@@ -6,36 +6,37 @@ package qldbsessionmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	qldbsession "github.com/aws/aws-sdk-go/service/qldbsession"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockQLDBSessionAPI is a mock of QLDBSessionAPI interface
+// MockQLDBSessionAPI is a mock of QLDBSessionAPI interface.
 type MockQLDBSessionAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockQLDBSessionAPIMockRecorder
 }
 
-// MockQLDBSessionAPIMockRecorder is the mock recorder for MockQLDBSessionAPI
+// MockQLDBSessionAPIMockRecorder is the mock recorder for MockQLDBSessionAPI.
 type MockQLDBSessionAPIMockRecorder struct {
 	mock *MockQLDBSessionAPI
 }
 
-// NewMockQLDBSessionAPI creates a new mock instance
+// NewMockQLDBSessionAPI creates a new mock instance.
 func NewMockQLDBSessionAPI(ctrl *gomock.Controller) *MockQLDBSessionAPI {
 	mock := &MockQLDBSessionAPI{ctrl: ctrl}
 	mock.recorder = &MockQLDBSessionAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockQLDBSessionAPI) EXPECT() *MockQLDBSessionAPIMockRecorder {
 	return m.recorder
 }
 
-// SendCommand mocks base method
+// SendCommand mocks base method.
 func (m *MockQLDBSessionAPI) SendCommand(arg0 *qldbsession.SendCommandInput) (*qldbsession.SendCommandOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendCommand", arg0)
@@ -44,13 +45,13 @@ func (m *MockQLDBSessionAPI) SendCommand(arg0 *qldbsession.SendCommandInput) (*q
 	return ret0, ret1
 }
 
-// SendCommand indicates an expected call of SendCommand
+// SendCommand indicates an expected call of SendCommand.
 func (mr *MockQLDBSessionAPIMockRecorder) SendCommand(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendCommand", reflect.TypeOf((*MockQLDBSessionAPI)(nil).SendCommand), arg0)
 }
 
-// SendCommandRequest mocks base method
+// SendCommandRequest mocks base method.
 func (m *MockQLDBSessionAPI) SendCommandRequest(arg0 *qldbsession.SendCommandInput) (*request.Request, *qldbsession.SendCommandOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendCommandRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockQLDBSessionAPI) SendCommandRequest(arg0 *qldbsession.SendCommandInp
 	return ret0, ret1
 }
 
-// SendCommandRequest indicates an expected call of SendCommandRequest
+// SendCommandRequest indicates an expected call of SendCommandRequest.
 func (mr *MockQLDBSessionAPIMockRecorder) SendCommandRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendCommandRequest", reflect.TypeOf((*MockQLDBSessionAPI)(nil).SendCommandRequest), arg0)
 }
 
-// SendCommandWithContext mocks base method
+// SendCommandWithContext mocks base method.
 func (m *MockQLDBSessionAPI) SendCommandWithContext(arg0 context.Context, arg1 *qldbsession.SendCommandInput, arg2 ...request.Option) (*qldbsession.SendCommandOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,7 +79,7 @@ func (m *MockQLDBSessionAPI) SendCommandWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// SendCommandWithContext indicates an expected call of SendCommandWithContext
+// SendCommandWithContext indicates an expected call of SendCommandWithContext.
 func (mr *MockQLDBSessionAPIMockRecorder) SendCommandWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

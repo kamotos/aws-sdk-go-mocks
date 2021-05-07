@@ -6,36 +6,37 @@ package elasticinferencemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	elasticinference "github.com/aws/aws-sdk-go/service/elasticinference"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockElasticInferenceAPI is a mock of ElasticInferenceAPI interface
+// MockElasticInferenceAPI is a mock of ElasticInferenceAPI interface.
 type MockElasticInferenceAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockElasticInferenceAPIMockRecorder
 }
 
-// MockElasticInferenceAPIMockRecorder is the mock recorder for MockElasticInferenceAPI
+// MockElasticInferenceAPIMockRecorder is the mock recorder for MockElasticInferenceAPI.
 type MockElasticInferenceAPIMockRecorder struct {
 	mock *MockElasticInferenceAPI
 }
 
-// NewMockElasticInferenceAPI creates a new mock instance
+// NewMockElasticInferenceAPI creates a new mock instance.
 func NewMockElasticInferenceAPI(ctrl *gomock.Controller) *MockElasticInferenceAPI {
 	mock := &MockElasticInferenceAPI{ctrl: ctrl}
 	mock.recorder = &MockElasticInferenceAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockElasticInferenceAPI) EXPECT() *MockElasticInferenceAPIMockRecorder {
 	return m.recorder
 }
 
-// DescribeAcceleratorOfferings mocks base method
+// DescribeAcceleratorOfferings mocks base method.
 func (m *MockElasticInferenceAPI) DescribeAcceleratorOfferings(arg0 *elasticinference.DescribeAcceleratorOfferingsInput) (*elasticinference.DescribeAcceleratorOfferingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAcceleratorOfferings", arg0)
@@ -44,13 +45,13 @@ func (m *MockElasticInferenceAPI) DescribeAcceleratorOfferings(arg0 *elasticinfe
 	return ret0, ret1
 }
 
-// DescribeAcceleratorOfferings indicates an expected call of DescribeAcceleratorOfferings
+// DescribeAcceleratorOfferings indicates an expected call of DescribeAcceleratorOfferings.
 func (mr *MockElasticInferenceAPIMockRecorder) DescribeAcceleratorOfferings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorOfferings", reflect.TypeOf((*MockElasticInferenceAPI)(nil).DescribeAcceleratorOfferings), arg0)
 }
 
-// DescribeAcceleratorOfferingsRequest mocks base method
+// DescribeAcceleratorOfferingsRequest mocks base method.
 func (m *MockElasticInferenceAPI) DescribeAcceleratorOfferingsRequest(arg0 *elasticinference.DescribeAcceleratorOfferingsInput) (*request.Request, *elasticinference.DescribeAcceleratorOfferingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAcceleratorOfferingsRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockElasticInferenceAPI) DescribeAcceleratorOfferingsRequest(arg0 *elas
 	return ret0, ret1
 }
 
-// DescribeAcceleratorOfferingsRequest indicates an expected call of DescribeAcceleratorOfferingsRequest
+// DescribeAcceleratorOfferingsRequest indicates an expected call of DescribeAcceleratorOfferingsRequest.
 func (mr *MockElasticInferenceAPIMockRecorder) DescribeAcceleratorOfferingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorOfferingsRequest", reflect.TypeOf((*MockElasticInferenceAPI)(nil).DescribeAcceleratorOfferingsRequest), arg0)
 }
 
-// DescribeAcceleratorOfferingsWithContext mocks base method
+// DescribeAcceleratorOfferingsWithContext mocks base method.
 func (m *MockElasticInferenceAPI) DescribeAcceleratorOfferingsWithContext(arg0 context.Context, arg1 *elasticinference.DescribeAcceleratorOfferingsInput, arg2 ...request.Option) (*elasticinference.DescribeAcceleratorOfferingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockElasticInferenceAPI) DescribeAcceleratorOfferingsWithContext(arg0 c
 	return ret0, ret1
 }
 
-// DescribeAcceleratorOfferingsWithContext indicates an expected call of DescribeAcceleratorOfferingsWithContext
+// DescribeAcceleratorOfferingsWithContext indicates an expected call of DescribeAcceleratorOfferingsWithContext.
 func (mr *MockElasticInferenceAPIMockRecorder) DescribeAcceleratorOfferingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorOfferingsWithContext", reflect.TypeOf((*MockElasticInferenceAPI)(nil).DescribeAcceleratorOfferingsWithContext), varargs...)
 }
 
-// DescribeAcceleratorTypes mocks base method
+// DescribeAcceleratorTypes mocks base method.
 func (m *MockElasticInferenceAPI) DescribeAcceleratorTypes(arg0 *elasticinference.DescribeAcceleratorTypesInput) (*elasticinference.DescribeAcceleratorTypesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAcceleratorTypes", arg0)
@@ -94,13 +95,13 @@ func (m *MockElasticInferenceAPI) DescribeAcceleratorTypes(arg0 *elasticinferenc
 	return ret0, ret1
 }
 
-// DescribeAcceleratorTypes indicates an expected call of DescribeAcceleratorTypes
+// DescribeAcceleratorTypes indicates an expected call of DescribeAcceleratorTypes.
 func (mr *MockElasticInferenceAPIMockRecorder) DescribeAcceleratorTypes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorTypes", reflect.TypeOf((*MockElasticInferenceAPI)(nil).DescribeAcceleratorTypes), arg0)
 }
 
-// DescribeAcceleratorTypesRequest mocks base method
+// DescribeAcceleratorTypesRequest mocks base method.
 func (m *MockElasticInferenceAPI) DescribeAcceleratorTypesRequest(arg0 *elasticinference.DescribeAcceleratorTypesInput) (*request.Request, *elasticinference.DescribeAcceleratorTypesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAcceleratorTypesRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockElasticInferenceAPI) DescribeAcceleratorTypesRequest(arg0 *elastici
 	return ret0, ret1
 }
 
-// DescribeAcceleratorTypesRequest indicates an expected call of DescribeAcceleratorTypesRequest
+// DescribeAcceleratorTypesRequest indicates an expected call of DescribeAcceleratorTypesRequest.
 func (mr *MockElasticInferenceAPIMockRecorder) DescribeAcceleratorTypesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorTypesRequest", reflect.TypeOf((*MockElasticInferenceAPI)(nil).DescribeAcceleratorTypesRequest), arg0)
 }
 
-// DescribeAcceleratorTypesWithContext mocks base method
+// DescribeAcceleratorTypesWithContext mocks base method.
 func (m *MockElasticInferenceAPI) DescribeAcceleratorTypesWithContext(arg0 context.Context, arg1 *elasticinference.DescribeAcceleratorTypesInput, arg2 ...request.Option) (*elasticinference.DescribeAcceleratorTypesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockElasticInferenceAPI) DescribeAcceleratorTypesWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// DescribeAcceleratorTypesWithContext indicates an expected call of DescribeAcceleratorTypesWithContext
+// DescribeAcceleratorTypesWithContext indicates an expected call of DescribeAcceleratorTypesWithContext.
 func (mr *MockElasticInferenceAPIMockRecorder) DescribeAcceleratorTypesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorTypesWithContext", reflect.TypeOf((*MockElasticInferenceAPI)(nil).DescribeAcceleratorTypesWithContext), varargs...)
 }
 
-// DescribeAccelerators mocks base method
+// DescribeAccelerators mocks base method.
 func (m *MockElasticInferenceAPI) DescribeAccelerators(arg0 *elasticinference.DescribeAcceleratorsInput) (*elasticinference.DescribeAcceleratorsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAccelerators", arg0)
@@ -144,13 +145,13 @@ func (m *MockElasticInferenceAPI) DescribeAccelerators(arg0 *elasticinference.De
 	return ret0, ret1
 }
 
-// DescribeAccelerators indicates an expected call of DescribeAccelerators
+// DescribeAccelerators indicates an expected call of DescribeAccelerators.
 func (mr *MockElasticInferenceAPIMockRecorder) DescribeAccelerators(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAccelerators", reflect.TypeOf((*MockElasticInferenceAPI)(nil).DescribeAccelerators), arg0)
 }
 
-// DescribeAcceleratorsPages mocks base method
+// DescribeAcceleratorsPages mocks base method.
 func (m *MockElasticInferenceAPI) DescribeAcceleratorsPages(arg0 *elasticinference.DescribeAcceleratorsInput, arg1 func(*elasticinference.DescribeAcceleratorsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAcceleratorsPages", arg0, arg1)
@@ -158,13 +159,13 @@ func (m *MockElasticInferenceAPI) DescribeAcceleratorsPages(arg0 *elasticinferen
 	return ret0
 }
 
-// DescribeAcceleratorsPages indicates an expected call of DescribeAcceleratorsPages
+// DescribeAcceleratorsPages indicates an expected call of DescribeAcceleratorsPages.
 func (mr *MockElasticInferenceAPIMockRecorder) DescribeAcceleratorsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorsPages", reflect.TypeOf((*MockElasticInferenceAPI)(nil).DescribeAcceleratorsPages), arg0, arg1)
 }
 
-// DescribeAcceleratorsPagesWithContext mocks base method
+// DescribeAcceleratorsPagesWithContext mocks base method.
 func (m *MockElasticInferenceAPI) DescribeAcceleratorsPagesWithContext(arg0 context.Context, arg1 *elasticinference.DescribeAcceleratorsInput, arg2 func(*elasticinference.DescribeAcceleratorsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -176,14 +177,14 @@ func (m *MockElasticInferenceAPI) DescribeAcceleratorsPagesWithContext(arg0 cont
 	return ret0
 }
 
-// DescribeAcceleratorsPagesWithContext indicates an expected call of DescribeAcceleratorsPagesWithContext
+// DescribeAcceleratorsPagesWithContext indicates an expected call of DescribeAcceleratorsPagesWithContext.
 func (mr *MockElasticInferenceAPIMockRecorder) DescribeAcceleratorsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorsPagesWithContext", reflect.TypeOf((*MockElasticInferenceAPI)(nil).DescribeAcceleratorsPagesWithContext), varargs...)
 }
 
-// DescribeAcceleratorsRequest mocks base method
+// DescribeAcceleratorsRequest mocks base method.
 func (m *MockElasticInferenceAPI) DescribeAcceleratorsRequest(arg0 *elasticinference.DescribeAcceleratorsInput) (*request.Request, *elasticinference.DescribeAcceleratorsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAcceleratorsRequest", arg0)
@@ -192,13 +193,13 @@ func (m *MockElasticInferenceAPI) DescribeAcceleratorsRequest(arg0 *elasticinfer
 	return ret0, ret1
 }
 
-// DescribeAcceleratorsRequest indicates an expected call of DescribeAcceleratorsRequest
+// DescribeAcceleratorsRequest indicates an expected call of DescribeAcceleratorsRequest.
 func (mr *MockElasticInferenceAPIMockRecorder) DescribeAcceleratorsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorsRequest", reflect.TypeOf((*MockElasticInferenceAPI)(nil).DescribeAcceleratorsRequest), arg0)
 }
 
-// DescribeAcceleratorsWithContext mocks base method
+// DescribeAcceleratorsWithContext mocks base method.
 func (m *MockElasticInferenceAPI) DescribeAcceleratorsWithContext(arg0 context.Context, arg1 *elasticinference.DescribeAcceleratorsInput, arg2 ...request.Option) (*elasticinference.DescribeAcceleratorsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -211,14 +212,14 @@ func (m *MockElasticInferenceAPI) DescribeAcceleratorsWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DescribeAcceleratorsWithContext indicates an expected call of DescribeAcceleratorsWithContext
+// DescribeAcceleratorsWithContext indicates an expected call of DescribeAcceleratorsWithContext.
 func (mr *MockElasticInferenceAPIMockRecorder) DescribeAcceleratorsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorsWithContext", reflect.TypeOf((*MockElasticInferenceAPI)(nil).DescribeAcceleratorsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockElasticInferenceAPI) ListTagsForResource(arg0 *elasticinference.ListTagsForResourceInput) (*elasticinference.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -227,13 +228,13 @@ func (m *MockElasticInferenceAPI) ListTagsForResource(arg0 *elasticinference.Lis
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockElasticInferenceAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockElasticInferenceAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockElasticInferenceAPI) ListTagsForResourceRequest(arg0 *elasticinference.ListTagsForResourceInput) (*request.Request, *elasticinference.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -242,13 +243,13 @@ func (m *MockElasticInferenceAPI) ListTagsForResourceRequest(arg0 *elasticinfere
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockElasticInferenceAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockElasticInferenceAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockElasticInferenceAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *elasticinference.ListTagsForResourceInput, arg2 ...request.Option) (*elasticinference.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -261,14 +262,14 @@ func (m *MockElasticInferenceAPI) ListTagsForResourceWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockElasticInferenceAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockElasticInferenceAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockElasticInferenceAPI) TagResource(arg0 *elasticinference.TagResourceInput) (*elasticinference.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -277,13 +278,13 @@ func (m *MockElasticInferenceAPI) TagResource(arg0 *elasticinference.TagResource
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockElasticInferenceAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockElasticInferenceAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockElasticInferenceAPI) TagResourceRequest(arg0 *elasticinference.TagResourceInput) (*request.Request, *elasticinference.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -292,13 +293,13 @@ func (m *MockElasticInferenceAPI) TagResourceRequest(arg0 *elasticinference.TagR
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockElasticInferenceAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockElasticInferenceAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockElasticInferenceAPI) TagResourceWithContext(arg0 context.Context, arg1 *elasticinference.TagResourceInput, arg2 ...request.Option) (*elasticinference.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -311,14 +312,14 @@ func (m *MockElasticInferenceAPI) TagResourceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockElasticInferenceAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockElasticInferenceAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockElasticInferenceAPI) UntagResource(arg0 *elasticinference.UntagResourceInput) (*elasticinference.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -327,13 +328,13 @@ func (m *MockElasticInferenceAPI) UntagResource(arg0 *elasticinference.UntagReso
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockElasticInferenceAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockElasticInferenceAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockElasticInferenceAPI) UntagResourceRequest(arg0 *elasticinference.UntagResourceInput) (*request.Request, *elasticinference.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -342,13 +343,13 @@ func (m *MockElasticInferenceAPI) UntagResourceRequest(arg0 *elasticinference.Un
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockElasticInferenceAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockElasticInferenceAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockElasticInferenceAPI) UntagResourceWithContext(arg0 context.Context, arg1 *elasticinference.UntagResourceInput, arg2 ...request.Option) (*elasticinference.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -361,7 +362,7 @@ func (m *MockElasticInferenceAPI) UntagResourceWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockElasticInferenceAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

@@ -6,36 +6,37 @@ package accessanalyzermock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	accessanalyzer "github.com/aws/aws-sdk-go/service/accessanalyzer"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockAccessAnalyzerAPI is a mock of AccessAnalyzerAPI interface
+// MockAccessAnalyzerAPI is a mock of AccessAnalyzerAPI interface.
 type MockAccessAnalyzerAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockAccessAnalyzerAPIMockRecorder
 }
 
-// MockAccessAnalyzerAPIMockRecorder is the mock recorder for MockAccessAnalyzerAPI
+// MockAccessAnalyzerAPIMockRecorder is the mock recorder for MockAccessAnalyzerAPI.
 type MockAccessAnalyzerAPIMockRecorder struct {
 	mock *MockAccessAnalyzerAPI
 }
 
-// NewMockAccessAnalyzerAPI creates a new mock instance
+// NewMockAccessAnalyzerAPI creates a new mock instance.
 func NewMockAccessAnalyzerAPI(ctrl *gomock.Controller) *MockAccessAnalyzerAPI {
 	mock := &MockAccessAnalyzerAPI{ctrl: ctrl}
 	mock.recorder = &MockAccessAnalyzerAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockAccessAnalyzerAPI) EXPECT() *MockAccessAnalyzerAPIMockRecorder {
 	return m.recorder
 }
 
-// ApplyArchiveRule mocks base method
+// ApplyArchiveRule mocks base method.
 func (m *MockAccessAnalyzerAPI) ApplyArchiveRule(arg0 *accessanalyzer.ApplyArchiveRuleInput) (*accessanalyzer.ApplyArchiveRuleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ApplyArchiveRule", arg0)
@@ -44,13 +45,13 @@ func (m *MockAccessAnalyzerAPI) ApplyArchiveRule(arg0 *accessanalyzer.ApplyArchi
 	return ret0, ret1
 }
 
-// ApplyArchiveRule indicates an expected call of ApplyArchiveRule
+// ApplyArchiveRule indicates an expected call of ApplyArchiveRule.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ApplyArchiveRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ApplyArchiveRule", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ApplyArchiveRule), arg0)
 }
 
-// ApplyArchiveRuleRequest mocks base method
+// ApplyArchiveRuleRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) ApplyArchiveRuleRequest(arg0 *accessanalyzer.ApplyArchiveRuleInput) (*request.Request, *accessanalyzer.ApplyArchiveRuleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ApplyArchiveRuleRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockAccessAnalyzerAPI) ApplyArchiveRuleRequest(arg0 *accessanalyzer.App
 	return ret0, ret1
 }
 
-// ApplyArchiveRuleRequest indicates an expected call of ApplyArchiveRuleRequest
+// ApplyArchiveRuleRequest indicates an expected call of ApplyArchiveRuleRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ApplyArchiveRuleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ApplyArchiveRuleRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ApplyArchiveRuleRequest), arg0)
 }
 
-// ApplyArchiveRuleWithContext mocks base method
+// ApplyArchiveRuleWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) ApplyArchiveRuleWithContext(arg0 context.Context, arg1 *accessanalyzer.ApplyArchiveRuleInput, arg2 ...request.Option) (*accessanalyzer.ApplyArchiveRuleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,114 @@ func (m *MockAccessAnalyzerAPI) ApplyArchiveRuleWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ApplyArchiveRuleWithContext indicates an expected call of ApplyArchiveRuleWithContext
+// ApplyArchiveRuleWithContext indicates an expected call of ApplyArchiveRuleWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ApplyArchiveRuleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ApplyArchiveRuleWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ApplyArchiveRuleWithContext), varargs...)
 }
 
-// CreateAnalyzer mocks base method
+// CancelPolicyGeneration mocks base method.
+func (m *MockAccessAnalyzerAPI) CancelPolicyGeneration(arg0 *accessanalyzer.CancelPolicyGenerationInput) (*accessanalyzer.CancelPolicyGenerationOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CancelPolicyGeneration", arg0)
+	ret0, _ := ret[0].(*accessanalyzer.CancelPolicyGenerationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CancelPolicyGeneration indicates an expected call of CancelPolicyGeneration.
+func (mr *MockAccessAnalyzerAPIMockRecorder) CancelPolicyGeneration(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelPolicyGeneration", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).CancelPolicyGeneration), arg0)
+}
+
+// CancelPolicyGenerationRequest mocks base method.
+func (m *MockAccessAnalyzerAPI) CancelPolicyGenerationRequest(arg0 *accessanalyzer.CancelPolicyGenerationInput) (*request.Request, *accessanalyzer.CancelPolicyGenerationOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CancelPolicyGenerationRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*accessanalyzer.CancelPolicyGenerationOutput)
+	return ret0, ret1
+}
+
+// CancelPolicyGenerationRequest indicates an expected call of CancelPolicyGenerationRequest.
+func (mr *MockAccessAnalyzerAPIMockRecorder) CancelPolicyGenerationRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelPolicyGenerationRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).CancelPolicyGenerationRequest), arg0)
+}
+
+// CancelPolicyGenerationWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) CancelPolicyGenerationWithContext(arg0 context.Context, arg1 *accessanalyzer.CancelPolicyGenerationInput, arg2 ...request.Option) (*accessanalyzer.CancelPolicyGenerationOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CancelPolicyGenerationWithContext", varargs...)
+	ret0, _ := ret[0].(*accessanalyzer.CancelPolicyGenerationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CancelPolicyGenerationWithContext indicates an expected call of CancelPolicyGenerationWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) CancelPolicyGenerationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelPolicyGenerationWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).CancelPolicyGenerationWithContext), varargs...)
+}
+
+// CreateAccessPreview mocks base method.
+func (m *MockAccessAnalyzerAPI) CreateAccessPreview(arg0 *accessanalyzer.CreateAccessPreviewInput) (*accessanalyzer.CreateAccessPreviewOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateAccessPreview", arg0)
+	ret0, _ := ret[0].(*accessanalyzer.CreateAccessPreviewOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateAccessPreview indicates an expected call of CreateAccessPreview.
+func (mr *MockAccessAnalyzerAPIMockRecorder) CreateAccessPreview(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAccessPreview", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).CreateAccessPreview), arg0)
+}
+
+// CreateAccessPreviewRequest mocks base method.
+func (m *MockAccessAnalyzerAPI) CreateAccessPreviewRequest(arg0 *accessanalyzer.CreateAccessPreviewInput) (*request.Request, *accessanalyzer.CreateAccessPreviewOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateAccessPreviewRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*accessanalyzer.CreateAccessPreviewOutput)
+	return ret0, ret1
+}
+
+// CreateAccessPreviewRequest indicates an expected call of CreateAccessPreviewRequest.
+func (mr *MockAccessAnalyzerAPIMockRecorder) CreateAccessPreviewRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAccessPreviewRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).CreateAccessPreviewRequest), arg0)
+}
+
+// CreateAccessPreviewWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) CreateAccessPreviewWithContext(arg0 context.Context, arg1 *accessanalyzer.CreateAccessPreviewInput, arg2 ...request.Option) (*accessanalyzer.CreateAccessPreviewOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateAccessPreviewWithContext", varargs...)
+	ret0, _ := ret[0].(*accessanalyzer.CreateAccessPreviewOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateAccessPreviewWithContext indicates an expected call of CreateAccessPreviewWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) CreateAccessPreviewWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAccessPreviewWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).CreateAccessPreviewWithContext), varargs...)
+}
+
+// CreateAnalyzer mocks base method.
 func (m *MockAccessAnalyzerAPI) CreateAnalyzer(arg0 *accessanalyzer.CreateAnalyzerInput) (*accessanalyzer.CreateAnalyzerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAnalyzer", arg0)
@@ -94,13 +195,13 @@ func (m *MockAccessAnalyzerAPI) CreateAnalyzer(arg0 *accessanalyzer.CreateAnalyz
 	return ret0, ret1
 }
 
-// CreateAnalyzer indicates an expected call of CreateAnalyzer
+// CreateAnalyzer indicates an expected call of CreateAnalyzer.
 func (mr *MockAccessAnalyzerAPIMockRecorder) CreateAnalyzer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAnalyzer", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).CreateAnalyzer), arg0)
 }
 
-// CreateAnalyzerRequest mocks base method
+// CreateAnalyzerRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) CreateAnalyzerRequest(arg0 *accessanalyzer.CreateAnalyzerInput) (*request.Request, *accessanalyzer.CreateAnalyzerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAnalyzerRequest", arg0)
@@ -109,13 +210,13 @@ func (m *MockAccessAnalyzerAPI) CreateAnalyzerRequest(arg0 *accessanalyzer.Creat
 	return ret0, ret1
 }
 
-// CreateAnalyzerRequest indicates an expected call of CreateAnalyzerRequest
+// CreateAnalyzerRequest indicates an expected call of CreateAnalyzerRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) CreateAnalyzerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAnalyzerRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).CreateAnalyzerRequest), arg0)
 }
 
-// CreateAnalyzerWithContext mocks base method
+// CreateAnalyzerWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) CreateAnalyzerWithContext(arg0 context.Context, arg1 *accessanalyzer.CreateAnalyzerInput, arg2 ...request.Option) (*accessanalyzer.CreateAnalyzerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +229,14 @@ func (m *MockAccessAnalyzerAPI) CreateAnalyzerWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// CreateAnalyzerWithContext indicates an expected call of CreateAnalyzerWithContext
+// CreateAnalyzerWithContext indicates an expected call of CreateAnalyzerWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) CreateAnalyzerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAnalyzerWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).CreateAnalyzerWithContext), varargs...)
 }
 
-// CreateArchiveRule mocks base method
+// CreateArchiveRule mocks base method.
 func (m *MockAccessAnalyzerAPI) CreateArchiveRule(arg0 *accessanalyzer.CreateArchiveRuleInput) (*accessanalyzer.CreateArchiveRuleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateArchiveRule", arg0)
@@ -144,13 +245,13 @@ func (m *MockAccessAnalyzerAPI) CreateArchiveRule(arg0 *accessanalyzer.CreateArc
 	return ret0, ret1
 }
 
-// CreateArchiveRule indicates an expected call of CreateArchiveRule
+// CreateArchiveRule indicates an expected call of CreateArchiveRule.
 func (mr *MockAccessAnalyzerAPIMockRecorder) CreateArchiveRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateArchiveRule", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).CreateArchiveRule), arg0)
 }
 
-// CreateArchiveRuleRequest mocks base method
+// CreateArchiveRuleRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) CreateArchiveRuleRequest(arg0 *accessanalyzer.CreateArchiveRuleInput) (*request.Request, *accessanalyzer.CreateArchiveRuleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateArchiveRuleRequest", arg0)
@@ -159,13 +260,13 @@ func (m *MockAccessAnalyzerAPI) CreateArchiveRuleRequest(arg0 *accessanalyzer.Cr
 	return ret0, ret1
 }
 
-// CreateArchiveRuleRequest indicates an expected call of CreateArchiveRuleRequest
+// CreateArchiveRuleRequest indicates an expected call of CreateArchiveRuleRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) CreateArchiveRuleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateArchiveRuleRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).CreateArchiveRuleRequest), arg0)
 }
 
-// CreateArchiveRuleWithContext mocks base method
+// CreateArchiveRuleWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) CreateArchiveRuleWithContext(arg0 context.Context, arg1 *accessanalyzer.CreateArchiveRuleInput, arg2 ...request.Option) (*accessanalyzer.CreateArchiveRuleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +279,14 @@ func (m *MockAccessAnalyzerAPI) CreateArchiveRuleWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CreateArchiveRuleWithContext indicates an expected call of CreateArchiveRuleWithContext
+// CreateArchiveRuleWithContext indicates an expected call of CreateArchiveRuleWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) CreateArchiveRuleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateArchiveRuleWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).CreateArchiveRuleWithContext), varargs...)
 }
 
-// DeleteAnalyzer mocks base method
+// DeleteAnalyzer mocks base method.
 func (m *MockAccessAnalyzerAPI) DeleteAnalyzer(arg0 *accessanalyzer.DeleteAnalyzerInput) (*accessanalyzer.DeleteAnalyzerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAnalyzer", arg0)
@@ -194,13 +295,13 @@ func (m *MockAccessAnalyzerAPI) DeleteAnalyzer(arg0 *accessanalyzer.DeleteAnalyz
 	return ret0, ret1
 }
 
-// DeleteAnalyzer indicates an expected call of DeleteAnalyzer
+// DeleteAnalyzer indicates an expected call of DeleteAnalyzer.
 func (mr *MockAccessAnalyzerAPIMockRecorder) DeleteAnalyzer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAnalyzer", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).DeleteAnalyzer), arg0)
 }
 
-// DeleteAnalyzerRequest mocks base method
+// DeleteAnalyzerRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) DeleteAnalyzerRequest(arg0 *accessanalyzer.DeleteAnalyzerInput) (*request.Request, *accessanalyzer.DeleteAnalyzerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAnalyzerRequest", arg0)
@@ -209,13 +310,13 @@ func (m *MockAccessAnalyzerAPI) DeleteAnalyzerRequest(arg0 *accessanalyzer.Delet
 	return ret0, ret1
 }
 
-// DeleteAnalyzerRequest indicates an expected call of DeleteAnalyzerRequest
+// DeleteAnalyzerRequest indicates an expected call of DeleteAnalyzerRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) DeleteAnalyzerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAnalyzerRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).DeleteAnalyzerRequest), arg0)
 }
 
-// DeleteAnalyzerWithContext mocks base method
+// DeleteAnalyzerWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) DeleteAnalyzerWithContext(arg0 context.Context, arg1 *accessanalyzer.DeleteAnalyzerInput, arg2 ...request.Option) (*accessanalyzer.DeleteAnalyzerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +329,14 @@ func (m *MockAccessAnalyzerAPI) DeleteAnalyzerWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DeleteAnalyzerWithContext indicates an expected call of DeleteAnalyzerWithContext
+// DeleteAnalyzerWithContext indicates an expected call of DeleteAnalyzerWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) DeleteAnalyzerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAnalyzerWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).DeleteAnalyzerWithContext), varargs...)
 }
 
-// DeleteArchiveRule mocks base method
+// DeleteArchiveRule mocks base method.
 func (m *MockAccessAnalyzerAPI) DeleteArchiveRule(arg0 *accessanalyzer.DeleteArchiveRuleInput) (*accessanalyzer.DeleteArchiveRuleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteArchiveRule", arg0)
@@ -244,13 +345,13 @@ func (m *MockAccessAnalyzerAPI) DeleteArchiveRule(arg0 *accessanalyzer.DeleteArc
 	return ret0, ret1
 }
 
-// DeleteArchiveRule indicates an expected call of DeleteArchiveRule
+// DeleteArchiveRule indicates an expected call of DeleteArchiveRule.
 func (mr *MockAccessAnalyzerAPIMockRecorder) DeleteArchiveRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteArchiveRule", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).DeleteArchiveRule), arg0)
 }
 
-// DeleteArchiveRuleRequest mocks base method
+// DeleteArchiveRuleRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) DeleteArchiveRuleRequest(arg0 *accessanalyzer.DeleteArchiveRuleInput) (*request.Request, *accessanalyzer.DeleteArchiveRuleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteArchiveRuleRequest", arg0)
@@ -259,13 +360,13 @@ func (m *MockAccessAnalyzerAPI) DeleteArchiveRuleRequest(arg0 *accessanalyzer.De
 	return ret0, ret1
 }
 
-// DeleteArchiveRuleRequest indicates an expected call of DeleteArchiveRuleRequest
+// DeleteArchiveRuleRequest indicates an expected call of DeleteArchiveRuleRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) DeleteArchiveRuleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteArchiveRuleRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).DeleteArchiveRuleRequest), arg0)
 }
 
-// DeleteArchiveRuleWithContext mocks base method
+// DeleteArchiveRuleWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) DeleteArchiveRuleWithContext(arg0 context.Context, arg1 *accessanalyzer.DeleteArchiveRuleInput, arg2 ...request.Option) (*accessanalyzer.DeleteArchiveRuleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +379,64 @@ func (m *MockAccessAnalyzerAPI) DeleteArchiveRuleWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteArchiveRuleWithContext indicates an expected call of DeleteArchiveRuleWithContext
+// DeleteArchiveRuleWithContext indicates an expected call of DeleteArchiveRuleWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) DeleteArchiveRuleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteArchiveRuleWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).DeleteArchiveRuleWithContext), varargs...)
 }
 
-// GetAnalyzedResource mocks base method
+// GetAccessPreview mocks base method.
+func (m *MockAccessAnalyzerAPI) GetAccessPreview(arg0 *accessanalyzer.GetAccessPreviewInput) (*accessanalyzer.GetAccessPreviewOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetAccessPreview", arg0)
+	ret0, _ := ret[0].(*accessanalyzer.GetAccessPreviewOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetAccessPreview indicates an expected call of GetAccessPreview.
+func (mr *MockAccessAnalyzerAPIMockRecorder) GetAccessPreview(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAccessPreview", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetAccessPreview), arg0)
+}
+
+// GetAccessPreviewRequest mocks base method.
+func (m *MockAccessAnalyzerAPI) GetAccessPreviewRequest(arg0 *accessanalyzer.GetAccessPreviewInput) (*request.Request, *accessanalyzer.GetAccessPreviewOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetAccessPreviewRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*accessanalyzer.GetAccessPreviewOutput)
+	return ret0, ret1
+}
+
+// GetAccessPreviewRequest indicates an expected call of GetAccessPreviewRequest.
+func (mr *MockAccessAnalyzerAPIMockRecorder) GetAccessPreviewRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAccessPreviewRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetAccessPreviewRequest), arg0)
+}
+
+// GetAccessPreviewWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) GetAccessPreviewWithContext(arg0 context.Context, arg1 *accessanalyzer.GetAccessPreviewInput, arg2 ...request.Option) (*accessanalyzer.GetAccessPreviewOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetAccessPreviewWithContext", varargs...)
+	ret0, _ := ret[0].(*accessanalyzer.GetAccessPreviewOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetAccessPreviewWithContext indicates an expected call of GetAccessPreviewWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) GetAccessPreviewWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAccessPreviewWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetAccessPreviewWithContext), varargs...)
+}
+
+// GetAnalyzedResource mocks base method.
 func (m *MockAccessAnalyzerAPI) GetAnalyzedResource(arg0 *accessanalyzer.GetAnalyzedResourceInput) (*accessanalyzer.GetAnalyzedResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAnalyzedResource", arg0)
@@ -294,13 +445,13 @@ func (m *MockAccessAnalyzerAPI) GetAnalyzedResource(arg0 *accessanalyzer.GetAnal
 	return ret0, ret1
 }
 
-// GetAnalyzedResource indicates an expected call of GetAnalyzedResource
+// GetAnalyzedResource indicates an expected call of GetAnalyzedResource.
 func (mr *MockAccessAnalyzerAPIMockRecorder) GetAnalyzedResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAnalyzedResource", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetAnalyzedResource), arg0)
 }
 
-// GetAnalyzedResourceRequest mocks base method
+// GetAnalyzedResourceRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) GetAnalyzedResourceRequest(arg0 *accessanalyzer.GetAnalyzedResourceInput) (*request.Request, *accessanalyzer.GetAnalyzedResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAnalyzedResourceRequest", arg0)
@@ -309,13 +460,13 @@ func (m *MockAccessAnalyzerAPI) GetAnalyzedResourceRequest(arg0 *accessanalyzer.
 	return ret0, ret1
 }
 
-// GetAnalyzedResourceRequest indicates an expected call of GetAnalyzedResourceRequest
+// GetAnalyzedResourceRequest indicates an expected call of GetAnalyzedResourceRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) GetAnalyzedResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAnalyzedResourceRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetAnalyzedResourceRequest), arg0)
 }
 
-// GetAnalyzedResourceWithContext mocks base method
+// GetAnalyzedResourceWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) GetAnalyzedResourceWithContext(arg0 context.Context, arg1 *accessanalyzer.GetAnalyzedResourceInput, arg2 ...request.Option) (*accessanalyzer.GetAnalyzedResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +479,14 @@ func (m *MockAccessAnalyzerAPI) GetAnalyzedResourceWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// GetAnalyzedResourceWithContext indicates an expected call of GetAnalyzedResourceWithContext
+// GetAnalyzedResourceWithContext indicates an expected call of GetAnalyzedResourceWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) GetAnalyzedResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAnalyzedResourceWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetAnalyzedResourceWithContext), varargs...)
 }
 
-// GetAnalyzer mocks base method
+// GetAnalyzer mocks base method.
 func (m *MockAccessAnalyzerAPI) GetAnalyzer(arg0 *accessanalyzer.GetAnalyzerInput) (*accessanalyzer.GetAnalyzerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAnalyzer", arg0)
@@ -344,13 +495,13 @@ func (m *MockAccessAnalyzerAPI) GetAnalyzer(arg0 *accessanalyzer.GetAnalyzerInpu
 	return ret0, ret1
 }
 
-// GetAnalyzer indicates an expected call of GetAnalyzer
+// GetAnalyzer indicates an expected call of GetAnalyzer.
 func (mr *MockAccessAnalyzerAPIMockRecorder) GetAnalyzer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAnalyzer", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetAnalyzer), arg0)
 }
 
-// GetAnalyzerRequest mocks base method
+// GetAnalyzerRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) GetAnalyzerRequest(arg0 *accessanalyzer.GetAnalyzerInput) (*request.Request, *accessanalyzer.GetAnalyzerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAnalyzerRequest", arg0)
@@ -359,13 +510,13 @@ func (m *MockAccessAnalyzerAPI) GetAnalyzerRequest(arg0 *accessanalyzer.GetAnaly
 	return ret0, ret1
 }
 
-// GetAnalyzerRequest indicates an expected call of GetAnalyzerRequest
+// GetAnalyzerRequest indicates an expected call of GetAnalyzerRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) GetAnalyzerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAnalyzerRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetAnalyzerRequest), arg0)
 }
 
-// GetAnalyzerWithContext mocks base method
+// GetAnalyzerWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) GetAnalyzerWithContext(arg0 context.Context, arg1 *accessanalyzer.GetAnalyzerInput, arg2 ...request.Option) (*accessanalyzer.GetAnalyzerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +529,14 @@ func (m *MockAccessAnalyzerAPI) GetAnalyzerWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetAnalyzerWithContext indicates an expected call of GetAnalyzerWithContext
+// GetAnalyzerWithContext indicates an expected call of GetAnalyzerWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) GetAnalyzerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAnalyzerWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetAnalyzerWithContext), varargs...)
 }
 
-// GetArchiveRule mocks base method
+// GetArchiveRule mocks base method.
 func (m *MockAccessAnalyzerAPI) GetArchiveRule(arg0 *accessanalyzer.GetArchiveRuleInput) (*accessanalyzer.GetArchiveRuleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetArchiveRule", arg0)
@@ -394,13 +545,13 @@ func (m *MockAccessAnalyzerAPI) GetArchiveRule(arg0 *accessanalyzer.GetArchiveRu
 	return ret0, ret1
 }
 
-// GetArchiveRule indicates an expected call of GetArchiveRule
+// GetArchiveRule indicates an expected call of GetArchiveRule.
 func (mr *MockAccessAnalyzerAPIMockRecorder) GetArchiveRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetArchiveRule", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetArchiveRule), arg0)
 }
 
-// GetArchiveRuleRequest mocks base method
+// GetArchiveRuleRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) GetArchiveRuleRequest(arg0 *accessanalyzer.GetArchiveRuleInput) (*request.Request, *accessanalyzer.GetArchiveRuleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetArchiveRuleRequest", arg0)
@@ -409,13 +560,13 @@ func (m *MockAccessAnalyzerAPI) GetArchiveRuleRequest(arg0 *accessanalyzer.GetAr
 	return ret0, ret1
 }
 
-// GetArchiveRuleRequest indicates an expected call of GetArchiveRuleRequest
+// GetArchiveRuleRequest indicates an expected call of GetArchiveRuleRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) GetArchiveRuleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetArchiveRuleRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetArchiveRuleRequest), arg0)
 }
 
-// GetArchiveRuleWithContext mocks base method
+// GetArchiveRuleWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) GetArchiveRuleWithContext(arg0 context.Context, arg1 *accessanalyzer.GetArchiveRuleInput, arg2 ...request.Option) (*accessanalyzer.GetArchiveRuleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +579,14 @@ func (m *MockAccessAnalyzerAPI) GetArchiveRuleWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// GetArchiveRuleWithContext indicates an expected call of GetArchiveRuleWithContext
+// GetArchiveRuleWithContext indicates an expected call of GetArchiveRuleWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) GetArchiveRuleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetArchiveRuleWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetArchiveRuleWithContext), varargs...)
 }
 
-// GetFinding mocks base method
+// GetFinding mocks base method.
 func (m *MockAccessAnalyzerAPI) GetFinding(arg0 *accessanalyzer.GetFindingInput) (*accessanalyzer.GetFindingOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFinding", arg0)
@@ -444,13 +595,13 @@ func (m *MockAccessAnalyzerAPI) GetFinding(arg0 *accessanalyzer.GetFindingInput)
 	return ret0, ret1
 }
 
-// GetFinding indicates an expected call of GetFinding
+// GetFinding indicates an expected call of GetFinding.
 func (mr *MockAccessAnalyzerAPIMockRecorder) GetFinding(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFinding", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetFinding), arg0)
 }
 
-// GetFindingRequest mocks base method
+// GetFindingRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) GetFindingRequest(arg0 *accessanalyzer.GetFindingInput) (*request.Request, *accessanalyzer.GetFindingOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFindingRequest", arg0)
@@ -459,13 +610,13 @@ func (m *MockAccessAnalyzerAPI) GetFindingRequest(arg0 *accessanalyzer.GetFindin
 	return ret0, ret1
 }
 
-// GetFindingRequest indicates an expected call of GetFindingRequest
+// GetFindingRequest indicates an expected call of GetFindingRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) GetFindingRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetFindingRequest), arg0)
 }
 
-// GetFindingWithContext mocks base method
+// GetFindingWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) GetFindingWithContext(arg0 context.Context, arg1 *accessanalyzer.GetFindingInput, arg2 ...request.Option) (*accessanalyzer.GetFindingOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +629,230 @@ func (m *MockAccessAnalyzerAPI) GetFindingWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetFindingWithContext indicates an expected call of GetFindingWithContext
+// GetFindingWithContext indicates an expected call of GetFindingWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) GetFindingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetFindingWithContext), varargs...)
 }
 
-// ListAnalyzedResources mocks base method
+// GetGeneratedPolicy mocks base method.
+func (m *MockAccessAnalyzerAPI) GetGeneratedPolicy(arg0 *accessanalyzer.GetGeneratedPolicyInput) (*accessanalyzer.GetGeneratedPolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetGeneratedPolicy", arg0)
+	ret0, _ := ret[0].(*accessanalyzer.GetGeneratedPolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetGeneratedPolicy indicates an expected call of GetGeneratedPolicy.
+func (mr *MockAccessAnalyzerAPIMockRecorder) GetGeneratedPolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGeneratedPolicy", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetGeneratedPolicy), arg0)
+}
+
+// GetGeneratedPolicyRequest mocks base method.
+func (m *MockAccessAnalyzerAPI) GetGeneratedPolicyRequest(arg0 *accessanalyzer.GetGeneratedPolicyInput) (*request.Request, *accessanalyzer.GetGeneratedPolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetGeneratedPolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*accessanalyzer.GetGeneratedPolicyOutput)
+	return ret0, ret1
+}
+
+// GetGeneratedPolicyRequest indicates an expected call of GetGeneratedPolicyRequest.
+func (mr *MockAccessAnalyzerAPIMockRecorder) GetGeneratedPolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGeneratedPolicyRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetGeneratedPolicyRequest), arg0)
+}
+
+// GetGeneratedPolicyWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) GetGeneratedPolicyWithContext(arg0 context.Context, arg1 *accessanalyzer.GetGeneratedPolicyInput, arg2 ...request.Option) (*accessanalyzer.GetGeneratedPolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetGeneratedPolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*accessanalyzer.GetGeneratedPolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetGeneratedPolicyWithContext indicates an expected call of GetGeneratedPolicyWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) GetGeneratedPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGeneratedPolicyWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).GetGeneratedPolicyWithContext), varargs...)
+}
+
+// ListAccessPreviewFindings mocks base method.
+func (m *MockAccessAnalyzerAPI) ListAccessPreviewFindings(arg0 *accessanalyzer.ListAccessPreviewFindingsInput) (*accessanalyzer.ListAccessPreviewFindingsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAccessPreviewFindings", arg0)
+	ret0, _ := ret[0].(*accessanalyzer.ListAccessPreviewFindingsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListAccessPreviewFindings indicates an expected call of ListAccessPreviewFindings.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListAccessPreviewFindings(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccessPreviewFindings", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAccessPreviewFindings), arg0)
+}
+
+// ListAccessPreviewFindingsPages mocks base method.
+func (m *MockAccessAnalyzerAPI) ListAccessPreviewFindingsPages(arg0 *accessanalyzer.ListAccessPreviewFindingsInput, arg1 func(*accessanalyzer.ListAccessPreviewFindingsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAccessPreviewFindingsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAccessPreviewFindingsPages indicates an expected call of ListAccessPreviewFindingsPages.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListAccessPreviewFindingsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccessPreviewFindingsPages", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAccessPreviewFindingsPages), arg0, arg1)
+}
+
+// ListAccessPreviewFindingsPagesWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) ListAccessPreviewFindingsPagesWithContext(arg0 context.Context, arg1 *accessanalyzer.ListAccessPreviewFindingsInput, arg2 func(*accessanalyzer.ListAccessPreviewFindingsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListAccessPreviewFindingsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAccessPreviewFindingsPagesWithContext indicates an expected call of ListAccessPreviewFindingsPagesWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListAccessPreviewFindingsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccessPreviewFindingsPagesWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAccessPreviewFindingsPagesWithContext), varargs...)
+}
+
+// ListAccessPreviewFindingsRequest mocks base method.
+func (m *MockAccessAnalyzerAPI) ListAccessPreviewFindingsRequest(arg0 *accessanalyzer.ListAccessPreviewFindingsInput) (*request.Request, *accessanalyzer.ListAccessPreviewFindingsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAccessPreviewFindingsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*accessanalyzer.ListAccessPreviewFindingsOutput)
+	return ret0, ret1
+}
+
+// ListAccessPreviewFindingsRequest indicates an expected call of ListAccessPreviewFindingsRequest.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListAccessPreviewFindingsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccessPreviewFindingsRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAccessPreviewFindingsRequest), arg0)
+}
+
+// ListAccessPreviewFindingsWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) ListAccessPreviewFindingsWithContext(arg0 context.Context, arg1 *accessanalyzer.ListAccessPreviewFindingsInput, arg2 ...request.Option) (*accessanalyzer.ListAccessPreviewFindingsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListAccessPreviewFindingsWithContext", varargs...)
+	ret0, _ := ret[0].(*accessanalyzer.ListAccessPreviewFindingsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListAccessPreviewFindingsWithContext indicates an expected call of ListAccessPreviewFindingsWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListAccessPreviewFindingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccessPreviewFindingsWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAccessPreviewFindingsWithContext), varargs...)
+}
+
+// ListAccessPreviews mocks base method.
+func (m *MockAccessAnalyzerAPI) ListAccessPreviews(arg0 *accessanalyzer.ListAccessPreviewsInput) (*accessanalyzer.ListAccessPreviewsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAccessPreviews", arg0)
+	ret0, _ := ret[0].(*accessanalyzer.ListAccessPreviewsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListAccessPreviews indicates an expected call of ListAccessPreviews.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListAccessPreviews(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccessPreviews", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAccessPreviews), arg0)
+}
+
+// ListAccessPreviewsPages mocks base method.
+func (m *MockAccessAnalyzerAPI) ListAccessPreviewsPages(arg0 *accessanalyzer.ListAccessPreviewsInput, arg1 func(*accessanalyzer.ListAccessPreviewsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAccessPreviewsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAccessPreviewsPages indicates an expected call of ListAccessPreviewsPages.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListAccessPreviewsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccessPreviewsPages", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAccessPreviewsPages), arg0, arg1)
+}
+
+// ListAccessPreviewsPagesWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) ListAccessPreviewsPagesWithContext(arg0 context.Context, arg1 *accessanalyzer.ListAccessPreviewsInput, arg2 func(*accessanalyzer.ListAccessPreviewsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListAccessPreviewsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAccessPreviewsPagesWithContext indicates an expected call of ListAccessPreviewsPagesWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListAccessPreviewsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccessPreviewsPagesWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAccessPreviewsPagesWithContext), varargs...)
+}
+
+// ListAccessPreviewsRequest mocks base method.
+func (m *MockAccessAnalyzerAPI) ListAccessPreviewsRequest(arg0 *accessanalyzer.ListAccessPreviewsInput) (*request.Request, *accessanalyzer.ListAccessPreviewsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAccessPreviewsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*accessanalyzer.ListAccessPreviewsOutput)
+	return ret0, ret1
+}
+
+// ListAccessPreviewsRequest indicates an expected call of ListAccessPreviewsRequest.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListAccessPreviewsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccessPreviewsRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAccessPreviewsRequest), arg0)
+}
+
+// ListAccessPreviewsWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) ListAccessPreviewsWithContext(arg0 context.Context, arg1 *accessanalyzer.ListAccessPreviewsInput, arg2 ...request.Option) (*accessanalyzer.ListAccessPreviewsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListAccessPreviewsWithContext", varargs...)
+	ret0, _ := ret[0].(*accessanalyzer.ListAccessPreviewsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListAccessPreviewsWithContext indicates an expected call of ListAccessPreviewsWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListAccessPreviewsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccessPreviewsWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAccessPreviewsWithContext), varargs...)
+}
+
+// ListAnalyzedResources mocks base method.
 func (m *MockAccessAnalyzerAPI) ListAnalyzedResources(arg0 *accessanalyzer.ListAnalyzedResourcesInput) (*accessanalyzer.ListAnalyzedResourcesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAnalyzedResources", arg0)
@@ -494,13 +861,13 @@ func (m *MockAccessAnalyzerAPI) ListAnalyzedResources(arg0 *accessanalyzer.ListA
 	return ret0, ret1
 }
 
-// ListAnalyzedResources indicates an expected call of ListAnalyzedResources
+// ListAnalyzedResources indicates an expected call of ListAnalyzedResources.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListAnalyzedResources(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnalyzedResources", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAnalyzedResources), arg0)
 }
 
-// ListAnalyzedResourcesPages mocks base method
+// ListAnalyzedResourcesPages mocks base method.
 func (m *MockAccessAnalyzerAPI) ListAnalyzedResourcesPages(arg0 *accessanalyzer.ListAnalyzedResourcesInput, arg1 func(*accessanalyzer.ListAnalyzedResourcesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAnalyzedResourcesPages", arg0, arg1)
@@ -508,13 +875,13 @@ func (m *MockAccessAnalyzerAPI) ListAnalyzedResourcesPages(arg0 *accessanalyzer.
 	return ret0
 }
 
-// ListAnalyzedResourcesPages indicates an expected call of ListAnalyzedResourcesPages
+// ListAnalyzedResourcesPages indicates an expected call of ListAnalyzedResourcesPages.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListAnalyzedResourcesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnalyzedResourcesPages", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAnalyzedResourcesPages), arg0, arg1)
 }
 
-// ListAnalyzedResourcesPagesWithContext mocks base method
+// ListAnalyzedResourcesPagesWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) ListAnalyzedResourcesPagesWithContext(arg0 context.Context, arg1 *accessanalyzer.ListAnalyzedResourcesInput, arg2 func(*accessanalyzer.ListAnalyzedResourcesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -526,14 +893,14 @@ func (m *MockAccessAnalyzerAPI) ListAnalyzedResourcesPagesWithContext(arg0 conte
 	return ret0
 }
 
-// ListAnalyzedResourcesPagesWithContext indicates an expected call of ListAnalyzedResourcesPagesWithContext
+// ListAnalyzedResourcesPagesWithContext indicates an expected call of ListAnalyzedResourcesPagesWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListAnalyzedResourcesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnalyzedResourcesPagesWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAnalyzedResourcesPagesWithContext), varargs...)
 }
 
-// ListAnalyzedResourcesRequest mocks base method
+// ListAnalyzedResourcesRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) ListAnalyzedResourcesRequest(arg0 *accessanalyzer.ListAnalyzedResourcesInput) (*request.Request, *accessanalyzer.ListAnalyzedResourcesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAnalyzedResourcesRequest", arg0)
@@ -542,13 +909,13 @@ func (m *MockAccessAnalyzerAPI) ListAnalyzedResourcesRequest(arg0 *accessanalyze
 	return ret0, ret1
 }
 
-// ListAnalyzedResourcesRequest indicates an expected call of ListAnalyzedResourcesRequest
+// ListAnalyzedResourcesRequest indicates an expected call of ListAnalyzedResourcesRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListAnalyzedResourcesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnalyzedResourcesRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAnalyzedResourcesRequest), arg0)
 }
 
-// ListAnalyzedResourcesWithContext mocks base method
+// ListAnalyzedResourcesWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) ListAnalyzedResourcesWithContext(arg0 context.Context, arg1 *accessanalyzer.ListAnalyzedResourcesInput, arg2 ...request.Option) (*accessanalyzer.ListAnalyzedResourcesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -561,14 +928,14 @@ func (m *MockAccessAnalyzerAPI) ListAnalyzedResourcesWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListAnalyzedResourcesWithContext indicates an expected call of ListAnalyzedResourcesWithContext
+// ListAnalyzedResourcesWithContext indicates an expected call of ListAnalyzedResourcesWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListAnalyzedResourcesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnalyzedResourcesWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAnalyzedResourcesWithContext), varargs...)
 }
 
-// ListAnalyzers mocks base method
+// ListAnalyzers mocks base method.
 func (m *MockAccessAnalyzerAPI) ListAnalyzers(arg0 *accessanalyzer.ListAnalyzersInput) (*accessanalyzer.ListAnalyzersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAnalyzers", arg0)
@@ -577,13 +944,13 @@ func (m *MockAccessAnalyzerAPI) ListAnalyzers(arg0 *accessanalyzer.ListAnalyzers
 	return ret0, ret1
 }
 
-// ListAnalyzers indicates an expected call of ListAnalyzers
+// ListAnalyzers indicates an expected call of ListAnalyzers.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListAnalyzers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnalyzers", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAnalyzers), arg0)
 }
 
-// ListAnalyzersPages mocks base method
+// ListAnalyzersPages mocks base method.
 func (m *MockAccessAnalyzerAPI) ListAnalyzersPages(arg0 *accessanalyzer.ListAnalyzersInput, arg1 func(*accessanalyzer.ListAnalyzersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAnalyzersPages", arg0, arg1)
@@ -591,13 +958,13 @@ func (m *MockAccessAnalyzerAPI) ListAnalyzersPages(arg0 *accessanalyzer.ListAnal
 	return ret0
 }
 
-// ListAnalyzersPages indicates an expected call of ListAnalyzersPages
+// ListAnalyzersPages indicates an expected call of ListAnalyzersPages.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListAnalyzersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnalyzersPages", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAnalyzersPages), arg0, arg1)
 }
 
-// ListAnalyzersPagesWithContext mocks base method
+// ListAnalyzersPagesWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) ListAnalyzersPagesWithContext(arg0 context.Context, arg1 *accessanalyzer.ListAnalyzersInput, arg2 func(*accessanalyzer.ListAnalyzersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -609,14 +976,14 @@ func (m *MockAccessAnalyzerAPI) ListAnalyzersPagesWithContext(arg0 context.Conte
 	return ret0
 }
 
-// ListAnalyzersPagesWithContext indicates an expected call of ListAnalyzersPagesWithContext
+// ListAnalyzersPagesWithContext indicates an expected call of ListAnalyzersPagesWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListAnalyzersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnalyzersPagesWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAnalyzersPagesWithContext), varargs...)
 }
 
-// ListAnalyzersRequest mocks base method
+// ListAnalyzersRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) ListAnalyzersRequest(arg0 *accessanalyzer.ListAnalyzersInput) (*request.Request, *accessanalyzer.ListAnalyzersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAnalyzersRequest", arg0)
@@ -625,13 +992,13 @@ func (m *MockAccessAnalyzerAPI) ListAnalyzersRequest(arg0 *accessanalyzer.ListAn
 	return ret0, ret1
 }
 
-// ListAnalyzersRequest indicates an expected call of ListAnalyzersRequest
+// ListAnalyzersRequest indicates an expected call of ListAnalyzersRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListAnalyzersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnalyzersRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAnalyzersRequest), arg0)
 }
 
-// ListAnalyzersWithContext mocks base method
+// ListAnalyzersWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) ListAnalyzersWithContext(arg0 context.Context, arg1 *accessanalyzer.ListAnalyzersInput, arg2 ...request.Option) (*accessanalyzer.ListAnalyzersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -644,14 +1011,14 @@ func (m *MockAccessAnalyzerAPI) ListAnalyzersWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ListAnalyzersWithContext indicates an expected call of ListAnalyzersWithContext
+// ListAnalyzersWithContext indicates an expected call of ListAnalyzersWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListAnalyzersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnalyzersWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListAnalyzersWithContext), varargs...)
 }
 
-// ListArchiveRules mocks base method
+// ListArchiveRules mocks base method.
 func (m *MockAccessAnalyzerAPI) ListArchiveRules(arg0 *accessanalyzer.ListArchiveRulesInput) (*accessanalyzer.ListArchiveRulesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListArchiveRules", arg0)
@@ -660,13 +1027,13 @@ func (m *MockAccessAnalyzerAPI) ListArchiveRules(arg0 *accessanalyzer.ListArchiv
 	return ret0, ret1
 }
 
-// ListArchiveRules indicates an expected call of ListArchiveRules
+// ListArchiveRules indicates an expected call of ListArchiveRules.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListArchiveRules(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListArchiveRules", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListArchiveRules), arg0)
 }
 
-// ListArchiveRulesPages mocks base method
+// ListArchiveRulesPages mocks base method.
 func (m *MockAccessAnalyzerAPI) ListArchiveRulesPages(arg0 *accessanalyzer.ListArchiveRulesInput, arg1 func(*accessanalyzer.ListArchiveRulesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListArchiveRulesPages", arg0, arg1)
@@ -674,13 +1041,13 @@ func (m *MockAccessAnalyzerAPI) ListArchiveRulesPages(arg0 *accessanalyzer.ListA
 	return ret0
 }
 
-// ListArchiveRulesPages indicates an expected call of ListArchiveRulesPages
+// ListArchiveRulesPages indicates an expected call of ListArchiveRulesPages.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListArchiveRulesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListArchiveRulesPages", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListArchiveRulesPages), arg0, arg1)
 }
 
-// ListArchiveRulesPagesWithContext mocks base method
+// ListArchiveRulesPagesWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) ListArchiveRulesPagesWithContext(arg0 context.Context, arg1 *accessanalyzer.ListArchiveRulesInput, arg2 func(*accessanalyzer.ListArchiveRulesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -692,14 +1059,14 @@ func (m *MockAccessAnalyzerAPI) ListArchiveRulesPagesWithContext(arg0 context.Co
 	return ret0
 }
 
-// ListArchiveRulesPagesWithContext indicates an expected call of ListArchiveRulesPagesWithContext
+// ListArchiveRulesPagesWithContext indicates an expected call of ListArchiveRulesPagesWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListArchiveRulesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListArchiveRulesPagesWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListArchiveRulesPagesWithContext), varargs...)
 }
 
-// ListArchiveRulesRequest mocks base method
+// ListArchiveRulesRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) ListArchiveRulesRequest(arg0 *accessanalyzer.ListArchiveRulesInput) (*request.Request, *accessanalyzer.ListArchiveRulesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListArchiveRulesRequest", arg0)
@@ -708,13 +1075,13 @@ func (m *MockAccessAnalyzerAPI) ListArchiveRulesRequest(arg0 *accessanalyzer.Lis
 	return ret0, ret1
 }
 
-// ListArchiveRulesRequest indicates an expected call of ListArchiveRulesRequest
+// ListArchiveRulesRequest indicates an expected call of ListArchiveRulesRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListArchiveRulesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListArchiveRulesRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListArchiveRulesRequest), arg0)
 }
 
-// ListArchiveRulesWithContext mocks base method
+// ListArchiveRulesWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) ListArchiveRulesWithContext(arg0 context.Context, arg1 *accessanalyzer.ListArchiveRulesInput, arg2 ...request.Option) (*accessanalyzer.ListArchiveRulesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -727,14 +1094,14 @@ func (m *MockAccessAnalyzerAPI) ListArchiveRulesWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListArchiveRulesWithContext indicates an expected call of ListArchiveRulesWithContext
+// ListArchiveRulesWithContext indicates an expected call of ListArchiveRulesWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListArchiveRulesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListArchiveRulesWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListArchiveRulesWithContext), varargs...)
 }
 
-// ListFindings mocks base method
+// ListFindings mocks base method.
 func (m *MockAccessAnalyzerAPI) ListFindings(arg0 *accessanalyzer.ListFindingsInput) (*accessanalyzer.ListFindingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFindings", arg0)
@@ -743,13 +1110,13 @@ func (m *MockAccessAnalyzerAPI) ListFindings(arg0 *accessanalyzer.ListFindingsIn
 	return ret0, ret1
 }
 
-// ListFindings indicates an expected call of ListFindings
+// ListFindings indicates an expected call of ListFindings.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListFindings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindings", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListFindings), arg0)
 }
 
-// ListFindingsPages mocks base method
+// ListFindingsPages mocks base method.
 func (m *MockAccessAnalyzerAPI) ListFindingsPages(arg0 *accessanalyzer.ListFindingsInput, arg1 func(*accessanalyzer.ListFindingsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFindingsPages", arg0, arg1)
@@ -757,13 +1124,13 @@ func (m *MockAccessAnalyzerAPI) ListFindingsPages(arg0 *accessanalyzer.ListFindi
 	return ret0
 }
 
-// ListFindingsPages indicates an expected call of ListFindingsPages
+// ListFindingsPages indicates an expected call of ListFindingsPages.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListFindingsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsPages", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListFindingsPages), arg0, arg1)
 }
 
-// ListFindingsPagesWithContext mocks base method
+// ListFindingsPagesWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) ListFindingsPagesWithContext(arg0 context.Context, arg1 *accessanalyzer.ListFindingsInput, arg2 func(*accessanalyzer.ListFindingsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -775,14 +1142,14 @@ func (m *MockAccessAnalyzerAPI) ListFindingsPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListFindingsPagesWithContext indicates an expected call of ListFindingsPagesWithContext
+// ListFindingsPagesWithContext indicates an expected call of ListFindingsPagesWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListFindingsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsPagesWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListFindingsPagesWithContext), varargs...)
 }
 
-// ListFindingsRequest mocks base method
+// ListFindingsRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) ListFindingsRequest(arg0 *accessanalyzer.ListFindingsInput) (*request.Request, *accessanalyzer.ListFindingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFindingsRequest", arg0)
@@ -791,13 +1158,13 @@ func (m *MockAccessAnalyzerAPI) ListFindingsRequest(arg0 *accessanalyzer.ListFin
 	return ret0, ret1
 }
 
-// ListFindingsRequest indicates an expected call of ListFindingsRequest
+// ListFindingsRequest indicates an expected call of ListFindingsRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListFindingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListFindingsRequest), arg0)
 }
 
-// ListFindingsWithContext mocks base method
+// ListFindingsWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) ListFindingsWithContext(arg0 context.Context, arg1 *accessanalyzer.ListFindingsInput, arg2 ...request.Option) (*accessanalyzer.ListFindingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -810,14 +1177,97 @@ func (m *MockAccessAnalyzerAPI) ListFindingsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListFindingsWithContext indicates an expected call of ListFindingsWithContext
+// ListFindingsWithContext indicates an expected call of ListFindingsWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListFindingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListFindingsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListPolicyGenerations mocks base method.
+func (m *MockAccessAnalyzerAPI) ListPolicyGenerations(arg0 *accessanalyzer.ListPolicyGenerationsInput) (*accessanalyzer.ListPolicyGenerationsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListPolicyGenerations", arg0)
+	ret0, _ := ret[0].(*accessanalyzer.ListPolicyGenerationsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListPolicyGenerations indicates an expected call of ListPolicyGenerations.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListPolicyGenerations(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPolicyGenerations", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListPolicyGenerations), arg0)
+}
+
+// ListPolicyGenerationsPages mocks base method.
+func (m *MockAccessAnalyzerAPI) ListPolicyGenerationsPages(arg0 *accessanalyzer.ListPolicyGenerationsInput, arg1 func(*accessanalyzer.ListPolicyGenerationsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListPolicyGenerationsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListPolicyGenerationsPages indicates an expected call of ListPolicyGenerationsPages.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListPolicyGenerationsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPolicyGenerationsPages", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListPolicyGenerationsPages), arg0, arg1)
+}
+
+// ListPolicyGenerationsPagesWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) ListPolicyGenerationsPagesWithContext(arg0 context.Context, arg1 *accessanalyzer.ListPolicyGenerationsInput, arg2 func(*accessanalyzer.ListPolicyGenerationsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListPolicyGenerationsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListPolicyGenerationsPagesWithContext indicates an expected call of ListPolicyGenerationsPagesWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListPolicyGenerationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPolicyGenerationsPagesWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListPolicyGenerationsPagesWithContext), varargs...)
+}
+
+// ListPolicyGenerationsRequest mocks base method.
+func (m *MockAccessAnalyzerAPI) ListPolicyGenerationsRequest(arg0 *accessanalyzer.ListPolicyGenerationsInput) (*request.Request, *accessanalyzer.ListPolicyGenerationsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListPolicyGenerationsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*accessanalyzer.ListPolicyGenerationsOutput)
+	return ret0, ret1
+}
+
+// ListPolicyGenerationsRequest indicates an expected call of ListPolicyGenerationsRequest.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListPolicyGenerationsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPolicyGenerationsRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListPolicyGenerationsRequest), arg0)
+}
+
+// ListPolicyGenerationsWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) ListPolicyGenerationsWithContext(arg0 context.Context, arg1 *accessanalyzer.ListPolicyGenerationsInput, arg2 ...request.Option) (*accessanalyzer.ListPolicyGenerationsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListPolicyGenerationsWithContext", varargs...)
+	ret0, _ := ret[0].(*accessanalyzer.ListPolicyGenerationsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListPolicyGenerationsWithContext indicates an expected call of ListPolicyGenerationsWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ListPolicyGenerationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPolicyGenerationsWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListPolicyGenerationsWithContext), varargs...)
+}
+
+// ListTagsForResource mocks base method.
 func (m *MockAccessAnalyzerAPI) ListTagsForResource(arg0 *accessanalyzer.ListTagsForResourceInput) (*accessanalyzer.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -826,13 +1276,13 @@ func (m *MockAccessAnalyzerAPI) ListTagsForResource(arg0 *accessanalyzer.ListTag
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) ListTagsForResourceRequest(arg0 *accessanalyzer.ListTagsForResourceInput) (*request.Request, *accessanalyzer.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -841,13 +1291,13 @@ func (m *MockAccessAnalyzerAPI) ListTagsForResourceRequest(arg0 *accessanalyzer.
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *accessanalyzer.ListTagsForResourceInput, arg2 ...request.Option) (*accessanalyzer.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -860,14 +1310,64 @@ func (m *MockAccessAnalyzerAPI) ListTagsForResourceWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// StartResourceScan mocks base method
+// StartPolicyGeneration mocks base method.
+func (m *MockAccessAnalyzerAPI) StartPolicyGeneration(arg0 *accessanalyzer.StartPolicyGenerationInput) (*accessanalyzer.StartPolicyGenerationOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartPolicyGeneration", arg0)
+	ret0, _ := ret[0].(*accessanalyzer.StartPolicyGenerationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartPolicyGeneration indicates an expected call of StartPolicyGeneration.
+func (mr *MockAccessAnalyzerAPIMockRecorder) StartPolicyGeneration(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartPolicyGeneration", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).StartPolicyGeneration), arg0)
+}
+
+// StartPolicyGenerationRequest mocks base method.
+func (m *MockAccessAnalyzerAPI) StartPolicyGenerationRequest(arg0 *accessanalyzer.StartPolicyGenerationInput) (*request.Request, *accessanalyzer.StartPolicyGenerationOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartPolicyGenerationRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*accessanalyzer.StartPolicyGenerationOutput)
+	return ret0, ret1
+}
+
+// StartPolicyGenerationRequest indicates an expected call of StartPolicyGenerationRequest.
+func (mr *MockAccessAnalyzerAPIMockRecorder) StartPolicyGenerationRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartPolicyGenerationRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).StartPolicyGenerationRequest), arg0)
+}
+
+// StartPolicyGenerationWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) StartPolicyGenerationWithContext(arg0 context.Context, arg1 *accessanalyzer.StartPolicyGenerationInput, arg2 ...request.Option) (*accessanalyzer.StartPolicyGenerationOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "StartPolicyGenerationWithContext", varargs...)
+	ret0, _ := ret[0].(*accessanalyzer.StartPolicyGenerationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartPolicyGenerationWithContext indicates an expected call of StartPolicyGenerationWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) StartPolicyGenerationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartPolicyGenerationWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).StartPolicyGenerationWithContext), varargs...)
+}
+
+// StartResourceScan mocks base method.
 func (m *MockAccessAnalyzerAPI) StartResourceScan(arg0 *accessanalyzer.StartResourceScanInput) (*accessanalyzer.StartResourceScanOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartResourceScan", arg0)
@@ -876,13 +1376,13 @@ func (m *MockAccessAnalyzerAPI) StartResourceScan(arg0 *accessanalyzer.StartReso
 	return ret0, ret1
 }
 
-// StartResourceScan indicates an expected call of StartResourceScan
+// StartResourceScan indicates an expected call of StartResourceScan.
 func (mr *MockAccessAnalyzerAPIMockRecorder) StartResourceScan(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartResourceScan", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).StartResourceScan), arg0)
 }
 
-// StartResourceScanRequest mocks base method
+// StartResourceScanRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) StartResourceScanRequest(arg0 *accessanalyzer.StartResourceScanInput) (*request.Request, *accessanalyzer.StartResourceScanOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartResourceScanRequest", arg0)
@@ -891,13 +1391,13 @@ func (m *MockAccessAnalyzerAPI) StartResourceScanRequest(arg0 *accessanalyzer.St
 	return ret0, ret1
 }
 
-// StartResourceScanRequest indicates an expected call of StartResourceScanRequest
+// StartResourceScanRequest indicates an expected call of StartResourceScanRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) StartResourceScanRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartResourceScanRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).StartResourceScanRequest), arg0)
 }
 
-// StartResourceScanWithContext mocks base method
+// StartResourceScanWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) StartResourceScanWithContext(arg0 context.Context, arg1 *accessanalyzer.StartResourceScanInput, arg2 ...request.Option) (*accessanalyzer.StartResourceScanOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -910,14 +1410,14 @@ func (m *MockAccessAnalyzerAPI) StartResourceScanWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// StartResourceScanWithContext indicates an expected call of StartResourceScanWithContext
+// StartResourceScanWithContext indicates an expected call of StartResourceScanWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) StartResourceScanWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartResourceScanWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).StartResourceScanWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockAccessAnalyzerAPI) TagResource(arg0 *accessanalyzer.TagResourceInput) (*accessanalyzer.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -926,13 +1426,13 @@ func (m *MockAccessAnalyzerAPI) TagResource(arg0 *accessanalyzer.TagResourceInpu
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockAccessAnalyzerAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) TagResourceRequest(arg0 *accessanalyzer.TagResourceInput) (*request.Request, *accessanalyzer.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -941,13 +1441,13 @@ func (m *MockAccessAnalyzerAPI) TagResourceRequest(arg0 *accessanalyzer.TagResou
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) TagResourceWithContext(arg0 context.Context, arg1 *accessanalyzer.TagResourceInput, arg2 ...request.Option) (*accessanalyzer.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -960,14 +1460,14 @@ func (m *MockAccessAnalyzerAPI) TagResourceWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockAccessAnalyzerAPI) UntagResource(arg0 *accessanalyzer.UntagResourceInput) (*accessanalyzer.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -976,13 +1476,13 @@ func (m *MockAccessAnalyzerAPI) UntagResource(arg0 *accessanalyzer.UntagResource
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockAccessAnalyzerAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) UntagResourceRequest(arg0 *accessanalyzer.UntagResourceInput) (*request.Request, *accessanalyzer.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -991,13 +1491,13 @@ func (m *MockAccessAnalyzerAPI) UntagResourceRequest(arg0 *accessanalyzer.UntagR
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) UntagResourceWithContext(arg0 context.Context, arg1 *accessanalyzer.UntagResourceInput, arg2 ...request.Option) (*accessanalyzer.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1010,14 +1510,14 @@ func (m *MockAccessAnalyzerAPI) UntagResourceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateArchiveRule mocks base method
+// UpdateArchiveRule mocks base method.
 func (m *MockAccessAnalyzerAPI) UpdateArchiveRule(arg0 *accessanalyzer.UpdateArchiveRuleInput) (*accessanalyzer.UpdateArchiveRuleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateArchiveRule", arg0)
@@ -1026,13 +1526,13 @@ func (m *MockAccessAnalyzerAPI) UpdateArchiveRule(arg0 *accessanalyzer.UpdateArc
 	return ret0, ret1
 }
 
-// UpdateArchiveRule indicates an expected call of UpdateArchiveRule
+// UpdateArchiveRule indicates an expected call of UpdateArchiveRule.
 func (mr *MockAccessAnalyzerAPIMockRecorder) UpdateArchiveRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateArchiveRule", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).UpdateArchiveRule), arg0)
 }
 
-// UpdateArchiveRuleRequest mocks base method
+// UpdateArchiveRuleRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) UpdateArchiveRuleRequest(arg0 *accessanalyzer.UpdateArchiveRuleInput) (*request.Request, *accessanalyzer.UpdateArchiveRuleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateArchiveRuleRequest", arg0)
@@ -1041,13 +1541,13 @@ func (m *MockAccessAnalyzerAPI) UpdateArchiveRuleRequest(arg0 *accessanalyzer.Up
 	return ret0, ret1
 }
 
-// UpdateArchiveRuleRequest indicates an expected call of UpdateArchiveRuleRequest
+// UpdateArchiveRuleRequest indicates an expected call of UpdateArchiveRuleRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) UpdateArchiveRuleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateArchiveRuleRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).UpdateArchiveRuleRequest), arg0)
 }
 
-// UpdateArchiveRuleWithContext mocks base method
+// UpdateArchiveRuleWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) UpdateArchiveRuleWithContext(arg0 context.Context, arg1 *accessanalyzer.UpdateArchiveRuleInput, arg2 ...request.Option) (*accessanalyzer.UpdateArchiveRuleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1060,14 +1560,14 @@ func (m *MockAccessAnalyzerAPI) UpdateArchiveRuleWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// UpdateArchiveRuleWithContext indicates an expected call of UpdateArchiveRuleWithContext
+// UpdateArchiveRuleWithContext indicates an expected call of UpdateArchiveRuleWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) UpdateArchiveRuleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateArchiveRuleWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).UpdateArchiveRuleWithContext), varargs...)
 }
 
-// UpdateFindings mocks base method
+// UpdateFindings mocks base method.
 func (m *MockAccessAnalyzerAPI) UpdateFindings(arg0 *accessanalyzer.UpdateFindingsInput) (*accessanalyzer.UpdateFindingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFindings", arg0)
@@ -1076,13 +1576,13 @@ func (m *MockAccessAnalyzerAPI) UpdateFindings(arg0 *accessanalyzer.UpdateFindin
 	return ret0, ret1
 }
 
-// UpdateFindings indicates an expected call of UpdateFindings
+// UpdateFindings indicates an expected call of UpdateFindings.
 func (mr *MockAccessAnalyzerAPIMockRecorder) UpdateFindings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFindings", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).UpdateFindings), arg0)
 }
 
-// UpdateFindingsRequest mocks base method
+// UpdateFindingsRequest mocks base method.
 func (m *MockAccessAnalyzerAPI) UpdateFindingsRequest(arg0 *accessanalyzer.UpdateFindingsInput) (*request.Request, *accessanalyzer.UpdateFindingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFindingsRequest", arg0)
@@ -1091,13 +1591,13 @@ func (m *MockAccessAnalyzerAPI) UpdateFindingsRequest(arg0 *accessanalyzer.Updat
 	return ret0, ret1
 }
 
-// UpdateFindingsRequest indicates an expected call of UpdateFindingsRequest
+// UpdateFindingsRequest indicates an expected call of UpdateFindingsRequest.
 func (mr *MockAccessAnalyzerAPIMockRecorder) UpdateFindingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFindingsRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).UpdateFindingsRequest), arg0)
 }
 
-// UpdateFindingsWithContext mocks base method
+// UpdateFindingsWithContext mocks base method.
 func (m *MockAccessAnalyzerAPI) UpdateFindingsWithContext(arg0 context.Context, arg1 *accessanalyzer.UpdateFindingsInput, arg2 ...request.Option) (*accessanalyzer.UpdateFindingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1110,9 +1610,92 @@ func (m *MockAccessAnalyzerAPI) UpdateFindingsWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// UpdateFindingsWithContext indicates an expected call of UpdateFindingsWithContext
+// UpdateFindingsWithContext indicates an expected call of UpdateFindingsWithContext.
 func (mr *MockAccessAnalyzerAPIMockRecorder) UpdateFindingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFindingsWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).UpdateFindingsWithContext), varargs...)
+}
+
+// ValidatePolicy mocks base method.
+func (m *MockAccessAnalyzerAPI) ValidatePolicy(arg0 *accessanalyzer.ValidatePolicyInput) (*accessanalyzer.ValidatePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ValidatePolicy", arg0)
+	ret0, _ := ret[0].(*accessanalyzer.ValidatePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ValidatePolicy indicates an expected call of ValidatePolicy.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ValidatePolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ValidatePolicy", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ValidatePolicy), arg0)
+}
+
+// ValidatePolicyPages mocks base method.
+func (m *MockAccessAnalyzerAPI) ValidatePolicyPages(arg0 *accessanalyzer.ValidatePolicyInput, arg1 func(*accessanalyzer.ValidatePolicyOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ValidatePolicyPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ValidatePolicyPages indicates an expected call of ValidatePolicyPages.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ValidatePolicyPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ValidatePolicyPages", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ValidatePolicyPages), arg0, arg1)
+}
+
+// ValidatePolicyPagesWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) ValidatePolicyPagesWithContext(arg0 context.Context, arg1 *accessanalyzer.ValidatePolicyInput, arg2 func(*accessanalyzer.ValidatePolicyOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ValidatePolicyPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ValidatePolicyPagesWithContext indicates an expected call of ValidatePolicyPagesWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ValidatePolicyPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ValidatePolicyPagesWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ValidatePolicyPagesWithContext), varargs...)
+}
+
+// ValidatePolicyRequest mocks base method.
+func (m *MockAccessAnalyzerAPI) ValidatePolicyRequest(arg0 *accessanalyzer.ValidatePolicyInput) (*request.Request, *accessanalyzer.ValidatePolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ValidatePolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*accessanalyzer.ValidatePolicyOutput)
+	return ret0, ret1
+}
+
+// ValidatePolicyRequest indicates an expected call of ValidatePolicyRequest.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ValidatePolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ValidatePolicyRequest", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ValidatePolicyRequest), arg0)
+}
+
+// ValidatePolicyWithContext mocks base method.
+func (m *MockAccessAnalyzerAPI) ValidatePolicyWithContext(arg0 context.Context, arg1 *accessanalyzer.ValidatePolicyInput, arg2 ...request.Option) (*accessanalyzer.ValidatePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ValidatePolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*accessanalyzer.ValidatePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ValidatePolicyWithContext indicates an expected call of ValidatePolicyWithContext.
+func (mr *MockAccessAnalyzerAPIMockRecorder) ValidatePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ValidatePolicyWithContext", reflect.TypeOf((*MockAccessAnalyzerAPI)(nil).ValidatePolicyWithContext), varargs...)
 }

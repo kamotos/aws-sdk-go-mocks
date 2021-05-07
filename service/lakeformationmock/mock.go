@@ -6,36 +6,37 @@ package lakeformationmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	lakeformation "github.com/aws/aws-sdk-go/service/lakeformation"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockLakeFormationAPI is a mock of LakeFormationAPI interface
+// MockLakeFormationAPI is a mock of LakeFormationAPI interface.
 type MockLakeFormationAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockLakeFormationAPIMockRecorder
 }
 
-// MockLakeFormationAPIMockRecorder is the mock recorder for MockLakeFormationAPI
+// MockLakeFormationAPIMockRecorder is the mock recorder for MockLakeFormationAPI.
 type MockLakeFormationAPIMockRecorder struct {
 	mock *MockLakeFormationAPI
 }
 
-// NewMockLakeFormationAPI creates a new mock instance
+// NewMockLakeFormationAPI creates a new mock instance.
 func NewMockLakeFormationAPI(ctrl *gomock.Controller) *MockLakeFormationAPI {
 	mock := &MockLakeFormationAPI{ctrl: ctrl}
 	mock.recorder = &MockLakeFormationAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockLakeFormationAPI) EXPECT() *MockLakeFormationAPIMockRecorder {
 	return m.recorder
 }
 
-// BatchGrantPermissions mocks base method
+// BatchGrantPermissions mocks base method.
 func (m *MockLakeFormationAPI) BatchGrantPermissions(arg0 *lakeformation.BatchGrantPermissionsInput) (*lakeformation.BatchGrantPermissionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGrantPermissions", arg0)
@@ -44,13 +45,13 @@ func (m *MockLakeFormationAPI) BatchGrantPermissions(arg0 *lakeformation.BatchGr
 	return ret0, ret1
 }
 
-// BatchGrantPermissions indicates an expected call of BatchGrantPermissions
+// BatchGrantPermissions indicates an expected call of BatchGrantPermissions.
 func (mr *MockLakeFormationAPIMockRecorder) BatchGrantPermissions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGrantPermissions", reflect.TypeOf((*MockLakeFormationAPI)(nil).BatchGrantPermissions), arg0)
 }
 
-// BatchGrantPermissionsRequest mocks base method
+// BatchGrantPermissionsRequest mocks base method.
 func (m *MockLakeFormationAPI) BatchGrantPermissionsRequest(arg0 *lakeformation.BatchGrantPermissionsInput) (*request.Request, *lakeformation.BatchGrantPermissionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGrantPermissionsRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockLakeFormationAPI) BatchGrantPermissionsRequest(arg0 *lakeformation.
 	return ret0, ret1
 }
 
-// BatchGrantPermissionsRequest indicates an expected call of BatchGrantPermissionsRequest
+// BatchGrantPermissionsRequest indicates an expected call of BatchGrantPermissionsRequest.
 func (mr *MockLakeFormationAPIMockRecorder) BatchGrantPermissionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGrantPermissionsRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).BatchGrantPermissionsRequest), arg0)
 }
 
-// BatchGrantPermissionsWithContext mocks base method
+// BatchGrantPermissionsWithContext mocks base method.
 func (m *MockLakeFormationAPI) BatchGrantPermissionsWithContext(arg0 context.Context, arg1 *lakeformation.BatchGrantPermissionsInput, arg2 ...request.Option) (*lakeformation.BatchGrantPermissionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockLakeFormationAPI) BatchGrantPermissionsWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// BatchGrantPermissionsWithContext indicates an expected call of BatchGrantPermissionsWithContext
+// BatchGrantPermissionsWithContext indicates an expected call of BatchGrantPermissionsWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) BatchGrantPermissionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGrantPermissionsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).BatchGrantPermissionsWithContext), varargs...)
 }
 
-// BatchRevokePermissions mocks base method
+// BatchRevokePermissions mocks base method.
 func (m *MockLakeFormationAPI) BatchRevokePermissions(arg0 *lakeformation.BatchRevokePermissionsInput) (*lakeformation.BatchRevokePermissionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchRevokePermissions", arg0)
@@ -94,13 +95,13 @@ func (m *MockLakeFormationAPI) BatchRevokePermissions(arg0 *lakeformation.BatchR
 	return ret0, ret1
 }
 
-// BatchRevokePermissions indicates an expected call of BatchRevokePermissions
+// BatchRevokePermissions indicates an expected call of BatchRevokePermissions.
 func (mr *MockLakeFormationAPIMockRecorder) BatchRevokePermissions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchRevokePermissions", reflect.TypeOf((*MockLakeFormationAPI)(nil).BatchRevokePermissions), arg0)
 }
 
-// BatchRevokePermissionsRequest mocks base method
+// BatchRevokePermissionsRequest mocks base method.
 func (m *MockLakeFormationAPI) BatchRevokePermissionsRequest(arg0 *lakeformation.BatchRevokePermissionsInput) (*request.Request, *lakeformation.BatchRevokePermissionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchRevokePermissionsRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockLakeFormationAPI) BatchRevokePermissionsRequest(arg0 *lakeformation
 	return ret0, ret1
 }
 
-// BatchRevokePermissionsRequest indicates an expected call of BatchRevokePermissionsRequest
+// BatchRevokePermissionsRequest indicates an expected call of BatchRevokePermissionsRequest.
 func (mr *MockLakeFormationAPIMockRecorder) BatchRevokePermissionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchRevokePermissionsRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).BatchRevokePermissionsRequest), arg0)
 }
 
-// BatchRevokePermissionsWithContext mocks base method
+// BatchRevokePermissionsWithContext mocks base method.
 func (m *MockLakeFormationAPI) BatchRevokePermissionsWithContext(arg0 context.Context, arg1 *lakeformation.BatchRevokePermissionsInput, arg2 ...request.Option) (*lakeformation.BatchRevokePermissionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockLakeFormationAPI) BatchRevokePermissionsWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// BatchRevokePermissionsWithContext indicates an expected call of BatchRevokePermissionsWithContext
+// BatchRevokePermissionsWithContext indicates an expected call of BatchRevokePermissionsWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) BatchRevokePermissionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchRevokePermissionsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).BatchRevokePermissionsWithContext), varargs...)
 }
 
-// DeregisterResource mocks base method
+// DeregisterResource mocks base method.
 func (m *MockLakeFormationAPI) DeregisterResource(arg0 *lakeformation.DeregisterResourceInput) (*lakeformation.DeregisterResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeregisterResource", arg0)
@@ -144,13 +145,13 @@ func (m *MockLakeFormationAPI) DeregisterResource(arg0 *lakeformation.Deregister
 	return ret0, ret1
 }
 
-// DeregisterResource indicates an expected call of DeregisterResource
+// DeregisterResource indicates an expected call of DeregisterResource.
 func (mr *MockLakeFormationAPIMockRecorder) DeregisterResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeregisterResource", reflect.TypeOf((*MockLakeFormationAPI)(nil).DeregisterResource), arg0)
 }
 
-// DeregisterResourceRequest mocks base method
+// DeregisterResourceRequest mocks base method.
 func (m *MockLakeFormationAPI) DeregisterResourceRequest(arg0 *lakeformation.DeregisterResourceInput) (*request.Request, *lakeformation.DeregisterResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeregisterResourceRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockLakeFormationAPI) DeregisterResourceRequest(arg0 *lakeformation.Der
 	return ret0, ret1
 }
 
-// DeregisterResourceRequest indicates an expected call of DeregisterResourceRequest
+// DeregisterResourceRequest indicates an expected call of DeregisterResourceRequest.
 func (mr *MockLakeFormationAPIMockRecorder) DeregisterResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeregisterResourceRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).DeregisterResourceRequest), arg0)
 }
 
-// DeregisterResourceWithContext mocks base method
+// DeregisterResourceWithContext mocks base method.
 func (m *MockLakeFormationAPI) DeregisterResourceWithContext(arg0 context.Context, arg1 *lakeformation.DeregisterResourceInput, arg2 ...request.Option) (*lakeformation.DeregisterResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockLakeFormationAPI) DeregisterResourceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeregisterResourceWithContext indicates an expected call of DeregisterResourceWithContext
+// DeregisterResourceWithContext indicates an expected call of DeregisterResourceWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) DeregisterResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeregisterResourceWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).DeregisterResourceWithContext), varargs...)
 }
 
-// DescribeResource mocks base method
+// DescribeResource mocks base method.
 func (m *MockLakeFormationAPI) DescribeResource(arg0 *lakeformation.DescribeResourceInput) (*lakeformation.DescribeResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeResource", arg0)
@@ -194,13 +195,13 @@ func (m *MockLakeFormationAPI) DescribeResource(arg0 *lakeformation.DescribeReso
 	return ret0, ret1
 }
 
-// DescribeResource indicates an expected call of DescribeResource
+// DescribeResource indicates an expected call of DescribeResource.
 func (mr *MockLakeFormationAPIMockRecorder) DescribeResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeResource", reflect.TypeOf((*MockLakeFormationAPI)(nil).DescribeResource), arg0)
 }
 
-// DescribeResourceRequest mocks base method
+// DescribeResourceRequest mocks base method.
 func (m *MockLakeFormationAPI) DescribeResourceRequest(arg0 *lakeformation.DescribeResourceInput) (*request.Request, *lakeformation.DescribeResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeResourceRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockLakeFormationAPI) DescribeResourceRequest(arg0 *lakeformation.Descr
 	return ret0, ret1
 }
 
-// DescribeResourceRequest indicates an expected call of DescribeResourceRequest
+// DescribeResourceRequest indicates an expected call of DescribeResourceRequest.
 func (mr *MockLakeFormationAPIMockRecorder) DescribeResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeResourceRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).DescribeResourceRequest), arg0)
 }
 
-// DescribeResourceWithContext mocks base method
+// DescribeResourceWithContext mocks base method.
 func (m *MockLakeFormationAPI) DescribeResourceWithContext(arg0 context.Context, arg1 *lakeformation.DescribeResourceInput, arg2 ...request.Option) (*lakeformation.DescribeResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockLakeFormationAPI) DescribeResourceWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DescribeResourceWithContext indicates an expected call of DescribeResourceWithContext
+// DescribeResourceWithContext indicates an expected call of DescribeResourceWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) DescribeResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeResourceWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).DescribeResourceWithContext), varargs...)
 }
 
-// GetDataLakeSettings mocks base method
+// GetDataLakeSettings mocks base method.
 func (m *MockLakeFormationAPI) GetDataLakeSettings(arg0 *lakeformation.GetDataLakeSettingsInput) (*lakeformation.GetDataLakeSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDataLakeSettings", arg0)
@@ -244,13 +245,13 @@ func (m *MockLakeFormationAPI) GetDataLakeSettings(arg0 *lakeformation.GetDataLa
 	return ret0, ret1
 }
 
-// GetDataLakeSettings indicates an expected call of GetDataLakeSettings
+// GetDataLakeSettings indicates an expected call of GetDataLakeSettings.
 func (mr *MockLakeFormationAPIMockRecorder) GetDataLakeSettings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDataLakeSettings", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetDataLakeSettings), arg0)
 }
 
-// GetDataLakeSettingsRequest mocks base method
+// GetDataLakeSettingsRequest mocks base method.
 func (m *MockLakeFormationAPI) GetDataLakeSettingsRequest(arg0 *lakeformation.GetDataLakeSettingsInput) (*request.Request, *lakeformation.GetDataLakeSettingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDataLakeSettingsRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockLakeFormationAPI) GetDataLakeSettingsRequest(arg0 *lakeformation.Ge
 	return ret0, ret1
 }
 
-// GetDataLakeSettingsRequest indicates an expected call of GetDataLakeSettingsRequest
+// GetDataLakeSettingsRequest indicates an expected call of GetDataLakeSettingsRequest.
 func (mr *MockLakeFormationAPIMockRecorder) GetDataLakeSettingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDataLakeSettingsRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetDataLakeSettingsRequest), arg0)
 }
 
-// GetDataLakeSettingsWithContext mocks base method
+// GetDataLakeSettingsWithContext mocks base method.
 func (m *MockLakeFormationAPI) GetDataLakeSettingsWithContext(arg0 context.Context, arg1 *lakeformation.GetDataLakeSettingsInput, arg2 ...request.Option) (*lakeformation.GetDataLakeSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockLakeFormationAPI) GetDataLakeSettingsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// GetDataLakeSettingsWithContext indicates an expected call of GetDataLakeSettingsWithContext
+// GetDataLakeSettingsWithContext indicates an expected call of GetDataLakeSettingsWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) GetDataLakeSettingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDataLakeSettingsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetDataLakeSettingsWithContext), varargs...)
 }
 
-// GetEffectivePermissionsForPath mocks base method
+// GetEffectivePermissionsForPath mocks base method.
 func (m *MockLakeFormationAPI) GetEffectivePermissionsForPath(arg0 *lakeformation.GetEffectivePermissionsForPathInput) (*lakeformation.GetEffectivePermissionsForPathOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEffectivePermissionsForPath", arg0)
@@ -294,13 +295,13 @@ func (m *MockLakeFormationAPI) GetEffectivePermissionsForPath(arg0 *lakeformatio
 	return ret0, ret1
 }
 
-// GetEffectivePermissionsForPath indicates an expected call of GetEffectivePermissionsForPath
+// GetEffectivePermissionsForPath indicates an expected call of GetEffectivePermissionsForPath.
 func (mr *MockLakeFormationAPIMockRecorder) GetEffectivePermissionsForPath(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEffectivePermissionsForPath", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetEffectivePermissionsForPath), arg0)
 }
 
-// GetEffectivePermissionsForPathPages mocks base method
+// GetEffectivePermissionsForPathPages mocks base method.
 func (m *MockLakeFormationAPI) GetEffectivePermissionsForPathPages(arg0 *lakeformation.GetEffectivePermissionsForPathInput, arg1 func(*lakeformation.GetEffectivePermissionsForPathOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEffectivePermissionsForPathPages", arg0, arg1)
@@ -308,13 +309,13 @@ func (m *MockLakeFormationAPI) GetEffectivePermissionsForPathPages(arg0 *lakefor
 	return ret0
 }
 
-// GetEffectivePermissionsForPathPages indicates an expected call of GetEffectivePermissionsForPathPages
+// GetEffectivePermissionsForPathPages indicates an expected call of GetEffectivePermissionsForPathPages.
 func (mr *MockLakeFormationAPIMockRecorder) GetEffectivePermissionsForPathPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEffectivePermissionsForPathPages", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetEffectivePermissionsForPathPages), arg0, arg1)
 }
 
-// GetEffectivePermissionsForPathPagesWithContext mocks base method
+// GetEffectivePermissionsForPathPagesWithContext mocks base method.
 func (m *MockLakeFormationAPI) GetEffectivePermissionsForPathPagesWithContext(arg0 context.Context, arg1 *lakeformation.GetEffectivePermissionsForPathInput, arg2 func(*lakeformation.GetEffectivePermissionsForPathOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -326,14 +327,14 @@ func (m *MockLakeFormationAPI) GetEffectivePermissionsForPathPagesWithContext(ar
 	return ret0
 }
 
-// GetEffectivePermissionsForPathPagesWithContext indicates an expected call of GetEffectivePermissionsForPathPagesWithContext
+// GetEffectivePermissionsForPathPagesWithContext indicates an expected call of GetEffectivePermissionsForPathPagesWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) GetEffectivePermissionsForPathPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEffectivePermissionsForPathPagesWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetEffectivePermissionsForPathPagesWithContext), varargs...)
 }
 
-// GetEffectivePermissionsForPathRequest mocks base method
+// GetEffectivePermissionsForPathRequest mocks base method.
 func (m *MockLakeFormationAPI) GetEffectivePermissionsForPathRequest(arg0 *lakeformation.GetEffectivePermissionsForPathInput) (*request.Request, *lakeformation.GetEffectivePermissionsForPathOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEffectivePermissionsForPathRequest", arg0)
@@ -342,13 +343,13 @@ func (m *MockLakeFormationAPI) GetEffectivePermissionsForPathRequest(arg0 *lakef
 	return ret0, ret1
 }
 
-// GetEffectivePermissionsForPathRequest indicates an expected call of GetEffectivePermissionsForPathRequest
+// GetEffectivePermissionsForPathRequest indicates an expected call of GetEffectivePermissionsForPathRequest.
 func (mr *MockLakeFormationAPIMockRecorder) GetEffectivePermissionsForPathRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEffectivePermissionsForPathRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetEffectivePermissionsForPathRequest), arg0)
 }
 
-// GetEffectivePermissionsForPathWithContext mocks base method
+// GetEffectivePermissionsForPathWithContext mocks base method.
 func (m *MockLakeFormationAPI) GetEffectivePermissionsForPathWithContext(arg0 context.Context, arg1 *lakeformation.GetEffectivePermissionsForPathInput, arg2 ...request.Option) (*lakeformation.GetEffectivePermissionsForPathOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -361,14 +362,14 @@ func (m *MockLakeFormationAPI) GetEffectivePermissionsForPathWithContext(arg0 co
 	return ret0, ret1
 }
 
-// GetEffectivePermissionsForPathWithContext indicates an expected call of GetEffectivePermissionsForPathWithContext
+// GetEffectivePermissionsForPathWithContext indicates an expected call of GetEffectivePermissionsForPathWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) GetEffectivePermissionsForPathWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEffectivePermissionsForPathWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetEffectivePermissionsForPathWithContext), varargs...)
 }
 
-// GrantPermissions mocks base method
+// GrantPermissions mocks base method.
 func (m *MockLakeFormationAPI) GrantPermissions(arg0 *lakeformation.GrantPermissionsInput) (*lakeformation.GrantPermissionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GrantPermissions", arg0)
@@ -377,13 +378,13 @@ func (m *MockLakeFormationAPI) GrantPermissions(arg0 *lakeformation.GrantPermiss
 	return ret0, ret1
 }
 
-// GrantPermissions indicates an expected call of GrantPermissions
+// GrantPermissions indicates an expected call of GrantPermissions.
 func (mr *MockLakeFormationAPIMockRecorder) GrantPermissions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GrantPermissions", reflect.TypeOf((*MockLakeFormationAPI)(nil).GrantPermissions), arg0)
 }
 
-// GrantPermissionsRequest mocks base method
+// GrantPermissionsRequest mocks base method.
 func (m *MockLakeFormationAPI) GrantPermissionsRequest(arg0 *lakeformation.GrantPermissionsInput) (*request.Request, *lakeformation.GrantPermissionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GrantPermissionsRequest", arg0)
@@ -392,13 +393,13 @@ func (m *MockLakeFormationAPI) GrantPermissionsRequest(arg0 *lakeformation.Grant
 	return ret0, ret1
 }
 
-// GrantPermissionsRequest indicates an expected call of GrantPermissionsRequest
+// GrantPermissionsRequest indicates an expected call of GrantPermissionsRequest.
 func (mr *MockLakeFormationAPIMockRecorder) GrantPermissionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GrantPermissionsRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).GrantPermissionsRequest), arg0)
 }
 
-// GrantPermissionsWithContext mocks base method
+// GrantPermissionsWithContext mocks base method.
 func (m *MockLakeFormationAPI) GrantPermissionsWithContext(arg0 context.Context, arg1 *lakeformation.GrantPermissionsInput, arg2 ...request.Option) (*lakeformation.GrantPermissionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -411,14 +412,14 @@ func (m *MockLakeFormationAPI) GrantPermissionsWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// GrantPermissionsWithContext indicates an expected call of GrantPermissionsWithContext
+// GrantPermissionsWithContext indicates an expected call of GrantPermissionsWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) GrantPermissionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GrantPermissionsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).GrantPermissionsWithContext), varargs...)
 }
 
-// ListPermissions mocks base method
+// ListPermissions mocks base method.
 func (m *MockLakeFormationAPI) ListPermissions(arg0 *lakeformation.ListPermissionsInput) (*lakeformation.ListPermissionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPermissions", arg0)
@@ -427,13 +428,13 @@ func (m *MockLakeFormationAPI) ListPermissions(arg0 *lakeformation.ListPermissio
 	return ret0, ret1
 }
 
-// ListPermissions indicates an expected call of ListPermissions
+// ListPermissions indicates an expected call of ListPermissions.
 func (mr *MockLakeFormationAPIMockRecorder) ListPermissions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissions", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListPermissions), arg0)
 }
 
-// ListPermissionsPages mocks base method
+// ListPermissionsPages mocks base method.
 func (m *MockLakeFormationAPI) ListPermissionsPages(arg0 *lakeformation.ListPermissionsInput, arg1 func(*lakeformation.ListPermissionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPermissionsPages", arg0, arg1)
@@ -441,13 +442,13 @@ func (m *MockLakeFormationAPI) ListPermissionsPages(arg0 *lakeformation.ListPerm
 	return ret0
 }
 
-// ListPermissionsPages indicates an expected call of ListPermissionsPages
+// ListPermissionsPages indicates an expected call of ListPermissionsPages.
 func (mr *MockLakeFormationAPIMockRecorder) ListPermissionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionsPages", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListPermissionsPages), arg0, arg1)
 }
 
-// ListPermissionsPagesWithContext mocks base method
+// ListPermissionsPagesWithContext mocks base method.
 func (m *MockLakeFormationAPI) ListPermissionsPagesWithContext(arg0 context.Context, arg1 *lakeformation.ListPermissionsInput, arg2 func(*lakeformation.ListPermissionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -459,14 +460,14 @@ func (m *MockLakeFormationAPI) ListPermissionsPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListPermissionsPagesWithContext indicates an expected call of ListPermissionsPagesWithContext
+// ListPermissionsPagesWithContext indicates an expected call of ListPermissionsPagesWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) ListPermissionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionsPagesWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListPermissionsPagesWithContext), varargs...)
 }
 
-// ListPermissionsRequest mocks base method
+// ListPermissionsRequest mocks base method.
 func (m *MockLakeFormationAPI) ListPermissionsRequest(arg0 *lakeformation.ListPermissionsInput) (*request.Request, *lakeformation.ListPermissionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPermissionsRequest", arg0)
@@ -475,13 +476,13 @@ func (m *MockLakeFormationAPI) ListPermissionsRequest(arg0 *lakeformation.ListPe
 	return ret0, ret1
 }
 
-// ListPermissionsRequest indicates an expected call of ListPermissionsRequest
+// ListPermissionsRequest indicates an expected call of ListPermissionsRequest.
 func (mr *MockLakeFormationAPIMockRecorder) ListPermissionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionsRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListPermissionsRequest), arg0)
 }
 
-// ListPermissionsWithContext mocks base method
+// ListPermissionsWithContext mocks base method.
 func (m *MockLakeFormationAPI) ListPermissionsWithContext(arg0 context.Context, arg1 *lakeformation.ListPermissionsInput, arg2 ...request.Option) (*lakeformation.ListPermissionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -494,14 +495,14 @@ func (m *MockLakeFormationAPI) ListPermissionsWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListPermissionsWithContext indicates an expected call of ListPermissionsWithContext
+// ListPermissionsWithContext indicates an expected call of ListPermissionsWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) ListPermissionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListPermissionsWithContext), varargs...)
 }
 
-// ListResources mocks base method
+// ListResources mocks base method.
 func (m *MockLakeFormationAPI) ListResources(arg0 *lakeformation.ListResourcesInput) (*lakeformation.ListResourcesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListResources", arg0)
@@ -510,13 +511,13 @@ func (m *MockLakeFormationAPI) ListResources(arg0 *lakeformation.ListResourcesIn
 	return ret0, ret1
 }
 
-// ListResources indicates an expected call of ListResources
+// ListResources indicates an expected call of ListResources.
 func (mr *MockLakeFormationAPIMockRecorder) ListResources(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResources", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListResources), arg0)
 }
 
-// ListResourcesPages mocks base method
+// ListResourcesPages mocks base method.
 func (m *MockLakeFormationAPI) ListResourcesPages(arg0 *lakeformation.ListResourcesInput, arg1 func(*lakeformation.ListResourcesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListResourcesPages", arg0, arg1)
@@ -524,13 +525,13 @@ func (m *MockLakeFormationAPI) ListResourcesPages(arg0 *lakeformation.ListResour
 	return ret0
 }
 
-// ListResourcesPages indicates an expected call of ListResourcesPages
+// ListResourcesPages indicates an expected call of ListResourcesPages.
 func (mr *MockLakeFormationAPIMockRecorder) ListResourcesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResourcesPages", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListResourcesPages), arg0, arg1)
 }
 
-// ListResourcesPagesWithContext mocks base method
+// ListResourcesPagesWithContext mocks base method.
 func (m *MockLakeFormationAPI) ListResourcesPagesWithContext(arg0 context.Context, arg1 *lakeformation.ListResourcesInput, arg2 func(*lakeformation.ListResourcesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -542,14 +543,14 @@ func (m *MockLakeFormationAPI) ListResourcesPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListResourcesPagesWithContext indicates an expected call of ListResourcesPagesWithContext
+// ListResourcesPagesWithContext indicates an expected call of ListResourcesPagesWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) ListResourcesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResourcesPagesWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListResourcesPagesWithContext), varargs...)
 }
 
-// ListResourcesRequest mocks base method
+// ListResourcesRequest mocks base method.
 func (m *MockLakeFormationAPI) ListResourcesRequest(arg0 *lakeformation.ListResourcesInput) (*request.Request, *lakeformation.ListResourcesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListResourcesRequest", arg0)
@@ -558,13 +559,13 @@ func (m *MockLakeFormationAPI) ListResourcesRequest(arg0 *lakeformation.ListReso
 	return ret0, ret1
 }
 
-// ListResourcesRequest indicates an expected call of ListResourcesRequest
+// ListResourcesRequest indicates an expected call of ListResourcesRequest.
 func (mr *MockLakeFormationAPIMockRecorder) ListResourcesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResourcesRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListResourcesRequest), arg0)
 }
 
-// ListResourcesWithContext mocks base method
+// ListResourcesWithContext mocks base method.
 func (m *MockLakeFormationAPI) ListResourcesWithContext(arg0 context.Context, arg1 *lakeformation.ListResourcesInput, arg2 ...request.Option) (*lakeformation.ListResourcesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -577,14 +578,14 @@ func (m *MockLakeFormationAPI) ListResourcesWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListResourcesWithContext indicates an expected call of ListResourcesWithContext
+// ListResourcesWithContext indicates an expected call of ListResourcesWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) ListResourcesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResourcesWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListResourcesWithContext), varargs...)
 }
 
-// PutDataLakeSettings mocks base method
+// PutDataLakeSettings mocks base method.
 func (m *MockLakeFormationAPI) PutDataLakeSettings(arg0 *lakeformation.PutDataLakeSettingsInput) (*lakeformation.PutDataLakeSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutDataLakeSettings", arg0)
@@ -593,13 +594,13 @@ func (m *MockLakeFormationAPI) PutDataLakeSettings(arg0 *lakeformation.PutDataLa
 	return ret0, ret1
 }
 
-// PutDataLakeSettings indicates an expected call of PutDataLakeSettings
+// PutDataLakeSettings indicates an expected call of PutDataLakeSettings.
 func (mr *MockLakeFormationAPIMockRecorder) PutDataLakeSettings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDataLakeSettings", reflect.TypeOf((*MockLakeFormationAPI)(nil).PutDataLakeSettings), arg0)
 }
 
-// PutDataLakeSettingsRequest mocks base method
+// PutDataLakeSettingsRequest mocks base method.
 func (m *MockLakeFormationAPI) PutDataLakeSettingsRequest(arg0 *lakeformation.PutDataLakeSettingsInput) (*request.Request, *lakeformation.PutDataLakeSettingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutDataLakeSettingsRequest", arg0)
@@ -608,13 +609,13 @@ func (m *MockLakeFormationAPI) PutDataLakeSettingsRequest(arg0 *lakeformation.Pu
 	return ret0, ret1
 }
 
-// PutDataLakeSettingsRequest indicates an expected call of PutDataLakeSettingsRequest
+// PutDataLakeSettingsRequest indicates an expected call of PutDataLakeSettingsRequest.
 func (mr *MockLakeFormationAPIMockRecorder) PutDataLakeSettingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDataLakeSettingsRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).PutDataLakeSettingsRequest), arg0)
 }
 
-// PutDataLakeSettingsWithContext mocks base method
+// PutDataLakeSettingsWithContext mocks base method.
 func (m *MockLakeFormationAPI) PutDataLakeSettingsWithContext(arg0 context.Context, arg1 *lakeformation.PutDataLakeSettingsInput, arg2 ...request.Option) (*lakeformation.PutDataLakeSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -627,14 +628,14 @@ func (m *MockLakeFormationAPI) PutDataLakeSettingsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// PutDataLakeSettingsWithContext indicates an expected call of PutDataLakeSettingsWithContext
+// PutDataLakeSettingsWithContext indicates an expected call of PutDataLakeSettingsWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) PutDataLakeSettingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDataLakeSettingsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).PutDataLakeSettingsWithContext), varargs...)
 }
 
-// RegisterResource mocks base method
+// RegisterResource mocks base method.
 func (m *MockLakeFormationAPI) RegisterResource(arg0 *lakeformation.RegisterResourceInput) (*lakeformation.RegisterResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RegisterResource", arg0)
@@ -643,13 +644,13 @@ func (m *MockLakeFormationAPI) RegisterResource(arg0 *lakeformation.RegisterReso
 	return ret0, ret1
 }
 
-// RegisterResource indicates an expected call of RegisterResource
+// RegisterResource indicates an expected call of RegisterResource.
 func (mr *MockLakeFormationAPIMockRecorder) RegisterResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RegisterResource", reflect.TypeOf((*MockLakeFormationAPI)(nil).RegisterResource), arg0)
 }
 
-// RegisterResourceRequest mocks base method
+// RegisterResourceRequest mocks base method.
 func (m *MockLakeFormationAPI) RegisterResourceRequest(arg0 *lakeformation.RegisterResourceInput) (*request.Request, *lakeformation.RegisterResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RegisterResourceRequest", arg0)
@@ -658,13 +659,13 @@ func (m *MockLakeFormationAPI) RegisterResourceRequest(arg0 *lakeformation.Regis
 	return ret0, ret1
 }
 
-// RegisterResourceRequest indicates an expected call of RegisterResourceRequest
+// RegisterResourceRequest indicates an expected call of RegisterResourceRequest.
 func (mr *MockLakeFormationAPIMockRecorder) RegisterResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RegisterResourceRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).RegisterResourceRequest), arg0)
 }
 
-// RegisterResourceWithContext mocks base method
+// RegisterResourceWithContext mocks base method.
 func (m *MockLakeFormationAPI) RegisterResourceWithContext(arg0 context.Context, arg1 *lakeformation.RegisterResourceInput, arg2 ...request.Option) (*lakeformation.RegisterResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -677,14 +678,14 @@ func (m *MockLakeFormationAPI) RegisterResourceWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// RegisterResourceWithContext indicates an expected call of RegisterResourceWithContext
+// RegisterResourceWithContext indicates an expected call of RegisterResourceWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) RegisterResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RegisterResourceWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).RegisterResourceWithContext), varargs...)
 }
 
-// RevokePermissions mocks base method
+// RevokePermissions mocks base method.
 func (m *MockLakeFormationAPI) RevokePermissions(arg0 *lakeformation.RevokePermissionsInput) (*lakeformation.RevokePermissionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RevokePermissions", arg0)
@@ -693,13 +694,13 @@ func (m *MockLakeFormationAPI) RevokePermissions(arg0 *lakeformation.RevokePermi
 	return ret0, ret1
 }
 
-// RevokePermissions indicates an expected call of RevokePermissions
+// RevokePermissions indicates an expected call of RevokePermissions.
 func (mr *MockLakeFormationAPIMockRecorder) RevokePermissions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokePermissions", reflect.TypeOf((*MockLakeFormationAPI)(nil).RevokePermissions), arg0)
 }
 
-// RevokePermissionsRequest mocks base method
+// RevokePermissionsRequest mocks base method.
 func (m *MockLakeFormationAPI) RevokePermissionsRequest(arg0 *lakeformation.RevokePermissionsInput) (*request.Request, *lakeformation.RevokePermissionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RevokePermissionsRequest", arg0)
@@ -708,13 +709,13 @@ func (m *MockLakeFormationAPI) RevokePermissionsRequest(arg0 *lakeformation.Revo
 	return ret0, ret1
 }
 
-// RevokePermissionsRequest indicates an expected call of RevokePermissionsRequest
+// RevokePermissionsRequest indicates an expected call of RevokePermissionsRequest.
 func (mr *MockLakeFormationAPIMockRecorder) RevokePermissionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokePermissionsRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).RevokePermissionsRequest), arg0)
 }
 
-// RevokePermissionsWithContext mocks base method
+// RevokePermissionsWithContext mocks base method.
 func (m *MockLakeFormationAPI) RevokePermissionsWithContext(arg0 context.Context, arg1 *lakeformation.RevokePermissionsInput, arg2 ...request.Option) (*lakeformation.RevokePermissionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -727,14 +728,14 @@ func (m *MockLakeFormationAPI) RevokePermissionsWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// RevokePermissionsWithContext indicates an expected call of RevokePermissionsWithContext
+// RevokePermissionsWithContext indicates an expected call of RevokePermissionsWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) RevokePermissionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokePermissionsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).RevokePermissionsWithContext), varargs...)
 }
 
-// UpdateResource mocks base method
+// UpdateResource mocks base method.
 func (m *MockLakeFormationAPI) UpdateResource(arg0 *lakeformation.UpdateResourceInput) (*lakeformation.UpdateResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateResource", arg0)
@@ -743,13 +744,13 @@ func (m *MockLakeFormationAPI) UpdateResource(arg0 *lakeformation.UpdateResource
 	return ret0, ret1
 }
 
-// UpdateResource indicates an expected call of UpdateResource
+// UpdateResource indicates an expected call of UpdateResource.
 func (mr *MockLakeFormationAPIMockRecorder) UpdateResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateResource", reflect.TypeOf((*MockLakeFormationAPI)(nil).UpdateResource), arg0)
 }
 
-// UpdateResourceRequest mocks base method
+// UpdateResourceRequest mocks base method.
 func (m *MockLakeFormationAPI) UpdateResourceRequest(arg0 *lakeformation.UpdateResourceInput) (*request.Request, *lakeformation.UpdateResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateResourceRequest", arg0)
@@ -758,13 +759,13 @@ func (m *MockLakeFormationAPI) UpdateResourceRequest(arg0 *lakeformation.UpdateR
 	return ret0, ret1
 }
 
-// UpdateResourceRequest indicates an expected call of UpdateResourceRequest
+// UpdateResourceRequest indicates an expected call of UpdateResourceRequest.
 func (mr *MockLakeFormationAPIMockRecorder) UpdateResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateResourceRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).UpdateResourceRequest), arg0)
 }
 
-// UpdateResourceWithContext mocks base method
+// UpdateResourceWithContext mocks base method.
 func (m *MockLakeFormationAPI) UpdateResourceWithContext(arg0 context.Context, arg1 *lakeformation.UpdateResourceInput, arg2 ...request.Option) (*lakeformation.UpdateResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -777,7 +778,7 @@ func (m *MockLakeFormationAPI) UpdateResourceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UpdateResourceWithContext indicates an expected call of UpdateResourceWithContext
+// UpdateResourceWithContext indicates an expected call of UpdateResourceWithContext.
 func (mr *MockLakeFormationAPIMockRecorder) UpdateResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

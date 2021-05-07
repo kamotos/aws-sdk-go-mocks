@@ -6,36 +6,37 @@ package mediastoremock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	mediastore "github.com/aws/aws-sdk-go/service/mediastore"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockMediaStoreAPI is a mock of MediaStoreAPI interface
+// MockMediaStoreAPI is a mock of MediaStoreAPI interface.
 type MockMediaStoreAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockMediaStoreAPIMockRecorder
 }
 
-// MockMediaStoreAPIMockRecorder is the mock recorder for MockMediaStoreAPI
+// MockMediaStoreAPIMockRecorder is the mock recorder for MockMediaStoreAPI.
 type MockMediaStoreAPIMockRecorder struct {
 	mock *MockMediaStoreAPI
 }
 
-// NewMockMediaStoreAPI creates a new mock instance
+// NewMockMediaStoreAPI creates a new mock instance.
 func NewMockMediaStoreAPI(ctrl *gomock.Controller) *MockMediaStoreAPI {
 	mock := &MockMediaStoreAPI{ctrl: ctrl}
 	mock.recorder = &MockMediaStoreAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockMediaStoreAPI) EXPECT() *MockMediaStoreAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateContainer mocks base method
+// CreateContainer mocks base method.
 func (m *MockMediaStoreAPI) CreateContainer(arg0 *mediastore.CreateContainerInput) (*mediastore.CreateContainerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContainer", arg0)
@@ -44,13 +45,13 @@ func (m *MockMediaStoreAPI) CreateContainer(arg0 *mediastore.CreateContainerInpu
 	return ret0, ret1
 }
 
-// CreateContainer indicates an expected call of CreateContainer
+// CreateContainer indicates an expected call of CreateContainer.
 func (mr *MockMediaStoreAPIMockRecorder) CreateContainer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainer", reflect.TypeOf((*MockMediaStoreAPI)(nil).CreateContainer), arg0)
 }
 
-// CreateContainerRequest mocks base method
+// CreateContainerRequest mocks base method.
 func (m *MockMediaStoreAPI) CreateContainerRequest(arg0 *mediastore.CreateContainerInput) (*request.Request, *mediastore.CreateContainerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContainerRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockMediaStoreAPI) CreateContainerRequest(arg0 *mediastore.CreateContai
 	return ret0, ret1
 }
 
-// CreateContainerRequest indicates an expected call of CreateContainerRequest
+// CreateContainerRequest indicates an expected call of CreateContainerRequest.
 func (mr *MockMediaStoreAPIMockRecorder) CreateContainerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).CreateContainerRequest), arg0)
 }
 
-// CreateContainerWithContext mocks base method
+// CreateContainerWithContext mocks base method.
 func (m *MockMediaStoreAPI) CreateContainerWithContext(arg0 context.Context, arg1 *mediastore.CreateContainerInput, arg2 ...request.Option) (*mediastore.CreateContainerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockMediaStoreAPI) CreateContainerWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// CreateContainerWithContext indicates an expected call of CreateContainerWithContext
+// CreateContainerWithContext indicates an expected call of CreateContainerWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) CreateContainerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).CreateContainerWithContext), varargs...)
 }
 
-// DeleteContainer mocks base method
+// DeleteContainer mocks base method.
 func (m *MockMediaStoreAPI) DeleteContainer(arg0 *mediastore.DeleteContainerInput) (*mediastore.DeleteContainerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContainer", arg0)
@@ -94,13 +95,13 @@ func (m *MockMediaStoreAPI) DeleteContainer(arg0 *mediastore.DeleteContainerInpu
 	return ret0, ret1
 }
 
-// DeleteContainer indicates an expected call of DeleteContainer
+// DeleteContainer indicates an expected call of DeleteContainer.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteContainer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainer", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteContainer), arg0)
 }
 
-// DeleteContainerPolicy mocks base method
+// DeleteContainerPolicy mocks base method.
 func (m *MockMediaStoreAPI) DeleteContainerPolicy(arg0 *mediastore.DeleteContainerPolicyInput) (*mediastore.DeleteContainerPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContainerPolicy", arg0)
@@ -109,13 +110,13 @@ func (m *MockMediaStoreAPI) DeleteContainerPolicy(arg0 *mediastore.DeleteContain
 	return ret0, ret1
 }
 
-// DeleteContainerPolicy indicates an expected call of DeleteContainerPolicy
+// DeleteContainerPolicy indicates an expected call of DeleteContainerPolicy.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteContainerPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerPolicy", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteContainerPolicy), arg0)
 }
 
-// DeleteContainerPolicyRequest mocks base method
+// DeleteContainerPolicyRequest mocks base method.
 func (m *MockMediaStoreAPI) DeleteContainerPolicyRequest(arg0 *mediastore.DeleteContainerPolicyInput) (*request.Request, *mediastore.DeleteContainerPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContainerPolicyRequest", arg0)
@@ -124,13 +125,13 @@ func (m *MockMediaStoreAPI) DeleteContainerPolicyRequest(arg0 *mediastore.Delete
 	return ret0, ret1
 }
 
-// DeleteContainerPolicyRequest indicates an expected call of DeleteContainerPolicyRequest
+// DeleteContainerPolicyRequest indicates an expected call of DeleteContainerPolicyRequest.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteContainerPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerPolicyRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteContainerPolicyRequest), arg0)
 }
 
-// DeleteContainerPolicyWithContext mocks base method
+// DeleteContainerPolicyWithContext mocks base method.
 func (m *MockMediaStoreAPI) DeleteContainerPolicyWithContext(arg0 context.Context, arg1 *mediastore.DeleteContainerPolicyInput, arg2 ...request.Option) (*mediastore.DeleteContainerPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -143,14 +144,14 @@ func (m *MockMediaStoreAPI) DeleteContainerPolicyWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteContainerPolicyWithContext indicates an expected call of DeleteContainerPolicyWithContext
+// DeleteContainerPolicyWithContext indicates an expected call of DeleteContainerPolicyWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteContainerPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerPolicyWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteContainerPolicyWithContext), varargs...)
 }
 
-// DeleteContainerRequest mocks base method
+// DeleteContainerRequest mocks base method.
 func (m *MockMediaStoreAPI) DeleteContainerRequest(arg0 *mediastore.DeleteContainerInput) (*request.Request, *mediastore.DeleteContainerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContainerRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockMediaStoreAPI) DeleteContainerRequest(arg0 *mediastore.DeleteContai
 	return ret0, ret1
 }
 
-// DeleteContainerRequest indicates an expected call of DeleteContainerRequest
+// DeleteContainerRequest indicates an expected call of DeleteContainerRequest.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteContainerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteContainerRequest), arg0)
 }
 
-// DeleteContainerWithContext mocks base method
+// DeleteContainerWithContext mocks base method.
 func (m *MockMediaStoreAPI) DeleteContainerWithContext(arg0 context.Context, arg1 *mediastore.DeleteContainerInput, arg2 ...request.Option) (*mediastore.DeleteContainerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockMediaStoreAPI) DeleteContainerWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DeleteContainerWithContext indicates an expected call of DeleteContainerWithContext
+// DeleteContainerWithContext indicates an expected call of DeleteContainerWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteContainerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteContainerWithContext), varargs...)
 }
 
-// DeleteCorsPolicy mocks base method
+// DeleteCorsPolicy mocks base method.
 func (m *MockMediaStoreAPI) DeleteCorsPolicy(arg0 *mediastore.DeleteCorsPolicyInput) (*mediastore.DeleteCorsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCorsPolicy", arg0)
@@ -194,13 +195,13 @@ func (m *MockMediaStoreAPI) DeleteCorsPolicy(arg0 *mediastore.DeleteCorsPolicyIn
 	return ret0, ret1
 }
 
-// DeleteCorsPolicy indicates an expected call of DeleteCorsPolicy
+// DeleteCorsPolicy indicates an expected call of DeleteCorsPolicy.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteCorsPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCorsPolicy", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteCorsPolicy), arg0)
 }
 
-// DeleteCorsPolicyRequest mocks base method
+// DeleteCorsPolicyRequest mocks base method.
 func (m *MockMediaStoreAPI) DeleteCorsPolicyRequest(arg0 *mediastore.DeleteCorsPolicyInput) (*request.Request, *mediastore.DeleteCorsPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCorsPolicyRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockMediaStoreAPI) DeleteCorsPolicyRequest(arg0 *mediastore.DeleteCorsP
 	return ret0, ret1
 }
 
-// DeleteCorsPolicyRequest indicates an expected call of DeleteCorsPolicyRequest
+// DeleteCorsPolicyRequest indicates an expected call of DeleteCorsPolicyRequest.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteCorsPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCorsPolicyRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteCorsPolicyRequest), arg0)
 }
 
-// DeleteCorsPolicyWithContext mocks base method
+// DeleteCorsPolicyWithContext mocks base method.
 func (m *MockMediaStoreAPI) DeleteCorsPolicyWithContext(arg0 context.Context, arg1 *mediastore.DeleteCorsPolicyInput, arg2 ...request.Option) (*mediastore.DeleteCorsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockMediaStoreAPI) DeleteCorsPolicyWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteCorsPolicyWithContext indicates an expected call of DeleteCorsPolicyWithContext
+// DeleteCorsPolicyWithContext indicates an expected call of DeleteCorsPolicyWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteCorsPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCorsPolicyWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteCorsPolicyWithContext), varargs...)
 }
 
-// DeleteLifecyclePolicy mocks base method
+// DeleteLifecyclePolicy mocks base method.
 func (m *MockMediaStoreAPI) DeleteLifecyclePolicy(arg0 *mediastore.DeleteLifecyclePolicyInput) (*mediastore.DeleteLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLifecyclePolicy", arg0)
@@ -244,13 +245,13 @@ func (m *MockMediaStoreAPI) DeleteLifecyclePolicy(arg0 *mediastore.DeleteLifecyc
 	return ret0, ret1
 }
 
-// DeleteLifecyclePolicy indicates an expected call of DeleteLifecyclePolicy
+// DeleteLifecyclePolicy indicates an expected call of DeleteLifecyclePolicy.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteLifecyclePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLifecyclePolicy", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteLifecyclePolicy), arg0)
 }
 
-// DeleteLifecyclePolicyRequest mocks base method
+// DeleteLifecyclePolicyRequest mocks base method.
 func (m *MockMediaStoreAPI) DeleteLifecyclePolicyRequest(arg0 *mediastore.DeleteLifecyclePolicyInput) (*request.Request, *mediastore.DeleteLifecyclePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLifecyclePolicyRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockMediaStoreAPI) DeleteLifecyclePolicyRequest(arg0 *mediastore.Delete
 	return ret0, ret1
 }
 
-// DeleteLifecyclePolicyRequest indicates an expected call of DeleteLifecyclePolicyRequest
+// DeleteLifecyclePolicyRequest indicates an expected call of DeleteLifecyclePolicyRequest.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteLifecyclePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLifecyclePolicyRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteLifecyclePolicyRequest), arg0)
 }
 
-// DeleteLifecyclePolicyWithContext mocks base method
+// DeleteLifecyclePolicyWithContext mocks base method.
 func (m *MockMediaStoreAPI) DeleteLifecyclePolicyWithContext(arg0 context.Context, arg1 *mediastore.DeleteLifecyclePolicyInput, arg2 ...request.Option) (*mediastore.DeleteLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockMediaStoreAPI) DeleteLifecyclePolicyWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteLifecyclePolicyWithContext indicates an expected call of DeleteLifecyclePolicyWithContext
+// DeleteLifecyclePolicyWithContext indicates an expected call of DeleteLifecyclePolicyWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteLifecyclePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLifecyclePolicyWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteLifecyclePolicyWithContext), varargs...)
 }
 
-// DeleteMetricPolicy mocks base method
+// DeleteMetricPolicy mocks base method.
 func (m *MockMediaStoreAPI) DeleteMetricPolicy(arg0 *mediastore.DeleteMetricPolicyInput) (*mediastore.DeleteMetricPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMetricPolicy", arg0)
@@ -294,13 +295,13 @@ func (m *MockMediaStoreAPI) DeleteMetricPolicy(arg0 *mediastore.DeleteMetricPoli
 	return ret0, ret1
 }
 
-// DeleteMetricPolicy indicates an expected call of DeleteMetricPolicy
+// DeleteMetricPolicy indicates an expected call of DeleteMetricPolicy.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteMetricPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMetricPolicy", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteMetricPolicy), arg0)
 }
 
-// DeleteMetricPolicyRequest mocks base method
+// DeleteMetricPolicyRequest mocks base method.
 func (m *MockMediaStoreAPI) DeleteMetricPolicyRequest(arg0 *mediastore.DeleteMetricPolicyInput) (*request.Request, *mediastore.DeleteMetricPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMetricPolicyRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockMediaStoreAPI) DeleteMetricPolicyRequest(arg0 *mediastore.DeleteMet
 	return ret0, ret1
 }
 
-// DeleteMetricPolicyRequest indicates an expected call of DeleteMetricPolicyRequest
+// DeleteMetricPolicyRequest indicates an expected call of DeleteMetricPolicyRequest.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteMetricPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMetricPolicyRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteMetricPolicyRequest), arg0)
 }
 
-// DeleteMetricPolicyWithContext mocks base method
+// DeleteMetricPolicyWithContext mocks base method.
 func (m *MockMediaStoreAPI) DeleteMetricPolicyWithContext(arg0 context.Context, arg1 *mediastore.DeleteMetricPolicyInput, arg2 ...request.Option) (*mediastore.DeleteMetricPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockMediaStoreAPI) DeleteMetricPolicyWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DeleteMetricPolicyWithContext indicates an expected call of DeleteMetricPolicyWithContext
+// DeleteMetricPolicyWithContext indicates an expected call of DeleteMetricPolicyWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) DeleteMetricPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMetricPolicyWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).DeleteMetricPolicyWithContext), varargs...)
 }
 
-// DescribeContainer mocks base method
+// DescribeContainer mocks base method.
 func (m *MockMediaStoreAPI) DescribeContainer(arg0 *mediastore.DescribeContainerInput) (*mediastore.DescribeContainerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeContainer", arg0)
@@ -344,13 +345,13 @@ func (m *MockMediaStoreAPI) DescribeContainer(arg0 *mediastore.DescribeContainer
 	return ret0, ret1
 }
 
-// DescribeContainer indicates an expected call of DescribeContainer
+// DescribeContainer indicates an expected call of DescribeContainer.
 func (mr *MockMediaStoreAPIMockRecorder) DescribeContainer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeContainer", reflect.TypeOf((*MockMediaStoreAPI)(nil).DescribeContainer), arg0)
 }
 
-// DescribeContainerRequest mocks base method
+// DescribeContainerRequest mocks base method.
 func (m *MockMediaStoreAPI) DescribeContainerRequest(arg0 *mediastore.DescribeContainerInput) (*request.Request, *mediastore.DescribeContainerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeContainerRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockMediaStoreAPI) DescribeContainerRequest(arg0 *mediastore.DescribeCo
 	return ret0, ret1
 }
 
-// DescribeContainerRequest indicates an expected call of DescribeContainerRequest
+// DescribeContainerRequest indicates an expected call of DescribeContainerRequest.
 func (mr *MockMediaStoreAPIMockRecorder) DescribeContainerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeContainerRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).DescribeContainerRequest), arg0)
 }
 
-// DescribeContainerWithContext mocks base method
+// DescribeContainerWithContext mocks base method.
 func (m *MockMediaStoreAPI) DescribeContainerWithContext(arg0 context.Context, arg1 *mediastore.DescribeContainerInput, arg2 ...request.Option) (*mediastore.DescribeContainerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockMediaStoreAPI) DescribeContainerWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DescribeContainerWithContext indicates an expected call of DescribeContainerWithContext
+// DescribeContainerWithContext indicates an expected call of DescribeContainerWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) DescribeContainerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeContainerWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).DescribeContainerWithContext), varargs...)
 }
 
-// GetContainerPolicy mocks base method
+// GetContainerPolicy mocks base method.
 func (m *MockMediaStoreAPI) GetContainerPolicy(arg0 *mediastore.GetContainerPolicyInput) (*mediastore.GetContainerPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerPolicy", arg0)
@@ -394,13 +395,13 @@ func (m *MockMediaStoreAPI) GetContainerPolicy(arg0 *mediastore.GetContainerPoli
 	return ret0, ret1
 }
 
-// GetContainerPolicy indicates an expected call of GetContainerPolicy
+// GetContainerPolicy indicates an expected call of GetContainerPolicy.
 func (mr *MockMediaStoreAPIMockRecorder) GetContainerPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerPolicy", reflect.TypeOf((*MockMediaStoreAPI)(nil).GetContainerPolicy), arg0)
 }
 
-// GetContainerPolicyRequest mocks base method
+// GetContainerPolicyRequest mocks base method.
 func (m *MockMediaStoreAPI) GetContainerPolicyRequest(arg0 *mediastore.GetContainerPolicyInput) (*request.Request, *mediastore.GetContainerPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerPolicyRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockMediaStoreAPI) GetContainerPolicyRequest(arg0 *mediastore.GetContai
 	return ret0, ret1
 }
 
-// GetContainerPolicyRequest indicates an expected call of GetContainerPolicyRequest
+// GetContainerPolicyRequest indicates an expected call of GetContainerPolicyRequest.
 func (mr *MockMediaStoreAPIMockRecorder) GetContainerPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerPolicyRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).GetContainerPolicyRequest), arg0)
 }
 
-// GetContainerPolicyWithContext mocks base method
+// GetContainerPolicyWithContext mocks base method.
 func (m *MockMediaStoreAPI) GetContainerPolicyWithContext(arg0 context.Context, arg1 *mediastore.GetContainerPolicyInput, arg2 ...request.Option) (*mediastore.GetContainerPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockMediaStoreAPI) GetContainerPolicyWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// GetContainerPolicyWithContext indicates an expected call of GetContainerPolicyWithContext
+// GetContainerPolicyWithContext indicates an expected call of GetContainerPolicyWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) GetContainerPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerPolicyWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).GetContainerPolicyWithContext), varargs...)
 }
 
-// GetCorsPolicy mocks base method
+// GetCorsPolicy mocks base method.
 func (m *MockMediaStoreAPI) GetCorsPolicy(arg0 *mediastore.GetCorsPolicyInput) (*mediastore.GetCorsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCorsPolicy", arg0)
@@ -444,13 +445,13 @@ func (m *MockMediaStoreAPI) GetCorsPolicy(arg0 *mediastore.GetCorsPolicyInput) (
 	return ret0, ret1
 }
 
-// GetCorsPolicy indicates an expected call of GetCorsPolicy
+// GetCorsPolicy indicates an expected call of GetCorsPolicy.
 func (mr *MockMediaStoreAPIMockRecorder) GetCorsPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCorsPolicy", reflect.TypeOf((*MockMediaStoreAPI)(nil).GetCorsPolicy), arg0)
 }
 
-// GetCorsPolicyRequest mocks base method
+// GetCorsPolicyRequest mocks base method.
 func (m *MockMediaStoreAPI) GetCorsPolicyRequest(arg0 *mediastore.GetCorsPolicyInput) (*request.Request, *mediastore.GetCorsPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCorsPolicyRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockMediaStoreAPI) GetCorsPolicyRequest(arg0 *mediastore.GetCorsPolicyI
 	return ret0, ret1
 }
 
-// GetCorsPolicyRequest indicates an expected call of GetCorsPolicyRequest
+// GetCorsPolicyRequest indicates an expected call of GetCorsPolicyRequest.
 func (mr *MockMediaStoreAPIMockRecorder) GetCorsPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCorsPolicyRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).GetCorsPolicyRequest), arg0)
 }
 
-// GetCorsPolicyWithContext mocks base method
+// GetCorsPolicyWithContext mocks base method.
 func (m *MockMediaStoreAPI) GetCorsPolicyWithContext(arg0 context.Context, arg1 *mediastore.GetCorsPolicyInput, arg2 ...request.Option) (*mediastore.GetCorsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockMediaStoreAPI) GetCorsPolicyWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// GetCorsPolicyWithContext indicates an expected call of GetCorsPolicyWithContext
+// GetCorsPolicyWithContext indicates an expected call of GetCorsPolicyWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) GetCorsPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCorsPolicyWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).GetCorsPolicyWithContext), varargs...)
 }
 
-// GetLifecyclePolicy mocks base method
+// GetLifecyclePolicy mocks base method.
 func (m *MockMediaStoreAPI) GetLifecyclePolicy(arg0 *mediastore.GetLifecyclePolicyInput) (*mediastore.GetLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLifecyclePolicy", arg0)
@@ -494,13 +495,13 @@ func (m *MockMediaStoreAPI) GetLifecyclePolicy(arg0 *mediastore.GetLifecyclePoli
 	return ret0, ret1
 }
 
-// GetLifecyclePolicy indicates an expected call of GetLifecyclePolicy
+// GetLifecyclePolicy indicates an expected call of GetLifecyclePolicy.
 func (mr *MockMediaStoreAPIMockRecorder) GetLifecyclePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLifecyclePolicy", reflect.TypeOf((*MockMediaStoreAPI)(nil).GetLifecyclePolicy), arg0)
 }
 
-// GetLifecyclePolicyRequest mocks base method
+// GetLifecyclePolicyRequest mocks base method.
 func (m *MockMediaStoreAPI) GetLifecyclePolicyRequest(arg0 *mediastore.GetLifecyclePolicyInput) (*request.Request, *mediastore.GetLifecyclePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLifecyclePolicyRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockMediaStoreAPI) GetLifecyclePolicyRequest(arg0 *mediastore.GetLifecy
 	return ret0, ret1
 }
 
-// GetLifecyclePolicyRequest indicates an expected call of GetLifecyclePolicyRequest
+// GetLifecyclePolicyRequest indicates an expected call of GetLifecyclePolicyRequest.
 func (mr *MockMediaStoreAPIMockRecorder) GetLifecyclePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLifecyclePolicyRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).GetLifecyclePolicyRequest), arg0)
 }
 
-// GetLifecyclePolicyWithContext mocks base method
+// GetLifecyclePolicyWithContext mocks base method.
 func (m *MockMediaStoreAPI) GetLifecyclePolicyWithContext(arg0 context.Context, arg1 *mediastore.GetLifecyclePolicyInput, arg2 ...request.Option) (*mediastore.GetLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockMediaStoreAPI) GetLifecyclePolicyWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// GetLifecyclePolicyWithContext indicates an expected call of GetLifecyclePolicyWithContext
+// GetLifecyclePolicyWithContext indicates an expected call of GetLifecyclePolicyWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) GetLifecyclePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLifecyclePolicyWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).GetLifecyclePolicyWithContext), varargs...)
 }
 
-// GetMetricPolicy mocks base method
+// GetMetricPolicy mocks base method.
 func (m *MockMediaStoreAPI) GetMetricPolicy(arg0 *mediastore.GetMetricPolicyInput) (*mediastore.GetMetricPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMetricPolicy", arg0)
@@ -544,13 +545,13 @@ func (m *MockMediaStoreAPI) GetMetricPolicy(arg0 *mediastore.GetMetricPolicyInpu
 	return ret0, ret1
 }
 
-// GetMetricPolicy indicates an expected call of GetMetricPolicy
+// GetMetricPolicy indicates an expected call of GetMetricPolicy.
 func (mr *MockMediaStoreAPIMockRecorder) GetMetricPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMetricPolicy", reflect.TypeOf((*MockMediaStoreAPI)(nil).GetMetricPolicy), arg0)
 }
 
-// GetMetricPolicyRequest mocks base method
+// GetMetricPolicyRequest mocks base method.
 func (m *MockMediaStoreAPI) GetMetricPolicyRequest(arg0 *mediastore.GetMetricPolicyInput) (*request.Request, *mediastore.GetMetricPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMetricPolicyRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockMediaStoreAPI) GetMetricPolicyRequest(arg0 *mediastore.GetMetricPol
 	return ret0, ret1
 }
 
-// GetMetricPolicyRequest indicates an expected call of GetMetricPolicyRequest
+// GetMetricPolicyRequest indicates an expected call of GetMetricPolicyRequest.
 func (mr *MockMediaStoreAPIMockRecorder) GetMetricPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMetricPolicyRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).GetMetricPolicyRequest), arg0)
 }
 
-// GetMetricPolicyWithContext mocks base method
+// GetMetricPolicyWithContext mocks base method.
 func (m *MockMediaStoreAPI) GetMetricPolicyWithContext(arg0 context.Context, arg1 *mediastore.GetMetricPolicyInput, arg2 ...request.Option) (*mediastore.GetMetricPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockMediaStoreAPI) GetMetricPolicyWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetMetricPolicyWithContext indicates an expected call of GetMetricPolicyWithContext
+// GetMetricPolicyWithContext indicates an expected call of GetMetricPolicyWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) GetMetricPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMetricPolicyWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).GetMetricPolicyWithContext), varargs...)
 }
 
-// ListContainers mocks base method
+// ListContainers mocks base method.
 func (m *MockMediaStoreAPI) ListContainers(arg0 *mediastore.ListContainersInput) (*mediastore.ListContainersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContainers", arg0)
@@ -594,13 +595,13 @@ func (m *MockMediaStoreAPI) ListContainers(arg0 *mediastore.ListContainersInput)
 	return ret0, ret1
 }
 
-// ListContainers indicates an expected call of ListContainers
+// ListContainers indicates an expected call of ListContainers.
 func (mr *MockMediaStoreAPIMockRecorder) ListContainers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContainers", reflect.TypeOf((*MockMediaStoreAPI)(nil).ListContainers), arg0)
 }
 
-// ListContainersPages mocks base method
+// ListContainersPages mocks base method.
 func (m *MockMediaStoreAPI) ListContainersPages(arg0 *mediastore.ListContainersInput, arg1 func(*mediastore.ListContainersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContainersPages", arg0, arg1)
@@ -608,13 +609,13 @@ func (m *MockMediaStoreAPI) ListContainersPages(arg0 *mediastore.ListContainersI
 	return ret0
 }
 
-// ListContainersPages indicates an expected call of ListContainersPages
+// ListContainersPages indicates an expected call of ListContainersPages.
 func (mr *MockMediaStoreAPIMockRecorder) ListContainersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContainersPages", reflect.TypeOf((*MockMediaStoreAPI)(nil).ListContainersPages), arg0, arg1)
 }
 
-// ListContainersPagesWithContext mocks base method
+// ListContainersPagesWithContext mocks base method.
 func (m *MockMediaStoreAPI) ListContainersPagesWithContext(arg0 context.Context, arg1 *mediastore.ListContainersInput, arg2 func(*mediastore.ListContainersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -626,14 +627,14 @@ func (m *MockMediaStoreAPI) ListContainersPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListContainersPagesWithContext indicates an expected call of ListContainersPagesWithContext
+// ListContainersPagesWithContext indicates an expected call of ListContainersPagesWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) ListContainersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContainersPagesWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).ListContainersPagesWithContext), varargs...)
 }
 
-// ListContainersRequest mocks base method
+// ListContainersRequest mocks base method.
 func (m *MockMediaStoreAPI) ListContainersRequest(arg0 *mediastore.ListContainersInput) (*request.Request, *mediastore.ListContainersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContainersRequest", arg0)
@@ -642,13 +643,13 @@ func (m *MockMediaStoreAPI) ListContainersRequest(arg0 *mediastore.ListContainer
 	return ret0, ret1
 }
 
-// ListContainersRequest indicates an expected call of ListContainersRequest
+// ListContainersRequest indicates an expected call of ListContainersRequest.
 func (mr *MockMediaStoreAPIMockRecorder) ListContainersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContainersRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).ListContainersRequest), arg0)
 }
 
-// ListContainersWithContext mocks base method
+// ListContainersWithContext mocks base method.
 func (m *MockMediaStoreAPI) ListContainersWithContext(arg0 context.Context, arg1 *mediastore.ListContainersInput, arg2 ...request.Option) (*mediastore.ListContainersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -661,14 +662,14 @@ func (m *MockMediaStoreAPI) ListContainersWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListContainersWithContext indicates an expected call of ListContainersWithContext
+// ListContainersWithContext indicates an expected call of ListContainersWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) ListContainersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContainersWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).ListContainersWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockMediaStoreAPI) ListTagsForResource(arg0 *mediastore.ListTagsForResourceInput) (*mediastore.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -677,13 +678,13 @@ func (m *MockMediaStoreAPI) ListTagsForResource(arg0 *mediastore.ListTagsForReso
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockMediaStoreAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockMediaStoreAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockMediaStoreAPI) ListTagsForResourceRequest(arg0 *mediastore.ListTagsForResourceInput) (*request.Request, *mediastore.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -692,13 +693,13 @@ func (m *MockMediaStoreAPI) ListTagsForResourceRequest(arg0 *mediastore.ListTags
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockMediaStoreAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockMediaStoreAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *mediastore.ListTagsForResourceInput, arg2 ...request.Option) (*mediastore.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -711,14 +712,14 @@ func (m *MockMediaStoreAPI) ListTagsForResourceWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PutContainerPolicy mocks base method
+// PutContainerPolicy mocks base method.
 func (m *MockMediaStoreAPI) PutContainerPolicy(arg0 *mediastore.PutContainerPolicyInput) (*mediastore.PutContainerPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutContainerPolicy", arg0)
@@ -727,13 +728,13 @@ func (m *MockMediaStoreAPI) PutContainerPolicy(arg0 *mediastore.PutContainerPoli
 	return ret0, ret1
 }
 
-// PutContainerPolicy indicates an expected call of PutContainerPolicy
+// PutContainerPolicy indicates an expected call of PutContainerPolicy.
 func (mr *MockMediaStoreAPIMockRecorder) PutContainerPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutContainerPolicy", reflect.TypeOf((*MockMediaStoreAPI)(nil).PutContainerPolicy), arg0)
 }
 
-// PutContainerPolicyRequest mocks base method
+// PutContainerPolicyRequest mocks base method.
 func (m *MockMediaStoreAPI) PutContainerPolicyRequest(arg0 *mediastore.PutContainerPolicyInput) (*request.Request, *mediastore.PutContainerPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutContainerPolicyRequest", arg0)
@@ -742,13 +743,13 @@ func (m *MockMediaStoreAPI) PutContainerPolicyRequest(arg0 *mediastore.PutContai
 	return ret0, ret1
 }
 
-// PutContainerPolicyRequest indicates an expected call of PutContainerPolicyRequest
+// PutContainerPolicyRequest indicates an expected call of PutContainerPolicyRequest.
 func (mr *MockMediaStoreAPIMockRecorder) PutContainerPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutContainerPolicyRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).PutContainerPolicyRequest), arg0)
 }
 
-// PutContainerPolicyWithContext mocks base method
+// PutContainerPolicyWithContext mocks base method.
 func (m *MockMediaStoreAPI) PutContainerPolicyWithContext(arg0 context.Context, arg1 *mediastore.PutContainerPolicyInput, arg2 ...request.Option) (*mediastore.PutContainerPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -761,14 +762,14 @@ func (m *MockMediaStoreAPI) PutContainerPolicyWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// PutContainerPolicyWithContext indicates an expected call of PutContainerPolicyWithContext
+// PutContainerPolicyWithContext indicates an expected call of PutContainerPolicyWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) PutContainerPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutContainerPolicyWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).PutContainerPolicyWithContext), varargs...)
 }
 
-// PutCorsPolicy mocks base method
+// PutCorsPolicy mocks base method.
 func (m *MockMediaStoreAPI) PutCorsPolicy(arg0 *mediastore.PutCorsPolicyInput) (*mediastore.PutCorsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutCorsPolicy", arg0)
@@ -777,13 +778,13 @@ func (m *MockMediaStoreAPI) PutCorsPolicy(arg0 *mediastore.PutCorsPolicyInput) (
 	return ret0, ret1
 }
 
-// PutCorsPolicy indicates an expected call of PutCorsPolicy
+// PutCorsPolicy indicates an expected call of PutCorsPolicy.
 func (mr *MockMediaStoreAPIMockRecorder) PutCorsPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutCorsPolicy", reflect.TypeOf((*MockMediaStoreAPI)(nil).PutCorsPolicy), arg0)
 }
 
-// PutCorsPolicyRequest mocks base method
+// PutCorsPolicyRequest mocks base method.
 func (m *MockMediaStoreAPI) PutCorsPolicyRequest(arg0 *mediastore.PutCorsPolicyInput) (*request.Request, *mediastore.PutCorsPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutCorsPolicyRequest", arg0)
@@ -792,13 +793,13 @@ func (m *MockMediaStoreAPI) PutCorsPolicyRequest(arg0 *mediastore.PutCorsPolicyI
 	return ret0, ret1
 }
 
-// PutCorsPolicyRequest indicates an expected call of PutCorsPolicyRequest
+// PutCorsPolicyRequest indicates an expected call of PutCorsPolicyRequest.
 func (mr *MockMediaStoreAPIMockRecorder) PutCorsPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutCorsPolicyRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).PutCorsPolicyRequest), arg0)
 }
 
-// PutCorsPolicyWithContext mocks base method
+// PutCorsPolicyWithContext mocks base method.
 func (m *MockMediaStoreAPI) PutCorsPolicyWithContext(arg0 context.Context, arg1 *mediastore.PutCorsPolicyInput, arg2 ...request.Option) (*mediastore.PutCorsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -811,14 +812,14 @@ func (m *MockMediaStoreAPI) PutCorsPolicyWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// PutCorsPolicyWithContext indicates an expected call of PutCorsPolicyWithContext
+// PutCorsPolicyWithContext indicates an expected call of PutCorsPolicyWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) PutCorsPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutCorsPolicyWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).PutCorsPolicyWithContext), varargs...)
 }
 
-// PutLifecyclePolicy mocks base method
+// PutLifecyclePolicy mocks base method.
 func (m *MockMediaStoreAPI) PutLifecyclePolicy(arg0 *mediastore.PutLifecyclePolicyInput) (*mediastore.PutLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutLifecyclePolicy", arg0)
@@ -827,13 +828,13 @@ func (m *MockMediaStoreAPI) PutLifecyclePolicy(arg0 *mediastore.PutLifecyclePoli
 	return ret0, ret1
 }
 
-// PutLifecyclePolicy indicates an expected call of PutLifecyclePolicy
+// PutLifecyclePolicy indicates an expected call of PutLifecyclePolicy.
 func (mr *MockMediaStoreAPIMockRecorder) PutLifecyclePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutLifecyclePolicy", reflect.TypeOf((*MockMediaStoreAPI)(nil).PutLifecyclePolicy), arg0)
 }
 
-// PutLifecyclePolicyRequest mocks base method
+// PutLifecyclePolicyRequest mocks base method.
 func (m *MockMediaStoreAPI) PutLifecyclePolicyRequest(arg0 *mediastore.PutLifecyclePolicyInput) (*request.Request, *mediastore.PutLifecyclePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutLifecyclePolicyRequest", arg0)
@@ -842,13 +843,13 @@ func (m *MockMediaStoreAPI) PutLifecyclePolicyRequest(arg0 *mediastore.PutLifecy
 	return ret0, ret1
 }
 
-// PutLifecyclePolicyRequest indicates an expected call of PutLifecyclePolicyRequest
+// PutLifecyclePolicyRequest indicates an expected call of PutLifecyclePolicyRequest.
 func (mr *MockMediaStoreAPIMockRecorder) PutLifecyclePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutLifecyclePolicyRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).PutLifecyclePolicyRequest), arg0)
 }
 
-// PutLifecyclePolicyWithContext mocks base method
+// PutLifecyclePolicyWithContext mocks base method.
 func (m *MockMediaStoreAPI) PutLifecyclePolicyWithContext(arg0 context.Context, arg1 *mediastore.PutLifecyclePolicyInput, arg2 ...request.Option) (*mediastore.PutLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -861,14 +862,14 @@ func (m *MockMediaStoreAPI) PutLifecyclePolicyWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// PutLifecyclePolicyWithContext indicates an expected call of PutLifecyclePolicyWithContext
+// PutLifecyclePolicyWithContext indicates an expected call of PutLifecyclePolicyWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) PutLifecyclePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutLifecyclePolicyWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).PutLifecyclePolicyWithContext), varargs...)
 }
 
-// PutMetricPolicy mocks base method
+// PutMetricPolicy mocks base method.
 func (m *MockMediaStoreAPI) PutMetricPolicy(arg0 *mediastore.PutMetricPolicyInput) (*mediastore.PutMetricPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutMetricPolicy", arg0)
@@ -877,13 +878,13 @@ func (m *MockMediaStoreAPI) PutMetricPolicy(arg0 *mediastore.PutMetricPolicyInpu
 	return ret0, ret1
 }
 
-// PutMetricPolicy indicates an expected call of PutMetricPolicy
+// PutMetricPolicy indicates an expected call of PutMetricPolicy.
 func (mr *MockMediaStoreAPIMockRecorder) PutMetricPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutMetricPolicy", reflect.TypeOf((*MockMediaStoreAPI)(nil).PutMetricPolicy), arg0)
 }
 
-// PutMetricPolicyRequest mocks base method
+// PutMetricPolicyRequest mocks base method.
 func (m *MockMediaStoreAPI) PutMetricPolicyRequest(arg0 *mediastore.PutMetricPolicyInput) (*request.Request, *mediastore.PutMetricPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutMetricPolicyRequest", arg0)
@@ -892,13 +893,13 @@ func (m *MockMediaStoreAPI) PutMetricPolicyRequest(arg0 *mediastore.PutMetricPol
 	return ret0, ret1
 }
 
-// PutMetricPolicyRequest indicates an expected call of PutMetricPolicyRequest
+// PutMetricPolicyRequest indicates an expected call of PutMetricPolicyRequest.
 func (mr *MockMediaStoreAPIMockRecorder) PutMetricPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutMetricPolicyRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).PutMetricPolicyRequest), arg0)
 }
 
-// PutMetricPolicyWithContext mocks base method
+// PutMetricPolicyWithContext mocks base method.
 func (m *MockMediaStoreAPI) PutMetricPolicyWithContext(arg0 context.Context, arg1 *mediastore.PutMetricPolicyInput, arg2 ...request.Option) (*mediastore.PutMetricPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -911,14 +912,14 @@ func (m *MockMediaStoreAPI) PutMetricPolicyWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// PutMetricPolicyWithContext indicates an expected call of PutMetricPolicyWithContext
+// PutMetricPolicyWithContext indicates an expected call of PutMetricPolicyWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) PutMetricPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutMetricPolicyWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).PutMetricPolicyWithContext), varargs...)
 }
 
-// StartAccessLogging mocks base method
+// StartAccessLogging mocks base method.
 func (m *MockMediaStoreAPI) StartAccessLogging(arg0 *mediastore.StartAccessLoggingInput) (*mediastore.StartAccessLoggingOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartAccessLogging", arg0)
@@ -927,13 +928,13 @@ func (m *MockMediaStoreAPI) StartAccessLogging(arg0 *mediastore.StartAccessLoggi
 	return ret0, ret1
 }
 
-// StartAccessLogging indicates an expected call of StartAccessLogging
+// StartAccessLogging indicates an expected call of StartAccessLogging.
 func (mr *MockMediaStoreAPIMockRecorder) StartAccessLogging(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartAccessLogging", reflect.TypeOf((*MockMediaStoreAPI)(nil).StartAccessLogging), arg0)
 }
 
-// StartAccessLoggingRequest mocks base method
+// StartAccessLoggingRequest mocks base method.
 func (m *MockMediaStoreAPI) StartAccessLoggingRequest(arg0 *mediastore.StartAccessLoggingInput) (*request.Request, *mediastore.StartAccessLoggingOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartAccessLoggingRequest", arg0)
@@ -942,13 +943,13 @@ func (m *MockMediaStoreAPI) StartAccessLoggingRequest(arg0 *mediastore.StartAcce
 	return ret0, ret1
 }
 
-// StartAccessLoggingRequest indicates an expected call of StartAccessLoggingRequest
+// StartAccessLoggingRequest indicates an expected call of StartAccessLoggingRequest.
 func (mr *MockMediaStoreAPIMockRecorder) StartAccessLoggingRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartAccessLoggingRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).StartAccessLoggingRequest), arg0)
 }
 
-// StartAccessLoggingWithContext mocks base method
+// StartAccessLoggingWithContext mocks base method.
 func (m *MockMediaStoreAPI) StartAccessLoggingWithContext(arg0 context.Context, arg1 *mediastore.StartAccessLoggingInput, arg2 ...request.Option) (*mediastore.StartAccessLoggingOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -961,14 +962,14 @@ func (m *MockMediaStoreAPI) StartAccessLoggingWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// StartAccessLoggingWithContext indicates an expected call of StartAccessLoggingWithContext
+// StartAccessLoggingWithContext indicates an expected call of StartAccessLoggingWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) StartAccessLoggingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartAccessLoggingWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).StartAccessLoggingWithContext), varargs...)
 }
 
-// StopAccessLogging mocks base method
+// StopAccessLogging mocks base method.
 func (m *MockMediaStoreAPI) StopAccessLogging(arg0 *mediastore.StopAccessLoggingInput) (*mediastore.StopAccessLoggingOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopAccessLogging", arg0)
@@ -977,13 +978,13 @@ func (m *MockMediaStoreAPI) StopAccessLogging(arg0 *mediastore.StopAccessLogging
 	return ret0, ret1
 }
 
-// StopAccessLogging indicates an expected call of StopAccessLogging
+// StopAccessLogging indicates an expected call of StopAccessLogging.
 func (mr *MockMediaStoreAPIMockRecorder) StopAccessLogging(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopAccessLogging", reflect.TypeOf((*MockMediaStoreAPI)(nil).StopAccessLogging), arg0)
 }
 
-// StopAccessLoggingRequest mocks base method
+// StopAccessLoggingRequest mocks base method.
 func (m *MockMediaStoreAPI) StopAccessLoggingRequest(arg0 *mediastore.StopAccessLoggingInput) (*request.Request, *mediastore.StopAccessLoggingOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopAccessLoggingRequest", arg0)
@@ -992,13 +993,13 @@ func (m *MockMediaStoreAPI) StopAccessLoggingRequest(arg0 *mediastore.StopAccess
 	return ret0, ret1
 }
 
-// StopAccessLoggingRequest indicates an expected call of StopAccessLoggingRequest
+// StopAccessLoggingRequest indicates an expected call of StopAccessLoggingRequest.
 func (mr *MockMediaStoreAPIMockRecorder) StopAccessLoggingRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopAccessLoggingRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).StopAccessLoggingRequest), arg0)
 }
 
-// StopAccessLoggingWithContext mocks base method
+// StopAccessLoggingWithContext mocks base method.
 func (m *MockMediaStoreAPI) StopAccessLoggingWithContext(arg0 context.Context, arg1 *mediastore.StopAccessLoggingInput, arg2 ...request.Option) (*mediastore.StopAccessLoggingOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1011,14 +1012,14 @@ func (m *MockMediaStoreAPI) StopAccessLoggingWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// StopAccessLoggingWithContext indicates an expected call of StopAccessLoggingWithContext
+// StopAccessLoggingWithContext indicates an expected call of StopAccessLoggingWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) StopAccessLoggingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopAccessLoggingWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).StopAccessLoggingWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockMediaStoreAPI) TagResource(arg0 *mediastore.TagResourceInput) (*mediastore.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1027,13 +1028,13 @@ func (m *MockMediaStoreAPI) TagResource(arg0 *mediastore.TagResourceInput) (*med
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockMediaStoreAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockMediaStoreAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockMediaStoreAPI) TagResourceRequest(arg0 *mediastore.TagResourceInput) (*request.Request, *mediastore.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1042,13 +1043,13 @@ func (m *MockMediaStoreAPI) TagResourceRequest(arg0 *mediastore.TagResourceInput
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockMediaStoreAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockMediaStoreAPI) TagResourceWithContext(arg0 context.Context, arg1 *mediastore.TagResourceInput, arg2 ...request.Option) (*mediastore.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1061,14 +1062,14 @@ func (m *MockMediaStoreAPI) TagResourceWithContext(arg0 context.Context, arg1 *m
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockMediaStoreAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockMediaStoreAPI) UntagResource(arg0 *mediastore.UntagResourceInput) (*mediastore.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1077,13 +1078,13 @@ func (m *MockMediaStoreAPI) UntagResource(arg0 *mediastore.UntagResourceInput) (
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockMediaStoreAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockMediaStoreAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockMediaStoreAPI) UntagResourceRequest(arg0 *mediastore.UntagResourceInput) (*request.Request, *mediastore.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1092,13 +1093,13 @@ func (m *MockMediaStoreAPI) UntagResourceRequest(arg0 *mediastore.UntagResourceI
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockMediaStoreAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockMediaStoreAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockMediaStoreAPI) UntagResourceWithContext(arg0 context.Context, arg1 *mediastore.UntagResourceInput, arg2 ...request.Option) (*mediastore.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1111,7 +1112,7 @@ func (m *MockMediaStoreAPI) UntagResourceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockMediaStoreAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

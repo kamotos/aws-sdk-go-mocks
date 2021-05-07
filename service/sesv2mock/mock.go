@@ -6,36 +6,37 @@ package sesv2mock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	sesv2 "github.com/aws/aws-sdk-go/service/sesv2"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockSESV2API is a mock of SESV2API interface
+// MockSESV2API is a mock of SESV2API interface.
 type MockSESV2API struct {
 	ctrl     *gomock.Controller
 	recorder *MockSESV2APIMockRecorder
 }
 
-// MockSESV2APIMockRecorder is the mock recorder for MockSESV2API
+// MockSESV2APIMockRecorder is the mock recorder for MockSESV2API.
 type MockSESV2APIMockRecorder struct {
 	mock *MockSESV2API
 }
 
-// NewMockSESV2API creates a new mock instance
+// NewMockSESV2API creates a new mock instance.
 func NewMockSESV2API(ctrl *gomock.Controller) *MockSESV2API {
 	mock := &MockSESV2API{ctrl: ctrl}
 	mock.recorder = &MockSESV2APIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockSESV2API) EXPECT() *MockSESV2APIMockRecorder {
 	return m.recorder
 }
 
-// CreateConfigurationSet mocks base method
+// CreateConfigurationSet mocks base method.
 func (m *MockSESV2API) CreateConfigurationSet(arg0 *sesv2.CreateConfigurationSetInput) (*sesv2.CreateConfigurationSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConfigurationSet", arg0)
@@ -44,13 +45,13 @@ func (m *MockSESV2API) CreateConfigurationSet(arg0 *sesv2.CreateConfigurationSet
 	return ret0, ret1
 }
 
-// CreateConfigurationSet indicates an expected call of CreateConfigurationSet
+// CreateConfigurationSet indicates an expected call of CreateConfigurationSet.
 func (mr *MockSESV2APIMockRecorder) CreateConfigurationSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationSet", reflect.TypeOf((*MockSESV2API)(nil).CreateConfigurationSet), arg0)
 }
 
-// CreateConfigurationSetEventDestination mocks base method
+// CreateConfigurationSetEventDestination mocks base method.
 func (m *MockSESV2API) CreateConfigurationSetEventDestination(arg0 *sesv2.CreateConfigurationSetEventDestinationInput) (*sesv2.CreateConfigurationSetEventDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConfigurationSetEventDestination", arg0)
@@ -59,13 +60,13 @@ func (m *MockSESV2API) CreateConfigurationSetEventDestination(arg0 *sesv2.Create
 	return ret0, ret1
 }
 
-// CreateConfigurationSetEventDestination indicates an expected call of CreateConfigurationSetEventDestination
+// CreateConfigurationSetEventDestination indicates an expected call of CreateConfigurationSetEventDestination.
 func (mr *MockSESV2APIMockRecorder) CreateConfigurationSetEventDestination(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationSetEventDestination", reflect.TypeOf((*MockSESV2API)(nil).CreateConfigurationSetEventDestination), arg0)
 }
 
-// CreateConfigurationSetEventDestinationRequest mocks base method
+// CreateConfigurationSetEventDestinationRequest mocks base method.
 func (m *MockSESV2API) CreateConfigurationSetEventDestinationRequest(arg0 *sesv2.CreateConfigurationSetEventDestinationInput) (*request.Request, *sesv2.CreateConfigurationSetEventDestinationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConfigurationSetEventDestinationRequest", arg0)
@@ -74,13 +75,13 @@ func (m *MockSESV2API) CreateConfigurationSetEventDestinationRequest(arg0 *sesv2
 	return ret0, ret1
 }
 
-// CreateConfigurationSetEventDestinationRequest indicates an expected call of CreateConfigurationSetEventDestinationRequest
+// CreateConfigurationSetEventDestinationRequest indicates an expected call of CreateConfigurationSetEventDestinationRequest.
 func (mr *MockSESV2APIMockRecorder) CreateConfigurationSetEventDestinationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationSetEventDestinationRequest", reflect.TypeOf((*MockSESV2API)(nil).CreateConfigurationSetEventDestinationRequest), arg0)
 }
 
-// CreateConfigurationSetEventDestinationWithContext mocks base method
+// CreateConfigurationSetEventDestinationWithContext mocks base method.
 func (m *MockSESV2API) CreateConfigurationSetEventDestinationWithContext(arg0 context.Context, arg1 *sesv2.CreateConfigurationSetEventDestinationInput, arg2 ...request.Option) (*sesv2.CreateConfigurationSetEventDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -93,14 +94,14 @@ func (m *MockSESV2API) CreateConfigurationSetEventDestinationWithContext(arg0 co
 	return ret0, ret1
 }
 
-// CreateConfigurationSetEventDestinationWithContext indicates an expected call of CreateConfigurationSetEventDestinationWithContext
+// CreateConfigurationSetEventDestinationWithContext indicates an expected call of CreateConfigurationSetEventDestinationWithContext.
 func (mr *MockSESV2APIMockRecorder) CreateConfigurationSetEventDestinationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationSetEventDestinationWithContext", reflect.TypeOf((*MockSESV2API)(nil).CreateConfigurationSetEventDestinationWithContext), varargs...)
 }
 
-// CreateConfigurationSetRequest mocks base method
+// CreateConfigurationSetRequest mocks base method.
 func (m *MockSESV2API) CreateConfigurationSetRequest(arg0 *sesv2.CreateConfigurationSetInput) (*request.Request, *sesv2.CreateConfigurationSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConfigurationSetRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockSESV2API) CreateConfigurationSetRequest(arg0 *sesv2.CreateConfigura
 	return ret0, ret1
 }
 
-// CreateConfigurationSetRequest indicates an expected call of CreateConfigurationSetRequest
+// CreateConfigurationSetRequest indicates an expected call of CreateConfigurationSetRequest.
 func (mr *MockSESV2APIMockRecorder) CreateConfigurationSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationSetRequest", reflect.TypeOf((*MockSESV2API)(nil).CreateConfigurationSetRequest), arg0)
 }
 
-// CreateConfigurationSetWithContext mocks base method
+// CreateConfigurationSetWithContext mocks base method.
 func (m *MockSESV2API) CreateConfigurationSetWithContext(arg0 context.Context, arg1 *sesv2.CreateConfigurationSetInput, arg2 ...request.Option) (*sesv2.CreateConfigurationSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockSESV2API) CreateConfigurationSetWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// CreateConfigurationSetWithContext indicates an expected call of CreateConfigurationSetWithContext
+// CreateConfigurationSetWithContext indicates an expected call of CreateConfigurationSetWithContext.
 func (mr *MockSESV2APIMockRecorder) CreateConfigurationSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationSetWithContext", reflect.TypeOf((*MockSESV2API)(nil).CreateConfigurationSetWithContext), varargs...)
 }
 
-// CreateContact mocks base method
+// CreateContact mocks base method.
 func (m *MockSESV2API) CreateContact(arg0 *sesv2.CreateContactInput) (*sesv2.CreateContactOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContact", arg0)
@@ -144,13 +145,13 @@ func (m *MockSESV2API) CreateContact(arg0 *sesv2.CreateContactInput) (*sesv2.Cre
 	return ret0, ret1
 }
 
-// CreateContact indicates an expected call of CreateContact
+// CreateContact indicates an expected call of CreateContact.
 func (mr *MockSESV2APIMockRecorder) CreateContact(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContact", reflect.TypeOf((*MockSESV2API)(nil).CreateContact), arg0)
 }
 
-// CreateContactList mocks base method
+// CreateContactList mocks base method.
 func (m *MockSESV2API) CreateContactList(arg0 *sesv2.CreateContactListInput) (*sesv2.CreateContactListOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContactList", arg0)
@@ -159,13 +160,13 @@ func (m *MockSESV2API) CreateContactList(arg0 *sesv2.CreateContactListInput) (*s
 	return ret0, ret1
 }
 
-// CreateContactList indicates an expected call of CreateContactList
+// CreateContactList indicates an expected call of CreateContactList.
 func (mr *MockSESV2APIMockRecorder) CreateContactList(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContactList", reflect.TypeOf((*MockSESV2API)(nil).CreateContactList), arg0)
 }
 
-// CreateContactListRequest mocks base method
+// CreateContactListRequest mocks base method.
 func (m *MockSESV2API) CreateContactListRequest(arg0 *sesv2.CreateContactListInput) (*request.Request, *sesv2.CreateContactListOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContactListRequest", arg0)
@@ -174,13 +175,13 @@ func (m *MockSESV2API) CreateContactListRequest(arg0 *sesv2.CreateContactListInp
 	return ret0, ret1
 }
 
-// CreateContactListRequest indicates an expected call of CreateContactListRequest
+// CreateContactListRequest indicates an expected call of CreateContactListRequest.
 func (mr *MockSESV2APIMockRecorder) CreateContactListRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContactListRequest", reflect.TypeOf((*MockSESV2API)(nil).CreateContactListRequest), arg0)
 }
 
-// CreateContactListWithContext mocks base method
+// CreateContactListWithContext mocks base method.
 func (m *MockSESV2API) CreateContactListWithContext(arg0 context.Context, arg1 *sesv2.CreateContactListInput, arg2 ...request.Option) (*sesv2.CreateContactListOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -193,14 +194,14 @@ func (m *MockSESV2API) CreateContactListWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// CreateContactListWithContext indicates an expected call of CreateContactListWithContext
+// CreateContactListWithContext indicates an expected call of CreateContactListWithContext.
 func (mr *MockSESV2APIMockRecorder) CreateContactListWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContactListWithContext", reflect.TypeOf((*MockSESV2API)(nil).CreateContactListWithContext), varargs...)
 }
 
-// CreateContactRequest mocks base method
+// CreateContactRequest mocks base method.
 func (m *MockSESV2API) CreateContactRequest(arg0 *sesv2.CreateContactInput) (*request.Request, *sesv2.CreateContactOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContactRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockSESV2API) CreateContactRequest(arg0 *sesv2.CreateContactInput) (*re
 	return ret0, ret1
 }
 
-// CreateContactRequest indicates an expected call of CreateContactRequest
+// CreateContactRequest indicates an expected call of CreateContactRequest.
 func (mr *MockSESV2APIMockRecorder) CreateContactRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContactRequest", reflect.TypeOf((*MockSESV2API)(nil).CreateContactRequest), arg0)
 }
 
-// CreateContactWithContext mocks base method
+// CreateContactWithContext mocks base method.
 func (m *MockSESV2API) CreateContactWithContext(arg0 context.Context, arg1 *sesv2.CreateContactInput, arg2 ...request.Option) (*sesv2.CreateContactOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockSESV2API) CreateContactWithContext(arg0 context.Context, arg1 *sesv
 	return ret0, ret1
 }
 
-// CreateContactWithContext indicates an expected call of CreateContactWithContext
+// CreateContactWithContext indicates an expected call of CreateContactWithContext.
 func (mr *MockSESV2APIMockRecorder) CreateContactWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContactWithContext", reflect.TypeOf((*MockSESV2API)(nil).CreateContactWithContext), varargs...)
 }
 
-// CreateCustomVerificationEmailTemplate mocks base method
+// CreateCustomVerificationEmailTemplate mocks base method.
 func (m *MockSESV2API) CreateCustomVerificationEmailTemplate(arg0 *sesv2.CreateCustomVerificationEmailTemplateInput) (*sesv2.CreateCustomVerificationEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCustomVerificationEmailTemplate", arg0)
@@ -244,13 +245,13 @@ func (m *MockSESV2API) CreateCustomVerificationEmailTemplate(arg0 *sesv2.CreateC
 	return ret0, ret1
 }
 
-// CreateCustomVerificationEmailTemplate indicates an expected call of CreateCustomVerificationEmailTemplate
+// CreateCustomVerificationEmailTemplate indicates an expected call of CreateCustomVerificationEmailTemplate.
 func (mr *MockSESV2APIMockRecorder) CreateCustomVerificationEmailTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomVerificationEmailTemplate", reflect.TypeOf((*MockSESV2API)(nil).CreateCustomVerificationEmailTemplate), arg0)
 }
 
-// CreateCustomVerificationEmailTemplateRequest mocks base method
+// CreateCustomVerificationEmailTemplateRequest mocks base method.
 func (m *MockSESV2API) CreateCustomVerificationEmailTemplateRequest(arg0 *sesv2.CreateCustomVerificationEmailTemplateInput) (*request.Request, *sesv2.CreateCustomVerificationEmailTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCustomVerificationEmailTemplateRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockSESV2API) CreateCustomVerificationEmailTemplateRequest(arg0 *sesv2.
 	return ret0, ret1
 }
 
-// CreateCustomVerificationEmailTemplateRequest indicates an expected call of CreateCustomVerificationEmailTemplateRequest
+// CreateCustomVerificationEmailTemplateRequest indicates an expected call of CreateCustomVerificationEmailTemplateRequest.
 func (mr *MockSESV2APIMockRecorder) CreateCustomVerificationEmailTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomVerificationEmailTemplateRequest", reflect.TypeOf((*MockSESV2API)(nil).CreateCustomVerificationEmailTemplateRequest), arg0)
 }
 
-// CreateCustomVerificationEmailTemplateWithContext mocks base method
+// CreateCustomVerificationEmailTemplateWithContext mocks base method.
 func (m *MockSESV2API) CreateCustomVerificationEmailTemplateWithContext(arg0 context.Context, arg1 *sesv2.CreateCustomVerificationEmailTemplateInput, arg2 ...request.Option) (*sesv2.CreateCustomVerificationEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockSESV2API) CreateCustomVerificationEmailTemplateWithContext(arg0 con
 	return ret0, ret1
 }
 
-// CreateCustomVerificationEmailTemplateWithContext indicates an expected call of CreateCustomVerificationEmailTemplateWithContext
+// CreateCustomVerificationEmailTemplateWithContext indicates an expected call of CreateCustomVerificationEmailTemplateWithContext.
 func (mr *MockSESV2APIMockRecorder) CreateCustomVerificationEmailTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomVerificationEmailTemplateWithContext", reflect.TypeOf((*MockSESV2API)(nil).CreateCustomVerificationEmailTemplateWithContext), varargs...)
 }
 
-// CreateDedicatedIpPool mocks base method
+// CreateDedicatedIpPool mocks base method.
 func (m *MockSESV2API) CreateDedicatedIpPool(arg0 *sesv2.CreateDedicatedIpPoolInput) (*sesv2.CreateDedicatedIpPoolOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDedicatedIpPool", arg0)
@@ -294,13 +295,13 @@ func (m *MockSESV2API) CreateDedicatedIpPool(arg0 *sesv2.CreateDedicatedIpPoolIn
 	return ret0, ret1
 }
 
-// CreateDedicatedIpPool indicates an expected call of CreateDedicatedIpPool
+// CreateDedicatedIpPool indicates an expected call of CreateDedicatedIpPool.
 func (mr *MockSESV2APIMockRecorder) CreateDedicatedIpPool(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDedicatedIpPool", reflect.TypeOf((*MockSESV2API)(nil).CreateDedicatedIpPool), arg0)
 }
 
-// CreateDedicatedIpPoolRequest mocks base method
+// CreateDedicatedIpPoolRequest mocks base method.
 func (m *MockSESV2API) CreateDedicatedIpPoolRequest(arg0 *sesv2.CreateDedicatedIpPoolInput) (*request.Request, *sesv2.CreateDedicatedIpPoolOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDedicatedIpPoolRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockSESV2API) CreateDedicatedIpPoolRequest(arg0 *sesv2.CreateDedicatedI
 	return ret0, ret1
 }
 
-// CreateDedicatedIpPoolRequest indicates an expected call of CreateDedicatedIpPoolRequest
+// CreateDedicatedIpPoolRequest indicates an expected call of CreateDedicatedIpPoolRequest.
 func (mr *MockSESV2APIMockRecorder) CreateDedicatedIpPoolRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDedicatedIpPoolRequest", reflect.TypeOf((*MockSESV2API)(nil).CreateDedicatedIpPoolRequest), arg0)
 }
 
-// CreateDedicatedIpPoolWithContext mocks base method
+// CreateDedicatedIpPoolWithContext mocks base method.
 func (m *MockSESV2API) CreateDedicatedIpPoolWithContext(arg0 context.Context, arg1 *sesv2.CreateDedicatedIpPoolInput, arg2 ...request.Option) (*sesv2.CreateDedicatedIpPoolOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockSESV2API) CreateDedicatedIpPoolWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateDedicatedIpPoolWithContext indicates an expected call of CreateDedicatedIpPoolWithContext
+// CreateDedicatedIpPoolWithContext indicates an expected call of CreateDedicatedIpPoolWithContext.
 func (mr *MockSESV2APIMockRecorder) CreateDedicatedIpPoolWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDedicatedIpPoolWithContext", reflect.TypeOf((*MockSESV2API)(nil).CreateDedicatedIpPoolWithContext), varargs...)
 }
 
-// CreateDeliverabilityTestReport mocks base method
+// CreateDeliverabilityTestReport mocks base method.
 func (m *MockSESV2API) CreateDeliverabilityTestReport(arg0 *sesv2.CreateDeliverabilityTestReportInput) (*sesv2.CreateDeliverabilityTestReportOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDeliverabilityTestReport", arg0)
@@ -344,13 +345,13 @@ func (m *MockSESV2API) CreateDeliverabilityTestReport(arg0 *sesv2.CreateDelivera
 	return ret0, ret1
 }
 
-// CreateDeliverabilityTestReport indicates an expected call of CreateDeliverabilityTestReport
+// CreateDeliverabilityTestReport indicates an expected call of CreateDeliverabilityTestReport.
 func (mr *MockSESV2APIMockRecorder) CreateDeliverabilityTestReport(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDeliverabilityTestReport", reflect.TypeOf((*MockSESV2API)(nil).CreateDeliverabilityTestReport), arg0)
 }
 
-// CreateDeliverabilityTestReportRequest mocks base method
+// CreateDeliverabilityTestReportRequest mocks base method.
 func (m *MockSESV2API) CreateDeliverabilityTestReportRequest(arg0 *sesv2.CreateDeliverabilityTestReportInput) (*request.Request, *sesv2.CreateDeliverabilityTestReportOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDeliverabilityTestReportRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockSESV2API) CreateDeliverabilityTestReportRequest(arg0 *sesv2.CreateD
 	return ret0, ret1
 }
 
-// CreateDeliverabilityTestReportRequest indicates an expected call of CreateDeliverabilityTestReportRequest
+// CreateDeliverabilityTestReportRequest indicates an expected call of CreateDeliverabilityTestReportRequest.
 func (mr *MockSESV2APIMockRecorder) CreateDeliverabilityTestReportRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDeliverabilityTestReportRequest", reflect.TypeOf((*MockSESV2API)(nil).CreateDeliverabilityTestReportRequest), arg0)
 }
 
-// CreateDeliverabilityTestReportWithContext mocks base method
+// CreateDeliverabilityTestReportWithContext mocks base method.
 func (m *MockSESV2API) CreateDeliverabilityTestReportWithContext(arg0 context.Context, arg1 *sesv2.CreateDeliverabilityTestReportInput, arg2 ...request.Option) (*sesv2.CreateDeliverabilityTestReportOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockSESV2API) CreateDeliverabilityTestReportWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// CreateDeliverabilityTestReportWithContext indicates an expected call of CreateDeliverabilityTestReportWithContext
+// CreateDeliverabilityTestReportWithContext indicates an expected call of CreateDeliverabilityTestReportWithContext.
 func (mr *MockSESV2APIMockRecorder) CreateDeliverabilityTestReportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDeliverabilityTestReportWithContext", reflect.TypeOf((*MockSESV2API)(nil).CreateDeliverabilityTestReportWithContext), varargs...)
 }
 
-// CreateEmailIdentity mocks base method
+// CreateEmailIdentity mocks base method.
 func (m *MockSESV2API) CreateEmailIdentity(arg0 *sesv2.CreateEmailIdentityInput) (*sesv2.CreateEmailIdentityOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEmailIdentity", arg0)
@@ -394,13 +395,13 @@ func (m *MockSESV2API) CreateEmailIdentity(arg0 *sesv2.CreateEmailIdentityInput)
 	return ret0, ret1
 }
 
-// CreateEmailIdentity indicates an expected call of CreateEmailIdentity
+// CreateEmailIdentity indicates an expected call of CreateEmailIdentity.
 func (mr *MockSESV2APIMockRecorder) CreateEmailIdentity(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEmailIdentity", reflect.TypeOf((*MockSESV2API)(nil).CreateEmailIdentity), arg0)
 }
 
-// CreateEmailIdentityPolicy mocks base method
+// CreateEmailIdentityPolicy mocks base method.
 func (m *MockSESV2API) CreateEmailIdentityPolicy(arg0 *sesv2.CreateEmailIdentityPolicyInput) (*sesv2.CreateEmailIdentityPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEmailIdentityPolicy", arg0)
@@ -409,13 +410,13 @@ func (m *MockSESV2API) CreateEmailIdentityPolicy(arg0 *sesv2.CreateEmailIdentity
 	return ret0, ret1
 }
 
-// CreateEmailIdentityPolicy indicates an expected call of CreateEmailIdentityPolicy
+// CreateEmailIdentityPolicy indicates an expected call of CreateEmailIdentityPolicy.
 func (mr *MockSESV2APIMockRecorder) CreateEmailIdentityPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEmailIdentityPolicy", reflect.TypeOf((*MockSESV2API)(nil).CreateEmailIdentityPolicy), arg0)
 }
 
-// CreateEmailIdentityPolicyRequest mocks base method
+// CreateEmailIdentityPolicyRequest mocks base method.
 func (m *MockSESV2API) CreateEmailIdentityPolicyRequest(arg0 *sesv2.CreateEmailIdentityPolicyInput) (*request.Request, *sesv2.CreateEmailIdentityPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEmailIdentityPolicyRequest", arg0)
@@ -424,13 +425,13 @@ func (m *MockSESV2API) CreateEmailIdentityPolicyRequest(arg0 *sesv2.CreateEmailI
 	return ret0, ret1
 }
 
-// CreateEmailIdentityPolicyRequest indicates an expected call of CreateEmailIdentityPolicyRequest
+// CreateEmailIdentityPolicyRequest indicates an expected call of CreateEmailIdentityPolicyRequest.
 func (mr *MockSESV2APIMockRecorder) CreateEmailIdentityPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEmailIdentityPolicyRequest", reflect.TypeOf((*MockSESV2API)(nil).CreateEmailIdentityPolicyRequest), arg0)
 }
 
-// CreateEmailIdentityPolicyWithContext mocks base method
+// CreateEmailIdentityPolicyWithContext mocks base method.
 func (m *MockSESV2API) CreateEmailIdentityPolicyWithContext(arg0 context.Context, arg1 *sesv2.CreateEmailIdentityPolicyInput, arg2 ...request.Option) (*sesv2.CreateEmailIdentityPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -443,14 +444,14 @@ func (m *MockSESV2API) CreateEmailIdentityPolicyWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// CreateEmailIdentityPolicyWithContext indicates an expected call of CreateEmailIdentityPolicyWithContext
+// CreateEmailIdentityPolicyWithContext indicates an expected call of CreateEmailIdentityPolicyWithContext.
 func (mr *MockSESV2APIMockRecorder) CreateEmailIdentityPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEmailIdentityPolicyWithContext", reflect.TypeOf((*MockSESV2API)(nil).CreateEmailIdentityPolicyWithContext), varargs...)
 }
 
-// CreateEmailIdentityRequest mocks base method
+// CreateEmailIdentityRequest mocks base method.
 func (m *MockSESV2API) CreateEmailIdentityRequest(arg0 *sesv2.CreateEmailIdentityInput) (*request.Request, *sesv2.CreateEmailIdentityOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEmailIdentityRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockSESV2API) CreateEmailIdentityRequest(arg0 *sesv2.CreateEmailIdentit
 	return ret0, ret1
 }
 
-// CreateEmailIdentityRequest indicates an expected call of CreateEmailIdentityRequest
+// CreateEmailIdentityRequest indicates an expected call of CreateEmailIdentityRequest.
 func (mr *MockSESV2APIMockRecorder) CreateEmailIdentityRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEmailIdentityRequest", reflect.TypeOf((*MockSESV2API)(nil).CreateEmailIdentityRequest), arg0)
 }
 
-// CreateEmailIdentityWithContext mocks base method
+// CreateEmailIdentityWithContext mocks base method.
 func (m *MockSESV2API) CreateEmailIdentityWithContext(arg0 context.Context, arg1 *sesv2.CreateEmailIdentityInput, arg2 ...request.Option) (*sesv2.CreateEmailIdentityOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockSESV2API) CreateEmailIdentityWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// CreateEmailIdentityWithContext indicates an expected call of CreateEmailIdentityWithContext
+// CreateEmailIdentityWithContext indicates an expected call of CreateEmailIdentityWithContext.
 func (mr *MockSESV2APIMockRecorder) CreateEmailIdentityWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEmailIdentityWithContext", reflect.TypeOf((*MockSESV2API)(nil).CreateEmailIdentityWithContext), varargs...)
 }
 
-// CreateEmailTemplate mocks base method
+// CreateEmailTemplate mocks base method.
 func (m *MockSESV2API) CreateEmailTemplate(arg0 *sesv2.CreateEmailTemplateInput) (*sesv2.CreateEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEmailTemplate", arg0)
@@ -494,13 +495,13 @@ func (m *MockSESV2API) CreateEmailTemplate(arg0 *sesv2.CreateEmailTemplateInput)
 	return ret0, ret1
 }
 
-// CreateEmailTemplate indicates an expected call of CreateEmailTemplate
+// CreateEmailTemplate indicates an expected call of CreateEmailTemplate.
 func (mr *MockSESV2APIMockRecorder) CreateEmailTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEmailTemplate", reflect.TypeOf((*MockSESV2API)(nil).CreateEmailTemplate), arg0)
 }
 
-// CreateEmailTemplateRequest mocks base method
+// CreateEmailTemplateRequest mocks base method.
 func (m *MockSESV2API) CreateEmailTemplateRequest(arg0 *sesv2.CreateEmailTemplateInput) (*request.Request, *sesv2.CreateEmailTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEmailTemplateRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockSESV2API) CreateEmailTemplateRequest(arg0 *sesv2.CreateEmailTemplat
 	return ret0, ret1
 }
 
-// CreateEmailTemplateRequest indicates an expected call of CreateEmailTemplateRequest
+// CreateEmailTemplateRequest indicates an expected call of CreateEmailTemplateRequest.
 func (mr *MockSESV2APIMockRecorder) CreateEmailTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEmailTemplateRequest", reflect.TypeOf((*MockSESV2API)(nil).CreateEmailTemplateRequest), arg0)
 }
 
-// CreateEmailTemplateWithContext mocks base method
+// CreateEmailTemplateWithContext mocks base method.
 func (m *MockSESV2API) CreateEmailTemplateWithContext(arg0 context.Context, arg1 *sesv2.CreateEmailTemplateInput, arg2 ...request.Option) (*sesv2.CreateEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockSESV2API) CreateEmailTemplateWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// CreateEmailTemplateWithContext indicates an expected call of CreateEmailTemplateWithContext
+// CreateEmailTemplateWithContext indicates an expected call of CreateEmailTemplateWithContext.
 func (mr *MockSESV2APIMockRecorder) CreateEmailTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEmailTemplateWithContext", reflect.TypeOf((*MockSESV2API)(nil).CreateEmailTemplateWithContext), varargs...)
 }
 
-// CreateImportJob mocks base method
+// CreateImportJob mocks base method.
 func (m *MockSESV2API) CreateImportJob(arg0 *sesv2.CreateImportJobInput) (*sesv2.CreateImportJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateImportJob", arg0)
@@ -544,13 +545,13 @@ func (m *MockSESV2API) CreateImportJob(arg0 *sesv2.CreateImportJobInput) (*sesv2
 	return ret0, ret1
 }
 
-// CreateImportJob indicates an expected call of CreateImportJob
+// CreateImportJob indicates an expected call of CreateImportJob.
 func (mr *MockSESV2APIMockRecorder) CreateImportJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImportJob", reflect.TypeOf((*MockSESV2API)(nil).CreateImportJob), arg0)
 }
 
-// CreateImportJobRequest mocks base method
+// CreateImportJobRequest mocks base method.
 func (m *MockSESV2API) CreateImportJobRequest(arg0 *sesv2.CreateImportJobInput) (*request.Request, *sesv2.CreateImportJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateImportJobRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockSESV2API) CreateImportJobRequest(arg0 *sesv2.CreateImportJobInput) 
 	return ret0, ret1
 }
 
-// CreateImportJobRequest indicates an expected call of CreateImportJobRequest
+// CreateImportJobRequest indicates an expected call of CreateImportJobRequest.
 func (mr *MockSESV2APIMockRecorder) CreateImportJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImportJobRequest", reflect.TypeOf((*MockSESV2API)(nil).CreateImportJobRequest), arg0)
 }
 
-// CreateImportJobWithContext mocks base method
+// CreateImportJobWithContext mocks base method.
 func (m *MockSESV2API) CreateImportJobWithContext(arg0 context.Context, arg1 *sesv2.CreateImportJobInput, arg2 ...request.Option) (*sesv2.CreateImportJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockSESV2API) CreateImportJobWithContext(arg0 context.Context, arg1 *se
 	return ret0, ret1
 }
 
-// CreateImportJobWithContext indicates an expected call of CreateImportJobWithContext
+// CreateImportJobWithContext indicates an expected call of CreateImportJobWithContext.
 func (mr *MockSESV2APIMockRecorder) CreateImportJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImportJobWithContext", reflect.TypeOf((*MockSESV2API)(nil).CreateImportJobWithContext), varargs...)
 }
 
-// DeleteConfigurationSet mocks base method
+// DeleteConfigurationSet mocks base method.
 func (m *MockSESV2API) DeleteConfigurationSet(arg0 *sesv2.DeleteConfigurationSetInput) (*sesv2.DeleteConfigurationSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConfigurationSet", arg0)
@@ -594,13 +595,13 @@ func (m *MockSESV2API) DeleteConfigurationSet(arg0 *sesv2.DeleteConfigurationSet
 	return ret0, ret1
 }
 
-// DeleteConfigurationSet indicates an expected call of DeleteConfigurationSet
+// DeleteConfigurationSet indicates an expected call of DeleteConfigurationSet.
 func (mr *MockSESV2APIMockRecorder) DeleteConfigurationSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationSet", reflect.TypeOf((*MockSESV2API)(nil).DeleteConfigurationSet), arg0)
 }
 
-// DeleteConfigurationSetEventDestination mocks base method
+// DeleteConfigurationSetEventDestination mocks base method.
 func (m *MockSESV2API) DeleteConfigurationSetEventDestination(arg0 *sesv2.DeleteConfigurationSetEventDestinationInput) (*sesv2.DeleteConfigurationSetEventDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConfigurationSetEventDestination", arg0)
@@ -609,13 +610,13 @@ func (m *MockSESV2API) DeleteConfigurationSetEventDestination(arg0 *sesv2.Delete
 	return ret0, ret1
 }
 
-// DeleteConfigurationSetEventDestination indicates an expected call of DeleteConfigurationSetEventDestination
+// DeleteConfigurationSetEventDestination indicates an expected call of DeleteConfigurationSetEventDestination.
 func (mr *MockSESV2APIMockRecorder) DeleteConfigurationSetEventDestination(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationSetEventDestination", reflect.TypeOf((*MockSESV2API)(nil).DeleteConfigurationSetEventDestination), arg0)
 }
 
-// DeleteConfigurationSetEventDestinationRequest mocks base method
+// DeleteConfigurationSetEventDestinationRequest mocks base method.
 func (m *MockSESV2API) DeleteConfigurationSetEventDestinationRequest(arg0 *sesv2.DeleteConfigurationSetEventDestinationInput) (*request.Request, *sesv2.DeleteConfigurationSetEventDestinationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConfigurationSetEventDestinationRequest", arg0)
@@ -624,13 +625,13 @@ func (m *MockSESV2API) DeleteConfigurationSetEventDestinationRequest(arg0 *sesv2
 	return ret0, ret1
 }
 
-// DeleteConfigurationSetEventDestinationRequest indicates an expected call of DeleteConfigurationSetEventDestinationRequest
+// DeleteConfigurationSetEventDestinationRequest indicates an expected call of DeleteConfigurationSetEventDestinationRequest.
 func (mr *MockSESV2APIMockRecorder) DeleteConfigurationSetEventDestinationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationSetEventDestinationRequest", reflect.TypeOf((*MockSESV2API)(nil).DeleteConfigurationSetEventDestinationRequest), arg0)
 }
 
-// DeleteConfigurationSetEventDestinationWithContext mocks base method
+// DeleteConfigurationSetEventDestinationWithContext mocks base method.
 func (m *MockSESV2API) DeleteConfigurationSetEventDestinationWithContext(arg0 context.Context, arg1 *sesv2.DeleteConfigurationSetEventDestinationInput, arg2 ...request.Option) (*sesv2.DeleteConfigurationSetEventDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -643,14 +644,14 @@ func (m *MockSESV2API) DeleteConfigurationSetEventDestinationWithContext(arg0 co
 	return ret0, ret1
 }
 
-// DeleteConfigurationSetEventDestinationWithContext indicates an expected call of DeleteConfigurationSetEventDestinationWithContext
+// DeleteConfigurationSetEventDestinationWithContext indicates an expected call of DeleteConfigurationSetEventDestinationWithContext.
 func (mr *MockSESV2APIMockRecorder) DeleteConfigurationSetEventDestinationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationSetEventDestinationWithContext", reflect.TypeOf((*MockSESV2API)(nil).DeleteConfigurationSetEventDestinationWithContext), varargs...)
 }
 
-// DeleteConfigurationSetRequest mocks base method
+// DeleteConfigurationSetRequest mocks base method.
 func (m *MockSESV2API) DeleteConfigurationSetRequest(arg0 *sesv2.DeleteConfigurationSetInput) (*request.Request, *sesv2.DeleteConfigurationSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConfigurationSetRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockSESV2API) DeleteConfigurationSetRequest(arg0 *sesv2.DeleteConfigura
 	return ret0, ret1
 }
 
-// DeleteConfigurationSetRequest indicates an expected call of DeleteConfigurationSetRequest
+// DeleteConfigurationSetRequest indicates an expected call of DeleteConfigurationSetRequest.
 func (mr *MockSESV2APIMockRecorder) DeleteConfigurationSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationSetRequest", reflect.TypeOf((*MockSESV2API)(nil).DeleteConfigurationSetRequest), arg0)
 }
 
-// DeleteConfigurationSetWithContext mocks base method
+// DeleteConfigurationSetWithContext mocks base method.
 func (m *MockSESV2API) DeleteConfigurationSetWithContext(arg0 context.Context, arg1 *sesv2.DeleteConfigurationSetInput, arg2 ...request.Option) (*sesv2.DeleteConfigurationSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockSESV2API) DeleteConfigurationSetWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteConfigurationSetWithContext indicates an expected call of DeleteConfigurationSetWithContext
+// DeleteConfigurationSetWithContext indicates an expected call of DeleteConfigurationSetWithContext.
 func (mr *MockSESV2APIMockRecorder) DeleteConfigurationSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationSetWithContext", reflect.TypeOf((*MockSESV2API)(nil).DeleteConfigurationSetWithContext), varargs...)
 }
 
-// DeleteContact mocks base method
+// DeleteContact mocks base method.
 func (m *MockSESV2API) DeleteContact(arg0 *sesv2.DeleteContactInput) (*sesv2.DeleteContactOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContact", arg0)
@@ -694,13 +695,13 @@ func (m *MockSESV2API) DeleteContact(arg0 *sesv2.DeleteContactInput) (*sesv2.Del
 	return ret0, ret1
 }
 
-// DeleteContact indicates an expected call of DeleteContact
+// DeleteContact indicates an expected call of DeleteContact.
 func (mr *MockSESV2APIMockRecorder) DeleteContact(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContact", reflect.TypeOf((*MockSESV2API)(nil).DeleteContact), arg0)
 }
 
-// DeleteContactList mocks base method
+// DeleteContactList mocks base method.
 func (m *MockSESV2API) DeleteContactList(arg0 *sesv2.DeleteContactListInput) (*sesv2.DeleteContactListOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContactList", arg0)
@@ -709,13 +710,13 @@ func (m *MockSESV2API) DeleteContactList(arg0 *sesv2.DeleteContactListInput) (*s
 	return ret0, ret1
 }
 
-// DeleteContactList indicates an expected call of DeleteContactList
+// DeleteContactList indicates an expected call of DeleteContactList.
 func (mr *MockSESV2APIMockRecorder) DeleteContactList(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContactList", reflect.TypeOf((*MockSESV2API)(nil).DeleteContactList), arg0)
 }
 
-// DeleteContactListRequest mocks base method
+// DeleteContactListRequest mocks base method.
 func (m *MockSESV2API) DeleteContactListRequest(arg0 *sesv2.DeleteContactListInput) (*request.Request, *sesv2.DeleteContactListOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContactListRequest", arg0)
@@ -724,13 +725,13 @@ func (m *MockSESV2API) DeleteContactListRequest(arg0 *sesv2.DeleteContactListInp
 	return ret0, ret1
 }
 
-// DeleteContactListRequest indicates an expected call of DeleteContactListRequest
+// DeleteContactListRequest indicates an expected call of DeleteContactListRequest.
 func (mr *MockSESV2APIMockRecorder) DeleteContactListRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContactListRequest", reflect.TypeOf((*MockSESV2API)(nil).DeleteContactListRequest), arg0)
 }
 
-// DeleteContactListWithContext mocks base method
+// DeleteContactListWithContext mocks base method.
 func (m *MockSESV2API) DeleteContactListWithContext(arg0 context.Context, arg1 *sesv2.DeleteContactListInput, arg2 ...request.Option) (*sesv2.DeleteContactListOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -743,14 +744,14 @@ func (m *MockSESV2API) DeleteContactListWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DeleteContactListWithContext indicates an expected call of DeleteContactListWithContext
+// DeleteContactListWithContext indicates an expected call of DeleteContactListWithContext.
 func (mr *MockSESV2APIMockRecorder) DeleteContactListWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContactListWithContext", reflect.TypeOf((*MockSESV2API)(nil).DeleteContactListWithContext), varargs...)
 }
 
-// DeleteContactRequest mocks base method
+// DeleteContactRequest mocks base method.
 func (m *MockSESV2API) DeleteContactRequest(arg0 *sesv2.DeleteContactInput) (*request.Request, *sesv2.DeleteContactOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContactRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockSESV2API) DeleteContactRequest(arg0 *sesv2.DeleteContactInput) (*re
 	return ret0, ret1
 }
 
-// DeleteContactRequest indicates an expected call of DeleteContactRequest
+// DeleteContactRequest indicates an expected call of DeleteContactRequest.
 func (mr *MockSESV2APIMockRecorder) DeleteContactRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContactRequest", reflect.TypeOf((*MockSESV2API)(nil).DeleteContactRequest), arg0)
 }
 
-// DeleteContactWithContext mocks base method
+// DeleteContactWithContext mocks base method.
 func (m *MockSESV2API) DeleteContactWithContext(arg0 context.Context, arg1 *sesv2.DeleteContactInput, arg2 ...request.Option) (*sesv2.DeleteContactOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockSESV2API) DeleteContactWithContext(arg0 context.Context, arg1 *sesv
 	return ret0, ret1
 }
 
-// DeleteContactWithContext indicates an expected call of DeleteContactWithContext
+// DeleteContactWithContext indicates an expected call of DeleteContactWithContext.
 func (mr *MockSESV2APIMockRecorder) DeleteContactWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContactWithContext", reflect.TypeOf((*MockSESV2API)(nil).DeleteContactWithContext), varargs...)
 }
 
-// DeleteCustomVerificationEmailTemplate mocks base method
+// DeleteCustomVerificationEmailTemplate mocks base method.
 func (m *MockSESV2API) DeleteCustomVerificationEmailTemplate(arg0 *sesv2.DeleteCustomVerificationEmailTemplateInput) (*sesv2.DeleteCustomVerificationEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCustomVerificationEmailTemplate", arg0)
@@ -794,13 +795,13 @@ func (m *MockSESV2API) DeleteCustomVerificationEmailTemplate(arg0 *sesv2.DeleteC
 	return ret0, ret1
 }
 
-// DeleteCustomVerificationEmailTemplate indicates an expected call of DeleteCustomVerificationEmailTemplate
+// DeleteCustomVerificationEmailTemplate indicates an expected call of DeleteCustomVerificationEmailTemplate.
 func (mr *MockSESV2APIMockRecorder) DeleteCustomVerificationEmailTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomVerificationEmailTemplate", reflect.TypeOf((*MockSESV2API)(nil).DeleteCustomVerificationEmailTemplate), arg0)
 }
 
-// DeleteCustomVerificationEmailTemplateRequest mocks base method
+// DeleteCustomVerificationEmailTemplateRequest mocks base method.
 func (m *MockSESV2API) DeleteCustomVerificationEmailTemplateRequest(arg0 *sesv2.DeleteCustomVerificationEmailTemplateInput) (*request.Request, *sesv2.DeleteCustomVerificationEmailTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCustomVerificationEmailTemplateRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockSESV2API) DeleteCustomVerificationEmailTemplateRequest(arg0 *sesv2.
 	return ret0, ret1
 }
 
-// DeleteCustomVerificationEmailTemplateRequest indicates an expected call of DeleteCustomVerificationEmailTemplateRequest
+// DeleteCustomVerificationEmailTemplateRequest indicates an expected call of DeleteCustomVerificationEmailTemplateRequest.
 func (mr *MockSESV2APIMockRecorder) DeleteCustomVerificationEmailTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomVerificationEmailTemplateRequest", reflect.TypeOf((*MockSESV2API)(nil).DeleteCustomVerificationEmailTemplateRequest), arg0)
 }
 
-// DeleteCustomVerificationEmailTemplateWithContext mocks base method
+// DeleteCustomVerificationEmailTemplateWithContext mocks base method.
 func (m *MockSESV2API) DeleteCustomVerificationEmailTemplateWithContext(arg0 context.Context, arg1 *sesv2.DeleteCustomVerificationEmailTemplateInput, arg2 ...request.Option) (*sesv2.DeleteCustomVerificationEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockSESV2API) DeleteCustomVerificationEmailTemplateWithContext(arg0 con
 	return ret0, ret1
 }
 
-// DeleteCustomVerificationEmailTemplateWithContext indicates an expected call of DeleteCustomVerificationEmailTemplateWithContext
+// DeleteCustomVerificationEmailTemplateWithContext indicates an expected call of DeleteCustomVerificationEmailTemplateWithContext.
 func (mr *MockSESV2APIMockRecorder) DeleteCustomVerificationEmailTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomVerificationEmailTemplateWithContext", reflect.TypeOf((*MockSESV2API)(nil).DeleteCustomVerificationEmailTemplateWithContext), varargs...)
 }
 
-// DeleteDedicatedIpPool mocks base method
+// DeleteDedicatedIpPool mocks base method.
 func (m *MockSESV2API) DeleteDedicatedIpPool(arg0 *sesv2.DeleteDedicatedIpPoolInput) (*sesv2.DeleteDedicatedIpPoolOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDedicatedIpPool", arg0)
@@ -844,13 +845,13 @@ func (m *MockSESV2API) DeleteDedicatedIpPool(arg0 *sesv2.DeleteDedicatedIpPoolIn
 	return ret0, ret1
 }
 
-// DeleteDedicatedIpPool indicates an expected call of DeleteDedicatedIpPool
+// DeleteDedicatedIpPool indicates an expected call of DeleteDedicatedIpPool.
 func (mr *MockSESV2APIMockRecorder) DeleteDedicatedIpPool(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDedicatedIpPool", reflect.TypeOf((*MockSESV2API)(nil).DeleteDedicatedIpPool), arg0)
 }
 
-// DeleteDedicatedIpPoolRequest mocks base method
+// DeleteDedicatedIpPoolRequest mocks base method.
 func (m *MockSESV2API) DeleteDedicatedIpPoolRequest(arg0 *sesv2.DeleteDedicatedIpPoolInput) (*request.Request, *sesv2.DeleteDedicatedIpPoolOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDedicatedIpPoolRequest", arg0)
@@ -859,13 +860,13 @@ func (m *MockSESV2API) DeleteDedicatedIpPoolRequest(arg0 *sesv2.DeleteDedicatedI
 	return ret0, ret1
 }
 
-// DeleteDedicatedIpPoolRequest indicates an expected call of DeleteDedicatedIpPoolRequest
+// DeleteDedicatedIpPoolRequest indicates an expected call of DeleteDedicatedIpPoolRequest.
 func (mr *MockSESV2APIMockRecorder) DeleteDedicatedIpPoolRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDedicatedIpPoolRequest", reflect.TypeOf((*MockSESV2API)(nil).DeleteDedicatedIpPoolRequest), arg0)
 }
 
-// DeleteDedicatedIpPoolWithContext mocks base method
+// DeleteDedicatedIpPoolWithContext mocks base method.
 func (m *MockSESV2API) DeleteDedicatedIpPoolWithContext(arg0 context.Context, arg1 *sesv2.DeleteDedicatedIpPoolInput, arg2 ...request.Option) (*sesv2.DeleteDedicatedIpPoolOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +879,14 @@ func (m *MockSESV2API) DeleteDedicatedIpPoolWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteDedicatedIpPoolWithContext indicates an expected call of DeleteDedicatedIpPoolWithContext
+// DeleteDedicatedIpPoolWithContext indicates an expected call of DeleteDedicatedIpPoolWithContext.
 func (mr *MockSESV2APIMockRecorder) DeleteDedicatedIpPoolWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDedicatedIpPoolWithContext", reflect.TypeOf((*MockSESV2API)(nil).DeleteDedicatedIpPoolWithContext), varargs...)
 }
 
-// DeleteEmailIdentity mocks base method
+// DeleteEmailIdentity mocks base method.
 func (m *MockSESV2API) DeleteEmailIdentity(arg0 *sesv2.DeleteEmailIdentityInput) (*sesv2.DeleteEmailIdentityOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEmailIdentity", arg0)
@@ -894,13 +895,13 @@ func (m *MockSESV2API) DeleteEmailIdentity(arg0 *sesv2.DeleteEmailIdentityInput)
 	return ret0, ret1
 }
 
-// DeleteEmailIdentity indicates an expected call of DeleteEmailIdentity
+// DeleteEmailIdentity indicates an expected call of DeleteEmailIdentity.
 func (mr *MockSESV2APIMockRecorder) DeleteEmailIdentity(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEmailIdentity", reflect.TypeOf((*MockSESV2API)(nil).DeleteEmailIdentity), arg0)
 }
 
-// DeleteEmailIdentityPolicy mocks base method
+// DeleteEmailIdentityPolicy mocks base method.
 func (m *MockSESV2API) DeleteEmailIdentityPolicy(arg0 *sesv2.DeleteEmailIdentityPolicyInput) (*sesv2.DeleteEmailIdentityPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEmailIdentityPolicy", arg0)
@@ -909,13 +910,13 @@ func (m *MockSESV2API) DeleteEmailIdentityPolicy(arg0 *sesv2.DeleteEmailIdentity
 	return ret0, ret1
 }
 
-// DeleteEmailIdentityPolicy indicates an expected call of DeleteEmailIdentityPolicy
+// DeleteEmailIdentityPolicy indicates an expected call of DeleteEmailIdentityPolicy.
 func (mr *MockSESV2APIMockRecorder) DeleteEmailIdentityPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEmailIdentityPolicy", reflect.TypeOf((*MockSESV2API)(nil).DeleteEmailIdentityPolicy), arg0)
 }
 
-// DeleteEmailIdentityPolicyRequest mocks base method
+// DeleteEmailIdentityPolicyRequest mocks base method.
 func (m *MockSESV2API) DeleteEmailIdentityPolicyRequest(arg0 *sesv2.DeleteEmailIdentityPolicyInput) (*request.Request, *sesv2.DeleteEmailIdentityPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEmailIdentityPolicyRequest", arg0)
@@ -924,13 +925,13 @@ func (m *MockSESV2API) DeleteEmailIdentityPolicyRequest(arg0 *sesv2.DeleteEmailI
 	return ret0, ret1
 }
 
-// DeleteEmailIdentityPolicyRequest indicates an expected call of DeleteEmailIdentityPolicyRequest
+// DeleteEmailIdentityPolicyRequest indicates an expected call of DeleteEmailIdentityPolicyRequest.
 func (mr *MockSESV2APIMockRecorder) DeleteEmailIdentityPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEmailIdentityPolicyRequest", reflect.TypeOf((*MockSESV2API)(nil).DeleteEmailIdentityPolicyRequest), arg0)
 }
 
-// DeleteEmailIdentityPolicyWithContext mocks base method
+// DeleteEmailIdentityPolicyWithContext mocks base method.
 func (m *MockSESV2API) DeleteEmailIdentityPolicyWithContext(arg0 context.Context, arg1 *sesv2.DeleteEmailIdentityPolicyInput, arg2 ...request.Option) (*sesv2.DeleteEmailIdentityPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -943,14 +944,14 @@ func (m *MockSESV2API) DeleteEmailIdentityPolicyWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// DeleteEmailIdentityPolicyWithContext indicates an expected call of DeleteEmailIdentityPolicyWithContext
+// DeleteEmailIdentityPolicyWithContext indicates an expected call of DeleteEmailIdentityPolicyWithContext.
 func (mr *MockSESV2APIMockRecorder) DeleteEmailIdentityPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEmailIdentityPolicyWithContext", reflect.TypeOf((*MockSESV2API)(nil).DeleteEmailIdentityPolicyWithContext), varargs...)
 }
 
-// DeleteEmailIdentityRequest mocks base method
+// DeleteEmailIdentityRequest mocks base method.
 func (m *MockSESV2API) DeleteEmailIdentityRequest(arg0 *sesv2.DeleteEmailIdentityInput) (*request.Request, *sesv2.DeleteEmailIdentityOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEmailIdentityRequest", arg0)
@@ -959,13 +960,13 @@ func (m *MockSESV2API) DeleteEmailIdentityRequest(arg0 *sesv2.DeleteEmailIdentit
 	return ret0, ret1
 }
 
-// DeleteEmailIdentityRequest indicates an expected call of DeleteEmailIdentityRequest
+// DeleteEmailIdentityRequest indicates an expected call of DeleteEmailIdentityRequest.
 func (mr *MockSESV2APIMockRecorder) DeleteEmailIdentityRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEmailIdentityRequest", reflect.TypeOf((*MockSESV2API)(nil).DeleteEmailIdentityRequest), arg0)
 }
 
-// DeleteEmailIdentityWithContext mocks base method
+// DeleteEmailIdentityWithContext mocks base method.
 func (m *MockSESV2API) DeleteEmailIdentityWithContext(arg0 context.Context, arg1 *sesv2.DeleteEmailIdentityInput, arg2 ...request.Option) (*sesv2.DeleteEmailIdentityOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -978,14 +979,14 @@ func (m *MockSESV2API) DeleteEmailIdentityWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DeleteEmailIdentityWithContext indicates an expected call of DeleteEmailIdentityWithContext
+// DeleteEmailIdentityWithContext indicates an expected call of DeleteEmailIdentityWithContext.
 func (mr *MockSESV2APIMockRecorder) DeleteEmailIdentityWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEmailIdentityWithContext", reflect.TypeOf((*MockSESV2API)(nil).DeleteEmailIdentityWithContext), varargs...)
 }
 
-// DeleteEmailTemplate mocks base method
+// DeleteEmailTemplate mocks base method.
 func (m *MockSESV2API) DeleteEmailTemplate(arg0 *sesv2.DeleteEmailTemplateInput) (*sesv2.DeleteEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEmailTemplate", arg0)
@@ -994,13 +995,13 @@ func (m *MockSESV2API) DeleteEmailTemplate(arg0 *sesv2.DeleteEmailTemplateInput)
 	return ret0, ret1
 }
 
-// DeleteEmailTemplate indicates an expected call of DeleteEmailTemplate
+// DeleteEmailTemplate indicates an expected call of DeleteEmailTemplate.
 func (mr *MockSESV2APIMockRecorder) DeleteEmailTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEmailTemplate", reflect.TypeOf((*MockSESV2API)(nil).DeleteEmailTemplate), arg0)
 }
 
-// DeleteEmailTemplateRequest mocks base method
+// DeleteEmailTemplateRequest mocks base method.
 func (m *MockSESV2API) DeleteEmailTemplateRequest(arg0 *sesv2.DeleteEmailTemplateInput) (*request.Request, *sesv2.DeleteEmailTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEmailTemplateRequest", arg0)
@@ -1009,13 +1010,13 @@ func (m *MockSESV2API) DeleteEmailTemplateRequest(arg0 *sesv2.DeleteEmailTemplat
 	return ret0, ret1
 }
 
-// DeleteEmailTemplateRequest indicates an expected call of DeleteEmailTemplateRequest
+// DeleteEmailTemplateRequest indicates an expected call of DeleteEmailTemplateRequest.
 func (mr *MockSESV2APIMockRecorder) DeleteEmailTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEmailTemplateRequest", reflect.TypeOf((*MockSESV2API)(nil).DeleteEmailTemplateRequest), arg0)
 }
 
-// DeleteEmailTemplateWithContext mocks base method
+// DeleteEmailTemplateWithContext mocks base method.
 func (m *MockSESV2API) DeleteEmailTemplateWithContext(arg0 context.Context, arg1 *sesv2.DeleteEmailTemplateInput, arg2 ...request.Option) (*sesv2.DeleteEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1028,14 +1029,14 @@ func (m *MockSESV2API) DeleteEmailTemplateWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DeleteEmailTemplateWithContext indicates an expected call of DeleteEmailTemplateWithContext
+// DeleteEmailTemplateWithContext indicates an expected call of DeleteEmailTemplateWithContext.
 func (mr *MockSESV2APIMockRecorder) DeleteEmailTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEmailTemplateWithContext", reflect.TypeOf((*MockSESV2API)(nil).DeleteEmailTemplateWithContext), varargs...)
 }
 
-// DeleteSuppressedDestination mocks base method
+// DeleteSuppressedDestination mocks base method.
 func (m *MockSESV2API) DeleteSuppressedDestination(arg0 *sesv2.DeleteSuppressedDestinationInput) (*sesv2.DeleteSuppressedDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSuppressedDestination", arg0)
@@ -1044,13 +1045,13 @@ func (m *MockSESV2API) DeleteSuppressedDestination(arg0 *sesv2.DeleteSuppressedD
 	return ret0, ret1
 }
 
-// DeleteSuppressedDestination indicates an expected call of DeleteSuppressedDestination
+// DeleteSuppressedDestination indicates an expected call of DeleteSuppressedDestination.
 func (mr *MockSESV2APIMockRecorder) DeleteSuppressedDestination(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSuppressedDestination", reflect.TypeOf((*MockSESV2API)(nil).DeleteSuppressedDestination), arg0)
 }
 
-// DeleteSuppressedDestinationRequest mocks base method
+// DeleteSuppressedDestinationRequest mocks base method.
 func (m *MockSESV2API) DeleteSuppressedDestinationRequest(arg0 *sesv2.DeleteSuppressedDestinationInput) (*request.Request, *sesv2.DeleteSuppressedDestinationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSuppressedDestinationRequest", arg0)
@@ -1059,13 +1060,13 @@ func (m *MockSESV2API) DeleteSuppressedDestinationRequest(arg0 *sesv2.DeleteSupp
 	return ret0, ret1
 }
 
-// DeleteSuppressedDestinationRequest indicates an expected call of DeleteSuppressedDestinationRequest
+// DeleteSuppressedDestinationRequest indicates an expected call of DeleteSuppressedDestinationRequest.
 func (mr *MockSESV2APIMockRecorder) DeleteSuppressedDestinationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSuppressedDestinationRequest", reflect.TypeOf((*MockSESV2API)(nil).DeleteSuppressedDestinationRequest), arg0)
 }
 
-// DeleteSuppressedDestinationWithContext mocks base method
+// DeleteSuppressedDestinationWithContext mocks base method.
 func (m *MockSESV2API) DeleteSuppressedDestinationWithContext(arg0 context.Context, arg1 *sesv2.DeleteSuppressedDestinationInput, arg2 ...request.Option) (*sesv2.DeleteSuppressedDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1078,14 +1079,14 @@ func (m *MockSESV2API) DeleteSuppressedDestinationWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DeleteSuppressedDestinationWithContext indicates an expected call of DeleteSuppressedDestinationWithContext
+// DeleteSuppressedDestinationWithContext indicates an expected call of DeleteSuppressedDestinationWithContext.
 func (mr *MockSESV2APIMockRecorder) DeleteSuppressedDestinationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSuppressedDestinationWithContext", reflect.TypeOf((*MockSESV2API)(nil).DeleteSuppressedDestinationWithContext), varargs...)
 }
 
-// GetAccount mocks base method
+// GetAccount mocks base method.
 func (m *MockSESV2API) GetAccount(arg0 *sesv2.GetAccountInput) (*sesv2.GetAccountOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAccount", arg0)
@@ -1094,13 +1095,13 @@ func (m *MockSESV2API) GetAccount(arg0 *sesv2.GetAccountInput) (*sesv2.GetAccoun
 	return ret0, ret1
 }
 
-// GetAccount indicates an expected call of GetAccount
+// GetAccount indicates an expected call of GetAccount.
 func (mr *MockSESV2APIMockRecorder) GetAccount(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAccount", reflect.TypeOf((*MockSESV2API)(nil).GetAccount), arg0)
 }
 
-// GetAccountRequest mocks base method
+// GetAccountRequest mocks base method.
 func (m *MockSESV2API) GetAccountRequest(arg0 *sesv2.GetAccountInput) (*request.Request, *sesv2.GetAccountOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAccountRequest", arg0)
@@ -1109,13 +1110,13 @@ func (m *MockSESV2API) GetAccountRequest(arg0 *sesv2.GetAccountInput) (*request.
 	return ret0, ret1
 }
 
-// GetAccountRequest indicates an expected call of GetAccountRequest
+// GetAccountRequest indicates an expected call of GetAccountRequest.
 func (mr *MockSESV2APIMockRecorder) GetAccountRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAccountRequest", reflect.TypeOf((*MockSESV2API)(nil).GetAccountRequest), arg0)
 }
 
-// GetAccountWithContext mocks base method
+// GetAccountWithContext mocks base method.
 func (m *MockSESV2API) GetAccountWithContext(arg0 context.Context, arg1 *sesv2.GetAccountInput, arg2 ...request.Option) (*sesv2.GetAccountOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1128,14 +1129,14 @@ func (m *MockSESV2API) GetAccountWithContext(arg0 context.Context, arg1 *sesv2.G
 	return ret0, ret1
 }
 
-// GetAccountWithContext indicates an expected call of GetAccountWithContext
+// GetAccountWithContext indicates an expected call of GetAccountWithContext.
 func (mr *MockSESV2APIMockRecorder) GetAccountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAccountWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetAccountWithContext), varargs...)
 }
 
-// GetBlacklistReports mocks base method
+// GetBlacklistReports mocks base method.
 func (m *MockSESV2API) GetBlacklistReports(arg0 *sesv2.GetBlacklistReportsInput) (*sesv2.GetBlacklistReportsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBlacklistReports", arg0)
@@ -1144,13 +1145,13 @@ func (m *MockSESV2API) GetBlacklistReports(arg0 *sesv2.GetBlacklistReportsInput)
 	return ret0, ret1
 }
 
-// GetBlacklistReports indicates an expected call of GetBlacklistReports
+// GetBlacklistReports indicates an expected call of GetBlacklistReports.
 func (mr *MockSESV2APIMockRecorder) GetBlacklistReports(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlacklistReports", reflect.TypeOf((*MockSESV2API)(nil).GetBlacklistReports), arg0)
 }
 
-// GetBlacklistReportsRequest mocks base method
+// GetBlacklistReportsRequest mocks base method.
 func (m *MockSESV2API) GetBlacklistReportsRequest(arg0 *sesv2.GetBlacklistReportsInput) (*request.Request, *sesv2.GetBlacklistReportsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBlacklistReportsRequest", arg0)
@@ -1159,13 +1160,13 @@ func (m *MockSESV2API) GetBlacklistReportsRequest(arg0 *sesv2.GetBlacklistReport
 	return ret0, ret1
 }
 
-// GetBlacklistReportsRequest indicates an expected call of GetBlacklistReportsRequest
+// GetBlacklistReportsRequest indicates an expected call of GetBlacklistReportsRequest.
 func (mr *MockSESV2APIMockRecorder) GetBlacklistReportsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlacklistReportsRequest", reflect.TypeOf((*MockSESV2API)(nil).GetBlacklistReportsRequest), arg0)
 }
 
-// GetBlacklistReportsWithContext mocks base method
+// GetBlacklistReportsWithContext mocks base method.
 func (m *MockSESV2API) GetBlacklistReportsWithContext(arg0 context.Context, arg1 *sesv2.GetBlacklistReportsInput, arg2 ...request.Option) (*sesv2.GetBlacklistReportsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1178,14 +1179,14 @@ func (m *MockSESV2API) GetBlacklistReportsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetBlacklistReportsWithContext indicates an expected call of GetBlacklistReportsWithContext
+// GetBlacklistReportsWithContext indicates an expected call of GetBlacklistReportsWithContext.
 func (mr *MockSESV2APIMockRecorder) GetBlacklistReportsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlacklistReportsWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetBlacklistReportsWithContext), varargs...)
 }
 
-// GetConfigurationSet mocks base method
+// GetConfigurationSet mocks base method.
 func (m *MockSESV2API) GetConfigurationSet(arg0 *sesv2.GetConfigurationSetInput) (*sesv2.GetConfigurationSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConfigurationSet", arg0)
@@ -1194,13 +1195,13 @@ func (m *MockSESV2API) GetConfigurationSet(arg0 *sesv2.GetConfigurationSetInput)
 	return ret0, ret1
 }
 
-// GetConfigurationSet indicates an expected call of GetConfigurationSet
+// GetConfigurationSet indicates an expected call of GetConfigurationSet.
 func (mr *MockSESV2APIMockRecorder) GetConfigurationSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationSet", reflect.TypeOf((*MockSESV2API)(nil).GetConfigurationSet), arg0)
 }
 
-// GetConfigurationSetEventDestinations mocks base method
+// GetConfigurationSetEventDestinations mocks base method.
 func (m *MockSESV2API) GetConfigurationSetEventDestinations(arg0 *sesv2.GetConfigurationSetEventDestinationsInput) (*sesv2.GetConfigurationSetEventDestinationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConfigurationSetEventDestinations", arg0)
@@ -1209,13 +1210,13 @@ func (m *MockSESV2API) GetConfigurationSetEventDestinations(arg0 *sesv2.GetConfi
 	return ret0, ret1
 }
 
-// GetConfigurationSetEventDestinations indicates an expected call of GetConfigurationSetEventDestinations
+// GetConfigurationSetEventDestinations indicates an expected call of GetConfigurationSetEventDestinations.
 func (mr *MockSESV2APIMockRecorder) GetConfigurationSetEventDestinations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationSetEventDestinations", reflect.TypeOf((*MockSESV2API)(nil).GetConfigurationSetEventDestinations), arg0)
 }
 
-// GetConfigurationSetEventDestinationsRequest mocks base method
+// GetConfigurationSetEventDestinationsRequest mocks base method.
 func (m *MockSESV2API) GetConfigurationSetEventDestinationsRequest(arg0 *sesv2.GetConfigurationSetEventDestinationsInput) (*request.Request, *sesv2.GetConfigurationSetEventDestinationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConfigurationSetEventDestinationsRequest", arg0)
@@ -1224,13 +1225,13 @@ func (m *MockSESV2API) GetConfigurationSetEventDestinationsRequest(arg0 *sesv2.G
 	return ret0, ret1
 }
 
-// GetConfigurationSetEventDestinationsRequest indicates an expected call of GetConfigurationSetEventDestinationsRequest
+// GetConfigurationSetEventDestinationsRequest indicates an expected call of GetConfigurationSetEventDestinationsRequest.
 func (mr *MockSESV2APIMockRecorder) GetConfigurationSetEventDestinationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationSetEventDestinationsRequest", reflect.TypeOf((*MockSESV2API)(nil).GetConfigurationSetEventDestinationsRequest), arg0)
 }
 
-// GetConfigurationSetEventDestinationsWithContext mocks base method
+// GetConfigurationSetEventDestinationsWithContext mocks base method.
 func (m *MockSESV2API) GetConfigurationSetEventDestinationsWithContext(arg0 context.Context, arg1 *sesv2.GetConfigurationSetEventDestinationsInput, arg2 ...request.Option) (*sesv2.GetConfigurationSetEventDestinationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1243,14 +1244,14 @@ func (m *MockSESV2API) GetConfigurationSetEventDestinationsWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// GetConfigurationSetEventDestinationsWithContext indicates an expected call of GetConfigurationSetEventDestinationsWithContext
+// GetConfigurationSetEventDestinationsWithContext indicates an expected call of GetConfigurationSetEventDestinationsWithContext.
 func (mr *MockSESV2APIMockRecorder) GetConfigurationSetEventDestinationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationSetEventDestinationsWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetConfigurationSetEventDestinationsWithContext), varargs...)
 }
 
-// GetConfigurationSetRequest mocks base method
+// GetConfigurationSetRequest mocks base method.
 func (m *MockSESV2API) GetConfigurationSetRequest(arg0 *sesv2.GetConfigurationSetInput) (*request.Request, *sesv2.GetConfigurationSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConfigurationSetRequest", arg0)
@@ -1259,13 +1260,13 @@ func (m *MockSESV2API) GetConfigurationSetRequest(arg0 *sesv2.GetConfigurationSe
 	return ret0, ret1
 }
 
-// GetConfigurationSetRequest indicates an expected call of GetConfigurationSetRequest
+// GetConfigurationSetRequest indicates an expected call of GetConfigurationSetRequest.
 func (mr *MockSESV2APIMockRecorder) GetConfigurationSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationSetRequest", reflect.TypeOf((*MockSESV2API)(nil).GetConfigurationSetRequest), arg0)
 }
 
-// GetConfigurationSetWithContext mocks base method
+// GetConfigurationSetWithContext mocks base method.
 func (m *MockSESV2API) GetConfigurationSetWithContext(arg0 context.Context, arg1 *sesv2.GetConfigurationSetInput, arg2 ...request.Option) (*sesv2.GetConfigurationSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1278,14 +1279,14 @@ func (m *MockSESV2API) GetConfigurationSetWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetConfigurationSetWithContext indicates an expected call of GetConfigurationSetWithContext
+// GetConfigurationSetWithContext indicates an expected call of GetConfigurationSetWithContext.
 func (mr *MockSESV2APIMockRecorder) GetConfigurationSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationSetWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetConfigurationSetWithContext), varargs...)
 }
 
-// GetContact mocks base method
+// GetContact mocks base method.
 func (m *MockSESV2API) GetContact(arg0 *sesv2.GetContactInput) (*sesv2.GetContactOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContact", arg0)
@@ -1294,13 +1295,13 @@ func (m *MockSESV2API) GetContact(arg0 *sesv2.GetContactInput) (*sesv2.GetContac
 	return ret0, ret1
 }
 
-// GetContact indicates an expected call of GetContact
+// GetContact indicates an expected call of GetContact.
 func (mr *MockSESV2APIMockRecorder) GetContact(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContact", reflect.TypeOf((*MockSESV2API)(nil).GetContact), arg0)
 }
 
-// GetContactList mocks base method
+// GetContactList mocks base method.
 func (m *MockSESV2API) GetContactList(arg0 *sesv2.GetContactListInput) (*sesv2.GetContactListOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContactList", arg0)
@@ -1309,13 +1310,13 @@ func (m *MockSESV2API) GetContactList(arg0 *sesv2.GetContactListInput) (*sesv2.G
 	return ret0, ret1
 }
 
-// GetContactList indicates an expected call of GetContactList
+// GetContactList indicates an expected call of GetContactList.
 func (mr *MockSESV2APIMockRecorder) GetContactList(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContactList", reflect.TypeOf((*MockSESV2API)(nil).GetContactList), arg0)
 }
 
-// GetContactListRequest mocks base method
+// GetContactListRequest mocks base method.
 func (m *MockSESV2API) GetContactListRequest(arg0 *sesv2.GetContactListInput) (*request.Request, *sesv2.GetContactListOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContactListRequest", arg0)
@@ -1324,13 +1325,13 @@ func (m *MockSESV2API) GetContactListRequest(arg0 *sesv2.GetContactListInput) (*
 	return ret0, ret1
 }
 
-// GetContactListRequest indicates an expected call of GetContactListRequest
+// GetContactListRequest indicates an expected call of GetContactListRequest.
 func (mr *MockSESV2APIMockRecorder) GetContactListRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContactListRequest", reflect.TypeOf((*MockSESV2API)(nil).GetContactListRequest), arg0)
 }
 
-// GetContactListWithContext mocks base method
+// GetContactListWithContext mocks base method.
 func (m *MockSESV2API) GetContactListWithContext(arg0 context.Context, arg1 *sesv2.GetContactListInput, arg2 ...request.Option) (*sesv2.GetContactListOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1343,14 +1344,14 @@ func (m *MockSESV2API) GetContactListWithContext(arg0 context.Context, arg1 *ses
 	return ret0, ret1
 }
 
-// GetContactListWithContext indicates an expected call of GetContactListWithContext
+// GetContactListWithContext indicates an expected call of GetContactListWithContext.
 func (mr *MockSESV2APIMockRecorder) GetContactListWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContactListWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetContactListWithContext), varargs...)
 }
 
-// GetContactRequest mocks base method
+// GetContactRequest mocks base method.
 func (m *MockSESV2API) GetContactRequest(arg0 *sesv2.GetContactInput) (*request.Request, *sesv2.GetContactOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContactRequest", arg0)
@@ -1359,13 +1360,13 @@ func (m *MockSESV2API) GetContactRequest(arg0 *sesv2.GetContactInput) (*request.
 	return ret0, ret1
 }
 
-// GetContactRequest indicates an expected call of GetContactRequest
+// GetContactRequest indicates an expected call of GetContactRequest.
 func (mr *MockSESV2APIMockRecorder) GetContactRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContactRequest", reflect.TypeOf((*MockSESV2API)(nil).GetContactRequest), arg0)
 }
 
-// GetContactWithContext mocks base method
+// GetContactWithContext mocks base method.
 func (m *MockSESV2API) GetContactWithContext(arg0 context.Context, arg1 *sesv2.GetContactInput, arg2 ...request.Option) (*sesv2.GetContactOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1378,14 +1379,14 @@ func (m *MockSESV2API) GetContactWithContext(arg0 context.Context, arg1 *sesv2.G
 	return ret0, ret1
 }
 
-// GetContactWithContext indicates an expected call of GetContactWithContext
+// GetContactWithContext indicates an expected call of GetContactWithContext.
 func (mr *MockSESV2APIMockRecorder) GetContactWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContactWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetContactWithContext), varargs...)
 }
 
-// GetCustomVerificationEmailTemplate mocks base method
+// GetCustomVerificationEmailTemplate mocks base method.
 func (m *MockSESV2API) GetCustomVerificationEmailTemplate(arg0 *sesv2.GetCustomVerificationEmailTemplateInput) (*sesv2.GetCustomVerificationEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCustomVerificationEmailTemplate", arg0)
@@ -1394,13 +1395,13 @@ func (m *MockSESV2API) GetCustomVerificationEmailTemplate(arg0 *sesv2.GetCustomV
 	return ret0, ret1
 }
 
-// GetCustomVerificationEmailTemplate indicates an expected call of GetCustomVerificationEmailTemplate
+// GetCustomVerificationEmailTemplate indicates an expected call of GetCustomVerificationEmailTemplate.
 func (mr *MockSESV2APIMockRecorder) GetCustomVerificationEmailTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCustomVerificationEmailTemplate", reflect.TypeOf((*MockSESV2API)(nil).GetCustomVerificationEmailTemplate), arg0)
 }
 
-// GetCustomVerificationEmailTemplateRequest mocks base method
+// GetCustomVerificationEmailTemplateRequest mocks base method.
 func (m *MockSESV2API) GetCustomVerificationEmailTemplateRequest(arg0 *sesv2.GetCustomVerificationEmailTemplateInput) (*request.Request, *sesv2.GetCustomVerificationEmailTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCustomVerificationEmailTemplateRequest", arg0)
@@ -1409,13 +1410,13 @@ func (m *MockSESV2API) GetCustomVerificationEmailTemplateRequest(arg0 *sesv2.Get
 	return ret0, ret1
 }
 
-// GetCustomVerificationEmailTemplateRequest indicates an expected call of GetCustomVerificationEmailTemplateRequest
+// GetCustomVerificationEmailTemplateRequest indicates an expected call of GetCustomVerificationEmailTemplateRequest.
 func (mr *MockSESV2APIMockRecorder) GetCustomVerificationEmailTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCustomVerificationEmailTemplateRequest", reflect.TypeOf((*MockSESV2API)(nil).GetCustomVerificationEmailTemplateRequest), arg0)
 }
 
-// GetCustomVerificationEmailTemplateWithContext mocks base method
+// GetCustomVerificationEmailTemplateWithContext mocks base method.
 func (m *MockSESV2API) GetCustomVerificationEmailTemplateWithContext(arg0 context.Context, arg1 *sesv2.GetCustomVerificationEmailTemplateInput, arg2 ...request.Option) (*sesv2.GetCustomVerificationEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1428,14 +1429,14 @@ func (m *MockSESV2API) GetCustomVerificationEmailTemplateWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// GetCustomVerificationEmailTemplateWithContext indicates an expected call of GetCustomVerificationEmailTemplateWithContext
+// GetCustomVerificationEmailTemplateWithContext indicates an expected call of GetCustomVerificationEmailTemplateWithContext.
 func (mr *MockSESV2APIMockRecorder) GetCustomVerificationEmailTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCustomVerificationEmailTemplateWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetCustomVerificationEmailTemplateWithContext), varargs...)
 }
 
-// GetDedicatedIp mocks base method
+// GetDedicatedIp mocks base method.
 func (m *MockSESV2API) GetDedicatedIp(arg0 *sesv2.GetDedicatedIpInput) (*sesv2.GetDedicatedIpOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDedicatedIp", arg0)
@@ -1444,13 +1445,13 @@ func (m *MockSESV2API) GetDedicatedIp(arg0 *sesv2.GetDedicatedIpInput) (*sesv2.G
 	return ret0, ret1
 }
 
-// GetDedicatedIp indicates an expected call of GetDedicatedIp
+// GetDedicatedIp indicates an expected call of GetDedicatedIp.
 func (mr *MockSESV2APIMockRecorder) GetDedicatedIp(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDedicatedIp", reflect.TypeOf((*MockSESV2API)(nil).GetDedicatedIp), arg0)
 }
 
-// GetDedicatedIpRequest mocks base method
+// GetDedicatedIpRequest mocks base method.
 func (m *MockSESV2API) GetDedicatedIpRequest(arg0 *sesv2.GetDedicatedIpInput) (*request.Request, *sesv2.GetDedicatedIpOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDedicatedIpRequest", arg0)
@@ -1459,13 +1460,13 @@ func (m *MockSESV2API) GetDedicatedIpRequest(arg0 *sesv2.GetDedicatedIpInput) (*
 	return ret0, ret1
 }
 
-// GetDedicatedIpRequest indicates an expected call of GetDedicatedIpRequest
+// GetDedicatedIpRequest indicates an expected call of GetDedicatedIpRequest.
 func (mr *MockSESV2APIMockRecorder) GetDedicatedIpRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDedicatedIpRequest", reflect.TypeOf((*MockSESV2API)(nil).GetDedicatedIpRequest), arg0)
 }
 
-// GetDedicatedIpWithContext mocks base method
+// GetDedicatedIpWithContext mocks base method.
 func (m *MockSESV2API) GetDedicatedIpWithContext(arg0 context.Context, arg1 *sesv2.GetDedicatedIpInput, arg2 ...request.Option) (*sesv2.GetDedicatedIpOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1478,14 +1479,14 @@ func (m *MockSESV2API) GetDedicatedIpWithContext(arg0 context.Context, arg1 *ses
 	return ret0, ret1
 }
 
-// GetDedicatedIpWithContext indicates an expected call of GetDedicatedIpWithContext
+// GetDedicatedIpWithContext indicates an expected call of GetDedicatedIpWithContext.
 func (mr *MockSESV2APIMockRecorder) GetDedicatedIpWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDedicatedIpWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetDedicatedIpWithContext), varargs...)
 }
 
-// GetDedicatedIps mocks base method
+// GetDedicatedIps mocks base method.
 func (m *MockSESV2API) GetDedicatedIps(arg0 *sesv2.GetDedicatedIpsInput) (*sesv2.GetDedicatedIpsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDedicatedIps", arg0)
@@ -1494,13 +1495,13 @@ func (m *MockSESV2API) GetDedicatedIps(arg0 *sesv2.GetDedicatedIpsInput) (*sesv2
 	return ret0, ret1
 }
 
-// GetDedicatedIps indicates an expected call of GetDedicatedIps
+// GetDedicatedIps indicates an expected call of GetDedicatedIps.
 func (mr *MockSESV2APIMockRecorder) GetDedicatedIps(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDedicatedIps", reflect.TypeOf((*MockSESV2API)(nil).GetDedicatedIps), arg0)
 }
 
-// GetDedicatedIpsPages mocks base method
+// GetDedicatedIpsPages mocks base method.
 func (m *MockSESV2API) GetDedicatedIpsPages(arg0 *sesv2.GetDedicatedIpsInput, arg1 func(*sesv2.GetDedicatedIpsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDedicatedIpsPages", arg0, arg1)
@@ -1508,13 +1509,13 @@ func (m *MockSESV2API) GetDedicatedIpsPages(arg0 *sesv2.GetDedicatedIpsInput, ar
 	return ret0
 }
 
-// GetDedicatedIpsPages indicates an expected call of GetDedicatedIpsPages
+// GetDedicatedIpsPages indicates an expected call of GetDedicatedIpsPages.
 func (mr *MockSESV2APIMockRecorder) GetDedicatedIpsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDedicatedIpsPages", reflect.TypeOf((*MockSESV2API)(nil).GetDedicatedIpsPages), arg0, arg1)
 }
 
-// GetDedicatedIpsPagesWithContext mocks base method
+// GetDedicatedIpsPagesWithContext mocks base method.
 func (m *MockSESV2API) GetDedicatedIpsPagesWithContext(arg0 context.Context, arg1 *sesv2.GetDedicatedIpsInput, arg2 func(*sesv2.GetDedicatedIpsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1526,14 +1527,14 @@ func (m *MockSESV2API) GetDedicatedIpsPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// GetDedicatedIpsPagesWithContext indicates an expected call of GetDedicatedIpsPagesWithContext
+// GetDedicatedIpsPagesWithContext indicates an expected call of GetDedicatedIpsPagesWithContext.
 func (mr *MockSESV2APIMockRecorder) GetDedicatedIpsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDedicatedIpsPagesWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetDedicatedIpsPagesWithContext), varargs...)
 }
 
-// GetDedicatedIpsRequest mocks base method
+// GetDedicatedIpsRequest mocks base method.
 func (m *MockSESV2API) GetDedicatedIpsRequest(arg0 *sesv2.GetDedicatedIpsInput) (*request.Request, *sesv2.GetDedicatedIpsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDedicatedIpsRequest", arg0)
@@ -1542,13 +1543,13 @@ func (m *MockSESV2API) GetDedicatedIpsRequest(arg0 *sesv2.GetDedicatedIpsInput) 
 	return ret0, ret1
 }
 
-// GetDedicatedIpsRequest indicates an expected call of GetDedicatedIpsRequest
+// GetDedicatedIpsRequest indicates an expected call of GetDedicatedIpsRequest.
 func (mr *MockSESV2APIMockRecorder) GetDedicatedIpsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDedicatedIpsRequest", reflect.TypeOf((*MockSESV2API)(nil).GetDedicatedIpsRequest), arg0)
 }
 
-// GetDedicatedIpsWithContext mocks base method
+// GetDedicatedIpsWithContext mocks base method.
 func (m *MockSESV2API) GetDedicatedIpsWithContext(arg0 context.Context, arg1 *sesv2.GetDedicatedIpsInput, arg2 ...request.Option) (*sesv2.GetDedicatedIpsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1561,14 +1562,14 @@ func (m *MockSESV2API) GetDedicatedIpsWithContext(arg0 context.Context, arg1 *se
 	return ret0, ret1
 }
 
-// GetDedicatedIpsWithContext indicates an expected call of GetDedicatedIpsWithContext
+// GetDedicatedIpsWithContext indicates an expected call of GetDedicatedIpsWithContext.
 func (mr *MockSESV2APIMockRecorder) GetDedicatedIpsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDedicatedIpsWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetDedicatedIpsWithContext), varargs...)
 }
 
-// GetDeliverabilityDashboardOptions mocks base method
+// GetDeliverabilityDashboardOptions mocks base method.
 func (m *MockSESV2API) GetDeliverabilityDashboardOptions(arg0 *sesv2.GetDeliverabilityDashboardOptionsInput) (*sesv2.GetDeliverabilityDashboardOptionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDeliverabilityDashboardOptions", arg0)
@@ -1577,13 +1578,13 @@ func (m *MockSESV2API) GetDeliverabilityDashboardOptions(arg0 *sesv2.GetDelivera
 	return ret0, ret1
 }
 
-// GetDeliverabilityDashboardOptions indicates an expected call of GetDeliverabilityDashboardOptions
+// GetDeliverabilityDashboardOptions indicates an expected call of GetDeliverabilityDashboardOptions.
 func (mr *MockSESV2APIMockRecorder) GetDeliverabilityDashboardOptions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeliverabilityDashboardOptions", reflect.TypeOf((*MockSESV2API)(nil).GetDeliverabilityDashboardOptions), arg0)
 }
 
-// GetDeliverabilityDashboardOptionsRequest mocks base method
+// GetDeliverabilityDashboardOptionsRequest mocks base method.
 func (m *MockSESV2API) GetDeliverabilityDashboardOptionsRequest(arg0 *sesv2.GetDeliverabilityDashboardOptionsInput) (*request.Request, *sesv2.GetDeliverabilityDashboardOptionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDeliverabilityDashboardOptionsRequest", arg0)
@@ -1592,13 +1593,13 @@ func (m *MockSESV2API) GetDeliverabilityDashboardOptionsRequest(arg0 *sesv2.GetD
 	return ret0, ret1
 }
 
-// GetDeliverabilityDashboardOptionsRequest indicates an expected call of GetDeliverabilityDashboardOptionsRequest
+// GetDeliverabilityDashboardOptionsRequest indicates an expected call of GetDeliverabilityDashboardOptionsRequest.
 func (mr *MockSESV2APIMockRecorder) GetDeliverabilityDashboardOptionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeliverabilityDashboardOptionsRequest", reflect.TypeOf((*MockSESV2API)(nil).GetDeliverabilityDashboardOptionsRequest), arg0)
 }
 
-// GetDeliverabilityDashboardOptionsWithContext mocks base method
+// GetDeliverabilityDashboardOptionsWithContext mocks base method.
 func (m *MockSESV2API) GetDeliverabilityDashboardOptionsWithContext(arg0 context.Context, arg1 *sesv2.GetDeliverabilityDashboardOptionsInput, arg2 ...request.Option) (*sesv2.GetDeliverabilityDashboardOptionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1611,14 +1612,14 @@ func (m *MockSESV2API) GetDeliverabilityDashboardOptionsWithContext(arg0 context
 	return ret0, ret1
 }
 
-// GetDeliverabilityDashboardOptionsWithContext indicates an expected call of GetDeliverabilityDashboardOptionsWithContext
+// GetDeliverabilityDashboardOptionsWithContext indicates an expected call of GetDeliverabilityDashboardOptionsWithContext.
 func (mr *MockSESV2APIMockRecorder) GetDeliverabilityDashboardOptionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeliverabilityDashboardOptionsWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetDeliverabilityDashboardOptionsWithContext), varargs...)
 }
 
-// GetDeliverabilityTestReport mocks base method
+// GetDeliverabilityTestReport mocks base method.
 func (m *MockSESV2API) GetDeliverabilityTestReport(arg0 *sesv2.GetDeliverabilityTestReportInput) (*sesv2.GetDeliverabilityTestReportOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDeliverabilityTestReport", arg0)
@@ -1627,13 +1628,13 @@ func (m *MockSESV2API) GetDeliverabilityTestReport(arg0 *sesv2.GetDeliverability
 	return ret0, ret1
 }
 
-// GetDeliverabilityTestReport indicates an expected call of GetDeliverabilityTestReport
+// GetDeliverabilityTestReport indicates an expected call of GetDeliverabilityTestReport.
 func (mr *MockSESV2APIMockRecorder) GetDeliverabilityTestReport(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeliverabilityTestReport", reflect.TypeOf((*MockSESV2API)(nil).GetDeliverabilityTestReport), arg0)
 }
 
-// GetDeliverabilityTestReportRequest mocks base method
+// GetDeliverabilityTestReportRequest mocks base method.
 func (m *MockSESV2API) GetDeliverabilityTestReportRequest(arg0 *sesv2.GetDeliverabilityTestReportInput) (*request.Request, *sesv2.GetDeliverabilityTestReportOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDeliverabilityTestReportRequest", arg0)
@@ -1642,13 +1643,13 @@ func (m *MockSESV2API) GetDeliverabilityTestReportRequest(arg0 *sesv2.GetDeliver
 	return ret0, ret1
 }
 
-// GetDeliverabilityTestReportRequest indicates an expected call of GetDeliverabilityTestReportRequest
+// GetDeliverabilityTestReportRequest indicates an expected call of GetDeliverabilityTestReportRequest.
 func (mr *MockSESV2APIMockRecorder) GetDeliverabilityTestReportRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeliverabilityTestReportRequest", reflect.TypeOf((*MockSESV2API)(nil).GetDeliverabilityTestReportRequest), arg0)
 }
 
-// GetDeliverabilityTestReportWithContext mocks base method
+// GetDeliverabilityTestReportWithContext mocks base method.
 func (m *MockSESV2API) GetDeliverabilityTestReportWithContext(arg0 context.Context, arg1 *sesv2.GetDeliverabilityTestReportInput, arg2 ...request.Option) (*sesv2.GetDeliverabilityTestReportOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1661,14 +1662,14 @@ func (m *MockSESV2API) GetDeliverabilityTestReportWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// GetDeliverabilityTestReportWithContext indicates an expected call of GetDeliverabilityTestReportWithContext
+// GetDeliverabilityTestReportWithContext indicates an expected call of GetDeliverabilityTestReportWithContext.
 func (mr *MockSESV2APIMockRecorder) GetDeliverabilityTestReportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeliverabilityTestReportWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetDeliverabilityTestReportWithContext), varargs...)
 }
 
-// GetDomainDeliverabilityCampaign mocks base method
+// GetDomainDeliverabilityCampaign mocks base method.
 func (m *MockSESV2API) GetDomainDeliverabilityCampaign(arg0 *sesv2.GetDomainDeliverabilityCampaignInput) (*sesv2.GetDomainDeliverabilityCampaignOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomainDeliverabilityCampaign", arg0)
@@ -1677,13 +1678,13 @@ func (m *MockSESV2API) GetDomainDeliverabilityCampaign(arg0 *sesv2.GetDomainDeli
 	return ret0, ret1
 }
 
-// GetDomainDeliverabilityCampaign indicates an expected call of GetDomainDeliverabilityCampaign
+// GetDomainDeliverabilityCampaign indicates an expected call of GetDomainDeliverabilityCampaign.
 func (mr *MockSESV2APIMockRecorder) GetDomainDeliverabilityCampaign(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainDeliverabilityCampaign", reflect.TypeOf((*MockSESV2API)(nil).GetDomainDeliverabilityCampaign), arg0)
 }
 
-// GetDomainDeliverabilityCampaignRequest mocks base method
+// GetDomainDeliverabilityCampaignRequest mocks base method.
 func (m *MockSESV2API) GetDomainDeliverabilityCampaignRequest(arg0 *sesv2.GetDomainDeliverabilityCampaignInput) (*request.Request, *sesv2.GetDomainDeliverabilityCampaignOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomainDeliverabilityCampaignRequest", arg0)
@@ -1692,13 +1693,13 @@ func (m *MockSESV2API) GetDomainDeliverabilityCampaignRequest(arg0 *sesv2.GetDom
 	return ret0, ret1
 }
 
-// GetDomainDeliverabilityCampaignRequest indicates an expected call of GetDomainDeliverabilityCampaignRequest
+// GetDomainDeliverabilityCampaignRequest indicates an expected call of GetDomainDeliverabilityCampaignRequest.
 func (mr *MockSESV2APIMockRecorder) GetDomainDeliverabilityCampaignRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainDeliverabilityCampaignRequest", reflect.TypeOf((*MockSESV2API)(nil).GetDomainDeliverabilityCampaignRequest), arg0)
 }
 
-// GetDomainDeliverabilityCampaignWithContext mocks base method
+// GetDomainDeliverabilityCampaignWithContext mocks base method.
 func (m *MockSESV2API) GetDomainDeliverabilityCampaignWithContext(arg0 context.Context, arg1 *sesv2.GetDomainDeliverabilityCampaignInput, arg2 ...request.Option) (*sesv2.GetDomainDeliverabilityCampaignOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1711,14 +1712,14 @@ func (m *MockSESV2API) GetDomainDeliverabilityCampaignWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// GetDomainDeliverabilityCampaignWithContext indicates an expected call of GetDomainDeliverabilityCampaignWithContext
+// GetDomainDeliverabilityCampaignWithContext indicates an expected call of GetDomainDeliverabilityCampaignWithContext.
 func (mr *MockSESV2APIMockRecorder) GetDomainDeliverabilityCampaignWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainDeliverabilityCampaignWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetDomainDeliverabilityCampaignWithContext), varargs...)
 }
 
-// GetDomainStatisticsReport mocks base method
+// GetDomainStatisticsReport mocks base method.
 func (m *MockSESV2API) GetDomainStatisticsReport(arg0 *sesv2.GetDomainStatisticsReportInput) (*sesv2.GetDomainStatisticsReportOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomainStatisticsReport", arg0)
@@ -1727,13 +1728,13 @@ func (m *MockSESV2API) GetDomainStatisticsReport(arg0 *sesv2.GetDomainStatistics
 	return ret0, ret1
 }
 
-// GetDomainStatisticsReport indicates an expected call of GetDomainStatisticsReport
+// GetDomainStatisticsReport indicates an expected call of GetDomainStatisticsReport.
 func (mr *MockSESV2APIMockRecorder) GetDomainStatisticsReport(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainStatisticsReport", reflect.TypeOf((*MockSESV2API)(nil).GetDomainStatisticsReport), arg0)
 }
 
-// GetDomainStatisticsReportRequest mocks base method
+// GetDomainStatisticsReportRequest mocks base method.
 func (m *MockSESV2API) GetDomainStatisticsReportRequest(arg0 *sesv2.GetDomainStatisticsReportInput) (*request.Request, *sesv2.GetDomainStatisticsReportOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomainStatisticsReportRequest", arg0)
@@ -1742,13 +1743,13 @@ func (m *MockSESV2API) GetDomainStatisticsReportRequest(arg0 *sesv2.GetDomainSta
 	return ret0, ret1
 }
 
-// GetDomainStatisticsReportRequest indicates an expected call of GetDomainStatisticsReportRequest
+// GetDomainStatisticsReportRequest indicates an expected call of GetDomainStatisticsReportRequest.
 func (mr *MockSESV2APIMockRecorder) GetDomainStatisticsReportRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainStatisticsReportRequest", reflect.TypeOf((*MockSESV2API)(nil).GetDomainStatisticsReportRequest), arg0)
 }
 
-// GetDomainStatisticsReportWithContext mocks base method
+// GetDomainStatisticsReportWithContext mocks base method.
 func (m *MockSESV2API) GetDomainStatisticsReportWithContext(arg0 context.Context, arg1 *sesv2.GetDomainStatisticsReportInput, arg2 ...request.Option) (*sesv2.GetDomainStatisticsReportOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1761,14 +1762,14 @@ func (m *MockSESV2API) GetDomainStatisticsReportWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// GetDomainStatisticsReportWithContext indicates an expected call of GetDomainStatisticsReportWithContext
+// GetDomainStatisticsReportWithContext indicates an expected call of GetDomainStatisticsReportWithContext.
 func (mr *MockSESV2APIMockRecorder) GetDomainStatisticsReportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainStatisticsReportWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetDomainStatisticsReportWithContext), varargs...)
 }
 
-// GetEmailIdentity mocks base method
+// GetEmailIdentity mocks base method.
 func (m *MockSESV2API) GetEmailIdentity(arg0 *sesv2.GetEmailIdentityInput) (*sesv2.GetEmailIdentityOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEmailIdentity", arg0)
@@ -1777,13 +1778,13 @@ func (m *MockSESV2API) GetEmailIdentity(arg0 *sesv2.GetEmailIdentityInput) (*ses
 	return ret0, ret1
 }
 
-// GetEmailIdentity indicates an expected call of GetEmailIdentity
+// GetEmailIdentity indicates an expected call of GetEmailIdentity.
 func (mr *MockSESV2APIMockRecorder) GetEmailIdentity(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEmailIdentity", reflect.TypeOf((*MockSESV2API)(nil).GetEmailIdentity), arg0)
 }
 
-// GetEmailIdentityPolicies mocks base method
+// GetEmailIdentityPolicies mocks base method.
 func (m *MockSESV2API) GetEmailIdentityPolicies(arg0 *sesv2.GetEmailIdentityPoliciesInput) (*sesv2.GetEmailIdentityPoliciesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEmailIdentityPolicies", arg0)
@@ -1792,13 +1793,13 @@ func (m *MockSESV2API) GetEmailIdentityPolicies(arg0 *sesv2.GetEmailIdentityPoli
 	return ret0, ret1
 }
 
-// GetEmailIdentityPolicies indicates an expected call of GetEmailIdentityPolicies
+// GetEmailIdentityPolicies indicates an expected call of GetEmailIdentityPolicies.
 func (mr *MockSESV2APIMockRecorder) GetEmailIdentityPolicies(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEmailIdentityPolicies", reflect.TypeOf((*MockSESV2API)(nil).GetEmailIdentityPolicies), arg0)
 }
 
-// GetEmailIdentityPoliciesRequest mocks base method
+// GetEmailIdentityPoliciesRequest mocks base method.
 func (m *MockSESV2API) GetEmailIdentityPoliciesRequest(arg0 *sesv2.GetEmailIdentityPoliciesInput) (*request.Request, *sesv2.GetEmailIdentityPoliciesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEmailIdentityPoliciesRequest", arg0)
@@ -1807,13 +1808,13 @@ func (m *MockSESV2API) GetEmailIdentityPoliciesRequest(arg0 *sesv2.GetEmailIdent
 	return ret0, ret1
 }
 
-// GetEmailIdentityPoliciesRequest indicates an expected call of GetEmailIdentityPoliciesRequest
+// GetEmailIdentityPoliciesRequest indicates an expected call of GetEmailIdentityPoliciesRequest.
 func (mr *MockSESV2APIMockRecorder) GetEmailIdentityPoliciesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEmailIdentityPoliciesRequest", reflect.TypeOf((*MockSESV2API)(nil).GetEmailIdentityPoliciesRequest), arg0)
 }
 
-// GetEmailIdentityPoliciesWithContext mocks base method
+// GetEmailIdentityPoliciesWithContext mocks base method.
 func (m *MockSESV2API) GetEmailIdentityPoliciesWithContext(arg0 context.Context, arg1 *sesv2.GetEmailIdentityPoliciesInput, arg2 ...request.Option) (*sesv2.GetEmailIdentityPoliciesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1826,14 +1827,14 @@ func (m *MockSESV2API) GetEmailIdentityPoliciesWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// GetEmailIdentityPoliciesWithContext indicates an expected call of GetEmailIdentityPoliciesWithContext
+// GetEmailIdentityPoliciesWithContext indicates an expected call of GetEmailIdentityPoliciesWithContext.
 func (mr *MockSESV2APIMockRecorder) GetEmailIdentityPoliciesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEmailIdentityPoliciesWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetEmailIdentityPoliciesWithContext), varargs...)
 }
 
-// GetEmailIdentityRequest mocks base method
+// GetEmailIdentityRequest mocks base method.
 func (m *MockSESV2API) GetEmailIdentityRequest(arg0 *sesv2.GetEmailIdentityInput) (*request.Request, *sesv2.GetEmailIdentityOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEmailIdentityRequest", arg0)
@@ -1842,13 +1843,13 @@ func (m *MockSESV2API) GetEmailIdentityRequest(arg0 *sesv2.GetEmailIdentityInput
 	return ret0, ret1
 }
 
-// GetEmailIdentityRequest indicates an expected call of GetEmailIdentityRequest
+// GetEmailIdentityRequest indicates an expected call of GetEmailIdentityRequest.
 func (mr *MockSESV2APIMockRecorder) GetEmailIdentityRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEmailIdentityRequest", reflect.TypeOf((*MockSESV2API)(nil).GetEmailIdentityRequest), arg0)
 }
 
-// GetEmailIdentityWithContext mocks base method
+// GetEmailIdentityWithContext mocks base method.
 func (m *MockSESV2API) GetEmailIdentityWithContext(arg0 context.Context, arg1 *sesv2.GetEmailIdentityInput, arg2 ...request.Option) (*sesv2.GetEmailIdentityOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1861,14 +1862,14 @@ func (m *MockSESV2API) GetEmailIdentityWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// GetEmailIdentityWithContext indicates an expected call of GetEmailIdentityWithContext
+// GetEmailIdentityWithContext indicates an expected call of GetEmailIdentityWithContext.
 func (mr *MockSESV2APIMockRecorder) GetEmailIdentityWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEmailIdentityWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetEmailIdentityWithContext), varargs...)
 }
 
-// GetEmailTemplate mocks base method
+// GetEmailTemplate mocks base method.
 func (m *MockSESV2API) GetEmailTemplate(arg0 *sesv2.GetEmailTemplateInput) (*sesv2.GetEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEmailTemplate", arg0)
@@ -1877,13 +1878,13 @@ func (m *MockSESV2API) GetEmailTemplate(arg0 *sesv2.GetEmailTemplateInput) (*ses
 	return ret0, ret1
 }
 
-// GetEmailTemplate indicates an expected call of GetEmailTemplate
+// GetEmailTemplate indicates an expected call of GetEmailTemplate.
 func (mr *MockSESV2APIMockRecorder) GetEmailTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEmailTemplate", reflect.TypeOf((*MockSESV2API)(nil).GetEmailTemplate), arg0)
 }
 
-// GetEmailTemplateRequest mocks base method
+// GetEmailTemplateRequest mocks base method.
 func (m *MockSESV2API) GetEmailTemplateRequest(arg0 *sesv2.GetEmailTemplateInput) (*request.Request, *sesv2.GetEmailTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEmailTemplateRequest", arg0)
@@ -1892,13 +1893,13 @@ func (m *MockSESV2API) GetEmailTemplateRequest(arg0 *sesv2.GetEmailTemplateInput
 	return ret0, ret1
 }
 
-// GetEmailTemplateRequest indicates an expected call of GetEmailTemplateRequest
+// GetEmailTemplateRequest indicates an expected call of GetEmailTemplateRequest.
 func (mr *MockSESV2APIMockRecorder) GetEmailTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEmailTemplateRequest", reflect.TypeOf((*MockSESV2API)(nil).GetEmailTemplateRequest), arg0)
 }
 
-// GetEmailTemplateWithContext mocks base method
+// GetEmailTemplateWithContext mocks base method.
 func (m *MockSESV2API) GetEmailTemplateWithContext(arg0 context.Context, arg1 *sesv2.GetEmailTemplateInput, arg2 ...request.Option) (*sesv2.GetEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1911,14 +1912,14 @@ func (m *MockSESV2API) GetEmailTemplateWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// GetEmailTemplateWithContext indicates an expected call of GetEmailTemplateWithContext
+// GetEmailTemplateWithContext indicates an expected call of GetEmailTemplateWithContext.
 func (mr *MockSESV2APIMockRecorder) GetEmailTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEmailTemplateWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetEmailTemplateWithContext), varargs...)
 }
 
-// GetImportJob mocks base method
+// GetImportJob mocks base method.
 func (m *MockSESV2API) GetImportJob(arg0 *sesv2.GetImportJobInput) (*sesv2.GetImportJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetImportJob", arg0)
@@ -1927,13 +1928,13 @@ func (m *MockSESV2API) GetImportJob(arg0 *sesv2.GetImportJobInput) (*sesv2.GetIm
 	return ret0, ret1
 }
 
-// GetImportJob indicates an expected call of GetImportJob
+// GetImportJob indicates an expected call of GetImportJob.
 func (mr *MockSESV2APIMockRecorder) GetImportJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImportJob", reflect.TypeOf((*MockSESV2API)(nil).GetImportJob), arg0)
 }
 
-// GetImportJobRequest mocks base method
+// GetImportJobRequest mocks base method.
 func (m *MockSESV2API) GetImportJobRequest(arg0 *sesv2.GetImportJobInput) (*request.Request, *sesv2.GetImportJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetImportJobRequest", arg0)
@@ -1942,13 +1943,13 @@ func (m *MockSESV2API) GetImportJobRequest(arg0 *sesv2.GetImportJobInput) (*requ
 	return ret0, ret1
 }
 
-// GetImportJobRequest indicates an expected call of GetImportJobRequest
+// GetImportJobRequest indicates an expected call of GetImportJobRequest.
 func (mr *MockSESV2APIMockRecorder) GetImportJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImportJobRequest", reflect.TypeOf((*MockSESV2API)(nil).GetImportJobRequest), arg0)
 }
 
-// GetImportJobWithContext mocks base method
+// GetImportJobWithContext mocks base method.
 func (m *MockSESV2API) GetImportJobWithContext(arg0 context.Context, arg1 *sesv2.GetImportJobInput, arg2 ...request.Option) (*sesv2.GetImportJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1961,14 +1962,14 @@ func (m *MockSESV2API) GetImportJobWithContext(arg0 context.Context, arg1 *sesv2
 	return ret0, ret1
 }
 
-// GetImportJobWithContext indicates an expected call of GetImportJobWithContext
+// GetImportJobWithContext indicates an expected call of GetImportJobWithContext.
 func (mr *MockSESV2APIMockRecorder) GetImportJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImportJobWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetImportJobWithContext), varargs...)
 }
 
-// GetSuppressedDestination mocks base method
+// GetSuppressedDestination mocks base method.
 func (m *MockSESV2API) GetSuppressedDestination(arg0 *sesv2.GetSuppressedDestinationInput) (*sesv2.GetSuppressedDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSuppressedDestination", arg0)
@@ -1977,13 +1978,13 @@ func (m *MockSESV2API) GetSuppressedDestination(arg0 *sesv2.GetSuppressedDestina
 	return ret0, ret1
 }
 
-// GetSuppressedDestination indicates an expected call of GetSuppressedDestination
+// GetSuppressedDestination indicates an expected call of GetSuppressedDestination.
 func (mr *MockSESV2APIMockRecorder) GetSuppressedDestination(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSuppressedDestination", reflect.TypeOf((*MockSESV2API)(nil).GetSuppressedDestination), arg0)
 }
 
-// GetSuppressedDestinationRequest mocks base method
+// GetSuppressedDestinationRequest mocks base method.
 func (m *MockSESV2API) GetSuppressedDestinationRequest(arg0 *sesv2.GetSuppressedDestinationInput) (*request.Request, *sesv2.GetSuppressedDestinationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSuppressedDestinationRequest", arg0)
@@ -1992,13 +1993,13 @@ func (m *MockSESV2API) GetSuppressedDestinationRequest(arg0 *sesv2.GetSuppressed
 	return ret0, ret1
 }
 
-// GetSuppressedDestinationRequest indicates an expected call of GetSuppressedDestinationRequest
+// GetSuppressedDestinationRequest indicates an expected call of GetSuppressedDestinationRequest.
 func (mr *MockSESV2APIMockRecorder) GetSuppressedDestinationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSuppressedDestinationRequest", reflect.TypeOf((*MockSESV2API)(nil).GetSuppressedDestinationRequest), arg0)
 }
 
-// GetSuppressedDestinationWithContext mocks base method
+// GetSuppressedDestinationWithContext mocks base method.
 func (m *MockSESV2API) GetSuppressedDestinationWithContext(arg0 context.Context, arg1 *sesv2.GetSuppressedDestinationInput, arg2 ...request.Option) (*sesv2.GetSuppressedDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2011,14 +2012,14 @@ func (m *MockSESV2API) GetSuppressedDestinationWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// GetSuppressedDestinationWithContext indicates an expected call of GetSuppressedDestinationWithContext
+// GetSuppressedDestinationWithContext indicates an expected call of GetSuppressedDestinationWithContext.
 func (mr *MockSESV2APIMockRecorder) GetSuppressedDestinationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSuppressedDestinationWithContext", reflect.TypeOf((*MockSESV2API)(nil).GetSuppressedDestinationWithContext), varargs...)
 }
 
-// ListConfigurationSets mocks base method
+// ListConfigurationSets mocks base method.
 func (m *MockSESV2API) ListConfigurationSets(arg0 *sesv2.ListConfigurationSetsInput) (*sesv2.ListConfigurationSetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConfigurationSets", arg0)
@@ -2027,13 +2028,13 @@ func (m *MockSESV2API) ListConfigurationSets(arg0 *sesv2.ListConfigurationSetsIn
 	return ret0, ret1
 }
 
-// ListConfigurationSets indicates an expected call of ListConfigurationSets
+// ListConfigurationSets indicates an expected call of ListConfigurationSets.
 func (mr *MockSESV2APIMockRecorder) ListConfigurationSets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationSets", reflect.TypeOf((*MockSESV2API)(nil).ListConfigurationSets), arg0)
 }
 
-// ListConfigurationSetsPages mocks base method
+// ListConfigurationSetsPages mocks base method.
 func (m *MockSESV2API) ListConfigurationSetsPages(arg0 *sesv2.ListConfigurationSetsInput, arg1 func(*sesv2.ListConfigurationSetsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConfigurationSetsPages", arg0, arg1)
@@ -2041,13 +2042,13 @@ func (m *MockSESV2API) ListConfigurationSetsPages(arg0 *sesv2.ListConfigurationS
 	return ret0
 }
 
-// ListConfigurationSetsPages indicates an expected call of ListConfigurationSetsPages
+// ListConfigurationSetsPages indicates an expected call of ListConfigurationSetsPages.
 func (mr *MockSESV2APIMockRecorder) ListConfigurationSetsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationSetsPages", reflect.TypeOf((*MockSESV2API)(nil).ListConfigurationSetsPages), arg0, arg1)
 }
 
-// ListConfigurationSetsPagesWithContext mocks base method
+// ListConfigurationSetsPagesWithContext mocks base method.
 func (m *MockSESV2API) ListConfigurationSetsPagesWithContext(arg0 context.Context, arg1 *sesv2.ListConfigurationSetsInput, arg2 func(*sesv2.ListConfigurationSetsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2059,14 +2060,14 @@ func (m *MockSESV2API) ListConfigurationSetsPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListConfigurationSetsPagesWithContext indicates an expected call of ListConfigurationSetsPagesWithContext
+// ListConfigurationSetsPagesWithContext indicates an expected call of ListConfigurationSetsPagesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListConfigurationSetsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationSetsPagesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListConfigurationSetsPagesWithContext), varargs...)
 }
 
-// ListConfigurationSetsRequest mocks base method
+// ListConfigurationSetsRequest mocks base method.
 func (m *MockSESV2API) ListConfigurationSetsRequest(arg0 *sesv2.ListConfigurationSetsInput) (*request.Request, *sesv2.ListConfigurationSetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConfigurationSetsRequest", arg0)
@@ -2075,13 +2076,13 @@ func (m *MockSESV2API) ListConfigurationSetsRequest(arg0 *sesv2.ListConfiguratio
 	return ret0, ret1
 }
 
-// ListConfigurationSetsRequest indicates an expected call of ListConfigurationSetsRequest
+// ListConfigurationSetsRequest indicates an expected call of ListConfigurationSetsRequest.
 func (mr *MockSESV2APIMockRecorder) ListConfigurationSetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationSetsRequest", reflect.TypeOf((*MockSESV2API)(nil).ListConfigurationSetsRequest), arg0)
 }
 
-// ListConfigurationSetsWithContext mocks base method
+// ListConfigurationSetsWithContext mocks base method.
 func (m *MockSESV2API) ListConfigurationSetsWithContext(arg0 context.Context, arg1 *sesv2.ListConfigurationSetsInput, arg2 ...request.Option) (*sesv2.ListConfigurationSetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2094,14 +2095,14 @@ func (m *MockSESV2API) ListConfigurationSetsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListConfigurationSetsWithContext indicates an expected call of ListConfigurationSetsWithContext
+// ListConfigurationSetsWithContext indicates an expected call of ListConfigurationSetsWithContext.
 func (mr *MockSESV2APIMockRecorder) ListConfigurationSetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationSetsWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListConfigurationSetsWithContext), varargs...)
 }
 
-// ListContactLists mocks base method
+// ListContactLists mocks base method.
 func (m *MockSESV2API) ListContactLists(arg0 *sesv2.ListContactListsInput) (*sesv2.ListContactListsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContactLists", arg0)
@@ -2110,13 +2111,13 @@ func (m *MockSESV2API) ListContactLists(arg0 *sesv2.ListContactListsInput) (*ses
 	return ret0, ret1
 }
 
-// ListContactLists indicates an expected call of ListContactLists
+// ListContactLists indicates an expected call of ListContactLists.
 func (mr *MockSESV2APIMockRecorder) ListContactLists(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactLists", reflect.TypeOf((*MockSESV2API)(nil).ListContactLists), arg0)
 }
 
-// ListContactListsPages mocks base method
+// ListContactListsPages mocks base method.
 func (m *MockSESV2API) ListContactListsPages(arg0 *sesv2.ListContactListsInput, arg1 func(*sesv2.ListContactListsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContactListsPages", arg0, arg1)
@@ -2124,13 +2125,13 @@ func (m *MockSESV2API) ListContactListsPages(arg0 *sesv2.ListContactListsInput, 
 	return ret0
 }
 
-// ListContactListsPages indicates an expected call of ListContactListsPages
+// ListContactListsPages indicates an expected call of ListContactListsPages.
 func (mr *MockSESV2APIMockRecorder) ListContactListsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactListsPages", reflect.TypeOf((*MockSESV2API)(nil).ListContactListsPages), arg0, arg1)
 }
 
-// ListContactListsPagesWithContext mocks base method
+// ListContactListsPagesWithContext mocks base method.
 func (m *MockSESV2API) ListContactListsPagesWithContext(arg0 context.Context, arg1 *sesv2.ListContactListsInput, arg2 func(*sesv2.ListContactListsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2142,14 +2143,14 @@ func (m *MockSESV2API) ListContactListsPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// ListContactListsPagesWithContext indicates an expected call of ListContactListsPagesWithContext
+// ListContactListsPagesWithContext indicates an expected call of ListContactListsPagesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListContactListsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactListsPagesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListContactListsPagesWithContext), varargs...)
 }
 
-// ListContactListsRequest mocks base method
+// ListContactListsRequest mocks base method.
 func (m *MockSESV2API) ListContactListsRequest(arg0 *sesv2.ListContactListsInput) (*request.Request, *sesv2.ListContactListsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContactListsRequest", arg0)
@@ -2158,13 +2159,13 @@ func (m *MockSESV2API) ListContactListsRequest(arg0 *sesv2.ListContactListsInput
 	return ret0, ret1
 }
 
-// ListContactListsRequest indicates an expected call of ListContactListsRequest
+// ListContactListsRequest indicates an expected call of ListContactListsRequest.
 func (mr *MockSESV2APIMockRecorder) ListContactListsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactListsRequest", reflect.TypeOf((*MockSESV2API)(nil).ListContactListsRequest), arg0)
 }
 
-// ListContactListsWithContext mocks base method
+// ListContactListsWithContext mocks base method.
 func (m *MockSESV2API) ListContactListsWithContext(arg0 context.Context, arg1 *sesv2.ListContactListsInput, arg2 ...request.Option) (*sesv2.ListContactListsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2177,14 +2178,14 @@ func (m *MockSESV2API) ListContactListsWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// ListContactListsWithContext indicates an expected call of ListContactListsWithContext
+// ListContactListsWithContext indicates an expected call of ListContactListsWithContext.
 func (mr *MockSESV2APIMockRecorder) ListContactListsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactListsWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListContactListsWithContext), varargs...)
 }
 
-// ListContacts mocks base method
+// ListContacts mocks base method.
 func (m *MockSESV2API) ListContacts(arg0 *sesv2.ListContactsInput) (*sesv2.ListContactsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContacts", arg0)
@@ -2193,13 +2194,13 @@ func (m *MockSESV2API) ListContacts(arg0 *sesv2.ListContactsInput) (*sesv2.ListC
 	return ret0, ret1
 }
 
-// ListContacts indicates an expected call of ListContacts
+// ListContacts indicates an expected call of ListContacts.
 func (mr *MockSESV2APIMockRecorder) ListContacts(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContacts", reflect.TypeOf((*MockSESV2API)(nil).ListContacts), arg0)
 }
 
-// ListContactsPages mocks base method
+// ListContactsPages mocks base method.
 func (m *MockSESV2API) ListContactsPages(arg0 *sesv2.ListContactsInput, arg1 func(*sesv2.ListContactsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContactsPages", arg0, arg1)
@@ -2207,13 +2208,13 @@ func (m *MockSESV2API) ListContactsPages(arg0 *sesv2.ListContactsInput, arg1 fun
 	return ret0
 }
 
-// ListContactsPages indicates an expected call of ListContactsPages
+// ListContactsPages indicates an expected call of ListContactsPages.
 func (mr *MockSESV2APIMockRecorder) ListContactsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactsPages", reflect.TypeOf((*MockSESV2API)(nil).ListContactsPages), arg0, arg1)
 }
 
-// ListContactsPagesWithContext mocks base method
+// ListContactsPagesWithContext mocks base method.
 func (m *MockSESV2API) ListContactsPagesWithContext(arg0 context.Context, arg1 *sesv2.ListContactsInput, arg2 func(*sesv2.ListContactsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2225,14 +2226,14 @@ func (m *MockSESV2API) ListContactsPagesWithContext(arg0 context.Context, arg1 *
 	return ret0
 }
 
-// ListContactsPagesWithContext indicates an expected call of ListContactsPagesWithContext
+// ListContactsPagesWithContext indicates an expected call of ListContactsPagesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListContactsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactsPagesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListContactsPagesWithContext), varargs...)
 }
 
-// ListContactsRequest mocks base method
+// ListContactsRequest mocks base method.
 func (m *MockSESV2API) ListContactsRequest(arg0 *sesv2.ListContactsInput) (*request.Request, *sesv2.ListContactsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContactsRequest", arg0)
@@ -2241,13 +2242,13 @@ func (m *MockSESV2API) ListContactsRequest(arg0 *sesv2.ListContactsInput) (*requ
 	return ret0, ret1
 }
 
-// ListContactsRequest indicates an expected call of ListContactsRequest
+// ListContactsRequest indicates an expected call of ListContactsRequest.
 func (mr *MockSESV2APIMockRecorder) ListContactsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactsRequest", reflect.TypeOf((*MockSESV2API)(nil).ListContactsRequest), arg0)
 }
 
-// ListContactsWithContext mocks base method
+// ListContactsWithContext mocks base method.
 func (m *MockSESV2API) ListContactsWithContext(arg0 context.Context, arg1 *sesv2.ListContactsInput, arg2 ...request.Option) (*sesv2.ListContactsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2260,14 +2261,14 @@ func (m *MockSESV2API) ListContactsWithContext(arg0 context.Context, arg1 *sesv2
 	return ret0, ret1
 }
 
-// ListContactsWithContext indicates an expected call of ListContactsWithContext
+// ListContactsWithContext indicates an expected call of ListContactsWithContext.
 func (mr *MockSESV2APIMockRecorder) ListContactsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactsWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListContactsWithContext), varargs...)
 }
 
-// ListCustomVerificationEmailTemplates mocks base method
+// ListCustomVerificationEmailTemplates mocks base method.
 func (m *MockSESV2API) ListCustomVerificationEmailTemplates(arg0 *sesv2.ListCustomVerificationEmailTemplatesInput) (*sesv2.ListCustomVerificationEmailTemplatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomVerificationEmailTemplates", arg0)
@@ -2276,13 +2277,13 @@ func (m *MockSESV2API) ListCustomVerificationEmailTemplates(arg0 *sesv2.ListCust
 	return ret0, ret1
 }
 
-// ListCustomVerificationEmailTemplates indicates an expected call of ListCustomVerificationEmailTemplates
+// ListCustomVerificationEmailTemplates indicates an expected call of ListCustomVerificationEmailTemplates.
 func (mr *MockSESV2APIMockRecorder) ListCustomVerificationEmailTemplates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomVerificationEmailTemplates", reflect.TypeOf((*MockSESV2API)(nil).ListCustomVerificationEmailTemplates), arg0)
 }
 
-// ListCustomVerificationEmailTemplatesPages mocks base method
+// ListCustomVerificationEmailTemplatesPages mocks base method.
 func (m *MockSESV2API) ListCustomVerificationEmailTemplatesPages(arg0 *sesv2.ListCustomVerificationEmailTemplatesInput, arg1 func(*sesv2.ListCustomVerificationEmailTemplatesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomVerificationEmailTemplatesPages", arg0, arg1)
@@ -2290,13 +2291,13 @@ func (m *MockSESV2API) ListCustomVerificationEmailTemplatesPages(arg0 *sesv2.Lis
 	return ret0
 }
 
-// ListCustomVerificationEmailTemplatesPages indicates an expected call of ListCustomVerificationEmailTemplatesPages
+// ListCustomVerificationEmailTemplatesPages indicates an expected call of ListCustomVerificationEmailTemplatesPages.
 func (mr *MockSESV2APIMockRecorder) ListCustomVerificationEmailTemplatesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomVerificationEmailTemplatesPages", reflect.TypeOf((*MockSESV2API)(nil).ListCustomVerificationEmailTemplatesPages), arg0, arg1)
 }
 
-// ListCustomVerificationEmailTemplatesPagesWithContext mocks base method
+// ListCustomVerificationEmailTemplatesPagesWithContext mocks base method.
 func (m *MockSESV2API) ListCustomVerificationEmailTemplatesPagesWithContext(arg0 context.Context, arg1 *sesv2.ListCustomVerificationEmailTemplatesInput, arg2 func(*sesv2.ListCustomVerificationEmailTemplatesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2308,14 +2309,14 @@ func (m *MockSESV2API) ListCustomVerificationEmailTemplatesPagesWithContext(arg0
 	return ret0
 }
 
-// ListCustomVerificationEmailTemplatesPagesWithContext indicates an expected call of ListCustomVerificationEmailTemplatesPagesWithContext
+// ListCustomVerificationEmailTemplatesPagesWithContext indicates an expected call of ListCustomVerificationEmailTemplatesPagesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListCustomVerificationEmailTemplatesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomVerificationEmailTemplatesPagesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListCustomVerificationEmailTemplatesPagesWithContext), varargs...)
 }
 
-// ListCustomVerificationEmailTemplatesRequest mocks base method
+// ListCustomVerificationEmailTemplatesRequest mocks base method.
 func (m *MockSESV2API) ListCustomVerificationEmailTemplatesRequest(arg0 *sesv2.ListCustomVerificationEmailTemplatesInput) (*request.Request, *sesv2.ListCustomVerificationEmailTemplatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomVerificationEmailTemplatesRequest", arg0)
@@ -2324,13 +2325,13 @@ func (m *MockSESV2API) ListCustomVerificationEmailTemplatesRequest(arg0 *sesv2.L
 	return ret0, ret1
 }
 
-// ListCustomVerificationEmailTemplatesRequest indicates an expected call of ListCustomVerificationEmailTemplatesRequest
+// ListCustomVerificationEmailTemplatesRequest indicates an expected call of ListCustomVerificationEmailTemplatesRequest.
 func (mr *MockSESV2APIMockRecorder) ListCustomVerificationEmailTemplatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomVerificationEmailTemplatesRequest", reflect.TypeOf((*MockSESV2API)(nil).ListCustomVerificationEmailTemplatesRequest), arg0)
 }
 
-// ListCustomVerificationEmailTemplatesWithContext mocks base method
+// ListCustomVerificationEmailTemplatesWithContext mocks base method.
 func (m *MockSESV2API) ListCustomVerificationEmailTemplatesWithContext(arg0 context.Context, arg1 *sesv2.ListCustomVerificationEmailTemplatesInput, arg2 ...request.Option) (*sesv2.ListCustomVerificationEmailTemplatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2343,14 +2344,14 @@ func (m *MockSESV2API) ListCustomVerificationEmailTemplatesWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// ListCustomVerificationEmailTemplatesWithContext indicates an expected call of ListCustomVerificationEmailTemplatesWithContext
+// ListCustomVerificationEmailTemplatesWithContext indicates an expected call of ListCustomVerificationEmailTemplatesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListCustomVerificationEmailTemplatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomVerificationEmailTemplatesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListCustomVerificationEmailTemplatesWithContext), varargs...)
 }
 
-// ListDedicatedIpPools mocks base method
+// ListDedicatedIpPools mocks base method.
 func (m *MockSESV2API) ListDedicatedIpPools(arg0 *sesv2.ListDedicatedIpPoolsInput) (*sesv2.ListDedicatedIpPoolsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDedicatedIpPools", arg0)
@@ -2359,13 +2360,13 @@ func (m *MockSESV2API) ListDedicatedIpPools(arg0 *sesv2.ListDedicatedIpPoolsInpu
 	return ret0, ret1
 }
 
-// ListDedicatedIpPools indicates an expected call of ListDedicatedIpPools
+// ListDedicatedIpPools indicates an expected call of ListDedicatedIpPools.
 func (mr *MockSESV2APIMockRecorder) ListDedicatedIpPools(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDedicatedIpPools", reflect.TypeOf((*MockSESV2API)(nil).ListDedicatedIpPools), arg0)
 }
 
-// ListDedicatedIpPoolsPages mocks base method
+// ListDedicatedIpPoolsPages mocks base method.
 func (m *MockSESV2API) ListDedicatedIpPoolsPages(arg0 *sesv2.ListDedicatedIpPoolsInput, arg1 func(*sesv2.ListDedicatedIpPoolsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDedicatedIpPoolsPages", arg0, arg1)
@@ -2373,13 +2374,13 @@ func (m *MockSESV2API) ListDedicatedIpPoolsPages(arg0 *sesv2.ListDedicatedIpPool
 	return ret0
 }
 
-// ListDedicatedIpPoolsPages indicates an expected call of ListDedicatedIpPoolsPages
+// ListDedicatedIpPoolsPages indicates an expected call of ListDedicatedIpPoolsPages.
 func (mr *MockSESV2APIMockRecorder) ListDedicatedIpPoolsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDedicatedIpPoolsPages", reflect.TypeOf((*MockSESV2API)(nil).ListDedicatedIpPoolsPages), arg0, arg1)
 }
 
-// ListDedicatedIpPoolsPagesWithContext mocks base method
+// ListDedicatedIpPoolsPagesWithContext mocks base method.
 func (m *MockSESV2API) ListDedicatedIpPoolsPagesWithContext(arg0 context.Context, arg1 *sesv2.ListDedicatedIpPoolsInput, arg2 func(*sesv2.ListDedicatedIpPoolsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2391,14 +2392,14 @@ func (m *MockSESV2API) ListDedicatedIpPoolsPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListDedicatedIpPoolsPagesWithContext indicates an expected call of ListDedicatedIpPoolsPagesWithContext
+// ListDedicatedIpPoolsPagesWithContext indicates an expected call of ListDedicatedIpPoolsPagesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListDedicatedIpPoolsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDedicatedIpPoolsPagesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListDedicatedIpPoolsPagesWithContext), varargs...)
 }
 
-// ListDedicatedIpPoolsRequest mocks base method
+// ListDedicatedIpPoolsRequest mocks base method.
 func (m *MockSESV2API) ListDedicatedIpPoolsRequest(arg0 *sesv2.ListDedicatedIpPoolsInput) (*request.Request, *sesv2.ListDedicatedIpPoolsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDedicatedIpPoolsRequest", arg0)
@@ -2407,13 +2408,13 @@ func (m *MockSESV2API) ListDedicatedIpPoolsRequest(arg0 *sesv2.ListDedicatedIpPo
 	return ret0, ret1
 }
 
-// ListDedicatedIpPoolsRequest indicates an expected call of ListDedicatedIpPoolsRequest
+// ListDedicatedIpPoolsRequest indicates an expected call of ListDedicatedIpPoolsRequest.
 func (mr *MockSESV2APIMockRecorder) ListDedicatedIpPoolsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDedicatedIpPoolsRequest", reflect.TypeOf((*MockSESV2API)(nil).ListDedicatedIpPoolsRequest), arg0)
 }
 
-// ListDedicatedIpPoolsWithContext mocks base method
+// ListDedicatedIpPoolsWithContext mocks base method.
 func (m *MockSESV2API) ListDedicatedIpPoolsWithContext(arg0 context.Context, arg1 *sesv2.ListDedicatedIpPoolsInput, arg2 ...request.Option) (*sesv2.ListDedicatedIpPoolsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2426,14 +2427,14 @@ func (m *MockSESV2API) ListDedicatedIpPoolsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListDedicatedIpPoolsWithContext indicates an expected call of ListDedicatedIpPoolsWithContext
+// ListDedicatedIpPoolsWithContext indicates an expected call of ListDedicatedIpPoolsWithContext.
 func (mr *MockSESV2APIMockRecorder) ListDedicatedIpPoolsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDedicatedIpPoolsWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListDedicatedIpPoolsWithContext), varargs...)
 }
 
-// ListDeliverabilityTestReports mocks base method
+// ListDeliverabilityTestReports mocks base method.
 func (m *MockSESV2API) ListDeliverabilityTestReports(arg0 *sesv2.ListDeliverabilityTestReportsInput) (*sesv2.ListDeliverabilityTestReportsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDeliverabilityTestReports", arg0)
@@ -2442,13 +2443,13 @@ func (m *MockSESV2API) ListDeliverabilityTestReports(arg0 *sesv2.ListDeliverabil
 	return ret0, ret1
 }
 
-// ListDeliverabilityTestReports indicates an expected call of ListDeliverabilityTestReports
+// ListDeliverabilityTestReports indicates an expected call of ListDeliverabilityTestReports.
 func (mr *MockSESV2APIMockRecorder) ListDeliverabilityTestReports(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeliverabilityTestReports", reflect.TypeOf((*MockSESV2API)(nil).ListDeliverabilityTestReports), arg0)
 }
 
-// ListDeliverabilityTestReportsPages mocks base method
+// ListDeliverabilityTestReportsPages mocks base method.
 func (m *MockSESV2API) ListDeliverabilityTestReportsPages(arg0 *sesv2.ListDeliverabilityTestReportsInput, arg1 func(*sesv2.ListDeliverabilityTestReportsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDeliverabilityTestReportsPages", arg0, arg1)
@@ -2456,13 +2457,13 @@ func (m *MockSESV2API) ListDeliverabilityTestReportsPages(arg0 *sesv2.ListDelive
 	return ret0
 }
 
-// ListDeliverabilityTestReportsPages indicates an expected call of ListDeliverabilityTestReportsPages
+// ListDeliverabilityTestReportsPages indicates an expected call of ListDeliverabilityTestReportsPages.
 func (mr *MockSESV2APIMockRecorder) ListDeliverabilityTestReportsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeliverabilityTestReportsPages", reflect.TypeOf((*MockSESV2API)(nil).ListDeliverabilityTestReportsPages), arg0, arg1)
 }
 
-// ListDeliverabilityTestReportsPagesWithContext mocks base method
+// ListDeliverabilityTestReportsPagesWithContext mocks base method.
 func (m *MockSESV2API) ListDeliverabilityTestReportsPagesWithContext(arg0 context.Context, arg1 *sesv2.ListDeliverabilityTestReportsInput, arg2 func(*sesv2.ListDeliverabilityTestReportsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2474,14 +2475,14 @@ func (m *MockSESV2API) ListDeliverabilityTestReportsPagesWithContext(arg0 contex
 	return ret0
 }
 
-// ListDeliverabilityTestReportsPagesWithContext indicates an expected call of ListDeliverabilityTestReportsPagesWithContext
+// ListDeliverabilityTestReportsPagesWithContext indicates an expected call of ListDeliverabilityTestReportsPagesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListDeliverabilityTestReportsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeliverabilityTestReportsPagesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListDeliverabilityTestReportsPagesWithContext), varargs...)
 }
 
-// ListDeliverabilityTestReportsRequest mocks base method
+// ListDeliverabilityTestReportsRequest mocks base method.
 func (m *MockSESV2API) ListDeliverabilityTestReportsRequest(arg0 *sesv2.ListDeliverabilityTestReportsInput) (*request.Request, *sesv2.ListDeliverabilityTestReportsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDeliverabilityTestReportsRequest", arg0)
@@ -2490,13 +2491,13 @@ func (m *MockSESV2API) ListDeliverabilityTestReportsRequest(arg0 *sesv2.ListDeli
 	return ret0, ret1
 }
 
-// ListDeliverabilityTestReportsRequest indicates an expected call of ListDeliverabilityTestReportsRequest
+// ListDeliverabilityTestReportsRequest indicates an expected call of ListDeliverabilityTestReportsRequest.
 func (mr *MockSESV2APIMockRecorder) ListDeliverabilityTestReportsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeliverabilityTestReportsRequest", reflect.TypeOf((*MockSESV2API)(nil).ListDeliverabilityTestReportsRequest), arg0)
 }
 
-// ListDeliverabilityTestReportsWithContext mocks base method
+// ListDeliverabilityTestReportsWithContext mocks base method.
 func (m *MockSESV2API) ListDeliverabilityTestReportsWithContext(arg0 context.Context, arg1 *sesv2.ListDeliverabilityTestReportsInput, arg2 ...request.Option) (*sesv2.ListDeliverabilityTestReportsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2509,14 +2510,14 @@ func (m *MockSESV2API) ListDeliverabilityTestReportsWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListDeliverabilityTestReportsWithContext indicates an expected call of ListDeliverabilityTestReportsWithContext
+// ListDeliverabilityTestReportsWithContext indicates an expected call of ListDeliverabilityTestReportsWithContext.
 func (mr *MockSESV2APIMockRecorder) ListDeliverabilityTestReportsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeliverabilityTestReportsWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListDeliverabilityTestReportsWithContext), varargs...)
 }
 
-// ListDomainDeliverabilityCampaigns mocks base method
+// ListDomainDeliverabilityCampaigns mocks base method.
 func (m *MockSESV2API) ListDomainDeliverabilityCampaigns(arg0 *sesv2.ListDomainDeliverabilityCampaignsInput) (*sesv2.ListDomainDeliverabilityCampaignsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomainDeliverabilityCampaigns", arg0)
@@ -2525,13 +2526,13 @@ func (m *MockSESV2API) ListDomainDeliverabilityCampaigns(arg0 *sesv2.ListDomainD
 	return ret0, ret1
 }
 
-// ListDomainDeliverabilityCampaigns indicates an expected call of ListDomainDeliverabilityCampaigns
+// ListDomainDeliverabilityCampaigns indicates an expected call of ListDomainDeliverabilityCampaigns.
 func (mr *MockSESV2APIMockRecorder) ListDomainDeliverabilityCampaigns(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainDeliverabilityCampaigns", reflect.TypeOf((*MockSESV2API)(nil).ListDomainDeliverabilityCampaigns), arg0)
 }
 
-// ListDomainDeliverabilityCampaignsPages mocks base method
+// ListDomainDeliverabilityCampaignsPages mocks base method.
 func (m *MockSESV2API) ListDomainDeliverabilityCampaignsPages(arg0 *sesv2.ListDomainDeliverabilityCampaignsInput, arg1 func(*sesv2.ListDomainDeliverabilityCampaignsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomainDeliverabilityCampaignsPages", arg0, arg1)
@@ -2539,13 +2540,13 @@ func (m *MockSESV2API) ListDomainDeliverabilityCampaignsPages(arg0 *sesv2.ListDo
 	return ret0
 }
 
-// ListDomainDeliverabilityCampaignsPages indicates an expected call of ListDomainDeliverabilityCampaignsPages
+// ListDomainDeliverabilityCampaignsPages indicates an expected call of ListDomainDeliverabilityCampaignsPages.
 func (mr *MockSESV2APIMockRecorder) ListDomainDeliverabilityCampaignsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainDeliverabilityCampaignsPages", reflect.TypeOf((*MockSESV2API)(nil).ListDomainDeliverabilityCampaignsPages), arg0, arg1)
 }
 
-// ListDomainDeliverabilityCampaignsPagesWithContext mocks base method
+// ListDomainDeliverabilityCampaignsPagesWithContext mocks base method.
 func (m *MockSESV2API) ListDomainDeliverabilityCampaignsPagesWithContext(arg0 context.Context, arg1 *sesv2.ListDomainDeliverabilityCampaignsInput, arg2 func(*sesv2.ListDomainDeliverabilityCampaignsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2557,14 +2558,14 @@ func (m *MockSESV2API) ListDomainDeliverabilityCampaignsPagesWithContext(arg0 co
 	return ret0
 }
 
-// ListDomainDeliverabilityCampaignsPagesWithContext indicates an expected call of ListDomainDeliverabilityCampaignsPagesWithContext
+// ListDomainDeliverabilityCampaignsPagesWithContext indicates an expected call of ListDomainDeliverabilityCampaignsPagesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListDomainDeliverabilityCampaignsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainDeliverabilityCampaignsPagesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListDomainDeliverabilityCampaignsPagesWithContext), varargs...)
 }
 
-// ListDomainDeliverabilityCampaignsRequest mocks base method
+// ListDomainDeliverabilityCampaignsRequest mocks base method.
 func (m *MockSESV2API) ListDomainDeliverabilityCampaignsRequest(arg0 *sesv2.ListDomainDeliverabilityCampaignsInput) (*request.Request, *sesv2.ListDomainDeliverabilityCampaignsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomainDeliverabilityCampaignsRequest", arg0)
@@ -2573,13 +2574,13 @@ func (m *MockSESV2API) ListDomainDeliverabilityCampaignsRequest(arg0 *sesv2.List
 	return ret0, ret1
 }
 
-// ListDomainDeliverabilityCampaignsRequest indicates an expected call of ListDomainDeliverabilityCampaignsRequest
+// ListDomainDeliverabilityCampaignsRequest indicates an expected call of ListDomainDeliverabilityCampaignsRequest.
 func (mr *MockSESV2APIMockRecorder) ListDomainDeliverabilityCampaignsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainDeliverabilityCampaignsRequest", reflect.TypeOf((*MockSESV2API)(nil).ListDomainDeliverabilityCampaignsRequest), arg0)
 }
 
-// ListDomainDeliverabilityCampaignsWithContext mocks base method
+// ListDomainDeliverabilityCampaignsWithContext mocks base method.
 func (m *MockSESV2API) ListDomainDeliverabilityCampaignsWithContext(arg0 context.Context, arg1 *sesv2.ListDomainDeliverabilityCampaignsInput, arg2 ...request.Option) (*sesv2.ListDomainDeliverabilityCampaignsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2592,14 +2593,14 @@ func (m *MockSESV2API) ListDomainDeliverabilityCampaignsWithContext(arg0 context
 	return ret0, ret1
 }
 
-// ListDomainDeliverabilityCampaignsWithContext indicates an expected call of ListDomainDeliverabilityCampaignsWithContext
+// ListDomainDeliverabilityCampaignsWithContext indicates an expected call of ListDomainDeliverabilityCampaignsWithContext.
 func (mr *MockSESV2APIMockRecorder) ListDomainDeliverabilityCampaignsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainDeliverabilityCampaignsWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListDomainDeliverabilityCampaignsWithContext), varargs...)
 }
 
-// ListEmailIdentities mocks base method
+// ListEmailIdentities mocks base method.
 func (m *MockSESV2API) ListEmailIdentities(arg0 *sesv2.ListEmailIdentitiesInput) (*sesv2.ListEmailIdentitiesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEmailIdentities", arg0)
@@ -2608,13 +2609,13 @@ func (m *MockSESV2API) ListEmailIdentities(arg0 *sesv2.ListEmailIdentitiesInput)
 	return ret0, ret1
 }
 
-// ListEmailIdentities indicates an expected call of ListEmailIdentities
+// ListEmailIdentities indicates an expected call of ListEmailIdentities.
 func (mr *MockSESV2APIMockRecorder) ListEmailIdentities(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEmailIdentities", reflect.TypeOf((*MockSESV2API)(nil).ListEmailIdentities), arg0)
 }
 
-// ListEmailIdentitiesPages mocks base method
+// ListEmailIdentitiesPages mocks base method.
 func (m *MockSESV2API) ListEmailIdentitiesPages(arg0 *sesv2.ListEmailIdentitiesInput, arg1 func(*sesv2.ListEmailIdentitiesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEmailIdentitiesPages", arg0, arg1)
@@ -2622,13 +2623,13 @@ func (m *MockSESV2API) ListEmailIdentitiesPages(arg0 *sesv2.ListEmailIdentitiesI
 	return ret0
 }
 
-// ListEmailIdentitiesPages indicates an expected call of ListEmailIdentitiesPages
+// ListEmailIdentitiesPages indicates an expected call of ListEmailIdentitiesPages.
 func (mr *MockSESV2APIMockRecorder) ListEmailIdentitiesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEmailIdentitiesPages", reflect.TypeOf((*MockSESV2API)(nil).ListEmailIdentitiesPages), arg0, arg1)
 }
 
-// ListEmailIdentitiesPagesWithContext mocks base method
+// ListEmailIdentitiesPagesWithContext mocks base method.
 func (m *MockSESV2API) ListEmailIdentitiesPagesWithContext(arg0 context.Context, arg1 *sesv2.ListEmailIdentitiesInput, arg2 func(*sesv2.ListEmailIdentitiesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2640,14 +2641,14 @@ func (m *MockSESV2API) ListEmailIdentitiesPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListEmailIdentitiesPagesWithContext indicates an expected call of ListEmailIdentitiesPagesWithContext
+// ListEmailIdentitiesPagesWithContext indicates an expected call of ListEmailIdentitiesPagesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListEmailIdentitiesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEmailIdentitiesPagesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListEmailIdentitiesPagesWithContext), varargs...)
 }
 
-// ListEmailIdentitiesRequest mocks base method
+// ListEmailIdentitiesRequest mocks base method.
 func (m *MockSESV2API) ListEmailIdentitiesRequest(arg0 *sesv2.ListEmailIdentitiesInput) (*request.Request, *sesv2.ListEmailIdentitiesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEmailIdentitiesRequest", arg0)
@@ -2656,13 +2657,13 @@ func (m *MockSESV2API) ListEmailIdentitiesRequest(arg0 *sesv2.ListEmailIdentitie
 	return ret0, ret1
 }
 
-// ListEmailIdentitiesRequest indicates an expected call of ListEmailIdentitiesRequest
+// ListEmailIdentitiesRequest indicates an expected call of ListEmailIdentitiesRequest.
 func (mr *MockSESV2APIMockRecorder) ListEmailIdentitiesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEmailIdentitiesRequest", reflect.TypeOf((*MockSESV2API)(nil).ListEmailIdentitiesRequest), arg0)
 }
 
-// ListEmailIdentitiesWithContext mocks base method
+// ListEmailIdentitiesWithContext mocks base method.
 func (m *MockSESV2API) ListEmailIdentitiesWithContext(arg0 context.Context, arg1 *sesv2.ListEmailIdentitiesInput, arg2 ...request.Option) (*sesv2.ListEmailIdentitiesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2675,14 +2676,14 @@ func (m *MockSESV2API) ListEmailIdentitiesWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListEmailIdentitiesWithContext indicates an expected call of ListEmailIdentitiesWithContext
+// ListEmailIdentitiesWithContext indicates an expected call of ListEmailIdentitiesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListEmailIdentitiesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEmailIdentitiesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListEmailIdentitiesWithContext), varargs...)
 }
 
-// ListEmailTemplates mocks base method
+// ListEmailTemplates mocks base method.
 func (m *MockSESV2API) ListEmailTemplates(arg0 *sesv2.ListEmailTemplatesInput) (*sesv2.ListEmailTemplatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEmailTemplates", arg0)
@@ -2691,13 +2692,13 @@ func (m *MockSESV2API) ListEmailTemplates(arg0 *sesv2.ListEmailTemplatesInput) (
 	return ret0, ret1
 }
 
-// ListEmailTemplates indicates an expected call of ListEmailTemplates
+// ListEmailTemplates indicates an expected call of ListEmailTemplates.
 func (mr *MockSESV2APIMockRecorder) ListEmailTemplates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEmailTemplates", reflect.TypeOf((*MockSESV2API)(nil).ListEmailTemplates), arg0)
 }
 
-// ListEmailTemplatesPages mocks base method
+// ListEmailTemplatesPages mocks base method.
 func (m *MockSESV2API) ListEmailTemplatesPages(arg0 *sesv2.ListEmailTemplatesInput, arg1 func(*sesv2.ListEmailTemplatesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEmailTemplatesPages", arg0, arg1)
@@ -2705,13 +2706,13 @@ func (m *MockSESV2API) ListEmailTemplatesPages(arg0 *sesv2.ListEmailTemplatesInp
 	return ret0
 }
 
-// ListEmailTemplatesPages indicates an expected call of ListEmailTemplatesPages
+// ListEmailTemplatesPages indicates an expected call of ListEmailTemplatesPages.
 func (mr *MockSESV2APIMockRecorder) ListEmailTemplatesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEmailTemplatesPages", reflect.TypeOf((*MockSESV2API)(nil).ListEmailTemplatesPages), arg0, arg1)
 }
 
-// ListEmailTemplatesPagesWithContext mocks base method
+// ListEmailTemplatesPagesWithContext mocks base method.
 func (m *MockSESV2API) ListEmailTemplatesPagesWithContext(arg0 context.Context, arg1 *sesv2.ListEmailTemplatesInput, arg2 func(*sesv2.ListEmailTemplatesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2723,14 +2724,14 @@ func (m *MockSESV2API) ListEmailTemplatesPagesWithContext(arg0 context.Context, 
 	return ret0
 }
 
-// ListEmailTemplatesPagesWithContext indicates an expected call of ListEmailTemplatesPagesWithContext
+// ListEmailTemplatesPagesWithContext indicates an expected call of ListEmailTemplatesPagesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListEmailTemplatesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEmailTemplatesPagesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListEmailTemplatesPagesWithContext), varargs...)
 }
 
-// ListEmailTemplatesRequest mocks base method
+// ListEmailTemplatesRequest mocks base method.
 func (m *MockSESV2API) ListEmailTemplatesRequest(arg0 *sesv2.ListEmailTemplatesInput) (*request.Request, *sesv2.ListEmailTemplatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEmailTemplatesRequest", arg0)
@@ -2739,13 +2740,13 @@ func (m *MockSESV2API) ListEmailTemplatesRequest(arg0 *sesv2.ListEmailTemplatesI
 	return ret0, ret1
 }
 
-// ListEmailTemplatesRequest indicates an expected call of ListEmailTemplatesRequest
+// ListEmailTemplatesRequest indicates an expected call of ListEmailTemplatesRequest.
 func (mr *MockSESV2APIMockRecorder) ListEmailTemplatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEmailTemplatesRequest", reflect.TypeOf((*MockSESV2API)(nil).ListEmailTemplatesRequest), arg0)
 }
 
-// ListEmailTemplatesWithContext mocks base method
+// ListEmailTemplatesWithContext mocks base method.
 func (m *MockSESV2API) ListEmailTemplatesWithContext(arg0 context.Context, arg1 *sesv2.ListEmailTemplatesInput, arg2 ...request.Option) (*sesv2.ListEmailTemplatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2758,14 +2759,14 @@ func (m *MockSESV2API) ListEmailTemplatesWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListEmailTemplatesWithContext indicates an expected call of ListEmailTemplatesWithContext
+// ListEmailTemplatesWithContext indicates an expected call of ListEmailTemplatesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListEmailTemplatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEmailTemplatesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListEmailTemplatesWithContext), varargs...)
 }
 
-// ListImportJobs mocks base method
+// ListImportJobs mocks base method.
 func (m *MockSESV2API) ListImportJobs(arg0 *sesv2.ListImportJobsInput) (*sesv2.ListImportJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImportJobs", arg0)
@@ -2774,13 +2775,13 @@ func (m *MockSESV2API) ListImportJobs(arg0 *sesv2.ListImportJobsInput) (*sesv2.L
 	return ret0, ret1
 }
 
-// ListImportJobs indicates an expected call of ListImportJobs
+// ListImportJobs indicates an expected call of ListImportJobs.
 func (mr *MockSESV2APIMockRecorder) ListImportJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImportJobs", reflect.TypeOf((*MockSESV2API)(nil).ListImportJobs), arg0)
 }
 
-// ListImportJobsPages mocks base method
+// ListImportJobsPages mocks base method.
 func (m *MockSESV2API) ListImportJobsPages(arg0 *sesv2.ListImportJobsInput, arg1 func(*sesv2.ListImportJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImportJobsPages", arg0, arg1)
@@ -2788,13 +2789,13 @@ func (m *MockSESV2API) ListImportJobsPages(arg0 *sesv2.ListImportJobsInput, arg1
 	return ret0
 }
 
-// ListImportJobsPages indicates an expected call of ListImportJobsPages
+// ListImportJobsPages indicates an expected call of ListImportJobsPages.
 func (mr *MockSESV2APIMockRecorder) ListImportJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImportJobsPages", reflect.TypeOf((*MockSESV2API)(nil).ListImportJobsPages), arg0, arg1)
 }
 
-// ListImportJobsPagesWithContext mocks base method
+// ListImportJobsPagesWithContext mocks base method.
 func (m *MockSESV2API) ListImportJobsPagesWithContext(arg0 context.Context, arg1 *sesv2.ListImportJobsInput, arg2 func(*sesv2.ListImportJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2806,14 +2807,14 @@ func (m *MockSESV2API) ListImportJobsPagesWithContext(arg0 context.Context, arg1
 	return ret0
 }
 
-// ListImportJobsPagesWithContext indicates an expected call of ListImportJobsPagesWithContext
+// ListImportJobsPagesWithContext indicates an expected call of ListImportJobsPagesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListImportJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImportJobsPagesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListImportJobsPagesWithContext), varargs...)
 }
 
-// ListImportJobsRequest mocks base method
+// ListImportJobsRequest mocks base method.
 func (m *MockSESV2API) ListImportJobsRequest(arg0 *sesv2.ListImportJobsInput) (*request.Request, *sesv2.ListImportJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImportJobsRequest", arg0)
@@ -2822,13 +2823,13 @@ func (m *MockSESV2API) ListImportJobsRequest(arg0 *sesv2.ListImportJobsInput) (*
 	return ret0, ret1
 }
 
-// ListImportJobsRequest indicates an expected call of ListImportJobsRequest
+// ListImportJobsRequest indicates an expected call of ListImportJobsRequest.
 func (mr *MockSESV2APIMockRecorder) ListImportJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImportJobsRequest", reflect.TypeOf((*MockSESV2API)(nil).ListImportJobsRequest), arg0)
 }
 
-// ListImportJobsWithContext mocks base method
+// ListImportJobsWithContext mocks base method.
 func (m *MockSESV2API) ListImportJobsWithContext(arg0 context.Context, arg1 *sesv2.ListImportJobsInput, arg2 ...request.Option) (*sesv2.ListImportJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2841,14 +2842,14 @@ func (m *MockSESV2API) ListImportJobsWithContext(arg0 context.Context, arg1 *ses
 	return ret0, ret1
 }
 
-// ListImportJobsWithContext indicates an expected call of ListImportJobsWithContext
+// ListImportJobsWithContext indicates an expected call of ListImportJobsWithContext.
 func (mr *MockSESV2APIMockRecorder) ListImportJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImportJobsWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListImportJobsWithContext), varargs...)
 }
 
-// ListSuppressedDestinations mocks base method
+// ListSuppressedDestinations mocks base method.
 func (m *MockSESV2API) ListSuppressedDestinations(arg0 *sesv2.ListSuppressedDestinationsInput) (*sesv2.ListSuppressedDestinationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSuppressedDestinations", arg0)
@@ -2857,13 +2858,13 @@ func (m *MockSESV2API) ListSuppressedDestinations(arg0 *sesv2.ListSuppressedDest
 	return ret0, ret1
 }
 
-// ListSuppressedDestinations indicates an expected call of ListSuppressedDestinations
+// ListSuppressedDestinations indicates an expected call of ListSuppressedDestinations.
 func (mr *MockSESV2APIMockRecorder) ListSuppressedDestinations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuppressedDestinations", reflect.TypeOf((*MockSESV2API)(nil).ListSuppressedDestinations), arg0)
 }
 
-// ListSuppressedDestinationsPages mocks base method
+// ListSuppressedDestinationsPages mocks base method.
 func (m *MockSESV2API) ListSuppressedDestinationsPages(arg0 *sesv2.ListSuppressedDestinationsInput, arg1 func(*sesv2.ListSuppressedDestinationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSuppressedDestinationsPages", arg0, arg1)
@@ -2871,13 +2872,13 @@ func (m *MockSESV2API) ListSuppressedDestinationsPages(arg0 *sesv2.ListSuppresse
 	return ret0
 }
 
-// ListSuppressedDestinationsPages indicates an expected call of ListSuppressedDestinationsPages
+// ListSuppressedDestinationsPages indicates an expected call of ListSuppressedDestinationsPages.
 func (mr *MockSESV2APIMockRecorder) ListSuppressedDestinationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuppressedDestinationsPages", reflect.TypeOf((*MockSESV2API)(nil).ListSuppressedDestinationsPages), arg0, arg1)
 }
 
-// ListSuppressedDestinationsPagesWithContext mocks base method
+// ListSuppressedDestinationsPagesWithContext mocks base method.
 func (m *MockSESV2API) ListSuppressedDestinationsPagesWithContext(arg0 context.Context, arg1 *sesv2.ListSuppressedDestinationsInput, arg2 func(*sesv2.ListSuppressedDestinationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2889,14 +2890,14 @@ func (m *MockSESV2API) ListSuppressedDestinationsPagesWithContext(arg0 context.C
 	return ret0
 }
 
-// ListSuppressedDestinationsPagesWithContext indicates an expected call of ListSuppressedDestinationsPagesWithContext
+// ListSuppressedDestinationsPagesWithContext indicates an expected call of ListSuppressedDestinationsPagesWithContext.
 func (mr *MockSESV2APIMockRecorder) ListSuppressedDestinationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuppressedDestinationsPagesWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListSuppressedDestinationsPagesWithContext), varargs...)
 }
 
-// ListSuppressedDestinationsRequest mocks base method
+// ListSuppressedDestinationsRequest mocks base method.
 func (m *MockSESV2API) ListSuppressedDestinationsRequest(arg0 *sesv2.ListSuppressedDestinationsInput) (*request.Request, *sesv2.ListSuppressedDestinationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSuppressedDestinationsRequest", arg0)
@@ -2905,13 +2906,13 @@ func (m *MockSESV2API) ListSuppressedDestinationsRequest(arg0 *sesv2.ListSuppres
 	return ret0, ret1
 }
 
-// ListSuppressedDestinationsRequest indicates an expected call of ListSuppressedDestinationsRequest
+// ListSuppressedDestinationsRequest indicates an expected call of ListSuppressedDestinationsRequest.
 func (mr *MockSESV2APIMockRecorder) ListSuppressedDestinationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuppressedDestinationsRequest", reflect.TypeOf((*MockSESV2API)(nil).ListSuppressedDestinationsRequest), arg0)
 }
 
-// ListSuppressedDestinationsWithContext mocks base method
+// ListSuppressedDestinationsWithContext mocks base method.
 func (m *MockSESV2API) ListSuppressedDestinationsWithContext(arg0 context.Context, arg1 *sesv2.ListSuppressedDestinationsInput, arg2 ...request.Option) (*sesv2.ListSuppressedDestinationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2924,14 +2925,14 @@ func (m *MockSESV2API) ListSuppressedDestinationsWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListSuppressedDestinationsWithContext indicates an expected call of ListSuppressedDestinationsWithContext
+// ListSuppressedDestinationsWithContext indicates an expected call of ListSuppressedDestinationsWithContext.
 func (mr *MockSESV2APIMockRecorder) ListSuppressedDestinationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuppressedDestinationsWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListSuppressedDestinationsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockSESV2API) ListTagsForResource(arg0 *sesv2.ListTagsForResourceInput) (*sesv2.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -2940,13 +2941,13 @@ func (m *MockSESV2API) ListTagsForResource(arg0 *sesv2.ListTagsForResourceInput)
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockSESV2APIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockSESV2API)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockSESV2API) ListTagsForResourceRequest(arg0 *sesv2.ListTagsForResourceInput) (*request.Request, *sesv2.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -2955,13 +2956,13 @@ func (m *MockSESV2API) ListTagsForResourceRequest(arg0 *sesv2.ListTagsForResourc
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockSESV2APIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockSESV2API)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockSESV2API) ListTagsForResourceWithContext(arg0 context.Context, arg1 *sesv2.ListTagsForResourceInput, arg2 ...request.Option) (*sesv2.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2974,14 +2975,14 @@ func (m *MockSESV2API) ListTagsForResourceWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockSESV2APIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockSESV2API)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PutAccountDedicatedIpWarmupAttributes mocks base method
+// PutAccountDedicatedIpWarmupAttributes mocks base method.
 func (m *MockSESV2API) PutAccountDedicatedIpWarmupAttributes(arg0 *sesv2.PutAccountDedicatedIpWarmupAttributesInput) (*sesv2.PutAccountDedicatedIpWarmupAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutAccountDedicatedIpWarmupAttributes", arg0)
@@ -2990,13 +2991,13 @@ func (m *MockSESV2API) PutAccountDedicatedIpWarmupAttributes(arg0 *sesv2.PutAcco
 	return ret0, ret1
 }
 
-// PutAccountDedicatedIpWarmupAttributes indicates an expected call of PutAccountDedicatedIpWarmupAttributes
+// PutAccountDedicatedIpWarmupAttributes indicates an expected call of PutAccountDedicatedIpWarmupAttributes.
 func (mr *MockSESV2APIMockRecorder) PutAccountDedicatedIpWarmupAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAccountDedicatedIpWarmupAttributes", reflect.TypeOf((*MockSESV2API)(nil).PutAccountDedicatedIpWarmupAttributes), arg0)
 }
 
-// PutAccountDedicatedIpWarmupAttributesRequest mocks base method
+// PutAccountDedicatedIpWarmupAttributesRequest mocks base method.
 func (m *MockSESV2API) PutAccountDedicatedIpWarmupAttributesRequest(arg0 *sesv2.PutAccountDedicatedIpWarmupAttributesInput) (*request.Request, *sesv2.PutAccountDedicatedIpWarmupAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutAccountDedicatedIpWarmupAttributesRequest", arg0)
@@ -3005,13 +3006,13 @@ func (m *MockSESV2API) PutAccountDedicatedIpWarmupAttributesRequest(arg0 *sesv2.
 	return ret0, ret1
 }
 
-// PutAccountDedicatedIpWarmupAttributesRequest indicates an expected call of PutAccountDedicatedIpWarmupAttributesRequest
+// PutAccountDedicatedIpWarmupAttributesRequest indicates an expected call of PutAccountDedicatedIpWarmupAttributesRequest.
 func (mr *MockSESV2APIMockRecorder) PutAccountDedicatedIpWarmupAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAccountDedicatedIpWarmupAttributesRequest", reflect.TypeOf((*MockSESV2API)(nil).PutAccountDedicatedIpWarmupAttributesRequest), arg0)
 }
 
-// PutAccountDedicatedIpWarmupAttributesWithContext mocks base method
+// PutAccountDedicatedIpWarmupAttributesWithContext mocks base method.
 func (m *MockSESV2API) PutAccountDedicatedIpWarmupAttributesWithContext(arg0 context.Context, arg1 *sesv2.PutAccountDedicatedIpWarmupAttributesInput, arg2 ...request.Option) (*sesv2.PutAccountDedicatedIpWarmupAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3024,14 +3025,14 @@ func (m *MockSESV2API) PutAccountDedicatedIpWarmupAttributesWithContext(arg0 con
 	return ret0, ret1
 }
 
-// PutAccountDedicatedIpWarmupAttributesWithContext indicates an expected call of PutAccountDedicatedIpWarmupAttributesWithContext
+// PutAccountDedicatedIpWarmupAttributesWithContext indicates an expected call of PutAccountDedicatedIpWarmupAttributesWithContext.
 func (mr *MockSESV2APIMockRecorder) PutAccountDedicatedIpWarmupAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAccountDedicatedIpWarmupAttributesWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutAccountDedicatedIpWarmupAttributesWithContext), varargs...)
 }
 
-// PutAccountDetails mocks base method
+// PutAccountDetails mocks base method.
 func (m *MockSESV2API) PutAccountDetails(arg0 *sesv2.PutAccountDetailsInput) (*sesv2.PutAccountDetailsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutAccountDetails", arg0)
@@ -3040,13 +3041,13 @@ func (m *MockSESV2API) PutAccountDetails(arg0 *sesv2.PutAccountDetailsInput) (*s
 	return ret0, ret1
 }
 
-// PutAccountDetails indicates an expected call of PutAccountDetails
+// PutAccountDetails indicates an expected call of PutAccountDetails.
 func (mr *MockSESV2APIMockRecorder) PutAccountDetails(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAccountDetails", reflect.TypeOf((*MockSESV2API)(nil).PutAccountDetails), arg0)
 }
 
-// PutAccountDetailsRequest mocks base method
+// PutAccountDetailsRequest mocks base method.
 func (m *MockSESV2API) PutAccountDetailsRequest(arg0 *sesv2.PutAccountDetailsInput) (*request.Request, *sesv2.PutAccountDetailsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutAccountDetailsRequest", arg0)
@@ -3055,13 +3056,13 @@ func (m *MockSESV2API) PutAccountDetailsRequest(arg0 *sesv2.PutAccountDetailsInp
 	return ret0, ret1
 }
 
-// PutAccountDetailsRequest indicates an expected call of PutAccountDetailsRequest
+// PutAccountDetailsRequest indicates an expected call of PutAccountDetailsRequest.
 func (mr *MockSESV2APIMockRecorder) PutAccountDetailsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAccountDetailsRequest", reflect.TypeOf((*MockSESV2API)(nil).PutAccountDetailsRequest), arg0)
 }
 
-// PutAccountDetailsWithContext mocks base method
+// PutAccountDetailsWithContext mocks base method.
 func (m *MockSESV2API) PutAccountDetailsWithContext(arg0 context.Context, arg1 *sesv2.PutAccountDetailsInput, arg2 ...request.Option) (*sesv2.PutAccountDetailsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3074,14 +3075,14 @@ func (m *MockSESV2API) PutAccountDetailsWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// PutAccountDetailsWithContext indicates an expected call of PutAccountDetailsWithContext
+// PutAccountDetailsWithContext indicates an expected call of PutAccountDetailsWithContext.
 func (mr *MockSESV2APIMockRecorder) PutAccountDetailsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAccountDetailsWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutAccountDetailsWithContext), varargs...)
 }
 
-// PutAccountSendingAttributes mocks base method
+// PutAccountSendingAttributes mocks base method.
 func (m *MockSESV2API) PutAccountSendingAttributes(arg0 *sesv2.PutAccountSendingAttributesInput) (*sesv2.PutAccountSendingAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutAccountSendingAttributes", arg0)
@@ -3090,13 +3091,13 @@ func (m *MockSESV2API) PutAccountSendingAttributes(arg0 *sesv2.PutAccountSending
 	return ret0, ret1
 }
 
-// PutAccountSendingAttributes indicates an expected call of PutAccountSendingAttributes
+// PutAccountSendingAttributes indicates an expected call of PutAccountSendingAttributes.
 func (mr *MockSESV2APIMockRecorder) PutAccountSendingAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAccountSendingAttributes", reflect.TypeOf((*MockSESV2API)(nil).PutAccountSendingAttributes), arg0)
 }
 
-// PutAccountSendingAttributesRequest mocks base method
+// PutAccountSendingAttributesRequest mocks base method.
 func (m *MockSESV2API) PutAccountSendingAttributesRequest(arg0 *sesv2.PutAccountSendingAttributesInput) (*request.Request, *sesv2.PutAccountSendingAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutAccountSendingAttributesRequest", arg0)
@@ -3105,13 +3106,13 @@ func (m *MockSESV2API) PutAccountSendingAttributesRequest(arg0 *sesv2.PutAccount
 	return ret0, ret1
 }
 
-// PutAccountSendingAttributesRequest indicates an expected call of PutAccountSendingAttributesRequest
+// PutAccountSendingAttributesRequest indicates an expected call of PutAccountSendingAttributesRequest.
 func (mr *MockSESV2APIMockRecorder) PutAccountSendingAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAccountSendingAttributesRequest", reflect.TypeOf((*MockSESV2API)(nil).PutAccountSendingAttributesRequest), arg0)
 }
 
-// PutAccountSendingAttributesWithContext mocks base method
+// PutAccountSendingAttributesWithContext mocks base method.
 func (m *MockSESV2API) PutAccountSendingAttributesWithContext(arg0 context.Context, arg1 *sesv2.PutAccountSendingAttributesInput, arg2 ...request.Option) (*sesv2.PutAccountSendingAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3124,14 +3125,14 @@ func (m *MockSESV2API) PutAccountSendingAttributesWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// PutAccountSendingAttributesWithContext indicates an expected call of PutAccountSendingAttributesWithContext
+// PutAccountSendingAttributesWithContext indicates an expected call of PutAccountSendingAttributesWithContext.
 func (mr *MockSESV2APIMockRecorder) PutAccountSendingAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAccountSendingAttributesWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutAccountSendingAttributesWithContext), varargs...)
 }
 
-// PutAccountSuppressionAttributes mocks base method
+// PutAccountSuppressionAttributes mocks base method.
 func (m *MockSESV2API) PutAccountSuppressionAttributes(arg0 *sesv2.PutAccountSuppressionAttributesInput) (*sesv2.PutAccountSuppressionAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutAccountSuppressionAttributes", arg0)
@@ -3140,13 +3141,13 @@ func (m *MockSESV2API) PutAccountSuppressionAttributes(arg0 *sesv2.PutAccountSup
 	return ret0, ret1
 }
 
-// PutAccountSuppressionAttributes indicates an expected call of PutAccountSuppressionAttributes
+// PutAccountSuppressionAttributes indicates an expected call of PutAccountSuppressionAttributes.
 func (mr *MockSESV2APIMockRecorder) PutAccountSuppressionAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAccountSuppressionAttributes", reflect.TypeOf((*MockSESV2API)(nil).PutAccountSuppressionAttributes), arg0)
 }
 
-// PutAccountSuppressionAttributesRequest mocks base method
+// PutAccountSuppressionAttributesRequest mocks base method.
 func (m *MockSESV2API) PutAccountSuppressionAttributesRequest(arg0 *sesv2.PutAccountSuppressionAttributesInput) (*request.Request, *sesv2.PutAccountSuppressionAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutAccountSuppressionAttributesRequest", arg0)
@@ -3155,13 +3156,13 @@ func (m *MockSESV2API) PutAccountSuppressionAttributesRequest(arg0 *sesv2.PutAcc
 	return ret0, ret1
 }
 
-// PutAccountSuppressionAttributesRequest indicates an expected call of PutAccountSuppressionAttributesRequest
+// PutAccountSuppressionAttributesRequest indicates an expected call of PutAccountSuppressionAttributesRequest.
 func (mr *MockSESV2APIMockRecorder) PutAccountSuppressionAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAccountSuppressionAttributesRequest", reflect.TypeOf((*MockSESV2API)(nil).PutAccountSuppressionAttributesRequest), arg0)
 }
 
-// PutAccountSuppressionAttributesWithContext mocks base method
+// PutAccountSuppressionAttributesWithContext mocks base method.
 func (m *MockSESV2API) PutAccountSuppressionAttributesWithContext(arg0 context.Context, arg1 *sesv2.PutAccountSuppressionAttributesInput, arg2 ...request.Option) (*sesv2.PutAccountSuppressionAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3174,14 +3175,14 @@ func (m *MockSESV2API) PutAccountSuppressionAttributesWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// PutAccountSuppressionAttributesWithContext indicates an expected call of PutAccountSuppressionAttributesWithContext
+// PutAccountSuppressionAttributesWithContext indicates an expected call of PutAccountSuppressionAttributesWithContext.
 func (mr *MockSESV2APIMockRecorder) PutAccountSuppressionAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAccountSuppressionAttributesWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutAccountSuppressionAttributesWithContext), varargs...)
 }
 
-// PutConfigurationSetDeliveryOptions mocks base method
+// PutConfigurationSetDeliveryOptions mocks base method.
 func (m *MockSESV2API) PutConfigurationSetDeliveryOptions(arg0 *sesv2.PutConfigurationSetDeliveryOptionsInput) (*sesv2.PutConfigurationSetDeliveryOptionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutConfigurationSetDeliveryOptions", arg0)
@@ -3190,13 +3191,13 @@ func (m *MockSESV2API) PutConfigurationSetDeliveryOptions(arg0 *sesv2.PutConfigu
 	return ret0, ret1
 }
 
-// PutConfigurationSetDeliveryOptions indicates an expected call of PutConfigurationSetDeliveryOptions
+// PutConfigurationSetDeliveryOptions indicates an expected call of PutConfigurationSetDeliveryOptions.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetDeliveryOptions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetDeliveryOptions", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetDeliveryOptions), arg0)
 }
 
-// PutConfigurationSetDeliveryOptionsRequest mocks base method
+// PutConfigurationSetDeliveryOptionsRequest mocks base method.
 func (m *MockSESV2API) PutConfigurationSetDeliveryOptionsRequest(arg0 *sesv2.PutConfigurationSetDeliveryOptionsInput) (*request.Request, *sesv2.PutConfigurationSetDeliveryOptionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutConfigurationSetDeliveryOptionsRequest", arg0)
@@ -3205,13 +3206,13 @@ func (m *MockSESV2API) PutConfigurationSetDeliveryOptionsRequest(arg0 *sesv2.Put
 	return ret0, ret1
 }
 
-// PutConfigurationSetDeliveryOptionsRequest indicates an expected call of PutConfigurationSetDeliveryOptionsRequest
+// PutConfigurationSetDeliveryOptionsRequest indicates an expected call of PutConfigurationSetDeliveryOptionsRequest.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetDeliveryOptionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetDeliveryOptionsRequest", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetDeliveryOptionsRequest), arg0)
 }
 
-// PutConfigurationSetDeliveryOptionsWithContext mocks base method
+// PutConfigurationSetDeliveryOptionsWithContext mocks base method.
 func (m *MockSESV2API) PutConfigurationSetDeliveryOptionsWithContext(arg0 context.Context, arg1 *sesv2.PutConfigurationSetDeliveryOptionsInput, arg2 ...request.Option) (*sesv2.PutConfigurationSetDeliveryOptionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3224,14 +3225,14 @@ func (m *MockSESV2API) PutConfigurationSetDeliveryOptionsWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// PutConfigurationSetDeliveryOptionsWithContext indicates an expected call of PutConfigurationSetDeliveryOptionsWithContext
+// PutConfigurationSetDeliveryOptionsWithContext indicates an expected call of PutConfigurationSetDeliveryOptionsWithContext.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetDeliveryOptionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetDeliveryOptionsWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetDeliveryOptionsWithContext), varargs...)
 }
 
-// PutConfigurationSetReputationOptions mocks base method
+// PutConfigurationSetReputationOptions mocks base method.
 func (m *MockSESV2API) PutConfigurationSetReputationOptions(arg0 *sesv2.PutConfigurationSetReputationOptionsInput) (*sesv2.PutConfigurationSetReputationOptionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutConfigurationSetReputationOptions", arg0)
@@ -3240,13 +3241,13 @@ func (m *MockSESV2API) PutConfigurationSetReputationOptions(arg0 *sesv2.PutConfi
 	return ret0, ret1
 }
 
-// PutConfigurationSetReputationOptions indicates an expected call of PutConfigurationSetReputationOptions
+// PutConfigurationSetReputationOptions indicates an expected call of PutConfigurationSetReputationOptions.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetReputationOptions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetReputationOptions", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetReputationOptions), arg0)
 }
 
-// PutConfigurationSetReputationOptionsRequest mocks base method
+// PutConfigurationSetReputationOptionsRequest mocks base method.
 func (m *MockSESV2API) PutConfigurationSetReputationOptionsRequest(arg0 *sesv2.PutConfigurationSetReputationOptionsInput) (*request.Request, *sesv2.PutConfigurationSetReputationOptionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutConfigurationSetReputationOptionsRequest", arg0)
@@ -3255,13 +3256,13 @@ func (m *MockSESV2API) PutConfigurationSetReputationOptionsRequest(arg0 *sesv2.P
 	return ret0, ret1
 }
 
-// PutConfigurationSetReputationOptionsRequest indicates an expected call of PutConfigurationSetReputationOptionsRequest
+// PutConfigurationSetReputationOptionsRequest indicates an expected call of PutConfigurationSetReputationOptionsRequest.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetReputationOptionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetReputationOptionsRequest", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetReputationOptionsRequest), arg0)
 }
 
-// PutConfigurationSetReputationOptionsWithContext mocks base method
+// PutConfigurationSetReputationOptionsWithContext mocks base method.
 func (m *MockSESV2API) PutConfigurationSetReputationOptionsWithContext(arg0 context.Context, arg1 *sesv2.PutConfigurationSetReputationOptionsInput, arg2 ...request.Option) (*sesv2.PutConfigurationSetReputationOptionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3274,14 +3275,14 @@ func (m *MockSESV2API) PutConfigurationSetReputationOptionsWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// PutConfigurationSetReputationOptionsWithContext indicates an expected call of PutConfigurationSetReputationOptionsWithContext
+// PutConfigurationSetReputationOptionsWithContext indicates an expected call of PutConfigurationSetReputationOptionsWithContext.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetReputationOptionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetReputationOptionsWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetReputationOptionsWithContext), varargs...)
 }
 
-// PutConfigurationSetSendingOptions mocks base method
+// PutConfigurationSetSendingOptions mocks base method.
 func (m *MockSESV2API) PutConfigurationSetSendingOptions(arg0 *sesv2.PutConfigurationSetSendingOptionsInput) (*sesv2.PutConfigurationSetSendingOptionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutConfigurationSetSendingOptions", arg0)
@@ -3290,13 +3291,13 @@ func (m *MockSESV2API) PutConfigurationSetSendingOptions(arg0 *sesv2.PutConfigur
 	return ret0, ret1
 }
 
-// PutConfigurationSetSendingOptions indicates an expected call of PutConfigurationSetSendingOptions
+// PutConfigurationSetSendingOptions indicates an expected call of PutConfigurationSetSendingOptions.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetSendingOptions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetSendingOptions", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetSendingOptions), arg0)
 }
 
-// PutConfigurationSetSendingOptionsRequest mocks base method
+// PutConfigurationSetSendingOptionsRequest mocks base method.
 func (m *MockSESV2API) PutConfigurationSetSendingOptionsRequest(arg0 *sesv2.PutConfigurationSetSendingOptionsInput) (*request.Request, *sesv2.PutConfigurationSetSendingOptionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutConfigurationSetSendingOptionsRequest", arg0)
@@ -3305,13 +3306,13 @@ func (m *MockSESV2API) PutConfigurationSetSendingOptionsRequest(arg0 *sesv2.PutC
 	return ret0, ret1
 }
 
-// PutConfigurationSetSendingOptionsRequest indicates an expected call of PutConfigurationSetSendingOptionsRequest
+// PutConfigurationSetSendingOptionsRequest indicates an expected call of PutConfigurationSetSendingOptionsRequest.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetSendingOptionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetSendingOptionsRequest", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetSendingOptionsRequest), arg0)
 }
 
-// PutConfigurationSetSendingOptionsWithContext mocks base method
+// PutConfigurationSetSendingOptionsWithContext mocks base method.
 func (m *MockSESV2API) PutConfigurationSetSendingOptionsWithContext(arg0 context.Context, arg1 *sesv2.PutConfigurationSetSendingOptionsInput, arg2 ...request.Option) (*sesv2.PutConfigurationSetSendingOptionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3324,14 +3325,14 @@ func (m *MockSESV2API) PutConfigurationSetSendingOptionsWithContext(arg0 context
 	return ret0, ret1
 }
 
-// PutConfigurationSetSendingOptionsWithContext indicates an expected call of PutConfigurationSetSendingOptionsWithContext
+// PutConfigurationSetSendingOptionsWithContext indicates an expected call of PutConfigurationSetSendingOptionsWithContext.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetSendingOptionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetSendingOptionsWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetSendingOptionsWithContext), varargs...)
 }
 
-// PutConfigurationSetSuppressionOptions mocks base method
+// PutConfigurationSetSuppressionOptions mocks base method.
 func (m *MockSESV2API) PutConfigurationSetSuppressionOptions(arg0 *sesv2.PutConfigurationSetSuppressionOptionsInput) (*sesv2.PutConfigurationSetSuppressionOptionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutConfigurationSetSuppressionOptions", arg0)
@@ -3340,13 +3341,13 @@ func (m *MockSESV2API) PutConfigurationSetSuppressionOptions(arg0 *sesv2.PutConf
 	return ret0, ret1
 }
 
-// PutConfigurationSetSuppressionOptions indicates an expected call of PutConfigurationSetSuppressionOptions
+// PutConfigurationSetSuppressionOptions indicates an expected call of PutConfigurationSetSuppressionOptions.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetSuppressionOptions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetSuppressionOptions", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetSuppressionOptions), arg0)
 }
 
-// PutConfigurationSetSuppressionOptionsRequest mocks base method
+// PutConfigurationSetSuppressionOptionsRequest mocks base method.
 func (m *MockSESV2API) PutConfigurationSetSuppressionOptionsRequest(arg0 *sesv2.PutConfigurationSetSuppressionOptionsInput) (*request.Request, *sesv2.PutConfigurationSetSuppressionOptionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutConfigurationSetSuppressionOptionsRequest", arg0)
@@ -3355,13 +3356,13 @@ func (m *MockSESV2API) PutConfigurationSetSuppressionOptionsRequest(arg0 *sesv2.
 	return ret0, ret1
 }
 
-// PutConfigurationSetSuppressionOptionsRequest indicates an expected call of PutConfigurationSetSuppressionOptionsRequest
+// PutConfigurationSetSuppressionOptionsRequest indicates an expected call of PutConfigurationSetSuppressionOptionsRequest.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetSuppressionOptionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetSuppressionOptionsRequest", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetSuppressionOptionsRequest), arg0)
 }
 
-// PutConfigurationSetSuppressionOptionsWithContext mocks base method
+// PutConfigurationSetSuppressionOptionsWithContext mocks base method.
 func (m *MockSESV2API) PutConfigurationSetSuppressionOptionsWithContext(arg0 context.Context, arg1 *sesv2.PutConfigurationSetSuppressionOptionsInput, arg2 ...request.Option) (*sesv2.PutConfigurationSetSuppressionOptionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3374,14 +3375,14 @@ func (m *MockSESV2API) PutConfigurationSetSuppressionOptionsWithContext(arg0 con
 	return ret0, ret1
 }
 
-// PutConfigurationSetSuppressionOptionsWithContext indicates an expected call of PutConfigurationSetSuppressionOptionsWithContext
+// PutConfigurationSetSuppressionOptionsWithContext indicates an expected call of PutConfigurationSetSuppressionOptionsWithContext.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetSuppressionOptionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetSuppressionOptionsWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetSuppressionOptionsWithContext), varargs...)
 }
 
-// PutConfigurationSetTrackingOptions mocks base method
+// PutConfigurationSetTrackingOptions mocks base method.
 func (m *MockSESV2API) PutConfigurationSetTrackingOptions(arg0 *sesv2.PutConfigurationSetTrackingOptionsInput) (*sesv2.PutConfigurationSetTrackingOptionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutConfigurationSetTrackingOptions", arg0)
@@ -3390,13 +3391,13 @@ func (m *MockSESV2API) PutConfigurationSetTrackingOptions(arg0 *sesv2.PutConfigu
 	return ret0, ret1
 }
 
-// PutConfigurationSetTrackingOptions indicates an expected call of PutConfigurationSetTrackingOptions
+// PutConfigurationSetTrackingOptions indicates an expected call of PutConfigurationSetTrackingOptions.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetTrackingOptions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetTrackingOptions", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetTrackingOptions), arg0)
 }
 
-// PutConfigurationSetTrackingOptionsRequest mocks base method
+// PutConfigurationSetTrackingOptionsRequest mocks base method.
 func (m *MockSESV2API) PutConfigurationSetTrackingOptionsRequest(arg0 *sesv2.PutConfigurationSetTrackingOptionsInput) (*request.Request, *sesv2.PutConfigurationSetTrackingOptionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutConfigurationSetTrackingOptionsRequest", arg0)
@@ -3405,13 +3406,13 @@ func (m *MockSESV2API) PutConfigurationSetTrackingOptionsRequest(arg0 *sesv2.Put
 	return ret0, ret1
 }
 
-// PutConfigurationSetTrackingOptionsRequest indicates an expected call of PutConfigurationSetTrackingOptionsRequest
+// PutConfigurationSetTrackingOptionsRequest indicates an expected call of PutConfigurationSetTrackingOptionsRequest.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetTrackingOptionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetTrackingOptionsRequest", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetTrackingOptionsRequest), arg0)
 }
 
-// PutConfigurationSetTrackingOptionsWithContext mocks base method
+// PutConfigurationSetTrackingOptionsWithContext mocks base method.
 func (m *MockSESV2API) PutConfigurationSetTrackingOptionsWithContext(arg0 context.Context, arg1 *sesv2.PutConfigurationSetTrackingOptionsInput, arg2 ...request.Option) (*sesv2.PutConfigurationSetTrackingOptionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3424,14 +3425,14 @@ func (m *MockSESV2API) PutConfigurationSetTrackingOptionsWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// PutConfigurationSetTrackingOptionsWithContext indicates an expected call of PutConfigurationSetTrackingOptionsWithContext
+// PutConfigurationSetTrackingOptionsWithContext indicates an expected call of PutConfigurationSetTrackingOptionsWithContext.
 func (mr *MockSESV2APIMockRecorder) PutConfigurationSetTrackingOptionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutConfigurationSetTrackingOptionsWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutConfigurationSetTrackingOptionsWithContext), varargs...)
 }
 
-// PutDedicatedIpInPool mocks base method
+// PutDedicatedIpInPool mocks base method.
 func (m *MockSESV2API) PutDedicatedIpInPool(arg0 *sesv2.PutDedicatedIpInPoolInput) (*sesv2.PutDedicatedIpInPoolOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutDedicatedIpInPool", arg0)
@@ -3440,13 +3441,13 @@ func (m *MockSESV2API) PutDedicatedIpInPool(arg0 *sesv2.PutDedicatedIpInPoolInpu
 	return ret0, ret1
 }
 
-// PutDedicatedIpInPool indicates an expected call of PutDedicatedIpInPool
+// PutDedicatedIpInPool indicates an expected call of PutDedicatedIpInPool.
 func (mr *MockSESV2APIMockRecorder) PutDedicatedIpInPool(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDedicatedIpInPool", reflect.TypeOf((*MockSESV2API)(nil).PutDedicatedIpInPool), arg0)
 }
 
-// PutDedicatedIpInPoolRequest mocks base method
+// PutDedicatedIpInPoolRequest mocks base method.
 func (m *MockSESV2API) PutDedicatedIpInPoolRequest(arg0 *sesv2.PutDedicatedIpInPoolInput) (*request.Request, *sesv2.PutDedicatedIpInPoolOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutDedicatedIpInPoolRequest", arg0)
@@ -3455,13 +3456,13 @@ func (m *MockSESV2API) PutDedicatedIpInPoolRequest(arg0 *sesv2.PutDedicatedIpInP
 	return ret0, ret1
 }
 
-// PutDedicatedIpInPoolRequest indicates an expected call of PutDedicatedIpInPoolRequest
+// PutDedicatedIpInPoolRequest indicates an expected call of PutDedicatedIpInPoolRequest.
 func (mr *MockSESV2APIMockRecorder) PutDedicatedIpInPoolRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDedicatedIpInPoolRequest", reflect.TypeOf((*MockSESV2API)(nil).PutDedicatedIpInPoolRequest), arg0)
 }
 
-// PutDedicatedIpInPoolWithContext mocks base method
+// PutDedicatedIpInPoolWithContext mocks base method.
 func (m *MockSESV2API) PutDedicatedIpInPoolWithContext(arg0 context.Context, arg1 *sesv2.PutDedicatedIpInPoolInput, arg2 ...request.Option) (*sesv2.PutDedicatedIpInPoolOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3474,14 +3475,14 @@ func (m *MockSESV2API) PutDedicatedIpInPoolWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// PutDedicatedIpInPoolWithContext indicates an expected call of PutDedicatedIpInPoolWithContext
+// PutDedicatedIpInPoolWithContext indicates an expected call of PutDedicatedIpInPoolWithContext.
 func (mr *MockSESV2APIMockRecorder) PutDedicatedIpInPoolWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDedicatedIpInPoolWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutDedicatedIpInPoolWithContext), varargs...)
 }
 
-// PutDedicatedIpWarmupAttributes mocks base method
+// PutDedicatedIpWarmupAttributes mocks base method.
 func (m *MockSESV2API) PutDedicatedIpWarmupAttributes(arg0 *sesv2.PutDedicatedIpWarmupAttributesInput) (*sesv2.PutDedicatedIpWarmupAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutDedicatedIpWarmupAttributes", arg0)
@@ -3490,13 +3491,13 @@ func (m *MockSESV2API) PutDedicatedIpWarmupAttributes(arg0 *sesv2.PutDedicatedIp
 	return ret0, ret1
 }
 
-// PutDedicatedIpWarmupAttributes indicates an expected call of PutDedicatedIpWarmupAttributes
+// PutDedicatedIpWarmupAttributes indicates an expected call of PutDedicatedIpWarmupAttributes.
 func (mr *MockSESV2APIMockRecorder) PutDedicatedIpWarmupAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDedicatedIpWarmupAttributes", reflect.TypeOf((*MockSESV2API)(nil).PutDedicatedIpWarmupAttributes), arg0)
 }
 
-// PutDedicatedIpWarmupAttributesRequest mocks base method
+// PutDedicatedIpWarmupAttributesRequest mocks base method.
 func (m *MockSESV2API) PutDedicatedIpWarmupAttributesRequest(arg0 *sesv2.PutDedicatedIpWarmupAttributesInput) (*request.Request, *sesv2.PutDedicatedIpWarmupAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutDedicatedIpWarmupAttributesRequest", arg0)
@@ -3505,13 +3506,13 @@ func (m *MockSESV2API) PutDedicatedIpWarmupAttributesRequest(arg0 *sesv2.PutDedi
 	return ret0, ret1
 }
 
-// PutDedicatedIpWarmupAttributesRequest indicates an expected call of PutDedicatedIpWarmupAttributesRequest
+// PutDedicatedIpWarmupAttributesRequest indicates an expected call of PutDedicatedIpWarmupAttributesRequest.
 func (mr *MockSESV2APIMockRecorder) PutDedicatedIpWarmupAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDedicatedIpWarmupAttributesRequest", reflect.TypeOf((*MockSESV2API)(nil).PutDedicatedIpWarmupAttributesRequest), arg0)
 }
 
-// PutDedicatedIpWarmupAttributesWithContext mocks base method
+// PutDedicatedIpWarmupAttributesWithContext mocks base method.
 func (m *MockSESV2API) PutDedicatedIpWarmupAttributesWithContext(arg0 context.Context, arg1 *sesv2.PutDedicatedIpWarmupAttributesInput, arg2 ...request.Option) (*sesv2.PutDedicatedIpWarmupAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3524,14 +3525,14 @@ func (m *MockSESV2API) PutDedicatedIpWarmupAttributesWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// PutDedicatedIpWarmupAttributesWithContext indicates an expected call of PutDedicatedIpWarmupAttributesWithContext
+// PutDedicatedIpWarmupAttributesWithContext indicates an expected call of PutDedicatedIpWarmupAttributesWithContext.
 func (mr *MockSESV2APIMockRecorder) PutDedicatedIpWarmupAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDedicatedIpWarmupAttributesWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutDedicatedIpWarmupAttributesWithContext), varargs...)
 }
 
-// PutDeliverabilityDashboardOption mocks base method
+// PutDeliverabilityDashboardOption mocks base method.
 func (m *MockSESV2API) PutDeliverabilityDashboardOption(arg0 *sesv2.PutDeliverabilityDashboardOptionInput) (*sesv2.PutDeliverabilityDashboardOptionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutDeliverabilityDashboardOption", arg0)
@@ -3540,13 +3541,13 @@ func (m *MockSESV2API) PutDeliverabilityDashboardOption(arg0 *sesv2.PutDeliverab
 	return ret0, ret1
 }
 
-// PutDeliverabilityDashboardOption indicates an expected call of PutDeliverabilityDashboardOption
+// PutDeliverabilityDashboardOption indicates an expected call of PutDeliverabilityDashboardOption.
 func (mr *MockSESV2APIMockRecorder) PutDeliverabilityDashboardOption(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDeliverabilityDashboardOption", reflect.TypeOf((*MockSESV2API)(nil).PutDeliverabilityDashboardOption), arg0)
 }
 
-// PutDeliverabilityDashboardOptionRequest mocks base method
+// PutDeliverabilityDashboardOptionRequest mocks base method.
 func (m *MockSESV2API) PutDeliverabilityDashboardOptionRequest(arg0 *sesv2.PutDeliverabilityDashboardOptionInput) (*request.Request, *sesv2.PutDeliverabilityDashboardOptionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutDeliverabilityDashboardOptionRequest", arg0)
@@ -3555,13 +3556,13 @@ func (m *MockSESV2API) PutDeliverabilityDashboardOptionRequest(arg0 *sesv2.PutDe
 	return ret0, ret1
 }
 
-// PutDeliverabilityDashboardOptionRequest indicates an expected call of PutDeliverabilityDashboardOptionRequest
+// PutDeliverabilityDashboardOptionRequest indicates an expected call of PutDeliverabilityDashboardOptionRequest.
 func (mr *MockSESV2APIMockRecorder) PutDeliverabilityDashboardOptionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDeliverabilityDashboardOptionRequest", reflect.TypeOf((*MockSESV2API)(nil).PutDeliverabilityDashboardOptionRequest), arg0)
 }
 
-// PutDeliverabilityDashboardOptionWithContext mocks base method
+// PutDeliverabilityDashboardOptionWithContext mocks base method.
 func (m *MockSESV2API) PutDeliverabilityDashboardOptionWithContext(arg0 context.Context, arg1 *sesv2.PutDeliverabilityDashboardOptionInput, arg2 ...request.Option) (*sesv2.PutDeliverabilityDashboardOptionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3574,14 +3575,64 @@ func (m *MockSESV2API) PutDeliverabilityDashboardOptionWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// PutDeliverabilityDashboardOptionWithContext indicates an expected call of PutDeliverabilityDashboardOptionWithContext
+// PutDeliverabilityDashboardOptionWithContext indicates an expected call of PutDeliverabilityDashboardOptionWithContext.
 func (mr *MockSESV2APIMockRecorder) PutDeliverabilityDashboardOptionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDeliverabilityDashboardOptionWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutDeliverabilityDashboardOptionWithContext), varargs...)
 }
 
-// PutEmailIdentityDkimAttributes mocks base method
+// PutEmailIdentityConfigurationSetAttributes mocks base method.
+func (m *MockSESV2API) PutEmailIdentityConfigurationSetAttributes(arg0 *sesv2.PutEmailIdentityConfigurationSetAttributesInput) (*sesv2.PutEmailIdentityConfigurationSetAttributesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "PutEmailIdentityConfigurationSetAttributes", arg0)
+	ret0, _ := ret[0].(*sesv2.PutEmailIdentityConfigurationSetAttributesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// PutEmailIdentityConfigurationSetAttributes indicates an expected call of PutEmailIdentityConfigurationSetAttributes.
+func (mr *MockSESV2APIMockRecorder) PutEmailIdentityConfigurationSetAttributes(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityConfigurationSetAttributes", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityConfigurationSetAttributes), arg0)
+}
+
+// PutEmailIdentityConfigurationSetAttributesRequest mocks base method.
+func (m *MockSESV2API) PutEmailIdentityConfigurationSetAttributesRequest(arg0 *sesv2.PutEmailIdentityConfigurationSetAttributesInput) (*request.Request, *sesv2.PutEmailIdentityConfigurationSetAttributesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "PutEmailIdentityConfigurationSetAttributesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*sesv2.PutEmailIdentityConfigurationSetAttributesOutput)
+	return ret0, ret1
+}
+
+// PutEmailIdentityConfigurationSetAttributesRequest indicates an expected call of PutEmailIdentityConfigurationSetAttributesRequest.
+func (mr *MockSESV2APIMockRecorder) PutEmailIdentityConfigurationSetAttributesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityConfigurationSetAttributesRequest", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityConfigurationSetAttributesRequest), arg0)
+}
+
+// PutEmailIdentityConfigurationSetAttributesWithContext mocks base method.
+func (m *MockSESV2API) PutEmailIdentityConfigurationSetAttributesWithContext(arg0 context.Context, arg1 *sesv2.PutEmailIdentityConfigurationSetAttributesInput, arg2 ...request.Option) (*sesv2.PutEmailIdentityConfigurationSetAttributesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "PutEmailIdentityConfigurationSetAttributesWithContext", varargs...)
+	ret0, _ := ret[0].(*sesv2.PutEmailIdentityConfigurationSetAttributesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// PutEmailIdentityConfigurationSetAttributesWithContext indicates an expected call of PutEmailIdentityConfigurationSetAttributesWithContext.
+func (mr *MockSESV2APIMockRecorder) PutEmailIdentityConfigurationSetAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityConfigurationSetAttributesWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityConfigurationSetAttributesWithContext), varargs...)
+}
+
+// PutEmailIdentityDkimAttributes mocks base method.
 func (m *MockSESV2API) PutEmailIdentityDkimAttributes(arg0 *sesv2.PutEmailIdentityDkimAttributesInput) (*sesv2.PutEmailIdentityDkimAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutEmailIdentityDkimAttributes", arg0)
@@ -3590,13 +3641,13 @@ func (m *MockSESV2API) PutEmailIdentityDkimAttributes(arg0 *sesv2.PutEmailIdenti
 	return ret0, ret1
 }
 
-// PutEmailIdentityDkimAttributes indicates an expected call of PutEmailIdentityDkimAttributes
+// PutEmailIdentityDkimAttributes indicates an expected call of PutEmailIdentityDkimAttributes.
 func (mr *MockSESV2APIMockRecorder) PutEmailIdentityDkimAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityDkimAttributes", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityDkimAttributes), arg0)
 }
 
-// PutEmailIdentityDkimAttributesRequest mocks base method
+// PutEmailIdentityDkimAttributesRequest mocks base method.
 func (m *MockSESV2API) PutEmailIdentityDkimAttributesRequest(arg0 *sesv2.PutEmailIdentityDkimAttributesInput) (*request.Request, *sesv2.PutEmailIdentityDkimAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutEmailIdentityDkimAttributesRequest", arg0)
@@ -3605,13 +3656,13 @@ func (m *MockSESV2API) PutEmailIdentityDkimAttributesRequest(arg0 *sesv2.PutEmai
 	return ret0, ret1
 }
 
-// PutEmailIdentityDkimAttributesRequest indicates an expected call of PutEmailIdentityDkimAttributesRequest
+// PutEmailIdentityDkimAttributesRequest indicates an expected call of PutEmailIdentityDkimAttributesRequest.
 func (mr *MockSESV2APIMockRecorder) PutEmailIdentityDkimAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityDkimAttributesRequest", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityDkimAttributesRequest), arg0)
 }
 
-// PutEmailIdentityDkimAttributesWithContext mocks base method
+// PutEmailIdentityDkimAttributesWithContext mocks base method.
 func (m *MockSESV2API) PutEmailIdentityDkimAttributesWithContext(arg0 context.Context, arg1 *sesv2.PutEmailIdentityDkimAttributesInput, arg2 ...request.Option) (*sesv2.PutEmailIdentityDkimAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3624,14 +3675,14 @@ func (m *MockSESV2API) PutEmailIdentityDkimAttributesWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// PutEmailIdentityDkimAttributesWithContext indicates an expected call of PutEmailIdentityDkimAttributesWithContext
+// PutEmailIdentityDkimAttributesWithContext indicates an expected call of PutEmailIdentityDkimAttributesWithContext.
 func (mr *MockSESV2APIMockRecorder) PutEmailIdentityDkimAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityDkimAttributesWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityDkimAttributesWithContext), varargs...)
 }
 
-// PutEmailIdentityDkimSigningAttributes mocks base method
+// PutEmailIdentityDkimSigningAttributes mocks base method.
 func (m *MockSESV2API) PutEmailIdentityDkimSigningAttributes(arg0 *sesv2.PutEmailIdentityDkimSigningAttributesInput) (*sesv2.PutEmailIdentityDkimSigningAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutEmailIdentityDkimSigningAttributes", arg0)
@@ -3640,13 +3691,13 @@ func (m *MockSESV2API) PutEmailIdentityDkimSigningAttributes(arg0 *sesv2.PutEmai
 	return ret0, ret1
 }
 
-// PutEmailIdentityDkimSigningAttributes indicates an expected call of PutEmailIdentityDkimSigningAttributes
+// PutEmailIdentityDkimSigningAttributes indicates an expected call of PutEmailIdentityDkimSigningAttributes.
 func (mr *MockSESV2APIMockRecorder) PutEmailIdentityDkimSigningAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityDkimSigningAttributes", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityDkimSigningAttributes), arg0)
 }
 
-// PutEmailIdentityDkimSigningAttributesRequest mocks base method
+// PutEmailIdentityDkimSigningAttributesRequest mocks base method.
 func (m *MockSESV2API) PutEmailIdentityDkimSigningAttributesRequest(arg0 *sesv2.PutEmailIdentityDkimSigningAttributesInput) (*request.Request, *sesv2.PutEmailIdentityDkimSigningAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutEmailIdentityDkimSigningAttributesRequest", arg0)
@@ -3655,13 +3706,13 @@ func (m *MockSESV2API) PutEmailIdentityDkimSigningAttributesRequest(arg0 *sesv2.
 	return ret0, ret1
 }
 
-// PutEmailIdentityDkimSigningAttributesRequest indicates an expected call of PutEmailIdentityDkimSigningAttributesRequest
+// PutEmailIdentityDkimSigningAttributesRequest indicates an expected call of PutEmailIdentityDkimSigningAttributesRequest.
 func (mr *MockSESV2APIMockRecorder) PutEmailIdentityDkimSigningAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityDkimSigningAttributesRequest", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityDkimSigningAttributesRequest), arg0)
 }
 
-// PutEmailIdentityDkimSigningAttributesWithContext mocks base method
+// PutEmailIdentityDkimSigningAttributesWithContext mocks base method.
 func (m *MockSESV2API) PutEmailIdentityDkimSigningAttributesWithContext(arg0 context.Context, arg1 *sesv2.PutEmailIdentityDkimSigningAttributesInput, arg2 ...request.Option) (*sesv2.PutEmailIdentityDkimSigningAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3674,14 +3725,14 @@ func (m *MockSESV2API) PutEmailIdentityDkimSigningAttributesWithContext(arg0 con
 	return ret0, ret1
 }
 
-// PutEmailIdentityDkimSigningAttributesWithContext indicates an expected call of PutEmailIdentityDkimSigningAttributesWithContext
+// PutEmailIdentityDkimSigningAttributesWithContext indicates an expected call of PutEmailIdentityDkimSigningAttributesWithContext.
 func (mr *MockSESV2APIMockRecorder) PutEmailIdentityDkimSigningAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityDkimSigningAttributesWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityDkimSigningAttributesWithContext), varargs...)
 }
 
-// PutEmailIdentityFeedbackAttributes mocks base method
+// PutEmailIdentityFeedbackAttributes mocks base method.
 func (m *MockSESV2API) PutEmailIdentityFeedbackAttributes(arg0 *sesv2.PutEmailIdentityFeedbackAttributesInput) (*sesv2.PutEmailIdentityFeedbackAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutEmailIdentityFeedbackAttributes", arg0)
@@ -3690,13 +3741,13 @@ func (m *MockSESV2API) PutEmailIdentityFeedbackAttributes(arg0 *sesv2.PutEmailId
 	return ret0, ret1
 }
 
-// PutEmailIdentityFeedbackAttributes indicates an expected call of PutEmailIdentityFeedbackAttributes
+// PutEmailIdentityFeedbackAttributes indicates an expected call of PutEmailIdentityFeedbackAttributes.
 func (mr *MockSESV2APIMockRecorder) PutEmailIdentityFeedbackAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityFeedbackAttributes", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityFeedbackAttributes), arg0)
 }
 
-// PutEmailIdentityFeedbackAttributesRequest mocks base method
+// PutEmailIdentityFeedbackAttributesRequest mocks base method.
 func (m *MockSESV2API) PutEmailIdentityFeedbackAttributesRequest(arg0 *sesv2.PutEmailIdentityFeedbackAttributesInput) (*request.Request, *sesv2.PutEmailIdentityFeedbackAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutEmailIdentityFeedbackAttributesRequest", arg0)
@@ -3705,13 +3756,13 @@ func (m *MockSESV2API) PutEmailIdentityFeedbackAttributesRequest(arg0 *sesv2.Put
 	return ret0, ret1
 }
 
-// PutEmailIdentityFeedbackAttributesRequest indicates an expected call of PutEmailIdentityFeedbackAttributesRequest
+// PutEmailIdentityFeedbackAttributesRequest indicates an expected call of PutEmailIdentityFeedbackAttributesRequest.
 func (mr *MockSESV2APIMockRecorder) PutEmailIdentityFeedbackAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityFeedbackAttributesRequest", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityFeedbackAttributesRequest), arg0)
 }
 
-// PutEmailIdentityFeedbackAttributesWithContext mocks base method
+// PutEmailIdentityFeedbackAttributesWithContext mocks base method.
 func (m *MockSESV2API) PutEmailIdentityFeedbackAttributesWithContext(arg0 context.Context, arg1 *sesv2.PutEmailIdentityFeedbackAttributesInput, arg2 ...request.Option) (*sesv2.PutEmailIdentityFeedbackAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3724,14 +3775,14 @@ func (m *MockSESV2API) PutEmailIdentityFeedbackAttributesWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// PutEmailIdentityFeedbackAttributesWithContext indicates an expected call of PutEmailIdentityFeedbackAttributesWithContext
+// PutEmailIdentityFeedbackAttributesWithContext indicates an expected call of PutEmailIdentityFeedbackAttributesWithContext.
 func (mr *MockSESV2APIMockRecorder) PutEmailIdentityFeedbackAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityFeedbackAttributesWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityFeedbackAttributesWithContext), varargs...)
 }
 
-// PutEmailIdentityMailFromAttributes mocks base method
+// PutEmailIdentityMailFromAttributes mocks base method.
 func (m *MockSESV2API) PutEmailIdentityMailFromAttributes(arg0 *sesv2.PutEmailIdentityMailFromAttributesInput) (*sesv2.PutEmailIdentityMailFromAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutEmailIdentityMailFromAttributes", arg0)
@@ -3740,13 +3791,13 @@ func (m *MockSESV2API) PutEmailIdentityMailFromAttributes(arg0 *sesv2.PutEmailId
 	return ret0, ret1
 }
 
-// PutEmailIdentityMailFromAttributes indicates an expected call of PutEmailIdentityMailFromAttributes
+// PutEmailIdentityMailFromAttributes indicates an expected call of PutEmailIdentityMailFromAttributes.
 func (mr *MockSESV2APIMockRecorder) PutEmailIdentityMailFromAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityMailFromAttributes", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityMailFromAttributes), arg0)
 }
 
-// PutEmailIdentityMailFromAttributesRequest mocks base method
+// PutEmailIdentityMailFromAttributesRequest mocks base method.
 func (m *MockSESV2API) PutEmailIdentityMailFromAttributesRequest(arg0 *sesv2.PutEmailIdentityMailFromAttributesInput) (*request.Request, *sesv2.PutEmailIdentityMailFromAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutEmailIdentityMailFromAttributesRequest", arg0)
@@ -3755,13 +3806,13 @@ func (m *MockSESV2API) PutEmailIdentityMailFromAttributesRequest(arg0 *sesv2.Put
 	return ret0, ret1
 }
 
-// PutEmailIdentityMailFromAttributesRequest indicates an expected call of PutEmailIdentityMailFromAttributesRequest
+// PutEmailIdentityMailFromAttributesRequest indicates an expected call of PutEmailIdentityMailFromAttributesRequest.
 func (mr *MockSESV2APIMockRecorder) PutEmailIdentityMailFromAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityMailFromAttributesRequest", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityMailFromAttributesRequest), arg0)
 }
 
-// PutEmailIdentityMailFromAttributesWithContext mocks base method
+// PutEmailIdentityMailFromAttributesWithContext mocks base method.
 func (m *MockSESV2API) PutEmailIdentityMailFromAttributesWithContext(arg0 context.Context, arg1 *sesv2.PutEmailIdentityMailFromAttributesInput, arg2 ...request.Option) (*sesv2.PutEmailIdentityMailFromAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3774,14 +3825,14 @@ func (m *MockSESV2API) PutEmailIdentityMailFromAttributesWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// PutEmailIdentityMailFromAttributesWithContext indicates an expected call of PutEmailIdentityMailFromAttributesWithContext
+// PutEmailIdentityMailFromAttributesWithContext indicates an expected call of PutEmailIdentityMailFromAttributesWithContext.
 func (mr *MockSESV2APIMockRecorder) PutEmailIdentityMailFromAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEmailIdentityMailFromAttributesWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutEmailIdentityMailFromAttributesWithContext), varargs...)
 }
 
-// PutSuppressedDestination mocks base method
+// PutSuppressedDestination mocks base method.
 func (m *MockSESV2API) PutSuppressedDestination(arg0 *sesv2.PutSuppressedDestinationInput) (*sesv2.PutSuppressedDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutSuppressedDestination", arg0)
@@ -3790,13 +3841,13 @@ func (m *MockSESV2API) PutSuppressedDestination(arg0 *sesv2.PutSuppressedDestina
 	return ret0, ret1
 }
 
-// PutSuppressedDestination indicates an expected call of PutSuppressedDestination
+// PutSuppressedDestination indicates an expected call of PutSuppressedDestination.
 func (mr *MockSESV2APIMockRecorder) PutSuppressedDestination(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutSuppressedDestination", reflect.TypeOf((*MockSESV2API)(nil).PutSuppressedDestination), arg0)
 }
 
-// PutSuppressedDestinationRequest mocks base method
+// PutSuppressedDestinationRequest mocks base method.
 func (m *MockSESV2API) PutSuppressedDestinationRequest(arg0 *sesv2.PutSuppressedDestinationInput) (*request.Request, *sesv2.PutSuppressedDestinationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutSuppressedDestinationRequest", arg0)
@@ -3805,13 +3856,13 @@ func (m *MockSESV2API) PutSuppressedDestinationRequest(arg0 *sesv2.PutSuppressed
 	return ret0, ret1
 }
 
-// PutSuppressedDestinationRequest indicates an expected call of PutSuppressedDestinationRequest
+// PutSuppressedDestinationRequest indicates an expected call of PutSuppressedDestinationRequest.
 func (mr *MockSESV2APIMockRecorder) PutSuppressedDestinationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutSuppressedDestinationRequest", reflect.TypeOf((*MockSESV2API)(nil).PutSuppressedDestinationRequest), arg0)
 }
 
-// PutSuppressedDestinationWithContext mocks base method
+// PutSuppressedDestinationWithContext mocks base method.
 func (m *MockSESV2API) PutSuppressedDestinationWithContext(arg0 context.Context, arg1 *sesv2.PutSuppressedDestinationInput, arg2 ...request.Option) (*sesv2.PutSuppressedDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3824,14 +3875,14 @@ func (m *MockSESV2API) PutSuppressedDestinationWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// PutSuppressedDestinationWithContext indicates an expected call of PutSuppressedDestinationWithContext
+// PutSuppressedDestinationWithContext indicates an expected call of PutSuppressedDestinationWithContext.
 func (mr *MockSESV2APIMockRecorder) PutSuppressedDestinationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutSuppressedDestinationWithContext", reflect.TypeOf((*MockSESV2API)(nil).PutSuppressedDestinationWithContext), varargs...)
 }
 
-// SendBulkEmail mocks base method
+// SendBulkEmail mocks base method.
 func (m *MockSESV2API) SendBulkEmail(arg0 *sesv2.SendBulkEmailInput) (*sesv2.SendBulkEmailOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendBulkEmail", arg0)
@@ -3840,13 +3891,13 @@ func (m *MockSESV2API) SendBulkEmail(arg0 *sesv2.SendBulkEmailInput) (*sesv2.Sen
 	return ret0, ret1
 }
 
-// SendBulkEmail indicates an expected call of SendBulkEmail
+// SendBulkEmail indicates an expected call of SendBulkEmail.
 func (mr *MockSESV2APIMockRecorder) SendBulkEmail(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendBulkEmail", reflect.TypeOf((*MockSESV2API)(nil).SendBulkEmail), arg0)
 }
 
-// SendBulkEmailRequest mocks base method
+// SendBulkEmailRequest mocks base method.
 func (m *MockSESV2API) SendBulkEmailRequest(arg0 *sesv2.SendBulkEmailInput) (*request.Request, *sesv2.SendBulkEmailOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendBulkEmailRequest", arg0)
@@ -3855,13 +3906,13 @@ func (m *MockSESV2API) SendBulkEmailRequest(arg0 *sesv2.SendBulkEmailInput) (*re
 	return ret0, ret1
 }
 
-// SendBulkEmailRequest indicates an expected call of SendBulkEmailRequest
+// SendBulkEmailRequest indicates an expected call of SendBulkEmailRequest.
 func (mr *MockSESV2APIMockRecorder) SendBulkEmailRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendBulkEmailRequest", reflect.TypeOf((*MockSESV2API)(nil).SendBulkEmailRequest), arg0)
 }
 
-// SendBulkEmailWithContext mocks base method
+// SendBulkEmailWithContext mocks base method.
 func (m *MockSESV2API) SendBulkEmailWithContext(arg0 context.Context, arg1 *sesv2.SendBulkEmailInput, arg2 ...request.Option) (*sesv2.SendBulkEmailOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3874,14 +3925,14 @@ func (m *MockSESV2API) SendBulkEmailWithContext(arg0 context.Context, arg1 *sesv
 	return ret0, ret1
 }
 
-// SendBulkEmailWithContext indicates an expected call of SendBulkEmailWithContext
+// SendBulkEmailWithContext indicates an expected call of SendBulkEmailWithContext.
 func (mr *MockSESV2APIMockRecorder) SendBulkEmailWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendBulkEmailWithContext", reflect.TypeOf((*MockSESV2API)(nil).SendBulkEmailWithContext), varargs...)
 }
 
-// SendCustomVerificationEmail mocks base method
+// SendCustomVerificationEmail mocks base method.
 func (m *MockSESV2API) SendCustomVerificationEmail(arg0 *sesv2.SendCustomVerificationEmailInput) (*sesv2.SendCustomVerificationEmailOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendCustomVerificationEmail", arg0)
@@ -3890,13 +3941,13 @@ func (m *MockSESV2API) SendCustomVerificationEmail(arg0 *sesv2.SendCustomVerific
 	return ret0, ret1
 }
 
-// SendCustomVerificationEmail indicates an expected call of SendCustomVerificationEmail
+// SendCustomVerificationEmail indicates an expected call of SendCustomVerificationEmail.
 func (mr *MockSESV2APIMockRecorder) SendCustomVerificationEmail(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendCustomVerificationEmail", reflect.TypeOf((*MockSESV2API)(nil).SendCustomVerificationEmail), arg0)
 }
 
-// SendCustomVerificationEmailRequest mocks base method
+// SendCustomVerificationEmailRequest mocks base method.
 func (m *MockSESV2API) SendCustomVerificationEmailRequest(arg0 *sesv2.SendCustomVerificationEmailInput) (*request.Request, *sesv2.SendCustomVerificationEmailOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendCustomVerificationEmailRequest", arg0)
@@ -3905,13 +3956,13 @@ func (m *MockSESV2API) SendCustomVerificationEmailRequest(arg0 *sesv2.SendCustom
 	return ret0, ret1
 }
 
-// SendCustomVerificationEmailRequest indicates an expected call of SendCustomVerificationEmailRequest
+// SendCustomVerificationEmailRequest indicates an expected call of SendCustomVerificationEmailRequest.
 func (mr *MockSESV2APIMockRecorder) SendCustomVerificationEmailRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendCustomVerificationEmailRequest", reflect.TypeOf((*MockSESV2API)(nil).SendCustomVerificationEmailRequest), arg0)
 }
 
-// SendCustomVerificationEmailWithContext mocks base method
+// SendCustomVerificationEmailWithContext mocks base method.
 func (m *MockSESV2API) SendCustomVerificationEmailWithContext(arg0 context.Context, arg1 *sesv2.SendCustomVerificationEmailInput, arg2 ...request.Option) (*sesv2.SendCustomVerificationEmailOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3924,14 +3975,14 @@ func (m *MockSESV2API) SendCustomVerificationEmailWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// SendCustomVerificationEmailWithContext indicates an expected call of SendCustomVerificationEmailWithContext
+// SendCustomVerificationEmailWithContext indicates an expected call of SendCustomVerificationEmailWithContext.
 func (mr *MockSESV2APIMockRecorder) SendCustomVerificationEmailWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendCustomVerificationEmailWithContext", reflect.TypeOf((*MockSESV2API)(nil).SendCustomVerificationEmailWithContext), varargs...)
 }
 
-// SendEmail mocks base method
+// SendEmail mocks base method.
 func (m *MockSESV2API) SendEmail(arg0 *sesv2.SendEmailInput) (*sesv2.SendEmailOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendEmail", arg0)
@@ -3940,13 +3991,13 @@ func (m *MockSESV2API) SendEmail(arg0 *sesv2.SendEmailInput) (*sesv2.SendEmailOu
 	return ret0, ret1
 }
 
-// SendEmail indicates an expected call of SendEmail
+// SendEmail indicates an expected call of SendEmail.
 func (mr *MockSESV2APIMockRecorder) SendEmail(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendEmail", reflect.TypeOf((*MockSESV2API)(nil).SendEmail), arg0)
 }
 
-// SendEmailRequest mocks base method
+// SendEmailRequest mocks base method.
 func (m *MockSESV2API) SendEmailRequest(arg0 *sesv2.SendEmailInput) (*request.Request, *sesv2.SendEmailOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendEmailRequest", arg0)
@@ -3955,13 +4006,13 @@ func (m *MockSESV2API) SendEmailRequest(arg0 *sesv2.SendEmailInput) (*request.Re
 	return ret0, ret1
 }
 
-// SendEmailRequest indicates an expected call of SendEmailRequest
+// SendEmailRequest indicates an expected call of SendEmailRequest.
 func (mr *MockSESV2APIMockRecorder) SendEmailRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendEmailRequest", reflect.TypeOf((*MockSESV2API)(nil).SendEmailRequest), arg0)
 }
 
-// SendEmailWithContext mocks base method
+// SendEmailWithContext mocks base method.
 func (m *MockSESV2API) SendEmailWithContext(arg0 context.Context, arg1 *sesv2.SendEmailInput, arg2 ...request.Option) (*sesv2.SendEmailOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3974,14 +4025,14 @@ func (m *MockSESV2API) SendEmailWithContext(arg0 context.Context, arg1 *sesv2.Se
 	return ret0, ret1
 }
 
-// SendEmailWithContext indicates an expected call of SendEmailWithContext
+// SendEmailWithContext indicates an expected call of SendEmailWithContext.
 func (mr *MockSESV2APIMockRecorder) SendEmailWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendEmailWithContext", reflect.TypeOf((*MockSESV2API)(nil).SendEmailWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockSESV2API) TagResource(arg0 *sesv2.TagResourceInput) (*sesv2.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -3990,13 +4041,13 @@ func (m *MockSESV2API) TagResource(arg0 *sesv2.TagResourceInput) (*sesv2.TagReso
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockSESV2APIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockSESV2API)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockSESV2API) TagResourceRequest(arg0 *sesv2.TagResourceInput) (*request.Request, *sesv2.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -4005,13 +4056,13 @@ func (m *MockSESV2API) TagResourceRequest(arg0 *sesv2.TagResourceInput) (*reques
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockSESV2APIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockSESV2API)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockSESV2API) TagResourceWithContext(arg0 context.Context, arg1 *sesv2.TagResourceInput, arg2 ...request.Option) (*sesv2.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4024,14 +4075,14 @@ func (m *MockSESV2API) TagResourceWithContext(arg0 context.Context, arg1 *sesv2.
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockSESV2APIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockSESV2API)(nil).TagResourceWithContext), varargs...)
 }
 
-// TestRenderEmailTemplate mocks base method
+// TestRenderEmailTemplate mocks base method.
 func (m *MockSESV2API) TestRenderEmailTemplate(arg0 *sesv2.TestRenderEmailTemplateInput) (*sesv2.TestRenderEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TestRenderEmailTemplate", arg0)
@@ -4040,13 +4091,13 @@ func (m *MockSESV2API) TestRenderEmailTemplate(arg0 *sesv2.TestRenderEmailTempla
 	return ret0, ret1
 }
 
-// TestRenderEmailTemplate indicates an expected call of TestRenderEmailTemplate
+// TestRenderEmailTemplate indicates an expected call of TestRenderEmailTemplate.
 func (mr *MockSESV2APIMockRecorder) TestRenderEmailTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TestRenderEmailTemplate", reflect.TypeOf((*MockSESV2API)(nil).TestRenderEmailTemplate), arg0)
 }
 
-// TestRenderEmailTemplateRequest mocks base method
+// TestRenderEmailTemplateRequest mocks base method.
 func (m *MockSESV2API) TestRenderEmailTemplateRequest(arg0 *sesv2.TestRenderEmailTemplateInput) (*request.Request, *sesv2.TestRenderEmailTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TestRenderEmailTemplateRequest", arg0)
@@ -4055,13 +4106,13 @@ func (m *MockSESV2API) TestRenderEmailTemplateRequest(arg0 *sesv2.TestRenderEmai
 	return ret0, ret1
 }
 
-// TestRenderEmailTemplateRequest indicates an expected call of TestRenderEmailTemplateRequest
+// TestRenderEmailTemplateRequest indicates an expected call of TestRenderEmailTemplateRequest.
 func (mr *MockSESV2APIMockRecorder) TestRenderEmailTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TestRenderEmailTemplateRequest", reflect.TypeOf((*MockSESV2API)(nil).TestRenderEmailTemplateRequest), arg0)
 }
 
-// TestRenderEmailTemplateWithContext mocks base method
+// TestRenderEmailTemplateWithContext mocks base method.
 func (m *MockSESV2API) TestRenderEmailTemplateWithContext(arg0 context.Context, arg1 *sesv2.TestRenderEmailTemplateInput, arg2 ...request.Option) (*sesv2.TestRenderEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4074,14 +4125,14 @@ func (m *MockSESV2API) TestRenderEmailTemplateWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// TestRenderEmailTemplateWithContext indicates an expected call of TestRenderEmailTemplateWithContext
+// TestRenderEmailTemplateWithContext indicates an expected call of TestRenderEmailTemplateWithContext.
 func (mr *MockSESV2APIMockRecorder) TestRenderEmailTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TestRenderEmailTemplateWithContext", reflect.TypeOf((*MockSESV2API)(nil).TestRenderEmailTemplateWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockSESV2API) UntagResource(arg0 *sesv2.UntagResourceInput) (*sesv2.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -4090,13 +4141,13 @@ func (m *MockSESV2API) UntagResource(arg0 *sesv2.UntagResourceInput) (*sesv2.Unt
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockSESV2APIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockSESV2API)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockSESV2API) UntagResourceRequest(arg0 *sesv2.UntagResourceInput) (*request.Request, *sesv2.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -4105,13 +4156,13 @@ func (m *MockSESV2API) UntagResourceRequest(arg0 *sesv2.UntagResourceInput) (*re
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockSESV2APIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockSESV2API)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockSESV2API) UntagResourceWithContext(arg0 context.Context, arg1 *sesv2.UntagResourceInput, arg2 ...request.Option) (*sesv2.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4124,14 +4175,14 @@ func (m *MockSESV2API) UntagResourceWithContext(arg0 context.Context, arg1 *sesv
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockSESV2APIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockSESV2API)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateConfigurationSetEventDestination mocks base method
+// UpdateConfigurationSetEventDestination mocks base method.
 func (m *MockSESV2API) UpdateConfigurationSetEventDestination(arg0 *sesv2.UpdateConfigurationSetEventDestinationInput) (*sesv2.UpdateConfigurationSetEventDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateConfigurationSetEventDestination", arg0)
@@ -4140,13 +4191,13 @@ func (m *MockSESV2API) UpdateConfigurationSetEventDestination(arg0 *sesv2.Update
 	return ret0, ret1
 }
 
-// UpdateConfigurationSetEventDestination indicates an expected call of UpdateConfigurationSetEventDestination
+// UpdateConfigurationSetEventDestination indicates an expected call of UpdateConfigurationSetEventDestination.
 func (mr *MockSESV2APIMockRecorder) UpdateConfigurationSetEventDestination(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConfigurationSetEventDestination", reflect.TypeOf((*MockSESV2API)(nil).UpdateConfigurationSetEventDestination), arg0)
 }
 
-// UpdateConfigurationSetEventDestinationRequest mocks base method
+// UpdateConfigurationSetEventDestinationRequest mocks base method.
 func (m *MockSESV2API) UpdateConfigurationSetEventDestinationRequest(arg0 *sesv2.UpdateConfigurationSetEventDestinationInput) (*request.Request, *sesv2.UpdateConfigurationSetEventDestinationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateConfigurationSetEventDestinationRequest", arg0)
@@ -4155,13 +4206,13 @@ func (m *MockSESV2API) UpdateConfigurationSetEventDestinationRequest(arg0 *sesv2
 	return ret0, ret1
 }
 
-// UpdateConfigurationSetEventDestinationRequest indicates an expected call of UpdateConfigurationSetEventDestinationRequest
+// UpdateConfigurationSetEventDestinationRequest indicates an expected call of UpdateConfigurationSetEventDestinationRequest.
 func (mr *MockSESV2APIMockRecorder) UpdateConfigurationSetEventDestinationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConfigurationSetEventDestinationRequest", reflect.TypeOf((*MockSESV2API)(nil).UpdateConfigurationSetEventDestinationRequest), arg0)
 }
 
-// UpdateConfigurationSetEventDestinationWithContext mocks base method
+// UpdateConfigurationSetEventDestinationWithContext mocks base method.
 func (m *MockSESV2API) UpdateConfigurationSetEventDestinationWithContext(arg0 context.Context, arg1 *sesv2.UpdateConfigurationSetEventDestinationInput, arg2 ...request.Option) (*sesv2.UpdateConfigurationSetEventDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4174,14 +4225,14 @@ func (m *MockSESV2API) UpdateConfigurationSetEventDestinationWithContext(arg0 co
 	return ret0, ret1
 }
 
-// UpdateConfigurationSetEventDestinationWithContext indicates an expected call of UpdateConfigurationSetEventDestinationWithContext
+// UpdateConfigurationSetEventDestinationWithContext indicates an expected call of UpdateConfigurationSetEventDestinationWithContext.
 func (mr *MockSESV2APIMockRecorder) UpdateConfigurationSetEventDestinationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConfigurationSetEventDestinationWithContext", reflect.TypeOf((*MockSESV2API)(nil).UpdateConfigurationSetEventDestinationWithContext), varargs...)
 }
 
-// UpdateContact mocks base method
+// UpdateContact mocks base method.
 func (m *MockSESV2API) UpdateContact(arg0 *sesv2.UpdateContactInput) (*sesv2.UpdateContactOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateContact", arg0)
@@ -4190,13 +4241,13 @@ func (m *MockSESV2API) UpdateContact(arg0 *sesv2.UpdateContactInput) (*sesv2.Upd
 	return ret0, ret1
 }
 
-// UpdateContact indicates an expected call of UpdateContact
+// UpdateContact indicates an expected call of UpdateContact.
 func (mr *MockSESV2APIMockRecorder) UpdateContact(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateContact", reflect.TypeOf((*MockSESV2API)(nil).UpdateContact), arg0)
 }
 
-// UpdateContactList mocks base method
+// UpdateContactList mocks base method.
 func (m *MockSESV2API) UpdateContactList(arg0 *sesv2.UpdateContactListInput) (*sesv2.UpdateContactListOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateContactList", arg0)
@@ -4205,13 +4256,13 @@ func (m *MockSESV2API) UpdateContactList(arg0 *sesv2.UpdateContactListInput) (*s
 	return ret0, ret1
 }
 
-// UpdateContactList indicates an expected call of UpdateContactList
+// UpdateContactList indicates an expected call of UpdateContactList.
 func (mr *MockSESV2APIMockRecorder) UpdateContactList(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateContactList", reflect.TypeOf((*MockSESV2API)(nil).UpdateContactList), arg0)
 }
 
-// UpdateContactListRequest mocks base method
+// UpdateContactListRequest mocks base method.
 func (m *MockSESV2API) UpdateContactListRequest(arg0 *sesv2.UpdateContactListInput) (*request.Request, *sesv2.UpdateContactListOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateContactListRequest", arg0)
@@ -4220,13 +4271,13 @@ func (m *MockSESV2API) UpdateContactListRequest(arg0 *sesv2.UpdateContactListInp
 	return ret0, ret1
 }
 
-// UpdateContactListRequest indicates an expected call of UpdateContactListRequest
+// UpdateContactListRequest indicates an expected call of UpdateContactListRequest.
 func (mr *MockSESV2APIMockRecorder) UpdateContactListRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateContactListRequest", reflect.TypeOf((*MockSESV2API)(nil).UpdateContactListRequest), arg0)
 }
 
-// UpdateContactListWithContext mocks base method
+// UpdateContactListWithContext mocks base method.
 func (m *MockSESV2API) UpdateContactListWithContext(arg0 context.Context, arg1 *sesv2.UpdateContactListInput, arg2 ...request.Option) (*sesv2.UpdateContactListOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4239,14 +4290,14 @@ func (m *MockSESV2API) UpdateContactListWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// UpdateContactListWithContext indicates an expected call of UpdateContactListWithContext
+// UpdateContactListWithContext indicates an expected call of UpdateContactListWithContext.
 func (mr *MockSESV2APIMockRecorder) UpdateContactListWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateContactListWithContext", reflect.TypeOf((*MockSESV2API)(nil).UpdateContactListWithContext), varargs...)
 }
 
-// UpdateContactRequest mocks base method
+// UpdateContactRequest mocks base method.
 func (m *MockSESV2API) UpdateContactRequest(arg0 *sesv2.UpdateContactInput) (*request.Request, *sesv2.UpdateContactOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateContactRequest", arg0)
@@ -4255,13 +4306,13 @@ func (m *MockSESV2API) UpdateContactRequest(arg0 *sesv2.UpdateContactInput) (*re
 	return ret0, ret1
 }
 
-// UpdateContactRequest indicates an expected call of UpdateContactRequest
+// UpdateContactRequest indicates an expected call of UpdateContactRequest.
 func (mr *MockSESV2APIMockRecorder) UpdateContactRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateContactRequest", reflect.TypeOf((*MockSESV2API)(nil).UpdateContactRequest), arg0)
 }
 
-// UpdateContactWithContext mocks base method
+// UpdateContactWithContext mocks base method.
 func (m *MockSESV2API) UpdateContactWithContext(arg0 context.Context, arg1 *sesv2.UpdateContactInput, arg2 ...request.Option) (*sesv2.UpdateContactOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4274,14 +4325,14 @@ func (m *MockSESV2API) UpdateContactWithContext(arg0 context.Context, arg1 *sesv
 	return ret0, ret1
 }
 
-// UpdateContactWithContext indicates an expected call of UpdateContactWithContext
+// UpdateContactWithContext indicates an expected call of UpdateContactWithContext.
 func (mr *MockSESV2APIMockRecorder) UpdateContactWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateContactWithContext", reflect.TypeOf((*MockSESV2API)(nil).UpdateContactWithContext), varargs...)
 }
 
-// UpdateCustomVerificationEmailTemplate mocks base method
+// UpdateCustomVerificationEmailTemplate mocks base method.
 func (m *MockSESV2API) UpdateCustomVerificationEmailTemplate(arg0 *sesv2.UpdateCustomVerificationEmailTemplateInput) (*sesv2.UpdateCustomVerificationEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCustomVerificationEmailTemplate", arg0)
@@ -4290,13 +4341,13 @@ func (m *MockSESV2API) UpdateCustomVerificationEmailTemplate(arg0 *sesv2.UpdateC
 	return ret0, ret1
 }
 
-// UpdateCustomVerificationEmailTemplate indicates an expected call of UpdateCustomVerificationEmailTemplate
+// UpdateCustomVerificationEmailTemplate indicates an expected call of UpdateCustomVerificationEmailTemplate.
 func (mr *MockSESV2APIMockRecorder) UpdateCustomVerificationEmailTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCustomVerificationEmailTemplate", reflect.TypeOf((*MockSESV2API)(nil).UpdateCustomVerificationEmailTemplate), arg0)
 }
 
-// UpdateCustomVerificationEmailTemplateRequest mocks base method
+// UpdateCustomVerificationEmailTemplateRequest mocks base method.
 func (m *MockSESV2API) UpdateCustomVerificationEmailTemplateRequest(arg0 *sesv2.UpdateCustomVerificationEmailTemplateInput) (*request.Request, *sesv2.UpdateCustomVerificationEmailTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCustomVerificationEmailTemplateRequest", arg0)
@@ -4305,13 +4356,13 @@ func (m *MockSESV2API) UpdateCustomVerificationEmailTemplateRequest(arg0 *sesv2.
 	return ret0, ret1
 }
 
-// UpdateCustomVerificationEmailTemplateRequest indicates an expected call of UpdateCustomVerificationEmailTemplateRequest
+// UpdateCustomVerificationEmailTemplateRequest indicates an expected call of UpdateCustomVerificationEmailTemplateRequest.
 func (mr *MockSESV2APIMockRecorder) UpdateCustomVerificationEmailTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCustomVerificationEmailTemplateRequest", reflect.TypeOf((*MockSESV2API)(nil).UpdateCustomVerificationEmailTemplateRequest), arg0)
 }
 
-// UpdateCustomVerificationEmailTemplateWithContext mocks base method
+// UpdateCustomVerificationEmailTemplateWithContext mocks base method.
 func (m *MockSESV2API) UpdateCustomVerificationEmailTemplateWithContext(arg0 context.Context, arg1 *sesv2.UpdateCustomVerificationEmailTemplateInput, arg2 ...request.Option) (*sesv2.UpdateCustomVerificationEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4324,14 +4375,14 @@ func (m *MockSESV2API) UpdateCustomVerificationEmailTemplateWithContext(arg0 con
 	return ret0, ret1
 }
 
-// UpdateCustomVerificationEmailTemplateWithContext indicates an expected call of UpdateCustomVerificationEmailTemplateWithContext
+// UpdateCustomVerificationEmailTemplateWithContext indicates an expected call of UpdateCustomVerificationEmailTemplateWithContext.
 func (mr *MockSESV2APIMockRecorder) UpdateCustomVerificationEmailTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCustomVerificationEmailTemplateWithContext", reflect.TypeOf((*MockSESV2API)(nil).UpdateCustomVerificationEmailTemplateWithContext), varargs...)
 }
 
-// UpdateEmailIdentityPolicy mocks base method
+// UpdateEmailIdentityPolicy mocks base method.
 func (m *MockSESV2API) UpdateEmailIdentityPolicy(arg0 *sesv2.UpdateEmailIdentityPolicyInput) (*sesv2.UpdateEmailIdentityPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateEmailIdentityPolicy", arg0)
@@ -4340,13 +4391,13 @@ func (m *MockSESV2API) UpdateEmailIdentityPolicy(arg0 *sesv2.UpdateEmailIdentity
 	return ret0, ret1
 }
 
-// UpdateEmailIdentityPolicy indicates an expected call of UpdateEmailIdentityPolicy
+// UpdateEmailIdentityPolicy indicates an expected call of UpdateEmailIdentityPolicy.
 func (mr *MockSESV2APIMockRecorder) UpdateEmailIdentityPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEmailIdentityPolicy", reflect.TypeOf((*MockSESV2API)(nil).UpdateEmailIdentityPolicy), arg0)
 }
 
-// UpdateEmailIdentityPolicyRequest mocks base method
+// UpdateEmailIdentityPolicyRequest mocks base method.
 func (m *MockSESV2API) UpdateEmailIdentityPolicyRequest(arg0 *sesv2.UpdateEmailIdentityPolicyInput) (*request.Request, *sesv2.UpdateEmailIdentityPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateEmailIdentityPolicyRequest", arg0)
@@ -4355,13 +4406,13 @@ func (m *MockSESV2API) UpdateEmailIdentityPolicyRequest(arg0 *sesv2.UpdateEmailI
 	return ret0, ret1
 }
 
-// UpdateEmailIdentityPolicyRequest indicates an expected call of UpdateEmailIdentityPolicyRequest
+// UpdateEmailIdentityPolicyRequest indicates an expected call of UpdateEmailIdentityPolicyRequest.
 func (mr *MockSESV2APIMockRecorder) UpdateEmailIdentityPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEmailIdentityPolicyRequest", reflect.TypeOf((*MockSESV2API)(nil).UpdateEmailIdentityPolicyRequest), arg0)
 }
 
-// UpdateEmailIdentityPolicyWithContext mocks base method
+// UpdateEmailIdentityPolicyWithContext mocks base method.
 func (m *MockSESV2API) UpdateEmailIdentityPolicyWithContext(arg0 context.Context, arg1 *sesv2.UpdateEmailIdentityPolicyInput, arg2 ...request.Option) (*sesv2.UpdateEmailIdentityPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4374,14 +4425,14 @@ func (m *MockSESV2API) UpdateEmailIdentityPolicyWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// UpdateEmailIdentityPolicyWithContext indicates an expected call of UpdateEmailIdentityPolicyWithContext
+// UpdateEmailIdentityPolicyWithContext indicates an expected call of UpdateEmailIdentityPolicyWithContext.
 func (mr *MockSESV2APIMockRecorder) UpdateEmailIdentityPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEmailIdentityPolicyWithContext", reflect.TypeOf((*MockSESV2API)(nil).UpdateEmailIdentityPolicyWithContext), varargs...)
 }
 
-// UpdateEmailTemplate mocks base method
+// UpdateEmailTemplate mocks base method.
 func (m *MockSESV2API) UpdateEmailTemplate(arg0 *sesv2.UpdateEmailTemplateInput) (*sesv2.UpdateEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateEmailTemplate", arg0)
@@ -4390,13 +4441,13 @@ func (m *MockSESV2API) UpdateEmailTemplate(arg0 *sesv2.UpdateEmailTemplateInput)
 	return ret0, ret1
 }
 
-// UpdateEmailTemplate indicates an expected call of UpdateEmailTemplate
+// UpdateEmailTemplate indicates an expected call of UpdateEmailTemplate.
 func (mr *MockSESV2APIMockRecorder) UpdateEmailTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEmailTemplate", reflect.TypeOf((*MockSESV2API)(nil).UpdateEmailTemplate), arg0)
 }
 
-// UpdateEmailTemplateRequest mocks base method
+// UpdateEmailTemplateRequest mocks base method.
 func (m *MockSESV2API) UpdateEmailTemplateRequest(arg0 *sesv2.UpdateEmailTemplateInput) (*request.Request, *sesv2.UpdateEmailTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateEmailTemplateRequest", arg0)
@@ -4405,13 +4456,13 @@ func (m *MockSESV2API) UpdateEmailTemplateRequest(arg0 *sesv2.UpdateEmailTemplat
 	return ret0, ret1
 }
 
-// UpdateEmailTemplateRequest indicates an expected call of UpdateEmailTemplateRequest
+// UpdateEmailTemplateRequest indicates an expected call of UpdateEmailTemplateRequest.
 func (mr *MockSESV2APIMockRecorder) UpdateEmailTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEmailTemplateRequest", reflect.TypeOf((*MockSESV2API)(nil).UpdateEmailTemplateRequest), arg0)
 }
 
-// UpdateEmailTemplateWithContext mocks base method
+// UpdateEmailTemplateWithContext mocks base method.
 func (m *MockSESV2API) UpdateEmailTemplateWithContext(arg0 context.Context, arg1 *sesv2.UpdateEmailTemplateInput, arg2 ...request.Option) (*sesv2.UpdateEmailTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4424,7 +4475,7 @@ func (m *MockSESV2API) UpdateEmailTemplateWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// UpdateEmailTemplateWithContext indicates an expected call of UpdateEmailTemplateWithContext
+// UpdateEmailTemplateWithContext indicates an expected call of UpdateEmailTemplateWithContext.
 func (mr *MockSESV2APIMockRecorder) UpdateEmailTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

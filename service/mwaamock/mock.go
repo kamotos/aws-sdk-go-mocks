@@ -6,36 +6,37 @@ package mwaamock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	mwaa "github.com/aws/aws-sdk-go/service/mwaa"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockMWAAAPI is a mock of MWAAAPI interface
+// MockMWAAAPI is a mock of MWAAAPI interface.
 type MockMWAAAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockMWAAAPIMockRecorder
 }
 
-// MockMWAAAPIMockRecorder is the mock recorder for MockMWAAAPI
+// MockMWAAAPIMockRecorder is the mock recorder for MockMWAAAPI.
 type MockMWAAAPIMockRecorder struct {
 	mock *MockMWAAAPI
 }
 
-// NewMockMWAAAPI creates a new mock instance
+// NewMockMWAAAPI creates a new mock instance.
 func NewMockMWAAAPI(ctrl *gomock.Controller) *MockMWAAAPI {
 	mock := &MockMWAAAPI{ctrl: ctrl}
 	mock.recorder = &MockMWAAAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockMWAAAPI) EXPECT() *MockMWAAAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateCliToken mocks base method
+// CreateCliToken mocks base method.
 func (m *MockMWAAAPI) CreateCliToken(arg0 *mwaa.CreateCliTokenInput) (*mwaa.CreateCliTokenOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCliToken", arg0)
@@ -44,13 +45,13 @@ func (m *MockMWAAAPI) CreateCliToken(arg0 *mwaa.CreateCliTokenInput) (*mwaa.Crea
 	return ret0, ret1
 }
 
-// CreateCliToken indicates an expected call of CreateCliToken
+// CreateCliToken indicates an expected call of CreateCliToken.
 func (mr *MockMWAAAPIMockRecorder) CreateCliToken(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCliToken", reflect.TypeOf((*MockMWAAAPI)(nil).CreateCliToken), arg0)
 }
 
-// CreateCliTokenRequest mocks base method
+// CreateCliTokenRequest mocks base method.
 func (m *MockMWAAAPI) CreateCliTokenRequest(arg0 *mwaa.CreateCliTokenInput) (*request.Request, *mwaa.CreateCliTokenOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCliTokenRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockMWAAAPI) CreateCliTokenRequest(arg0 *mwaa.CreateCliTokenInput) (*re
 	return ret0, ret1
 }
 
-// CreateCliTokenRequest indicates an expected call of CreateCliTokenRequest
+// CreateCliTokenRequest indicates an expected call of CreateCliTokenRequest.
 func (mr *MockMWAAAPIMockRecorder) CreateCliTokenRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCliTokenRequest", reflect.TypeOf((*MockMWAAAPI)(nil).CreateCliTokenRequest), arg0)
 }
 
-// CreateCliTokenWithContext mocks base method
+// CreateCliTokenWithContext mocks base method.
 func (m *MockMWAAAPI) CreateCliTokenWithContext(arg0 context.Context, arg1 *mwaa.CreateCliTokenInput, arg2 ...request.Option) (*mwaa.CreateCliTokenOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockMWAAAPI) CreateCliTokenWithContext(arg0 context.Context, arg1 *mwaa
 	return ret0, ret1
 }
 
-// CreateCliTokenWithContext indicates an expected call of CreateCliTokenWithContext
+// CreateCliTokenWithContext indicates an expected call of CreateCliTokenWithContext.
 func (mr *MockMWAAAPIMockRecorder) CreateCliTokenWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCliTokenWithContext", reflect.TypeOf((*MockMWAAAPI)(nil).CreateCliTokenWithContext), varargs...)
 }
 
-// CreateEnvironment mocks base method
+// CreateEnvironment mocks base method.
 func (m *MockMWAAAPI) CreateEnvironment(arg0 *mwaa.CreateEnvironmentInput) (*mwaa.CreateEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEnvironment", arg0)
@@ -94,13 +95,13 @@ func (m *MockMWAAAPI) CreateEnvironment(arg0 *mwaa.CreateEnvironmentInput) (*mwa
 	return ret0, ret1
 }
 
-// CreateEnvironment indicates an expected call of CreateEnvironment
+// CreateEnvironment indicates an expected call of CreateEnvironment.
 func (mr *MockMWAAAPIMockRecorder) CreateEnvironment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEnvironment", reflect.TypeOf((*MockMWAAAPI)(nil).CreateEnvironment), arg0)
 }
 
-// CreateEnvironmentRequest mocks base method
+// CreateEnvironmentRequest mocks base method.
 func (m *MockMWAAAPI) CreateEnvironmentRequest(arg0 *mwaa.CreateEnvironmentInput) (*request.Request, *mwaa.CreateEnvironmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEnvironmentRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockMWAAAPI) CreateEnvironmentRequest(arg0 *mwaa.CreateEnvironmentInput
 	return ret0, ret1
 }
 
-// CreateEnvironmentRequest indicates an expected call of CreateEnvironmentRequest
+// CreateEnvironmentRequest indicates an expected call of CreateEnvironmentRequest.
 func (mr *MockMWAAAPIMockRecorder) CreateEnvironmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEnvironmentRequest", reflect.TypeOf((*MockMWAAAPI)(nil).CreateEnvironmentRequest), arg0)
 }
 
-// CreateEnvironmentWithContext mocks base method
+// CreateEnvironmentWithContext mocks base method.
 func (m *MockMWAAAPI) CreateEnvironmentWithContext(arg0 context.Context, arg1 *mwaa.CreateEnvironmentInput, arg2 ...request.Option) (*mwaa.CreateEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockMWAAAPI) CreateEnvironmentWithContext(arg0 context.Context, arg1 *m
 	return ret0, ret1
 }
 
-// CreateEnvironmentWithContext indicates an expected call of CreateEnvironmentWithContext
+// CreateEnvironmentWithContext indicates an expected call of CreateEnvironmentWithContext.
 func (mr *MockMWAAAPIMockRecorder) CreateEnvironmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEnvironmentWithContext", reflect.TypeOf((*MockMWAAAPI)(nil).CreateEnvironmentWithContext), varargs...)
 }
 
-// CreateWebLoginToken mocks base method
+// CreateWebLoginToken mocks base method.
 func (m *MockMWAAAPI) CreateWebLoginToken(arg0 *mwaa.CreateWebLoginTokenInput) (*mwaa.CreateWebLoginTokenOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWebLoginToken", arg0)
@@ -144,13 +145,13 @@ func (m *MockMWAAAPI) CreateWebLoginToken(arg0 *mwaa.CreateWebLoginTokenInput) (
 	return ret0, ret1
 }
 
-// CreateWebLoginToken indicates an expected call of CreateWebLoginToken
+// CreateWebLoginToken indicates an expected call of CreateWebLoginToken.
 func (mr *MockMWAAAPIMockRecorder) CreateWebLoginToken(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWebLoginToken", reflect.TypeOf((*MockMWAAAPI)(nil).CreateWebLoginToken), arg0)
 }
 
-// CreateWebLoginTokenRequest mocks base method
+// CreateWebLoginTokenRequest mocks base method.
 func (m *MockMWAAAPI) CreateWebLoginTokenRequest(arg0 *mwaa.CreateWebLoginTokenInput) (*request.Request, *mwaa.CreateWebLoginTokenOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWebLoginTokenRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockMWAAAPI) CreateWebLoginTokenRequest(arg0 *mwaa.CreateWebLoginTokenI
 	return ret0, ret1
 }
 
-// CreateWebLoginTokenRequest indicates an expected call of CreateWebLoginTokenRequest
+// CreateWebLoginTokenRequest indicates an expected call of CreateWebLoginTokenRequest.
 func (mr *MockMWAAAPIMockRecorder) CreateWebLoginTokenRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWebLoginTokenRequest", reflect.TypeOf((*MockMWAAAPI)(nil).CreateWebLoginTokenRequest), arg0)
 }
 
-// CreateWebLoginTokenWithContext mocks base method
+// CreateWebLoginTokenWithContext mocks base method.
 func (m *MockMWAAAPI) CreateWebLoginTokenWithContext(arg0 context.Context, arg1 *mwaa.CreateWebLoginTokenInput, arg2 ...request.Option) (*mwaa.CreateWebLoginTokenOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockMWAAAPI) CreateWebLoginTokenWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// CreateWebLoginTokenWithContext indicates an expected call of CreateWebLoginTokenWithContext
+// CreateWebLoginTokenWithContext indicates an expected call of CreateWebLoginTokenWithContext.
 func (mr *MockMWAAAPIMockRecorder) CreateWebLoginTokenWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWebLoginTokenWithContext", reflect.TypeOf((*MockMWAAAPI)(nil).CreateWebLoginTokenWithContext), varargs...)
 }
 
-// DeleteEnvironment mocks base method
+// DeleteEnvironment mocks base method.
 func (m *MockMWAAAPI) DeleteEnvironment(arg0 *mwaa.DeleteEnvironmentInput) (*mwaa.DeleteEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEnvironment", arg0)
@@ -194,13 +195,13 @@ func (m *MockMWAAAPI) DeleteEnvironment(arg0 *mwaa.DeleteEnvironmentInput) (*mwa
 	return ret0, ret1
 }
 
-// DeleteEnvironment indicates an expected call of DeleteEnvironment
+// DeleteEnvironment indicates an expected call of DeleteEnvironment.
 func (mr *MockMWAAAPIMockRecorder) DeleteEnvironment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEnvironment", reflect.TypeOf((*MockMWAAAPI)(nil).DeleteEnvironment), arg0)
 }
 
-// DeleteEnvironmentRequest mocks base method
+// DeleteEnvironmentRequest mocks base method.
 func (m *MockMWAAAPI) DeleteEnvironmentRequest(arg0 *mwaa.DeleteEnvironmentInput) (*request.Request, *mwaa.DeleteEnvironmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEnvironmentRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockMWAAAPI) DeleteEnvironmentRequest(arg0 *mwaa.DeleteEnvironmentInput
 	return ret0, ret1
 }
 
-// DeleteEnvironmentRequest indicates an expected call of DeleteEnvironmentRequest
+// DeleteEnvironmentRequest indicates an expected call of DeleteEnvironmentRequest.
 func (mr *MockMWAAAPIMockRecorder) DeleteEnvironmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEnvironmentRequest", reflect.TypeOf((*MockMWAAAPI)(nil).DeleteEnvironmentRequest), arg0)
 }
 
-// DeleteEnvironmentWithContext mocks base method
+// DeleteEnvironmentWithContext mocks base method.
 func (m *MockMWAAAPI) DeleteEnvironmentWithContext(arg0 context.Context, arg1 *mwaa.DeleteEnvironmentInput, arg2 ...request.Option) (*mwaa.DeleteEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockMWAAAPI) DeleteEnvironmentWithContext(arg0 context.Context, arg1 *m
 	return ret0, ret1
 }
 
-// DeleteEnvironmentWithContext indicates an expected call of DeleteEnvironmentWithContext
+// DeleteEnvironmentWithContext indicates an expected call of DeleteEnvironmentWithContext.
 func (mr *MockMWAAAPIMockRecorder) DeleteEnvironmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEnvironmentWithContext", reflect.TypeOf((*MockMWAAAPI)(nil).DeleteEnvironmentWithContext), varargs...)
 }
 
-// GetEnvironment mocks base method
+// GetEnvironment mocks base method.
 func (m *MockMWAAAPI) GetEnvironment(arg0 *mwaa.GetEnvironmentInput) (*mwaa.GetEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEnvironment", arg0)
@@ -244,13 +245,13 @@ func (m *MockMWAAAPI) GetEnvironment(arg0 *mwaa.GetEnvironmentInput) (*mwaa.GetE
 	return ret0, ret1
 }
 
-// GetEnvironment indicates an expected call of GetEnvironment
+// GetEnvironment indicates an expected call of GetEnvironment.
 func (mr *MockMWAAAPIMockRecorder) GetEnvironment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEnvironment", reflect.TypeOf((*MockMWAAAPI)(nil).GetEnvironment), arg0)
 }
 
-// GetEnvironmentRequest mocks base method
+// GetEnvironmentRequest mocks base method.
 func (m *MockMWAAAPI) GetEnvironmentRequest(arg0 *mwaa.GetEnvironmentInput) (*request.Request, *mwaa.GetEnvironmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEnvironmentRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockMWAAAPI) GetEnvironmentRequest(arg0 *mwaa.GetEnvironmentInput) (*re
 	return ret0, ret1
 }
 
-// GetEnvironmentRequest indicates an expected call of GetEnvironmentRequest
+// GetEnvironmentRequest indicates an expected call of GetEnvironmentRequest.
 func (mr *MockMWAAAPIMockRecorder) GetEnvironmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEnvironmentRequest", reflect.TypeOf((*MockMWAAAPI)(nil).GetEnvironmentRequest), arg0)
 }
 
-// GetEnvironmentWithContext mocks base method
+// GetEnvironmentWithContext mocks base method.
 func (m *MockMWAAAPI) GetEnvironmentWithContext(arg0 context.Context, arg1 *mwaa.GetEnvironmentInput, arg2 ...request.Option) (*mwaa.GetEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockMWAAAPI) GetEnvironmentWithContext(arg0 context.Context, arg1 *mwaa
 	return ret0, ret1
 }
 
-// GetEnvironmentWithContext indicates an expected call of GetEnvironmentWithContext
+// GetEnvironmentWithContext indicates an expected call of GetEnvironmentWithContext.
 func (mr *MockMWAAAPIMockRecorder) GetEnvironmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEnvironmentWithContext", reflect.TypeOf((*MockMWAAAPI)(nil).GetEnvironmentWithContext), varargs...)
 }
 
-// ListEnvironments mocks base method
+// ListEnvironments mocks base method.
 func (m *MockMWAAAPI) ListEnvironments(arg0 *mwaa.ListEnvironmentsInput) (*mwaa.ListEnvironmentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEnvironments", arg0)
@@ -294,13 +295,13 @@ func (m *MockMWAAAPI) ListEnvironments(arg0 *mwaa.ListEnvironmentsInput) (*mwaa.
 	return ret0, ret1
 }
 
-// ListEnvironments indicates an expected call of ListEnvironments
+// ListEnvironments indicates an expected call of ListEnvironments.
 func (mr *MockMWAAAPIMockRecorder) ListEnvironments(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEnvironments", reflect.TypeOf((*MockMWAAAPI)(nil).ListEnvironments), arg0)
 }
 
-// ListEnvironmentsPages mocks base method
+// ListEnvironmentsPages mocks base method.
 func (m *MockMWAAAPI) ListEnvironmentsPages(arg0 *mwaa.ListEnvironmentsInput, arg1 func(*mwaa.ListEnvironmentsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEnvironmentsPages", arg0, arg1)
@@ -308,13 +309,13 @@ func (m *MockMWAAAPI) ListEnvironmentsPages(arg0 *mwaa.ListEnvironmentsInput, ar
 	return ret0
 }
 
-// ListEnvironmentsPages indicates an expected call of ListEnvironmentsPages
+// ListEnvironmentsPages indicates an expected call of ListEnvironmentsPages.
 func (mr *MockMWAAAPIMockRecorder) ListEnvironmentsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEnvironmentsPages", reflect.TypeOf((*MockMWAAAPI)(nil).ListEnvironmentsPages), arg0, arg1)
 }
 
-// ListEnvironmentsPagesWithContext mocks base method
+// ListEnvironmentsPagesWithContext mocks base method.
 func (m *MockMWAAAPI) ListEnvironmentsPagesWithContext(arg0 context.Context, arg1 *mwaa.ListEnvironmentsInput, arg2 func(*mwaa.ListEnvironmentsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -326,14 +327,14 @@ func (m *MockMWAAAPI) ListEnvironmentsPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// ListEnvironmentsPagesWithContext indicates an expected call of ListEnvironmentsPagesWithContext
+// ListEnvironmentsPagesWithContext indicates an expected call of ListEnvironmentsPagesWithContext.
 func (mr *MockMWAAAPIMockRecorder) ListEnvironmentsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEnvironmentsPagesWithContext", reflect.TypeOf((*MockMWAAAPI)(nil).ListEnvironmentsPagesWithContext), varargs...)
 }
 
-// ListEnvironmentsRequest mocks base method
+// ListEnvironmentsRequest mocks base method.
 func (m *MockMWAAAPI) ListEnvironmentsRequest(arg0 *mwaa.ListEnvironmentsInput) (*request.Request, *mwaa.ListEnvironmentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEnvironmentsRequest", arg0)
@@ -342,13 +343,13 @@ func (m *MockMWAAAPI) ListEnvironmentsRequest(arg0 *mwaa.ListEnvironmentsInput) 
 	return ret0, ret1
 }
 
-// ListEnvironmentsRequest indicates an expected call of ListEnvironmentsRequest
+// ListEnvironmentsRequest indicates an expected call of ListEnvironmentsRequest.
 func (mr *MockMWAAAPIMockRecorder) ListEnvironmentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEnvironmentsRequest", reflect.TypeOf((*MockMWAAAPI)(nil).ListEnvironmentsRequest), arg0)
 }
 
-// ListEnvironmentsWithContext mocks base method
+// ListEnvironmentsWithContext mocks base method.
 func (m *MockMWAAAPI) ListEnvironmentsWithContext(arg0 context.Context, arg1 *mwaa.ListEnvironmentsInput, arg2 ...request.Option) (*mwaa.ListEnvironmentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -361,14 +362,14 @@ func (m *MockMWAAAPI) ListEnvironmentsWithContext(arg0 context.Context, arg1 *mw
 	return ret0, ret1
 }
 
-// ListEnvironmentsWithContext indicates an expected call of ListEnvironmentsWithContext
+// ListEnvironmentsWithContext indicates an expected call of ListEnvironmentsWithContext.
 func (mr *MockMWAAAPIMockRecorder) ListEnvironmentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEnvironmentsWithContext", reflect.TypeOf((*MockMWAAAPI)(nil).ListEnvironmentsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockMWAAAPI) ListTagsForResource(arg0 *mwaa.ListTagsForResourceInput) (*mwaa.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -377,13 +378,13 @@ func (m *MockMWAAAPI) ListTagsForResource(arg0 *mwaa.ListTagsForResourceInput) (
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockMWAAAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockMWAAAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockMWAAAPI) ListTagsForResourceRequest(arg0 *mwaa.ListTagsForResourceInput) (*request.Request, *mwaa.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -392,13 +393,13 @@ func (m *MockMWAAAPI) ListTagsForResourceRequest(arg0 *mwaa.ListTagsForResourceI
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockMWAAAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockMWAAAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockMWAAAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *mwaa.ListTagsForResourceInput, arg2 ...request.Option) (*mwaa.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -411,14 +412,14 @@ func (m *MockMWAAAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockMWAAAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockMWAAAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PublishMetrics mocks base method
+// PublishMetrics mocks base method.
 func (m *MockMWAAAPI) PublishMetrics(arg0 *mwaa.PublishMetricsInput) (*mwaa.PublishMetricsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PublishMetrics", arg0)
@@ -427,13 +428,13 @@ func (m *MockMWAAAPI) PublishMetrics(arg0 *mwaa.PublishMetricsInput) (*mwaa.Publ
 	return ret0, ret1
 }
 
-// PublishMetrics indicates an expected call of PublishMetrics
+// PublishMetrics indicates an expected call of PublishMetrics.
 func (mr *MockMWAAAPIMockRecorder) PublishMetrics(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PublishMetrics", reflect.TypeOf((*MockMWAAAPI)(nil).PublishMetrics), arg0)
 }
 
-// PublishMetricsRequest mocks base method
+// PublishMetricsRequest mocks base method.
 func (m *MockMWAAAPI) PublishMetricsRequest(arg0 *mwaa.PublishMetricsInput) (*request.Request, *mwaa.PublishMetricsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PublishMetricsRequest", arg0)
@@ -442,13 +443,13 @@ func (m *MockMWAAAPI) PublishMetricsRequest(arg0 *mwaa.PublishMetricsInput) (*re
 	return ret0, ret1
 }
 
-// PublishMetricsRequest indicates an expected call of PublishMetricsRequest
+// PublishMetricsRequest indicates an expected call of PublishMetricsRequest.
 func (mr *MockMWAAAPIMockRecorder) PublishMetricsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PublishMetricsRequest", reflect.TypeOf((*MockMWAAAPI)(nil).PublishMetricsRequest), arg0)
 }
 
-// PublishMetricsWithContext mocks base method
+// PublishMetricsWithContext mocks base method.
 func (m *MockMWAAAPI) PublishMetricsWithContext(arg0 context.Context, arg1 *mwaa.PublishMetricsInput, arg2 ...request.Option) (*mwaa.PublishMetricsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -461,14 +462,14 @@ func (m *MockMWAAAPI) PublishMetricsWithContext(arg0 context.Context, arg1 *mwaa
 	return ret0, ret1
 }
 
-// PublishMetricsWithContext indicates an expected call of PublishMetricsWithContext
+// PublishMetricsWithContext indicates an expected call of PublishMetricsWithContext.
 func (mr *MockMWAAAPIMockRecorder) PublishMetricsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PublishMetricsWithContext", reflect.TypeOf((*MockMWAAAPI)(nil).PublishMetricsWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockMWAAAPI) TagResource(arg0 *mwaa.TagResourceInput) (*mwaa.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -477,13 +478,13 @@ func (m *MockMWAAAPI) TagResource(arg0 *mwaa.TagResourceInput) (*mwaa.TagResourc
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockMWAAAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockMWAAAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockMWAAAPI) TagResourceRequest(arg0 *mwaa.TagResourceInput) (*request.Request, *mwaa.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -492,13 +493,13 @@ func (m *MockMWAAAPI) TagResourceRequest(arg0 *mwaa.TagResourceInput) (*request.
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockMWAAAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockMWAAAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockMWAAAPI) TagResourceWithContext(arg0 context.Context, arg1 *mwaa.TagResourceInput, arg2 ...request.Option) (*mwaa.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -511,14 +512,14 @@ func (m *MockMWAAAPI) TagResourceWithContext(arg0 context.Context, arg1 *mwaa.Ta
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockMWAAAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockMWAAAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockMWAAAPI) UntagResource(arg0 *mwaa.UntagResourceInput) (*mwaa.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -527,13 +528,13 @@ func (m *MockMWAAAPI) UntagResource(arg0 *mwaa.UntagResourceInput) (*mwaa.UntagR
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockMWAAAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockMWAAAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockMWAAAPI) UntagResourceRequest(arg0 *mwaa.UntagResourceInput) (*request.Request, *mwaa.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -542,13 +543,13 @@ func (m *MockMWAAAPI) UntagResourceRequest(arg0 *mwaa.UntagResourceInput) (*requ
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockMWAAAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockMWAAAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockMWAAAPI) UntagResourceWithContext(arg0 context.Context, arg1 *mwaa.UntagResourceInput, arg2 ...request.Option) (*mwaa.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -561,14 +562,14 @@ func (m *MockMWAAAPI) UntagResourceWithContext(arg0 context.Context, arg1 *mwaa.
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockMWAAAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockMWAAAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateEnvironment mocks base method
+// UpdateEnvironment mocks base method.
 func (m *MockMWAAAPI) UpdateEnvironment(arg0 *mwaa.UpdateEnvironmentInput) (*mwaa.UpdateEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateEnvironment", arg0)
@@ -577,13 +578,13 @@ func (m *MockMWAAAPI) UpdateEnvironment(arg0 *mwaa.UpdateEnvironmentInput) (*mwa
 	return ret0, ret1
 }
 
-// UpdateEnvironment indicates an expected call of UpdateEnvironment
+// UpdateEnvironment indicates an expected call of UpdateEnvironment.
 func (mr *MockMWAAAPIMockRecorder) UpdateEnvironment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEnvironment", reflect.TypeOf((*MockMWAAAPI)(nil).UpdateEnvironment), arg0)
 }
 
-// UpdateEnvironmentRequest mocks base method
+// UpdateEnvironmentRequest mocks base method.
 func (m *MockMWAAAPI) UpdateEnvironmentRequest(arg0 *mwaa.UpdateEnvironmentInput) (*request.Request, *mwaa.UpdateEnvironmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateEnvironmentRequest", arg0)
@@ -592,13 +593,13 @@ func (m *MockMWAAAPI) UpdateEnvironmentRequest(arg0 *mwaa.UpdateEnvironmentInput
 	return ret0, ret1
 }
 
-// UpdateEnvironmentRequest indicates an expected call of UpdateEnvironmentRequest
+// UpdateEnvironmentRequest indicates an expected call of UpdateEnvironmentRequest.
 func (mr *MockMWAAAPIMockRecorder) UpdateEnvironmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEnvironmentRequest", reflect.TypeOf((*MockMWAAAPI)(nil).UpdateEnvironmentRequest), arg0)
 }
 
-// UpdateEnvironmentWithContext mocks base method
+// UpdateEnvironmentWithContext mocks base method.
 func (m *MockMWAAAPI) UpdateEnvironmentWithContext(arg0 context.Context, arg1 *mwaa.UpdateEnvironmentInput, arg2 ...request.Option) (*mwaa.UpdateEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -611,7 +612,7 @@ func (m *MockMWAAAPI) UpdateEnvironmentWithContext(arg0 context.Context, arg1 *m
 	return ret0, ret1
 }
 
-// UpdateEnvironmentWithContext indicates an expected call of UpdateEnvironmentWithContext
+// UpdateEnvironmentWithContext indicates an expected call of UpdateEnvironmentWithContext.
 func (mr *MockMWAAAPIMockRecorder) UpdateEnvironmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

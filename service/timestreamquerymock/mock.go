@@ -6,36 +6,37 @@ package timestreamquerymock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	timestreamquery "github.com/aws/aws-sdk-go/service/timestreamquery"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockTimestreamQueryAPI is a mock of TimestreamQueryAPI interface
+// MockTimestreamQueryAPI is a mock of TimestreamQueryAPI interface.
 type MockTimestreamQueryAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockTimestreamQueryAPIMockRecorder
 }
 
-// MockTimestreamQueryAPIMockRecorder is the mock recorder for MockTimestreamQueryAPI
+// MockTimestreamQueryAPIMockRecorder is the mock recorder for MockTimestreamQueryAPI.
 type MockTimestreamQueryAPIMockRecorder struct {
 	mock *MockTimestreamQueryAPI
 }
 
-// NewMockTimestreamQueryAPI creates a new mock instance
+// NewMockTimestreamQueryAPI creates a new mock instance.
 func NewMockTimestreamQueryAPI(ctrl *gomock.Controller) *MockTimestreamQueryAPI {
 	mock := &MockTimestreamQueryAPI{ctrl: ctrl}
 	mock.recorder = &MockTimestreamQueryAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockTimestreamQueryAPI) EXPECT() *MockTimestreamQueryAPIMockRecorder {
 	return m.recorder
 }
 
-// CancelQuery mocks base method
+// CancelQuery mocks base method.
 func (m *MockTimestreamQueryAPI) CancelQuery(arg0 *timestreamquery.CancelQueryInput) (*timestreamquery.CancelQueryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelQuery", arg0)
@@ -44,13 +45,13 @@ func (m *MockTimestreamQueryAPI) CancelQuery(arg0 *timestreamquery.CancelQueryIn
 	return ret0, ret1
 }
 
-// CancelQuery indicates an expected call of CancelQuery
+// CancelQuery indicates an expected call of CancelQuery.
 func (mr *MockTimestreamQueryAPIMockRecorder) CancelQuery(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelQuery", reflect.TypeOf((*MockTimestreamQueryAPI)(nil).CancelQuery), arg0)
 }
 
-// CancelQueryRequest mocks base method
+// CancelQueryRequest mocks base method.
 func (m *MockTimestreamQueryAPI) CancelQueryRequest(arg0 *timestreamquery.CancelQueryInput) (*request.Request, *timestreamquery.CancelQueryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelQueryRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockTimestreamQueryAPI) CancelQueryRequest(arg0 *timestreamquery.Cancel
 	return ret0, ret1
 }
 
-// CancelQueryRequest indicates an expected call of CancelQueryRequest
+// CancelQueryRequest indicates an expected call of CancelQueryRequest.
 func (mr *MockTimestreamQueryAPIMockRecorder) CancelQueryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelQueryRequest", reflect.TypeOf((*MockTimestreamQueryAPI)(nil).CancelQueryRequest), arg0)
 }
 
-// CancelQueryWithContext mocks base method
+// CancelQueryWithContext mocks base method.
 func (m *MockTimestreamQueryAPI) CancelQueryWithContext(arg0 context.Context, arg1 *timestreamquery.CancelQueryInput, arg2 ...request.Option) (*timestreamquery.CancelQueryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockTimestreamQueryAPI) CancelQueryWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CancelQueryWithContext indicates an expected call of CancelQueryWithContext
+// CancelQueryWithContext indicates an expected call of CancelQueryWithContext.
 func (mr *MockTimestreamQueryAPIMockRecorder) CancelQueryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelQueryWithContext", reflect.TypeOf((*MockTimestreamQueryAPI)(nil).CancelQueryWithContext), varargs...)
 }
 
-// DescribeEndpoints mocks base method
+// DescribeEndpoints mocks base method.
 func (m *MockTimestreamQueryAPI) DescribeEndpoints(arg0 *timestreamquery.DescribeEndpointsInput) (*timestreamquery.DescribeEndpointsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeEndpoints", arg0)
@@ -94,13 +95,13 @@ func (m *MockTimestreamQueryAPI) DescribeEndpoints(arg0 *timestreamquery.Describ
 	return ret0, ret1
 }
 
-// DescribeEndpoints indicates an expected call of DescribeEndpoints
+// DescribeEndpoints indicates an expected call of DescribeEndpoints.
 func (mr *MockTimestreamQueryAPIMockRecorder) DescribeEndpoints(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeEndpoints", reflect.TypeOf((*MockTimestreamQueryAPI)(nil).DescribeEndpoints), arg0)
 }
 
-// DescribeEndpointsRequest mocks base method
+// DescribeEndpointsRequest mocks base method.
 func (m *MockTimestreamQueryAPI) DescribeEndpointsRequest(arg0 *timestreamquery.DescribeEndpointsInput) (*request.Request, *timestreamquery.DescribeEndpointsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeEndpointsRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockTimestreamQueryAPI) DescribeEndpointsRequest(arg0 *timestreamquery.
 	return ret0, ret1
 }
 
-// DescribeEndpointsRequest indicates an expected call of DescribeEndpointsRequest
+// DescribeEndpointsRequest indicates an expected call of DescribeEndpointsRequest.
 func (mr *MockTimestreamQueryAPIMockRecorder) DescribeEndpointsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeEndpointsRequest", reflect.TypeOf((*MockTimestreamQueryAPI)(nil).DescribeEndpointsRequest), arg0)
 }
 
-// DescribeEndpointsWithContext mocks base method
+// DescribeEndpointsWithContext mocks base method.
 func (m *MockTimestreamQueryAPI) DescribeEndpointsWithContext(arg0 context.Context, arg1 *timestreamquery.DescribeEndpointsInput, arg2 ...request.Option) (*timestreamquery.DescribeEndpointsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockTimestreamQueryAPI) DescribeEndpointsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DescribeEndpointsWithContext indicates an expected call of DescribeEndpointsWithContext
+// DescribeEndpointsWithContext indicates an expected call of DescribeEndpointsWithContext.
 func (mr *MockTimestreamQueryAPIMockRecorder) DescribeEndpointsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeEndpointsWithContext", reflect.TypeOf((*MockTimestreamQueryAPI)(nil).DescribeEndpointsWithContext), varargs...)
 }
 
-// Query mocks base method
+// Query mocks base method.
 func (m *MockTimestreamQueryAPI) Query(arg0 *timestreamquery.QueryInput) (*timestreamquery.QueryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Query", arg0)
@@ -144,13 +145,13 @@ func (m *MockTimestreamQueryAPI) Query(arg0 *timestreamquery.QueryInput) (*times
 	return ret0, ret1
 }
 
-// Query indicates an expected call of Query
+// Query indicates an expected call of Query.
 func (mr *MockTimestreamQueryAPIMockRecorder) Query(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Query", reflect.TypeOf((*MockTimestreamQueryAPI)(nil).Query), arg0)
 }
 
-// QueryPages mocks base method
+// QueryPages mocks base method.
 func (m *MockTimestreamQueryAPI) QueryPages(arg0 *timestreamquery.QueryInput, arg1 func(*timestreamquery.QueryOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "QueryPages", arg0, arg1)
@@ -158,13 +159,13 @@ func (m *MockTimestreamQueryAPI) QueryPages(arg0 *timestreamquery.QueryInput, ar
 	return ret0
 }
 
-// QueryPages indicates an expected call of QueryPages
+// QueryPages indicates an expected call of QueryPages.
 func (mr *MockTimestreamQueryAPIMockRecorder) QueryPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "QueryPages", reflect.TypeOf((*MockTimestreamQueryAPI)(nil).QueryPages), arg0, arg1)
 }
 
-// QueryPagesWithContext mocks base method
+// QueryPagesWithContext mocks base method.
 func (m *MockTimestreamQueryAPI) QueryPagesWithContext(arg0 context.Context, arg1 *timestreamquery.QueryInput, arg2 func(*timestreamquery.QueryOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -176,14 +177,14 @@ func (m *MockTimestreamQueryAPI) QueryPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// QueryPagesWithContext indicates an expected call of QueryPagesWithContext
+// QueryPagesWithContext indicates an expected call of QueryPagesWithContext.
 func (mr *MockTimestreamQueryAPIMockRecorder) QueryPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "QueryPagesWithContext", reflect.TypeOf((*MockTimestreamQueryAPI)(nil).QueryPagesWithContext), varargs...)
 }
 
-// QueryRequest mocks base method
+// QueryRequest mocks base method.
 func (m *MockTimestreamQueryAPI) QueryRequest(arg0 *timestreamquery.QueryInput) (*request.Request, *timestreamquery.QueryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "QueryRequest", arg0)
@@ -192,13 +193,13 @@ func (m *MockTimestreamQueryAPI) QueryRequest(arg0 *timestreamquery.QueryInput) 
 	return ret0, ret1
 }
 
-// QueryRequest indicates an expected call of QueryRequest
+// QueryRequest indicates an expected call of QueryRequest.
 func (mr *MockTimestreamQueryAPIMockRecorder) QueryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "QueryRequest", reflect.TypeOf((*MockTimestreamQueryAPI)(nil).QueryRequest), arg0)
 }
 
-// QueryWithContext mocks base method
+// QueryWithContext mocks base method.
 func (m *MockTimestreamQueryAPI) QueryWithContext(arg0 context.Context, arg1 *timestreamquery.QueryInput, arg2 ...request.Option) (*timestreamquery.QueryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -211,7 +212,7 @@ func (m *MockTimestreamQueryAPI) QueryWithContext(arg0 context.Context, arg1 *ti
 	return ret0, ret1
 }
 
-// QueryWithContext indicates an expected call of QueryWithContext
+// QueryWithContext indicates an expected call of QueryWithContext.
 func (mr *MockTimestreamQueryAPIMockRecorder) QueryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

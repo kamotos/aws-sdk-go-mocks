@@ -6,36 +6,37 @@ package mturkmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	mturk "github.com/aws/aws-sdk-go/service/mturk"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockMTurkAPI is a mock of MTurkAPI interface
+// MockMTurkAPI is a mock of MTurkAPI interface.
 type MockMTurkAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockMTurkAPIMockRecorder
 }
 
-// MockMTurkAPIMockRecorder is the mock recorder for MockMTurkAPI
+// MockMTurkAPIMockRecorder is the mock recorder for MockMTurkAPI.
 type MockMTurkAPIMockRecorder struct {
 	mock *MockMTurkAPI
 }
 
-// NewMockMTurkAPI creates a new mock instance
+// NewMockMTurkAPI creates a new mock instance.
 func NewMockMTurkAPI(ctrl *gomock.Controller) *MockMTurkAPI {
 	mock := &MockMTurkAPI{ctrl: ctrl}
 	mock.recorder = &MockMTurkAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockMTurkAPI) EXPECT() *MockMTurkAPIMockRecorder {
 	return m.recorder
 }
 
-// AcceptQualificationRequest mocks base method
+// AcceptQualificationRequest mocks base method.
 func (m *MockMTurkAPI) AcceptQualificationRequest(arg0 *mturk.AcceptQualificationRequestInput) (*mturk.AcceptQualificationRequestOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AcceptQualificationRequest", arg0)
@@ -44,13 +45,13 @@ func (m *MockMTurkAPI) AcceptQualificationRequest(arg0 *mturk.AcceptQualificatio
 	return ret0, ret1
 }
 
-// AcceptQualificationRequest indicates an expected call of AcceptQualificationRequest
+// AcceptQualificationRequest indicates an expected call of AcceptQualificationRequest.
 func (mr *MockMTurkAPIMockRecorder) AcceptQualificationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptQualificationRequest", reflect.TypeOf((*MockMTurkAPI)(nil).AcceptQualificationRequest), arg0)
 }
 
-// AcceptQualificationRequestRequest mocks base method
+// AcceptQualificationRequestRequest mocks base method.
 func (m *MockMTurkAPI) AcceptQualificationRequestRequest(arg0 *mturk.AcceptQualificationRequestInput) (*request.Request, *mturk.AcceptQualificationRequestOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AcceptQualificationRequestRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockMTurkAPI) AcceptQualificationRequestRequest(arg0 *mturk.AcceptQuali
 	return ret0, ret1
 }
 
-// AcceptQualificationRequestRequest indicates an expected call of AcceptQualificationRequestRequest
+// AcceptQualificationRequestRequest indicates an expected call of AcceptQualificationRequestRequest.
 func (mr *MockMTurkAPIMockRecorder) AcceptQualificationRequestRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptQualificationRequestRequest", reflect.TypeOf((*MockMTurkAPI)(nil).AcceptQualificationRequestRequest), arg0)
 }
 
-// AcceptQualificationRequestWithContext mocks base method
+// AcceptQualificationRequestWithContext mocks base method.
 func (m *MockMTurkAPI) AcceptQualificationRequestWithContext(arg0 context.Context, arg1 *mturk.AcceptQualificationRequestInput, arg2 ...request.Option) (*mturk.AcceptQualificationRequestOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockMTurkAPI) AcceptQualificationRequestWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// AcceptQualificationRequestWithContext indicates an expected call of AcceptQualificationRequestWithContext
+// AcceptQualificationRequestWithContext indicates an expected call of AcceptQualificationRequestWithContext.
 func (mr *MockMTurkAPIMockRecorder) AcceptQualificationRequestWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptQualificationRequestWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).AcceptQualificationRequestWithContext), varargs...)
 }
 
-// ApproveAssignment mocks base method
+// ApproveAssignment mocks base method.
 func (m *MockMTurkAPI) ApproveAssignment(arg0 *mturk.ApproveAssignmentInput) (*mturk.ApproveAssignmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ApproveAssignment", arg0)
@@ -94,13 +95,13 @@ func (m *MockMTurkAPI) ApproveAssignment(arg0 *mturk.ApproveAssignmentInput) (*m
 	return ret0, ret1
 }
 
-// ApproveAssignment indicates an expected call of ApproveAssignment
+// ApproveAssignment indicates an expected call of ApproveAssignment.
 func (mr *MockMTurkAPIMockRecorder) ApproveAssignment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ApproveAssignment", reflect.TypeOf((*MockMTurkAPI)(nil).ApproveAssignment), arg0)
 }
 
-// ApproveAssignmentRequest mocks base method
+// ApproveAssignmentRequest mocks base method.
 func (m *MockMTurkAPI) ApproveAssignmentRequest(arg0 *mturk.ApproveAssignmentInput) (*request.Request, *mturk.ApproveAssignmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ApproveAssignmentRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockMTurkAPI) ApproveAssignmentRequest(arg0 *mturk.ApproveAssignmentInp
 	return ret0, ret1
 }
 
-// ApproveAssignmentRequest indicates an expected call of ApproveAssignmentRequest
+// ApproveAssignmentRequest indicates an expected call of ApproveAssignmentRequest.
 func (mr *MockMTurkAPIMockRecorder) ApproveAssignmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ApproveAssignmentRequest", reflect.TypeOf((*MockMTurkAPI)(nil).ApproveAssignmentRequest), arg0)
 }
 
-// ApproveAssignmentWithContext mocks base method
+// ApproveAssignmentWithContext mocks base method.
 func (m *MockMTurkAPI) ApproveAssignmentWithContext(arg0 context.Context, arg1 *mturk.ApproveAssignmentInput, arg2 ...request.Option) (*mturk.ApproveAssignmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockMTurkAPI) ApproveAssignmentWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ApproveAssignmentWithContext indicates an expected call of ApproveAssignmentWithContext
+// ApproveAssignmentWithContext indicates an expected call of ApproveAssignmentWithContext.
 func (mr *MockMTurkAPIMockRecorder) ApproveAssignmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ApproveAssignmentWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ApproveAssignmentWithContext), varargs...)
 }
 
-// AssociateQualificationWithWorker mocks base method
+// AssociateQualificationWithWorker mocks base method.
 func (m *MockMTurkAPI) AssociateQualificationWithWorker(arg0 *mturk.AssociateQualificationWithWorkerInput) (*mturk.AssociateQualificationWithWorkerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateQualificationWithWorker", arg0)
@@ -144,13 +145,13 @@ func (m *MockMTurkAPI) AssociateQualificationWithWorker(arg0 *mturk.AssociateQua
 	return ret0, ret1
 }
 
-// AssociateQualificationWithWorker indicates an expected call of AssociateQualificationWithWorker
+// AssociateQualificationWithWorker indicates an expected call of AssociateQualificationWithWorker.
 func (mr *MockMTurkAPIMockRecorder) AssociateQualificationWithWorker(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateQualificationWithWorker", reflect.TypeOf((*MockMTurkAPI)(nil).AssociateQualificationWithWorker), arg0)
 }
 
-// AssociateQualificationWithWorkerRequest mocks base method
+// AssociateQualificationWithWorkerRequest mocks base method.
 func (m *MockMTurkAPI) AssociateQualificationWithWorkerRequest(arg0 *mturk.AssociateQualificationWithWorkerInput) (*request.Request, *mturk.AssociateQualificationWithWorkerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateQualificationWithWorkerRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockMTurkAPI) AssociateQualificationWithWorkerRequest(arg0 *mturk.Assoc
 	return ret0, ret1
 }
 
-// AssociateQualificationWithWorkerRequest indicates an expected call of AssociateQualificationWithWorkerRequest
+// AssociateQualificationWithWorkerRequest indicates an expected call of AssociateQualificationWithWorkerRequest.
 func (mr *MockMTurkAPIMockRecorder) AssociateQualificationWithWorkerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateQualificationWithWorkerRequest", reflect.TypeOf((*MockMTurkAPI)(nil).AssociateQualificationWithWorkerRequest), arg0)
 }
 
-// AssociateQualificationWithWorkerWithContext mocks base method
+// AssociateQualificationWithWorkerWithContext mocks base method.
 func (m *MockMTurkAPI) AssociateQualificationWithWorkerWithContext(arg0 context.Context, arg1 *mturk.AssociateQualificationWithWorkerInput, arg2 ...request.Option) (*mturk.AssociateQualificationWithWorkerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockMTurkAPI) AssociateQualificationWithWorkerWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// AssociateQualificationWithWorkerWithContext indicates an expected call of AssociateQualificationWithWorkerWithContext
+// AssociateQualificationWithWorkerWithContext indicates an expected call of AssociateQualificationWithWorkerWithContext.
 func (mr *MockMTurkAPIMockRecorder) AssociateQualificationWithWorkerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateQualificationWithWorkerWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).AssociateQualificationWithWorkerWithContext), varargs...)
 }
 
-// CreateAdditionalAssignmentsForHIT mocks base method
+// CreateAdditionalAssignmentsForHIT mocks base method.
 func (m *MockMTurkAPI) CreateAdditionalAssignmentsForHIT(arg0 *mturk.CreateAdditionalAssignmentsForHITInput) (*mturk.CreateAdditionalAssignmentsForHITOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAdditionalAssignmentsForHIT", arg0)
@@ -194,13 +195,13 @@ func (m *MockMTurkAPI) CreateAdditionalAssignmentsForHIT(arg0 *mturk.CreateAddit
 	return ret0, ret1
 }
 
-// CreateAdditionalAssignmentsForHIT indicates an expected call of CreateAdditionalAssignmentsForHIT
+// CreateAdditionalAssignmentsForHIT indicates an expected call of CreateAdditionalAssignmentsForHIT.
 func (mr *MockMTurkAPIMockRecorder) CreateAdditionalAssignmentsForHIT(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAdditionalAssignmentsForHIT", reflect.TypeOf((*MockMTurkAPI)(nil).CreateAdditionalAssignmentsForHIT), arg0)
 }
 
-// CreateAdditionalAssignmentsForHITRequest mocks base method
+// CreateAdditionalAssignmentsForHITRequest mocks base method.
 func (m *MockMTurkAPI) CreateAdditionalAssignmentsForHITRequest(arg0 *mturk.CreateAdditionalAssignmentsForHITInput) (*request.Request, *mturk.CreateAdditionalAssignmentsForHITOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAdditionalAssignmentsForHITRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockMTurkAPI) CreateAdditionalAssignmentsForHITRequest(arg0 *mturk.Crea
 	return ret0, ret1
 }
 
-// CreateAdditionalAssignmentsForHITRequest indicates an expected call of CreateAdditionalAssignmentsForHITRequest
+// CreateAdditionalAssignmentsForHITRequest indicates an expected call of CreateAdditionalAssignmentsForHITRequest.
 func (mr *MockMTurkAPIMockRecorder) CreateAdditionalAssignmentsForHITRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAdditionalAssignmentsForHITRequest", reflect.TypeOf((*MockMTurkAPI)(nil).CreateAdditionalAssignmentsForHITRequest), arg0)
 }
 
-// CreateAdditionalAssignmentsForHITWithContext mocks base method
+// CreateAdditionalAssignmentsForHITWithContext mocks base method.
 func (m *MockMTurkAPI) CreateAdditionalAssignmentsForHITWithContext(arg0 context.Context, arg1 *mturk.CreateAdditionalAssignmentsForHITInput, arg2 ...request.Option) (*mturk.CreateAdditionalAssignmentsForHITOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockMTurkAPI) CreateAdditionalAssignmentsForHITWithContext(arg0 context
 	return ret0, ret1
 }
 
-// CreateAdditionalAssignmentsForHITWithContext indicates an expected call of CreateAdditionalAssignmentsForHITWithContext
+// CreateAdditionalAssignmentsForHITWithContext indicates an expected call of CreateAdditionalAssignmentsForHITWithContext.
 func (mr *MockMTurkAPIMockRecorder) CreateAdditionalAssignmentsForHITWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAdditionalAssignmentsForHITWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).CreateAdditionalAssignmentsForHITWithContext), varargs...)
 }
 
-// CreateHIT mocks base method
+// CreateHIT mocks base method.
 func (m *MockMTurkAPI) CreateHIT(arg0 *mturk.CreateHITInput) (*mturk.CreateHITOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateHIT", arg0)
@@ -244,13 +245,13 @@ func (m *MockMTurkAPI) CreateHIT(arg0 *mturk.CreateHITInput) (*mturk.CreateHITOu
 	return ret0, ret1
 }
 
-// CreateHIT indicates an expected call of CreateHIT
+// CreateHIT indicates an expected call of CreateHIT.
 func (mr *MockMTurkAPIMockRecorder) CreateHIT(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHIT", reflect.TypeOf((*MockMTurkAPI)(nil).CreateHIT), arg0)
 }
 
-// CreateHITRequest mocks base method
+// CreateHITRequest mocks base method.
 func (m *MockMTurkAPI) CreateHITRequest(arg0 *mturk.CreateHITInput) (*request.Request, *mturk.CreateHITOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateHITRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockMTurkAPI) CreateHITRequest(arg0 *mturk.CreateHITInput) (*request.Re
 	return ret0, ret1
 }
 
-// CreateHITRequest indicates an expected call of CreateHITRequest
+// CreateHITRequest indicates an expected call of CreateHITRequest.
 func (mr *MockMTurkAPIMockRecorder) CreateHITRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHITRequest", reflect.TypeOf((*MockMTurkAPI)(nil).CreateHITRequest), arg0)
 }
 
-// CreateHITType mocks base method
+// CreateHITType mocks base method.
 func (m *MockMTurkAPI) CreateHITType(arg0 *mturk.CreateHITTypeInput) (*mturk.CreateHITTypeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateHITType", arg0)
@@ -274,13 +275,13 @@ func (m *MockMTurkAPI) CreateHITType(arg0 *mturk.CreateHITTypeInput) (*mturk.Cre
 	return ret0, ret1
 }
 
-// CreateHITType indicates an expected call of CreateHITType
+// CreateHITType indicates an expected call of CreateHITType.
 func (mr *MockMTurkAPIMockRecorder) CreateHITType(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHITType", reflect.TypeOf((*MockMTurkAPI)(nil).CreateHITType), arg0)
 }
 
-// CreateHITTypeRequest mocks base method
+// CreateHITTypeRequest mocks base method.
 func (m *MockMTurkAPI) CreateHITTypeRequest(arg0 *mturk.CreateHITTypeInput) (*request.Request, *mturk.CreateHITTypeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateHITTypeRequest", arg0)
@@ -289,13 +290,13 @@ func (m *MockMTurkAPI) CreateHITTypeRequest(arg0 *mturk.CreateHITTypeInput) (*re
 	return ret0, ret1
 }
 
-// CreateHITTypeRequest indicates an expected call of CreateHITTypeRequest
+// CreateHITTypeRequest indicates an expected call of CreateHITTypeRequest.
 func (mr *MockMTurkAPIMockRecorder) CreateHITTypeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHITTypeRequest", reflect.TypeOf((*MockMTurkAPI)(nil).CreateHITTypeRequest), arg0)
 }
 
-// CreateHITTypeWithContext mocks base method
+// CreateHITTypeWithContext mocks base method.
 func (m *MockMTurkAPI) CreateHITTypeWithContext(arg0 context.Context, arg1 *mturk.CreateHITTypeInput, arg2 ...request.Option) (*mturk.CreateHITTypeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -308,14 +309,14 @@ func (m *MockMTurkAPI) CreateHITTypeWithContext(arg0 context.Context, arg1 *mtur
 	return ret0, ret1
 }
 
-// CreateHITTypeWithContext indicates an expected call of CreateHITTypeWithContext
+// CreateHITTypeWithContext indicates an expected call of CreateHITTypeWithContext.
 func (mr *MockMTurkAPIMockRecorder) CreateHITTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHITTypeWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).CreateHITTypeWithContext), varargs...)
 }
 
-// CreateHITWithContext mocks base method
+// CreateHITWithContext mocks base method.
 func (m *MockMTurkAPI) CreateHITWithContext(arg0 context.Context, arg1 *mturk.CreateHITInput, arg2 ...request.Option) (*mturk.CreateHITOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockMTurkAPI) CreateHITWithContext(arg0 context.Context, arg1 *mturk.Cr
 	return ret0, ret1
 }
 
-// CreateHITWithContext indicates an expected call of CreateHITWithContext
+// CreateHITWithContext indicates an expected call of CreateHITWithContext.
 func (mr *MockMTurkAPIMockRecorder) CreateHITWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHITWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).CreateHITWithContext), varargs...)
 }
 
-// CreateHITWithHITType mocks base method
+// CreateHITWithHITType mocks base method.
 func (m *MockMTurkAPI) CreateHITWithHITType(arg0 *mturk.CreateHITWithHITTypeInput) (*mturk.CreateHITWithHITTypeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateHITWithHITType", arg0)
@@ -344,13 +345,13 @@ func (m *MockMTurkAPI) CreateHITWithHITType(arg0 *mturk.CreateHITWithHITTypeInpu
 	return ret0, ret1
 }
 
-// CreateHITWithHITType indicates an expected call of CreateHITWithHITType
+// CreateHITWithHITType indicates an expected call of CreateHITWithHITType.
 func (mr *MockMTurkAPIMockRecorder) CreateHITWithHITType(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHITWithHITType", reflect.TypeOf((*MockMTurkAPI)(nil).CreateHITWithHITType), arg0)
 }
 
-// CreateHITWithHITTypeRequest mocks base method
+// CreateHITWithHITTypeRequest mocks base method.
 func (m *MockMTurkAPI) CreateHITWithHITTypeRequest(arg0 *mturk.CreateHITWithHITTypeInput) (*request.Request, *mturk.CreateHITWithHITTypeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateHITWithHITTypeRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockMTurkAPI) CreateHITWithHITTypeRequest(arg0 *mturk.CreateHITWithHITT
 	return ret0, ret1
 }
 
-// CreateHITWithHITTypeRequest indicates an expected call of CreateHITWithHITTypeRequest
+// CreateHITWithHITTypeRequest indicates an expected call of CreateHITWithHITTypeRequest.
 func (mr *MockMTurkAPIMockRecorder) CreateHITWithHITTypeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHITWithHITTypeRequest", reflect.TypeOf((*MockMTurkAPI)(nil).CreateHITWithHITTypeRequest), arg0)
 }
 
-// CreateHITWithHITTypeWithContext mocks base method
+// CreateHITWithHITTypeWithContext mocks base method.
 func (m *MockMTurkAPI) CreateHITWithHITTypeWithContext(arg0 context.Context, arg1 *mturk.CreateHITWithHITTypeInput, arg2 ...request.Option) (*mturk.CreateHITWithHITTypeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockMTurkAPI) CreateHITWithHITTypeWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// CreateHITWithHITTypeWithContext indicates an expected call of CreateHITWithHITTypeWithContext
+// CreateHITWithHITTypeWithContext indicates an expected call of CreateHITWithHITTypeWithContext.
 func (mr *MockMTurkAPIMockRecorder) CreateHITWithHITTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHITWithHITTypeWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).CreateHITWithHITTypeWithContext), varargs...)
 }
 
-// CreateQualificationType mocks base method
+// CreateQualificationType mocks base method.
 func (m *MockMTurkAPI) CreateQualificationType(arg0 *mturk.CreateQualificationTypeInput) (*mturk.CreateQualificationTypeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateQualificationType", arg0)
@@ -394,13 +395,13 @@ func (m *MockMTurkAPI) CreateQualificationType(arg0 *mturk.CreateQualificationTy
 	return ret0, ret1
 }
 
-// CreateQualificationType indicates an expected call of CreateQualificationType
+// CreateQualificationType indicates an expected call of CreateQualificationType.
 func (mr *MockMTurkAPIMockRecorder) CreateQualificationType(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateQualificationType", reflect.TypeOf((*MockMTurkAPI)(nil).CreateQualificationType), arg0)
 }
 
-// CreateQualificationTypeRequest mocks base method
+// CreateQualificationTypeRequest mocks base method.
 func (m *MockMTurkAPI) CreateQualificationTypeRequest(arg0 *mturk.CreateQualificationTypeInput) (*request.Request, *mturk.CreateQualificationTypeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateQualificationTypeRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockMTurkAPI) CreateQualificationTypeRequest(arg0 *mturk.CreateQualific
 	return ret0, ret1
 }
 
-// CreateQualificationTypeRequest indicates an expected call of CreateQualificationTypeRequest
+// CreateQualificationTypeRequest indicates an expected call of CreateQualificationTypeRequest.
 func (mr *MockMTurkAPIMockRecorder) CreateQualificationTypeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateQualificationTypeRequest", reflect.TypeOf((*MockMTurkAPI)(nil).CreateQualificationTypeRequest), arg0)
 }
 
-// CreateQualificationTypeWithContext mocks base method
+// CreateQualificationTypeWithContext mocks base method.
 func (m *MockMTurkAPI) CreateQualificationTypeWithContext(arg0 context.Context, arg1 *mturk.CreateQualificationTypeInput, arg2 ...request.Option) (*mturk.CreateQualificationTypeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockMTurkAPI) CreateQualificationTypeWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// CreateQualificationTypeWithContext indicates an expected call of CreateQualificationTypeWithContext
+// CreateQualificationTypeWithContext indicates an expected call of CreateQualificationTypeWithContext.
 func (mr *MockMTurkAPIMockRecorder) CreateQualificationTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateQualificationTypeWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).CreateQualificationTypeWithContext), varargs...)
 }
 
-// CreateWorkerBlock mocks base method
+// CreateWorkerBlock mocks base method.
 func (m *MockMTurkAPI) CreateWorkerBlock(arg0 *mturk.CreateWorkerBlockInput) (*mturk.CreateWorkerBlockOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWorkerBlock", arg0)
@@ -444,13 +445,13 @@ func (m *MockMTurkAPI) CreateWorkerBlock(arg0 *mturk.CreateWorkerBlockInput) (*m
 	return ret0, ret1
 }
 
-// CreateWorkerBlock indicates an expected call of CreateWorkerBlock
+// CreateWorkerBlock indicates an expected call of CreateWorkerBlock.
 func (mr *MockMTurkAPIMockRecorder) CreateWorkerBlock(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkerBlock", reflect.TypeOf((*MockMTurkAPI)(nil).CreateWorkerBlock), arg0)
 }
 
-// CreateWorkerBlockRequest mocks base method
+// CreateWorkerBlockRequest mocks base method.
 func (m *MockMTurkAPI) CreateWorkerBlockRequest(arg0 *mturk.CreateWorkerBlockInput) (*request.Request, *mturk.CreateWorkerBlockOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWorkerBlockRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockMTurkAPI) CreateWorkerBlockRequest(arg0 *mturk.CreateWorkerBlockInp
 	return ret0, ret1
 }
 
-// CreateWorkerBlockRequest indicates an expected call of CreateWorkerBlockRequest
+// CreateWorkerBlockRequest indicates an expected call of CreateWorkerBlockRequest.
 func (mr *MockMTurkAPIMockRecorder) CreateWorkerBlockRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkerBlockRequest", reflect.TypeOf((*MockMTurkAPI)(nil).CreateWorkerBlockRequest), arg0)
 }
 
-// CreateWorkerBlockWithContext mocks base method
+// CreateWorkerBlockWithContext mocks base method.
 func (m *MockMTurkAPI) CreateWorkerBlockWithContext(arg0 context.Context, arg1 *mturk.CreateWorkerBlockInput, arg2 ...request.Option) (*mturk.CreateWorkerBlockOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockMTurkAPI) CreateWorkerBlockWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// CreateWorkerBlockWithContext indicates an expected call of CreateWorkerBlockWithContext
+// CreateWorkerBlockWithContext indicates an expected call of CreateWorkerBlockWithContext.
 func (mr *MockMTurkAPIMockRecorder) CreateWorkerBlockWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkerBlockWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).CreateWorkerBlockWithContext), varargs...)
 }
 
-// DeleteHIT mocks base method
+// DeleteHIT mocks base method.
 func (m *MockMTurkAPI) DeleteHIT(arg0 *mturk.DeleteHITInput) (*mturk.DeleteHITOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteHIT", arg0)
@@ -494,13 +495,13 @@ func (m *MockMTurkAPI) DeleteHIT(arg0 *mturk.DeleteHITInput) (*mturk.DeleteHITOu
 	return ret0, ret1
 }
 
-// DeleteHIT indicates an expected call of DeleteHIT
+// DeleteHIT indicates an expected call of DeleteHIT.
 func (mr *MockMTurkAPIMockRecorder) DeleteHIT(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteHIT", reflect.TypeOf((*MockMTurkAPI)(nil).DeleteHIT), arg0)
 }
 
-// DeleteHITRequest mocks base method
+// DeleteHITRequest mocks base method.
 func (m *MockMTurkAPI) DeleteHITRequest(arg0 *mturk.DeleteHITInput) (*request.Request, *mturk.DeleteHITOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteHITRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockMTurkAPI) DeleteHITRequest(arg0 *mturk.DeleteHITInput) (*request.Re
 	return ret0, ret1
 }
 
-// DeleteHITRequest indicates an expected call of DeleteHITRequest
+// DeleteHITRequest indicates an expected call of DeleteHITRequest.
 func (mr *MockMTurkAPIMockRecorder) DeleteHITRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteHITRequest", reflect.TypeOf((*MockMTurkAPI)(nil).DeleteHITRequest), arg0)
 }
 
-// DeleteHITWithContext mocks base method
+// DeleteHITWithContext mocks base method.
 func (m *MockMTurkAPI) DeleteHITWithContext(arg0 context.Context, arg1 *mturk.DeleteHITInput, arg2 ...request.Option) (*mturk.DeleteHITOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockMTurkAPI) DeleteHITWithContext(arg0 context.Context, arg1 *mturk.De
 	return ret0, ret1
 }
 
-// DeleteHITWithContext indicates an expected call of DeleteHITWithContext
+// DeleteHITWithContext indicates an expected call of DeleteHITWithContext.
 func (mr *MockMTurkAPIMockRecorder) DeleteHITWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteHITWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).DeleteHITWithContext), varargs...)
 }
 
-// DeleteQualificationType mocks base method
+// DeleteQualificationType mocks base method.
 func (m *MockMTurkAPI) DeleteQualificationType(arg0 *mturk.DeleteQualificationTypeInput) (*mturk.DeleteQualificationTypeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteQualificationType", arg0)
@@ -544,13 +545,13 @@ func (m *MockMTurkAPI) DeleteQualificationType(arg0 *mturk.DeleteQualificationTy
 	return ret0, ret1
 }
 
-// DeleteQualificationType indicates an expected call of DeleteQualificationType
+// DeleteQualificationType indicates an expected call of DeleteQualificationType.
 func (mr *MockMTurkAPIMockRecorder) DeleteQualificationType(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteQualificationType", reflect.TypeOf((*MockMTurkAPI)(nil).DeleteQualificationType), arg0)
 }
 
-// DeleteQualificationTypeRequest mocks base method
+// DeleteQualificationTypeRequest mocks base method.
 func (m *MockMTurkAPI) DeleteQualificationTypeRequest(arg0 *mturk.DeleteQualificationTypeInput) (*request.Request, *mturk.DeleteQualificationTypeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteQualificationTypeRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockMTurkAPI) DeleteQualificationTypeRequest(arg0 *mturk.DeleteQualific
 	return ret0, ret1
 }
 
-// DeleteQualificationTypeRequest indicates an expected call of DeleteQualificationTypeRequest
+// DeleteQualificationTypeRequest indicates an expected call of DeleteQualificationTypeRequest.
 func (mr *MockMTurkAPIMockRecorder) DeleteQualificationTypeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteQualificationTypeRequest", reflect.TypeOf((*MockMTurkAPI)(nil).DeleteQualificationTypeRequest), arg0)
 }
 
-// DeleteQualificationTypeWithContext mocks base method
+// DeleteQualificationTypeWithContext mocks base method.
 func (m *MockMTurkAPI) DeleteQualificationTypeWithContext(arg0 context.Context, arg1 *mturk.DeleteQualificationTypeInput, arg2 ...request.Option) (*mturk.DeleteQualificationTypeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockMTurkAPI) DeleteQualificationTypeWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DeleteQualificationTypeWithContext indicates an expected call of DeleteQualificationTypeWithContext
+// DeleteQualificationTypeWithContext indicates an expected call of DeleteQualificationTypeWithContext.
 func (mr *MockMTurkAPIMockRecorder) DeleteQualificationTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteQualificationTypeWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).DeleteQualificationTypeWithContext), varargs...)
 }
 
-// DeleteWorkerBlock mocks base method
+// DeleteWorkerBlock mocks base method.
 func (m *MockMTurkAPI) DeleteWorkerBlock(arg0 *mturk.DeleteWorkerBlockInput) (*mturk.DeleteWorkerBlockOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteWorkerBlock", arg0)
@@ -594,13 +595,13 @@ func (m *MockMTurkAPI) DeleteWorkerBlock(arg0 *mturk.DeleteWorkerBlockInput) (*m
 	return ret0, ret1
 }
 
-// DeleteWorkerBlock indicates an expected call of DeleteWorkerBlock
+// DeleteWorkerBlock indicates an expected call of DeleteWorkerBlock.
 func (mr *MockMTurkAPIMockRecorder) DeleteWorkerBlock(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkerBlock", reflect.TypeOf((*MockMTurkAPI)(nil).DeleteWorkerBlock), arg0)
 }
 
-// DeleteWorkerBlockRequest mocks base method
+// DeleteWorkerBlockRequest mocks base method.
 func (m *MockMTurkAPI) DeleteWorkerBlockRequest(arg0 *mturk.DeleteWorkerBlockInput) (*request.Request, *mturk.DeleteWorkerBlockOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteWorkerBlockRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockMTurkAPI) DeleteWorkerBlockRequest(arg0 *mturk.DeleteWorkerBlockInp
 	return ret0, ret1
 }
 
-// DeleteWorkerBlockRequest indicates an expected call of DeleteWorkerBlockRequest
+// DeleteWorkerBlockRequest indicates an expected call of DeleteWorkerBlockRequest.
 func (mr *MockMTurkAPIMockRecorder) DeleteWorkerBlockRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkerBlockRequest", reflect.TypeOf((*MockMTurkAPI)(nil).DeleteWorkerBlockRequest), arg0)
 }
 
-// DeleteWorkerBlockWithContext mocks base method
+// DeleteWorkerBlockWithContext mocks base method.
 func (m *MockMTurkAPI) DeleteWorkerBlockWithContext(arg0 context.Context, arg1 *mturk.DeleteWorkerBlockInput, arg2 ...request.Option) (*mturk.DeleteWorkerBlockOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockMTurkAPI) DeleteWorkerBlockWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DeleteWorkerBlockWithContext indicates an expected call of DeleteWorkerBlockWithContext
+// DeleteWorkerBlockWithContext indicates an expected call of DeleteWorkerBlockWithContext.
 func (mr *MockMTurkAPIMockRecorder) DeleteWorkerBlockWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkerBlockWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).DeleteWorkerBlockWithContext), varargs...)
 }
 
-// DisassociateQualificationFromWorker mocks base method
+// DisassociateQualificationFromWorker mocks base method.
 func (m *MockMTurkAPI) DisassociateQualificationFromWorker(arg0 *mturk.DisassociateQualificationFromWorkerInput) (*mturk.DisassociateQualificationFromWorkerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateQualificationFromWorker", arg0)
@@ -644,13 +645,13 @@ func (m *MockMTurkAPI) DisassociateQualificationFromWorker(arg0 *mturk.Disassoci
 	return ret0, ret1
 }
 
-// DisassociateQualificationFromWorker indicates an expected call of DisassociateQualificationFromWorker
+// DisassociateQualificationFromWorker indicates an expected call of DisassociateQualificationFromWorker.
 func (mr *MockMTurkAPIMockRecorder) DisassociateQualificationFromWorker(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateQualificationFromWorker", reflect.TypeOf((*MockMTurkAPI)(nil).DisassociateQualificationFromWorker), arg0)
 }
 
-// DisassociateQualificationFromWorkerRequest mocks base method
+// DisassociateQualificationFromWorkerRequest mocks base method.
 func (m *MockMTurkAPI) DisassociateQualificationFromWorkerRequest(arg0 *mturk.DisassociateQualificationFromWorkerInput) (*request.Request, *mturk.DisassociateQualificationFromWorkerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateQualificationFromWorkerRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockMTurkAPI) DisassociateQualificationFromWorkerRequest(arg0 *mturk.Di
 	return ret0, ret1
 }
 
-// DisassociateQualificationFromWorkerRequest indicates an expected call of DisassociateQualificationFromWorkerRequest
+// DisassociateQualificationFromWorkerRequest indicates an expected call of DisassociateQualificationFromWorkerRequest.
 func (mr *MockMTurkAPIMockRecorder) DisassociateQualificationFromWorkerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateQualificationFromWorkerRequest", reflect.TypeOf((*MockMTurkAPI)(nil).DisassociateQualificationFromWorkerRequest), arg0)
 }
 
-// DisassociateQualificationFromWorkerWithContext mocks base method
+// DisassociateQualificationFromWorkerWithContext mocks base method.
 func (m *MockMTurkAPI) DisassociateQualificationFromWorkerWithContext(arg0 context.Context, arg1 *mturk.DisassociateQualificationFromWorkerInput, arg2 ...request.Option) (*mturk.DisassociateQualificationFromWorkerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockMTurkAPI) DisassociateQualificationFromWorkerWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// DisassociateQualificationFromWorkerWithContext indicates an expected call of DisassociateQualificationFromWorkerWithContext
+// DisassociateQualificationFromWorkerWithContext indicates an expected call of DisassociateQualificationFromWorkerWithContext.
 func (mr *MockMTurkAPIMockRecorder) DisassociateQualificationFromWorkerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateQualificationFromWorkerWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).DisassociateQualificationFromWorkerWithContext), varargs...)
 }
 
-// GetAccountBalance mocks base method
+// GetAccountBalance mocks base method.
 func (m *MockMTurkAPI) GetAccountBalance(arg0 *mturk.GetAccountBalanceInput) (*mturk.GetAccountBalanceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAccountBalance", arg0)
@@ -694,13 +695,13 @@ func (m *MockMTurkAPI) GetAccountBalance(arg0 *mturk.GetAccountBalanceInput) (*m
 	return ret0, ret1
 }
 
-// GetAccountBalance indicates an expected call of GetAccountBalance
+// GetAccountBalance indicates an expected call of GetAccountBalance.
 func (mr *MockMTurkAPIMockRecorder) GetAccountBalance(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAccountBalance", reflect.TypeOf((*MockMTurkAPI)(nil).GetAccountBalance), arg0)
 }
 
-// GetAccountBalanceRequest mocks base method
+// GetAccountBalanceRequest mocks base method.
 func (m *MockMTurkAPI) GetAccountBalanceRequest(arg0 *mturk.GetAccountBalanceInput) (*request.Request, *mturk.GetAccountBalanceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAccountBalanceRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockMTurkAPI) GetAccountBalanceRequest(arg0 *mturk.GetAccountBalanceInp
 	return ret0, ret1
 }
 
-// GetAccountBalanceRequest indicates an expected call of GetAccountBalanceRequest
+// GetAccountBalanceRequest indicates an expected call of GetAccountBalanceRequest.
 func (mr *MockMTurkAPIMockRecorder) GetAccountBalanceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAccountBalanceRequest", reflect.TypeOf((*MockMTurkAPI)(nil).GetAccountBalanceRequest), arg0)
 }
 
-// GetAccountBalanceWithContext mocks base method
+// GetAccountBalanceWithContext mocks base method.
 func (m *MockMTurkAPI) GetAccountBalanceWithContext(arg0 context.Context, arg1 *mturk.GetAccountBalanceInput, arg2 ...request.Option) (*mturk.GetAccountBalanceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockMTurkAPI) GetAccountBalanceWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// GetAccountBalanceWithContext indicates an expected call of GetAccountBalanceWithContext
+// GetAccountBalanceWithContext indicates an expected call of GetAccountBalanceWithContext.
 func (mr *MockMTurkAPIMockRecorder) GetAccountBalanceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAccountBalanceWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).GetAccountBalanceWithContext), varargs...)
 }
 
-// GetAssignment mocks base method
+// GetAssignment mocks base method.
 func (m *MockMTurkAPI) GetAssignment(arg0 *mturk.GetAssignmentInput) (*mturk.GetAssignmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAssignment", arg0)
@@ -744,13 +745,13 @@ func (m *MockMTurkAPI) GetAssignment(arg0 *mturk.GetAssignmentInput) (*mturk.Get
 	return ret0, ret1
 }
 
-// GetAssignment indicates an expected call of GetAssignment
+// GetAssignment indicates an expected call of GetAssignment.
 func (mr *MockMTurkAPIMockRecorder) GetAssignment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAssignment", reflect.TypeOf((*MockMTurkAPI)(nil).GetAssignment), arg0)
 }
 
-// GetAssignmentRequest mocks base method
+// GetAssignmentRequest mocks base method.
 func (m *MockMTurkAPI) GetAssignmentRequest(arg0 *mturk.GetAssignmentInput) (*request.Request, *mturk.GetAssignmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAssignmentRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockMTurkAPI) GetAssignmentRequest(arg0 *mturk.GetAssignmentInput) (*re
 	return ret0, ret1
 }
 
-// GetAssignmentRequest indicates an expected call of GetAssignmentRequest
+// GetAssignmentRequest indicates an expected call of GetAssignmentRequest.
 func (mr *MockMTurkAPIMockRecorder) GetAssignmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAssignmentRequest", reflect.TypeOf((*MockMTurkAPI)(nil).GetAssignmentRequest), arg0)
 }
 
-// GetAssignmentWithContext mocks base method
+// GetAssignmentWithContext mocks base method.
 func (m *MockMTurkAPI) GetAssignmentWithContext(arg0 context.Context, arg1 *mturk.GetAssignmentInput, arg2 ...request.Option) (*mturk.GetAssignmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockMTurkAPI) GetAssignmentWithContext(arg0 context.Context, arg1 *mtur
 	return ret0, ret1
 }
 
-// GetAssignmentWithContext indicates an expected call of GetAssignmentWithContext
+// GetAssignmentWithContext indicates an expected call of GetAssignmentWithContext.
 func (mr *MockMTurkAPIMockRecorder) GetAssignmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAssignmentWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).GetAssignmentWithContext), varargs...)
 }
 
-// GetFileUploadURL mocks base method
+// GetFileUploadURL mocks base method.
 func (m *MockMTurkAPI) GetFileUploadURL(arg0 *mturk.GetFileUploadURLInput) (*mturk.GetFileUploadURLOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFileUploadURL", arg0)
@@ -794,13 +795,13 @@ func (m *MockMTurkAPI) GetFileUploadURL(arg0 *mturk.GetFileUploadURLInput) (*mtu
 	return ret0, ret1
 }
 
-// GetFileUploadURL indicates an expected call of GetFileUploadURL
+// GetFileUploadURL indicates an expected call of GetFileUploadURL.
 func (mr *MockMTurkAPIMockRecorder) GetFileUploadURL(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFileUploadURL", reflect.TypeOf((*MockMTurkAPI)(nil).GetFileUploadURL), arg0)
 }
 
-// GetFileUploadURLRequest mocks base method
+// GetFileUploadURLRequest mocks base method.
 func (m *MockMTurkAPI) GetFileUploadURLRequest(arg0 *mturk.GetFileUploadURLInput) (*request.Request, *mturk.GetFileUploadURLOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFileUploadURLRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockMTurkAPI) GetFileUploadURLRequest(arg0 *mturk.GetFileUploadURLInput
 	return ret0, ret1
 }
 
-// GetFileUploadURLRequest indicates an expected call of GetFileUploadURLRequest
+// GetFileUploadURLRequest indicates an expected call of GetFileUploadURLRequest.
 func (mr *MockMTurkAPIMockRecorder) GetFileUploadURLRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFileUploadURLRequest", reflect.TypeOf((*MockMTurkAPI)(nil).GetFileUploadURLRequest), arg0)
 }
 
-// GetFileUploadURLWithContext mocks base method
+// GetFileUploadURLWithContext mocks base method.
 func (m *MockMTurkAPI) GetFileUploadURLWithContext(arg0 context.Context, arg1 *mturk.GetFileUploadURLInput, arg2 ...request.Option) (*mturk.GetFileUploadURLOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockMTurkAPI) GetFileUploadURLWithContext(arg0 context.Context, arg1 *m
 	return ret0, ret1
 }
 
-// GetFileUploadURLWithContext indicates an expected call of GetFileUploadURLWithContext
+// GetFileUploadURLWithContext indicates an expected call of GetFileUploadURLWithContext.
 func (mr *MockMTurkAPIMockRecorder) GetFileUploadURLWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFileUploadURLWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).GetFileUploadURLWithContext), varargs...)
 }
 
-// GetHIT mocks base method
+// GetHIT mocks base method.
 func (m *MockMTurkAPI) GetHIT(arg0 *mturk.GetHITInput) (*mturk.GetHITOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetHIT", arg0)
@@ -844,13 +845,13 @@ func (m *MockMTurkAPI) GetHIT(arg0 *mturk.GetHITInput) (*mturk.GetHITOutput, err
 	return ret0, ret1
 }
 
-// GetHIT indicates an expected call of GetHIT
+// GetHIT indicates an expected call of GetHIT.
 func (mr *MockMTurkAPIMockRecorder) GetHIT(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetHIT", reflect.TypeOf((*MockMTurkAPI)(nil).GetHIT), arg0)
 }
 
-// GetHITRequest mocks base method
+// GetHITRequest mocks base method.
 func (m *MockMTurkAPI) GetHITRequest(arg0 *mturk.GetHITInput) (*request.Request, *mturk.GetHITOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetHITRequest", arg0)
@@ -859,13 +860,13 @@ func (m *MockMTurkAPI) GetHITRequest(arg0 *mturk.GetHITInput) (*request.Request,
 	return ret0, ret1
 }
 
-// GetHITRequest indicates an expected call of GetHITRequest
+// GetHITRequest indicates an expected call of GetHITRequest.
 func (mr *MockMTurkAPIMockRecorder) GetHITRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetHITRequest", reflect.TypeOf((*MockMTurkAPI)(nil).GetHITRequest), arg0)
 }
 
-// GetHITWithContext mocks base method
+// GetHITWithContext mocks base method.
 func (m *MockMTurkAPI) GetHITWithContext(arg0 context.Context, arg1 *mturk.GetHITInput, arg2 ...request.Option) (*mturk.GetHITOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +879,14 @@ func (m *MockMTurkAPI) GetHITWithContext(arg0 context.Context, arg1 *mturk.GetHI
 	return ret0, ret1
 }
 
-// GetHITWithContext indicates an expected call of GetHITWithContext
+// GetHITWithContext indicates an expected call of GetHITWithContext.
 func (mr *MockMTurkAPIMockRecorder) GetHITWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetHITWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).GetHITWithContext), varargs...)
 }
 
-// GetQualificationScore mocks base method
+// GetQualificationScore mocks base method.
 func (m *MockMTurkAPI) GetQualificationScore(arg0 *mturk.GetQualificationScoreInput) (*mturk.GetQualificationScoreOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetQualificationScore", arg0)
@@ -894,13 +895,13 @@ func (m *MockMTurkAPI) GetQualificationScore(arg0 *mturk.GetQualificationScoreIn
 	return ret0, ret1
 }
 
-// GetQualificationScore indicates an expected call of GetQualificationScore
+// GetQualificationScore indicates an expected call of GetQualificationScore.
 func (mr *MockMTurkAPIMockRecorder) GetQualificationScore(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetQualificationScore", reflect.TypeOf((*MockMTurkAPI)(nil).GetQualificationScore), arg0)
 }
 
-// GetQualificationScoreRequest mocks base method
+// GetQualificationScoreRequest mocks base method.
 func (m *MockMTurkAPI) GetQualificationScoreRequest(arg0 *mturk.GetQualificationScoreInput) (*request.Request, *mturk.GetQualificationScoreOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetQualificationScoreRequest", arg0)
@@ -909,13 +910,13 @@ func (m *MockMTurkAPI) GetQualificationScoreRequest(arg0 *mturk.GetQualification
 	return ret0, ret1
 }
 
-// GetQualificationScoreRequest indicates an expected call of GetQualificationScoreRequest
+// GetQualificationScoreRequest indicates an expected call of GetQualificationScoreRequest.
 func (mr *MockMTurkAPIMockRecorder) GetQualificationScoreRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetQualificationScoreRequest", reflect.TypeOf((*MockMTurkAPI)(nil).GetQualificationScoreRequest), arg0)
 }
 
-// GetQualificationScoreWithContext mocks base method
+// GetQualificationScoreWithContext mocks base method.
 func (m *MockMTurkAPI) GetQualificationScoreWithContext(arg0 context.Context, arg1 *mturk.GetQualificationScoreInput, arg2 ...request.Option) (*mturk.GetQualificationScoreOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -928,14 +929,14 @@ func (m *MockMTurkAPI) GetQualificationScoreWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// GetQualificationScoreWithContext indicates an expected call of GetQualificationScoreWithContext
+// GetQualificationScoreWithContext indicates an expected call of GetQualificationScoreWithContext.
 func (mr *MockMTurkAPIMockRecorder) GetQualificationScoreWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetQualificationScoreWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).GetQualificationScoreWithContext), varargs...)
 }
 
-// GetQualificationType mocks base method
+// GetQualificationType mocks base method.
 func (m *MockMTurkAPI) GetQualificationType(arg0 *mturk.GetQualificationTypeInput) (*mturk.GetQualificationTypeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetQualificationType", arg0)
@@ -944,13 +945,13 @@ func (m *MockMTurkAPI) GetQualificationType(arg0 *mturk.GetQualificationTypeInpu
 	return ret0, ret1
 }
 
-// GetQualificationType indicates an expected call of GetQualificationType
+// GetQualificationType indicates an expected call of GetQualificationType.
 func (mr *MockMTurkAPIMockRecorder) GetQualificationType(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetQualificationType", reflect.TypeOf((*MockMTurkAPI)(nil).GetQualificationType), arg0)
 }
 
-// GetQualificationTypeRequest mocks base method
+// GetQualificationTypeRequest mocks base method.
 func (m *MockMTurkAPI) GetQualificationTypeRequest(arg0 *mturk.GetQualificationTypeInput) (*request.Request, *mturk.GetQualificationTypeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetQualificationTypeRequest", arg0)
@@ -959,13 +960,13 @@ func (m *MockMTurkAPI) GetQualificationTypeRequest(arg0 *mturk.GetQualificationT
 	return ret0, ret1
 }
 
-// GetQualificationTypeRequest indicates an expected call of GetQualificationTypeRequest
+// GetQualificationTypeRequest indicates an expected call of GetQualificationTypeRequest.
 func (mr *MockMTurkAPIMockRecorder) GetQualificationTypeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetQualificationTypeRequest", reflect.TypeOf((*MockMTurkAPI)(nil).GetQualificationTypeRequest), arg0)
 }
 
-// GetQualificationTypeWithContext mocks base method
+// GetQualificationTypeWithContext mocks base method.
 func (m *MockMTurkAPI) GetQualificationTypeWithContext(arg0 context.Context, arg1 *mturk.GetQualificationTypeInput, arg2 ...request.Option) (*mturk.GetQualificationTypeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -978,14 +979,14 @@ func (m *MockMTurkAPI) GetQualificationTypeWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetQualificationTypeWithContext indicates an expected call of GetQualificationTypeWithContext
+// GetQualificationTypeWithContext indicates an expected call of GetQualificationTypeWithContext.
 func (mr *MockMTurkAPIMockRecorder) GetQualificationTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetQualificationTypeWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).GetQualificationTypeWithContext), varargs...)
 }
 
-// ListAssignmentsForHIT mocks base method
+// ListAssignmentsForHIT mocks base method.
 func (m *MockMTurkAPI) ListAssignmentsForHIT(arg0 *mturk.ListAssignmentsForHITInput) (*mturk.ListAssignmentsForHITOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAssignmentsForHIT", arg0)
@@ -994,13 +995,13 @@ func (m *MockMTurkAPI) ListAssignmentsForHIT(arg0 *mturk.ListAssignmentsForHITIn
 	return ret0, ret1
 }
 
-// ListAssignmentsForHIT indicates an expected call of ListAssignmentsForHIT
+// ListAssignmentsForHIT indicates an expected call of ListAssignmentsForHIT.
 func (mr *MockMTurkAPIMockRecorder) ListAssignmentsForHIT(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssignmentsForHIT", reflect.TypeOf((*MockMTurkAPI)(nil).ListAssignmentsForHIT), arg0)
 }
 
-// ListAssignmentsForHITPages mocks base method
+// ListAssignmentsForHITPages mocks base method.
 func (m *MockMTurkAPI) ListAssignmentsForHITPages(arg0 *mturk.ListAssignmentsForHITInput, arg1 func(*mturk.ListAssignmentsForHITOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAssignmentsForHITPages", arg0, arg1)
@@ -1008,13 +1009,13 @@ func (m *MockMTurkAPI) ListAssignmentsForHITPages(arg0 *mturk.ListAssignmentsFor
 	return ret0
 }
 
-// ListAssignmentsForHITPages indicates an expected call of ListAssignmentsForHITPages
+// ListAssignmentsForHITPages indicates an expected call of ListAssignmentsForHITPages.
 func (mr *MockMTurkAPIMockRecorder) ListAssignmentsForHITPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssignmentsForHITPages", reflect.TypeOf((*MockMTurkAPI)(nil).ListAssignmentsForHITPages), arg0, arg1)
 }
 
-// ListAssignmentsForHITPagesWithContext mocks base method
+// ListAssignmentsForHITPagesWithContext mocks base method.
 func (m *MockMTurkAPI) ListAssignmentsForHITPagesWithContext(arg0 context.Context, arg1 *mturk.ListAssignmentsForHITInput, arg2 func(*mturk.ListAssignmentsForHITOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1026,14 +1027,14 @@ func (m *MockMTurkAPI) ListAssignmentsForHITPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListAssignmentsForHITPagesWithContext indicates an expected call of ListAssignmentsForHITPagesWithContext
+// ListAssignmentsForHITPagesWithContext indicates an expected call of ListAssignmentsForHITPagesWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListAssignmentsForHITPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssignmentsForHITPagesWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListAssignmentsForHITPagesWithContext), varargs...)
 }
 
-// ListAssignmentsForHITRequest mocks base method
+// ListAssignmentsForHITRequest mocks base method.
 func (m *MockMTurkAPI) ListAssignmentsForHITRequest(arg0 *mturk.ListAssignmentsForHITInput) (*request.Request, *mturk.ListAssignmentsForHITOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAssignmentsForHITRequest", arg0)
@@ -1042,13 +1043,13 @@ func (m *MockMTurkAPI) ListAssignmentsForHITRequest(arg0 *mturk.ListAssignmentsF
 	return ret0, ret1
 }
 
-// ListAssignmentsForHITRequest indicates an expected call of ListAssignmentsForHITRequest
+// ListAssignmentsForHITRequest indicates an expected call of ListAssignmentsForHITRequest.
 func (mr *MockMTurkAPIMockRecorder) ListAssignmentsForHITRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssignmentsForHITRequest", reflect.TypeOf((*MockMTurkAPI)(nil).ListAssignmentsForHITRequest), arg0)
 }
 
-// ListAssignmentsForHITWithContext mocks base method
+// ListAssignmentsForHITWithContext mocks base method.
 func (m *MockMTurkAPI) ListAssignmentsForHITWithContext(arg0 context.Context, arg1 *mturk.ListAssignmentsForHITInput, arg2 ...request.Option) (*mturk.ListAssignmentsForHITOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1061,14 +1062,14 @@ func (m *MockMTurkAPI) ListAssignmentsForHITWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListAssignmentsForHITWithContext indicates an expected call of ListAssignmentsForHITWithContext
+// ListAssignmentsForHITWithContext indicates an expected call of ListAssignmentsForHITWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListAssignmentsForHITWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssignmentsForHITWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListAssignmentsForHITWithContext), varargs...)
 }
 
-// ListBonusPayments mocks base method
+// ListBonusPayments mocks base method.
 func (m *MockMTurkAPI) ListBonusPayments(arg0 *mturk.ListBonusPaymentsInput) (*mturk.ListBonusPaymentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBonusPayments", arg0)
@@ -1077,13 +1078,13 @@ func (m *MockMTurkAPI) ListBonusPayments(arg0 *mturk.ListBonusPaymentsInput) (*m
 	return ret0, ret1
 }
 
-// ListBonusPayments indicates an expected call of ListBonusPayments
+// ListBonusPayments indicates an expected call of ListBonusPayments.
 func (mr *MockMTurkAPIMockRecorder) ListBonusPayments(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBonusPayments", reflect.TypeOf((*MockMTurkAPI)(nil).ListBonusPayments), arg0)
 }
 
-// ListBonusPaymentsPages mocks base method
+// ListBonusPaymentsPages mocks base method.
 func (m *MockMTurkAPI) ListBonusPaymentsPages(arg0 *mturk.ListBonusPaymentsInput, arg1 func(*mturk.ListBonusPaymentsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBonusPaymentsPages", arg0, arg1)
@@ -1091,13 +1092,13 @@ func (m *MockMTurkAPI) ListBonusPaymentsPages(arg0 *mturk.ListBonusPaymentsInput
 	return ret0
 }
 
-// ListBonusPaymentsPages indicates an expected call of ListBonusPaymentsPages
+// ListBonusPaymentsPages indicates an expected call of ListBonusPaymentsPages.
 func (mr *MockMTurkAPIMockRecorder) ListBonusPaymentsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBonusPaymentsPages", reflect.TypeOf((*MockMTurkAPI)(nil).ListBonusPaymentsPages), arg0, arg1)
 }
 
-// ListBonusPaymentsPagesWithContext mocks base method
+// ListBonusPaymentsPagesWithContext mocks base method.
 func (m *MockMTurkAPI) ListBonusPaymentsPagesWithContext(arg0 context.Context, arg1 *mturk.ListBonusPaymentsInput, arg2 func(*mturk.ListBonusPaymentsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1109,14 +1110,14 @@ func (m *MockMTurkAPI) ListBonusPaymentsPagesWithContext(arg0 context.Context, a
 	return ret0
 }
 
-// ListBonusPaymentsPagesWithContext indicates an expected call of ListBonusPaymentsPagesWithContext
+// ListBonusPaymentsPagesWithContext indicates an expected call of ListBonusPaymentsPagesWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListBonusPaymentsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBonusPaymentsPagesWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListBonusPaymentsPagesWithContext), varargs...)
 }
 
-// ListBonusPaymentsRequest mocks base method
+// ListBonusPaymentsRequest mocks base method.
 func (m *MockMTurkAPI) ListBonusPaymentsRequest(arg0 *mturk.ListBonusPaymentsInput) (*request.Request, *mturk.ListBonusPaymentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBonusPaymentsRequest", arg0)
@@ -1125,13 +1126,13 @@ func (m *MockMTurkAPI) ListBonusPaymentsRequest(arg0 *mturk.ListBonusPaymentsInp
 	return ret0, ret1
 }
 
-// ListBonusPaymentsRequest indicates an expected call of ListBonusPaymentsRequest
+// ListBonusPaymentsRequest indicates an expected call of ListBonusPaymentsRequest.
 func (mr *MockMTurkAPIMockRecorder) ListBonusPaymentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBonusPaymentsRequest", reflect.TypeOf((*MockMTurkAPI)(nil).ListBonusPaymentsRequest), arg0)
 }
 
-// ListBonusPaymentsWithContext mocks base method
+// ListBonusPaymentsWithContext mocks base method.
 func (m *MockMTurkAPI) ListBonusPaymentsWithContext(arg0 context.Context, arg1 *mturk.ListBonusPaymentsInput, arg2 ...request.Option) (*mturk.ListBonusPaymentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1144,14 +1145,14 @@ func (m *MockMTurkAPI) ListBonusPaymentsWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ListBonusPaymentsWithContext indicates an expected call of ListBonusPaymentsWithContext
+// ListBonusPaymentsWithContext indicates an expected call of ListBonusPaymentsWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListBonusPaymentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBonusPaymentsWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListBonusPaymentsWithContext), varargs...)
 }
 
-// ListHITs mocks base method
+// ListHITs mocks base method.
 func (m *MockMTurkAPI) ListHITs(arg0 *mturk.ListHITsInput) (*mturk.ListHITsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHITs", arg0)
@@ -1160,13 +1161,13 @@ func (m *MockMTurkAPI) ListHITs(arg0 *mturk.ListHITsInput) (*mturk.ListHITsOutpu
 	return ret0, ret1
 }
 
-// ListHITs indicates an expected call of ListHITs
+// ListHITs indicates an expected call of ListHITs.
 func (mr *MockMTurkAPIMockRecorder) ListHITs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHITs", reflect.TypeOf((*MockMTurkAPI)(nil).ListHITs), arg0)
 }
 
-// ListHITsForQualificationType mocks base method
+// ListHITsForQualificationType mocks base method.
 func (m *MockMTurkAPI) ListHITsForQualificationType(arg0 *mturk.ListHITsForQualificationTypeInput) (*mturk.ListHITsForQualificationTypeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHITsForQualificationType", arg0)
@@ -1175,13 +1176,13 @@ func (m *MockMTurkAPI) ListHITsForQualificationType(arg0 *mturk.ListHITsForQuali
 	return ret0, ret1
 }
 
-// ListHITsForQualificationType indicates an expected call of ListHITsForQualificationType
+// ListHITsForQualificationType indicates an expected call of ListHITsForQualificationType.
 func (mr *MockMTurkAPIMockRecorder) ListHITsForQualificationType(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHITsForQualificationType", reflect.TypeOf((*MockMTurkAPI)(nil).ListHITsForQualificationType), arg0)
 }
 
-// ListHITsForQualificationTypePages mocks base method
+// ListHITsForQualificationTypePages mocks base method.
 func (m *MockMTurkAPI) ListHITsForQualificationTypePages(arg0 *mturk.ListHITsForQualificationTypeInput, arg1 func(*mturk.ListHITsForQualificationTypeOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHITsForQualificationTypePages", arg0, arg1)
@@ -1189,13 +1190,13 @@ func (m *MockMTurkAPI) ListHITsForQualificationTypePages(arg0 *mturk.ListHITsFor
 	return ret0
 }
 
-// ListHITsForQualificationTypePages indicates an expected call of ListHITsForQualificationTypePages
+// ListHITsForQualificationTypePages indicates an expected call of ListHITsForQualificationTypePages.
 func (mr *MockMTurkAPIMockRecorder) ListHITsForQualificationTypePages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHITsForQualificationTypePages", reflect.TypeOf((*MockMTurkAPI)(nil).ListHITsForQualificationTypePages), arg0, arg1)
 }
 
-// ListHITsForQualificationTypePagesWithContext mocks base method
+// ListHITsForQualificationTypePagesWithContext mocks base method.
 func (m *MockMTurkAPI) ListHITsForQualificationTypePagesWithContext(arg0 context.Context, arg1 *mturk.ListHITsForQualificationTypeInput, arg2 func(*mturk.ListHITsForQualificationTypeOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1207,14 +1208,14 @@ func (m *MockMTurkAPI) ListHITsForQualificationTypePagesWithContext(arg0 context
 	return ret0
 }
 
-// ListHITsForQualificationTypePagesWithContext indicates an expected call of ListHITsForQualificationTypePagesWithContext
+// ListHITsForQualificationTypePagesWithContext indicates an expected call of ListHITsForQualificationTypePagesWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListHITsForQualificationTypePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHITsForQualificationTypePagesWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListHITsForQualificationTypePagesWithContext), varargs...)
 }
 
-// ListHITsForQualificationTypeRequest mocks base method
+// ListHITsForQualificationTypeRequest mocks base method.
 func (m *MockMTurkAPI) ListHITsForQualificationTypeRequest(arg0 *mturk.ListHITsForQualificationTypeInput) (*request.Request, *mturk.ListHITsForQualificationTypeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHITsForQualificationTypeRequest", arg0)
@@ -1223,13 +1224,13 @@ func (m *MockMTurkAPI) ListHITsForQualificationTypeRequest(arg0 *mturk.ListHITsF
 	return ret0, ret1
 }
 
-// ListHITsForQualificationTypeRequest indicates an expected call of ListHITsForQualificationTypeRequest
+// ListHITsForQualificationTypeRequest indicates an expected call of ListHITsForQualificationTypeRequest.
 func (mr *MockMTurkAPIMockRecorder) ListHITsForQualificationTypeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHITsForQualificationTypeRequest", reflect.TypeOf((*MockMTurkAPI)(nil).ListHITsForQualificationTypeRequest), arg0)
 }
 
-// ListHITsForQualificationTypeWithContext mocks base method
+// ListHITsForQualificationTypeWithContext mocks base method.
 func (m *MockMTurkAPI) ListHITsForQualificationTypeWithContext(arg0 context.Context, arg1 *mturk.ListHITsForQualificationTypeInput, arg2 ...request.Option) (*mturk.ListHITsForQualificationTypeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1242,14 +1243,14 @@ func (m *MockMTurkAPI) ListHITsForQualificationTypeWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListHITsForQualificationTypeWithContext indicates an expected call of ListHITsForQualificationTypeWithContext
+// ListHITsForQualificationTypeWithContext indicates an expected call of ListHITsForQualificationTypeWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListHITsForQualificationTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHITsForQualificationTypeWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListHITsForQualificationTypeWithContext), varargs...)
 }
 
-// ListHITsPages mocks base method
+// ListHITsPages mocks base method.
 func (m *MockMTurkAPI) ListHITsPages(arg0 *mturk.ListHITsInput, arg1 func(*mturk.ListHITsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHITsPages", arg0, arg1)
@@ -1257,13 +1258,13 @@ func (m *MockMTurkAPI) ListHITsPages(arg0 *mturk.ListHITsInput, arg1 func(*mturk
 	return ret0
 }
 
-// ListHITsPages indicates an expected call of ListHITsPages
+// ListHITsPages indicates an expected call of ListHITsPages.
 func (mr *MockMTurkAPIMockRecorder) ListHITsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHITsPages", reflect.TypeOf((*MockMTurkAPI)(nil).ListHITsPages), arg0, arg1)
 }
 
-// ListHITsPagesWithContext mocks base method
+// ListHITsPagesWithContext mocks base method.
 func (m *MockMTurkAPI) ListHITsPagesWithContext(arg0 context.Context, arg1 *mturk.ListHITsInput, arg2 func(*mturk.ListHITsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1275,14 +1276,14 @@ func (m *MockMTurkAPI) ListHITsPagesWithContext(arg0 context.Context, arg1 *mtur
 	return ret0
 }
 
-// ListHITsPagesWithContext indicates an expected call of ListHITsPagesWithContext
+// ListHITsPagesWithContext indicates an expected call of ListHITsPagesWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListHITsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHITsPagesWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListHITsPagesWithContext), varargs...)
 }
 
-// ListHITsRequest mocks base method
+// ListHITsRequest mocks base method.
 func (m *MockMTurkAPI) ListHITsRequest(arg0 *mturk.ListHITsInput) (*request.Request, *mturk.ListHITsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHITsRequest", arg0)
@@ -1291,13 +1292,13 @@ func (m *MockMTurkAPI) ListHITsRequest(arg0 *mturk.ListHITsInput) (*request.Requ
 	return ret0, ret1
 }
 
-// ListHITsRequest indicates an expected call of ListHITsRequest
+// ListHITsRequest indicates an expected call of ListHITsRequest.
 func (mr *MockMTurkAPIMockRecorder) ListHITsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHITsRequest", reflect.TypeOf((*MockMTurkAPI)(nil).ListHITsRequest), arg0)
 }
 
-// ListHITsWithContext mocks base method
+// ListHITsWithContext mocks base method.
 func (m *MockMTurkAPI) ListHITsWithContext(arg0 context.Context, arg1 *mturk.ListHITsInput, arg2 ...request.Option) (*mturk.ListHITsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1310,14 +1311,14 @@ func (m *MockMTurkAPI) ListHITsWithContext(arg0 context.Context, arg1 *mturk.Lis
 	return ret0, ret1
 }
 
-// ListHITsWithContext indicates an expected call of ListHITsWithContext
+// ListHITsWithContext indicates an expected call of ListHITsWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListHITsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHITsWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListHITsWithContext), varargs...)
 }
 
-// ListQualificationRequests mocks base method
+// ListQualificationRequests mocks base method.
 func (m *MockMTurkAPI) ListQualificationRequests(arg0 *mturk.ListQualificationRequestsInput) (*mturk.ListQualificationRequestsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListQualificationRequests", arg0)
@@ -1326,13 +1327,13 @@ func (m *MockMTurkAPI) ListQualificationRequests(arg0 *mturk.ListQualificationRe
 	return ret0, ret1
 }
 
-// ListQualificationRequests indicates an expected call of ListQualificationRequests
+// ListQualificationRequests indicates an expected call of ListQualificationRequests.
 func (mr *MockMTurkAPIMockRecorder) ListQualificationRequests(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListQualificationRequests", reflect.TypeOf((*MockMTurkAPI)(nil).ListQualificationRequests), arg0)
 }
 
-// ListQualificationRequestsPages mocks base method
+// ListQualificationRequestsPages mocks base method.
 func (m *MockMTurkAPI) ListQualificationRequestsPages(arg0 *mturk.ListQualificationRequestsInput, arg1 func(*mturk.ListQualificationRequestsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListQualificationRequestsPages", arg0, arg1)
@@ -1340,13 +1341,13 @@ func (m *MockMTurkAPI) ListQualificationRequestsPages(arg0 *mturk.ListQualificat
 	return ret0
 }
 
-// ListQualificationRequestsPages indicates an expected call of ListQualificationRequestsPages
+// ListQualificationRequestsPages indicates an expected call of ListQualificationRequestsPages.
 func (mr *MockMTurkAPIMockRecorder) ListQualificationRequestsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListQualificationRequestsPages", reflect.TypeOf((*MockMTurkAPI)(nil).ListQualificationRequestsPages), arg0, arg1)
 }
 
-// ListQualificationRequestsPagesWithContext mocks base method
+// ListQualificationRequestsPagesWithContext mocks base method.
 func (m *MockMTurkAPI) ListQualificationRequestsPagesWithContext(arg0 context.Context, arg1 *mturk.ListQualificationRequestsInput, arg2 func(*mturk.ListQualificationRequestsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1358,14 +1359,14 @@ func (m *MockMTurkAPI) ListQualificationRequestsPagesWithContext(arg0 context.Co
 	return ret0
 }
 
-// ListQualificationRequestsPagesWithContext indicates an expected call of ListQualificationRequestsPagesWithContext
+// ListQualificationRequestsPagesWithContext indicates an expected call of ListQualificationRequestsPagesWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListQualificationRequestsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListQualificationRequestsPagesWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListQualificationRequestsPagesWithContext), varargs...)
 }
 
-// ListQualificationRequestsRequest mocks base method
+// ListQualificationRequestsRequest mocks base method.
 func (m *MockMTurkAPI) ListQualificationRequestsRequest(arg0 *mturk.ListQualificationRequestsInput) (*request.Request, *mturk.ListQualificationRequestsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListQualificationRequestsRequest", arg0)
@@ -1374,13 +1375,13 @@ func (m *MockMTurkAPI) ListQualificationRequestsRequest(arg0 *mturk.ListQualific
 	return ret0, ret1
 }
 
-// ListQualificationRequestsRequest indicates an expected call of ListQualificationRequestsRequest
+// ListQualificationRequestsRequest indicates an expected call of ListQualificationRequestsRequest.
 func (mr *MockMTurkAPIMockRecorder) ListQualificationRequestsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListQualificationRequestsRequest", reflect.TypeOf((*MockMTurkAPI)(nil).ListQualificationRequestsRequest), arg0)
 }
 
-// ListQualificationRequestsWithContext mocks base method
+// ListQualificationRequestsWithContext mocks base method.
 func (m *MockMTurkAPI) ListQualificationRequestsWithContext(arg0 context.Context, arg1 *mturk.ListQualificationRequestsInput, arg2 ...request.Option) (*mturk.ListQualificationRequestsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1393,14 +1394,14 @@ func (m *MockMTurkAPI) ListQualificationRequestsWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListQualificationRequestsWithContext indicates an expected call of ListQualificationRequestsWithContext
+// ListQualificationRequestsWithContext indicates an expected call of ListQualificationRequestsWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListQualificationRequestsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListQualificationRequestsWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListQualificationRequestsWithContext), varargs...)
 }
 
-// ListQualificationTypes mocks base method
+// ListQualificationTypes mocks base method.
 func (m *MockMTurkAPI) ListQualificationTypes(arg0 *mturk.ListQualificationTypesInput) (*mturk.ListQualificationTypesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListQualificationTypes", arg0)
@@ -1409,13 +1410,13 @@ func (m *MockMTurkAPI) ListQualificationTypes(arg0 *mturk.ListQualificationTypes
 	return ret0, ret1
 }
 
-// ListQualificationTypes indicates an expected call of ListQualificationTypes
+// ListQualificationTypes indicates an expected call of ListQualificationTypes.
 func (mr *MockMTurkAPIMockRecorder) ListQualificationTypes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListQualificationTypes", reflect.TypeOf((*MockMTurkAPI)(nil).ListQualificationTypes), arg0)
 }
 
-// ListQualificationTypesPages mocks base method
+// ListQualificationTypesPages mocks base method.
 func (m *MockMTurkAPI) ListQualificationTypesPages(arg0 *mturk.ListQualificationTypesInput, arg1 func(*mturk.ListQualificationTypesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListQualificationTypesPages", arg0, arg1)
@@ -1423,13 +1424,13 @@ func (m *MockMTurkAPI) ListQualificationTypesPages(arg0 *mturk.ListQualification
 	return ret0
 }
 
-// ListQualificationTypesPages indicates an expected call of ListQualificationTypesPages
+// ListQualificationTypesPages indicates an expected call of ListQualificationTypesPages.
 func (mr *MockMTurkAPIMockRecorder) ListQualificationTypesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListQualificationTypesPages", reflect.TypeOf((*MockMTurkAPI)(nil).ListQualificationTypesPages), arg0, arg1)
 }
 
-// ListQualificationTypesPagesWithContext mocks base method
+// ListQualificationTypesPagesWithContext mocks base method.
 func (m *MockMTurkAPI) ListQualificationTypesPagesWithContext(arg0 context.Context, arg1 *mturk.ListQualificationTypesInput, arg2 func(*mturk.ListQualificationTypesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1441,14 +1442,14 @@ func (m *MockMTurkAPI) ListQualificationTypesPagesWithContext(arg0 context.Conte
 	return ret0
 }
 
-// ListQualificationTypesPagesWithContext indicates an expected call of ListQualificationTypesPagesWithContext
+// ListQualificationTypesPagesWithContext indicates an expected call of ListQualificationTypesPagesWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListQualificationTypesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListQualificationTypesPagesWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListQualificationTypesPagesWithContext), varargs...)
 }
 
-// ListQualificationTypesRequest mocks base method
+// ListQualificationTypesRequest mocks base method.
 func (m *MockMTurkAPI) ListQualificationTypesRequest(arg0 *mturk.ListQualificationTypesInput) (*request.Request, *mturk.ListQualificationTypesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListQualificationTypesRequest", arg0)
@@ -1457,13 +1458,13 @@ func (m *MockMTurkAPI) ListQualificationTypesRequest(arg0 *mturk.ListQualificati
 	return ret0, ret1
 }
 
-// ListQualificationTypesRequest indicates an expected call of ListQualificationTypesRequest
+// ListQualificationTypesRequest indicates an expected call of ListQualificationTypesRequest.
 func (mr *MockMTurkAPIMockRecorder) ListQualificationTypesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListQualificationTypesRequest", reflect.TypeOf((*MockMTurkAPI)(nil).ListQualificationTypesRequest), arg0)
 }
 
-// ListQualificationTypesWithContext mocks base method
+// ListQualificationTypesWithContext mocks base method.
 func (m *MockMTurkAPI) ListQualificationTypesWithContext(arg0 context.Context, arg1 *mturk.ListQualificationTypesInput, arg2 ...request.Option) (*mturk.ListQualificationTypesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1476,14 +1477,14 @@ func (m *MockMTurkAPI) ListQualificationTypesWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ListQualificationTypesWithContext indicates an expected call of ListQualificationTypesWithContext
+// ListQualificationTypesWithContext indicates an expected call of ListQualificationTypesWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListQualificationTypesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListQualificationTypesWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListQualificationTypesWithContext), varargs...)
 }
 
-// ListReviewPolicyResultsForHIT mocks base method
+// ListReviewPolicyResultsForHIT mocks base method.
 func (m *MockMTurkAPI) ListReviewPolicyResultsForHIT(arg0 *mturk.ListReviewPolicyResultsForHITInput) (*mturk.ListReviewPolicyResultsForHITOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReviewPolicyResultsForHIT", arg0)
@@ -1492,13 +1493,13 @@ func (m *MockMTurkAPI) ListReviewPolicyResultsForHIT(arg0 *mturk.ListReviewPolic
 	return ret0, ret1
 }
 
-// ListReviewPolicyResultsForHIT indicates an expected call of ListReviewPolicyResultsForHIT
+// ListReviewPolicyResultsForHIT indicates an expected call of ListReviewPolicyResultsForHIT.
 func (mr *MockMTurkAPIMockRecorder) ListReviewPolicyResultsForHIT(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReviewPolicyResultsForHIT", reflect.TypeOf((*MockMTurkAPI)(nil).ListReviewPolicyResultsForHIT), arg0)
 }
 
-// ListReviewPolicyResultsForHITPages mocks base method
+// ListReviewPolicyResultsForHITPages mocks base method.
 func (m *MockMTurkAPI) ListReviewPolicyResultsForHITPages(arg0 *mturk.ListReviewPolicyResultsForHITInput, arg1 func(*mturk.ListReviewPolicyResultsForHITOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReviewPolicyResultsForHITPages", arg0, arg1)
@@ -1506,13 +1507,13 @@ func (m *MockMTurkAPI) ListReviewPolicyResultsForHITPages(arg0 *mturk.ListReview
 	return ret0
 }
 
-// ListReviewPolicyResultsForHITPages indicates an expected call of ListReviewPolicyResultsForHITPages
+// ListReviewPolicyResultsForHITPages indicates an expected call of ListReviewPolicyResultsForHITPages.
 func (mr *MockMTurkAPIMockRecorder) ListReviewPolicyResultsForHITPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReviewPolicyResultsForHITPages", reflect.TypeOf((*MockMTurkAPI)(nil).ListReviewPolicyResultsForHITPages), arg0, arg1)
 }
 
-// ListReviewPolicyResultsForHITPagesWithContext mocks base method
+// ListReviewPolicyResultsForHITPagesWithContext mocks base method.
 func (m *MockMTurkAPI) ListReviewPolicyResultsForHITPagesWithContext(arg0 context.Context, arg1 *mturk.ListReviewPolicyResultsForHITInput, arg2 func(*mturk.ListReviewPolicyResultsForHITOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1524,14 +1525,14 @@ func (m *MockMTurkAPI) ListReviewPolicyResultsForHITPagesWithContext(arg0 contex
 	return ret0
 }
 
-// ListReviewPolicyResultsForHITPagesWithContext indicates an expected call of ListReviewPolicyResultsForHITPagesWithContext
+// ListReviewPolicyResultsForHITPagesWithContext indicates an expected call of ListReviewPolicyResultsForHITPagesWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListReviewPolicyResultsForHITPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReviewPolicyResultsForHITPagesWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListReviewPolicyResultsForHITPagesWithContext), varargs...)
 }
 
-// ListReviewPolicyResultsForHITRequest mocks base method
+// ListReviewPolicyResultsForHITRequest mocks base method.
 func (m *MockMTurkAPI) ListReviewPolicyResultsForHITRequest(arg0 *mturk.ListReviewPolicyResultsForHITInput) (*request.Request, *mturk.ListReviewPolicyResultsForHITOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReviewPolicyResultsForHITRequest", arg0)
@@ -1540,13 +1541,13 @@ func (m *MockMTurkAPI) ListReviewPolicyResultsForHITRequest(arg0 *mturk.ListRevi
 	return ret0, ret1
 }
 
-// ListReviewPolicyResultsForHITRequest indicates an expected call of ListReviewPolicyResultsForHITRequest
+// ListReviewPolicyResultsForHITRequest indicates an expected call of ListReviewPolicyResultsForHITRequest.
 func (mr *MockMTurkAPIMockRecorder) ListReviewPolicyResultsForHITRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReviewPolicyResultsForHITRequest", reflect.TypeOf((*MockMTurkAPI)(nil).ListReviewPolicyResultsForHITRequest), arg0)
 }
 
-// ListReviewPolicyResultsForHITWithContext mocks base method
+// ListReviewPolicyResultsForHITWithContext mocks base method.
 func (m *MockMTurkAPI) ListReviewPolicyResultsForHITWithContext(arg0 context.Context, arg1 *mturk.ListReviewPolicyResultsForHITInput, arg2 ...request.Option) (*mturk.ListReviewPolicyResultsForHITOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1559,14 +1560,14 @@ func (m *MockMTurkAPI) ListReviewPolicyResultsForHITWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListReviewPolicyResultsForHITWithContext indicates an expected call of ListReviewPolicyResultsForHITWithContext
+// ListReviewPolicyResultsForHITWithContext indicates an expected call of ListReviewPolicyResultsForHITWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListReviewPolicyResultsForHITWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReviewPolicyResultsForHITWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListReviewPolicyResultsForHITWithContext), varargs...)
 }
 
-// ListReviewableHITs mocks base method
+// ListReviewableHITs mocks base method.
 func (m *MockMTurkAPI) ListReviewableHITs(arg0 *mturk.ListReviewableHITsInput) (*mturk.ListReviewableHITsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReviewableHITs", arg0)
@@ -1575,13 +1576,13 @@ func (m *MockMTurkAPI) ListReviewableHITs(arg0 *mturk.ListReviewableHITsInput) (
 	return ret0, ret1
 }
 
-// ListReviewableHITs indicates an expected call of ListReviewableHITs
+// ListReviewableHITs indicates an expected call of ListReviewableHITs.
 func (mr *MockMTurkAPIMockRecorder) ListReviewableHITs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReviewableHITs", reflect.TypeOf((*MockMTurkAPI)(nil).ListReviewableHITs), arg0)
 }
 
-// ListReviewableHITsPages mocks base method
+// ListReviewableHITsPages mocks base method.
 func (m *MockMTurkAPI) ListReviewableHITsPages(arg0 *mturk.ListReviewableHITsInput, arg1 func(*mturk.ListReviewableHITsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReviewableHITsPages", arg0, arg1)
@@ -1589,13 +1590,13 @@ func (m *MockMTurkAPI) ListReviewableHITsPages(arg0 *mturk.ListReviewableHITsInp
 	return ret0
 }
 
-// ListReviewableHITsPages indicates an expected call of ListReviewableHITsPages
+// ListReviewableHITsPages indicates an expected call of ListReviewableHITsPages.
 func (mr *MockMTurkAPIMockRecorder) ListReviewableHITsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReviewableHITsPages", reflect.TypeOf((*MockMTurkAPI)(nil).ListReviewableHITsPages), arg0, arg1)
 }
 
-// ListReviewableHITsPagesWithContext mocks base method
+// ListReviewableHITsPagesWithContext mocks base method.
 func (m *MockMTurkAPI) ListReviewableHITsPagesWithContext(arg0 context.Context, arg1 *mturk.ListReviewableHITsInput, arg2 func(*mturk.ListReviewableHITsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1607,14 +1608,14 @@ func (m *MockMTurkAPI) ListReviewableHITsPagesWithContext(arg0 context.Context, 
 	return ret0
 }
 
-// ListReviewableHITsPagesWithContext indicates an expected call of ListReviewableHITsPagesWithContext
+// ListReviewableHITsPagesWithContext indicates an expected call of ListReviewableHITsPagesWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListReviewableHITsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReviewableHITsPagesWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListReviewableHITsPagesWithContext), varargs...)
 }
 
-// ListReviewableHITsRequest mocks base method
+// ListReviewableHITsRequest mocks base method.
 func (m *MockMTurkAPI) ListReviewableHITsRequest(arg0 *mturk.ListReviewableHITsInput) (*request.Request, *mturk.ListReviewableHITsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReviewableHITsRequest", arg0)
@@ -1623,13 +1624,13 @@ func (m *MockMTurkAPI) ListReviewableHITsRequest(arg0 *mturk.ListReviewableHITsI
 	return ret0, ret1
 }
 
-// ListReviewableHITsRequest indicates an expected call of ListReviewableHITsRequest
+// ListReviewableHITsRequest indicates an expected call of ListReviewableHITsRequest.
 func (mr *MockMTurkAPIMockRecorder) ListReviewableHITsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReviewableHITsRequest", reflect.TypeOf((*MockMTurkAPI)(nil).ListReviewableHITsRequest), arg0)
 }
 
-// ListReviewableHITsWithContext mocks base method
+// ListReviewableHITsWithContext mocks base method.
 func (m *MockMTurkAPI) ListReviewableHITsWithContext(arg0 context.Context, arg1 *mturk.ListReviewableHITsInput, arg2 ...request.Option) (*mturk.ListReviewableHITsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1642,14 +1643,14 @@ func (m *MockMTurkAPI) ListReviewableHITsWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListReviewableHITsWithContext indicates an expected call of ListReviewableHITsWithContext
+// ListReviewableHITsWithContext indicates an expected call of ListReviewableHITsWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListReviewableHITsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReviewableHITsWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListReviewableHITsWithContext), varargs...)
 }
 
-// ListWorkerBlocks mocks base method
+// ListWorkerBlocks mocks base method.
 func (m *MockMTurkAPI) ListWorkerBlocks(arg0 *mturk.ListWorkerBlocksInput) (*mturk.ListWorkerBlocksOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkerBlocks", arg0)
@@ -1658,13 +1659,13 @@ func (m *MockMTurkAPI) ListWorkerBlocks(arg0 *mturk.ListWorkerBlocksInput) (*mtu
 	return ret0, ret1
 }
 
-// ListWorkerBlocks indicates an expected call of ListWorkerBlocks
+// ListWorkerBlocks indicates an expected call of ListWorkerBlocks.
 func (mr *MockMTurkAPIMockRecorder) ListWorkerBlocks(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkerBlocks", reflect.TypeOf((*MockMTurkAPI)(nil).ListWorkerBlocks), arg0)
 }
 
-// ListWorkerBlocksPages mocks base method
+// ListWorkerBlocksPages mocks base method.
 func (m *MockMTurkAPI) ListWorkerBlocksPages(arg0 *mturk.ListWorkerBlocksInput, arg1 func(*mturk.ListWorkerBlocksOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkerBlocksPages", arg0, arg1)
@@ -1672,13 +1673,13 @@ func (m *MockMTurkAPI) ListWorkerBlocksPages(arg0 *mturk.ListWorkerBlocksInput, 
 	return ret0
 }
 
-// ListWorkerBlocksPages indicates an expected call of ListWorkerBlocksPages
+// ListWorkerBlocksPages indicates an expected call of ListWorkerBlocksPages.
 func (mr *MockMTurkAPIMockRecorder) ListWorkerBlocksPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkerBlocksPages", reflect.TypeOf((*MockMTurkAPI)(nil).ListWorkerBlocksPages), arg0, arg1)
 }
 
-// ListWorkerBlocksPagesWithContext mocks base method
+// ListWorkerBlocksPagesWithContext mocks base method.
 func (m *MockMTurkAPI) ListWorkerBlocksPagesWithContext(arg0 context.Context, arg1 *mturk.ListWorkerBlocksInput, arg2 func(*mturk.ListWorkerBlocksOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1690,14 +1691,14 @@ func (m *MockMTurkAPI) ListWorkerBlocksPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// ListWorkerBlocksPagesWithContext indicates an expected call of ListWorkerBlocksPagesWithContext
+// ListWorkerBlocksPagesWithContext indicates an expected call of ListWorkerBlocksPagesWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListWorkerBlocksPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkerBlocksPagesWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListWorkerBlocksPagesWithContext), varargs...)
 }
 
-// ListWorkerBlocksRequest mocks base method
+// ListWorkerBlocksRequest mocks base method.
 func (m *MockMTurkAPI) ListWorkerBlocksRequest(arg0 *mturk.ListWorkerBlocksInput) (*request.Request, *mturk.ListWorkerBlocksOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkerBlocksRequest", arg0)
@@ -1706,13 +1707,13 @@ func (m *MockMTurkAPI) ListWorkerBlocksRequest(arg0 *mturk.ListWorkerBlocksInput
 	return ret0, ret1
 }
 
-// ListWorkerBlocksRequest indicates an expected call of ListWorkerBlocksRequest
+// ListWorkerBlocksRequest indicates an expected call of ListWorkerBlocksRequest.
 func (mr *MockMTurkAPIMockRecorder) ListWorkerBlocksRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkerBlocksRequest", reflect.TypeOf((*MockMTurkAPI)(nil).ListWorkerBlocksRequest), arg0)
 }
 
-// ListWorkerBlocksWithContext mocks base method
+// ListWorkerBlocksWithContext mocks base method.
 func (m *MockMTurkAPI) ListWorkerBlocksWithContext(arg0 context.Context, arg1 *mturk.ListWorkerBlocksInput, arg2 ...request.Option) (*mturk.ListWorkerBlocksOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1725,14 +1726,14 @@ func (m *MockMTurkAPI) ListWorkerBlocksWithContext(arg0 context.Context, arg1 *m
 	return ret0, ret1
 }
 
-// ListWorkerBlocksWithContext indicates an expected call of ListWorkerBlocksWithContext
+// ListWorkerBlocksWithContext indicates an expected call of ListWorkerBlocksWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListWorkerBlocksWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkerBlocksWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListWorkerBlocksWithContext), varargs...)
 }
 
-// ListWorkersWithQualificationType mocks base method
+// ListWorkersWithQualificationType mocks base method.
 func (m *MockMTurkAPI) ListWorkersWithQualificationType(arg0 *mturk.ListWorkersWithQualificationTypeInput) (*mturk.ListWorkersWithQualificationTypeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkersWithQualificationType", arg0)
@@ -1741,13 +1742,13 @@ func (m *MockMTurkAPI) ListWorkersWithQualificationType(arg0 *mturk.ListWorkersW
 	return ret0, ret1
 }
 
-// ListWorkersWithQualificationType indicates an expected call of ListWorkersWithQualificationType
+// ListWorkersWithQualificationType indicates an expected call of ListWorkersWithQualificationType.
 func (mr *MockMTurkAPIMockRecorder) ListWorkersWithQualificationType(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkersWithQualificationType", reflect.TypeOf((*MockMTurkAPI)(nil).ListWorkersWithQualificationType), arg0)
 }
 
-// ListWorkersWithQualificationTypePages mocks base method
+// ListWorkersWithQualificationTypePages mocks base method.
 func (m *MockMTurkAPI) ListWorkersWithQualificationTypePages(arg0 *mturk.ListWorkersWithQualificationTypeInput, arg1 func(*mturk.ListWorkersWithQualificationTypeOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkersWithQualificationTypePages", arg0, arg1)
@@ -1755,13 +1756,13 @@ func (m *MockMTurkAPI) ListWorkersWithQualificationTypePages(arg0 *mturk.ListWor
 	return ret0
 }
 
-// ListWorkersWithQualificationTypePages indicates an expected call of ListWorkersWithQualificationTypePages
+// ListWorkersWithQualificationTypePages indicates an expected call of ListWorkersWithQualificationTypePages.
 func (mr *MockMTurkAPIMockRecorder) ListWorkersWithQualificationTypePages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkersWithQualificationTypePages", reflect.TypeOf((*MockMTurkAPI)(nil).ListWorkersWithQualificationTypePages), arg0, arg1)
 }
 
-// ListWorkersWithQualificationTypePagesWithContext mocks base method
+// ListWorkersWithQualificationTypePagesWithContext mocks base method.
 func (m *MockMTurkAPI) ListWorkersWithQualificationTypePagesWithContext(arg0 context.Context, arg1 *mturk.ListWorkersWithQualificationTypeInput, arg2 func(*mturk.ListWorkersWithQualificationTypeOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1773,14 +1774,14 @@ func (m *MockMTurkAPI) ListWorkersWithQualificationTypePagesWithContext(arg0 con
 	return ret0
 }
 
-// ListWorkersWithQualificationTypePagesWithContext indicates an expected call of ListWorkersWithQualificationTypePagesWithContext
+// ListWorkersWithQualificationTypePagesWithContext indicates an expected call of ListWorkersWithQualificationTypePagesWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListWorkersWithQualificationTypePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkersWithQualificationTypePagesWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListWorkersWithQualificationTypePagesWithContext), varargs...)
 }
 
-// ListWorkersWithQualificationTypeRequest mocks base method
+// ListWorkersWithQualificationTypeRequest mocks base method.
 func (m *MockMTurkAPI) ListWorkersWithQualificationTypeRequest(arg0 *mturk.ListWorkersWithQualificationTypeInput) (*request.Request, *mturk.ListWorkersWithQualificationTypeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkersWithQualificationTypeRequest", arg0)
@@ -1789,13 +1790,13 @@ func (m *MockMTurkAPI) ListWorkersWithQualificationTypeRequest(arg0 *mturk.ListW
 	return ret0, ret1
 }
 
-// ListWorkersWithQualificationTypeRequest indicates an expected call of ListWorkersWithQualificationTypeRequest
+// ListWorkersWithQualificationTypeRequest indicates an expected call of ListWorkersWithQualificationTypeRequest.
 func (mr *MockMTurkAPIMockRecorder) ListWorkersWithQualificationTypeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkersWithQualificationTypeRequest", reflect.TypeOf((*MockMTurkAPI)(nil).ListWorkersWithQualificationTypeRequest), arg0)
 }
 
-// ListWorkersWithQualificationTypeWithContext mocks base method
+// ListWorkersWithQualificationTypeWithContext mocks base method.
 func (m *MockMTurkAPI) ListWorkersWithQualificationTypeWithContext(arg0 context.Context, arg1 *mturk.ListWorkersWithQualificationTypeInput, arg2 ...request.Option) (*mturk.ListWorkersWithQualificationTypeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1808,14 +1809,14 @@ func (m *MockMTurkAPI) ListWorkersWithQualificationTypeWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// ListWorkersWithQualificationTypeWithContext indicates an expected call of ListWorkersWithQualificationTypeWithContext
+// ListWorkersWithQualificationTypeWithContext indicates an expected call of ListWorkersWithQualificationTypeWithContext.
 func (mr *MockMTurkAPIMockRecorder) ListWorkersWithQualificationTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkersWithQualificationTypeWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).ListWorkersWithQualificationTypeWithContext), varargs...)
 }
 
-// NotifyWorkers mocks base method
+// NotifyWorkers mocks base method.
 func (m *MockMTurkAPI) NotifyWorkers(arg0 *mturk.NotifyWorkersInput) (*mturk.NotifyWorkersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "NotifyWorkers", arg0)
@@ -1824,13 +1825,13 @@ func (m *MockMTurkAPI) NotifyWorkers(arg0 *mturk.NotifyWorkersInput) (*mturk.Not
 	return ret0, ret1
 }
 
-// NotifyWorkers indicates an expected call of NotifyWorkers
+// NotifyWorkers indicates an expected call of NotifyWorkers.
 func (mr *MockMTurkAPIMockRecorder) NotifyWorkers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "NotifyWorkers", reflect.TypeOf((*MockMTurkAPI)(nil).NotifyWorkers), arg0)
 }
 
-// NotifyWorkersRequest mocks base method
+// NotifyWorkersRequest mocks base method.
 func (m *MockMTurkAPI) NotifyWorkersRequest(arg0 *mturk.NotifyWorkersInput) (*request.Request, *mturk.NotifyWorkersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "NotifyWorkersRequest", arg0)
@@ -1839,13 +1840,13 @@ func (m *MockMTurkAPI) NotifyWorkersRequest(arg0 *mturk.NotifyWorkersInput) (*re
 	return ret0, ret1
 }
 
-// NotifyWorkersRequest indicates an expected call of NotifyWorkersRequest
+// NotifyWorkersRequest indicates an expected call of NotifyWorkersRequest.
 func (mr *MockMTurkAPIMockRecorder) NotifyWorkersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "NotifyWorkersRequest", reflect.TypeOf((*MockMTurkAPI)(nil).NotifyWorkersRequest), arg0)
 }
 
-// NotifyWorkersWithContext mocks base method
+// NotifyWorkersWithContext mocks base method.
 func (m *MockMTurkAPI) NotifyWorkersWithContext(arg0 context.Context, arg1 *mturk.NotifyWorkersInput, arg2 ...request.Option) (*mturk.NotifyWorkersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1858,14 +1859,14 @@ func (m *MockMTurkAPI) NotifyWorkersWithContext(arg0 context.Context, arg1 *mtur
 	return ret0, ret1
 }
 
-// NotifyWorkersWithContext indicates an expected call of NotifyWorkersWithContext
+// NotifyWorkersWithContext indicates an expected call of NotifyWorkersWithContext.
 func (mr *MockMTurkAPIMockRecorder) NotifyWorkersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "NotifyWorkersWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).NotifyWorkersWithContext), varargs...)
 }
 
-// RejectAssignment mocks base method
+// RejectAssignment mocks base method.
 func (m *MockMTurkAPI) RejectAssignment(arg0 *mturk.RejectAssignmentInput) (*mturk.RejectAssignmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RejectAssignment", arg0)
@@ -1874,13 +1875,13 @@ func (m *MockMTurkAPI) RejectAssignment(arg0 *mturk.RejectAssignmentInput) (*mtu
 	return ret0, ret1
 }
 
-// RejectAssignment indicates an expected call of RejectAssignment
+// RejectAssignment indicates an expected call of RejectAssignment.
 func (mr *MockMTurkAPIMockRecorder) RejectAssignment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RejectAssignment", reflect.TypeOf((*MockMTurkAPI)(nil).RejectAssignment), arg0)
 }
 
-// RejectAssignmentRequest mocks base method
+// RejectAssignmentRequest mocks base method.
 func (m *MockMTurkAPI) RejectAssignmentRequest(arg0 *mturk.RejectAssignmentInput) (*request.Request, *mturk.RejectAssignmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RejectAssignmentRequest", arg0)
@@ -1889,13 +1890,13 @@ func (m *MockMTurkAPI) RejectAssignmentRequest(arg0 *mturk.RejectAssignmentInput
 	return ret0, ret1
 }
 
-// RejectAssignmentRequest indicates an expected call of RejectAssignmentRequest
+// RejectAssignmentRequest indicates an expected call of RejectAssignmentRequest.
 func (mr *MockMTurkAPIMockRecorder) RejectAssignmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RejectAssignmentRequest", reflect.TypeOf((*MockMTurkAPI)(nil).RejectAssignmentRequest), arg0)
 }
 
-// RejectAssignmentWithContext mocks base method
+// RejectAssignmentWithContext mocks base method.
 func (m *MockMTurkAPI) RejectAssignmentWithContext(arg0 context.Context, arg1 *mturk.RejectAssignmentInput, arg2 ...request.Option) (*mturk.RejectAssignmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1908,14 +1909,14 @@ func (m *MockMTurkAPI) RejectAssignmentWithContext(arg0 context.Context, arg1 *m
 	return ret0, ret1
 }
 
-// RejectAssignmentWithContext indicates an expected call of RejectAssignmentWithContext
+// RejectAssignmentWithContext indicates an expected call of RejectAssignmentWithContext.
 func (mr *MockMTurkAPIMockRecorder) RejectAssignmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RejectAssignmentWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).RejectAssignmentWithContext), varargs...)
 }
 
-// RejectQualificationRequest mocks base method
+// RejectQualificationRequest mocks base method.
 func (m *MockMTurkAPI) RejectQualificationRequest(arg0 *mturk.RejectQualificationRequestInput) (*mturk.RejectQualificationRequestOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RejectQualificationRequest", arg0)
@@ -1924,13 +1925,13 @@ func (m *MockMTurkAPI) RejectQualificationRequest(arg0 *mturk.RejectQualificatio
 	return ret0, ret1
 }
 
-// RejectQualificationRequest indicates an expected call of RejectQualificationRequest
+// RejectQualificationRequest indicates an expected call of RejectQualificationRequest.
 func (mr *MockMTurkAPIMockRecorder) RejectQualificationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RejectQualificationRequest", reflect.TypeOf((*MockMTurkAPI)(nil).RejectQualificationRequest), arg0)
 }
 
-// RejectQualificationRequestRequest mocks base method
+// RejectQualificationRequestRequest mocks base method.
 func (m *MockMTurkAPI) RejectQualificationRequestRequest(arg0 *mturk.RejectQualificationRequestInput) (*request.Request, *mturk.RejectQualificationRequestOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RejectQualificationRequestRequest", arg0)
@@ -1939,13 +1940,13 @@ func (m *MockMTurkAPI) RejectQualificationRequestRequest(arg0 *mturk.RejectQuali
 	return ret0, ret1
 }
 
-// RejectQualificationRequestRequest indicates an expected call of RejectQualificationRequestRequest
+// RejectQualificationRequestRequest indicates an expected call of RejectQualificationRequestRequest.
 func (mr *MockMTurkAPIMockRecorder) RejectQualificationRequestRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RejectQualificationRequestRequest", reflect.TypeOf((*MockMTurkAPI)(nil).RejectQualificationRequestRequest), arg0)
 }
 
-// RejectQualificationRequestWithContext mocks base method
+// RejectQualificationRequestWithContext mocks base method.
 func (m *MockMTurkAPI) RejectQualificationRequestWithContext(arg0 context.Context, arg1 *mturk.RejectQualificationRequestInput, arg2 ...request.Option) (*mturk.RejectQualificationRequestOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1958,14 +1959,14 @@ func (m *MockMTurkAPI) RejectQualificationRequestWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// RejectQualificationRequestWithContext indicates an expected call of RejectQualificationRequestWithContext
+// RejectQualificationRequestWithContext indicates an expected call of RejectQualificationRequestWithContext.
 func (mr *MockMTurkAPIMockRecorder) RejectQualificationRequestWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RejectQualificationRequestWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).RejectQualificationRequestWithContext), varargs...)
 }
 
-// SendBonus mocks base method
+// SendBonus mocks base method.
 func (m *MockMTurkAPI) SendBonus(arg0 *mturk.SendBonusInput) (*mturk.SendBonusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendBonus", arg0)
@@ -1974,13 +1975,13 @@ func (m *MockMTurkAPI) SendBonus(arg0 *mturk.SendBonusInput) (*mturk.SendBonusOu
 	return ret0, ret1
 }
 
-// SendBonus indicates an expected call of SendBonus
+// SendBonus indicates an expected call of SendBonus.
 func (mr *MockMTurkAPIMockRecorder) SendBonus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendBonus", reflect.TypeOf((*MockMTurkAPI)(nil).SendBonus), arg0)
 }
 
-// SendBonusRequest mocks base method
+// SendBonusRequest mocks base method.
 func (m *MockMTurkAPI) SendBonusRequest(arg0 *mturk.SendBonusInput) (*request.Request, *mturk.SendBonusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendBonusRequest", arg0)
@@ -1989,13 +1990,13 @@ func (m *MockMTurkAPI) SendBonusRequest(arg0 *mturk.SendBonusInput) (*request.Re
 	return ret0, ret1
 }
 
-// SendBonusRequest indicates an expected call of SendBonusRequest
+// SendBonusRequest indicates an expected call of SendBonusRequest.
 func (mr *MockMTurkAPIMockRecorder) SendBonusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendBonusRequest", reflect.TypeOf((*MockMTurkAPI)(nil).SendBonusRequest), arg0)
 }
 
-// SendBonusWithContext mocks base method
+// SendBonusWithContext mocks base method.
 func (m *MockMTurkAPI) SendBonusWithContext(arg0 context.Context, arg1 *mturk.SendBonusInput, arg2 ...request.Option) (*mturk.SendBonusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2008,14 +2009,14 @@ func (m *MockMTurkAPI) SendBonusWithContext(arg0 context.Context, arg1 *mturk.Se
 	return ret0, ret1
 }
 
-// SendBonusWithContext indicates an expected call of SendBonusWithContext
+// SendBonusWithContext indicates an expected call of SendBonusWithContext.
 func (mr *MockMTurkAPIMockRecorder) SendBonusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendBonusWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).SendBonusWithContext), varargs...)
 }
 
-// SendTestEventNotification mocks base method
+// SendTestEventNotification mocks base method.
 func (m *MockMTurkAPI) SendTestEventNotification(arg0 *mturk.SendTestEventNotificationInput) (*mturk.SendTestEventNotificationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendTestEventNotification", arg0)
@@ -2024,13 +2025,13 @@ func (m *MockMTurkAPI) SendTestEventNotification(arg0 *mturk.SendTestEventNotifi
 	return ret0, ret1
 }
 
-// SendTestEventNotification indicates an expected call of SendTestEventNotification
+// SendTestEventNotification indicates an expected call of SendTestEventNotification.
 func (mr *MockMTurkAPIMockRecorder) SendTestEventNotification(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendTestEventNotification", reflect.TypeOf((*MockMTurkAPI)(nil).SendTestEventNotification), arg0)
 }
 
-// SendTestEventNotificationRequest mocks base method
+// SendTestEventNotificationRequest mocks base method.
 func (m *MockMTurkAPI) SendTestEventNotificationRequest(arg0 *mturk.SendTestEventNotificationInput) (*request.Request, *mturk.SendTestEventNotificationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendTestEventNotificationRequest", arg0)
@@ -2039,13 +2040,13 @@ func (m *MockMTurkAPI) SendTestEventNotificationRequest(arg0 *mturk.SendTestEven
 	return ret0, ret1
 }
 
-// SendTestEventNotificationRequest indicates an expected call of SendTestEventNotificationRequest
+// SendTestEventNotificationRequest indicates an expected call of SendTestEventNotificationRequest.
 func (mr *MockMTurkAPIMockRecorder) SendTestEventNotificationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendTestEventNotificationRequest", reflect.TypeOf((*MockMTurkAPI)(nil).SendTestEventNotificationRequest), arg0)
 }
 
-// SendTestEventNotificationWithContext mocks base method
+// SendTestEventNotificationWithContext mocks base method.
 func (m *MockMTurkAPI) SendTestEventNotificationWithContext(arg0 context.Context, arg1 *mturk.SendTestEventNotificationInput, arg2 ...request.Option) (*mturk.SendTestEventNotificationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2058,14 +2059,14 @@ func (m *MockMTurkAPI) SendTestEventNotificationWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// SendTestEventNotificationWithContext indicates an expected call of SendTestEventNotificationWithContext
+// SendTestEventNotificationWithContext indicates an expected call of SendTestEventNotificationWithContext.
 func (mr *MockMTurkAPIMockRecorder) SendTestEventNotificationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendTestEventNotificationWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).SendTestEventNotificationWithContext), varargs...)
 }
 
-// UpdateExpirationForHIT mocks base method
+// UpdateExpirationForHIT mocks base method.
 func (m *MockMTurkAPI) UpdateExpirationForHIT(arg0 *mturk.UpdateExpirationForHITInput) (*mturk.UpdateExpirationForHITOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateExpirationForHIT", arg0)
@@ -2074,13 +2075,13 @@ func (m *MockMTurkAPI) UpdateExpirationForHIT(arg0 *mturk.UpdateExpirationForHIT
 	return ret0, ret1
 }
 
-// UpdateExpirationForHIT indicates an expected call of UpdateExpirationForHIT
+// UpdateExpirationForHIT indicates an expected call of UpdateExpirationForHIT.
 func (mr *MockMTurkAPIMockRecorder) UpdateExpirationForHIT(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateExpirationForHIT", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateExpirationForHIT), arg0)
 }
 
-// UpdateExpirationForHITRequest mocks base method
+// UpdateExpirationForHITRequest mocks base method.
 func (m *MockMTurkAPI) UpdateExpirationForHITRequest(arg0 *mturk.UpdateExpirationForHITInput) (*request.Request, *mturk.UpdateExpirationForHITOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateExpirationForHITRequest", arg0)
@@ -2089,13 +2090,13 @@ func (m *MockMTurkAPI) UpdateExpirationForHITRequest(arg0 *mturk.UpdateExpiratio
 	return ret0, ret1
 }
 
-// UpdateExpirationForHITRequest indicates an expected call of UpdateExpirationForHITRequest
+// UpdateExpirationForHITRequest indicates an expected call of UpdateExpirationForHITRequest.
 func (mr *MockMTurkAPIMockRecorder) UpdateExpirationForHITRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateExpirationForHITRequest", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateExpirationForHITRequest), arg0)
 }
 
-// UpdateExpirationForHITWithContext mocks base method
+// UpdateExpirationForHITWithContext mocks base method.
 func (m *MockMTurkAPI) UpdateExpirationForHITWithContext(arg0 context.Context, arg1 *mturk.UpdateExpirationForHITInput, arg2 ...request.Option) (*mturk.UpdateExpirationForHITOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2108,14 +2109,14 @@ func (m *MockMTurkAPI) UpdateExpirationForHITWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UpdateExpirationForHITWithContext indicates an expected call of UpdateExpirationForHITWithContext
+// UpdateExpirationForHITWithContext indicates an expected call of UpdateExpirationForHITWithContext.
 func (mr *MockMTurkAPIMockRecorder) UpdateExpirationForHITWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateExpirationForHITWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateExpirationForHITWithContext), varargs...)
 }
 
-// UpdateHITReviewStatus mocks base method
+// UpdateHITReviewStatus mocks base method.
 func (m *MockMTurkAPI) UpdateHITReviewStatus(arg0 *mturk.UpdateHITReviewStatusInput) (*mturk.UpdateHITReviewStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateHITReviewStatus", arg0)
@@ -2124,13 +2125,13 @@ func (m *MockMTurkAPI) UpdateHITReviewStatus(arg0 *mturk.UpdateHITReviewStatusIn
 	return ret0, ret1
 }
 
-// UpdateHITReviewStatus indicates an expected call of UpdateHITReviewStatus
+// UpdateHITReviewStatus indicates an expected call of UpdateHITReviewStatus.
 func (mr *MockMTurkAPIMockRecorder) UpdateHITReviewStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateHITReviewStatus", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateHITReviewStatus), arg0)
 }
 
-// UpdateHITReviewStatusRequest mocks base method
+// UpdateHITReviewStatusRequest mocks base method.
 func (m *MockMTurkAPI) UpdateHITReviewStatusRequest(arg0 *mturk.UpdateHITReviewStatusInput) (*request.Request, *mturk.UpdateHITReviewStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateHITReviewStatusRequest", arg0)
@@ -2139,13 +2140,13 @@ func (m *MockMTurkAPI) UpdateHITReviewStatusRequest(arg0 *mturk.UpdateHITReviewS
 	return ret0, ret1
 }
 
-// UpdateHITReviewStatusRequest indicates an expected call of UpdateHITReviewStatusRequest
+// UpdateHITReviewStatusRequest indicates an expected call of UpdateHITReviewStatusRequest.
 func (mr *MockMTurkAPIMockRecorder) UpdateHITReviewStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateHITReviewStatusRequest", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateHITReviewStatusRequest), arg0)
 }
 
-// UpdateHITReviewStatusWithContext mocks base method
+// UpdateHITReviewStatusWithContext mocks base method.
 func (m *MockMTurkAPI) UpdateHITReviewStatusWithContext(arg0 context.Context, arg1 *mturk.UpdateHITReviewStatusInput, arg2 ...request.Option) (*mturk.UpdateHITReviewStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2158,14 +2159,14 @@ func (m *MockMTurkAPI) UpdateHITReviewStatusWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateHITReviewStatusWithContext indicates an expected call of UpdateHITReviewStatusWithContext
+// UpdateHITReviewStatusWithContext indicates an expected call of UpdateHITReviewStatusWithContext.
 func (mr *MockMTurkAPIMockRecorder) UpdateHITReviewStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateHITReviewStatusWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateHITReviewStatusWithContext), varargs...)
 }
 
-// UpdateHITTypeOfHIT mocks base method
+// UpdateHITTypeOfHIT mocks base method.
 func (m *MockMTurkAPI) UpdateHITTypeOfHIT(arg0 *mturk.UpdateHITTypeOfHITInput) (*mturk.UpdateHITTypeOfHITOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateHITTypeOfHIT", arg0)
@@ -2174,13 +2175,13 @@ func (m *MockMTurkAPI) UpdateHITTypeOfHIT(arg0 *mturk.UpdateHITTypeOfHITInput) (
 	return ret0, ret1
 }
 
-// UpdateHITTypeOfHIT indicates an expected call of UpdateHITTypeOfHIT
+// UpdateHITTypeOfHIT indicates an expected call of UpdateHITTypeOfHIT.
 func (mr *MockMTurkAPIMockRecorder) UpdateHITTypeOfHIT(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateHITTypeOfHIT", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateHITTypeOfHIT), arg0)
 }
 
-// UpdateHITTypeOfHITRequest mocks base method
+// UpdateHITTypeOfHITRequest mocks base method.
 func (m *MockMTurkAPI) UpdateHITTypeOfHITRequest(arg0 *mturk.UpdateHITTypeOfHITInput) (*request.Request, *mturk.UpdateHITTypeOfHITOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateHITTypeOfHITRequest", arg0)
@@ -2189,13 +2190,13 @@ func (m *MockMTurkAPI) UpdateHITTypeOfHITRequest(arg0 *mturk.UpdateHITTypeOfHITI
 	return ret0, ret1
 }
 
-// UpdateHITTypeOfHITRequest indicates an expected call of UpdateHITTypeOfHITRequest
+// UpdateHITTypeOfHITRequest indicates an expected call of UpdateHITTypeOfHITRequest.
 func (mr *MockMTurkAPIMockRecorder) UpdateHITTypeOfHITRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateHITTypeOfHITRequest", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateHITTypeOfHITRequest), arg0)
 }
 
-// UpdateHITTypeOfHITWithContext mocks base method
+// UpdateHITTypeOfHITWithContext mocks base method.
 func (m *MockMTurkAPI) UpdateHITTypeOfHITWithContext(arg0 context.Context, arg1 *mturk.UpdateHITTypeOfHITInput, arg2 ...request.Option) (*mturk.UpdateHITTypeOfHITOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2208,14 +2209,14 @@ func (m *MockMTurkAPI) UpdateHITTypeOfHITWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// UpdateHITTypeOfHITWithContext indicates an expected call of UpdateHITTypeOfHITWithContext
+// UpdateHITTypeOfHITWithContext indicates an expected call of UpdateHITTypeOfHITWithContext.
 func (mr *MockMTurkAPIMockRecorder) UpdateHITTypeOfHITWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateHITTypeOfHITWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateHITTypeOfHITWithContext), varargs...)
 }
 
-// UpdateNotificationSettings mocks base method
+// UpdateNotificationSettings mocks base method.
 func (m *MockMTurkAPI) UpdateNotificationSettings(arg0 *mturk.UpdateNotificationSettingsInput) (*mturk.UpdateNotificationSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateNotificationSettings", arg0)
@@ -2224,13 +2225,13 @@ func (m *MockMTurkAPI) UpdateNotificationSettings(arg0 *mturk.UpdateNotification
 	return ret0, ret1
 }
 
-// UpdateNotificationSettings indicates an expected call of UpdateNotificationSettings
+// UpdateNotificationSettings indicates an expected call of UpdateNotificationSettings.
 func (mr *MockMTurkAPIMockRecorder) UpdateNotificationSettings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateNotificationSettings", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateNotificationSettings), arg0)
 }
 
-// UpdateNotificationSettingsRequest mocks base method
+// UpdateNotificationSettingsRequest mocks base method.
 func (m *MockMTurkAPI) UpdateNotificationSettingsRequest(arg0 *mturk.UpdateNotificationSettingsInput) (*request.Request, *mturk.UpdateNotificationSettingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateNotificationSettingsRequest", arg0)
@@ -2239,13 +2240,13 @@ func (m *MockMTurkAPI) UpdateNotificationSettingsRequest(arg0 *mturk.UpdateNotif
 	return ret0, ret1
 }
 
-// UpdateNotificationSettingsRequest indicates an expected call of UpdateNotificationSettingsRequest
+// UpdateNotificationSettingsRequest indicates an expected call of UpdateNotificationSettingsRequest.
 func (mr *MockMTurkAPIMockRecorder) UpdateNotificationSettingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateNotificationSettingsRequest", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateNotificationSettingsRequest), arg0)
 }
 
-// UpdateNotificationSettingsWithContext mocks base method
+// UpdateNotificationSettingsWithContext mocks base method.
 func (m *MockMTurkAPI) UpdateNotificationSettingsWithContext(arg0 context.Context, arg1 *mturk.UpdateNotificationSettingsInput, arg2 ...request.Option) (*mturk.UpdateNotificationSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2258,14 +2259,14 @@ func (m *MockMTurkAPI) UpdateNotificationSettingsWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// UpdateNotificationSettingsWithContext indicates an expected call of UpdateNotificationSettingsWithContext
+// UpdateNotificationSettingsWithContext indicates an expected call of UpdateNotificationSettingsWithContext.
 func (mr *MockMTurkAPIMockRecorder) UpdateNotificationSettingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateNotificationSettingsWithContext", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateNotificationSettingsWithContext), varargs...)
 }
 
-// UpdateQualificationType mocks base method
+// UpdateQualificationType mocks base method.
 func (m *MockMTurkAPI) UpdateQualificationType(arg0 *mturk.UpdateQualificationTypeInput) (*mturk.UpdateQualificationTypeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateQualificationType", arg0)
@@ -2274,13 +2275,13 @@ func (m *MockMTurkAPI) UpdateQualificationType(arg0 *mturk.UpdateQualificationTy
 	return ret0, ret1
 }
 
-// UpdateQualificationType indicates an expected call of UpdateQualificationType
+// UpdateQualificationType indicates an expected call of UpdateQualificationType.
 func (mr *MockMTurkAPIMockRecorder) UpdateQualificationType(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateQualificationType", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateQualificationType), arg0)
 }
 
-// UpdateQualificationTypeRequest mocks base method
+// UpdateQualificationTypeRequest mocks base method.
 func (m *MockMTurkAPI) UpdateQualificationTypeRequest(arg0 *mturk.UpdateQualificationTypeInput) (*request.Request, *mturk.UpdateQualificationTypeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateQualificationTypeRequest", arg0)
@@ -2289,13 +2290,13 @@ func (m *MockMTurkAPI) UpdateQualificationTypeRequest(arg0 *mturk.UpdateQualific
 	return ret0, ret1
 }
 
-// UpdateQualificationTypeRequest indicates an expected call of UpdateQualificationTypeRequest
+// UpdateQualificationTypeRequest indicates an expected call of UpdateQualificationTypeRequest.
 func (mr *MockMTurkAPIMockRecorder) UpdateQualificationTypeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateQualificationTypeRequest", reflect.TypeOf((*MockMTurkAPI)(nil).UpdateQualificationTypeRequest), arg0)
 }
 
-// UpdateQualificationTypeWithContext mocks base method
+// UpdateQualificationTypeWithContext mocks base method.
 func (m *MockMTurkAPI) UpdateQualificationTypeWithContext(arg0 context.Context, arg1 *mturk.UpdateQualificationTypeInput, arg2 ...request.Option) (*mturk.UpdateQualificationTypeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2308,7 +2309,7 @@ func (m *MockMTurkAPI) UpdateQualificationTypeWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// UpdateQualificationTypeWithContext indicates an expected call of UpdateQualificationTypeWithContext
+// UpdateQualificationTypeWithContext indicates an expected call of UpdateQualificationTypeWithContext.
 func (mr *MockMTurkAPIMockRecorder) UpdateQualificationTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

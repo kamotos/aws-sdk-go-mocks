@@ -6,36 +6,37 @@ package timestreamwritemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	timestreamwrite "github.com/aws/aws-sdk-go/service/timestreamwrite"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockTimestreamWriteAPI is a mock of TimestreamWriteAPI interface
+// MockTimestreamWriteAPI is a mock of TimestreamWriteAPI interface.
 type MockTimestreamWriteAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockTimestreamWriteAPIMockRecorder
 }
 
-// MockTimestreamWriteAPIMockRecorder is the mock recorder for MockTimestreamWriteAPI
+// MockTimestreamWriteAPIMockRecorder is the mock recorder for MockTimestreamWriteAPI.
 type MockTimestreamWriteAPIMockRecorder struct {
 	mock *MockTimestreamWriteAPI
 }
 
-// NewMockTimestreamWriteAPI creates a new mock instance
+// NewMockTimestreamWriteAPI creates a new mock instance.
 func NewMockTimestreamWriteAPI(ctrl *gomock.Controller) *MockTimestreamWriteAPI {
 	mock := &MockTimestreamWriteAPI{ctrl: ctrl}
 	mock.recorder = &MockTimestreamWriteAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockTimestreamWriteAPI) EXPECT() *MockTimestreamWriteAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateDatabase mocks base method
+// CreateDatabase mocks base method.
 func (m *MockTimestreamWriteAPI) CreateDatabase(arg0 *timestreamwrite.CreateDatabaseInput) (*timestreamwrite.CreateDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDatabase", arg0)
@@ -44,13 +45,13 @@ func (m *MockTimestreamWriteAPI) CreateDatabase(arg0 *timestreamwrite.CreateData
 	return ret0, ret1
 }
 
-// CreateDatabase indicates an expected call of CreateDatabase
+// CreateDatabase indicates an expected call of CreateDatabase.
 func (mr *MockTimestreamWriteAPIMockRecorder) CreateDatabase(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatabase", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).CreateDatabase), arg0)
 }
 
-// CreateDatabaseRequest mocks base method
+// CreateDatabaseRequest mocks base method.
 func (m *MockTimestreamWriteAPI) CreateDatabaseRequest(arg0 *timestreamwrite.CreateDatabaseInput) (*request.Request, *timestreamwrite.CreateDatabaseOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDatabaseRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockTimestreamWriteAPI) CreateDatabaseRequest(arg0 *timestreamwrite.Cre
 	return ret0, ret1
 }
 
-// CreateDatabaseRequest indicates an expected call of CreateDatabaseRequest
+// CreateDatabaseRequest indicates an expected call of CreateDatabaseRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) CreateDatabaseRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatabaseRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).CreateDatabaseRequest), arg0)
 }
 
-// CreateDatabaseWithContext mocks base method
+// CreateDatabaseWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) CreateDatabaseWithContext(arg0 context.Context, arg1 *timestreamwrite.CreateDatabaseInput, arg2 ...request.Option) (*timestreamwrite.CreateDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockTimestreamWriteAPI) CreateDatabaseWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateDatabaseWithContext indicates an expected call of CreateDatabaseWithContext
+// CreateDatabaseWithContext indicates an expected call of CreateDatabaseWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) CreateDatabaseWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatabaseWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).CreateDatabaseWithContext), varargs...)
 }
 
-// CreateTable mocks base method
+// CreateTable mocks base method.
 func (m *MockTimestreamWriteAPI) CreateTable(arg0 *timestreamwrite.CreateTableInput) (*timestreamwrite.CreateTableOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateTable", arg0)
@@ -94,13 +95,13 @@ func (m *MockTimestreamWriteAPI) CreateTable(arg0 *timestreamwrite.CreateTableIn
 	return ret0, ret1
 }
 
-// CreateTable indicates an expected call of CreateTable
+// CreateTable indicates an expected call of CreateTable.
 func (mr *MockTimestreamWriteAPIMockRecorder) CreateTable(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateTable", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).CreateTable), arg0)
 }
 
-// CreateTableRequest mocks base method
+// CreateTableRequest mocks base method.
 func (m *MockTimestreamWriteAPI) CreateTableRequest(arg0 *timestreamwrite.CreateTableInput) (*request.Request, *timestreamwrite.CreateTableOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateTableRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockTimestreamWriteAPI) CreateTableRequest(arg0 *timestreamwrite.Create
 	return ret0, ret1
 }
 
-// CreateTableRequest indicates an expected call of CreateTableRequest
+// CreateTableRequest indicates an expected call of CreateTableRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) CreateTableRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateTableRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).CreateTableRequest), arg0)
 }
 
-// CreateTableWithContext mocks base method
+// CreateTableWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) CreateTableWithContext(arg0 context.Context, arg1 *timestreamwrite.CreateTableInput, arg2 ...request.Option) (*timestreamwrite.CreateTableOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockTimestreamWriteAPI) CreateTableWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateTableWithContext indicates an expected call of CreateTableWithContext
+// CreateTableWithContext indicates an expected call of CreateTableWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) CreateTableWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateTableWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).CreateTableWithContext), varargs...)
 }
 
-// DeleteDatabase mocks base method
+// DeleteDatabase mocks base method.
 func (m *MockTimestreamWriteAPI) DeleteDatabase(arg0 *timestreamwrite.DeleteDatabaseInput) (*timestreamwrite.DeleteDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDatabase", arg0)
@@ -144,13 +145,13 @@ func (m *MockTimestreamWriteAPI) DeleteDatabase(arg0 *timestreamwrite.DeleteData
 	return ret0, ret1
 }
 
-// DeleteDatabase indicates an expected call of DeleteDatabase
+// DeleteDatabase indicates an expected call of DeleteDatabase.
 func (mr *MockTimestreamWriteAPIMockRecorder) DeleteDatabase(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatabase", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DeleteDatabase), arg0)
 }
 
-// DeleteDatabaseRequest mocks base method
+// DeleteDatabaseRequest mocks base method.
 func (m *MockTimestreamWriteAPI) DeleteDatabaseRequest(arg0 *timestreamwrite.DeleteDatabaseInput) (*request.Request, *timestreamwrite.DeleteDatabaseOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDatabaseRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockTimestreamWriteAPI) DeleteDatabaseRequest(arg0 *timestreamwrite.Del
 	return ret0, ret1
 }
 
-// DeleteDatabaseRequest indicates an expected call of DeleteDatabaseRequest
+// DeleteDatabaseRequest indicates an expected call of DeleteDatabaseRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) DeleteDatabaseRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatabaseRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DeleteDatabaseRequest), arg0)
 }
 
-// DeleteDatabaseWithContext mocks base method
+// DeleteDatabaseWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) DeleteDatabaseWithContext(arg0 context.Context, arg1 *timestreamwrite.DeleteDatabaseInput, arg2 ...request.Option) (*timestreamwrite.DeleteDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockTimestreamWriteAPI) DeleteDatabaseWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteDatabaseWithContext indicates an expected call of DeleteDatabaseWithContext
+// DeleteDatabaseWithContext indicates an expected call of DeleteDatabaseWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) DeleteDatabaseWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatabaseWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DeleteDatabaseWithContext), varargs...)
 }
 
-// DeleteTable mocks base method
+// DeleteTable mocks base method.
 func (m *MockTimestreamWriteAPI) DeleteTable(arg0 *timestreamwrite.DeleteTableInput) (*timestreamwrite.DeleteTableOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteTable", arg0)
@@ -194,13 +195,13 @@ func (m *MockTimestreamWriteAPI) DeleteTable(arg0 *timestreamwrite.DeleteTableIn
 	return ret0, ret1
 }
 
-// DeleteTable indicates an expected call of DeleteTable
+// DeleteTable indicates an expected call of DeleteTable.
 func (mr *MockTimestreamWriteAPIMockRecorder) DeleteTable(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTable", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DeleteTable), arg0)
 }
 
-// DeleteTableRequest mocks base method
+// DeleteTableRequest mocks base method.
 func (m *MockTimestreamWriteAPI) DeleteTableRequest(arg0 *timestreamwrite.DeleteTableInput) (*request.Request, *timestreamwrite.DeleteTableOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteTableRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockTimestreamWriteAPI) DeleteTableRequest(arg0 *timestreamwrite.Delete
 	return ret0, ret1
 }
 
-// DeleteTableRequest indicates an expected call of DeleteTableRequest
+// DeleteTableRequest indicates an expected call of DeleteTableRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) DeleteTableRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTableRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DeleteTableRequest), arg0)
 }
 
-// DeleteTableWithContext mocks base method
+// DeleteTableWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) DeleteTableWithContext(arg0 context.Context, arg1 *timestreamwrite.DeleteTableInput, arg2 ...request.Option) (*timestreamwrite.DeleteTableOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockTimestreamWriteAPI) DeleteTableWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteTableWithContext indicates an expected call of DeleteTableWithContext
+// DeleteTableWithContext indicates an expected call of DeleteTableWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) DeleteTableWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTableWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DeleteTableWithContext), varargs...)
 }
 
-// DescribeDatabase mocks base method
+// DescribeDatabase mocks base method.
 func (m *MockTimestreamWriteAPI) DescribeDatabase(arg0 *timestreamwrite.DescribeDatabaseInput) (*timestreamwrite.DescribeDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDatabase", arg0)
@@ -244,13 +245,13 @@ func (m *MockTimestreamWriteAPI) DescribeDatabase(arg0 *timestreamwrite.Describe
 	return ret0, ret1
 }
 
-// DescribeDatabase indicates an expected call of DescribeDatabase
+// DescribeDatabase indicates an expected call of DescribeDatabase.
 func (mr *MockTimestreamWriteAPIMockRecorder) DescribeDatabase(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatabase", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DescribeDatabase), arg0)
 }
 
-// DescribeDatabaseRequest mocks base method
+// DescribeDatabaseRequest mocks base method.
 func (m *MockTimestreamWriteAPI) DescribeDatabaseRequest(arg0 *timestreamwrite.DescribeDatabaseInput) (*request.Request, *timestreamwrite.DescribeDatabaseOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDatabaseRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockTimestreamWriteAPI) DescribeDatabaseRequest(arg0 *timestreamwrite.D
 	return ret0, ret1
 }
 
-// DescribeDatabaseRequest indicates an expected call of DescribeDatabaseRequest
+// DescribeDatabaseRequest indicates an expected call of DescribeDatabaseRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) DescribeDatabaseRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatabaseRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DescribeDatabaseRequest), arg0)
 }
 
-// DescribeDatabaseWithContext mocks base method
+// DescribeDatabaseWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) DescribeDatabaseWithContext(arg0 context.Context, arg1 *timestreamwrite.DescribeDatabaseInput, arg2 ...request.Option) (*timestreamwrite.DescribeDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockTimestreamWriteAPI) DescribeDatabaseWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DescribeDatabaseWithContext indicates an expected call of DescribeDatabaseWithContext
+// DescribeDatabaseWithContext indicates an expected call of DescribeDatabaseWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) DescribeDatabaseWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatabaseWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DescribeDatabaseWithContext), varargs...)
 }
 
-// DescribeEndpoints mocks base method
+// DescribeEndpoints mocks base method.
 func (m *MockTimestreamWriteAPI) DescribeEndpoints(arg0 *timestreamwrite.DescribeEndpointsInput) (*timestreamwrite.DescribeEndpointsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeEndpoints", arg0)
@@ -294,13 +295,13 @@ func (m *MockTimestreamWriteAPI) DescribeEndpoints(arg0 *timestreamwrite.Describ
 	return ret0, ret1
 }
 
-// DescribeEndpoints indicates an expected call of DescribeEndpoints
+// DescribeEndpoints indicates an expected call of DescribeEndpoints.
 func (mr *MockTimestreamWriteAPIMockRecorder) DescribeEndpoints(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeEndpoints", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DescribeEndpoints), arg0)
 }
 
-// DescribeEndpointsRequest mocks base method
+// DescribeEndpointsRequest mocks base method.
 func (m *MockTimestreamWriteAPI) DescribeEndpointsRequest(arg0 *timestreamwrite.DescribeEndpointsInput) (*request.Request, *timestreamwrite.DescribeEndpointsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeEndpointsRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockTimestreamWriteAPI) DescribeEndpointsRequest(arg0 *timestreamwrite.
 	return ret0, ret1
 }
 
-// DescribeEndpointsRequest indicates an expected call of DescribeEndpointsRequest
+// DescribeEndpointsRequest indicates an expected call of DescribeEndpointsRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) DescribeEndpointsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeEndpointsRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DescribeEndpointsRequest), arg0)
 }
 
-// DescribeEndpointsWithContext mocks base method
+// DescribeEndpointsWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) DescribeEndpointsWithContext(arg0 context.Context, arg1 *timestreamwrite.DescribeEndpointsInput, arg2 ...request.Option) (*timestreamwrite.DescribeEndpointsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockTimestreamWriteAPI) DescribeEndpointsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DescribeEndpointsWithContext indicates an expected call of DescribeEndpointsWithContext
+// DescribeEndpointsWithContext indicates an expected call of DescribeEndpointsWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) DescribeEndpointsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeEndpointsWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DescribeEndpointsWithContext), varargs...)
 }
 
-// DescribeTable mocks base method
+// DescribeTable mocks base method.
 func (m *MockTimestreamWriteAPI) DescribeTable(arg0 *timestreamwrite.DescribeTableInput) (*timestreamwrite.DescribeTableOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeTable", arg0)
@@ -344,13 +345,13 @@ func (m *MockTimestreamWriteAPI) DescribeTable(arg0 *timestreamwrite.DescribeTab
 	return ret0, ret1
 }
 
-// DescribeTable indicates an expected call of DescribeTable
+// DescribeTable indicates an expected call of DescribeTable.
 func (mr *MockTimestreamWriteAPIMockRecorder) DescribeTable(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTable", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DescribeTable), arg0)
 }
 
-// DescribeTableRequest mocks base method
+// DescribeTableRequest mocks base method.
 func (m *MockTimestreamWriteAPI) DescribeTableRequest(arg0 *timestreamwrite.DescribeTableInput) (*request.Request, *timestreamwrite.DescribeTableOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeTableRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockTimestreamWriteAPI) DescribeTableRequest(arg0 *timestreamwrite.Desc
 	return ret0, ret1
 }
 
-// DescribeTableRequest indicates an expected call of DescribeTableRequest
+// DescribeTableRequest indicates an expected call of DescribeTableRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) DescribeTableRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTableRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DescribeTableRequest), arg0)
 }
 
-// DescribeTableWithContext mocks base method
+// DescribeTableWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) DescribeTableWithContext(arg0 context.Context, arg1 *timestreamwrite.DescribeTableInput, arg2 ...request.Option) (*timestreamwrite.DescribeTableOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockTimestreamWriteAPI) DescribeTableWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DescribeTableWithContext indicates an expected call of DescribeTableWithContext
+// DescribeTableWithContext indicates an expected call of DescribeTableWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) DescribeTableWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTableWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).DescribeTableWithContext), varargs...)
 }
 
-// ListDatabases mocks base method
+// ListDatabases mocks base method.
 func (m *MockTimestreamWriteAPI) ListDatabases(arg0 *timestreamwrite.ListDatabasesInput) (*timestreamwrite.ListDatabasesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatabases", arg0)
@@ -394,13 +395,13 @@ func (m *MockTimestreamWriteAPI) ListDatabases(arg0 *timestreamwrite.ListDatabas
 	return ret0, ret1
 }
 
-// ListDatabases indicates an expected call of ListDatabases
+// ListDatabases indicates an expected call of ListDatabases.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListDatabases(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatabases", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListDatabases), arg0)
 }
 
-// ListDatabasesPages mocks base method
+// ListDatabasesPages mocks base method.
 func (m *MockTimestreamWriteAPI) ListDatabasesPages(arg0 *timestreamwrite.ListDatabasesInput, arg1 func(*timestreamwrite.ListDatabasesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatabasesPages", arg0, arg1)
@@ -408,13 +409,13 @@ func (m *MockTimestreamWriteAPI) ListDatabasesPages(arg0 *timestreamwrite.ListDa
 	return ret0
 }
 
-// ListDatabasesPages indicates an expected call of ListDatabasesPages
+// ListDatabasesPages indicates an expected call of ListDatabasesPages.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListDatabasesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatabasesPages", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListDatabasesPages), arg0, arg1)
 }
 
-// ListDatabasesPagesWithContext mocks base method
+// ListDatabasesPagesWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) ListDatabasesPagesWithContext(arg0 context.Context, arg1 *timestreamwrite.ListDatabasesInput, arg2 func(*timestreamwrite.ListDatabasesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -426,14 +427,14 @@ func (m *MockTimestreamWriteAPI) ListDatabasesPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListDatabasesPagesWithContext indicates an expected call of ListDatabasesPagesWithContext
+// ListDatabasesPagesWithContext indicates an expected call of ListDatabasesPagesWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListDatabasesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatabasesPagesWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListDatabasesPagesWithContext), varargs...)
 }
 
-// ListDatabasesRequest mocks base method
+// ListDatabasesRequest mocks base method.
 func (m *MockTimestreamWriteAPI) ListDatabasesRequest(arg0 *timestreamwrite.ListDatabasesInput) (*request.Request, *timestreamwrite.ListDatabasesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatabasesRequest", arg0)
@@ -442,13 +443,13 @@ func (m *MockTimestreamWriteAPI) ListDatabasesRequest(arg0 *timestreamwrite.List
 	return ret0, ret1
 }
 
-// ListDatabasesRequest indicates an expected call of ListDatabasesRequest
+// ListDatabasesRequest indicates an expected call of ListDatabasesRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListDatabasesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatabasesRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListDatabasesRequest), arg0)
 }
 
-// ListDatabasesWithContext mocks base method
+// ListDatabasesWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) ListDatabasesWithContext(arg0 context.Context, arg1 *timestreamwrite.ListDatabasesInput, arg2 ...request.Option) (*timestreamwrite.ListDatabasesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -461,14 +462,14 @@ func (m *MockTimestreamWriteAPI) ListDatabasesWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListDatabasesWithContext indicates an expected call of ListDatabasesWithContext
+// ListDatabasesWithContext indicates an expected call of ListDatabasesWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListDatabasesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatabasesWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListDatabasesWithContext), varargs...)
 }
 
-// ListTables mocks base method
+// ListTables mocks base method.
 func (m *MockTimestreamWriteAPI) ListTables(arg0 *timestreamwrite.ListTablesInput) (*timestreamwrite.ListTablesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTables", arg0)
@@ -477,13 +478,13 @@ func (m *MockTimestreamWriteAPI) ListTables(arg0 *timestreamwrite.ListTablesInpu
 	return ret0, ret1
 }
 
-// ListTables indicates an expected call of ListTables
+// ListTables indicates an expected call of ListTables.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListTables(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTables", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListTables), arg0)
 }
 
-// ListTablesPages mocks base method
+// ListTablesPages mocks base method.
 func (m *MockTimestreamWriteAPI) ListTablesPages(arg0 *timestreamwrite.ListTablesInput, arg1 func(*timestreamwrite.ListTablesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTablesPages", arg0, arg1)
@@ -491,13 +492,13 @@ func (m *MockTimestreamWriteAPI) ListTablesPages(arg0 *timestreamwrite.ListTable
 	return ret0
 }
 
-// ListTablesPages indicates an expected call of ListTablesPages
+// ListTablesPages indicates an expected call of ListTablesPages.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListTablesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTablesPages", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListTablesPages), arg0, arg1)
 }
 
-// ListTablesPagesWithContext mocks base method
+// ListTablesPagesWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) ListTablesPagesWithContext(arg0 context.Context, arg1 *timestreamwrite.ListTablesInput, arg2 func(*timestreamwrite.ListTablesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -509,14 +510,14 @@ func (m *MockTimestreamWriteAPI) ListTablesPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListTablesPagesWithContext indicates an expected call of ListTablesPagesWithContext
+// ListTablesPagesWithContext indicates an expected call of ListTablesPagesWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListTablesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTablesPagesWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListTablesPagesWithContext), varargs...)
 }
 
-// ListTablesRequest mocks base method
+// ListTablesRequest mocks base method.
 func (m *MockTimestreamWriteAPI) ListTablesRequest(arg0 *timestreamwrite.ListTablesInput) (*request.Request, *timestreamwrite.ListTablesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTablesRequest", arg0)
@@ -525,13 +526,13 @@ func (m *MockTimestreamWriteAPI) ListTablesRequest(arg0 *timestreamwrite.ListTab
 	return ret0, ret1
 }
 
-// ListTablesRequest indicates an expected call of ListTablesRequest
+// ListTablesRequest indicates an expected call of ListTablesRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListTablesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTablesRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListTablesRequest), arg0)
 }
 
-// ListTablesWithContext mocks base method
+// ListTablesWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) ListTablesWithContext(arg0 context.Context, arg1 *timestreamwrite.ListTablesInput, arg2 ...request.Option) (*timestreamwrite.ListTablesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -544,14 +545,14 @@ func (m *MockTimestreamWriteAPI) ListTablesWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListTablesWithContext indicates an expected call of ListTablesWithContext
+// ListTablesWithContext indicates an expected call of ListTablesWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListTablesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTablesWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListTablesWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockTimestreamWriteAPI) ListTagsForResource(arg0 *timestreamwrite.ListTagsForResourceInput) (*timestreamwrite.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -560,13 +561,13 @@ func (m *MockTimestreamWriteAPI) ListTagsForResource(arg0 *timestreamwrite.ListT
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockTimestreamWriteAPI) ListTagsForResourceRequest(arg0 *timestreamwrite.ListTagsForResourceInput) (*request.Request, *timestreamwrite.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -575,13 +576,13 @@ func (m *MockTimestreamWriteAPI) ListTagsForResourceRequest(arg0 *timestreamwrit
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *timestreamwrite.ListTagsForResourceInput, arg2 ...request.Option) (*timestreamwrite.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -594,14 +595,14 @@ func (m *MockTimestreamWriteAPI) ListTagsForResourceWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockTimestreamWriteAPI) TagResource(arg0 *timestreamwrite.TagResourceInput) (*timestreamwrite.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -610,13 +611,13 @@ func (m *MockTimestreamWriteAPI) TagResource(arg0 *timestreamwrite.TagResourceIn
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockTimestreamWriteAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockTimestreamWriteAPI) TagResourceRequest(arg0 *timestreamwrite.TagResourceInput) (*request.Request, *timestreamwrite.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -625,13 +626,13 @@ func (m *MockTimestreamWriteAPI) TagResourceRequest(arg0 *timestreamwrite.TagRes
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) TagResourceWithContext(arg0 context.Context, arg1 *timestreamwrite.TagResourceInput, arg2 ...request.Option) (*timestreamwrite.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -644,14 +645,14 @@ func (m *MockTimestreamWriteAPI) TagResourceWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockTimestreamWriteAPI) UntagResource(arg0 *timestreamwrite.UntagResourceInput) (*timestreamwrite.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -660,13 +661,13 @@ func (m *MockTimestreamWriteAPI) UntagResource(arg0 *timestreamwrite.UntagResour
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockTimestreamWriteAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockTimestreamWriteAPI) UntagResourceRequest(arg0 *timestreamwrite.UntagResourceInput) (*request.Request, *timestreamwrite.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -675,13 +676,13 @@ func (m *MockTimestreamWriteAPI) UntagResourceRequest(arg0 *timestreamwrite.Unta
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) UntagResourceWithContext(arg0 context.Context, arg1 *timestreamwrite.UntagResourceInput, arg2 ...request.Option) (*timestreamwrite.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -694,14 +695,14 @@ func (m *MockTimestreamWriteAPI) UntagResourceWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateDatabase mocks base method
+// UpdateDatabase mocks base method.
 func (m *MockTimestreamWriteAPI) UpdateDatabase(arg0 *timestreamwrite.UpdateDatabaseInput) (*timestreamwrite.UpdateDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDatabase", arg0)
@@ -710,13 +711,13 @@ func (m *MockTimestreamWriteAPI) UpdateDatabase(arg0 *timestreamwrite.UpdateData
 	return ret0, ret1
 }
 
-// UpdateDatabase indicates an expected call of UpdateDatabase
+// UpdateDatabase indicates an expected call of UpdateDatabase.
 func (mr *MockTimestreamWriteAPIMockRecorder) UpdateDatabase(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDatabase", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).UpdateDatabase), arg0)
 }
 
-// UpdateDatabaseRequest mocks base method
+// UpdateDatabaseRequest mocks base method.
 func (m *MockTimestreamWriteAPI) UpdateDatabaseRequest(arg0 *timestreamwrite.UpdateDatabaseInput) (*request.Request, *timestreamwrite.UpdateDatabaseOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDatabaseRequest", arg0)
@@ -725,13 +726,13 @@ func (m *MockTimestreamWriteAPI) UpdateDatabaseRequest(arg0 *timestreamwrite.Upd
 	return ret0, ret1
 }
 
-// UpdateDatabaseRequest indicates an expected call of UpdateDatabaseRequest
+// UpdateDatabaseRequest indicates an expected call of UpdateDatabaseRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) UpdateDatabaseRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDatabaseRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).UpdateDatabaseRequest), arg0)
 }
 
-// UpdateDatabaseWithContext mocks base method
+// UpdateDatabaseWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) UpdateDatabaseWithContext(arg0 context.Context, arg1 *timestreamwrite.UpdateDatabaseInput, arg2 ...request.Option) (*timestreamwrite.UpdateDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -744,14 +745,14 @@ func (m *MockTimestreamWriteAPI) UpdateDatabaseWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// UpdateDatabaseWithContext indicates an expected call of UpdateDatabaseWithContext
+// UpdateDatabaseWithContext indicates an expected call of UpdateDatabaseWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) UpdateDatabaseWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDatabaseWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).UpdateDatabaseWithContext), varargs...)
 }
 
-// UpdateTable mocks base method
+// UpdateTable mocks base method.
 func (m *MockTimestreamWriteAPI) UpdateTable(arg0 *timestreamwrite.UpdateTableInput) (*timestreamwrite.UpdateTableOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateTable", arg0)
@@ -760,13 +761,13 @@ func (m *MockTimestreamWriteAPI) UpdateTable(arg0 *timestreamwrite.UpdateTableIn
 	return ret0, ret1
 }
 
-// UpdateTable indicates an expected call of UpdateTable
+// UpdateTable indicates an expected call of UpdateTable.
 func (mr *MockTimestreamWriteAPIMockRecorder) UpdateTable(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateTable", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).UpdateTable), arg0)
 }
 
-// UpdateTableRequest mocks base method
+// UpdateTableRequest mocks base method.
 func (m *MockTimestreamWriteAPI) UpdateTableRequest(arg0 *timestreamwrite.UpdateTableInput) (*request.Request, *timestreamwrite.UpdateTableOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateTableRequest", arg0)
@@ -775,13 +776,13 @@ func (m *MockTimestreamWriteAPI) UpdateTableRequest(arg0 *timestreamwrite.Update
 	return ret0, ret1
 }
 
-// UpdateTableRequest indicates an expected call of UpdateTableRequest
+// UpdateTableRequest indicates an expected call of UpdateTableRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) UpdateTableRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateTableRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).UpdateTableRequest), arg0)
 }
 
-// UpdateTableWithContext mocks base method
+// UpdateTableWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) UpdateTableWithContext(arg0 context.Context, arg1 *timestreamwrite.UpdateTableInput, arg2 ...request.Option) (*timestreamwrite.UpdateTableOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -794,14 +795,14 @@ func (m *MockTimestreamWriteAPI) UpdateTableWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateTableWithContext indicates an expected call of UpdateTableWithContext
+// UpdateTableWithContext indicates an expected call of UpdateTableWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) UpdateTableWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateTableWithContext", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).UpdateTableWithContext), varargs...)
 }
 
-// WriteRecords mocks base method
+// WriteRecords mocks base method.
 func (m *MockTimestreamWriteAPI) WriteRecords(arg0 *timestreamwrite.WriteRecordsInput) (*timestreamwrite.WriteRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WriteRecords", arg0)
@@ -810,13 +811,13 @@ func (m *MockTimestreamWriteAPI) WriteRecords(arg0 *timestreamwrite.WriteRecords
 	return ret0, ret1
 }
 
-// WriteRecords indicates an expected call of WriteRecords
+// WriteRecords indicates an expected call of WriteRecords.
 func (mr *MockTimestreamWriteAPIMockRecorder) WriteRecords(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WriteRecords", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).WriteRecords), arg0)
 }
 
-// WriteRecordsRequest mocks base method
+// WriteRecordsRequest mocks base method.
 func (m *MockTimestreamWriteAPI) WriteRecordsRequest(arg0 *timestreamwrite.WriteRecordsInput) (*request.Request, *timestreamwrite.WriteRecordsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WriteRecordsRequest", arg0)
@@ -825,13 +826,13 @@ func (m *MockTimestreamWriteAPI) WriteRecordsRequest(arg0 *timestreamwrite.Write
 	return ret0, ret1
 }
 
-// WriteRecordsRequest indicates an expected call of WriteRecordsRequest
+// WriteRecordsRequest indicates an expected call of WriteRecordsRequest.
 func (mr *MockTimestreamWriteAPIMockRecorder) WriteRecordsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WriteRecordsRequest", reflect.TypeOf((*MockTimestreamWriteAPI)(nil).WriteRecordsRequest), arg0)
 }
 
-// WriteRecordsWithContext mocks base method
+// WriteRecordsWithContext mocks base method.
 func (m *MockTimestreamWriteAPI) WriteRecordsWithContext(arg0 context.Context, arg1 *timestreamwrite.WriteRecordsInput, arg2 ...request.Option) (*timestreamwrite.WriteRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -844,7 +845,7 @@ func (m *MockTimestreamWriteAPI) WriteRecordsWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// WriteRecordsWithContext indicates an expected call of WriteRecordsWithContext
+// WriteRecordsWithContext indicates an expected call of WriteRecordsWithContext.
 func (mr *MockTimestreamWriteAPIMockRecorder) WriteRecordsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

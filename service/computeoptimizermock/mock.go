@@ -6,36 +6,37 @@ package computeoptimizermock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	computeoptimizer "github.com/aws/aws-sdk-go/service/computeoptimizer"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockComputeOptimizerAPI is a mock of ComputeOptimizerAPI interface
+// MockComputeOptimizerAPI is a mock of ComputeOptimizerAPI interface.
 type MockComputeOptimizerAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockComputeOptimizerAPIMockRecorder
 }
 
-// MockComputeOptimizerAPIMockRecorder is the mock recorder for MockComputeOptimizerAPI
+// MockComputeOptimizerAPIMockRecorder is the mock recorder for MockComputeOptimizerAPI.
 type MockComputeOptimizerAPIMockRecorder struct {
 	mock *MockComputeOptimizerAPI
 }
 
-// NewMockComputeOptimizerAPI creates a new mock instance
+// NewMockComputeOptimizerAPI creates a new mock instance.
 func NewMockComputeOptimizerAPI(ctrl *gomock.Controller) *MockComputeOptimizerAPI {
 	mock := &MockComputeOptimizerAPI{ctrl: ctrl}
 	mock.recorder = &MockComputeOptimizerAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockComputeOptimizerAPI) EXPECT() *MockComputeOptimizerAPIMockRecorder {
 	return m.recorder
 }
 
-// DescribeRecommendationExportJobs mocks base method
+// DescribeRecommendationExportJobs mocks base method.
 func (m *MockComputeOptimizerAPI) DescribeRecommendationExportJobs(arg0 *computeoptimizer.DescribeRecommendationExportJobsInput) (*computeoptimizer.DescribeRecommendationExportJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRecommendationExportJobs", arg0)
@@ -44,13 +45,13 @@ func (m *MockComputeOptimizerAPI) DescribeRecommendationExportJobs(arg0 *compute
 	return ret0, ret1
 }
 
-// DescribeRecommendationExportJobs indicates an expected call of DescribeRecommendationExportJobs
+// DescribeRecommendationExportJobs indicates an expected call of DescribeRecommendationExportJobs.
 func (mr *MockComputeOptimizerAPIMockRecorder) DescribeRecommendationExportJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecommendationExportJobs", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).DescribeRecommendationExportJobs), arg0)
 }
 
-// DescribeRecommendationExportJobsRequest mocks base method
+// DescribeRecommendationExportJobsRequest mocks base method.
 func (m *MockComputeOptimizerAPI) DescribeRecommendationExportJobsRequest(arg0 *computeoptimizer.DescribeRecommendationExportJobsInput) (*request.Request, *computeoptimizer.DescribeRecommendationExportJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRecommendationExportJobsRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockComputeOptimizerAPI) DescribeRecommendationExportJobsRequest(arg0 *
 	return ret0, ret1
 }
 
-// DescribeRecommendationExportJobsRequest indicates an expected call of DescribeRecommendationExportJobsRequest
+// DescribeRecommendationExportJobsRequest indicates an expected call of DescribeRecommendationExportJobsRequest.
 func (mr *MockComputeOptimizerAPIMockRecorder) DescribeRecommendationExportJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecommendationExportJobsRequest", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).DescribeRecommendationExportJobsRequest), arg0)
 }
 
-// DescribeRecommendationExportJobsWithContext mocks base method
+// DescribeRecommendationExportJobsWithContext mocks base method.
 func (m *MockComputeOptimizerAPI) DescribeRecommendationExportJobsWithContext(arg0 context.Context, arg1 *computeoptimizer.DescribeRecommendationExportJobsInput, arg2 ...request.Option) (*computeoptimizer.DescribeRecommendationExportJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockComputeOptimizerAPI) DescribeRecommendationExportJobsWithContext(ar
 	return ret0, ret1
 }
 
-// DescribeRecommendationExportJobsWithContext indicates an expected call of DescribeRecommendationExportJobsWithContext
+// DescribeRecommendationExportJobsWithContext indicates an expected call of DescribeRecommendationExportJobsWithContext.
 func (mr *MockComputeOptimizerAPIMockRecorder) DescribeRecommendationExportJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecommendationExportJobsWithContext", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).DescribeRecommendationExportJobsWithContext), varargs...)
 }
 
-// ExportAutoScalingGroupRecommendations mocks base method
+// ExportAutoScalingGroupRecommendations mocks base method.
 func (m *MockComputeOptimizerAPI) ExportAutoScalingGroupRecommendations(arg0 *computeoptimizer.ExportAutoScalingGroupRecommendationsInput) (*computeoptimizer.ExportAutoScalingGroupRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExportAutoScalingGroupRecommendations", arg0)
@@ -94,13 +95,13 @@ func (m *MockComputeOptimizerAPI) ExportAutoScalingGroupRecommendations(arg0 *co
 	return ret0, ret1
 }
 
-// ExportAutoScalingGroupRecommendations indicates an expected call of ExportAutoScalingGroupRecommendations
+// ExportAutoScalingGroupRecommendations indicates an expected call of ExportAutoScalingGroupRecommendations.
 func (mr *MockComputeOptimizerAPIMockRecorder) ExportAutoScalingGroupRecommendations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportAutoScalingGroupRecommendations", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).ExportAutoScalingGroupRecommendations), arg0)
 }
 
-// ExportAutoScalingGroupRecommendationsRequest mocks base method
+// ExportAutoScalingGroupRecommendationsRequest mocks base method.
 func (m *MockComputeOptimizerAPI) ExportAutoScalingGroupRecommendationsRequest(arg0 *computeoptimizer.ExportAutoScalingGroupRecommendationsInput) (*request.Request, *computeoptimizer.ExportAutoScalingGroupRecommendationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExportAutoScalingGroupRecommendationsRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockComputeOptimizerAPI) ExportAutoScalingGroupRecommendationsRequest(a
 	return ret0, ret1
 }
 
-// ExportAutoScalingGroupRecommendationsRequest indicates an expected call of ExportAutoScalingGroupRecommendationsRequest
+// ExportAutoScalingGroupRecommendationsRequest indicates an expected call of ExportAutoScalingGroupRecommendationsRequest.
 func (mr *MockComputeOptimizerAPIMockRecorder) ExportAutoScalingGroupRecommendationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportAutoScalingGroupRecommendationsRequest", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).ExportAutoScalingGroupRecommendationsRequest), arg0)
 }
 
-// ExportAutoScalingGroupRecommendationsWithContext mocks base method
+// ExportAutoScalingGroupRecommendationsWithContext mocks base method.
 func (m *MockComputeOptimizerAPI) ExportAutoScalingGroupRecommendationsWithContext(arg0 context.Context, arg1 *computeoptimizer.ExportAutoScalingGroupRecommendationsInput, arg2 ...request.Option) (*computeoptimizer.ExportAutoScalingGroupRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockComputeOptimizerAPI) ExportAutoScalingGroupRecommendationsWithConte
 	return ret0, ret1
 }
 
-// ExportAutoScalingGroupRecommendationsWithContext indicates an expected call of ExportAutoScalingGroupRecommendationsWithContext
+// ExportAutoScalingGroupRecommendationsWithContext indicates an expected call of ExportAutoScalingGroupRecommendationsWithContext.
 func (mr *MockComputeOptimizerAPIMockRecorder) ExportAutoScalingGroupRecommendationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportAutoScalingGroupRecommendationsWithContext", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).ExportAutoScalingGroupRecommendationsWithContext), varargs...)
 }
 
-// ExportEC2InstanceRecommendations mocks base method
+// ExportEC2InstanceRecommendations mocks base method.
 func (m *MockComputeOptimizerAPI) ExportEC2InstanceRecommendations(arg0 *computeoptimizer.ExportEC2InstanceRecommendationsInput) (*computeoptimizer.ExportEC2InstanceRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExportEC2InstanceRecommendations", arg0)
@@ -144,13 +145,13 @@ func (m *MockComputeOptimizerAPI) ExportEC2InstanceRecommendations(arg0 *compute
 	return ret0, ret1
 }
 
-// ExportEC2InstanceRecommendations indicates an expected call of ExportEC2InstanceRecommendations
+// ExportEC2InstanceRecommendations indicates an expected call of ExportEC2InstanceRecommendations.
 func (mr *MockComputeOptimizerAPIMockRecorder) ExportEC2InstanceRecommendations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportEC2InstanceRecommendations", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).ExportEC2InstanceRecommendations), arg0)
 }
 
-// ExportEC2InstanceRecommendationsRequest mocks base method
+// ExportEC2InstanceRecommendationsRequest mocks base method.
 func (m *MockComputeOptimizerAPI) ExportEC2InstanceRecommendationsRequest(arg0 *computeoptimizer.ExportEC2InstanceRecommendationsInput) (*request.Request, *computeoptimizer.ExportEC2InstanceRecommendationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExportEC2InstanceRecommendationsRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockComputeOptimizerAPI) ExportEC2InstanceRecommendationsRequest(arg0 *
 	return ret0, ret1
 }
 
-// ExportEC2InstanceRecommendationsRequest indicates an expected call of ExportEC2InstanceRecommendationsRequest
+// ExportEC2InstanceRecommendationsRequest indicates an expected call of ExportEC2InstanceRecommendationsRequest.
 func (mr *MockComputeOptimizerAPIMockRecorder) ExportEC2InstanceRecommendationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportEC2InstanceRecommendationsRequest", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).ExportEC2InstanceRecommendationsRequest), arg0)
 }
 
-// ExportEC2InstanceRecommendationsWithContext mocks base method
+// ExportEC2InstanceRecommendationsWithContext mocks base method.
 func (m *MockComputeOptimizerAPI) ExportEC2InstanceRecommendationsWithContext(arg0 context.Context, arg1 *computeoptimizer.ExportEC2InstanceRecommendationsInput, arg2 ...request.Option) (*computeoptimizer.ExportEC2InstanceRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockComputeOptimizerAPI) ExportEC2InstanceRecommendationsWithContext(ar
 	return ret0, ret1
 }
 
-// ExportEC2InstanceRecommendationsWithContext indicates an expected call of ExportEC2InstanceRecommendationsWithContext
+// ExportEC2InstanceRecommendationsWithContext indicates an expected call of ExportEC2InstanceRecommendationsWithContext.
 func (mr *MockComputeOptimizerAPIMockRecorder) ExportEC2InstanceRecommendationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportEC2InstanceRecommendationsWithContext", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).ExportEC2InstanceRecommendationsWithContext), varargs...)
 }
 
-// GetAutoScalingGroupRecommendations mocks base method
+// GetAutoScalingGroupRecommendations mocks base method.
 func (m *MockComputeOptimizerAPI) GetAutoScalingGroupRecommendations(arg0 *computeoptimizer.GetAutoScalingGroupRecommendationsInput) (*computeoptimizer.GetAutoScalingGroupRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAutoScalingGroupRecommendations", arg0)
@@ -194,13 +195,13 @@ func (m *MockComputeOptimizerAPI) GetAutoScalingGroupRecommendations(arg0 *compu
 	return ret0, ret1
 }
 
-// GetAutoScalingGroupRecommendations indicates an expected call of GetAutoScalingGroupRecommendations
+// GetAutoScalingGroupRecommendations indicates an expected call of GetAutoScalingGroupRecommendations.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetAutoScalingGroupRecommendations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAutoScalingGroupRecommendations", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetAutoScalingGroupRecommendations), arg0)
 }
 
-// GetAutoScalingGroupRecommendationsRequest mocks base method
+// GetAutoScalingGroupRecommendationsRequest mocks base method.
 func (m *MockComputeOptimizerAPI) GetAutoScalingGroupRecommendationsRequest(arg0 *computeoptimizer.GetAutoScalingGroupRecommendationsInput) (*request.Request, *computeoptimizer.GetAutoScalingGroupRecommendationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAutoScalingGroupRecommendationsRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockComputeOptimizerAPI) GetAutoScalingGroupRecommendationsRequest(arg0
 	return ret0, ret1
 }
 
-// GetAutoScalingGroupRecommendationsRequest indicates an expected call of GetAutoScalingGroupRecommendationsRequest
+// GetAutoScalingGroupRecommendationsRequest indicates an expected call of GetAutoScalingGroupRecommendationsRequest.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetAutoScalingGroupRecommendationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAutoScalingGroupRecommendationsRequest", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetAutoScalingGroupRecommendationsRequest), arg0)
 }
 
-// GetAutoScalingGroupRecommendationsWithContext mocks base method
+// GetAutoScalingGroupRecommendationsWithContext mocks base method.
 func (m *MockComputeOptimizerAPI) GetAutoScalingGroupRecommendationsWithContext(arg0 context.Context, arg1 *computeoptimizer.GetAutoScalingGroupRecommendationsInput, arg2 ...request.Option) (*computeoptimizer.GetAutoScalingGroupRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockComputeOptimizerAPI) GetAutoScalingGroupRecommendationsWithContext(
 	return ret0, ret1
 }
 
-// GetAutoScalingGroupRecommendationsWithContext indicates an expected call of GetAutoScalingGroupRecommendationsWithContext
+// GetAutoScalingGroupRecommendationsWithContext indicates an expected call of GetAutoScalingGroupRecommendationsWithContext.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetAutoScalingGroupRecommendationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAutoScalingGroupRecommendationsWithContext", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetAutoScalingGroupRecommendationsWithContext), varargs...)
 }
 
-// GetEBSVolumeRecommendations mocks base method
+// GetEBSVolumeRecommendations mocks base method.
 func (m *MockComputeOptimizerAPI) GetEBSVolumeRecommendations(arg0 *computeoptimizer.GetEBSVolumeRecommendationsInput) (*computeoptimizer.GetEBSVolumeRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEBSVolumeRecommendations", arg0)
@@ -244,13 +245,13 @@ func (m *MockComputeOptimizerAPI) GetEBSVolumeRecommendations(arg0 *computeoptim
 	return ret0, ret1
 }
 
-// GetEBSVolumeRecommendations indicates an expected call of GetEBSVolumeRecommendations
+// GetEBSVolumeRecommendations indicates an expected call of GetEBSVolumeRecommendations.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetEBSVolumeRecommendations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEBSVolumeRecommendations", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetEBSVolumeRecommendations), arg0)
 }
 
-// GetEBSVolumeRecommendationsRequest mocks base method
+// GetEBSVolumeRecommendationsRequest mocks base method.
 func (m *MockComputeOptimizerAPI) GetEBSVolumeRecommendationsRequest(arg0 *computeoptimizer.GetEBSVolumeRecommendationsInput) (*request.Request, *computeoptimizer.GetEBSVolumeRecommendationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEBSVolumeRecommendationsRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockComputeOptimizerAPI) GetEBSVolumeRecommendationsRequest(arg0 *compu
 	return ret0, ret1
 }
 
-// GetEBSVolumeRecommendationsRequest indicates an expected call of GetEBSVolumeRecommendationsRequest
+// GetEBSVolumeRecommendationsRequest indicates an expected call of GetEBSVolumeRecommendationsRequest.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetEBSVolumeRecommendationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEBSVolumeRecommendationsRequest", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetEBSVolumeRecommendationsRequest), arg0)
 }
 
-// GetEBSVolumeRecommendationsWithContext mocks base method
+// GetEBSVolumeRecommendationsWithContext mocks base method.
 func (m *MockComputeOptimizerAPI) GetEBSVolumeRecommendationsWithContext(arg0 context.Context, arg1 *computeoptimizer.GetEBSVolumeRecommendationsInput, arg2 ...request.Option) (*computeoptimizer.GetEBSVolumeRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockComputeOptimizerAPI) GetEBSVolumeRecommendationsWithContext(arg0 co
 	return ret0, ret1
 }
 
-// GetEBSVolumeRecommendationsWithContext indicates an expected call of GetEBSVolumeRecommendationsWithContext
+// GetEBSVolumeRecommendationsWithContext indicates an expected call of GetEBSVolumeRecommendationsWithContext.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetEBSVolumeRecommendationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEBSVolumeRecommendationsWithContext", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetEBSVolumeRecommendationsWithContext), varargs...)
 }
 
-// GetEC2InstanceRecommendations mocks base method
+// GetEC2InstanceRecommendations mocks base method.
 func (m *MockComputeOptimizerAPI) GetEC2InstanceRecommendations(arg0 *computeoptimizer.GetEC2InstanceRecommendationsInput) (*computeoptimizer.GetEC2InstanceRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEC2InstanceRecommendations", arg0)
@@ -294,13 +295,13 @@ func (m *MockComputeOptimizerAPI) GetEC2InstanceRecommendations(arg0 *computeopt
 	return ret0, ret1
 }
 
-// GetEC2InstanceRecommendations indicates an expected call of GetEC2InstanceRecommendations
+// GetEC2InstanceRecommendations indicates an expected call of GetEC2InstanceRecommendations.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetEC2InstanceRecommendations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEC2InstanceRecommendations", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetEC2InstanceRecommendations), arg0)
 }
 
-// GetEC2InstanceRecommendationsRequest mocks base method
+// GetEC2InstanceRecommendationsRequest mocks base method.
 func (m *MockComputeOptimizerAPI) GetEC2InstanceRecommendationsRequest(arg0 *computeoptimizer.GetEC2InstanceRecommendationsInput) (*request.Request, *computeoptimizer.GetEC2InstanceRecommendationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEC2InstanceRecommendationsRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockComputeOptimizerAPI) GetEC2InstanceRecommendationsRequest(arg0 *com
 	return ret0, ret1
 }
 
-// GetEC2InstanceRecommendationsRequest indicates an expected call of GetEC2InstanceRecommendationsRequest
+// GetEC2InstanceRecommendationsRequest indicates an expected call of GetEC2InstanceRecommendationsRequest.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetEC2InstanceRecommendationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEC2InstanceRecommendationsRequest", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetEC2InstanceRecommendationsRequest), arg0)
 }
 
-// GetEC2InstanceRecommendationsWithContext mocks base method
+// GetEC2InstanceRecommendationsWithContext mocks base method.
 func (m *MockComputeOptimizerAPI) GetEC2InstanceRecommendationsWithContext(arg0 context.Context, arg1 *computeoptimizer.GetEC2InstanceRecommendationsInput, arg2 ...request.Option) (*computeoptimizer.GetEC2InstanceRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockComputeOptimizerAPI) GetEC2InstanceRecommendationsWithContext(arg0 
 	return ret0, ret1
 }
 
-// GetEC2InstanceRecommendationsWithContext indicates an expected call of GetEC2InstanceRecommendationsWithContext
+// GetEC2InstanceRecommendationsWithContext indicates an expected call of GetEC2InstanceRecommendationsWithContext.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetEC2InstanceRecommendationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEC2InstanceRecommendationsWithContext", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetEC2InstanceRecommendationsWithContext), varargs...)
 }
 
-// GetEC2RecommendationProjectedMetrics mocks base method
+// GetEC2RecommendationProjectedMetrics mocks base method.
 func (m *MockComputeOptimizerAPI) GetEC2RecommendationProjectedMetrics(arg0 *computeoptimizer.GetEC2RecommendationProjectedMetricsInput) (*computeoptimizer.GetEC2RecommendationProjectedMetricsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEC2RecommendationProjectedMetrics", arg0)
@@ -344,13 +345,13 @@ func (m *MockComputeOptimizerAPI) GetEC2RecommendationProjectedMetrics(arg0 *com
 	return ret0, ret1
 }
 
-// GetEC2RecommendationProjectedMetrics indicates an expected call of GetEC2RecommendationProjectedMetrics
+// GetEC2RecommendationProjectedMetrics indicates an expected call of GetEC2RecommendationProjectedMetrics.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetEC2RecommendationProjectedMetrics(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEC2RecommendationProjectedMetrics", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetEC2RecommendationProjectedMetrics), arg0)
 }
 
-// GetEC2RecommendationProjectedMetricsRequest mocks base method
+// GetEC2RecommendationProjectedMetricsRequest mocks base method.
 func (m *MockComputeOptimizerAPI) GetEC2RecommendationProjectedMetricsRequest(arg0 *computeoptimizer.GetEC2RecommendationProjectedMetricsInput) (*request.Request, *computeoptimizer.GetEC2RecommendationProjectedMetricsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEC2RecommendationProjectedMetricsRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockComputeOptimizerAPI) GetEC2RecommendationProjectedMetricsRequest(ar
 	return ret0, ret1
 }
 
-// GetEC2RecommendationProjectedMetricsRequest indicates an expected call of GetEC2RecommendationProjectedMetricsRequest
+// GetEC2RecommendationProjectedMetricsRequest indicates an expected call of GetEC2RecommendationProjectedMetricsRequest.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetEC2RecommendationProjectedMetricsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEC2RecommendationProjectedMetricsRequest", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetEC2RecommendationProjectedMetricsRequest), arg0)
 }
 
-// GetEC2RecommendationProjectedMetricsWithContext mocks base method
+// GetEC2RecommendationProjectedMetricsWithContext mocks base method.
 func (m *MockComputeOptimizerAPI) GetEC2RecommendationProjectedMetricsWithContext(arg0 context.Context, arg1 *computeoptimizer.GetEC2RecommendationProjectedMetricsInput, arg2 ...request.Option) (*computeoptimizer.GetEC2RecommendationProjectedMetricsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockComputeOptimizerAPI) GetEC2RecommendationProjectedMetricsWithContex
 	return ret0, ret1
 }
 
-// GetEC2RecommendationProjectedMetricsWithContext indicates an expected call of GetEC2RecommendationProjectedMetricsWithContext
+// GetEC2RecommendationProjectedMetricsWithContext indicates an expected call of GetEC2RecommendationProjectedMetricsWithContext.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetEC2RecommendationProjectedMetricsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEC2RecommendationProjectedMetricsWithContext", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetEC2RecommendationProjectedMetricsWithContext), varargs...)
 }
 
-// GetEnrollmentStatus mocks base method
+// GetEnrollmentStatus mocks base method.
 func (m *MockComputeOptimizerAPI) GetEnrollmentStatus(arg0 *computeoptimizer.GetEnrollmentStatusInput) (*computeoptimizer.GetEnrollmentStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEnrollmentStatus", arg0)
@@ -394,13 +395,13 @@ func (m *MockComputeOptimizerAPI) GetEnrollmentStatus(arg0 *computeoptimizer.Get
 	return ret0, ret1
 }
 
-// GetEnrollmentStatus indicates an expected call of GetEnrollmentStatus
+// GetEnrollmentStatus indicates an expected call of GetEnrollmentStatus.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetEnrollmentStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEnrollmentStatus", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetEnrollmentStatus), arg0)
 }
 
-// GetEnrollmentStatusRequest mocks base method
+// GetEnrollmentStatusRequest mocks base method.
 func (m *MockComputeOptimizerAPI) GetEnrollmentStatusRequest(arg0 *computeoptimizer.GetEnrollmentStatusInput) (*request.Request, *computeoptimizer.GetEnrollmentStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEnrollmentStatusRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockComputeOptimizerAPI) GetEnrollmentStatusRequest(arg0 *computeoptimi
 	return ret0, ret1
 }
 
-// GetEnrollmentStatusRequest indicates an expected call of GetEnrollmentStatusRequest
+// GetEnrollmentStatusRequest indicates an expected call of GetEnrollmentStatusRequest.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetEnrollmentStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEnrollmentStatusRequest", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetEnrollmentStatusRequest), arg0)
 }
 
-// GetEnrollmentStatusWithContext mocks base method
+// GetEnrollmentStatusWithContext mocks base method.
 func (m *MockComputeOptimizerAPI) GetEnrollmentStatusWithContext(arg0 context.Context, arg1 *computeoptimizer.GetEnrollmentStatusInput, arg2 ...request.Option) (*computeoptimizer.GetEnrollmentStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockComputeOptimizerAPI) GetEnrollmentStatusWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// GetEnrollmentStatusWithContext indicates an expected call of GetEnrollmentStatusWithContext
+// GetEnrollmentStatusWithContext indicates an expected call of GetEnrollmentStatusWithContext.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetEnrollmentStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEnrollmentStatusWithContext", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetEnrollmentStatusWithContext), varargs...)
 }
 
-// GetLambdaFunctionRecommendations mocks base method
+// GetLambdaFunctionRecommendations mocks base method.
 func (m *MockComputeOptimizerAPI) GetLambdaFunctionRecommendations(arg0 *computeoptimizer.GetLambdaFunctionRecommendationsInput) (*computeoptimizer.GetLambdaFunctionRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLambdaFunctionRecommendations", arg0)
@@ -444,13 +445,13 @@ func (m *MockComputeOptimizerAPI) GetLambdaFunctionRecommendations(arg0 *compute
 	return ret0, ret1
 }
 
-// GetLambdaFunctionRecommendations indicates an expected call of GetLambdaFunctionRecommendations
+// GetLambdaFunctionRecommendations indicates an expected call of GetLambdaFunctionRecommendations.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetLambdaFunctionRecommendations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLambdaFunctionRecommendations", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetLambdaFunctionRecommendations), arg0)
 }
 
-// GetLambdaFunctionRecommendationsRequest mocks base method
+// GetLambdaFunctionRecommendationsRequest mocks base method.
 func (m *MockComputeOptimizerAPI) GetLambdaFunctionRecommendationsRequest(arg0 *computeoptimizer.GetLambdaFunctionRecommendationsInput) (*request.Request, *computeoptimizer.GetLambdaFunctionRecommendationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLambdaFunctionRecommendationsRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockComputeOptimizerAPI) GetLambdaFunctionRecommendationsRequest(arg0 *
 	return ret0, ret1
 }
 
-// GetLambdaFunctionRecommendationsRequest indicates an expected call of GetLambdaFunctionRecommendationsRequest
+// GetLambdaFunctionRecommendationsRequest indicates an expected call of GetLambdaFunctionRecommendationsRequest.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetLambdaFunctionRecommendationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLambdaFunctionRecommendationsRequest", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetLambdaFunctionRecommendationsRequest), arg0)
 }
 
-// GetLambdaFunctionRecommendationsWithContext mocks base method
+// GetLambdaFunctionRecommendationsWithContext mocks base method.
 func (m *MockComputeOptimizerAPI) GetLambdaFunctionRecommendationsWithContext(arg0 context.Context, arg1 *computeoptimizer.GetLambdaFunctionRecommendationsInput, arg2 ...request.Option) (*computeoptimizer.GetLambdaFunctionRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockComputeOptimizerAPI) GetLambdaFunctionRecommendationsWithContext(ar
 	return ret0, ret1
 }
 
-// GetLambdaFunctionRecommendationsWithContext indicates an expected call of GetLambdaFunctionRecommendationsWithContext
+// GetLambdaFunctionRecommendationsWithContext indicates an expected call of GetLambdaFunctionRecommendationsWithContext.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetLambdaFunctionRecommendationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLambdaFunctionRecommendationsWithContext", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetLambdaFunctionRecommendationsWithContext), varargs...)
 }
 
-// GetRecommendationSummaries mocks base method
+// GetRecommendationSummaries mocks base method.
 func (m *MockComputeOptimizerAPI) GetRecommendationSummaries(arg0 *computeoptimizer.GetRecommendationSummariesInput) (*computeoptimizer.GetRecommendationSummariesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRecommendationSummaries", arg0)
@@ -494,13 +495,13 @@ func (m *MockComputeOptimizerAPI) GetRecommendationSummaries(arg0 *computeoptimi
 	return ret0, ret1
 }
 
-// GetRecommendationSummaries indicates an expected call of GetRecommendationSummaries
+// GetRecommendationSummaries indicates an expected call of GetRecommendationSummaries.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetRecommendationSummaries(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecommendationSummaries", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetRecommendationSummaries), arg0)
 }
 
-// GetRecommendationSummariesRequest mocks base method
+// GetRecommendationSummariesRequest mocks base method.
 func (m *MockComputeOptimizerAPI) GetRecommendationSummariesRequest(arg0 *computeoptimizer.GetRecommendationSummariesInput) (*request.Request, *computeoptimizer.GetRecommendationSummariesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRecommendationSummariesRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockComputeOptimizerAPI) GetRecommendationSummariesRequest(arg0 *comput
 	return ret0, ret1
 }
 
-// GetRecommendationSummariesRequest indicates an expected call of GetRecommendationSummariesRequest
+// GetRecommendationSummariesRequest indicates an expected call of GetRecommendationSummariesRequest.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetRecommendationSummariesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecommendationSummariesRequest", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetRecommendationSummariesRequest), arg0)
 }
 
-// GetRecommendationSummariesWithContext mocks base method
+// GetRecommendationSummariesWithContext mocks base method.
 func (m *MockComputeOptimizerAPI) GetRecommendationSummariesWithContext(arg0 context.Context, arg1 *computeoptimizer.GetRecommendationSummariesInput, arg2 ...request.Option) (*computeoptimizer.GetRecommendationSummariesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockComputeOptimizerAPI) GetRecommendationSummariesWithContext(arg0 con
 	return ret0, ret1
 }
 
-// GetRecommendationSummariesWithContext indicates an expected call of GetRecommendationSummariesWithContext
+// GetRecommendationSummariesWithContext indicates an expected call of GetRecommendationSummariesWithContext.
 func (mr *MockComputeOptimizerAPIMockRecorder) GetRecommendationSummariesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecommendationSummariesWithContext", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).GetRecommendationSummariesWithContext), varargs...)
 }
 
-// UpdateEnrollmentStatus mocks base method
+// UpdateEnrollmentStatus mocks base method.
 func (m *MockComputeOptimizerAPI) UpdateEnrollmentStatus(arg0 *computeoptimizer.UpdateEnrollmentStatusInput) (*computeoptimizer.UpdateEnrollmentStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateEnrollmentStatus", arg0)
@@ -544,13 +545,13 @@ func (m *MockComputeOptimizerAPI) UpdateEnrollmentStatus(arg0 *computeoptimizer.
 	return ret0, ret1
 }
 
-// UpdateEnrollmentStatus indicates an expected call of UpdateEnrollmentStatus
+// UpdateEnrollmentStatus indicates an expected call of UpdateEnrollmentStatus.
 func (mr *MockComputeOptimizerAPIMockRecorder) UpdateEnrollmentStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEnrollmentStatus", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).UpdateEnrollmentStatus), arg0)
 }
 
-// UpdateEnrollmentStatusRequest mocks base method
+// UpdateEnrollmentStatusRequest mocks base method.
 func (m *MockComputeOptimizerAPI) UpdateEnrollmentStatusRequest(arg0 *computeoptimizer.UpdateEnrollmentStatusInput) (*request.Request, *computeoptimizer.UpdateEnrollmentStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateEnrollmentStatusRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockComputeOptimizerAPI) UpdateEnrollmentStatusRequest(arg0 *computeopt
 	return ret0, ret1
 }
 
-// UpdateEnrollmentStatusRequest indicates an expected call of UpdateEnrollmentStatusRequest
+// UpdateEnrollmentStatusRequest indicates an expected call of UpdateEnrollmentStatusRequest.
 func (mr *MockComputeOptimizerAPIMockRecorder) UpdateEnrollmentStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEnrollmentStatusRequest", reflect.TypeOf((*MockComputeOptimizerAPI)(nil).UpdateEnrollmentStatusRequest), arg0)
 }
 
-// UpdateEnrollmentStatusWithContext mocks base method
+// UpdateEnrollmentStatusWithContext mocks base method.
 func (m *MockComputeOptimizerAPI) UpdateEnrollmentStatusWithContext(arg0 context.Context, arg1 *computeoptimizer.UpdateEnrollmentStatusInput, arg2 ...request.Option) (*computeoptimizer.UpdateEnrollmentStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,7 +579,7 @@ func (m *MockComputeOptimizerAPI) UpdateEnrollmentStatusWithContext(arg0 context
 	return ret0, ret1
 }
 
-// UpdateEnrollmentStatusWithContext indicates an expected call of UpdateEnrollmentStatusWithContext
+// UpdateEnrollmentStatusWithContext indicates an expected call of UpdateEnrollmentStatusWithContext.
 func (mr *MockComputeOptimizerAPIMockRecorder) UpdateEnrollmentStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

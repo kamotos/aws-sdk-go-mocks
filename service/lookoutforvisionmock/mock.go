@@ -6,36 +6,37 @@ package lookoutforvisionmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	lookoutforvision "github.com/aws/aws-sdk-go/service/lookoutforvision"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockLookoutForVisionAPI is a mock of LookoutForVisionAPI interface
+// MockLookoutForVisionAPI is a mock of LookoutForVisionAPI interface.
 type MockLookoutForVisionAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockLookoutForVisionAPIMockRecorder
 }
 
-// MockLookoutForVisionAPIMockRecorder is the mock recorder for MockLookoutForVisionAPI
+// MockLookoutForVisionAPIMockRecorder is the mock recorder for MockLookoutForVisionAPI.
 type MockLookoutForVisionAPIMockRecorder struct {
 	mock *MockLookoutForVisionAPI
 }
 
-// NewMockLookoutForVisionAPI creates a new mock instance
+// NewMockLookoutForVisionAPI creates a new mock instance.
 func NewMockLookoutForVisionAPI(ctrl *gomock.Controller) *MockLookoutForVisionAPI {
 	mock := &MockLookoutForVisionAPI{ctrl: ctrl}
 	mock.recorder = &MockLookoutForVisionAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockLookoutForVisionAPI) EXPECT() *MockLookoutForVisionAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateDataset mocks base method
+// CreateDataset mocks base method.
 func (m *MockLookoutForVisionAPI) CreateDataset(arg0 *lookoutforvision.CreateDatasetInput) (*lookoutforvision.CreateDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDataset", arg0)
@@ -44,13 +45,13 @@ func (m *MockLookoutForVisionAPI) CreateDataset(arg0 *lookoutforvision.CreateDat
 	return ret0, ret1
 }
 
-// CreateDataset indicates an expected call of CreateDataset
+// CreateDataset indicates an expected call of CreateDataset.
 func (mr *MockLookoutForVisionAPIMockRecorder) CreateDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataset", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).CreateDataset), arg0)
 }
 
-// CreateDatasetRequest mocks base method
+// CreateDatasetRequest mocks base method.
 func (m *MockLookoutForVisionAPI) CreateDatasetRequest(arg0 *lookoutforvision.CreateDatasetInput) (*request.Request, *lookoutforvision.CreateDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDatasetRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockLookoutForVisionAPI) CreateDatasetRequest(arg0 *lookoutforvision.Cr
 	return ret0, ret1
 }
 
-// CreateDatasetRequest indicates an expected call of CreateDatasetRequest
+// CreateDatasetRequest indicates an expected call of CreateDatasetRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) CreateDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).CreateDatasetRequest), arg0)
 }
 
-// CreateDatasetWithContext mocks base method
+// CreateDatasetWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) CreateDatasetWithContext(arg0 context.Context, arg1 *lookoutforvision.CreateDatasetInput, arg2 ...request.Option) (*lookoutforvision.CreateDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockLookoutForVisionAPI) CreateDatasetWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateDatasetWithContext indicates an expected call of CreateDatasetWithContext
+// CreateDatasetWithContext indicates an expected call of CreateDatasetWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) CreateDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).CreateDatasetWithContext), varargs...)
 }
 
-// CreateModel mocks base method
+// CreateModel mocks base method.
 func (m *MockLookoutForVisionAPI) CreateModel(arg0 *lookoutforvision.CreateModelInput) (*lookoutforvision.CreateModelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateModel", arg0)
@@ -94,13 +95,13 @@ func (m *MockLookoutForVisionAPI) CreateModel(arg0 *lookoutforvision.CreateModel
 	return ret0, ret1
 }
 
-// CreateModel indicates an expected call of CreateModel
+// CreateModel indicates an expected call of CreateModel.
 func (mr *MockLookoutForVisionAPIMockRecorder) CreateModel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateModel", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).CreateModel), arg0)
 }
 
-// CreateModelRequest mocks base method
+// CreateModelRequest mocks base method.
 func (m *MockLookoutForVisionAPI) CreateModelRequest(arg0 *lookoutforvision.CreateModelInput) (*request.Request, *lookoutforvision.CreateModelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateModelRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockLookoutForVisionAPI) CreateModelRequest(arg0 *lookoutforvision.Crea
 	return ret0, ret1
 }
 
-// CreateModelRequest indicates an expected call of CreateModelRequest
+// CreateModelRequest indicates an expected call of CreateModelRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) CreateModelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateModelRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).CreateModelRequest), arg0)
 }
 
-// CreateModelWithContext mocks base method
+// CreateModelWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) CreateModelWithContext(arg0 context.Context, arg1 *lookoutforvision.CreateModelInput, arg2 ...request.Option) (*lookoutforvision.CreateModelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockLookoutForVisionAPI) CreateModelWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// CreateModelWithContext indicates an expected call of CreateModelWithContext
+// CreateModelWithContext indicates an expected call of CreateModelWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) CreateModelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateModelWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).CreateModelWithContext), varargs...)
 }
 
-// CreateProject mocks base method
+// CreateProject mocks base method.
 func (m *MockLookoutForVisionAPI) CreateProject(arg0 *lookoutforvision.CreateProjectInput) (*lookoutforvision.CreateProjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateProject", arg0)
@@ -144,13 +145,13 @@ func (m *MockLookoutForVisionAPI) CreateProject(arg0 *lookoutforvision.CreatePro
 	return ret0, ret1
 }
 
-// CreateProject indicates an expected call of CreateProject
+// CreateProject indicates an expected call of CreateProject.
 func (mr *MockLookoutForVisionAPIMockRecorder) CreateProject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProject", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).CreateProject), arg0)
 }
 
-// CreateProjectRequest mocks base method
+// CreateProjectRequest mocks base method.
 func (m *MockLookoutForVisionAPI) CreateProjectRequest(arg0 *lookoutforvision.CreateProjectInput) (*request.Request, *lookoutforvision.CreateProjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateProjectRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockLookoutForVisionAPI) CreateProjectRequest(arg0 *lookoutforvision.Cr
 	return ret0, ret1
 }
 
-// CreateProjectRequest indicates an expected call of CreateProjectRequest
+// CreateProjectRequest indicates an expected call of CreateProjectRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) CreateProjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProjectRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).CreateProjectRequest), arg0)
 }
 
-// CreateProjectWithContext mocks base method
+// CreateProjectWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) CreateProjectWithContext(arg0 context.Context, arg1 *lookoutforvision.CreateProjectInput, arg2 ...request.Option) (*lookoutforvision.CreateProjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockLookoutForVisionAPI) CreateProjectWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateProjectWithContext indicates an expected call of CreateProjectWithContext
+// CreateProjectWithContext indicates an expected call of CreateProjectWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) CreateProjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProjectWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).CreateProjectWithContext), varargs...)
 }
 
-// DeleteDataset mocks base method
+// DeleteDataset mocks base method.
 func (m *MockLookoutForVisionAPI) DeleteDataset(arg0 *lookoutforvision.DeleteDatasetInput) (*lookoutforvision.DeleteDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDataset", arg0)
@@ -194,13 +195,13 @@ func (m *MockLookoutForVisionAPI) DeleteDataset(arg0 *lookoutforvision.DeleteDat
 	return ret0, ret1
 }
 
-// DeleteDataset indicates an expected call of DeleteDataset
+// DeleteDataset indicates an expected call of DeleteDataset.
 func (mr *MockLookoutForVisionAPIMockRecorder) DeleteDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataset", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DeleteDataset), arg0)
 }
 
-// DeleteDatasetRequest mocks base method
+// DeleteDatasetRequest mocks base method.
 func (m *MockLookoutForVisionAPI) DeleteDatasetRequest(arg0 *lookoutforvision.DeleteDatasetInput) (*request.Request, *lookoutforvision.DeleteDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDatasetRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockLookoutForVisionAPI) DeleteDatasetRequest(arg0 *lookoutforvision.De
 	return ret0, ret1
 }
 
-// DeleteDatasetRequest indicates an expected call of DeleteDatasetRequest
+// DeleteDatasetRequest indicates an expected call of DeleteDatasetRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) DeleteDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatasetRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DeleteDatasetRequest), arg0)
 }
 
-// DeleteDatasetWithContext mocks base method
+// DeleteDatasetWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) DeleteDatasetWithContext(arg0 context.Context, arg1 *lookoutforvision.DeleteDatasetInput, arg2 ...request.Option) (*lookoutforvision.DeleteDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockLookoutForVisionAPI) DeleteDatasetWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteDatasetWithContext indicates an expected call of DeleteDatasetWithContext
+// DeleteDatasetWithContext indicates an expected call of DeleteDatasetWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) DeleteDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatasetWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DeleteDatasetWithContext), varargs...)
 }
 
-// DeleteModel mocks base method
+// DeleteModel mocks base method.
 func (m *MockLookoutForVisionAPI) DeleteModel(arg0 *lookoutforvision.DeleteModelInput) (*lookoutforvision.DeleteModelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteModel", arg0)
@@ -244,13 +245,13 @@ func (m *MockLookoutForVisionAPI) DeleteModel(arg0 *lookoutforvision.DeleteModel
 	return ret0, ret1
 }
 
-// DeleteModel indicates an expected call of DeleteModel
+// DeleteModel indicates an expected call of DeleteModel.
 func (mr *MockLookoutForVisionAPIMockRecorder) DeleteModel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteModel", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DeleteModel), arg0)
 }
 
-// DeleteModelRequest mocks base method
+// DeleteModelRequest mocks base method.
 func (m *MockLookoutForVisionAPI) DeleteModelRequest(arg0 *lookoutforvision.DeleteModelInput) (*request.Request, *lookoutforvision.DeleteModelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteModelRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockLookoutForVisionAPI) DeleteModelRequest(arg0 *lookoutforvision.Dele
 	return ret0, ret1
 }
 
-// DeleteModelRequest indicates an expected call of DeleteModelRequest
+// DeleteModelRequest indicates an expected call of DeleteModelRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) DeleteModelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteModelRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DeleteModelRequest), arg0)
 }
 
-// DeleteModelWithContext mocks base method
+// DeleteModelWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) DeleteModelWithContext(arg0 context.Context, arg1 *lookoutforvision.DeleteModelInput, arg2 ...request.Option) (*lookoutforvision.DeleteModelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockLookoutForVisionAPI) DeleteModelWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteModelWithContext indicates an expected call of DeleteModelWithContext
+// DeleteModelWithContext indicates an expected call of DeleteModelWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) DeleteModelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteModelWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DeleteModelWithContext), varargs...)
 }
 
-// DeleteProject mocks base method
+// DeleteProject mocks base method.
 func (m *MockLookoutForVisionAPI) DeleteProject(arg0 *lookoutforvision.DeleteProjectInput) (*lookoutforvision.DeleteProjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProject", arg0)
@@ -294,13 +295,13 @@ func (m *MockLookoutForVisionAPI) DeleteProject(arg0 *lookoutforvision.DeletePro
 	return ret0, ret1
 }
 
-// DeleteProject indicates an expected call of DeleteProject
+// DeleteProject indicates an expected call of DeleteProject.
 func (mr *MockLookoutForVisionAPIMockRecorder) DeleteProject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProject", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DeleteProject), arg0)
 }
 
-// DeleteProjectRequest mocks base method
+// DeleteProjectRequest mocks base method.
 func (m *MockLookoutForVisionAPI) DeleteProjectRequest(arg0 *lookoutforvision.DeleteProjectInput) (*request.Request, *lookoutforvision.DeleteProjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProjectRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockLookoutForVisionAPI) DeleteProjectRequest(arg0 *lookoutforvision.De
 	return ret0, ret1
 }
 
-// DeleteProjectRequest indicates an expected call of DeleteProjectRequest
+// DeleteProjectRequest indicates an expected call of DeleteProjectRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) DeleteProjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProjectRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DeleteProjectRequest), arg0)
 }
 
-// DeleteProjectWithContext mocks base method
+// DeleteProjectWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) DeleteProjectWithContext(arg0 context.Context, arg1 *lookoutforvision.DeleteProjectInput, arg2 ...request.Option) (*lookoutforvision.DeleteProjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockLookoutForVisionAPI) DeleteProjectWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteProjectWithContext indicates an expected call of DeleteProjectWithContext
+// DeleteProjectWithContext indicates an expected call of DeleteProjectWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) DeleteProjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProjectWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DeleteProjectWithContext), varargs...)
 }
 
-// DescribeDataset mocks base method
+// DescribeDataset mocks base method.
 func (m *MockLookoutForVisionAPI) DescribeDataset(arg0 *lookoutforvision.DescribeDatasetInput) (*lookoutforvision.DescribeDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDataset", arg0)
@@ -344,13 +345,13 @@ func (m *MockLookoutForVisionAPI) DescribeDataset(arg0 *lookoutforvision.Describ
 	return ret0, ret1
 }
 
-// DescribeDataset indicates an expected call of DescribeDataset
+// DescribeDataset indicates an expected call of DescribeDataset.
 func (mr *MockLookoutForVisionAPIMockRecorder) DescribeDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDataset", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DescribeDataset), arg0)
 }
 
-// DescribeDatasetRequest mocks base method
+// DescribeDatasetRequest mocks base method.
 func (m *MockLookoutForVisionAPI) DescribeDatasetRequest(arg0 *lookoutforvision.DescribeDatasetInput) (*request.Request, *lookoutforvision.DescribeDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDatasetRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockLookoutForVisionAPI) DescribeDatasetRequest(arg0 *lookoutforvision.
 	return ret0, ret1
 }
 
-// DescribeDatasetRequest indicates an expected call of DescribeDatasetRequest
+// DescribeDatasetRequest indicates an expected call of DescribeDatasetRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) DescribeDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DescribeDatasetRequest), arg0)
 }
 
-// DescribeDatasetWithContext mocks base method
+// DescribeDatasetWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) DescribeDatasetWithContext(arg0 context.Context, arg1 *lookoutforvision.DescribeDatasetInput, arg2 ...request.Option) (*lookoutforvision.DescribeDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockLookoutForVisionAPI) DescribeDatasetWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DescribeDatasetWithContext indicates an expected call of DescribeDatasetWithContext
+// DescribeDatasetWithContext indicates an expected call of DescribeDatasetWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) DescribeDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DescribeDatasetWithContext), varargs...)
 }
 
-// DescribeModel mocks base method
+// DescribeModel mocks base method.
 func (m *MockLookoutForVisionAPI) DescribeModel(arg0 *lookoutforvision.DescribeModelInput) (*lookoutforvision.DescribeModelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeModel", arg0)
@@ -394,13 +395,13 @@ func (m *MockLookoutForVisionAPI) DescribeModel(arg0 *lookoutforvision.DescribeM
 	return ret0, ret1
 }
 
-// DescribeModel indicates an expected call of DescribeModel
+// DescribeModel indicates an expected call of DescribeModel.
 func (mr *MockLookoutForVisionAPIMockRecorder) DescribeModel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeModel", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DescribeModel), arg0)
 }
 
-// DescribeModelRequest mocks base method
+// DescribeModelRequest mocks base method.
 func (m *MockLookoutForVisionAPI) DescribeModelRequest(arg0 *lookoutforvision.DescribeModelInput) (*request.Request, *lookoutforvision.DescribeModelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeModelRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockLookoutForVisionAPI) DescribeModelRequest(arg0 *lookoutforvision.De
 	return ret0, ret1
 }
 
-// DescribeModelRequest indicates an expected call of DescribeModelRequest
+// DescribeModelRequest indicates an expected call of DescribeModelRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) DescribeModelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeModelRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DescribeModelRequest), arg0)
 }
 
-// DescribeModelWithContext mocks base method
+// DescribeModelWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) DescribeModelWithContext(arg0 context.Context, arg1 *lookoutforvision.DescribeModelInput, arg2 ...request.Option) (*lookoutforvision.DescribeModelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockLookoutForVisionAPI) DescribeModelWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DescribeModelWithContext indicates an expected call of DescribeModelWithContext
+// DescribeModelWithContext indicates an expected call of DescribeModelWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) DescribeModelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeModelWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DescribeModelWithContext), varargs...)
 }
 
-// DescribeProject mocks base method
+// DescribeProject mocks base method.
 func (m *MockLookoutForVisionAPI) DescribeProject(arg0 *lookoutforvision.DescribeProjectInput) (*lookoutforvision.DescribeProjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeProject", arg0)
@@ -444,13 +445,13 @@ func (m *MockLookoutForVisionAPI) DescribeProject(arg0 *lookoutforvision.Describ
 	return ret0, ret1
 }
 
-// DescribeProject indicates an expected call of DescribeProject
+// DescribeProject indicates an expected call of DescribeProject.
 func (mr *MockLookoutForVisionAPIMockRecorder) DescribeProject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeProject", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DescribeProject), arg0)
 }
 
-// DescribeProjectRequest mocks base method
+// DescribeProjectRequest mocks base method.
 func (m *MockLookoutForVisionAPI) DescribeProjectRequest(arg0 *lookoutforvision.DescribeProjectInput) (*request.Request, *lookoutforvision.DescribeProjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeProjectRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockLookoutForVisionAPI) DescribeProjectRequest(arg0 *lookoutforvision.
 	return ret0, ret1
 }
 
-// DescribeProjectRequest indicates an expected call of DescribeProjectRequest
+// DescribeProjectRequest indicates an expected call of DescribeProjectRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) DescribeProjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeProjectRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DescribeProjectRequest), arg0)
 }
 
-// DescribeProjectWithContext mocks base method
+// DescribeProjectWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) DescribeProjectWithContext(arg0 context.Context, arg1 *lookoutforvision.DescribeProjectInput, arg2 ...request.Option) (*lookoutforvision.DescribeProjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockLookoutForVisionAPI) DescribeProjectWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DescribeProjectWithContext indicates an expected call of DescribeProjectWithContext
+// DescribeProjectWithContext indicates an expected call of DescribeProjectWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) DescribeProjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeProjectWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DescribeProjectWithContext), varargs...)
 }
 
-// DetectAnomalies mocks base method
+// DetectAnomalies mocks base method.
 func (m *MockLookoutForVisionAPI) DetectAnomalies(arg0 *lookoutforvision.DetectAnomaliesInput) (*lookoutforvision.DetectAnomaliesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetectAnomalies", arg0)
@@ -494,13 +495,13 @@ func (m *MockLookoutForVisionAPI) DetectAnomalies(arg0 *lookoutforvision.DetectA
 	return ret0, ret1
 }
 
-// DetectAnomalies indicates an expected call of DetectAnomalies
+// DetectAnomalies indicates an expected call of DetectAnomalies.
 func (mr *MockLookoutForVisionAPIMockRecorder) DetectAnomalies(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetectAnomalies", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DetectAnomalies), arg0)
 }
 
-// DetectAnomaliesRequest mocks base method
+// DetectAnomaliesRequest mocks base method.
 func (m *MockLookoutForVisionAPI) DetectAnomaliesRequest(arg0 *lookoutforvision.DetectAnomaliesInput) (*request.Request, *lookoutforvision.DetectAnomaliesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetectAnomaliesRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockLookoutForVisionAPI) DetectAnomaliesRequest(arg0 *lookoutforvision.
 	return ret0, ret1
 }
 
-// DetectAnomaliesRequest indicates an expected call of DetectAnomaliesRequest
+// DetectAnomaliesRequest indicates an expected call of DetectAnomaliesRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) DetectAnomaliesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetectAnomaliesRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DetectAnomaliesRequest), arg0)
 }
 
-// DetectAnomaliesWithContext mocks base method
+// DetectAnomaliesWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) DetectAnomaliesWithContext(arg0 context.Context, arg1 *lookoutforvision.DetectAnomaliesInput, arg2 ...request.Option) (*lookoutforvision.DetectAnomaliesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockLookoutForVisionAPI) DetectAnomaliesWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DetectAnomaliesWithContext indicates an expected call of DetectAnomaliesWithContext
+// DetectAnomaliesWithContext indicates an expected call of DetectAnomaliesWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) DetectAnomaliesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetectAnomaliesWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).DetectAnomaliesWithContext), varargs...)
 }
 
-// ListDatasetEntries mocks base method
+// ListDatasetEntries mocks base method.
 func (m *MockLookoutForVisionAPI) ListDatasetEntries(arg0 *lookoutforvision.ListDatasetEntriesInput) (*lookoutforvision.ListDatasetEntriesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetEntries", arg0)
@@ -544,13 +545,13 @@ func (m *MockLookoutForVisionAPI) ListDatasetEntries(arg0 *lookoutforvision.List
 	return ret0, ret1
 }
 
-// ListDatasetEntries indicates an expected call of ListDatasetEntries
+// ListDatasetEntries indicates an expected call of ListDatasetEntries.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListDatasetEntries(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetEntries", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListDatasetEntries), arg0)
 }
 
-// ListDatasetEntriesPages mocks base method
+// ListDatasetEntriesPages mocks base method.
 func (m *MockLookoutForVisionAPI) ListDatasetEntriesPages(arg0 *lookoutforvision.ListDatasetEntriesInput, arg1 func(*lookoutforvision.ListDatasetEntriesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetEntriesPages", arg0, arg1)
@@ -558,13 +559,13 @@ func (m *MockLookoutForVisionAPI) ListDatasetEntriesPages(arg0 *lookoutforvision
 	return ret0
 }
 
-// ListDatasetEntriesPages indicates an expected call of ListDatasetEntriesPages
+// ListDatasetEntriesPages indicates an expected call of ListDatasetEntriesPages.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListDatasetEntriesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetEntriesPages", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListDatasetEntriesPages), arg0, arg1)
 }
 
-// ListDatasetEntriesPagesWithContext mocks base method
+// ListDatasetEntriesPagesWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) ListDatasetEntriesPagesWithContext(arg0 context.Context, arg1 *lookoutforvision.ListDatasetEntriesInput, arg2 func(*lookoutforvision.ListDatasetEntriesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -576,14 +577,14 @@ func (m *MockLookoutForVisionAPI) ListDatasetEntriesPagesWithContext(arg0 contex
 	return ret0
 }
 
-// ListDatasetEntriesPagesWithContext indicates an expected call of ListDatasetEntriesPagesWithContext
+// ListDatasetEntriesPagesWithContext indicates an expected call of ListDatasetEntriesPagesWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListDatasetEntriesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetEntriesPagesWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListDatasetEntriesPagesWithContext), varargs...)
 }
 
-// ListDatasetEntriesRequest mocks base method
+// ListDatasetEntriesRequest mocks base method.
 func (m *MockLookoutForVisionAPI) ListDatasetEntriesRequest(arg0 *lookoutforvision.ListDatasetEntriesInput) (*request.Request, *lookoutforvision.ListDatasetEntriesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetEntriesRequest", arg0)
@@ -592,13 +593,13 @@ func (m *MockLookoutForVisionAPI) ListDatasetEntriesRequest(arg0 *lookoutforvisi
 	return ret0, ret1
 }
 
-// ListDatasetEntriesRequest indicates an expected call of ListDatasetEntriesRequest
+// ListDatasetEntriesRequest indicates an expected call of ListDatasetEntriesRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListDatasetEntriesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetEntriesRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListDatasetEntriesRequest), arg0)
 }
 
-// ListDatasetEntriesWithContext mocks base method
+// ListDatasetEntriesWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) ListDatasetEntriesWithContext(arg0 context.Context, arg1 *lookoutforvision.ListDatasetEntriesInput, arg2 ...request.Option) (*lookoutforvision.ListDatasetEntriesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -611,14 +612,14 @@ func (m *MockLookoutForVisionAPI) ListDatasetEntriesWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListDatasetEntriesWithContext indicates an expected call of ListDatasetEntriesWithContext
+// ListDatasetEntriesWithContext indicates an expected call of ListDatasetEntriesWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListDatasetEntriesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetEntriesWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListDatasetEntriesWithContext), varargs...)
 }
 
-// ListModels mocks base method
+// ListModels mocks base method.
 func (m *MockLookoutForVisionAPI) ListModels(arg0 *lookoutforvision.ListModelsInput) (*lookoutforvision.ListModelsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListModels", arg0)
@@ -627,13 +628,13 @@ func (m *MockLookoutForVisionAPI) ListModels(arg0 *lookoutforvision.ListModelsIn
 	return ret0, ret1
 }
 
-// ListModels indicates an expected call of ListModels
+// ListModels indicates an expected call of ListModels.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListModels(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListModels", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListModels), arg0)
 }
 
-// ListModelsPages mocks base method
+// ListModelsPages mocks base method.
 func (m *MockLookoutForVisionAPI) ListModelsPages(arg0 *lookoutforvision.ListModelsInput, arg1 func(*lookoutforvision.ListModelsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListModelsPages", arg0, arg1)
@@ -641,13 +642,13 @@ func (m *MockLookoutForVisionAPI) ListModelsPages(arg0 *lookoutforvision.ListMod
 	return ret0
 }
 
-// ListModelsPages indicates an expected call of ListModelsPages
+// ListModelsPages indicates an expected call of ListModelsPages.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListModelsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListModelsPages", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListModelsPages), arg0, arg1)
 }
 
-// ListModelsPagesWithContext mocks base method
+// ListModelsPagesWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) ListModelsPagesWithContext(arg0 context.Context, arg1 *lookoutforvision.ListModelsInput, arg2 func(*lookoutforvision.ListModelsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -659,14 +660,14 @@ func (m *MockLookoutForVisionAPI) ListModelsPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListModelsPagesWithContext indicates an expected call of ListModelsPagesWithContext
+// ListModelsPagesWithContext indicates an expected call of ListModelsPagesWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListModelsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListModelsPagesWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListModelsPagesWithContext), varargs...)
 }
 
-// ListModelsRequest mocks base method
+// ListModelsRequest mocks base method.
 func (m *MockLookoutForVisionAPI) ListModelsRequest(arg0 *lookoutforvision.ListModelsInput) (*request.Request, *lookoutforvision.ListModelsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListModelsRequest", arg0)
@@ -675,13 +676,13 @@ func (m *MockLookoutForVisionAPI) ListModelsRequest(arg0 *lookoutforvision.ListM
 	return ret0, ret1
 }
 
-// ListModelsRequest indicates an expected call of ListModelsRequest
+// ListModelsRequest indicates an expected call of ListModelsRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListModelsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListModelsRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListModelsRequest), arg0)
 }
 
-// ListModelsWithContext mocks base method
+// ListModelsWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) ListModelsWithContext(arg0 context.Context, arg1 *lookoutforvision.ListModelsInput, arg2 ...request.Option) (*lookoutforvision.ListModelsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -694,14 +695,14 @@ func (m *MockLookoutForVisionAPI) ListModelsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListModelsWithContext indicates an expected call of ListModelsWithContext
+// ListModelsWithContext indicates an expected call of ListModelsWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListModelsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListModelsWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListModelsWithContext), varargs...)
 }
 
-// ListProjects mocks base method
+// ListProjects mocks base method.
 func (m *MockLookoutForVisionAPI) ListProjects(arg0 *lookoutforvision.ListProjectsInput) (*lookoutforvision.ListProjectsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProjects", arg0)
@@ -710,13 +711,13 @@ func (m *MockLookoutForVisionAPI) ListProjects(arg0 *lookoutforvision.ListProjec
 	return ret0, ret1
 }
 
-// ListProjects indicates an expected call of ListProjects
+// ListProjects indicates an expected call of ListProjects.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListProjects(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjects", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListProjects), arg0)
 }
 
-// ListProjectsPages mocks base method
+// ListProjectsPages mocks base method.
 func (m *MockLookoutForVisionAPI) ListProjectsPages(arg0 *lookoutforvision.ListProjectsInput, arg1 func(*lookoutforvision.ListProjectsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProjectsPages", arg0, arg1)
@@ -724,13 +725,13 @@ func (m *MockLookoutForVisionAPI) ListProjectsPages(arg0 *lookoutforvision.ListP
 	return ret0
 }
 
-// ListProjectsPages indicates an expected call of ListProjectsPages
+// ListProjectsPages indicates an expected call of ListProjectsPages.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListProjectsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjectsPages", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListProjectsPages), arg0, arg1)
 }
 
-// ListProjectsPagesWithContext mocks base method
+// ListProjectsPagesWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) ListProjectsPagesWithContext(arg0 context.Context, arg1 *lookoutforvision.ListProjectsInput, arg2 func(*lookoutforvision.ListProjectsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -742,14 +743,14 @@ func (m *MockLookoutForVisionAPI) ListProjectsPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListProjectsPagesWithContext indicates an expected call of ListProjectsPagesWithContext
+// ListProjectsPagesWithContext indicates an expected call of ListProjectsPagesWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListProjectsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjectsPagesWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListProjectsPagesWithContext), varargs...)
 }
 
-// ListProjectsRequest mocks base method
+// ListProjectsRequest mocks base method.
 func (m *MockLookoutForVisionAPI) ListProjectsRequest(arg0 *lookoutforvision.ListProjectsInput) (*request.Request, *lookoutforvision.ListProjectsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProjectsRequest", arg0)
@@ -758,13 +759,13 @@ func (m *MockLookoutForVisionAPI) ListProjectsRequest(arg0 *lookoutforvision.Lis
 	return ret0, ret1
 }
 
-// ListProjectsRequest indicates an expected call of ListProjectsRequest
+// ListProjectsRequest indicates an expected call of ListProjectsRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListProjectsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjectsRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListProjectsRequest), arg0)
 }
 
-// ListProjectsWithContext mocks base method
+// ListProjectsWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) ListProjectsWithContext(arg0 context.Context, arg1 *lookoutforvision.ListProjectsInput, arg2 ...request.Option) (*lookoutforvision.ListProjectsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -777,14 +778,64 @@ func (m *MockLookoutForVisionAPI) ListProjectsWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListProjectsWithContext indicates an expected call of ListProjectsWithContext
+// ListProjectsWithContext indicates an expected call of ListProjectsWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) ListProjectsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjectsWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListProjectsWithContext), varargs...)
 }
 
-// StartModel mocks base method
+// ListTagsForResource mocks base method.
+func (m *MockLookoutForVisionAPI) ListTagsForResource(arg0 *lookoutforvision.ListTagsForResourceInput) (*lookoutforvision.ListTagsForResourceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
+	ret0, _ := ret[0].(*lookoutforvision.ListTagsForResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListTagsForResource indicates an expected call of ListTagsForResource.
+func (mr *MockLookoutForVisionAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListTagsForResource), arg0)
+}
+
+// ListTagsForResourceRequest mocks base method.
+func (m *MockLookoutForVisionAPI) ListTagsForResourceRequest(arg0 *lookoutforvision.ListTagsForResourceInput) (*request.Request, *lookoutforvision.ListTagsForResourceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lookoutforvision.ListTagsForResourceOutput)
+	return ret0, ret1
+}
+
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
+func (mr *MockLookoutForVisionAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListTagsForResourceRequest), arg0)
+}
+
+// ListTagsForResourceWithContext mocks base method.
+func (m *MockLookoutForVisionAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *lookoutforvision.ListTagsForResourceInput, arg2 ...request.Option) (*lookoutforvision.ListTagsForResourceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListTagsForResourceWithContext", varargs...)
+	ret0, _ := ret[0].(*lookoutforvision.ListTagsForResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
+func (mr *MockLookoutForVisionAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).ListTagsForResourceWithContext), varargs...)
+}
+
+// StartModel mocks base method.
 func (m *MockLookoutForVisionAPI) StartModel(arg0 *lookoutforvision.StartModelInput) (*lookoutforvision.StartModelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartModel", arg0)
@@ -793,13 +844,13 @@ func (m *MockLookoutForVisionAPI) StartModel(arg0 *lookoutforvision.StartModelIn
 	return ret0, ret1
 }
 
-// StartModel indicates an expected call of StartModel
+// StartModel indicates an expected call of StartModel.
 func (mr *MockLookoutForVisionAPIMockRecorder) StartModel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartModel", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).StartModel), arg0)
 }
 
-// StartModelRequest mocks base method
+// StartModelRequest mocks base method.
 func (m *MockLookoutForVisionAPI) StartModelRequest(arg0 *lookoutforvision.StartModelInput) (*request.Request, *lookoutforvision.StartModelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartModelRequest", arg0)
@@ -808,13 +859,13 @@ func (m *MockLookoutForVisionAPI) StartModelRequest(arg0 *lookoutforvision.Start
 	return ret0, ret1
 }
 
-// StartModelRequest indicates an expected call of StartModelRequest
+// StartModelRequest indicates an expected call of StartModelRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) StartModelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartModelRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).StartModelRequest), arg0)
 }
 
-// StartModelWithContext mocks base method
+// StartModelWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) StartModelWithContext(arg0 context.Context, arg1 *lookoutforvision.StartModelInput, arg2 ...request.Option) (*lookoutforvision.StartModelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -827,14 +878,14 @@ func (m *MockLookoutForVisionAPI) StartModelWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// StartModelWithContext indicates an expected call of StartModelWithContext
+// StartModelWithContext indicates an expected call of StartModelWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) StartModelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartModelWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).StartModelWithContext), varargs...)
 }
 
-// StopModel mocks base method
+// StopModel mocks base method.
 func (m *MockLookoutForVisionAPI) StopModel(arg0 *lookoutforvision.StopModelInput) (*lookoutforvision.StopModelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopModel", arg0)
@@ -843,13 +894,13 @@ func (m *MockLookoutForVisionAPI) StopModel(arg0 *lookoutforvision.StopModelInpu
 	return ret0, ret1
 }
 
-// StopModel indicates an expected call of StopModel
+// StopModel indicates an expected call of StopModel.
 func (mr *MockLookoutForVisionAPIMockRecorder) StopModel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopModel", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).StopModel), arg0)
 }
 
-// StopModelRequest mocks base method
+// StopModelRequest mocks base method.
 func (m *MockLookoutForVisionAPI) StopModelRequest(arg0 *lookoutforvision.StopModelInput) (*request.Request, *lookoutforvision.StopModelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopModelRequest", arg0)
@@ -858,13 +909,13 @@ func (m *MockLookoutForVisionAPI) StopModelRequest(arg0 *lookoutforvision.StopMo
 	return ret0, ret1
 }
 
-// StopModelRequest indicates an expected call of StopModelRequest
+// StopModelRequest indicates an expected call of StopModelRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) StopModelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopModelRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).StopModelRequest), arg0)
 }
 
-// StopModelWithContext mocks base method
+// StopModelWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) StopModelWithContext(arg0 context.Context, arg1 *lookoutforvision.StopModelInput, arg2 ...request.Option) (*lookoutforvision.StopModelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -877,14 +928,114 @@ func (m *MockLookoutForVisionAPI) StopModelWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// StopModelWithContext indicates an expected call of StopModelWithContext
+// StopModelWithContext indicates an expected call of StopModelWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) StopModelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopModelWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).StopModelWithContext), varargs...)
 }
 
-// UpdateDatasetEntries mocks base method
+// TagResource mocks base method.
+func (m *MockLookoutForVisionAPI) TagResource(arg0 *lookoutforvision.TagResourceInput) (*lookoutforvision.TagResourceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "TagResource", arg0)
+	ret0, _ := ret[0].(*lookoutforvision.TagResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// TagResource indicates an expected call of TagResource.
+func (mr *MockLookoutForVisionAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).TagResource), arg0)
+}
+
+// TagResourceRequest mocks base method.
+func (m *MockLookoutForVisionAPI) TagResourceRequest(arg0 *lookoutforvision.TagResourceInput) (*request.Request, *lookoutforvision.TagResourceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lookoutforvision.TagResourceOutput)
+	return ret0, ret1
+}
+
+// TagResourceRequest indicates an expected call of TagResourceRequest.
+func (mr *MockLookoutForVisionAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).TagResourceRequest), arg0)
+}
+
+// TagResourceWithContext mocks base method.
+func (m *MockLookoutForVisionAPI) TagResourceWithContext(arg0 context.Context, arg1 *lookoutforvision.TagResourceInput, arg2 ...request.Option) (*lookoutforvision.TagResourceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "TagResourceWithContext", varargs...)
+	ret0, _ := ret[0].(*lookoutforvision.TagResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
+func (mr *MockLookoutForVisionAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).TagResourceWithContext), varargs...)
+}
+
+// UntagResource mocks base method.
+func (m *MockLookoutForVisionAPI) UntagResource(arg0 *lookoutforvision.UntagResourceInput) (*lookoutforvision.UntagResourceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UntagResource", arg0)
+	ret0, _ := ret[0].(*lookoutforvision.UntagResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UntagResource indicates an expected call of UntagResource.
+func (mr *MockLookoutForVisionAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).UntagResource), arg0)
+}
+
+// UntagResourceRequest mocks base method.
+func (m *MockLookoutForVisionAPI) UntagResourceRequest(arg0 *lookoutforvision.UntagResourceInput) (*request.Request, *lookoutforvision.UntagResourceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lookoutforvision.UntagResourceOutput)
+	return ret0, ret1
+}
+
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
+func (mr *MockLookoutForVisionAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).UntagResourceRequest), arg0)
+}
+
+// UntagResourceWithContext mocks base method.
+func (m *MockLookoutForVisionAPI) UntagResourceWithContext(arg0 context.Context, arg1 *lookoutforvision.UntagResourceInput, arg2 ...request.Option) (*lookoutforvision.UntagResourceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UntagResourceWithContext", varargs...)
+	ret0, _ := ret[0].(*lookoutforvision.UntagResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
+func (mr *MockLookoutForVisionAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).UntagResourceWithContext), varargs...)
+}
+
+// UpdateDatasetEntries mocks base method.
 func (m *MockLookoutForVisionAPI) UpdateDatasetEntries(arg0 *lookoutforvision.UpdateDatasetEntriesInput) (*lookoutforvision.UpdateDatasetEntriesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDatasetEntries", arg0)
@@ -893,13 +1044,13 @@ func (m *MockLookoutForVisionAPI) UpdateDatasetEntries(arg0 *lookoutforvision.Up
 	return ret0, ret1
 }
 
-// UpdateDatasetEntries indicates an expected call of UpdateDatasetEntries
+// UpdateDatasetEntries indicates an expected call of UpdateDatasetEntries.
 func (mr *MockLookoutForVisionAPIMockRecorder) UpdateDatasetEntries(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDatasetEntries", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).UpdateDatasetEntries), arg0)
 }
 
-// UpdateDatasetEntriesRequest mocks base method
+// UpdateDatasetEntriesRequest mocks base method.
 func (m *MockLookoutForVisionAPI) UpdateDatasetEntriesRequest(arg0 *lookoutforvision.UpdateDatasetEntriesInput) (*request.Request, *lookoutforvision.UpdateDatasetEntriesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDatasetEntriesRequest", arg0)
@@ -908,13 +1059,13 @@ func (m *MockLookoutForVisionAPI) UpdateDatasetEntriesRequest(arg0 *lookoutforvi
 	return ret0, ret1
 }
 
-// UpdateDatasetEntriesRequest indicates an expected call of UpdateDatasetEntriesRequest
+// UpdateDatasetEntriesRequest indicates an expected call of UpdateDatasetEntriesRequest.
 func (mr *MockLookoutForVisionAPIMockRecorder) UpdateDatasetEntriesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDatasetEntriesRequest", reflect.TypeOf((*MockLookoutForVisionAPI)(nil).UpdateDatasetEntriesRequest), arg0)
 }
 
-// UpdateDatasetEntriesWithContext mocks base method
+// UpdateDatasetEntriesWithContext mocks base method.
 func (m *MockLookoutForVisionAPI) UpdateDatasetEntriesWithContext(arg0 context.Context, arg1 *lookoutforvision.UpdateDatasetEntriesInput, arg2 ...request.Option) (*lookoutforvision.UpdateDatasetEntriesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -927,7 +1078,7 @@ func (m *MockLookoutForVisionAPI) UpdateDatasetEntriesWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// UpdateDatasetEntriesWithContext indicates an expected call of UpdateDatasetEntriesWithContext
+// UpdateDatasetEntriesWithContext indicates an expected call of UpdateDatasetEntriesWithContext.
 func (mr *MockLookoutForVisionAPIMockRecorder) UpdateDatasetEntriesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

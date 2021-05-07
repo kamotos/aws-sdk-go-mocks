@@ -6,36 +6,37 @@ package codestarnotificationsmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	codestarnotifications "github.com/aws/aws-sdk-go/service/codestarnotifications"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockCodeStarNotificationsAPI is a mock of CodeStarNotificationsAPI interface
+// MockCodeStarNotificationsAPI is a mock of CodeStarNotificationsAPI interface.
 type MockCodeStarNotificationsAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockCodeStarNotificationsAPIMockRecorder
 }
 
-// MockCodeStarNotificationsAPIMockRecorder is the mock recorder for MockCodeStarNotificationsAPI
+// MockCodeStarNotificationsAPIMockRecorder is the mock recorder for MockCodeStarNotificationsAPI.
 type MockCodeStarNotificationsAPIMockRecorder struct {
 	mock *MockCodeStarNotificationsAPI
 }
 
-// NewMockCodeStarNotificationsAPI creates a new mock instance
+// NewMockCodeStarNotificationsAPI creates a new mock instance.
 func NewMockCodeStarNotificationsAPI(ctrl *gomock.Controller) *MockCodeStarNotificationsAPI {
 	mock := &MockCodeStarNotificationsAPI{ctrl: ctrl}
 	mock.recorder = &MockCodeStarNotificationsAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockCodeStarNotificationsAPI) EXPECT() *MockCodeStarNotificationsAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateNotificationRule mocks base method
+// CreateNotificationRule mocks base method.
 func (m *MockCodeStarNotificationsAPI) CreateNotificationRule(arg0 *codestarnotifications.CreateNotificationRuleInput) (*codestarnotifications.CreateNotificationRuleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateNotificationRule", arg0)
@@ -44,13 +45,13 @@ func (m *MockCodeStarNotificationsAPI) CreateNotificationRule(arg0 *codestarnoti
 	return ret0, ret1
 }
 
-// CreateNotificationRule indicates an expected call of CreateNotificationRule
+// CreateNotificationRule indicates an expected call of CreateNotificationRule.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) CreateNotificationRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateNotificationRule", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).CreateNotificationRule), arg0)
 }
 
-// CreateNotificationRuleRequest mocks base method
+// CreateNotificationRuleRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) CreateNotificationRuleRequest(arg0 *codestarnotifications.CreateNotificationRuleInput) (*request.Request, *codestarnotifications.CreateNotificationRuleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateNotificationRuleRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockCodeStarNotificationsAPI) CreateNotificationRuleRequest(arg0 *codes
 	return ret0, ret1
 }
 
-// CreateNotificationRuleRequest indicates an expected call of CreateNotificationRuleRequest
+// CreateNotificationRuleRequest indicates an expected call of CreateNotificationRuleRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) CreateNotificationRuleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateNotificationRuleRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).CreateNotificationRuleRequest), arg0)
 }
 
-// CreateNotificationRuleWithContext mocks base method
+// CreateNotificationRuleWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) CreateNotificationRuleWithContext(arg0 context.Context, arg1 *codestarnotifications.CreateNotificationRuleInput, arg2 ...request.Option) (*codestarnotifications.CreateNotificationRuleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockCodeStarNotificationsAPI) CreateNotificationRuleWithContext(arg0 co
 	return ret0, ret1
 }
 
-// CreateNotificationRuleWithContext indicates an expected call of CreateNotificationRuleWithContext
+// CreateNotificationRuleWithContext indicates an expected call of CreateNotificationRuleWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) CreateNotificationRuleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateNotificationRuleWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).CreateNotificationRuleWithContext), varargs...)
 }
 
-// DeleteNotificationRule mocks base method
+// DeleteNotificationRule mocks base method.
 func (m *MockCodeStarNotificationsAPI) DeleteNotificationRule(arg0 *codestarnotifications.DeleteNotificationRuleInput) (*codestarnotifications.DeleteNotificationRuleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteNotificationRule", arg0)
@@ -94,13 +95,13 @@ func (m *MockCodeStarNotificationsAPI) DeleteNotificationRule(arg0 *codestarnoti
 	return ret0, ret1
 }
 
-// DeleteNotificationRule indicates an expected call of DeleteNotificationRule
+// DeleteNotificationRule indicates an expected call of DeleteNotificationRule.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) DeleteNotificationRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteNotificationRule", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).DeleteNotificationRule), arg0)
 }
 
-// DeleteNotificationRuleRequest mocks base method
+// DeleteNotificationRuleRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) DeleteNotificationRuleRequest(arg0 *codestarnotifications.DeleteNotificationRuleInput) (*request.Request, *codestarnotifications.DeleteNotificationRuleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteNotificationRuleRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockCodeStarNotificationsAPI) DeleteNotificationRuleRequest(arg0 *codes
 	return ret0, ret1
 }
 
-// DeleteNotificationRuleRequest indicates an expected call of DeleteNotificationRuleRequest
+// DeleteNotificationRuleRequest indicates an expected call of DeleteNotificationRuleRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) DeleteNotificationRuleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteNotificationRuleRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).DeleteNotificationRuleRequest), arg0)
 }
 
-// DeleteNotificationRuleWithContext mocks base method
+// DeleteNotificationRuleWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) DeleteNotificationRuleWithContext(arg0 context.Context, arg1 *codestarnotifications.DeleteNotificationRuleInput, arg2 ...request.Option) (*codestarnotifications.DeleteNotificationRuleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockCodeStarNotificationsAPI) DeleteNotificationRuleWithContext(arg0 co
 	return ret0, ret1
 }
 
-// DeleteNotificationRuleWithContext indicates an expected call of DeleteNotificationRuleWithContext
+// DeleteNotificationRuleWithContext indicates an expected call of DeleteNotificationRuleWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) DeleteNotificationRuleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteNotificationRuleWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).DeleteNotificationRuleWithContext), varargs...)
 }
 
-// DeleteTarget mocks base method
+// DeleteTarget mocks base method.
 func (m *MockCodeStarNotificationsAPI) DeleteTarget(arg0 *codestarnotifications.DeleteTargetInput) (*codestarnotifications.DeleteTargetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteTarget", arg0)
@@ -144,13 +145,13 @@ func (m *MockCodeStarNotificationsAPI) DeleteTarget(arg0 *codestarnotifications.
 	return ret0, ret1
 }
 
-// DeleteTarget indicates an expected call of DeleteTarget
+// DeleteTarget indicates an expected call of DeleteTarget.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) DeleteTarget(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTarget", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).DeleteTarget), arg0)
 }
 
-// DeleteTargetRequest mocks base method
+// DeleteTargetRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) DeleteTargetRequest(arg0 *codestarnotifications.DeleteTargetInput) (*request.Request, *codestarnotifications.DeleteTargetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteTargetRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockCodeStarNotificationsAPI) DeleteTargetRequest(arg0 *codestarnotific
 	return ret0, ret1
 }
 
-// DeleteTargetRequest indicates an expected call of DeleteTargetRequest
+// DeleteTargetRequest indicates an expected call of DeleteTargetRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) DeleteTargetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTargetRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).DeleteTargetRequest), arg0)
 }
 
-// DeleteTargetWithContext mocks base method
+// DeleteTargetWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) DeleteTargetWithContext(arg0 context.Context, arg1 *codestarnotifications.DeleteTargetInput, arg2 ...request.Option) (*codestarnotifications.DeleteTargetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockCodeStarNotificationsAPI) DeleteTargetWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DeleteTargetWithContext indicates an expected call of DeleteTargetWithContext
+// DeleteTargetWithContext indicates an expected call of DeleteTargetWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) DeleteTargetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTargetWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).DeleteTargetWithContext), varargs...)
 }
 
-// DescribeNotificationRule mocks base method
+// DescribeNotificationRule mocks base method.
 func (m *MockCodeStarNotificationsAPI) DescribeNotificationRule(arg0 *codestarnotifications.DescribeNotificationRuleInput) (*codestarnotifications.DescribeNotificationRuleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeNotificationRule", arg0)
@@ -194,13 +195,13 @@ func (m *MockCodeStarNotificationsAPI) DescribeNotificationRule(arg0 *codestarno
 	return ret0, ret1
 }
 
-// DescribeNotificationRule indicates an expected call of DescribeNotificationRule
+// DescribeNotificationRule indicates an expected call of DescribeNotificationRule.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) DescribeNotificationRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeNotificationRule", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).DescribeNotificationRule), arg0)
 }
 
-// DescribeNotificationRuleRequest mocks base method
+// DescribeNotificationRuleRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) DescribeNotificationRuleRequest(arg0 *codestarnotifications.DescribeNotificationRuleInput) (*request.Request, *codestarnotifications.DescribeNotificationRuleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeNotificationRuleRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockCodeStarNotificationsAPI) DescribeNotificationRuleRequest(arg0 *cod
 	return ret0, ret1
 }
 
-// DescribeNotificationRuleRequest indicates an expected call of DescribeNotificationRuleRequest
+// DescribeNotificationRuleRequest indicates an expected call of DescribeNotificationRuleRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) DescribeNotificationRuleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeNotificationRuleRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).DescribeNotificationRuleRequest), arg0)
 }
 
-// DescribeNotificationRuleWithContext mocks base method
+// DescribeNotificationRuleWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) DescribeNotificationRuleWithContext(arg0 context.Context, arg1 *codestarnotifications.DescribeNotificationRuleInput, arg2 ...request.Option) (*codestarnotifications.DescribeNotificationRuleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockCodeStarNotificationsAPI) DescribeNotificationRuleWithContext(arg0 
 	return ret0, ret1
 }
 
-// DescribeNotificationRuleWithContext indicates an expected call of DescribeNotificationRuleWithContext
+// DescribeNotificationRuleWithContext indicates an expected call of DescribeNotificationRuleWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) DescribeNotificationRuleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeNotificationRuleWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).DescribeNotificationRuleWithContext), varargs...)
 }
 
-// ListEventTypes mocks base method
+// ListEventTypes mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListEventTypes(arg0 *codestarnotifications.ListEventTypesInput) (*codestarnotifications.ListEventTypesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEventTypes", arg0)
@@ -244,13 +245,13 @@ func (m *MockCodeStarNotificationsAPI) ListEventTypes(arg0 *codestarnotification
 	return ret0, ret1
 }
 
-// ListEventTypes indicates an expected call of ListEventTypes
+// ListEventTypes indicates an expected call of ListEventTypes.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListEventTypes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventTypes", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListEventTypes), arg0)
 }
 
-// ListEventTypesPages mocks base method
+// ListEventTypesPages mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListEventTypesPages(arg0 *codestarnotifications.ListEventTypesInput, arg1 func(*codestarnotifications.ListEventTypesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEventTypesPages", arg0, arg1)
@@ -258,13 +259,13 @@ func (m *MockCodeStarNotificationsAPI) ListEventTypesPages(arg0 *codestarnotific
 	return ret0
 }
 
-// ListEventTypesPages indicates an expected call of ListEventTypesPages
+// ListEventTypesPages indicates an expected call of ListEventTypesPages.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListEventTypesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventTypesPages", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListEventTypesPages), arg0, arg1)
 }
 
-// ListEventTypesPagesWithContext mocks base method
+// ListEventTypesPagesWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListEventTypesPagesWithContext(arg0 context.Context, arg1 *codestarnotifications.ListEventTypesInput, arg2 func(*codestarnotifications.ListEventTypesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -276,14 +277,14 @@ func (m *MockCodeStarNotificationsAPI) ListEventTypesPagesWithContext(arg0 conte
 	return ret0
 }
 
-// ListEventTypesPagesWithContext indicates an expected call of ListEventTypesPagesWithContext
+// ListEventTypesPagesWithContext indicates an expected call of ListEventTypesPagesWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListEventTypesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventTypesPagesWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListEventTypesPagesWithContext), varargs...)
 }
 
-// ListEventTypesRequest mocks base method
+// ListEventTypesRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListEventTypesRequest(arg0 *codestarnotifications.ListEventTypesInput) (*request.Request, *codestarnotifications.ListEventTypesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEventTypesRequest", arg0)
@@ -292,13 +293,13 @@ func (m *MockCodeStarNotificationsAPI) ListEventTypesRequest(arg0 *codestarnotif
 	return ret0, ret1
 }
 
-// ListEventTypesRequest indicates an expected call of ListEventTypesRequest
+// ListEventTypesRequest indicates an expected call of ListEventTypesRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListEventTypesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventTypesRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListEventTypesRequest), arg0)
 }
 
-// ListEventTypesWithContext mocks base method
+// ListEventTypesWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListEventTypesWithContext(arg0 context.Context, arg1 *codestarnotifications.ListEventTypesInput, arg2 ...request.Option) (*codestarnotifications.ListEventTypesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -311,14 +312,14 @@ func (m *MockCodeStarNotificationsAPI) ListEventTypesWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListEventTypesWithContext indicates an expected call of ListEventTypesWithContext
+// ListEventTypesWithContext indicates an expected call of ListEventTypesWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListEventTypesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventTypesWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListEventTypesWithContext), varargs...)
 }
 
-// ListNotificationRules mocks base method
+// ListNotificationRules mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListNotificationRules(arg0 *codestarnotifications.ListNotificationRulesInput) (*codestarnotifications.ListNotificationRulesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListNotificationRules", arg0)
@@ -327,13 +328,13 @@ func (m *MockCodeStarNotificationsAPI) ListNotificationRules(arg0 *codestarnotif
 	return ret0, ret1
 }
 
-// ListNotificationRules indicates an expected call of ListNotificationRules
+// ListNotificationRules indicates an expected call of ListNotificationRules.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListNotificationRules(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNotificationRules", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListNotificationRules), arg0)
 }
 
-// ListNotificationRulesPages mocks base method
+// ListNotificationRulesPages mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListNotificationRulesPages(arg0 *codestarnotifications.ListNotificationRulesInput, arg1 func(*codestarnotifications.ListNotificationRulesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListNotificationRulesPages", arg0, arg1)
@@ -341,13 +342,13 @@ func (m *MockCodeStarNotificationsAPI) ListNotificationRulesPages(arg0 *codestar
 	return ret0
 }
 
-// ListNotificationRulesPages indicates an expected call of ListNotificationRulesPages
+// ListNotificationRulesPages indicates an expected call of ListNotificationRulesPages.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListNotificationRulesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNotificationRulesPages", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListNotificationRulesPages), arg0, arg1)
 }
 
-// ListNotificationRulesPagesWithContext mocks base method
+// ListNotificationRulesPagesWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListNotificationRulesPagesWithContext(arg0 context.Context, arg1 *codestarnotifications.ListNotificationRulesInput, arg2 func(*codestarnotifications.ListNotificationRulesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -359,14 +360,14 @@ func (m *MockCodeStarNotificationsAPI) ListNotificationRulesPagesWithContext(arg
 	return ret0
 }
 
-// ListNotificationRulesPagesWithContext indicates an expected call of ListNotificationRulesPagesWithContext
+// ListNotificationRulesPagesWithContext indicates an expected call of ListNotificationRulesPagesWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListNotificationRulesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNotificationRulesPagesWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListNotificationRulesPagesWithContext), varargs...)
 }
 
-// ListNotificationRulesRequest mocks base method
+// ListNotificationRulesRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListNotificationRulesRequest(arg0 *codestarnotifications.ListNotificationRulesInput) (*request.Request, *codestarnotifications.ListNotificationRulesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListNotificationRulesRequest", arg0)
@@ -375,13 +376,13 @@ func (m *MockCodeStarNotificationsAPI) ListNotificationRulesRequest(arg0 *codest
 	return ret0, ret1
 }
 
-// ListNotificationRulesRequest indicates an expected call of ListNotificationRulesRequest
+// ListNotificationRulesRequest indicates an expected call of ListNotificationRulesRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListNotificationRulesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNotificationRulesRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListNotificationRulesRequest), arg0)
 }
 
-// ListNotificationRulesWithContext mocks base method
+// ListNotificationRulesWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListNotificationRulesWithContext(arg0 context.Context, arg1 *codestarnotifications.ListNotificationRulesInput, arg2 ...request.Option) (*codestarnotifications.ListNotificationRulesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -394,14 +395,14 @@ func (m *MockCodeStarNotificationsAPI) ListNotificationRulesWithContext(arg0 con
 	return ret0, ret1
 }
 
-// ListNotificationRulesWithContext indicates an expected call of ListNotificationRulesWithContext
+// ListNotificationRulesWithContext indicates an expected call of ListNotificationRulesWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListNotificationRulesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNotificationRulesWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListNotificationRulesWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListTagsForResource(arg0 *codestarnotifications.ListTagsForResourceInput) (*codestarnotifications.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -410,13 +411,13 @@ func (m *MockCodeStarNotificationsAPI) ListTagsForResource(arg0 *codestarnotific
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListTagsForResourceRequest(arg0 *codestarnotifications.ListTagsForResourceInput) (*request.Request, *codestarnotifications.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -425,13 +426,13 @@ func (m *MockCodeStarNotificationsAPI) ListTagsForResourceRequest(arg0 *codestar
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *codestarnotifications.ListTagsForResourceInput, arg2 ...request.Option) (*codestarnotifications.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -444,14 +445,14 @@ func (m *MockCodeStarNotificationsAPI) ListTagsForResourceWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// ListTargets mocks base method
+// ListTargets mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListTargets(arg0 *codestarnotifications.ListTargetsInput) (*codestarnotifications.ListTargetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTargets", arg0)
@@ -460,13 +461,13 @@ func (m *MockCodeStarNotificationsAPI) ListTargets(arg0 *codestarnotifications.L
 	return ret0, ret1
 }
 
-// ListTargets indicates an expected call of ListTargets
+// ListTargets indicates an expected call of ListTargets.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListTargets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargets", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListTargets), arg0)
 }
 
-// ListTargetsPages mocks base method
+// ListTargetsPages mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListTargetsPages(arg0 *codestarnotifications.ListTargetsInput, arg1 func(*codestarnotifications.ListTargetsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTargetsPages", arg0, arg1)
@@ -474,13 +475,13 @@ func (m *MockCodeStarNotificationsAPI) ListTargetsPages(arg0 *codestarnotificati
 	return ret0
 }
 
-// ListTargetsPages indicates an expected call of ListTargetsPages
+// ListTargetsPages indicates an expected call of ListTargetsPages.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListTargetsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetsPages", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListTargetsPages), arg0, arg1)
 }
 
-// ListTargetsPagesWithContext mocks base method
+// ListTargetsPagesWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListTargetsPagesWithContext(arg0 context.Context, arg1 *codestarnotifications.ListTargetsInput, arg2 func(*codestarnotifications.ListTargetsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -492,14 +493,14 @@ func (m *MockCodeStarNotificationsAPI) ListTargetsPagesWithContext(arg0 context.
 	return ret0
 }
 
-// ListTargetsPagesWithContext indicates an expected call of ListTargetsPagesWithContext
+// ListTargetsPagesWithContext indicates an expected call of ListTargetsPagesWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListTargetsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetsPagesWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListTargetsPagesWithContext), varargs...)
 }
 
-// ListTargetsRequest mocks base method
+// ListTargetsRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListTargetsRequest(arg0 *codestarnotifications.ListTargetsInput) (*request.Request, *codestarnotifications.ListTargetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTargetsRequest", arg0)
@@ -508,13 +509,13 @@ func (m *MockCodeStarNotificationsAPI) ListTargetsRequest(arg0 *codestarnotifica
 	return ret0, ret1
 }
 
-// ListTargetsRequest indicates an expected call of ListTargetsRequest
+// ListTargetsRequest indicates an expected call of ListTargetsRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListTargetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetsRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListTargetsRequest), arg0)
 }
 
-// ListTargetsWithContext mocks base method
+// ListTargetsWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) ListTargetsWithContext(arg0 context.Context, arg1 *codestarnotifications.ListTargetsInput, arg2 ...request.Option) (*codestarnotifications.ListTargetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -527,14 +528,14 @@ func (m *MockCodeStarNotificationsAPI) ListTargetsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListTargetsWithContext indicates an expected call of ListTargetsWithContext
+// ListTargetsWithContext indicates an expected call of ListTargetsWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) ListTargetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetsWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).ListTargetsWithContext), varargs...)
 }
 
-// Subscribe mocks base method
+// Subscribe mocks base method.
 func (m *MockCodeStarNotificationsAPI) Subscribe(arg0 *codestarnotifications.SubscribeInput) (*codestarnotifications.SubscribeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Subscribe", arg0)
@@ -543,13 +544,13 @@ func (m *MockCodeStarNotificationsAPI) Subscribe(arg0 *codestarnotifications.Sub
 	return ret0, ret1
 }
 
-// Subscribe indicates an expected call of Subscribe
+// Subscribe indicates an expected call of Subscribe.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) Subscribe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Subscribe", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).Subscribe), arg0)
 }
 
-// SubscribeRequest mocks base method
+// SubscribeRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) SubscribeRequest(arg0 *codestarnotifications.SubscribeInput) (*request.Request, *codestarnotifications.SubscribeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SubscribeRequest", arg0)
@@ -558,13 +559,13 @@ func (m *MockCodeStarNotificationsAPI) SubscribeRequest(arg0 *codestarnotificati
 	return ret0, ret1
 }
 
-// SubscribeRequest indicates an expected call of SubscribeRequest
+// SubscribeRequest indicates an expected call of SubscribeRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) SubscribeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SubscribeRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).SubscribeRequest), arg0)
 }
 
-// SubscribeWithContext mocks base method
+// SubscribeWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) SubscribeWithContext(arg0 context.Context, arg1 *codestarnotifications.SubscribeInput, arg2 ...request.Option) (*codestarnotifications.SubscribeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -577,14 +578,14 @@ func (m *MockCodeStarNotificationsAPI) SubscribeWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// SubscribeWithContext indicates an expected call of SubscribeWithContext
+// SubscribeWithContext indicates an expected call of SubscribeWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) SubscribeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SubscribeWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).SubscribeWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockCodeStarNotificationsAPI) TagResource(arg0 *codestarnotifications.TagResourceInput) (*codestarnotifications.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -593,13 +594,13 @@ func (m *MockCodeStarNotificationsAPI) TagResource(arg0 *codestarnotifications.T
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) TagResourceRequest(arg0 *codestarnotifications.TagResourceInput) (*request.Request, *codestarnotifications.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -608,13 +609,13 @@ func (m *MockCodeStarNotificationsAPI) TagResourceRequest(arg0 *codestarnotifica
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) TagResourceWithContext(arg0 context.Context, arg1 *codestarnotifications.TagResourceInput, arg2 ...request.Option) (*codestarnotifications.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -627,14 +628,14 @@ func (m *MockCodeStarNotificationsAPI) TagResourceWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// Unsubscribe mocks base method
+// Unsubscribe mocks base method.
 func (m *MockCodeStarNotificationsAPI) Unsubscribe(arg0 *codestarnotifications.UnsubscribeInput) (*codestarnotifications.UnsubscribeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Unsubscribe", arg0)
@@ -643,13 +644,13 @@ func (m *MockCodeStarNotificationsAPI) Unsubscribe(arg0 *codestarnotifications.U
 	return ret0, ret1
 }
 
-// Unsubscribe indicates an expected call of Unsubscribe
+// Unsubscribe indicates an expected call of Unsubscribe.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) Unsubscribe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Unsubscribe", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).Unsubscribe), arg0)
 }
 
-// UnsubscribeRequest mocks base method
+// UnsubscribeRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) UnsubscribeRequest(arg0 *codestarnotifications.UnsubscribeInput) (*request.Request, *codestarnotifications.UnsubscribeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UnsubscribeRequest", arg0)
@@ -658,13 +659,13 @@ func (m *MockCodeStarNotificationsAPI) UnsubscribeRequest(arg0 *codestarnotifica
 	return ret0, ret1
 }
 
-// UnsubscribeRequest indicates an expected call of UnsubscribeRequest
+// UnsubscribeRequest indicates an expected call of UnsubscribeRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) UnsubscribeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UnsubscribeRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).UnsubscribeRequest), arg0)
 }
 
-// UnsubscribeWithContext mocks base method
+// UnsubscribeWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) UnsubscribeWithContext(arg0 context.Context, arg1 *codestarnotifications.UnsubscribeInput, arg2 ...request.Option) (*codestarnotifications.UnsubscribeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -677,14 +678,14 @@ func (m *MockCodeStarNotificationsAPI) UnsubscribeWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// UnsubscribeWithContext indicates an expected call of UnsubscribeWithContext
+// UnsubscribeWithContext indicates an expected call of UnsubscribeWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) UnsubscribeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UnsubscribeWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).UnsubscribeWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockCodeStarNotificationsAPI) UntagResource(arg0 *codestarnotifications.UntagResourceInput) (*codestarnotifications.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -693,13 +694,13 @@ func (m *MockCodeStarNotificationsAPI) UntagResource(arg0 *codestarnotifications
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) UntagResourceRequest(arg0 *codestarnotifications.UntagResourceInput) (*request.Request, *codestarnotifications.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -708,13 +709,13 @@ func (m *MockCodeStarNotificationsAPI) UntagResourceRequest(arg0 *codestarnotifi
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) UntagResourceWithContext(arg0 context.Context, arg1 *codestarnotifications.UntagResourceInput, arg2 ...request.Option) (*codestarnotifications.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -727,14 +728,14 @@ func (m *MockCodeStarNotificationsAPI) UntagResourceWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateNotificationRule mocks base method
+// UpdateNotificationRule mocks base method.
 func (m *MockCodeStarNotificationsAPI) UpdateNotificationRule(arg0 *codestarnotifications.UpdateNotificationRuleInput) (*codestarnotifications.UpdateNotificationRuleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateNotificationRule", arg0)
@@ -743,13 +744,13 @@ func (m *MockCodeStarNotificationsAPI) UpdateNotificationRule(arg0 *codestarnoti
 	return ret0, ret1
 }
 
-// UpdateNotificationRule indicates an expected call of UpdateNotificationRule
+// UpdateNotificationRule indicates an expected call of UpdateNotificationRule.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) UpdateNotificationRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateNotificationRule", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).UpdateNotificationRule), arg0)
 }
 
-// UpdateNotificationRuleRequest mocks base method
+// UpdateNotificationRuleRequest mocks base method.
 func (m *MockCodeStarNotificationsAPI) UpdateNotificationRuleRequest(arg0 *codestarnotifications.UpdateNotificationRuleInput) (*request.Request, *codestarnotifications.UpdateNotificationRuleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateNotificationRuleRequest", arg0)
@@ -758,13 +759,13 @@ func (m *MockCodeStarNotificationsAPI) UpdateNotificationRuleRequest(arg0 *codes
 	return ret0, ret1
 }
 
-// UpdateNotificationRuleRequest indicates an expected call of UpdateNotificationRuleRequest
+// UpdateNotificationRuleRequest indicates an expected call of UpdateNotificationRuleRequest.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) UpdateNotificationRuleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateNotificationRuleRequest", reflect.TypeOf((*MockCodeStarNotificationsAPI)(nil).UpdateNotificationRuleRequest), arg0)
 }
 
-// UpdateNotificationRuleWithContext mocks base method
+// UpdateNotificationRuleWithContext mocks base method.
 func (m *MockCodeStarNotificationsAPI) UpdateNotificationRuleWithContext(arg0 context.Context, arg1 *codestarnotifications.UpdateNotificationRuleInput, arg2 ...request.Option) (*codestarnotifications.UpdateNotificationRuleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -777,7 +778,7 @@ func (m *MockCodeStarNotificationsAPI) UpdateNotificationRuleWithContext(arg0 co
 	return ret0, ret1
 }
 
-// UpdateNotificationRuleWithContext indicates an expected call of UpdateNotificationRuleWithContext
+// UpdateNotificationRuleWithContext indicates an expected call of UpdateNotificationRuleWithContext.
 func (mr *MockCodeStarNotificationsAPIMockRecorder) UpdateNotificationRuleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

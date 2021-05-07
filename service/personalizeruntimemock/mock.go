@@ -6,36 +6,37 @@ package personalizeruntimemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	personalizeruntime "github.com/aws/aws-sdk-go/service/personalizeruntime"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockPersonalizeRuntimeAPI is a mock of PersonalizeRuntimeAPI interface
+// MockPersonalizeRuntimeAPI is a mock of PersonalizeRuntimeAPI interface.
 type MockPersonalizeRuntimeAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockPersonalizeRuntimeAPIMockRecorder
 }
 
-// MockPersonalizeRuntimeAPIMockRecorder is the mock recorder for MockPersonalizeRuntimeAPI
+// MockPersonalizeRuntimeAPIMockRecorder is the mock recorder for MockPersonalizeRuntimeAPI.
 type MockPersonalizeRuntimeAPIMockRecorder struct {
 	mock *MockPersonalizeRuntimeAPI
 }
 
-// NewMockPersonalizeRuntimeAPI creates a new mock instance
+// NewMockPersonalizeRuntimeAPI creates a new mock instance.
 func NewMockPersonalizeRuntimeAPI(ctrl *gomock.Controller) *MockPersonalizeRuntimeAPI {
 	mock := &MockPersonalizeRuntimeAPI{ctrl: ctrl}
 	mock.recorder = &MockPersonalizeRuntimeAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockPersonalizeRuntimeAPI) EXPECT() *MockPersonalizeRuntimeAPIMockRecorder {
 	return m.recorder
 }
 
-// GetPersonalizedRanking mocks base method
+// GetPersonalizedRanking mocks base method.
 func (m *MockPersonalizeRuntimeAPI) GetPersonalizedRanking(arg0 *personalizeruntime.GetPersonalizedRankingInput) (*personalizeruntime.GetPersonalizedRankingOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetPersonalizedRanking", arg0)
@@ -44,13 +45,13 @@ func (m *MockPersonalizeRuntimeAPI) GetPersonalizedRanking(arg0 *personalizerunt
 	return ret0, ret1
 }
 
-// GetPersonalizedRanking indicates an expected call of GetPersonalizedRanking
+// GetPersonalizedRanking indicates an expected call of GetPersonalizedRanking.
 func (mr *MockPersonalizeRuntimeAPIMockRecorder) GetPersonalizedRanking(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPersonalizedRanking", reflect.TypeOf((*MockPersonalizeRuntimeAPI)(nil).GetPersonalizedRanking), arg0)
 }
 
-// GetPersonalizedRankingRequest mocks base method
+// GetPersonalizedRankingRequest mocks base method.
 func (m *MockPersonalizeRuntimeAPI) GetPersonalizedRankingRequest(arg0 *personalizeruntime.GetPersonalizedRankingInput) (*request.Request, *personalizeruntime.GetPersonalizedRankingOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetPersonalizedRankingRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockPersonalizeRuntimeAPI) GetPersonalizedRankingRequest(arg0 *personal
 	return ret0, ret1
 }
 
-// GetPersonalizedRankingRequest indicates an expected call of GetPersonalizedRankingRequest
+// GetPersonalizedRankingRequest indicates an expected call of GetPersonalizedRankingRequest.
 func (mr *MockPersonalizeRuntimeAPIMockRecorder) GetPersonalizedRankingRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPersonalizedRankingRequest", reflect.TypeOf((*MockPersonalizeRuntimeAPI)(nil).GetPersonalizedRankingRequest), arg0)
 }
 
-// GetPersonalizedRankingWithContext mocks base method
+// GetPersonalizedRankingWithContext mocks base method.
 func (m *MockPersonalizeRuntimeAPI) GetPersonalizedRankingWithContext(arg0 context.Context, arg1 *personalizeruntime.GetPersonalizedRankingInput, arg2 ...request.Option) (*personalizeruntime.GetPersonalizedRankingOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockPersonalizeRuntimeAPI) GetPersonalizedRankingWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// GetPersonalizedRankingWithContext indicates an expected call of GetPersonalizedRankingWithContext
+// GetPersonalizedRankingWithContext indicates an expected call of GetPersonalizedRankingWithContext.
 func (mr *MockPersonalizeRuntimeAPIMockRecorder) GetPersonalizedRankingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPersonalizedRankingWithContext", reflect.TypeOf((*MockPersonalizeRuntimeAPI)(nil).GetPersonalizedRankingWithContext), varargs...)
 }
 
-// GetRecommendations mocks base method
+// GetRecommendations mocks base method.
 func (m *MockPersonalizeRuntimeAPI) GetRecommendations(arg0 *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRecommendations", arg0)
@@ -94,13 +95,13 @@ func (m *MockPersonalizeRuntimeAPI) GetRecommendations(arg0 *personalizeruntime.
 	return ret0, ret1
 }
 
-// GetRecommendations indicates an expected call of GetRecommendations
+// GetRecommendations indicates an expected call of GetRecommendations.
 func (mr *MockPersonalizeRuntimeAPIMockRecorder) GetRecommendations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecommendations", reflect.TypeOf((*MockPersonalizeRuntimeAPI)(nil).GetRecommendations), arg0)
 }
 
-// GetRecommendationsRequest mocks base method
+// GetRecommendationsRequest mocks base method.
 func (m *MockPersonalizeRuntimeAPI) GetRecommendationsRequest(arg0 *personalizeruntime.GetRecommendationsInput) (*request.Request, *personalizeruntime.GetRecommendationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRecommendationsRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockPersonalizeRuntimeAPI) GetRecommendationsRequest(arg0 *personalizer
 	return ret0, ret1
 }
 
-// GetRecommendationsRequest indicates an expected call of GetRecommendationsRequest
+// GetRecommendationsRequest indicates an expected call of GetRecommendationsRequest.
 func (mr *MockPersonalizeRuntimeAPIMockRecorder) GetRecommendationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecommendationsRequest", reflect.TypeOf((*MockPersonalizeRuntimeAPI)(nil).GetRecommendationsRequest), arg0)
 }
 
-// GetRecommendationsWithContext mocks base method
+// GetRecommendationsWithContext mocks base method.
 func (m *MockPersonalizeRuntimeAPI) GetRecommendationsWithContext(arg0 context.Context, arg1 *personalizeruntime.GetRecommendationsInput, arg2 ...request.Option) (*personalizeruntime.GetRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,7 +129,7 @@ func (m *MockPersonalizeRuntimeAPI) GetRecommendationsWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// GetRecommendationsWithContext indicates an expected call of GetRecommendationsWithContext
+// GetRecommendationsWithContext indicates an expected call of GetRecommendationsWithContext.
 func (mr *MockPersonalizeRuntimeAPIMockRecorder) GetRecommendationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

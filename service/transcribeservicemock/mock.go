@@ -6,36 +6,37 @@ package transcribeservicemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	transcribeservice "github.com/aws/aws-sdk-go/service/transcribeservice"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockTranscribeServiceAPI is a mock of TranscribeServiceAPI interface
+// MockTranscribeServiceAPI is a mock of TranscribeServiceAPI interface.
 type MockTranscribeServiceAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockTranscribeServiceAPIMockRecorder
 }
 
-// MockTranscribeServiceAPIMockRecorder is the mock recorder for MockTranscribeServiceAPI
+// MockTranscribeServiceAPIMockRecorder is the mock recorder for MockTranscribeServiceAPI.
 type MockTranscribeServiceAPIMockRecorder struct {
 	mock *MockTranscribeServiceAPI
 }
 
-// NewMockTranscribeServiceAPI creates a new mock instance
+// NewMockTranscribeServiceAPI creates a new mock instance.
 func NewMockTranscribeServiceAPI(ctrl *gomock.Controller) *MockTranscribeServiceAPI {
 	mock := &MockTranscribeServiceAPI{ctrl: ctrl}
 	mock.recorder = &MockTranscribeServiceAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockTranscribeServiceAPI) EXPECT() *MockTranscribeServiceAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateLanguageModel mocks base method
+// CreateLanguageModel mocks base method.
 func (m *MockTranscribeServiceAPI) CreateLanguageModel(arg0 *transcribeservice.CreateLanguageModelInput) (*transcribeservice.CreateLanguageModelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateLanguageModel", arg0)
@@ -44,13 +45,13 @@ func (m *MockTranscribeServiceAPI) CreateLanguageModel(arg0 *transcribeservice.C
 	return ret0, ret1
 }
 
-// CreateLanguageModel indicates an expected call of CreateLanguageModel
+// CreateLanguageModel indicates an expected call of CreateLanguageModel.
 func (mr *MockTranscribeServiceAPIMockRecorder) CreateLanguageModel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLanguageModel", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).CreateLanguageModel), arg0)
 }
 
-// CreateLanguageModelRequest mocks base method
+// CreateLanguageModelRequest mocks base method.
 func (m *MockTranscribeServiceAPI) CreateLanguageModelRequest(arg0 *transcribeservice.CreateLanguageModelInput) (*request.Request, *transcribeservice.CreateLanguageModelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateLanguageModelRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockTranscribeServiceAPI) CreateLanguageModelRequest(arg0 *transcribese
 	return ret0, ret1
 }
 
-// CreateLanguageModelRequest indicates an expected call of CreateLanguageModelRequest
+// CreateLanguageModelRequest indicates an expected call of CreateLanguageModelRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) CreateLanguageModelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLanguageModelRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).CreateLanguageModelRequest), arg0)
 }
 
-// CreateLanguageModelWithContext mocks base method
+// CreateLanguageModelWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) CreateLanguageModelWithContext(arg0 context.Context, arg1 *transcribeservice.CreateLanguageModelInput, arg2 ...request.Option) (*transcribeservice.CreateLanguageModelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockTranscribeServiceAPI) CreateLanguageModelWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// CreateLanguageModelWithContext indicates an expected call of CreateLanguageModelWithContext
+// CreateLanguageModelWithContext indicates an expected call of CreateLanguageModelWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) CreateLanguageModelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLanguageModelWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).CreateLanguageModelWithContext), varargs...)
 }
 
-// CreateMedicalVocabulary mocks base method
+// CreateMedicalVocabulary mocks base method.
 func (m *MockTranscribeServiceAPI) CreateMedicalVocabulary(arg0 *transcribeservice.CreateMedicalVocabularyInput) (*transcribeservice.CreateMedicalVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMedicalVocabulary", arg0)
@@ -94,13 +95,13 @@ func (m *MockTranscribeServiceAPI) CreateMedicalVocabulary(arg0 *transcribeservi
 	return ret0, ret1
 }
 
-// CreateMedicalVocabulary indicates an expected call of CreateMedicalVocabulary
+// CreateMedicalVocabulary indicates an expected call of CreateMedicalVocabulary.
 func (mr *MockTranscribeServiceAPIMockRecorder) CreateMedicalVocabulary(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMedicalVocabulary", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).CreateMedicalVocabulary), arg0)
 }
 
-// CreateMedicalVocabularyRequest mocks base method
+// CreateMedicalVocabularyRequest mocks base method.
 func (m *MockTranscribeServiceAPI) CreateMedicalVocabularyRequest(arg0 *transcribeservice.CreateMedicalVocabularyInput) (*request.Request, *transcribeservice.CreateMedicalVocabularyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMedicalVocabularyRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockTranscribeServiceAPI) CreateMedicalVocabularyRequest(arg0 *transcri
 	return ret0, ret1
 }
 
-// CreateMedicalVocabularyRequest indicates an expected call of CreateMedicalVocabularyRequest
+// CreateMedicalVocabularyRequest indicates an expected call of CreateMedicalVocabularyRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) CreateMedicalVocabularyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMedicalVocabularyRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).CreateMedicalVocabularyRequest), arg0)
 }
 
-// CreateMedicalVocabularyWithContext mocks base method
+// CreateMedicalVocabularyWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) CreateMedicalVocabularyWithContext(arg0 context.Context, arg1 *transcribeservice.CreateMedicalVocabularyInput, arg2 ...request.Option) (*transcribeservice.CreateMedicalVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockTranscribeServiceAPI) CreateMedicalVocabularyWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// CreateMedicalVocabularyWithContext indicates an expected call of CreateMedicalVocabularyWithContext
+// CreateMedicalVocabularyWithContext indicates an expected call of CreateMedicalVocabularyWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) CreateMedicalVocabularyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMedicalVocabularyWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).CreateMedicalVocabularyWithContext), varargs...)
 }
 
-// CreateVocabulary mocks base method
+// CreateVocabulary mocks base method.
 func (m *MockTranscribeServiceAPI) CreateVocabulary(arg0 *transcribeservice.CreateVocabularyInput) (*transcribeservice.CreateVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVocabulary", arg0)
@@ -144,13 +145,13 @@ func (m *MockTranscribeServiceAPI) CreateVocabulary(arg0 *transcribeservice.Crea
 	return ret0, ret1
 }
 
-// CreateVocabulary indicates an expected call of CreateVocabulary
+// CreateVocabulary indicates an expected call of CreateVocabulary.
 func (mr *MockTranscribeServiceAPIMockRecorder) CreateVocabulary(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVocabulary", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).CreateVocabulary), arg0)
 }
 
-// CreateVocabularyFilter mocks base method
+// CreateVocabularyFilter mocks base method.
 func (m *MockTranscribeServiceAPI) CreateVocabularyFilter(arg0 *transcribeservice.CreateVocabularyFilterInput) (*transcribeservice.CreateVocabularyFilterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVocabularyFilter", arg0)
@@ -159,13 +160,13 @@ func (m *MockTranscribeServiceAPI) CreateVocabularyFilter(arg0 *transcribeservic
 	return ret0, ret1
 }
 
-// CreateVocabularyFilter indicates an expected call of CreateVocabularyFilter
+// CreateVocabularyFilter indicates an expected call of CreateVocabularyFilter.
 func (mr *MockTranscribeServiceAPIMockRecorder) CreateVocabularyFilter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVocabularyFilter", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).CreateVocabularyFilter), arg0)
 }
 
-// CreateVocabularyFilterRequest mocks base method
+// CreateVocabularyFilterRequest mocks base method.
 func (m *MockTranscribeServiceAPI) CreateVocabularyFilterRequest(arg0 *transcribeservice.CreateVocabularyFilterInput) (*request.Request, *transcribeservice.CreateVocabularyFilterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVocabularyFilterRequest", arg0)
@@ -174,13 +175,13 @@ func (m *MockTranscribeServiceAPI) CreateVocabularyFilterRequest(arg0 *transcrib
 	return ret0, ret1
 }
 
-// CreateVocabularyFilterRequest indicates an expected call of CreateVocabularyFilterRequest
+// CreateVocabularyFilterRequest indicates an expected call of CreateVocabularyFilterRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) CreateVocabularyFilterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVocabularyFilterRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).CreateVocabularyFilterRequest), arg0)
 }
 
-// CreateVocabularyFilterWithContext mocks base method
+// CreateVocabularyFilterWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) CreateVocabularyFilterWithContext(arg0 context.Context, arg1 *transcribeservice.CreateVocabularyFilterInput, arg2 ...request.Option) (*transcribeservice.CreateVocabularyFilterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -193,14 +194,14 @@ func (m *MockTranscribeServiceAPI) CreateVocabularyFilterWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// CreateVocabularyFilterWithContext indicates an expected call of CreateVocabularyFilterWithContext
+// CreateVocabularyFilterWithContext indicates an expected call of CreateVocabularyFilterWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) CreateVocabularyFilterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVocabularyFilterWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).CreateVocabularyFilterWithContext), varargs...)
 }
 
-// CreateVocabularyRequest mocks base method
+// CreateVocabularyRequest mocks base method.
 func (m *MockTranscribeServiceAPI) CreateVocabularyRequest(arg0 *transcribeservice.CreateVocabularyInput) (*request.Request, *transcribeservice.CreateVocabularyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVocabularyRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockTranscribeServiceAPI) CreateVocabularyRequest(arg0 *transcribeservi
 	return ret0, ret1
 }
 
-// CreateVocabularyRequest indicates an expected call of CreateVocabularyRequest
+// CreateVocabularyRequest indicates an expected call of CreateVocabularyRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) CreateVocabularyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVocabularyRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).CreateVocabularyRequest), arg0)
 }
 
-// CreateVocabularyWithContext mocks base method
+// CreateVocabularyWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) CreateVocabularyWithContext(arg0 context.Context, arg1 *transcribeservice.CreateVocabularyInput, arg2 ...request.Option) (*transcribeservice.CreateVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockTranscribeServiceAPI) CreateVocabularyWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// CreateVocabularyWithContext indicates an expected call of CreateVocabularyWithContext
+// CreateVocabularyWithContext indicates an expected call of CreateVocabularyWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) CreateVocabularyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVocabularyWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).CreateVocabularyWithContext), varargs...)
 }
 
-// DeleteLanguageModel mocks base method
+// DeleteLanguageModel mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteLanguageModel(arg0 *transcribeservice.DeleteLanguageModelInput) (*transcribeservice.DeleteLanguageModelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLanguageModel", arg0)
@@ -244,13 +245,13 @@ func (m *MockTranscribeServiceAPI) DeleteLanguageModel(arg0 *transcribeservice.D
 	return ret0, ret1
 }
 
-// DeleteLanguageModel indicates an expected call of DeleteLanguageModel
+// DeleteLanguageModel indicates an expected call of DeleteLanguageModel.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteLanguageModel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLanguageModel", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteLanguageModel), arg0)
 }
 
-// DeleteLanguageModelRequest mocks base method
+// DeleteLanguageModelRequest mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteLanguageModelRequest(arg0 *transcribeservice.DeleteLanguageModelInput) (*request.Request, *transcribeservice.DeleteLanguageModelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLanguageModelRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockTranscribeServiceAPI) DeleteLanguageModelRequest(arg0 *transcribese
 	return ret0, ret1
 }
 
-// DeleteLanguageModelRequest indicates an expected call of DeleteLanguageModelRequest
+// DeleteLanguageModelRequest indicates an expected call of DeleteLanguageModelRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteLanguageModelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLanguageModelRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteLanguageModelRequest), arg0)
 }
 
-// DeleteLanguageModelWithContext mocks base method
+// DeleteLanguageModelWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteLanguageModelWithContext(arg0 context.Context, arg1 *transcribeservice.DeleteLanguageModelInput, arg2 ...request.Option) (*transcribeservice.DeleteLanguageModelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockTranscribeServiceAPI) DeleteLanguageModelWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DeleteLanguageModelWithContext indicates an expected call of DeleteLanguageModelWithContext
+// DeleteLanguageModelWithContext indicates an expected call of DeleteLanguageModelWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteLanguageModelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLanguageModelWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteLanguageModelWithContext), varargs...)
 }
 
-// DeleteMedicalTranscriptionJob mocks base method
+// DeleteMedicalTranscriptionJob mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteMedicalTranscriptionJob(arg0 *transcribeservice.DeleteMedicalTranscriptionJobInput) (*transcribeservice.DeleteMedicalTranscriptionJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMedicalTranscriptionJob", arg0)
@@ -294,13 +295,13 @@ func (m *MockTranscribeServiceAPI) DeleteMedicalTranscriptionJob(arg0 *transcrib
 	return ret0, ret1
 }
 
-// DeleteMedicalTranscriptionJob indicates an expected call of DeleteMedicalTranscriptionJob
+// DeleteMedicalTranscriptionJob indicates an expected call of DeleteMedicalTranscriptionJob.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteMedicalTranscriptionJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMedicalTranscriptionJob", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteMedicalTranscriptionJob), arg0)
 }
 
-// DeleteMedicalTranscriptionJobRequest mocks base method
+// DeleteMedicalTranscriptionJobRequest mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteMedicalTranscriptionJobRequest(arg0 *transcribeservice.DeleteMedicalTranscriptionJobInput) (*request.Request, *transcribeservice.DeleteMedicalTranscriptionJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMedicalTranscriptionJobRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockTranscribeServiceAPI) DeleteMedicalTranscriptionJobRequest(arg0 *tr
 	return ret0, ret1
 }
 
-// DeleteMedicalTranscriptionJobRequest indicates an expected call of DeleteMedicalTranscriptionJobRequest
+// DeleteMedicalTranscriptionJobRequest indicates an expected call of DeleteMedicalTranscriptionJobRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteMedicalTranscriptionJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMedicalTranscriptionJobRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteMedicalTranscriptionJobRequest), arg0)
 }
 
-// DeleteMedicalTranscriptionJobWithContext mocks base method
+// DeleteMedicalTranscriptionJobWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteMedicalTranscriptionJobWithContext(arg0 context.Context, arg1 *transcribeservice.DeleteMedicalTranscriptionJobInput, arg2 ...request.Option) (*transcribeservice.DeleteMedicalTranscriptionJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockTranscribeServiceAPI) DeleteMedicalTranscriptionJobWithContext(arg0
 	return ret0, ret1
 }
 
-// DeleteMedicalTranscriptionJobWithContext indicates an expected call of DeleteMedicalTranscriptionJobWithContext
+// DeleteMedicalTranscriptionJobWithContext indicates an expected call of DeleteMedicalTranscriptionJobWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteMedicalTranscriptionJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMedicalTranscriptionJobWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteMedicalTranscriptionJobWithContext), varargs...)
 }
 
-// DeleteMedicalVocabulary mocks base method
+// DeleteMedicalVocabulary mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteMedicalVocabulary(arg0 *transcribeservice.DeleteMedicalVocabularyInput) (*transcribeservice.DeleteMedicalVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMedicalVocabulary", arg0)
@@ -344,13 +345,13 @@ func (m *MockTranscribeServiceAPI) DeleteMedicalVocabulary(arg0 *transcribeservi
 	return ret0, ret1
 }
 
-// DeleteMedicalVocabulary indicates an expected call of DeleteMedicalVocabulary
+// DeleteMedicalVocabulary indicates an expected call of DeleteMedicalVocabulary.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteMedicalVocabulary(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMedicalVocabulary", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteMedicalVocabulary), arg0)
 }
 
-// DeleteMedicalVocabularyRequest mocks base method
+// DeleteMedicalVocabularyRequest mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteMedicalVocabularyRequest(arg0 *transcribeservice.DeleteMedicalVocabularyInput) (*request.Request, *transcribeservice.DeleteMedicalVocabularyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMedicalVocabularyRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockTranscribeServiceAPI) DeleteMedicalVocabularyRequest(arg0 *transcri
 	return ret0, ret1
 }
 
-// DeleteMedicalVocabularyRequest indicates an expected call of DeleteMedicalVocabularyRequest
+// DeleteMedicalVocabularyRequest indicates an expected call of DeleteMedicalVocabularyRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteMedicalVocabularyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMedicalVocabularyRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteMedicalVocabularyRequest), arg0)
 }
 
-// DeleteMedicalVocabularyWithContext mocks base method
+// DeleteMedicalVocabularyWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteMedicalVocabularyWithContext(arg0 context.Context, arg1 *transcribeservice.DeleteMedicalVocabularyInput, arg2 ...request.Option) (*transcribeservice.DeleteMedicalVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockTranscribeServiceAPI) DeleteMedicalVocabularyWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// DeleteMedicalVocabularyWithContext indicates an expected call of DeleteMedicalVocabularyWithContext
+// DeleteMedicalVocabularyWithContext indicates an expected call of DeleteMedicalVocabularyWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteMedicalVocabularyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMedicalVocabularyWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteMedicalVocabularyWithContext), varargs...)
 }
 
-// DeleteTranscriptionJob mocks base method
+// DeleteTranscriptionJob mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteTranscriptionJob(arg0 *transcribeservice.DeleteTranscriptionJobInput) (*transcribeservice.DeleteTranscriptionJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteTranscriptionJob", arg0)
@@ -394,13 +395,13 @@ func (m *MockTranscribeServiceAPI) DeleteTranscriptionJob(arg0 *transcribeservic
 	return ret0, ret1
 }
 
-// DeleteTranscriptionJob indicates an expected call of DeleteTranscriptionJob
+// DeleteTranscriptionJob indicates an expected call of DeleteTranscriptionJob.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteTranscriptionJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTranscriptionJob", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteTranscriptionJob), arg0)
 }
 
-// DeleteTranscriptionJobRequest mocks base method
+// DeleteTranscriptionJobRequest mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteTranscriptionJobRequest(arg0 *transcribeservice.DeleteTranscriptionJobInput) (*request.Request, *transcribeservice.DeleteTranscriptionJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteTranscriptionJobRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockTranscribeServiceAPI) DeleteTranscriptionJobRequest(arg0 *transcrib
 	return ret0, ret1
 }
 
-// DeleteTranscriptionJobRequest indicates an expected call of DeleteTranscriptionJobRequest
+// DeleteTranscriptionJobRequest indicates an expected call of DeleteTranscriptionJobRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteTranscriptionJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTranscriptionJobRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteTranscriptionJobRequest), arg0)
 }
 
-// DeleteTranscriptionJobWithContext mocks base method
+// DeleteTranscriptionJobWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteTranscriptionJobWithContext(arg0 context.Context, arg1 *transcribeservice.DeleteTranscriptionJobInput, arg2 ...request.Option) (*transcribeservice.DeleteTranscriptionJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockTranscribeServiceAPI) DeleteTranscriptionJobWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// DeleteTranscriptionJobWithContext indicates an expected call of DeleteTranscriptionJobWithContext
+// DeleteTranscriptionJobWithContext indicates an expected call of DeleteTranscriptionJobWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteTranscriptionJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTranscriptionJobWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteTranscriptionJobWithContext), varargs...)
 }
 
-// DeleteVocabulary mocks base method
+// DeleteVocabulary mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteVocabulary(arg0 *transcribeservice.DeleteVocabularyInput) (*transcribeservice.DeleteVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVocabulary", arg0)
@@ -444,13 +445,13 @@ func (m *MockTranscribeServiceAPI) DeleteVocabulary(arg0 *transcribeservice.Dele
 	return ret0, ret1
 }
 
-// DeleteVocabulary indicates an expected call of DeleteVocabulary
+// DeleteVocabulary indicates an expected call of DeleteVocabulary.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteVocabulary(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVocabulary", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteVocabulary), arg0)
 }
 
-// DeleteVocabularyFilter mocks base method
+// DeleteVocabularyFilter mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteVocabularyFilter(arg0 *transcribeservice.DeleteVocabularyFilterInput) (*transcribeservice.DeleteVocabularyFilterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVocabularyFilter", arg0)
@@ -459,13 +460,13 @@ func (m *MockTranscribeServiceAPI) DeleteVocabularyFilter(arg0 *transcribeservic
 	return ret0, ret1
 }
 
-// DeleteVocabularyFilter indicates an expected call of DeleteVocabularyFilter
+// DeleteVocabularyFilter indicates an expected call of DeleteVocabularyFilter.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteVocabularyFilter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVocabularyFilter", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteVocabularyFilter), arg0)
 }
 
-// DeleteVocabularyFilterRequest mocks base method
+// DeleteVocabularyFilterRequest mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteVocabularyFilterRequest(arg0 *transcribeservice.DeleteVocabularyFilterInput) (*request.Request, *transcribeservice.DeleteVocabularyFilterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVocabularyFilterRequest", arg0)
@@ -474,13 +475,13 @@ func (m *MockTranscribeServiceAPI) DeleteVocabularyFilterRequest(arg0 *transcrib
 	return ret0, ret1
 }
 
-// DeleteVocabularyFilterRequest indicates an expected call of DeleteVocabularyFilterRequest
+// DeleteVocabularyFilterRequest indicates an expected call of DeleteVocabularyFilterRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteVocabularyFilterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVocabularyFilterRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteVocabularyFilterRequest), arg0)
 }
 
-// DeleteVocabularyFilterWithContext mocks base method
+// DeleteVocabularyFilterWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteVocabularyFilterWithContext(arg0 context.Context, arg1 *transcribeservice.DeleteVocabularyFilterInput, arg2 ...request.Option) (*transcribeservice.DeleteVocabularyFilterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -493,14 +494,14 @@ func (m *MockTranscribeServiceAPI) DeleteVocabularyFilterWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// DeleteVocabularyFilterWithContext indicates an expected call of DeleteVocabularyFilterWithContext
+// DeleteVocabularyFilterWithContext indicates an expected call of DeleteVocabularyFilterWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteVocabularyFilterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVocabularyFilterWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteVocabularyFilterWithContext), varargs...)
 }
 
-// DeleteVocabularyRequest mocks base method
+// DeleteVocabularyRequest mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteVocabularyRequest(arg0 *transcribeservice.DeleteVocabularyInput) (*request.Request, *transcribeservice.DeleteVocabularyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVocabularyRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockTranscribeServiceAPI) DeleteVocabularyRequest(arg0 *transcribeservi
 	return ret0, ret1
 }
 
-// DeleteVocabularyRequest indicates an expected call of DeleteVocabularyRequest
+// DeleteVocabularyRequest indicates an expected call of DeleteVocabularyRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteVocabularyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVocabularyRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteVocabularyRequest), arg0)
 }
 
-// DeleteVocabularyWithContext mocks base method
+// DeleteVocabularyWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) DeleteVocabularyWithContext(arg0 context.Context, arg1 *transcribeservice.DeleteVocabularyInput, arg2 ...request.Option) (*transcribeservice.DeleteVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockTranscribeServiceAPI) DeleteVocabularyWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DeleteVocabularyWithContext indicates an expected call of DeleteVocabularyWithContext
+// DeleteVocabularyWithContext indicates an expected call of DeleteVocabularyWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) DeleteVocabularyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVocabularyWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DeleteVocabularyWithContext), varargs...)
 }
 
-// DescribeLanguageModel mocks base method
+// DescribeLanguageModel mocks base method.
 func (m *MockTranscribeServiceAPI) DescribeLanguageModel(arg0 *transcribeservice.DescribeLanguageModelInput) (*transcribeservice.DescribeLanguageModelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeLanguageModel", arg0)
@@ -544,13 +545,13 @@ func (m *MockTranscribeServiceAPI) DescribeLanguageModel(arg0 *transcribeservice
 	return ret0, ret1
 }
 
-// DescribeLanguageModel indicates an expected call of DescribeLanguageModel
+// DescribeLanguageModel indicates an expected call of DescribeLanguageModel.
 func (mr *MockTranscribeServiceAPIMockRecorder) DescribeLanguageModel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLanguageModel", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DescribeLanguageModel), arg0)
 }
 
-// DescribeLanguageModelRequest mocks base method
+// DescribeLanguageModelRequest mocks base method.
 func (m *MockTranscribeServiceAPI) DescribeLanguageModelRequest(arg0 *transcribeservice.DescribeLanguageModelInput) (*request.Request, *transcribeservice.DescribeLanguageModelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeLanguageModelRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockTranscribeServiceAPI) DescribeLanguageModelRequest(arg0 *transcribe
 	return ret0, ret1
 }
 
-// DescribeLanguageModelRequest indicates an expected call of DescribeLanguageModelRequest
+// DescribeLanguageModelRequest indicates an expected call of DescribeLanguageModelRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) DescribeLanguageModelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLanguageModelRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DescribeLanguageModelRequest), arg0)
 }
 
-// DescribeLanguageModelWithContext mocks base method
+// DescribeLanguageModelWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) DescribeLanguageModelWithContext(arg0 context.Context, arg1 *transcribeservice.DescribeLanguageModelInput, arg2 ...request.Option) (*transcribeservice.DescribeLanguageModelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockTranscribeServiceAPI) DescribeLanguageModelWithContext(arg0 context
 	return ret0, ret1
 }
 
-// DescribeLanguageModelWithContext indicates an expected call of DescribeLanguageModelWithContext
+// DescribeLanguageModelWithContext indicates an expected call of DescribeLanguageModelWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) DescribeLanguageModelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLanguageModelWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).DescribeLanguageModelWithContext), varargs...)
 }
 
-// GetMedicalTranscriptionJob mocks base method
+// GetMedicalTranscriptionJob mocks base method.
 func (m *MockTranscribeServiceAPI) GetMedicalTranscriptionJob(arg0 *transcribeservice.GetMedicalTranscriptionJobInput) (*transcribeservice.GetMedicalTranscriptionJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMedicalTranscriptionJob", arg0)
@@ -594,13 +595,13 @@ func (m *MockTranscribeServiceAPI) GetMedicalTranscriptionJob(arg0 *transcribese
 	return ret0, ret1
 }
 
-// GetMedicalTranscriptionJob indicates an expected call of GetMedicalTranscriptionJob
+// GetMedicalTranscriptionJob indicates an expected call of GetMedicalTranscriptionJob.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetMedicalTranscriptionJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMedicalTranscriptionJob", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetMedicalTranscriptionJob), arg0)
 }
 
-// GetMedicalTranscriptionJobRequest mocks base method
+// GetMedicalTranscriptionJobRequest mocks base method.
 func (m *MockTranscribeServiceAPI) GetMedicalTranscriptionJobRequest(arg0 *transcribeservice.GetMedicalTranscriptionJobInput) (*request.Request, *transcribeservice.GetMedicalTranscriptionJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMedicalTranscriptionJobRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockTranscribeServiceAPI) GetMedicalTranscriptionJobRequest(arg0 *trans
 	return ret0, ret1
 }
 
-// GetMedicalTranscriptionJobRequest indicates an expected call of GetMedicalTranscriptionJobRequest
+// GetMedicalTranscriptionJobRequest indicates an expected call of GetMedicalTranscriptionJobRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetMedicalTranscriptionJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMedicalTranscriptionJobRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetMedicalTranscriptionJobRequest), arg0)
 }
 
-// GetMedicalTranscriptionJobWithContext mocks base method
+// GetMedicalTranscriptionJobWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) GetMedicalTranscriptionJobWithContext(arg0 context.Context, arg1 *transcribeservice.GetMedicalTranscriptionJobInput, arg2 ...request.Option) (*transcribeservice.GetMedicalTranscriptionJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockTranscribeServiceAPI) GetMedicalTranscriptionJobWithContext(arg0 co
 	return ret0, ret1
 }
 
-// GetMedicalTranscriptionJobWithContext indicates an expected call of GetMedicalTranscriptionJobWithContext
+// GetMedicalTranscriptionJobWithContext indicates an expected call of GetMedicalTranscriptionJobWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetMedicalTranscriptionJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMedicalTranscriptionJobWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetMedicalTranscriptionJobWithContext), varargs...)
 }
 
-// GetMedicalVocabulary mocks base method
+// GetMedicalVocabulary mocks base method.
 func (m *MockTranscribeServiceAPI) GetMedicalVocabulary(arg0 *transcribeservice.GetMedicalVocabularyInput) (*transcribeservice.GetMedicalVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMedicalVocabulary", arg0)
@@ -644,13 +645,13 @@ func (m *MockTranscribeServiceAPI) GetMedicalVocabulary(arg0 *transcribeservice.
 	return ret0, ret1
 }
 
-// GetMedicalVocabulary indicates an expected call of GetMedicalVocabulary
+// GetMedicalVocabulary indicates an expected call of GetMedicalVocabulary.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetMedicalVocabulary(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMedicalVocabulary", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetMedicalVocabulary), arg0)
 }
 
-// GetMedicalVocabularyRequest mocks base method
+// GetMedicalVocabularyRequest mocks base method.
 func (m *MockTranscribeServiceAPI) GetMedicalVocabularyRequest(arg0 *transcribeservice.GetMedicalVocabularyInput) (*request.Request, *transcribeservice.GetMedicalVocabularyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMedicalVocabularyRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockTranscribeServiceAPI) GetMedicalVocabularyRequest(arg0 *transcribes
 	return ret0, ret1
 }
 
-// GetMedicalVocabularyRequest indicates an expected call of GetMedicalVocabularyRequest
+// GetMedicalVocabularyRequest indicates an expected call of GetMedicalVocabularyRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetMedicalVocabularyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMedicalVocabularyRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetMedicalVocabularyRequest), arg0)
 }
 
-// GetMedicalVocabularyWithContext mocks base method
+// GetMedicalVocabularyWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) GetMedicalVocabularyWithContext(arg0 context.Context, arg1 *transcribeservice.GetMedicalVocabularyInput, arg2 ...request.Option) (*transcribeservice.GetMedicalVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockTranscribeServiceAPI) GetMedicalVocabularyWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// GetMedicalVocabularyWithContext indicates an expected call of GetMedicalVocabularyWithContext
+// GetMedicalVocabularyWithContext indicates an expected call of GetMedicalVocabularyWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetMedicalVocabularyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMedicalVocabularyWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetMedicalVocabularyWithContext), varargs...)
 }
 
-// GetTranscriptionJob mocks base method
+// GetTranscriptionJob mocks base method.
 func (m *MockTranscribeServiceAPI) GetTranscriptionJob(arg0 *transcribeservice.GetTranscriptionJobInput) (*transcribeservice.GetTranscriptionJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTranscriptionJob", arg0)
@@ -694,13 +695,13 @@ func (m *MockTranscribeServiceAPI) GetTranscriptionJob(arg0 *transcribeservice.G
 	return ret0, ret1
 }
 
-// GetTranscriptionJob indicates an expected call of GetTranscriptionJob
+// GetTranscriptionJob indicates an expected call of GetTranscriptionJob.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetTranscriptionJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTranscriptionJob", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetTranscriptionJob), arg0)
 }
 
-// GetTranscriptionJobRequest mocks base method
+// GetTranscriptionJobRequest mocks base method.
 func (m *MockTranscribeServiceAPI) GetTranscriptionJobRequest(arg0 *transcribeservice.GetTranscriptionJobInput) (*request.Request, *transcribeservice.GetTranscriptionJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTranscriptionJobRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockTranscribeServiceAPI) GetTranscriptionJobRequest(arg0 *transcribese
 	return ret0, ret1
 }
 
-// GetTranscriptionJobRequest indicates an expected call of GetTranscriptionJobRequest
+// GetTranscriptionJobRequest indicates an expected call of GetTranscriptionJobRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetTranscriptionJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTranscriptionJobRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetTranscriptionJobRequest), arg0)
 }
 
-// GetTranscriptionJobWithContext mocks base method
+// GetTranscriptionJobWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) GetTranscriptionJobWithContext(arg0 context.Context, arg1 *transcribeservice.GetTranscriptionJobInput, arg2 ...request.Option) (*transcribeservice.GetTranscriptionJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockTranscribeServiceAPI) GetTranscriptionJobWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// GetTranscriptionJobWithContext indicates an expected call of GetTranscriptionJobWithContext
+// GetTranscriptionJobWithContext indicates an expected call of GetTranscriptionJobWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetTranscriptionJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTranscriptionJobWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetTranscriptionJobWithContext), varargs...)
 }
 
-// GetVocabulary mocks base method
+// GetVocabulary mocks base method.
 func (m *MockTranscribeServiceAPI) GetVocabulary(arg0 *transcribeservice.GetVocabularyInput) (*transcribeservice.GetVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetVocabulary", arg0)
@@ -744,13 +745,13 @@ func (m *MockTranscribeServiceAPI) GetVocabulary(arg0 *transcribeservice.GetVoca
 	return ret0, ret1
 }
 
-// GetVocabulary indicates an expected call of GetVocabulary
+// GetVocabulary indicates an expected call of GetVocabulary.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetVocabulary(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetVocabulary", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetVocabulary), arg0)
 }
 
-// GetVocabularyFilter mocks base method
+// GetVocabularyFilter mocks base method.
 func (m *MockTranscribeServiceAPI) GetVocabularyFilter(arg0 *transcribeservice.GetVocabularyFilterInput) (*transcribeservice.GetVocabularyFilterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetVocabularyFilter", arg0)
@@ -759,13 +760,13 @@ func (m *MockTranscribeServiceAPI) GetVocabularyFilter(arg0 *transcribeservice.G
 	return ret0, ret1
 }
 
-// GetVocabularyFilter indicates an expected call of GetVocabularyFilter
+// GetVocabularyFilter indicates an expected call of GetVocabularyFilter.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetVocabularyFilter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetVocabularyFilter", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetVocabularyFilter), arg0)
 }
 
-// GetVocabularyFilterRequest mocks base method
+// GetVocabularyFilterRequest mocks base method.
 func (m *MockTranscribeServiceAPI) GetVocabularyFilterRequest(arg0 *transcribeservice.GetVocabularyFilterInput) (*request.Request, *transcribeservice.GetVocabularyFilterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetVocabularyFilterRequest", arg0)
@@ -774,13 +775,13 @@ func (m *MockTranscribeServiceAPI) GetVocabularyFilterRequest(arg0 *transcribese
 	return ret0, ret1
 }
 
-// GetVocabularyFilterRequest indicates an expected call of GetVocabularyFilterRequest
+// GetVocabularyFilterRequest indicates an expected call of GetVocabularyFilterRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetVocabularyFilterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetVocabularyFilterRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetVocabularyFilterRequest), arg0)
 }
 
-// GetVocabularyFilterWithContext mocks base method
+// GetVocabularyFilterWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) GetVocabularyFilterWithContext(arg0 context.Context, arg1 *transcribeservice.GetVocabularyFilterInput, arg2 ...request.Option) (*transcribeservice.GetVocabularyFilterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -793,14 +794,14 @@ func (m *MockTranscribeServiceAPI) GetVocabularyFilterWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// GetVocabularyFilterWithContext indicates an expected call of GetVocabularyFilterWithContext
+// GetVocabularyFilterWithContext indicates an expected call of GetVocabularyFilterWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetVocabularyFilterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetVocabularyFilterWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetVocabularyFilterWithContext), varargs...)
 }
 
-// GetVocabularyRequest mocks base method
+// GetVocabularyRequest mocks base method.
 func (m *MockTranscribeServiceAPI) GetVocabularyRequest(arg0 *transcribeservice.GetVocabularyInput) (*request.Request, *transcribeservice.GetVocabularyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetVocabularyRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockTranscribeServiceAPI) GetVocabularyRequest(arg0 *transcribeservice.
 	return ret0, ret1
 }
 
-// GetVocabularyRequest indicates an expected call of GetVocabularyRequest
+// GetVocabularyRequest indicates an expected call of GetVocabularyRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetVocabularyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetVocabularyRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetVocabularyRequest), arg0)
 }
 
-// GetVocabularyWithContext mocks base method
+// GetVocabularyWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) GetVocabularyWithContext(arg0 context.Context, arg1 *transcribeservice.GetVocabularyInput, arg2 ...request.Option) (*transcribeservice.GetVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockTranscribeServiceAPI) GetVocabularyWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// GetVocabularyWithContext indicates an expected call of GetVocabularyWithContext
+// GetVocabularyWithContext indicates an expected call of GetVocabularyWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) GetVocabularyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetVocabularyWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).GetVocabularyWithContext), varargs...)
 }
 
-// ListLanguageModels mocks base method
+// ListLanguageModels mocks base method.
 func (m *MockTranscribeServiceAPI) ListLanguageModels(arg0 *transcribeservice.ListLanguageModelsInput) (*transcribeservice.ListLanguageModelsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLanguageModels", arg0)
@@ -844,13 +845,13 @@ func (m *MockTranscribeServiceAPI) ListLanguageModels(arg0 *transcribeservice.Li
 	return ret0, ret1
 }
 
-// ListLanguageModels indicates an expected call of ListLanguageModels
+// ListLanguageModels indicates an expected call of ListLanguageModels.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListLanguageModels(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLanguageModels", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListLanguageModels), arg0)
 }
 
-// ListLanguageModelsPages mocks base method
+// ListLanguageModelsPages mocks base method.
 func (m *MockTranscribeServiceAPI) ListLanguageModelsPages(arg0 *transcribeservice.ListLanguageModelsInput, arg1 func(*transcribeservice.ListLanguageModelsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLanguageModelsPages", arg0, arg1)
@@ -858,13 +859,13 @@ func (m *MockTranscribeServiceAPI) ListLanguageModelsPages(arg0 *transcribeservi
 	return ret0
 }
 
-// ListLanguageModelsPages indicates an expected call of ListLanguageModelsPages
+// ListLanguageModelsPages indicates an expected call of ListLanguageModelsPages.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListLanguageModelsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLanguageModelsPages", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListLanguageModelsPages), arg0, arg1)
 }
 
-// ListLanguageModelsPagesWithContext mocks base method
+// ListLanguageModelsPagesWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) ListLanguageModelsPagesWithContext(arg0 context.Context, arg1 *transcribeservice.ListLanguageModelsInput, arg2 func(*transcribeservice.ListLanguageModelsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -876,14 +877,14 @@ func (m *MockTranscribeServiceAPI) ListLanguageModelsPagesWithContext(arg0 conte
 	return ret0
 }
 
-// ListLanguageModelsPagesWithContext indicates an expected call of ListLanguageModelsPagesWithContext
+// ListLanguageModelsPagesWithContext indicates an expected call of ListLanguageModelsPagesWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListLanguageModelsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLanguageModelsPagesWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListLanguageModelsPagesWithContext), varargs...)
 }
 
-// ListLanguageModelsRequest mocks base method
+// ListLanguageModelsRequest mocks base method.
 func (m *MockTranscribeServiceAPI) ListLanguageModelsRequest(arg0 *transcribeservice.ListLanguageModelsInput) (*request.Request, *transcribeservice.ListLanguageModelsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLanguageModelsRequest", arg0)
@@ -892,13 +893,13 @@ func (m *MockTranscribeServiceAPI) ListLanguageModelsRequest(arg0 *transcribeser
 	return ret0, ret1
 }
 
-// ListLanguageModelsRequest indicates an expected call of ListLanguageModelsRequest
+// ListLanguageModelsRequest indicates an expected call of ListLanguageModelsRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListLanguageModelsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLanguageModelsRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListLanguageModelsRequest), arg0)
 }
 
-// ListLanguageModelsWithContext mocks base method
+// ListLanguageModelsWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) ListLanguageModelsWithContext(arg0 context.Context, arg1 *transcribeservice.ListLanguageModelsInput, arg2 ...request.Option) (*transcribeservice.ListLanguageModelsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -911,14 +912,14 @@ func (m *MockTranscribeServiceAPI) ListLanguageModelsWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListLanguageModelsWithContext indicates an expected call of ListLanguageModelsWithContext
+// ListLanguageModelsWithContext indicates an expected call of ListLanguageModelsWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListLanguageModelsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLanguageModelsWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListLanguageModelsWithContext), varargs...)
 }
 
-// ListMedicalTranscriptionJobs mocks base method
+// ListMedicalTranscriptionJobs mocks base method.
 func (m *MockTranscribeServiceAPI) ListMedicalTranscriptionJobs(arg0 *transcribeservice.ListMedicalTranscriptionJobsInput) (*transcribeservice.ListMedicalTranscriptionJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMedicalTranscriptionJobs", arg0)
@@ -927,13 +928,13 @@ func (m *MockTranscribeServiceAPI) ListMedicalTranscriptionJobs(arg0 *transcribe
 	return ret0, ret1
 }
 
-// ListMedicalTranscriptionJobs indicates an expected call of ListMedicalTranscriptionJobs
+// ListMedicalTranscriptionJobs indicates an expected call of ListMedicalTranscriptionJobs.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListMedicalTranscriptionJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMedicalTranscriptionJobs", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListMedicalTranscriptionJobs), arg0)
 }
 
-// ListMedicalTranscriptionJobsPages mocks base method
+// ListMedicalTranscriptionJobsPages mocks base method.
 func (m *MockTranscribeServiceAPI) ListMedicalTranscriptionJobsPages(arg0 *transcribeservice.ListMedicalTranscriptionJobsInput, arg1 func(*transcribeservice.ListMedicalTranscriptionJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMedicalTranscriptionJobsPages", arg0, arg1)
@@ -941,13 +942,13 @@ func (m *MockTranscribeServiceAPI) ListMedicalTranscriptionJobsPages(arg0 *trans
 	return ret0
 }
 
-// ListMedicalTranscriptionJobsPages indicates an expected call of ListMedicalTranscriptionJobsPages
+// ListMedicalTranscriptionJobsPages indicates an expected call of ListMedicalTranscriptionJobsPages.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListMedicalTranscriptionJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMedicalTranscriptionJobsPages", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListMedicalTranscriptionJobsPages), arg0, arg1)
 }
 
-// ListMedicalTranscriptionJobsPagesWithContext mocks base method
+// ListMedicalTranscriptionJobsPagesWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) ListMedicalTranscriptionJobsPagesWithContext(arg0 context.Context, arg1 *transcribeservice.ListMedicalTranscriptionJobsInput, arg2 func(*transcribeservice.ListMedicalTranscriptionJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -959,14 +960,14 @@ func (m *MockTranscribeServiceAPI) ListMedicalTranscriptionJobsPagesWithContext(
 	return ret0
 }
 
-// ListMedicalTranscriptionJobsPagesWithContext indicates an expected call of ListMedicalTranscriptionJobsPagesWithContext
+// ListMedicalTranscriptionJobsPagesWithContext indicates an expected call of ListMedicalTranscriptionJobsPagesWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListMedicalTranscriptionJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMedicalTranscriptionJobsPagesWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListMedicalTranscriptionJobsPagesWithContext), varargs...)
 }
 
-// ListMedicalTranscriptionJobsRequest mocks base method
+// ListMedicalTranscriptionJobsRequest mocks base method.
 func (m *MockTranscribeServiceAPI) ListMedicalTranscriptionJobsRequest(arg0 *transcribeservice.ListMedicalTranscriptionJobsInput) (*request.Request, *transcribeservice.ListMedicalTranscriptionJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMedicalTranscriptionJobsRequest", arg0)
@@ -975,13 +976,13 @@ func (m *MockTranscribeServiceAPI) ListMedicalTranscriptionJobsRequest(arg0 *tra
 	return ret0, ret1
 }
 
-// ListMedicalTranscriptionJobsRequest indicates an expected call of ListMedicalTranscriptionJobsRequest
+// ListMedicalTranscriptionJobsRequest indicates an expected call of ListMedicalTranscriptionJobsRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListMedicalTranscriptionJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMedicalTranscriptionJobsRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListMedicalTranscriptionJobsRequest), arg0)
 }
 
-// ListMedicalTranscriptionJobsWithContext mocks base method
+// ListMedicalTranscriptionJobsWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) ListMedicalTranscriptionJobsWithContext(arg0 context.Context, arg1 *transcribeservice.ListMedicalTranscriptionJobsInput, arg2 ...request.Option) (*transcribeservice.ListMedicalTranscriptionJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -994,14 +995,14 @@ func (m *MockTranscribeServiceAPI) ListMedicalTranscriptionJobsWithContext(arg0 
 	return ret0, ret1
 }
 
-// ListMedicalTranscriptionJobsWithContext indicates an expected call of ListMedicalTranscriptionJobsWithContext
+// ListMedicalTranscriptionJobsWithContext indicates an expected call of ListMedicalTranscriptionJobsWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListMedicalTranscriptionJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMedicalTranscriptionJobsWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListMedicalTranscriptionJobsWithContext), varargs...)
 }
 
-// ListMedicalVocabularies mocks base method
+// ListMedicalVocabularies mocks base method.
 func (m *MockTranscribeServiceAPI) ListMedicalVocabularies(arg0 *transcribeservice.ListMedicalVocabulariesInput) (*transcribeservice.ListMedicalVocabulariesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMedicalVocabularies", arg0)
@@ -1010,13 +1011,13 @@ func (m *MockTranscribeServiceAPI) ListMedicalVocabularies(arg0 *transcribeservi
 	return ret0, ret1
 }
 
-// ListMedicalVocabularies indicates an expected call of ListMedicalVocabularies
+// ListMedicalVocabularies indicates an expected call of ListMedicalVocabularies.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListMedicalVocabularies(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMedicalVocabularies", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListMedicalVocabularies), arg0)
 }
 
-// ListMedicalVocabulariesPages mocks base method
+// ListMedicalVocabulariesPages mocks base method.
 func (m *MockTranscribeServiceAPI) ListMedicalVocabulariesPages(arg0 *transcribeservice.ListMedicalVocabulariesInput, arg1 func(*transcribeservice.ListMedicalVocabulariesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMedicalVocabulariesPages", arg0, arg1)
@@ -1024,13 +1025,13 @@ func (m *MockTranscribeServiceAPI) ListMedicalVocabulariesPages(arg0 *transcribe
 	return ret0
 }
 
-// ListMedicalVocabulariesPages indicates an expected call of ListMedicalVocabulariesPages
+// ListMedicalVocabulariesPages indicates an expected call of ListMedicalVocabulariesPages.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListMedicalVocabulariesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMedicalVocabulariesPages", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListMedicalVocabulariesPages), arg0, arg1)
 }
 
-// ListMedicalVocabulariesPagesWithContext mocks base method
+// ListMedicalVocabulariesPagesWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) ListMedicalVocabulariesPagesWithContext(arg0 context.Context, arg1 *transcribeservice.ListMedicalVocabulariesInput, arg2 func(*transcribeservice.ListMedicalVocabulariesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1042,14 +1043,14 @@ func (m *MockTranscribeServiceAPI) ListMedicalVocabulariesPagesWithContext(arg0 
 	return ret0
 }
 
-// ListMedicalVocabulariesPagesWithContext indicates an expected call of ListMedicalVocabulariesPagesWithContext
+// ListMedicalVocabulariesPagesWithContext indicates an expected call of ListMedicalVocabulariesPagesWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListMedicalVocabulariesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMedicalVocabulariesPagesWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListMedicalVocabulariesPagesWithContext), varargs...)
 }
 
-// ListMedicalVocabulariesRequest mocks base method
+// ListMedicalVocabulariesRequest mocks base method.
 func (m *MockTranscribeServiceAPI) ListMedicalVocabulariesRequest(arg0 *transcribeservice.ListMedicalVocabulariesInput) (*request.Request, *transcribeservice.ListMedicalVocabulariesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMedicalVocabulariesRequest", arg0)
@@ -1058,13 +1059,13 @@ func (m *MockTranscribeServiceAPI) ListMedicalVocabulariesRequest(arg0 *transcri
 	return ret0, ret1
 }
 
-// ListMedicalVocabulariesRequest indicates an expected call of ListMedicalVocabulariesRequest
+// ListMedicalVocabulariesRequest indicates an expected call of ListMedicalVocabulariesRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListMedicalVocabulariesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMedicalVocabulariesRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListMedicalVocabulariesRequest), arg0)
 }
 
-// ListMedicalVocabulariesWithContext mocks base method
+// ListMedicalVocabulariesWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) ListMedicalVocabulariesWithContext(arg0 context.Context, arg1 *transcribeservice.ListMedicalVocabulariesInput, arg2 ...request.Option) (*transcribeservice.ListMedicalVocabulariesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1077,14 +1078,14 @@ func (m *MockTranscribeServiceAPI) ListMedicalVocabulariesWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// ListMedicalVocabulariesWithContext indicates an expected call of ListMedicalVocabulariesWithContext
+// ListMedicalVocabulariesWithContext indicates an expected call of ListMedicalVocabulariesWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListMedicalVocabulariesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMedicalVocabulariesWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListMedicalVocabulariesWithContext), varargs...)
 }
 
-// ListTranscriptionJobs mocks base method
+// ListTranscriptionJobs mocks base method.
 func (m *MockTranscribeServiceAPI) ListTranscriptionJobs(arg0 *transcribeservice.ListTranscriptionJobsInput) (*transcribeservice.ListTranscriptionJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTranscriptionJobs", arg0)
@@ -1093,13 +1094,13 @@ func (m *MockTranscribeServiceAPI) ListTranscriptionJobs(arg0 *transcribeservice
 	return ret0, ret1
 }
 
-// ListTranscriptionJobs indicates an expected call of ListTranscriptionJobs
+// ListTranscriptionJobs indicates an expected call of ListTranscriptionJobs.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListTranscriptionJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTranscriptionJobs", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListTranscriptionJobs), arg0)
 }
 
-// ListTranscriptionJobsPages mocks base method
+// ListTranscriptionJobsPages mocks base method.
 func (m *MockTranscribeServiceAPI) ListTranscriptionJobsPages(arg0 *transcribeservice.ListTranscriptionJobsInput, arg1 func(*transcribeservice.ListTranscriptionJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTranscriptionJobsPages", arg0, arg1)
@@ -1107,13 +1108,13 @@ func (m *MockTranscribeServiceAPI) ListTranscriptionJobsPages(arg0 *transcribese
 	return ret0
 }
 
-// ListTranscriptionJobsPages indicates an expected call of ListTranscriptionJobsPages
+// ListTranscriptionJobsPages indicates an expected call of ListTranscriptionJobsPages.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListTranscriptionJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTranscriptionJobsPages", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListTranscriptionJobsPages), arg0, arg1)
 }
 
-// ListTranscriptionJobsPagesWithContext mocks base method
+// ListTranscriptionJobsPagesWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) ListTranscriptionJobsPagesWithContext(arg0 context.Context, arg1 *transcribeservice.ListTranscriptionJobsInput, arg2 func(*transcribeservice.ListTranscriptionJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1125,14 +1126,14 @@ func (m *MockTranscribeServiceAPI) ListTranscriptionJobsPagesWithContext(arg0 co
 	return ret0
 }
 
-// ListTranscriptionJobsPagesWithContext indicates an expected call of ListTranscriptionJobsPagesWithContext
+// ListTranscriptionJobsPagesWithContext indicates an expected call of ListTranscriptionJobsPagesWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListTranscriptionJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTranscriptionJobsPagesWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListTranscriptionJobsPagesWithContext), varargs...)
 }
 
-// ListTranscriptionJobsRequest mocks base method
+// ListTranscriptionJobsRequest mocks base method.
 func (m *MockTranscribeServiceAPI) ListTranscriptionJobsRequest(arg0 *transcribeservice.ListTranscriptionJobsInput) (*request.Request, *transcribeservice.ListTranscriptionJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTranscriptionJobsRequest", arg0)
@@ -1141,13 +1142,13 @@ func (m *MockTranscribeServiceAPI) ListTranscriptionJobsRequest(arg0 *transcribe
 	return ret0, ret1
 }
 
-// ListTranscriptionJobsRequest indicates an expected call of ListTranscriptionJobsRequest
+// ListTranscriptionJobsRequest indicates an expected call of ListTranscriptionJobsRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListTranscriptionJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTranscriptionJobsRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListTranscriptionJobsRequest), arg0)
 }
 
-// ListTranscriptionJobsWithContext mocks base method
+// ListTranscriptionJobsWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) ListTranscriptionJobsWithContext(arg0 context.Context, arg1 *transcribeservice.ListTranscriptionJobsInput, arg2 ...request.Option) (*transcribeservice.ListTranscriptionJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1160,14 +1161,14 @@ func (m *MockTranscribeServiceAPI) ListTranscriptionJobsWithContext(arg0 context
 	return ret0, ret1
 }
 
-// ListTranscriptionJobsWithContext indicates an expected call of ListTranscriptionJobsWithContext
+// ListTranscriptionJobsWithContext indicates an expected call of ListTranscriptionJobsWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListTranscriptionJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTranscriptionJobsWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListTranscriptionJobsWithContext), varargs...)
 }
 
-// ListVocabularies mocks base method
+// ListVocabularies mocks base method.
 func (m *MockTranscribeServiceAPI) ListVocabularies(arg0 *transcribeservice.ListVocabulariesInput) (*transcribeservice.ListVocabulariesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVocabularies", arg0)
@@ -1176,13 +1177,13 @@ func (m *MockTranscribeServiceAPI) ListVocabularies(arg0 *transcribeservice.List
 	return ret0, ret1
 }
 
-// ListVocabularies indicates an expected call of ListVocabularies
+// ListVocabularies indicates an expected call of ListVocabularies.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListVocabularies(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVocabularies", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListVocabularies), arg0)
 }
 
-// ListVocabulariesPages mocks base method
+// ListVocabulariesPages mocks base method.
 func (m *MockTranscribeServiceAPI) ListVocabulariesPages(arg0 *transcribeservice.ListVocabulariesInput, arg1 func(*transcribeservice.ListVocabulariesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVocabulariesPages", arg0, arg1)
@@ -1190,13 +1191,13 @@ func (m *MockTranscribeServiceAPI) ListVocabulariesPages(arg0 *transcribeservice
 	return ret0
 }
 
-// ListVocabulariesPages indicates an expected call of ListVocabulariesPages
+// ListVocabulariesPages indicates an expected call of ListVocabulariesPages.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListVocabulariesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVocabulariesPages", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListVocabulariesPages), arg0, arg1)
 }
 
-// ListVocabulariesPagesWithContext mocks base method
+// ListVocabulariesPagesWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) ListVocabulariesPagesWithContext(arg0 context.Context, arg1 *transcribeservice.ListVocabulariesInput, arg2 func(*transcribeservice.ListVocabulariesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1208,14 +1209,14 @@ func (m *MockTranscribeServiceAPI) ListVocabulariesPagesWithContext(arg0 context
 	return ret0
 }
 
-// ListVocabulariesPagesWithContext indicates an expected call of ListVocabulariesPagesWithContext
+// ListVocabulariesPagesWithContext indicates an expected call of ListVocabulariesPagesWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListVocabulariesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVocabulariesPagesWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListVocabulariesPagesWithContext), varargs...)
 }
 
-// ListVocabulariesRequest mocks base method
+// ListVocabulariesRequest mocks base method.
 func (m *MockTranscribeServiceAPI) ListVocabulariesRequest(arg0 *transcribeservice.ListVocabulariesInput) (*request.Request, *transcribeservice.ListVocabulariesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVocabulariesRequest", arg0)
@@ -1224,13 +1225,13 @@ func (m *MockTranscribeServiceAPI) ListVocabulariesRequest(arg0 *transcribeservi
 	return ret0, ret1
 }
 
-// ListVocabulariesRequest indicates an expected call of ListVocabulariesRequest
+// ListVocabulariesRequest indicates an expected call of ListVocabulariesRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListVocabulariesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVocabulariesRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListVocabulariesRequest), arg0)
 }
 
-// ListVocabulariesWithContext mocks base method
+// ListVocabulariesWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) ListVocabulariesWithContext(arg0 context.Context, arg1 *transcribeservice.ListVocabulariesInput, arg2 ...request.Option) (*transcribeservice.ListVocabulariesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1243,14 +1244,14 @@ func (m *MockTranscribeServiceAPI) ListVocabulariesWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListVocabulariesWithContext indicates an expected call of ListVocabulariesWithContext
+// ListVocabulariesWithContext indicates an expected call of ListVocabulariesWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListVocabulariesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVocabulariesWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListVocabulariesWithContext), varargs...)
 }
 
-// ListVocabularyFilters mocks base method
+// ListVocabularyFilters mocks base method.
 func (m *MockTranscribeServiceAPI) ListVocabularyFilters(arg0 *transcribeservice.ListVocabularyFiltersInput) (*transcribeservice.ListVocabularyFiltersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVocabularyFilters", arg0)
@@ -1259,13 +1260,13 @@ func (m *MockTranscribeServiceAPI) ListVocabularyFilters(arg0 *transcribeservice
 	return ret0, ret1
 }
 
-// ListVocabularyFilters indicates an expected call of ListVocabularyFilters
+// ListVocabularyFilters indicates an expected call of ListVocabularyFilters.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListVocabularyFilters(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVocabularyFilters", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListVocabularyFilters), arg0)
 }
 
-// ListVocabularyFiltersPages mocks base method
+// ListVocabularyFiltersPages mocks base method.
 func (m *MockTranscribeServiceAPI) ListVocabularyFiltersPages(arg0 *transcribeservice.ListVocabularyFiltersInput, arg1 func(*transcribeservice.ListVocabularyFiltersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVocabularyFiltersPages", arg0, arg1)
@@ -1273,13 +1274,13 @@ func (m *MockTranscribeServiceAPI) ListVocabularyFiltersPages(arg0 *transcribese
 	return ret0
 }
 
-// ListVocabularyFiltersPages indicates an expected call of ListVocabularyFiltersPages
+// ListVocabularyFiltersPages indicates an expected call of ListVocabularyFiltersPages.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListVocabularyFiltersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVocabularyFiltersPages", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListVocabularyFiltersPages), arg0, arg1)
 }
 
-// ListVocabularyFiltersPagesWithContext mocks base method
+// ListVocabularyFiltersPagesWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) ListVocabularyFiltersPagesWithContext(arg0 context.Context, arg1 *transcribeservice.ListVocabularyFiltersInput, arg2 func(*transcribeservice.ListVocabularyFiltersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1291,14 +1292,14 @@ func (m *MockTranscribeServiceAPI) ListVocabularyFiltersPagesWithContext(arg0 co
 	return ret0
 }
 
-// ListVocabularyFiltersPagesWithContext indicates an expected call of ListVocabularyFiltersPagesWithContext
+// ListVocabularyFiltersPagesWithContext indicates an expected call of ListVocabularyFiltersPagesWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListVocabularyFiltersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVocabularyFiltersPagesWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListVocabularyFiltersPagesWithContext), varargs...)
 }
 
-// ListVocabularyFiltersRequest mocks base method
+// ListVocabularyFiltersRequest mocks base method.
 func (m *MockTranscribeServiceAPI) ListVocabularyFiltersRequest(arg0 *transcribeservice.ListVocabularyFiltersInput) (*request.Request, *transcribeservice.ListVocabularyFiltersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVocabularyFiltersRequest", arg0)
@@ -1307,13 +1308,13 @@ func (m *MockTranscribeServiceAPI) ListVocabularyFiltersRequest(arg0 *transcribe
 	return ret0, ret1
 }
 
-// ListVocabularyFiltersRequest indicates an expected call of ListVocabularyFiltersRequest
+// ListVocabularyFiltersRequest indicates an expected call of ListVocabularyFiltersRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListVocabularyFiltersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVocabularyFiltersRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListVocabularyFiltersRequest), arg0)
 }
 
-// ListVocabularyFiltersWithContext mocks base method
+// ListVocabularyFiltersWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) ListVocabularyFiltersWithContext(arg0 context.Context, arg1 *transcribeservice.ListVocabularyFiltersInput, arg2 ...request.Option) (*transcribeservice.ListVocabularyFiltersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1326,14 +1327,14 @@ func (m *MockTranscribeServiceAPI) ListVocabularyFiltersWithContext(arg0 context
 	return ret0, ret1
 }
 
-// ListVocabularyFiltersWithContext indicates an expected call of ListVocabularyFiltersWithContext
+// ListVocabularyFiltersWithContext indicates an expected call of ListVocabularyFiltersWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) ListVocabularyFiltersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVocabularyFiltersWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).ListVocabularyFiltersWithContext), varargs...)
 }
 
-// StartMedicalTranscriptionJob mocks base method
+// StartMedicalTranscriptionJob mocks base method.
 func (m *MockTranscribeServiceAPI) StartMedicalTranscriptionJob(arg0 *transcribeservice.StartMedicalTranscriptionJobInput) (*transcribeservice.StartMedicalTranscriptionJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartMedicalTranscriptionJob", arg0)
@@ -1342,13 +1343,13 @@ func (m *MockTranscribeServiceAPI) StartMedicalTranscriptionJob(arg0 *transcribe
 	return ret0, ret1
 }
 
-// StartMedicalTranscriptionJob indicates an expected call of StartMedicalTranscriptionJob
+// StartMedicalTranscriptionJob indicates an expected call of StartMedicalTranscriptionJob.
 func (mr *MockTranscribeServiceAPIMockRecorder) StartMedicalTranscriptionJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMedicalTranscriptionJob", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).StartMedicalTranscriptionJob), arg0)
 }
 
-// StartMedicalTranscriptionJobRequest mocks base method
+// StartMedicalTranscriptionJobRequest mocks base method.
 func (m *MockTranscribeServiceAPI) StartMedicalTranscriptionJobRequest(arg0 *transcribeservice.StartMedicalTranscriptionJobInput) (*request.Request, *transcribeservice.StartMedicalTranscriptionJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartMedicalTranscriptionJobRequest", arg0)
@@ -1357,13 +1358,13 @@ func (m *MockTranscribeServiceAPI) StartMedicalTranscriptionJobRequest(arg0 *tra
 	return ret0, ret1
 }
 
-// StartMedicalTranscriptionJobRequest indicates an expected call of StartMedicalTranscriptionJobRequest
+// StartMedicalTranscriptionJobRequest indicates an expected call of StartMedicalTranscriptionJobRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) StartMedicalTranscriptionJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMedicalTranscriptionJobRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).StartMedicalTranscriptionJobRequest), arg0)
 }
 
-// StartMedicalTranscriptionJobWithContext mocks base method
+// StartMedicalTranscriptionJobWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) StartMedicalTranscriptionJobWithContext(arg0 context.Context, arg1 *transcribeservice.StartMedicalTranscriptionJobInput, arg2 ...request.Option) (*transcribeservice.StartMedicalTranscriptionJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1376,14 +1377,14 @@ func (m *MockTranscribeServiceAPI) StartMedicalTranscriptionJobWithContext(arg0 
 	return ret0, ret1
 }
 
-// StartMedicalTranscriptionJobWithContext indicates an expected call of StartMedicalTranscriptionJobWithContext
+// StartMedicalTranscriptionJobWithContext indicates an expected call of StartMedicalTranscriptionJobWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) StartMedicalTranscriptionJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMedicalTranscriptionJobWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).StartMedicalTranscriptionJobWithContext), varargs...)
 }
 
-// StartTranscriptionJob mocks base method
+// StartTranscriptionJob mocks base method.
 func (m *MockTranscribeServiceAPI) StartTranscriptionJob(arg0 *transcribeservice.StartTranscriptionJobInput) (*transcribeservice.StartTranscriptionJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartTranscriptionJob", arg0)
@@ -1392,13 +1393,13 @@ func (m *MockTranscribeServiceAPI) StartTranscriptionJob(arg0 *transcribeservice
 	return ret0, ret1
 }
 
-// StartTranscriptionJob indicates an expected call of StartTranscriptionJob
+// StartTranscriptionJob indicates an expected call of StartTranscriptionJob.
 func (mr *MockTranscribeServiceAPIMockRecorder) StartTranscriptionJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartTranscriptionJob", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).StartTranscriptionJob), arg0)
 }
 
-// StartTranscriptionJobRequest mocks base method
+// StartTranscriptionJobRequest mocks base method.
 func (m *MockTranscribeServiceAPI) StartTranscriptionJobRequest(arg0 *transcribeservice.StartTranscriptionJobInput) (*request.Request, *transcribeservice.StartTranscriptionJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartTranscriptionJobRequest", arg0)
@@ -1407,13 +1408,13 @@ func (m *MockTranscribeServiceAPI) StartTranscriptionJobRequest(arg0 *transcribe
 	return ret0, ret1
 }
 
-// StartTranscriptionJobRequest indicates an expected call of StartTranscriptionJobRequest
+// StartTranscriptionJobRequest indicates an expected call of StartTranscriptionJobRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) StartTranscriptionJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartTranscriptionJobRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).StartTranscriptionJobRequest), arg0)
 }
 
-// StartTranscriptionJobWithContext mocks base method
+// StartTranscriptionJobWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) StartTranscriptionJobWithContext(arg0 context.Context, arg1 *transcribeservice.StartTranscriptionJobInput, arg2 ...request.Option) (*transcribeservice.StartTranscriptionJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1426,14 +1427,14 @@ func (m *MockTranscribeServiceAPI) StartTranscriptionJobWithContext(arg0 context
 	return ret0, ret1
 }
 
-// StartTranscriptionJobWithContext indicates an expected call of StartTranscriptionJobWithContext
+// StartTranscriptionJobWithContext indicates an expected call of StartTranscriptionJobWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) StartTranscriptionJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartTranscriptionJobWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).StartTranscriptionJobWithContext), varargs...)
 }
 
-// UpdateMedicalVocabulary mocks base method
+// UpdateMedicalVocabulary mocks base method.
 func (m *MockTranscribeServiceAPI) UpdateMedicalVocabulary(arg0 *transcribeservice.UpdateMedicalVocabularyInput) (*transcribeservice.UpdateMedicalVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMedicalVocabulary", arg0)
@@ -1442,13 +1443,13 @@ func (m *MockTranscribeServiceAPI) UpdateMedicalVocabulary(arg0 *transcribeservi
 	return ret0, ret1
 }
 
-// UpdateMedicalVocabulary indicates an expected call of UpdateMedicalVocabulary
+// UpdateMedicalVocabulary indicates an expected call of UpdateMedicalVocabulary.
 func (mr *MockTranscribeServiceAPIMockRecorder) UpdateMedicalVocabulary(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMedicalVocabulary", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).UpdateMedicalVocabulary), arg0)
 }
 
-// UpdateMedicalVocabularyRequest mocks base method
+// UpdateMedicalVocabularyRequest mocks base method.
 func (m *MockTranscribeServiceAPI) UpdateMedicalVocabularyRequest(arg0 *transcribeservice.UpdateMedicalVocabularyInput) (*request.Request, *transcribeservice.UpdateMedicalVocabularyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMedicalVocabularyRequest", arg0)
@@ -1457,13 +1458,13 @@ func (m *MockTranscribeServiceAPI) UpdateMedicalVocabularyRequest(arg0 *transcri
 	return ret0, ret1
 }
 
-// UpdateMedicalVocabularyRequest indicates an expected call of UpdateMedicalVocabularyRequest
+// UpdateMedicalVocabularyRequest indicates an expected call of UpdateMedicalVocabularyRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) UpdateMedicalVocabularyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMedicalVocabularyRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).UpdateMedicalVocabularyRequest), arg0)
 }
 
-// UpdateMedicalVocabularyWithContext mocks base method
+// UpdateMedicalVocabularyWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) UpdateMedicalVocabularyWithContext(arg0 context.Context, arg1 *transcribeservice.UpdateMedicalVocabularyInput, arg2 ...request.Option) (*transcribeservice.UpdateMedicalVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1476,14 +1477,14 @@ func (m *MockTranscribeServiceAPI) UpdateMedicalVocabularyWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// UpdateMedicalVocabularyWithContext indicates an expected call of UpdateMedicalVocabularyWithContext
+// UpdateMedicalVocabularyWithContext indicates an expected call of UpdateMedicalVocabularyWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) UpdateMedicalVocabularyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMedicalVocabularyWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).UpdateMedicalVocabularyWithContext), varargs...)
 }
 
-// UpdateVocabulary mocks base method
+// UpdateVocabulary mocks base method.
 func (m *MockTranscribeServiceAPI) UpdateVocabulary(arg0 *transcribeservice.UpdateVocabularyInput) (*transcribeservice.UpdateVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVocabulary", arg0)
@@ -1492,13 +1493,13 @@ func (m *MockTranscribeServiceAPI) UpdateVocabulary(arg0 *transcribeservice.Upda
 	return ret0, ret1
 }
 
-// UpdateVocabulary indicates an expected call of UpdateVocabulary
+// UpdateVocabulary indicates an expected call of UpdateVocabulary.
 func (mr *MockTranscribeServiceAPIMockRecorder) UpdateVocabulary(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVocabulary", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).UpdateVocabulary), arg0)
 }
 
-// UpdateVocabularyFilter mocks base method
+// UpdateVocabularyFilter mocks base method.
 func (m *MockTranscribeServiceAPI) UpdateVocabularyFilter(arg0 *transcribeservice.UpdateVocabularyFilterInput) (*transcribeservice.UpdateVocabularyFilterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVocabularyFilter", arg0)
@@ -1507,13 +1508,13 @@ func (m *MockTranscribeServiceAPI) UpdateVocabularyFilter(arg0 *transcribeservic
 	return ret0, ret1
 }
 
-// UpdateVocabularyFilter indicates an expected call of UpdateVocabularyFilter
+// UpdateVocabularyFilter indicates an expected call of UpdateVocabularyFilter.
 func (mr *MockTranscribeServiceAPIMockRecorder) UpdateVocabularyFilter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVocabularyFilter", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).UpdateVocabularyFilter), arg0)
 }
 
-// UpdateVocabularyFilterRequest mocks base method
+// UpdateVocabularyFilterRequest mocks base method.
 func (m *MockTranscribeServiceAPI) UpdateVocabularyFilterRequest(arg0 *transcribeservice.UpdateVocabularyFilterInput) (*request.Request, *transcribeservice.UpdateVocabularyFilterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVocabularyFilterRequest", arg0)
@@ -1522,13 +1523,13 @@ func (m *MockTranscribeServiceAPI) UpdateVocabularyFilterRequest(arg0 *transcrib
 	return ret0, ret1
 }
 
-// UpdateVocabularyFilterRequest indicates an expected call of UpdateVocabularyFilterRequest
+// UpdateVocabularyFilterRequest indicates an expected call of UpdateVocabularyFilterRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) UpdateVocabularyFilterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVocabularyFilterRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).UpdateVocabularyFilterRequest), arg0)
 }
 
-// UpdateVocabularyFilterWithContext mocks base method
+// UpdateVocabularyFilterWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) UpdateVocabularyFilterWithContext(arg0 context.Context, arg1 *transcribeservice.UpdateVocabularyFilterInput, arg2 ...request.Option) (*transcribeservice.UpdateVocabularyFilterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1541,14 +1542,14 @@ func (m *MockTranscribeServiceAPI) UpdateVocabularyFilterWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// UpdateVocabularyFilterWithContext indicates an expected call of UpdateVocabularyFilterWithContext
+// UpdateVocabularyFilterWithContext indicates an expected call of UpdateVocabularyFilterWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) UpdateVocabularyFilterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVocabularyFilterWithContext", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).UpdateVocabularyFilterWithContext), varargs...)
 }
 
-// UpdateVocabularyRequest mocks base method
+// UpdateVocabularyRequest mocks base method.
 func (m *MockTranscribeServiceAPI) UpdateVocabularyRequest(arg0 *transcribeservice.UpdateVocabularyInput) (*request.Request, *transcribeservice.UpdateVocabularyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVocabularyRequest", arg0)
@@ -1557,13 +1558,13 @@ func (m *MockTranscribeServiceAPI) UpdateVocabularyRequest(arg0 *transcribeservi
 	return ret0, ret1
 }
 
-// UpdateVocabularyRequest indicates an expected call of UpdateVocabularyRequest
+// UpdateVocabularyRequest indicates an expected call of UpdateVocabularyRequest.
 func (mr *MockTranscribeServiceAPIMockRecorder) UpdateVocabularyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVocabularyRequest", reflect.TypeOf((*MockTranscribeServiceAPI)(nil).UpdateVocabularyRequest), arg0)
 }
 
-// UpdateVocabularyWithContext mocks base method
+// UpdateVocabularyWithContext mocks base method.
 func (m *MockTranscribeServiceAPI) UpdateVocabularyWithContext(arg0 context.Context, arg1 *transcribeservice.UpdateVocabularyInput, arg2 ...request.Option) (*transcribeservice.UpdateVocabularyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1576,7 +1577,7 @@ func (m *MockTranscribeServiceAPI) UpdateVocabularyWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// UpdateVocabularyWithContext indicates an expected call of UpdateVocabularyWithContext
+// UpdateVocabularyWithContext indicates an expected call of UpdateVocabularyWithContext.
 func (mr *MockTranscribeServiceAPIMockRecorder) UpdateVocabularyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

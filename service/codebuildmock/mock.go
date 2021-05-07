@@ -6,36 +6,37 @@ package codebuildmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	codebuild "github.com/aws/aws-sdk-go/service/codebuild"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockCodeBuildAPI is a mock of CodeBuildAPI interface
+// MockCodeBuildAPI is a mock of CodeBuildAPI interface.
 type MockCodeBuildAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockCodeBuildAPIMockRecorder
 }
 
-// MockCodeBuildAPIMockRecorder is the mock recorder for MockCodeBuildAPI
+// MockCodeBuildAPIMockRecorder is the mock recorder for MockCodeBuildAPI.
 type MockCodeBuildAPIMockRecorder struct {
 	mock *MockCodeBuildAPI
 }
 
-// NewMockCodeBuildAPI creates a new mock instance
+// NewMockCodeBuildAPI creates a new mock instance.
 func NewMockCodeBuildAPI(ctrl *gomock.Controller) *MockCodeBuildAPI {
 	mock := &MockCodeBuildAPI{ctrl: ctrl}
 	mock.recorder = &MockCodeBuildAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockCodeBuildAPI) EXPECT() *MockCodeBuildAPIMockRecorder {
 	return m.recorder
 }
 
-// BatchDeleteBuilds mocks base method
+// BatchDeleteBuilds mocks base method.
 func (m *MockCodeBuildAPI) BatchDeleteBuilds(arg0 *codebuild.BatchDeleteBuildsInput) (*codebuild.BatchDeleteBuildsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchDeleteBuilds", arg0)
@@ -44,13 +45,13 @@ func (m *MockCodeBuildAPI) BatchDeleteBuilds(arg0 *codebuild.BatchDeleteBuildsIn
 	return ret0, ret1
 }
 
-// BatchDeleteBuilds indicates an expected call of BatchDeleteBuilds
+// BatchDeleteBuilds indicates an expected call of BatchDeleteBuilds.
 func (mr *MockCodeBuildAPIMockRecorder) BatchDeleteBuilds(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchDeleteBuilds", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchDeleteBuilds), arg0)
 }
 
-// BatchDeleteBuildsRequest mocks base method
+// BatchDeleteBuildsRequest mocks base method.
 func (m *MockCodeBuildAPI) BatchDeleteBuildsRequest(arg0 *codebuild.BatchDeleteBuildsInput) (*request.Request, *codebuild.BatchDeleteBuildsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchDeleteBuildsRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockCodeBuildAPI) BatchDeleteBuildsRequest(arg0 *codebuild.BatchDeleteB
 	return ret0, ret1
 }
 
-// BatchDeleteBuildsRequest indicates an expected call of BatchDeleteBuildsRequest
+// BatchDeleteBuildsRequest indicates an expected call of BatchDeleteBuildsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) BatchDeleteBuildsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchDeleteBuildsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchDeleteBuildsRequest), arg0)
 }
 
-// BatchDeleteBuildsWithContext mocks base method
+// BatchDeleteBuildsWithContext mocks base method.
 func (m *MockCodeBuildAPI) BatchDeleteBuildsWithContext(arg0 context.Context, arg1 *codebuild.BatchDeleteBuildsInput, arg2 ...request.Option) (*codebuild.BatchDeleteBuildsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockCodeBuildAPI) BatchDeleteBuildsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// BatchDeleteBuildsWithContext indicates an expected call of BatchDeleteBuildsWithContext
+// BatchDeleteBuildsWithContext indicates an expected call of BatchDeleteBuildsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) BatchDeleteBuildsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchDeleteBuildsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchDeleteBuildsWithContext), varargs...)
 }
 
-// BatchGetBuildBatches mocks base method
+// BatchGetBuildBatches mocks base method.
 func (m *MockCodeBuildAPI) BatchGetBuildBatches(arg0 *codebuild.BatchGetBuildBatchesInput) (*codebuild.BatchGetBuildBatchesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetBuildBatches", arg0)
@@ -94,13 +95,13 @@ func (m *MockCodeBuildAPI) BatchGetBuildBatches(arg0 *codebuild.BatchGetBuildBat
 	return ret0, ret1
 }
 
-// BatchGetBuildBatches indicates an expected call of BatchGetBuildBatches
+// BatchGetBuildBatches indicates an expected call of BatchGetBuildBatches.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetBuildBatches(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetBuildBatches", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetBuildBatches), arg0)
 }
 
-// BatchGetBuildBatchesRequest mocks base method
+// BatchGetBuildBatchesRequest mocks base method.
 func (m *MockCodeBuildAPI) BatchGetBuildBatchesRequest(arg0 *codebuild.BatchGetBuildBatchesInput) (*request.Request, *codebuild.BatchGetBuildBatchesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetBuildBatchesRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockCodeBuildAPI) BatchGetBuildBatchesRequest(arg0 *codebuild.BatchGetB
 	return ret0, ret1
 }
 
-// BatchGetBuildBatchesRequest indicates an expected call of BatchGetBuildBatchesRequest
+// BatchGetBuildBatchesRequest indicates an expected call of BatchGetBuildBatchesRequest.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetBuildBatchesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetBuildBatchesRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetBuildBatchesRequest), arg0)
 }
 
-// BatchGetBuildBatchesWithContext mocks base method
+// BatchGetBuildBatchesWithContext mocks base method.
 func (m *MockCodeBuildAPI) BatchGetBuildBatchesWithContext(arg0 context.Context, arg1 *codebuild.BatchGetBuildBatchesInput, arg2 ...request.Option) (*codebuild.BatchGetBuildBatchesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockCodeBuildAPI) BatchGetBuildBatchesWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// BatchGetBuildBatchesWithContext indicates an expected call of BatchGetBuildBatchesWithContext
+// BatchGetBuildBatchesWithContext indicates an expected call of BatchGetBuildBatchesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetBuildBatchesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetBuildBatchesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetBuildBatchesWithContext), varargs...)
 }
 
-// BatchGetBuilds mocks base method
+// BatchGetBuilds mocks base method.
 func (m *MockCodeBuildAPI) BatchGetBuilds(arg0 *codebuild.BatchGetBuildsInput) (*codebuild.BatchGetBuildsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetBuilds", arg0)
@@ -144,13 +145,13 @@ func (m *MockCodeBuildAPI) BatchGetBuilds(arg0 *codebuild.BatchGetBuildsInput) (
 	return ret0, ret1
 }
 
-// BatchGetBuilds indicates an expected call of BatchGetBuilds
+// BatchGetBuilds indicates an expected call of BatchGetBuilds.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetBuilds(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetBuilds", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetBuilds), arg0)
 }
 
-// BatchGetBuildsRequest mocks base method
+// BatchGetBuildsRequest mocks base method.
 func (m *MockCodeBuildAPI) BatchGetBuildsRequest(arg0 *codebuild.BatchGetBuildsInput) (*request.Request, *codebuild.BatchGetBuildsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetBuildsRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockCodeBuildAPI) BatchGetBuildsRequest(arg0 *codebuild.BatchGetBuildsI
 	return ret0, ret1
 }
 
-// BatchGetBuildsRequest indicates an expected call of BatchGetBuildsRequest
+// BatchGetBuildsRequest indicates an expected call of BatchGetBuildsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetBuildsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetBuildsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetBuildsRequest), arg0)
 }
 
-// BatchGetBuildsWithContext mocks base method
+// BatchGetBuildsWithContext mocks base method.
 func (m *MockCodeBuildAPI) BatchGetBuildsWithContext(arg0 context.Context, arg1 *codebuild.BatchGetBuildsInput, arg2 ...request.Option) (*codebuild.BatchGetBuildsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockCodeBuildAPI) BatchGetBuildsWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// BatchGetBuildsWithContext indicates an expected call of BatchGetBuildsWithContext
+// BatchGetBuildsWithContext indicates an expected call of BatchGetBuildsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetBuildsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetBuildsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetBuildsWithContext), varargs...)
 }
 
-// BatchGetProjects mocks base method
+// BatchGetProjects mocks base method.
 func (m *MockCodeBuildAPI) BatchGetProjects(arg0 *codebuild.BatchGetProjectsInput) (*codebuild.BatchGetProjectsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetProjects", arg0)
@@ -194,13 +195,13 @@ func (m *MockCodeBuildAPI) BatchGetProjects(arg0 *codebuild.BatchGetProjectsInpu
 	return ret0, ret1
 }
 
-// BatchGetProjects indicates an expected call of BatchGetProjects
+// BatchGetProjects indicates an expected call of BatchGetProjects.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetProjects(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetProjects", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetProjects), arg0)
 }
 
-// BatchGetProjectsRequest mocks base method
+// BatchGetProjectsRequest mocks base method.
 func (m *MockCodeBuildAPI) BatchGetProjectsRequest(arg0 *codebuild.BatchGetProjectsInput) (*request.Request, *codebuild.BatchGetProjectsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetProjectsRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockCodeBuildAPI) BatchGetProjectsRequest(arg0 *codebuild.BatchGetProje
 	return ret0, ret1
 }
 
-// BatchGetProjectsRequest indicates an expected call of BatchGetProjectsRequest
+// BatchGetProjectsRequest indicates an expected call of BatchGetProjectsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetProjectsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetProjectsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetProjectsRequest), arg0)
 }
 
-// BatchGetProjectsWithContext mocks base method
+// BatchGetProjectsWithContext mocks base method.
 func (m *MockCodeBuildAPI) BatchGetProjectsWithContext(arg0 context.Context, arg1 *codebuild.BatchGetProjectsInput, arg2 ...request.Option) (*codebuild.BatchGetProjectsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockCodeBuildAPI) BatchGetProjectsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// BatchGetProjectsWithContext indicates an expected call of BatchGetProjectsWithContext
+// BatchGetProjectsWithContext indicates an expected call of BatchGetProjectsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetProjectsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetProjectsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetProjectsWithContext), varargs...)
 }
 
-// BatchGetReportGroups mocks base method
+// BatchGetReportGroups mocks base method.
 func (m *MockCodeBuildAPI) BatchGetReportGroups(arg0 *codebuild.BatchGetReportGroupsInput) (*codebuild.BatchGetReportGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetReportGroups", arg0)
@@ -244,13 +245,13 @@ func (m *MockCodeBuildAPI) BatchGetReportGroups(arg0 *codebuild.BatchGetReportGr
 	return ret0, ret1
 }
 
-// BatchGetReportGroups indicates an expected call of BatchGetReportGroups
+// BatchGetReportGroups indicates an expected call of BatchGetReportGroups.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetReportGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetReportGroups", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetReportGroups), arg0)
 }
 
-// BatchGetReportGroupsRequest mocks base method
+// BatchGetReportGroupsRequest mocks base method.
 func (m *MockCodeBuildAPI) BatchGetReportGroupsRequest(arg0 *codebuild.BatchGetReportGroupsInput) (*request.Request, *codebuild.BatchGetReportGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetReportGroupsRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockCodeBuildAPI) BatchGetReportGroupsRequest(arg0 *codebuild.BatchGetR
 	return ret0, ret1
 }
 
-// BatchGetReportGroupsRequest indicates an expected call of BatchGetReportGroupsRequest
+// BatchGetReportGroupsRequest indicates an expected call of BatchGetReportGroupsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetReportGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetReportGroupsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetReportGroupsRequest), arg0)
 }
 
-// BatchGetReportGroupsWithContext mocks base method
+// BatchGetReportGroupsWithContext mocks base method.
 func (m *MockCodeBuildAPI) BatchGetReportGroupsWithContext(arg0 context.Context, arg1 *codebuild.BatchGetReportGroupsInput, arg2 ...request.Option) (*codebuild.BatchGetReportGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockCodeBuildAPI) BatchGetReportGroupsWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// BatchGetReportGroupsWithContext indicates an expected call of BatchGetReportGroupsWithContext
+// BatchGetReportGroupsWithContext indicates an expected call of BatchGetReportGroupsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetReportGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetReportGroupsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetReportGroupsWithContext), varargs...)
 }
 
-// BatchGetReports mocks base method
+// BatchGetReports mocks base method.
 func (m *MockCodeBuildAPI) BatchGetReports(arg0 *codebuild.BatchGetReportsInput) (*codebuild.BatchGetReportsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetReports", arg0)
@@ -294,13 +295,13 @@ func (m *MockCodeBuildAPI) BatchGetReports(arg0 *codebuild.BatchGetReportsInput)
 	return ret0, ret1
 }
 
-// BatchGetReports indicates an expected call of BatchGetReports
+// BatchGetReports indicates an expected call of BatchGetReports.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetReports(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetReports", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetReports), arg0)
 }
 
-// BatchGetReportsRequest mocks base method
+// BatchGetReportsRequest mocks base method.
 func (m *MockCodeBuildAPI) BatchGetReportsRequest(arg0 *codebuild.BatchGetReportsInput) (*request.Request, *codebuild.BatchGetReportsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetReportsRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockCodeBuildAPI) BatchGetReportsRequest(arg0 *codebuild.BatchGetReport
 	return ret0, ret1
 }
 
-// BatchGetReportsRequest indicates an expected call of BatchGetReportsRequest
+// BatchGetReportsRequest indicates an expected call of BatchGetReportsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetReportsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetReportsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetReportsRequest), arg0)
 }
 
-// BatchGetReportsWithContext mocks base method
+// BatchGetReportsWithContext mocks base method.
 func (m *MockCodeBuildAPI) BatchGetReportsWithContext(arg0 context.Context, arg1 *codebuild.BatchGetReportsInput, arg2 ...request.Option) (*codebuild.BatchGetReportsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockCodeBuildAPI) BatchGetReportsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// BatchGetReportsWithContext indicates an expected call of BatchGetReportsWithContext
+// BatchGetReportsWithContext indicates an expected call of BatchGetReportsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) BatchGetReportsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetReportsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).BatchGetReportsWithContext), varargs...)
 }
 
-// CreateProject mocks base method
+// CreateProject mocks base method.
 func (m *MockCodeBuildAPI) CreateProject(arg0 *codebuild.CreateProjectInput) (*codebuild.CreateProjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateProject", arg0)
@@ -344,13 +345,13 @@ func (m *MockCodeBuildAPI) CreateProject(arg0 *codebuild.CreateProjectInput) (*c
 	return ret0, ret1
 }
 
-// CreateProject indicates an expected call of CreateProject
+// CreateProject indicates an expected call of CreateProject.
 func (mr *MockCodeBuildAPIMockRecorder) CreateProject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProject", reflect.TypeOf((*MockCodeBuildAPI)(nil).CreateProject), arg0)
 }
 
-// CreateProjectRequest mocks base method
+// CreateProjectRequest mocks base method.
 func (m *MockCodeBuildAPI) CreateProjectRequest(arg0 *codebuild.CreateProjectInput) (*request.Request, *codebuild.CreateProjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateProjectRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockCodeBuildAPI) CreateProjectRequest(arg0 *codebuild.CreateProjectInp
 	return ret0, ret1
 }
 
-// CreateProjectRequest indicates an expected call of CreateProjectRequest
+// CreateProjectRequest indicates an expected call of CreateProjectRequest.
 func (mr *MockCodeBuildAPIMockRecorder) CreateProjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProjectRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).CreateProjectRequest), arg0)
 }
 
-// CreateProjectWithContext mocks base method
+// CreateProjectWithContext mocks base method.
 func (m *MockCodeBuildAPI) CreateProjectWithContext(arg0 context.Context, arg1 *codebuild.CreateProjectInput, arg2 ...request.Option) (*codebuild.CreateProjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockCodeBuildAPI) CreateProjectWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// CreateProjectWithContext indicates an expected call of CreateProjectWithContext
+// CreateProjectWithContext indicates an expected call of CreateProjectWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) CreateProjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProjectWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).CreateProjectWithContext), varargs...)
 }
 
-// CreateReportGroup mocks base method
+// CreateReportGroup mocks base method.
 func (m *MockCodeBuildAPI) CreateReportGroup(arg0 *codebuild.CreateReportGroupInput) (*codebuild.CreateReportGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateReportGroup", arg0)
@@ -394,13 +395,13 @@ func (m *MockCodeBuildAPI) CreateReportGroup(arg0 *codebuild.CreateReportGroupIn
 	return ret0, ret1
 }
 
-// CreateReportGroup indicates an expected call of CreateReportGroup
+// CreateReportGroup indicates an expected call of CreateReportGroup.
 func (mr *MockCodeBuildAPIMockRecorder) CreateReportGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateReportGroup", reflect.TypeOf((*MockCodeBuildAPI)(nil).CreateReportGroup), arg0)
 }
 
-// CreateReportGroupRequest mocks base method
+// CreateReportGroupRequest mocks base method.
 func (m *MockCodeBuildAPI) CreateReportGroupRequest(arg0 *codebuild.CreateReportGroupInput) (*request.Request, *codebuild.CreateReportGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateReportGroupRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockCodeBuildAPI) CreateReportGroupRequest(arg0 *codebuild.CreateReport
 	return ret0, ret1
 }
 
-// CreateReportGroupRequest indicates an expected call of CreateReportGroupRequest
+// CreateReportGroupRequest indicates an expected call of CreateReportGroupRequest.
 func (mr *MockCodeBuildAPIMockRecorder) CreateReportGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateReportGroupRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).CreateReportGroupRequest), arg0)
 }
 
-// CreateReportGroupWithContext mocks base method
+// CreateReportGroupWithContext mocks base method.
 func (m *MockCodeBuildAPI) CreateReportGroupWithContext(arg0 context.Context, arg1 *codebuild.CreateReportGroupInput, arg2 ...request.Option) (*codebuild.CreateReportGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockCodeBuildAPI) CreateReportGroupWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateReportGroupWithContext indicates an expected call of CreateReportGroupWithContext
+// CreateReportGroupWithContext indicates an expected call of CreateReportGroupWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) CreateReportGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateReportGroupWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).CreateReportGroupWithContext), varargs...)
 }
 
-// CreateWebhook mocks base method
+// CreateWebhook mocks base method.
 func (m *MockCodeBuildAPI) CreateWebhook(arg0 *codebuild.CreateWebhookInput) (*codebuild.CreateWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWebhook", arg0)
@@ -444,13 +445,13 @@ func (m *MockCodeBuildAPI) CreateWebhook(arg0 *codebuild.CreateWebhookInput) (*c
 	return ret0, ret1
 }
 
-// CreateWebhook indicates an expected call of CreateWebhook
+// CreateWebhook indicates an expected call of CreateWebhook.
 func (mr *MockCodeBuildAPIMockRecorder) CreateWebhook(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWebhook", reflect.TypeOf((*MockCodeBuildAPI)(nil).CreateWebhook), arg0)
 }
 
-// CreateWebhookRequest mocks base method
+// CreateWebhookRequest mocks base method.
 func (m *MockCodeBuildAPI) CreateWebhookRequest(arg0 *codebuild.CreateWebhookInput) (*request.Request, *codebuild.CreateWebhookOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWebhookRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockCodeBuildAPI) CreateWebhookRequest(arg0 *codebuild.CreateWebhookInp
 	return ret0, ret1
 }
 
-// CreateWebhookRequest indicates an expected call of CreateWebhookRequest
+// CreateWebhookRequest indicates an expected call of CreateWebhookRequest.
 func (mr *MockCodeBuildAPIMockRecorder) CreateWebhookRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWebhookRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).CreateWebhookRequest), arg0)
 }
 
-// CreateWebhookWithContext mocks base method
+// CreateWebhookWithContext mocks base method.
 func (m *MockCodeBuildAPI) CreateWebhookWithContext(arg0 context.Context, arg1 *codebuild.CreateWebhookInput, arg2 ...request.Option) (*codebuild.CreateWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockCodeBuildAPI) CreateWebhookWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// CreateWebhookWithContext indicates an expected call of CreateWebhookWithContext
+// CreateWebhookWithContext indicates an expected call of CreateWebhookWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) CreateWebhookWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWebhookWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).CreateWebhookWithContext), varargs...)
 }
 
-// DeleteBuildBatch mocks base method
+// DeleteBuildBatch mocks base method.
 func (m *MockCodeBuildAPI) DeleteBuildBatch(arg0 *codebuild.DeleteBuildBatchInput) (*codebuild.DeleteBuildBatchOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBuildBatch", arg0)
@@ -494,13 +495,13 @@ func (m *MockCodeBuildAPI) DeleteBuildBatch(arg0 *codebuild.DeleteBuildBatchInpu
 	return ret0, ret1
 }
 
-// DeleteBuildBatch indicates an expected call of DeleteBuildBatch
+// DeleteBuildBatch indicates an expected call of DeleteBuildBatch.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteBuildBatch(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBuildBatch", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteBuildBatch), arg0)
 }
 
-// DeleteBuildBatchRequest mocks base method
+// DeleteBuildBatchRequest mocks base method.
 func (m *MockCodeBuildAPI) DeleteBuildBatchRequest(arg0 *codebuild.DeleteBuildBatchInput) (*request.Request, *codebuild.DeleteBuildBatchOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBuildBatchRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockCodeBuildAPI) DeleteBuildBatchRequest(arg0 *codebuild.DeleteBuildBa
 	return ret0, ret1
 }
 
-// DeleteBuildBatchRequest indicates an expected call of DeleteBuildBatchRequest
+// DeleteBuildBatchRequest indicates an expected call of DeleteBuildBatchRequest.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteBuildBatchRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBuildBatchRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteBuildBatchRequest), arg0)
 }
 
-// DeleteBuildBatchWithContext mocks base method
+// DeleteBuildBatchWithContext mocks base method.
 func (m *MockCodeBuildAPI) DeleteBuildBatchWithContext(arg0 context.Context, arg1 *codebuild.DeleteBuildBatchInput, arg2 ...request.Option) (*codebuild.DeleteBuildBatchOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockCodeBuildAPI) DeleteBuildBatchWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DeleteBuildBatchWithContext indicates an expected call of DeleteBuildBatchWithContext
+// DeleteBuildBatchWithContext indicates an expected call of DeleteBuildBatchWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteBuildBatchWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBuildBatchWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteBuildBatchWithContext), varargs...)
 }
 
-// DeleteProject mocks base method
+// DeleteProject mocks base method.
 func (m *MockCodeBuildAPI) DeleteProject(arg0 *codebuild.DeleteProjectInput) (*codebuild.DeleteProjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProject", arg0)
@@ -544,13 +545,13 @@ func (m *MockCodeBuildAPI) DeleteProject(arg0 *codebuild.DeleteProjectInput) (*c
 	return ret0, ret1
 }
 
-// DeleteProject indicates an expected call of DeleteProject
+// DeleteProject indicates an expected call of DeleteProject.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteProject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProject", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteProject), arg0)
 }
 
-// DeleteProjectRequest mocks base method
+// DeleteProjectRequest mocks base method.
 func (m *MockCodeBuildAPI) DeleteProjectRequest(arg0 *codebuild.DeleteProjectInput) (*request.Request, *codebuild.DeleteProjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProjectRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockCodeBuildAPI) DeleteProjectRequest(arg0 *codebuild.DeleteProjectInp
 	return ret0, ret1
 }
 
-// DeleteProjectRequest indicates an expected call of DeleteProjectRequest
+// DeleteProjectRequest indicates an expected call of DeleteProjectRequest.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteProjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProjectRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteProjectRequest), arg0)
 }
 
-// DeleteProjectWithContext mocks base method
+// DeleteProjectWithContext mocks base method.
 func (m *MockCodeBuildAPI) DeleteProjectWithContext(arg0 context.Context, arg1 *codebuild.DeleteProjectInput, arg2 ...request.Option) (*codebuild.DeleteProjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockCodeBuildAPI) DeleteProjectWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DeleteProjectWithContext indicates an expected call of DeleteProjectWithContext
+// DeleteProjectWithContext indicates an expected call of DeleteProjectWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteProjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProjectWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteProjectWithContext), varargs...)
 }
 
-// DeleteReport mocks base method
+// DeleteReport mocks base method.
 func (m *MockCodeBuildAPI) DeleteReport(arg0 *codebuild.DeleteReportInput) (*codebuild.DeleteReportOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteReport", arg0)
@@ -594,13 +595,13 @@ func (m *MockCodeBuildAPI) DeleteReport(arg0 *codebuild.DeleteReportInput) (*cod
 	return ret0, ret1
 }
 
-// DeleteReport indicates an expected call of DeleteReport
+// DeleteReport indicates an expected call of DeleteReport.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteReport(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteReport", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteReport), arg0)
 }
 
-// DeleteReportGroup mocks base method
+// DeleteReportGroup mocks base method.
 func (m *MockCodeBuildAPI) DeleteReportGroup(arg0 *codebuild.DeleteReportGroupInput) (*codebuild.DeleteReportGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteReportGroup", arg0)
@@ -609,13 +610,13 @@ func (m *MockCodeBuildAPI) DeleteReportGroup(arg0 *codebuild.DeleteReportGroupIn
 	return ret0, ret1
 }
 
-// DeleteReportGroup indicates an expected call of DeleteReportGroup
+// DeleteReportGroup indicates an expected call of DeleteReportGroup.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteReportGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteReportGroup", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteReportGroup), arg0)
 }
 
-// DeleteReportGroupRequest mocks base method
+// DeleteReportGroupRequest mocks base method.
 func (m *MockCodeBuildAPI) DeleteReportGroupRequest(arg0 *codebuild.DeleteReportGroupInput) (*request.Request, *codebuild.DeleteReportGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteReportGroupRequest", arg0)
@@ -624,13 +625,13 @@ func (m *MockCodeBuildAPI) DeleteReportGroupRequest(arg0 *codebuild.DeleteReport
 	return ret0, ret1
 }
 
-// DeleteReportGroupRequest indicates an expected call of DeleteReportGroupRequest
+// DeleteReportGroupRequest indicates an expected call of DeleteReportGroupRequest.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteReportGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteReportGroupRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteReportGroupRequest), arg0)
 }
 
-// DeleteReportGroupWithContext mocks base method
+// DeleteReportGroupWithContext mocks base method.
 func (m *MockCodeBuildAPI) DeleteReportGroupWithContext(arg0 context.Context, arg1 *codebuild.DeleteReportGroupInput, arg2 ...request.Option) (*codebuild.DeleteReportGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -643,14 +644,14 @@ func (m *MockCodeBuildAPI) DeleteReportGroupWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteReportGroupWithContext indicates an expected call of DeleteReportGroupWithContext
+// DeleteReportGroupWithContext indicates an expected call of DeleteReportGroupWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteReportGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteReportGroupWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteReportGroupWithContext), varargs...)
 }
 
-// DeleteReportRequest mocks base method
+// DeleteReportRequest mocks base method.
 func (m *MockCodeBuildAPI) DeleteReportRequest(arg0 *codebuild.DeleteReportInput) (*request.Request, *codebuild.DeleteReportOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteReportRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockCodeBuildAPI) DeleteReportRequest(arg0 *codebuild.DeleteReportInput
 	return ret0, ret1
 }
 
-// DeleteReportRequest indicates an expected call of DeleteReportRequest
+// DeleteReportRequest indicates an expected call of DeleteReportRequest.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteReportRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteReportRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteReportRequest), arg0)
 }
 
-// DeleteReportWithContext mocks base method
+// DeleteReportWithContext mocks base method.
 func (m *MockCodeBuildAPI) DeleteReportWithContext(arg0 context.Context, arg1 *codebuild.DeleteReportInput, arg2 ...request.Option) (*codebuild.DeleteReportOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockCodeBuildAPI) DeleteReportWithContext(arg0 context.Context, arg1 *c
 	return ret0, ret1
 }
 
-// DeleteReportWithContext indicates an expected call of DeleteReportWithContext
+// DeleteReportWithContext indicates an expected call of DeleteReportWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteReportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteReportWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteReportWithContext), varargs...)
 }
 
-// DeleteResourcePolicy mocks base method
+// DeleteResourcePolicy mocks base method.
 func (m *MockCodeBuildAPI) DeleteResourcePolicy(arg0 *codebuild.DeleteResourcePolicyInput) (*codebuild.DeleteResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteResourcePolicy", arg0)
@@ -694,13 +695,13 @@ func (m *MockCodeBuildAPI) DeleteResourcePolicy(arg0 *codebuild.DeleteResourcePo
 	return ret0, ret1
 }
 
-// DeleteResourcePolicy indicates an expected call of DeleteResourcePolicy
+// DeleteResourcePolicy indicates an expected call of DeleteResourcePolicy.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteResourcePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicy", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteResourcePolicy), arg0)
 }
 
-// DeleteResourcePolicyRequest mocks base method
+// DeleteResourcePolicyRequest mocks base method.
 func (m *MockCodeBuildAPI) DeleteResourcePolicyRequest(arg0 *codebuild.DeleteResourcePolicyInput) (*request.Request, *codebuild.DeleteResourcePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteResourcePolicyRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockCodeBuildAPI) DeleteResourcePolicyRequest(arg0 *codebuild.DeleteRes
 	return ret0, ret1
 }
 
-// DeleteResourcePolicyRequest indicates an expected call of DeleteResourcePolicyRequest
+// DeleteResourcePolicyRequest indicates an expected call of DeleteResourcePolicyRequest.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteResourcePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteResourcePolicyRequest), arg0)
 }
 
-// DeleteResourcePolicyWithContext mocks base method
+// DeleteResourcePolicyWithContext mocks base method.
 func (m *MockCodeBuildAPI) DeleteResourcePolicyWithContext(arg0 context.Context, arg1 *codebuild.DeleteResourcePolicyInput, arg2 ...request.Option) (*codebuild.DeleteResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockCodeBuildAPI) DeleteResourcePolicyWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteResourcePolicyWithContext indicates an expected call of DeleteResourcePolicyWithContext
+// DeleteResourcePolicyWithContext indicates an expected call of DeleteResourcePolicyWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteResourcePolicyWithContext), varargs...)
 }
 
-// DeleteSourceCredentials mocks base method
+// DeleteSourceCredentials mocks base method.
 func (m *MockCodeBuildAPI) DeleteSourceCredentials(arg0 *codebuild.DeleteSourceCredentialsInput) (*codebuild.DeleteSourceCredentialsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSourceCredentials", arg0)
@@ -744,13 +745,13 @@ func (m *MockCodeBuildAPI) DeleteSourceCredentials(arg0 *codebuild.DeleteSourceC
 	return ret0, ret1
 }
 
-// DeleteSourceCredentials indicates an expected call of DeleteSourceCredentials
+// DeleteSourceCredentials indicates an expected call of DeleteSourceCredentials.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteSourceCredentials(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSourceCredentials", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteSourceCredentials), arg0)
 }
 
-// DeleteSourceCredentialsRequest mocks base method
+// DeleteSourceCredentialsRequest mocks base method.
 func (m *MockCodeBuildAPI) DeleteSourceCredentialsRequest(arg0 *codebuild.DeleteSourceCredentialsInput) (*request.Request, *codebuild.DeleteSourceCredentialsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSourceCredentialsRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockCodeBuildAPI) DeleteSourceCredentialsRequest(arg0 *codebuild.Delete
 	return ret0, ret1
 }
 
-// DeleteSourceCredentialsRequest indicates an expected call of DeleteSourceCredentialsRequest
+// DeleteSourceCredentialsRequest indicates an expected call of DeleteSourceCredentialsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteSourceCredentialsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSourceCredentialsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteSourceCredentialsRequest), arg0)
 }
 
-// DeleteSourceCredentialsWithContext mocks base method
+// DeleteSourceCredentialsWithContext mocks base method.
 func (m *MockCodeBuildAPI) DeleteSourceCredentialsWithContext(arg0 context.Context, arg1 *codebuild.DeleteSourceCredentialsInput, arg2 ...request.Option) (*codebuild.DeleteSourceCredentialsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockCodeBuildAPI) DeleteSourceCredentialsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DeleteSourceCredentialsWithContext indicates an expected call of DeleteSourceCredentialsWithContext
+// DeleteSourceCredentialsWithContext indicates an expected call of DeleteSourceCredentialsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteSourceCredentialsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSourceCredentialsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteSourceCredentialsWithContext), varargs...)
 }
 
-// DeleteWebhook mocks base method
+// DeleteWebhook mocks base method.
 func (m *MockCodeBuildAPI) DeleteWebhook(arg0 *codebuild.DeleteWebhookInput) (*codebuild.DeleteWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteWebhook", arg0)
@@ -794,13 +795,13 @@ func (m *MockCodeBuildAPI) DeleteWebhook(arg0 *codebuild.DeleteWebhookInput) (*c
 	return ret0, ret1
 }
 
-// DeleteWebhook indicates an expected call of DeleteWebhook
+// DeleteWebhook indicates an expected call of DeleteWebhook.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteWebhook(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWebhook", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteWebhook), arg0)
 }
 
-// DeleteWebhookRequest mocks base method
+// DeleteWebhookRequest mocks base method.
 func (m *MockCodeBuildAPI) DeleteWebhookRequest(arg0 *codebuild.DeleteWebhookInput) (*request.Request, *codebuild.DeleteWebhookOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteWebhookRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockCodeBuildAPI) DeleteWebhookRequest(arg0 *codebuild.DeleteWebhookInp
 	return ret0, ret1
 }
 
-// DeleteWebhookRequest indicates an expected call of DeleteWebhookRequest
+// DeleteWebhookRequest indicates an expected call of DeleteWebhookRequest.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteWebhookRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWebhookRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteWebhookRequest), arg0)
 }
 
-// DeleteWebhookWithContext mocks base method
+// DeleteWebhookWithContext mocks base method.
 func (m *MockCodeBuildAPI) DeleteWebhookWithContext(arg0 context.Context, arg1 *codebuild.DeleteWebhookInput, arg2 ...request.Option) (*codebuild.DeleteWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockCodeBuildAPI) DeleteWebhookWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DeleteWebhookWithContext indicates an expected call of DeleteWebhookWithContext
+// DeleteWebhookWithContext indicates an expected call of DeleteWebhookWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) DeleteWebhookWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWebhookWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).DeleteWebhookWithContext), varargs...)
 }
 
-// DescribeCodeCoverages mocks base method
+// DescribeCodeCoverages mocks base method.
 func (m *MockCodeBuildAPI) DescribeCodeCoverages(arg0 *codebuild.DescribeCodeCoveragesInput) (*codebuild.DescribeCodeCoveragesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCodeCoverages", arg0)
@@ -844,13 +845,13 @@ func (m *MockCodeBuildAPI) DescribeCodeCoverages(arg0 *codebuild.DescribeCodeCov
 	return ret0, ret1
 }
 
-// DescribeCodeCoverages indicates an expected call of DescribeCodeCoverages
+// DescribeCodeCoverages indicates an expected call of DescribeCodeCoverages.
 func (mr *MockCodeBuildAPIMockRecorder) DescribeCodeCoverages(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCodeCoverages", reflect.TypeOf((*MockCodeBuildAPI)(nil).DescribeCodeCoverages), arg0)
 }
 
-// DescribeCodeCoveragesPages mocks base method
+// DescribeCodeCoveragesPages mocks base method.
 func (m *MockCodeBuildAPI) DescribeCodeCoveragesPages(arg0 *codebuild.DescribeCodeCoveragesInput, arg1 func(*codebuild.DescribeCodeCoveragesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCodeCoveragesPages", arg0, arg1)
@@ -858,13 +859,13 @@ func (m *MockCodeBuildAPI) DescribeCodeCoveragesPages(arg0 *codebuild.DescribeCo
 	return ret0
 }
 
-// DescribeCodeCoveragesPages indicates an expected call of DescribeCodeCoveragesPages
+// DescribeCodeCoveragesPages indicates an expected call of DescribeCodeCoveragesPages.
 func (mr *MockCodeBuildAPIMockRecorder) DescribeCodeCoveragesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCodeCoveragesPages", reflect.TypeOf((*MockCodeBuildAPI)(nil).DescribeCodeCoveragesPages), arg0, arg1)
 }
 
-// DescribeCodeCoveragesPagesWithContext mocks base method
+// DescribeCodeCoveragesPagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) DescribeCodeCoveragesPagesWithContext(arg0 context.Context, arg1 *codebuild.DescribeCodeCoveragesInput, arg2 func(*codebuild.DescribeCodeCoveragesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -876,14 +877,14 @@ func (m *MockCodeBuildAPI) DescribeCodeCoveragesPagesWithContext(arg0 context.Co
 	return ret0
 }
 
-// DescribeCodeCoveragesPagesWithContext indicates an expected call of DescribeCodeCoveragesPagesWithContext
+// DescribeCodeCoveragesPagesWithContext indicates an expected call of DescribeCodeCoveragesPagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) DescribeCodeCoveragesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCodeCoveragesPagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).DescribeCodeCoveragesPagesWithContext), varargs...)
 }
 
-// DescribeCodeCoveragesRequest mocks base method
+// DescribeCodeCoveragesRequest mocks base method.
 func (m *MockCodeBuildAPI) DescribeCodeCoveragesRequest(arg0 *codebuild.DescribeCodeCoveragesInput) (*request.Request, *codebuild.DescribeCodeCoveragesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCodeCoveragesRequest", arg0)
@@ -892,13 +893,13 @@ func (m *MockCodeBuildAPI) DescribeCodeCoveragesRequest(arg0 *codebuild.Describe
 	return ret0, ret1
 }
 
-// DescribeCodeCoveragesRequest indicates an expected call of DescribeCodeCoveragesRequest
+// DescribeCodeCoveragesRequest indicates an expected call of DescribeCodeCoveragesRequest.
 func (mr *MockCodeBuildAPIMockRecorder) DescribeCodeCoveragesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCodeCoveragesRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).DescribeCodeCoveragesRequest), arg0)
 }
 
-// DescribeCodeCoveragesWithContext mocks base method
+// DescribeCodeCoveragesWithContext mocks base method.
 func (m *MockCodeBuildAPI) DescribeCodeCoveragesWithContext(arg0 context.Context, arg1 *codebuild.DescribeCodeCoveragesInput, arg2 ...request.Option) (*codebuild.DescribeCodeCoveragesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -911,14 +912,14 @@ func (m *MockCodeBuildAPI) DescribeCodeCoveragesWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// DescribeCodeCoveragesWithContext indicates an expected call of DescribeCodeCoveragesWithContext
+// DescribeCodeCoveragesWithContext indicates an expected call of DescribeCodeCoveragesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) DescribeCodeCoveragesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCodeCoveragesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).DescribeCodeCoveragesWithContext), varargs...)
 }
 
-// DescribeTestCases mocks base method
+// DescribeTestCases mocks base method.
 func (m *MockCodeBuildAPI) DescribeTestCases(arg0 *codebuild.DescribeTestCasesInput) (*codebuild.DescribeTestCasesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeTestCases", arg0)
@@ -927,13 +928,13 @@ func (m *MockCodeBuildAPI) DescribeTestCases(arg0 *codebuild.DescribeTestCasesIn
 	return ret0, ret1
 }
 
-// DescribeTestCases indicates an expected call of DescribeTestCases
+// DescribeTestCases indicates an expected call of DescribeTestCases.
 func (mr *MockCodeBuildAPIMockRecorder) DescribeTestCases(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTestCases", reflect.TypeOf((*MockCodeBuildAPI)(nil).DescribeTestCases), arg0)
 }
 
-// DescribeTestCasesPages mocks base method
+// DescribeTestCasesPages mocks base method.
 func (m *MockCodeBuildAPI) DescribeTestCasesPages(arg0 *codebuild.DescribeTestCasesInput, arg1 func(*codebuild.DescribeTestCasesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeTestCasesPages", arg0, arg1)
@@ -941,13 +942,13 @@ func (m *MockCodeBuildAPI) DescribeTestCasesPages(arg0 *codebuild.DescribeTestCa
 	return ret0
 }
 
-// DescribeTestCasesPages indicates an expected call of DescribeTestCasesPages
+// DescribeTestCasesPages indicates an expected call of DescribeTestCasesPages.
 func (mr *MockCodeBuildAPIMockRecorder) DescribeTestCasesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTestCasesPages", reflect.TypeOf((*MockCodeBuildAPI)(nil).DescribeTestCasesPages), arg0, arg1)
 }
 
-// DescribeTestCasesPagesWithContext mocks base method
+// DescribeTestCasesPagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) DescribeTestCasesPagesWithContext(arg0 context.Context, arg1 *codebuild.DescribeTestCasesInput, arg2 func(*codebuild.DescribeTestCasesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -959,14 +960,14 @@ func (m *MockCodeBuildAPI) DescribeTestCasesPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// DescribeTestCasesPagesWithContext indicates an expected call of DescribeTestCasesPagesWithContext
+// DescribeTestCasesPagesWithContext indicates an expected call of DescribeTestCasesPagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) DescribeTestCasesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTestCasesPagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).DescribeTestCasesPagesWithContext), varargs...)
 }
 
-// DescribeTestCasesRequest mocks base method
+// DescribeTestCasesRequest mocks base method.
 func (m *MockCodeBuildAPI) DescribeTestCasesRequest(arg0 *codebuild.DescribeTestCasesInput) (*request.Request, *codebuild.DescribeTestCasesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeTestCasesRequest", arg0)
@@ -975,13 +976,13 @@ func (m *MockCodeBuildAPI) DescribeTestCasesRequest(arg0 *codebuild.DescribeTest
 	return ret0, ret1
 }
 
-// DescribeTestCasesRequest indicates an expected call of DescribeTestCasesRequest
+// DescribeTestCasesRequest indicates an expected call of DescribeTestCasesRequest.
 func (mr *MockCodeBuildAPIMockRecorder) DescribeTestCasesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTestCasesRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).DescribeTestCasesRequest), arg0)
 }
 
-// DescribeTestCasesWithContext mocks base method
+// DescribeTestCasesWithContext mocks base method.
 func (m *MockCodeBuildAPI) DescribeTestCasesWithContext(arg0 context.Context, arg1 *codebuild.DescribeTestCasesInput, arg2 ...request.Option) (*codebuild.DescribeTestCasesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -994,14 +995,14 @@ func (m *MockCodeBuildAPI) DescribeTestCasesWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DescribeTestCasesWithContext indicates an expected call of DescribeTestCasesWithContext
+// DescribeTestCasesWithContext indicates an expected call of DescribeTestCasesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) DescribeTestCasesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTestCasesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).DescribeTestCasesWithContext), varargs...)
 }
 
-// GetReportGroupTrend mocks base method
+// GetReportGroupTrend mocks base method.
 func (m *MockCodeBuildAPI) GetReportGroupTrend(arg0 *codebuild.GetReportGroupTrendInput) (*codebuild.GetReportGroupTrendOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetReportGroupTrend", arg0)
@@ -1010,13 +1011,13 @@ func (m *MockCodeBuildAPI) GetReportGroupTrend(arg0 *codebuild.GetReportGroupTre
 	return ret0, ret1
 }
 
-// GetReportGroupTrend indicates an expected call of GetReportGroupTrend
+// GetReportGroupTrend indicates an expected call of GetReportGroupTrend.
 func (mr *MockCodeBuildAPIMockRecorder) GetReportGroupTrend(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetReportGroupTrend", reflect.TypeOf((*MockCodeBuildAPI)(nil).GetReportGroupTrend), arg0)
 }
 
-// GetReportGroupTrendRequest mocks base method
+// GetReportGroupTrendRequest mocks base method.
 func (m *MockCodeBuildAPI) GetReportGroupTrendRequest(arg0 *codebuild.GetReportGroupTrendInput) (*request.Request, *codebuild.GetReportGroupTrendOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetReportGroupTrendRequest", arg0)
@@ -1025,13 +1026,13 @@ func (m *MockCodeBuildAPI) GetReportGroupTrendRequest(arg0 *codebuild.GetReportG
 	return ret0, ret1
 }
 
-// GetReportGroupTrendRequest indicates an expected call of GetReportGroupTrendRequest
+// GetReportGroupTrendRequest indicates an expected call of GetReportGroupTrendRequest.
 func (mr *MockCodeBuildAPIMockRecorder) GetReportGroupTrendRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetReportGroupTrendRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).GetReportGroupTrendRequest), arg0)
 }
 
-// GetReportGroupTrendWithContext mocks base method
+// GetReportGroupTrendWithContext mocks base method.
 func (m *MockCodeBuildAPI) GetReportGroupTrendWithContext(arg0 context.Context, arg1 *codebuild.GetReportGroupTrendInput, arg2 ...request.Option) (*codebuild.GetReportGroupTrendOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1044,14 +1045,14 @@ func (m *MockCodeBuildAPI) GetReportGroupTrendWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// GetReportGroupTrendWithContext indicates an expected call of GetReportGroupTrendWithContext
+// GetReportGroupTrendWithContext indicates an expected call of GetReportGroupTrendWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) GetReportGroupTrendWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetReportGroupTrendWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).GetReportGroupTrendWithContext), varargs...)
 }
 
-// GetResourcePolicy mocks base method
+// GetResourcePolicy mocks base method.
 func (m *MockCodeBuildAPI) GetResourcePolicy(arg0 *codebuild.GetResourcePolicyInput) (*codebuild.GetResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetResourcePolicy", arg0)
@@ -1060,13 +1061,13 @@ func (m *MockCodeBuildAPI) GetResourcePolicy(arg0 *codebuild.GetResourcePolicyIn
 	return ret0, ret1
 }
 
-// GetResourcePolicy indicates an expected call of GetResourcePolicy
+// GetResourcePolicy indicates an expected call of GetResourcePolicy.
 func (mr *MockCodeBuildAPIMockRecorder) GetResourcePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourcePolicy", reflect.TypeOf((*MockCodeBuildAPI)(nil).GetResourcePolicy), arg0)
 }
 
-// GetResourcePolicyRequest mocks base method
+// GetResourcePolicyRequest mocks base method.
 func (m *MockCodeBuildAPI) GetResourcePolicyRequest(arg0 *codebuild.GetResourcePolicyInput) (*request.Request, *codebuild.GetResourcePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetResourcePolicyRequest", arg0)
@@ -1075,13 +1076,13 @@ func (m *MockCodeBuildAPI) GetResourcePolicyRequest(arg0 *codebuild.GetResourceP
 	return ret0, ret1
 }
 
-// GetResourcePolicyRequest indicates an expected call of GetResourcePolicyRequest
+// GetResourcePolicyRequest indicates an expected call of GetResourcePolicyRequest.
 func (mr *MockCodeBuildAPIMockRecorder) GetResourcePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourcePolicyRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).GetResourcePolicyRequest), arg0)
 }
 
-// GetResourcePolicyWithContext mocks base method
+// GetResourcePolicyWithContext mocks base method.
 func (m *MockCodeBuildAPI) GetResourcePolicyWithContext(arg0 context.Context, arg1 *codebuild.GetResourcePolicyInput, arg2 ...request.Option) (*codebuild.GetResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1094,14 +1095,14 @@ func (m *MockCodeBuildAPI) GetResourcePolicyWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// GetResourcePolicyWithContext indicates an expected call of GetResourcePolicyWithContext
+// GetResourcePolicyWithContext indicates an expected call of GetResourcePolicyWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) GetResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourcePolicyWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).GetResourcePolicyWithContext), varargs...)
 }
 
-// ImportSourceCredentials mocks base method
+// ImportSourceCredentials mocks base method.
 func (m *MockCodeBuildAPI) ImportSourceCredentials(arg0 *codebuild.ImportSourceCredentialsInput) (*codebuild.ImportSourceCredentialsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ImportSourceCredentials", arg0)
@@ -1110,13 +1111,13 @@ func (m *MockCodeBuildAPI) ImportSourceCredentials(arg0 *codebuild.ImportSourceC
 	return ret0, ret1
 }
 
-// ImportSourceCredentials indicates an expected call of ImportSourceCredentials
+// ImportSourceCredentials indicates an expected call of ImportSourceCredentials.
 func (mr *MockCodeBuildAPIMockRecorder) ImportSourceCredentials(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportSourceCredentials", reflect.TypeOf((*MockCodeBuildAPI)(nil).ImportSourceCredentials), arg0)
 }
 
-// ImportSourceCredentialsRequest mocks base method
+// ImportSourceCredentialsRequest mocks base method.
 func (m *MockCodeBuildAPI) ImportSourceCredentialsRequest(arg0 *codebuild.ImportSourceCredentialsInput) (*request.Request, *codebuild.ImportSourceCredentialsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ImportSourceCredentialsRequest", arg0)
@@ -1125,13 +1126,13 @@ func (m *MockCodeBuildAPI) ImportSourceCredentialsRequest(arg0 *codebuild.Import
 	return ret0, ret1
 }
 
-// ImportSourceCredentialsRequest indicates an expected call of ImportSourceCredentialsRequest
+// ImportSourceCredentialsRequest indicates an expected call of ImportSourceCredentialsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ImportSourceCredentialsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportSourceCredentialsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ImportSourceCredentialsRequest), arg0)
 }
 
-// ImportSourceCredentialsWithContext mocks base method
+// ImportSourceCredentialsWithContext mocks base method.
 func (m *MockCodeBuildAPI) ImportSourceCredentialsWithContext(arg0 context.Context, arg1 *codebuild.ImportSourceCredentialsInput, arg2 ...request.Option) (*codebuild.ImportSourceCredentialsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1144,14 +1145,14 @@ func (m *MockCodeBuildAPI) ImportSourceCredentialsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ImportSourceCredentialsWithContext indicates an expected call of ImportSourceCredentialsWithContext
+// ImportSourceCredentialsWithContext indicates an expected call of ImportSourceCredentialsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ImportSourceCredentialsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportSourceCredentialsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ImportSourceCredentialsWithContext), varargs...)
 }
 
-// InvalidateProjectCache mocks base method
+// InvalidateProjectCache mocks base method.
 func (m *MockCodeBuildAPI) InvalidateProjectCache(arg0 *codebuild.InvalidateProjectCacheInput) (*codebuild.InvalidateProjectCacheOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "InvalidateProjectCache", arg0)
@@ -1160,13 +1161,13 @@ func (m *MockCodeBuildAPI) InvalidateProjectCache(arg0 *codebuild.InvalidateProj
 	return ret0, ret1
 }
 
-// InvalidateProjectCache indicates an expected call of InvalidateProjectCache
+// InvalidateProjectCache indicates an expected call of InvalidateProjectCache.
 func (mr *MockCodeBuildAPIMockRecorder) InvalidateProjectCache(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InvalidateProjectCache", reflect.TypeOf((*MockCodeBuildAPI)(nil).InvalidateProjectCache), arg0)
 }
 
-// InvalidateProjectCacheRequest mocks base method
+// InvalidateProjectCacheRequest mocks base method.
 func (m *MockCodeBuildAPI) InvalidateProjectCacheRequest(arg0 *codebuild.InvalidateProjectCacheInput) (*request.Request, *codebuild.InvalidateProjectCacheOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "InvalidateProjectCacheRequest", arg0)
@@ -1175,13 +1176,13 @@ func (m *MockCodeBuildAPI) InvalidateProjectCacheRequest(arg0 *codebuild.Invalid
 	return ret0, ret1
 }
 
-// InvalidateProjectCacheRequest indicates an expected call of InvalidateProjectCacheRequest
+// InvalidateProjectCacheRequest indicates an expected call of InvalidateProjectCacheRequest.
 func (mr *MockCodeBuildAPIMockRecorder) InvalidateProjectCacheRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InvalidateProjectCacheRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).InvalidateProjectCacheRequest), arg0)
 }
 
-// InvalidateProjectCacheWithContext mocks base method
+// InvalidateProjectCacheWithContext mocks base method.
 func (m *MockCodeBuildAPI) InvalidateProjectCacheWithContext(arg0 context.Context, arg1 *codebuild.InvalidateProjectCacheInput, arg2 ...request.Option) (*codebuild.InvalidateProjectCacheOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1194,14 +1195,14 @@ func (m *MockCodeBuildAPI) InvalidateProjectCacheWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// InvalidateProjectCacheWithContext indicates an expected call of InvalidateProjectCacheWithContext
+// InvalidateProjectCacheWithContext indicates an expected call of InvalidateProjectCacheWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) InvalidateProjectCacheWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InvalidateProjectCacheWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).InvalidateProjectCacheWithContext), varargs...)
 }
 
-// ListBuildBatches mocks base method
+// ListBuildBatches mocks base method.
 func (m *MockCodeBuildAPI) ListBuildBatches(arg0 *codebuild.ListBuildBatchesInput) (*codebuild.ListBuildBatchesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBuildBatches", arg0)
@@ -1210,13 +1211,13 @@ func (m *MockCodeBuildAPI) ListBuildBatches(arg0 *codebuild.ListBuildBatchesInpu
 	return ret0, ret1
 }
 
-// ListBuildBatches indicates an expected call of ListBuildBatches
+// ListBuildBatches indicates an expected call of ListBuildBatches.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildBatches(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildBatches", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildBatches), arg0)
 }
 
-// ListBuildBatchesForProject mocks base method
+// ListBuildBatchesForProject mocks base method.
 func (m *MockCodeBuildAPI) ListBuildBatchesForProject(arg0 *codebuild.ListBuildBatchesForProjectInput) (*codebuild.ListBuildBatchesForProjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBuildBatchesForProject", arg0)
@@ -1225,13 +1226,13 @@ func (m *MockCodeBuildAPI) ListBuildBatchesForProject(arg0 *codebuild.ListBuildB
 	return ret0, ret1
 }
 
-// ListBuildBatchesForProject indicates an expected call of ListBuildBatchesForProject
+// ListBuildBatchesForProject indicates an expected call of ListBuildBatchesForProject.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildBatchesForProject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildBatchesForProject", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildBatchesForProject), arg0)
 }
 
-// ListBuildBatchesForProjectPages mocks base method
+// ListBuildBatchesForProjectPages mocks base method.
 func (m *MockCodeBuildAPI) ListBuildBatchesForProjectPages(arg0 *codebuild.ListBuildBatchesForProjectInput, arg1 func(*codebuild.ListBuildBatchesForProjectOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBuildBatchesForProjectPages", arg0, arg1)
@@ -1239,13 +1240,13 @@ func (m *MockCodeBuildAPI) ListBuildBatchesForProjectPages(arg0 *codebuild.ListB
 	return ret0
 }
 
-// ListBuildBatchesForProjectPages indicates an expected call of ListBuildBatchesForProjectPages
+// ListBuildBatchesForProjectPages indicates an expected call of ListBuildBatchesForProjectPages.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildBatchesForProjectPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildBatchesForProjectPages", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildBatchesForProjectPages), arg0, arg1)
 }
 
-// ListBuildBatchesForProjectPagesWithContext mocks base method
+// ListBuildBatchesForProjectPagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListBuildBatchesForProjectPagesWithContext(arg0 context.Context, arg1 *codebuild.ListBuildBatchesForProjectInput, arg2 func(*codebuild.ListBuildBatchesForProjectOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1257,14 +1258,14 @@ func (m *MockCodeBuildAPI) ListBuildBatchesForProjectPagesWithContext(arg0 conte
 	return ret0
 }
 
-// ListBuildBatchesForProjectPagesWithContext indicates an expected call of ListBuildBatchesForProjectPagesWithContext
+// ListBuildBatchesForProjectPagesWithContext indicates an expected call of ListBuildBatchesForProjectPagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildBatchesForProjectPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildBatchesForProjectPagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildBatchesForProjectPagesWithContext), varargs...)
 }
 
-// ListBuildBatchesForProjectRequest mocks base method
+// ListBuildBatchesForProjectRequest mocks base method.
 func (m *MockCodeBuildAPI) ListBuildBatchesForProjectRequest(arg0 *codebuild.ListBuildBatchesForProjectInput) (*request.Request, *codebuild.ListBuildBatchesForProjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBuildBatchesForProjectRequest", arg0)
@@ -1273,13 +1274,13 @@ func (m *MockCodeBuildAPI) ListBuildBatchesForProjectRequest(arg0 *codebuild.Lis
 	return ret0, ret1
 }
 
-// ListBuildBatchesForProjectRequest indicates an expected call of ListBuildBatchesForProjectRequest
+// ListBuildBatchesForProjectRequest indicates an expected call of ListBuildBatchesForProjectRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildBatchesForProjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildBatchesForProjectRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildBatchesForProjectRequest), arg0)
 }
 
-// ListBuildBatchesForProjectWithContext mocks base method
+// ListBuildBatchesForProjectWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListBuildBatchesForProjectWithContext(arg0 context.Context, arg1 *codebuild.ListBuildBatchesForProjectInput, arg2 ...request.Option) (*codebuild.ListBuildBatchesForProjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1292,14 +1293,14 @@ func (m *MockCodeBuildAPI) ListBuildBatchesForProjectWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListBuildBatchesForProjectWithContext indicates an expected call of ListBuildBatchesForProjectWithContext
+// ListBuildBatchesForProjectWithContext indicates an expected call of ListBuildBatchesForProjectWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildBatchesForProjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildBatchesForProjectWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildBatchesForProjectWithContext), varargs...)
 }
 
-// ListBuildBatchesPages mocks base method
+// ListBuildBatchesPages mocks base method.
 func (m *MockCodeBuildAPI) ListBuildBatchesPages(arg0 *codebuild.ListBuildBatchesInput, arg1 func(*codebuild.ListBuildBatchesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBuildBatchesPages", arg0, arg1)
@@ -1307,13 +1308,13 @@ func (m *MockCodeBuildAPI) ListBuildBatchesPages(arg0 *codebuild.ListBuildBatche
 	return ret0
 }
 
-// ListBuildBatchesPages indicates an expected call of ListBuildBatchesPages
+// ListBuildBatchesPages indicates an expected call of ListBuildBatchesPages.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildBatchesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildBatchesPages", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildBatchesPages), arg0, arg1)
 }
 
-// ListBuildBatchesPagesWithContext mocks base method
+// ListBuildBatchesPagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListBuildBatchesPagesWithContext(arg0 context.Context, arg1 *codebuild.ListBuildBatchesInput, arg2 func(*codebuild.ListBuildBatchesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1325,14 +1326,14 @@ func (m *MockCodeBuildAPI) ListBuildBatchesPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListBuildBatchesPagesWithContext indicates an expected call of ListBuildBatchesPagesWithContext
+// ListBuildBatchesPagesWithContext indicates an expected call of ListBuildBatchesPagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildBatchesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildBatchesPagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildBatchesPagesWithContext), varargs...)
 }
 
-// ListBuildBatchesRequest mocks base method
+// ListBuildBatchesRequest mocks base method.
 func (m *MockCodeBuildAPI) ListBuildBatchesRequest(arg0 *codebuild.ListBuildBatchesInput) (*request.Request, *codebuild.ListBuildBatchesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBuildBatchesRequest", arg0)
@@ -1341,13 +1342,13 @@ func (m *MockCodeBuildAPI) ListBuildBatchesRequest(arg0 *codebuild.ListBuildBatc
 	return ret0, ret1
 }
 
-// ListBuildBatchesRequest indicates an expected call of ListBuildBatchesRequest
+// ListBuildBatchesRequest indicates an expected call of ListBuildBatchesRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildBatchesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildBatchesRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildBatchesRequest), arg0)
 }
 
-// ListBuildBatchesWithContext mocks base method
+// ListBuildBatchesWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListBuildBatchesWithContext(arg0 context.Context, arg1 *codebuild.ListBuildBatchesInput, arg2 ...request.Option) (*codebuild.ListBuildBatchesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1360,14 +1361,14 @@ func (m *MockCodeBuildAPI) ListBuildBatchesWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListBuildBatchesWithContext indicates an expected call of ListBuildBatchesWithContext
+// ListBuildBatchesWithContext indicates an expected call of ListBuildBatchesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildBatchesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildBatchesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildBatchesWithContext), varargs...)
 }
 
-// ListBuilds mocks base method
+// ListBuilds mocks base method.
 func (m *MockCodeBuildAPI) ListBuilds(arg0 *codebuild.ListBuildsInput) (*codebuild.ListBuildsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBuilds", arg0)
@@ -1376,13 +1377,13 @@ func (m *MockCodeBuildAPI) ListBuilds(arg0 *codebuild.ListBuildsInput) (*codebui
 	return ret0, ret1
 }
 
-// ListBuilds indicates an expected call of ListBuilds
+// ListBuilds indicates an expected call of ListBuilds.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuilds(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuilds", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuilds), arg0)
 }
 
-// ListBuildsForProject mocks base method
+// ListBuildsForProject mocks base method.
 func (m *MockCodeBuildAPI) ListBuildsForProject(arg0 *codebuild.ListBuildsForProjectInput) (*codebuild.ListBuildsForProjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBuildsForProject", arg0)
@@ -1391,13 +1392,13 @@ func (m *MockCodeBuildAPI) ListBuildsForProject(arg0 *codebuild.ListBuildsForPro
 	return ret0, ret1
 }
 
-// ListBuildsForProject indicates an expected call of ListBuildsForProject
+// ListBuildsForProject indicates an expected call of ListBuildsForProject.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildsForProject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildsForProject", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildsForProject), arg0)
 }
 
-// ListBuildsForProjectPages mocks base method
+// ListBuildsForProjectPages mocks base method.
 func (m *MockCodeBuildAPI) ListBuildsForProjectPages(arg0 *codebuild.ListBuildsForProjectInput, arg1 func(*codebuild.ListBuildsForProjectOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBuildsForProjectPages", arg0, arg1)
@@ -1405,13 +1406,13 @@ func (m *MockCodeBuildAPI) ListBuildsForProjectPages(arg0 *codebuild.ListBuildsF
 	return ret0
 }
 
-// ListBuildsForProjectPages indicates an expected call of ListBuildsForProjectPages
+// ListBuildsForProjectPages indicates an expected call of ListBuildsForProjectPages.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildsForProjectPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildsForProjectPages", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildsForProjectPages), arg0, arg1)
 }
 
-// ListBuildsForProjectPagesWithContext mocks base method
+// ListBuildsForProjectPagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListBuildsForProjectPagesWithContext(arg0 context.Context, arg1 *codebuild.ListBuildsForProjectInput, arg2 func(*codebuild.ListBuildsForProjectOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1423,14 +1424,14 @@ func (m *MockCodeBuildAPI) ListBuildsForProjectPagesWithContext(arg0 context.Con
 	return ret0
 }
 
-// ListBuildsForProjectPagesWithContext indicates an expected call of ListBuildsForProjectPagesWithContext
+// ListBuildsForProjectPagesWithContext indicates an expected call of ListBuildsForProjectPagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildsForProjectPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildsForProjectPagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildsForProjectPagesWithContext), varargs...)
 }
 
-// ListBuildsForProjectRequest mocks base method
+// ListBuildsForProjectRequest mocks base method.
 func (m *MockCodeBuildAPI) ListBuildsForProjectRequest(arg0 *codebuild.ListBuildsForProjectInput) (*request.Request, *codebuild.ListBuildsForProjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBuildsForProjectRequest", arg0)
@@ -1439,13 +1440,13 @@ func (m *MockCodeBuildAPI) ListBuildsForProjectRequest(arg0 *codebuild.ListBuild
 	return ret0, ret1
 }
 
-// ListBuildsForProjectRequest indicates an expected call of ListBuildsForProjectRequest
+// ListBuildsForProjectRequest indicates an expected call of ListBuildsForProjectRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildsForProjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildsForProjectRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildsForProjectRequest), arg0)
 }
 
-// ListBuildsForProjectWithContext mocks base method
+// ListBuildsForProjectWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListBuildsForProjectWithContext(arg0 context.Context, arg1 *codebuild.ListBuildsForProjectInput, arg2 ...request.Option) (*codebuild.ListBuildsForProjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1458,14 +1459,14 @@ func (m *MockCodeBuildAPI) ListBuildsForProjectWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// ListBuildsForProjectWithContext indicates an expected call of ListBuildsForProjectWithContext
+// ListBuildsForProjectWithContext indicates an expected call of ListBuildsForProjectWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildsForProjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildsForProjectWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildsForProjectWithContext), varargs...)
 }
 
-// ListBuildsPages mocks base method
+// ListBuildsPages mocks base method.
 func (m *MockCodeBuildAPI) ListBuildsPages(arg0 *codebuild.ListBuildsInput, arg1 func(*codebuild.ListBuildsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBuildsPages", arg0, arg1)
@@ -1473,13 +1474,13 @@ func (m *MockCodeBuildAPI) ListBuildsPages(arg0 *codebuild.ListBuildsInput, arg1
 	return ret0
 }
 
-// ListBuildsPages indicates an expected call of ListBuildsPages
+// ListBuildsPages indicates an expected call of ListBuildsPages.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildsPages", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildsPages), arg0, arg1)
 }
 
-// ListBuildsPagesWithContext mocks base method
+// ListBuildsPagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListBuildsPagesWithContext(arg0 context.Context, arg1 *codebuild.ListBuildsInput, arg2 func(*codebuild.ListBuildsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1491,14 +1492,14 @@ func (m *MockCodeBuildAPI) ListBuildsPagesWithContext(arg0 context.Context, arg1
 	return ret0
 }
 
-// ListBuildsPagesWithContext indicates an expected call of ListBuildsPagesWithContext
+// ListBuildsPagesWithContext indicates an expected call of ListBuildsPagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildsPagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildsPagesWithContext), varargs...)
 }
 
-// ListBuildsRequest mocks base method
+// ListBuildsRequest mocks base method.
 func (m *MockCodeBuildAPI) ListBuildsRequest(arg0 *codebuild.ListBuildsInput) (*request.Request, *codebuild.ListBuildsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBuildsRequest", arg0)
@@ -1507,13 +1508,13 @@ func (m *MockCodeBuildAPI) ListBuildsRequest(arg0 *codebuild.ListBuildsInput) (*
 	return ret0, ret1
 }
 
-// ListBuildsRequest indicates an expected call of ListBuildsRequest
+// ListBuildsRequest indicates an expected call of ListBuildsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildsRequest), arg0)
 }
 
-// ListBuildsWithContext mocks base method
+// ListBuildsWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListBuildsWithContext(arg0 context.Context, arg1 *codebuild.ListBuildsInput, arg2 ...request.Option) (*codebuild.ListBuildsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1526,14 +1527,14 @@ func (m *MockCodeBuildAPI) ListBuildsWithContext(arg0 context.Context, arg1 *cod
 	return ret0, ret1
 }
 
-// ListBuildsWithContext indicates an expected call of ListBuildsWithContext
+// ListBuildsWithContext indicates an expected call of ListBuildsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListBuildsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuildsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListBuildsWithContext), varargs...)
 }
 
-// ListCuratedEnvironmentImages mocks base method
+// ListCuratedEnvironmentImages mocks base method.
 func (m *MockCodeBuildAPI) ListCuratedEnvironmentImages(arg0 *codebuild.ListCuratedEnvironmentImagesInput) (*codebuild.ListCuratedEnvironmentImagesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCuratedEnvironmentImages", arg0)
@@ -1542,13 +1543,13 @@ func (m *MockCodeBuildAPI) ListCuratedEnvironmentImages(arg0 *codebuild.ListCura
 	return ret0, ret1
 }
 
-// ListCuratedEnvironmentImages indicates an expected call of ListCuratedEnvironmentImages
+// ListCuratedEnvironmentImages indicates an expected call of ListCuratedEnvironmentImages.
 func (mr *MockCodeBuildAPIMockRecorder) ListCuratedEnvironmentImages(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCuratedEnvironmentImages", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListCuratedEnvironmentImages), arg0)
 }
 
-// ListCuratedEnvironmentImagesRequest mocks base method
+// ListCuratedEnvironmentImagesRequest mocks base method.
 func (m *MockCodeBuildAPI) ListCuratedEnvironmentImagesRequest(arg0 *codebuild.ListCuratedEnvironmentImagesInput) (*request.Request, *codebuild.ListCuratedEnvironmentImagesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCuratedEnvironmentImagesRequest", arg0)
@@ -1557,13 +1558,13 @@ func (m *MockCodeBuildAPI) ListCuratedEnvironmentImagesRequest(arg0 *codebuild.L
 	return ret0, ret1
 }
 
-// ListCuratedEnvironmentImagesRequest indicates an expected call of ListCuratedEnvironmentImagesRequest
+// ListCuratedEnvironmentImagesRequest indicates an expected call of ListCuratedEnvironmentImagesRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ListCuratedEnvironmentImagesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCuratedEnvironmentImagesRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListCuratedEnvironmentImagesRequest), arg0)
 }
 
-// ListCuratedEnvironmentImagesWithContext mocks base method
+// ListCuratedEnvironmentImagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListCuratedEnvironmentImagesWithContext(arg0 context.Context, arg1 *codebuild.ListCuratedEnvironmentImagesInput, arg2 ...request.Option) (*codebuild.ListCuratedEnvironmentImagesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1576,14 +1577,14 @@ func (m *MockCodeBuildAPI) ListCuratedEnvironmentImagesWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// ListCuratedEnvironmentImagesWithContext indicates an expected call of ListCuratedEnvironmentImagesWithContext
+// ListCuratedEnvironmentImagesWithContext indicates an expected call of ListCuratedEnvironmentImagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListCuratedEnvironmentImagesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCuratedEnvironmentImagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListCuratedEnvironmentImagesWithContext), varargs...)
 }
 
-// ListProjects mocks base method
+// ListProjects mocks base method.
 func (m *MockCodeBuildAPI) ListProjects(arg0 *codebuild.ListProjectsInput) (*codebuild.ListProjectsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProjects", arg0)
@@ -1592,13 +1593,13 @@ func (m *MockCodeBuildAPI) ListProjects(arg0 *codebuild.ListProjectsInput) (*cod
 	return ret0, ret1
 }
 
-// ListProjects indicates an expected call of ListProjects
+// ListProjects indicates an expected call of ListProjects.
 func (mr *MockCodeBuildAPIMockRecorder) ListProjects(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjects", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListProjects), arg0)
 }
 
-// ListProjectsPages mocks base method
+// ListProjectsPages mocks base method.
 func (m *MockCodeBuildAPI) ListProjectsPages(arg0 *codebuild.ListProjectsInput, arg1 func(*codebuild.ListProjectsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProjectsPages", arg0, arg1)
@@ -1606,13 +1607,13 @@ func (m *MockCodeBuildAPI) ListProjectsPages(arg0 *codebuild.ListProjectsInput, 
 	return ret0
 }
 
-// ListProjectsPages indicates an expected call of ListProjectsPages
+// ListProjectsPages indicates an expected call of ListProjectsPages.
 func (mr *MockCodeBuildAPIMockRecorder) ListProjectsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjectsPages", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListProjectsPages), arg0, arg1)
 }
 
-// ListProjectsPagesWithContext mocks base method
+// ListProjectsPagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListProjectsPagesWithContext(arg0 context.Context, arg1 *codebuild.ListProjectsInput, arg2 func(*codebuild.ListProjectsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1624,14 +1625,14 @@ func (m *MockCodeBuildAPI) ListProjectsPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// ListProjectsPagesWithContext indicates an expected call of ListProjectsPagesWithContext
+// ListProjectsPagesWithContext indicates an expected call of ListProjectsPagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListProjectsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjectsPagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListProjectsPagesWithContext), varargs...)
 }
 
-// ListProjectsRequest mocks base method
+// ListProjectsRequest mocks base method.
 func (m *MockCodeBuildAPI) ListProjectsRequest(arg0 *codebuild.ListProjectsInput) (*request.Request, *codebuild.ListProjectsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProjectsRequest", arg0)
@@ -1640,13 +1641,13 @@ func (m *MockCodeBuildAPI) ListProjectsRequest(arg0 *codebuild.ListProjectsInput
 	return ret0, ret1
 }
 
-// ListProjectsRequest indicates an expected call of ListProjectsRequest
+// ListProjectsRequest indicates an expected call of ListProjectsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ListProjectsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjectsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListProjectsRequest), arg0)
 }
 
-// ListProjectsWithContext mocks base method
+// ListProjectsWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListProjectsWithContext(arg0 context.Context, arg1 *codebuild.ListProjectsInput, arg2 ...request.Option) (*codebuild.ListProjectsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1659,14 +1660,14 @@ func (m *MockCodeBuildAPI) ListProjectsWithContext(arg0 context.Context, arg1 *c
 	return ret0, ret1
 }
 
-// ListProjectsWithContext indicates an expected call of ListProjectsWithContext
+// ListProjectsWithContext indicates an expected call of ListProjectsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListProjectsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjectsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListProjectsWithContext), varargs...)
 }
 
-// ListReportGroups mocks base method
+// ListReportGroups mocks base method.
 func (m *MockCodeBuildAPI) ListReportGroups(arg0 *codebuild.ListReportGroupsInput) (*codebuild.ListReportGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReportGroups", arg0)
@@ -1675,13 +1676,13 @@ func (m *MockCodeBuildAPI) ListReportGroups(arg0 *codebuild.ListReportGroupsInpu
 	return ret0, ret1
 }
 
-// ListReportGroups indicates an expected call of ListReportGroups
+// ListReportGroups indicates an expected call of ListReportGroups.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportGroups", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportGroups), arg0)
 }
 
-// ListReportGroupsPages mocks base method
+// ListReportGroupsPages mocks base method.
 func (m *MockCodeBuildAPI) ListReportGroupsPages(arg0 *codebuild.ListReportGroupsInput, arg1 func(*codebuild.ListReportGroupsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReportGroupsPages", arg0, arg1)
@@ -1689,13 +1690,13 @@ func (m *MockCodeBuildAPI) ListReportGroupsPages(arg0 *codebuild.ListReportGroup
 	return ret0
 }
 
-// ListReportGroupsPages indicates an expected call of ListReportGroupsPages
+// ListReportGroupsPages indicates an expected call of ListReportGroupsPages.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportGroupsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportGroupsPages", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportGroupsPages), arg0, arg1)
 }
 
-// ListReportGroupsPagesWithContext mocks base method
+// ListReportGroupsPagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListReportGroupsPagesWithContext(arg0 context.Context, arg1 *codebuild.ListReportGroupsInput, arg2 func(*codebuild.ListReportGroupsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1707,14 +1708,14 @@ func (m *MockCodeBuildAPI) ListReportGroupsPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListReportGroupsPagesWithContext indicates an expected call of ListReportGroupsPagesWithContext
+// ListReportGroupsPagesWithContext indicates an expected call of ListReportGroupsPagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportGroupsPagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportGroupsPagesWithContext), varargs...)
 }
 
-// ListReportGroupsRequest mocks base method
+// ListReportGroupsRequest mocks base method.
 func (m *MockCodeBuildAPI) ListReportGroupsRequest(arg0 *codebuild.ListReportGroupsInput) (*request.Request, *codebuild.ListReportGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReportGroupsRequest", arg0)
@@ -1723,13 +1724,13 @@ func (m *MockCodeBuildAPI) ListReportGroupsRequest(arg0 *codebuild.ListReportGro
 	return ret0, ret1
 }
 
-// ListReportGroupsRequest indicates an expected call of ListReportGroupsRequest
+// ListReportGroupsRequest indicates an expected call of ListReportGroupsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportGroupsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportGroupsRequest), arg0)
 }
 
-// ListReportGroupsWithContext mocks base method
+// ListReportGroupsWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListReportGroupsWithContext(arg0 context.Context, arg1 *codebuild.ListReportGroupsInput, arg2 ...request.Option) (*codebuild.ListReportGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1742,14 +1743,14 @@ func (m *MockCodeBuildAPI) ListReportGroupsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListReportGroupsWithContext indicates an expected call of ListReportGroupsWithContext
+// ListReportGroupsWithContext indicates an expected call of ListReportGroupsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportGroupsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportGroupsWithContext), varargs...)
 }
 
-// ListReports mocks base method
+// ListReports mocks base method.
 func (m *MockCodeBuildAPI) ListReports(arg0 *codebuild.ListReportsInput) (*codebuild.ListReportsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReports", arg0)
@@ -1758,13 +1759,13 @@ func (m *MockCodeBuildAPI) ListReports(arg0 *codebuild.ListReportsInput) (*codeb
 	return ret0, ret1
 }
 
-// ListReports indicates an expected call of ListReports
+// ListReports indicates an expected call of ListReports.
 func (mr *MockCodeBuildAPIMockRecorder) ListReports(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReports", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReports), arg0)
 }
 
-// ListReportsForReportGroup mocks base method
+// ListReportsForReportGroup mocks base method.
 func (m *MockCodeBuildAPI) ListReportsForReportGroup(arg0 *codebuild.ListReportsForReportGroupInput) (*codebuild.ListReportsForReportGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReportsForReportGroup", arg0)
@@ -1773,13 +1774,13 @@ func (m *MockCodeBuildAPI) ListReportsForReportGroup(arg0 *codebuild.ListReports
 	return ret0, ret1
 }
 
-// ListReportsForReportGroup indicates an expected call of ListReportsForReportGroup
+// ListReportsForReportGroup indicates an expected call of ListReportsForReportGroup.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportsForReportGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportsForReportGroup", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportsForReportGroup), arg0)
 }
 
-// ListReportsForReportGroupPages mocks base method
+// ListReportsForReportGroupPages mocks base method.
 func (m *MockCodeBuildAPI) ListReportsForReportGroupPages(arg0 *codebuild.ListReportsForReportGroupInput, arg1 func(*codebuild.ListReportsForReportGroupOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReportsForReportGroupPages", arg0, arg1)
@@ -1787,13 +1788,13 @@ func (m *MockCodeBuildAPI) ListReportsForReportGroupPages(arg0 *codebuild.ListRe
 	return ret0
 }
 
-// ListReportsForReportGroupPages indicates an expected call of ListReportsForReportGroupPages
+// ListReportsForReportGroupPages indicates an expected call of ListReportsForReportGroupPages.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportsForReportGroupPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportsForReportGroupPages", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportsForReportGroupPages), arg0, arg1)
 }
 
-// ListReportsForReportGroupPagesWithContext mocks base method
+// ListReportsForReportGroupPagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListReportsForReportGroupPagesWithContext(arg0 context.Context, arg1 *codebuild.ListReportsForReportGroupInput, arg2 func(*codebuild.ListReportsForReportGroupOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1805,14 +1806,14 @@ func (m *MockCodeBuildAPI) ListReportsForReportGroupPagesWithContext(arg0 contex
 	return ret0
 }
 
-// ListReportsForReportGroupPagesWithContext indicates an expected call of ListReportsForReportGroupPagesWithContext
+// ListReportsForReportGroupPagesWithContext indicates an expected call of ListReportsForReportGroupPagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportsForReportGroupPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportsForReportGroupPagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportsForReportGroupPagesWithContext), varargs...)
 }
 
-// ListReportsForReportGroupRequest mocks base method
+// ListReportsForReportGroupRequest mocks base method.
 func (m *MockCodeBuildAPI) ListReportsForReportGroupRequest(arg0 *codebuild.ListReportsForReportGroupInput) (*request.Request, *codebuild.ListReportsForReportGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReportsForReportGroupRequest", arg0)
@@ -1821,13 +1822,13 @@ func (m *MockCodeBuildAPI) ListReportsForReportGroupRequest(arg0 *codebuild.List
 	return ret0, ret1
 }
 
-// ListReportsForReportGroupRequest indicates an expected call of ListReportsForReportGroupRequest
+// ListReportsForReportGroupRequest indicates an expected call of ListReportsForReportGroupRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportsForReportGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportsForReportGroupRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportsForReportGroupRequest), arg0)
 }
 
-// ListReportsForReportGroupWithContext mocks base method
+// ListReportsForReportGroupWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListReportsForReportGroupWithContext(arg0 context.Context, arg1 *codebuild.ListReportsForReportGroupInput, arg2 ...request.Option) (*codebuild.ListReportsForReportGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1840,14 +1841,14 @@ func (m *MockCodeBuildAPI) ListReportsForReportGroupWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListReportsForReportGroupWithContext indicates an expected call of ListReportsForReportGroupWithContext
+// ListReportsForReportGroupWithContext indicates an expected call of ListReportsForReportGroupWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportsForReportGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportsForReportGroupWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportsForReportGroupWithContext), varargs...)
 }
 
-// ListReportsPages mocks base method
+// ListReportsPages mocks base method.
 func (m *MockCodeBuildAPI) ListReportsPages(arg0 *codebuild.ListReportsInput, arg1 func(*codebuild.ListReportsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReportsPages", arg0, arg1)
@@ -1855,13 +1856,13 @@ func (m *MockCodeBuildAPI) ListReportsPages(arg0 *codebuild.ListReportsInput, ar
 	return ret0
 }
 
-// ListReportsPages indicates an expected call of ListReportsPages
+// ListReportsPages indicates an expected call of ListReportsPages.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportsPages", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportsPages), arg0, arg1)
 }
 
-// ListReportsPagesWithContext mocks base method
+// ListReportsPagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListReportsPagesWithContext(arg0 context.Context, arg1 *codebuild.ListReportsInput, arg2 func(*codebuild.ListReportsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1873,14 +1874,14 @@ func (m *MockCodeBuildAPI) ListReportsPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// ListReportsPagesWithContext indicates an expected call of ListReportsPagesWithContext
+// ListReportsPagesWithContext indicates an expected call of ListReportsPagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportsPagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportsPagesWithContext), varargs...)
 }
 
-// ListReportsRequest mocks base method
+// ListReportsRequest mocks base method.
 func (m *MockCodeBuildAPI) ListReportsRequest(arg0 *codebuild.ListReportsInput) (*request.Request, *codebuild.ListReportsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReportsRequest", arg0)
@@ -1889,13 +1890,13 @@ func (m *MockCodeBuildAPI) ListReportsRequest(arg0 *codebuild.ListReportsInput) 
 	return ret0, ret1
 }
 
-// ListReportsRequest indicates an expected call of ListReportsRequest
+// ListReportsRequest indicates an expected call of ListReportsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportsRequest), arg0)
 }
 
-// ListReportsWithContext mocks base method
+// ListReportsWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListReportsWithContext(arg0 context.Context, arg1 *codebuild.ListReportsInput, arg2 ...request.Option) (*codebuild.ListReportsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1908,14 +1909,14 @@ func (m *MockCodeBuildAPI) ListReportsWithContext(arg0 context.Context, arg1 *co
 	return ret0, ret1
 }
 
-// ListReportsWithContext indicates an expected call of ListReportsWithContext
+// ListReportsWithContext indicates an expected call of ListReportsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListReportsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReportsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListReportsWithContext), varargs...)
 }
 
-// ListSharedProjects mocks base method
+// ListSharedProjects mocks base method.
 func (m *MockCodeBuildAPI) ListSharedProjects(arg0 *codebuild.ListSharedProjectsInput) (*codebuild.ListSharedProjectsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSharedProjects", arg0)
@@ -1924,13 +1925,13 @@ func (m *MockCodeBuildAPI) ListSharedProjects(arg0 *codebuild.ListSharedProjects
 	return ret0, ret1
 }
 
-// ListSharedProjects indicates an expected call of ListSharedProjects
+// ListSharedProjects indicates an expected call of ListSharedProjects.
 func (mr *MockCodeBuildAPIMockRecorder) ListSharedProjects(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSharedProjects", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSharedProjects), arg0)
 }
 
-// ListSharedProjectsPages mocks base method
+// ListSharedProjectsPages mocks base method.
 func (m *MockCodeBuildAPI) ListSharedProjectsPages(arg0 *codebuild.ListSharedProjectsInput, arg1 func(*codebuild.ListSharedProjectsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSharedProjectsPages", arg0, arg1)
@@ -1938,13 +1939,13 @@ func (m *MockCodeBuildAPI) ListSharedProjectsPages(arg0 *codebuild.ListSharedPro
 	return ret0
 }
 
-// ListSharedProjectsPages indicates an expected call of ListSharedProjectsPages
+// ListSharedProjectsPages indicates an expected call of ListSharedProjectsPages.
 func (mr *MockCodeBuildAPIMockRecorder) ListSharedProjectsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSharedProjectsPages", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSharedProjectsPages), arg0, arg1)
 }
 
-// ListSharedProjectsPagesWithContext mocks base method
+// ListSharedProjectsPagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListSharedProjectsPagesWithContext(arg0 context.Context, arg1 *codebuild.ListSharedProjectsInput, arg2 func(*codebuild.ListSharedProjectsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1956,14 +1957,14 @@ func (m *MockCodeBuildAPI) ListSharedProjectsPagesWithContext(arg0 context.Conte
 	return ret0
 }
 
-// ListSharedProjectsPagesWithContext indicates an expected call of ListSharedProjectsPagesWithContext
+// ListSharedProjectsPagesWithContext indicates an expected call of ListSharedProjectsPagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListSharedProjectsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSharedProjectsPagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSharedProjectsPagesWithContext), varargs...)
 }
 
-// ListSharedProjectsRequest mocks base method
+// ListSharedProjectsRequest mocks base method.
 func (m *MockCodeBuildAPI) ListSharedProjectsRequest(arg0 *codebuild.ListSharedProjectsInput) (*request.Request, *codebuild.ListSharedProjectsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSharedProjectsRequest", arg0)
@@ -1972,13 +1973,13 @@ func (m *MockCodeBuildAPI) ListSharedProjectsRequest(arg0 *codebuild.ListSharedP
 	return ret0, ret1
 }
 
-// ListSharedProjectsRequest indicates an expected call of ListSharedProjectsRequest
+// ListSharedProjectsRequest indicates an expected call of ListSharedProjectsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ListSharedProjectsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSharedProjectsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSharedProjectsRequest), arg0)
 }
 
-// ListSharedProjectsWithContext mocks base method
+// ListSharedProjectsWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListSharedProjectsWithContext(arg0 context.Context, arg1 *codebuild.ListSharedProjectsInput, arg2 ...request.Option) (*codebuild.ListSharedProjectsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1991,14 +1992,14 @@ func (m *MockCodeBuildAPI) ListSharedProjectsWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ListSharedProjectsWithContext indicates an expected call of ListSharedProjectsWithContext
+// ListSharedProjectsWithContext indicates an expected call of ListSharedProjectsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListSharedProjectsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSharedProjectsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSharedProjectsWithContext), varargs...)
 }
 
-// ListSharedReportGroups mocks base method
+// ListSharedReportGroups mocks base method.
 func (m *MockCodeBuildAPI) ListSharedReportGroups(arg0 *codebuild.ListSharedReportGroupsInput) (*codebuild.ListSharedReportGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSharedReportGroups", arg0)
@@ -2007,13 +2008,13 @@ func (m *MockCodeBuildAPI) ListSharedReportGroups(arg0 *codebuild.ListSharedRepo
 	return ret0, ret1
 }
 
-// ListSharedReportGroups indicates an expected call of ListSharedReportGroups
+// ListSharedReportGroups indicates an expected call of ListSharedReportGroups.
 func (mr *MockCodeBuildAPIMockRecorder) ListSharedReportGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSharedReportGroups", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSharedReportGroups), arg0)
 }
 
-// ListSharedReportGroupsPages mocks base method
+// ListSharedReportGroupsPages mocks base method.
 func (m *MockCodeBuildAPI) ListSharedReportGroupsPages(arg0 *codebuild.ListSharedReportGroupsInput, arg1 func(*codebuild.ListSharedReportGroupsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSharedReportGroupsPages", arg0, arg1)
@@ -2021,13 +2022,13 @@ func (m *MockCodeBuildAPI) ListSharedReportGroupsPages(arg0 *codebuild.ListShare
 	return ret0
 }
 
-// ListSharedReportGroupsPages indicates an expected call of ListSharedReportGroupsPages
+// ListSharedReportGroupsPages indicates an expected call of ListSharedReportGroupsPages.
 func (mr *MockCodeBuildAPIMockRecorder) ListSharedReportGroupsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSharedReportGroupsPages", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSharedReportGroupsPages), arg0, arg1)
 }
 
-// ListSharedReportGroupsPagesWithContext mocks base method
+// ListSharedReportGroupsPagesWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListSharedReportGroupsPagesWithContext(arg0 context.Context, arg1 *codebuild.ListSharedReportGroupsInput, arg2 func(*codebuild.ListSharedReportGroupsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2039,14 +2040,14 @@ func (m *MockCodeBuildAPI) ListSharedReportGroupsPagesWithContext(arg0 context.C
 	return ret0
 }
 
-// ListSharedReportGroupsPagesWithContext indicates an expected call of ListSharedReportGroupsPagesWithContext
+// ListSharedReportGroupsPagesWithContext indicates an expected call of ListSharedReportGroupsPagesWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListSharedReportGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSharedReportGroupsPagesWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSharedReportGroupsPagesWithContext), varargs...)
 }
 
-// ListSharedReportGroupsRequest mocks base method
+// ListSharedReportGroupsRequest mocks base method.
 func (m *MockCodeBuildAPI) ListSharedReportGroupsRequest(arg0 *codebuild.ListSharedReportGroupsInput) (*request.Request, *codebuild.ListSharedReportGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSharedReportGroupsRequest", arg0)
@@ -2055,13 +2056,13 @@ func (m *MockCodeBuildAPI) ListSharedReportGroupsRequest(arg0 *codebuild.ListSha
 	return ret0, ret1
 }
 
-// ListSharedReportGroupsRequest indicates an expected call of ListSharedReportGroupsRequest
+// ListSharedReportGroupsRequest indicates an expected call of ListSharedReportGroupsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ListSharedReportGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSharedReportGroupsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSharedReportGroupsRequest), arg0)
 }
 
-// ListSharedReportGroupsWithContext mocks base method
+// ListSharedReportGroupsWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListSharedReportGroupsWithContext(arg0 context.Context, arg1 *codebuild.ListSharedReportGroupsInput, arg2 ...request.Option) (*codebuild.ListSharedReportGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2074,14 +2075,14 @@ func (m *MockCodeBuildAPI) ListSharedReportGroupsWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListSharedReportGroupsWithContext indicates an expected call of ListSharedReportGroupsWithContext
+// ListSharedReportGroupsWithContext indicates an expected call of ListSharedReportGroupsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListSharedReportGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSharedReportGroupsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSharedReportGroupsWithContext), varargs...)
 }
 
-// ListSourceCredentials mocks base method
+// ListSourceCredentials mocks base method.
 func (m *MockCodeBuildAPI) ListSourceCredentials(arg0 *codebuild.ListSourceCredentialsInput) (*codebuild.ListSourceCredentialsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSourceCredentials", arg0)
@@ -2090,13 +2091,13 @@ func (m *MockCodeBuildAPI) ListSourceCredentials(arg0 *codebuild.ListSourceCrede
 	return ret0, ret1
 }
 
-// ListSourceCredentials indicates an expected call of ListSourceCredentials
+// ListSourceCredentials indicates an expected call of ListSourceCredentials.
 func (mr *MockCodeBuildAPIMockRecorder) ListSourceCredentials(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSourceCredentials", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSourceCredentials), arg0)
 }
 
-// ListSourceCredentialsRequest mocks base method
+// ListSourceCredentialsRequest mocks base method.
 func (m *MockCodeBuildAPI) ListSourceCredentialsRequest(arg0 *codebuild.ListSourceCredentialsInput) (*request.Request, *codebuild.ListSourceCredentialsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSourceCredentialsRequest", arg0)
@@ -2105,13 +2106,13 @@ func (m *MockCodeBuildAPI) ListSourceCredentialsRequest(arg0 *codebuild.ListSour
 	return ret0, ret1
 }
 
-// ListSourceCredentialsRequest indicates an expected call of ListSourceCredentialsRequest
+// ListSourceCredentialsRequest indicates an expected call of ListSourceCredentialsRequest.
 func (mr *MockCodeBuildAPIMockRecorder) ListSourceCredentialsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSourceCredentialsRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSourceCredentialsRequest), arg0)
 }
 
-// ListSourceCredentialsWithContext mocks base method
+// ListSourceCredentialsWithContext mocks base method.
 func (m *MockCodeBuildAPI) ListSourceCredentialsWithContext(arg0 context.Context, arg1 *codebuild.ListSourceCredentialsInput, arg2 ...request.Option) (*codebuild.ListSourceCredentialsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2124,14 +2125,14 @@ func (m *MockCodeBuildAPI) ListSourceCredentialsWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListSourceCredentialsWithContext indicates an expected call of ListSourceCredentialsWithContext
+// ListSourceCredentialsWithContext indicates an expected call of ListSourceCredentialsWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) ListSourceCredentialsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSourceCredentialsWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).ListSourceCredentialsWithContext), varargs...)
 }
 
-// PutResourcePolicy mocks base method
+// PutResourcePolicy mocks base method.
 func (m *MockCodeBuildAPI) PutResourcePolicy(arg0 *codebuild.PutResourcePolicyInput) (*codebuild.PutResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutResourcePolicy", arg0)
@@ -2140,13 +2141,13 @@ func (m *MockCodeBuildAPI) PutResourcePolicy(arg0 *codebuild.PutResourcePolicyIn
 	return ret0, ret1
 }
 
-// PutResourcePolicy indicates an expected call of PutResourcePolicy
+// PutResourcePolicy indicates an expected call of PutResourcePolicy.
 func (mr *MockCodeBuildAPIMockRecorder) PutResourcePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutResourcePolicy", reflect.TypeOf((*MockCodeBuildAPI)(nil).PutResourcePolicy), arg0)
 }
 
-// PutResourcePolicyRequest mocks base method
+// PutResourcePolicyRequest mocks base method.
 func (m *MockCodeBuildAPI) PutResourcePolicyRequest(arg0 *codebuild.PutResourcePolicyInput) (*request.Request, *codebuild.PutResourcePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutResourcePolicyRequest", arg0)
@@ -2155,13 +2156,13 @@ func (m *MockCodeBuildAPI) PutResourcePolicyRequest(arg0 *codebuild.PutResourceP
 	return ret0, ret1
 }
 
-// PutResourcePolicyRequest indicates an expected call of PutResourcePolicyRequest
+// PutResourcePolicyRequest indicates an expected call of PutResourcePolicyRequest.
 func (mr *MockCodeBuildAPIMockRecorder) PutResourcePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutResourcePolicyRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).PutResourcePolicyRequest), arg0)
 }
 
-// PutResourcePolicyWithContext mocks base method
+// PutResourcePolicyWithContext mocks base method.
 func (m *MockCodeBuildAPI) PutResourcePolicyWithContext(arg0 context.Context, arg1 *codebuild.PutResourcePolicyInput, arg2 ...request.Option) (*codebuild.PutResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2174,14 +2175,14 @@ func (m *MockCodeBuildAPI) PutResourcePolicyWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// PutResourcePolicyWithContext indicates an expected call of PutResourcePolicyWithContext
+// PutResourcePolicyWithContext indicates an expected call of PutResourcePolicyWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) PutResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutResourcePolicyWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).PutResourcePolicyWithContext), varargs...)
 }
 
-// RetryBuild mocks base method
+// RetryBuild mocks base method.
 func (m *MockCodeBuildAPI) RetryBuild(arg0 *codebuild.RetryBuildInput) (*codebuild.RetryBuildOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RetryBuild", arg0)
@@ -2190,13 +2191,13 @@ func (m *MockCodeBuildAPI) RetryBuild(arg0 *codebuild.RetryBuildInput) (*codebui
 	return ret0, ret1
 }
 
-// RetryBuild indicates an expected call of RetryBuild
+// RetryBuild indicates an expected call of RetryBuild.
 func (mr *MockCodeBuildAPIMockRecorder) RetryBuild(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RetryBuild", reflect.TypeOf((*MockCodeBuildAPI)(nil).RetryBuild), arg0)
 }
 
-// RetryBuildBatch mocks base method
+// RetryBuildBatch mocks base method.
 func (m *MockCodeBuildAPI) RetryBuildBatch(arg0 *codebuild.RetryBuildBatchInput) (*codebuild.RetryBuildBatchOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RetryBuildBatch", arg0)
@@ -2205,13 +2206,13 @@ func (m *MockCodeBuildAPI) RetryBuildBatch(arg0 *codebuild.RetryBuildBatchInput)
 	return ret0, ret1
 }
 
-// RetryBuildBatch indicates an expected call of RetryBuildBatch
+// RetryBuildBatch indicates an expected call of RetryBuildBatch.
 func (mr *MockCodeBuildAPIMockRecorder) RetryBuildBatch(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RetryBuildBatch", reflect.TypeOf((*MockCodeBuildAPI)(nil).RetryBuildBatch), arg0)
 }
 
-// RetryBuildBatchRequest mocks base method
+// RetryBuildBatchRequest mocks base method.
 func (m *MockCodeBuildAPI) RetryBuildBatchRequest(arg0 *codebuild.RetryBuildBatchInput) (*request.Request, *codebuild.RetryBuildBatchOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RetryBuildBatchRequest", arg0)
@@ -2220,13 +2221,13 @@ func (m *MockCodeBuildAPI) RetryBuildBatchRequest(arg0 *codebuild.RetryBuildBatc
 	return ret0, ret1
 }
 
-// RetryBuildBatchRequest indicates an expected call of RetryBuildBatchRequest
+// RetryBuildBatchRequest indicates an expected call of RetryBuildBatchRequest.
 func (mr *MockCodeBuildAPIMockRecorder) RetryBuildBatchRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RetryBuildBatchRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).RetryBuildBatchRequest), arg0)
 }
 
-// RetryBuildBatchWithContext mocks base method
+// RetryBuildBatchWithContext mocks base method.
 func (m *MockCodeBuildAPI) RetryBuildBatchWithContext(arg0 context.Context, arg1 *codebuild.RetryBuildBatchInput, arg2 ...request.Option) (*codebuild.RetryBuildBatchOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2239,14 +2240,14 @@ func (m *MockCodeBuildAPI) RetryBuildBatchWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// RetryBuildBatchWithContext indicates an expected call of RetryBuildBatchWithContext
+// RetryBuildBatchWithContext indicates an expected call of RetryBuildBatchWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) RetryBuildBatchWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RetryBuildBatchWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).RetryBuildBatchWithContext), varargs...)
 }
 
-// RetryBuildRequest mocks base method
+// RetryBuildRequest mocks base method.
 func (m *MockCodeBuildAPI) RetryBuildRequest(arg0 *codebuild.RetryBuildInput) (*request.Request, *codebuild.RetryBuildOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RetryBuildRequest", arg0)
@@ -2255,13 +2256,13 @@ func (m *MockCodeBuildAPI) RetryBuildRequest(arg0 *codebuild.RetryBuildInput) (*
 	return ret0, ret1
 }
 
-// RetryBuildRequest indicates an expected call of RetryBuildRequest
+// RetryBuildRequest indicates an expected call of RetryBuildRequest.
 func (mr *MockCodeBuildAPIMockRecorder) RetryBuildRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RetryBuildRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).RetryBuildRequest), arg0)
 }
 
-// RetryBuildWithContext mocks base method
+// RetryBuildWithContext mocks base method.
 func (m *MockCodeBuildAPI) RetryBuildWithContext(arg0 context.Context, arg1 *codebuild.RetryBuildInput, arg2 ...request.Option) (*codebuild.RetryBuildOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2274,14 +2275,14 @@ func (m *MockCodeBuildAPI) RetryBuildWithContext(arg0 context.Context, arg1 *cod
 	return ret0, ret1
 }
 
-// RetryBuildWithContext indicates an expected call of RetryBuildWithContext
+// RetryBuildWithContext indicates an expected call of RetryBuildWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) RetryBuildWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RetryBuildWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).RetryBuildWithContext), varargs...)
 }
 
-// StartBuild mocks base method
+// StartBuild mocks base method.
 func (m *MockCodeBuildAPI) StartBuild(arg0 *codebuild.StartBuildInput) (*codebuild.StartBuildOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartBuild", arg0)
@@ -2290,13 +2291,13 @@ func (m *MockCodeBuildAPI) StartBuild(arg0 *codebuild.StartBuildInput) (*codebui
 	return ret0, ret1
 }
 
-// StartBuild indicates an expected call of StartBuild
+// StartBuild indicates an expected call of StartBuild.
 func (mr *MockCodeBuildAPIMockRecorder) StartBuild(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBuild", reflect.TypeOf((*MockCodeBuildAPI)(nil).StartBuild), arg0)
 }
 
-// StartBuildBatch mocks base method
+// StartBuildBatch mocks base method.
 func (m *MockCodeBuildAPI) StartBuildBatch(arg0 *codebuild.StartBuildBatchInput) (*codebuild.StartBuildBatchOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartBuildBatch", arg0)
@@ -2305,13 +2306,13 @@ func (m *MockCodeBuildAPI) StartBuildBatch(arg0 *codebuild.StartBuildBatchInput)
 	return ret0, ret1
 }
 
-// StartBuildBatch indicates an expected call of StartBuildBatch
+// StartBuildBatch indicates an expected call of StartBuildBatch.
 func (mr *MockCodeBuildAPIMockRecorder) StartBuildBatch(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBuildBatch", reflect.TypeOf((*MockCodeBuildAPI)(nil).StartBuildBatch), arg0)
 }
 
-// StartBuildBatchRequest mocks base method
+// StartBuildBatchRequest mocks base method.
 func (m *MockCodeBuildAPI) StartBuildBatchRequest(arg0 *codebuild.StartBuildBatchInput) (*request.Request, *codebuild.StartBuildBatchOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartBuildBatchRequest", arg0)
@@ -2320,13 +2321,13 @@ func (m *MockCodeBuildAPI) StartBuildBatchRequest(arg0 *codebuild.StartBuildBatc
 	return ret0, ret1
 }
 
-// StartBuildBatchRequest indicates an expected call of StartBuildBatchRequest
+// StartBuildBatchRequest indicates an expected call of StartBuildBatchRequest.
 func (mr *MockCodeBuildAPIMockRecorder) StartBuildBatchRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBuildBatchRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).StartBuildBatchRequest), arg0)
 }
 
-// StartBuildBatchWithContext mocks base method
+// StartBuildBatchWithContext mocks base method.
 func (m *MockCodeBuildAPI) StartBuildBatchWithContext(arg0 context.Context, arg1 *codebuild.StartBuildBatchInput, arg2 ...request.Option) (*codebuild.StartBuildBatchOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2339,14 +2340,14 @@ func (m *MockCodeBuildAPI) StartBuildBatchWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// StartBuildBatchWithContext indicates an expected call of StartBuildBatchWithContext
+// StartBuildBatchWithContext indicates an expected call of StartBuildBatchWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) StartBuildBatchWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBuildBatchWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).StartBuildBatchWithContext), varargs...)
 }
 
-// StartBuildRequest mocks base method
+// StartBuildRequest mocks base method.
 func (m *MockCodeBuildAPI) StartBuildRequest(arg0 *codebuild.StartBuildInput) (*request.Request, *codebuild.StartBuildOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartBuildRequest", arg0)
@@ -2355,13 +2356,13 @@ func (m *MockCodeBuildAPI) StartBuildRequest(arg0 *codebuild.StartBuildInput) (*
 	return ret0, ret1
 }
 
-// StartBuildRequest indicates an expected call of StartBuildRequest
+// StartBuildRequest indicates an expected call of StartBuildRequest.
 func (mr *MockCodeBuildAPIMockRecorder) StartBuildRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBuildRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).StartBuildRequest), arg0)
 }
 
-// StartBuildWithContext mocks base method
+// StartBuildWithContext mocks base method.
 func (m *MockCodeBuildAPI) StartBuildWithContext(arg0 context.Context, arg1 *codebuild.StartBuildInput, arg2 ...request.Option) (*codebuild.StartBuildOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2374,14 +2375,14 @@ func (m *MockCodeBuildAPI) StartBuildWithContext(arg0 context.Context, arg1 *cod
 	return ret0, ret1
 }
 
-// StartBuildWithContext indicates an expected call of StartBuildWithContext
+// StartBuildWithContext indicates an expected call of StartBuildWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) StartBuildWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBuildWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).StartBuildWithContext), varargs...)
 }
 
-// StopBuild mocks base method
+// StopBuild mocks base method.
 func (m *MockCodeBuildAPI) StopBuild(arg0 *codebuild.StopBuildInput) (*codebuild.StopBuildOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopBuild", arg0)
@@ -2390,13 +2391,13 @@ func (m *MockCodeBuildAPI) StopBuild(arg0 *codebuild.StopBuildInput) (*codebuild
 	return ret0, ret1
 }
 
-// StopBuild indicates an expected call of StopBuild
+// StopBuild indicates an expected call of StopBuild.
 func (mr *MockCodeBuildAPIMockRecorder) StopBuild(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopBuild", reflect.TypeOf((*MockCodeBuildAPI)(nil).StopBuild), arg0)
 }
 
-// StopBuildBatch mocks base method
+// StopBuildBatch mocks base method.
 func (m *MockCodeBuildAPI) StopBuildBatch(arg0 *codebuild.StopBuildBatchInput) (*codebuild.StopBuildBatchOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopBuildBatch", arg0)
@@ -2405,13 +2406,13 @@ func (m *MockCodeBuildAPI) StopBuildBatch(arg0 *codebuild.StopBuildBatchInput) (
 	return ret0, ret1
 }
 
-// StopBuildBatch indicates an expected call of StopBuildBatch
+// StopBuildBatch indicates an expected call of StopBuildBatch.
 func (mr *MockCodeBuildAPIMockRecorder) StopBuildBatch(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopBuildBatch", reflect.TypeOf((*MockCodeBuildAPI)(nil).StopBuildBatch), arg0)
 }
 
-// StopBuildBatchRequest mocks base method
+// StopBuildBatchRequest mocks base method.
 func (m *MockCodeBuildAPI) StopBuildBatchRequest(arg0 *codebuild.StopBuildBatchInput) (*request.Request, *codebuild.StopBuildBatchOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopBuildBatchRequest", arg0)
@@ -2420,13 +2421,13 @@ func (m *MockCodeBuildAPI) StopBuildBatchRequest(arg0 *codebuild.StopBuildBatchI
 	return ret0, ret1
 }
 
-// StopBuildBatchRequest indicates an expected call of StopBuildBatchRequest
+// StopBuildBatchRequest indicates an expected call of StopBuildBatchRequest.
 func (mr *MockCodeBuildAPIMockRecorder) StopBuildBatchRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopBuildBatchRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).StopBuildBatchRequest), arg0)
 }
 
-// StopBuildBatchWithContext mocks base method
+// StopBuildBatchWithContext mocks base method.
 func (m *MockCodeBuildAPI) StopBuildBatchWithContext(arg0 context.Context, arg1 *codebuild.StopBuildBatchInput, arg2 ...request.Option) (*codebuild.StopBuildBatchOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2439,14 +2440,14 @@ func (m *MockCodeBuildAPI) StopBuildBatchWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// StopBuildBatchWithContext indicates an expected call of StopBuildBatchWithContext
+// StopBuildBatchWithContext indicates an expected call of StopBuildBatchWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) StopBuildBatchWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopBuildBatchWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).StopBuildBatchWithContext), varargs...)
 }
 
-// StopBuildRequest mocks base method
+// StopBuildRequest mocks base method.
 func (m *MockCodeBuildAPI) StopBuildRequest(arg0 *codebuild.StopBuildInput) (*request.Request, *codebuild.StopBuildOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopBuildRequest", arg0)
@@ -2455,13 +2456,13 @@ func (m *MockCodeBuildAPI) StopBuildRequest(arg0 *codebuild.StopBuildInput) (*re
 	return ret0, ret1
 }
 
-// StopBuildRequest indicates an expected call of StopBuildRequest
+// StopBuildRequest indicates an expected call of StopBuildRequest.
 func (mr *MockCodeBuildAPIMockRecorder) StopBuildRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopBuildRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).StopBuildRequest), arg0)
 }
 
-// StopBuildWithContext mocks base method
+// StopBuildWithContext mocks base method.
 func (m *MockCodeBuildAPI) StopBuildWithContext(arg0 context.Context, arg1 *codebuild.StopBuildInput, arg2 ...request.Option) (*codebuild.StopBuildOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2474,14 +2475,14 @@ func (m *MockCodeBuildAPI) StopBuildWithContext(arg0 context.Context, arg1 *code
 	return ret0, ret1
 }
 
-// StopBuildWithContext indicates an expected call of StopBuildWithContext
+// StopBuildWithContext indicates an expected call of StopBuildWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) StopBuildWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopBuildWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).StopBuildWithContext), varargs...)
 }
 
-// UpdateProject mocks base method
+// UpdateProject mocks base method.
 func (m *MockCodeBuildAPI) UpdateProject(arg0 *codebuild.UpdateProjectInput) (*codebuild.UpdateProjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateProject", arg0)
@@ -2490,13 +2491,13 @@ func (m *MockCodeBuildAPI) UpdateProject(arg0 *codebuild.UpdateProjectInput) (*c
 	return ret0, ret1
 }
 
-// UpdateProject indicates an expected call of UpdateProject
+// UpdateProject indicates an expected call of UpdateProject.
 func (mr *MockCodeBuildAPIMockRecorder) UpdateProject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateProject", reflect.TypeOf((*MockCodeBuildAPI)(nil).UpdateProject), arg0)
 }
 
-// UpdateProjectRequest mocks base method
+// UpdateProjectRequest mocks base method.
 func (m *MockCodeBuildAPI) UpdateProjectRequest(arg0 *codebuild.UpdateProjectInput) (*request.Request, *codebuild.UpdateProjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateProjectRequest", arg0)
@@ -2505,13 +2506,13 @@ func (m *MockCodeBuildAPI) UpdateProjectRequest(arg0 *codebuild.UpdateProjectInp
 	return ret0, ret1
 }
 
-// UpdateProjectRequest indicates an expected call of UpdateProjectRequest
+// UpdateProjectRequest indicates an expected call of UpdateProjectRequest.
 func (mr *MockCodeBuildAPIMockRecorder) UpdateProjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateProjectRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).UpdateProjectRequest), arg0)
 }
 
-// UpdateProjectWithContext mocks base method
+// UpdateProjectWithContext mocks base method.
 func (m *MockCodeBuildAPI) UpdateProjectWithContext(arg0 context.Context, arg1 *codebuild.UpdateProjectInput, arg2 ...request.Option) (*codebuild.UpdateProjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2524,14 +2525,14 @@ func (m *MockCodeBuildAPI) UpdateProjectWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// UpdateProjectWithContext indicates an expected call of UpdateProjectWithContext
+// UpdateProjectWithContext indicates an expected call of UpdateProjectWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) UpdateProjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateProjectWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).UpdateProjectWithContext), varargs...)
 }
 
-// UpdateReportGroup mocks base method
+// UpdateReportGroup mocks base method.
 func (m *MockCodeBuildAPI) UpdateReportGroup(arg0 *codebuild.UpdateReportGroupInput) (*codebuild.UpdateReportGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateReportGroup", arg0)
@@ -2540,13 +2541,13 @@ func (m *MockCodeBuildAPI) UpdateReportGroup(arg0 *codebuild.UpdateReportGroupIn
 	return ret0, ret1
 }
 
-// UpdateReportGroup indicates an expected call of UpdateReportGroup
+// UpdateReportGroup indicates an expected call of UpdateReportGroup.
 func (mr *MockCodeBuildAPIMockRecorder) UpdateReportGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateReportGroup", reflect.TypeOf((*MockCodeBuildAPI)(nil).UpdateReportGroup), arg0)
 }
 
-// UpdateReportGroupRequest mocks base method
+// UpdateReportGroupRequest mocks base method.
 func (m *MockCodeBuildAPI) UpdateReportGroupRequest(arg0 *codebuild.UpdateReportGroupInput) (*request.Request, *codebuild.UpdateReportGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateReportGroupRequest", arg0)
@@ -2555,13 +2556,13 @@ func (m *MockCodeBuildAPI) UpdateReportGroupRequest(arg0 *codebuild.UpdateReport
 	return ret0, ret1
 }
 
-// UpdateReportGroupRequest indicates an expected call of UpdateReportGroupRequest
+// UpdateReportGroupRequest indicates an expected call of UpdateReportGroupRequest.
 func (mr *MockCodeBuildAPIMockRecorder) UpdateReportGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateReportGroupRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).UpdateReportGroupRequest), arg0)
 }
 
-// UpdateReportGroupWithContext mocks base method
+// UpdateReportGroupWithContext mocks base method.
 func (m *MockCodeBuildAPI) UpdateReportGroupWithContext(arg0 context.Context, arg1 *codebuild.UpdateReportGroupInput, arg2 ...request.Option) (*codebuild.UpdateReportGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2574,14 +2575,14 @@ func (m *MockCodeBuildAPI) UpdateReportGroupWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateReportGroupWithContext indicates an expected call of UpdateReportGroupWithContext
+// UpdateReportGroupWithContext indicates an expected call of UpdateReportGroupWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) UpdateReportGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateReportGroupWithContext", reflect.TypeOf((*MockCodeBuildAPI)(nil).UpdateReportGroupWithContext), varargs...)
 }
 
-// UpdateWebhook mocks base method
+// UpdateWebhook mocks base method.
 func (m *MockCodeBuildAPI) UpdateWebhook(arg0 *codebuild.UpdateWebhookInput) (*codebuild.UpdateWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateWebhook", arg0)
@@ -2590,13 +2591,13 @@ func (m *MockCodeBuildAPI) UpdateWebhook(arg0 *codebuild.UpdateWebhookInput) (*c
 	return ret0, ret1
 }
 
-// UpdateWebhook indicates an expected call of UpdateWebhook
+// UpdateWebhook indicates an expected call of UpdateWebhook.
 func (mr *MockCodeBuildAPIMockRecorder) UpdateWebhook(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWebhook", reflect.TypeOf((*MockCodeBuildAPI)(nil).UpdateWebhook), arg0)
 }
 
-// UpdateWebhookRequest mocks base method
+// UpdateWebhookRequest mocks base method.
 func (m *MockCodeBuildAPI) UpdateWebhookRequest(arg0 *codebuild.UpdateWebhookInput) (*request.Request, *codebuild.UpdateWebhookOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateWebhookRequest", arg0)
@@ -2605,13 +2606,13 @@ func (m *MockCodeBuildAPI) UpdateWebhookRequest(arg0 *codebuild.UpdateWebhookInp
 	return ret0, ret1
 }
 
-// UpdateWebhookRequest indicates an expected call of UpdateWebhookRequest
+// UpdateWebhookRequest indicates an expected call of UpdateWebhookRequest.
 func (mr *MockCodeBuildAPIMockRecorder) UpdateWebhookRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWebhookRequest", reflect.TypeOf((*MockCodeBuildAPI)(nil).UpdateWebhookRequest), arg0)
 }
 
-// UpdateWebhookWithContext mocks base method
+// UpdateWebhookWithContext mocks base method.
 func (m *MockCodeBuildAPI) UpdateWebhookWithContext(arg0 context.Context, arg1 *codebuild.UpdateWebhookInput, arg2 ...request.Option) (*codebuild.UpdateWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2624,7 +2625,7 @@ func (m *MockCodeBuildAPI) UpdateWebhookWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// UpdateWebhookWithContext indicates an expected call of UpdateWebhookWithContext
+// UpdateWebhookWithContext indicates an expected call of UpdateWebhookWithContext.
 func (mr *MockCodeBuildAPIMockRecorder) UpdateWebhookWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

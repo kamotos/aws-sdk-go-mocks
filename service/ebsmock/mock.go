@@ -6,36 +6,37 @@ package ebsmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	ebs "github.com/aws/aws-sdk-go/service/ebs"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockEBSAPI is a mock of EBSAPI interface
+// MockEBSAPI is a mock of EBSAPI interface.
 type MockEBSAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockEBSAPIMockRecorder
 }
 
-// MockEBSAPIMockRecorder is the mock recorder for MockEBSAPI
+// MockEBSAPIMockRecorder is the mock recorder for MockEBSAPI.
 type MockEBSAPIMockRecorder struct {
 	mock *MockEBSAPI
 }
 
-// NewMockEBSAPI creates a new mock instance
+// NewMockEBSAPI creates a new mock instance.
 func NewMockEBSAPI(ctrl *gomock.Controller) *MockEBSAPI {
 	mock := &MockEBSAPI{ctrl: ctrl}
 	mock.recorder = &MockEBSAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockEBSAPI) EXPECT() *MockEBSAPIMockRecorder {
 	return m.recorder
 }
 
-// CompleteSnapshot mocks base method
+// CompleteSnapshot mocks base method.
 func (m *MockEBSAPI) CompleteSnapshot(arg0 *ebs.CompleteSnapshotInput) (*ebs.CompleteSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CompleteSnapshot", arg0)
@@ -44,13 +45,13 @@ func (m *MockEBSAPI) CompleteSnapshot(arg0 *ebs.CompleteSnapshotInput) (*ebs.Com
 	return ret0, ret1
 }
 
-// CompleteSnapshot indicates an expected call of CompleteSnapshot
+// CompleteSnapshot indicates an expected call of CompleteSnapshot.
 func (mr *MockEBSAPIMockRecorder) CompleteSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CompleteSnapshot", reflect.TypeOf((*MockEBSAPI)(nil).CompleteSnapshot), arg0)
 }
 
-// CompleteSnapshotRequest mocks base method
+// CompleteSnapshotRequest mocks base method.
 func (m *MockEBSAPI) CompleteSnapshotRequest(arg0 *ebs.CompleteSnapshotInput) (*request.Request, *ebs.CompleteSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CompleteSnapshotRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockEBSAPI) CompleteSnapshotRequest(arg0 *ebs.CompleteSnapshotInput) (*
 	return ret0, ret1
 }
 
-// CompleteSnapshotRequest indicates an expected call of CompleteSnapshotRequest
+// CompleteSnapshotRequest indicates an expected call of CompleteSnapshotRequest.
 func (mr *MockEBSAPIMockRecorder) CompleteSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CompleteSnapshotRequest", reflect.TypeOf((*MockEBSAPI)(nil).CompleteSnapshotRequest), arg0)
 }
 
-// CompleteSnapshotWithContext mocks base method
+// CompleteSnapshotWithContext mocks base method.
 func (m *MockEBSAPI) CompleteSnapshotWithContext(arg0 context.Context, arg1 *ebs.CompleteSnapshotInput, arg2 ...request.Option) (*ebs.CompleteSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockEBSAPI) CompleteSnapshotWithContext(arg0 context.Context, arg1 *ebs
 	return ret0, ret1
 }
 
-// CompleteSnapshotWithContext indicates an expected call of CompleteSnapshotWithContext
+// CompleteSnapshotWithContext indicates an expected call of CompleteSnapshotWithContext.
 func (mr *MockEBSAPIMockRecorder) CompleteSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CompleteSnapshotWithContext", reflect.TypeOf((*MockEBSAPI)(nil).CompleteSnapshotWithContext), varargs...)
 }
 
-// GetSnapshotBlock mocks base method
+// GetSnapshotBlock mocks base method.
 func (m *MockEBSAPI) GetSnapshotBlock(arg0 *ebs.GetSnapshotBlockInput) (*ebs.GetSnapshotBlockOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSnapshotBlock", arg0)
@@ -94,13 +95,13 @@ func (m *MockEBSAPI) GetSnapshotBlock(arg0 *ebs.GetSnapshotBlockInput) (*ebs.Get
 	return ret0, ret1
 }
 
-// GetSnapshotBlock indicates an expected call of GetSnapshotBlock
+// GetSnapshotBlock indicates an expected call of GetSnapshotBlock.
 func (mr *MockEBSAPIMockRecorder) GetSnapshotBlock(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSnapshotBlock", reflect.TypeOf((*MockEBSAPI)(nil).GetSnapshotBlock), arg0)
 }
 
-// GetSnapshotBlockRequest mocks base method
+// GetSnapshotBlockRequest mocks base method.
 func (m *MockEBSAPI) GetSnapshotBlockRequest(arg0 *ebs.GetSnapshotBlockInput) (*request.Request, *ebs.GetSnapshotBlockOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSnapshotBlockRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockEBSAPI) GetSnapshotBlockRequest(arg0 *ebs.GetSnapshotBlockInput) (*
 	return ret0, ret1
 }
 
-// GetSnapshotBlockRequest indicates an expected call of GetSnapshotBlockRequest
+// GetSnapshotBlockRequest indicates an expected call of GetSnapshotBlockRequest.
 func (mr *MockEBSAPIMockRecorder) GetSnapshotBlockRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSnapshotBlockRequest", reflect.TypeOf((*MockEBSAPI)(nil).GetSnapshotBlockRequest), arg0)
 }
 
-// GetSnapshotBlockWithContext mocks base method
+// GetSnapshotBlockWithContext mocks base method.
 func (m *MockEBSAPI) GetSnapshotBlockWithContext(arg0 context.Context, arg1 *ebs.GetSnapshotBlockInput, arg2 ...request.Option) (*ebs.GetSnapshotBlockOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockEBSAPI) GetSnapshotBlockWithContext(arg0 context.Context, arg1 *ebs
 	return ret0, ret1
 }
 
-// GetSnapshotBlockWithContext indicates an expected call of GetSnapshotBlockWithContext
+// GetSnapshotBlockWithContext indicates an expected call of GetSnapshotBlockWithContext.
 func (mr *MockEBSAPIMockRecorder) GetSnapshotBlockWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSnapshotBlockWithContext", reflect.TypeOf((*MockEBSAPI)(nil).GetSnapshotBlockWithContext), varargs...)
 }
 
-// ListChangedBlocks mocks base method
+// ListChangedBlocks mocks base method.
 func (m *MockEBSAPI) ListChangedBlocks(arg0 *ebs.ListChangedBlocksInput) (*ebs.ListChangedBlocksOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListChangedBlocks", arg0)
@@ -144,13 +145,13 @@ func (m *MockEBSAPI) ListChangedBlocks(arg0 *ebs.ListChangedBlocksInput) (*ebs.L
 	return ret0, ret1
 }
 
-// ListChangedBlocks indicates an expected call of ListChangedBlocks
+// ListChangedBlocks indicates an expected call of ListChangedBlocks.
 func (mr *MockEBSAPIMockRecorder) ListChangedBlocks(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListChangedBlocks", reflect.TypeOf((*MockEBSAPI)(nil).ListChangedBlocks), arg0)
 }
 
-// ListChangedBlocksPages mocks base method
+// ListChangedBlocksPages mocks base method.
 func (m *MockEBSAPI) ListChangedBlocksPages(arg0 *ebs.ListChangedBlocksInput, arg1 func(*ebs.ListChangedBlocksOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListChangedBlocksPages", arg0, arg1)
@@ -158,13 +159,13 @@ func (m *MockEBSAPI) ListChangedBlocksPages(arg0 *ebs.ListChangedBlocksInput, ar
 	return ret0
 }
 
-// ListChangedBlocksPages indicates an expected call of ListChangedBlocksPages
+// ListChangedBlocksPages indicates an expected call of ListChangedBlocksPages.
 func (mr *MockEBSAPIMockRecorder) ListChangedBlocksPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListChangedBlocksPages", reflect.TypeOf((*MockEBSAPI)(nil).ListChangedBlocksPages), arg0, arg1)
 }
 
-// ListChangedBlocksPagesWithContext mocks base method
+// ListChangedBlocksPagesWithContext mocks base method.
 func (m *MockEBSAPI) ListChangedBlocksPagesWithContext(arg0 context.Context, arg1 *ebs.ListChangedBlocksInput, arg2 func(*ebs.ListChangedBlocksOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -176,14 +177,14 @@ func (m *MockEBSAPI) ListChangedBlocksPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// ListChangedBlocksPagesWithContext indicates an expected call of ListChangedBlocksPagesWithContext
+// ListChangedBlocksPagesWithContext indicates an expected call of ListChangedBlocksPagesWithContext.
 func (mr *MockEBSAPIMockRecorder) ListChangedBlocksPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListChangedBlocksPagesWithContext", reflect.TypeOf((*MockEBSAPI)(nil).ListChangedBlocksPagesWithContext), varargs...)
 }
 
-// ListChangedBlocksRequest mocks base method
+// ListChangedBlocksRequest mocks base method.
 func (m *MockEBSAPI) ListChangedBlocksRequest(arg0 *ebs.ListChangedBlocksInput) (*request.Request, *ebs.ListChangedBlocksOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListChangedBlocksRequest", arg0)
@@ -192,13 +193,13 @@ func (m *MockEBSAPI) ListChangedBlocksRequest(arg0 *ebs.ListChangedBlocksInput) 
 	return ret0, ret1
 }
 
-// ListChangedBlocksRequest indicates an expected call of ListChangedBlocksRequest
+// ListChangedBlocksRequest indicates an expected call of ListChangedBlocksRequest.
 func (mr *MockEBSAPIMockRecorder) ListChangedBlocksRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListChangedBlocksRequest", reflect.TypeOf((*MockEBSAPI)(nil).ListChangedBlocksRequest), arg0)
 }
 
-// ListChangedBlocksWithContext mocks base method
+// ListChangedBlocksWithContext mocks base method.
 func (m *MockEBSAPI) ListChangedBlocksWithContext(arg0 context.Context, arg1 *ebs.ListChangedBlocksInput, arg2 ...request.Option) (*ebs.ListChangedBlocksOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -211,14 +212,14 @@ func (m *MockEBSAPI) ListChangedBlocksWithContext(arg0 context.Context, arg1 *eb
 	return ret0, ret1
 }
 
-// ListChangedBlocksWithContext indicates an expected call of ListChangedBlocksWithContext
+// ListChangedBlocksWithContext indicates an expected call of ListChangedBlocksWithContext.
 func (mr *MockEBSAPIMockRecorder) ListChangedBlocksWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListChangedBlocksWithContext", reflect.TypeOf((*MockEBSAPI)(nil).ListChangedBlocksWithContext), varargs...)
 }
 
-// ListSnapshotBlocks mocks base method
+// ListSnapshotBlocks mocks base method.
 func (m *MockEBSAPI) ListSnapshotBlocks(arg0 *ebs.ListSnapshotBlocksInput) (*ebs.ListSnapshotBlocksOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSnapshotBlocks", arg0)
@@ -227,13 +228,13 @@ func (m *MockEBSAPI) ListSnapshotBlocks(arg0 *ebs.ListSnapshotBlocksInput) (*ebs
 	return ret0, ret1
 }
 
-// ListSnapshotBlocks indicates an expected call of ListSnapshotBlocks
+// ListSnapshotBlocks indicates an expected call of ListSnapshotBlocks.
 func (mr *MockEBSAPIMockRecorder) ListSnapshotBlocks(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSnapshotBlocks", reflect.TypeOf((*MockEBSAPI)(nil).ListSnapshotBlocks), arg0)
 }
 
-// ListSnapshotBlocksPages mocks base method
+// ListSnapshotBlocksPages mocks base method.
 func (m *MockEBSAPI) ListSnapshotBlocksPages(arg0 *ebs.ListSnapshotBlocksInput, arg1 func(*ebs.ListSnapshotBlocksOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSnapshotBlocksPages", arg0, arg1)
@@ -241,13 +242,13 @@ func (m *MockEBSAPI) ListSnapshotBlocksPages(arg0 *ebs.ListSnapshotBlocksInput, 
 	return ret0
 }
 
-// ListSnapshotBlocksPages indicates an expected call of ListSnapshotBlocksPages
+// ListSnapshotBlocksPages indicates an expected call of ListSnapshotBlocksPages.
 func (mr *MockEBSAPIMockRecorder) ListSnapshotBlocksPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSnapshotBlocksPages", reflect.TypeOf((*MockEBSAPI)(nil).ListSnapshotBlocksPages), arg0, arg1)
 }
 
-// ListSnapshotBlocksPagesWithContext mocks base method
+// ListSnapshotBlocksPagesWithContext mocks base method.
 func (m *MockEBSAPI) ListSnapshotBlocksPagesWithContext(arg0 context.Context, arg1 *ebs.ListSnapshotBlocksInput, arg2 func(*ebs.ListSnapshotBlocksOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -259,14 +260,14 @@ func (m *MockEBSAPI) ListSnapshotBlocksPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// ListSnapshotBlocksPagesWithContext indicates an expected call of ListSnapshotBlocksPagesWithContext
+// ListSnapshotBlocksPagesWithContext indicates an expected call of ListSnapshotBlocksPagesWithContext.
 func (mr *MockEBSAPIMockRecorder) ListSnapshotBlocksPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSnapshotBlocksPagesWithContext", reflect.TypeOf((*MockEBSAPI)(nil).ListSnapshotBlocksPagesWithContext), varargs...)
 }
 
-// ListSnapshotBlocksRequest mocks base method
+// ListSnapshotBlocksRequest mocks base method.
 func (m *MockEBSAPI) ListSnapshotBlocksRequest(arg0 *ebs.ListSnapshotBlocksInput) (*request.Request, *ebs.ListSnapshotBlocksOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSnapshotBlocksRequest", arg0)
@@ -275,13 +276,13 @@ func (m *MockEBSAPI) ListSnapshotBlocksRequest(arg0 *ebs.ListSnapshotBlocksInput
 	return ret0, ret1
 }
 
-// ListSnapshotBlocksRequest indicates an expected call of ListSnapshotBlocksRequest
+// ListSnapshotBlocksRequest indicates an expected call of ListSnapshotBlocksRequest.
 func (mr *MockEBSAPIMockRecorder) ListSnapshotBlocksRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSnapshotBlocksRequest", reflect.TypeOf((*MockEBSAPI)(nil).ListSnapshotBlocksRequest), arg0)
 }
 
-// ListSnapshotBlocksWithContext mocks base method
+// ListSnapshotBlocksWithContext mocks base method.
 func (m *MockEBSAPI) ListSnapshotBlocksWithContext(arg0 context.Context, arg1 *ebs.ListSnapshotBlocksInput, arg2 ...request.Option) (*ebs.ListSnapshotBlocksOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -294,14 +295,14 @@ func (m *MockEBSAPI) ListSnapshotBlocksWithContext(arg0 context.Context, arg1 *e
 	return ret0, ret1
 }
 
-// ListSnapshotBlocksWithContext indicates an expected call of ListSnapshotBlocksWithContext
+// ListSnapshotBlocksWithContext indicates an expected call of ListSnapshotBlocksWithContext.
 func (mr *MockEBSAPIMockRecorder) ListSnapshotBlocksWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSnapshotBlocksWithContext", reflect.TypeOf((*MockEBSAPI)(nil).ListSnapshotBlocksWithContext), varargs...)
 }
 
-// PutSnapshotBlock mocks base method
+// PutSnapshotBlock mocks base method.
 func (m *MockEBSAPI) PutSnapshotBlock(arg0 *ebs.PutSnapshotBlockInput) (*ebs.PutSnapshotBlockOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutSnapshotBlock", arg0)
@@ -310,13 +311,13 @@ func (m *MockEBSAPI) PutSnapshotBlock(arg0 *ebs.PutSnapshotBlockInput) (*ebs.Put
 	return ret0, ret1
 }
 
-// PutSnapshotBlock indicates an expected call of PutSnapshotBlock
+// PutSnapshotBlock indicates an expected call of PutSnapshotBlock.
 func (mr *MockEBSAPIMockRecorder) PutSnapshotBlock(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutSnapshotBlock", reflect.TypeOf((*MockEBSAPI)(nil).PutSnapshotBlock), arg0)
 }
 
-// PutSnapshotBlockRequest mocks base method
+// PutSnapshotBlockRequest mocks base method.
 func (m *MockEBSAPI) PutSnapshotBlockRequest(arg0 *ebs.PutSnapshotBlockInput) (*request.Request, *ebs.PutSnapshotBlockOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutSnapshotBlockRequest", arg0)
@@ -325,13 +326,13 @@ func (m *MockEBSAPI) PutSnapshotBlockRequest(arg0 *ebs.PutSnapshotBlockInput) (*
 	return ret0, ret1
 }
 
-// PutSnapshotBlockRequest indicates an expected call of PutSnapshotBlockRequest
+// PutSnapshotBlockRequest indicates an expected call of PutSnapshotBlockRequest.
 func (mr *MockEBSAPIMockRecorder) PutSnapshotBlockRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutSnapshotBlockRequest", reflect.TypeOf((*MockEBSAPI)(nil).PutSnapshotBlockRequest), arg0)
 }
 
-// PutSnapshotBlockWithContext mocks base method
+// PutSnapshotBlockWithContext mocks base method.
 func (m *MockEBSAPI) PutSnapshotBlockWithContext(arg0 context.Context, arg1 *ebs.PutSnapshotBlockInput, arg2 ...request.Option) (*ebs.PutSnapshotBlockOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -344,14 +345,14 @@ func (m *MockEBSAPI) PutSnapshotBlockWithContext(arg0 context.Context, arg1 *ebs
 	return ret0, ret1
 }
 
-// PutSnapshotBlockWithContext indicates an expected call of PutSnapshotBlockWithContext
+// PutSnapshotBlockWithContext indicates an expected call of PutSnapshotBlockWithContext.
 func (mr *MockEBSAPIMockRecorder) PutSnapshotBlockWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutSnapshotBlockWithContext", reflect.TypeOf((*MockEBSAPI)(nil).PutSnapshotBlockWithContext), varargs...)
 }
 
-// StartSnapshot mocks base method
+// StartSnapshot mocks base method.
 func (m *MockEBSAPI) StartSnapshot(arg0 *ebs.StartSnapshotInput) (*ebs.StartSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartSnapshot", arg0)
@@ -360,13 +361,13 @@ func (m *MockEBSAPI) StartSnapshot(arg0 *ebs.StartSnapshotInput) (*ebs.StartSnap
 	return ret0, ret1
 }
 
-// StartSnapshot indicates an expected call of StartSnapshot
+// StartSnapshot indicates an expected call of StartSnapshot.
 func (mr *MockEBSAPIMockRecorder) StartSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartSnapshot", reflect.TypeOf((*MockEBSAPI)(nil).StartSnapshot), arg0)
 }
 
-// StartSnapshotRequest mocks base method
+// StartSnapshotRequest mocks base method.
 func (m *MockEBSAPI) StartSnapshotRequest(arg0 *ebs.StartSnapshotInput) (*request.Request, *ebs.StartSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartSnapshotRequest", arg0)
@@ -375,13 +376,13 @@ func (m *MockEBSAPI) StartSnapshotRequest(arg0 *ebs.StartSnapshotInput) (*reques
 	return ret0, ret1
 }
 
-// StartSnapshotRequest indicates an expected call of StartSnapshotRequest
+// StartSnapshotRequest indicates an expected call of StartSnapshotRequest.
 func (mr *MockEBSAPIMockRecorder) StartSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartSnapshotRequest", reflect.TypeOf((*MockEBSAPI)(nil).StartSnapshotRequest), arg0)
 }
 
-// StartSnapshotWithContext mocks base method
+// StartSnapshotWithContext mocks base method.
 func (m *MockEBSAPI) StartSnapshotWithContext(arg0 context.Context, arg1 *ebs.StartSnapshotInput, arg2 ...request.Option) (*ebs.StartSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -394,7 +395,7 @@ func (m *MockEBSAPI) StartSnapshotWithContext(arg0 context.Context, arg1 *ebs.St
 	return ret0, ret1
 }
 
-// StartSnapshotWithContext indicates an expected call of StartSnapshotWithContext
+// StartSnapshotWithContext indicates an expected call of StartSnapshotWithContext.
 func (mr *MockEBSAPIMockRecorder) StartSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

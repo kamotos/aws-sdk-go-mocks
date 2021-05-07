@@ -6,36 +6,37 @@ package appregistrymock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	appregistry "github.com/aws/aws-sdk-go/service/appregistry"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockAppRegistryAPI is a mock of AppRegistryAPI interface
+// MockAppRegistryAPI is a mock of AppRegistryAPI interface.
 type MockAppRegistryAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockAppRegistryAPIMockRecorder
 }
 
-// MockAppRegistryAPIMockRecorder is the mock recorder for MockAppRegistryAPI
+// MockAppRegistryAPIMockRecorder is the mock recorder for MockAppRegistryAPI.
 type MockAppRegistryAPIMockRecorder struct {
 	mock *MockAppRegistryAPI
 }
 
-// NewMockAppRegistryAPI creates a new mock instance
+// NewMockAppRegistryAPI creates a new mock instance.
 func NewMockAppRegistryAPI(ctrl *gomock.Controller) *MockAppRegistryAPI {
 	mock := &MockAppRegistryAPI{ctrl: ctrl}
 	mock.recorder = &MockAppRegistryAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockAppRegistryAPI) EXPECT() *MockAppRegistryAPIMockRecorder {
 	return m.recorder
 }
 
-// AssociateAttributeGroup mocks base method
+// AssociateAttributeGroup mocks base method.
 func (m *MockAppRegistryAPI) AssociateAttributeGroup(arg0 *appregistry.AssociateAttributeGroupInput) (*appregistry.AssociateAttributeGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateAttributeGroup", arg0)
@@ -44,13 +45,13 @@ func (m *MockAppRegistryAPI) AssociateAttributeGroup(arg0 *appregistry.Associate
 	return ret0, ret1
 }
 
-// AssociateAttributeGroup indicates an expected call of AssociateAttributeGroup
+// AssociateAttributeGroup indicates an expected call of AssociateAttributeGroup.
 func (mr *MockAppRegistryAPIMockRecorder) AssociateAttributeGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateAttributeGroup", reflect.TypeOf((*MockAppRegistryAPI)(nil).AssociateAttributeGroup), arg0)
 }
 
-// AssociateAttributeGroupRequest mocks base method
+// AssociateAttributeGroupRequest mocks base method.
 func (m *MockAppRegistryAPI) AssociateAttributeGroupRequest(arg0 *appregistry.AssociateAttributeGroupInput) (*request.Request, *appregistry.AssociateAttributeGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateAttributeGroupRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockAppRegistryAPI) AssociateAttributeGroupRequest(arg0 *appregistry.As
 	return ret0, ret1
 }
 
-// AssociateAttributeGroupRequest indicates an expected call of AssociateAttributeGroupRequest
+// AssociateAttributeGroupRequest indicates an expected call of AssociateAttributeGroupRequest.
 func (mr *MockAppRegistryAPIMockRecorder) AssociateAttributeGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateAttributeGroupRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).AssociateAttributeGroupRequest), arg0)
 }
 
-// AssociateAttributeGroupWithContext mocks base method
+// AssociateAttributeGroupWithContext mocks base method.
 func (m *MockAppRegistryAPI) AssociateAttributeGroupWithContext(arg0 context.Context, arg1 *appregistry.AssociateAttributeGroupInput, arg2 ...request.Option) (*appregistry.AssociateAttributeGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockAppRegistryAPI) AssociateAttributeGroupWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// AssociateAttributeGroupWithContext indicates an expected call of AssociateAttributeGroupWithContext
+// AssociateAttributeGroupWithContext indicates an expected call of AssociateAttributeGroupWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) AssociateAttributeGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateAttributeGroupWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).AssociateAttributeGroupWithContext), varargs...)
 }
 
-// AssociateResource mocks base method
+// AssociateResource mocks base method.
 func (m *MockAppRegistryAPI) AssociateResource(arg0 *appregistry.AssociateResourceInput) (*appregistry.AssociateResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateResource", arg0)
@@ -94,13 +95,13 @@ func (m *MockAppRegistryAPI) AssociateResource(arg0 *appregistry.AssociateResour
 	return ret0, ret1
 }
 
-// AssociateResource indicates an expected call of AssociateResource
+// AssociateResource indicates an expected call of AssociateResource.
 func (mr *MockAppRegistryAPIMockRecorder) AssociateResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateResource", reflect.TypeOf((*MockAppRegistryAPI)(nil).AssociateResource), arg0)
 }
 
-// AssociateResourceRequest mocks base method
+// AssociateResourceRequest mocks base method.
 func (m *MockAppRegistryAPI) AssociateResourceRequest(arg0 *appregistry.AssociateResourceInput) (*request.Request, *appregistry.AssociateResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateResourceRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockAppRegistryAPI) AssociateResourceRequest(arg0 *appregistry.Associat
 	return ret0, ret1
 }
 
-// AssociateResourceRequest indicates an expected call of AssociateResourceRequest
+// AssociateResourceRequest indicates an expected call of AssociateResourceRequest.
 func (mr *MockAppRegistryAPIMockRecorder) AssociateResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateResourceRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).AssociateResourceRequest), arg0)
 }
 
-// AssociateResourceWithContext mocks base method
+// AssociateResourceWithContext mocks base method.
 func (m *MockAppRegistryAPI) AssociateResourceWithContext(arg0 context.Context, arg1 *appregistry.AssociateResourceInput, arg2 ...request.Option) (*appregistry.AssociateResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockAppRegistryAPI) AssociateResourceWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// AssociateResourceWithContext indicates an expected call of AssociateResourceWithContext
+// AssociateResourceWithContext indicates an expected call of AssociateResourceWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) AssociateResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateResourceWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).AssociateResourceWithContext), varargs...)
 }
 
-// CreateApplication mocks base method
+// CreateApplication mocks base method.
 func (m *MockAppRegistryAPI) CreateApplication(arg0 *appregistry.CreateApplicationInput) (*appregistry.CreateApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateApplication", arg0)
@@ -144,13 +145,13 @@ func (m *MockAppRegistryAPI) CreateApplication(arg0 *appregistry.CreateApplicati
 	return ret0, ret1
 }
 
-// CreateApplication indicates an expected call of CreateApplication
+// CreateApplication indicates an expected call of CreateApplication.
 func (mr *MockAppRegistryAPIMockRecorder) CreateApplication(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateApplication", reflect.TypeOf((*MockAppRegistryAPI)(nil).CreateApplication), arg0)
 }
 
-// CreateApplicationRequest mocks base method
+// CreateApplicationRequest mocks base method.
 func (m *MockAppRegistryAPI) CreateApplicationRequest(arg0 *appregistry.CreateApplicationInput) (*request.Request, *appregistry.CreateApplicationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateApplicationRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockAppRegistryAPI) CreateApplicationRequest(arg0 *appregistry.CreateAp
 	return ret0, ret1
 }
 
-// CreateApplicationRequest indicates an expected call of CreateApplicationRequest
+// CreateApplicationRequest indicates an expected call of CreateApplicationRequest.
 func (mr *MockAppRegistryAPIMockRecorder) CreateApplicationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateApplicationRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).CreateApplicationRequest), arg0)
 }
 
-// CreateApplicationWithContext mocks base method
+// CreateApplicationWithContext mocks base method.
 func (m *MockAppRegistryAPI) CreateApplicationWithContext(arg0 context.Context, arg1 *appregistry.CreateApplicationInput, arg2 ...request.Option) (*appregistry.CreateApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockAppRegistryAPI) CreateApplicationWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// CreateApplicationWithContext indicates an expected call of CreateApplicationWithContext
+// CreateApplicationWithContext indicates an expected call of CreateApplicationWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) CreateApplicationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateApplicationWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).CreateApplicationWithContext), varargs...)
 }
 
-// CreateAttributeGroup mocks base method
+// CreateAttributeGroup mocks base method.
 func (m *MockAppRegistryAPI) CreateAttributeGroup(arg0 *appregistry.CreateAttributeGroupInput) (*appregistry.CreateAttributeGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAttributeGroup", arg0)
@@ -194,13 +195,13 @@ func (m *MockAppRegistryAPI) CreateAttributeGroup(arg0 *appregistry.CreateAttrib
 	return ret0, ret1
 }
 
-// CreateAttributeGroup indicates an expected call of CreateAttributeGroup
+// CreateAttributeGroup indicates an expected call of CreateAttributeGroup.
 func (mr *MockAppRegistryAPIMockRecorder) CreateAttributeGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAttributeGroup", reflect.TypeOf((*MockAppRegistryAPI)(nil).CreateAttributeGroup), arg0)
 }
 
-// CreateAttributeGroupRequest mocks base method
+// CreateAttributeGroupRequest mocks base method.
 func (m *MockAppRegistryAPI) CreateAttributeGroupRequest(arg0 *appregistry.CreateAttributeGroupInput) (*request.Request, *appregistry.CreateAttributeGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAttributeGroupRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockAppRegistryAPI) CreateAttributeGroupRequest(arg0 *appregistry.Creat
 	return ret0, ret1
 }
 
-// CreateAttributeGroupRequest indicates an expected call of CreateAttributeGroupRequest
+// CreateAttributeGroupRequest indicates an expected call of CreateAttributeGroupRequest.
 func (mr *MockAppRegistryAPIMockRecorder) CreateAttributeGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAttributeGroupRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).CreateAttributeGroupRequest), arg0)
 }
 
-// CreateAttributeGroupWithContext mocks base method
+// CreateAttributeGroupWithContext mocks base method.
 func (m *MockAppRegistryAPI) CreateAttributeGroupWithContext(arg0 context.Context, arg1 *appregistry.CreateAttributeGroupInput, arg2 ...request.Option) (*appregistry.CreateAttributeGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockAppRegistryAPI) CreateAttributeGroupWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CreateAttributeGroupWithContext indicates an expected call of CreateAttributeGroupWithContext
+// CreateAttributeGroupWithContext indicates an expected call of CreateAttributeGroupWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) CreateAttributeGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAttributeGroupWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).CreateAttributeGroupWithContext), varargs...)
 }
 
-// DeleteApplication mocks base method
+// DeleteApplication mocks base method.
 func (m *MockAppRegistryAPI) DeleteApplication(arg0 *appregistry.DeleteApplicationInput) (*appregistry.DeleteApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteApplication", arg0)
@@ -244,13 +245,13 @@ func (m *MockAppRegistryAPI) DeleteApplication(arg0 *appregistry.DeleteApplicati
 	return ret0, ret1
 }
 
-// DeleteApplication indicates an expected call of DeleteApplication
+// DeleteApplication indicates an expected call of DeleteApplication.
 func (mr *MockAppRegistryAPIMockRecorder) DeleteApplication(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteApplication", reflect.TypeOf((*MockAppRegistryAPI)(nil).DeleteApplication), arg0)
 }
 
-// DeleteApplicationRequest mocks base method
+// DeleteApplicationRequest mocks base method.
 func (m *MockAppRegistryAPI) DeleteApplicationRequest(arg0 *appregistry.DeleteApplicationInput) (*request.Request, *appregistry.DeleteApplicationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteApplicationRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockAppRegistryAPI) DeleteApplicationRequest(arg0 *appregistry.DeleteAp
 	return ret0, ret1
 }
 
-// DeleteApplicationRequest indicates an expected call of DeleteApplicationRequest
+// DeleteApplicationRequest indicates an expected call of DeleteApplicationRequest.
 func (mr *MockAppRegistryAPIMockRecorder) DeleteApplicationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteApplicationRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).DeleteApplicationRequest), arg0)
 }
 
-// DeleteApplicationWithContext mocks base method
+// DeleteApplicationWithContext mocks base method.
 func (m *MockAppRegistryAPI) DeleteApplicationWithContext(arg0 context.Context, arg1 *appregistry.DeleteApplicationInput, arg2 ...request.Option) (*appregistry.DeleteApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockAppRegistryAPI) DeleteApplicationWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DeleteApplicationWithContext indicates an expected call of DeleteApplicationWithContext
+// DeleteApplicationWithContext indicates an expected call of DeleteApplicationWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) DeleteApplicationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteApplicationWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).DeleteApplicationWithContext), varargs...)
 }
 
-// DeleteAttributeGroup mocks base method
+// DeleteAttributeGroup mocks base method.
 func (m *MockAppRegistryAPI) DeleteAttributeGroup(arg0 *appregistry.DeleteAttributeGroupInput) (*appregistry.DeleteAttributeGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAttributeGroup", arg0)
@@ -294,13 +295,13 @@ func (m *MockAppRegistryAPI) DeleteAttributeGroup(arg0 *appregistry.DeleteAttrib
 	return ret0, ret1
 }
 
-// DeleteAttributeGroup indicates an expected call of DeleteAttributeGroup
+// DeleteAttributeGroup indicates an expected call of DeleteAttributeGroup.
 func (mr *MockAppRegistryAPIMockRecorder) DeleteAttributeGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAttributeGroup", reflect.TypeOf((*MockAppRegistryAPI)(nil).DeleteAttributeGroup), arg0)
 }
 
-// DeleteAttributeGroupRequest mocks base method
+// DeleteAttributeGroupRequest mocks base method.
 func (m *MockAppRegistryAPI) DeleteAttributeGroupRequest(arg0 *appregistry.DeleteAttributeGroupInput) (*request.Request, *appregistry.DeleteAttributeGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAttributeGroupRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockAppRegistryAPI) DeleteAttributeGroupRequest(arg0 *appregistry.Delet
 	return ret0, ret1
 }
 
-// DeleteAttributeGroupRequest indicates an expected call of DeleteAttributeGroupRequest
+// DeleteAttributeGroupRequest indicates an expected call of DeleteAttributeGroupRequest.
 func (mr *MockAppRegistryAPIMockRecorder) DeleteAttributeGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAttributeGroupRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).DeleteAttributeGroupRequest), arg0)
 }
 
-// DeleteAttributeGroupWithContext mocks base method
+// DeleteAttributeGroupWithContext mocks base method.
 func (m *MockAppRegistryAPI) DeleteAttributeGroupWithContext(arg0 context.Context, arg1 *appregistry.DeleteAttributeGroupInput, arg2 ...request.Option) (*appregistry.DeleteAttributeGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockAppRegistryAPI) DeleteAttributeGroupWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteAttributeGroupWithContext indicates an expected call of DeleteAttributeGroupWithContext
+// DeleteAttributeGroupWithContext indicates an expected call of DeleteAttributeGroupWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) DeleteAttributeGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAttributeGroupWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).DeleteAttributeGroupWithContext), varargs...)
 }
 
-// DisassociateAttributeGroup mocks base method
+// DisassociateAttributeGroup mocks base method.
 func (m *MockAppRegistryAPI) DisassociateAttributeGroup(arg0 *appregistry.DisassociateAttributeGroupInput) (*appregistry.DisassociateAttributeGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateAttributeGroup", arg0)
@@ -344,13 +345,13 @@ func (m *MockAppRegistryAPI) DisassociateAttributeGroup(arg0 *appregistry.Disass
 	return ret0, ret1
 }
 
-// DisassociateAttributeGroup indicates an expected call of DisassociateAttributeGroup
+// DisassociateAttributeGroup indicates an expected call of DisassociateAttributeGroup.
 func (mr *MockAppRegistryAPIMockRecorder) DisassociateAttributeGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateAttributeGroup", reflect.TypeOf((*MockAppRegistryAPI)(nil).DisassociateAttributeGroup), arg0)
 }
 
-// DisassociateAttributeGroupRequest mocks base method
+// DisassociateAttributeGroupRequest mocks base method.
 func (m *MockAppRegistryAPI) DisassociateAttributeGroupRequest(arg0 *appregistry.DisassociateAttributeGroupInput) (*request.Request, *appregistry.DisassociateAttributeGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateAttributeGroupRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockAppRegistryAPI) DisassociateAttributeGroupRequest(arg0 *appregistry
 	return ret0, ret1
 }
 
-// DisassociateAttributeGroupRequest indicates an expected call of DisassociateAttributeGroupRequest
+// DisassociateAttributeGroupRequest indicates an expected call of DisassociateAttributeGroupRequest.
 func (mr *MockAppRegistryAPIMockRecorder) DisassociateAttributeGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateAttributeGroupRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).DisassociateAttributeGroupRequest), arg0)
 }
 
-// DisassociateAttributeGroupWithContext mocks base method
+// DisassociateAttributeGroupWithContext mocks base method.
 func (m *MockAppRegistryAPI) DisassociateAttributeGroupWithContext(arg0 context.Context, arg1 *appregistry.DisassociateAttributeGroupInput, arg2 ...request.Option) (*appregistry.DisassociateAttributeGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockAppRegistryAPI) DisassociateAttributeGroupWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// DisassociateAttributeGroupWithContext indicates an expected call of DisassociateAttributeGroupWithContext
+// DisassociateAttributeGroupWithContext indicates an expected call of DisassociateAttributeGroupWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) DisassociateAttributeGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateAttributeGroupWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).DisassociateAttributeGroupWithContext), varargs...)
 }
 
-// DisassociateResource mocks base method
+// DisassociateResource mocks base method.
 func (m *MockAppRegistryAPI) DisassociateResource(arg0 *appregistry.DisassociateResourceInput) (*appregistry.DisassociateResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateResource", arg0)
@@ -394,13 +395,13 @@ func (m *MockAppRegistryAPI) DisassociateResource(arg0 *appregistry.Disassociate
 	return ret0, ret1
 }
 
-// DisassociateResource indicates an expected call of DisassociateResource
+// DisassociateResource indicates an expected call of DisassociateResource.
 func (mr *MockAppRegistryAPIMockRecorder) DisassociateResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateResource", reflect.TypeOf((*MockAppRegistryAPI)(nil).DisassociateResource), arg0)
 }
 
-// DisassociateResourceRequest mocks base method
+// DisassociateResourceRequest mocks base method.
 func (m *MockAppRegistryAPI) DisassociateResourceRequest(arg0 *appregistry.DisassociateResourceInput) (*request.Request, *appregistry.DisassociateResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateResourceRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockAppRegistryAPI) DisassociateResourceRequest(arg0 *appregistry.Disas
 	return ret0, ret1
 }
 
-// DisassociateResourceRequest indicates an expected call of DisassociateResourceRequest
+// DisassociateResourceRequest indicates an expected call of DisassociateResourceRequest.
 func (mr *MockAppRegistryAPIMockRecorder) DisassociateResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateResourceRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).DisassociateResourceRequest), arg0)
 }
 
-// DisassociateResourceWithContext mocks base method
+// DisassociateResourceWithContext mocks base method.
 func (m *MockAppRegistryAPI) DisassociateResourceWithContext(arg0 context.Context, arg1 *appregistry.DisassociateResourceInput, arg2 ...request.Option) (*appregistry.DisassociateResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockAppRegistryAPI) DisassociateResourceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DisassociateResourceWithContext indicates an expected call of DisassociateResourceWithContext
+// DisassociateResourceWithContext indicates an expected call of DisassociateResourceWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) DisassociateResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateResourceWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).DisassociateResourceWithContext), varargs...)
 }
 
-// GetApplication mocks base method
+// GetApplication mocks base method.
 func (m *MockAppRegistryAPI) GetApplication(arg0 *appregistry.GetApplicationInput) (*appregistry.GetApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetApplication", arg0)
@@ -444,13 +445,13 @@ func (m *MockAppRegistryAPI) GetApplication(arg0 *appregistry.GetApplicationInpu
 	return ret0, ret1
 }
 
-// GetApplication indicates an expected call of GetApplication
+// GetApplication indicates an expected call of GetApplication.
 func (mr *MockAppRegistryAPIMockRecorder) GetApplication(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetApplication", reflect.TypeOf((*MockAppRegistryAPI)(nil).GetApplication), arg0)
 }
 
-// GetApplicationRequest mocks base method
+// GetApplicationRequest mocks base method.
 func (m *MockAppRegistryAPI) GetApplicationRequest(arg0 *appregistry.GetApplicationInput) (*request.Request, *appregistry.GetApplicationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetApplicationRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockAppRegistryAPI) GetApplicationRequest(arg0 *appregistry.GetApplicat
 	return ret0, ret1
 }
 
-// GetApplicationRequest indicates an expected call of GetApplicationRequest
+// GetApplicationRequest indicates an expected call of GetApplicationRequest.
 func (mr *MockAppRegistryAPIMockRecorder) GetApplicationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetApplicationRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).GetApplicationRequest), arg0)
 }
 
-// GetApplicationWithContext mocks base method
+// GetApplicationWithContext mocks base method.
 func (m *MockAppRegistryAPI) GetApplicationWithContext(arg0 context.Context, arg1 *appregistry.GetApplicationInput, arg2 ...request.Option) (*appregistry.GetApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockAppRegistryAPI) GetApplicationWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetApplicationWithContext indicates an expected call of GetApplicationWithContext
+// GetApplicationWithContext indicates an expected call of GetApplicationWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) GetApplicationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetApplicationWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).GetApplicationWithContext), varargs...)
 }
 
-// GetAttributeGroup mocks base method
+// GetAttributeGroup mocks base method.
 func (m *MockAppRegistryAPI) GetAttributeGroup(arg0 *appregistry.GetAttributeGroupInput) (*appregistry.GetAttributeGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAttributeGroup", arg0)
@@ -494,13 +495,13 @@ func (m *MockAppRegistryAPI) GetAttributeGroup(arg0 *appregistry.GetAttributeGro
 	return ret0, ret1
 }
 
-// GetAttributeGroup indicates an expected call of GetAttributeGroup
+// GetAttributeGroup indicates an expected call of GetAttributeGroup.
 func (mr *MockAppRegistryAPIMockRecorder) GetAttributeGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAttributeGroup", reflect.TypeOf((*MockAppRegistryAPI)(nil).GetAttributeGroup), arg0)
 }
 
-// GetAttributeGroupRequest mocks base method
+// GetAttributeGroupRequest mocks base method.
 func (m *MockAppRegistryAPI) GetAttributeGroupRequest(arg0 *appregistry.GetAttributeGroupInput) (*request.Request, *appregistry.GetAttributeGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAttributeGroupRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockAppRegistryAPI) GetAttributeGroupRequest(arg0 *appregistry.GetAttri
 	return ret0, ret1
 }
 
-// GetAttributeGroupRequest indicates an expected call of GetAttributeGroupRequest
+// GetAttributeGroupRequest indicates an expected call of GetAttributeGroupRequest.
 func (mr *MockAppRegistryAPIMockRecorder) GetAttributeGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAttributeGroupRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).GetAttributeGroupRequest), arg0)
 }
 
-// GetAttributeGroupWithContext mocks base method
+// GetAttributeGroupWithContext mocks base method.
 func (m *MockAppRegistryAPI) GetAttributeGroupWithContext(arg0 context.Context, arg1 *appregistry.GetAttributeGroupInput, arg2 ...request.Option) (*appregistry.GetAttributeGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockAppRegistryAPI) GetAttributeGroupWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// GetAttributeGroupWithContext indicates an expected call of GetAttributeGroupWithContext
+// GetAttributeGroupWithContext indicates an expected call of GetAttributeGroupWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) GetAttributeGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAttributeGroupWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).GetAttributeGroupWithContext), varargs...)
 }
 
-// ListApplications mocks base method
+// ListApplications mocks base method.
 func (m *MockAppRegistryAPI) ListApplications(arg0 *appregistry.ListApplicationsInput) (*appregistry.ListApplicationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListApplications", arg0)
@@ -544,13 +545,13 @@ func (m *MockAppRegistryAPI) ListApplications(arg0 *appregistry.ListApplications
 	return ret0, ret1
 }
 
-// ListApplications indicates an expected call of ListApplications
+// ListApplications indicates an expected call of ListApplications.
 func (mr *MockAppRegistryAPIMockRecorder) ListApplications(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListApplications", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListApplications), arg0)
 }
 
-// ListApplicationsPages mocks base method
+// ListApplicationsPages mocks base method.
 func (m *MockAppRegistryAPI) ListApplicationsPages(arg0 *appregistry.ListApplicationsInput, arg1 func(*appregistry.ListApplicationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListApplicationsPages", arg0, arg1)
@@ -558,13 +559,13 @@ func (m *MockAppRegistryAPI) ListApplicationsPages(arg0 *appregistry.ListApplica
 	return ret0
 }
 
-// ListApplicationsPages indicates an expected call of ListApplicationsPages
+// ListApplicationsPages indicates an expected call of ListApplicationsPages.
 func (mr *MockAppRegistryAPIMockRecorder) ListApplicationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListApplicationsPages", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListApplicationsPages), arg0, arg1)
 }
 
-// ListApplicationsPagesWithContext mocks base method
+// ListApplicationsPagesWithContext mocks base method.
 func (m *MockAppRegistryAPI) ListApplicationsPagesWithContext(arg0 context.Context, arg1 *appregistry.ListApplicationsInput, arg2 func(*appregistry.ListApplicationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -576,14 +577,14 @@ func (m *MockAppRegistryAPI) ListApplicationsPagesWithContext(arg0 context.Conte
 	return ret0
 }
 
-// ListApplicationsPagesWithContext indicates an expected call of ListApplicationsPagesWithContext
+// ListApplicationsPagesWithContext indicates an expected call of ListApplicationsPagesWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) ListApplicationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListApplicationsPagesWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListApplicationsPagesWithContext), varargs...)
 }
 
-// ListApplicationsRequest mocks base method
+// ListApplicationsRequest mocks base method.
 func (m *MockAppRegistryAPI) ListApplicationsRequest(arg0 *appregistry.ListApplicationsInput) (*request.Request, *appregistry.ListApplicationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListApplicationsRequest", arg0)
@@ -592,13 +593,13 @@ func (m *MockAppRegistryAPI) ListApplicationsRequest(arg0 *appregistry.ListAppli
 	return ret0, ret1
 }
 
-// ListApplicationsRequest indicates an expected call of ListApplicationsRequest
+// ListApplicationsRequest indicates an expected call of ListApplicationsRequest.
 func (mr *MockAppRegistryAPIMockRecorder) ListApplicationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListApplicationsRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListApplicationsRequest), arg0)
 }
 
-// ListApplicationsWithContext mocks base method
+// ListApplicationsWithContext mocks base method.
 func (m *MockAppRegistryAPI) ListApplicationsWithContext(arg0 context.Context, arg1 *appregistry.ListApplicationsInput, arg2 ...request.Option) (*appregistry.ListApplicationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -611,14 +612,14 @@ func (m *MockAppRegistryAPI) ListApplicationsWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ListApplicationsWithContext indicates an expected call of ListApplicationsWithContext
+// ListApplicationsWithContext indicates an expected call of ListApplicationsWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) ListApplicationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListApplicationsWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListApplicationsWithContext), varargs...)
 }
 
-// ListAssociatedAttributeGroups mocks base method
+// ListAssociatedAttributeGroups mocks base method.
 func (m *MockAppRegistryAPI) ListAssociatedAttributeGroups(arg0 *appregistry.ListAssociatedAttributeGroupsInput) (*appregistry.ListAssociatedAttributeGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAssociatedAttributeGroups", arg0)
@@ -627,13 +628,13 @@ func (m *MockAppRegistryAPI) ListAssociatedAttributeGroups(arg0 *appregistry.Lis
 	return ret0, ret1
 }
 
-// ListAssociatedAttributeGroups indicates an expected call of ListAssociatedAttributeGroups
+// ListAssociatedAttributeGroups indicates an expected call of ListAssociatedAttributeGroups.
 func (mr *MockAppRegistryAPIMockRecorder) ListAssociatedAttributeGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssociatedAttributeGroups", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAssociatedAttributeGroups), arg0)
 }
 
-// ListAssociatedAttributeGroupsPages mocks base method
+// ListAssociatedAttributeGroupsPages mocks base method.
 func (m *MockAppRegistryAPI) ListAssociatedAttributeGroupsPages(arg0 *appregistry.ListAssociatedAttributeGroupsInput, arg1 func(*appregistry.ListAssociatedAttributeGroupsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAssociatedAttributeGroupsPages", arg0, arg1)
@@ -641,13 +642,13 @@ func (m *MockAppRegistryAPI) ListAssociatedAttributeGroupsPages(arg0 *appregistr
 	return ret0
 }
 
-// ListAssociatedAttributeGroupsPages indicates an expected call of ListAssociatedAttributeGroupsPages
+// ListAssociatedAttributeGroupsPages indicates an expected call of ListAssociatedAttributeGroupsPages.
 func (mr *MockAppRegistryAPIMockRecorder) ListAssociatedAttributeGroupsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssociatedAttributeGroupsPages", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAssociatedAttributeGroupsPages), arg0, arg1)
 }
 
-// ListAssociatedAttributeGroupsPagesWithContext mocks base method
+// ListAssociatedAttributeGroupsPagesWithContext mocks base method.
 func (m *MockAppRegistryAPI) ListAssociatedAttributeGroupsPagesWithContext(arg0 context.Context, arg1 *appregistry.ListAssociatedAttributeGroupsInput, arg2 func(*appregistry.ListAssociatedAttributeGroupsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -659,14 +660,14 @@ func (m *MockAppRegistryAPI) ListAssociatedAttributeGroupsPagesWithContext(arg0 
 	return ret0
 }
 
-// ListAssociatedAttributeGroupsPagesWithContext indicates an expected call of ListAssociatedAttributeGroupsPagesWithContext
+// ListAssociatedAttributeGroupsPagesWithContext indicates an expected call of ListAssociatedAttributeGroupsPagesWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) ListAssociatedAttributeGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssociatedAttributeGroupsPagesWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAssociatedAttributeGroupsPagesWithContext), varargs...)
 }
 
-// ListAssociatedAttributeGroupsRequest mocks base method
+// ListAssociatedAttributeGroupsRequest mocks base method.
 func (m *MockAppRegistryAPI) ListAssociatedAttributeGroupsRequest(arg0 *appregistry.ListAssociatedAttributeGroupsInput) (*request.Request, *appregistry.ListAssociatedAttributeGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAssociatedAttributeGroupsRequest", arg0)
@@ -675,13 +676,13 @@ func (m *MockAppRegistryAPI) ListAssociatedAttributeGroupsRequest(arg0 *appregis
 	return ret0, ret1
 }
 
-// ListAssociatedAttributeGroupsRequest indicates an expected call of ListAssociatedAttributeGroupsRequest
+// ListAssociatedAttributeGroupsRequest indicates an expected call of ListAssociatedAttributeGroupsRequest.
 func (mr *MockAppRegistryAPIMockRecorder) ListAssociatedAttributeGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssociatedAttributeGroupsRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAssociatedAttributeGroupsRequest), arg0)
 }
 
-// ListAssociatedAttributeGroupsWithContext mocks base method
+// ListAssociatedAttributeGroupsWithContext mocks base method.
 func (m *MockAppRegistryAPI) ListAssociatedAttributeGroupsWithContext(arg0 context.Context, arg1 *appregistry.ListAssociatedAttributeGroupsInput, arg2 ...request.Option) (*appregistry.ListAssociatedAttributeGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -694,14 +695,14 @@ func (m *MockAppRegistryAPI) ListAssociatedAttributeGroupsWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// ListAssociatedAttributeGroupsWithContext indicates an expected call of ListAssociatedAttributeGroupsWithContext
+// ListAssociatedAttributeGroupsWithContext indicates an expected call of ListAssociatedAttributeGroupsWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) ListAssociatedAttributeGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssociatedAttributeGroupsWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAssociatedAttributeGroupsWithContext), varargs...)
 }
 
-// ListAssociatedResources mocks base method
+// ListAssociatedResources mocks base method.
 func (m *MockAppRegistryAPI) ListAssociatedResources(arg0 *appregistry.ListAssociatedResourcesInput) (*appregistry.ListAssociatedResourcesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAssociatedResources", arg0)
@@ -710,13 +711,13 @@ func (m *MockAppRegistryAPI) ListAssociatedResources(arg0 *appregistry.ListAssoc
 	return ret0, ret1
 }
 
-// ListAssociatedResources indicates an expected call of ListAssociatedResources
+// ListAssociatedResources indicates an expected call of ListAssociatedResources.
 func (mr *MockAppRegistryAPIMockRecorder) ListAssociatedResources(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssociatedResources", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAssociatedResources), arg0)
 }
 
-// ListAssociatedResourcesPages mocks base method
+// ListAssociatedResourcesPages mocks base method.
 func (m *MockAppRegistryAPI) ListAssociatedResourcesPages(arg0 *appregistry.ListAssociatedResourcesInput, arg1 func(*appregistry.ListAssociatedResourcesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAssociatedResourcesPages", arg0, arg1)
@@ -724,13 +725,13 @@ func (m *MockAppRegistryAPI) ListAssociatedResourcesPages(arg0 *appregistry.List
 	return ret0
 }
 
-// ListAssociatedResourcesPages indicates an expected call of ListAssociatedResourcesPages
+// ListAssociatedResourcesPages indicates an expected call of ListAssociatedResourcesPages.
 func (mr *MockAppRegistryAPIMockRecorder) ListAssociatedResourcesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssociatedResourcesPages", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAssociatedResourcesPages), arg0, arg1)
 }
 
-// ListAssociatedResourcesPagesWithContext mocks base method
+// ListAssociatedResourcesPagesWithContext mocks base method.
 func (m *MockAppRegistryAPI) ListAssociatedResourcesPagesWithContext(arg0 context.Context, arg1 *appregistry.ListAssociatedResourcesInput, arg2 func(*appregistry.ListAssociatedResourcesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -742,14 +743,14 @@ func (m *MockAppRegistryAPI) ListAssociatedResourcesPagesWithContext(arg0 contex
 	return ret0
 }
 
-// ListAssociatedResourcesPagesWithContext indicates an expected call of ListAssociatedResourcesPagesWithContext
+// ListAssociatedResourcesPagesWithContext indicates an expected call of ListAssociatedResourcesPagesWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) ListAssociatedResourcesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssociatedResourcesPagesWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAssociatedResourcesPagesWithContext), varargs...)
 }
 
-// ListAssociatedResourcesRequest mocks base method
+// ListAssociatedResourcesRequest mocks base method.
 func (m *MockAppRegistryAPI) ListAssociatedResourcesRequest(arg0 *appregistry.ListAssociatedResourcesInput) (*request.Request, *appregistry.ListAssociatedResourcesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAssociatedResourcesRequest", arg0)
@@ -758,13 +759,13 @@ func (m *MockAppRegistryAPI) ListAssociatedResourcesRequest(arg0 *appregistry.Li
 	return ret0, ret1
 }
 
-// ListAssociatedResourcesRequest indicates an expected call of ListAssociatedResourcesRequest
+// ListAssociatedResourcesRequest indicates an expected call of ListAssociatedResourcesRequest.
 func (mr *MockAppRegistryAPIMockRecorder) ListAssociatedResourcesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssociatedResourcesRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAssociatedResourcesRequest), arg0)
 }
 
-// ListAssociatedResourcesWithContext mocks base method
+// ListAssociatedResourcesWithContext mocks base method.
 func (m *MockAppRegistryAPI) ListAssociatedResourcesWithContext(arg0 context.Context, arg1 *appregistry.ListAssociatedResourcesInput, arg2 ...request.Option) (*appregistry.ListAssociatedResourcesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -777,14 +778,14 @@ func (m *MockAppRegistryAPI) ListAssociatedResourcesWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListAssociatedResourcesWithContext indicates an expected call of ListAssociatedResourcesWithContext
+// ListAssociatedResourcesWithContext indicates an expected call of ListAssociatedResourcesWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) ListAssociatedResourcesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssociatedResourcesWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAssociatedResourcesWithContext), varargs...)
 }
 
-// ListAttributeGroups mocks base method
+// ListAttributeGroups mocks base method.
 func (m *MockAppRegistryAPI) ListAttributeGroups(arg0 *appregistry.ListAttributeGroupsInput) (*appregistry.ListAttributeGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAttributeGroups", arg0)
@@ -793,13 +794,13 @@ func (m *MockAppRegistryAPI) ListAttributeGroups(arg0 *appregistry.ListAttribute
 	return ret0, ret1
 }
 
-// ListAttributeGroups indicates an expected call of ListAttributeGroups
+// ListAttributeGroups indicates an expected call of ListAttributeGroups.
 func (mr *MockAppRegistryAPIMockRecorder) ListAttributeGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAttributeGroups", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAttributeGroups), arg0)
 }
 
-// ListAttributeGroupsPages mocks base method
+// ListAttributeGroupsPages mocks base method.
 func (m *MockAppRegistryAPI) ListAttributeGroupsPages(arg0 *appregistry.ListAttributeGroupsInput, arg1 func(*appregistry.ListAttributeGroupsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAttributeGroupsPages", arg0, arg1)
@@ -807,13 +808,13 @@ func (m *MockAppRegistryAPI) ListAttributeGroupsPages(arg0 *appregistry.ListAttr
 	return ret0
 }
 
-// ListAttributeGroupsPages indicates an expected call of ListAttributeGroupsPages
+// ListAttributeGroupsPages indicates an expected call of ListAttributeGroupsPages.
 func (mr *MockAppRegistryAPIMockRecorder) ListAttributeGroupsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAttributeGroupsPages", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAttributeGroupsPages), arg0, arg1)
 }
 
-// ListAttributeGroupsPagesWithContext mocks base method
+// ListAttributeGroupsPagesWithContext mocks base method.
 func (m *MockAppRegistryAPI) ListAttributeGroupsPagesWithContext(arg0 context.Context, arg1 *appregistry.ListAttributeGroupsInput, arg2 func(*appregistry.ListAttributeGroupsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -825,14 +826,14 @@ func (m *MockAppRegistryAPI) ListAttributeGroupsPagesWithContext(arg0 context.Co
 	return ret0
 }
 
-// ListAttributeGroupsPagesWithContext indicates an expected call of ListAttributeGroupsPagesWithContext
+// ListAttributeGroupsPagesWithContext indicates an expected call of ListAttributeGroupsPagesWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) ListAttributeGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAttributeGroupsPagesWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAttributeGroupsPagesWithContext), varargs...)
 }
 
-// ListAttributeGroupsRequest mocks base method
+// ListAttributeGroupsRequest mocks base method.
 func (m *MockAppRegistryAPI) ListAttributeGroupsRequest(arg0 *appregistry.ListAttributeGroupsInput) (*request.Request, *appregistry.ListAttributeGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAttributeGroupsRequest", arg0)
@@ -841,13 +842,13 @@ func (m *MockAppRegistryAPI) ListAttributeGroupsRequest(arg0 *appregistry.ListAt
 	return ret0, ret1
 }
 
-// ListAttributeGroupsRequest indicates an expected call of ListAttributeGroupsRequest
+// ListAttributeGroupsRequest indicates an expected call of ListAttributeGroupsRequest.
 func (mr *MockAppRegistryAPIMockRecorder) ListAttributeGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAttributeGroupsRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAttributeGroupsRequest), arg0)
 }
 
-// ListAttributeGroupsWithContext mocks base method
+// ListAttributeGroupsWithContext mocks base method.
 func (m *MockAppRegistryAPI) ListAttributeGroupsWithContext(arg0 context.Context, arg1 *appregistry.ListAttributeGroupsInput, arg2 ...request.Option) (*appregistry.ListAttributeGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -860,14 +861,14 @@ func (m *MockAppRegistryAPI) ListAttributeGroupsWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListAttributeGroupsWithContext indicates an expected call of ListAttributeGroupsWithContext
+// ListAttributeGroupsWithContext indicates an expected call of ListAttributeGroupsWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) ListAttributeGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAttributeGroupsWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListAttributeGroupsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockAppRegistryAPI) ListTagsForResource(arg0 *appregistry.ListTagsForResourceInput) (*appregistry.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -876,13 +877,13 @@ func (m *MockAppRegistryAPI) ListTagsForResource(arg0 *appregistry.ListTagsForRe
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockAppRegistryAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockAppRegistryAPI) ListTagsForResourceRequest(arg0 *appregistry.ListTagsForResourceInput) (*request.Request, *appregistry.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -891,13 +892,13 @@ func (m *MockAppRegistryAPI) ListTagsForResourceRequest(arg0 *appregistry.ListTa
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockAppRegistryAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockAppRegistryAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *appregistry.ListTagsForResourceInput, arg2 ...request.Option) (*appregistry.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -910,14 +911,14 @@ func (m *MockAppRegistryAPI) ListTagsForResourceWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// SyncResource mocks base method
+// SyncResource mocks base method.
 func (m *MockAppRegistryAPI) SyncResource(arg0 *appregistry.SyncResourceInput) (*appregistry.SyncResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SyncResource", arg0)
@@ -926,13 +927,13 @@ func (m *MockAppRegistryAPI) SyncResource(arg0 *appregistry.SyncResourceInput) (
 	return ret0, ret1
 }
 
-// SyncResource indicates an expected call of SyncResource
+// SyncResource indicates an expected call of SyncResource.
 func (mr *MockAppRegistryAPIMockRecorder) SyncResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SyncResource", reflect.TypeOf((*MockAppRegistryAPI)(nil).SyncResource), arg0)
 }
 
-// SyncResourceRequest mocks base method
+// SyncResourceRequest mocks base method.
 func (m *MockAppRegistryAPI) SyncResourceRequest(arg0 *appregistry.SyncResourceInput) (*request.Request, *appregistry.SyncResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SyncResourceRequest", arg0)
@@ -941,13 +942,13 @@ func (m *MockAppRegistryAPI) SyncResourceRequest(arg0 *appregistry.SyncResourceI
 	return ret0, ret1
 }
 
-// SyncResourceRequest indicates an expected call of SyncResourceRequest
+// SyncResourceRequest indicates an expected call of SyncResourceRequest.
 func (mr *MockAppRegistryAPIMockRecorder) SyncResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SyncResourceRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).SyncResourceRequest), arg0)
 }
 
-// SyncResourceWithContext mocks base method
+// SyncResourceWithContext mocks base method.
 func (m *MockAppRegistryAPI) SyncResourceWithContext(arg0 context.Context, arg1 *appregistry.SyncResourceInput, arg2 ...request.Option) (*appregistry.SyncResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -960,14 +961,14 @@ func (m *MockAppRegistryAPI) SyncResourceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// SyncResourceWithContext indicates an expected call of SyncResourceWithContext
+// SyncResourceWithContext indicates an expected call of SyncResourceWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) SyncResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SyncResourceWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).SyncResourceWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockAppRegistryAPI) TagResource(arg0 *appregistry.TagResourceInput) (*appregistry.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -976,13 +977,13 @@ func (m *MockAppRegistryAPI) TagResource(arg0 *appregistry.TagResourceInput) (*a
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockAppRegistryAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockAppRegistryAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockAppRegistryAPI) TagResourceRequest(arg0 *appregistry.TagResourceInput) (*request.Request, *appregistry.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -991,13 +992,13 @@ func (m *MockAppRegistryAPI) TagResourceRequest(arg0 *appregistry.TagResourceInp
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockAppRegistryAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockAppRegistryAPI) TagResourceWithContext(arg0 context.Context, arg1 *appregistry.TagResourceInput, arg2 ...request.Option) (*appregistry.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1010,14 +1011,14 @@ func (m *MockAppRegistryAPI) TagResourceWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockAppRegistryAPI) UntagResource(arg0 *appregistry.UntagResourceInput) (*appregistry.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1026,13 +1027,13 @@ func (m *MockAppRegistryAPI) UntagResource(arg0 *appregistry.UntagResourceInput)
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockAppRegistryAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockAppRegistryAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockAppRegistryAPI) UntagResourceRequest(arg0 *appregistry.UntagResourceInput) (*request.Request, *appregistry.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1041,13 +1042,13 @@ func (m *MockAppRegistryAPI) UntagResourceRequest(arg0 *appregistry.UntagResourc
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockAppRegistryAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockAppRegistryAPI) UntagResourceWithContext(arg0 context.Context, arg1 *appregistry.UntagResourceInput, arg2 ...request.Option) (*appregistry.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1060,14 +1061,14 @@ func (m *MockAppRegistryAPI) UntagResourceWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateApplication mocks base method
+// UpdateApplication mocks base method.
 func (m *MockAppRegistryAPI) UpdateApplication(arg0 *appregistry.UpdateApplicationInput) (*appregistry.UpdateApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateApplication", arg0)
@@ -1076,13 +1077,13 @@ func (m *MockAppRegistryAPI) UpdateApplication(arg0 *appregistry.UpdateApplicati
 	return ret0, ret1
 }
 
-// UpdateApplication indicates an expected call of UpdateApplication
+// UpdateApplication indicates an expected call of UpdateApplication.
 func (mr *MockAppRegistryAPIMockRecorder) UpdateApplication(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateApplication", reflect.TypeOf((*MockAppRegistryAPI)(nil).UpdateApplication), arg0)
 }
 
-// UpdateApplicationRequest mocks base method
+// UpdateApplicationRequest mocks base method.
 func (m *MockAppRegistryAPI) UpdateApplicationRequest(arg0 *appregistry.UpdateApplicationInput) (*request.Request, *appregistry.UpdateApplicationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateApplicationRequest", arg0)
@@ -1091,13 +1092,13 @@ func (m *MockAppRegistryAPI) UpdateApplicationRequest(arg0 *appregistry.UpdateAp
 	return ret0, ret1
 }
 
-// UpdateApplicationRequest indicates an expected call of UpdateApplicationRequest
+// UpdateApplicationRequest indicates an expected call of UpdateApplicationRequest.
 func (mr *MockAppRegistryAPIMockRecorder) UpdateApplicationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateApplicationRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).UpdateApplicationRequest), arg0)
 }
 
-// UpdateApplicationWithContext mocks base method
+// UpdateApplicationWithContext mocks base method.
 func (m *MockAppRegistryAPI) UpdateApplicationWithContext(arg0 context.Context, arg1 *appregistry.UpdateApplicationInput, arg2 ...request.Option) (*appregistry.UpdateApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1110,14 +1111,14 @@ func (m *MockAppRegistryAPI) UpdateApplicationWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// UpdateApplicationWithContext indicates an expected call of UpdateApplicationWithContext
+// UpdateApplicationWithContext indicates an expected call of UpdateApplicationWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) UpdateApplicationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateApplicationWithContext", reflect.TypeOf((*MockAppRegistryAPI)(nil).UpdateApplicationWithContext), varargs...)
 }
 
-// UpdateAttributeGroup mocks base method
+// UpdateAttributeGroup mocks base method.
 func (m *MockAppRegistryAPI) UpdateAttributeGroup(arg0 *appregistry.UpdateAttributeGroupInput) (*appregistry.UpdateAttributeGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAttributeGroup", arg0)
@@ -1126,13 +1127,13 @@ func (m *MockAppRegistryAPI) UpdateAttributeGroup(arg0 *appregistry.UpdateAttrib
 	return ret0, ret1
 }
 
-// UpdateAttributeGroup indicates an expected call of UpdateAttributeGroup
+// UpdateAttributeGroup indicates an expected call of UpdateAttributeGroup.
 func (mr *MockAppRegistryAPIMockRecorder) UpdateAttributeGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAttributeGroup", reflect.TypeOf((*MockAppRegistryAPI)(nil).UpdateAttributeGroup), arg0)
 }
 
-// UpdateAttributeGroupRequest mocks base method
+// UpdateAttributeGroupRequest mocks base method.
 func (m *MockAppRegistryAPI) UpdateAttributeGroupRequest(arg0 *appregistry.UpdateAttributeGroupInput) (*request.Request, *appregistry.UpdateAttributeGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAttributeGroupRequest", arg0)
@@ -1141,13 +1142,13 @@ func (m *MockAppRegistryAPI) UpdateAttributeGroupRequest(arg0 *appregistry.Updat
 	return ret0, ret1
 }
 
-// UpdateAttributeGroupRequest indicates an expected call of UpdateAttributeGroupRequest
+// UpdateAttributeGroupRequest indicates an expected call of UpdateAttributeGroupRequest.
 func (mr *MockAppRegistryAPIMockRecorder) UpdateAttributeGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAttributeGroupRequest", reflect.TypeOf((*MockAppRegistryAPI)(nil).UpdateAttributeGroupRequest), arg0)
 }
 
-// UpdateAttributeGroupWithContext mocks base method
+// UpdateAttributeGroupWithContext mocks base method.
 func (m *MockAppRegistryAPI) UpdateAttributeGroupWithContext(arg0 context.Context, arg1 *appregistry.UpdateAttributeGroupInput, arg2 ...request.Option) (*appregistry.UpdateAttributeGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1160,7 +1161,7 @@ func (m *MockAppRegistryAPI) UpdateAttributeGroupWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// UpdateAttributeGroupWithContext indicates an expected call of UpdateAttributeGroupWithContext
+// UpdateAttributeGroupWithContext indicates an expected call of UpdateAttributeGroupWithContext.
 func (mr *MockAppRegistryAPIMockRecorder) UpdateAttributeGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

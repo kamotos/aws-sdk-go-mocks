@@ -6,36 +6,37 @@ package globalacceleratormock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	globalaccelerator "github.com/aws/aws-sdk-go/service/globalaccelerator"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockGlobalAcceleratorAPI is a mock of GlobalAcceleratorAPI interface
+// MockGlobalAcceleratorAPI is a mock of GlobalAcceleratorAPI interface.
 type MockGlobalAcceleratorAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockGlobalAcceleratorAPIMockRecorder
 }
 
-// MockGlobalAcceleratorAPIMockRecorder is the mock recorder for MockGlobalAcceleratorAPI
+// MockGlobalAcceleratorAPIMockRecorder is the mock recorder for MockGlobalAcceleratorAPI.
 type MockGlobalAcceleratorAPIMockRecorder struct {
 	mock *MockGlobalAcceleratorAPI
 }
 
-// NewMockGlobalAcceleratorAPI creates a new mock instance
+// NewMockGlobalAcceleratorAPI creates a new mock instance.
 func NewMockGlobalAcceleratorAPI(ctrl *gomock.Controller) *MockGlobalAcceleratorAPI {
 	mock := &MockGlobalAcceleratorAPI{ctrl: ctrl}
 	mock.recorder = &MockGlobalAcceleratorAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockGlobalAcceleratorAPI) EXPECT() *MockGlobalAcceleratorAPIMockRecorder {
 	return m.recorder
 }
 
-// AddCustomRoutingEndpoints mocks base method
+// AddCustomRoutingEndpoints mocks base method.
 func (m *MockGlobalAcceleratorAPI) AddCustomRoutingEndpoints(arg0 *globalaccelerator.AddCustomRoutingEndpointsInput) (*globalaccelerator.AddCustomRoutingEndpointsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AddCustomRoutingEndpoints", arg0)
@@ -44,13 +45,13 @@ func (m *MockGlobalAcceleratorAPI) AddCustomRoutingEndpoints(arg0 *globalacceler
 	return ret0, ret1
 }
 
-// AddCustomRoutingEndpoints indicates an expected call of AddCustomRoutingEndpoints
+// AddCustomRoutingEndpoints indicates an expected call of AddCustomRoutingEndpoints.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) AddCustomRoutingEndpoints(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddCustomRoutingEndpoints", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).AddCustomRoutingEndpoints), arg0)
 }
 
-// AddCustomRoutingEndpointsRequest mocks base method
+// AddCustomRoutingEndpointsRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) AddCustomRoutingEndpointsRequest(arg0 *globalaccelerator.AddCustomRoutingEndpointsInput) (*request.Request, *globalaccelerator.AddCustomRoutingEndpointsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AddCustomRoutingEndpointsRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockGlobalAcceleratorAPI) AddCustomRoutingEndpointsRequest(arg0 *global
 	return ret0, ret1
 }
 
-// AddCustomRoutingEndpointsRequest indicates an expected call of AddCustomRoutingEndpointsRequest
+// AddCustomRoutingEndpointsRequest indicates an expected call of AddCustomRoutingEndpointsRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) AddCustomRoutingEndpointsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddCustomRoutingEndpointsRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).AddCustomRoutingEndpointsRequest), arg0)
 }
 
-// AddCustomRoutingEndpointsWithContext mocks base method
+// AddCustomRoutingEndpointsWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) AddCustomRoutingEndpointsWithContext(arg0 context.Context, arg1 *globalaccelerator.AddCustomRoutingEndpointsInput, arg2 ...request.Option) (*globalaccelerator.AddCustomRoutingEndpointsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockGlobalAcceleratorAPI) AddCustomRoutingEndpointsWithContext(arg0 con
 	return ret0, ret1
 }
 
-// AddCustomRoutingEndpointsWithContext indicates an expected call of AddCustomRoutingEndpointsWithContext
+// AddCustomRoutingEndpointsWithContext indicates an expected call of AddCustomRoutingEndpointsWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) AddCustomRoutingEndpointsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddCustomRoutingEndpointsWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).AddCustomRoutingEndpointsWithContext), varargs...)
 }
 
-// AdvertiseByoipCidr mocks base method
+// AdvertiseByoipCidr mocks base method.
 func (m *MockGlobalAcceleratorAPI) AdvertiseByoipCidr(arg0 *globalaccelerator.AdvertiseByoipCidrInput) (*globalaccelerator.AdvertiseByoipCidrOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AdvertiseByoipCidr", arg0)
@@ -94,13 +95,13 @@ func (m *MockGlobalAcceleratorAPI) AdvertiseByoipCidr(arg0 *globalaccelerator.Ad
 	return ret0, ret1
 }
 
-// AdvertiseByoipCidr indicates an expected call of AdvertiseByoipCidr
+// AdvertiseByoipCidr indicates an expected call of AdvertiseByoipCidr.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) AdvertiseByoipCidr(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AdvertiseByoipCidr", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).AdvertiseByoipCidr), arg0)
 }
 
-// AdvertiseByoipCidrRequest mocks base method
+// AdvertiseByoipCidrRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) AdvertiseByoipCidrRequest(arg0 *globalaccelerator.AdvertiseByoipCidrInput) (*request.Request, *globalaccelerator.AdvertiseByoipCidrOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AdvertiseByoipCidrRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockGlobalAcceleratorAPI) AdvertiseByoipCidrRequest(arg0 *globalacceler
 	return ret0, ret1
 }
 
-// AdvertiseByoipCidrRequest indicates an expected call of AdvertiseByoipCidrRequest
+// AdvertiseByoipCidrRequest indicates an expected call of AdvertiseByoipCidrRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) AdvertiseByoipCidrRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AdvertiseByoipCidrRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).AdvertiseByoipCidrRequest), arg0)
 }
 
-// AdvertiseByoipCidrWithContext mocks base method
+// AdvertiseByoipCidrWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) AdvertiseByoipCidrWithContext(arg0 context.Context, arg1 *globalaccelerator.AdvertiseByoipCidrInput, arg2 ...request.Option) (*globalaccelerator.AdvertiseByoipCidrOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockGlobalAcceleratorAPI) AdvertiseByoipCidrWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// AdvertiseByoipCidrWithContext indicates an expected call of AdvertiseByoipCidrWithContext
+// AdvertiseByoipCidrWithContext indicates an expected call of AdvertiseByoipCidrWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) AdvertiseByoipCidrWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AdvertiseByoipCidrWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).AdvertiseByoipCidrWithContext), varargs...)
 }
 
-// AllowCustomRoutingTraffic mocks base method
+// AllowCustomRoutingTraffic mocks base method.
 func (m *MockGlobalAcceleratorAPI) AllowCustomRoutingTraffic(arg0 *globalaccelerator.AllowCustomRoutingTrafficInput) (*globalaccelerator.AllowCustomRoutingTrafficOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllowCustomRoutingTraffic", arg0)
@@ -144,13 +145,13 @@ func (m *MockGlobalAcceleratorAPI) AllowCustomRoutingTraffic(arg0 *globalacceler
 	return ret0, ret1
 }
 
-// AllowCustomRoutingTraffic indicates an expected call of AllowCustomRoutingTraffic
+// AllowCustomRoutingTraffic indicates an expected call of AllowCustomRoutingTraffic.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) AllowCustomRoutingTraffic(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllowCustomRoutingTraffic", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).AllowCustomRoutingTraffic), arg0)
 }
 
-// AllowCustomRoutingTrafficRequest mocks base method
+// AllowCustomRoutingTrafficRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) AllowCustomRoutingTrafficRequest(arg0 *globalaccelerator.AllowCustomRoutingTrafficInput) (*request.Request, *globalaccelerator.AllowCustomRoutingTrafficOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllowCustomRoutingTrafficRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockGlobalAcceleratorAPI) AllowCustomRoutingTrafficRequest(arg0 *global
 	return ret0, ret1
 }
 
-// AllowCustomRoutingTrafficRequest indicates an expected call of AllowCustomRoutingTrafficRequest
+// AllowCustomRoutingTrafficRequest indicates an expected call of AllowCustomRoutingTrafficRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) AllowCustomRoutingTrafficRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllowCustomRoutingTrafficRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).AllowCustomRoutingTrafficRequest), arg0)
 }
 
-// AllowCustomRoutingTrafficWithContext mocks base method
+// AllowCustomRoutingTrafficWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) AllowCustomRoutingTrafficWithContext(arg0 context.Context, arg1 *globalaccelerator.AllowCustomRoutingTrafficInput, arg2 ...request.Option) (*globalaccelerator.AllowCustomRoutingTrafficOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockGlobalAcceleratorAPI) AllowCustomRoutingTrafficWithContext(arg0 con
 	return ret0, ret1
 }
 
-// AllowCustomRoutingTrafficWithContext indicates an expected call of AllowCustomRoutingTrafficWithContext
+// AllowCustomRoutingTrafficWithContext indicates an expected call of AllowCustomRoutingTrafficWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) AllowCustomRoutingTrafficWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllowCustomRoutingTrafficWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).AllowCustomRoutingTrafficWithContext), varargs...)
 }
 
-// CreateAccelerator mocks base method
+// CreateAccelerator mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateAccelerator(arg0 *globalaccelerator.CreateAcceleratorInput) (*globalaccelerator.CreateAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAccelerator", arg0)
@@ -194,13 +195,13 @@ func (m *MockGlobalAcceleratorAPI) CreateAccelerator(arg0 *globalaccelerator.Cre
 	return ret0, ret1
 }
 
-// CreateAccelerator indicates an expected call of CreateAccelerator
+// CreateAccelerator indicates an expected call of CreateAccelerator.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateAccelerator(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAccelerator", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateAccelerator), arg0)
 }
 
-// CreateAcceleratorRequest mocks base method
+// CreateAcceleratorRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateAcceleratorRequest(arg0 *globalaccelerator.CreateAcceleratorInput) (*request.Request, *globalaccelerator.CreateAcceleratorOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAcceleratorRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockGlobalAcceleratorAPI) CreateAcceleratorRequest(arg0 *globalaccelera
 	return ret0, ret1
 }
 
-// CreateAcceleratorRequest indicates an expected call of CreateAcceleratorRequest
+// CreateAcceleratorRequest indicates an expected call of CreateAcceleratorRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateAcceleratorRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAcceleratorRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateAcceleratorRequest), arg0)
 }
 
-// CreateAcceleratorWithContext mocks base method
+// CreateAcceleratorWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateAcceleratorWithContext(arg0 context.Context, arg1 *globalaccelerator.CreateAcceleratorInput, arg2 ...request.Option) (*globalaccelerator.CreateAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockGlobalAcceleratorAPI) CreateAcceleratorWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// CreateAcceleratorWithContext indicates an expected call of CreateAcceleratorWithContext
+// CreateAcceleratorWithContext indicates an expected call of CreateAcceleratorWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateAcceleratorWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAcceleratorWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateAcceleratorWithContext), varargs...)
 }
 
-// CreateCustomRoutingAccelerator mocks base method
+// CreateCustomRoutingAccelerator mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingAccelerator(arg0 *globalaccelerator.CreateCustomRoutingAcceleratorInput) (*globalaccelerator.CreateCustomRoutingAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCustomRoutingAccelerator", arg0)
@@ -244,13 +245,13 @@ func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingAccelerator(arg0 *globalac
 	return ret0, ret1
 }
 
-// CreateCustomRoutingAccelerator indicates an expected call of CreateCustomRoutingAccelerator
+// CreateCustomRoutingAccelerator indicates an expected call of CreateCustomRoutingAccelerator.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateCustomRoutingAccelerator(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomRoutingAccelerator", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateCustomRoutingAccelerator), arg0)
 }
 
-// CreateCustomRoutingAcceleratorRequest mocks base method
+// CreateCustomRoutingAcceleratorRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingAcceleratorRequest(arg0 *globalaccelerator.CreateCustomRoutingAcceleratorInput) (*request.Request, *globalaccelerator.CreateCustomRoutingAcceleratorOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCustomRoutingAcceleratorRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingAcceleratorRequest(arg0 *g
 	return ret0, ret1
 }
 
-// CreateCustomRoutingAcceleratorRequest indicates an expected call of CreateCustomRoutingAcceleratorRequest
+// CreateCustomRoutingAcceleratorRequest indicates an expected call of CreateCustomRoutingAcceleratorRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateCustomRoutingAcceleratorRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomRoutingAcceleratorRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateCustomRoutingAcceleratorRequest), arg0)
 }
 
-// CreateCustomRoutingAcceleratorWithContext mocks base method
+// CreateCustomRoutingAcceleratorWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingAcceleratorWithContext(arg0 context.Context, arg1 *globalaccelerator.CreateCustomRoutingAcceleratorInput, arg2 ...request.Option) (*globalaccelerator.CreateCustomRoutingAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingAcceleratorWithContext(arg
 	return ret0, ret1
 }
 
-// CreateCustomRoutingAcceleratorWithContext indicates an expected call of CreateCustomRoutingAcceleratorWithContext
+// CreateCustomRoutingAcceleratorWithContext indicates an expected call of CreateCustomRoutingAcceleratorWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateCustomRoutingAcceleratorWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomRoutingAcceleratorWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateCustomRoutingAcceleratorWithContext), varargs...)
 }
 
-// CreateCustomRoutingEndpointGroup mocks base method
+// CreateCustomRoutingEndpointGroup mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingEndpointGroup(arg0 *globalaccelerator.CreateCustomRoutingEndpointGroupInput) (*globalaccelerator.CreateCustomRoutingEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCustomRoutingEndpointGroup", arg0)
@@ -294,13 +295,13 @@ func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingEndpointGroup(arg0 *global
 	return ret0, ret1
 }
 
-// CreateCustomRoutingEndpointGroup indicates an expected call of CreateCustomRoutingEndpointGroup
+// CreateCustomRoutingEndpointGroup indicates an expected call of CreateCustomRoutingEndpointGroup.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateCustomRoutingEndpointGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomRoutingEndpointGroup", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateCustomRoutingEndpointGroup), arg0)
 }
 
-// CreateCustomRoutingEndpointGroupRequest mocks base method
+// CreateCustomRoutingEndpointGroupRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingEndpointGroupRequest(arg0 *globalaccelerator.CreateCustomRoutingEndpointGroupInput) (*request.Request, *globalaccelerator.CreateCustomRoutingEndpointGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCustomRoutingEndpointGroupRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingEndpointGroupRequest(arg0 
 	return ret0, ret1
 }
 
-// CreateCustomRoutingEndpointGroupRequest indicates an expected call of CreateCustomRoutingEndpointGroupRequest
+// CreateCustomRoutingEndpointGroupRequest indicates an expected call of CreateCustomRoutingEndpointGroupRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateCustomRoutingEndpointGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomRoutingEndpointGroupRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateCustomRoutingEndpointGroupRequest), arg0)
 }
 
-// CreateCustomRoutingEndpointGroupWithContext mocks base method
+// CreateCustomRoutingEndpointGroupWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingEndpointGroupWithContext(arg0 context.Context, arg1 *globalaccelerator.CreateCustomRoutingEndpointGroupInput, arg2 ...request.Option) (*globalaccelerator.CreateCustomRoutingEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingEndpointGroupWithContext(a
 	return ret0, ret1
 }
 
-// CreateCustomRoutingEndpointGroupWithContext indicates an expected call of CreateCustomRoutingEndpointGroupWithContext
+// CreateCustomRoutingEndpointGroupWithContext indicates an expected call of CreateCustomRoutingEndpointGroupWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateCustomRoutingEndpointGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomRoutingEndpointGroupWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateCustomRoutingEndpointGroupWithContext), varargs...)
 }
 
-// CreateCustomRoutingListener mocks base method
+// CreateCustomRoutingListener mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingListener(arg0 *globalaccelerator.CreateCustomRoutingListenerInput) (*globalaccelerator.CreateCustomRoutingListenerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCustomRoutingListener", arg0)
@@ -344,13 +345,13 @@ func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingListener(arg0 *globalaccel
 	return ret0, ret1
 }
 
-// CreateCustomRoutingListener indicates an expected call of CreateCustomRoutingListener
+// CreateCustomRoutingListener indicates an expected call of CreateCustomRoutingListener.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateCustomRoutingListener(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomRoutingListener", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateCustomRoutingListener), arg0)
 }
 
-// CreateCustomRoutingListenerRequest mocks base method
+// CreateCustomRoutingListenerRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingListenerRequest(arg0 *globalaccelerator.CreateCustomRoutingListenerInput) (*request.Request, *globalaccelerator.CreateCustomRoutingListenerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCustomRoutingListenerRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingListenerRequest(arg0 *glob
 	return ret0, ret1
 }
 
-// CreateCustomRoutingListenerRequest indicates an expected call of CreateCustomRoutingListenerRequest
+// CreateCustomRoutingListenerRequest indicates an expected call of CreateCustomRoutingListenerRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateCustomRoutingListenerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomRoutingListenerRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateCustomRoutingListenerRequest), arg0)
 }
 
-// CreateCustomRoutingListenerWithContext mocks base method
+// CreateCustomRoutingListenerWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingListenerWithContext(arg0 context.Context, arg1 *globalaccelerator.CreateCustomRoutingListenerInput, arg2 ...request.Option) (*globalaccelerator.CreateCustomRoutingListenerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockGlobalAcceleratorAPI) CreateCustomRoutingListenerWithContext(arg0 c
 	return ret0, ret1
 }
 
-// CreateCustomRoutingListenerWithContext indicates an expected call of CreateCustomRoutingListenerWithContext
+// CreateCustomRoutingListenerWithContext indicates an expected call of CreateCustomRoutingListenerWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateCustomRoutingListenerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomRoutingListenerWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateCustomRoutingListenerWithContext), varargs...)
 }
 
-// CreateEndpointGroup mocks base method
+// CreateEndpointGroup mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateEndpointGroup(arg0 *globalaccelerator.CreateEndpointGroupInput) (*globalaccelerator.CreateEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEndpointGroup", arg0)
@@ -394,13 +395,13 @@ func (m *MockGlobalAcceleratorAPI) CreateEndpointGroup(arg0 *globalaccelerator.C
 	return ret0, ret1
 }
 
-// CreateEndpointGroup indicates an expected call of CreateEndpointGroup
+// CreateEndpointGroup indicates an expected call of CreateEndpointGroup.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateEndpointGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEndpointGroup", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateEndpointGroup), arg0)
 }
 
-// CreateEndpointGroupRequest mocks base method
+// CreateEndpointGroupRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateEndpointGroupRequest(arg0 *globalaccelerator.CreateEndpointGroupInput) (*request.Request, *globalaccelerator.CreateEndpointGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEndpointGroupRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockGlobalAcceleratorAPI) CreateEndpointGroupRequest(arg0 *globalaccele
 	return ret0, ret1
 }
 
-// CreateEndpointGroupRequest indicates an expected call of CreateEndpointGroupRequest
+// CreateEndpointGroupRequest indicates an expected call of CreateEndpointGroupRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateEndpointGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEndpointGroupRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateEndpointGroupRequest), arg0)
 }
 
-// CreateEndpointGroupWithContext mocks base method
+// CreateEndpointGroupWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateEndpointGroupWithContext(arg0 context.Context, arg1 *globalaccelerator.CreateEndpointGroupInput, arg2 ...request.Option) (*globalaccelerator.CreateEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockGlobalAcceleratorAPI) CreateEndpointGroupWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// CreateEndpointGroupWithContext indicates an expected call of CreateEndpointGroupWithContext
+// CreateEndpointGroupWithContext indicates an expected call of CreateEndpointGroupWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateEndpointGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEndpointGroupWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateEndpointGroupWithContext), varargs...)
 }
 
-// CreateListener mocks base method
+// CreateListener mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateListener(arg0 *globalaccelerator.CreateListenerInput) (*globalaccelerator.CreateListenerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateListener", arg0)
@@ -444,13 +445,13 @@ func (m *MockGlobalAcceleratorAPI) CreateListener(arg0 *globalaccelerator.Create
 	return ret0, ret1
 }
 
-// CreateListener indicates an expected call of CreateListener
+// CreateListener indicates an expected call of CreateListener.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateListener(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateListener", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateListener), arg0)
 }
 
-// CreateListenerRequest mocks base method
+// CreateListenerRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateListenerRequest(arg0 *globalaccelerator.CreateListenerInput) (*request.Request, *globalaccelerator.CreateListenerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateListenerRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockGlobalAcceleratorAPI) CreateListenerRequest(arg0 *globalaccelerator
 	return ret0, ret1
 }
 
-// CreateListenerRequest indicates an expected call of CreateListenerRequest
+// CreateListenerRequest indicates an expected call of CreateListenerRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateListenerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateListenerRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateListenerRequest), arg0)
 }
 
-// CreateListenerWithContext mocks base method
+// CreateListenerWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) CreateListenerWithContext(arg0 context.Context, arg1 *globalaccelerator.CreateListenerInput, arg2 ...request.Option) (*globalaccelerator.CreateListenerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockGlobalAcceleratorAPI) CreateListenerWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CreateListenerWithContext indicates an expected call of CreateListenerWithContext
+// CreateListenerWithContext indicates an expected call of CreateListenerWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) CreateListenerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateListenerWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).CreateListenerWithContext), varargs...)
 }
 
-// DeleteAccelerator mocks base method
+// DeleteAccelerator mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteAccelerator(arg0 *globalaccelerator.DeleteAcceleratorInput) (*globalaccelerator.DeleteAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAccelerator", arg0)
@@ -494,13 +495,13 @@ func (m *MockGlobalAcceleratorAPI) DeleteAccelerator(arg0 *globalaccelerator.Del
 	return ret0, ret1
 }
 
-// DeleteAccelerator indicates an expected call of DeleteAccelerator
+// DeleteAccelerator indicates an expected call of DeleteAccelerator.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteAccelerator(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAccelerator", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteAccelerator), arg0)
 }
 
-// DeleteAcceleratorRequest mocks base method
+// DeleteAcceleratorRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteAcceleratorRequest(arg0 *globalaccelerator.DeleteAcceleratorInput) (*request.Request, *globalaccelerator.DeleteAcceleratorOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAcceleratorRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockGlobalAcceleratorAPI) DeleteAcceleratorRequest(arg0 *globalaccelera
 	return ret0, ret1
 }
 
-// DeleteAcceleratorRequest indicates an expected call of DeleteAcceleratorRequest
+// DeleteAcceleratorRequest indicates an expected call of DeleteAcceleratorRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteAcceleratorRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAcceleratorRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteAcceleratorRequest), arg0)
 }
 
-// DeleteAcceleratorWithContext mocks base method
+// DeleteAcceleratorWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteAcceleratorWithContext(arg0 context.Context, arg1 *globalaccelerator.DeleteAcceleratorInput, arg2 ...request.Option) (*globalaccelerator.DeleteAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockGlobalAcceleratorAPI) DeleteAcceleratorWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DeleteAcceleratorWithContext indicates an expected call of DeleteAcceleratorWithContext
+// DeleteAcceleratorWithContext indicates an expected call of DeleteAcceleratorWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteAcceleratorWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAcceleratorWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteAcceleratorWithContext), varargs...)
 }
 
-// DeleteCustomRoutingAccelerator mocks base method
+// DeleteCustomRoutingAccelerator mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingAccelerator(arg0 *globalaccelerator.DeleteCustomRoutingAcceleratorInput) (*globalaccelerator.DeleteCustomRoutingAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCustomRoutingAccelerator", arg0)
@@ -544,13 +545,13 @@ func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingAccelerator(arg0 *globalac
 	return ret0, ret1
 }
 
-// DeleteCustomRoutingAccelerator indicates an expected call of DeleteCustomRoutingAccelerator
+// DeleteCustomRoutingAccelerator indicates an expected call of DeleteCustomRoutingAccelerator.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteCustomRoutingAccelerator(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomRoutingAccelerator", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteCustomRoutingAccelerator), arg0)
 }
 
-// DeleteCustomRoutingAcceleratorRequest mocks base method
+// DeleteCustomRoutingAcceleratorRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingAcceleratorRequest(arg0 *globalaccelerator.DeleteCustomRoutingAcceleratorInput) (*request.Request, *globalaccelerator.DeleteCustomRoutingAcceleratorOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCustomRoutingAcceleratorRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingAcceleratorRequest(arg0 *g
 	return ret0, ret1
 }
 
-// DeleteCustomRoutingAcceleratorRequest indicates an expected call of DeleteCustomRoutingAcceleratorRequest
+// DeleteCustomRoutingAcceleratorRequest indicates an expected call of DeleteCustomRoutingAcceleratorRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteCustomRoutingAcceleratorRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomRoutingAcceleratorRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteCustomRoutingAcceleratorRequest), arg0)
 }
 
-// DeleteCustomRoutingAcceleratorWithContext mocks base method
+// DeleteCustomRoutingAcceleratorWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingAcceleratorWithContext(arg0 context.Context, arg1 *globalaccelerator.DeleteCustomRoutingAcceleratorInput, arg2 ...request.Option) (*globalaccelerator.DeleteCustomRoutingAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingAcceleratorWithContext(arg
 	return ret0, ret1
 }
 
-// DeleteCustomRoutingAcceleratorWithContext indicates an expected call of DeleteCustomRoutingAcceleratorWithContext
+// DeleteCustomRoutingAcceleratorWithContext indicates an expected call of DeleteCustomRoutingAcceleratorWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteCustomRoutingAcceleratorWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomRoutingAcceleratorWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteCustomRoutingAcceleratorWithContext), varargs...)
 }
 
-// DeleteCustomRoutingEndpointGroup mocks base method
+// DeleteCustomRoutingEndpointGroup mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingEndpointGroup(arg0 *globalaccelerator.DeleteCustomRoutingEndpointGroupInput) (*globalaccelerator.DeleteCustomRoutingEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCustomRoutingEndpointGroup", arg0)
@@ -594,13 +595,13 @@ func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingEndpointGroup(arg0 *global
 	return ret0, ret1
 }
 
-// DeleteCustomRoutingEndpointGroup indicates an expected call of DeleteCustomRoutingEndpointGroup
+// DeleteCustomRoutingEndpointGroup indicates an expected call of DeleteCustomRoutingEndpointGroup.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteCustomRoutingEndpointGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomRoutingEndpointGroup", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteCustomRoutingEndpointGroup), arg0)
 }
 
-// DeleteCustomRoutingEndpointGroupRequest mocks base method
+// DeleteCustomRoutingEndpointGroupRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingEndpointGroupRequest(arg0 *globalaccelerator.DeleteCustomRoutingEndpointGroupInput) (*request.Request, *globalaccelerator.DeleteCustomRoutingEndpointGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCustomRoutingEndpointGroupRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingEndpointGroupRequest(arg0 
 	return ret0, ret1
 }
 
-// DeleteCustomRoutingEndpointGroupRequest indicates an expected call of DeleteCustomRoutingEndpointGroupRequest
+// DeleteCustomRoutingEndpointGroupRequest indicates an expected call of DeleteCustomRoutingEndpointGroupRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteCustomRoutingEndpointGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomRoutingEndpointGroupRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteCustomRoutingEndpointGroupRequest), arg0)
 }
 
-// DeleteCustomRoutingEndpointGroupWithContext mocks base method
+// DeleteCustomRoutingEndpointGroupWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingEndpointGroupWithContext(arg0 context.Context, arg1 *globalaccelerator.DeleteCustomRoutingEndpointGroupInput, arg2 ...request.Option) (*globalaccelerator.DeleteCustomRoutingEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingEndpointGroupWithContext(a
 	return ret0, ret1
 }
 
-// DeleteCustomRoutingEndpointGroupWithContext indicates an expected call of DeleteCustomRoutingEndpointGroupWithContext
+// DeleteCustomRoutingEndpointGroupWithContext indicates an expected call of DeleteCustomRoutingEndpointGroupWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteCustomRoutingEndpointGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomRoutingEndpointGroupWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteCustomRoutingEndpointGroupWithContext), varargs...)
 }
 
-// DeleteCustomRoutingListener mocks base method
+// DeleteCustomRoutingListener mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingListener(arg0 *globalaccelerator.DeleteCustomRoutingListenerInput) (*globalaccelerator.DeleteCustomRoutingListenerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCustomRoutingListener", arg0)
@@ -644,13 +645,13 @@ func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingListener(arg0 *globalaccel
 	return ret0, ret1
 }
 
-// DeleteCustomRoutingListener indicates an expected call of DeleteCustomRoutingListener
+// DeleteCustomRoutingListener indicates an expected call of DeleteCustomRoutingListener.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteCustomRoutingListener(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomRoutingListener", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteCustomRoutingListener), arg0)
 }
 
-// DeleteCustomRoutingListenerRequest mocks base method
+// DeleteCustomRoutingListenerRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingListenerRequest(arg0 *globalaccelerator.DeleteCustomRoutingListenerInput) (*request.Request, *globalaccelerator.DeleteCustomRoutingListenerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCustomRoutingListenerRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingListenerRequest(arg0 *glob
 	return ret0, ret1
 }
 
-// DeleteCustomRoutingListenerRequest indicates an expected call of DeleteCustomRoutingListenerRequest
+// DeleteCustomRoutingListenerRequest indicates an expected call of DeleteCustomRoutingListenerRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteCustomRoutingListenerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomRoutingListenerRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteCustomRoutingListenerRequest), arg0)
 }
 
-// DeleteCustomRoutingListenerWithContext mocks base method
+// DeleteCustomRoutingListenerWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingListenerWithContext(arg0 context.Context, arg1 *globalaccelerator.DeleteCustomRoutingListenerInput, arg2 ...request.Option) (*globalaccelerator.DeleteCustomRoutingListenerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockGlobalAcceleratorAPI) DeleteCustomRoutingListenerWithContext(arg0 c
 	return ret0, ret1
 }
 
-// DeleteCustomRoutingListenerWithContext indicates an expected call of DeleteCustomRoutingListenerWithContext
+// DeleteCustomRoutingListenerWithContext indicates an expected call of DeleteCustomRoutingListenerWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteCustomRoutingListenerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomRoutingListenerWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteCustomRoutingListenerWithContext), varargs...)
 }
 
-// DeleteEndpointGroup mocks base method
+// DeleteEndpointGroup mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteEndpointGroup(arg0 *globalaccelerator.DeleteEndpointGroupInput) (*globalaccelerator.DeleteEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEndpointGroup", arg0)
@@ -694,13 +695,13 @@ func (m *MockGlobalAcceleratorAPI) DeleteEndpointGroup(arg0 *globalaccelerator.D
 	return ret0, ret1
 }
 
-// DeleteEndpointGroup indicates an expected call of DeleteEndpointGroup
+// DeleteEndpointGroup indicates an expected call of DeleteEndpointGroup.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteEndpointGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEndpointGroup", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteEndpointGroup), arg0)
 }
 
-// DeleteEndpointGroupRequest mocks base method
+// DeleteEndpointGroupRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteEndpointGroupRequest(arg0 *globalaccelerator.DeleteEndpointGroupInput) (*request.Request, *globalaccelerator.DeleteEndpointGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEndpointGroupRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockGlobalAcceleratorAPI) DeleteEndpointGroupRequest(arg0 *globalaccele
 	return ret0, ret1
 }
 
-// DeleteEndpointGroupRequest indicates an expected call of DeleteEndpointGroupRequest
+// DeleteEndpointGroupRequest indicates an expected call of DeleteEndpointGroupRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteEndpointGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEndpointGroupRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteEndpointGroupRequest), arg0)
 }
 
-// DeleteEndpointGroupWithContext mocks base method
+// DeleteEndpointGroupWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteEndpointGroupWithContext(arg0 context.Context, arg1 *globalaccelerator.DeleteEndpointGroupInput, arg2 ...request.Option) (*globalaccelerator.DeleteEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockGlobalAcceleratorAPI) DeleteEndpointGroupWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DeleteEndpointGroupWithContext indicates an expected call of DeleteEndpointGroupWithContext
+// DeleteEndpointGroupWithContext indicates an expected call of DeleteEndpointGroupWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteEndpointGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEndpointGroupWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteEndpointGroupWithContext), varargs...)
 }
 
-// DeleteListener mocks base method
+// DeleteListener mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteListener(arg0 *globalaccelerator.DeleteListenerInput) (*globalaccelerator.DeleteListenerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteListener", arg0)
@@ -744,13 +745,13 @@ func (m *MockGlobalAcceleratorAPI) DeleteListener(arg0 *globalaccelerator.Delete
 	return ret0, ret1
 }
 
-// DeleteListener indicates an expected call of DeleteListener
+// DeleteListener indicates an expected call of DeleteListener.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteListener(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteListener", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteListener), arg0)
 }
 
-// DeleteListenerRequest mocks base method
+// DeleteListenerRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteListenerRequest(arg0 *globalaccelerator.DeleteListenerInput) (*request.Request, *globalaccelerator.DeleteListenerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteListenerRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockGlobalAcceleratorAPI) DeleteListenerRequest(arg0 *globalaccelerator
 	return ret0, ret1
 }
 
-// DeleteListenerRequest indicates an expected call of DeleteListenerRequest
+// DeleteListenerRequest indicates an expected call of DeleteListenerRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteListenerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteListenerRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteListenerRequest), arg0)
 }
 
-// DeleteListenerWithContext mocks base method
+// DeleteListenerWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeleteListenerWithContext(arg0 context.Context, arg1 *globalaccelerator.DeleteListenerInput, arg2 ...request.Option) (*globalaccelerator.DeleteListenerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockGlobalAcceleratorAPI) DeleteListenerWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteListenerWithContext indicates an expected call of DeleteListenerWithContext
+// DeleteListenerWithContext indicates an expected call of DeleteListenerWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeleteListenerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteListenerWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeleteListenerWithContext), varargs...)
 }
 
-// DenyCustomRoutingTraffic mocks base method
+// DenyCustomRoutingTraffic mocks base method.
 func (m *MockGlobalAcceleratorAPI) DenyCustomRoutingTraffic(arg0 *globalaccelerator.DenyCustomRoutingTrafficInput) (*globalaccelerator.DenyCustomRoutingTrafficOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DenyCustomRoutingTraffic", arg0)
@@ -794,13 +795,13 @@ func (m *MockGlobalAcceleratorAPI) DenyCustomRoutingTraffic(arg0 *globalaccelera
 	return ret0, ret1
 }
 
-// DenyCustomRoutingTraffic indicates an expected call of DenyCustomRoutingTraffic
+// DenyCustomRoutingTraffic indicates an expected call of DenyCustomRoutingTraffic.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DenyCustomRoutingTraffic(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DenyCustomRoutingTraffic", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DenyCustomRoutingTraffic), arg0)
 }
 
-// DenyCustomRoutingTrafficRequest mocks base method
+// DenyCustomRoutingTrafficRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DenyCustomRoutingTrafficRequest(arg0 *globalaccelerator.DenyCustomRoutingTrafficInput) (*request.Request, *globalaccelerator.DenyCustomRoutingTrafficOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DenyCustomRoutingTrafficRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockGlobalAcceleratorAPI) DenyCustomRoutingTrafficRequest(arg0 *globala
 	return ret0, ret1
 }
 
-// DenyCustomRoutingTrafficRequest indicates an expected call of DenyCustomRoutingTrafficRequest
+// DenyCustomRoutingTrafficRequest indicates an expected call of DenyCustomRoutingTrafficRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DenyCustomRoutingTrafficRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DenyCustomRoutingTrafficRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DenyCustomRoutingTrafficRequest), arg0)
 }
 
-// DenyCustomRoutingTrafficWithContext mocks base method
+// DenyCustomRoutingTrafficWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DenyCustomRoutingTrafficWithContext(arg0 context.Context, arg1 *globalaccelerator.DenyCustomRoutingTrafficInput, arg2 ...request.Option) (*globalaccelerator.DenyCustomRoutingTrafficOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockGlobalAcceleratorAPI) DenyCustomRoutingTrafficWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// DenyCustomRoutingTrafficWithContext indicates an expected call of DenyCustomRoutingTrafficWithContext
+// DenyCustomRoutingTrafficWithContext indicates an expected call of DenyCustomRoutingTrafficWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DenyCustomRoutingTrafficWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DenyCustomRoutingTrafficWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DenyCustomRoutingTrafficWithContext), varargs...)
 }
 
-// DeprovisionByoipCidr mocks base method
+// DeprovisionByoipCidr mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeprovisionByoipCidr(arg0 *globalaccelerator.DeprovisionByoipCidrInput) (*globalaccelerator.DeprovisionByoipCidrOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeprovisionByoipCidr", arg0)
@@ -844,13 +845,13 @@ func (m *MockGlobalAcceleratorAPI) DeprovisionByoipCidr(arg0 *globalaccelerator.
 	return ret0, ret1
 }
 
-// DeprovisionByoipCidr indicates an expected call of DeprovisionByoipCidr
+// DeprovisionByoipCidr indicates an expected call of DeprovisionByoipCidr.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeprovisionByoipCidr(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeprovisionByoipCidr", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeprovisionByoipCidr), arg0)
 }
 
-// DeprovisionByoipCidrRequest mocks base method
+// DeprovisionByoipCidrRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeprovisionByoipCidrRequest(arg0 *globalaccelerator.DeprovisionByoipCidrInput) (*request.Request, *globalaccelerator.DeprovisionByoipCidrOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeprovisionByoipCidrRequest", arg0)
@@ -859,13 +860,13 @@ func (m *MockGlobalAcceleratorAPI) DeprovisionByoipCidrRequest(arg0 *globalaccel
 	return ret0, ret1
 }
 
-// DeprovisionByoipCidrRequest indicates an expected call of DeprovisionByoipCidrRequest
+// DeprovisionByoipCidrRequest indicates an expected call of DeprovisionByoipCidrRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeprovisionByoipCidrRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeprovisionByoipCidrRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeprovisionByoipCidrRequest), arg0)
 }
 
-// DeprovisionByoipCidrWithContext mocks base method
+// DeprovisionByoipCidrWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DeprovisionByoipCidrWithContext(arg0 context.Context, arg1 *globalaccelerator.DeprovisionByoipCidrInput, arg2 ...request.Option) (*globalaccelerator.DeprovisionByoipCidrOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +879,14 @@ func (m *MockGlobalAcceleratorAPI) DeprovisionByoipCidrWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// DeprovisionByoipCidrWithContext indicates an expected call of DeprovisionByoipCidrWithContext
+// DeprovisionByoipCidrWithContext indicates an expected call of DeprovisionByoipCidrWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DeprovisionByoipCidrWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeprovisionByoipCidrWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DeprovisionByoipCidrWithContext), varargs...)
 }
 
-// DescribeAccelerator mocks base method
+// DescribeAccelerator mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeAccelerator(arg0 *globalaccelerator.DescribeAcceleratorInput) (*globalaccelerator.DescribeAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAccelerator", arg0)
@@ -894,13 +895,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeAccelerator(arg0 *globalaccelerator.D
 	return ret0, ret1
 }
 
-// DescribeAccelerator indicates an expected call of DescribeAccelerator
+// DescribeAccelerator indicates an expected call of DescribeAccelerator.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeAccelerator(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAccelerator", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeAccelerator), arg0)
 }
 
-// DescribeAcceleratorAttributes mocks base method
+// DescribeAcceleratorAttributes mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeAcceleratorAttributes(arg0 *globalaccelerator.DescribeAcceleratorAttributesInput) (*globalaccelerator.DescribeAcceleratorAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAcceleratorAttributes", arg0)
@@ -909,13 +910,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeAcceleratorAttributes(arg0 *globalacc
 	return ret0, ret1
 }
 
-// DescribeAcceleratorAttributes indicates an expected call of DescribeAcceleratorAttributes
+// DescribeAcceleratorAttributes indicates an expected call of DescribeAcceleratorAttributes.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeAcceleratorAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorAttributes", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeAcceleratorAttributes), arg0)
 }
 
-// DescribeAcceleratorAttributesRequest mocks base method
+// DescribeAcceleratorAttributesRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeAcceleratorAttributesRequest(arg0 *globalaccelerator.DescribeAcceleratorAttributesInput) (*request.Request, *globalaccelerator.DescribeAcceleratorAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAcceleratorAttributesRequest", arg0)
@@ -924,13 +925,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeAcceleratorAttributesRequest(arg0 *gl
 	return ret0, ret1
 }
 
-// DescribeAcceleratorAttributesRequest indicates an expected call of DescribeAcceleratorAttributesRequest
+// DescribeAcceleratorAttributesRequest indicates an expected call of DescribeAcceleratorAttributesRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeAcceleratorAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorAttributesRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeAcceleratorAttributesRequest), arg0)
 }
 
-// DescribeAcceleratorAttributesWithContext mocks base method
+// DescribeAcceleratorAttributesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeAcceleratorAttributesWithContext(arg0 context.Context, arg1 *globalaccelerator.DescribeAcceleratorAttributesInput, arg2 ...request.Option) (*globalaccelerator.DescribeAcceleratorAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -943,14 +944,14 @@ func (m *MockGlobalAcceleratorAPI) DescribeAcceleratorAttributesWithContext(arg0
 	return ret0, ret1
 }
 
-// DescribeAcceleratorAttributesWithContext indicates an expected call of DescribeAcceleratorAttributesWithContext
+// DescribeAcceleratorAttributesWithContext indicates an expected call of DescribeAcceleratorAttributesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeAcceleratorAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorAttributesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeAcceleratorAttributesWithContext), varargs...)
 }
 
-// DescribeAcceleratorRequest mocks base method
+// DescribeAcceleratorRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeAcceleratorRequest(arg0 *globalaccelerator.DescribeAcceleratorInput) (*request.Request, *globalaccelerator.DescribeAcceleratorOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAcceleratorRequest", arg0)
@@ -959,13 +960,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeAcceleratorRequest(arg0 *globalaccele
 	return ret0, ret1
 }
 
-// DescribeAcceleratorRequest indicates an expected call of DescribeAcceleratorRequest
+// DescribeAcceleratorRequest indicates an expected call of DescribeAcceleratorRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeAcceleratorRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeAcceleratorRequest), arg0)
 }
 
-// DescribeAcceleratorWithContext mocks base method
+// DescribeAcceleratorWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeAcceleratorWithContext(arg0 context.Context, arg1 *globalaccelerator.DescribeAcceleratorInput, arg2 ...request.Option) (*globalaccelerator.DescribeAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -978,14 +979,14 @@ func (m *MockGlobalAcceleratorAPI) DescribeAcceleratorWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DescribeAcceleratorWithContext indicates an expected call of DescribeAcceleratorWithContext
+// DescribeAcceleratorWithContext indicates an expected call of DescribeAcceleratorWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeAcceleratorWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAcceleratorWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeAcceleratorWithContext), varargs...)
 }
 
-// DescribeCustomRoutingAccelerator mocks base method
+// DescribeCustomRoutingAccelerator mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingAccelerator(arg0 *globalaccelerator.DescribeCustomRoutingAcceleratorInput) (*globalaccelerator.DescribeCustomRoutingAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCustomRoutingAccelerator", arg0)
@@ -994,13 +995,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingAccelerator(arg0 *global
 	return ret0, ret1
 }
 
-// DescribeCustomRoutingAccelerator indicates an expected call of DescribeCustomRoutingAccelerator
+// DescribeCustomRoutingAccelerator indicates an expected call of DescribeCustomRoutingAccelerator.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeCustomRoutingAccelerator(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomRoutingAccelerator", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeCustomRoutingAccelerator), arg0)
 }
 
-// DescribeCustomRoutingAcceleratorAttributes mocks base method
+// DescribeCustomRoutingAcceleratorAttributes mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingAcceleratorAttributes(arg0 *globalaccelerator.DescribeCustomRoutingAcceleratorAttributesInput) (*globalaccelerator.DescribeCustomRoutingAcceleratorAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCustomRoutingAcceleratorAttributes", arg0)
@@ -1009,13 +1010,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingAcceleratorAttributes(ar
 	return ret0, ret1
 }
 
-// DescribeCustomRoutingAcceleratorAttributes indicates an expected call of DescribeCustomRoutingAcceleratorAttributes
+// DescribeCustomRoutingAcceleratorAttributes indicates an expected call of DescribeCustomRoutingAcceleratorAttributes.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeCustomRoutingAcceleratorAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomRoutingAcceleratorAttributes", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeCustomRoutingAcceleratorAttributes), arg0)
 }
 
-// DescribeCustomRoutingAcceleratorAttributesRequest mocks base method
+// DescribeCustomRoutingAcceleratorAttributesRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingAcceleratorAttributesRequest(arg0 *globalaccelerator.DescribeCustomRoutingAcceleratorAttributesInput) (*request.Request, *globalaccelerator.DescribeCustomRoutingAcceleratorAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCustomRoutingAcceleratorAttributesRequest", arg0)
@@ -1024,13 +1025,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingAcceleratorAttributesReq
 	return ret0, ret1
 }
 
-// DescribeCustomRoutingAcceleratorAttributesRequest indicates an expected call of DescribeCustomRoutingAcceleratorAttributesRequest
+// DescribeCustomRoutingAcceleratorAttributesRequest indicates an expected call of DescribeCustomRoutingAcceleratorAttributesRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeCustomRoutingAcceleratorAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomRoutingAcceleratorAttributesRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeCustomRoutingAcceleratorAttributesRequest), arg0)
 }
 
-// DescribeCustomRoutingAcceleratorAttributesWithContext mocks base method
+// DescribeCustomRoutingAcceleratorAttributesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingAcceleratorAttributesWithContext(arg0 context.Context, arg1 *globalaccelerator.DescribeCustomRoutingAcceleratorAttributesInput, arg2 ...request.Option) (*globalaccelerator.DescribeCustomRoutingAcceleratorAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1043,14 +1044,14 @@ func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingAcceleratorAttributesWit
 	return ret0, ret1
 }
 
-// DescribeCustomRoutingAcceleratorAttributesWithContext indicates an expected call of DescribeCustomRoutingAcceleratorAttributesWithContext
+// DescribeCustomRoutingAcceleratorAttributesWithContext indicates an expected call of DescribeCustomRoutingAcceleratorAttributesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeCustomRoutingAcceleratorAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomRoutingAcceleratorAttributesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeCustomRoutingAcceleratorAttributesWithContext), varargs...)
 }
 
-// DescribeCustomRoutingAcceleratorRequest mocks base method
+// DescribeCustomRoutingAcceleratorRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingAcceleratorRequest(arg0 *globalaccelerator.DescribeCustomRoutingAcceleratorInput) (*request.Request, *globalaccelerator.DescribeCustomRoutingAcceleratorOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCustomRoutingAcceleratorRequest", arg0)
@@ -1059,13 +1060,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingAcceleratorRequest(arg0 
 	return ret0, ret1
 }
 
-// DescribeCustomRoutingAcceleratorRequest indicates an expected call of DescribeCustomRoutingAcceleratorRequest
+// DescribeCustomRoutingAcceleratorRequest indicates an expected call of DescribeCustomRoutingAcceleratorRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeCustomRoutingAcceleratorRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomRoutingAcceleratorRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeCustomRoutingAcceleratorRequest), arg0)
 }
 
-// DescribeCustomRoutingAcceleratorWithContext mocks base method
+// DescribeCustomRoutingAcceleratorWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingAcceleratorWithContext(arg0 context.Context, arg1 *globalaccelerator.DescribeCustomRoutingAcceleratorInput, arg2 ...request.Option) (*globalaccelerator.DescribeCustomRoutingAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1078,14 +1079,14 @@ func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingAcceleratorWithContext(a
 	return ret0, ret1
 }
 
-// DescribeCustomRoutingAcceleratorWithContext indicates an expected call of DescribeCustomRoutingAcceleratorWithContext
+// DescribeCustomRoutingAcceleratorWithContext indicates an expected call of DescribeCustomRoutingAcceleratorWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeCustomRoutingAcceleratorWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomRoutingAcceleratorWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeCustomRoutingAcceleratorWithContext), varargs...)
 }
 
-// DescribeCustomRoutingEndpointGroup mocks base method
+// DescribeCustomRoutingEndpointGroup mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingEndpointGroup(arg0 *globalaccelerator.DescribeCustomRoutingEndpointGroupInput) (*globalaccelerator.DescribeCustomRoutingEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCustomRoutingEndpointGroup", arg0)
@@ -1094,13 +1095,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingEndpointGroup(arg0 *glob
 	return ret0, ret1
 }
 
-// DescribeCustomRoutingEndpointGroup indicates an expected call of DescribeCustomRoutingEndpointGroup
+// DescribeCustomRoutingEndpointGroup indicates an expected call of DescribeCustomRoutingEndpointGroup.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeCustomRoutingEndpointGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomRoutingEndpointGroup", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeCustomRoutingEndpointGroup), arg0)
 }
 
-// DescribeCustomRoutingEndpointGroupRequest mocks base method
+// DescribeCustomRoutingEndpointGroupRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingEndpointGroupRequest(arg0 *globalaccelerator.DescribeCustomRoutingEndpointGroupInput) (*request.Request, *globalaccelerator.DescribeCustomRoutingEndpointGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCustomRoutingEndpointGroupRequest", arg0)
@@ -1109,13 +1110,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingEndpointGroupRequest(arg
 	return ret0, ret1
 }
 
-// DescribeCustomRoutingEndpointGroupRequest indicates an expected call of DescribeCustomRoutingEndpointGroupRequest
+// DescribeCustomRoutingEndpointGroupRequest indicates an expected call of DescribeCustomRoutingEndpointGroupRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeCustomRoutingEndpointGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomRoutingEndpointGroupRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeCustomRoutingEndpointGroupRequest), arg0)
 }
 
-// DescribeCustomRoutingEndpointGroupWithContext mocks base method
+// DescribeCustomRoutingEndpointGroupWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingEndpointGroupWithContext(arg0 context.Context, arg1 *globalaccelerator.DescribeCustomRoutingEndpointGroupInput, arg2 ...request.Option) (*globalaccelerator.DescribeCustomRoutingEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1128,14 +1129,14 @@ func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingEndpointGroupWithContext
 	return ret0, ret1
 }
 
-// DescribeCustomRoutingEndpointGroupWithContext indicates an expected call of DescribeCustomRoutingEndpointGroupWithContext
+// DescribeCustomRoutingEndpointGroupWithContext indicates an expected call of DescribeCustomRoutingEndpointGroupWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeCustomRoutingEndpointGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomRoutingEndpointGroupWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeCustomRoutingEndpointGroupWithContext), varargs...)
 }
 
-// DescribeCustomRoutingListener mocks base method
+// DescribeCustomRoutingListener mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingListener(arg0 *globalaccelerator.DescribeCustomRoutingListenerInput) (*globalaccelerator.DescribeCustomRoutingListenerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCustomRoutingListener", arg0)
@@ -1144,13 +1145,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingListener(arg0 *globalacc
 	return ret0, ret1
 }
 
-// DescribeCustomRoutingListener indicates an expected call of DescribeCustomRoutingListener
+// DescribeCustomRoutingListener indicates an expected call of DescribeCustomRoutingListener.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeCustomRoutingListener(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomRoutingListener", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeCustomRoutingListener), arg0)
 }
 
-// DescribeCustomRoutingListenerRequest mocks base method
+// DescribeCustomRoutingListenerRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingListenerRequest(arg0 *globalaccelerator.DescribeCustomRoutingListenerInput) (*request.Request, *globalaccelerator.DescribeCustomRoutingListenerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCustomRoutingListenerRequest", arg0)
@@ -1159,13 +1160,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingListenerRequest(arg0 *gl
 	return ret0, ret1
 }
 
-// DescribeCustomRoutingListenerRequest indicates an expected call of DescribeCustomRoutingListenerRequest
+// DescribeCustomRoutingListenerRequest indicates an expected call of DescribeCustomRoutingListenerRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeCustomRoutingListenerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomRoutingListenerRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeCustomRoutingListenerRequest), arg0)
 }
 
-// DescribeCustomRoutingListenerWithContext mocks base method
+// DescribeCustomRoutingListenerWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingListenerWithContext(arg0 context.Context, arg1 *globalaccelerator.DescribeCustomRoutingListenerInput, arg2 ...request.Option) (*globalaccelerator.DescribeCustomRoutingListenerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1178,14 +1179,14 @@ func (m *MockGlobalAcceleratorAPI) DescribeCustomRoutingListenerWithContext(arg0
 	return ret0, ret1
 }
 
-// DescribeCustomRoutingListenerWithContext indicates an expected call of DescribeCustomRoutingListenerWithContext
+// DescribeCustomRoutingListenerWithContext indicates an expected call of DescribeCustomRoutingListenerWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeCustomRoutingListenerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomRoutingListenerWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeCustomRoutingListenerWithContext), varargs...)
 }
 
-// DescribeEndpointGroup mocks base method
+// DescribeEndpointGroup mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeEndpointGroup(arg0 *globalaccelerator.DescribeEndpointGroupInput) (*globalaccelerator.DescribeEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeEndpointGroup", arg0)
@@ -1194,13 +1195,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeEndpointGroup(arg0 *globalaccelerator
 	return ret0, ret1
 }
 
-// DescribeEndpointGroup indicates an expected call of DescribeEndpointGroup
+// DescribeEndpointGroup indicates an expected call of DescribeEndpointGroup.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeEndpointGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeEndpointGroup", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeEndpointGroup), arg0)
 }
 
-// DescribeEndpointGroupRequest mocks base method
+// DescribeEndpointGroupRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeEndpointGroupRequest(arg0 *globalaccelerator.DescribeEndpointGroupInput) (*request.Request, *globalaccelerator.DescribeEndpointGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeEndpointGroupRequest", arg0)
@@ -1209,13 +1210,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeEndpointGroupRequest(arg0 *globalacce
 	return ret0, ret1
 }
 
-// DescribeEndpointGroupRequest indicates an expected call of DescribeEndpointGroupRequest
+// DescribeEndpointGroupRequest indicates an expected call of DescribeEndpointGroupRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeEndpointGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeEndpointGroupRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeEndpointGroupRequest), arg0)
 }
 
-// DescribeEndpointGroupWithContext mocks base method
+// DescribeEndpointGroupWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeEndpointGroupWithContext(arg0 context.Context, arg1 *globalaccelerator.DescribeEndpointGroupInput, arg2 ...request.Option) (*globalaccelerator.DescribeEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1228,14 +1229,14 @@ func (m *MockGlobalAcceleratorAPI) DescribeEndpointGroupWithContext(arg0 context
 	return ret0, ret1
 }
 
-// DescribeEndpointGroupWithContext indicates an expected call of DescribeEndpointGroupWithContext
+// DescribeEndpointGroupWithContext indicates an expected call of DescribeEndpointGroupWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeEndpointGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeEndpointGroupWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeEndpointGroupWithContext), varargs...)
 }
 
-// DescribeListener mocks base method
+// DescribeListener mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeListener(arg0 *globalaccelerator.DescribeListenerInput) (*globalaccelerator.DescribeListenerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeListener", arg0)
@@ -1244,13 +1245,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeListener(arg0 *globalaccelerator.Desc
 	return ret0, ret1
 }
 
-// DescribeListener indicates an expected call of DescribeListener
+// DescribeListener indicates an expected call of DescribeListener.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeListener(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeListener", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeListener), arg0)
 }
 
-// DescribeListenerRequest mocks base method
+// DescribeListenerRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeListenerRequest(arg0 *globalaccelerator.DescribeListenerInput) (*request.Request, *globalaccelerator.DescribeListenerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeListenerRequest", arg0)
@@ -1259,13 +1260,13 @@ func (m *MockGlobalAcceleratorAPI) DescribeListenerRequest(arg0 *globalaccelerat
 	return ret0, ret1
 }
 
-// DescribeListenerRequest indicates an expected call of DescribeListenerRequest
+// DescribeListenerRequest indicates an expected call of DescribeListenerRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeListenerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeListenerRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeListenerRequest), arg0)
 }
 
-// DescribeListenerWithContext mocks base method
+// DescribeListenerWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) DescribeListenerWithContext(arg0 context.Context, arg1 *globalaccelerator.DescribeListenerInput, arg2 ...request.Option) (*globalaccelerator.DescribeListenerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1278,14 +1279,14 @@ func (m *MockGlobalAcceleratorAPI) DescribeListenerWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DescribeListenerWithContext indicates an expected call of DescribeListenerWithContext
+// DescribeListenerWithContext indicates an expected call of DescribeListenerWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) DescribeListenerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeListenerWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).DescribeListenerWithContext), varargs...)
 }
 
-// ListAccelerators mocks base method
+// ListAccelerators mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListAccelerators(arg0 *globalaccelerator.ListAcceleratorsInput) (*globalaccelerator.ListAcceleratorsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccelerators", arg0)
@@ -1294,13 +1295,13 @@ func (m *MockGlobalAcceleratorAPI) ListAccelerators(arg0 *globalaccelerator.List
 	return ret0, ret1
 }
 
-// ListAccelerators indicates an expected call of ListAccelerators
+// ListAccelerators indicates an expected call of ListAccelerators.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListAccelerators(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccelerators", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListAccelerators), arg0)
 }
 
-// ListAcceleratorsPages mocks base method
+// ListAcceleratorsPages mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListAcceleratorsPages(arg0 *globalaccelerator.ListAcceleratorsInput, arg1 func(*globalaccelerator.ListAcceleratorsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAcceleratorsPages", arg0, arg1)
@@ -1308,13 +1309,13 @@ func (m *MockGlobalAcceleratorAPI) ListAcceleratorsPages(arg0 *globalaccelerator
 	return ret0
 }
 
-// ListAcceleratorsPages indicates an expected call of ListAcceleratorsPages
+// ListAcceleratorsPages indicates an expected call of ListAcceleratorsPages.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListAcceleratorsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAcceleratorsPages", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListAcceleratorsPages), arg0, arg1)
 }
 
-// ListAcceleratorsPagesWithContext mocks base method
+// ListAcceleratorsPagesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListAcceleratorsPagesWithContext(arg0 context.Context, arg1 *globalaccelerator.ListAcceleratorsInput, arg2 func(*globalaccelerator.ListAcceleratorsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1326,14 +1327,14 @@ func (m *MockGlobalAcceleratorAPI) ListAcceleratorsPagesWithContext(arg0 context
 	return ret0
 }
 
-// ListAcceleratorsPagesWithContext indicates an expected call of ListAcceleratorsPagesWithContext
+// ListAcceleratorsPagesWithContext indicates an expected call of ListAcceleratorsPagesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListAcceleratorsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAcceleratorsPagesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListAcceleratorsPagesWithContext), varargs...)
 }
 
-// ListAcceleratorsRequest mocks base method
+// ListAcceleratorsRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListAcceleratorsRequest(arg0 *globalaccelerator.ListAcceleratorsInput) (*request.Request, *globalaccelerator.ListAcceleratorsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAcceleratorsRequest", arg0)
@@ -1342,13 +1343,13 @@ func (m *MockGlobalAcceleratorAPI) ListAcceleratorsRequest(arg0 *globalaccelerat
 	return ret0, ret1
 }
 
-// ListAcceleratorsRequest indicates an expected call of ListAcceleratorsRequest
+// ListAcceleratorsRequest indicates an expected call of ListAcceleratorsRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListAcceleratorsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAcceleratorsRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListAcceleratorsRequest), arg0)
 }
 
-// ListAcceleratorsWithContext mocks base method
+// ListAcceleratorsWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListAcceleratorsWithContext(arg0 context.Context, arg1 *globalaccelerator.ListAcceleratorsInput, arg2 ...request.Option) (*globalaccelerator.ListAcceleratorsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1361,14 +1362,14 @@ func (m *MockGlobalAcceleratorAPI) ListAcceleratorsWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListAcceleratorsWithContext indicates an expected call of ListAcceleratorsWithContext
+// ListAcceleratorsWithContext indicates an expected call of ListAcceleratorsWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListAcceleratorsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAcceleratorsWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListAcceleratorsWithContext), varargs...)
 }
 
-// ListByoipCidrs mocks base method
+// ListByoipCidrs mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListByoipCidrs(arg0 *globalaccelerator.ListByoipCidrsInput) (*globalaccelerator.ListByoipCidrsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListByoipCidrs", arg0)
@@ -1377,13 +1378,13 @@ func (m *MockGlobalAcceleratorAPI) ListByoipCidrs(arg0 *globalaccelerator.ListBy
 	return ret0, ret1
 }
 
-// ListByoipCidrs indicates an expected call of ListByoipCidrs
+// ListByoipCidrs indicates an expected call of ListByoipCidrs.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListByoipCidrs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListByoipCidrs", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListByoipCidrs), arg0)
 }
 
-// ListByoipCidrsPages mocks base method
+// ListByoipCidrsPages mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListByoipCidrsPages(arg0 *globalaccelerator.ListByoipCidrsInput, arg1 func(*globalaccelerator.ListByoipCidrsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListByoipCidrsPages", arg0, arg1)
@@ -1391,13 +1392,13 @@ func (m *MockGlobalAcceleratorAPI) ListByoipCidrsPages(arg0 *globalaccelerator.L
 	return ret0
 }
 
-// ListByoipCidrsPages indicates an expected call of ListByoipCidrsPages
+// ListByoipCidrsPages indicates an expected call of ListByoipCidrsPages.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListByoipCidrsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListByoipCidrsPages", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListByoipCidrsPages), arg0, arg1)
 }
 
-// ListByoipCidrsPagesWithContext mocks base method
+// ListByoipCidrsPagesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListByoipCidrsPagesWithContext(arg0 context.Context, arg1 *globalaccelerator.ListByoipCidrsInput, arg2 func(*globalaccelerator.ListByoipCidrsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1409,14 +1410,14 @@ func (m *MockGlobalAcceleratorAPI) ListByoipCidrsPagesWithContext(arg0 context.C
 	return ret0
 }
 
-// ListByoipCidrsPagesWithContext indicates an expected call of ListByoipCidrsPagesWithContext
+// ListByoipCidrsPagesWithContext indicates an expected call of ListByoipCidrsPagesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListByoipCidrsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListByoipCidrsPagesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListByoipCidrsPagesWithContext), varargs...)
 }
 
-// ListByoipCidrsRequest mocks base method
+// ListByoipCidrsRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListByoipCidrsRequest(arg0 *globalaccelerator.ListByoipCidrsInput) (*request.Request, *globalaccelerator.ListByoipCidrsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListByoipCidrsRequest", arg0)
@@ -1425,13 +1426,13 @@ func (m *MockGlobalAcceleratorAPI) ListByoipCidrsRequest(arg0 *globalaccelerator
 	return ret0, ret1
 }
 
-// ListByoipCidrsRequest indicates an expected call of ListByoipCidrsRequest
+// ListByoipCidrsRequest indicates an expected call of ListByoipCidrsRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListByoipCidrsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListByoipCidrsRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListByoipCidrsRequest), arg0)
 }
 
-// ListByoipCidrsWithContext mocks base method
+// ListByoipCidrsWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListByoipCidrsWithContext(arg0 context.Context, arg1 *globalaccelerator.ListByoipCidrsInput, arg2 ...request.Option) (*globalaccelerator.ListByoipCidrsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1444,14 +1445,14 @@ func (m *MockGlobalAcceleratorAPI) ListByoipCidrsWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListByoipCidrsWithContext indicates an expected call of ListByoipCidrsWithContext
+// ListByoipCidrsWithContext indicates an expected call of ListByoipCidrsWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListByoipCidrsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListByoipCidrsWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListByoipCidrsWithContext), varargs...)
 }
 
-// ListCustomRoutingAccelerators mocks base method
+// ListCustomRoutingAccelerators mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingAccelerators(arg0 *globalaccelerator.ListCustomRoutingAcceleratorsInput) (*globalaccelerator.ListCustomRoutingAcceleratorsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingAccelerators", arg0)
@@ -1460,13 +1461,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingAccelerators(arg0 *globalacc
 	return ret0, ret1
 }
 
-// ListCustomRoutingAccelerators indicates an expected call of ListCustomRoutingAccelerators
+// ListCustomRoutingAccelerators indicates an expected call of ListCustomRoutingAccelerators.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingAccelerators(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingAccelerators", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingAccelerators), arg0)
 }
 
-// ListCustomRoutingAcceleratorsPages mocks base method
+// ListCustomRoutingAcceleratorsPages mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingAcceleratorsPages(arg0 *globalaccelerator.ListCustomRoutingAcceleratorsInput, arg1 func(*globalaccelerator.ListCustomRoutingAcceleratorsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingAcceleratorsPages", arg0, arg1)
@@ -1474,13 +1475,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingAcceleratorsPages(arg0 *glob
 	return ret0
 }
 
-// ListCustomRoutingAcceleratorsPages indicates an expected call of ListCustomRoutingAcceleratorsPages
+// ListCustomRoutingAcceleratorsPages indicates an expected call of ListCustomRoutingAcceleratorsPages.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingAcceleratorsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingAcceleratorsPages", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingAcceleratorsPages), arg0, arg1)
 }
 
-// ListCustomRoutingAcceleratorsPagesWithContext mocks base method
+// ListCustomRoutingAcceleratorsPagesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingAcceleratorsPagesWithContext(arg0 context.Context, arg1 *globalaccelerator.ListCustomRoutingAcceleratorsInput, arg2 func(*globalaccelerator.ListCustomRoutingAcceleratorsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1492,14 +1493,14 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingAcceleratorsPagesWithContext
 	return ret0
 }
 
-// ListCustomRoutingAcceleratorsPagesWithContext indicates an expected call of ListCustomRoutingAcceleratorsPagesWithContext
+// ListCustomRoutingAcceleratorsPagesWithContext indicates an expected call of ListCustomRoutingAcceleratorsPagesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingAcceleratorsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingAcceleratorsPagesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingAcceleratorsPagesWithContext), varargs...)
 }
 
-// ListCustomRoutingAcceleratorsRequest mocks base method
+// ListCustomRoutingAcceleratorsRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingAcceleratorsRequest(arg0 *globalaccelerator.ListCustomRoutingAcceleratorsInput) (*request.Request, *globalaccelerator.ListCustomRoutingAcceleratorsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingAcceleratorsRequest", arg0)
@@ -1508,13 +1509,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingAcceleratorsRequest(arg0 *gl
 	return ret0, ret1
 }
 
-// ListCustomRoutingAcceleratorsRequest indicates an expected call of ListCustomRoutingAcceleratorsRequest
+// ListCustomRoutingAcceleratorsRequest indicates an expected call of ListCustomRoutingAcceleratorsRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingAcceleratorsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingAcceleratorsRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingAcceleratorsRequest), arg0)
 }
 
-// ListCustomRoutingAcceleratorsWithContext mocks base method
+// ListCustomRoutingAcceleratorsWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingAcceleratorsWithContext(arg0 context.Context, arg1 *globalaccelerator.ListCustomRoutingAcceleratorsInput, arg2 ...request.Option) (*globalaccelerator.ListCustomRoutingAcceleratorsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1527,14 +1528,14 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingAcceleratorsWithContext(arg0
 	return ret0, ret1
 }
 
-// ListCustomRoutingAcceleratorsWithContext indicates an expected call of ListCustomRoutingAcceleratorsWithContext
+// ListCustomRoutingAcceleratorsWithContext indicates an expected call of ListCustomRoutingAcceleratorsWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingAcceleratorsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingAcceleratorsWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingAcceleratorsWithContext), varargs...)
 }
 
-// ListCustomRoutingEndpointGroups mocks base method
+// ListCustomRoutingEndpointGroups mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingEndpointGroups(arg0 *globalaccelerator.ListCustomRoutingEndpointGroupsInput) (*globalaccelerator.ListCustomRoutingEndpointGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingEndpointGroups", arg0)
@@ -1543,13 +1544,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingEndpointGroups(arg0 *globala
 	return ret0, ret1
 }
 
-// ListCustomRoutingEndpointGroups indicates an expected call of ListCustomRoutingEndpointGroups
+// ListCustomRoutingEndpointGroups indicates an expected call of ListCustomRoutingEndpointGroups.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingEndpointGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingEndpointGroups", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingEndpointGroups), arg0)
 }
 
-// ListCustomRoutingEndpointGroupsPages mocks base method
+// ListCustomRoutingEndpointGroupsPages mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingEndpointGroupsPages(arg0 *globalaccelerator.ListCustomRoutingEndpointGroupsInput, arg1 func(*globalaccelerator.ListCustomRoutingEndpointGroupsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingEndpointGroupsPages", arg0, arg1)
@@ -1557,13 +1558,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingEndpointGroupsPages(arg0 *gl
 	return ret0
 }
 
-// ListCustomRoutingEndpointGroupsPages indicates an expected call of ListCustomRoutingEndpointGroupsPages
+// ListCustomRoutingEndpointGroupsPages indicates an expected call of ListCustomRoutingEndpointGroupsPages.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingEndpointGroupsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingEndpointGroupsPages", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingEndpointGroupsPages), arg0, arg1)
 }
 
-// ListCustomRoutingEndpointGroupsPagesWithContext mocks base method
+// ListCustomRoutingEndpointGroupsPagesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingEndpointGroupsPagesWithContext(arg0 context.Context, arg1 *globalaccelerator.ListCustomRoutingEndpointGroupsInput, arg2 func(*globalaccelerator.ListCustomRoutingEndpointGroupsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1575,14 +1576,14 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingEndpointGroupsPagesWithConte
 	return ret0
 }
 
-// ListCustomRoutingEndpointGroupsPagesWithContext indicates an expected call of ListCustomRoutingEndpointGroupsPagesWithContext
+// ListCustomRoutingEndpointGroupsPagesWithContext indicates an expected call of ListCustomRoutingEndpointGroupsPagesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingEndpointGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingEndpointGroupsPagesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingEndpointGroupsPagesWithContext), varargs...)
 }
 
-// ListCustomRoutingEndpointGroupsRequest mocks base method
+// ListCustomRoutingEndpointGroupsRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingEndpointGroupsRequest(arg0 *globalaccelerator.ListCustomRoutingEndpointGroupsInput) (*request.Request, *globalaccelerator.ListCustomRoutingEndpointGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingEndpointGroupsRequest", arg0)
@@ -1591,13 +1592,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingEndpointGroupsRequest(arg0 *
 	return ret0, ret1
 }
 
-// ListCustomRoutingEndpointGroupsRequest indicates an expected call of ListCustomRoutingEndpointGroupsRequest
+// ListCustomRoutingEndpointGroupsRequest indicates an expected call of ListCustomRoutingEndpointGroupsRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingEndpointGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingEndpointGroupsRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingEndpointGroupsRequest), arg0)
 }
 
-// ListCustomRoutingEndpointGroupsWithContext mocks base method
+// ListCustomRoutingEndpointGroupsWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingEndpointGroupsWithContext(arg0 context.Context, arg1 *globalaccelerator.ListCustomRoutingEndpointGroupsInput, arg2 ...request.Option) (*globalaccelerator.ListCustomRoutingEndpointGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1610,14 +1611,14 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingEndpointGroupsWithContext(ar
 	return ret0, ret1
 }
 
-// ListCustomRoutingEndpointGroupsWithContext indicates an expected call of ListCustomRoutingEndpointGroupsWithContext
+// ListCustomRoutingEndpointGroupsWithContext indicates an expected call of ListCustomRoutingEndpointGroupsWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingEndpointGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingEndpointGroupsWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingEndpointGroupsWithContext), varargs...)
 }
 
-// ListCustomRoutingListeners mocks base method
+// ListCustomRoutingListeners mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingListeners(arg0 *globalaccelerator.ListCustomRoutingListenersInput) (*globalaccelerator.ListCustomRoutingListenersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingListeners", arg0)
@@ -1626,13 +1627,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingListeners(arg0 *globalaccele
 	return ret0, ret1
 }
 
-// ListCustomRoutingListeners indicates an expected call of ListCustomRoutingListeners
+// ListCustomRoutingListeners indicates an expected call of ListCustomRoutingListeners.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingListeners(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingListeners", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingListeners), arg0)
 }
 
-// ListCustomRoutingListenersPages mocks base method
+// ListCustomRoutingListenersPages mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingListenersPages(arg0 *globalaccelerator.ListCustomRoutingListenersInput, arg1 func(*globalaccelerator.ListCustomRoutingListenersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingListenersPages", arg0, arg1)
@@ -1640,13 +1641,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingListenersPages(arg0 *globala
 	return ret0
 }
 
-// ListCustomRoutingListenersPages indicates an expected call of ListCustomRoutingListenersPages
+// ListCustomRoutingListenersPages indicates an expected call of ListCustomRoutingListenersPages.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingListenersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingListenersPages", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingListenersPages), arg0, arg1)
 }
 
-// ListCustomRoutingListenersPagesWithContext mocks base method
+// ListCustomRoutingListenersPagesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingListenersPagesWithContext(arg0 context.Context, arg1 *globalaccelerator.ListCustomRoutingListenersInput, arg2 func(*globalaccelerator.ListCustomRoutingListenersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1658,14 +1659,14 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingListenersPagesWithContext(ar
 	return ret0
 }
 
-// ListCustomRoutingListenersPagesWithContext indicates an expected call of ListCustomRoutingListenersPagesWithContext
+// ListCustomRoutingListenersPagesWithContext indicates an expected call of ListCustomRoutingListenersPagesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingListenersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingListenersPagesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingListenersPagesWithContext), varargs...)
 }
 
-// ListCustomRoutingListenersRequest mocks base method
+// ListCustomRoutingListenersRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingListenersRequest(arg0 *globalaccelerator.ListCustomRoutingListenersInput) (*request.Request, *globalaccelerator.ListCustomRoutingListenersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingListenersRequest", arg0)
@@ -1674,13 +1675,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingListenersRequest(arg0 *globa
 	return ret0, ret1
 }
 
-// ListCustomRoutingListenersRequest indicates an expected call of ListCustomRoutingListenersRequest
+// ListCustomRoutingListenersRequest indicates an expected call of ListCustomRoutingListenersRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingListenersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingListenersRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingListenersRequest), arg0)
 }
 
-// ListCustomRoutingListenersWithContext mocks base method
+// ListCustomRoutingListenersWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingListenersWithContext(arg0 context.Context, arg1 *globalaccelerator.ListCustomRoutingListenersInput, arg2 ...request.Option) (*globalaccelerator.ListCustomRoutingListenersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1693,14 +1694,14 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingListenersWithContext(arg0 co
 	return ret0, ret1
 }
 
-// ListCustomRoutingListenersWithContext indicates an expected call of ListCustomRoutingListenersWithContext
+// ListCustomRoutingListenersWithContext indicates an expected call of ListCustomRoutingListenersWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingListenersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingListenersWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingListenersWithContext), varargs...)
 }
 
-// ListCustomRoutingPortMappings mocks base method
+// ListCustomRoutingPortMappings mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappings(arg0 *globalaccelerator.ListCustomRoutingPortMappingsInput) (*globalaccelerator.ListCustomRoutingPortMappingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingPortMappings", arg0)
@@ -1709,13 +1710,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappings(arg0 *globalacc
 	return ret0, ret1
 }
 
-// ListCustomRoutingPortMappings indicates an expected call of ListCustomRoutingPortMappings
+// ListCustomRoutingPortMappings indicates an expected call of ListCustomRoutingPortMappings.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingPortMappings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingPortMappings", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingPortMappings), arg0)
 }
 
-// ListCustomRoutingPortMappingsByDestination mocks base method
+// ListCustomRoutingPortMappingsByDestination mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsByDestination(arg0 *globalaccelerator.ListCustomRoutingPortMappingsByDestinationInput) (*globalaccelerator.ListCustomRoutingPortMappingsByDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingPortMappingsByDestination", arg0)
@@ -1724,13 +1725,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsByDestination(ar
 	return ret0, ret1
 }
 
-// ListCustomRoutingPortMappingsByDestination indicates an expected call of ListCustomRoutingPortMappingsByDestination
+// ListCustomRoutingPortMappingsByDestination indicates an expected call of ListCustomRoutingPortMappingsByDestination.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingPortMappingsByDestination(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingPortMappingsByDestination", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingPortMappingsByDestination), arg0)
 }
 
-// ListCustomRoutingPortMappingsByDestinationPages mocks base method
+// ListCustomRoutingPortMappingsByDestinationPages mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsByDestinationPages(arg0 *globalaccelerator.ListCustomRoutingPortMappingsByDestinationInput, arg1 func(*globalaccelerator.ListCustomRoutingPortMappingsByDestinationOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingPortMappingsByDestinationPages", arg0, arg1)
@@ -1738,13 +1739,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsByDestinationPag
 	return ret0
 }
 
-// ListCustomRoutingPortMappingsByDestinationPages indicates an expected call of ListCustomRoutingPortMappingsByDestinationPages
+// ListCustomRoutingPortMappingsByDestinationPages indicates an expected call of ListCustomRoutingPortMappingsByDestinationPages.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingPortMappingsByDestinationPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingPortMappingsByDestinationPages", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingPortMappingsByDestinationPages), arg0, arg1)
 }
 
-// ListCustomRoutingPortMappingsByDestinationPagesWithContext mocks base method
+// ListCustomRoutingPortMappingsByDestinationPagesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsByDestinationPagesWithContext(arg0 context.Context, arg1 *globalaccelerator.ListCustomRoutingPortMappingsByDestinationInput, arg2 func(*globalaccelerator.ListCustomRoutingPortMappingsByDestinationOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1756,14 +1757,14 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsByDestinationPag
 	return ret0
 }
 
-// ListCustomRoutingPortMappingsByDestinationPagesWithContext indicates an expected call of ListCustomRoutingPortMappingsByDestinationPagesWithContext
+// ListCustomRoutingPortMappingsByDestinationPagesWithContext indicates an expected call of ListCustomRoutingPortMappingsByDestinationPagesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingPortMappingsByDestinationPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingPortMappingsByDestinationPagesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingPortMappingsByDestinationPagesWithContext), varargs...)
 }
 
-// ListCustomRoutingPortMappingsByDestinationRequest mocks base method
+// ListCustomRoutingPortMappingsByDestinationRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsByDestinationRequest(arg0 *globalaccelerator.ListCustomRoutingPortMappingsByDestinationInput) (*request.Request, *globalaccelerator.ListCustomRoutingPortMappingsByDestinationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingPortMappingsByDestinationRequest", arg0)
@@ -1772,13 +1773,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsByDestinationReq
 	return ret0, ret1
 }
 
-// ListCustomRoutingPortMappingsByDestinationRequest indicates an expected call of ListCustomRoutingPortMappingsByDestinationRequest
+// ListCustomRoutingPortMappingsByDestinationRequest indicates an expected call of ListCustomRoutingPortMappingsByDestinationRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingPortMappingsByDestinationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingPortMappingsByDestinationRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingPortMappingsByDestinationRequest), arg0)
 }
 
-// ListCustomRoutingPortMappingsByDestinationWithContext mocks base method
+// ListCustomRoutingPortMappingsByDestinationWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsByDestinationWithContext(arg0 context.Context, arg1 *globalaccelerator.ListCustomRoutingPortMappingsByDestinationInput, arg2 ...request.Option) (*globalaccelerator.ListCustomRoutingPortMappingsByDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1791,14 +1792,14 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsByDestinationWit
 	return ret0, ret1
 }
 
-// ListCustomRoutingPortMappingsByDestinationWithContext indicates an expected call of ListCustomRoutingPortMappingsByDestinationWithContext
+// ListCustomRoutingPortMappingsByDestinationWithContext indicates an expected call of ListCustomRoutingPortMappingsByDestinationWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingPortMappingsByDestinationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingPortMappingsByDestinationWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingPortMappingsByDestinationWithContext), varargs...)
 }
 
-// ListCustomRoutingPortMappingsPages mocks base method
+// ListCustomRoutingPortMappingsPages mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsPages(arg0 *globalaccelerator.ListCustomRoutingPortMappingsInput, arg1 func(*globalaccelerator.ListCustomRoutingPortMappingsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingPortMappingsPages", arg0, arg1)
@@ -1806,13 +1807,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsPages(arg0 *glob
 	return ret0
 }
 
-// ListCustomRoutingPortMappingsPages indicates an expected call of ListCustomRoutingPortMappingsPages
+// ListCustomRoutingPortMappingsPages indicates an expected call of ListCustomRoutingPortMappingsPages.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingPortMappingsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingPortMappingsPages", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingPortMappingsPages), arg0, arg1)
 }
 
-// ListCustomRoutingPortMappingsPagesWithContext mocks base method
+// ListCustomRoutingPortMappingsPagesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsPagesWithContext(arg0 context.Context, arg1 *globalaccelerator.ListCustomRoutingPortMappingsInput, arg2 func(*globalaccelerator.ListCustomRoutingPortMappingsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1824,14 +1825,14 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsPagesWithContext
 	return ret0
 }
 
-// ListCustomRoutingPortMappingsPagesWithContext indicates an expected call of ListCustomRoutingPortMappingsPagesWithContext
+// ListCustomRoutingPortMappingsPagesWithContext indicates an expected call of ListCustomRoutingPortMappingsPagesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingPortMappingsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingPortMappingsPagesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingPortMappingsPagesWithContext), varargs...)
 }
 
-// ListCustomRoutingPortMappingsRequest mocks base method
+// ListCustomRoutingPortMappingsRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsRequest(arg0 *globalaccelerator.ListCustomRoutingPortMappingsInput) (*request.Request, *globalaccelerator.ListCustomRoutingPortMappingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomRoutingPortMappingsRequest", arg0)
@@ -1840,13 +1841,13 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsRequest(arg0 *gl
 	return ret0, ret1
 }
 
-// ListCustomRoutingPortMappingsRequest indicates an expected call of ListCustomRoutingPortMappingsRequest
+// ListCustomRoutingPortMappingsRequest indicates an expected call of ListCustomRoutingPortMappingsRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingPortMappingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingPortMappingsRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingPortMappingsRequest), arg0)
 }
 
-// ListCustomRoutingPortMappingsWithContext mocks base method
+// ListCustomRoutingPortMappingsWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsWithContext(arg0 context.Context, arg1 *globalaccelerator.ListCustomRoutingPortMappingsInput, arg2 ...request.Option) (*globalaccelerator.ListCustomRoutingPortMappingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1859,14 +1860,14 @@ func (m *MockGlobalAcceleratorAPI) ListCustomRoutingPortMappingsWithContext(arg0
 	return ret0, ret1
 }
 
-// ListCustomRoutingPortMappingsWithContext indicates an expected call of ListCustomRoutingPortMappingsWithContext
+// ListCustomRoutingPortMappingsWithContext indicates an expected call of ListCustomRoutingPortMappingsWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListCustomRoutingPortMappingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomRoutingPortMappingsWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListCustomRoutingPortMappingsWithContext), varargs...)
 }
 
-// ListEndpointGroups mocks base method
+// ListEndpointGroups mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListEndpointGroups(arg0 *globalaccelerator.ListEndpointGroupsInput) (*globalaccelerator.ListEndpointGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEndpointGroups", arg0)
@@ -1875,13 +1876,13 @@ func (m *MockGlobalAcceleratorAPI) ListEndpointGroups(arg0 *globalaccelerator.Li
 	return ret0, ret1
 }
 
-// ListEndpointGroups indicates an expected call of ListEndpointGroups
+// ListEndpointGroups indicates an expected call of ListEndpointGroups.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListEndpointGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEndpointGroups", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListEndpointGroups), arg0)
 }
 
-// ListEndpointGroupsPages mocks base method
+// ListEndpointGroupsPages mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListEndpointGroupsPages(arg0 *globalaccelerator.ListEndpointGroupsInput, arg1 func(*globalaccelerator.ListEndpointGroupsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEndpointGroupsPages", arg0, arg1)
@@ -1889,13 +1890,13 @@ func (m *MockGlobalAcceleratorAPI) ListEndpointGroupsPages(arg0 *globalaccelerat
 	return ret0
 }
 
-// ListEndpointGroupsPages indicates an expected call of ListEndpointGroupsPages
+// ListEndpointGroupsPages indicates an expected call of ListEndpointGroupsPages.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListEndpointGroupsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEndpointGroupsPages", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListEndpointGroupsPages), arg0, arg1)
 }
 
-// ListEndpointGroupsPagesWithContext mocks base method
+// ListEndpointGroupsPagesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListEndpointGroupsPagesWithContext(arg0 context.Context, arg1 *globalaccelerator.ListEndpointGroupsInput, arg2 func(*globalaccelerator.ListEndpointGroupsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1907,14 +1908,14 @@ func (m *MockGlobalAcceleratorAPI) ListEndpointGroupsPagesWithContext(arg0 conte
 	return ret0
 }
 
-// ListEndpointGroupsPagesWithContext indicates an expected call of ListEndpointGroupsPagesWithContext
+// ListEndpointGroupsPagesWithContext indicates an expected call of ListEndpointGroupsPagesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListEndpointGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEndpointGroupsPagesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListEndpointGroupsPagesWithContext), varargs...)
 }
 
-// ListEndpointGroupsRequest mocks base method
+// ListEndpointGroupsRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListEndpointGroupsRequest(arg0 *globalaccelerator.ListEndpointGroupsInput) (*request.Request, *globalaccelerator.ListEndpointGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEndpointGroupsRequest", arg0)
@@ -1923,13 +1924,13 @@ func (m *MockGlobalAcceleratorAPI) ListEndpointGroupsRequest(arg0 *globalacceler
 	return ret0, ret1
 }
 
-// ListEndpointGroupsRequest indicates an expected call of ListEndpointGroupsRequest
+// ListEndpointGroupsRequest indicates an expected call of ListEndpointGroupsRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListEndpointGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEndpointGroupsRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListEndpointGroupsRequest), arg0)
 }
 
-// ListEndpointGroupsWithContext mocks base method
+// ListEndpointGroupsWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListEndpointGroupsWithContext(arg0 context.Context, arg1 *globalaccelerator.ListEndpointGroupsInput, arg2 ...request.Option) (*globalaccelerator.ListEndpointGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1942,14 +1943,14 @@ func (m *MockGlobalAcceleratorAPI) ListEndpointGroupsWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListEndpointGroupsWithContext indicates an expected call of ListEndpointGroupsWithContext
+// ListEndpointGroupsWithContext indicates an expected call of ListEndpointGroupsWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListEndpointGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEndpointGroupsWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListEndpointGroupsWithContext), varargs...)
 }
 
-// ListListeners mocks base method
+// ListListeners mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListListeners(arg0 *globalaccelerator.ListListenersInput) (*globalaccelerator.ListListenersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListListeners", arg0)
@@ -1958,13 +1959,13 @@ func (m *MockGlobalAcceleratorAPI) ListListeners(arg0 *globalaccelerator.ListLis
 	return ret0, ret1
 }
 
-// ListListeners indicates an expected call of ListListeners
+// ListListeners indicates an expected call of ListListeners.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListListeners(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListListeners", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListListeners), arg0)
 }
 
-// ListListenersPages mocks base method
+// ListListenersPages mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListListenersPages(arg0 *globalaccelerator.ListListenersInput, arg1 func(*globalaccelerator.ListListenersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListListenersPages", arg0, arg1)
@@ -1972,13 +1973,13 @@ func (m *MockGlobalAcceleratorAPI) ListListenersPages(arg0 *globalaccelerator.Li
 	return ret0
 }
 
-// ListListenersPages indicates an expected call of ListListenersPages
+// ListListenersPages indicates an expected call of ListListenersPages.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListListenersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListListenersPages", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListListenersPages), arg0, arg1)
 }
 
-// ListListenersPagesWithContext mocks base method
+// ListListenersPagesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListListenersPagesWithContext(arg0 context.Context, arg1 *globalaccelerator.ListListenersInput, arg2 func(*globalaccelerator.ListListenersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1990,14 +1991,14 @@ func (m *MockGlobalAcceleratorAPI) ListListenersPagesWithContext(arg0 context.Co
 	return ret0
 }
 
-// ListListenersPagesWithContext indicates an expected call of ListListenersPagesWithContext
+// ListListenersPagesWithContext indicates an expected call of ListListenersPagesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListListenersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListListenersPagesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListListenersPagesWithContext), varargs...)
 }
 
-// ListListenersRequest mocks base method
+// ListListenersRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListListenersRequest(arg0 *globalaccelerator.ListListenersInput) (*request.Request, *globalaccelerator.ListListenersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListListenersRequest", arg0)
@@ -2006,13 +2007,13 @@ func (m *MockGlobalAcceleratorAPI) ListListenersRequest(arg0 *globalaccelerator.
 	return ret0, ret1
 }
 
-// ListListenersRequest indicates an expected call of ListListenersRequest
+// ListListenersRequest indicates an expected call of ListListenersRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListListenersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListListenersRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListListenersRequest), arg0)
 }
 
-// ListListenersWithContext mocks base method
+// ListListenersWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListListenersWithContext(arg0 context.Context, arg1 *globalaccelerator.ListListenersInput, arg2 ...request.Option) (*globalaccelerator.ListListenersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2025,14 +2026,14 @@ func (m *MockGlobalAcceleratorAPI) ListListenersWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListListenersWithContext indicates an expected call of ListListenersWithContext
+// ListListenersWithContext indicates an expected call of ListListenersWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListListenersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListListenersWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListListenersWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListTagsForResource(arg0 *globalaccelerator.ListTagsForResourceInput) (*globalaccelerator.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -2041,13 +2042,13 @@ func (m *MockGlobalAcceleratorAPI) ListTagsForResource(arg0 *globalaccelerator.L
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListTagsForResourceRequest(arg0 *globalaccelerator.ListTagsForResourceInput) (*request.Request, *globalaccelerator.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -2056,13 +2057,13 @@ func (m *MockGlobalAcceleratorAPI) ListTagsForResourceRequest(arg0 *globalaccele
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *globalaccelerator.ListTagsForResourceInput, arg2 ...request.Option) (*globalaccelerator.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2075,14 +2076,14 @@ func (m *MockGlobalAcceleratorAPI) ListTagsForResourceWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// ProvisionByoipCidr mocks base method
+// ProvisionByoipCidr mocks base method.
 func (m *MockGlobalAcceleratorAPI) ProvisionByoipCidr(arg0 *globalaccelerator.ProvisionByoipCidrInput) (*globalaccelerator.ProvisionByoipCidrOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ProvisionByoipCidr", arg0)
@@ -2091,13 +2092,13 @@ func (m *MockGlobalAcceleratorAPI) ProvisionByoipCidr(arg0 *globalaccelerator.Pr
 	return ret0, ret1
 }
 
-// ProvisionByoipCidr indicates an expected call of ProvisionByoipCidr
+// ProvisionByoipCidr indicates an expected call of ProvisionByoipCidr.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ProvisionByoipCidr(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ProvisionByoipCidr", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ProvisionByoipCidr), arg0)
 }
 
-// ProvisionByoipCidrRequest mocks base method
+// ProvisionByoipCidrRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) ProvisionByoipCidrRequest(arg0 *globalaccelerator.ProvisionByoipCidrInput) (*request.Request, *globalaccelerator.ProvisionByoipCidrOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ProvisionByoipCidrRequest", arg0)
@@ -2106,13 +2107,13 @@ func (m *MockGlobalAcceleratorAPI) ProvisionByoipCidrRequest(arg0 *globalacceler
 	return ret0, ret1
 }
 
-// ProvisionByoipCidrRequest indicates an expected call of ProvisionByoipCidrRequest
+// ProvisionByoipCidrRequest indicates an expected call of ProvisionByoipCidrRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ProvisionByoipCidrRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ProvisionByoipCidrRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ProvisionByoipCidrRequest), arg0)
 }
 
-// ProvisionByoipCidrWithContext mocks base method
+// ProvisionByoipCidrWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) ProvisionByoipCidrWithContext(arg0 context.Context, arg1 *globalaccelerator.ProvisionByoipCidrInput, arg2 ...request.Option) (*globalaccelerator.ProvisionByoipCidrOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2125,14 +2126,14 @@ func (m *MockGlobalAcceleratorAPI) ProvisionByoipCidrWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ProvisionByoipCidrWithContext indicates an expected call of ProvisionByoipCidrWithContext
+// ProvisionByoipCidrWithContext indicates an expected call of ProvisionByoipCidrWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) ProvisionByoipCidrWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ProvisionByoipCidrWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).ProvisionByoipCidrWithContext), varargs...)
 }
 
-// RemoveCustomRoutingEndpoints mocks base method
+// RemoveCustomRoutingEndpoints mocks base method.
 func (m *MockGlobalAcceleratorAPI) RemoveCustomRoutingEndpoints(arg0 *globalaccelerator.RemoveCustomRoutingEndpointsInput) (*globalaccelerator.RemoveCustomRoutingEndpointsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RemoveCustomRoutingEndpoints", arg0)
@@ -2141,13 +2142,13 @@ func (m *MockGlobalAcceleratorAPI) RemoveCustomRoutingEndpoints(arg0 *globalacce
 	return ret0, ret1
 }
 
-// RemoveCustomRoutingEndpoints indicates an expected call of RemoveCustomRoutingEndpoints
+// RemoveCustomRoutingEndpoints indicates an expected call of RemoveCustomRoutingEndpoints.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) RemoveCustomRoutingEndpoints(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RemoveCustomRoutingEndpoints", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).RemoveCustomRoutingEndpoints), arg0)
 }
 
-// RemoveCustomRoutingEndpointsRequest mocks base method
+// RemoveCustomRoutingEndpointsRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) RemoveCustomRoutingEndpointsRequest(arg0 *globalaccelerator.RemoveCustomRoutingEndpointsInput) (*request.Request, *globalaccelerator.RemoveCustomRoutingEndpointsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RemoveCustomRoutingEndpointsRequest", arg0)
@@ -2156,13 +2157,13 @@ func (m *MockGlobalAcceleratorAPI) RemoveCustomRoutingEndpointsRequest(arg0 *glo
 	return ret0, ret1
 }
 
-// RemoveCustomRoutingEndpointsRequest indicates an expected call of RemoveCustomRoutingEndpointsRequest
+// RemoveCustomRoutingEndpointsRequest indicates an expected call of RemoveCustomRoutingEndpointsRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) RemoveCustomRoutingEndpointsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RemoveCustomRoutingEndpointsRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).RemoveCustomRoutingEndpointsRequest), arg0)
 }
 
-// RemoveCustomRoutingEndpointsWithContext mocks base method
+// RemoveCustomRoutingEndpointsWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) RemoveCustomRoutingEndpointsWithContext(arg0 context.Context, arg1 *globalaccelerator.RemoveCustomRoutingEndpointsInput, arg2 ...request.Option) (*globalaccelerator.RemoveCustomRoutingEndpointsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2175,14 +2176,14 @@ func (m *MockGlobalAcceleratorAPI) RemoveCustomRoutingEndpointsWithContext(arg0 
 	return ret0, ret1
 }
 
-// RemoveCustomRoutingEndpointsWithContext indicates an expected call of RemoveCustomRoutingEndpointsWithContext
+// RemoveCustomRoutingEndpointsWithContext indicates an expected call of RemoveCustomRoutingEndpointsWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) RemoveCustomRoutingEndpointsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RemoveCustomRoutingEndpointsWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).RemoveCustomRoutingEndpointsWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockGlobalAcceleratorAPI) TagResource(arg0 *globalaccelerator.TagResourceInput) (*globalaccelerator.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -2191,13 +2192,13 @@ func (m *MockGlobalAcceleratorAPI) TagResource(arg0 *globalaccelerator.TagResour
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) TagResourceRequest(arg0 *globalaccelerator.TagResourceInput) (*request.Request, *globalaccelerator.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -2206,13 +2207,13 @@ func (m *MockGlobalAcceleratorAPI) TagResourceRequest(arg0 *globalaccelerator.Ta
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) TagResourceWithContext(arg0 context.Context, arg1 *globalaccelerator.TagResourceInput, arg2 ...request.Option) (*globalaccelerator.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2225,14 +2226,14 @@ func (m *MockGlobalAcceleratorAPI) TagResourceWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockGlobalAcceleratorAPI) UntagResource(arg0 *globalaccelerator.UntagResourceInput) (*globalaccelerator.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -2241,13 +2242,13 @@ func (m *MockGlobalAcceleratorAPI) UntagResource(arg0 *globalaccelerator.UntagRe
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) UntagResourceRequest(arg0 *globalaccelerator.UntagResourceInput) (*request.Request, *globalaccelerator.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -2256,13 +2257,13 @@ func (m *MockGlobalAcceleratorAPI) UntagResourceRequest(arg0 *globalaccelerator.
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) UntagResourceWithContext(arg0 context.Context, arg1 *globalaccelerator.UntagResourceInput, arg2 ...request.Option) (*globalaccelerator.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2275,14 +2276,14 @@ func (m *MockGlobalAcceleratorAPI) UntagResourceWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateAccelerator mocks base method
+// UpdateAccelerator mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateAccelerator(arg0 *globalaccelerator.UpdateAcceleratorInput) (*globalaccelerator.UpdateAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAccelerator", arg0)
@@ -2291,13 +2292,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateAccelerator(arg0 *globalaccelerator.Upd
 	return ret0, ret1
 }
 
-// UpdateAccelerator indicates an expected call of UpdateAccelerator
+// UpdateAccelerator indicates an expected call of UpdateAccelerator.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateAccelerator(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAccelerator", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateAccelerator), arg0)
 }
 
-// UpdateAcceleratorAttributes mocks base method
+// UpdateAcceleratorAttributes mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateAcceleratorAttributes(arg0 *globalaccelerator.UpdateAcceleratorAttributesInput) (*globalaccelerator.UpdateAcceleratorAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAcceleratorAttributes", arg0)
@@ -2306,13 +2307,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateAcceleratorAttributes(arg0 *globalaccel
 	return ret0, ret1
 }
 
-// UpdateAcceleratorAttributes indicates an expected call of UpdateAcceleratorAttributes
+// UpdateAcceleratorAttributes indicates an expected call of UpdateAcceleratorAttributes.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateAcceleratorAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAcceleratorAttributes", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateAcceleratorAttributes), arg0)
 }
 
-// UpdateAcceleratorAttributesRequest mocks base method
+// UpdateAcceleratorAttributesRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateAcceleratorAttributesRequest(arg0 *globalaccelerator.UpdateAcceleratorAttributesInput) (*request.Request, *globalaccelerator.UpdateAcceleratorAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAcceleratorAttributesRequest", arg0)
@@ -2321,13 +2322,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateAcceleratorAttributesRequest(arg0 *glob
 	return ret0, ret1
 }
 
-// UpdateAcceleratorAttributesRequest indicates an expected call of UpdateAcceleratorAttributesRequest
+// UpdateAcceleratorAttributesRequest indicates an expected call of UpdateAcceleratorAttributesRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateAcceleratorAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAcceleratorAttributesRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateAcceleratorAttributesRequest), arg0)
 }
 
-// UpdateAcceleratorAttributesWithContext mocks base method
+// UpdateAcceleratorAttributesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateAcceleratorAttributesWithContext(arg0 context.Context, arg1 *globalaccelerator.UpdateAcceleratorAttributesInput, arg2 ...request.Option) (*globalaccelerator.UpdateAcceleratorAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2340,14 +2341,14 @@ func (m *MockGlobalAcceleratorAPI) UpdateAcceleratorAttributesWithContext(arg0 c
 	return ret0, ret1
 }
 
-// UpdateAcceleratorAttributesWithContext indicates an expected call of UpdateAcceleratorAttributesWithContext
+// UpdateAcceleratorAttributesWithContext indicates an expected call of UpdateAcceleratorAttributesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateAcceleratorAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAcceleratorAttributesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateAcceleratorAttributesWithContext), varargs...)
 }
 
-// UpdateAcceleratorRequest mocks base method
+// UpdateAcceleratorRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateAcceleratorRequest(arg0 *globalaccelerator.UpdateAcceleratorInput) (*request.Request, *globalaccelerator.UpdateAcceleratorOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAcceleratorRequest", arg0)
@@ -2356,13 +2357,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateAcceleratorRequest(arg0 *globalaccelera
 	return ret0, ret1
 }
 
-// UpdateAcceleratorRequest indicates an expected call of UpdateAcceleratorRequest
+// UpdateAcceleratorRequest indicates an expected call of UpdateAcceleratorRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateAcceleratorRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAcceleratorRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateAcceleratorRequest), arg0)
 }
 
-// UpdateAcceleratorWithContext mocks base method
+// UpdateAcceleratorWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateAcceleratorWithContext(arg0 context.Context, arg1 *globalaccelerator.UpdateAcceleratorInput, arg2 ...request.Option) (*globalaccelerator.UpdateAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2375,14 +2376,14 @@ func (m *MockGlobalAcceleratorAPI) UpdateAcceleratorWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// UpdateAcceleratorWithContext indicates an expected call of UpdateAcceleratorWithContext
+// UpdateAcceleratorWithContext indicates an expected call of UpdateAcceleratorWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateAcceleratorWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAcceleratorWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateAcceleratorWithContext), varargs...)
 }
 
-// UpdateCustomRoutingAccelerator mocks base method
+// UpdateCustomRoutingAccelerator mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingAccelerator(arg0 *globalaccelerator.UpdateCustomRoutingAcceleratorInput) (*globalaccelerator.UpdateCustomRoutingAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCustomRoutingAccelerator", arg0)
@@ -2391,13 +2392,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingAccelerator(arg0 *globalac
 	return ret0, ret1
 }
 
-// UpdateCustomRoutingAccelerator indicates an expected call of UpdateCustomRoutingAccelerator
+// UpdateCustomRoutingAccelerator indicates an expected call of UpdateCustomRoutingAccelerator.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateCustomRoutingAccelerator(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCustomRoutingAccelerator", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateCustomRoutingAccelerator), arg0)
 }
 
-// UpdateCustomRoutingAcceleratorAttributes mocks base method
+// UpdateCustomRoutingAcceleratorAttributes mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingAcceleratorAttributes(arg0 *globalaccelerator.UpdateCustomRoutingAcceleratorAttributesInput) (*globalaccelerator.UpdateCustomRoutingAcceleratorAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCustomRoutingAcceleratorAttributes", arg0)
@@ -2406,13 +2407,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingAcceleratorAttributes(arg0
 	return ret0, ret1
 }
 
-// UpdateCustomRoutingAcceleratorAttributes indicates an expected call of UpdateCustomRoutingAcceleratorAttributes
+// UpdateCustomRoutingAcceleratorAttributes indicates an expected call of UpdateCustomRoutingAcceleratorAttributes.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateCustomRoutingAcceleratorAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCustomRoutingAcceleratorAttributes", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateCustomRoutingAcceleratorAttributes), arg0)
 }
 
-// UpdateCustomRoutingAcceleratorAttributesRequest mocks base method
+// UpdateCustomRoutingAcceleratorAttributesRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingAcceleratorAttributesRequest(arg0 *globalaccelerator.UpdateCustomRoutingAcceleratorAttributesInput) (*request.Request, *globalaccelerator.UpdateCustomRoutingAcceleratorAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCustomRoutingAcceleratorAttributesRequest", arg0)
@@ -2421,13 +2422,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingAcceleratorAttributesReque
 	return ret0, ret1
 }
 
-// UpdateCustomRoutingAcceleratorAttributesRequest indicates an expected call of UpdateCustomRoutingAcceleratorAttributesRequest
+// UpdateCustomRoutingAcceleratorAttributesRequest indicates an expected call of UpdateCustomRoutingAcceleratorAttributesRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateCustomRoutingAcceleratorAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCustomRoutingAcceleratorAttributesRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateCustomRoutingAcceleratorAttributesRequest), arg0)
 }
 
-// UpdateCustomRoutingAcceleratorAttributesWithContext mocks base method
+// UpdateCustomRoutingAcceleratorAttributesWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingAcceleratorAttributesWithContext(arg0 context.Context, arg1 *globalaccelerator.UpdateCustomRoutingAcceleratorAttributesInput, arg2 ...request.Option) (*globalaccelerator.UpdateCustomRoutingAcceleratorAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2440,14 +2441,14 @@ func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingAcceleratorAttributesWithC
 	return ret0, ret1
 }
 
-// UpdateCustomRoutingAcceleratorAttributesWithContext indicates an expected call of UpdateCustomRoutingAcceleratorAttributesWithContext
+// UpdateCustomRoutingAcceleratorAttributesWithContext indicates an expected call of UpdateCustomRoutingAcceleratorAttributesWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateCustomRoutingAcceleratorAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCustomRoutingAcceleratorAttributesWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateCustomRoutingAcceleratorAttributesWithContext), varargs...)
 }
 
-// UpdateCustomRoutingAcceleratorRequest mocks base method
+// UpdateCustomRoutingAcceleratorRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingAcceleratorRequest(arg0 *globalaccelerator.UpdateCustomRoutingAcceleratorInput) (*request.Request, *globalaccelerator.UpdateCustomRoutingAcceleratorOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCustomRoutingAcceleratorRequest", arg0)
@@ -2456,13 +2457,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingAcceleratorRequest(arg0 *g
 	return ret0, ret1
 }
 
-// UpdateCustomRoutingAcceleratorRequest indicates an expected call of UpdateCustomRoutingAcceleratorRequest
+// UpdateCustomRoutingAcceleratorRequest indicates an expected call of UpdateCustomRoutingAcceleratorRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateCustomRoutingAcceleratorRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCustomRoutingAcceleratorRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateCustomRoutingAcceleratorRequest), arg0)
 }
 
-// UpdateCustomRoutingAcceleratorWithContext mocks base method
+// UpdateCustomRoutingAcceleratorWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingAcceleratorWithContext(arg0 context.Context, arg1 *globalaccelerator.UpdateCustomRoutingAcceleratorInput, arg2 ...request.Option) (*globalaccelerator.UpdateCustomRoutingAcceleratorOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2475,14 +2476,14 @@ func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingAcceleratorWithContext(arg
 	return ret0, ret1
 }
 
-// UpdateCustomRoutingAcceleratorWithContext indicates an expected call of UpdateCustomRoutingAcceleratorWithContext
+// UpdateCustomRoutingAcceleratorWithContext indicates an expected call of UpdateCustomRoutingAcceleratorWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateCustomRoutingAcceleratorWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCustomRoutingAcceleratorWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateCustomRoutingAcceleratorWithContext), varargs...)
 }
 
-// UpdateCustomRoutingListener mocks base method
+// UpdateCustomRoutingListener mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingListener(arg0 *globalaccelerator.UpdateCustomRoutingListenerInput) (*globalaccelerator.UpdateCustomRoutingListenerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCustomRoutingListener", arg0)
@@ -2491,13 +2492,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingListener(arg0 *globalaccel
 	return ret0, ret1
 }
 
-// UpdateCustomRoutingListener indicates an expected call of UpdateCustomRoutingListener
+// UpdateCustomRoutingListener indicates an expected call of UpdateCustomRoutingListener.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateCustomRoutingListener(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCustomRoutingListener", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateCustomRoutingListener), arg0)
 }
 
-// UpdateCustomRoutingListenerRequest mocks base method
+// UpdateCustomRoutingListenerRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingListenerRequest(arg0 *globalaccelerator.UpdateCustomRoutingListenerInput) (*request.Request, *globalaccelerator.UpdateCustomRoutingListenerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCustomRoutingListenerRequest", arg0)
@@ -2506,13 +2507,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingListenerRequest(arg0 *glob
 	return ret0, ret1
 }
 
-// UpdateCustomRoutingListenerRequest indicates an expected call of UpdateCustomRoutingListenerRequest
+// UpdateCustomRoutingListenerRequest indicates an expected call of UpdateCustomRoutingListenerRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateCustomRoutingListenerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCustomRoutingListenerRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateCustomRoutingListenerRequest), arg0)
 }
 
-// UpdateCustomRoutingListenerWithContext mocks base method
+// UpdateCustomRoutingListenerWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingListenerWithContext(arg0 context.Context, arg1 *globalaccelerator.UpdateCustomRoutingListenerInput, arg2 ...request.Option) (*globalaccelerator.UpdateCustomRoutingListenerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2525,14 +2526,14 @@ func (m *MockGlobalAcceleratorAPI) UpdateCustomRoutingListenerWithContext(arg0 c
 	return ret0, ret1
 }
 
-// UpdateCustomRoutingListenerWithContext indicates an expected call of UpdateCustomRoutingListenerWithContext
+// UpdateCustomRoutingListenerWithContext indicates an expected call of UpdateCustomRoutingListenerWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateCustomRoutingListenerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCustomRoutingListenerWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateCustomRoutingListenerWithContext), varargs...)
 }
 
-// UpdateEndpointGroup mocks base method
+// UpdateEndpointGroup mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateEndpointGroup(arg0 *globalaccelerator.UpdateEndpointGroupInput) (*globalaccelerator.UpdateEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateEndpointGroup", arg0)
@@ -2541,13 +2542,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateEndpointGroup(arg0 *globalaccelerator.U
 	return ret0, ret1
 }
 
-// UpdateEndpointGroup indicates an expected call of UpdateEndpointGroup
+// UpdateEndpointGroup indicates an expected call of UpdateEndpointGroup.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateEndpointGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEndpointGroup", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateEndpointGroup), arg0)
 }
 
-// UpdateEndpointGroupRequest mocks base method
+// UpdateEndpointGroupRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateEndpointGroupRequest(arg0 *globalaccelerator.UpdateEndpointGroupInput) (*request.Request, *globalaccelerator.UpdateEndpointGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateEndpointGroupRequest", arg0)
@@ -2556,13 +2557,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateEndpointGroupRequest(arg0 *globalaccele
 	return ret0, ret1
 }
 
-// UpdateEndpointGroupRequest indicates an expected call of UpdateEndpointGroupRequest
+// UpdateEndpointGroupRequest indicates an expected call of UpdateEndpointGroupRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateEndpointGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEndpointGroupRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateEndpointGroupRequest), arg0)
 }
 
-// UpdateEndpointGroupWithContext mocks base method
+// UpdateEndpointGroupWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateEndpointGroupWithContext(arg0 context.Context, arg1 *globalaccelerator.UpdateEndpointGroupInput, arg2 ...request.Option) (*globalaccelerator.UpdateEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2575,14 +2576,14 @@ func (m *MockGlobalAcceleratorAPI) UpdateEndpointGroupWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// UpdateEndpointGroupWithContext indicates an expected call of UpdateEndpointGroupWithContext
+// UpdateEndpointGroupWithContext indicates an expected call of UpdateEndpointGroupWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateEndpointGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEndpointGroupWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateEndpointGroupWithContext), varargs...)
 }
 
-// UpdateListener mocks base method
+// UpdateListener mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateListener(arg0 *globalaccelerator.UpdateListenerInput) (*globalaccelerator.UpdateListenerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateListener", arg0)
@@ -2591,13 +2592,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateListener(arg0 *globalaccelerator.Update
 	return ret0, ret1
 }
 
-// UpdateListener indicates an expected call of UpdateListener
+// UpdateListener indicates an expected call of UpdateListener.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateListener(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateListener", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateListener), arg0)
 }
 
-// UpdateListenerRequest mocks base method
+// UpdateListenerRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateListenerRequest(arg0 *globalaccelerator.UpdateListenerInput) (*request.Request, *globalaccelerator.UpdateListenerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateListenerRequest", arg0)
@@ -2606,13 +2607,13 @@ func (m *MockGlobalAcceleratorAPI) UpdateListenerRequest(arg0 *globalaccelerator
 	return ret0, ret1
 }
 
-// UpdateListenerRequest indicates an expected call of UpdateListenerRequest
+// UpdateListenerRequest indicates an expected call of UpdateListenerRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateListenerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateListenerRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateListenerRequest), arg0)
 }
 
-// UpdateListenerWithContext mocks base method
+// UpdateListenerWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) UpdateListenerWithContext(arg0 context.Context, arg1 *globalaccelerator.UpdateListenerInput, arg2 ...request.Option) (*globalaccelerator.UpdateListenerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2625,14 +2626,14 @@ func (m *MockGlobalAcceleratorAPI) UpdateListenerWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// UpdateListenerWithContext indicates an expected call of UpdateListenerWithContext
+// UpdateListenerWithContext indicates an expected call of UpdateListenerWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) UpdateListenerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateListenerWithContext", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).UpdateListenerWithContext), varargs...)
 }
 
-// WithdrawByoipCidr mocks base method
+// WithdrawByoipCidr mocks base method.
 func (m *MockGlobalAcceleratorAPI) WithdrawByoipCidr(arg0 *globalaccelerator.WithdrawByoipCidrInput) (*globalaccelerator.WithdrawByoipCidrOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WithdrawByoipCidr", arg0)
@@ -2641,13 +2642,13 @@ func (m *MockGlobalAcceleratorAPI) WithdrawByoipCidr(arg0 *globalaccelerator.Wit
 	return ret0, ret1
 }
 
-// WithdrawByoipCidr indicates an expected call of WithdrawByoipCidr
+// WithdrawByoipCidr indicates an expected call of WithdrawByoipCidr.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) WithdrawByoipCidr(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WithdrawByoipCidr", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).WithdrawByoipCidr), arg0)
 }
 
-// WithdrawByoipCidrRequest mocks base method
+// WithdrawByoipCidrRequest mocks base method.
 func (m *MockGlobalAcceleratorAPI) WithdrawByoipCidrRequest(arg0 *globalaccelerator.WithdrawByoipCidrInput) (*request.Request, *globalaccelerator.WithdrawByoipCidrOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WithdrawByoipCidrRequest", arg0)
@@ -2656,13 +2657,13 @@ func (m *MockGlobalAcceleratorAPI) WithdrawByoipCidrRequest(arg0 *globalaccelera
 	return ret0, ret1
 }
 
-// WithdrawByoipCidrRequest indicates an expected call of WithdrawByoipCidrRequest
+// WithdrawByoipCidrRequest indicates an expected call of WithdrawByoipCidrRequest.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) WithdrawByoipCidrRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WithdrawByoipCidrRequest", reflect.TypeOf((*MockGlobalAcceleratorAPI)(nil).WithdrawByoipCidrRequest), arg0)
 }
 
-// WithdrawByoipCidrWithContext mocks base method
+// WithdrawByoipCidrWithContext mocks base method.
 func (m *MockGlobalAcceleratorAPI) WithdrawByoipCidrWithContext(arg0 context.Context, arg1 *globalaccelerator.WithdrawByoipCidrInput, arg2 ...request.Option) (*globalaccelerator.WithdrawByoipCidrOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2675,7 +2676,7 @@ func (m *MockGlobalAcceleratorAPI) WithdrawByoipCidrWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// WithdrawByoipCidrWithContext indicates an expected call of WithdrawByoipCidrWithContext
+// WithdrawByoipCidrWithContext indicates an expected call of WithdrawByoipCidrWithContext.
 func (mr *MockGlobalAcceleratorAPIMockRecorder) WithdrawByoipCidrWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

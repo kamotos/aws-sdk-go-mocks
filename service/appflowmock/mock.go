@@ -6,36 +6,37 @@ package appflowmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	appflow "github.com/aws/aws-sdk-go/service/appflow"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockAppflowAPI is a mock of AppflowAPI interface
+// MockAppflowAPI is a mock of AppflowAPI interface.
 type MockAppflowAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockAppflowAPIMockRecorder
 }
 
-// MockAppflowAPIMockRecorder is the mock recorder for MockAppflowAPI
+// MockAppflowAPIMockRecorder is the mock recorder for MockAppflowAPI.
 type MockAppflowAPIMockRecorder struct {
 	mock *MockAppflowAPI
 }
 
-// NewMockAppflowAPI creates a new mock instance
+// NewMockAppflowAPI creates a new mock instance.
 func NewMockAppflowAPI(ctrl *gomock.Controller) *MockAppflowAPI {
 	mock := &MockAppflowAPI{ctrl: ctrl}
 	mock.recorder = &MockAppflowAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockAppflowAPI) EXPECT() *MockAppflowAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateConnectorProfile mocks base method
+// CreateConnectorProfile mocks base method.
 func (m *MockAppflowAPI) CreateConnectorProfile(arg0 *appflow.CreateConnectorProfileInput) (*appflow.CreateConnectorProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConnectorProfile", arg0)
@@ -44,13 +45,13 @@ func (m *MockAppflowAPI) CreateConnectorProfile(arg0 *appflow.CreateConnectorPro
 	return ret0, ret1
 }
 
-// CreateConnectorProfile indicates an expected call of CreateConnectorProfile
+// CreateConnectorProfile indicates an expected call of CreateConnectorProfile.
 func (mr *MockAppflowAPIMockRecorder) CreateConnectorProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConnectorProfile", reflect.TypeOf((*MockAppflowAPI)(nil).CreateConnectorProfile), arg0)
 }
 
-// CreateConnectorProfileRequest mocks base method
+// CreateConnectorProfileRequest mocks base method.
 func (m *MockAppflowAPI) CreateConnectorProfileRequest(arg0 *appflow.CreateConnectorProfileInput) (*request.Request, *appflow.CreateConnectorProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConnectorProfileRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockAppflowAPI) CreateConnectorProfileRequest(arg0 *appflow.CreateConne
 	return ret0, ret1
 }
 
-// CreateConnectorProfileRequest indicates an expected call of CreateConnectorProfileRequest
+// CreateConnectorProfileRequest indicates an expected call of CreateConnectorProfileRequest.
 func (mr *MockAppflowAPIMockRecorder) CreateConnectorProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConnectorProfileRequest", reflect.TypeOf((*MockAppflowAPI)(nil).CreateConnectorProfileRequest), arg0)
 }
 
-// CreateConnectorProfileWithContext mocks base method
+// CreateConnectorProfileWithContext mocks base method.
 func (m *MockAppflowAPI) CreateConnectorProfileWithContext(arg0 context.Context, arg1 *appflow.CreateConnectorProfileInput, arg2 ...request.Option) (*appflow.CreateConnectorProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockAppflowAPI) CreateConnectorProfileWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateConnectorProfileWithContext indicates an expected call of CreateConnectorProfileWithContext
+// CreateConnectorProfileWithContext indicates an expected call of CreateConnectorProfileWithContext.
 func (mr *MockAppflowAPIMockRecorder) CreateConnectorProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConnectorProfileWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).CreateConnectorProfileWithContext), varargs...)
 }
 
-// CreateFlow mocks base method
+// CreateFlow mocks base method.
 func (m *MockAppflowAPI) CreateFlow(arg0 *appflow.CreateFlowInput) (*appflow.CreateFlowOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFlow", arg0)
@@ -94,13 +95,13 @@ func (m *MockAppflowAPI) CreateFlow(arg0 *appflow.CreateFlowInput) (*appflow.Cre
 	return ret0, ret1
 }
 
-// CreateFlow indicates an expected call of CreateFlow
+// CreateFlow indicates an expected call of CreateFlow.
 func (mr *MockAppflowAPIMockRecorder) CreateFlow(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFlow", reflect.TypeOf((*MockAppflowAPI)(nil).CreateFlow), arg0)
 }
 
-// CreateFlowRequest mocks base method
+// CreateFlowRequest mocks base method.
 func (m *MockAppflowAPI) CreateFlowRequest(arg0 *appflow.CreateFlowInput) (*request.Request, *appflow.CreateFlowOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFlowRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockAppflowAPI) CreateFlowRequest(arg0 *appflow.CreateFlowInput) (*requ
 	return ret0, ret1
 }
 
-// CreateFlowRequest indicates an expected call of CreateFlowRequest
+// CreateFlowRequest indicates an expected call of CreateFlowRequest.
 func (mr *MockAppflowAPIMockRecorder) CreateFlowRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFlowRequest", reflect.TypeOf((*MockAppflowAPI)(nil).CreateFlowRequest), arg0)
 }
 
-// CreateFlowWithContext mocks base method
+// CreateFlowWithContext mocks base method.
 func (m *MockAppflowAPI) CreateFlowWithContext(arg0 context.Context, arg1 *appflow.CreateFlowInput, arg2 ...request.Option) (*appflow.CreateFlowOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockAppflowAPI) CreateFlowWithContext(arg0 context.Context, arg1 *appfl
 	return ret0, ret1
 }
 
-// CreateFlowWithContext indicates an expected call of CreateFlowWithContext
+// CreateFlowWithContext indicates an expected call of CreateFlowWithContext.
 func (mr *MockAppflowAPIMockRecorder) CreateFlowWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFlowWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).CreateFlowWithContext), varargs...)
 }
 
-// DeleteConnectorProfile mocks base method
+// DeleteConnectorProfile mocks base method.
 func (m *MockAppflowAPI) DeleteConnectorProfile(arg0 *appflow.DeleteConnectorProfileInput) (*appflow.DeleteConnectorProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConnectorProfile", arg0)
@@ -144,13 +145,13 @@ func (m *MockAppflowAPI) DeleteConnectorProfile(arg0 *appflow.DeleteConnectorPro
 	return ret0, ret1
 }
 
-// DeleteConnectorProfile indicates an expected call of DeleteConnectorProfile
+// DeleteConnectorProfile indicates an expected call of DeleteConnectorProfile.
 func (mr *MockAppflowAPIMockRecorder) DeleteConnectorProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConnectorProfile", reflect.TypeOf((*MockAppflowAPI)(nil).DeleteConnectorProfile), arg0)
 }
 
-// DeleteConnectorProfileRequest mocks base method
+// DeleteConnectorProfileRequest mocks base method.
 func (m *MockAppflowAPI) DeleteConnectorProfileRequest(arg0 *appflow.DeleteConnectorProfileInput) (*request.Request, *appflow.DeleteConnectorProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConnectorProfileRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockAppflowAPI) DeleteConnectorProfileRequest(arg0 *appflow.DeleteConne
 	return ret0, ret1
 }
 
-// DeleteConnectorProfileRequest indicates an expected call of DeleteConnectorProfileRequest
+// DeleteConnectorProfileRequest indicates an expected call of DeleteConnectorProfileRequest.
 func (mr *MockAppflowAPIMockRecorder) DeleteConnectorProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConnectorProfileRequest", reflect.TypeOf((*MockAppflowAPI)(nil).DeleteConnectorProfileRequest), arg0)
 }
 
-// DeleteConnectorProfileWithContext mocks base method
+// DeleteConnectorProfileWithContext mocks base method.
 func (m *MockAppflowAPI) DeleteConnectorProfileWithContext(arg0 context.Context, arg1 *appflow.DeleteConnectorProfileInput, arg2 ...request.Option) (*appflow.DeleteConnectorProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockAppflowAPI) DeleteConnectorProfileWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteConnectorProfileWithContext indicates an expected call of DeleteConnectorProfileWithContext
+// DeleteConnectorProfileWithContext indicates an expected call of DeleteConnectorProfileWithContext.
 func (mr *MockAppflowAPIMockRecorder) DeleteConnectorProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConnectorProfileWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).DeleteConnectorProfileWithContext), varargs...)
 }
 
-// DeleteFlow mocks base method
+// DeleteFlow mocks base method.
 func (m *MockAppflowAPI) DeleteFlow(arg0 *appflow.DeleteFlowInput) (*appflow.DeleteFlowOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFlow", arg0)
@@ -194,13 +195,13 @@ func (m *MockAppflowAPI) DeleteFlow(arg0 *appflow.DeleteFlowInput) (*appflow.Del
 	return ret0, ret1
 }
 
-// DeleteFlow indicates an expected call of DeleteFlow
+// DeleteFlow indicates an expected call of DeleteFlow.
 func (mr *MockAppflowAPIMockRecorder) DeleteFlow(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFlow", reflect.TypeOf((*MockAppflowAPI)(nil).DeleteFlow), arg0)
 }
 
-// DeleteFlowRequest mocks base method
+// DeleteFlowRequest mocks base method.
 func (m *MockAppflowAPI) DeleteFlowRequest(arg0 *appflow.DeleteFlowInput) (*request.Request, *appflow.DeleteFlowOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFlowRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockAppflowAPI) DeleteFlowRequest(arg0 *appflow.DeleteFlowInput) (*requ
 	return ret0, ret1
 }
 
-// DeleteFlowRequest indicates an expected call of DeleteFlowRequest
+// DeleteFlowRequest indicates an expected call of DeleteFlowRequest.
 func (mr *MockAppflowAPIMockRecorder) DeleteFlowRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFlowRequest", reflect.TypeOf((*MockAppflowAPI)(nil).DeleteFlowRequest), arg0)
 }
 
-// DeleteFlowWithContext mocks base method
+// DeleteFlowWithContext mocks base method.
 func (m *MockAppflowAPI) DeleteFlowWithContext(arg0 context.Context, arg1 *appflow.DeleteFlowInput, arg2 ...request.Option) (*appflow.DeleteFlowOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockAppflowAPI) DeleteFlowWithContext(arg0 context.Context, arg1 *appfl
 	return ret0, ret1
 }
 
-// DeleteFlowWithContext indicates an expected call of DeleteFlowWithContext
+// DeleteFlowWithContext indicates an expected call of DeleteFlowWithContext.
 func (mr *MockAppflowAPIMockRecorder) DeleteFlowWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFlowWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).DeleteFlowWithContext), varargs...)
 }
 
-// DescribeConnectorEntity mocks base method
+// DescribeConnectorEntity mocks base method.
 func (m *MockAppflowAPI) DescribeConnectorEntity(arg0 *appflow.DescribeConnectorEntityInput) (*appflow.DescribeConnectorEntityOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectorEntity", arg0)
@@ -244,13 +245,13 @@ func (m *MockAppflowAPI) DescribeConnectorEntity(arg0 *appflow.DescribeConnector
 	return ret0, ret1
 }
 
-// DescribeConnectorEntity indicates an expected call of DescribeConnectorEntity
+// DescribeConnectorEntity indicates an expected call of DescribeConnectorEntity.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectorEntity(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectorEntity", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectorEntity), arg0)
 }
 
-// DescribeConnectorEntityRequest mocks base method
+// DescribeConnectorEntityRequest mocks base method.
 func (m *MockAppflowAPI) DescribeConnectorEntityRequest(arg0 *appflow.DescribeConnectorEntityInput) (*request.Request, *appflow.DescribeConnectorEntityOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectorEntityRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockAppflowAPI) DescribeConnectorEntityRequest(arg0 *appflow.DescribeCo
 	return ret0, ret1
 }
 
-// DescribeConnectorEntityRequest indicates an expected call of DescribeConnectorEntityRequest
+// DescribeConnectorEntityRequest indicates an expected call of DescribeConnectorEntityRequest.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectorEntityRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectorEntityRequest", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectorEntityRequest), arg0)
 }
 
-// DescribeConnectorEntityWithContext mocks base method
+// DescribeConnectorEntityWithContext mocks base method.
 func (m *MockAppflowAPI) DescribeConnectorEntityWithContext(arg0 context.Context, arg1 *appflow.DescribeConnectorEntityInput, arg2 ...request.Option) (*appflow.DescribeConnectorEntityOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockAppflowAPI) DescribeConnectorEntityWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// DescribeConnectorEntityWithContext indicates an expected call of DescribeConnectorEntityWithContext
+// DescribeConnectorEntityWithContext indicates an expected call of DescribeConnectorEntityWithContext.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectorEntityWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectorEntityWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectorEntityWithContext), varargs...)
 }
 
-// DescribeConnectorProfiles mocks base method
+// DescribeConnectorProfiles mocks base method.
 func (m *MockAppflowAPI) DescribeConnectorProfiles(arg0 *appflow.DescribeConnectorProfilesInput) (*appflow.DescribeConnectorProfilesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectorProfiles", arg0)
@@ -294,13 +295,13 @@ func (m *MockAppflowAPI) DescribeConnectorProfiles(arg0 *appflow.DescribeConnect
 	return ret0, ret1
 }
 
-// DescribeConnectorProfiles indicates an expected call of DescribeConnectorProfiles
+// DescribeConnectorProfiles indicates an expected call of DescribeConnectorProfiles.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectorProfiles(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectorProfiles", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectorProfiles), arg0)
 }
 
-// DescribeConnectorProfilesPages mocks base method
+// DescribeConnectorProfilesPages mocks base method.
 func (m *MockAppflowAPI) DescribeConnectorProfilesPages(arg0 *appflow.DescribeConnectorProfilesInput, arg1 func(*appflow.DescribeConnectorProfilesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectorProfilesPages", arg0, arg1)
@@ -308,13 +309,13 @@ func (m *MockAppflowAPI) DescribeConnectorProfilesPages(arg0 *appflow.DescribeCo
 	return ret0
 }
 
-// DescribeConnectorProfilesPages indicates an expected call of DescribeConnectorProfilesPages
+// DescribeConnectorProfilesPages indicates an expected call of DescribeConnectorProfilesPages.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectorProfilesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectorProfilesPages", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectorProfilesPages), arg0, arg1)
 }
 
-// DescribeConnectorProfilesPagesWithContext mocks base method
+// DescribeConnectorProfilesPagesWithContext mocks base method.
 func (m *MockAppflowAPI) DescribeConnectorProfilesPagesWithContext(arg0 context.Context, arg1 *appflow.DescribeConnectorProfilesInput, arg2 func(*appflow.DescribeConnectorProfilesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -326,14 +327,14 @@ func (m *MockAppflowAPI) DescribeConnectorProfilesPagesWithContext(arg0 context.
 	return ret0
 }
 
-// DescribeConnectorProfilesPagesWithContext indicates an expected call of DescribeConnectorProfilesPagesWithContext
+// DescribeConnectorProfilesPagesWithContext indicates an expected call of DescribeConnectorProfilesPagesWithContext.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectorProfilesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectorProfilesPagesWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectorProfilesPagesWithContext), varargs...)
 }
 
-// DescribeConnectorProfilesRequest mocks base method
+// DescribeConnectorProfilesRequest mocks base method.
 func (m *MockAppflowAPI) DescribeConnectorProfilesRequest(arg0 *appflow.DescribeConnectorProfilesInput) (*request.Request, *appflow.DescribeConnectorProfilesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectorProfilesRequest", arg0)
@@ -342,13 +343,13 @@ func (m *MockAppflowAPI) DescribeConnectorProfilesRequest(arg0 *appflow.Describe
 	return ret0, ret1
 }
 
-// DescribeConnectorProfilesRequest indicates an expected call of DescribeConnectorProfilesRequest
+// DescribeConnectorProfilesRequest indicates an expected call of DescribeConnectorProfilesRequest.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectorProfilesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectorProfilesRequest", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectorProfilesRequest), arg0)
 }
 
-// DescribeConnectorProfilesWithContext mocks base method
+// DescribeConnectorProfilesWithContext mocks base method.
 func (m *MockAppflowAPI) DescribeConnectorProfilesWithContext(arg0 context.Context, arg1 *appflow.DescribeConnectorProfilesInput, arg2 ...request.Option) (*appflow.DescribeConnectorProfilesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -361,14 +362,14 @@ func (m *MockAppflowAPI) DescribeConnectorProfilesWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DescribeConnectorProfilesWithContext indicates an expected call of DescribeConnectorProfilesWithContext
+// DescribeConnectorProfilesWithContext indicates an expected call of DescribeConnectorProfilesWithContext.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectorProfilesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectorProfilesWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectorProfilesWithContext), varargs...)
 }
 
-// DescribeConnectors mocks base method
+// DescribeConnectors mocks base method.
 func (m *MockAppflowAPI) DescribeConnectors(arg0 *appflow.DescribeConnectorsInput) (*appflow.DescribeConnectorsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectors", arg0)
@@ -377,13 +378,13 @@ func (m *MockAppflowAPI) DescribeConnectors(arg0 *appflow.DescribeConnectorsInpu
 	return ret0, ret1
 }
 
-// DescribeConnectors indicates an expected call of DescribeConnectors
+// DescribeConnectors indicates an expected call of DescribeConnectors.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectors(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectors", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectors), arg0)
 }
 
-// DescribeConnectorsPages mocks base method
+// DescribeConnectorsPages mocks base method.
 func (m *MockAppflowAPI) DescribeConnectorsPages(arg0 *appflow.DescribeConnectorsInput, arg1 func(*appflow.DescribeConnectorsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectorsPages", arg0, arg1)
@@ -391,13 +392,13 @@ func (m *MockAppflowAPI) DescribeConnectorsPages(arg0 *appflow.DescribeConnector
 	return ret0
 }
 
-// DescribeConnectorsPages indicates an expected call of DescribeConnectorsPages
+// DescribeConnectorsPages indicates an expected call of DescribeConnectorsPages.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectorsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectorsPages", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectorsPages), arg0, arg1)
 }
 
-// DescribeConnectorsPagesWithContext mocks base method
+// DescribeConnectorsPagesWithContext mocks base method.
 func (m *MockAppflowAPI) DescribeConnectorsPagesWithContext(arg0 context.Context, arg1 *appflow.DescribeConnectorsInput, arg2 func(*appflow.DescribeConnectorsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -409,14 +410,14 @@ func (m *MockAppflowAPI) DescribeConnectorsPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// DescribeConnectorsPagesWithContext indicates an expected call of DescribeConnectorsPagesWithContext
+// DescribeConnectorsPagesWithContext indicates an expected call of DescribeConnectorsPagesWithContext.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectorsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectorsPagesWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectorsPagesWithContext), varargs...)
 }
 
-// DescribeConnectorsRequest mocks base method
+// DescribeConnectorsRequest mocks base method.
 func (m *MockAppflowAPI) DescribeConnectorsRequest(arg0 *appflow.DescribeConnectorsInput) (*request.Request, *appflow.DescribeConnectorsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectorsRequest", arg0)
@@ -425,13 +426,13 @@ func (m *MockAppflowAPI) DescribeConnectorsRequest(arg0 *appflow.DescribeConnect
 	return ret0, ret1
 }
 
-// DescribeConnectorsRequest indicates an expected call of DescribeConnectorsRequest
+// DescribeConnectorsRequest indicates an expected call of DescribeConnectorsRequest.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectorsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectorsRequest", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectorsRequest), arg0)
 }
 
-// DescribeConnectorsWithContext mocks base method
+// DescribeConnectorsWithContext mocks base method.
 func (m *MockAppflowAPI) DescribeConnectorsWithContext(arg0 context.Context, arg1 *appflow.DescribeConnectorsInput, arg2 ...request.Option) (*appflow.DescribeConnectorsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -444,14 +445,14 @@ func (m *MockAppflowAPI) DescribeConnectorsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DescribeConnectorsWithContext indicates an expected call of DescribeConnectorsWithContext
+// DescribeConnectorsWithContext indicates an expected call of DescribeConnectorsWithContext.
 func (mr *MockAppflowAPIMockRecorder) DescribeConnectorsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectorsWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeConnectorsWithContext), varargs...)
 }
 
-// DescribeFlow mocks base method
+// DescribeFlow mocks base method.
 func (m *MockAppflowAPI) DescribeFlow(arg0 *appflow.DescribeFlowInput) (*appflow.DescribeFlowOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFlow", arg0)
@@ -460,13 +461,13 @@ func (m *MockAppflowAPI) DescribeFlow(arg0 *appflow.DescribeFlowInput) (*appflow
 	return ret0, ret1
 }
 
-// DescribeFlow indicates an expected call of DescribeFlow
+// DescribeFlow indicates an expected call of DescribeFlow.
 func (mr *MockAppflowAPIMockRecorder) DescribeFlow(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFlow", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeFlow), arg0)
 }
 
-// DescribeFlowExecutionRecords mocks base method
+// DescribeFlowExecutionRecords mocks base method.
 func (m *MockAppflowAPI) DescribeFlowExecutionRecords(arg0 *appflow.DescribeFlowExecutionRecordsInput) (*appflow.DescribeFlowExecutionRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFlowExecutionRecords", arg0)
@@ -475,13 +476,13 @@ func (m *MockAppflowAPI) DescribeFlowExecutionRecords(arg0 *appflow.DescribeFlow
 	return ret0, ret1
 }
 
-// DescribeFlowExecutionRecords indicates an expected call of DescribeFlowExecutionRecords
+// DescribeFlowExecutionRecords indicates an expected call of DescribeFlowExecutionRecords.
 func (mr *MockAppflowAPIMockRecorder) DescribeFlowExecutionRecords(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFlowExecutionRecords", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeFlowExecutionRecords), arg0)
 }
 
-// DescribeFlowExecutionRecordsPages mocks base method
+// DescribeFlowExecutionRecordsPages mocks base method.
 func (m *MockAppflowAPI) DescribeFlowExecutionRecordsPages(arg0 *appflow.DescribeFlowExecutionRecordsInput, arg1 func(*appflow.DescribeFlowExecutionRecordsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFlowExecutionRecordsPages", arg0, arg1)
@@ -489,13 +490,13 @@ func (m *MockAppflowAPI) DescribeFlowExecutionRecordsPages(arg0 *appflow.Describ
 	return ret0
 }
 
-// DescribeFlowExecutionRecordsPages indicates an expected call of DescribeFlowExecutionRecordsPages
+// DescribeFlowExecutionRecordsPages indicates an expected call of DescribeFlowExecutionRecordsPages.
 func (mr *MockAppflowAPIMockRecorder) DescribeFlowExecutionRecordsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFlowExecutionRecordsPages", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeFlowExecutionRecordsPages), arg0, arg1)
 }
 
-// DescribeFlowExecutionRecordsPagesWithContext mocks base method
+// DescribeFlowExecutionRecordsPagesWithContext mocks base method.
 func (m *MockAppflowAPI) DescribeFlowExecutionRecordsPagesWithContext(arg0 context.Context, arg1 *appflow.DescribeFlowExecutionRecordsInput, arg2 func(*appflow.DescribeFlowExecutionRecordsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -507,14 +508,14 @@ func (m *MockAppflowAPI) DescribeFlowExecutionRecordsPagesWithContext(arg0 conte
 	return ret0
 }
 
-// DescribeFlowExecutionRecordsPagesWithContext indicates an expected call of DescribeFlowExecutionRecordsPagesWithContext
+// DescribeFlowExecutionRecordsPagesWithContext indicates an expected call of DescribeFlowExecutionRecordsPagesWithContext.
 func (mr *MockAppflowAPIMockRecorder) DescribeFlowExecutionRecordsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFlowExecutionRecordsPagesWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeFlowExecutionRecordsPagesWithContext), varargs...)
 }
 
-// DescribeFlowExecutionRecordsRequest mocks base method
+// DescribeFlowExecutionRecordsRequest mocks base method.
 func (m *MockAppflowAPI) DescribeFlowExecutionRecordsRequest(arg0 *appflow.DescribeFlowExecutionRecordsInput) (*request.Request, *appflow.DescribeFlowExecutionRecordsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFlowExecutionRecordsRequest", arg0)
@@ -523,13 +524,13 @@ func (m *MockAppflowAPI) DescribeFlowExecutionRecordsRequest(arg0 *appflow.Descr
 	return ret0, ret1
 }
 
-// DescribeFlowExecutionRecordsRequest indicates an expected call of DescribeFlowExecutionRecordsRequest
+// DescribeFlowExecutionRecordsRequest indicates an expected call of DescribeFlowExecutionRecordsRequest.
 func (mr *MockAppflowAPIMockRecorder) DescribeFlowExecutionRecordsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFlowExecutionRecordsRequest", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeFlowExecutionRecordsRequest), arg0)
 }
 
-// DescribeFlowExecutionRecordsWithContext mocks base method
+// DescribeFlowExecutionRecordsWithContext mocks base method.
 func (m *MockAppflowAPI) DescribeFlowExecutionRecordsWithContext(arg0 context.Context, arg1 *appflow.DescribeFlowExecutionRecordsInput, arg2 ...request.Option) (*appflow.DescribeFlowExecutionRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -542,14 +543,14 @@ func (m *MockAppflowAPI) DescribeFlowExecutionRecordsWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DescribeFlowExecutionRecordsWithContext indicates an expected call of DescribeFlowExecutionRecordsWithContext
+// DescribeFlowExecutionRecordsWithContext indicates an expected call of DescribeFlowExecutionRecordsWithContext.
 func (mr *MockAppflowAPIMockRecorder) DescribeFlowExecutionRecordsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFlowExecutionRecordsWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeFlowExecutionRecordsWithContext), varargs...)
 }
 
-// DescribeFlowRequest mocks base method
+// DescribeFlowRequest mocks base method.
 func (m *MockAppflowAPI) DescribeFlowRequest(arg0 *appflow.DescribeFlowInput) (*request.Request, *appflow.DescribeFlowOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFlowRequest", arg0)
@@ -558,13 +559,13 @@ func (m *MockAppflowAPI) DescribeFlowRequest(arg0 *appflow.DescribeFlowInput) (*
 	return ret0, ret1
 }
 
-// DescribeFlowRequest indicates an expected call of DescribeFlowRequest
+// DescribeFlowRequest indicates an expected call of DescribeFlowRequest.
 func (mr *MockAppflowAPIMockRecorder) DescribeFlowRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFlowRequest", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeFlowRequest), arg0)
 }
 
-// DescribeFlowWithContext mocks base method
+// DescribeFlowWithContext mocks base method.
 func (m *MockAppflowAPI) DescribeFlowWithContext(arg0 context.Context, arg1 *appflow.DescribeFlowInput, arg2 ...request.Option) (*appflow.DescribeFlowOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -577,14 +578,14 @@ func (m *MockAppflowAPI) DescribeFlowWithContext(arg0 context.Context, arg1 *app
 	return ret0, ret1
 }
 
-// DescribeFlowWithContext indicates an expected call of DescribeFlowWithContext
+// DescribeFlowWithContext indicates an expected call of DescribeFlowWithContext.
 func (mr *MockAppflowAPIMockRecorder) DescribeFlowWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFlowWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).DescribeFlowWithContext), varargs...)
 }
 
-// ListConnectorEntities mocks base method
+// ListConnectorEntities mocks base method.
 func (m *MockAppflowAPI) ListConnectorEntities(arg0 *appflow.ListConnectorEntitiesInput) (*appflow.ListConnectorEntitiesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConnectorEntities", arg0)
@@ -593,13 +594,13 @@ func (m *MockAppflowAPI) ListConnectorEntities(arg0 *appflow.ListConnectorEntiti
 	return ret0, ret1
 }
 
-// ListConnectorEntities indicates an expected call of ListConnectorEntities
+// ListConnectorEntities indicates an expected call of ListConnectorEntities.
 func (mr *MockAppflowAPIMockRecorder) ListConnectorEntities(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConnectorEntities", reflect.TypeOf((*MockAppflowAPI)(nil).ListConnectorEntities), arg0)
 }
 
-// ListConnectorEntitiesRequest mocks base method
+// ListConnectorEntitiesRequest mocks base method.
 func (m *MockAppflowAPI) ListConnectorEntitiesRequest(arg0 *appflow.ListConnectorEntitiesInput) (*request.Request, *appflow.ListConnectorEntitiesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConnectorEntitiesRequest", arg0)
@@ -608,13 +609,13 @@ func (m *MockAppflowAPI) ListConnectorEntitiesRequest(arg0 *appflow.ListConnecto
 	return ret0, ret1
 }
 
-// ListConnectorEntitiesRequest indicates an expected call of ListConnectorEntitiesRequest
+// ListConnectorEntitiesRequest indicates an expected call of ListConnectorEntitiesRequest.
 func (mr *MockAppflowAPIMockRecorder) ListConnectorEntitiesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConnectorEntitiesRequest", reflect.TypeOf((*MockAppflowAPI)(nil).ListConnectorEntitiesRequest), arg0)
 }
 
-// ListConnectorEntitiesWithContext mocks base method
+// ListConnectorEntitiesWithContext mocks base method.
 func (m *MockAppflowAPI) ListConnectorEntitiesWithContext(arg0 context.Context, arg1 *appflow.ListConnectorEntitiesInput, arg2 ...request.Option) (*appflow.ListConnectorEntitiesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -627,14 +628,14 @@ func (m *MockAppflowAPI) ListConnectorEntitiesWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListConnectorEntitiesWithContext indicates an expected call of ListConnectorEntitiesWithContext
+// ListConnectorEntitiesWithContext indicates an expected call of ListConnectorEntitiesWithContext.
 func (mr *MockAppflowAPIMockRecorder) ListConnectorEntitiesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConnectorEntitiesWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).ListConnectorEntitiesWithContext), varargs...)
 }
 
-// ListFlows mocks base method
+// ListFlows mocks base method.
 func (m *MockAppflowAPI) ListFlows(arg0 *appflow.ListFlowsInput) (*appflow.ListFlowsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFlows", arg0)
@@ -643,13 +644,13 @@ func (m *MockAppflowAPI) ListFlows(arg0 *appflow.ListFlowsInput) (*appflow.ListF
 	return ret0, ret1
 }
 
-// ListFlows indicates an expected call of ListFlows
+// ListFlows indicates an expected call of ListFlows.
 func (mr *MockAppflowAPIMockRecorder) ListFlows(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFlows", reflect.TypeOf((*MockAppflowAPI)(nil).ListFlows), arg0)
 }
 
-// ListFlowsPages mocks base method
+// ListFlowsPages mocks base method.
 func (m *MockAppflowAPI) ListFlowsPages(arg0 *appflow.ListFlowsInput, arg1 func(*appflow.ListFlowsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFlowsPages", arg0, arg1)
@@ -657,13 +658,13 @@ func (m *MockAppflowAPI) ListFlowsPages(arg0 *appflow.ListFlowsInput, arg1 func(
 	return ret0
 }
 
-// ListFlowsPages indicates an expected call of ListFlowsPages
+// ListFlowsPages indicates an expected call of ListFlowsPages.
 func (mr *MockAppflowAPIMockRecorder) ListFlowsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFlowsPages", reflect.TypeOf((*MockAppflowAPI)(nil).ListFlowsPages), arg0, arg1)
 }
 
-// ListFlowsPagesWithContext mocks base method
+// ListFlowsPagesWithContext mocks base method.
 func (m *MockAppflowAPI) ListFlowsPagesWithContext(arg0 context.Context, arg1 *appflow.ListFlowsInput, arg2 func(*appflow.ListFlowsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -675,14 +676,14 @@ func (m *MockAppflowAPI) ListFlowsPagesWithContext(arg0 context.Context, arg1 *a
 	return ret0
 }
 
-// ListFlowsPagesWithContext indicates an expected call of ListFlowsPagesWithContext
+// ListFlowsPagesWithContext indicates an expected call of ListFlowsPagesWithContext.
 func (mr *MockAppflowAPIMockRecorder) ListFlowsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFlowsPagesWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).ListFlowsPagesWithContext), varargs...)
 }
 
-// ListFlowsRequest mocks base method
+// ListFlowsRequest mocks base method.
 func (m *MockAppflowAPI) ListFlowsRequest(arg0 *appflow.ListFlowsInput) (*request.Request, *appflow.ListFlowsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFlowsRequest", arg0)
@@ -691,13 +692,13 @@ func (m *MockAppflowAPI) ListFlowsRequest(arg0 *appflow.ListFlowsInput) (*reques
 	return ret0, ret1
 }
 
-// ListFlowsRequest indicates an expected call of ListFlowsRequest
+// ListFlowsRequest indicates an expected call of ListFlowsRequest.
 func (mr *MockAppflowAPIMockRecorder) ListFlowsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFlowsRequest", reflect.TypeOf((*MockAppflowAPI)(nil).ListFlowsRequest), arg0)
 }
 
-// ListFlowsWithContext mocks base method
+// ListFlowsWithContext mocks base method.
 func (m *MockAppflowAPI) ListFlowsWithContext(arg0 context.Context, arg1 *appflow.ListFlowsInput, arg2 ...request.Option) (*appflow.ListFlowsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -710,14 +711,14 @@ func (m *MockAppflowAPI) ListFlowsWithContext(arg0 context.Context, arg1 *appflo
 	return ret0, ret1
 }
 
-// ListFlowsWithContext indicates an expected call of ListFlowsWithContext
+// ListFlowsWithContext indicates an expected call of ListFlowsWithContext.
 func (mr *MockAppflowAPIMockRecorder) ListFlowsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFlowsWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).ListFlowsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockAppflowAPI) ListTagsForResource(arg0 *appflow.ListTagsForResourceInput) (*appflow.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -726,13 +727,13 @@ func (m *MockAppflowAPI) ListTagsForResource(arg0 *appflow.ListTagsForResourceIn
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockAppflowAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockAppflowAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockAppflowAPI) ListTagsForResourceRequest(arg0 *appflow.ListTagsForResourceInput) (*request.Request, *appflow.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -741,13 +742,13 @@ func (m *MockAppflowAPI) ListTagsForResourceRequest(arg0 *appflow.ListTagsForRes
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockAppflowAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockAppflowAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockAppflowAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *appflow.ListTagsForResourceInput, arg2 ...request.Option) (*appflow.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -760,14 +761,14 @@ func (m *MockAppflowAPI) ListTagsForResourceWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockAppflowAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// StartFlow mocks base method
+// StartFlow mocks base method.
 func (m *MockAppflowAPI) StartFlow(arg0 *appflow.StartFlowInput) (*appflow.StartFlowOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartFlow", arg0)
@@ -776,13 +777,13 @@ func (m *MockAppflowAPI) StartFlow(arg0 *appflow.StartFlowInput) (*appflow.Start
 	return ret0, ret1
 }
 
-// StartFlow indicates an expected call of StartFlow
+// StartFlow indicates an expected call of StartFlow.
 func (mr *MockAppflowAPIMockRecorder) StartFlow(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartFlow", reflect.TypeOf((*MockAppflowAPI)(nil).StartFlow), arg0)
 }
 
-// StartFlowRequest mocks base method
+// StartFlowRequest mocks base method.
 func (m *MockAppflowAPI) StartFlowRequest(arg0 *appflow.StartFlowInput) (*request.Request, *appflow.StartFlowOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartFlowRequest", arg0)
@@ -791,13 +792,13 @@ func (m *MockAppflowAPI) StartFlowRequest(arg0 *appflow.StartFlowInput) (*reques
 	return ret0, ret1
 }
 
-// StartFlowRequest indicates an expected call of StartFlowRequest
+// StartFlowRequest indicates an expected call of StartFlowRequest.
 func (mr *MockAppflowAPIMockRecorder) StartFlowRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartFlowRequest", reflect.TypeOf((*MockAppflowAPI)(nil).StartFlowRequest), arg0)
 }
 
-// StartFlowWithContext mocks base method
+// StartFlowWithContext mocks base method.
 func (m *MockAppflowAPI) StartFlowWithContext(arg0 context.Context, arg1 *appflow.StartFlowInput, arg2 ...request.Option) (*appflow.StartFlowOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -810,14 +811,14 @@ func (m *MockAppflowAPI) StartFlowWithContext(arg0 context.Context, arg1 *appflo
 	return ret0, ret1
 }
 
-// StartFlowWithContext indicates an expected call of StartFlowWithContext
+// StartFlowWithContext indicates an expected call of StartFlowWithContext.
 func (mr *MockAppflowAPIMockRecorder) StartFlowWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartFlowWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).StartFlowWithContext), varargs...)
 }
 
-// StopFlow mocks base method
+// StopFlow mocks base method.
 func (m *MockAppflowAPI) StopFlow(arg0 *appflow.StopFlowInput) (*appflow.StopFlowOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopFlow", arg0)
@@ -826,13 +827,13 @@ func (m *MockAppflowAPI) StopFlow(arg0 *appflow.StopFlowInput) (*appflow.StopFlo
 	return ret0, ret1
 }
 
-// StopFlow indicates an expected call of StopFlow
+// StopFlow indicates an expected call of StopFlow.
 func (mr *MockAppflowAPIMockRecorder) StopFlow(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopFlow", reflect.TypeOf((*MockAppflowAPI)(nil).StopFlow), arg0)
 }
 
-// StopFlowRequest mocks base method
+// StopFlowRequest mocks base method.
 func (m *MockAppflowAPI) StopFlowRequest(arg0 *appflow.StopFlowInput) (*request.Request, *appflow.StopFlowOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopFlowRequest", arg0)
@@ -841,13 +842,13 @@ func (m *MockAppflowAPI) StopFlowRequest(arg0 *appflow.StopFlowInput) (*request.
 	return ret0, ret1
 }
 
-// StopFlowRequest indicates an expected call of StopFlowRequest
+// StopFlowRequest indicates an expected call of StopFlowRequest.
 func (mr *MockAppflowAPIMockRecorder) StopFlowRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopFlowRequest", reflect.TypeOf((*MockAppflowAPI)(nil).StopFlowRequest), arg0)
 }
 
-// StopFlowWithContext mocks base method
+// StopFlowWithContext mocks base method.
 func (m *MockAppflowAPI) StopFlowWithContext(arg0 context.Context, arg1 *appflow.StopFlowInput, arg2 ...request.Option) (*appflow.StopFlowOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -860,14 +861,14 @@ func (m *MockAppflowAPI) StopFlowWithContext(arg0 context.Context, arg1 *appflow
 	return ret0, ret1
 }
 
-// StopFlowWithContext indicates an expected call of StopFlowWithContext
+// StopFlowWithContext indicates an expected call of StopFlowWithContext.
 func (mr *MockAppflowAPIMockRecorder) StopFlowWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopFlowWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).StopFlowWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockAppflowAPI) TagResource(arg0 *appflow.TagResourceInput) (*appflow.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -876,13 +877,13 @@ func (m *MockAppflowAPI) TagResource(arg0 *appflow.TagResourceInput) (*appflow.T
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockAppflowAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockAppflowAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockAppflowAPI) TagResourceRequest(arg0 *appflow.TagResourceInput) (*request.Request, *appflow.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -891,13 +892,13 @@ func (m *MockAppflowAPI) TagResourceRequest(arg0 *appflow.TagResourceInput) (*re
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockAppflowAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockAppflowAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockAppflowAPI) TagResourceWithContext(arg0 context.Context, arg1 *appflow.TagResourceInput, arg2 ...request.Option) (*appflow.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -910,14 +911,14 @@ func (m *MockAppflowAPI) TagResourceWithContext(arg0 context.Context, arg1 *appf
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockAppflowAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockAppflowAPI) UntagResource(arg0 *appflow.UntagResourceInput) (*appflow.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -926,13 +927,13 @@ func (m *MockAppflowAPI) UntagResource(arg0 *appflow.UntagResourceInput) (*appfl
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockAppflowAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockAppflowAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockAppflowAPI) UntagResourceRequest(arg0 *appflow.UntagResourceInput) (*request.Request, *appflow.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -941,13 +942,13 @@ func (m *MockAppflowAPI) UntagResourceRequest(arg0 *appflow.UntagResourceInput) 
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockAppflowAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockAppflowAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockAppflowAPI) UntagResourceWithContext(arg0 context.Context, arg1 *appflow.UntagResourceInput, arg2 ...request.Option) (*appflow.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -960,14 +961,14 @@ func (m *MockAppflowAPI) UntagResourceWithContext(arg0 context.Context, arg1 *ap
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockAppflowAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateConnectorProfile mocks base method
+// UpdateConnectorProfile mocks base method.
 func (m *MockAppflowAPI) UpdateConnectorProfile(arg0 *appflow.UpdateConnectorProfileInput) (*appflow.UpdateConnectorProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateConnectorProfile", arg0)
@@ -976,13 +977,13 @@ func (m *MockAppflowAPI) UpdateConnectorProfile(arg0 *appflow.UpdateConnectorPro
 	return ret0, ret1
 }
 
-// UpdateConnectorProfile indicates an expected call of UpdateConnectorProfile
+// UpdateConnectorProfile indicates an expected call of UpdateConnectorProfile.
 func (mr *MockAppflowAPIMockRecorder) UpdateConnectorProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConnectorProfile", reflect.TypeOf((*MockAppflowAPI)(nil).UpdateConnectorProfile), arg0)
 }
 
-// UpdateConnectorProfileRequest mocks base method
+// UpdateConnectorProfileRequest mocks base method.
 func (m *MockAppflowAPI) UpdateConnectorProfileRequest(arg0 *appflow.UpdateConnectorProfileInput) (*request.Request, *appflow.UpdateConnectorProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateConnectorProfileRequest", arg0)
@@ -991,13 +992,13 @@ func (m *MockAppflowAPI) UpdateConnectorProfileRequest(arg0 *appflow.UpdateConne
 	return ret0, ret1
 }
 
-// UpdateConnectorProfileRequest indicates an expected call of UpdateConnectorProfileRequest
+// UpdateConnectorProfileRequest indicates an expected call of UpdateConnectorProfileRequest.
 func (mr *MockAppflowAPIMockRecorder) UpdateConnectorProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConnectorProfileRequest", reflect.TypeOf((*MockAppflowAPI)(nil).UpdateConnectorProfileRequest), arg0)
 }
 
-// UpdateConnectorProfileWithContext mocks base method
+// UpdateConnectorProfileWithContext mocks base method.
 func (m *MockAppflowAPI) UpdateConnectorProfileWithContext(arg0 context.Context, arg1 *appflow.UpdateConnectorProfileInput, arg2 ...request.Option) (*appflow.UpdateConnectorProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1010,14 +1011,14 @@ func (m *MockAppflowAPI) UpdateConnectorProfileWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// UpdateConnectorProfileWithContext indicates an expected call of UpdateConnectorProfileWithContext
+// UpdateConnectorProfileWithContext indicates an expected call of UpdateConnectorProfileWithContext.
 func (mr *MockAppflowAPIMockRecorder) UpdateConnectorProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConnectorProfileWithContext", reflect.TypeOf((*MockAppflowAPI)(nil).UpdateConnectorProfileWithContext), varargs...)
 }
 
-// UpdateFlow mocks base method
+// UpdateFlow mocks base method.
 func (m *MockAppflowAPI) UpdateFlow(arg0 *appflow.UpdateFlowInput) (*appflow.UpdateFlowOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFlow", arg0)
@@ -1026,13 +1027,13 @@ func (m *MockAppflowAPI) UpdateFlow(arg0 *appflow.UpdateFlowInput) (*appflow.Upd
 	return ret0, ret1
 }
 
-// UpdateFlow indicates an expected call of UpdateFlow
+// UpdateFlow indicates an expected call of UpdateFlow.
 func (mr *MockAppflowAPIMockRecorder) UpdateFlow(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFlow", reflect.TypeOf((*MockAppflowAPI)(nil).UpdateFlow), arg0)
 }
 
-// UpdateFlowRequest mocks base method
+// UpdateFlowRequest mocks base method.
 func (m *MockAppflowAPI) UpdateFlowRequest(arg0 *appflow.UpdateFlowInput) (*request.Request, *appflow.UpdateFlowOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFlowRequest", arg0)
@@ -1041,13 +1042,13 @@ func (m *MockAppflowAPI) UpdateFlowRequest(arg0 *appflow.UpdateFlowInput) (*requ
 	return ret0, ret1
 }
 
-// UpdateFlowRequest indicates an expected call of UpdateFlowRequest
+// UpdateFlowRequest indicates an expected call of UpdateFlowRequest.
 func (mr *MockAppflowAPIMockRecorder) UpdateFlowRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFlowRequest", reflect.TypeOf((*MockAppflowAPI)(nil).UpdateFlowRequest), arg0)
 }
 
-// UpdateFlowWithContext mocks base method
+// UpdateFlowWithContext mocks base method.
 func (m *MockAppflowAPI) UpdateFlowWithContext(arg0 context.Context, arg1 *appflow.UpdateFlowInput, arg2 ...request.Option) (*appflow.UpdateFlowOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1060,7 +1061,7 @@ func (m *MockAppflowAPI) UpdateFlowWithContext(arg0 context.Context, arg1 *appfl
 	return ret0, ret1
 }
 
-// UpdateFlowWithContext indicates an expected call of UpdateFlowWithContext
+// UpdateFlowWithContext indicates an expected call of UpdateFlowWithContext.
 func (mr *MockAppflowAPIMockRecorder) UpdateFlowWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

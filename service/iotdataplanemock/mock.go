@@ -6,36 +6,37 @@ package iotdataplanemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	iotdataplane "github.com/aws/aws-sdk-go/service/iotdataplane"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockIoTDataPlaneAPI is a mock of IoTDataPlaneAPI interface
+// MockIoTDataPlaneAPI is a mock of IoTDataPlaneAPI interface.
 type MockIoTDataPlaneAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockIoTDataPlaneAPIMockRecorder
 }
 
-// MockIoTDataPlaneAPIMockRecorder is the mock recorder for MockIoTDataPlaneAPI
+// MockIoTDataPlaneAPIMockRecorder is the mock recorder for MockIoTDataPlaneAPI.
 type MockIoTDataPlaneAPIMockRecorder struct {
 	mock *MockIoTDataPlaneAPI
 }
 
-// NewMockIoTDataPlaneAPI creates a new mock instance
+// NewMockIoTDataPlaneAPI creates a new mock instance.
 func NewMockIoTDataPlaneAPI(ctrl *gomock.Controller) *MockIoTDataPlaneAPI {
 	mock := &MockIoTDataPlaneAPI{ctrl: ctrl}
 	mock.recorder = &MockIoTDataPlaneAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockIoTDataPlaneAPI) EXPECT() *MockIoTDataPlaneAPIMockRecorder {
 	return m.recorder
 }
 
-// DeleteThingShadow mocks base method
+// DeleteThingShadow mocks base method.
 func (m *MockIoTDataPlaneAPI) DeleteThingShadow(arg0 *iotdataplane.DeleteThingShadowInput) (*iotdataplane.DeleteThingShadowOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteThingShadow", arg0)
@@ -44,13 +45,13 @@ func (m *MockIoTDataPlaneAPI) DeleteThingShadow(arg0 *iotdataplane.DeleteThingSh
 	return ret0, ret1
 }
 
-// DeleteThingShadow indicates an expected call of DeleteThingShadow
+// DeleteThingShadow indicates an expected call of DeleteThingShadow.
 func (mr *MockIoTDataPlaneAPIMockRecorder) DeleteThingShadow(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteThingShadow", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).DeleteThingShadow), arg0)
 }
 
-// DeleteThingShadowRequest mocks base method
+// DeleteThingShadowRequest mocks base method.
 func (m *MockIoTDataPlaneAPI) DeleteThingShadowRequest(arg0 *iotdataplane.DeleteThingShadowInput) (*request.Request, *iotdataplane.DeleteThingShadowOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteThingShadowRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockIoTDataPlaneAPI) DeleteThingShadowRequest(arg0 *iotdataplane.Delete
 	return ret0, ret1
 }
 
-// DeleteThingShadowRequest indicates an expected call of DeleteThingShadowRequest
+// DeleteThingShadowRequest indicates an expected call of DeleteThingShadowRequest.
 func (mr *MockIoTDataPlaneAPIMockRecorder) DeleteThingShadowRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteThingShadowRequest", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).DeleteThingShadowRequest), arg0)
 }
 
-// DeleteThingShadowWithContext mocks base method
+// DeleteThingShadowWithContext mocks base method.
 func (m *MockIoTDataPlaneAPI) DeleteThingShadowWithContext(arg0 context.Context, arg1 *iotdataplane.DeleteThingShadowInput, arg2 ...request.Option) (*iotdataplane.DeleteThingShadowOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockIoTDataPlaneAPI) DeleteThingShadowWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteThingShadowWithContext indicates an expected call of DeleteThingShadowWithContext
+// DeleteThingShadowWithContext indicates an expected call of DeleteThingShadowWithContext.
 func (mr *MockIoTDataPlaneAPIMockRecorder) DeleteThingShadowWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteThingShadowWithContext", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).DeleteThingShadowWithContext), varargs...)
 }
 
-// GetThingShadow mocks base method
+// GetThingShadow mocks base method.
 func (m *MockIoTDataPlaneAPI) GetThingShadow(arg0 *iotdataplane.GetThingShadowInput) (*iotdataplane.GetThingShadowOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetThingShadow", arg0)
@@ -94,13 +95,13 @@ func (m *MockIoTDataPlaneAPI) GetThingShadow(arg0 *iotdataplane.GetThingShadowIn
 	return ret0, ret1
 }
 
-// GetThingShadow indicates an expected call of GetThingShadow
+// GetThingShadow indicates an expected call of GetThingShadow.
 func (mr *MockIoTDataPlaneAPIMockRecorder) GetThingShadow(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetThingShadow", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).GetThingShadow), arg0)
 }
 
-// GetThingShadowRequest mocks base method
+// GetThingShadowRequest mocks base method.
 func (m *MockIoTDataPlaneAPI) GetThingShadowRequest(arg0 *iotdataplane.GetThingShadowInput) (*request.Request, *iotdataplane.GetThingShadowOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetThingShadowRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockIoTDataPlaneAPI) GetThingShadowRequest(arg0 *iotdataplane.GetThingS
 	return ret0, ret1
 }
 
-// GetThingShadowRequest indicates an expected call of GetThingShadowRequest
+// GetThingShadowRequest indicates an expected call of GetThingShadowRequest.
 func (mr *MockIoTDataPlaneAPIMockRecorder) GetThingShadowRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetThingShadowRequest", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).GetThingShadowRequest), arg0)
 }
 
-// GetThingShadowWithContext mocks base method
+// GetThingShadowWithContext mocks base method.
 func (m *MockIoTDataPlaneAPI) GetThingShadowWithContext(arg0 context.Context, arg1 *iotdataplane.GetThingShadowInput, arg2 ...request.Option) (*iotdataplane.GetThingShadowOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockIoTDataPlaneAPI) GetThingShadowWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// GetThingShadowWithContext indicates an expected call of GetThingShadowWithContext
+// GetThingShadowWithContext indicates an expected call of GetThingShadowWithContext.
 func (mr *MockIoTDataPlaneAPIMockRecorder) GetThingShadowWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetThingShadowWithContext", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).GetThingShadowWithContext), varargs...)
 }
 
-// ListNamedShadowsForThing mocks base method
+// ListNamedShadowsForThing mocks base method.
 func (m *MockIoTDataPlaneAPI) ListNamedShadowsForThing(arg0 *iotdataplane.ListNamedShadowsForThingInput) (*iotdataplane.ListNamedShadowsForThingOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListNamedShadowsForThing", arg0)
@@ -144,13 +145,13 @@ func (m *MockIoTDataPlaneAPI) ListNamedShadowsForThing(arg0 *iotdataplane.ListNa
 	return ret0, ret1
 }
 
-// ListNamedShadowsForThing indicates an expected call of ListNamedShadowsForThing
+// ListNamedShadowsForThing indicates an expected call of ListNamedShadowsForThing.
 func (mr *MockIoTDataPlaneAPIMockRecorder) ListNamedShadowsForThing(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNamedShadowsForThing", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).ListNamedShadowsForThing), arg0)
 }
 
-// ListNamedShadowsForThingRequest mocks base method
+// ListNamedShadowsForThingRequest mocks base method.
 func (m *MockIoTDataPlaneAPI) ListNamedShadowsForThingRequest(arg0 *iotdataplane.ListNamedShadowsForThingInput) (*request.Request, *iotdataplane.ListNamedShadowsForThingOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListNamedShadowsForThingRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockIoTDataPlaneAPI) ListNamedShadowsForThingRequest(arg0 *iotdataplane
 	return ret0, ret1
 }
 
-// ListNamedShadowsForThingRequest indicates an expected call of ListNamedShadowsForThingRequest
+// ListNamedShadowsForThingRequest indicates an expected call of ListNamedShadowsForThingRequest.
 func (mr *MockIoTDataPlaneAPIMockRecorder) ListNamedShadowsForThingRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNamedShadowsForThingRequest", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).ListNamedShadowsForThingRequest), arg0)
 }
 
-// ListNamedShadowsForThingWithContext mocks base method
+// ListNamedShadowsForThingWithContext mocks base method.
 func (m *MockIoTDataPlaneAPI) ListNamedShadowsForThingWithContext(arg0 context.Context, arg1 *iotdataplane.ListNamedShadowsForThingInput, arg2 ...request.Option) (*iotdataplane.ListNamedShadowsForThingOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockIoTDataPlaneAPI) ListNamedShadowsForThingWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// ListNamedShadowsForThingWithContext indicates an expected call of ListNamedShadowsForThingWithContext
+// ListNamedShadowsForThingWithContext indicates an expected call of ListNamedShadowsForThingWithContext.
 func (mr *MockIoTDataPlaneAPIMockRecorder) ListNamedShadowsForThingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNamedShadowsForThingWithContext", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).ListNamedShadowsForThingWithContext), varargs...)
 }
 
-// Publish mocks base method
+// Publish mocks base method.
 func (m *MockIoTDataPlaneAPI) Publish(arg0 *iotdataplane.PublishInput) (*iotdataplane.PublishOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Publish", arg0)
@@ -194,13 +195,13 @@ func (m *MockIoTDataPlaneAPI) Publish(arg0 *iotdataplane.PublishInput) (*iotdata
 	return ret0, ret1
 }
 
-// Publish indicates an expected call of Publish
+// Publish indicates an expected call of Publish.
 func (mr *MockIoTDataPlaneAPIMockRecorder) Publish(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Publish", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).Publish), arg0)
 }
 
-// PublishRequest mocks base method
+// PublishRequest mocks base method.
 func (m *MockIoTDataPlaneAPI) PublishRequest(arg0 *iotdataplane.PublishInput) (*request.Request, *iotdataplane.PublishOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PublishRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockIoTDataPlaneAPI) PublishRequest(arg0 *iotdataplane.PublishInput) (*
 	return ret0, ret1
 }
 
-// PublishRequest indicates an expected call of PublishRequest
+// PublishRequest indicates an expected call of PublishRequest.
 func (mr *MockIoTDataPlaneAPIMockRecorder) PublishRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PublishRequest", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).PublishRequest), arg0)
 }
 
-// PublishWithContext mocks base method
+// PublishWithContext mocks base method.
 func (m *MockIoTDataPlaneAPI) PublishWithContext(arg0 context.Context, arg1 *iotdataplane.PublishInput, arg2 ...request.Option) (*iotdataplane.PublishOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockIoTDataPlaneAPI) PublishWithContext(arg0 context.Context, arg1 *iot
 	return ret0, ret1
 }
 
-// PublishWithContext indicates an expected call of PublishWithContext
+// PublishWithContext indicates an expected call of PublishWithContext.
 func (mr *MockIoTDataPlaneAPIMockRecorder) PublishWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PublishWithContext", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).PublishWithContext), varargs...)
 }
 
-// UpdateThingShadow mocks base method
+// UpdateThingShadow mocks base method.
 func (m *MockIoTDataPlaneAPI) UpdateThingShadow(arg0 *iotdataplane.UpdateThingShadowInput) (*iotdataplane.UpdateThingShadowOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateThingShadow", arg0)
@@ -244,13 +245,13 @@ func (m *MockIoTDataPlaneAPI) UpdateThingShadow(arg0 *iotdataplane.UpdateThingSh
 	return ret0, ret1
 }
 
-// UpdateThingShadow indicates an expected call of UpdateThingShadow
+// UpdateThingShadow indicates an expected call of UpdateThingShadow.
 func (mr *MockIoTDataPlaneAPIMockRecorder) UpdateThingShadow(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateThingShadow", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).UpdateThingShadow), arg0)
 }
 
-// UpdateThingShadowRequest mocks base method
+// UpdateThingShadowRequest mocks base method.
 func (m *MockIoTDataPlaneAPI) UpdateThingShadowRequest(arg0 *iotdataplane.UpdateThingShadowInput) (*request.Request, *iotdataplane.UpdateThingShadowOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateThingShadowRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockIoTDataPlaneAPI) UpdateThingShadowRequest(arg0 *iotdataplane.Update
 	return ret0, ret1
 }
 
-// UpdateThingShadowRequest indicates an expected call of UpdateThingShadowRequest
+// UpdateThingShadowRequest indicates an expected call of UpdateThingShadowRequest.
 func (mr *MockIoTDataPlaneAPIMockRecorder) UpdateThingShadowRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateThingShadowRequest", reflect.TypeOf((*MockIoTDataPlaneAPI)(nil).UpdateThingShadowRequest), arg0)
 }
 
-// UpdateThingShadowWithContext mocks base method
+// UpdateThingShadowWithContext mocks base method.
 func (m *MockIoTDataPlaneAPI) UpdateThingShadowWithContext(arg0 context.Context, arg1 *iotdataplane.UpdateThingShadowInput, arg2 ...request.Option) (*iotdataplane.UpdateThingShadowOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,7 +279,7 @@ func (m *MockIoTDataPlaneAPI) UpdateThingShadowWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// UpdateThingShadowWithContext indicates an expected call of UpdateThingShadowWithContext
+// UpdateThingShadowWithContext indicates an expected call of UpdateThingShadowWithContext.
 func (mr *MockIoTDataPlaneAPIMockRecorder) UpdateThingShadowWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

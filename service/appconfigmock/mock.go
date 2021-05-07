@@ -6,36 +6,37 @@ package appconfigmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	appconfig "github.com/aws/aws-sdk-go/service/appconfig"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockAppConfigAPI is a mock of AppConfigAPI interface
+// MockAppConfigAPI is a mock of AppConfigAPI interface.
 type MockAppConfigAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockAppConfigAPIMockRecorder
 }
 
-// MockAppConfigAPIMockRecorder is the mock recorder for MockAppConfigAPI
+// MockAppConfigAPIMockRecorder is the mock recorder for MockAppConfigAPI.
 type MockAppConfigAPIMockRecorder struct {
 	mock *MockAppConfigAPI
 }
 
-// NewMockAppConfigAPI creates a new mock instance
+// NewMockAppConfigAPI creates a new mock instance.
 func NewMockAppConfigAPI(ctrl *gomock.Controller) *MockAppConfigAPI {
 	mock := &MockAppConfigAPI{ctrl: ctrl}
 	mock.recorder = &MockAppConfigAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockAppConfigAPI) EXPECT() *MockAppConfigAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateApplication mocks base method
+// CreateApplication mocks base method.
 func (m *MockAppConfigAPI) CreateApplication(arg0 *appconfig.CreateApplicationInput) (*appconfig.CreateApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateApplication", arg0)
@@ -44,13 +45,13 @@ func (m *MockAppConfigAPI) CreateApplication(arg0 *appconfig.CreateApplicationIn
 	return ret0, ret1
 }
 
-// CreateApplication indicates an expected call of CreateApplication
+// CreateApplication indicates an expected call of CreateApplication.
 func (mr *MockAppConfigAPIMockRecorder) CreateApplication(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateApplication", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateApplication), arg0)
 }
 
-// CreateApplicationRequest mocks base method
+// CreateApplicationRequest mocks base method.
 func (m *MockAppConfigAPI) CreateApplicationRequest(arg0 *appconfig.CreateApplicationInput) (*request.Request, *appconfig.CreateApplicationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateApplicationRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockAppConfigAPI) CreateApplicationRequest(arg0 *appconfig.CreateApplic
 	return ret0, ret1
 }
 
-// CreateApplicationRequest indicates an expected call of CreateApplicationRequest
+// CreateApplicationRequest indicates an expected call of CreateApplicationRequest.
 func (mr *MockAppConfigAPIMockRecorder) CreateApplicationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateApplicationRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateApplicationRequest), arg0)
 }
 
-// CreateApplicationWithContext mocks base method
+// CreateApplicationWithContext mocks base method.
 func (m *MockAppConfigAPI) CreateApplicationWithContext(arg0 context.Context, arg1 *appconfig.CreateApplicationInput, arg2 ...request.Option) (*appconfig.CreateApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockAppConfigAPI) CreateApplicationWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateApplicationWithContext indicates an expected call of CreateApplicationWithContext
+// CreateApplicationWithContext indicates an expected call of CreateApplicationWithContext.
 func (mr *MockAppConfigAPIMockRecorder) CreateApplicationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateApplicationWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateApplicationWithContext), varargs...)
 }
 
-// CreateConfigurationProfile mocks base method
+// CreateConfigurationProfile mocks base method.
 func (m *MockAppConfigAPI) CreateConfigurationProfile(arg0 *appconfig.CreateConfigurationProfileInput) (*appconfig.CreateConfigurationProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConfigurationProfile", arg0)
@@ -94,13 +95,13 @@ func (m *MockAppConfigAPI) CreateConfigurationProfile(arg0 *appconfig.CreateConf
 	return ret0, ret1
 }
 
-// CreateConfigurationProfile indicates an expected call of CreateConfigurationProfile
+// CreateConfigurationProfile indicates an expected call of CreateConfigurationProfile.
 func (mr *MockAppConfigAPIMockRecorder) CreateConfigurationProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationProfile", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateConfigurationProfile), arg0)
 }
 
-// CreateConfigurationProfileRequest mocks base method
+// CreateConfigurationProfileRequest mocks base method.
 func (m *MockAppConfigAPI) CreateConfigurationProfileRequest(arg0 *appconfig.CreateConfigurationProfileInput) (*request.Request, *appconfig.CreateConfigurationProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConfigurationProfileRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockAppConfigAPI) CreateConfigurationProfileRequest(arg0 *appconfig.Cre
 	return ret0, ret1
 }
 
-// CreateConfigurationProfileRequest indicates an expected call of CreateConfigurationProfileRequest
+// CreateConfigurationProfileRequest indicates an expected call of CreateConfigurationProfileRequest.
 func (mr *MockAppConfigAPIMockRecorder) CreateConfigurationProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationProfileRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateConfigurationProfileRequest), arg0)
 }
 
-// CreateConfigurationProfileWithContext mocks base method
+// CreateConfigurationProfileWithContext mocks base method.
 func (m *MockAppConfigAPI) CreateConfigurationProfileWithContext(arg0 context.Context, arg1 *appconfig.CreateConfigurationProfileInput, arg2 ...request.Option) (*appconfig.CreateConfigurationProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockAppConfigAPI) CreateConfigurationProfileWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// CreateConfigurationProfileWithContext indicates an expected call of CreateConfigurationProfileWithContext
+// CreateConfigurationProfileWithContext indicates an expected call of CreateConfigurationProfileWithContext.
 func (mr *MockAppConfigAPIMockRecorder) CreateConfigurationProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationProfileWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateConfigurationProfileWithContext), varargs...)
 }
 
-// CreateDeploymentStrategy mocks base method
+// CreateDeploymentStrategy mocks base method.
 func (m *MockAppConfigAPI) CreateDeploymentStrategy(arg0 *appconfig.CreateDeploymentStrategyInput) (*appconfig.CreateDeploymentStrategyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDeploymentStrategy", arg0)
@@ -144,13 +145,13 @@ func (m *MockAppConfigAPI) CreateDeploymentStrategy(arg0 *appconfig.CreateDeploy
 	return ret0, ret1
 }
 
-// CreateDeploymentStrategy indicates an expected call of CreateDeploymentStrategy
+// CreateDeploymentStrategy indicates an expected call of CreateDeploymentStrategy.
 func (mr *MockAppConfigAPIMockRecorder) CreateDeploymentStrategy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDeploymentStrategy", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateDeploymentStrategy), arg0)
 }
 
-// CreateDeploymentStrategyRequest mocks base method
+// CreateDeploymentStrategyRequest mocks base method.
 func (m *MockAppConfigAPI) CreateDeploymentStrategyRequest(arg0 *appconfig.CreateDeploymentStrategyInput) (*request.Request, *appconfig.CreateDeploymentStrategyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDeploymentStrategyRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockAppConfigAPI) CreateDeploymentStrategyRequest(arg0 *appconfig.Creat
 	return ret0, ret1
 }
 
-// CreateDeploymentStrategyRequest indicates an expected call of CreateDeploymentStrategyRequest
+// CreateDeploymentStrategyRequest indicates an expected call of CreateDeploymentStrategyRequest.
 func (mr *MockAppConfigAPIMockRecorder) CreateDeploymentStrategyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDeploymentStrategyRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateDeploymentStrategyRequest), arg0)
 }
 
-// CreateDeploymentStrategyWithContext mocks base method
+// CreateDeploymentStrategyWithContext mocks base method.
 func (m *MockAppConfigAPI) CreateDeploymentStrategyWithContext(arg0 context.Context, arg1 *appconfig.CreateDeploymentStrategyInput, arg2 ...request.Option) (*appconfig.CreateDeploymentStrategyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockAppConfigAPI) CreateDeploymentStrategyWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// CreateDeploymentStrategyWithContext indicates an expected call of CreateDeploymentStrategyWithContext
+// CreateDeploymentStrategyWithContext indicates an expected call of CreateDeploymentStrategyWithContext.
 func (mr *MockAppConfigAPIMockRecorder) CreateDeploymentStrategyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDeploymentStrategyWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateDeploymentStrategyWithContext), varargs...)
 }
 
-// CreateEnvironment mocks base method
+// CreateEnvironment mocks base method.
 func (m *MockAppConfigAPI) CreateEnvironment(arg0 *appconfig.CreateEnvironmentInput) (*appconfig.CreateEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEnvironment", arg0)
@@ -194,13 +195,13 @@ func (m *MockAppConfigAPI) CreateEnvironment(arg0 *appconfig.CreateEnvironmentIn
 	return ret0, ret1
 }
 
-// CreateEnvironment indicates an expected call of CreateEnvironment
+// CreateEnvironment indicates an expected call of CreateEnvironment.
 func (mr *MockAppConfigAPIMockRecorder) CreateEnvironment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEnvironment", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateEnvironment), arg0)
 }
 
-// CreateEnvironmentRequest mocks base method
+// CreateEnvironmentRequest mocks base method.
 func (m *MockAppConfigAPI) CreateEnvironmentRequest(arg0 *appconfig.CreateEnvironmentInput) (*request.Request, *appconfig.CreateEnvironmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEnvironmentRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockAppConfigAPI) CreateEnvironmentRequest(arg0 *appconfig.CreateEnviro
 	return ret0, ret1
 }
 
-// CreateEnvironmentRequest indicates an expected call of CreateEnvironmentRequest
+// CreateEnvironmentRequest indicates an expected call of CreateEnvironmentRequest.
 func (mr *MockAppConfigAPIMockRecorder) CreateEnvironmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEnvironmentRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateEnvironmentRequest), arg0)
 }
 
-// CreateEnvironmentWithContext mocks base method
+// CreateEnvironmentWithContext mocks base method.
 func (m *MockAppConfigAPI) CreateEnvironmentWithContext(arg0 context.Context, arg1 *appconfig.CreateEnvironmentInput, arg2 ...request.Option) (*appconfig.CreateEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockAppConfigAPI) CreateEnvironmentWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateEnvironmentWithContext indicates an expected call of CreateEnvironmentWithContext
+// CreateEnvironmentWithContext indicates an expected call of CreateEnvironmentWithContext.
 func (mr *MockAppConfigAPIMockRecorder) CreateEnvironmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEnvironmentWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateEnvironmentWithContext), varargs...)
 }
 
-// CreateHostedConfigurationVersion mocks base method
+// CreateHostedConfigurationVersion mocks base method.
 func (m *MockAppConfigAPI) CreateHostedConfigurationVersion(arg0 *appconfig.CreateHostedConfigurationVersionInput) (*appconfig.CreateHostedConfigurationVersionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateHostedConfigurationVersion", arg0)
@@ -244,13 +245,13 @@ func (m *MockAppConfigAPI) CreateHostedConfigurationVersion(arg0 *appconfig.Crea
 	return ret0, ret1
 }
 
-// CreateHostedConfigurationVersion indicates an expected call of CreateHostedConfigurationVersion
+// CreateHostedConfigurationVersion indicates an expected call of CreateHostedConfigurationVersion.
 func (mr *MockAppConfigAPIMockRecorder) CreateHostedConfigurationVersion(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHostedConfigurationVersion", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateHostedConfigurationVersion), arg0)
 }
 
-// CreateHostedConfigurationVersionRequest mocks base method
+// CreateHostedConfigurationVersionRequest mocks base method.
 func (m *MockAppConfigAPI) CreateHostedConfigurationVersionRequest(arg0 *appconfig.CreateHostedConfigurationVersionInput) (*request.Request, *appconfig.CreateHostedConfigurationVersionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateHostedConfigurationVersionRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockAppConfigAPI) CreateHostedConfigurationVersionRequest(arg0 *appconf
 	return ret0, ret1
 }
 
-// CreateHostedConfigurationVersionRequest indicates an expected call of CreateHostedConfigurationVersionRequest
+// CreateHostedConfigurationVersionRequest indicates an expected call of CreateHostedConfigurationVersionRequest.
 func (mr *MockAppConfigAPIMockRecorder) CreateHostedConfigurationVersionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHostedConfigurationVersionRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateHostedConfigurationVersionRequest), arg0)
 }
 
-// CreateHostedConfigurationVersionWithContext mocks base method
+// CreateHostedConfigurationVersionWithContext mocks base method.
 func (m *MockAppConfigAPI) CreateHostedConfigurationVersionWithContext(arg0 context.Context, arg1 *appconfig.CreateHostedConfigurationVersionInput, arg2 ...request.Option) (*appconfig.CreateHostedConfigurationVersionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockAppConfigAPI) CreateHostedConfigurationVersionWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// CreateHostedConfigurationVersionWithContext indicates an expected call of CreateHostedConfigurationVersionWithContext
+// CreateHostedConfigurationVersionWithContext indicates an expected call of CreateHostedConfigurationVersionWithContext.
 func (mr *MockAppConfigAPIMockRecorder) CreateHostedConfigurationVersionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHostedConfigurationVersionWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).CreateHostedConfigurationVersionWithContext), varargs...)
 }
 
-// DeleteApplication mocks base method
+// DeleteApplication mocks base method.
 func (m *MockAppConfigAPI) DeleteApplication(arg0 *appconfig.DeleteApplicationInput) (*appconfig.DeleteApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteApplication", arg0)
@@ -294,13 +295,13 @@ func (m *MockAppConfigAPI) DeleteApplication(arg0 *appconfig.DeleteApplicationIn
 	return ret0, ret1
 }
 
-// DeleteApplication indicates an expected call of DeleteApplication
+// DeleteApplication indicates an expected call of DeleteApplication.
 func (mr *MockAppConfigAPIMockRecorder) DeleteApplication(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteApplication", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteApplication), arg0)
 }
 
-// DeleteApplicationRequest mocks base method
+// DeleteApplicationRequest mocks base method.
 func (m *MockAppConfigAPI) DeleteApplicationRequest(arg0 *appconfig.DeleteApplicationInput) (*request.Request, *appconfig.DeleteApplicationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteApplicationRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockAppConfigAPI) DeleteApplicationRequest(arg0 *appconfig.DeleteApplic
 	return ret0, ret1
 }
 
-// DeleteApplicationRequest indicates an expected call of DeleteApplicationRequest
+// DeleteApplicationRequest indicates an expected call of DeleteApplicationRequest.
 func (mr *MockAppConfigAPIMockRecorder) DeleteApplicationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteApplicationRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteApplicationRequest), arg0)
 }
 
-// DeleteApplicationWithContext mocks base method
+// DeleteApplicationWithContext mocks base method.
 func (m *MockAppConfigAPI) DeleteApplicationWithContext(arg0 context.Context, arg1 *appconfig.DeleteApplicationInput, arg2 ...request.Option) (*appconfig.DeleteApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockAppConfigAPI) DeleteApplicationWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteApplicationWithContext indicates an expected call of DeleteApplicationWithContext
+// DeleteApplicationWithContext indicates an expected call of DeleteApplicationWithContext.
 func (mr *MockAppConfigAPIMockRecorder) DeleteApplicationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteApplicationWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteApplicationWithContext), varargs...)
 }
 
-// DeleteConfigurationProfile mocks base method
+// DeleteConfigurationProfile mocks base method.
 func (m *MockAppConfigAPI) DeleteConfigurationProfile(arg0 *appconfig.DeleteConfigurationProfileInput) (*appconfig.DeleteConfigurationProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConfigurationProfile", arg0)
@@ -344,13 +345,13 @@ func (m *MockAppConfigAPI) DeleteConfigurationProfile(arg0 *appconfig.DeleteConf
 	return ret0, ret1
 }
 
-// DeleteConfigurationProfile indicates an expected call of DeleteConfigurationProfile
+// DeleteConfigurationProfile indicates an expected call of DeleteConfigurationProfile.
 func (mr *MockAppConfigAPIMockRecorder) DeleteConfigurationProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationProfile", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteConfigurationProfile), arg0)
 }
 
-// DeleteConfigurationProfileRequest mocks base method
+// DeleteConfigurationProfileRequest mocks base method.
 func (m *MockAppConfigAPI) DeleteConfigurationProfileRequest(arg0 *appconfig.DeleteConfigurationProfileInput) (*request.Request, *appconfig.DeleteConfigurationProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConfigurationProfileRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockAppConfigAPI) DeleteConfigurationProfileRequest(arg0 *appconfig.Del
 	return ret0, ret1
 }
 
-// DeleteConfigurationProfileRequest indicates an expected call of DeleteConfigurationProfileRequest
+// DeleteConfigurationProfileRequest indicates an expected call of DeleteConfigurationProfileRequest.
 func (mr *MockAppConfigAPIMockRecorder) DeleteConfigurationProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationProfileRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteConfigurationProfileRequest), arg0)
 }
 
-// DeleteConfigurationProfileWithContext mocks base method
+// DeleteConfigurationProfileWithContext mocks base method.
 func (m *MockAppConfigAPI) DeleteConfigurationProfileWithContext(arg0 context.Context, arg1 *appconfig.DeleteConfigurationProfileInput, arg2 ...request.Option) (*appconfig.DeleteConfigurationProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockAppConfigAPI) DeleteConfigurationProfileWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DeleteConfigurationProfileWithContext indicates an expected call of DeleteConfigurationProfileWithContext
+// DeleteConfigurationProfileWithContext indicates an expected call of DeleteConfigurationProfileWithContext.
 func (mr *MockAppConfigAPIMockRecorder) DeleteConfigurationProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationProfileWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteConfigurationProfileWithContext), varargs...)
 }
 
-// DeleteDeploymentStrategy mocks base method
+// DeleteDeploymentStrategy mocks base method.
 func (m *MockAppConfigAPI) DeleteDeploymentStrategy(arg0 *appconfig.DeleteDeploymentStrategyInput) (*appconfig.DeleteDeploymentStrategyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDeploymentStrategy", arg0)
@@ -394,13 +395,13 @@ func (m *MockAppConfigAPI) DeleteDeploymentStrategy(arg0 *appconfig.DeleteDeploy
 	return ret0, ret1
 }
 
-// DeleteDeploymentStrategy indicates an expected call of DeleteDeploymentStrategy
+// DeleteDeploymentStrategy indicates an expected call of DeleteDeploymentStrategy.
 func (mr *MockAppConfigAPIMockRecorder) DeleteDeploymentStrategy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDeploymentStrategy", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteDeploymentStrategy), arg0)
 }
 
-// DeleteDeploymentStrategyRequest mocks base method
+// DeleteDeploymentStrategyRequest mocks base method.
 func (m *MockAppConfigAPI) DeleteDeploymentStrategyRequest(arg0 *appconfig.DeleteDeploymentStrategyInput) (*request.Request, *appconfig.DeleteDeploymentStrategyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDeploymentStrategyRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockAppConfigAPI) DeleteDeploymentStrategyRequest(arg0 *appconfig.Delet
 	return ret0, ret1
 }
 
-// DeleteDeploymentStrategyRequest indicates an expected call of DeleteDeploymentStrategyRequest
+// DeleteDeploymentStrategyRequest indicates an expected call of DeleteDeploymentStrategyRequest.
 func (mr *MockAppConfigAPIMockRecorder) DeleteDeploymentStrategyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDeploymentStrategyRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteDeploymentStrategyRequest), arg0)
 }
 
-// DeleteDeploymentStrategyWithContext mocks base method
+// DeleteDeploymentStrategyWithContext mocks base method.
 func (m *MockAppConfigAPI) DeleteDeploymentStrategyWithContext(arg0 context.Context, arg1 *appconfig.DeleteDeploymentStrategyInput, arg2 ...request.Option) (*appconfig.DeleteDeploymentStrategyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockAppConfigAPI) DeleteDeploymentStrategyWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DeleteDeploymentStrategyWithContext indicates an expected call of DeleteDeploymentStrategyWithContext
+// DeleteDeploymentStrategyWithContext indicates an expected call of DeleteDeploymentStrategyWithContext.
 func (mr *MockAppConfigAPIMockRecorder) DeleteDeploymentStrategyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDeploymentStrategyWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteDeploymentStrategyWithContext), varargs...)
 }
 
-// DeleteEnvironment mocks base method
+// DeleteEnvironment mocks base method.
 func (m *MockAppConfigAPI) DeleteEnvironment(arg0 *appconfig.DeleteEnvironmentInput) (*appconfig.DeleteEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEnvironment", arg0)
@@ -444,13 +445,13 @@ func (m *MockAppConfigAPI) DeleteEnvironment(arg0 *appconfig.DeleteEnvironmentIn
 	return ret0, ret1
 }
 
-// DeleteEnvironment indicates an expected call of DeleteEnvironment
+// DeleteEnvironment indicates an expected call of DeleteEnvironment.
 func (mr *MockAppConfigAPIMockRecorder) DeleteEnvironment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEnvironment", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteEnvironment), arg0)
 }
 
-// DeleteEnvironmentRequest mocks base method
+// DeleteEnvironmentRequest mocks base method.
 func (m *MockAppConfigAPI) DeleteEnvironmentRequest(arg0 *appconfig.DeleteEnvironmentInput) (*request.Request, *appconfig.DeleteEnvironmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEnvironmentRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockAppConfigAPI) DeleteEnvironmentRequest(arg0 *appconfig.DeleteEnviro
 	return ret0, ret1
 }
 
-// DeleteEnvironmentRequest indicates an expected call of DeleteEnvironmentRequest
+// DeleteEnvironmentRequest indicates an expected call of DeleteEnvironmentRequest.
 func (mr *MockAppConfigAPIMockRecorder) DeleteEnvironmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEnvironmentRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteEnvironmentRequest), arg0)
 }
 
-// DeleteEnvironmentWithContext mocks base method
+// DeleteEnvironmentWithContext mocks base method.
 func (m *MockAppConfigAPI) DeleteEnvironmentWithContext(arg0 context.Context, arg1 *appconfig.DeleteEnvironmentInput, arg2 ...request.Option) (*appconfig.DeleteEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockAppConfigAPI) DeleteEnvironmentWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteEnvironmentWithContext indicates an expected call of DeleteEnvironmentWithContext
+// DeleteEnvironmentWithContext indicates an expected call of DeleteEnvironmentWithContext.
 func (mr *MockAppConfigAPIMockRecorder) DeleteEnvironmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEnvironmentWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteEnvironmentWithContext), varargs...)
 }
 
-// DeleteHostedConfigurationVersion mocks base method
+// DeleteHostedConfigurationVersion mocks base method.
 func (m *MockAppConfigAPI) DeleteHostedConfigurationVersion(arg0 *appconfig.DeleteHostedConfigurationVersionInput) (*appconfig.DeleteHostedConfigurationVersionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteHostedConfigurationVersion", arg0)
@@ -494,13 +495,13 @@ func (m *MockAppConfigAPI) DeleteHostedConfigurationVersion(arg0 *appconfig.Dele
 	return ret0, ret1
 }
 
-// DeleteHostedConfigurationVersion indicates an expected call of DeleteHostedConfigurationVersion
+// DeleteHostedConfigurationVersion indicates an expected call of DeleteHostedConfigurationVersion.
 func (mr *MockAppConfigAPIMockRecorder) DeleteHostedConfigurationVersion(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteHostedConfigurationVersion", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteHostedConfigurationVersion), arg0)
 }
 
-// DeleteHostedConfigurationVersionRequest mocks base method
+// DeleteHostedConfigurationVersionRequest mocks base method.
 func (m *MockAppConfigAPI) DeleteHostedConfigurationVersionRequest(arg0 *appconfig.DeleteHostedConfigurationVersionInput) (*request.Request, *appconfig.DeleteHostedConfigurationVersionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteHostedConfigurationVersionRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockAppConfigAPI) DeleteHostedConfigurationVersionRequest(arg0 *appconf
 	return ret0, ret1
 }
 
-// DeleteHostedConfigurationVersionRequest indicates an expected call of DeleteHostedConfigurationVersionRequest
+// DeleteHostedConfigurationVersionRequest indicates an expected call of DeleteHostedConfigurationVersionRequest.
 func (mr *MockAppConfigAPIMockRecorder) DeleteHostedConfigurationVersionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteHostedConfigurationVersionRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteHostedConfigurationVersionRequest), arg0)
 }
 
-// DeleteHostedConfigurationVersionWithContext mocks base method
+// DeleteHostedConfigurationVersionWithContext mocks base method.
 func (m *MockAppConfigAPI) DeleteHostedConfigurationVersionWithContext(arg0 context.Context, arg1 *appconfig.DeleteHostedConfigurationVersionInput, arg2 ...request.Option) (*appconfig.DeleteHostedConfigurationVersionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockAppConfigAPI) DeleteHostedConfigurationVersionWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// DeleteHostedConfigurationVersionWithContext indicates an expected call of DeleteHostedConfigurationVersionWithContext
+// DeleteHostedConfigurationVersionWithContext indicates an expected call of DeleteHostedConfigurationVersionWithContext.
 func (mr *MockAppConfigAPIMockRecorder) DeleteHostedConfigurationVersionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteHostedConfigurationVersionWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).DeleteHostedConfigurationVersionWithContext), varargs...)
 }
 
-// GetApplication mocks base method
+// GetApplication mocks base method.
 func (m *MockAppConfigAPI) GetApplication(arg0 *appconfig.GetApplicationInput) (*appconfig.GetApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetApplication", arg0)
@@ -544,13 +545,13 @@ func (m *MockAppConfigAPI) GetApplication(arg0 *appconfig.GetApplicationInput) (
 	return ret0, ret1
 }
 
-// GetApplication indicates an expected call of GetApplication
+// GetApplication indicates an expected call of GetApplication.
 func (mr *MockAppConfigAPIMockRecorder) GetApplication(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetApplication", reflect.TypeOf((*MockAppConfigAPI)(nil).GetApplication), arg0)
 }
 
-// GetApplicationRequest mocks base method
+// GetApplicationRequest mocks base method.
 func (m *MockAppConfigAPI) GetApplicationRequest(arg0 *appconfig.GetApplicationInput) (*request.Request, *appconfig.GetApplicationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetApplicationRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockAppConfigAPI) GetApplicationRequest(arg0 *appconfig.GetApplicationI
 	return ret0, ret1
 }
 
-// GetApplicationRequest indicates an expected call of GetApplicationRequest
+// GetApplicationRequest indicates an expected call of GetApplicationRequest.
 func (mr *MockAppConfigAPIMockRecorder) GetApplicationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetApplicationRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).GetApplicationRequest), arg0)
 }
 
-// GetApplicationWithContext mocks base method
+// GetApplicationWithContext mocks base method.
 func (m *MockAppConfigAPI) GetApplicationWithContext(arg0 context.Context, arg1 *appconfig.GetApplicationInput, arg2 ...request.Option) (*appconfig.GetApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockAppConfigAPI) GetApplicationWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// GetApplicationWithContext indicates an expected call of GetApplicationWithContext
+// GetApplicationWithContext indicates an expected call of GetApplicationWithContext.
 func (mr *MockAppConfigAPIMockRecorder) GetApplicationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetApplicationWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).GetApplicationWithContext), varargs...)
 }
 
-// GetConfiguration mocks base method
+// GetConfiguration mocks base method.
 func (m *MockAppConfigAPI) GetConfiguration(arg0 *appconfig.GetConfigurationInput) (*appconfig.GetConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConfiguration", arg0)
@@ -594,13 +595,13 @@ func (m *MockAppConfigAPI) GetConfiguration(arg0 *appconfig.GetConfigurationInpu
 	return ret0, ret1
 }
 
-// GetConfiguration indicates an expected call of GetConfiguration
+// GetConfiguration indicates an expected call of GetConfiguration.
 func (mr *MockAppConfigAPIMockRecorder) GetConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfiguration", reflect.TypeOf((*MockAppConfigAPI)(nil).GetConfiguration), arg0)
 }
 
-// GetConfigurationProfile mocks base method
+// GetConfigurationProfile mocks base method.
 func (m *MockAppConfigAPI) GetConfigurationProfile(arg0 *appconfig.GetConfigurationProfileInput) (*appconfig.GetConfigurationProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConfigurationProfile", arg0)
@@ -609,13 +610,13 @@ func (m *MockAppConfigAPI) GetConfigurationProfile(arg0 *appconfig.GetConfigurat
 	return ret0, ret1
 }
 
-// GetConfigurationProfile indicates an expected call of GetConfigurationProfile
+// GetConfigurationProfile indicates an expected call of GetConfigurationProfile.
 func (mr *MockAppConfigAPIMockRecorder) GetConfigurationProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationProfile", reflect.TypeOf((*MockAppConfigAPI)(nil).GetConfigurationProfile), arg0)
 }
 
-// GetConfigurationProfileRequest mocks base method
+// GetConfigurationProfileRequest mocks base method.
 func (m *MockAppConfigAPI) GetConfigurationProfileRequest(arg0 *appconfig.GetConfigurationProfileInput) (*request.Request, *appconfig.GetConfigurationProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConfigurationProfileRequest", arg0)
@@ -624,13 +625,13 @@ func (m *MockAppConfigAPI) GetConfigurationProfileRequest(arg0 *appconfig.GetCon
 	return ret0, ret1
 }
 
-// GetConfigurationProfileRequest indicates an expected call of GetConfigurationProfileRequest
+// GetConfigurationProfileRequest indicates an expected call of GetConfigurationProfileRequest.
 func (mr *MockAppConfigAPIMockRecorder) GetConfigurationProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationProfileRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).GetConfigurationProfileRequest), arg0)
 }
 
-// GetConfigurationProfileWithContext mocks base method
+// GetConfigurationProfileWithContext mocks base method.
 func (m *MockAppConfigAPI) GetConfigurationProfileWithContext(arg0 context.Context, arg1 *appconfig.GetConfigurationProfileInput, arg2 ...request.Option) (*appconfig.GetConfigurationProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -643,14 +644,14 @@ func (m *MockAppConfigAPI) GetConfigurationProfileWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// GetConfigurationProfileWithContext indicates an expected call of GetConfigurationProfileWithContext
+// GetConfigurationProfileWithContext indicates an expected call of GetConfigurationProfileWithContext.
 func (mr *MockAppConfigAPIMockRecorder) GetConfigurationProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationProfileWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).GetConfigurationProfileWithContext), varargs...)
 }
 
-// GetConfigurationRequest mocks base method
+// GetConfigurationRequest mocks base method.
 func (m *MockAppConfigAPI) GetConfigurationRequest(arg0 *appconfig.GetConfigurationInput) (*request.Request, *appconfig.GetConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConfigurationRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockAppConfigAPI) GetConfigurationRequest(arg0 *appconfig.GetConfigurat
 	return ret0, ret1
 }
 
-// GetConfigurationRequest indicates an expected call of GetConfigurationRequest
+// GetConfigurationRequest indicates an expected call of GetConfigurationRequest.
 func (mr *MockAppConfigAPIMockRecorder) GetConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).GetConfigurationRequest), arg0)
 }
 
-// GetConfigurationWithContext mocks base method
+// GetConfigurationWithContext mocks base method.
 func (m *MockAppConfigAPI) GetConfigurationWithContext(arg0 context.Context, arg1 *appconfig.GetConfigurationInput, arg2 ...request.Option) (*appconfig.GetConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockAppConfigAPI) GetConfigurationWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetConfigurationWithContext indicates an expected call of GetConfigurationWithContext
+// GetConfigurationWithContext indicates an expected call of GetConfigurationWithContext.
 func (mr *MockAppConfigAPIMockRecorder) GetConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).GetConfigurationWithContext), varargs...)
 }
 
-// GetDeployment mocks base method
+// GetDeployment mocks base method.
 func (m *MockAppConfigAPI) GetDeployment(arg0 *appconfig.GetDeploymentInput) (*appconfig.GetDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDeployment", arg0)
@@ -694,13 +695,13 @@ func (m *MockAppConfigAPI) GetDeployment(arg0 *appconfig.GetDeploymentInput) (*a
 	return ret0, ret1
 }
 
-// GetDeployment indicates an expected call of GetDeployment
+// GetDeployment indicates an expected call of GetDeployment.
 func (mr *MockAppConfigAPIMockRecorder) GetDeployment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeployment", reflect.TypeOf((*MockAppConfigAPI)(nil).GetDeployment), arg0)
 }
 
-// GetDeploymentRequest mocks base method
+// GetDeploymentRequest mocks base method.
 func (m *MockAppConfigAPI) GetDeploymentRequest(arg0 *appconfig.GetDeploymentInput) (*request.Request, *appconfig.GetDeploymentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDeploymentRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockAppConfigAPI) GetDeploymentRequest(arg0 *appconfig.GetDeploymentInp
 	return ret0, ret1
 }
 
-// GetDeploymentRequest indicates an expected call of GetDeploymentRequest
+// GetDeploymentRequest indicates an expected call of GetDeploymentRequest.
 func (mr *MockAppConfigAPIMockRecorder) GetDeploymentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeploymentRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).GetDeploymentRequest), arg0)
 }
 
-// GetDeploymentStrategy mocks base method
+// GetDeploymentStrategy mocks base method.
 func (m *MockAppConfigAPI) GetDeploymentStrategy(arg0 *appconfig.GetDeploymentStrategyInput) (*appconfig.GetDeploymentStrategyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDeploymentStrategy", arg0)
@@ -724,13 +725,13 @@ func (m *MockAppConfigAPI) GetDeploymentStrategy(arg0 *appconfig.GetDeploymentSt
 	return ret0, ret1
 }
 
-// GetDeploymentStrategy indicates an expected call of GetDeploymentStrategy
+// GetDeploymentStrategy indicates an expected call of GetDeploymentStrategy.
 func (mr *MockAppConfigAPIMockRecorder) GetDeploymentStrategy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeploymentStrategy", reflect.TypeOf((*MockAppConfigAPI)(nil).GetDeploymentStrategy), arg0)
 }
 
-// GetDeploymentStrategyRequest mocks base method
+// GetDeploymentStrategyRequest mocks base method.
 func (m *MockAppConfigAPI) GetDeploymentStrategyRequest(arg0 *appconfig.GetDeploymentStrategyInput) (*request.Request, *appconfig.GetDeploymentStrategyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDeploymentStrategyRequest", arg0)
@@ -739,13 +740,13 @@ func (m *MockAppConfigAPI) GetDeploymentStrategyRequest(arg0 *appconfig.GetDeplo
 	return ret0, ret1
 }
 
-// GetDeploymentStrategyRequest indicates an expected call of GetDeploymentStrategyRequest
+// GetDeploymentStrategyRequest indicates an expected call of GetDeploymentStrategyRequest.
 func (mr *MockAppConfigAPIMockRecorder) GetDeploymentStrategyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeploymentStrategyRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).GetDeploymentStrategyRequest), arg0)
 }
 
-// GetDeploymentStrategyWithContext mocks base method
+// GetDeploymentStrategyWithContext mocks base method.
 func (m *MockAppConfigAPI) GetDeploymentStrategyWithContext(arg0 context.Context, arg1 *appconfig.GetDeploymentStrategyInput, arg2 ...request.Option) (*appconfig.GetDeploymentStrategyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -758,14 +759,14 @@ func (m *MockAppConfigAPI) GetDeploymentStrategyWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// GetDeploymentStrategyWithContext indicates an expected call of GetDeploymentStrategyWithContext
+// GetDeploymentStrategyWithContext indicates an expected call of GetDeploymentStrategyWithContext.
 func (mr *MockAppConfigAPIMockRecorder) GetDeploymentStrategyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeploymentStrategyWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).GetDeploymentStrategyWithContext), varargs...)
 }
 
-// GetDeploymentWithContext mocks base method
+// GetDeploymentWithContext mocks base method.
 func (m *MockAppConfigAPI) GetDeploymentWithContext(arg0 context.Context, arg1 *appconfig.GetDeploymentInput, arg2 ...request.Option) (*appconfig.GetDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockAppConfigAPI) GetDeploymentWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// GetDeploymentWithContext indicates an expected call of GetDeploymentWithContext
+// GetDeploymentWithContext indicates an expected call of GetDeploymentWithContext.
 func (mr *MockAppConfigAPIMockRecorder) GetDeploymentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeploymentWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).GetDeploymentWithContext), varargs...)
 }
 
-// GetEnvironment mocks base method
+// GetEnvironment mocks base method.
 func (m *MockAppConfigAPI) GetEnvironment(arg0 *appconfig.GetEnvironmentInput) (*appconfig.GetEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEnvironment", arg0)
@@ -794,13 +795,13 @@ func (m *MockAppConfigAPI) GetEnvironment(arg0 *appconfig.GetEnvironmentInput) (
 	return ret0, ret1
 }
 
-// GetEnvironment indicates an expected call of GetEnvironment
+// GetEnvironment indicates an expected call of GetEnvironment.
 func (mr *MockAppConfigAPIMockRecorder) GetEnvironment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEnvironment", reflect.TypeOf((*MockAppConfigAPI)(nil).GetEnvironment), arg0)
 }
 
-// GetEnvironmentRequest mocks base method
+// GetEnvironmentRequest mocks base method.
 func (m *MockAppConfigAPI) GetEnvironmentRequest(arg0 *appconfig.GetEnvironmentInput) (*request.Request, *appconfig.GetEnvironmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEnvironmentRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockAppConfigAPI) GetEnvironmentRequest(arg0 *appconfig.GetEnvironmentI
 	return ret0, ret1
 }
 
-// GetEnvironmentRequest indicates an expected call of GetEnvironmentRequest
+// GetEnvironmentRequest indicates an expected call of GetEnvironmentRequest.
 func (mr *MockAppConfigAPIMockRecorder) GetEnvironmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEnvironmentRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).GetEnvironmentRequest), arg0)
 }
 
-// GetEnvironmentWithContext mocks base method
+// GetEnvironmentWithContext mocks base method.
 func (m *MockAppConfigAPI) GetEnvironmentWithContext(arg0 context.Context, arg1 *appconfig.GetEnvironmentInput, arg2 ...request.Option) (*appconfig.GetEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockAppConfigAPI) GetEnvironmentWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// GetEnvironmentWithContext indicates an expected call of GetEnvironmentWithContext
+// GetEnvironmentWithContext indicates an expected call of GetEnvironmentWithContext.
 func (mr *MockAppConfigAPIMockRecorder) GetEnvironmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEnvironmentWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).GetEnvironmentWithContext), varargs...)
 }
 
-// GetHostedConfigurationVersion mocks base method
+// GetHostedConfigurationVersion mocks base method.
 func (m *MockAppConfigAPI) GetHostedConfigurationVersion(arg0 *appconfig.GetHostedConfigurationVersionInput) (*appconfig.GetHostedConfigurationVersionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetHostedConfigurationVersion", arg0)
@@ -844,13 +845,13 @@ func (m *MockAppConfigAPI) GetHostedConfigurationVersion(arg0 *appconfig.GetHost
 	return ret0, ret1
 }
 
-// GetHostedConfigurationVersion indicates an expected call of GetHostedConfigurationVersion
+// GetHostedConfigurationVersion indicates an expected call of GetHostedConfigurationVersion.
 func (mr *MockAppConfigAPIMockRecorder) GetHostedConfigurationVersion(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetHostedConfigurationVersion", reflect.TypeOf((*MockAppConfigAPI)(nil).GetHostedConfigurationVersion), arg0)
 }
 
-// GetHostedConfigurationVersionRequest mocks base method
+// GetHostedConfigurationVersionRequest mocks base method.
 func (m *MockAppConfigAPI) GetHostedConfigurationVersionRequest(arg0 *appconfig.GetHostedConfigurationVersionInput) (*request.Request, *appconfig.GetHostedConfigurationVersionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetHostedConfigurationVersionRequest", arg0)
@@ -859,13 +860,13 @@ func (m *MockAppConfigAPI) GetHostedConfigurationVersionRequest(arg0 *appconfig.
 	return ret0, ret1
 }
 
-// GetHostedConfigurationVersionRequest indicates an expected call of GetHostedConfigurationVersionRequest
+// GetHostedConfigurationVersionRequest indicates an expected call of GetHostedConfigurationVersionRequest.
 func (mr *MockAppConfigAPIMockRecorder) GetHostedConfigurationVersionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetHostedConfigurationVersionRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).GetHostedConfigurationVersionRequest), arg0)
 }
 
-// GetHostedConfigurationVersionWithContext mocks base method
+// GetHostedConfigurationVersionWithContext mocks base method.
 func (m *MockAppConfigAPI) GetHostedConfigurationVersionWithContext(arg0 context.Context, arg1 *appconfig.GetHostedConfigurationVersionInput, arg2 ...request.Option) (*appconfig.GetHostedConfigurationVersionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +879,14 @@ func (m *MockAppConfigAPI) GetHostedConfigurationVersionWithContext(arg0 context
 	return ret0, ret1
 }
 
-// GetHostedConfigurationVersionWithContext indicates an expected call of GetHostedConfigurationVersionWithContext
+// GetHostedConfigurationVersionWithContext indicates an expected call of GetHostedConfigurationVersionWithContext.
 func (mr *MockAppConfigAPIMockRecorder) GetHostedConfigurationVersionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetHostedConfigurationVersionWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).GetHostedConfigurationVersionWithContext), varargs...)
 }
 
-// ListApplications mocks base method
+// ListApplications mocks base method.
 func (m *MockAppConfigAPI) ListApplications(arg0 *appconfig.ListApplicationsInput) (*appconfig.ListApplicationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListApplications", arg0)
@@ -894,13 +895,13 @@ func (m *MockAppConfigAPI) ListApplications(arg0 *appconfig.ListApplicationsInpu
 	return ret0, ret1
 }
 
-// ListApplications indicates an expected call of ListApplications
+// ListApplications indicates an expected call of ListApplications.
 func (mr *MockAppConfigAPIMockRecorder) ListApplications(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListApplications", reflect.TypeOf((*MockAppConfigAPI)(nil).ListApplications), arg0)
 }
 
-// ListApplicationsPages mocks base method
+// ListApplicationsPages mocks base method.
 func (m *MockAppConfigAPI) ListApplicationsPages(arg0 *appconfig.ListApplicationsInput, arg1 func(*appconfig.ListApplicationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListApplicationsPages", arg0, arg1)
@@ -908,13 +909,13 @@ func (m *MockAppConfigAPI) ListApplicationsPages(arg0 *appconfig.ListApplication
 	return ret0
 }
 
-// ListApplicationsPages indicates an expected call of ListApplicationsPages
+// ListApplicationsPages indicates an expected call of ListApplicationsPages.
 func (mr *MockAppConfigAPIMockRecorder) ListApplicationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListApplicationsPages", reflect.TypeOf((*MockAppConfigAPI)(nil).ListApplicationsPages), arg0, arg1)
 }
 
-// ListApplicationsPagesWithContext mocks base method
+// ListApplicationsPagesWithContext mocks base method.
 func (m *MockAppConfigAPI) ListApplicationsPagesWithContext(arg0 context.Context, arg1 *appconfig.ListApplicationsInput, arg2 func(*appconfig.ListApplicationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -926,14 +927,14 @@ func (m *MockAppConfigAPI) ListApplicationsPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListApplicationsPagesWithContext indicates an expected call of ListApplicationsPagesWithContext
+// ListApplicationsPagesWithContext indicates an expected call of ListApplicationsPagesWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListApplicationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListApplicationsPagesWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListApplicationsPagesWithContext), varargs...)
 }
 
-// ListApplicationsRequest mocks base method
+// ListApplicationsRequest mocks base method.
 func (m *MockAppConfigAPI) ListApplicationsRequest(arg0 *appconfig.ListApplicationsInput) (*request.Request, *appconfig.ListApplicationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListApplicationsRequest", arg0)
@@ -942,13 +943,13 @@ func (m *MockAppConfigAPI) ListApplicationsRequest(arg0 *appconfig.ListApplicati
 	return ret0, ret1
 }
 
-// ListApplicationsRequest indicates an expected call of ListApplicationsRequest
+// ListApplicationsRequest indicates an expected call of ListApplicationsRequest.
 func (mr *MockAppConfigAPIMockRecorder) ListApplicationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListApplicationsRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).ListApplicationsRequest), arg0)
 }
 
-// ListApplicationsWithContext mocks base method
+// ListApplicationsWithContext mocks base method.
 func (m *MockAppConfigAPI) ListApplicationsWithContext(arg0 context.Context, arg1 *appconfig.ListApplicationsInput, arg2 ...request.Option) (*appconfig.ListApplicationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -961,14 +962,14 @@ func (m *MockAppConfigAPI) ListApplicationsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListApplicationsWithContext indicates an expected call of ListApplicationsWithContext
+// ListApplicationsWithContext indicates an expected call of ListApplicationsWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListApplicationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListApplicationsWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListApplicationsWithContext), varargs...)
 }
 
-// ListConfigurationProfiles mocks base method
+// ListConfigurationProfiles mocks base method.
 func (m *MockAppConfigAPI) ListConfigurationProfiles(arg0 *appconfig.ListConfigurationProfilesInput) (*appconfig.ListConfigurationProfilesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConfigurationProfiles", arg0)
@@ -977,13 +978,13 @@ func (m *MockAppConfigAPI) ListConfigurationProfiles(arg0 *appconfig.ListConfigu
 	return ret0, ret1
 }
 
-// ListConfigurationProfiles indicates an expected call of ListConfigurationProfiles
+// ListConfigurationProfiles indicates an expected call of ListConfigurationProfiles.
 func (mr *MockAppConfigAPIMockRecorder) ListConfigurationProfiles(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationProfiles", reflect.TypeOf((*MockAppConfigAPI)(nil).ListConfigurationProfiles), arg0)
 }
 
-// ListConfigurationProfilesPages mocks base method
+// ListConfigurationProfilesPages mocks base method.
 func (m *MockAppConfigAPI) ListConfigurationProfilesPages(arg0 *appconfig.ListConfigurationProfilesInput, arg1 func(*appconfig.ListConfigurationProfilesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConfigurationProfilesPages", arg0, arg1)
@@ -991,13 +992,13 @@ func (m *MockAppConfigAPI) ListConfigurationProfilesPages(arg0 *appconfig.ListCo
 	return ret0
 }
 
-// ListConfigurationProfilesPages indicates an expected call of ListConfigurationProfilesPages
+// ListConfigurationProfilesPages indicates an expected call of ListConfigurationProfilesPages.
 func (mr *MockAppConfigAPIMockRecorder) ListConfigurationProfilesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationProfilesPages", reflect.TypeOf((*MockAppConfigAPI)(nil).ListConfigurationProfilesPages), arg0, arg1)
 }
 
-// ListConfigurationProfilesPagesWithContext mocks base method
+// ListConfigurationProfilesPagesWithContext mocks base method.
 func (m *MockAppConfigAPI) ListConfigurationProfilesPagesWithContext(arg0 context.Context, arg1 *appconfig.ListConfigurationProfilesInput, arg2 func(*appconfig.ListConfigurationProfilesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1009,14 +1010,14 @@ func (m *MockAppConfigAPI) ListConfigurationProfilesPagesWithContext(arg0 contex
 	return ret0
 }
 
-// ListConfigurationProfilesPagesWithContext indicates an expected call of ListConfigurationProfilesPagesWithContext
+// ListConfigurationProfilesPagesWithContext indicates an expected call of ListConfigurationProfilesPagesWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListConfigurationProfilesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationProfilesPagesWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListConfigurationProfilesPagesWithContext), varargs...)
 }
 
-// ListConfigurationProfilesRequest mocks base method
+// ListConfigurationProfilesRequest mocks base method.
 func (m *MockAppConfigAPI) ListConfigurationProfilesRequest(arg0 *appconfig.ListConfigurationProfilesInput) (*request.Request, *appconfig.ListConfigurationProfilesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConfigurationProfilesRequest", arg0)
@@ -1025,13 +1026,13 @@ func (m *MockAppConfigAPI) ListConfigurationProfilesRequest(arg0 *appconfig.List
 	return ret0, ret1
 }
 
-// ListConfigurationProfilesRequest indicates an expected call of ListConfigurationProfilesRequest
+// ListConfigurationProfilesRequest indicates an expected call of ListConfigurationProfilesRequest.
 func (mr *MockAppConfigAPIMockRecorder) ListConfigurationProfilesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationProfilesRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).ListConfigurationProfilesRequest), arg0)
 }
 
-// ListConfigurationProfilesWithContext mocks base method
+// ListConfigurationProfilesWithContext mocks base method.
 func (m *MockAppConfigAPI) ListConfigurationProfilesWithContext(arg0 context.Context, arg1 *appconfig.ListConfigurationProfilesInput, arg2 ...request.Option) (*appconfig.ListConfigurationProfilesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1044,14 +1045,14 @@ func (m *MockAppConfigAPI) ListConfigurationProfilesWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListConfigurationProfilesWithContext indicates an expected call of ListConfigurationProfilesWithContext
+// ListConfigurationProfilesWithContext indicates an expected call of ListConfigurationProfilesWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListConfigurationProfilesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationProfilesWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListConfigurationProfilesWithContext), varargs...)
 }
 
-// ListDeploymentStrategies mocks base method
+// ListDeploymentStrategies mocks base method.
 func (m *MockAppConfigAPI) ListDeploymentStrategies(arg0 *appconfig.ListDeploymentStrategiesInput) (*appconfig.ListDeploymentStrategiesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDeploymentStrategies", arg0)
@@ -1060,13 +1061,13 @@ func (m *MockAppConfigAPI) ListDeploymentStrategies(arg0 *appconfig.ListDeployme
 	return ret0, ret1
 }
 
-// ListDeploymentStrategies indicates an expected call of ListDeploymentStrategies
+// ListDeploymentStrategies indicates an expected call of ListDeploymentStrategies.
 func (mr *MockAppConfigAPIMockRecorder) ListDeploymentStrategies(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentStrategies", reflect.TypeOf((*MockAppConfigAPI)(nil).ListDeploymentStrategies), arg0)
 }
 
-// ListDeploymentStrategiesPages mocks base method
+// ListDeploymentStrategiesPages mocks base method.
 func (m *MockAppConfigAPI) ListDeploymentStrategiesPages(arg0 *appconfig.ListDeploymentStrategiesInput, arg1 func(*appconfig.ListDeploymentStrategiesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDeploymentStrategiesPages", arg0, arg1)
@@ -1074,13 +1075,13 @@ func (m *MockAppConfigAPI) ListDeploymentStrategiesPages(arg0 *appconfig.ListDep
 	return ret0
 }
 
-// ListDeploymentStrategiesPages indicates an expected call of ListDeploymentStrategiesPages
+// ListDeploymentStrategiesPages indicates an expected call of ListDeploymentStrategiesPages.
 func (mr *MockAppConfigAPIMockRecorder) ListDeploymentStrategiesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentStrategiesPages", reflect.TypeOf((*MockAppConfigAPI)(nil).ListDeploymentStrategiesPages), arg0, arg1)
 }
 
-// ListDeploymentStrategiesPagesWithContext mocks base method
+// ListDeploymentStrategiesPagesWithContext mocks base method.
 func (m *MockAppConfigAPI) ListDeploymentStrategiesPagesWithContext(arg0 context.Context, arg1 *appconfig.ListDeploymentStrategiesInput, arg2 func(*appconfig.ListDeploymentStrategiesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1092,14 +1093,14 @@ func (m *MockAppConfigAPI) ListDeploymentStrategiesPagesWithContext(arg0 context
 	return ret0
 }
 
-// ListDeploymentStrategiesPagesWithContext indicates an expected call of ListDeploymentStrategiesPagesWithContext
+// ListDeploymentStrategiesPagesWithContext indicates an expected call of ListDeploymentStrategiesPagesWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListDeploymentStrategiesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentStrategiesPagesWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListDeploymentStrategiesPagesWithContext), varargs...)
 }
 
-// ListDeploymentStrategiesRequest mocks base method
+// ListDeploymentStrategiesRequest mocks base method.
 func (m *MockAppConfigAPI) ListDeploymentStrategiesRequest(arg0 *appconfig.ListDeploymentStrategiesInput) (*request.Request, *appconfig.ListDeploymentStrategiesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDeploymentStrategiesRequest", arg0)
@@ -1108,13 +1109,13 @@ func (m *MockAppConfigAPI) ListDeploymentStrategiesRequest(arg0 *appconfig.ListD
 	return ret0, ret1
 }
 
-// ListDeploymentStrategiesRequest indicates an expected call of ListDeploymentStrategiesRequest
+// ListDeploymentStrategiesRequest indicates an expected call of ListDeploymentStrategiesRequest.
 func (mr *MockAppConfigAPIMockRecorder) ListDeploymentStrategiesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentStrategiesRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).ListDeploymentStrategiesRequest), arg0)
 }
 
-// ListDeploymentStrategiesWithContext mocks base method
+// ListDeploymentStrategiesWithContext mocks base method.
 func (m *MockAppConfigAPI) ListDeploymentStrategiesWithContext(arg0 context.Context, arg1 *appconfig.ListDeploymentStrategiesInput, arg2 ...request.Option) (*appconfig.ListDeploymentStrategiesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1127,14 +1128,14 @@ func (m *MockAppConfigAPI) ListDeploymentStrategiesWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListDeploymentStrategiesWithContext indicates an expected call of ListDeploymentStrategiesWithContext
+// ListDeploymentStrategiesWithContext indicates an expected call of ListDeploymentStrategiesWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListDeploymentStrategiesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentStrategiesWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListDeploymentStrategiesWithContext), varargs...)
 }
 
-// ListDeployments mocks base method
+// ListDeployments mocks base method.
 func (m *MockAppConfigAPI) ListDeployments(arg0 *appconfig.ListDeploymentsInput) (*appconfig.ListDeploymentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDeployments", arg0)
@@ -1143,13 +1144,13 @@ func (m *MockAppConfigAPI) ListDeployments(arg0 *appconfig.ListDeploymentsInput)
 	return ret0, ret1
 }
 
-// ListDeployments indicates an expected call of ListDeployments
+// ListDeployments indicates an expected call of ListDeployments.
 func (mr *MockAppConfigAPIMockRecorder) ListDeployments(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeployments", reflect.TypeOf((*MockAppConfigAPI)(nil).ListDeployments), arg0)
 }
 
-// ListDeploymentsPages mocks base method
+// ListDeploymentsPages mocks base method.
 func (m *MockAppConfigAPI) ListDeploymentsPages(arg0 *appconfig.ListDeploymentsInput, arg1 func(*appconfig.ListDeploymentsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDeploymentsPages", arg0, arg1)
@@ -1157,13 +1158,13 @@ func (m *MockAppConfigAPI) ListDeploymentsPages(arg0 *appconfig.ListDeploymentsI
 	return ret0
 }
 
-// ListDeploymentsPages indicates an expected call of ListDeploymentsPages
+// ListDeploymentsPages indicates an expected call of ListDeploymentsPages.
 func (mr *MockAppConfigAPIMockRecorder) ListDeploymentsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentsPages", reflect.TypeOf((*MockAppConfigAPI)(nil).ListDeploymentsPages), arg0, arg1)
 }
 
-// ListDeploymentsPagesWithContext mocks base method
+// ListDeploymentsPagesWithContext mocks base method.
 func (m *MockAppConfigAPI) ListDeploymentsPagesWithContext(arg0 context.Context, arg1 *appconfig.ListDeploymentsInput, arg2 func(*appconfig.ListDeploymentsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1175,14 +1176,14 @@ func (m *MockAppConfigAPI) ListDeploymentsPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListDeploymentsPagesWithContext indicates an expected call of ListDeploymentsPagesWithContext
+// ListDeploymentsPagesWithContext indicates an expected call of ListDeploymentsPagesWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListDeploymentsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentsPagesWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListDeploymentsPagesWithContext), varargs...)
 }
 
-// ListDeploymentsRequest mocks base method
+// ListDeploymentsRequest mocks base method.
 func (m *MockAppConfigAPI) ListDeploymentsRequest(arg0 *appconfig.ListDeploymentsInput) (*request.Request, *appconfig.ListDeploymentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDeploymentsRequest", arg0)
@@ -1191,13 +1192,13 @@ func (m *MockAppConfigAPI) ListDeploymentsRequest(arg0 *appconfig.ListDeployment
 	return ret0, ret1
 }
 
-// ListDeploymentsRequest indicates an expected call of ListDeploymentsRequest
+// ListDeploymentsRequest indicates an expected call of ListDeploymentsRequest.
 func (mr *MockAppConfigAPIMockRecorder) ListDeploymentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentsRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).ListDeploymentsRequest), arg0)
 }
 
-// ListDeploymentsWithContext mocks base method
+// ListDeploymentsWithContext mocks base method.
 func (m *MockAppConfigAPI) ListDeploymentsWithContext(arg0 context.Context, arg1 *appconfig.ListDeploymentsInput, arg2 ...request.Option) (*appconfig.ListDeploymentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1210,14 +1211,14 @@ func (m *MockAppConfigAPI) ListDeploymentsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListDeploymentsWithContext indicates an expected call of ListDeploymentsWithContext
+// ListDeploymentsWithContext indicates an expected call of ListDeploymentsWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListDeploymentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentsWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListDeploymentsWithContext), varargs...)
 }
 
-// ListEnvironments mocks base method
+// ListEnvironments mocks base method.
 func (m *MockAppConfigAPI) ListEnvironments(arg0 *appconfig.ListEnvironmentsInput) (*appconfig.ListEnvironmentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEnvironments", arg0)
@@ -1226,13 +1227,13 @@ func (m *MockAppConfigAPI) ListEnvironments(arg0 *appconfig.ListEnvironmentsInpu
 	return ret0, ret1
 }
 
-// ListEnvironments indicates an expected call of ListEnvironments
+// ListEnvironments indicates an expected call of ListEnvironments.
 func (mr *MockAppConfigAPIMockRecorder) ListEnvironments(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEnvironments", reflect.TypeOf((*MockAppConfigAPI)(nil).ListEnvironments), arg0)
 }
 
-// ListEnvironmentsPages mocks base method
+// ListEnvironmentsPages mocks base method.
 func (m *MockAppConfigAPI) ListEnvironmentsPages(arg0 *appconfig.ListEnvironmentsInput, arg1 func(*appconfig.ListEnvironmentsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEnvironmentsPages", arg0, arg1)
@@ -1240,13 +1241,13 @@ func (m *MockAppConfigAPI) ListEnvironmentsPages(arg0 *appconfig.ListEnvironment
 	return ret0
 }
 
-// ListEnvironmentsPages indicates an expected call of ListEnvironmentsPages
+// ListEnvironmentsPages indicates an expected call of ListEnvironmentsPages.
 func (mr *MockAppConfigAPIMockRecorder) ListEnvironmentsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEnvironmentsPages", reflect.TypeOf((*MockAppConfigAPI)(nil).ListEnvironmentsPages), arg0, arg1)
 }
 
-// ListEnvironmentsPagesWithContext mocks base method
+// ListEnvironmentsPagesWithContext mocks base method.
 func (m *MockAppConfigAPI) ListEnvironmentsPagesWithContext(arg0 context.Context, arg1 *appconfig.ListEnvironmentsInput, arg2 func(*appconfig.ListEnvironmentsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1258,14 +1259,14 @@ func (m *MockAppConfigAPI) ListEnvironmentsPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListEnvironmentsPagesWithContext indicates an expected call of ListEnvironmentsPagesWithContext
+// ListEnvironmentsPagesWithContext indicates an expected call of ListEnvironmentsPagesWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListEnvironmentsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEnvironmentsPagesWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListEnvironmentsPagesWithContext), varargs...)
 }
 
-// ListEnvironmentsRequest mocks base method
+// ListEnvironmentsRequest mocks base method.
 func (m *MockAppConfigAPI) ListEnvironmentsRequest(arg0 *appconfig.ListEnvironmentsInput) (*request.Request, *appconfig.ListEnvironmentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEnvironmentsRequest", arg0)
@@ -1274,13 +1275,13 @@ func (m *MockAppConfigAPI) ListEnvironmentsRequest(arg0 *appconfig.ListEnvironme
 	return ret0, ret1
 }
 
-// ListEnvironmentsRequest indicates an expected call of ListEnvironmentsRequest
+// ListEnvironmentsRequest indicates an expected call of ListEnvironmentsRequest.
 func (mr *MockAppConfigAPIMockRecorder) ListEnvironmentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEnvironmentsRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).ListEnvironmentsRequest), arg0)
 }
 
-// ListEnvironmentsWithContext mocks base method
+// ListEnvironmentsWithContext mocks base method.
 func (m *MockAppConfigAPI) ListEnvironmentsWithContext(arg0 context.Context, arg1 *appconfig.ListEnvironmentsInput, arg2 ...request.Option) (*appconfig.ListEnvironmentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1293,14 +1294,14 @@ func (m *MockAppConfigAPI) ListEnvironmentsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListEnvironmentsWithContext indicates an expected call of ListEnvironmentsWithContext
+// ListEnvironmentsWithContext indicates an expected call of ListEnvironmentsWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListEnvironmentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEnvironmentsWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListEnvironmentsWithContext), varargs...)
 }
 
-// ListHostedConfigurationVersions mocks base method
+// ListHostedConfigurationVersions mocks base method.
 func (m *MockAppConfigAPI) ListHostedConfigurationVersions(arg0 *appconfig.ListHostedConfigurationVersionsInput) (*appconfig.ListHostedConfigurationVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHostedConfigurationVersions", arg0)
@@ -1309,13 +1310,13 @@ func (m *MockAppConfigAPI) ListHostedConfigurationVersions(arg0 *appconfig.ListH
 	return ret0, ret1
 }
 
-// ListHostedConfigurationVersions indicates an expected call of ListHostedConfigurationVersions
+// ListHostedConfigurationVersions indicates an expected call of ListHostedConfigurationVersions.
 func (mr *MockAppConfigAPIMockRecorder) ListHostedConfigurationVersions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHostedConfigurationVersions", reflect.TypeOf((*MockAppConfigAPI)(nil).ListHostedConfigurationVersions), arg0)
 }
 
-// ListHostedConfigurationVersionsPages mocks base method
+// ListHostedConfigurationVersionsPages mocks base method.
 func (m *MockAppConfigAPI) ListHostedConfigurationVersionsPages(arg0 *appconfig.ListHostedConfigurationVersionsInput, arg1 func(*appconfig.ListHostedConfigurationVersionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHostedConfigurationVersionsPages", arg0, arg1)
@@ -1323,13 +1324,13 @@ func (m *MockAppConfigAPI) ListHostedConfigurationVersionsPages(arg0 *appconfig.
 	return ret0
 }
 
-// ListHostedConfigurationVersionsPages indicates an expected call of ListHostedConfigurationVersionsPages
+// ListHostedConfigurationVersionsPages indicates an expected call of ListHostedConfigurationVersionsPages.
 func (mr *MockAppConfigAPIMockRecorder) ListHostedConfigurationVersionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHostedConfigurationVersionsPages", reflect.TypeOf((*MockAppConfigAPI)(nil).ListHostedConfigurationVersionsPages), arg0, arg1)
 }
 
-// ListHostedConfigurationVersionsPagesWithContext mocks base method
+// ListHostedConfigurationVersionsPagesWithContext mocks base method.
 func (m *MockAppConfigAPI) ListHostedConfigurationVersionsPagesWithContext(arg0 context.Context, arg1 *appconfig.ListHostedConfigurationVersionsInput, arg2 func(*appconfig.ListHostedConfigurationVersionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1341,14 +1342,14 @@ func (m *MockAppConfigAPI) ListHostedConfigurationVersionsPagesWithContext(arg0 
 	return ret0
 }
 
-// ListHostedConfigurationVersionsPagesWithContext indicates an expected call of ListHostedConfigurationVersionsPagesWithContext
+// ListHostedConfigurationVersionsPagesWithContext indicates an expected call of ListHostedConfigurationVersionsPagesWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListHostedConfigurationVersionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHostedConfigurationVersionsPagesWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListHostedConfigurationVersionsPagesWithContext), varargs...)
 }
 
-// ListHostedConfigurationVersionsRequest mocks base method
+// ListHostedConfigurationVersionsRequest mocks base method.
 func (m *MockAppConfigAPI) ListHostedConfigurationVersionsRequest(arg0 *appconfig.ListHostedConfigurationVersionsInput) (*request.Request, *appconfig.ListHostedConfigurationVersionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHostedConfigurationVersionsRequest", arg0)
@@ -1357,13 +1358,13 @@ func (m *MockAppConfigAPI) ListHostedConfigurationVersionsRequest(arg0 *appconfi
 	return ret0, ret1
 }
 
-// ListHostedConfigurationVersionsRequest indicates an expected call of ListHostedConfigurationVersionsRequest
+// ListHostedConfigurationVersionsRequest indicates an expected call of ListHostedConfigurationVersionsRequest.
 func (mr *MockAppConfigAPIMockRecorder) ListHostedConfigurationVersionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHostedConfigurationVersionsRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).ListHostedConfigurationVersionsRequest), arg0)
 }
 
-// ListHostedConfigurationVersionsWithContext mocks base method
+// ListHostedConfigurationVersionsWithContext mocks base method.
 func (m *MockAppConfigAPI) ListHostedConfigurationVersionsWithContext(arg0 context.Context, arg1 *appconfig.ListHostedConfigurationVersionsInput, arg2 ...request.Option) (*appconfig.ListHostedConfigurationVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1376,14 +1377,14 @@ func (m *MockAppConfigAPI) ListHostedConfigurationVersionsWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// ListHostedConfigurationVersionsWithContext indicates an expected call of ListHostedConfigurationVersionsWithContext
+// ListHostedConfigurationVersionsWithContext indicates an expected call of ListHostedConfigurationVersionsWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListHostedConfigurationVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHostedConfigurationVersionsWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListHostedConfigurationVersionsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockAppConfigAPI) ListTagsForResource(arg0 *appconfig.ListTagsForResourceInput) (*appconfig.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1392,13 +1393,13 @@ func (m *MockAppConfigAPI) ListTagsForResource(arg0 *appconfig.ListTagsForResour
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockAppConfigAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockAppConfigAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockAppConfigAPI) ListTagsForResourceRequest(arg0 *appconfig.ListTagsForResourceInput) (*request.Request, *appconfig.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1407,13 +1408,13 @@ func (m *MockAppConfigAPI) ListTagsForResourceRequest(arg0 *appconfig.ListTagsFo
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockAppConfigAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockAppConfigAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *appconfig.ListTagsForResourceInput, arg2 ...request.Option) (*appconfig.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1426,14 +1427,14 @@ func (m *MockAppConfigAPI) ListTagsForResourceWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// StartDeployment mocks base method
+// StartDeployment mocks base method.
 func (m *MockAppConfigAPI) StartDeployment(arg0 *appconfig.StartDeploymentInput) (*appconfig.StartDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartDeployment", arg0)
@@ -1442,13 +1443,13 @@ func (m *MockAppConfigAPI) StartDeployment(arg0 *appconfig.StartDeploymentInput)
 	return ret0, ret1
 }
 
-// StartDeployment indicates an expected call of StartDeployment
+// StartDeployment indicates an expected call of StartDeployment.
 func (mr *MockAppConfigAPIMockRecorder) StartDeployment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDeployment", reflect.TypeOf((*MockAppConfigAPI)(nil).StartDeployment), arg0)
 }
 
-// StartDeploymentRequest mocks base method
+// StartDeploymentRequest mocks base method.
 func (m *MockAppConfigAPI) StartDeploymentRequest(arg0 *appconfig.StartDeploymentInput) (*request.Request, *appconfig.StartDeploymentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartDeploymentRequest", arg0)
@@ -1457,13 +1458,13 @@ func (m *MockAppConfigAPI) StartDeploymentRequest(arg0 *appconfig.StartDeploymen
 	return ret0, ret1
 }
 
-// StartDeploymentRequest indicates an expected call of StartDeploymentRequest
+// StartDeploymentRequest indicates an expected call of StartDeploymentRequest.
 func (mr *MockAppConfigAPIMockRecorder) StartDeploymentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDeploymentRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).StartDeploymentRequest), arg0)
 }
 
-// StartDeploymentWithContext mocks base method
+// StartDeploymentWithContext mocks base method.
 func (m *MockAppConfigAPI) StartDeploymentWithContext(arg0 context.Context, arg1 *appconfig.StartDeploymentInput, arg2 ...request.Option) (*appconfig.StartDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1476,14 +1477,14 @@ func (m *MockAppConfigAPI) StartDeploymentWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// StartDeploymentWithContext indicates an expected call of StartDeploymentWithContext
+// StartDeploymentWithContext indicates an expected call of StartDeploymentWithContext.
 func (mr *MockAppConfigAPIMockRecorder) StartDeploymentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDeploymentWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).StartDeploymentWithContext), varargs...)
 }
 
-// StopDeployment mocks base method
+// StopDeployment mocks base method.
 func (m *MockAppConfigAPI) StopDeployment(arg0 *appconfig.StopDeploymentInput) (*appconfig.StopDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopDeployment", arg0)
@@ -1492,13 +1493,13 @@ func (m *MockAppConfigAPI) StopDeployment(arg0 *appconfig.StopDeploymentInput) (
 	return ret0, ret1
 }
 
-// StopDeployment indicates an expected call of StopDeployment
+// StopDeployment indicates an expected call of StopDeployment.
 func (mr *MockAppConfigAPIMockRecorder) StopDeployment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopDeployment", reflect.TypeOf((*MockAppConfigAPI)(nil).StopDeployment), arg0)
 }
 
-// StopDeploymentRequest mocks base method
+// StopDeploymentRequest mocks base method.
 func (m *MockAppConfigAPI) StopDeploymentRequest(arg0 *appconfig.StopDeploymentInput) (*request.Request, *appconfig.StopDeploymentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopDeploymentRequest", arg0)
@@ -1507,13 +1508,13 @@ func (m *MockAppConfigAPI) StopDeploymentRequest(arg0 *appconfig.StopDeploymentI
 	return ret0, ret1
 }
 
-// StopDeploymentRequest indicates an expected call of StopDeploymentRequest
+// StopDeploymentRequest indicates an expected call of StopDeploymentRequest.
 func (mr *MockAppConfigAPIMockRecorder) StopDeploymentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopDeploymentRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).StopDeploymentRequest), arg0)
 }
 
-// StopDeploymentWithContext mocks base method
+// StopDeploymentWithContext mocks base method.
 func (m *MockAppConfigAPI) StopDeploymentWithContext(arg0 context.Context, arg1 *appconfig.StopDeploymentInput, arg2 ...request.Option) (*appconfig.StopDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1526,14 +1527,14 @@ func (m *MockAppConfigAPI) StopDeploymentWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// StopDeploymentWithContext indicates an expected call of StopDeploymentWithContext
+// StopDeploymentWithContext indicates an expected call of StopDeploymentWithContext.
 func (mr *MockAppConfigAPIMockRecorder) StopDeploymentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopDeploymentWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).StopDeploymentWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockAppConfigAPI) TagResource(arg0 *appconfig.TagResourceInput) (*appconfig.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1542,13 +1543,13 @@ func (m *MockAppConfigAPI) TagResource(arg0 *appconfig.TagResourceInput) (*appco
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockAppConfigAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockAppConfigAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockAppConfigAPI) TagResourceRequest(arg0 *appconfig.TagResourceInput) (*request.Request, *appconfig.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1557,13 +1558,13 @@ func (m *MockAppConfigAPI) TagResourceRequest(arg0 *appconfig.TagResourceInput) 
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockAppConfigAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockAppConfigAPI) TagResourceWithContext(arg0 context.Context, arg1 *appconfig.TagResourceInput, arg2 ...request.Option) (*appconfig.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1576,14 +1577,14 @@ func (m *MockAppConfigAPI) TagResourceWithContext(arg0 context.Context, arg1 *ap
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockAppConfigAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockAppConfigAPI) UntagResource(arg0 *appconfig.UntagResourceInput) (*appconfig.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1592,13 +1593,13 @@ func (m *MockAppConfigAPI) UntagResource(arg0 *appconfig.UntagResourceInput) (*a
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockAppConfigAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockAppConfigAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockAppConfigAPI) UntagResourceRequest(arg0 *appconfig.UntagResourceInput) (*request.Request, *appconfig.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1607,13 +1608,13 @@ func (m *MockAppConfigAPI) UntagResourceRequest(arg0 *appconfig.UntagResourceInp
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockAppConfigAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockAppConfigAPI) UntagResourceWithContext(arg0 context.Context, arg1 *appconfig.UntagResourceInput, arg2 ...request.Option) (*appconfig.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1626,14 +1627,14 @@ func (m *MockAppConfigAPI) UntagResourceWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockAppConfigAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateApplication mocks base method
+// UpdateApplication mocks base method.
 func (m *MockAppConfigAPI) UpdateApplication(arg0 *appconfig.UpdateApplicationInput) (*appconfig.UpdateApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateApplication", arg0)
@@ -1642,13 +1643,13 @@ func (m *MockAppConfigAPI) UpdateApplication(arg0 *appconfig.UpdateApplicationIn
 	return ret0, ret1
 }
 
-// UpdateApplication indicates an expected call of UpdateApplication
+// UpdateApplication indicates an expected call of UpdateApplication.
 func (mr *MockAppConfigAPIMockRecorder) UpdateApplication(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateApplication", reflect.TypeOf((*MockAppConfigAPI)(nil).UpdateApplication), arg0)
 }
 
-// UpdateApplicationRequest mocks base method
+// UpdateApplicationRequest mocks base method.
 func (m *MockAppConfigAPI) UpdateApplicationRequest(arg0 *appconfig.UpdateApplicationInput) (*request.Request, *appconfig.UpdateApplicationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateApplicationRequest", arg0)
@@ -1657,13 +1658,13 @@ func (m *MockAppConfigAPI) UpdateApplicationRequest(arg0 *appconfig.UpdateApplic
 	return ret0, ret1
 }
 
-// UpdateApplicationRequest indicates an expected call of UpdateApplicationRequest
+// UpdateApplicationRequest indicates an expected call of UpdateApplicationRequest.
 func (mr *MockAppConfigAPIMockRecorder) UpdateApplicationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateApplicationRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).UpdateApplicationRequest), arg0)
 }
 
-// UpdateApplicationWithContext mocks base method
+// UpdateApplicationWithContext mocks base method.
 func (m *MockAppConfigAPI) UpdateApplicationWithContext(arg0 context.Context, arg1 *appconfig.UpdateApplicationInput, arg2 ...request.Option) (*appconfig.UpdateApplicationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1676,14 +1677,14 @@ func (m *MockAppConfigAPI) UpdateApplicationWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateApplicationWithContext indicates an expected call of UpdateApplicationWithContext
+// UpdateApplicationWithContext indicates an expected call of UpdateApplicationWithContext.
 func (mr *MockAppConfigAPIMockRecorder) UpdateApplicationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateApplicationWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).UpdateApplicationWithContext), varargs...)
 }
 
-// UpdateConfigurationProfile mocks base method
+// UpdateConfigurationProfile mocks base method.
 func (m *MockAppConfigAPI) UpdateConfigurationProfile(arg0 *appconfig.UpdateConfigurationProfileInput) (*appconfig.UpdateConfigurationProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateConfigurationProfile", arg0)
@@ -1692,13 +1693,13 @@ func (m *MockAppConfigAPI) UpdateConfigurationProfile(arg0 *appconfig.UpdateConf
 	return ret0, ret1
 }
 
-// UpdateConfigurationProfile indicates an expected call of UpdateConfigurationProfile
+// UpdateConfigurationProfile indicates an expected call of UpdateConfigurationProfile.
 func (mr *MockAppConfigAPIMockRecorder) UpdateConfigurationProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConfigurationProfile", reflect.TypeOf((*MockAppConfigAPI)(nil).UpdateConfigurationProfile), arg0)
 }
 
-// UpdateConfigurationProfileRequest mocks base method
+// UpdateConfigurationProfileRequest mocks base method.
 func (m *MockAppConfigAPI) UpdateConfigurationProfileRequest(arg0 *appconfig.UpdateConfigurationProfileInput) (*request.Request, *appconfig.UpdateConfigurationProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateConfigurationProfileRequest", arg0)
@@ -1707,13 +1708,13 @@ func (m *MockAppConfigAPI) UpdateConfigurationProfileRequest(arg0 *appconfig.Upd
 	return ret0, ret1
 }
 
-// UpdateConfigurationProfileRequest indicates an expected call of UpdateConfigurationProfileRequest
+// UpdateConfigurationProfileRequest indicates an expected call of UpdateConfigurationProfileRequest.
 func (mr *MockAppConfigAPIMockRecorder) UpdateConfigurationProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConfigurationProfileRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).UpdateConfigurationProfileRequest), arg0)
 }
 
-// UpdateConfigurationProfileWithContext mocks base method
+// UpdateConfigurationProfileWithContext mocks base method.
 func (m *MockAppConfigAPI) UpdateConfigurationProfileWithContext(arg0 context.Context, arg1 *appconfig.UpdateConfigurationProfileInput, arg2 ...request.Option) (*appconfig.UpdateConfigurationProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1726,14 +1727,14 @@ func (m *MockAppConfigAPI) UpdateConfigurationProfileWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// UpdateConfigurationProfileWithContext indicates an expected call of UpdateConfigurationProfileWithContext
+// UpdateConfigurationProfileWithContext indicates an expected call of UpdateConfigurationProfileWithContext.
 func (mr *MockAppConfigAPIMockRecorder) UpdateConfigurationProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConfigurationProfileWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).UpdateConfigurationProfileWithContext), varargs...)
 }
 
-// UpdateDeploymentStrategy mocks base method
+// UpdateDeploymentStrategy mocks base method.
 func (m *MockAppConfigAPI) UpdateDeploymentStrategy(arg0 *appconfig.UpdateDeploymentStrategyInput) (*appconfig.UpdateDeploymentStrategyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDeploymentStrategy", arg0)
@@ -1742,13 +1743,13 @@ func (m *MockAppConfigAPI) UpdateDeploymentStrategy(arg0 *appconfig.UpdateDeploy
 	return ret0, ret1
 }
 
-// UpdateDeploymentStrategy indicates an expected call of UpdateDeploymentStrategy
+// UpdateDeploymentStrategy indicates an expected call of UpdateDeploymentStrategy.
 func (mr *MockAppConfigAPIMockRecorder) UpdateDeploymentStrategy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDeploymentStrategy", reflect.TypeOf((*MockAppConfigAPI)(nil).UpdateDeploymentStrategy), arg0)
 }
 
-// UpdateDeploymentStrategyRequest mocks base method
+// UpdateDeploymentStrategyRequest mocks base method.
 func (m *MockAppConfigAPI) UpdateDeploymentStrategyRequest(arg0 *appconfig.UpdateDeploymentStrategyInput) (*request.Request, *appconfig.UpdateDeploymentStrategyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDeploymentStrategyRequest", arg0)
@@ -1757,13 +1758,13 @@ func (m *MockAppConfigAPI) UpdateDeploymentStrategyRequest(arg0 *appconfig.Updat
 	return ret0, ret1
 }
 
-// UpdateDeploymentStrategyRequest indicates an expected call of UpdateDeploymentStrategyRequest
+// UpdateDeploymentStrategyRequest indicates an expected call of UpdateDeploymentStrategyRequest.
 func (mr *MockAppConfigAPIMockRecorder) UpdateDeploymentStrategyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDeploymentStrategyRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).UpdateDeploymentStrategyRequest), arg0)
 }
 
-// UpdateDeploymentStrategyWithContext mocks base method
+// UpdateDeploymentStrategyWithContext mocks base method.
 func (m *MockAppConfigAPI) UpdateDeploymentStrategyWithContext(arg0 context.Context, arg1 *appconfig.UpdateDeploymentStrategyInput, arg2 ...request.Option) (*appconfig.UpdateDeploymentStrategyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1776,14 +1777,14 @@ func (m *MockAppConfigAPI) UpdateDeploymentStrategyWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// UpdateDeploymentStrategyWithContext indicates an expected call of UpdateDeploymentStrategyWithContext
+// UpdateDeploymentStrategyWithContext indicates an expected call of UpdateDeploymentStrategyWithContext.
 func (mr *MockAppConfigAPIMockRecorder) UpdateDeploymentStrategyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDeploymentStrategyWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).UpdateDeploymentStrategyWithContext), varargs...)
 }
 
-// UpdateEnvironment mocks base method
+// UpdateEnvironment mocks base method.
 func (m *MockAppConfigAPI) UpdateEnvironment(arg0 *appconfig.UpdateEnvironmentInput) (*appconfig.UpdateEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateEnvironment", arg0)
@@ -1792,13 +1793,13 @@ func (m *MockAppConfigAPI) UpdateEnvironment(arg0 *appconfig.UpdateEnvironmentIn
 	return ret0, ret1
 }
 
-// UpdateEnvironment indicates an expected call of UpdateEnvironment
+// UpdateEnvironment indicates an expected call of UpdateEnvironment.
 func (mr *MockAppConfigAPIMockRecorder) UpdateEnvironment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEnvironment", reflect.TypeOf((*MockAppConfigAPI)(nil).UpdateEnvironment), arg0)
 }
 
-// UpdateEnvironmentRequest mocks base method
+// UpdateEnvironmentRequest mocks base method.
 func (m *MockAppConfigAPI) UpdateEnvironmentRequest(arg0 *appconfig.UpdateEnvironmentInput) (*request.Request, *appconfig.UpdateEnvironmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateEnvironmentRequest", arg0)
@@ -1807,13 +1808,13 @@ func (m *MockAppConfigAPI) UpdateEnvironmentRequest(arg0 *appconfig.UpdateEnviro
 	return ret0, ret1
 }
 
-// UpdateEnvironmentRequest indicates an expected call of UpdateEnvironmentRequest
+// UpdateEnvironmentRequest indicates an expected call of UpdateEnvironmentRequest.
 func (mr *MockAppConfigAPIMockRecorder) UpdateEnvironmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEnvironmentRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).UpdateEnvironmentRequest), arg0)
 }
 
-// UpdateEnvironmentWithContext mocks base method
+// UpdateEnvironmentWithContext mocks base method.
 func (m *MockAppConfigAPI) UpdateEnvironmentWithContext(arg0 context.Context, arg1 *appconfig.UpdateEnvironmentInput, arg2 ...request.Option) (*appconfig.UpdateEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1826,14 +1827,14 @@ func (m *MockAppConfigAPI) UpdateEnvironmentWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateEnvironmentWithContext indicates an expected call of UpdateEnvironmentWithContext
+// UpdateEnvironmentWithContext indicates an expected call of UpdateEnvironmentWithContext.
 func (mr *MockAppConfigAPIMockRecorder) UpdateEnvironmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEnvironmentWithContext", reflect.TypeOf((*MockAppConfigAPI)(nil).UpdateEnvironmentWithContext), varargs...)
 }
 
-// ValidateConfiguration mocks base method
+// ValidateConfiguration mocks base method.
 func (m *MockAppConfigAPI) ValidateConfiguration(arg0 *appconfig.ValidateConfigurationInput) (*appconfig.ValidateConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ValidateConfiguration", arg0)
@@ -1842,13 +1843,13 @@ func (m *MockAppConfigAPI) ValidateConfiguration(arg0 *appconfig.ValidateConfigu
 	return ret0, ret1
 }
 
-// ValidateConfiguration indicates an expected call of ValidateConfiguration
+// ValidateConfiguration indicates an expected call of ValidateConfiguration.
 func (mr *MockAppConfigAPIMockRecorder) ValidateConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ValidateConfiguration", reflect.TypeOf((*MockAppConfigAPI)(nil).ValidateConfiguration), arg0)
 }
 
-// ValidateConfigurationRequest mocks base method
+// ValidateConfigurationRequest mocks base method.
 func (m *MockAppConfigAPI) ValidateConfigurationRequest(arg0 *appconfig.ValidateConfigurationInput) (*request.Request, *appconfig.ValidateConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ValidateConfigurationRequest", arg0)
@@ -1857,13 +1858,13 @@ func (m *MockAppConfigAPI) ValidateConfigurationRequest(arg0 *appconfig.Validate
 	return ret0, ret1
 }
 
-// ValidateConfigurationRequest indicates an expected call of ValidateConfigurationRequest
+// ValidateConfigurationRequest indicates an expected call of ValidateConfigurationRequest.
 func (mr *MockAppConfigAPIMockRecorder) ValidateConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ValidateConfigurationRequest", reflect.TypeOf((*MockAppConfigAPI)(nil).ValidateConfigurationRequest), arg0)
 }
 
-// ValidateConfigurationWithContext mocks base method
+// ValidateConfigurationWithContext mocks base method.
 func (m *MockAppConfigAPI) ValidateConfigurationWithContext(arg0 context.Context, arg1 *appconfig.ValidateConfigurationInput, arg2 ...request.Option) (*appconfig.ValidateConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1876,7 +1877,7 @@ func (m *MockAppConfigAPI) ValidateConfigurationWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ValidateConfigurationWithContext indicates an expected call of ValidateConfigurationWithContext
+// ValidateConfigurationWithContext indicates an expected call of ValidateConfigurationWithContext.
 func (mr *MockAppConfigAPIMockRecorder) ValidateConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

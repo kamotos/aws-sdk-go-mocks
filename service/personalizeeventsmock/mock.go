@@ -6,36 +6,37 @@ package personalizeeventsmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	personalizeevents "github.com/aws/aws-sdk-go/service/personalizeevents"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockPersonalizeEventsAPI is a mock of PersonalizeEventsAPI interface
+// MockPersonalizeEventsAPI is a mock of PersonalizeEventsAPI interface.
 type MockPersonalizeEventsAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockPersonalizeEventsAPIMockRecorder
 }
 
-// MockPersonalizeEventsAPIMockRecorder is the mock recorder for MockPersonalizeEventsAPI
+// MockPersonalizeEventsAPIMockRecorder is the mock recorder for MockPersonalizeEventsAPI.
 type MockPersonalizeEventsAPIMockRecorder struct {
 	mock *MockPersonalizeEventsAPI
 }
 
-// NewMockPersonalizeEventsAPI creates a new mock instance
+// NewMockPersonalizeEventsAPI creates a new mock instance.
 func NewMockPersonalizeEventsAPI(ctrl *gomock.Controller) *MockPersonalizeEventsAPI {
 	mock := &MockPersonalizeEventsAPI{ctrl: ctrl}
 	mock.recorder = &MockPersonalizeEventsAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockPersonalizeEventsAPI) EXPECT() *MockPersonalizeEventsAPIMockRecorder {
 	return m.recorder
 }
 
-// PutEvents mocks base method
+// PutEvents mocks base method.
 func (m *MockPersonalizeEventsAPI) PutEvents(arg0 *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutEvents", arg0)
@@ -44,13 +45,13 @@ func (m *MockPersonalizeEventsAPI) PutEvents(arg0 *personalizeevents.PutEventsIn
 	return ret0, ret1
 }
 
-// PutEvents indicates an expected call of PutEvents
+// PutEvents indicates an expected call of PutEvents.
 func (mr *MockPersonalizeEventsAPIMockRecorder) PutEvents(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEvents", reflect.TypeOf((*MockPersonalizeEventsAPI)(nil).PutEvents), arg0)
 }
 
-// PutEventsRequest mocks base method
+// PutEventsRequest mocks base method.
 func (m *MockPersonalizeEventsAPI) PutEventsRequest(arg0 *personalizeevents.PutEventsInput) (*request.Request, *personalizeevents.PutEventsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutEventsRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockPersonalizeEventsAPI) PutEventsRequest(arg0 *personalizeevents.PutE
 	return ret0, ret1
 }
 
-// PutEventsRequest indicates an expected call of PutEventsRequest
+// PutEventsRequest indicates an expected call of PutEventsRequest.
 func (mr *MockPersonalizeEventsAPIMockRecorder) PutEventsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEventsRequest", reflect.TypeOf((*MockPersonalizeEventsAPI)(nil).PutEventsRequest), arg0)
 }
 
-// PutEventsWithContext mocks base method
+// PutEventsWithContext mocks base method.
 func (m *MockPersonalizeEventsAPI) PutEventsWithContext(arg0 context.Context, arg1 *personalizeevents.PutEventsInput, arg2 ...request.Option) (*personalizeevents.PutEventsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockPersonalizeEventsAPI) PutEventsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// PutEventsWithContext indicates an expected call of PutEventsWithContext
+// PutEventsWithContext indicates an expected call of PutEventsWithContext.
 func (mr *MockPersonalizeEventsAPIMockRecorder) PutEventsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEventsWithContext", reflect.TypeOf((*MockPersonalizeEventsAPI)(nil).PutEventsWithContext), varargs...)
 }
 
-// PutItems mocks base method
+// PutItems mocks base method.
 func (m *MockPersonalizeEventsAPI) PutItems(arg0 *personalizeevents.PutItemsInput) (*personalizeevents.PutItemsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutItems", arg0)
@@ -94,13 +95,13 @@ func (m *MockPersonalizeEventsAPI) PutItems(arg0 *personalizeevents.PutItemsInpu
 	return ret0, ret1
 }
 
-// PutItems indicates an expected call of PutItems
+// PutItems indicates an expected call of PutItems.
 func (mr *MockPersonalizeEventsAPIMockRecorder) PutItems(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutItems", reflect.TypeOf((*MockPersonalizeEventsAPI)(nil).PutItems), arg0)
 }
 
-// PutItemsRequest mocks base method
+// PutItemsRequest mocks base method.
 func (m *MockPersonalizeEventsAPI) PutItemsRequest(arg0 *personalizeevents.PutItemsInput) (*request.Request, *personalizeevents.PutItemsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutItemsRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockPersonalizeEventsAPI) PutItemsRequest(arg0 *personalizeevents.PutIt
 	return ret0, ret1
 }
 
-// PutItemsRequest indicates an expected call of PutItemsRequest
+// PutItemsRequest indicates an expected call of PutItemsRequest.
 func (mr *MockPersonalizeEventsAPIMockRecorder) PutItemsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutItemsRequest", reflect.TypeOf((*MockPersonalizeEventsAPI)(nil).PutItemsRequest), arg0)
 }
 
-// PutItemsWithContext mocks base method
+// PutItemsWithContext mocks base method.
 func (m *MockPersonalizeEventsAPI) PutItemsWithContext(arg0 context.Context, arg1 *personalizeevents.PutItemsInput, arg2 ...request.Option) (*personalizeevents.PutItemsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockPersonalizeEventsAPI) PutItemsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// PutItemsWithContext indicates an expected call of PutItemsWithContext
+// PutItemsWithContext indicates an expected call of PutItemsWithContext.
 func (mr *MockPersonalizeEventsAPIMockRecorder) PutItemsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutItemsWithContext", reflect.TypeOf((*MockPersonalizeEventsAPI)(nil).PutItemsWithContext), varargs...)
 }
 
-// PutUsers mocks base method
+// PutUsers mocks base method.
 func (m *MockPersonalizeEventsAPI) PutUsers(arg0 *personalizeevents.PutUsersInput) (*personalizeevents.PutUsersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutUsers", arg0)
@@ -144,13 +145,13 @@ func (m *MockPersonalizeEventsAPI) PutUsers(arg0 *personalizeevents.PutUsersInpu
 	return ret0, ret1
 }
 
-// PutUsers indicates an expected call of PutUsers
+// PutUsers indicates an expected call of PutUsers.
 func (mr *MockPersonalizeEventsAPIMockRecorder) PutUsers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutUsers", reflect.TypeOf((*MockPersonalizeEventsAPI)(nil).PutUsers), arg0)
 }
 
-// PutUsersRequest mocks base method
+// PutUsersRequest mocks base method.
 func (m *MockPersonalizeEventsAPI) PutUsersRequest(arg0 *personalizeevents.PutUsersInput) (*request.Request, *personalizeevents.PutUsersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutUsersRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockPersonalizeEventsAPI) PutUsersRequest(arg0 *personalizeevents.PutUs
 	return ret0, ret1
 }
 
-// PutUsersRequest indicates an expected call of PutUsersRequest
+// PutUsersRequest indicates an expected call of PutUsersRequest.
 func (mr *MockPersonalizeEventsAPIMockRecorder) PutUsersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutUsersRequest", reflect.TypeOf((*MockPersonalizeEventsAPI)(nil).PutUsersRequest), arg0)
 }
 
-// PutUsersWithContext mocks base method
+// PutUsersWithContext mocks base method.
 func (m *MockPersonalizeEventsAPI) PutUsersWithContext(arg0 context.Context, arg1 *personalizeevents.PutUsersInput, arg2 ...request.Option) (*personalizeevents.PutUsersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,7 +179,7 @@ func (m *MockPersonalizeEventsAPI) PutUsersWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// PutUsersWithContext indicates an expected call of PutUsersWithContext
+// PutUsersWithContext indicates an expected call of PutUsersWithContext.
 func (mr *MockPersonalizeEventsAPIMockRecorder) PutUsersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

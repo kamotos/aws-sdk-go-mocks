@@ -6,36 +6,37 @@ package codegurureviewermock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	codegurureviewer "github.com/aws/aws-sdk-go/service/codegurureviewer"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockCodeGuruReviewerAPI is a mock of CodeGuruReviewerAPI interface
+// MockCodeGuruReviewerAPI is a mock of CodeGuruReviewerAPI interface.
 type MockCodeGuruReviewerAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockCodeGuruReviewerAPIMockRecorder
 }
 
-// MockCodeGuruReviewerAPIMockRecorder is the mock recorder for MockCodeGuruReviewerAPI
+// MockCodeGuruReviewerAPIMockRecorder is the mock recorder for MockCodeGuruReviewerAPI.
 type MockCodeGuruReviewerAPIMockRecorder struct {
 	mock *MockCodeGuruReviewerAPI
 }
 
-// NewMockCodeGuruReviewerAPI creates a new mock instance
+// NewMockCodeGuruReviewerAPI creates a new mock instance.
 func NewMockCodeGuruReviewerAPI(ctrl *gomock.Controller) *MockCodeGuruReviewerAPI {
 	mock := &MockCodeGuruReviewerAPI{ctrl: ctrl}
 	mock.recorder = &MockCodeGuruReviewerAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockCodeGuruReviewerAPI) EXPECT() *MockCodeGuruReviewerAPIMockRecorder {
 	return m.recorder
 }
 
-// AssociateRepository mocks base method
+// AssociateRepository mocks base method.
 func (m *MockCodeGuruReviewerAPI) AssociateRepository(arg0 *codegurureviewer.AssociateRepositoryInput) (*codegurureviewer.AssociateRepositoryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateRepository", arg0)
@@ -44,13 +45,13 @@ func (m *MockCodeGuruReviewerAPI) AssociateRepository(arg0 *codegurureviewer.Ass
 	return ret0, ret1
 }
 
-// AssociateRepository indicates an expected call of AssociateRepository
+// AssociateRepository indicates an expected call of AssociateRepository.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) AssociateRepository(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateRepository", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).AssociateRepository), arg0)
 }
 
-// AssociateRepositoryRequest mocks base method
+// AssociateRepositoryRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) AssociateRepositoryRequest(arg0 *codegurureviewer.AssociateRepositoryInput) (*request.Request, *codegurureviewer.AssociateRepositoryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateRepositoryRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockCodeGuruReviewerAPI) AssociateRepositoryRequest(arg0 *codegururevie
 	return ret0, ret1
 }
 
-// AssociateRepositoryRequest indicates an expected call of AssociateRepositoryRequest
+// AssociateRepositoryRequest indicates an expected call of AssociateRepositoryRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) AssociateRepositoryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateRepositoryRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).AssociateRepositoryRequest), arg0)
 }
 
-// AssociateRepositoryWithContext mocks base method
+// AssociateRepositoryWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) AssociateRepositoryWithContext(arg0 context.Context, arg1 *codegurureviewer.AssociateRepositoryInput, arg2 ...request.Option) (*codegurureviewer.AssociateRepositoryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockCodeGuruReviewerAPI) AssociateRepositoryWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// AssociateRepositoryWithContext indicates an expected call of AssociateRepositoryWithContext
+// AssociateRepositoryWithContext indicates an expected call of AssociateRepositoryWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) AssociateRepositoryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateRepositoryWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).AssociateRepositoryWithContext), varargs...)
 }
 
-// CreateCodeReview mocks base method
+// CreateCodeReview mocks base method.
 func (m *MockCodeGuruReviewerAPI) CreateCodeReview(arg0 *codegurureviewer.CreateCodeReviewInput) (*codegurureviewer.CreateCodeReviewOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCodeReview", arg0)
@@ -94,13 +95,13 @@ func (m *MockCodeGuruReviewerAPI) CreateCodeReview(arg0 *codegurureviewer.Create
 	return ret0, ret1
 }
 
-// CreateCodeReview indicates an expected call of CreateCodeReview
+// CreateCodeReview indicates an expected call of CreateCodeReview.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) CreateCodeReview(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCodeReview", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).CreateCodeReview), arg0)
 }
 
-// CreateCodeReviewRequest mocks base method
+// CreateCodeReviewRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) CreateCodeReviewRequest(arg0 *codegurureviewer.CreateCodeReviewInput) (*request.Request, *codegurureviewer.CreateCodeReviewOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCodeReviewRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockCodeGuruReviewerAPI) CreateCodeReviewRequest(arg0 *codegurureviewer
 	return ret0, ret1
 }
 
-// CreateCodeReviewRequest indicates an expected call of CreateCodeReviewRequest
+// CreateCodeReviewRequest indicates an expected call of CreateCodeReviewRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) CreateCodeReviewRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCodeReviewRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).CreateCodeReviewRequest), arg0)
 }
 
-// CreateCodeReviewWithContext mocks base method
+// CreateCodeReviewWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) CreateCodeReviewWithContext(arg0 context.Context, arg1 *codegurureviewer.CreateCodeReviewInput, arg2 ...request.Option) (*codegurureviewer.CreateCodeReviewOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockCodeGuruReviewerAPI) CreateCodeReviewWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// CreateCodeReviewWithContext indicates an expected call of CreateCodeReviewWithContext
+// CreateCodeReviewWithContext indicates an expected call of CreateCodeReviewWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) CreateCodeReviewWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCodeReviewWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).CreateCodeReviewWithContext), varargs...)
 }
 
-// DescribeCodeReview mocks base method
+// DescribeCodeReview mocks base method.
 func (m *MockCodeGuruReviewerAPI) DescribeCodeReview(arg0 *codegurureviewer.DescribeCodeReviewInput) (*codegurureviewer.DescribeCodeReviewOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCodeReview", arg0)
@@ -144,13 +145,13 @@ func (m *MockCodeGuruReviewerAPI) DescribeCodeReview(arg0 *codegurureviewer.Desc
 	return ret0, ret1
 }
 
-// DescribeCodeReview indicates an expected call of DescribeCodeReview
+// DescribeCodeReview indicates an expected call of DescribeCodeReview.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) DescribeCodeReview(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCodeReview", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).DescribeCodeReview), arg0)
 }
 
-// DescribeCodeReviewRequest mocks base method
+// DescribeCodeReviewRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) DescribeCodeReviewRequest(arg0 *codegurureviewer.DescribeCodeReviewInput) (*request.Request, *codegurureviewer.DescribeCodeReviewOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCodeReviewRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockCodeGuruReviewerAPI) DescribeCodeReviewRequest(arg0 *codegurureview
 	return ret0, ret1
 }
 
-// DescribeCodeReviewRequest indicates an expected call of DescribeCodeReviewRequest
+// DescribeCodeReviewRequest indicates an expected call of DescribeCodeReviewRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) DescribeCodeReviewRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCodeReviewRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).DescribeCodeReviewRequest), arg0)
 }
 
-// DescribeCodeReviewWithContext mocks base method
+// DescribeCodeReviewWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) DescribeCodeReviewWithContext(arg0 context.Context, arg1 *codegurureviewer.DescribeCodeReviewInput, arg2 ...request.Option) (*codegurureviewer.DescribeCodeReviewOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockCodeGuruReviewerAPI) DescribeCodeReviewWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DescribeCodeReviewWithContext indicates an expected call of DescribeCodeReviewWithContext
+// DescribeCodeReviewWithContext indicates an expected call of DescribeCodeReviewWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) DescribeCodeReviewWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCodeReviewWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).DescribeCodeReviewWithContext), varargs...)
 }
 
-// DescribeRecommendationFeedback mocks base method
+// DescribeRecommendationFeedback mocks base method.
 func (m *MockCodeGuruReviewerAPI) DescribeRecommendationFeedback(arg0 *codegurureviewer.DescribeRecommendationFeedbackInput) (*codegurureviewer.DescribeRecommendationFeedbackOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRecommendationFeedback", arg0)
@@ -194,13 +195,13 @@ func (m *MockCodeGuruReviewerAPI) DescribeRecommendationFeedback(arg0 *codegurur
 	return ret0, ret1
 }
 
-// DescribeRecommendationFeedback indicates an expected call of DescribeRecommendationFeedback
+// DescribeRecommendationFeedback indicates an expected call of DescribeRecommendationFeedback.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) DescribeRecommendationFeedback(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecommendationFeedback", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).DescribeRecommendationFeedback), arg0)
 }
 
-// DescribeRecommendationFeedbackRequest mocks base method
+// DescribeRecommendationFeedbackRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) DescribeRecommendationFeedbackRequest(arg0 *codegurureviewer.DescribeRecommendationFeedbackInput) (*request.Request, *codegurureviewer.DescribeRecommendationFeedbackOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRecommendationFeedbackRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockCodeGuruReviewerAPI) DescribeRecommendationFeedbackRequest(arg0 *co
 	return ret0, ret1
 }
 
-// DescribeRecommendationFeedbackRequest indicates an expected call of DescribeRecommendationFeedbackRequest
+// DescribeRecommendationFeedbackRequest indicates an expected call of DescribeRecommendationFeedbackRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) DescribeRecommendationFeedbackRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecommendationFeedbackRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).DescribeRecommendationFeedbackRequest), arg0)
 }
 
-// DescribeRecommendationFeedbackWithContext mocks base method
+// DescribeRecommendationFeedbackWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) DescribeRecommendationFeedbackWithContext(arg0 context.Context, arg1 *codegurureviewer.DescribeRecommendationFeedbackInput, arg2 ...request.Option) (*codegurureviewer.DescribeRecommendationFeedbackOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockCodeGuruReviewerAPI) DescribeRecommendationFeedbackWithContext(arg0
 	return ret0, ret1
 }
 
-// DescribeRecommendationFeedbackWithContext indicates an expected call of DescribeRecommendationFeedbackWithContext
+// DescribeRecommendationFeedbackWithContext indicates an expected call of DescribeRecommendationFeedbackWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) DescribeRecommendationFeedbackWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecommendationFeedbackWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).DescribeRecommendationFeedbackWithContext), varargs...)
 }
 
-// DescribeRepositoryAssociation mocks base method
+// DescribeRepositoryAssociation mocks base method.
 func (m *MockCodeGuruReviewerAPI) DescribeRepositoryAssociation(arg0 *codegurureviewer.DescribeRepositoryAssociationInput) (*codegurureviewer.DescribeRepositoryAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRepositoryAssociation", arg0)
@@ -244,13 +245,13 @@ func (m *MockCodeGuruReviewerAPI) DescribeRepositoryAssociation(arg0 *codegurure
 	return ret0, ret1
 }
 
-// DescribeRepositoryAssociation indicates an expected call of DescribeRepositoryAssociation
+// DescribeRepositoryAssociation indicates an expected call of DescribeRepositoryAssociation.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) DescribeRepositoryAssociation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRepositoryAssociation", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).DescribeRepositoryAssociation), arg0)
 }
 
-// DescribeRepositoryAssociationRequest mocks base method
+// DescribeRepositoryAssociationRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) DescribeRepositoryAssociationRequest(arg0 *codegurureviewer.DescribeRepositoryAssociationInput) (*request.Request, *codegurureviewer.DescribeRepositoryAssociationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRepositoryAssociationRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockCodeGuruReviewerAPI) DescribeRepositoryAssociationRequest(arg0 *cod
 	return ret0, ret1
 }
 
-// DescribeRepositoryAssociationRequest indicates an expected call of DescribeRepositoryAssociationRequest
+// DescribeRepositoryAssociationRequest indicates an expected call of DescribeRepositoryAssociationRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) DescribeRepositoryAssociationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRepositoryAssociationRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).DescribeRepositoryAssociationRequest), arg0)
 }
 
-// DescribeRepositoryAssociationWithContext mocks base method
+// DescribeRepositoryAssociationWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) DescribeRepositoryAssociationWithContext(arg0 context.Context, arg1 *codegurureviewer.DescribeRepositoryAssociationInput, arg2 ...request.Option) (*codegurureviewer.DescribeRepositoryAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockCodeGuruReviewerAPI) DescribeRepositoryAssociationWithContext(arg0 
 	return ret0, ret1
 }
 
-// DescribeRepositoryAssociationWithContext indicates an expected call of DescribeRepositoryAssociationWithContext
+// DescribeRepositoryAssociationWithContext indicates an expected call of DescribeRepositoryAssociationWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) DescribeRepositoryAssociationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRepositoryAssociationWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).DescribeRepositoryAssociationWithContext), varargs...)
 }
 
-// DisassociateRepository mocks base method
+// DisassociateRepository mocks base method.
 func (m *MockCodeGuruReviewerAPI) DisassociateRepository(arg0 *codegurureviewer.DisassociateRepositoryInput) (*codegurureviewer.DisassociateRepositoryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateRepository", arg0)
@@ -294,13 +295,13 @@ func (m *MockCodeGuruReviewerAPI) DisassociateRepository(arg0 *codegurureviewer.
 	return ret0, ret1
 }
 
-// DisassociateRepository indicates an expected call of DisassociateRepository
+// DisassociateRepository indicates an expected call of DisassociateRepository.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) DisassociateRepository(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateRepository", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).DisassociateRepository), arg0)
 }
 
-// DisassociateRepositoryRequest mocks base method
+// DisassociateRepositoryRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) DisassociateRepositoryRequest(arg0 *codegurureviewer.DisassociateRepositoryInput) (*request.Request, *codegurureviewer.DisassociateRepositoryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateRepositoryRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockCodeGuruReviewerAPI) DisassociateRepositoryRequest(arg0 *codegurure
 	return ret0, ret1
 }
 
-// DisassociateRepositoryRequest indicates an expected call of DisassociateRepositoryRequest
+// DisassociateRepositoryRequest indicates an expected call of DisassociateRepositoryRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) DisassociateRepositoryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateRepositoryRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).DisassociateRepositoryRequest), arg0)
 }
 
-// DisassociateRepositoryWithContext mocks base method
+// DisassociateRepositoryWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) DisassociateRepositoryWithContext(arg0 context.Context, arg1 *codegurureviewer.DisassociateRepositoryInput, arg2 ...request.Option) (*codegurureviewer.DisassociateRepositoryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockCodeGuruReviewerAPI) DisassociateRepositoryWithContext(arg0 context
 	return ret0, ret1
 }
 
-// DisassociateRepositoryWithContext indicates an expected call of DisassociateRepositoryWithContext
+// DisassociateRepositoryWithContext indicates an expected call of DisassociateRepositoryWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) DisassociateRepositoryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateRepositoryWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).DisassociateRepositoryWithContext), varargs...)
 }
 
-// ListCodeReviews mocks base method
+// ListCodeReviews mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListCodeReviews(arg0 *codegurureviewer.ListCodeReviewsInput) (*codegurureviewer.ListCodeReviewsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCodeReviews", arg0)
@@ -344,13 +345,13 @@ func (m *MockCodeGuruReviewerAPI) ListCodeReviews(arg0 *codegurureviewer.ListCod
 	return ret0, ret1
 }
 
-// ListCodeReviews indicates an expected call of ListCodeReviews
+// ListCodeReviews indicates an expected call of ListCodeReviews.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListCodeReviews(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCodeReviews", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListCodeReviews), arg0)
 }
 
-// ListCodeReviewsPages mocks base method
+// ListCodeReviewsPages mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListCodeReviewsPages(arg0 *codegurureviewer.ListCodeReviewsInput, arg1 func(*codegurureviewer.ListCodeReviewsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCodeReviewsPages", arg0, arg1)
@@ -358,13 +359,13 @@ func (m *MockCodeGuruReviewerAPI) ListCodeReviewsPages(arg0 *codegurureviewer.Li
 	return ret0
 }
 
-// ListCodeReviewsPages indicates an expected call of ListCodeReviewsPages
+// ListCodeReviewsPages indicates an expected call of ListCodeReviewsPages.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListCodeReviewsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCodeReviewsPages", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListCodeReviewsPages), arg0, arg1)
 }
 
-// ListCodeReviewsPagesWithContext mocks base method
+// ListCodeReviewsPagesWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListCodeReviewsPagesWithContext(arg0 context.Context, arg1 *codegurureviewer.ListCodeReviewsInput, arg2 func(*codegurureviewer.ListCodeReviewsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -376,14 +377,14 @@ func (m *MockCodeGuruReviewerAPI) ListCodeReviewsPagesWithContext(arg0 context.C
 	return ret0
 }
 
-// ListCodeReviewsPagesWithContext indicates an expected call of ListCodeReviewsPagesWithContext
+// ListCodeReviewsPagesWithContext indicates an expected call of ListCodeReviewsPagesWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListCodeReviewsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCodeReviewsPagesWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListCodeReviewsPagesWithContext), varargs...)
 }
 
-// ListCodeReviewsRequest mocks base method
+// ListCodeReviewsRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListCodeReviewsRequest(arg0 *codegurureviewer.ListCodeReviewsInput) (*request.Request, *codegurureviewer.ListCodeReviewsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCodeReviewsRequest", arg0)
@@ -392,13 +393,13 @@ func (m *MockCodeGuruReviewerAPI) ListCodeReviewsRequest(arg0 *codegurureviewer.
 	return ret0, ret1
 }
 
-// ListCodeReviewsRequest indicates an expected call of ListCodeReviewsRequest
+// ListCodeReviewsRequest indicates an expected call of ListCodeReviewsRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListCodeReviewsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCodeReviewsRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListCodeReviewsRequest), arg0)
 }
 
-// ListCodeReviewsWithContext mocks base method
+// ListCodeReviewsWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListCodeReviewsWithContext(arg0 context.Context, arg1 *codegurureviewer.ListCodeReviewsInput, arg2 ...request.Option) (*codegurureviewer.ListCodeReviewsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -411,14 +412,14 @@ func (m *MockCodeGuruReviewerAPI) ListCodeReviewsWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListCodeReviewsWithContext indicates an expected call of ListCodeReviewsWithContext
+// ListCodeReviewsWithContext indicates an expected call of ListCodeReviewsWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListCodeReviewsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCodeReviewsWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListCodeReviewsWithContext), varargs...)
 }
 
-// ListRecommendationFeedback mocks base method
+// ListRecommendationFeedback mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRecommendationFeedback(arg0 *codegurureviewer.ListRecommendationFeedbackInput) (*codegurureviewer.ListRecommendationFeedbackOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecommendationFeedback", arg0)
@@ -427,13 +428,13 @@ func (m *MockCodeGuruReviewerAPI) ListRecommendationFeedback(arg0 *codegururevie
 	return ret0, ret1
 }
 
-// ListRecommendationFeedback indicates an expected call of ListRecommendationFeedback
+// ListRecommendationFeedback indicates an expected call of ListRecommendationFeedback.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRecommendationFeedback(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendationFeedback", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRecommendationFeedback), arg0)
 }
 
-// ListRecommendationFeedbackPages mocks base method
+// ListRecommendationFeedbackPages mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRecommendationFeedbackPages(arg0 *codegurureviewer.ListRecommendationFeedbackInput, arg1 func(*codegurureviewer.ListRecommendationFeedbackOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecommendationFeedbackPages", arg0, arg1)
@@ -441,13 +442,13 @@ func (m *MockCodeGuruReviewerAPI) ListRecommendationFeedbackPages(arg0 *codeguru
 	return ret0
 }
 
-// ListRecommendationFeedbackPages indicates an expected call of ListRecommendationFeedbackPages
+// ListRecommendationFeedbackPages indicates an expected call of ListRecommendationFeedbackPages.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRecommendationFeedbackPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendationFeedbackPages", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRecommendationFeedbackPages), arg0, arg1)
 }
 
-// ListRecommendationFeedbackPagesWithContext mocks base method
+// ListRecommendationFeedbackPagesWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRecommendationFeedbackPagesWithContext(arg0 context.Context, arg1 *codegurureviewer.ListRecommendationFeedbackInput, arg2 func(*codegurureviewer.ListRecommendationFeedbackOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -459,14 +460,14 @@ func (m *MockCodeGuruReviewerAPI) ListRecommendationFeedbackPagesWithContext(arg
 	return ret0
 }
 
-// ListRecommendationFeedbackPagesWithContext indicates an expected call of ListRecommendationFeedbackPagesWithContext
+// ListRecommendationFeedbackPagesWithContext indicates an expected call of ListRecommendationFeedbackPagesWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRecommendationFeedbackPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendationFeedbackPagesWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRecommendationFeedbackPagesWithContext), varargs...)
 }
 
-// ListRecommendationFeedbackRequest mocks base method
+// ListRecommendationFeedbackRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRecommendationFeedbackRequest(arg0 *codegurureviewer.ListRecommendationFeedbackInput) (*request.Request, *codegurureviewer.ListRecommendationFeedbackOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecommendationFeedbackRequest", arg0)
@@ -475,13 +476,13 @@ func (m *MockCodeGuruReviewerAPI) ListRecommendationFeedbackRequest(arg0 *codegu
 	return ret0, ret1
 }
 
-// ListRecommendationFeedbackRequest indicates an expected call of ListRecommendationFeedbackRequest
+// ListRecommendationFeedbackRequest indicates an expected call of ListRecommendationFeedbackRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRecommendationFeedbackRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendationFeedbackRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRecommendationFeedbackRequest), arg0)
 }
 
-// ListRecommendationFeedbackWithContext mocks base method
+// ListRecommendationFeedbackWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRecommendationFeedbackWithContext(arg0 context.Context, arg1 *codegurureviewer.ListRecommendationFeedbackInput, arg2 ...request.Option) (*codegurureviewer.ListRecommendationFeedbackOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -494,14 +495,14 @@ func (m *MockCodeGuruReviewerAPI) ListRecommendationFeedbackWithContext(arg0 con
 	return ret0, ret1
 }
 
-// ListRecommendationFeedbackWithContext indicates an expected call of ListRecommendationFeedbackWithContext
+// ListRecommendationFeedbackWithContext indicates an expected call of ListRecommendationFeedbackWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRecommendationFeedbackWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendationFeedbackWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRecommendationFeedbackWithContext), varargs...)
 }
 
-// ListRecommendations mocks base method
+// ListRecommendations mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRecommendations(arg0 *codegurureviewer.ListRecommendationsInput) (*codegurureviewer.ListRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecommendations", arg0)
@@ -510,13 +511,13 @@ func (m *MockCodeGuruReviewerAPI) ListRecommendations(arg0 *codegurureviewer.Lis
 	return ret0, ret1
 }
 
-// ListRecommendations indicates an expected call of ListRecommendations
+// ListRecommendations indicates an expected call of ListRecommendations.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRecommendations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendations", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRecommendations), arg0)
 }
 
-// ListRecommendationsPages mocks base method
+// ListRecommendationsPages mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRecommendationsPages(arg0 *codegurureviewer.ListRecommendationsInput, arg1 func(*codegurureviewer.ListRecommendationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecommendationsPages", arg0, arg1)
@@ -524,13 +525,13 @@ func (m *MockCodeGuruReviewerAPI) ListRecommendationsPages(arg0 *codegurureviewe
 	return ret0
 }
 
-// ListRecommendationsPages indicates an expected call of ListRecommendationsPages
+// ListRecommendationsPages indicates an expected call of ListRecommendationsPages.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRecommendationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendationsPages", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRecommendationsPages), arg0, arg1)
 }
 
-// ListRecommendationsPagesWithContext mocks base method
+// ListRecommendationsPagesWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRecommendationsPagesWithContext(arg0 context.Context, arg1 *codegurureviewer.ListRecommendationsInput, arg2 func(*codegurureviewer.ListRecommendationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -542,14 +543,14 @@ func (m *MockCodeGuruReviewerAPI) ListRecommendationsPagesWithContext(arg0 conte
 	return ret0
 }
 
-// ListRecommendationsPagesWithContext indicates an expected call of ListRecommendationsPagesWithContext
+// ListRecommendationsPagesWithContext indicates an expected call of ListRecommendationsPagesWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRecommendationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendationsPagesWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRecommendationsPagesWithContext), varargs...)
 }
 
-// ListRecommendationsRequest mocks base method
+// ListRecommendationsRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRecommendationsRequest(arg0 *codegurureviewer.ListRecommendationsInput) (*request.Request, *codegurureviewer.ListRecommendationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecommendationsRequest", arg0)
@@ -558,13 +559,13 @@ func (m *MockCodeGuruReviewerAPI) ListRecommendationsRequest(arg0 *codegururevie
 	return ret0, ret1
 }
 
-// ListRecommendationsRequest indicates an expected call of ListRecommendationsRequest
+// ListRecommendationsRequest indicates an expected call of ListRecommendationsRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRecommendationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendationsRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRecommendationsRequest), arg0)
 }
 
-// ListRecommendationsWithContext mocks base method
+// ListRecommendationsWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRecommendationsWithContext(arg0 context.Context, arg1 *codegurureviewer.ListRecommendationsInput, arg2 ...request.Option) (*codegurureviewer.ListRecommendationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -577,14 +578,14 @@ func (m *MockCodeGuruReviewerAPI) ListRecommendationsWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListRecommendationsWithContext indicates an expected call of ListRecommendationsWithContext
+// ListRecommendationsWithContext indicates an expected call of ListRecommendationsWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRecommendationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendationsWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRecommendationsWithContext), varargs...)
 }
 
-// ListRepositoryAssociations mocks base method
+// ListRepositoryAssociations mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRepositoryAssociations(arg0 *codegurureviewer.ListRepositoryAssociationsInput) (*codegurureviewer.ListRepositoryAssociationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRepositoryAssociations", arg0)
@@ -593,13 +594,13 @@ func (m *MockCodeGuruReviewerAPI) ListRepositoryAssociations(arg0 *codegururevie
 	return ret0, ret1
 }
 
-// ListRepositoryAssociations indicates an expected call of ListRepositoryAssociations
+// ListRepositoryAssociations indicates an expected call of ListRepositoryAssociations.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRepositoryAssociations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoryAssociations", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRepositoryAssociations), arg0)
 }
 
-// ListRepositoryAssociationsPages mocks base method
+// ListRepositoryAssociationsPages mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRepositoryAssociationsPages(arg0 *codegurureviewer.ListRepositoryAssociationsInput, arg1 func(*codegurureviewer.ListRepositoryAssociationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRepositoryAssociationsPages", arg0, arg1)
@@ -607,13 +608,13 @@ func (m *MockCodeGuruReviewerAPI) ListRepositoryAssociationsPages(arg0 *codeguru
 	return ret0
 }
 
-// ListRepositoryAssociationsPages indicates an expected call of ListRepositoryAssociationsPages
+// ListRepositoryAssociationsPages indicates an expected call of ListRepositoryAssociationsPages.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRepositoryAssociationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoryAssociationsPages", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRepositoryAssociationsPages), arg0, arg1)
 }
 
-// ListRepositoryAssociationsPagesWithContext mocks base method
+// ListRepositoryAssociationsPagesWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRepositoryAssociationsPagesWithContext(arg0 context.Context, arg1 *codegurureviewer.ListRepositoryAssociationsInput, arg2 func(*codegurureviewer.ListRepositoryAssociationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -625,14 +626,14 @@ func (m *MockCodeGuruReviewerAPI) ListRepositoryAssociationsPagesWithContext(arg
 	return ret0
 }
 
-// ListRepositoryAssociationsPagesWithContext indicates an expected call of ListRepositoryAssociationsPagesWithContext
+// ListRepositoryAssociationsPagesWithContext indicates an expected call of ListRepositoryAssociationsPagesWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRepositoryAssociationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoryAssociationsPagesWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRepositoryAssociationsPagesWithContext), varargs...)
 }
 
-// ListRepositoryAssociationsRequest mocks base method
+// ListRepositoryAssociationsRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRepositoryAssociationsRequest(arg0 *codegurureviewer.ListRepositoryAssociationsInput) (*request.Request, *codegurureviewer.ListRepositoryAssociationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRepositoryAssociationsRequest", arg0)
@@ -641,13 +642,13 @@ func (m *MockCodeGuruReviewerAPI) ListRepositoryAssociationsRequest(arg0 *codegu
 	return ret0, ret1
 }
 
-// ListRepositoryAssociationsRequest indicates an expected call of ListRepositoryAssociationsRequest
+// ListRepositoryAssociationsRequest indicates an expected call of ListRepositoryAssociationsRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRepositoryAssociationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoryAssociationsRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRepositoryAssociationsRequest), arg0)
 }
 
-// ListRepositoryAssociationsWithContext mocks base method
+// ListRepositoryAssociationsWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListRepositoryAssociationsWithContext(arg0 context.Context, arg1 *codegurureviewer.ListRepositoryAssociationsInput, arg2 ...request.Option) (*codegurureviewer.ListRepositoryAssociationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -660,14 +661,14 @@ func (m *MockCodeGuruReviewerAPI) ListRepositoryAssociationsWithContext(arg0 con
 	return ret0, ret1
 }
 
-// ListRepositoryAssociationsWithContext indicates an expected call of ListRepositoryAssociationsWithContext
+// ListRepositoryAssociationsWithContext indicates an expected call of ListRepositoryAssociationsWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListRepositoryAssociationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoryAssociationsWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListRepositoryAssociationsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListTagsForResource(arg0 *codegurureviewer.ListTagsForResourceInput) (*codegurureviewer.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -676,13 +677,13 @@ func (m *MockCodeGuruReviewerAPI) ListTagsForResource(arg0 *codegurureviewer.Lis
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListTagsForResourceRequest(arg0 *codegurureviewer.ListTagsForResourceInput) (*request.Request, *codegurureviewer.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -691,13 +692,13 @@ func (m *MockCodeGuruReviewerAPI) ListTagsForResourceRequest(arg0 *codegururevie
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *codegurureviewer.ListTagsForResourceInput, arg2 ...request.Option) (*codegurureviewer.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -710,14 +711,14 @@ func (m *MockCodeGuruReviewerAPI) ListTagsForResourceWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PutRecommendationFeedback mocks base method
+// PutRecommendationFeedback mocks base method.
 func (m *MockCodeGuruReviewerAPI) PutRecommendationFeedback(arg0 *codegurureviewer.PutRecommendationFeedbackInput) (*codegurureviewer.PutRecommendationFeedbackOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutRecommendationFeedback", arg0)
@@ -726,13 +727,13 @@ func (m *MockCodeGuruReviewerAPI) PutRecommendationFeedback(arg0 *codegurureview
 	return ret0, ret1
 }
 
-// PutRecommendationFeedback indicates an expected call of PutRecommendationFeedback
+// PutRecommendationFeedback indicates an expected call of PutRecommendationFeedback.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) PutRecommendationFeedback(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutRecommendationFeedback", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).PutRecommendationFeedback), arg0)
 }
 
-// PutRecommendationFeedbackRequest mocks base method
+// PutRecommendationFeedbackRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) PutRecommendationFeedbackRequest(arg0 *codegurureviewer.PutRecommendationFeedbackInput) (*request.Request, *codegurureviewer.PutRecommendationFeedbackOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutRecommendationFeedbackRequest", arg0)
@@ -741,13 +742,13 @@ func (m *MockCodeGuruReviewerAPI) PutRecommendationFeedbackRequest(arg0 *codegur
 	return ret0, ret1
 }
 
-// PutRecommendationFeedbackRequest indicates an expected call of PutRecommendationFeedbackRequest
+// PutRecommendationFeedbackRequest indicates an expected call of PutRecommendationFeedbackRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) PutRecommendationFeedbackRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutRecommendationFeedbackRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).PutRecommendationFeedbackRequest), arg0)
 }
 
-// PutRecommendationFeedbackWithContext mocks base method
+// PutRecommendationFeedbackWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) PutRecommendationFeedbackWithContext(arg0 context.Context, arg1 *codegurureviewer.PutRecommendationFeedbackInput, arg2 ...request.Option) (*codegurureviewer.PutRecommendationFeedbackOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -760,14 +761,14 @@ func (m *MockCodeGuruReviewerAPI) PutRecommendationFeedbackWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// PutRecommendationFeedbackWithContext indicates an expected call of PutRecommendationFeedbackWithContext
+// PutRecommendationFeedbackWithContext indicates an expected call of PutRecommendationFeedbackWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) PutRecommendationFeedbackWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutRecommendationFeedbackWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).PutRecommendationFeedbackWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockCodeGuruReviewerAPI) TagResource(arg0 *codegurureviewer.TagResourceInput) (*codegurureviewer.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -776,13 +777,13 @@ func (m *MockCodeGuruReviewerAPI) TagResource(arg0 *codegurureviewer.TagResource
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) TagResourceRequest(arg0 *codegurureviewer.TagResourceInput) (*request.Request, *codegurureviewer.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -791,13 +792,13 @@ func (m *MockCodeGuruReviewerAPI) TagResourceRequest(arg0 *codegurureviewer.TagR
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) TagResourceWithContext(arg0 context.Context, arg1 *codegurureviewer.TagResourceInput, arg2 ...request.Option) (*codegurureviewer.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -810,14 +811,14 @@ func (m *MockCodeGuruReviewerAPI) TagResourceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockCodeGuruReviewerAPI) UntagResource(arg0 *codegurureviewer.UntagResourceInput) (*codegurureviewer.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -826,13 +827,13 @@ func (m *MockCodeGuruReviewerAPI) UntagResource(arg0 *codegurureviewer.UntagReso
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockCodeGuruReviewerAPI) UntagResourceRequest(arg0 *codegurureviewer.UntagResourceInput) (*request.Request, *codegurureviewer.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -841,13 +842,13 @@ func (m *MockCodeGuruReviewerAPI) UntagResourceRequest(arg0 *codegurureviewer.Un
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockCodeGuruReviewerAPI) UntagResourceWithContext(arg0 context.Context, arg1 *codegurureviewer.UntagResourceInput, arg2 ...request.Option) (*codegurureviewer.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -860,7 +861,7 @@ func (m *MockCodeGuruReviewerAPI) UntagResourceWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockCodeGuruReviewerAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

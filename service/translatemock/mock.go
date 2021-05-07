@@ -6,36 +6,37 @@ package translatemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	translate "github.com/aws/aws-sdk-go/service/translate"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockTranslateAPI is a mock of TranslateAPI interface
+// MockTranslateAPI is a mock of TranslateAPI interface.
 type MockTranslateAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockTranslateAPIMockRecorder
 }
 
-// MockTranslateAPIMockRecorder is the mock recorder for MockTranslateAPI
+// MockTranslateAPIMockRecorder is the mock recorder for MockTranslateAPI.
 type MockTranslateAPIMockRecorder struct {
 	mock *MockTranslateAPI
 }
 
-// NewMockTranslateAPI creates a new mock instance
+// NewMockTranslateAPI creates a new mock instance.
 func NewMockTranslateAPI(ctrl *gomock.Controller) *MockTranslateAPI {
 	mock := &MockTranslateAPI{ctrl: ctrl}
 	mock.recorder = &MockTranslateAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockTranslateAPI) EXPECT() *MockTranslateAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateParallelData mocks base method
+// CreateParallelData mocks base method.
 func (m *MockTranslateAPI) CreateParallelData(arg0 *translate.CreateParallelDataInput) (*translate.CreateParallelDataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateParallelData", arg0)
@@ -44,13 +45,13 @@ func (m *MockTranslateAPI) CreateParallelData(arg0 *translate.CreateParallelData
 	return ret0, ret1
 }
 
-// CreateParallelData indicates an expected call of CreateParallelData
+// CreateParallelData indicates an expected call of CreateParallelData.
 func (mr *MockTranslateAPIMockRecorder) CreateParallelData(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateParallelData", reflect.TypeOf((*MockTranslateAPI)(nil).CreateParallelData), arg0)
 }
 
-// CreateParallelDataRequest mocks base method
+// CreateParallelDataRequest mocks base method.
 func (m *MockTranslateAPI) CreateParallelDataRequest(arg0 *translate.CreateParallelDataInput) (*request.Request, *translate.CreateParallelDataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateParallelDataRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockTranslateAPI) CreateParallelDataRequest(arg0 *translate.CreateParal
 	return ret0, ret1
 }
 
-// CreateParallelDataRequest indicates an expected call of CreateParallelDataRequest
+// CreateParallelDataRequest indicates an expected call of CreateParallelDataRequest.
 func (mr *MockTranslateAPIMockRecorder) CreateParallelDataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateParallelDataRequest", reflect.TypeOf((*MockTranslateAPI)(nil).CreateParallelDataRequest), arg0)
 }
 
-// CreateParallelDataWithContext mocks base method
+// CreateParallelDataWithContext mocks base method.
 func (m *MockTranslateAPI) CreateParallelDataWithContext(arg0 context.Context, arg1 *translate.CreateParallelDataInput, arg2 ...request.Option) (*translate.CreateParallelDataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockTranslateAPI) CreateParallelDataWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// CreateParallelDataWithContext indicates an expected call of CreateParallelDataWithContext
+// CreateParallelDataWithContext indicates an expected call of CreateParallelDataWithContext.
 func (mr *MockTranslateAPIMockRecorder) CreateParallelDataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateParallelDataWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).CreateParallelDataWithContext), varargs...)
 }
 
-// DeleteParallelData mocks base method
+// DeleteParallelData mocks base method.
 func (m *MockTranslateAPI) DeleteParallelData(arg0 *translate.DeleteParallelDataInput) (*translate.DeleteParallelDataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteParallelData", arg0)
@@ -94,13 +95,13 @@ func (m *MockTranslateAPI) DeleteParallelData(arg0 *translate.DeleteParallelData
 	return ret0, ret1
 }
 
-// DeleteParallelData indicates an expected call of DeleteParallelData
+// DeleteParallelData indicates an expected call of DeleteParallelData.
 func (mr *MockTranslateAPIMockRecorder) DeleteParallelData(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteParallelData", reflect.TypeOf((*MockTranslateAPI)(nil).DeleteParallelData), arg0)
 }
 
-// DeleteParallelDataRequest mocks base method
+// DeleteParallelDataRequest mocks base method.
 func (m *MockTranslateAPI) DeleteParallelDataRequest(arg0 *translate.DeleteParallelDataInput) (*request.Request, *translate.DeleteParallelDataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteParallelDataRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockTranslateAPI) DeleteParallelDataRequest(arg0 *translate.DeleteParal
 	return ret0, ret1
 }
 
-// DeleteParallelDataRequest indicates an expected call of DeleteParallelDataRequest
+// DeleteParallelDataRequest indicates an expected call of DeleteParallelDataRequest.
 func (mr *MockTranslateAPIMockRecorder) DeleteParallelDataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteParallelDataRequest", reflect.TypeOf((*MockTranslateAPI)(nil).DeleteParallelDataRequest), arg0)
 }
 
-// DeleteParallelDataWithContext mocks base method
+// DeleteParallelDataWithContext mocks base method.
 func (m *MockTranslateAPI) DeleteParallelDataWithContext(arg0 context.Context, arg1 *translate.DeleteParallelDataInput, arg2 ...request.Option) (*translate.DeleteParallelDataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockTranslateAPI) DeleteParallelDataWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteParallelDataWithContext indicates an expected call of DeleteParallelDataWithContext
+// DeleteParallelDataWithContext indicates an expected call of DeleteParallelDataWithContext.
 func (mr *MockTranslateAPIMockRecorder) DeleteParallelDataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteParallelDataWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).DeleteParallelDataWithContext), varargs...)
 }
 
-// DeleteTerminology mocks base method
+// DeleteTerminology mocks base method.
 func (m *MockTranslateAPI) DeleteTerminology(arg0 *translate.DeleteTerminologyInput) (*translate.DeleteTerminologyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteTerminology", arg0)
@@ -144,13 +145,13 @@ func (m *MockTranslateAPI) DeleteTerminology(arg0 *translate.DeleteTerminologyIn
 	return ret0, ret1
 }
 
-// DeleteTerminology indicates an expected call of DeleteTerminology
+// DeleteTerminology indicates an expected call of DeleteTerminology.
 func (mr *MockTranslateAPIMockRecorder) DeleteTerminology(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTerminology", reflect.TypeOf((*MockTranslateAPI)(nil).DeleteTerminology), arg0)
 }
 
-// DeleteTerminologyRequest mocks base method
+// DeleteTerminologyRequest mocks base method.
 func (m *MockTranslateAPI) DeleteTerminologyRequest(arg0 *translate.DeleteTerminologyInput) (*request.Request, *translate.DeleteTerminologyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteTerminologyRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockTranslateAPI) DeleteTerminologyRequest(arg0 *translate.DeleteTermin
 	return ret0, ret1
 }
 
-// DeleteTerminologyRequest indicates an expected call of DeleteTerminologyRequest
+// DeleteTerminologyRequest indicates an expected call of DeleteTerminologyRequest.
 func (mr *MockTranslateAPIMockRecorder) DeleteTerminologyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTerminologyRequest", reflect.TypeOf((*MockTranslateAPI)(nil).DeleteTerminologyRequest), arg0)
 }
 
-// DeleteTerminologyWithContext mocks base method
+// DeleteTerminologyWithContext mocks base method.
 func (m *MockTranslateAPI) DeleteTerminologyWithContext(arg0 context.Context, arg1 *translate.DeleteTerminologyInput, arg2 ...request.Option) (*translate.DeleteTerminologyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockTranslateAPI) DeleteTerminologyWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteTerminologyWithContext indicates an expected call of DeleteTerminologyWithContext
+// DeleteTerminologyWithContext indicates an expected call of DeleteTerminologyWithContext.
 func (mr *MockTranslateAPIMockRecorder) DeleteTerminologyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTerminologyWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).DeleteTerminologyWithContext), varargs...)
 }
 
-// DescribeTextTranslationJob mocks base method
+// DescribeTextTranslationJob mocks base method.
 func (m *MockTranslateAPI) DescribeTextTranslationJob(arg0 *translate.DescribeTextTranslationJobInput) (*translate.DescribeTextTranslationJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeTextTranslationJob", arg0)
@@ -194,13 +195,13 @@ func (m *MockTranslateAPI) DescribeTextTranslationJob(arg0 *translate.DescribeTe
 	return ret0, ret1
 }
 
-// DescribeTextTranslationJob indicates an expected call of DescribeTextTranslationJob
+// DescribeTextTranslationJob indicates an expected call of DescribeTextTranslationJob.
 func (mr *MockTranslateAPIMockRecorder) DescribeTextTranslationJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTextTranslationJob", reflect.TypeOf((*MockTranslateAPI)(nil).DescribeTextTranslationJob), arg0)
 }
 
-// DescribeTextTranslationJobRequest mocks base method
+// DescribeTextTranslationJobRequest mocks base method.
 func (m *MockTranslateAPI) DescribeTextTranslationJobRequest(arg0 *translate.DescribeTextTranslationJobInput) (*request.Request, *translate.DescribeTextTranslationJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeTextTranslationJobRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockTranslateAPI) DescribeTextTranslationJobRequest(arg0 *translate.Des
 	return ret0, ret1
 }
 
-// DescribeTextTranslationJobRequest indicates an expected call of DescribeTextTranslationJobRequest
+// DescribeTextTranslationJobRequest indicates an expected call of DescribeTextTranslationJobRequest.
 func (mr *MockTranslateAPIMockRecorder) DescribeTextTranslationJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTextTranslationJobRequest", reflect.TypeOf((*MockTranslateAPI)(nil).DescribeTextTranslationJobRequest), arg0)
 }
 
-// DescribeTextTranslationJobWithContext mocks base method
+// DescribeTextTranslationJobWithContext mocks base method.
 func (m *MockTranslateAPI) DescribeTextTranslationJobWithContext(arg0 context.Context, arg1 *translate.DescribeTextTranslationJobInput, arg2 ...request.Option) (*translate.DescribeTextTranslationJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockTranslateAPI) DescribeTextTranslationJobWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DescribeTextTranslationJobWithContext indicates an expected call of DescribeTextTranslationJobWithContext
+// DescribeTextTranslationJobWithContext indicates an expected call of DescribeTextTranslationJobWithContext.
 func (mr *MockTranslateAPIMockRecorder) DescribeTextTranslationJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTextTranslationJobWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).DescribeTextTranslationJobWithContext), varargs...)
 }
 
-// GetParallelData mocks base method
+// GetParallelData mocks base method.
 func (m *MockTranslateAPI) GetParallelData(arg0 *translate.GetParallelDataInput) (*translate.GetParallelDataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetParallelData", arg0)
@@ -244,13 +245,13 @@ func (m *MockTranslateAPI) GetParallelData(arg0 *translate.GetParallelDataInput)
 	return ret0, ret1
 }
 
-// GetParallelData indicates an expected call of GetParallelData
+// GetParallelData indicates an expected call of GetParallelData.
 func (mr *MockTranslateAPIMockRecorder) GetParallelData(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetParallelData", reflect.TypeOf((*MockTranslateAPI)(nil).GetParallelData), arg0)
 }
 
-// GetParallelDataRequest mocks base method
+// GetParallelDataRequest mocks base method.
 func (m *MockTranslateAPI) GetParallelDataRequest(arg0 *translate.GetParallelDataInput) (*request.Request, *translate.GetParallelDataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetParallelDataRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockTranslateAPI) GetParallelDataRequest(arg0 *translate.GetParallelDat
 	return ret0, ret1
 }
 
-// GetParallelDataRequest indicates an expected call of GetParallelDataRequest
+// GetParallelDataRequest indicates an expected call of GetParallelDataRequest.
 func (mr *MockTranslateAPIMockRecorder) GetParallelDataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetParallelDataRequest", reflect.TypeOf((*MockTranslateAPI)(nil).GetParallelDataRequest), arg0)
 }
 
-// GetParallelDataWithContext mocks base method
+// GetParallelDataWithContext mocks base method.
 func (m *MockTranslateAPI) GetParallelDataWithContext(arg0 context.Context, arg1 *translate.GetParallelDataInput, arg2 ...request.Option) (*translate.GetParallelDataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockTranslateAPI) GetParallelDataWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetParallelDataWithContext indicates an expected call of GetParallelDataWithContext
+// GetParallelDataWithContext indicates an expected call of GetParallelDataWithContext.
 func (mr *MockTranslateAPIMockRecorder) GetParallelDataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetParallelDataWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).GetParallelDataWithContext), varargs...)
 }
 
-// GetTerminology mocks base method
+// GetTerminology mocks base method.
 func (m *MockTranslateAPI) GetTerminology(arg0 *translate.GetTerminologyInput) (*translate.GetTerminologyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTerminology", arg0)
@@ -294,13 +295,13 @@ func (m *MockTranslateAPI) GetTerminology(arg0 *translate.GetTerminologyInput) (
 	return ret0, ret1
 }
 
-// GetTerminology indicates an expected call of GetTerminology
+// GetTerminology indicates an expected call of GetTerminology.
 func (mr *MockTranslateAPIMockRecorder) GetTerminology(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTerminology", reflect.TypeOf((*MockTranslateAPI)(nil).GetTerminology), arg0)
 }
 
-// GetTerminologyRequest mocks base method
+// GetTerminologyRequest mocks base method.
 func (m *MockTranslateAPI) GetTerminologyRequest(arg0 *translate.GetTerminologyInput) (*request.Request, *translate.GetTerminologyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTerminologyRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockTranslateAPI) GetTerminologyRequest(arg0 *translate.GetTerminologyI
 	return ret0, ret1
 }
 
-// GetTerminologyRequest indicates an expected call of GetTerminologyRequest
+// GetTerminologyRequest indicates an expected call of GetTerminologyRequest.
 func (mr *MockTranslateAPIMockRecorder) GetTerminologyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTerminologyRequest", reflect.TypeOf((*MockTranslateAPI)(nil).GetTerminologyRequest), arg0)
 }
 
-// GetTerminologyWithContext mocks base method
+// GetTerminologyWithContext mocks base method.
 func (m *MockTranslateAPI) GetTerminologyWithContext(arg0 context.Context, arg1 *translate.GetTerminologyInput, arg2 ...request.Option) (*translate.GetTerminologyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockTranslateAPI) GetTerminologyWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// GetTerminologyWithContext indicates an expected call of GetTerminologyWithContext
+// GetTerminologyWithContext indicates an expected call of GetTerminologyWithContext.
 func (mr *MockTranslateAPIMockRecorder) GetTerminologyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTerminologyWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).GetTerminologyWithContext), varargs...)
 }
 
-// ImportTerminology mocks base method
+// ImportTerminology mocks base method.
 func (m *MockTranslateAPI) ImportTerminology(arg0 *translate.ImportTerminologyInput) (*translate.ImportTerminologyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ImportTerminology", arg0)
@@ -344,13 +345,13 @@ func (m *MockTranslateAPI) ImportTerminology(arg0 *translate.ImportTerminologyIn
 	return ret0, ret1
 }
 
-// ImportTerminology indicates an expected call of ImportTerminology
+// ImportTerminology indicates an expected call of ImportTerminology.
 func (mr *MockTranslateAPIMockRecorder) ImportTerminology(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportTerminology", reflect.TypeOf((*MockTranslateAPI)(nil).ImportTerminology), arg0)
 }
 
-// ImportTerminologyRequest mocks base method
+// ImportTerminologyRequest mocks base method.
 func (m *MockTranslateAPI) ImportTerminologyRequest(arg0 *translate.ImportTerminologyInput) (*request.Request, *translate.ImportTerminologyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ImportTerminologyRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockTranslateAPI) ImportTerminologyRequest(arg0 *translate.ImportTermin
 	return ret0, ret1
 }
 
-// ImportTerminologyRequest indicates an expected call of ImportTerminologyRequest
+// ImportTerminologyRequest indicates an expected call of ImportTerminologyRequest.
 func (mr *MockTranslateAPIMockRecorder) ImportTerminologyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportTerminologyRequest", reflect.TypeOf((*MockTranslateAPI)(nil).ImportTerminologyRequest), arg0)
 }
 
-// ImportTerminologyWithContext mocks base method
+// ImportTerminologyWithContext mocks base method.
 func (m *MockTranslateAPI) ImportTerminologyWithContext(arg0 context.Context, arg1 *translate.ImportTerminologyInput, arg2 ...request.Option) (*translate.ImportTerminologyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockTranslateAPI) ImportTerminologyWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ImportTerminologyWithContext indicates an expected call of ImportTerminologyWithContext
+// ImportTerminologyWithContext indicates an expected call of ImportTerminologyWithContext.
 func (mr *MockTranslateAPIMockRecorder) ImportTerminologyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportTerminologyWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).ImportTerminologyWithContext), varargs...)
 }
 
-// ListParallelData mocks base method
+// ListParallelData mocks base method.
 func (m *MockTranslateAPI) ListParallelData(arg0 *translate.ListParallelDataInput) (*translate.ListParallelDataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListParallelData", arg0)
@@ -394,13 +395,13 @@ func (m *MockTranslateAPI) ListParallelData(arg0 *translate.ListParallelDataInpu
 	return ret0, ret1
 }
 
-// ListParallelData indicates an expected call of ListParallelData
+// ListParallelData indicates an expected call of ListParallelData.
 func (mr *MockTranslateAPIMockRecorder) ListParallelData(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListParallelData", reflect.TypeOf((*MockTranslateAPI)(nil).ListParallelData), arg0)
 }
 
-// ListParallelDataPages mocks base method
+// ListParallelDataPages mocks base method.
 func (m *MockTranslateAPI) ListParallelDataPages(arg0 *translate.ListParallelDataInput, arg1 func(*translate.ListParallelDataOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListParallelDataPages", arg0, arg1)
@@ -408,13 +409,13 @@ func (m *MockTranslateAPI) ListParallelDataPages(arg0 *translate.ListParallelDat
 	return ret0
 }
 
-// ListParallelDataPages indicates an expected call of ListParallelDataPages
+// ListParallelDataPages indicates an expected call of ListParallelDataPages.
 func (mr *MockTranslateAPIMockRecorder) ListParallelDataPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListParallelDataPages", reflect.TypeOf((*MockTranslateAPI)(nil).ListParallelDataPages), arg0, arg1)
 }
 
-// ListParallelDataPagesWithContext mocks base method
+// ListParallelDataPagesWithContext mocks base method.
 func (m *MockTranslateAPI) ListParallelDataPagesWithContext(arg0 context.Context, arg1 *translate.ListParallelDataInput, arg2 func(*translate.ListParallelDataOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -426,14 +427,14 @@ func (m *MockTranslateAPI) ListParallelDataPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListParallelDataPagesWithContext indicates an expected call of ListParallelDataPagesWithContext
+// ListParallelDataPagesWithContext indicates an expected call of ListParallelDataPagesWithContext.
 func (mr *MockTranslateAPIMockRecorder) ListParallelDataPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListParallelDataPagesWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).ListParallelDataPagesWithContext), varargs...)
 }
 
-// ListParallelDataRequest mocks base method
+// ListParallelDataRequest mocks base method.
 func (m *MockTranslateAPI) ListParallelDataRequest(arg0 *translate.ListParallelDataInput) (*request.Request, *translate.ListParallelDataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListParallelDataRequest", arg0)
@@ -442,13 +443,13 @@ func (m *MockTranslateAPI) ListParallelDataRequest(arg0 *translate.ListParallelD
 	return ret0, ret1
 }
 
-// ListParallelDataRequest indicates an expected call of ListParallelDataRequest
+// ListParallelDataRequest indicates an expected call of ListParallelDataRequest.
 func (mr *MockTranslateAPIMockRecorder) ListParallelDataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListParallelDataRequest", reflect.TypeOf((*MockTranslateAPI)(nil).ListParallelDataRequest), arg0)
 }
 
-// ListParallelDataWithContext mocks base method
+// ListParallelDataWithContext mocks base method.
 func (m *MockTranslateAPI) ListParallelDataWithContext(arg0 context.Context, arg1 *translate.ListParallelDataInput, arg2 ...request.Option) (*translate.ListParallelDataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -461,14 +462,14 @@ func (m *MockTranslateAPI) ListParallelDataWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListParallelDataWithContext indicates an expected call of ListParallelDataWithContext
+// ListParallelDataWithContext indicates an expected call of ListParallelDataWithContext.
 func (mr *MockTranslateAPIMockRecorder) ListParallelDataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListParallelDataWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).ListParallelDataWithContext), varargs...)
 }
 
-// ListTerminologies mocks base method
+// ListTerminologies mocks base method.
 func (m *MockTranslateAPI) ListTerminologies(arg0 *translate.ListTerminologiesInput) (*translate.ListTerminologiesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTerminologies", arg0)
@@ -477,13 +478,13 @@ func (m *MockTranslateAPI) ListTerminologies(arg0 *translate.ListTerminologiesIn
 	return ret0, ret1
 }
 
-// ListTerminologies indicates an expected call of ListTerminologies
+// ListTerminologies indicates an expected call of ListTerminologies.
 func (mr *MockTranslateAPIMockRecorder) ListTerminologies(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTerminologies", reflect.TypeOf((*MockTranslateAPI)(nil).ListTerminologies), arg0)
 }
 
-// ListTerminologiesPages mocks base method
+// ListTerminologiesPages mocks base method.
 func (m *MockTranslateAPI) ListTerminologiesPages(arg0 *translate.ListTerminologiesInput, arg1 func(*translate.ListTerminologiesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTerminologiesPages", arg0, arg1)
@@ -491,13 +492,13 @@ func (m *MockTranslateAPI) ListTerminologiesPages(arg0 *translate.ListTerminolog
 	return ret0
 }
 
-// ListTerminologiesPages indicates an expected call of ListTerminologiesPages
+// ListTerminologiesPages indicates an expected call of ListTerminologiesPages.
 func (mr *MockTranslateAPIMockRecorder) ListTerminologiesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTerminologiesPages", reflect.TypeOf((*MockTranslateAPI)(nil).ListTerminologiesPages), arg0, arg1)
 }
 
-// ListTerminologiesPagesWithContext mocks base method
+// ListTerminologiesPagesWithContext mocks base method.
 func (m *MockTranslateAPI) ListTerminologiesPagesWithContext(arg0 context.Context, arg1 *translate.ListTerminologiesInput, arg2 func(*translate.ListTerminologiesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -509,14 +510,14 @@ func (m *MockTranslateAPI) ListTerminologiesPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListTerminologiesPagesWithContext indicates an expected call of ListTerminologiesPagesWithContext
+// ListTerminologiesPagesWithContext indicates an expected call of ListTerminologiesPagesWithContext.
 func (mr *MockTranslateAPIMockRecorder) ListTerminologiesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTerminologiesPagesWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).ListTerminologiesPagesWithContext), varargs...)
 }
 
-// ListTerminologiesRequest mocks base method
+// ListTerminologiesRequest mocks base method.
 func (m *MockTranslateAPI) ListTerminologiesRequest(arg0 *translate.ListTerminologiesInput) (*request.Request, *translate.ListTerminologiesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTerminologiesRequest", arg0)
@@ -525,13 +526,13 @@ func (m *MockTranslateAPI) ListTerminologiesRequest(arg0 *translate.ListTerminol
 	return ret0, ret1
 }
 
-// ListTerminologiesRequest indicates an expected call of ListTerminologiesRequest
+// ListTerminologiesRequest indicates an expected call of ListTerminologiesRequest.
 func (mr *MockTranslateAPIMockRecorder) ListTerminologiesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTerminologiesRequest", reflect.TypeOf((*MockTranslateAPI)(nil).ListTerminologiesRequest), arg0)
 }
 
-// ListTerminologiesWithContext mocks base method
+// ListTerminologiesWithContext mocks base method.
 func (m *MockTranslateAPI) ListTerminologiesWithContext(arg0 context.Context, arg1 *translate.ListTerminologiesInput, arg2 ...request.Option) (*translate.ListTerminologiesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -544,14 +545,14 @@ func (m *MockTranslateAPI) ListTerminologiesWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListTerminologiesWithContext indicates an expected call of ListTerminologiesWithContext
+// ListTerminologiesWithContext indicates an expected call of ListTerminologiesWithContext.
 func (mr *MockTranslateAPIMockRecorder) ListTerminologiesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTerminologiesWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).ListTerminologiesWithContext), varargs...)
 }
 
-// ListTextTranslationJobs mocks base method
+// ListTextTranslationJobs mocks base method.
 func (m *MockTranslateAPI) ListTextTranslationJobs(arg0 *translate.ListTextTranslationJobsInput) (*translate.ListTextTranslationJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTextTranslationJobs", arg0)
@@ -560,13 +561,13 @@ func (m *MockTranslateAPI) ListTextTranslationJobs(arg0 *translate.ListTextTrans
 	return ret0, ret1
 }
 
-// ListTextTranslationJobs indicates an expected call of ListTextTranslationJobs
+// ListTextTranslationJobs indicates an expected call of ListTextTranslationJobs.
 func (mr *MockTranslateAPIMockRecorder) ListTextTranslationJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTextTranslationJobs", reflect.TypeOf((*MockTranslateAPI)(nil).ListTextTranslationJobs), arg0)
 }
 
-// ListTextTranslationJobsPages mocks base method
+// ListTextTranslationJobsPages mocks base method.
 func (m *MockTranslateAPI) ListTextTranslationJobsPages(arg0 *translate.ListTextTranslationJobsInput, arg1 func(*translate.ListTextTranslationJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTextTranslationJobsPages", arg0, arg1)
@@ -574,13 +575,13 @@ func (m *MockTranslateAPI) ListTextTranslationJobsPages(arg0 *translate.ListText
 	return ret0
 }
 
-// ListTextTranslationJobsPages indicates an expected call of ListTextTranslationJobsPages
+// ListTextTranslationJobsPages indicates an expected call of ListTextTranslationJobsPages.
 func (mr *MockTranslateAPIMockRecorder) ListTextTranslationJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTextTranslationJobsPages", reflect.TypeOf((*MockTranslateAPI)(nil).ListTextTranslationJobsPages), arg0, arg1)
 }
 
-// ListTextTranslationJobsPagesWithContext mocks base method
+// ListTextTranslationJobsPagesWithContext mocks base method.
 func (m *MockTranslateAPI) ListTextTranslationJobsPagesWithContext(arg0 context.Context, arg1 *translate.ListTextTranslationJobsInput, arg2 func(*translate.ListTextTranslationJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -592,14 +593,14 @@ func (m *MockTranslateAPI) ListTextTranslationJobsPagesWithContext(arg0 context.
 	return ret0
 }
 
-// ListTextTranslationJobsPagesWithContext indicates an expected call of ListTextTranslationJobsPagesWithContext
+// ListTextTranslationJobsPagesWithContext indicates an expected call of ListTextTranslationJobsPagesWithContext.
 func (mr *MockTranslateAPIMockRecorder) ListTextTranslationJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTextTranslationJobsPagesWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).ListTextTranslationJobsPagesWithContext), varargs...)
 }
 
-// ListTextTranslationJobsRequest mocks base method
+// ListTextTranslationJobsRequest mocks base method.
 func (m *MockTranslateAPI) ListTextTranslationJobsRequest(arg0 *translate.ListTextTranslationJobsInput) (*request.Request, *translate.ListTextTranslationJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTextTranslationJobsRequest", arg0)
@@ -608,13 +609,13 @@ func (m *MockTranslateAPI) ListTextTranslationJobsRequest(arg0 *translate.ListTe
 	return ret0, ret1
 }
 
-// ListTextTranslationJobsRequest indicates an expected call of ListTextTranslationJobsRequest
+// ListTextTranslationJobsRequest indicates an expected call of ListTextTranslationJobsRequest.
 func (mr *MockTranslateAPIMockRecorder) ListTextTranslationJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTextTranslationJobsRequest", reflect.TypeOf((*MockTranslateAPI)(nil).ListTextTranslationJobsRequest), arg0)
 }
 
-// ListTextTranslationJobsWithContext mocks base method
+// ListTextTranslationJobsWithContext mocks base method.
 func (m *MockTranslateAPI) ListTextTranslationJobsWithContext(arg0 context.Context, arg1 *translate.ListTextTranslationJobsInput, arg2 ...request.Option) (*translate.ListTextTranslationJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -627,14 +628,14 @@ func (m *MockTranslateAPI) ListTextTranslationJobsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListTextTranslationJobsWithContext indicates an expected call of ListTextTranslationJobsWithContext
+// ListTextTranslationJobsWithContext indicates an expected call of ListTextTranslationJobsWithContext.
 func (mr *MockTranslateAPIMockRecorder) ListTextTranslationJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTextTranslationJobsWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).ListTextTranslationJobsWithContext), varargs...)
 }
 
-// StartTextTranslationJob mocks base method
+// StartTextTranslationJob mocks base method.
 func (m *MockTranslateAPI) StartTextTranslationJob(arg0 *translate.StartTextTranslationJobInput) (*translate.StartTextTranslationJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartTextTranslationJob", arg0)
@@ -643,13 +644,13 @@ func (m *MockTranslateAPI) StartTextTranslationJob(arg0 *translate.StartTextTran
 	return ret0, ret1
 }
 
-// StartTextTranslationJob indicates an expected call of StartTextTranslationJob
+// StartTextTranslationJob indicates an expected call of StartTextTranslationJob.
 func (mr *MockTranslateAPIMockRecorder) StartTextTranslationJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartTextTranslationJob", reflect.TypeOf((*MockTranslateAPI)(nil).StartTextTranslationJob), arg0)
 }
 
-// StartTextTranslationJobRequest mocks base method
+// StartTextTranslationJobRequest mocks base method.
 func (m *MockTranslateAPI) StartTextTranslationJobRequest(arg0 *translate.StartTextTranslationJobInput) (*request.Request, *translate.StartTextTranslationJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartTextTranslationJobRequest", arg0)
@@ -658,13 +659,13 @@ func (m *MockTranslateAPI) StartTextTranslationJobRequest(arg0 *translate.StartT
 	return ret0, ret1
 }
 
-// StartTextTranslationJobRequest indicates an expected call of StartTextTranslationJobRequest
+// StartTextTranslationJobRequest indicates an expected call of StartTextTranslationJobRequest.
 func (mr *MockTranslateAPIMockRecorder) StartTextTranslationJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartTextTranslationJobRequest", reflect.TypeOf((*MockTranslateAPI)(nil).StartTextTranslationJobRequest), arg0)
 }
 
-// StartTextTranslationJobWithContext mocks base method
+// StartTextTranslationJobWithContext mocks base method.
 func (m *MockTranslateAPI) StartTextTranslationJobWithContext(arg0 context.Context, arg1 *translate.StartTextTranslationJobInput, arg2 ...request.Option) (*translate.StartTextTranslationJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -677,14 +678,14 @@ func (m *MockTranslateAPI) StartTextTranslationJobWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// StartTextTranslationJobWithContext indicates an expected call of StartTextTranslationJobWithContext
+// StartTextTranslationJobWithContext indicates an expected call of StartTextTranslationJobWithContext.
 func (mr *MockTranslateAPIMockRecorder) StartTextTranslationJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartTextTranslationJobWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).StartTextTranslationJobWithContext), varargs...)
 }
 
-// StopTextTranslationJob mocks base method
+// StopTextTranslationJob mocks base method.
 func (m *MockTranslateAPI) StopTextTranslationJob(arg0 *translate.StopTextTranslationJobInput) (*translate.StopTextTranslationJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopTextTranslationJob", arg0)
@@ -693,13 +694,13 @@ func (m *MockTranslateAPI) StopTextTranslationJob(arg0 *translate.StopTextTransl
 	return ret0, ret1
 }
 
-// StopTextTranslationJob indicates an expected call of StopTextTranslationJob
+// StopTextTranslationJob indicates an expected call of StopTextTranslationJob.
 func (mr *MockTranslateAPIMockRecorder) StopTextTranslationJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopTextTranslationJob", reflect.TypeOf((*MockTranslateAPI)(nil).StopTextTranslationJob), arg0)
 }
 
-// StopTextTranslationJobRequest mocks base method
+// StopTextTranslationJobRequest mocks base method.
 func (m *MockTranslateAPI) StopTextTranslationJobRequest(arg0 *translate.StopTextTranslationJobInput) (*request.Request, *translate.StopTextTranslationJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopTextTranslationJobRequest", arg0)
@@ -708,13 +709,13 @@ func (m *MockTranslateAPI) StopTextTranslationJobRequest(arg0 *translate.StopTex
 	return ret0, ret1
 }
 
-// StopTextTranslationJobRequest indicates an expected call of StopTextTranslationJobRequest
+// StopTextTranslationJobRequest indicates an expected call of StopTextTranslationJobRequest.
 func (mr *MockTranslateAPIMockRecorder) StopTextTranslationJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopTextTranslationJobRequest", reflect.TypeOf((*MockTranslateAPI)(nil).StopTextTranslationJobRequest), arg0)
 }
 
-// StopTextTranslationJobWithContext mocks base method
+// StopTextTranslationJobWithContext mocks base method.
 func (m *MockTranslateAPI) StopTextTranslationJobWithContext(arg0 context.Context, arg1 *translate.StopTextTranslationJobInput, arg2 ...request.Option) (*translate.StopTextTranslationJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -727,14 +728,14 @@ func (m *MockTranslateAPI) StopTextTranslationJobWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// StopTextTranslationJobWithContext indicates an expected call of StopTextTranslationJobWithContext
+// StopTextTranslationJobWithContext indicates an expected call of StopTextTranslationJobWithContext.
 func (mr *MockTranslateAPIMockRecorder) StopTextTranslationJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopTextTranslationJobWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).StopTextTranslationJobWithContext), varargs...)
 }
 
-// Text mocks base method
+// Text mocks base method.
 func (m *MockTranslateAPI) Text(arg0 *translate.TextInput) (*translate.TextOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Text", arg0)
@@ -743,13 +744,13 @@ func (m *MockTranslateAPI) Text(arg0 *translate.TextInput) (*translate.TextOutpu
 	return ret0, ret1
 }
 
-// Text indicates an expected call of Text
+// Text indicates an expected call of Text.
 func (mr *MockTranslateAPIMockRecorder) Text(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Text", reflect.TypeOf((*MockTranslateAPI)(nil).Text), arg0)
 }
 
-// TextRequest mocks base method
+// TextRequest mocks base method.
 func (m *MockTranslateAPI) TextRequest(arg0 *translate.TextInput) (*request.Request, *translate.TextOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TextRequest", arg0)
@@ -758,13 +759,13 @@ func (m *MockTranslateAPI) TextRequest(arg0 *translate.TextInput) (*request.Requ
 	return ret0, ret1
 }
 
-// TextRequest indicates an expected call of TextRequest
+// TextRequest indicates an expected call of TextRequest.
 func (mr *MockTranslateAPIMockRecorder) TextRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TextRequest", reflect.TypeOf((*MockTranslateAPI)(nil).TextRequest), arg0)
 }
 
-// TextWithContext mocks base method
+// TextWithContext mocks base method.
 func (m *MockTranslateAPI) TextWithContext(arg0 context.Context, arg1 *translate.TextInput, arg2 ...request.Option) (*translate.TextOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -777,14 +778,14 @@ func (m *MockTranslateAPI) TextWithContext(arg0 context.Context, arg1 *translate
 	return ret0, ret1
 }
 
-// TextWithContext indicates an expected call of TextWithContext
+// TextWithContext indicates an expected call of TextWithContext.
 func (mr *MockTranslateAPIMockRecorder) TextWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TextWithContext", reflect.TypeOf((*MockTranslateAPI)(nil).TextWithContext), varargs...)
 }
 
-// UpdateParallelData mocks base method
+// UpdateParallelData mocks base method.
 func (m *MockTranslateAPI) UpdateParallelData(arg0 *translate.UpdateParallelDataInput) (*translate.UpdateParallelDataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateParallelData", arg0)
@@ -793,13 +794,13 @@ func (m *MockTranslateAPI) UpdateParallelData(arg0 *translate.UpdateParallelData
 	return ret0, ret1
 }
 
-// UpdateParallelData indicates an expected call of UpdateParallelData
+// UpdateParallelData indicates an expected call of UpdateParallelData.
 func (mr *MockTranslateAPIMockRecorder) UpdateParallelData(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateParallelData", reflect.TypeOf((*MockTranslateAPI)(nil).UpdateParallelData), arg0)
 }
 
-// UpdateParallelDataRequest mocks base method
+// UpdateParallelDataRequest mocks base method.
 func (m *MockTranslateAPI) UpdateParallelDataRequest(arg0 *translate.UpdateParallelDataInput) (*request.Request, *translate.UpdateParallelDataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateParallelDataRequest", arg0)
@@ -808,13 +809,13 @@ func (m *MockTranslateAPI) UpdateParallelDataRequest(arg0 *translate.UpdateParal
 	return ret0, ret1
 }
 
-// UpdateParallelDataRequest indicates an expected call of UpdateParallelDataRequest
+// UpdateParallelDataRequest indicates an expected call of UpdateParallelDataRequest.
 func (mr *MockTranslateAPIMockRecorder) UpdateParallelDataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateParallelDataRequest", reflect.TypeOf((*MockTranslateAPI)(nil).UpdateParallelDataRequest), arg0)
 }
 
-// UpdateParallelDataWithContext mocks base method
+// UpdateParallelDataWithContext mocks base method.
 func (m *MockTranslateAPI) UpdateParallelDataWithContext(arg0 context.Context, arg1 *translate.UpdateParallelDataInput, arg2 ...request.Option) (*translate.UpdateParallelDataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -827,7 +828,7 @@ func (m *MockTranslateAPI) UpdateParallelDataWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UpdateParallelDataWithContext indicates an expected call of UpdateParallelDataWithContext
+// UpdateParallelDataWithContext indicates an expected call of UpdateParallelDataWithContext.
 func (mr *MockTranslateAPIMockRecorder) UpdateParallelDataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

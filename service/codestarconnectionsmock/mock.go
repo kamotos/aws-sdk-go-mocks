@@ -6,36 +6,37 @@ package codestarconnectionsmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	codestarconnections "github.com/aws/aws-sdk-go/service/codestarconnections"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockCodeStarConnectionsAPI is a mock of CodeStarConnectionsAPI interface
+// MockCodeStarConnectionsAPI is a mock of CodeStarConnectionsAPI interface.
 type MockCodeStarConnectionsAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockCodeStarConnectionsAPIMockRecorder
 }
 
-// MockCodeStarConnectionsAPIMockRecorder is the mock recorder for MockCodeStarConnectionsAPI
+// MockCodeStarConnectionsAPIMockRecorder is the mock recorder for MockCodeStarConnectionsAPI.
 type MockCodeStarConnectionsAPIMockRecorder struct {
 	mock *MockCodeStarConnectionsAPI
 }
 
-// NewMockCodeStarConnectionsAPI creates a new mock instance
+// NewMockCodeStarConnectionsAPI creates a new mock instance.
 func NewMockCodeStarConnectionsAPI(ctrl *gomock.Controller) *MockCodeStarConnectionsAPI {
 	mock := &MockCodeStarConnectionsAPI{ctrl: ctrl}
 	mock.recorder = &MockCodeStarConnectionsAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockCodeStarConnectionsAPI) EXPECT() *MockCodeStarConnectionsAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateConnection mocks base method
+// CreateConnection mocks base method.
 func (m *MockCodeStarConnectionsAPI) CreateConnection(arg0 *codestarconnections.CreateConnectionInput) (*codestarconnections.CreateConnectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConnection", arg0)
@@ -44,13 +45,13 @@ func (m *MockCodeStarConnectionsAPI) CreateConnection(arg0 *codestarconnections.
 	return ret0, ret1
 }
 
-// CreateConnection indicates an expected call of CreateConnection
+// CreateConnection indicates an expected call of CreateConnection.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) CreateConnection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConnection", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).CreateConnection), arg0)
 }
 
-// CreateConnectionRequest mocks base method
+// CreateConnectionRequest mocks base method.
 func (m *MockCodeStarConnectionsAPI) CreateConnectionRequest(arg0 *codestarconnections.CreateConnectionInput) (*request.Request, *codestarconnections.CreateConnectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConnectionRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockCodeStarConnectionsAPI) CreateConnectionRequest(arg0 *codestarconne
 	return ret0, ret1
 }
 
-// CreateConnectionRequest indicates an expected call of CreateConnectionRequest
+// CreateConnectionRequest indicates an expected call of CreateConnectionRequest.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) CreateConnectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConnectionRequest", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).CreateConnectionRequest), arg0)
 }
 
-// CreateConnectionWithContext mocks base method
+// CreateConnectionWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) CreateConnectionWithContext(arg0 context.Context, arg1 *codestarconnections.CreateConnectionInput, arg2 ...request.Option) (*codestarconnections.CreateConnectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockCodeStarConnectionsAPI) CreateConnectionWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// CreateConnectionWithContext indicates an expected call of CreateConnectionWithContext
+// CreateConnectionWithContext indicates an expected call of CreateConnectionWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) CreateConnectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConnectionWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).CreateConnectionWithContext), varargs...)
 }
 
-// CreateHost mocks base method
+// CreateHost mocks base method.
 func (m *MockCodeStarConnectionsAPI) CreateHost(arg0 *codestarconnections.CreateHostInput) (*codestarconnections.CreateHostOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateHost", arg0)
@@ -94,13 +95,13 @@ func (m *MockCodeStarConnectionsAPI) CreateHost(arg0 *codestarconnections.Create
 	return ret0, ret1
 }
 
-// CreateHost indicates an expected call of CreateHost
+// CreateHost indicates an expected call of CreateHost.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) CreateHost(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHost", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).CreateHost), arg0)
 }
 
-// CreateHostRequest mocks base method
+// CreateHostRequest mocks base method.
 func (m *MockCodeStarConnectionsAPI) CreateHostRequest(arg0 *codestarconnections.CreateHostInput) (*request.Request, *codestarconnections.CreateHostOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateHostRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockCodeStarConnectionsAPI) CreateHostRequest(arg0 *codestarconnections
 	return ret0, ret1
 }
 
-// CreateHostRequest indicates an expected call of CreateHostRequest
+// CreateHostRequest indicates an expected call of CreateHostRequest.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) CreateHostRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHostRequest", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).CreateHostRequest), arg0)
 }
 
-// CreateHostWithContext mocks base method
+// CreateHostWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) CreateHostWithContext(arg0 context.Context, arg1 *codestarconnections.CreateHostInput, arg2 ...request.Option) (*codestarconnections.CreateHostOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockCodeStarConnectionsAPI) CreateHostWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateHostWithContext indicates an expected call of CreateHostWithContext
+// CreateHostWithContext indicates an expected call of CreateHostWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) CreateHostWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateHostWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).CreateHostWithContext), varargs...)
 }
 
-// DeleteConnection mocks base method
+// DeleteConnection mocks base method.
 func (m *MockCodeStarConnectionsAPI) DeleteConnection(arg0 *codestarconnections.DeleteConnectionInput) (*codestarconnections.DeleteConnectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConnection", arg0)
@@ -144,13 +145,13 @@ func (m *MockCodeStarConnectionsAPI) DeleteConnection(arg0 *codestarconnections.
 	return ret0, ret1
 }
 
-// DeleteConnection indicates an expected call of DeleteConnection
+// DeleteConnection indicates an expected call of DeleteConnection.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) DeleteConnection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConnection", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).DeleteConnection), arg0)
 }
 
-// DeleteConnectionRequest mocks base method
+// DeleteConnectionRequest mocks base method.
 func (m *MockCodeStarConnectionsAPI) DeleteConnectionRequest(arg0 *codestarconnections.DeleteConnectionInput) (*request.Request, *codestarconnections.DeleteConnectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConnectionRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockCodeStarConnectionsAPI) DeleteConnectionRequest(arg0 *codestarconne
 	return ret0, ret1
 }
 
-// DeleteConnectionRequest indicates an expected call of DeleteConnectionRequest
+// DeleteConnectionRequest indicates an expected call of DeleteConnectionRequest.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) DeleteConnectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConnectionRequest", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).DeleteConnectionRequest), arg0)
 }
 
-// DeleteConnectionWithContext mocks base method
+// DeleteConnectionWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) DeleteConnectionWithContext(arg0 context.Context, arg1 *codestarconnections.DeleteConnectionInput, arg2 ...request.Option) (*codestarconnections.DeleteConnectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockCodeStarConnectionsAPI) DeleteConnectionWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DeleteConnectionWithContext indicates an expected call of DeleteConnectionWithContext
+// DeleteConnectionWithContext indicates an expected call of DeleteConnectionWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) DeleteConnectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConnectionWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).DeleteConnectionWithContext), varargs...)
 }
 
-// DeleteHost mocks base method
+// DeleteHost mocks base method.
 func (m *MockCodeStarConnectionsAPI) DeleteHost(arg0 *codestarconnections.DeleteHostInput) (*codestarconnections.DeleteHostOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteHost", arg0)
@@ -194,13 +195,13 @@ func (m *MockCodeStarConnectionsAPI) DeleteHost(arg0 *codestarconnections.Delete
 	return ret0, ret1
 }
 
-// DeleteHost indicates an expected call of DeleteHost
+// DeleteHost indicates an expected call of DeleteHost.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) DeleteHost(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteHost", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).DeleteHost), arg0)
 }
 
-// DeleteHostRequest mocks base method
+// DeleteHostRequest mocks base method.
 func (m *MockCodeStarConnectionsAPI) DeleteHostRequest(arg0 *codestarconnections.DeleteHostInput) (*request.Request, *codestarconnections.DeleteHostOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteHostRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockCodeStarConnectionsAPI) DeleteHostRequest(arg0 *codestarconnections
 	return ret0, ret1
 }
 
-// DeleteHostRequest indicates an expected call of DeleteHostRequest
+// DeleteHostRequest indicates an expected call of DeleteHostRequest.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) DeleteHostRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteHostRequest", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).DeleteHostRequest), arg0)
 }
 
-// DeleteHostWithContext mocks base method
+// DeleteHostWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) DeleteHostWithContext(arg0 context.Context, arg1 *codestarconnections.DeleteHostInput, arg2 ...request.Option) (*codestarconnections.DeleteHostOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockCodeStarConnectionsAPI) DeleteHostWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteHostWithContext indicates an expected call of DeleteHostWithContext
+// DeleteHostWithContext indicates an expected call of DeleteHostWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) DeleteHostWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteHostWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).DeleteHostWithContext), varargs...)
 }
 
-// GetConnection mocks base method
+// GetConnection mocks base method.
 func (m *MockCodeStarConnectionsAPI) GetConnection(arg0 *codestarconnections.GetConnectionInput) (*codestarconnections.GetConnectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConnection", arg0)
@@ -244,13 +245,13 @@ func (m *MockCodeStarConnectionsAPI) GetConnection(arg0 *codestarconnections.Get
 	return ret0, ret1
 }
 
-// GetConnection indicates an expected call of GetConnection
+// GetConnection indicates an expected call of GetConnection.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) GetConnection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConnection", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).GetConnection), arg0)
 }
 
-// GetConnectionRequest mocks base method
+// GetConnectionRequest mocks base method.
 func (m *MockCodeStarConnectionsAPI) GetConnectionRequest(arg0 *codestarconnections.GetConnectionInput) (*request.Request, *codestarconnections.GetConnectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConnectionRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockCodeStarConnectionsAPI) GetConnectionRequest(arg0 *codestarconnecti
 	return ret0, ret1
 }
 
-// GetConnectionRequest indicates an expected call of GetConnectionRequest
+// GetConnectionRequest indicates an expected call of GetConnectionRequest.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) GetConnectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConnectionRequest", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).GetConnectionRequest), arg0)
 }
 
-// GetConnectionWithContext mocks base method
+// GetConnectionWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) GetConnectionWithContext(arg0 context.Context, arg1 *codestarconnections.GetConnectionInput, arg2 ...request.Option) (*codestarconnections.GetConnectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockCodeStarConnectionsAPI) GetConnectionWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// GetConnectionWithContext indicates an expected call of GetConnectionWithContext
+// GetConnectionWithContext indicates an expected call of GetConnectionWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) GetConnectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConnectionWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).GetConnectionWithContext), varargs...)
 }
 
-// GetHost mocks base method
+// GetHost mocks base method.
 func (m *MockCodeStarConnectionsAPI) GetHost(arg0 *codestarconnections.GetHostInput) (*codestarconnections.GetHostOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetHost", arg0)
@@ -294,13 +295,13 @@ func (m *MockCodeStarConnectionsAPI) GetHost(arg0 *codestarconnections.GetHostIn
 	return ret0, ret1
 }
 
-// GetHost indicates an expected call of GetHost
+// GetHost indicates an expected call of GetHost.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) GetHost(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetHost", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).GetHost), arg0)
 }
 
-// GetHostRequest mocks base method
+// GetHostRequest mocks base method.
 func (m *MockCodeStarConnectionsAPI) GetHostRequest(arg0 *codestarconnections.GetHostInput) (*request.Request, *codestarconnections.GetHostOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetHostRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockCodeStarConnectionsAPI) GetHostRequest(arg0 *codestarconnections.Ge
 	return ret0, ret1
 }
 
-// GetHostRequest indicates an expected call of GetHostRequest
+// GetHostRequest indicates an expected call of GetHostRequest.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) GetHostRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetHostRequest", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).GetHostRequest), arg0)
 }
 
-// GetHostWithContext mocks base method
+// GetHostWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) GetHostWithContext(arg0 context.Context, arg1 *codestarconnections.GetHostInput, arg2 ...request.Option) (*codestarconnections.GetHostOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockCodeStarConnectionsAPI) GetHostWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// GetHostWithContext indicates an expected call of GetHostWithContext
+// GetHostWithContext indicates an expected call of GetHostWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) GetHostWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetHostWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).GetHostWithContext), varargs...)
 }
 
-// ListConnections mocks base method
+// ListConnections mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListConnections(arg0 *codestarconnections.ListConnectionsInput) (*codestarconnections.ListConnectionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConnections", arg0)
@@ -344,13 +345,13 @@ func (m *MockCodeStarConnectionsAPI) ListConnections(arg0 *codestarconnections.L
 	return ret0, ret1
 }
 
-// ListConnections indicates an expected call of ListConnections
+// ListConnections indicates an expected call of ListConnections.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListConnections(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConnections", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListConnections), arg0)
 }
 
-// ListConnectionsPages mocks base method
+// ListConnectionsPages mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListConnectionsPages(arg0 *codestarconnections.ListConnectionsInput, arg1 func(*codestarconnections.ListConnectionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConnectionsPages", arg0, arg1)
@@ -358,13 +359,13 @@ func (m *MockCodeStarConnectionsAPI) ListConnectionsPages(arg0 *codestarconnecti
 	return ret0
 }
 
-// ListConnectionsPages indicates an expected call of ListConnectionsPages
+// ListConnectionsPages indicates an expected call of ListConnectionsPages.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListConnectionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConnectionsPages", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListConnectionsPages), arg0, arg1)
 }
 
-// ListConnectionsPagesWithContext mocks base method
+// ListConnectionsPagesWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListConnectionsPagesWithContext(arg0 context.Context, arg1 *codestarconnections.ListConnectionsInput, arg2 func(*codestarconnections.ListConnectionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -376,14 +377,14 @@ func (m *MockCodeStarConnectionsAPI) ListConnectionsPagesWithContext(arg0 contex
 	return ret0
 }
 
-// ListConnectionsPagesWithContext indicates an expected call of ListConnectionsPagesWithContext
+// ListConnectionsPagesWithContext indicates an expected call of ListConnectionsPagesWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListConnectionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConnectionsPagesWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListConnectionsPagesWithContext), varargs...)
 }
 
-// ListConnectionsRequest mocks base method
+// ListConnectionsRequest mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListConnectionsRequest(arg0 *codestarconnections.ListConnectionsInput) (*request.Request, *codestarconnections.ListConnectionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConnectionsRequest", arg0)
@@ -392,13 +393,13 @@ func (m *MockCodeStarConnectionsAPI) ListConnectionsRequest(arg0 *codestarconnec
 	return ret0, ret1
 }
 
-// ListConnectionsRequest indicates an expected call of ListConnectionsRequest
+// ListConnectionsRequest indicates an expected call of ListConnectionsRequest.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListConnectionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConnectionsRequest", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListConnectionsRequest), arg0)
 }
 
-// ListConnectionsWithContext mocks base method
+// ListConnectionsWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListConnectionsWithContext(arg0 context.Context, arg1 *codestarconnections.ListConnectionsInput, arg2 ...request.Option) (*codestarconnections.ListConnectionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -411,14 +412,14 @@ func (m *MockCodeStarConnectionsAPI) ListConnectionsWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListConnectionsWithContext indicates an expected call of ListConnectionsWithContext
+// ListConnectionsWithContext indicates an expected call of ListConnectionsWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListConnectionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConnectionsWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListConnectionsWithContext), varargs...)
 }
 
-// ListHosts mocks base method
+// ListHosts mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListHosts(arg0 *codestarconnections.ListHostsInput) (*codestarconnections.ListHostsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHosts", arg0)
@@ -427,13 +428,13 @@ func (m *MockCodeStarConnectionsAPI) ListHosts(arg0 *codestarconnections.ListHos
 	return ret0, ret1
 }
 
-// ListHosts indicates an expected call of ListHosts
+// ListHosts indicates an expected call of ListHosts.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListHosts(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHosts", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListHosts), arg0)
 }
 
-// ListHostsPages mocks base method
+// ListHostsPages mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListHostsPages(arg0 *codestarconnections.ListHostsInput, arg1 func(*codestarconnections.ListHostsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHostsPages", arg0, arg1)
@@ -441,13 +442,13 @@ func (m *MockCodeStarConnectionsAPI) ListHostsPages(arg0 *codestarconnections.Li
 	return ret0
 }
 
-// ListHostsPages indicates an expected call of ListHostsPages
+// ListHostsPages indicates an expected call of ListHostsPages.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListHostsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHostsPages", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListHostsPages), arg0, arg1)
 }
 
-// ListHostsPagesWithContext mocks base method
+// ListHostsPagesWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListHostsPagesWithContext(arg0 context.Context, arg1 *codestarconnections.ListHostsInput, arg2 func(*codestarconnections.ListHostsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -459,14 +460,14 @@ func (m *MockCodeStarConnectionsAPI) ListHostsPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListHostsPagesWithContext indicates an expected call of ListHostsPagesWithContext
+// ListHostsPagesWithContext indicates an expected call of ListHostsPagesWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListHostsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHostsPagesWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListHostsPagesWithContext), varargs...)
 }
 
-// ListHostsRequest mocks base method
+// ListHostsRequest mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListHostsRequest(arg0 *codestarconnections.ListHostsInput) (*request.Request, *codestarconnections.ListHostsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHostsRequest", arg0)
@@ -475,13 +476,13 @@ func (m *MockCodeStarConnectionsAPI) ListHostsRequest(arg0 *codestarconnections.
 	return ret0, ret1
 }
 
-// ListHostsRequest indicates an expected call of ListHostsRequest
+// ListHostsRequest indicates an expected call of ListHostsRequest.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListHostsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHostsRequest", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListHostsRequest), arg0)
 }
 
-// ListHostsWithContext mocks base method
+// ListHostsWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListHostsWithContext(arg0 context.Context, arg1 *codestarconnections.ListHostsInput, arg2 ...request.Option) (*codestarconnections.ListHostsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -494,14 +495,14 @@ func (m *MockCodeStarConnectionsAPI) ListHostsWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListHostsWithContext indicates an expected call of ListHostsWithContext
+// ListHostsWithContext indicates an expected call of ListHostsWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListHostsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHostsWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListHostsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListTagsForResource(arg0 *codestarconnections.ListTagsForResourceInput) (*codestarconnections.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -510,13 +511,13 @@ func (m *MockCodeStarConnectionsAPI) ListTagsForResource(arg0 *codestarconnectio
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListTagsForResourceRequest(arg0 *codestarconnections.ListTagsForResourceInput) (*request.Request, *codestarconnections.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -525,13 +526,13 @@ func (m *MockCodeStarConnectionsAPI) ListTagsForResourceRequest(arg0 *codestarco
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *codestarconnections.ListTagsForResourceInput, arg2 ...request.Option) (*codestarconnections.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -544,14 +545,14 @@ func (m *MockCodeStarConnectionsAPI) ListTagsForResourceWithContext(arg0 context
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockCodeStarConnectionsAPI) TagResource(arg0 *codestarconnections.TagResourceInput) (*codestarconnections.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -560,13 +561,13 @@ func (m *MockCodeStarConnectionsAPI) TagResource(arg0 *codestarconnections.TagRe
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockCodeStarConnectionsAPI) TagResourceRequest(arg0 *codestarconnections.TagResourceInput) (*request.Request, *codestarconnections.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -575,13 +576,13 @@ func (m *MockCodeStarConnectionsAPI) TagResourceRequest(arg0 *codestarconnection
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) TagResourceWithContext(arg0 context.Context, arg1 *codestarconnections.TagResourceInput, arg2 ...request.Option) (*codestarconnections.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -594,14 +595,14 @@ func (m *MockCodeStarConnectionsAPI) TagResourceWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockCodeStarConnectionsAPI) UntagResource(arg0 *codestarconnections.UntagResourceInput) (*codestarconnections.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -610,13 +611,13 @@ func (m *MockCodeStarConnectionsAPI) UntagResource(arg0 *codestarconnections.Unt
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockCodeStarConnectionsAPI) UntagResourceRequest(arg0 *codestarconnections.UntagResourceInput) (*request.Request, *codestarconnections.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -625,13 +626,13 @@ func (m *MockCodeStarConnectionsAPI) UntagResourceRequest(arg0 *codestarconnecti
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) UntagResourceWithContext(arg0 context.Context, arg1 *codestarconnections.UntagResourceInput, arg2 ...request.Option) (*codestarconnections.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -644,14 +645,14 @@ func (m *MockCodeStarConnectionsAPI) UntagResourceWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateHost mocks base method
+// UpdateHost mocks base method.
 func (m *MockCodeStarConnectionsAPI) UpdateHost(arg0 *codestarconnections.UpdateHostInput) (*codestarconnections.UpdateHostOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateHost", arg0)
@@ -660,13 +661,13 @@ func (m *MockCodeStarConnectionsAPI) UpdateHost(arg0 *codestarconnections.Update
 	return ret0, ret1
 }
 
-// UpdateHost indicates an expected call of UpdateHost
+// UpdateHost indicates an expected call of UpdateHost.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) UpdateHost(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateHost", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).UpdateHost), arg0)
 }
 
-// UpdateHostRequest mocks base method
+// UpdateHostRequest mocks base method.
 func (m *MockCodeStarConnectionsAPI) UpdateHostRequest(arg0 *codestarconnections.UpdateHostInput) (*request.Request, *codestarconnections.UpdateHostOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateHostRequest", arg0)
@@ -675,13 +676,13 @@ func (m *MockCodeStarConnectionsAPI) UpdateHostRequest(arg0 *codestarconnections
 	return ret0, ret1
 }
 
-// UpdateHostRequest indicates an expected call of UpdateHostRequest
+// UpdateHostRequest indicates an expected call of UpdateHostRequest.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) UpdateHostRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateHostRequest", reflect.TypeOf((*MockCodeStarConnectionsAPI)(nil).UpdateHostRequest), arg0)
 }
 
-// UpdateHostWithContext mocks base method
+// UpdateHostWithContext mocks base method.
 func (m *MockCodeStarConnectionsAPI) UpdateHostWithContext(arg0 context.Context, arg1 *codestarconnections.UpdateHostInput, arg2 ...request.Option) (*codestarconnections.UpdateHostOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -694,7 +695,7 @@ func (m *MockCodeStarConnectionsAPI) UpdateHostWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// UpdateHostWithContext indicates an expected call of UpdateHostWithContext
+// UpdateHostWithContext indicates an expected call of UpdateHostWithContext.
 func (mr *MockCodeStarConnectionsAPIMockRecorder) UpdateHostWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

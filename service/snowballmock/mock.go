@@ -6,36 +6,37 @@ package snowballmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	snowball "github.com/aws/aws-sdk-go/service/snowball"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockSnowballAPI is a mock of SnowballAPI interface
+// MockSnowballAPI is a mock of SnowballAPI interface.
 type MockSnowballAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockSnowballAPIMockRecorder
 }
 
-// MockSnowballAPIMockRecorder is the mock recorder for MockSnowballAPI
+// MockSnowballAPIMockRecorder is the mock recorder for MockSnowballAPI.
 type MockSnowballAPIMockRecorder struct {
 	mock *MockSnowballAPI
 }
 
-// NewMockSnowballAPI creates a new mock instance
+// NewMockSnowballAPI creates a new mock instance.
 func NewMockSnowballAPI(ctrl *gomock.Controller) *MockSnowballAPI {
 	mock := &MockSnowballAPI{ctrl: ctrl}
 	mock.recorder = &MockSnowballAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockSnowballAPI) EXPECT() *MockSnowballAPIMockRecorder {
 	return m.recorder
 }
 
-// CancelCluster mocks base method
+// CancelCluster mocks base method.
 func (m *MockSnowballAPI) CancelCluster(arg0 *snowball.CancelClusterInput) (*snowball.CancelClusterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelCluster", arg0)
@@ -44,13 +45,13 @@ func (m *MockSnowballAPI) CancelCluster(arg0 *snowball.CancelClusterInput) (*sno
 	return ret0, ret1
 }
 
-// CancelCluster indicates an expected call of CancelCluster
+// CancelCluster indicates an expected call of CancelCluster.
 func (mr *MockSnowballAPIMockRecorder) CancelCluster(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelCluster", reflect.TypeOf((*MockSnowballAPI)(nil).CancelCluster), arg0)
 }
 
-// CancelClusterRequest mocks base method
+// CancelClusterRequest mocks base method.
 func (m *MockSnowballAPI) CancelClusterRequest(arg0 *snowball.CancelClusterInput) (*request.Request, *snowball.CancelClusterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelClusterRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockSnowballAPI) CancelClusterRequest(arg0 *snowball.CancelClusterInput
 	return ret0, ret1
 }
 
-// CancelClusterRequest indicates an expected call of CancelClusterRequest
+// CancelClusterRequest indicates an expected call of CancelClusterRequest.
 func (mr *MockSnowballAPIMockRecorder) CancelClusterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelClusterRequest", reflect.TypeOf((*MockSnowballAPI)(nil).CancelClusterRequest), arg0)
 }
 
-// CancelClusterWithContext mocks base method
+// CancelClusterWithContext mocks base method.
 func (m *MockSnowballAPI) CancelClusterWithContext(arg0 context.Context, arg1 *snowball.CancelClusterInput, arg2 ...request.Option) (*snowball.CancelClusterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockSnowballAPI) CancelClusterWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// CancelClusterWithContext indicates an expected call of CancelClusterWithContext
+// CancelClusterWithContext indicates an expected call of CancelClusterWithContext.
 func (mr *MockSnowballAPIMockRecorder) CancelClusterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelClusterWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).CancelClusterWithContext), varargs...)
 }
 
-// CancelJob mocks base method
+// CancelJob mocks base method.
 func (m *MockSnowballAPI) CancelJob(arg0 *snowball.CancelJobInput) (*snowball.CancelJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelJob", arg0)
@@ -94,13 +95,13 @@ func (m *MockSnowballAPI) CancelJob(arg0 *snowball.CancelJobInput) (*snowball.Ca
 	return ret0, ret1
 }
 
-// CancelJob indicates an expected call of CancelJob
+// CancelJob indicates an expected call of CancelJob.
 func (mr *MockSnowballAPIMockRecorder) CancelJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelJob", reflect.TypeOf((*MockSnowballAPI)(nil).CancelJob), arg0)
 }
 
-// CancelJobRequest mocks base method
+// CancelJobRequest mocks base method.
 func (m *MockSnowballAPI) CancelJobRequest(arg0 *snowball.CancelJobInput) (*request.Request, *snowball.CancelJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelJobRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockSnowballAPI) CancelJobRequest(arg0 *snowball.CancelJobInput) (*requ
 	return ret0, ret1
 }
 
-// CancelJobRequest indicates an expected call of CancelJobRequest
+// CancelJobRequest indicates an expected call of CancelJobRequest.
 func (mr *MockSnowballAPIMockRecorder) CancelJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelJobRequest", reflect.TypeOf((*MockSnowballAPI)(nil).CancelJobRequest), arg0)
 }
 
-// CancelJobWithContext mocks base method
+// CancelJobWithContext mocks base method.
 func (m *MockSnowballAPI) CancelJobWithContext(arg0 context.Context, arg1 *snowball.CancelJobInput, arg2 ...request.Option) (*snowball.CancelJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockSnowballAPI) CancelJobWithContext(arg0 context.Context, arg1 *snowb
 	return ret0, ret1
 }
 
-// CancelJobWithContext indicates an expected call of CancelJobWithContext
+// CancelJobWithContext indicates an expected call of CancelJobWithContext.
 func (mr *MockSnowballAPIMockRecorder) CancelJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelJobWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).CancelJobWithContext), varargs...)
 }
 
-// CreateAddress mocks base method
+// CreateAddress mocks base method.
 func (m *MockSnowballAPI) CreateAddress(arg0 *snowball.CreateAddressInput) (*snowball.CreateAddressOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAddress", arg0)
@@ -144,13 +145,13 @@ func (m *MockSnowballAPI) CreateAddress(arg0 *snowball.CreateAddressInput) (*sno
 	return ret0, ret1
 }
 
-// CreateAddress indicates an expected call of CreateAddress
+// CreateAddress indicates an expected call of CreateAddress.
 func (mr *MockSnowballAPIMockRecorder) CreateAddress(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAddress", reflect.TypeOf((*MockSnowballAPI)(nil).CreateAddress), arg0)
 }
 
-// CreateAddressRequest mocks base method
+// CreateAddressRequest mocks base method.
 func (m *MockSnowballAPI) CreateAddressRequest(arg0 *snowball.CreateAddressInput) (*request.Request, *snowball.CreateAddressOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAddressRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockSnowballAPI) CreateAddressRequest(arg0 *snowball.CreateAddressInput
 	return ret0, ret1
 }
 
-// CreateAddressRequest indicates an expected call of CreateAddressRequest
+// CreateAddressRequest indicates an expected call of CreateAddressRequest.
 func (mr *MockSnowballAPIMockRecorder) CreateAddressRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAddressRequest", reflect.TypeOf((*MockSnowballAPI)(nil).CreateAddressRequest), arg0)
 }
 
-// CreateAddressWithContext mocks base method
+// CreateAddressWithContext mocks base method.
 func (m *MockSnowballAPI) CreateAddressWithContext(arg0 context.Context, arg1 *snowball.CreateAddressInput, arg2 ...request.Option) (*snowball.CreateAddressOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockSnowballAPI) CreateAddressWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// CreateAddressWithContext indicates an expected call of CreateAddressWithContext
+// CreateAddressWithContext indicates an expected call of CreateAddressWithContext.
 func (mr *MockSnowballAPIMockRecorder) CreateAddressWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAddressWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).CreateAddressWithContext), varargs...)
 }
 
-// CreateCluster mocks base method
+// CreateCluster mocks base method.
 func (m *MockSnowballAPI) CreateCluster(arg0 *snowball.CreateClusterInput) (*snowball.CreateClusterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCluster", arg0)
@@ -194,13 +195,13 @@ func (m *MockSnowballAPI) CreateCluster(arg0 *snowball.CreateClusterInput) (*sno
 	return ret0, ret1
 }
 
-// CreateCluster indicates an expected call of CreateCluster
+// CreateCluster indicates an expected call of CreateCluster.
 func (mr *MockSnowballAPIMockRecorder) CreateCluster(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCluster", reflect.TypeOf((*MockSnowballAPI)(nil).CreateCluster), arg0)
 }
 
-// CreateClusterRequest mocks base method
+// CreateClusterRequest mocks base method.
 func (m *MockSnowballAPI) CreateClusterRequest(arg0 *snowball.CreateClusterInput) (*request.Request, *snowball.CreateClusterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateClusterRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockSnowballAPI) CreateClusterRequest(arg0 *snowball.CreateClusterInput
 	return ret0, ret1
 }
 
-// CreateClusterRequest indicates an expected call of CreateClusterRequest
+// CreateClusterRequest indicates an expected call of CreateClusterRequest.
 func (mr *MockSnowballAPIMockRecorder) CreateClusterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateClusterRequest", reflect.TypeOf((*MockSnowballAPI)(nil).CreateClusterRequest), arg0)
 }
 
-// CreateClusterWithContext mocks base method
+// CreateClusterWithContext mocks base method.
 func (m *MockSnowballAPI) CreateClusterWithContext(arg0 context.Context, arg1 *snowball.CreateClusterInput, arg2 ...request.Option) (*snowball.CreateClusterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockSnowballAPI) CreateClusterWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// CreateClusterWithContext indicates an expected call of CreateClusterWithContext
+// CreateClusterWithContext indicates an expected call of CreateClusterWithContext.
 func (mr *MockSnowballAPIMockRecorder) CreateClusterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateClusterWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).CreateClusterWithContext), varargs...)
 }
 
-// CreateJob mocks base method
+// CreateJob mocks base method.
 func (m *MockSnowballAPI) CreateJob(arg0 *snowball.CreateJobInput) (*snowball.CreateJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateJob", arg0)
@@ -244,13 +245,13 @@ func (m *MockSnowballAPI) CreateJob(arg0 *snowball.CreateJobInput) (*snowball.Cr
 	return ret0, ret1
 }
 
-// CreateJob indicates an expected call of CreateJob
+// CreateJob indicates an expected call of CreateJob.
 func (mr *MockSnowballAPIMockRecorder) CreateJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateJob", reflect.TypeOf((*MockSnowballAPI)(nil).CreateJob), arg0)
 }
 
-// CreateJobRequest mocks base method
+// CreateJobRequest mocks base method.
 func (m *MockSnowballAPI) CreateJobRequest(arg0 *snowball.CreateJobInput) (*request.Request, *snowball.CreateJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateJobRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockSnowballAPI) CreateJobRequest(arg0 *snowball.CreateJobInput) (*requ
 	return ret0, ret1
 }
 
-// CreateJobRequest indicates an expected call of CreateJobRequest
+// CreateJobRequest indicates an expected call of CreateJobRequest.
 func (mr *MockSnowballAPIMockRecorder) CreateJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateJobRequest", reflect.TypeOf((*MockSnowballAPI)(nil).CreateJobRequest), arg0)
 }
 
-// CreateJobWithContext mocks base method
+// CreateJobWithContext mocks base method.
 func (m *MockSnowballAPI) CreateJobWithContext(arg0 context.Context, arg1 *snowball.CreateJobInput, arg2 ...request.Option) (*snowball.CreateJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,64 @@ func (m *MockSnowballAPI) CreateJobWithContext(arg0 context.Context, arg1 *snowb
 	return ret0, ret1
 }
 
-// CreateJobWithContext indicates an expected call of CreateJobWithContext
+// CreateJobWithContext indicates an expected call of CreateJobWithContext.
 func (mr *MockSnowballAPIMockRecorder) CreateJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateJobWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).CreateJobWithContext), varargs...)
 }
 
-// CreateReturnShippingLabel mocks base method
+// CreateLongTermPricing mocks base method.
+func (m *MockSnowballAPI) CreateLongTermPricing(arg0 *snowball.CreateLongTermPricingInput) (*snowball.CreateLongTermPricingOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateLongTermPricing", arg0)
+	ret0, _ := ret[0].(*snowball.CreateLongTermPricingOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateLongTermPricing indicates an expected call of CreateLongTermPricing.
+func (mr *MockSnowballAPIMockRecorder) CreateLongTermPricing(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLongTermPricing", reflect.TypeOf((*MockSnowballAPI)(nil).CreateLongTermPricing), arg0)
+}
+
+// CreateLongTermPricingRequest mocks base method.
+func (m *MockSnowballAPI) CreateLongTermPricingRequest(arg0 *snowball.CreateLongTermPricingInput) (*request.Request, *snowball.CreateLongTermPricingOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateLongTermPricingRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*snowball.CreateLongTermPricingOutput)
+	return ret0, ret1
+}
+
+// CreateLongTermPricingRequest indicates an expected call of CreateLongTermPricingRequest.
+func (mr *MockSnowballAPIMockRecorder) CreateLongTermPricingRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLongTermPricingRequest", reflect.TypeOf((*MockSnowballAPI)(nil).CreateLongTermPricingRequest), arg0)
+}
+
+// CreateLongTermPricingWithContext mocks base method.
+func (m *MockSnowballAPI) CreateLongTermPricingWithContext(arg0 context.Context, arg1 *snowball.CreateLongTermPricingInput, arg2 ...request.Option) (*snowball.CreateLongTermPricingOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateLongTermPricingWithContext", varargs...)
+	ret0, _ := ret[0].(*snowball.CreateLongTermPricingOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateLongTermPricingWithContext indicates an expected call of CreateLongTermPricingWithContext.
+func (mr *MockSnowballAPIMockRecorder) CreateLongTermPricingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLongTermPricingWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).CreateLongTermPricingWithContext), varargs...)
+}
+
+// CreateReturnShippingLabel mocks base method.
 func (m *MockSnowballAPI) CreateReturnShippingLabel(arg0 *snowball.CreateReturnShippingLabelInput) (*snowball.CreateReturnShippingLabelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateReturnShippingLabel", arg0)
@@ -294,13 +345,13 @@ func (m *MockSnowballAPI) CreateReturnShippingLabel(arg0 *snowball.CreateReturnS
 	return ret0, ret1
 }
 
-// CreateReturnShippingLabel indicates an expected call of CreateReturnShippingLabel
+// CreateReturnShippingLabel indicates an expected call of CreateReturnShippingLabel.
 func (mr *MockSnowballAPIMockRecorder) CreateReturnShippingLabel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateReturnShippingLabel", reflect.TypeOf((*MockSnowballAPI)(nil).CreateReturnShippingLabel), arg0)
 }
 
-// CreateReturnShippingLabelRequest mocks base method
+// CreateReturnShippingLabelRequest mocks base method.
 func (m *MockSnowballAPI) CreateReturnShippingLabelRequest(arg0 *snowball.CreateReturnShippingLabelInput) (*request.Request, *snowball.CreateReturnShippingLabelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateReturnShippingLabelRequest", arg0)
@@ -309,13 +360,13 @@ func (m *MockSnowballAPI) CreateReturnShippingLabelRequest(arg0 *snowball.Create
 	return ret0, ret1
 }
 
-// CreateReturnShippingLabelRequest indicates an expected call of CreateReturnShippingLabelRequest
+// CreateReturnShippingLabelRequest indicates an expected call of CreateReturnShippingLabelRequest.
 func (mr *MockSnowballAPIMockRecorder) CreateReturnShippingLabelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateReturnShippingLabelRequest", reflect.TypeOf((*MockSnowballAPI)(nil).CreateReturnShippingLabelRequest), arg0)
 }
 
-// CreateReturnShippingLabelWithContext mocks base method
+// CreateReturnShippingLabelWithContext mocks base method.
 func (m *MockSnowballAPI) CreateReturnShippingLabelWithContext(arg0 context.Context, arg1 *snowball.CreateReturnShippingLabelInput, arg2 ...request.Option) (*snowball.CreateReturnShippingLabelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +379,14 @@ func (m *MockSnowballAPI) CreateReturnShippingLabelWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// CreateReturnShippingLabelWithContext indicates an expected call of CreateReturnShippingLabelWithContext
+// CreateReturnShippingLabelWithContext indicates an expected call of CreateReturnShippingLabelWithContext.
 func (mr *MockSnowballAPIMockRecorder) CreateReturnShippingLabelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateReturnShippingLabelWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).CreateReturnShippingLabelWithContext), varargs...)
 }
 
-// DescribeAddress mocks base method
+// DescribeAddress mocks base method.
 func (m *MockSnowballAPI) DescribeAddress(arg0 *snowball.DescribeAddressInput) (*snowball.DescribeAddressOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAddress", arg0)
@@ -344,13 +395,13 @@ func (m *MockSnowballAPI) DescribeAddress(arg0 *snowball.DescribeAddressInput) (
 	return ret0, ret1
 }
 
-// DescribeAddress indicates an expected call of DescribeAddress
+// DescribeAddress indicates an expected call of DescribeAddress.
 func (mr *MockSnowballAPIMockRecorder) DescribeAddress(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAddress", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeAddress), arg0)
 }
 
-// DescribeAddressRequest mocks base method
+// DescribeAddressRequest mocks base method.
 func (m *MockSnowballAPI) DescribeAddressRequest(arg0 *snowball.DescribeAddressInput) (*request.Request, *snowball.DescribeAddressOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAddressRequest", arg0)
@@ -359,13 +410,13 @@ func (m *MockSnowballAPI) DescribeAddressRequest(arg0 *snowball.DescribeAddressI
 	return ret0, ret1
 }
 
-// DescribeAddressRequest indicates an expected call of DescribeAddressRequest
+// DescribeAddressRequest indicates an expected call of DescribeAddressRequest.
 func (mr *MockSnowballAPIMockRecorder) DescribeAddressRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAddressRequest", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeAddressRequest), arg0)
 }
 
-// DescribeAddressWithContext mocks base method
+// DescribeAddressWithContext mocks base method.
 func (m *MockSnowballAPI) DescribeAddressWithContext(arg0 context.Context, arg1 *snowball.DescribeAddressInput, arg2 ...request.Option) (*snowball.DescribeAddressOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +429,14 @@ func (m *MockSnowballAPI) DescribeAddressWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DescribeAddressWithContext indicates an expected call of DescribeAddressWithContext
+// DescribeAddressWithContext indicates an expected call of DescribeAddressWithContext.
 func (mr *MockSnowballAPIMockRecorder) DescribeAddressWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAddressWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeAddressWithContext), varargs...)
 }
 
-// DescribeAddresses mocks base method
+// DescribeAddresses mocks base method.
 func (m *MockSnowballAPI) DescribeAddresses(arg0 *snowball.DescribeAddressesInput) (*snowball.DescribeAddressesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAddresses", arg0)
@@ -394,13 +445,13 @@ func (m *MockSnowballAPI) DescribeAddresses(arg0 *snowball.DescribeAddressesInpu
 	return ret0, ret1
 }
 
-// DescribeAddresses indicates an expected call of DescribeAddresses
+// DescribeAddresses indicates an expected call of DescribeAddresses.
 func (mr *MockSnowballAPIMockRecorder) DescribeAddresses(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAddresses", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeAddresses), arg0)
 }
 
-// DescribeAddressesPages mocks base method
+// DescribeAddressesPages mocks base method.
 func (m *MockSnowballAPI) DescribeAddressesPages(arg0 *snowball.DescribeAddressesInput, arg1 func(*snowball.DescribeAddressesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAddressesPages", arg0, arg1)
@@ -408,13 +459,13 @@ func (m *MockSnowballAPI) DescribeAddressesPages(arg0 *snowball.DescribeAddresse
 	return ret0
 }
 
-// DescribeAddressesPages indicates an expected call of DescribeAddressesPages
+// DescribeAddressesPages indicates an expected call of DescribeAddressesPages.
 func (mr *MockSnowballAPIMockRecorder) DescribeAddressesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAddressesPages", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeAddressesPages), arg0, arg1)
 }
 
-// DescribeAddressesPagesWithContext mocks base method
+// DescribeAddressesPagesWithContext mocks base method.
 func (m *MockSnowballAPI) DescribeAddressesPagesWithContext(arg0 context.Context, arg1 *snowball.DescribeAddressesInput, arg2 func(*snowball.DescribeAddressesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -426,14 +477,14 @@ func (m *MockSnowballAPI) DescribeAddressesPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// DescribeAddressesPagesWithContext indicates an expected call of DescribeAddressesPagesWithContext
+// DescribeAddressesPagesWithContext indicates an expected call of DescribeAddressesPagesWithContext.
 func (mr *MockSnowballAPIMockRecorder) DescribeAddressesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAddressesPagesWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeAddressesPagesWithContext), varargs...)
 }
 
-// DescribeAddressesRequest mocks base method
+// DescribeAddressesRequest mocks base method.
 func (m *MockSnowballAPI) DescribeAddressesRequest(arg0 *snowball.DescribeAddressesInput) (*request.Request, *snowball.DescribeAddressesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAddressesRequest", arg0)
@@ -442,13 +493,13 @@ func (m *MockSnowballAPI) DescribeAddressesRequest(arg0 *snowball.DescribeAddres
 	return ret0, ret1
 }
 
-// DescribeAddressesRequest indicates an expected call of DescribeAddressesRequest
+// DescribeAddressesRequest indicates an expected call of DescribeAddressesRequest.
 func (mr *MockSnowballAPIMockRecorder) DescribeAddressesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAddressesRequest", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeAddressesRequest), arg0)
 }
 
-// DescribeAddressesWithContext mocks base method
+// DescribeAddressesWithContext mocks base method.
 func (m *MockSnowballAPI) DescribeAddressesWithContext(arg0 context.Context, arg1 *snowball.DescribeAddressesInput, arg2 ...request.Option) (*snowball.DescribeAddressesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -461,14 +512,14 @@ func (m *MockSnowballAPI) DescribeAddressesWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DescribeAddressesWithContext indicates an expected call of DescribeAddressesWithContext
+// DescribeAddressesWithContext indicates an expected call of DescribeAddressesWithContext.
 func (mr *MockSnowballAPIMockRecorder) DescribeAddressesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAddressesWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeAddressesWithContext), varargs...)
 }
 
-// DescribeCluster mocks base method
+// DescribeCluster mocks base method.
 func (m *MockSnowballAPI) DescribeCluster(arg0 *snowball.DescribeClusterInput) (*snowball.DescribeClusterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCluster", arg0)
@@ -477,13 +528,13 @@ func (m *MockSnowballAPI) DescribeCluster(arg0 *snowball.DescribeClusterInput) (
 	return ret0, ret1
 }
 
-// DescribeCluster indicates an expected call of DescribeCluster
+// DescribeCluster indicates an expected call of DescribeCluster.
 func (mr *MockSnowballAPIMockRecorder) DescribeCluster(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCluster", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeCluster), arg0)
 }
 
-// DescribeClusterRequest mocks base method
+// DescribeClusterRequest mocks base method.
 func (m *MockSnowballAPI) DescribeClusterRequest(arg0 *snowball.DescribeClusterInput) (*request.Request, *snowball.DescribeClusterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeClusterRequest", arg0)
@@ -492,13 +543,13 @@ func (m *MockSnowballAPI) DescribeClusterRequest(arg0 *snowball.DescribeClusterI
 	return ret0, ret1
 }
 
-// DescribeClusterRequest indicates an expected call of DescribeClusterRequest
+// DescribeClusterRequest indicates an expected call of DescribeClusterRequest.
 func (mr *MockSnowballAPIMockRecorder) DescribeClusterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeClusterRequest", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeClusterRequest), arg0)
 }
 
-// DescribeClusterWithContext mocks base method
+// DescribeClusterWithContext mocks base method.
 func (m *MockSnowballAPI) DescribeClusterWithContext(arg0 context.Context, arg1 *snowball.DescribeClusterInput, arg2 ...request.Option) (*snowball.DescribeClusterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -511,14 +562,14 @@ func (m *MockSnowballAPI) DescribeClusterWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DescribeClusterWithContext indicates an expected call of DescribeClusterWithContext
+// DescribeClusterWithContext indicates an expected call of DescribeClusterWithContext.
 func (mr *MockSnowballAPIMockRecorder) DescribeClusterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeClusterWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeClusterWithContext), varargs...)
 }
 
-// DescribeJob mocks base method
+// DescribeJob mocks base method.
 func (m *MockSnowballAPI) DescribeJob(arg0 *snowball.DescribeJobInput) (*snowball.DescribeJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeJob", arg0)
@@ -527,13 +578,13 @@ func (m *MockSnowballAPI) DescribeJob(arg0 *snowball.DescribeJobInput) (*snowbal
 	return ret0, ret1
 }
 
-// DescribeJob indicates an expected call of DescribeJob
+// DescribeJob indicates an expected call of DescribeJob.
 func (mr *MockSnowballAPIMockRecorder) DescribeJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJob", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeJob), arg0)
 }
 
-// DescribeJobRequest mocks base method
+// DescribeJobRequest mocks base method.
 func (m *MockSnowballAPI) DescribeJobRequest(arg0 *snowball.DescribeJobInput) (*request.Request, *snowball.DescribeJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeJobRequest", arg0)
@@ -542,13 +593,13 @@ func (m *MockSnowballAPI) DescribeJobRequest(arg0 *snowball.DescribeJobInput) (*
 	return ret0, ret1
 }
 
-// DescribeJobRequest indicates an expected call of DescribeJobRequest
+// DescribeJobRequest indicates an expected call of DescribeJobRequest.
 func (mr *MockSnowballAPIMockRecorder) DescribeJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobRequest", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeJobRequest), arg0)
 }
 
-// DescribeJobWithContext mocks base method
+// DescribeJobWithContext mocks base method.
 func (m *MockSnowballAPI) DescribeJobWithContext(arg0 context.Context, arg1 *snowball.DescribeJobInput, arg2 ...request.Option) (*snowball.DescribeJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -561,14 +612,14 @@ func (m *MockSnowballAPI) DescribeJobWithContext(arg0 context.Context, arg1 *sno
 	return ret0, ret1
 }
 
-// DescribeJobWithContext indicates an expected call of DescribeJobWithContext
+// DescribeJobWithContext indicates an expected call of DescribeJobWithContext.
 func (mr *MockSnowballAPIMockRecorder) DescribeJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeJobWithContext), varargs...)
 }
 
-// DescribeReturnShippingLabel mocks base method
+// DescribeReturnShippingLabel mocks base method.
 func (m *MockSnowballAPI) DescribeReturnShippingLabel(arg0 *snowball.DescribeReturnShippingLabelInput) (*snowball.DescribeReturnShippingLabelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeReturnShippingLabel", arg0)
@@ -577,13 +628,13 @@ func (m *MockSnowballAPI) DescribeReturnShippingLabel(arg0 *snowball.DescribeRet
 	return ret0, ret1
 }
 
-// DescribeReturnShippingLabel indicates an expected call of DescribeReturnShippingLabel
+// DescribeReturnShippingLabel indicates an expected call of DescribeReturnShippingLabel.
 func (mr *MockSnowballAPIMockRecorder) DescribeReturnShippingLabel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeReturnShippingLabel", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeReturnShippingLabel), arg0)
 }
 
-// DescribeReturnShippingLabelRequest mocks base method
+// DescribeReturnShippingLabelRequest mocks base method.
 func (m *MockSnowballAPI) DescribeReturnShippingLabelRequest(arg0 *snowball.DescribeReturnShippingLabelInput) (*request.Request, *snowball.DescribeReturnShippingLabelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeReturnShippingLabelRequest", arg0)
@@ -592,13 +643,13 @@ func (m *MockSnowballAPI) DescribeReturnShippingLabelRequest(arg0 *snowball.Desc
 	return ret0, ret1
 }
 
-// DescribeReturnShippingLabelRequest indicates an expected call of DescribeReturnShippingLabelRequest
+// DescribeReturnShippingLabelRequest indicates an expected call of DescribeReturnShippingLabelRequest.
 func (mr *MockSnowballAPIMockRecorder) DescribeReturnShippingLabelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeReturnShippingLabelRequest", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeReturnShippingLabelRequest), arg0)
 }
 
-// DescribeReturnShippingLabelWithContext mocks base method
+// DescribeReturnShippingLabelWithContext mocks base method.
 func (m *MockSnowballAPI) DescribeReturnShippingLabelWithContext(arg0 context.Context, arg1 *snowball.DescribeReturnShippingLabelInput, arg2 ...request.Option) (*snowball.DescribeReturnShippingLabelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -611,14 +662,14 @@ func (m *MockSnowballAPI) DescribeReturnShippingLabelWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DescribeReturnShippingLabelWithContext indicates an expected call of DescribeReturnShippingLabelWithContext
+// DescribeReturnShippingLabelWithContext indicates an expected call of DescribeReturnShippingLabelWithContext.
 func (mr *MockSnowballAPIMockRecorder) DescribeReturnShippingLabelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeReturnShippingLabelWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).DescribeReturnShippingLabelWithContext), varargs...)
 }
 
-// GetJobManifest mocks base method
+// GetJobManifest mocks base method.
 func (m *MockSnowballAPI) GetJobManifest(arg0 *snowball.GetJobManifestInput) (*snowball.GetJobManifestOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetJobManifest", arg0)
@@ -627,13 +678,13 @@ func (m *MockSnowballAPI) GetJobManifest(arg0 *snowball.GetJobManifestInput) (*s
 	return ret0, ret1
 }
 
-// GetJobManifest indicates an expected call of GetJobManifest
+// GetJobManifest indicates an expected call of GetJobManifest.
 func (mr *MockSnowballAPIMockRecorder) GetJobManifest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetJobManifest", reflect.TypeOf((*MockSnowballAPI)(nil).GetJobManifest), arg0)
 }
 
-// GetJobManifestRequest mocks base method
+// GetJobManifestRequest mocks base method.
 func (m *MockSnowballAPI) GetJobManifestRequest(arg0 *snowball.GetJobManifestInput) (*request.Request, *snowball.GetJobManifestOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetJobManifestRequest", arg0)
@@ -642,13 +693,13 @@ func (m *MockSnowballAPI) GetJobManifestRequest(arg0 *snowball.GetJobManifestInp
 	return ret0, ret1
 }
 
-// GetJobManifestRequest indicates an expected call of GetJobManifestRequest
+// GetJobManifestRequest indicates an expected call of GetJobManifestRequest.
 func (mr *MockSnowballAPIMockRecorder) GetJobManifestRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetJobManifestRequest", reflect.TypeOf((*MockSnowballAPI)(nil).GetJobManifestRequest), arg0)
 }
 
-// GetJobManifestWithContext mocks base method
+// GetJobManifestWithContext mocks base method.
 func (m *MockSnowballAPI) GetJobManifestWithContext(arg0 context.Context, arg1 *snowball.GetJobManifestInput, arg2 ...request.Option) (*snowball.GetJobManifestOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -661,14 +712,14 @@ func (m *MockSnowballAPI) GetJobManifestWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// GetJobManifestWithContext indicates an expected call of GetJobManifestWithContext
+// GetJobManifestWithContext indicates an expected call of GetJobManifestWithContext.
 func (mr *MockSnowballAPIMockRecorder) GetJobManifestWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetJobManifestWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).GetJobManifestWithContext), varargs...)
 }
 
-// GetJobUnlockCode mocks base method
+// GetJobUnlockCode mocks base method.
 func (m *MockSnowballAPI) GetJobUnlockCode(arg0 *snowball.GetJobUnlockCodeInput) (*snowball.GetJobUnlockCodeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetJobUnlockCode", arg0)
@@ -677,13 +728,13 @@ func (m *MockSnowballAPI) GetJobUnlockCode(arg0 *snowball.GetJobUnlockCodeInput)
 	return ret0, ret1
 }
 
-// GetJobUnlockCode indicates an expected call of GetJobUnlockCode
+// GetJobUnlockCode indicates an expected call of GetJobUnlockCode.
 func (mr *MockSnowballAPIMockRecorder) GetJobUnlockCode(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetJobUnlockCode", reflect.TypeOf((*MockSnowballAPI)(nil).GetJobUnlockCode), arg0)
 }
 
-// GetJobUnlockCodeRequest mocks base method
+// GetJobUnlockCodeRequest mocks base method.
 func (m *MockSnowballAPI) GetJobUnlockCodeRequest(arg0 *snowball.GetJobUnlockCodeInput) (*request.Request, *snowball.GetJobUnlockCodeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetJobUnlockCodeRequest", arg0)
@@ -692,13 +743,13 @@ func (m *MockSnowballAPI) GetJobUnlockCodeRequest(arg0 *snowball.GetJobUnlockCod
 	return ret0, ret1
 }
 
-// GetJobUnlockCodeRequest indicates an expected call of GetJobUnlockCodeRequest
+// GetJobUnlockCodeRequest indicates an expected call of GetJobUnlockCodeRequest.
 func (mr *MockSnowballAPIMockRecorder) GetJobUnlockCodeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetJobUnlockCodeRequest", reflect.TypeOf((*MockSnowballAPI)(nil).GetJobUnlockCodeRequest), arg0)
 }
 
-// GetJobUnlockCodeWithContext mocks base method
+// GetJobUnlockCodeWithContext mocks base method.
 func (m *MockSnowballAPI) GetJobUnlockCodeWithContext(arg0 context.Context, arg1 *snowball.GetJobUnlockCodeInput, arg2 ...request.Option) (*snowball.GetJobUnlockCodeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -711,14 +762,14 @@ func (m *MockSnowballAPI) GetJobUnlockCodeWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetJobUnlockCodeWithContext indicates an expected call of GetJobUnlockCodeWithContext
+// GetJobUnlockCodeWithContext indicates an expected call of GetJobUnlockCodeWithContext.
 func (mr *MockSnowballAPIMockRecorder) GetJobUnlockCodeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetJobUnlockCodeWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).GetJobUnlockCodeWithContext), varargs...)
 }
 
-// GetSnowballUsage mocks base method
+// GetSnowballUsage mocks base method.
 func (m *MockSnowballAPI) GetSnowballUsage(arg0 *snowball.GetSnowballUsageInput) (*snowball.GetSnowballUsageOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSnowballUsage", arg0)
@@ -727,13 +778,13 @@ func (m *MockSnowballAPI) GetSnowballUsage(arg0 *snowball.GetSnowballUsageInput)
 	return ret0, ret1
 }
 
-// GetSnowballUsage indicates an expected call of GetSnowballUsage
+// GetSnowballUsage indicates an expected call of GetSnowballUsage.
 func (mr *MockSnowballAPIMockRecorder) GetSnowballUsage(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSnowballUsage", reflect.TypeOf((*MockSnowballAPI)(nil).GetSnowballUsage), arg0)
 }
 
-// GetSnowballUsageRequest mocks base method
+// GetSnowballUsageRequest mocks base method.
 func (m *MockSnowballAPI) GetSnowballUsageRequest(arg0 *snowball.GetSnowballUsageInput) (*request.Request, *snowball.GetSnowballUsageOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSnowballUsageRequest", arg0)
@@ -742,13 +793,13 @@ func (m *MockSnowballAPI) GetSnowballUsageRequest(arg0 *snowball.GetSnowballUsag
 	return ret0, ret1
 }
 
-// GetSnowballUsageRequest indicates an expected call of GetSnowballUsageRequest
+// GetSnowballUsageRequest indicates an expected call of GetSnowballUsageRequest.
 func (mr *MockSnowballAPIMockRecorder) GetSnowballUsageRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSnowballUsageRequest", reflect.TypeOf((*MockSnowballAPI)(nil).GetSnowballUsageRequest), arg0)
 }
 
-// GetSnowballUsageWithContext mocks base method
+// GetSnowballUsageWithContext mocks base method.
 func (m *MockSnowballAPI) GetSnowballUsageWithContext(arg0 context.Context, arg1 *snowball.GetSnowballUsageInput, arg2 ...request.Option) (*snowball.GetSnowballUsageOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -761,14 +812,14 @@ func (m *MockSnowballAPI) GetSnowballUsageWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetSnowballUsageWithContext indicates an expected call of GetSnowballUsageWithContext
+// GetSnowballUsageWithContext indicates an expected call of GetSnowballUsageWithContext.
 func (mr *MockSnowballAPIMockRecorder) GetSnowballUsageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSnowballUsageWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).GetSnowballUsageWithContext), varargs...)
 }
 
-// GetSoftwareUpdates mocks base method
+// GetSoftwareUpdates mocks base method.
 func (m *MockSnowballAPI) GetSoftwareUpdates(arg0 *snowball.GetSoftwareUpdatesInput) (*snowball.GetSoftwareUpdatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSoftwareUpdates", arg0)
@@ -777,13 +828,13 @@ func (m *MockSnowballAPI) GetSoftwareUpdates(arg0 *snowball.GetSoftwareUpdatesIn
 	return ret0, ret1
 }
 
-// GetSoftwareUpdates indicates an expected call of GetSoftwareUpdates
+// GetSoftwareUpdates indicates an expected call of GetSoftwareUpdates.
 func (mr *MockSnowballAPIMockRecorder) GetSoftwareUpdates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSoftwareUpdates", reflect.TypeOf((*MockSnowballAPI)(nil).GetSoftwareUpdates), arg0)
 }
 
-// GetSoftwareUpdatesRequest mocks base method
+// GetSoftwareUpdatesRequest mocks base method.
 func (m *MockSnowballAPI) GetSoftwareUpdatesRequest(arg0 *snowball.GetSoftwareUpdatesInput) (*request.Request, *snowball.GetSoftwareUpdatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSoftwareUpdatesRequest", arg0)
@@ -792,13 +843,13 @@ func (m *MockSnowballAPI) GetSoftwareUpdatesRequest(arg0 *snowball.GetSoftwareUp
 	return ret0, ret1
 }
 
-// GetSoftwareUpdatesRequest indicates an expected call of GetSoftwareUpdatesRequest
+// GetSoftwareUpdatesRequest indicates an expected call of GetSoftwareUpdatesRequest.
 func (mr *MockSnowballAPIMockRecorder) GetSoftwareUpdatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSoftwareUpdatesRequest", reflect.TypeOf((*MockSnowballAPI)(nil).GetSoftwareUpdatesRequest), arg0)
 }
 
-// GetSoftwareUpdatesWithContext mocks base method
+// GetSoftwareUpdatesWithContext mocks base method.
 func (m *MockSnowballAPI) GetSoftwareUpdatesWithContext(arg0 context.Context, arg1 *snowball.GetSoftwareUpdatesInput, arg2 ...request.Option) (*snowball.GetSoftwareUpdatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -811,14 +862,14 @@ func (m *MockSnowballAPI) GetSoftwareUpdatesWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// GetSoftwareUpdatesWithContext indicates an expected call of GetSoftwareUpdatesWithContext
+// GetSoftwareUpdatesWithContext indicates an expected call of GetSoftwareUpdatesWithContext.
 func (mr *MockSnowballAPIMockRecorder) GetSoftwareUpdatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSoftwareUpdatesWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).GetSoftwareUpdatesWithContext), varargs...)
 }
 
-// ListClusterJobs mocks base method
+// ListClusterJobs mocks base method.
 func (m *MockSnowballAPI) ListClusterJobs(arg0 *snowball.ListClusterJobsInput) (*snowball.ListClusterJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListClusterJobs", arg0)
@@ -827,13 +878,13 @@ func (m *MockSnowballAPI) ListClusterJobs(arg0 *snowball.ListClusterJobsInput) (
 	return ret0, ret1
 }
 
-// ListClusterJobs indicates an expected call of ListClusterJobs
+// ListClusterJobs indicates an expected call of ListClusterJobs.
 func (mr *MockSnowballAPIMockRecorder) ListClusterJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClusterJobs", reflect.TypeOf((*MockSnowballAPI)(nil).ListClusterJobs), arg0)
 }
 
-// ListClusterJobsRequest mocks base method
+// ListClusterJobsRequest mocks base method.
 func (m *MockSnowballAPI) ListClusterJobsRequest(arg0 *snowball.ListClusterJobsInput) (*request.Request, *snowball.ListClusterJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListClusterJobsRequest", arg0)
@@ -842,13 +893,13 @@ func (m *MockSnowballAPI) ListClusterJobsRequest(arg0 *snowball.ListClusterJobsI
 	return ret0, ret1
 }
 
-// ListClusterJobsRequest indicates an expected call of ListClusterJobsRequest
+// ListClusterJobsRequest indicates an expected call of ListClusterJobsRequest.
 func (mr *MockSnowballAPIMockRecorder) ListClusterJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClusterJobsRequest", reflect.TypeOf((*MockSnowballAPI)(nil).ListClusterJobsRequest), arg0)
 }
 
-// ListClusterJobsWithContext mocks base method
+// ListClusterJobsWithContext mocks base method.
 func (m *MockSnowballAPI) ListClusterJobsWithContext(arg0 context.Context, arg1 *snowball.ListClusterJobsInput, arg2 ...request.Option) (*snowball.ListClusterJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -861,14 +912,14 @@ func (m *MockSnowballAPI) ListClusterJobsWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListClusterJobsWithContext indicates an expected call of ListClusterJobsWithContext
+// ListClusterJobsWithContext indicates an expected call of ListClusterJobsWithContext.
 func (mr *MockSnowballAPIMockRecorder) ListClusterJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClusterJobsWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).ListClusterJobsWithContext), varargs...)
 }
 
-// ListClusters mocks base method
+// ListClusters mocks base method.
 func (m *MockSnowballAPI) ListClusters(arg0 *snowball.ListClustersInput) (*snowball.ListClustersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListClusters", arg0)
@@ -877,13 +928,13 @@ func (m *MockSnowballAPI) ListClusters(arg0 *snowball.ListClustersInput) (*snowb
 	return ret0, ret1
 }
 
-// ListClusters indicates an expected call of ListClusters
+// ListClusters indicates an expected call of ListClusters.
 func (mr *MockSnowballAPIMockRecorder) ListClusters(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClusters", reflect.TypeOf((*MockSnowballAPI)(nil).ListClusters), arg0)
 }
 
-// ListClustersRequest mocks base method
+// ListClustersRequest mocks base method.
 func (m *MockSnowballAPI) ListClustersRequest(arg0 *snowball.ListClustersInput) (*request.Request, *snowball.ListClustersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListClustersRequest", arg0)
@@ -892,13 +943,13 @@ func (m *MockSnowballAPI) ListClustersRequest(arg0 *snowball.ListClustersInput) 
 	return ret0, ret1
 }
 
-// ListClustersRequest indicates an expected call of ListClustersRequest
+// ListClustersRequest indicates an expected call of ListClustersRequest.
 func (mr *MockSnowballAPIMockRecorder) ListClustersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClustersRequest", reflect.TypeOf((*MockSnowballAPI)(nil).ListClustersRequest), arg0)
 }
 
-// ListClustersWithContext mocks base method
+// ListClustersWithContext mocks base method.
 func (m *MockSnowballAPI) ListClustersWithContext(arg0 context.Context, arg1 *snowball.ListClustersInput, arg2 ...request.Option) (*snowball.ListClustersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -911,14 +962,14 @@ func (m *MockSnowballAPI) ListClustersWithContext(arg0 context.Context, arg1 *sn
 	return ret0, ret1
 }
 
-// ListClustersWithContext indicates an expected call of ListClustersWithContext
+// ListClustersWithContext indicates an expected call of ListClustersWithContext.
 func (mr *MockSnowballAPIMockRecorder) ListClustersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClustersWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).ListClustersWithContext), varargs...)
 }
 
-// ListCompatibleImages mocks base method
+// ListCompatibleImages mocks base method.
 func (m *MockSnowballAPI) ListCompatibleImages(arg0 *snowball.ListCompatibleImagesInput) (*snowball.ListCompatibleImagesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCompatibleImages", arg0)
@@ -927,13 +978,13 @@ func (m *MockSnowballAPI) ListCompatibleImages(arg0 *snowball.ListCompatibleImag
 	return ret0, ret1
 }
 
-// ListCompatibleImages indicates an expected call of ListCompatibleImages
+// ListCompatibleImages indicates an expected call of ListCompatibleImages.
 func (mr *MockSnowballAPIMockRecorder) ListCompatibleImages(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCompatibleImages", reflect.TypeOf((*MockSnowballAPI)(nil).ListCompatibleImages), arg0)
 }
 
-// ListCompatibleImagesRequest mocks base method
+// ListCompatibleImagesRequest mocks base method.
 func (m *MockSnowballAPI) ListCompatibleImagesRequest(arg0 *snowball.ListCompatibleImagesInput) (*request.Request, *snowball.ListCompatibleImagesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCompatibleImagesRequest", arg0)
@@ -942,13 +993,13 @@ func (m *MockSnowballAPI) ListCompatibleImagesRequest(arg0 *snowball.ListCompati
 	return ret0, ret1
 }
 
-// ListCompatibleImagesRequest indicates an expected call of ListCompatibleImagesRequest
+// ListCompatibleImagesRequest indicates an expected call of ListCompatibleImagesRequest.
 func (mr *MockSnowballAPIMockRecorder) ListCompatibleImagesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCompatibleImagesRequest", reflect.TypeOf((*MockSnowballAPI)(nil).ListCompatibleImagesRequest), arg0)
 }
 
-// ListCompatibleImagesWithContext mocks base method
+// ListCompatibleImagesWithContext mocks base method.
 func (m *MockSnowballAPI) ListCompatibleImagesWithContext(arg0 context.Context, arg1 *snowball.ListCompatibleImagesInput, arg2 ...request.Option) (*snowball.ListCompatibleImagesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -961,14 +1012,14 @@ func (m *MockSnowballAPI) ListCompatibleImagesWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListCompatibleImagesWithContext indicates an expected call of ListCompatibleImagesWithContext
+// ListCompatibleImagesWithContext indicates an expected call of ListCompatibleImagesWithContext.
 func (mr *MockSnowballAPIMockRecorder) ListCompatibleImagesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCompatibleImagesWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).ListCompatibleImagesWithContext), varargs...)
 }
 
-// ListJobs mocks base method
+// ListJobs mocks base method.
 func (m *MockSnowballAPI) ListJobs(arg0 *snowball.ListJobsInput) (*snowball.ListJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobs", arg0)
@@ -977,13 +1028,13 @@ func (m *MockSnowballAPI) ListJobs(arg0 *snowball.ListJobsInput) (*snowball.List
 	return ret0, ret1
 }
 
-// ListJobs indicates an expected call of ListJobs
+// ListJobs indicates an expected call of ListJobs.
 func (mr *MockSnowballAPIMockRecorder) ListJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobs", reflect.TypeOf((*MockSnowballAPI)(nil).ListJobs), arg0)
 }
 
-// ListJobsPages mocks base method
+// ListJobsPages mocks base method.
 func (m *MockSnowballAPI) ListJobsPages(arg0 *snowball.ListJobsInput, arg1 func(*snowball.ListJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobsPages", arg0, arg1)
@@ -991,13 +1042,13 @@ func (m *MockSnowballAPI) ListJobsPages(arg0 *snowball.ListJobsInput, arg1 func(
 	return ret0
 }
 
-// ListJobsPages indicates an expected call of ListJobsPages
+// ListJobsPages indicates an expected call of ListJobsPages.
 func (mr *MockSnowballAPIMockRecorder) ListJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsPages", reflect.TypeOf((*MockSnowballAPI)(nil).ListJobsPages), arg0, arg1)
 }
 
-// ListJobsPagesWithContext mocks base method
+// ListJobsPagesWithContext mocks base method.
 func (m *MockSnowballAPI) ListJobsPagesWithContext(arg0 context.Context, arg1 *snowball.ListJobsInput, arg2 func(*snowball.ListJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1009,14 +1060,14 @@ func (m *MockSnowballAPI) ListJobsPagesWithContext(arg0 context.Context, arg1 *s
 	return ret0
 }
 
-// ListJobsPagesWithContext indicates an expected call of ListJobsPagesWithContext
+// ListJobsPagesWithContext indicates an expected call of ListJobsPagesWithContext.
 func (mr *MockSnowballAPIMockRecorder) ListJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsPagesWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).ListJobsPagesWithContext), varargs...)
 }
 
-// ListJobsRequest mocks base method
+// ListJobsRequest mocks base method.
 func (m *MockSnowballAPI) ListJobsRequest(arg0 *snowball.ListJobsInput) (*request.Request, *snowball.ListJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobsRequest", arg0)
@@ -1025,13 +1076,13 @@ func (m *MockSnowballAPI) ListJobsRequest(arg0 *snowball.ListJobsInput) (*reques
 	return ret0, ret1
 }
 
-// ListJobsRequest indicates an expected call of ListJobsRequest
+// ListJobsRequest indicates an expected call of ListJobsRequest.
 func (mr *MockSnowballAPIMockRecorder) ListJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsRequest", reflect.TypeOf((*MockSnowballAPI)(nil).ListJobsRequest), arg0)
 }
 
-// ListJobsWithContext mocks base method
+// ListJobsWithContext mocks base method.
 func (m *MockSnowballAPI) ListJobsWithContext(arg0 context.Context, arg1 *snowball.ListJobsInput, arg2 ...request.Option) (*snowball.ListJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1044,14 +1095,64 @@ func (m *MockSnowballAPI) ListJobsWithContext(arg0 context.Context, arg1 *snowba
 	return ret0, ret1
 }
 
-// ListJobsWithContext indicates an expected call of ListJobsWithContext
+// ListJobsWithContext indicates an expected call of ListJobsWithContext.
 func (mr *MockSnowballAPIMockRecorder) ListJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).ListJobsWithContext), varargs...)
 }
 
-// UpdateCluster mocks base method
+// ListLongTermPricing mocks base method.
+func (m *MockSnowballAPI) ListLongTermPricing(arg0 *snowball.ListLongTermPricingInput) (*snowball.ListLongTermPricingOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListLongTermPricing", arg0)
+	ret0, _ := ret[0].(*snowball.ListLongTermPricingOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListLongTermPricing indicates an expected call of ListLongTermPricing.
+func (mr *MockSnowballAPIMockRecorder) ListLongTermPricing(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLongTermPricing", reflect.TypeOf((*MockSnowballAPI)(nil).ListLongTermPricing), arg0)
+}
+
+// ListLongTermPricingRequest mocks base method.
+func (m *MockSnowballAPI) ListLongTermPricingRequest(arg0 *snowball.ListLongTermPricingInput) (*request.Request, *snowball.ListLongTermPricingOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListLongTermPricingRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*snowball.ListLongTermPricingOutput)
+	return ret0, ret1
+}
+
+// ListLongTermPricingRequest indicates an expected call of ListLongTermPricingRequest.
+func (mr *MockSnowballAPIMockRecorder) ListLongTermPricingRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLongTermPricingRequest", reflect.TypeOf((*MockSnowballAPI)(nil).ListLongTermPricingRequest), arg0)
+}
+
+// ListLongTermPricingWithContext mocks base method.
+func (m *MockSnowballAPI) ListLongTermPricingWithContext(arg0 context.Context, arg1 *snowball.ListLongTermPricingInput, arg2 ...request.Option) (*snowball.ListLongTermPricingOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListLongTermPricingWithContext", varargs...)
+	ret0, _ := ret[0].(*snowball.ListLongTermPricingOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListLongTermPricingWithContext indicates an expected call of ListLongTermPricingWithContext.
+func (mr *MockSnowballAPIMockRecorder) ListLongTermPricingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLongTermPricingWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).ListLongTermPricingWithContext), varargs...)
+}
+
+// UpdateCluster mocks base method.
 func (m *MockSnowballAPI) UpdateCluster(arg0 *snowball.UpdateClusterInput) (*snowball.UpdateClusterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCluster", arg0)
@@ -1060,13 +1161,13 @@ func (m *MockSnowballAPI) UpdateCluster(arg0 *snowball.UpdateClusterInput) (*sno
 	return ret0, ret1
 }
 
-// UpdateCluster indicates an expected call of UpdateCluster
+// UpdateCluster indicates an expected call of UpdateCluster.
 func (mr *MockSnowballAPIMockRecorder) UpdateCluster(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCluster", reflect.TypeOf((*MockSnowballAPI)(nil).UpdateCluster), arg0)
 }
 
-// UpdateClusterRequest mocks base method
+// UpdateClusterRequest mocks base method.
 func (m *MockSnowballAPI) UpdateClusterRequest(arg0 *snowball.UpdateClusterInput) (*request.Request, *snowball.UpdateClusterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateClusterRequest", arg0)
@@ -1075,13 +1176,13 @@ func (m *MockSnowballAPI) UpdateClusterRequest(arg0 *snowball.UpdateClusterInput
 	return ret0, ret1
 }
 
-// UpdateClusterRequest indicates an expected call of UpdateClusterRequest
+// UpdateClusterRequest indicates an expected call of UpdateClusterRequest.
 func (mr *MockSnowballAPIMockRecorder) UpdateClusterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateClusterRequest", reflect.TypeOf((*MockSnowballAPI)(nil).UpdateClusterRequest), arg0)
 }
 
-// UpdateClusterWithContext mocks base method
+// UpdateClusterWithContext mocks base method.
 func (m *MockSnowballAPI) UpdateClusterWithContext(arg0 context.Context, arg1 *snowball.UpdateClusterInput, arg2 ...request.Option) (*snowball.UpdateClusterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1094,14 +1195,14 @@ func (m *MockSnowballAPI) UpdateClusterWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// UpdateClusterWithContext indicates an expected call of UpdateClusterWithContext
+// UpdateClusterWithContext indicates an expected call of UpdateClusterWithContext.
 func (mr *MockSnowballAPIMockRecorder) UpdateClusterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateClusterWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).UpdateClusterWithContext), varargs...)
 }
 
-// UpdateJob mocks base method
+// UpdateJob mocks base method.
 func (m *MockSnowballAPI) UpdateJob(arg0 *snowball.UpdateJobInput) (*snowball.UpdateJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateJob", arg0)
@@ -1110,13 +1211,13 @@ func (m *MockSnowballAPI) UpdateJob(arg0 *snowball.UpdateJobInput) (*snowball.Up
 	return ret0, ret1
 }
 
-// UpdateJob indicates an expected call of UpdateJob
+// UpdateJob indicates an expected call of UpdateJob.
 func (mr *MockSnowballAPIMockRecorder) UpdateJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateJob", reflect.TypeOf((*MockSnowballAPI)(nil).UpdateJob), arg0)
 }
 
-// UpdateJobRequest mocks base method
+// UpdateJobRequest mocks base method.
 func (m *MockSnowballAPI) UpdateJobRequest(arg0 *snowball.UpdateJobInput) (*request.Request, *snowball.UpdateJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateJobRequest", arg0)
@@ -1125,13 +1226,13 @@ func (m *MockSnowballAPI) UpdateJobRequest(arg0 *snowball.UpdateJobInput) (*requ
 	return ret0, ret1
 }
 
-// UpdateJobRequest indicates an expected call of UpdateJobRequest
+// UpdateJobRequest indicates an expected call of UpdateJobRequest.
 func (mr *MockSnowballAPIMockRecorder) UpdateJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateJobRequest", reflect.TypeOf((*MockSnowballAPI)(nil).UpdateJobRequest), arg0)
 }
 
-// UpdateJobShipmentState mocks base method
+// UpdateJobShipmentState mocks base method.
 func (m *MockSnowballAPI) UpdateJobShipmentState(arg0 *snowball.UpdateJobShipmentStateInput) (*snowball.UpdateJobShipmentStateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateJobShipmentState", arg0)
@@ -1140,13 +1241,13 @@ func (m *MockSnowballAPI) UpdateJobShipmentState(arg0 *snowball.UpdateJobShipmen
 	return ret0, ret1
 }
 
-// UpdateJobShipmentState indicates an expected call of UpdateJobShipmentState
+// UpdateJobShipmentState indicates an expected call of UpdateJobShipmentState.
 func (mr *MockSnowballAPIMockRecorder) UpdateJobShipmentState(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateJobShipmentState", reflect.TypeOf((*MockSnowballAPI)(nil).UpdateJobShipmentState), arg0)
 }
 
-// UpdateJobShipmentStateRequest mocks base method
+// UpdateJobShipmentStateRequest mocks base method.
 func (m *MockSnowballAPI) UpdateJobShipmentStateRequest(arg0 *snowball.UpdateJobShipmentStateInput) (*request.Request, *snowball.UpdateJobShipmentStateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateJobShipmentStateRequest", arg0)
@@ -1155,13 +1256,13 @@ func (m *MockSnowballAPI) UpdateJobShipmentStateRequest(arg0 *snowball.UpdateJob
 	return ret0, ret1
 }
 
-// UpdateJobShipmentStateRequest indicates an expected call of UpdateJobShipmentStateRequest
+// UpdateJobShipmentStateRequest indicates an expected call of UpdateJobShipmentStateRequest.
 func (mr *MockSnowballAPIMockRecorder) UpdateJobShipmentStateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateJobShipmentStateRequest", reflect.TypeOf((*MockSnowballAPI)(nil).UpdateJobShipmentStateRequest), arg0)
 }
 
-// UpdateJobShipmentStateWithContext mocks base method
+// UpdateJobShipmentStateWithContext mocks base method.
 func (m *MockSnowballAPI) UpdateJobShipmentStateWithContext(arg0 context.Context, arg1 *snowball.UpdateJobShipmentStateInput, arg2 ...request.Option) (*snowball.UpdateJobShipmentStateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1174,14 +1275,14 @@ func (m *MockSnowballAPI) UpdateJobShipmentStateWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// UpdateJobShipmentStateWithContext indicates an expected call of UpdateJobShipmentStateWithContext
+// UpdateJobShipmentStateWithContext indicates an expected call of UpdateJobShipmentStateWithContext.
 func (mr *MockSnowballAPIMockRecorder) UpdateJobShipmentStateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateJobShipmentStateWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).UpdateJobShipmentStateWithContext), varargs...)
 }
 
-// UpdateJobWithContext mocks base method
+// UpdateJobWithContext mocks base method.
 func (m *MockSnowballAPI) UpdateJobWithContext(arg0 context.Context, arg1 *snowball.UpdateJobInput, arg2 ...request.Option) (*snowball.UpdateJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1194,9 +1295,59 @@ func (m *MockSnowballAPI) UpdateJobWithContext(arg0 context.Context, arg1 *snowb
 	return ret0, ret1
 }
 
-// UpdateJobWithContext indicates an expected call of UpdateJobWithContext
+// UpdateJobWithContext indicates an expected call of UpdateJobWithContext.
 func (mr *MockSnowballAPIMockRecorder) UpdateJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateJobWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).UpdateJobWithContext), varargs...)
+}
+
+// UpdateLongTermPricing mocks base method.
+func (m *MockSnowballAPI) UpdateLongTermPricing(arg0 *snowball.UpdateLongTermPricingInput) (*snowball.UpdateLongTermPricingOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateLongTermPricing", arg0)
+	ret0, _ := ret[0].(*snowball.UpdateLongTermPricingOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateLongTermPricing indicates an expected call of UpdateLongTermPricing.
+func (mr *MockSnowballAPIMockRecorder) UpdateLongTermPricing(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLongTermPricing", reflect.TypeOf((*MockSnowballAPI)(nil).UpdateLongTermPricing), arg0)
+}
+
+// UpdateLongTermPricingRequest mocks base method.
+func (m *MockSnowballAPI) UpdateLongTermPricingRequest(arg0 *snowball.UpdateLongTermPricingInput) (*request.Request, *snowball.UpdateLongTermPricingOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateLongTermPricingRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*snowball.UpdateLongTermPricingOutput)
+	return ret0, ret1
+}
+
+// UpdateLongTermPricingRequest indicates an expected call of UpdateLongTermPricingRequest.
+func (mr *MockSnowballAPIMockRecorder) UpdateLongTermPricingRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLongTermPricingRequest", reflect.TypeOf((*MockSnowballAPI)(nil).UpdateLongTermPricingRequest), arg0)
+}
+
+// UpdateLongTermPricingWithContext mocks base method.
+func (m *MockSnowballAPI) UpdateLongTermPricingWithContext(arg0 context.Context, arg1 *snowball.UpdateLongTermPricingInput, arg2 ...request.Option) (*snowball.UpdateLongTermPricingOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateLongTermPricingWithContext", varargs...)
+	ret0, _ := ret[0].(*snowball.UpdateLongTermPricingOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateLongTermPricingWithContext indicates an expected call of UpdateLongTermPricingWithContext.
+func (mr *MockSnowballAPIMockRecorder) UpdateLongTermPricingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLongTermPricingWithContext", reflect.TypeOf((*MockSnowballAPI)(nil).UpdateLongTermPricingWithContext), varargs...)
 }

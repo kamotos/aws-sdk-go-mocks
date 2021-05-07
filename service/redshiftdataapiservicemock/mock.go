@@ -6,36 +6,37 @@ package redshiftdataapiservicemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	redshiftdataapiservice "github.com/aws/aws-sdk-go/service/redshiftdataapiservice"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockRedshiftDataAPIServiceAPI is a mock of RedshiftDataAPIServiceAPI interface
+// MockRedshiftDataAPIServiceAPI is a mock of RedshiftDataAPIServiceAPI interface.
 type MockRedshiftDataAPIServiceAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockRedshiftDataAPIServiceAPIMockRecorder
 }
 
-// MockRedshiftDataAPIServiceAPIMockRecorder is the mock recorder for MockRedshiftDataAPIServiceAPI
+// MockRedshiftDataAPIServiceAPIMockRecorder is the mock recorder for MockRedshiftDataAPIServiceAPI.
 type MockRedshiftDataAPIServiceAPIMockRecorder struct {
 	mock *MockRedshiftDataAPIServiceAPI
 }
 
-// NewMockRedshiftDataAPIServiceAPI creates a new mock instance
+// NewMockRedshiftDataAPIServiceAPI creates a new mock instance.
 func NewMockRedshiftDataAPIServiceAPI(ctrl *gomock.Controller) *MockRedshiftDataAPIServiceAPI {
 	mock := &MockRedshiftDataAPIServiceAPI{ctrl: ctrl}
 	mock.recorder = &MockRedshiftDataAPIServiceAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockRedshiftDataAPIServiceAPI) EXPECT() *MockRedshiftDataAPIServiceAPIMockRecorder {
 	return m.recorder
 }
 
-// CancelStatement mocks base method
+// CancelStatement mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) CancelStatement(arg0 *redshiftdataapiservice.CancelStatementInput) (*redshiftdataapiservice.CancelStatementOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelStatement", arg0)
@@ -44,13 +45,13 @@ func (m *MockRedshiftDataAPIServiceAPI) CancelStatement(arg0 *redshiftdataapiser
 	return ret0, ret1
 }
 
-// CancelStatement indicates an expected call of CancelStatement
+// CancelStatement indicates an expected call of CancelStatement.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) CancelStatement(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelStatement", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).CancelStatement), arg0)
 }
 
-// CancelStatementRequest mocks base method
+// CancelStatementRequest mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) CancelStatementRequest(arg0 *redshiftdataapiservice.CancelStatementInput) (*request.Request, *redshiftdataapiservice.CancelStatementOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelStatementRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockRedshiftDataAPIServiceAPI) CancelStatementRequest(arg0 *redshiftdat
 	return ret0, ret1
 }
 
-// CancelStatementRequest indicates an expected call of CancelStatementRequest
+// CancelStatementRequest indicates an expected call of CancelStatementRequest.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) CancelStatementRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelStatementRequest", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).CancelStatementRequest), arg0)
 }
 
-// CancelStatementWithContext mocks base method
+// CancelStatementWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) CancelStatementWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.CancelStatementInput, arg2 ...request.Option) (*redshiftdataapiservice.CancelStatementOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockRedshiftDataAPIServiceAPI) CancelStatementWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// CancelStatementWithContext indicates an expected call of CancelStatementWithContext
+// CancelStatementWithContext indicates an expected call of CancelStatementWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) CancelStatementWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelStatementWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).CancelStatementWithContext), varargs...)
 }
 
-// DescribeStatement mocks base method
+// DescribeStatement mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) DescribeStatement(arg0 *redshiftdataapiservice.DescribeStatementInput) (*redshiftdataapiservice.DescribeStatementOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeStatement", arg0)
@@ -94,13 +95,13 @@ func (m *MockRedshiftDataAPIServiceAPI) DescribeStatement(arg0 *redshiftdataapis
 	return ret0, ret1
 }
 
-// DescribeStatement indicates an expected call of DescribeStatement
+// DescribeStatement indicates an expected call of DescribeStatement.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) DescribeStatement(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeStatement", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).DescribeStatement), arg0)
 }
 
-// DescribeStatementRequest mocks base method
+// DescribeStatementRequest mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) DescribeStatementRequest(arg0 *redshiftdataapiservice.DescribeStatementInput) (*request.Request, *redshiftdataapiservice.DescribeStatementOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeStatementRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockRedshiftDataAPIServiceAPI) DescribeStatementRequest(arg0 *redshiftd
 	return ret0, ret1
 }
 
-// DescribeStatementRequest indicates an expected call of DescribeStatementRequest
+// DescribeStatementRequest indicates an expected call of DescribeStatementRequest.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) DescribeStatementRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeStatementRequest", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).DescribeStatementRequest), arg0)
 }
 
-// DescribeStatementWithContext mocks base method
+// DescribeStatementWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) DescribeStatementWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.DescribeStatementInput, arg2 ...request.Option) (*redshiftdataapiservice.DescribeStatementOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockRedshiftDataAPIServiceAPI) DescribeStatementWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// DescribeStatementWithContext indicates an expected call of DescribeStatementWithContext
+// DescribeStatementWithContext indicates an expected call of DescribeStatementWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) DescribeStatementWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeStatementWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).DescribeStatementWithContext), varargs...)
 }
 
-// DescribeTable mocks base method
+// DescribeTable mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) DescribeTable(arg0 *redshiftdataapiservice.DescribeTableInput) (*redshiftdataapiservice.DescribeTableOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeTable", arg0)
@@ -144,13 +145,13 @@ func (m *MockRedshiftDataAPIServiceAPI) DescribeTable(arg0 *redshiftdataapiservi
 	return ret0, ret1
 }
 
-// DescribeTable indicates an expected call of DescribeTable
+// DescribeTable indicates an expected call of DescribeTable.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) DescribeTable(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTable", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).DescribeTable), arg0)
 }
 
-// DescribeTablePages mocks base method
+// DescribeTablePages mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) DescribeTablePages(arg0 *redshiftdataapiservice.DescribeTableInput, arg1 func(*redshiftdataapiservice.DescribeTableOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeTablePages", arg0, arg1)
@@ -158,13 +159,13 @@ func (m *MockRedshiftDataAPIServiceAPI) DescribeTablePages(arg0 *redshiftdataapi
 	return ret0
 }
 
-// DescribeTablePages indicates an expected call of DescribeTablePages
+// DescribeTablePages indicates an expected call of DescribeTablePages.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) DescribeTablePages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTablePages", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).DescribeTablePages), arg0, arg1)
 }
 
-// DescribeTablePagesWithContext mocks base method
+// DescribeTablePagesWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) DescribeTablePagesWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.DescribeTableInput, arg2 func(*redshiftdataapiservice.DescribeTableOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -176,14 +177,14 @@ func (m *MockRedshiftDataAPIServiceAPI) DescribeTablePagesWithContext(arg0 conte
 	return ret0
 }
 
-// DescribeTablePagesWithContext indicates an expected call of DescribeTablePagesWithContext
+// DescribeTablePagesWithContext indicates an expected call of DescribeTablePagesWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) DescribeTablePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTablePagesWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).DescribeTablePagesWithContext), varargs...)
 }
 
-// DescribeTableRequest mocks base method
+// DescribeTableRequest mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) DescribeTableRequest(arg0 *redshiftdataapiservice.DescribeTableInput) (*request.Request, *redshiftdataapiservice.DescribeTableOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeTableRequest", arg0)
@@ -192,13 +193,13 @@ func (m *MockRedshiftDataAPIServiceAPI) DescribeTableRequest(arg0 *redshiftdataa
 	return ret0, ret1
 }
 
-// DescribeTableRequest indicates an expected call of DescribeTableRequest
+// DescribeTableRequest indicates an expected call of DescribeTableRequest.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) DescribeTableRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTableRequest", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).DescribeTableRequest), arg0)
 }
 
-// DescribeTableWithContext mocks base method
+// DescribeTableWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) DescribeTableWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.DescribeTableInput, arg2 ...request.Option) (*redshiftdataapiservice.DescribeTableOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -211,14 +212,14 @@ func (m *MockRedshiftDataAPIServiceAPI) DescribeTableWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DescribeTableWithContext indicates an expected call of DescribeTableWithContext
+// DescribeTableWithContext indicates an expected call of DescribeTableWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) DescribeTableWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTableWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).DescribeTableWithContext), varargs...)
 }
 
-// ExecuteStatement mocks base method
+// ExecuteStatement mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ExecuteStatement(arg0 *redshiftdataapiservice.ExecuteStatementInput) (*redshiftdataapiservice.ExecuteStatementOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExecuteStatement", arg0)
@@ -227,13 +228,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ExecuteStatement(arg0 *redshiftdataapise
 	return ret0, ret1
 }
 
-// ExecuteStatement indicates an expected call of ExecuteStatement
+// ExecuteStatement indicates an expected call of ExecuteStatement.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ExecuteStatement(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteStatement", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ExecuteStatement), arg0)
 }
 
-// ExecuteStatementRequest mocks base method
+// ExecuteStatementRequest mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ExecuteStatementRequest(arg0 *redshiftdataapiservice.ExecuteStatementInput) (*request.Request, *redshiftdataapiservice.ExecuteStatementOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExecuteStatementRequest", arg0)
@@ -242,13 +243,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ExecuteStatementRequest(arg0 *redshiftda
 	return ret0, ret1
 }
 
-// ExecuteStatementRequest indicates an expected call of ExecuteStatementRequest
+// ExecuteStatementRequest indicates an expected call of ExecuteStatementRequest.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ExecuteStatementRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteStatementRequest", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ExecuteStatementRequest), arg0)
 }
 
-// ExecuteStatementWithContext mocks base method
+// ExecuteStatementWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ExecuteStatementWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.ExecuteStatementInput, arg2 ...request.Option) (*redshiftdataapiservice.ExecuteStatementOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -261,14 +262,14 @@ func (m *MockRedshiftDataAPIServiceAPI) ExecuteStatementWithContext(arg0 context
 	return ret0, ret1
 }
 
-// ExecuteStatementWithContext indicates an expected call of ExecuteStatementWithContext
+// ExecuteStatementWithContext indicates an expected call of ExecuteStatementWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ExecuteStatementWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteStatementWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ExecuteStatementWithContext), varargs...)
 }
 
-// GetStatementResult mocks base method
+// GetStatementResult mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) GetStatementResult(arg0 *redshiftdataapiservice.GetStatementResultInput) (*redshiftdataapiservice.GetStatementResultOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetStatementResult", arg0)
@@ -277,13 +278,13 @@ func (m *MockRedshiftDataAPIServiceAPI) GetStatementResult(arg0 *redshiftdataapi
 	return ret0, ret1
 }
 
-// GetStatementResult indicates an expected call of GetStatementResult
+// GetStatementResult indicates an expected call of GetStatementResult.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) GetStatementResult(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStatementResult", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).GetStatementResult), arg0)
 }
 
-// GetStatementResultPages mocks base method
+// GetStatementResultPages mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) GetStatementResultPages(arg0 *redshiftdataapiservice.GetStatementResultInput, arg1 func(*redshiftdataapiservice.GetStatementResultOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetStatementResultPages", arg0, arg1)
@@ -291,13 +292,13 @@ func (m *MockRedshiftDataAPIServiceAPI) GetStatementResultPages(arg0 *redshiftda
 	return ret0
 }
 
-// GetStatementResultPages indicates an expected call of GetStatementResultPages
+// GetStatementResultPages indicates an expected call of GetStatementResultPages.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) GetStatementResultPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStatementResultPages", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).GetStatementResultPages), arg0, arg1)
 }
 
-// GetStatementResultPagesWithContext mocks base method
+// GetStatementResultPagesWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) GetStatementResultPagesWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.GetStatementResultInput, arg2 func(*redshiftdataapiservice.GetStatementResultOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -309,14 +310,14 @@ func (m *MockRedshiftDataAPIServiceAPI) GetStatementResultPagesWithContext(arg0 
 	return ret0
 }
 
-// GetStatementResultPagesWithContext indicates an expected call of GetStatementResultPagesWithContext
+// GetStatementResultPagesWithContext indicates an expected call of GetStatementResultPagesWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) GetStatementResultPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStatementResultPagesWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).GetStatementResultPagesWithContext), varargs...)
 }
 
-// GetStatementResultRequest mocks base method
+// GetStatementResultRequest mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) GetStatementResultRequest(arg0 *redshiftdataapiservice.GetStatementResultInput) (*request.Request, *redshiftdataapiservice.GetStatementResultOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetStatementResultRequest", arg0)
@@ -325,13 +326,13 @@ func (m *MockRedshiftDataAPIServiceAPI) GetStatementResultRequest(arg0 *redshift
 	return ret0, ret1
 }
 
-// GetStatementResultRequest indicates an expected call of GetStatementResultRequest
+// GetStatementResultRequest indicates an expected call of GetStatementResultRequest.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) GetStatementResultRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStatementResultRequest", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).GetStatementResultRequest), arg0)
 }
 
-// GetStatementResultWithContext mocks base method
+// GetStatementResultWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) GetStatementResultWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.GetStatementResultInput, arg2 ...request.Option) (*redshiftdataapiservice.GetStatementResultOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -344,14 +345,14 @@ func (m *MockRedshiftDataAPIServiceAPI) GetStatementResultWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// GetStatementResultWithContext indicates an expected call of GetStatementResultWithContext
+// GetStatementResultWithContext indicates an expected call of GetStatementResultWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) GetStatementResultWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStatementResultWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).GetStatementResultWithContext), varargs...)
 }
 
-// ListDatabases mocks base method
+// ListDatabases mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListDatabases(arg0 *redshiftdataapiservice.ListDatabasesInput) (*redshiftdataapiservice.ListDatabasesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatabases", arg0)
@@ -360,13 +361,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ListDatabases(arg0 *redshiftdataapiservi
 	return ret0, ret1
 }
 
-// ListDatabases indicates an expected call of ListDatabases
+// ListDatabases indicates an expected call of ListDatabases.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListDatabases(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatabases", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListDatabases), arg0)
 }
 
-// ListDatabasesPages mocks base method
+// ListDatabasesPages mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListDatabasesPages(arg0 *redshiftdataapiservice.ListDatabasesInput, arg1 func(*redshiftdataapiservice.ListDatabasesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatabasesPages", arg0, arg1)
@@ -374,13 +375,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ListDatabasesPages(arg0 *redshiftdataapi
 	return ret0
 }
 
-// ListDatabasesPages indicates an expected call of ListDatabasesPages
+// ListDatabasesPages indicates an expected call of ListDatabasesPages.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListDatabasesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatabasesPages", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListDatabasesPages), arg0, arg1)
 }
 
-// ListDatabasesPagesWithContext mocks base method
+// ListDatabasesPagesWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListDatabasesPagesWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.ListDatabasesInput, arg2 func(*redshiftdataapiservice.ListDatabasesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -392,14 +393,14 @@ func (m *MockRedshiftDataAPIServiceAPI) ListDatabasesPagesWithContext(arg0 conte
 	return ret0
 }
 
-// ListDatabasesPagesWithContext indicates an expected call of ListDatabasesPagesWithContext
+// ListDatabasesPagesWithContext indicates an expected call of ListDatabasesPagesWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListDatabasesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatabasesPagesWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListDatabasesPagesWithContext), varargs...)
 }
 
-// ListDatabasesRequest mocks base method
+// ListDatabasesRequest mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListDatabasesRequest(arg0 *redshiftdataapiservice.ListDatabasesInput) (*request.Request, *redshiftdataapiservice.ListDatabasesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatabasesRequest", arg0)
@@ -408,13 +409,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ListDatabasesRequest(arg0 *redshiftdataa
 	return ret0, ret1
 }
 
-// ListDatabasesRequest indicates an expected call of ListDatabasesRequest
+// ListDatabasesRequest indicates an expected call of ListDatabasesRequest.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListDatabasesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatabasesRequest", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListDatabasesRequest), arg0)
 }
 
-// ListDatabasesWithContext mocks base method
+// ListDatabasesWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListDatabasesWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.ListDatabasesInput, arg2 ...request.Option) (*redshiftdataapiservice.ListDatabasesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -427,14 +428,14 @@ func (m *MockRedshiftDataAPIServiceAPI) ListDatabasesWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListDatabasesWithContext indicates an expected call of ListDatabasesWithContext
+// ListDatabasesWithContext indicates an expected call of ListDatabasesWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListDatabasesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatabasesWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListDatabasesWithContext), varargs...)
 }
 
-// ListSchemas mocks base method
+// ListSchemas mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListSchemas(arg0 *redshiftdataapiservice.ListSchemasInput) (*redshiftdataapiservice.ListSchemasOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchemas", arg0)
@@ -443,13 +444,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ListSchemas(arg0 *redshiftdataapiservice
 	return ret0, ret1
 }
 
-// ListSchemas indicates an expected call of ListSchemas
+// ListSchemas indicates an expected call of ListSchemas.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListSchemas(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemas", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListSchemas), arg0)
 }
 
-// ListSchemasPages mocks base method
+// ListSchemasPages mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListSchemasPages(arg0 *redshiftdataapiservice.ListSchemasInput, arg1 func(*redshiftdataapiservice.ListSchemasOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchemasPages", arg0, arg1)
@@ -457,13 +458,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ListSchemasPages(arg0 *redshiftdataapise
 	return ret0
 }
 
-// ListSchemasPages indicates an expected call of ListSchemasPages
+// ListSchemasPages indicates an expected call of ListSchemasPages.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListSchemasPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemasPages", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListSchemasPages), arg0, arg1)
 }
 
-// ListSchemasPagesWithContext mocks base method
+// ListSchemasPagesWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListSchemasPagesWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.ListSchemasInput, arg2 func(*redshiftdataapiservice.ListSchemasOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -475,14 +476,14 @@ func (m *MockRedshiftDataAPIServiceAPI) ListSchemasPagesWithContext(arg0 context
 	return ret0
 }
 
-// ListSchemasPagesWithContext indicates an expected call of ListSchemasPagesWithContext
+// ListSchemasPagesWithContext indicates an expected call of ListSchemasPagesWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListSchemasPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemasPagesWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListSchemasPagesWithContext), varargs...)
 }
 
-// ListSchemasRequest mocks base method
+// ListSchemasRequest mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListSchemasRequest(arg0 *redshiftdataapiservice.ListSchemasInput) (*request.Request, *redshiftdataapiservice.ListSchemasOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchemasRequest", arg0)
@@ -491,13 +492,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ListSchemasRequest(arg0 *redshiftdataapi
 	return ret0, ret1
 }
 
-// ListSchemasRequest indicates an expected call of ListSchemasRequest
+// ListSchemasRequest indicates an expected call of ListSchemasRequest.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListSchemasRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemasRequest", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListSchemasRequest), arg0)
 }
 
-// ListSchemasWithContext mocks base method
+// ListSchemasWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListSchemasWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.ListSchemasInput, arg2 ...request.Option) (*redshiftdataapiservice.ListSchemasOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -510,14 +511,14 @@ func (m *MockRedshiftDataAPIServiceAPI) ListSchemasWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListSchemasWithContext indicates an expected call of ListSchemasWithContext
+// ListSchemasWithContext indicates an expected call of ListSchemasWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListSchemasWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemasWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListSchemasWithContext), varargs...)
 }
 
-// ListStatements mocks base method
+// ListStatements mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListStatements(arg0 *redshiftdataapiservice.ListStatementsInput) (*redshiftdataapiservice.ListStatementsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListStatements", arg0)
@@ -526,13 +527,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ListStatements(arg0 *redshiftdataapiserv
 	return ret0, ret1
 }
 
-// ListStatements indicates an expected call of ListStatements
+// ListStatements indicates an expected call of ListStatements.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListStatements(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListStatements", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListStatements), arg0)
 }
 
-// ListStatementsPages mocks base method
+// ListStatementsPages mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListStatementsPages(arg0 *redshiftdataapiservice.ListStatementsInput, arg1 func(*redshiftdataapiservice.ListStatementsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListStatementsPages", arg0, arg1)
@@ -540,13 +541,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ListStatementsPages(arg0 *redshiftdataap
 	return ret0
 }
 
-// ListStatementsPages indicates an expected call of ListStatementsPages
+// ListStatementsPages indicates an expected call of ListStatementsPages.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListStatementsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListStatementsPages", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListStatementsPages), arg0, arg1)
 }
 
-// ListStatementsPagesWithContext mocks base method
+// ListStatementsPagesWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListStatementsPagesWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.ListStatementsInput, arg2 func(*redshiftdataapiservice.ListStatementsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -558,14 +559,14 @@ func (m *MockRedshiftDataAPIServiceAPI) ListStatementsPagesWithContext(arg0 cont
 	return ret0
 }
 
-// ListStatementsPagesWithContext indicates an expected call of ListStatementsPagesWithContext
+// ListStatementsPagesWithContext indicates an expected call of ListStatementsPagesWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListStatementsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListStatementsPagesWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListStatementsPagesWithContext), varargs...)
 }
 
-// ListStatementsRequest mocks base method
+// ListStatementsRequest mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListStatementsRequest(arg0 *redshiftdataapiservice.ListStatementsInput) (*request.Request, *redshiftdataapiservice.ListStatementsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListStatementsRequest", arg0)
@@ -574,13 +575,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ListStatementsRequest(arg0 *redshiftdata
 	return ret0, ret1
 }
 
-// ListStatementsRequest indicates an expected call of ListStatementsRequest
+// ListStatementsRequest indicates an expected call of ListStatementsRequest.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListStatementsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListStatementsRequest", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListStatementsRequest), arg0)
 }
 
-// ListStatementsWithContext mocks base method
+// ListStatementsWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListStatementsWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.ListStatementsInput, arg2 ...request.Option) (*redshiftdataapiservice.ListStatementsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -593,14 +594,14 @@ func (m *MockRedshiftDataAPIServiceAPI) ListStatementsWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// ListStatementsWithContext indicates an expected call of ListStatementsWithContext
+// ListStatementsWithContext indicates an expected call of ListStatementsWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListStatementsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListStatementsWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListStatementsWithContext), varargs...)
 }
 
-// ListTables mocks base method
+// ListTables mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListTables(arg0 *redshiftdataapiservice.ListTablesInput) (*redshiftdataapiservice.ListTablesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTables", arg0)
@@ -609,13 +610,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ListTables(arg0 *redshiftdataapiservice.
 	return ret0, ret1
 }
 
-// ListTables indicates an expected call of ListTables
+// ListTables indicates an expected call of ListTables.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListTables(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTables", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListTables), arg0)
 }
 
-// ListTablesPages mocks base method
+// ListTablesPages mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListTablesPages(arg0 *redshiftdataapiservice.ListTablesInput, arg1 func(*redshiftdataapiservice.ListTablesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTablesPages", arg0, arg1)
@@ -623,13 +624,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ListTablesPages(arg0 *redshiftdataapiser
 	return ret0
 }
 
-// ListTablesPages indicates an expected call of ListTablesPages
+// ListTablesPages indicates an expected call of ListTablesPages.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListTablesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTablesPages", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListTablesPages), arg0, arg1)
 }
 
-// ListTablesPagesWithContext mocks base method
+// ListTablesPagesWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListTablesPagesWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.ListTablesInput, arg2 func(*redshiftdataapiservice.ListTablesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -641,14 +642,14 @@ func (m *MockRedshiftDataAPIServiceAPI) ListTablesPagesWithContext(arg0 context.
 	return ret0
 }
 
-// ListTablesPagesWithContext indicates an expected call of ListTablesPagesWithContext
+// ListTablesPagesWithContext indicates an expected call of ListTablesPagesWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListTablesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTablesPagesWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListTablesPagesWithContext), varargs...)
 }
 
-// ListTablesRequest mocks base method
+// ListTablesRequest mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListTablesRequest(arg0 *redshiftdataapiservice.ListTablesInput) (*request.Request, *redshiftdataapiservice.ListTablesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTablesRequest", arg0)
@@ -657,13 +658,13 @@ func (m *MockRedshiftDataAPIServiceAPI) ListTablesRequest(arg0 *redshiftdataapis
 	return ret0, ret1
 }
 
-// ListTablesRequest indicates an expected call of ListTablesRequest
+// ListTablesRequest indicates an expected call of ListTablesRequest.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListTablesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTablesRequest", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).ListTablesRequest), arg0)
 }
 
-// ListTablesWithContext mocks base method
+// ListTablesWithContext mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) ListTablesWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.ListTablesInput, arg2 ...request.Option) (*redshiftdataapiservice.ListTablesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -676,7 +677,7 @@ func (m *MockRedshiftDataAPIServiceAPI) ListTablesWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListTablesWithContext indicates an expected call of ListTablesWithContext
+// ListTablesWithContext indicates an expected call of ListTablesWithContext.
 func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) ListTablesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

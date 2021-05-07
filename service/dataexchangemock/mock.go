@@ -6,36 +6,37 @@ package dataexchangemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	dataexchange "github.com/aws/aws-sdk-go/service/dataexchange"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockDataExchangeAPI is a mock of DataExchangeAPI interface
+// MockDataExchangeAPI is a mock of DataExchangeAPI interface.
 type MockDataExchangeAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockDataExchangeAPIMockRecorder
 }
 
-// MockDataExchangeAPIMockRecorder is the mock recorder for MockDataExchangeAPI
+// MockDataExchangeAPIMockRecorder is the mock recorder for MockDataExchangeAPI.
 type MockDataExchangeAPIMockRecorder struct {
 	mock *MockDataExchangeAPI
 }
 
-// NewMockDataExchangeAPI creates a new mock instance
+// NewMockDataExchangeAPI creates a new mock instance.
 func NewMockDataExchangeAPI(ctrl *gomock.Controller) *MockDataExchangeAPI {
 	mock := &MockDataExchangeAPI{ctrl: ctrl}
 	mock.recorder = &MockDataExchangeAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockDataExchangeAPI) EXPECT() *MockDataExchangeAPIMockRecorder {
 	return m.recorder
 }
 
-// CancelJob mocks base method
+// CancelJob mocks base method.
 func (m *MockDataExchangeAPI) CancelJob(arg0 *dataexchange.CancelJobInput) (*dataexchange.CancelJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelJob", arg0)
@@ -44,13 +45,13 @@ func (m *MockDataExchangeAPI) CancelJob(arg0 *dataexchange.CancelJobInput) (*dat
 	return ret0, ret1
 }
 
-// CancelJob indicates an expected call of CancelJob
+// CancelJob indicates an expected call of CancelJob.
 func (mr *MockDataExchangeAPIMockRecorder) CancelJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelJob", reflect.TypeOf((*MockDataExchangeAPI)(nil).CancelJob), arg0)
 }
 
-// CancelJobRequest mocks base method
+// CancelJobRequest mocks base method.
 func (m *MockDataExchangeAPI) CancelJobRequest(arg0 *dataexchange.CancelJobInput) (*request.Request, *dataexchange.CancelJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelJobRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockDataExchangeAPI) CancelJobRequest(arg0 *dataexchange.CancelJobInput
 	return ret0, ret1
 }
 
-// CancelJobRequest indicates an expected call of CancelJobRequest
+// CancelJobRequest indicates an expected call of CancelJobRequest.
 func (mr *MockDataExchangeAPIMockRecorder) CancelJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelJobRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).CancelJobRequest), arg0)
 }
 
-// CancelJobWithContext mocks base method
+// CancelJobWithContext mocks base method.
 func (m *MockDataExchangeAPI) CancelJobWithContext(arg0 context.Context, arg1 *dataexchange.CancelJobInput, arg2 ...request.Option) (*dataexchange.CancelJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockDataExchangeAPI) CancelJobWithContext(arg0 context.Context, arg1 *d
 	return ret0, ret1
 }
 
-// CancelJobWithContext indicates an expected call of CancelJobWithContext
+// CancelJobWithContext indicates an expected call of CancelJobWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) CancelJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelJobWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).CancelJobWithContext), varargs...)
 }
 
-// CreateDataSet mocks base method
+// CreateDataSet mocks base method.
 func (m *MockDataExchangeAPI) CreateDataSet(arg0 *dataexchange.CreateDataSetInput) (*dataexchange.CreateDataSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDataSet", arg0)
@@ -94,13 +95,13 @@ func (m *MockDataExchangeAPI) CreateDataSet(arg0 *dataexchange.CreateDataSetInpu
 	return ret0, ret1
 }
 
-// CreateDataSet indicates an expected call of CreateDataSet
+// CreateDataSet indicates an expected call of CreateDataSet.
 func (mr *MockDataExchangeAPIMockRecorder) CreateDataSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataSet", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateDataSet), arg0)
 }
 
-// CreateDataSetRequest mocks base method
+// CreateDataSetRequest mocks base method.
 func (m *MockDataExchangeAPI) CreateDataSetRequest(arg0 *dataexchange.CreateDataSetInput) (*request.Request, *dataexchange.CreateDataSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDataSetRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockDataExchangeAPI) CreateDataSetRequest(arg0 *dataexchange.CreateData
 	return ret0, ret1
 }
 
-// CreateDataSetRequest indicates an expected call of CreateDataSetRequest
+// CreateDataSetRequest indicates an expected call of CreateDataSetRequest.
 func (mr *MockDataExchangeAPIMockRecorder) CreateDataSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataSetRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateDataSetRequest), arg0)
 }
 
-// CreateDataSetWithContext mocks base method
+// CreateDataSetWithContext mocks base method.
 func (m *MockDataExchangeAPI) CreateDataSetWithContext(arg0 context.Context, arg1 *dataexchange.CreateDataSetInput, arg2 ...request.Option) (*dataexchange.CreateDataSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockDataExchangeAPI) CreateDataSetWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// CreateDataSetWithContext indicates an expected call of CreateDataSetWithContext
+// CreateDataSetWithContext indicates an expected call of CreateDataSetWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) CreateDataSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataSetWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateDataSetWithContext), varargs...)
 }
 
-// CreateJob mocks base method
+// CreateJob mocks base method.
 func (m *MockDataExchangeAPI) CreateJob(arg0 *dataexchange.CreateJobInput) (*dataexchange.CreateJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateJob", arg0)
@@ -144,13 +145,13 @@ func (m *MockDataExchangeAPI) CreateJob(arg0 *dataexchange.CreateJobInput) (*dat
 	return ret0, ret1
 }
 
-// CreateJob indicates an expected call of CreateJob
+// CreateJob indicates an expected call of CreateJob.
 func (mr *MockDataExchangeAPIMockRecorder) CreateJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateJob", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateJob), arg0)
 }
 
-// CreateJobRequest mocks base method
+// CreateJobRequest mocks base method.
 func (m *MockDataExchangeAPI) CreateJobRequest(arg0 *dataexchange.CreateJobInput) (*request.Request, *dataexchange.CreateJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateJobRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockDataExchangeAPI) CreateJobRequest(arg0 *dataexchange.CreateJobInput
 	return ret0, ret1
 }
 
-// CreateJobRequest indicates an expected call of CreateJobRequest
+// CreateJobRequest indicates an expected call of CreateJobRequest.
 func (mr *MockDataExchangeAPIMockRecorder) CreateJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateJobRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateJobRequest), arg0)
 }
 
-// CreateJobWithContext mocks base method
+// CreateJobWithContext mocks base method.
 func (m *MockDataExchangeAPI) CreateJobWithContext(arg0 context.Context, arg1 *dataexchange.CreateJobInput, arg2 ...request.Option) (*dataexchange.CreateJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockDataExchangeAPI) CreateJobWithContext(arg0 context.Context, arg1 *d
 	return ret0, ret1
 }
 
-// CreateJobWithContext indicates an expected call of CreateJobWithContext
+// CreateJobWithContext indicates an expected call of CreateJobWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) CreateJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateJobWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateJobWithContext), varargs...)
 }
 
-// CreateRevision mocks base method
+// CreateRevision mocks base method.
 func (m *MockDataExchangeAPI) CreateRevision(arg0 *dataexchange.CreateRevisionInput) (*dataexchange.CreateRevisionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRevision", arg0)
@@ -194,13 +195,13 @@ func (m *MockDataExchangeAPI) CreateRevision(arg0 *dataexchange.CreateRevisionIn
 	return ret0, ret1
 }
 
-// CreateRevision indicates an expected call of CreateRevision
+// CreateRevision indicates an expected call of CreateRevision.
 func (mr *MockDataExchangeAPIMockRecorder) CreateRevision(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRevision", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateRevision), arg0)
 }
 
-// CreateRevisionRequest mocks base method
+// CreateRevisionRequest mocks base method.
 func (m *MockDataExchangeAPI) CreateRevisionRequest(arg0 *dataexchange.CreateRevisionInput) (*request.Request, *dataexchange.CreateRevisionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRevisionRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockDataExchangeAPI) CreateRevisionRequest(arg0 *dataexchange.CreateRev
 	return ret0, ret1
 }
 
-// CreateRevisionRequest indicates an expected call of CreateRevisionRequest
+// CreateRevisionRequest indicates an expected call of CreateRevisionRequest.
 func (mr *MockDataExchangeAPIMockRecorder) CreateRevisionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRevisionRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateRevisionRequest), arg0)
 }
 
-// CreateRevisionWithContext mocks base method
+// CreateRevisionWithContext mocks base method.
 func (m *MockDataExchangeAPI) CreateRevisionWithContext(arg0 context.Context, arg1 *dataexchange.CreateRevisionInput, arg2 ...request.Option) (*dataexchange.CreateRevisionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockDataExchangeAPI) CreateRevisionWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateRevisionWithContext indicates an expected call of CreateRevisionWithContext
+// CreateRevisionWithContext indicates an expected call of CreateRevisionWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) CreateRevisionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRevisionWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateRevisionWithContext), varargs...)
 }
 
-// DeleteAsset mocks base method
+// DeleteAsset mocks base method.
 func (m *MockDataExchangeAPI) DeleteAsset(arg0 *dataexchange.DeleteAssetInput) (*dataexchange.DeleteAssetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAsset", arg0)
@@ -244,13 +245,13 @@ func (m *MockDataExchangeAPI) DeleteAsset(arg0 *dataexchange.DeleteAssetInput) (
 	return ret0, ret1
 }
 
-// DeleteAsset indicates an expected call of DeleteAsset
+// DeleteAsset indicates an expected call of DeleteAsset.
 func (mr *MockDataExchangeAPIMockRecorder) DeleteAsset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAsset", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteAsset), arg0)
 }
 
-// DeleteAssetRequest mocks base method
+// DeleteAssetRequest mocks base method.
 func (m *MockDataExchangeAPI) DeleteAssetRequest(arg0 *dataexchange.DeleteAssetInput) (*request.Request, *dataexchange.DeleteAssetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAssetRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockDataExchangeAPI) DeleteAssetRequest(arg0 *dataexchange.DeleteAssetI
 	return ret0, ret1
 }
 
-// DeleteAssetRequest indicates an expected call of DeleteAssetRequest
+// DeleteAssetRequest indicates an expected call of DeleteAssetRequest.
 func (mr *MockDataExchangeAPIMockRecorder) DeleteAssetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAssetRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteAssetRequest), arg0)
 }
 
-// DeleteAssetWithContext mocks base method
+// DeleteAssetWithContext mocks base method.
 func (m *MockDataExchangeAPI) DeleteAssetWithContext(arg0 context.Context, arg1 *dataexchange.DeleteAssetInput, arg2 ...request.Option) (*dataexchange.DeleteAssetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockDataExchangeAPI) DeleteAssetWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DeleteAssetWithContext indicates an expected call of DeleteAssetWithContext
+// DeleteAssetWithContext indicates an expected call of DeleteAssetWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) DeleteAssetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAssetWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteAssetWithContext), varargs...)
 }
 
-// DeleteDataSet mocks base method
+// DeleteDataSet mocks base method.
 func (m *MockDataExchangeAPI) DeleteDataSet(arg0 *dataexchange.DeleteDataSetInput) (*dataexchange.DeleteDataSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDataSet", arg0)
@@ -294,13 +295,13 @@ func (m *MockDataExchangeAPI) DeleteDataSet(arg0 *dataexchange.DeleteDataSetInpu
 	return ret0, ret1
 }
 
-// DeleteDataSet indicates an expected call of DeleteDataSet
+// DeleteDataSet indicates an expected call of DeleteDataSet.
 func (mr *MockDataExchangeAPIMockRecorder) DeleteDataSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataSet", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteDataSet), arg0)
 }
 
-// DeleteDataSetRequest mocks base method
+// DeleteDataSetRequest mocks base method.
 func (m *MockDataExchangeAPI) DeleteDataSetRequest(arg0 *dataexchange.DeleteDataSetInput) (*request.Request, *dataexchange.DeleteDataSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDataSetRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockDataExchangeAPI) DeleteDataSetRequest(arg0 *dataexchange.DeleteData
 	return ret0, ret1
 }
 
-// DeleteDataSetRequest indicates an expected call of DeleteDataSetRequest
+// DeleteDataSetRequest indicates an expected call of DeleteDataSetRequest.
 func (mr *MockDataExchangeAPIMockRecorder) DeleteDataSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataSetRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteDataSetRequest), arg0)
 }
 
-// DeleteDataSetWithContext mocks base method
+// DeleteDataSetWithContext mocks base method.
 func (m *MockDataExchangeAPI) DeleteDataSetWithContext(arg0 context.Context, arg1 *dataexchange.DeleteDataSetInput, arg2 ...request.Option) (*dataexchange.DeleteDataSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockDataExchangeAPI) DeleteDataSetWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DeleteDataSetWithContext indicates an expected call of DeleteDataSetWithContext
+// DeleteDataSetWithContext indicates an expected call of DeleteDataSetWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) DeleteDataSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataSetWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteDataSetWithContext), varargs...)
 }
 
-// DeleteRevision mocks base method
+// DeleteRevision mocks base method.
 func (m *MockDataExchangeAPI) DeleteRevision(arg0 *dataexchange.DeleteRevisionInput) (*dataexchange.DeleteRevisionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRevision", arg0)
@@ -344,13 +345,13 @@ func (m *MockDataExchangeAPI) DeleteRevision(arg0 *dataexchange.DeleteRevisionIn
 	return ret0, ret1
 }
 
-// DeleteRevision indicates an expected call of DeleteRevision
+// DeleteRevision indicates an expected call of DeleteRevision.
 func (mr *MockDataExchangeAPIMockRecorder) DeleteRevision(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRevision", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteRevision), arg0)
 }
 
-// DeleteRevisionRequest mocks base method
+// DeleteRevisionRequest mocks base method.
 func (m *MockDataExchangeAPI) DeleteRevisionRequest(arg0 *dataexchange.DeleteRevisionInput) (*request.Request, *dataexchange.DeleteRevisionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRevisionRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockDataExchangeAPI) DeleteRevisionRequest(arg0 *dataexchange.DeleteRev
 	return ret0, ret1
 }
 
-// DeleteRevisionRequest indicates an expected call of DeleteRevisionRequest
+// DeleteRevisionRequest indicates an expected call of DeleteRevisionRequest.
 func (mr *MockDataExchangeAPIMockRecorder) DeleteRevisionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRevisionRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteRevisionRequest), arg0)
 }
 
-// DeleteRevisionWithContext mocks base method
+// DeleteRevisionWithContext mocks base method.
 func (m *MockDataExchangeAPI) DeleteRevisionWithContext(arg0 context.Context, arg1 *dataexchange.DeleteRevisionInput, arg2 ...request.Option) (*dataexchange.DeleteRevisionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockDataExchangeAPI) DeleteRevisionWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteRevisionWithContext indicates an expected call of DeleteRevisionWithContext
+// DeleteRevisionWithContext indicates an expected call of DeleteRevisionWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) DeleteRevisionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRevisionWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteRevisionWithContext), varargs...)
 }
 
-// GetAsset mocks base method
+// GetAsset mocks base method.
 func (m *MockDataExchangeAPI) GetAsset(arg0 *dataexchange.GetAssetInput) (*dataexchange.GetAssetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAsset", arg0)
@@ -394,13 +395,13 @@ func (m *MockDataExchangeAPI) GetAsset(arg0 *dataexchange.GetAssetInput) (*datae
 	return ret0, ret1
 }
 
-// GetAsset indicates an expected call of GetAsset
+// GetAsset indicates an expected call of GetAsset.
 func (mr *MockDataExchangeAPIMockRecorder) GetAsset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAsset", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetAsset), arg0)
 }
 
-// GetAssetRequest mocks base method
+// GetAssetRequest mocks base method.
 func (m *MockDataExchangeAPI) GetAssetRequest(arg0 *dataexchange.GetAssetInput) (*request.Request, *dataexchange.GetAssetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAssetRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockDataExchangeAPI) GetAssetRequest(arg0 *dataexchange.GetAssetInput) 
 	return ret0, ret1
 }
 
-// GetAssetRequest indicates an expected call of GetAssetRequest
+// GetAssetRequest indicates an expected call of GetAssetRequest.
 func (mr *MockDataExchangeAPIMockRecorder) GetAssetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAssetRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetAssetRequest), arg0)
 }
 
-// GetAssetWithContext mocks base method
+// GetAssetWithContext mocks base method.
 func (m *MockDataExchangeAPI) GetAssetWithContext(arg0 context.Context, arg1 *dataexchange.GetAssetInput, arg2 ...request.Option) (*dataexchange.GetAssetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockDataExchangeAPI) GetAssetWithContext(arg0 context.Context, arg1 *da
 	return ret0, ret1
 }
 
-// GetAssetWithContext indicates an expected call of GetAssetWithContext
+// GetAssetWithContext indicates an expected call of GetAssetWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) GetAssetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAssetWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetAssetWithContext), varargs...)
 }
 
-// GetDataSet mocks base method
+// GetDataSet mocks base method.
 func (m *MockDataExchangeAPI) GetDataSet(arg0 *dataexchange.GetDataSetInput) (*dataexchange.GetDataSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDataSet", arg0)
@@ -444,13 +445,13 @@ func (m *MockDataExchangeAPI) GetDataSet(arg0 *dataexchange.GetDataSetInput) (*d
 	return ret0, ret1
 }
 
-// GetDataSet indicates an expected call of GetDataSet
+// GetDataSet indicates an expected call of GetDataSet.
 func (mr *MockDataExchangeAPIMockRecorder) GetDataSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDataSet", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetDataSet), arg0)
 }
 
-// GetDataSetRequest mocks base method
+// GetDataSetRequest mocks base method.
 func (m *MockDataExchangeAPI) GetDataSetRequest(arg0 *dataexchange.GetDataSetInput) (*request.Request, *dataexchange.GetDataSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDataSetRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockDataExchangeAPI) GetDataSetRequest(arg0 *dataexchange.GetDataSetInp
 	return ret0, ret1
 }
 
-// GetDataSetRequest indicates an expected call of GetDataSetRequest
+// GetDataSetRequest indicates an expected call of GetDataSetRequest.
 func (mr *MockDataExchangeAPIMockRecorder) GetDataSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDataSetRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetDataSetRequest), arg0)
 }
 
-// GetDataSetWithContext mocks base method
+// GetDataSetWithContext mocks base method.
 func (m *MockDataExchangeAPI) GetDataSetWithContext(arg0 context.Context, arg1 *dataexchange.GetDataSetInput, arg2 ...request.Option) (*dataexchange.GetDataSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockDataExchangeAPI) GetDataSetWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// GetDataSetWithContext indicates an expected call of GetDataSetWithContext
+// GetDataSetWithContext indicates an expected call of GetDataSetWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) GetDataSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDataSetWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetDataSetWithContext), varargs...)
 }
 
-// GetJob mocks base method
+// GetJob mocks base method.
 func (m *MockDataExchangeAPI) GetJob(arg0 *dataexchange.GetJobInput) (*dataexchange.GetJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetJob", arg0)
@@ -494,13 +495,13 @@ func (m *MockDataExchangeAPI) GetJob(arg0 *dataexchange.GetJobInput) (*dataexcha
 	return ret0, ret1
 }
 
-// GetJob indicates an expected call of GetJob
+// GetJob indicates an expected call of GetJob.
 func (mr *MockDataExchangeAPIMockRecorder) GetJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetJob", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetJob), arg0)
 }
 
-// GetJobRequest mocks base method
+// GetJobRequest mocks base method.
 func (m *MockDataExchangeAPI) GetJobRequest(arg0 *dataexchange.GetJobInput) (*request.Request, *dataexchange.GetJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetJobRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockDataExchangeAPI) GetJobRequest(arg0 *dataexchange.GetJobInput) (*re
 	return ret0, ret1
 }
 
-// GetJobRequest indicates an expected call of GetJobRequest
+// GetJobRequest indicates an expected call of GetJobRequest.
 func (mr *MockDataExchangeAPIMockRecorder) GetJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetJobRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetJobRequest), arg0)
 }
 
-// GetJobWithContext mocks base method
+// GetJobWithContext mocks base method.
 func (m *MockDataExchangeAPI) GetJobWithContext(arg0 context.Context, arg1 *dataexchange.GetJobInput, arg2 ...request.Option) (*dataexchange.GetJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockDataExchangeAPI) GetJobWithContext(arg0 context.Context, arg1 *data
 	return ret0, ret1
 }
 
-// GetJobWithContext indicates an expected call of GetJobWithContext
+// GetJobWithContext indicates an expected call of GetJobWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) GetJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetJobWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetJobWithContext), varargs...)
 }
 
-// GetRevision mocks base method
+// GetRevision mocks base method.
 func (m *MockDataExchangeAPI) GetRevision(arg0 *dataexchange.GetRevisionInput) (*dataexchange.GetRevisionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRevision", arg0)
@@ -544,13 +545,13 @@ func (m *MockDataExchangeAPI) GetRevision(arg0 *dataexchange.GetRevisionInput) (
 	return ret0, ret1
 }
 
-// GetRevision indicates an expected call of GetRevision
+// GetRevision indicates an expected call of GetRevision.
 func (mr *MockDataExchangeAPIMockRecorder) GetRevision(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRevision", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetRevision), arg0)
 }
 
-// GetRevisionRequest mocks base method
+// GetRevisionRequest mocks base method.
 func (m *MockDataExchangeAPI) GetRevisionRequest(arg0 *dataexchange.GetRevisionInput) (*request.Request, *dataexchange.GetRevisionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRevisionRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockDataExchangeAPI) GetRevisionRequest(arg0 *dataexchange.GetRevisionI
 	return ret0, ret1
 }
 
-// GetRevisionRequest indicates an expected call of GetRevisionRequest
+// GetRevisionRequest indicates an expected call of GetRevisionRequest.
 func (mr *MockDataExchangeAPIMockRecorder) GetRevisionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRevisionRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetRevisionRequest), arg0)
 }
 
-// GetRevisionWithContext mocks base method
+// GetRevisionWithContext mocks base method.
 func (m *MockDataExchangeAPI) GetRevisionWithContext(arg0 context.Context, arg1 *dataexchange.GetRevisionInput, arg2 ...request.Option) (*dataexchange.GetRevisionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockDataExchangeAPI) GetRevisionWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// GetRevisionWithContext indicates an expected call of GetRevisionWithContext
+// GetRevisionWithContext indicates an expected call of GetRevisionWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) GetRevisionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRevisionWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetRevisionWithContext), varargs...)
 }
 
-// ListDataSetRevisions mocks base method
+// ListDataSetRevisions mocks base method.
 func (m *MockDataExchangeAPI) ListDataSetRevisions(arg0 *dataexchange.ListDataSetRevisionsInput) (*dataexchange.ListDataSetRevisionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataSetRevisions", arg0)
@@ -594,13 +595,13 @@ func (m *MockDataExchangeAPI) ListDataSetRevisions(arg0 *dataexchange.ListDataSe
 	return ret0, ret1
 }
 
-// ListDataSetRevisions indicates an expected call of ListDataSetRevisions
+// ListDataSetRevisions indicates an expected call of ListDataSetRevisions.
 func (mr *MockDataExchangeAPIMockRecorder) ListDataSetRevisions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSetRevisions", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListDataSetRevisions), arg0)
 }
 
-// ListDataSetRevisionsPages mocks base method
+// ListDataSetRevisionsPages mocks base method.
 func (m *MockDataExchangeAPI) ListDataSetRevisionsPages(arg0 *dataexchange.ListDataSetRevisionsInput, arg1 func(*dataexchange.ListDataSetRevisionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataSetRevisionsPages", arg0, arg1)
@@ -608,13 +609,13 @@ func (m *MockDataExchangeAPI) ListDataSetRevisionsPages(arg0 *dataexchange.ListD
 	return ret0
 }
 
-// ListDataSetRevisionsPages indicates an expected call of ListDataSetRevisionsPages
+// ListDataSetRevisionsPages indicates an expected call of ListDataSetRevisionsPages.
 func (mr *MockDataExchangeAPIMockRecorder) ListDataSetRevisionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSetRevisionsPages", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListDataSetRevisionsPages), arg0, arg1)
 }
 
-// ListDataSetRevisionsPagesWithContext mocks base method
+// ListDataSetRevisionsPagesWithContext mocks base method.
 func (m *MockDataExchangeAPI) ListDataSetRevisionsPagesWithContext(arg0 context.Context, arg1 *dataexchange.ListDataSetRevisionsInput, arg2 func(*dataexchange.ListDataSetRevisionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -626,14 +627,14 @@ func (m *MockDataExchangeAPI) ListDataSetRevisionsPagesWithContext(arg0 context.
 	return ret0
 }
 
-// ListDataSetRevisionsPagesWithContext indicates an expected call of ListDataSetRevisionsPagesWithContext
+// ListDataSetRevisionsPagesWithContext indicates an expected call of ListDataSetRevisionsPagesWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) ListDataSetRevisionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSetRevisionsPagesWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListDataSetRevisionsPagesWithContext), varargs...)
 }
 
-// ListDataSetRevisionsRequest mocks base method
+// ListDataSetRevisionsRequest mocks base method.
 func (m *MockDataExchangeAPI) ListDataSetRevisionsRequest(arg0 *dataexchange.ListDataSetRevisionsInput) (*request.Request, *dataexchange.ListDataSetRevisionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataSetRevisionsRequest", arg0)
@@ -642,13 +643,13 @@ func (m *MockDataExchangeAPI) ListDataSetRevisionsRequest(arg0 *dataexchange.Lis
 	return ret0, ret1
 }
 
-// ListDataSetRevisionsRequest indicates an expected call of ListDataSetRevisionsRequest
+// ListDataSetRevisionsRequest indicates an expected call of ListDataSetRevisionsRequest.
 func (mr *MockDataExchangeAPIMockRecorder) ListDataSetRevisionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSetRevisionsRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListDataSetRevisionsRequest), arg0)
 }
 
-// ListDataSetRevisionsWithContext mocks base method
+// ListDataSetRevisionsWithContext mocks base method.
 func (m *MockDataExchangeAPI) ListDataSetRevisionsWithContext(arg0 context.Context, arg1 *dataexchange.ListDataSetRevisionsInput, arg2 ...request.Option) (*dataexchange.ListDataSetRevisionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -661,14 +662,14 @@ func (m *MockDataExchangeAPI) ListDataSetRevisionsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListDataSetRevisionsWithContext indicates an expected call of ListDataSetRevisionsWithContext
+// ListDataSetRevisionsWithContext indicates an expected call of ListDataSetRevisionsWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) ListDataSetRevisionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSetRevisionsWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListDataSetRevisionsWithContext), varargs...)
 }
 
-// ListDataSets mocks base method
+// ListDataSets mocks base method.
 func (m *MockDataExchangeAPI) ListDataSets(arg0 *dataexchange.ListDataSetsInput) (*dataexchange.ListDataSetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataSets", arg0)
@@ -677,13 +678,13 @@ func (m *MockDataExchangeAPI) ListDataSets(arg0 *dataexchange.ListDataSetsInput)
 	return ret0, ret1
 }
 
-// ListDataSets indicates an expected call of ListDataSets
+// ListDataSets indicates an expected call of ListDataSets.
 func (mr *MockDataExchangeAPIMockRecorder) ListDataSets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSets", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListDataSets), arg0)
 }
 
-// ListDataSetsPages mocks base method
+// ListDataSetsPages mocks base method.
 func (m *MockDataExchangeAPI) ListDataSetsPages(arg0 *dataexchange.ListDataSetsInput, arg1 func(*dataexchange.ListDataSetsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataSetsPages", arg0, arg1)
@@ -691,13 +692,13 @@ func (m *MockDataExchangeAPI) ListDataSetsPages(arg0 *dataexchange.ListDataSetsI
 	return ret0
 }
 
-// ListDataSetsPages indicates an expected call of ListDataSetsPages
+// ListDataSetsPages indicates an expected call of ListDataSetsPages.
 func (mr *MockDataExchangeAPIMockRecorder) ListDataSetsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSetsPages", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListDataSetsPages), arg0, arg1)
 }
 
-// ListDataSetsPagesWithContext mocks base method
+// ListDataSetsPagesWithContext mocks base method.
 func (m *MockDataExchangeAPI) ListDataSetsPagesWithContext(arg0 context.Context, arg1 *dataexchange.ListDataSetsInput, arg2 func(*dataexchange.ListDataSetsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -709,14 +710,14 @@ func (m *MockDataExchangeAPI) ListDataSetsPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListDataSetsPagesWithContext indicates an expected call of ListDataSetsPagesWithContext
+// ListDataSetsPagesWithContext indicates an expected call of ListDataSetsPagesWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) ListDataSetsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSetsPagesWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListDataSetsPagesWithContext), varargs...)
 }
 
-// ListDataSetsRequest mocks base method
+// ListDataSetsRequest mocks base method.
 func (m *MockDataExchangeAPI) ListDataSetsRequest(arg0 *dataexchange.ListDataSetsInput) (*request.Request, *dataexchange.ListDataSetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataSetsRequest", arg0)
@@ -725,13 +726,13 @@ func (m *MockDataExchangeAPI) ListDataSetsRequest(arg0 *dataexchange.ListDataSet
 	return ret0, ret1
 }
 
-// ListDataSetsRequest indicates an expected call of ListDataSetsRequest
+// ListDataSetsRequest indicates an expected call of ListDataSetsRequest.
 func (mr *MockDataExchangeAPIMockRecorder) ListDataSetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSetsRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListDataSetsRequest), arg0)
 }
 
-// ListDataSetsWithContext mocks base method
+// ListDataSetsWithContext mocks base method.
 func (m *MockDataExchangeAPI) ListDataSetsWithContext(arg0 context.Context, arg1 *dataexchange.ListDataSetsInput, arg2 ...request.Option) (*dataexchange.ListDataSetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -744,14 +745,14 @@ func (m *MockDataExchangeAPI) ListDataSetsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListDataSetsWithContext indicates an expected call of ListDataSetsWithContext
+// ListDataSetsWithContext indicates an expected call of ListDataSetsWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) ListDataSetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSetsWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListDataSetsWithContext), varargs...)
 }
 
-// ListJobs mocks base method
+// ListJobs mocks base method.
 func (m *MockDataExchangeAPI) ListJobs(arg0 *dataexchange.ListJobsInput) (*dataexchange.ListJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobs", arg0)
@@ -760,13 +761,13 @@ func (m *MockDataExchangeAPI) ListJobs(arg0 *dataexchange.ListJobsInput) (*datae
 	return ret0, ret1
 }
 
-// ListJobs indicates an expected call of ListJobs
+// ListJobs indicates an expected call of ListJobs.
 func (mr *MockDataExchangeAPIMockRecorder) ListJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobs", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListJobs), arg0)
 }
 
-// ListJobsPages mocks base method
+// ListJobsPages mocks base method.
 func (m *MockDataExchangeAPI) ListJobsPages(arg0 *dataexchange.ListJobsInput, arg1 func(*dataexchange.ListJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobsPages", arg0, arg1)
@@ -774,13 +775,13 @@ func (m *MockDataExchangeAPI) ListJobsPages(arg0 *dataexchange.ListJobsInput, ar
 	return ret0
 }
 
-// ListJobsPages indicates an expected call of ListJobsPages
+// ListJobsPages indicates an expected call of ListJobsPages.
 func (mr *MockDataExchangeAPIMockRecorder) ListJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsPages", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListJobsPages), arg0, arg1)
 }
 
-// ListJobsPagesWithContext mocks base method
+// ListJobsPagesWithContext mocks base method.
 func (m *MockDataExchangeAPI) ListJobsPagesWithContext(arg0 context.Context, arg1 *dataexchange.ListJobsInput, arg2 func(*dataexchange.ListJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -792,14 +793,14 @@ func (m *MockDataExchangeAPI) ListJobsPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// ListJobsPagesWithContext indicates an expected call of ListJobsPagesWithContext
+// ListJobsPagesWithContext indicates an expected call of ListJobsPagesWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) ListJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsPagesWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListJobsPagesWithContext), varargs...)
 }
 
-// ListJobsRequest mocks base method
+// ListJobsRequest mocks base method.
 func (m *MockDataExchangeAPI) ListJobsRequest(arg0 *dataexchange.ListJobsInput) (*request.Request, *dataexchange.ListJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobsRequest", arg0)
@@ -808,13 +809,13 @@ func (m *MockDataExchangeAPI) ListJobsRequest(arg0 *dataexchange.ListJobsInput) 
 	return ret0, ret1
 }
 
-// ListJobsRequest indicates an expected call of ListJobsRequest
+// ListJobsRequest indicates an expected call of ListJobsRequest.
 func (mr *MockDataExchangeAPIMockRecorder) ListJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListJobsRequest), arg0)
 }
 
-// ListJobsWithContext mocks base method
+// ListJobsWithContext mocks base method.
 func (m *MockDataExchangeAPI) ListJobsWithContext(arg0 context.Context, arg1 *dataexchange.ListJobsInput, arg2 ...request.Option) (*dataexchange.ListJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -827,14 +828,14 @@ func (m *MockDataExchangeAPI) ListJobsWithContext(arg0 context.Context, arg1 *da
 	return ret0, ret1
 }
 
-// ListJobsWithContext indicates an expected call of ListJobsWithContext
+// ListJobsWithContext indicates an expected call of ListJobsWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) ListJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListJobsWithContext), varargs...)
 }
 
-// ListRevisionAssets mocks base method
+// ListRevisionAssets mocks base method.
 func (m *MockDataExchangeAPI) ListRevisionAssets(arg0 *dataexchange.ListRevisionAssetsInput) (*dataexchange.ListRevisionAssetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRevisionAssets", arg0)
@@ -843,13 +844,13 @@ func (m *MockDataExchangeAPI) ListRevisionAssets(arg0 *dataexchange.ListRevision
 	return ret0, ret1
 }
 
-// ListRevisionAssets indicates an expected call of ListRevisionAssets
+// ListRevisionAssets indicates an expected call of ListRevisionAssets.
 func (mr *MockDataExchangeAPIMockRecorder) ListRevisionAssets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRevisionAssets", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListRevisionAssets), arg0)
 }
 
-// ListRevisionAssetsPages mocks base method
+// ListRevisionAssetsPages mocks base method.
 func (m *MockDataExchangeAPI) ListRevisionAssetsPages(arg0 *dataexchange.ListRevisionAssetsInput, arg1 func(*dataexchange.ListRevisionAssetsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRevisionAssetsPages", arg0, arg1)
@@ -857,13 +858,13 @@ func (m *MockDataExchangeAPI) ListRevisionAssetsPages(arg0 *dataexchange.ListRev
 	return ret0
 }
 
-// ListRevisionAssetsPages indicates an expected call of ListRevisionAssetsPages
+// ListRevisionAssetsPages indicates an expected call of ListRevisionAssetsPages.
 func (mr *MockDataExchangeAPIMockRecorder) ListRevisionAssetsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRevisionAssetsPages", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListRevisionAssetsPages), arg0, arg1)
 }
 
-// ListRevisionAssetsPagesWithContext mocks base method
+// ListRevisionAssetsPagesWithContext mocks base method.
 func (m *MockDataExchangeAPI) ListRevisionAssetsPagesWithContext(arg0 context.Context, arg1 *dataexchange.ListRevisionAssetsInput, arg2 func(*dataexchange.ListRevisionAssetsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -875,14 +876,14 @@ func (m *MockDataExchangeAPI) ListRevisionAssetsPagesWithContext(arg0 context.Co
 	return ret0
 }
 
-// ListRevisionAssetsPagesWithContext indicates an expected call of ListRevisionAssetsPagesWithContext
+// ListRevisionAssetsPagesWithContext indicates an expected call of ListRevisionAssetsPagesWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) ListRevisionAssetsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRevisionAssetsPagesWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListRevisionAssetsPagesWithContext), varargs...)
 }
 
-// ListRevisionAssetsRequest mocks base method
+// ListRevisionAssetsRequest mocks base method.
 func (m *MockDataExchangeAPI) ListRevisionAssetsRequest(arg0 *dataexchange.ListRevisionAssetsInput) (*request.Request, *dataexchange.ListRevisionAssetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRevisionAssetsRequest", arg0)
@@ -891,13 +892,13 @@ func (m *MockDataExchangeAPI) ListRevisionAssetsRequest(arg0 *dataexchange.ListR
 	return ret0, ret1
 }
 
-// ListRevisionAssetsRequest indicates an expected call of ListRevisionAssetsRequest
+// ListRevisionAssetsRequest indicates an expected call of ListRevisionAssetsRequest.
 func (mr *MockDataExchangeAPIMockRecorder) ListRevisionAssetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRevisionAssetsRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListRevisionAssetsRequest), arg0)
 }
 
-// ListRevisionAssetsWithContext mocks base method
+// ListRevisionAssetsWithContext mocks base method.
 func (m *MockDataExchangeAPI) ListRevisionAssetsWithContext(arg0 context.Context, arg1 *dataexchange.ListRevisionAssetsInput, arg2 ...request.Option) (*dataexchange.ListRevisionAssetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -910,14 +911,14 @@ func (m *MockDataExchangeAPI) ListRevisionAssetsWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListRevisionAssetsWithContext indicates an expected call of ListRevisionAssetsWithContext
+// ListRevisionAssetsWithContext indicates an expected call of ListRevisionAssetsWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) ListRevisionAssetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRevisionAssetsWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListRevisionAssetsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockDataExchangeAPI) ListTagsForResource(arg0 *dataexchange.ListTagsForResourceInput) (*dataexchange.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -926,13 +927,13 @@ func (m *MockDataExchangeAPI) ListTagsForResource(arg0 *dataexchange.ListTagsFor
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockDataExchangeAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockDataExchangeAPI) ListTagsForResourceRequest(arg0 *dataexchange.ListTagsForResourceInput) (*request.Request, *dataexchange.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -941,13 +942,13 @@ func (m *MockDataExchangeAPI) ListTagsForResourceRequest(arg0 *dataexchange.List
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockDataExchangeAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockDataExchangeAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *dataexchange.ListTagsForResourceInput, arg2 ...request.Option) (*dataexchange.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -960,14 +961,14 @@ func (m *MockDataExchangeAPI) ListTagsForResourceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// StartJob mocks base method
+// StartJob mocks base method.
 func (m *MockDataExchangeAPI) StartJob(arg0 *dataexchange.StartJobInput) (*dataexchange.StartJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartJob", arg0)
@@ -976,13 +977,13 @@ func (m *MockDataExchangeAPI) StartJob(arg0 *dataexchange.StartJobInput) (*datae
 	return ret0, ret1
 }
 
-// StartJob indicates an expected call of StartJob
+// StartJob indicates an expected call of StartJob.
 func (mr *MockDataExchangeAPIMockRecorder) StartJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartJob", reflect.TypeOf((*MockDataExchangeAPI)(nil).StartJob), arg0)
 }
 
-// StartJobRequest mocks base method
+// StartJobRequest mocks base method.
 func (m *MockDataExchangeAPI) StartJobRequest(arg0 *dataexchange.StartJobInput) (*request.Request, *dataexchange.StartJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartJobRequest", arg0)
@@ -991,13 +992,13 @@ func (m *MockDataExchangeAPI) StartJobRequest(arg0 *dataexchange.StartJobInput) 
 	return ret0, ret1
 }
 
-// StartJobRequest indicates an expected call of StartJobRequest
+// StartJobRequest indicates an expected call of StartJobRequest.
 func (mr *MockDataExchangeAPIMockRecorder) StartJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartJobRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).StartJobRequest), arg0)
 }
 
-// StartJobWithContext mocks base method
+// StartJobWithContext mocks base method.
 func (m *MockDataExchangeAPI) StartJobWithContext(arg0 context.Context, arg1 *dataexchange.StartJobInput, arg2 ...request.Option) (*dataexchange.StartJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1010,14 +1011,14 @@ func (m *MockDataExchangeAPI) StartJobWithContext(arg0 context.Context, arg1 *da
 	return ret0, ret1
 }
 
-// StartJobWithContext indicates an expected call of StartJobWithContext
+// StartJobWithContext indicates an expected call of StartJobWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) StartJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartJobWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).StartJobWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockDataExchangeAPI) TagResource(arg0 *dataexchange.TagResourceInput) (*dataexchange.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1026,13 +1027,13 @@ func (m *MockDataExchangeAPI) TagResource(arg0 *dataexchange.TagResourceInput) (
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockDataExchangeAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockDataExchangeAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockDataExchangeAPI) TagResourceRequest(arg0 *dataexchange.TagResourceInput) (*request.Request, *dataexchange.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1041,13 +1042,13 @@ func (m *MockDataExchangeAPI) TagResourceRequest(arg0 *dataexchange.TagResourceI
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockDataExchangeAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockDataExchangeAPI) TagResourceWithContext(arg0 context.Context, arg1 *dataexchange.TagResourceInput, arg2 ...request.Option) (*dataexchange.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1060,14 +1061,14 @@ func (m *MockDataExchangeAPI) TagResourceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockDataExchangeAPI) UntagResource(arg0 *dataexchange.UntagResourceInput) (*dataexchange.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1076,13 +1077,13 @@ func (m *MockDataExchangeAPI) UntagResource(arg0 *dataexchange.UntagResourceInpu
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockDataExchangeAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockDataExchangeAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockDataExchangeAPI) UntagResourceRequest(arg0 *dataexchange.UntagResourceInput) (*request.Request, *dataexchange.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1091,13 +1092,13 @@ func (m *MockDataExchangeAPI) UntagResourceRequest(arg0 *dataexchange.UntagResou
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockDataExchangeAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockDataExchangeAPI) UntagResourceWithContext(arg0 context.Context, arg1 *dataexchange.UntagResourceInput, arg2 ...request.Option) (*dataexchange.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1110,14 +1111,14 @@ func (m *MockDataExchangeAPI) UntagResourceWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateAsset mocks base method
+// UpdateAsset mocks base method.
 func (m *MockDataExchangeAPI) UpdateAsset(arg0 *dataexchange.UpdateAssetInput) (*dataexchange.UpdateAssetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAsset", arg0)
@@ -1126,13 +1127,13 @@ func (m *MockDataExchangeAPI) UpdateAsset(arg0 *dataexchange.UpdateAssetInput) (
 	return ret0, ret1
 }
 
-// UpdateAsset indicates an expected call of UpdateAsset
+// UpdateAsset indicates an expected call of UpdateAsset.
 func (mr *MockDataExchangeAPIMockRecorder) UpdateAsset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAsset", reflect.TypeOf((*MockDataExchangeAPI)(nil).UpdateAsset), arg0)
 }
 
-// UpdateAssetRequest mocks base method
+// UpdateAssetRequest mocks base method.
 func (m *MockDataExchangeAPI) UpdateAssetRequest(arg0 *dataexchange.UpdateAssetInput) (*request.Request, *dataexchange.UpdateAssetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAssetRequest", arg0)
@@ -1141,13 +1142,13 @@ func (m *MockDataExchangeAPI) UpdateAssetRequest(arg0 *dataexchange.UpdateAssetI
 	return ret0, ret1
 }
 
-// UpdateAssetRequest indicates an expected call of UpdateAssetRequest
+// UpdateAssetRequest indicates an expected call of UpdateAssetRequest.
 func (mr *MockDataExchangeAPIMockRecorder) UpdateAssetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAssetRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).UpdateAssetRequest), arg0)
 }
 
-// UpdateAssetWithContext mocks base method
+// UpdateAssetWithContext mocks base method.
 func (m *MockDataExchangeAPI) UpdateAssetWithContext(arg0 context.Context, arg1 *dataexchange.UpdateAssetInput, arg2 ...request.Option) (*dataexchange.UpdateAssetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1160,14 +1161,14 @@ func (m *MockDataExchangeAPI) UpdateAssetWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// UpdateAssetWithContext indicates an expected call of UpdateAssetWithContext
+// UpdateAssetWithContext indicates an expected call of UpdateAssetWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) UpdateAssetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAssetWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).UpdateAssetWithContext), varargs...)
 }
 
-// UpdateDataSet mocks base method
+// UpdateDataSet mocks base method.
 func (m *MockDataExchangeAPI) UpdateDataSet(arg0 *dataexchange.UpdateDataSetInput) (*dataexchange.UpdateDataSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDataSet", arg0)
@@ -1176,13 +1177,13 @@ func (m *MockDataExchangeAPI) UpdateDataSet(arg0 *dataexchange.UpdateDataSetInpu
 	return ret0, ret1
 }
 
-// UpdateDataSet indicates an expected call of UpdateDataSet
+// UpdateDataSet indicates an expected call of UpdateDataSet.
 func (mr *MockDataExchangeAPIMockRecorder) UpdateDataSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDataSet", reflect.TypeOf((*MockDataExchangeAPI)(nil).UpdateDataSet), arg0)
 }
 
-// UpdateDataSetRequest mocks base method
+// UpdateDataSetRequest mocks base method.
 func (m *MockDataExchangeAPI) UpdateDataSetRequest(arg0 *dataexchange.UpdateDataSetInput) (*request.Request, *dataexchange.UpdateDataSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDataSetRequest", arg0)
@@ -1191,13 +1192,13 @@ func (m *MockDataExchangeAPI) UpdateDataSetRequest(arg0 *dataexchange.UpdateData
 	return ret0, ret1
 }
 
-// UpdateDataSetRequest indicates an expected call of UpdateDataSetRequest
+// UpdateDataSetRequest indicates an expected call of UpdateDataSetRequest.
 func (mr *MockDataExchangeAPIMockRecorder) UpdateDataSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDataSetRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).UpdateDataSetRequest), arg0)
 }
 
-// UpdateDataSetWithContext mocks base method
+// UpdateDataSetWithContext mocks base method.
 func (m *MockDataExchangeAPI) UpdateDataSetWithContext(arg0 context.Context, arg1 *dataexchange.UpdateDataSetInput, arg2 ...request.Option) (*dataexchange.UpdateDataSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1210,14 +1211,14 @@ func (m *MockDataExchangeAPI) UpdateDataSetWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UpdateDataSetWithContext indicates an expected call of UpdateDataSetWithContext
+// UpdateDataSetWithContext indicates an expected call of UpdateDataSetWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) UpdateDataSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDataSetWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).UpdateDataSetWithContext), varargs...)
 }
 
-// UpdateRevision mocks base method
+// UpdateRevision mocks base method.
 func (m *MockDataExchangeAPI) UpdateRevision(arg0 *dataexchange.UpdateRevisionInput) (*dataexchange.UpdateRevisionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRevision", arg0)
@@ -1226,13 +1227,13 @@ func (m *MockDataExchangeAPI) UpdateRevision(arg0 *dataexchange.UpdateRevisionIn
 	return ret0, ret1
 }
 
-// UpdateRevision indicates an expected call of UpdateRevision
+// UpdateRevision indicates an expected call of UpdateRevision.
 func (mr *MockDataExchangeAPIMockRecorder) UpdateRevision(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRevision", reflect.TypeOf((*MockDataExchangeAPI)(nil).UpdateRevision), arg0)
 }
 
-// UpdateRevisionRequest mocks base method
+// UpdateRevisionRequest mocks base method.
 func (m *MockDataExchangeAPI) UpdateRevisionRequest(arg0 *dataexchange.UpdateRevisionInput) (*request.Request, *dataexchange.UpdateRevisionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRevisionRequest", arg0)
@@ -1241,13 +1242,13 @@ func (m *MockDataExchangeAPI) UpdateRevisionRequest(arg0 *dataexchange.UpdateRev
 	return ret0, ret1
 }
 
-// UpdateRevisionRequest indicates an expected call of UpdateRevisionRequest
+// UpdateRevisionRequest indicates an expected call of UpdateRevisionRequest.
 func (mr *MockDataExchangeAPIMockRecorder) UpdateRevisionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRevisionRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).UpdateRevisionRequest), arg0)
 }
 
-// UpdateRevisionWithContext mocks base method
+// UpdateRevisionWithContext mocks base method.
 func (m *MockDataExchangeAPI) UpdateRevisionWithContext(arg0 context.Context, arg1 *dataexchange.UpdateRevisionInput, arg2 ...request.Option) (*dataexchange.UpdateRevisionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1260,7 +1261,7 @@ func (m *MockDataExchangeAPI) UpdateRevisionWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateRevisionWithContext indicates an expected call of UpdateRevisionWithContext
+// UpdateRevisionWithContext indicates an expected call of UpdateRevisionWithContext.
 func (mr *MockDataExchangeAPIMockRecorder) UpdateRevisionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

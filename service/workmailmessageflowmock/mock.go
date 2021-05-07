@@ -6,36 +6,37 @@ package workmailmessageflowmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	workmailmessageflow "github.com/aws/aws-sdk-go/service/workmailmessageflow"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockWorkMailMessageFlowAPI is a mock of WorkMailMessageFlowAPI interface
+// MockWorkMailMessageFlowAPI is a mock of WorkMailMessageFlowAPI interface.
 type MockWorkMailMessageFlowAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockWorkMailMessageFlowAPIMockRecorder
 }
 
-// MockWorkMailMessageFlowAPIMockRecorder is the mock recorder for MockWorkMailMessageFlowAPI
+// MockWorkMailMessageFlowAPIMockRecorder is the mock recorder for MockWorkMailMessageFlowAPI.
 type MockWorkMailMessageFlowAPIMockRecorder struct {
 	mock *MockWorkMailMessageFlowAPI
 }
 
-// NewMockWorkMailMessageFlowAPI creates a new mock instance
+// NewMockWorkMailMessageFlowAPI creates a new mock instance.
 func NewMockWorkMailMessageFlowAPI(ctrl *gomock.Controller) *MockWorkMailMessageFlowAPI {
 	mock := &MockWorkMailMessageFlowAPI{ctrl: ctrl}
 	mock.recorder = &MockWorkMailMessageFlowAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockWorkMailMessageFlowAPI) EXPECT() *MockWorkMailMessageFlowAPIMockRecorder {
 	return m.recorder
 }
 
-// GetRawMessageContent mocks base method
+// GetRawMessageContent mocks base method.
 func (m *MockWorkMailMessageFlowAPI) GetRawMessageContent(arg0 *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRawMessageContent", arg0)
@@ -44,13 +45,13 @@ func (m *MockWorkMailMessageFlowAPI) GetRawMessageContent(arg0 *workmailmessagef
 	return ret0, ret1
 }
 
-// GetRawMessageContent indicates an expected call of GetRawMessageContent
+// GetRawMessageContent indicates an expected call of GetRawMessageContent.
 func (mr *MockWorkMailMessageFlowAPIMockRecorder) GetRawMessageContent(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRawMessageContent", reflect.TypeOf((*MockWorkMailMessageFlowAPI)(nil).GetRawMessageContent), arg0)
 }
 
-// GetRawMessageContentRequest mocks base method
+// GetRawMessageContentRequest mocks base method.
 func (m *MockWorkMailMessageFlowAPI) GetRawMessageContentRequest(arg0 *workmailmessageflow.GetRawMessageContentInput) (*request.Request, *workmailmessageflow.GetRawMessageContentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRawMessageContentRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockWorkMailMessageFlowAPI) GetRawMessageContentRequest(arg0 *workmailm
 	return ret0, ret1
 }
 
-// GetRawMessageContentRequest indicates an expected call of GetRawMessageContentRequest
+// GetRawMessageContentRequest indicates an expected call of GetRawMessageContentRequest.
 func (mr *MockWorkMailMessageFlowAPIMockRecorder) GetRawMessageContentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRawMessageContentRequest", reflect.TypeOf((*MockWorkMailMessageFlowAPI)(nil).GetRawMessageContentRequest), arg0)
 }
 
-// GetRawMessageContentWithContext mocks base method
+// GetRawMessageContentWithContext mocks base method.
 func (m *MockWorkMailMessageFlowAPI) GetRawMessageContentWithContext(arg0 context.Context, arg1 *workmailmessageflow.GetRawMessageContentInput, arg2 ...request.Option) (*workmailmessageflow.GetRawMessageContentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,9 +79,59 @@ func (m *MockWorkMailMessageFlowAPI) GetRawMessageContentWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// GetRawMessageContentWithContext indicates an expected call of GetRawMessageContentWithContext
+// GetRawMessageContentWithContext indicates an expected call of GetRawMessageContentWithContext.
 func (mr *MockWorkMailMessageFlowAPIMockRecorder) GetRawMessageContentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRawMessageContentWithContext", reflect.TypeOf((*MockWorkMailMessageFlowAPI)(nil).GetRawMessageContentWithContext), varargs...)
+}
+
+// PutRawMessageContent mocks base method.
+func (m *MockWorkMailMessageFlowAPI) PutRawMessageContent(arg0 *workmailmessageflow.PutRawMessageContentInput) (*workmailmessageflow.PutRawMessageContentOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "PutRawMessageContent", arg0)
+	ret0, _ := ret[0].(*workmailmessageflow.PutRawMessageContentOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// PutRawMessageContent indicates an expected call of PutRawMessageContent.
+func (mr *MockWorkMailMessageFlowAPIMockRecorder) PutRawMessageContent(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutRawMessageContent", reflect.TypeOf((*MockWorkMailMessageFlowAPI)(nil).PutRawMessageContent), arg0)
+}
+
+// PutRawMessageContentRequest mocks base method.
+func (m *MockWorkMailMessageFlowAPI) PutRawMessageContentRequest(arg0 *workmailmessageflow.PutRawMessageContentInput) (*request.Request, *workmailmessageflow.PutRawMessageContentOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "PutRawMessageContentRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*workmailmessageflow.PutRawMessageContentOutput)
+	return ret0, ret1
+}
+
+// PutRawMessageContentRequest indicates an expected call of PutRawMessageContentRequest.
+func (mr *MockWorkMailMessageFlowAPIMockRecorder) PutRawMessageContentRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutRawMessageContentRequest", reflect.TypeOf((*MockWorkMailMessageFlowAPI)(nil).PutRawMessageContentRequest), arg0)
+}
+
+// PutRawMessageContentWithContext mocks base method.
+func (m *MockWorkMailMessageFlowAPI) PutRawMessageContentWithContext(arg0 context.Context, arg1 *workmailmessageflow.PutRawMessageContentInput, arg2 ...request.Option) (*workmailmessageflow.PutRawMessageContentOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "PutRawMessageContentWithContext", varargs...)
+	ret0, _ := ret[0].(*workmailmessageflow.PutRawMessageContentOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// PutRawMessageContentWithContext indicates an expected call of PutRawMessageContentWithContext.
+func (mr *MockWorkMailMessageFlowAPIMockRecorder) PutRawMessageContentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutRawMessageContentWithContext", reflect.TypeOf((*MockWorkMailMessageFlowAPI)(nil).PutRawMessageContentWithContext), varargs...)
 }

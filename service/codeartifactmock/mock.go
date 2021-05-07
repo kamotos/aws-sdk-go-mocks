@@ -6,36 +6,37 @@ package codeartifactmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	codeartifact "github.com/aws/aws-sdk-go/service/codeartifact"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockCodeArtifactAPI is a mock of CodeArtifactAPI interface
+// MockCodeArtifactAPI is a mock of CodeArtifactAPI interface.
 type MockCodeArtifactAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockCodeArtifactAPIMockRecorder
 }
 
-// MockCodeArtifactAPIMockRecorder is the mock recorder for MockCodeArtifactAPI
+// MockCodeArtifactAPIMockRecorder is the mock recorder for MockCodeArtifactAPI.
 type MockCodeArtifactAPIMockRecorder struct {
 	mock *MockCodeArtifactAPI
 }
 
-// NewMockCodeArtifactAPI creates a new mock instance
+// NewMockCodeArtifactAPI creates a new mock instance.
 func NewMockCodeArtifactAPI(ctrl *gomock.Controller) *MockCodeArtifactAPI {
 	mock := &MockCodeArtifactAPI{ctrl: ctrl}
 	mock.recorder = &MockCodeArtifactAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockCodeArtifactAPI) EXPECT() *MockCodeArtifactAPIMockRecorder {
 	return m.recorder
 }
 
-// AssociateExternalConnection mocks base method
+// AssociateExternalConnection mocks base method.
 func (m *MockCodeArtifactAPI) AssociateExternalConnection(arg0 *codeartifact.AssociateExternalConnectionInput) (*codeartifact.AssociateExternalConnectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateExternalConnection", arg0)
@@ -44,13 +45,13 @@ func (m *MockCodeArtifactAPI) AssociateExternalConnection(arg0 *codeartifact.Ass
 	return ret0, ret1
 }
 
-// AssociateExternalConnection indicates an expected call of AssociateExternalConnection
+// AssociateExternalConnection indicates an expected call of AssociateExternalConnection.
 func (mr *MockCodeArtifactAPIMockRecorder) AssociateExternalConnection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateExternalConnection", reflect.TypeOf((*MockCodeArtifactAPI)(nil).AssociateExternalConnection), arg0)
 }
 
-// AssociateExternalConnectionRequest mocks base method
+// AssociateExternalConnectionRequest mocks base method.
 func (m *MockCodeArtifactAPI) AssociateExternalConnectionRequest(arg0 *codeartifact.AssociateExternalConnectionInput) (*request.Request, *codeartifact.AssociateExternalConnectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateExternalConnectionRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockCodeArtifactAPI) AssociateExternalConnectionRequest(arg0 *codeartif
 	return ret0, ret1
 }
 
-// AssociateExternalConnectionRequest indicates an expected call of AssociateExternalConnectionRequest
+// AssociateExternalConnectionRequest indicates an expected call of AssociateExternalConnectionRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) AssociateExternalConnectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateExternalConnectionRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).AssociateExternalConnectionRequest), arg0)
 }
 
-// AssociateExternalConnectionWithContext mocks base method
+// AssociateExternalConnectionWithContext mocks base method.
 func (m *MockCodeArtifactAPI) AssociateExternalConnectionWithContext(arg0 context.Context, arg1 *codeartifact.AssociateExternalConnectionInput, arg2 ...request.Option) (*codeartifact.AssociateExternalConnectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockCodeArtifactAPI) AssociateExternalConnectionWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// AssociateExternalConnectionWithContext indicates an expected call of AssociateExternalConnectionWithContext
+// AssociateExternalConnectionWithContext indicates an expected call of AssociateExternalConnectionWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) AssociateExternalConnectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateExternalConnectionWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).AssociateExternalConnectionWithContext), varargs...)
 }
 
-// CopyPackageVersions mocks base method
+// CopyPackageVersions mocks base method.
 func (m *MockCodeArtifactAPI) CopyPackageVersions(arg0 *codeartifact.CopyPackageVersionsInput) (*codeartifact.CopyPackageVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CopyPackageVersions", arg0)
@@ -94,13 +95,13 @@ func (m *MockCodeArtifactAPI) CopyPackageVersions(arg0 *codeartifact.CopyPackage
 	return ret0, ret1
 }
 
-// CopyPackageVersions indicates an expected call of CopyPackageVersions
+// CopyPackageVersions indicates an expected call of CopyPackageVersions.
 func (mr *MockCodeArtifactAPIMockRecorder) CopyPackageVersions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CopyPackageVersions", reflect.TypeOf((*MockCodeArtifactAPI)(nil).CopyPackageVersions), arg0)
 }
 
-// CopyPackageVersionsRequest mocks base method
+// CopyPackageVersionsRequest mocks base method.
 func (m *MockCodeArtifactAPI) CopyPackageVersionsRequest(arg0 *codeartifact.CopyPackageVersionsInput) (*request.Request, *codeartifact.CopyPackageVersionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CopyPackageVersionsRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockCodeArtifactAPI) CopyPackageVersionsRequest(arg0 *codeartifact.Copy
 	return ret0, ret1
 }
 
-// CopyPackageVersionsRequest indicates an expected call of CopyPackageVersionsRequest
+// CopyPackageVersionsRequest indicates an expected call of CopyPackageVersionsRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) CopyPackageVersionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CopyPackageVersionsRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).CopyPackageVersionsRequest), arg0)
 }
 
-// CopyPackageVersionsWithContext mocks base method
+// CopyPackageVersionsWithContext mocks base method.
 func (m *MockCodeArtifactAPI) CopyPackageVersionsWithContext(arg0 context.Context, arg1 *codeartifact.CopyPackageVersionsInput, arg2 ...request.Option) (*codeartifact.CopyPackageVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockCodeArtifactAPI) CopyPackageVersionsWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CopyPackageVersionsWithContext indicates an expected call of CopyPackageVersionsWithContext
+// CopyPackageVersionsWithContext indicates an expected call of CopyPackageVersionsWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) CopyPackageVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CopyPackageVersionsWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).CopyPackageVersionsWithContext), varargs...)
 }
 
-// CreateDomain mocks base method
+// CreateDomain mocks base method.
 func (m *MockCodeArtifactAPI) CreateDomain(arg0 *codeartifact.CreateDomainInput) (*codeartifact.CreateDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDomain", arg0)
@@ -144,13 +145,13 @@ func (m *MockCodeArtifactAPI) CreateDomain(arg0 *codeartifact.CreateDomainInput)
 	return ret0, ret1
 }
 
-// CreateDomain indicates an expected call of CreateDomain
+// CreateDomain indicates an expected call of CreateDomain.
 func (mr *MockCodeArtifactAPIMockRecorder) CreateDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomain", reflect.TypeOf((*MockCodeArtifactAPI)(nil).CreateDomain), arg0)
 }
 
-// CreateDomainRequest mocks base method
+// CreateDomainRequest mocks base method.
 func (m *MockCodeArtifactAPI) CreateDomainRequest(arg0 *codeartifact.CreateDomainInput) (*request.Request, *codeartifact.CreateDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDomainRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockCodeArtifactAPI) CreateDomainRequest(arg0 *codeartifact.CreateDomai
 	return ret0, ret1
 }
 
-// CreateDomainRequest indicates an expected call of CreateDomainRequest
+// CreateDomainRequest indicates an expected call of CreateDomainRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) CreateDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).CreateDomainRequest), arg0)
 }
 
-// CreateDomainWithContext mocks base method
+// CreateDomainWithContext mocks base method.
 func (m *MockCodeArtifactAPI) CreateDomainWithContext(arg0 context.Context, arg1 *codeartifact.CreateDomainInput, arg2 ...request.Option) (*codeartifact.CreateDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockCodeArtifactAPI) CreateDomainWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// CreateDomainWithContext indicates an expected call of CreateDomainWithContext
+// CreateDomainWithContext indicates an expected call of CreateDomainWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) CreateDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).CreateDomainWithContext), varargs...)
 }
 
-// CreateRepository mocks base method
+// CreateRepository mocks base method.
 func (m *MockCodeArtifactAPI) CreateRepository(arg0 *codeartifact.CreateRepositoryInput) (*codeartifact.CreateRepositoryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRepository", arg0)
@@ -194,13 +195,13 @@ func (m *MockCodeArtifactAPI) CreateRepository(arg0 *codeartifact.CreateReposito
 	return ret0, ret1
 }
 
-// CreateRepository indicates an expected call of CreateRepository
+// CreateRepository indicates an expected call of CreateRepository.
 func (mr *MockCodeArtifactAPIMockRecorder) CreateRepository(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRepository", reflect.TypeOf((*MockCodeArtifactAPI)(nil).CreateRepository), arg0)
 }
 
-// CreateRepositoryRequest mocks base method
+// CreateRepositoryRequest mocks base method.
 func (m *MockCodeArtifactAPI) CreateRepositoryRequest(arg0 *codeartifact.CreateRepositoryInput) (*request.Request, *codeartifact.CreateRepositoryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRepositoryRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockCodeArtifactAPI) CreateRepositoryRequest(arg0 *codeartifact.CreateR
 	return ret0, ret1
 }
 
-// CreateRepositoryRequest indicates an expected call of CreateRepositoryRequest
+// CreateRepositoryRequest indicates an expected call of CreateRepositoryRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) CreateRepositoryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRepositoryRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).CreateRepositoryRequest), arg0)
 }
 
-// CreateRepositoryWithContext mocks base method
+// CreateRepositoryWithContext mocks base method.
 func (m *MockCodeArtifactAPI) CreateRepositoryWithContext(arg0 context.Context, arg1 *codeartifact.CreateRepositoryInput, arg2 ...request.Option) (*codeartifact.CreateRepositoryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockCodeArtifactAPI) CreateRepositoryWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// CreateRepositoryWithContext indicates an expected call of CreateRepositoryWithContext
+// CreateRepositoryWithContext indicates an expected call of CreateRepositoryWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) CreateRepositoryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRepositoryWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).CreateRepositoryWithContext), varargs...)
 }
 
-// DeleteDomain mocks base method
+// DeleteDomain mocks base method.
 func (m *MockCodeArtifactAPI) DeleteDomain(arg0 *codeartifact.DeleteDomainInput) (*codeartifact.DeleteDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDomain", arg0)
@@ -244,13 +245,13 @@ func (m *MockCodeArtifactAPI) DeleteDomain(arg0 *codeartifact.DeleteDomainInput)
 	return ret0, ret1
 }
 
-// DeleteDomain indicates an expected call of DeleteDomain
+// DeleteDomain indicates an expected call of DeleteDomain.
 func (mr *MockCodeArtifactAPIMockRecorder) DeleteDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomain", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeleteDomain), arg0)
 }
 
-// DeleteDomainPermissionsPolicy mocks base method
+// DeleteDomainPermissionsPolicy mocks base method.
 func (m *MockCodeArtifactAPI) DeleteDomainPermissionsPolicy(arg0 *codeartifact.DeleteDomainPermissionsPolicyInput) (*codeartifact.DeleteDomainPermissionsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDomainPermissionsPolicy", arg0)
@@ -259,13 +260,13 @@ func (m *MockCodeArtifactAPI) DeleteDomainPermissionsPolicy(arg0 *codeartifact.D
 	return ret0, ret1
 }
 
-// DeleteDomainPermissionsPolicy indicates an expected call of DeleteDomainPermissionsPolicy
+// DeleteDomainPermissionsPolicy indicates an expected call of DeleteDomainPermissionsPolicy.
 func (mr *MockCodeArtifactAPIMockRecorder) DeleteDomainPermissionsPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainPermissionsPolicy", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeleteDomainPermissionsPolicy), arg0)
 }
 
-// DeleteDomainPermissionsPolicyRequest mocks base method
+// DeleteDomainPermissionsPolicyRequest mocks base method.
 func (m *MockCodeArtifactAPI) DeleteDomainPermissionsPolicyRequest(arg0 *codeartifact.DeleteDomainPermissionsPolicyInput) (*request.Request, *codeartifact.DeleteDomainPermissionsPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDomainPermissionsPolicyRequest", arg0)
@@ -274,13 +275,13 @@ func (m *MockCodeArtifactAPI) DeleteDomainPermissionsPolicyRequest(arg0 *codeart
 	return ret0, ret1
 }
 
-// DeleteDomainPermissionsPolicyRequest indicates an expected call of DeleteDomainPermissionsPolicyRequest
+// DeleteDomainPermissionsPolicyRequest indicates an expected call of DeleteDomainPermissionsPolicyRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) DeleteDomainPermissionsPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainPermissionsPolicyRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeleteDomainPermissionsPolicyRequest), arg0)
 }
 
-// DeleteDomainPermissionsPolicyWithContext mocks base method
+// DeleteDomainPermissionsPolicyWithContext mocks base method.
 func (m *MockCodeArtifactAPI) DeleteDomainPermissionsPolicyWithContext(arg0 context.Context, arg1 *codeartifact.DeleteDomainPermissionsPolicyInput, arg2 ...request.Option) (*codeartifact.DeleteDomainPermissionsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -293,14 +294,14 @@ func (m *MockCodeArtifactAPI) DeleteDomainPermissionsPolicyWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// DeleteDomainPermissionsPolicyWithContext indicates an expected call of DeleteDomainPermissionsPolicyWithContext
+// DeleteDomainPermissionsPolicyWithContext indicates an expected call of DeleteDomainPermissionsPolicyWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) DeleteDomainPermissionsPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainPermissionsPolicyWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeleteDomainPermissionsPolicyWithContext), varargs...)
 }
 
-// DeleteDomainRequest mocks base method
+// DeleteDomainRequest mocks base method.
 func (m *MockCodeArtifactAPI) DeleteDomainRequest(arg0 *codeartifact.DeleteDomainInput) (*request.Request, *codeartifact.DeleteDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDomainRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockCodeArtifactAPI) DeleteDomainRequest(arg0 *codeartifact.DeleteDomai
 	return ret0, ret1
 }
 
-// DeleteDomainRequest indicates an expected call of DeleteDomainRequest
+// DeleteDomainRequest indicates an expected call of DeleteDomainRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) DeleteDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeleteDomainRequest), arg0)
 }
 
-// DeleteDomainWithContext mocks base method
+// DeleteDomainWithContext mocks base method.
 func (m *MockCodeArtifactAPI) DeleteDomainWithContext(arg0 context.Context, arg1 *codeartifact.DeleteDomainInput, arg2 ...request.Option) (*codeartifact.DeleteDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockCodeArtifactAPI) DeleteDomainWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DeleteDomainWithContext indicates an expected call of DeleteDomainWithContext
+// DeleteDomainWithContext indicates an expected call of DeleteDomainWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) DeleteDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeleteDomainWithContext), varargs...)
 }
 
-// DeletePackageVersions mocks base method
+// DeletePackageVersions mocks base method.
 func (m *MockCodeArtifactAPI) DeletePackageVersions(arg0 *codeartifact.DeletePackageVersionsInput) (*codeartifact.DeletePackageVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeletePackageVersions", arg0)
@@ -344,13 +345,13 @@ func (m *MockCodeArtifactAPI) DeletePackageVersions(arg0 *codeartifact.DeletePac
 	return ret0, ret1
 }
 
-// DeletePackageVersions indicates an expected call of DeletePackageVersions
+// DeletePackageVersions indicates an expected call of DeletePackageVersions.
 func (mr *MockCodeArtifactAPIMockRecorder) DeletePackageVersions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePackageVersions", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeletePackageVersions), arg0)
 }
 
-// DeletePackageVersionsRequest mocks base method
+// DeletePackageVersionsRequest mocks base method.
 func (m *MockCodeArtifactAPI) DeletePackageVersionsRequest(arg0 *codeartifact.DeletePackageVersionsInput) (*request.Request, *codeartifact.DeletePackageVersionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeletePackageVersionsRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockCodeArtifactAPI) DeletePackageVersionsRequest(arg0 *codeartifact.De
 	return ret0, ret1
 }
 
-// DeletePackageVersionsRequest indicates an expected call of DeletePackageVersionsRequest
+// DeletePackageVersionsRequest indicates an expected call of DeletePackageVersionsRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) DeletePackageVersionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePackageVersionsRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeletePackageVersionsRequest), arg0)
 }
 
-// DeletePackageVersionsWithContext mocks base method
+// DeletePackageVersionsWithContext mocks base method.
 func (m *MockCodeArtifactAPI) DeletePackageVersionsWithContext(arg0 context.Context, arg1 *codeartifact.DeletePackageVersionsInput, arg2 ...request.Option) (*codeartifact.DeletePackageVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockCodeArtifactAPI) DeletePackageVersionsWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DeletePackageVersionsWithContext indicates an expected call of DeletePackageVersionsWithContext
+// DeletePackageVersionsWithContext indicates an expected call of DeletePackageVersionsWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) DeletePackageVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePackageVersionsWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeletePackageVersionsWithContext), varargs...)
 }
 
-// DeleteRepository mocks base method
+// DeleteRepository mocks base method.
 func (m *MockCodeArtifactAPI) DeleteRepository(arg0 *codeartifact.DeleteRepositoryInput) (*codeartifact.DeleteRepositoryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRepository", arg0)
@@ -394,13 +395,13 @@ func (m *MockCodeArtifactAPI) DeleteRepository(arg0 *codeartifact.DeleteReposito
 	return ret0, ret1
 }
 
-// DeleteRepository indicates an expected call of DeleteRepository
+// DeleteRepository indicates an expected call of DeleteRepository.
 func (mr *MockCodeArtifactAPIMockRecorder) DeleteRepository(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRepository", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeleteRepository), arg0)
 }
 
-// DeleteRepositoryPermissionsPolicy mocks base method
+// DeleteRepositoryPermissionsPolicy mocks base method.
 func (m *MockCodeArtifactAPI) DeleteRepositoryPermissionsPolicy(arg0 *codeartifact.DeleteRepositoryPermissionsPolicyInput) (*codeartifact.DeleteRepositoryPermissionsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRepositoryPermissionsPolicy", arg0)
@@ -409,13 +410,13 @@ func (m *MockCodeArtifactAPI) DeleteRepositoryPermissionsPolicy(arg0 *codeartifa
 	return ret0, ret1
 }
 
-// DeleteRepositoryPermissionsPolicy indicates an expected call of DeleteRepositoryPermissionsPolicy
+// DeleteRepositoryPermissionsPolicy indicates an expected call of DeleteRepositoryPermissionsPolicy.
 func (mr *MockCodeArtifactAPIMockRecorder) DeleteRepositoryPermissionsPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRepositoryPermissionsPolicy", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeleteRepositoryPermissionsPolicy), arg0)
 }
 
-// DeleteRepositoryPermissionsPolicyRequest mocks base method
+// DeleteRepositoryPermissionsPolicyRequest mocks base method.
 func (m *MockCodeArtifactAPI) DeleteRepositoryPermissionsPolicyRequest(arg0 *codeartifact.DeleteRepositoryPermissionsPolicyInput) (*request.Request, *codeartifact.DeleteRepositoryPermissionsPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRepositoryPermissionsPolicyRequest", arg0)
@@ -424,13 +425,13 @@ func (m *MockCodeArtifactAPI) DeleteRepositoryPermissionsPolicyRequest(arg0 *cod
 	return ret0, ret1
 }
 
-// DeleteRepositoryPermissionsPolicyRequest indicates an expected call of DeleteRepositoryPermissionsPolicyRequest
+// DeleteRepositoryPermissionsPolicyRequest indicates an expected call of DeleteRepositoryPermissionsPolicyRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) DeleteRepositoryPermissionsPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRepositoryPermissionsPolicyRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeleteRepositoryPermissionsPolicyRequest), arg0)
 }
 
-// DeleteRepositoryPermissionsPolicyWithContext mocks base method
+// DeleteRepositoryPermissionsPolicyWithContext mocks base method.
 func (m *MockCodeArtifactAPI) DeleteRepositoryPermissionsPolicyWithContext(arg0 context.Context, arg1 *codeartifact.DeleteRepositoryPermissionsPolicyInput, arg2 ...request.Option) (*codeartifact.DeleteRepositoryPermissionsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -443,14 +444,14 @@ func (m *MockCodeArtifactAPI) DeleteRepositoryPermissionsPolicyWithContext(arg0 
 	return ret0, ret1
 }
 
-// DeleteRepositoryPermissionsPolicyWithContext indicates an expected call of DeleteRepositoryPermissionsPolicyWithContext
+// DeleteRepositoryPermissionsPolicyWithContext indicates an expected call of DeleteRepositoryPermissionsPolicyWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) DeleteRepositoryPermissionsPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRepositoryPermissionsPolicyWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeleteRepositoryPermissionsPolicyWithContext), varargs...)
 }
 
-// DeleteRepositoryRequest mocks base method
+// DeleteRepositoryRequest mocks base method.
 func (m *MockCodeArtifactAPI) DeleteRepositoryRequest(arg0 *codeartifact.DeleteRepositoryInput) (*request.Request, *codeartifact.DeleteRepositoryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRepositoryRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockCodeArtifactAPI) DeleteRepositoryRequest(arg0 *codeartifact.DeleteR
 	return ret0, ret1
 }
 
-// DeleteRepositoryRequest indicates an expected call of DeleteRepositoryRequest
+// DeleteRepositoryRequest indicates an expected call of DeleteRepositoryRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) DeleteRepositoryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRepositoryRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeleteRepositoryRequest), arg0)
 }
 
-// DeleteRepositoryWithContext mocks base method
+// DeleteRepositoryWithContext mocks base method.
 func (m *MockCodeArtifactAPI) DeleteRepositoryWithContext(arg0 context.Context, arg1 *codeartifact.DeleteRepositoryInput, arg2 ...request.Option) (*codeartifact.DeleteRepositoryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockCodeArtifactAPI) DeleteRepositoryWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DeleteRepositoryWithContext indicates an expected call of DeleteRepositoryWithContext
+// DeleteRepositoryWithContext indicates an expected call of DeleteRepositoryWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) DeleteRepositoryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRepositoryWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DeleteRepositoryWithContext), varargs...)
 }
 
-// DescribeDomain mocks base method
+// DescribeDomain mocks base method.
 func (m *MockCodeArtifactAPI) DescribeDomain(arg0 *codeartifact.DescribeDomainInput) (*codeartifact.DescribeDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDomain", arg0)
@@ -494,13 +495,13 @@ func (m *MockCodeArtifactAPI) DescribeDomain(arg0 *codeartifact.DescribeDomainIn
 	return ret0, ret1
 }
 
-// DescribeDomain indicates an expected call of DescribeDomain
+// DescribeDomain indicates an expected call of DescribeDomain.
 func (mr *MockCodeArtifactAPIMockRecorder) DescribeDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDomain", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DescribeDomain), arg0)
 }
 
-// DescribeDomainRequest mocks base method
+// DescribeDomainRequest mocks base method.
 func (m *MockCodeArtifactAPI) DescribeDomainRequest(arg0 *codeartifact.DescribeDomainInput) (*request.Request, *codeartifact.DescribeDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDomainRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockCodeArtifactAPI) DescribeDomainRequest(arg0 *codeartifact.DescribeD
 	return ret0, ret1
 }
 
-// DescribeDomainRequest indicates an expected call of DescribeDomainRequest
+// DescribeDomainRequest indicates an expected call of DescribeDomainRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) DescribeDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDomainRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DescribeDomainRequest), arg0)
 }
 
-// DescribeDomainWithContext mocks base method
+// DescribeDomainWithContext mocks base method.
 func (m *MockCodeArtifactAPI) DescribeDomainWithContext(arg0 context.Context, arg1 *codeartifact.DescribeDomainInput, arg2 ...request.Option) (*codeartifact.DescribeDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockCodeArtifactAPI) DescribeDomainWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DescribeDomainWithContext indicates an expected call of DescribeDomainWithContext
+// DescribeDomainWithContext indicates an expected call of DescribeDomainWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) DescribeDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDomainWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DescribeDomainWithContext), varargs...)
 }
 
-// DescribePackageVersion mocks base method
+// DescribePackageVersion mocks base method.
 func (m *MockCodeArtifactAPI) DescribePackageVersion(arg0 *codeartifact.DescribePackageVersionInput) (*codeartifact.DescribePackageVersionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribePackageVersion", arg0)
@@ -544,13 +545,13 @@ func (m *MockCodeArtifactAPI) DescribePackageVersion(arg0 *codeartifact.Describe
 	return ret0, ret1
 }
 
-// DescribePackageVersion indicates an expected call of DescribePackageVersion
+// DescribePackageVersion indicates an expected call of DescribePackageVersion.
 func (mr *MockCodeArtifactAPIMockRecorder) DescribePackageVersion(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePackageVersion", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DescribePackageVersion), arg0)
 }
 
-// DescribePackageVersionRequest mocks base method
+// DescribePackageVersionRequest mocks base method.
 func (m *MockCodeArtifactAPI) DescribePackageVersionRequest(arg0 *codeartifact.DescribePackageVersionInput) (*request.Request, *codeartifact.DescribePackageVersionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribePackageVersionRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockCodeArtifactAPI) DescribePackageVersionRequest(arg0 *codeartifact.D
 	return ret0, ret1
 }
 
-// DescribePackageVersionRequest indicates an expected call of DescribePackageVersionRequest
+// DescribePackageVersionRequest indicates an expected call of DescribePackageVersionRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) DescribePackageVersionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePackageVersionRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DescribePackageVersionRequest), arg0)
 }
 
-// DescribePackageVersionWithContext mocks base method
+// DescribePackageVersionWithContext mocks base method.
 func (m *MockCodeArtifactAPI) DescribePackageVersionWithContext(arg0 context.Context, arg1 *codeartifact.DescribePackageVersionInput, arg2 ...request.Option) (*codeartifact.DescribePackageVersionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockCodeArtifactAPI) DescribePackageVersionWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DescribePackageVersionWithContext indicates an expected call of DescribePackageVersionWithContext
+// DescribePackageVersionWithContext indicates an expected call of DescribePackageVersionWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) DescribePackageVersionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePackageVersionWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DescribePackageVersionWithContext), varargs...)
 }
 
-// DescribeRepository mocks base method
+// DescribeRepository mocks base method.
 func (m *MockCodeArtifactAPI) DescribeRepository(arg0 *codeartifact.DescribeRepositoryInput) (*codeartifact.DescribeRepositoryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRepository", arg0)
@@ -594,13 +595,13 @@ func (m *MockCodeArtifactAPI) DescribeRepository(arg0 *codeartifact.DescribeRepo
 	return ret0, ret1
 }
 
-// DescribeRepository indicates an expected call of DescribeRepository
+// DescribeRepository indicates an expected call of DescribeRepository.
 func (mr *MockCodeArtifactAPIMockRecorder) DescribeRepository(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRepository", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DescribeRepository), arg0)
 }
 
-// DescribeRepositoryRequest mocks base method
+// DescribeRepositoryRequest mocks base method.
 func (m *MockCodeArtifactAPI) DescribeRepositoryRequest(arg0 *codeartifact.DescribeRepositoryInput) (*request.Request, *codeartifact.DescribeRepositoryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRepositoryRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockCodeArtifactAPI) DescribeRepositoryRequest(arg0 *codeartifact.Descr
 	return ret0, ret1
 }
 
-// DescribeRepositoryRequest indicates an expected call of DescribeRepositoryRequest
+// DescribeRepositoryRequest indicates an expected call of DescribeRepositoryRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) DescribeRepositoryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRepositoryRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DescribeRepositoryRequest), arg0)
 }
 
-// DescribeRepositoryWithContext mocks base method
+// DescribeRepositoryWithContext mocks base method.
 func (m *MockCodeArtifactAPI) DescribeRepositoryWithContext(arg0 context.Context, arg1 *codeartifact.DescribeRepositoryInput, arg2 ...request.Option) (*codeartifact.DescribeRepositoryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockCodeArtifactAPI) DescribeRepositoryWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// DescribeRepositoryWithContext indicates an expected call of DescribeRepositoryWithContext
+// DescribeRepositoryWithContext indicates an expected call of DescribeRepositoryWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) DescribeRepositoryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRepositoryWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DescribeRepositoryWithContext), varargs...)
 }
 
-// DisassociateExternalConnection mocks base method
+// DisassociateExternalConnection mocks base method.
 func (m *MockCodeArtifactAPI) DisassociateExternalConnection(arg0 *codeartifact.DisassociateExternalConnectionInput) (*codeartifact.DisassociateExternalConnectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateExternalConnection", arg0)
@@ -644,13 +645,13 @@ func (m *MockCodeArtifactAPI) DisassociateExternalConnection(arg0 *codeartifact.
 	return ret0, ret1
 }
 
-// DisassociateExternalConnection indicates an expected call of DisassociateExternalConnection
+// DisassociateExternalConnection indicates an expected call of DisassociateExternalConnection.
 func (mr *MockCodeArtifactAPIMockRecorder) DisassociateExternalConnection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateExternalConnection", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DisassociateExternalConnection), arg0)
 }
 
-// DisassociateExternalConnectionRequest mocks base method
+// DisassociateExternalConnectionRequest mocks base method.
 func (m *MockCodeArtifactAPI) DisassociateExternalConnectionRequest(arg0 *codeartifact.DisassociateExternalConnectionInput) (*request.Request, *codeartifact.DisassociateExternalConnectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateExternalConnectionRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockCodeArtifactAPI) DisassociateExternalConnectionRequest(arg0 *codear
 	return ret0, ret1
 }
 
-// DisassociateExternalConnectionRequest indicates an expected call of DisassociateExternalConnectionRequest
+// DisassociateExternalConnectionRequest indicates an expected call of DisassociateExternalConnectionRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) DisassociateExternalConnectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateExternalConnectionRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DisassociateExternalConnectionRequest), arg0)
 }
 
-// DisassociateExternalConnectionWithContext mocks base method
+// DisassociateExternalConnectionWithContext mocks base method.
 func (m *MockCodeArtifactAPI) DisassociateExternalConnectionWithContext(arg0 context.Context, arg1 *codeartifact.DisassociateExternalConnectionInput, arg2 ...request.Option) (*codeartifact.DisassociateExternalConnectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockCodeArtifactAPI) DisassociateExternalConnectionWithContext(arg0 con
 	return ret0, ret1
 }
 
-// DisassociateExternalConnectionWithContext indicates an expected call of DisassociateExternalConnectionWithContext
+// DisassociateExternalConnectionWithContext indicates an expected call of DisassociateExternalConnectionWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) DisassociateExternalConnectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateExternalConnectionWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DisassociateExternalConnectionWithContext), varargs...)
 }
 
-// DisposePackageVersions mocks base method
+// DisposePackageVersions mocks base method.
 func (m *MockCodeArtifactAPI) DisposePackageVersions(arg0 *codeartifact.DisposePackageVersionsInput) (*codeartifact.DisposePackageVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisposePackageVersions", arg0)
@@ -694,13 +695,13 @@ func (m *MockCodeArtifactAPI) DisposePackageVersions(arg0 *codeartifact.DisposeP
 	return ret0, ret1
 }
 
-// DisposePackageVersions indicates an expected call of DisposePackageVersions
+// DisposePackageVersions indicates an expected call of DisposePackageVersions.
 func (mr *MockCodeArtifactAPIMockRecorder) DisposePackageVersions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisposePackageVersions", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DisposePackageVersions), arg0)
 }
 
-// DisposePackageVersionsRequest mocks base method
+// DisposePackageVersionsRequest mocks base method.
 func (m *MockCodeArtifactAPI) DisposePackageVersionsRequest(arg0 *codeartifact.DisposePackageVersionsInput) (*request.Request, *codeartifact.DisposePackageVersionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisposePackageVersionsRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockCodeArtifactAPI) DisposePackageVersionsRequest(arg0 *codeartifact.D
 	return ret0, ret1
 }
 
-// DisposePackageVersionsRequest indicates an expected call of DisposePackageVersionsRequest
+// DisposePackageVersionsRequest indicates an expected call of DisposePackageVersionsRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) DisposePackageVersionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisposePackageVersionsRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DisposePackageVersionsRequest), arg0)
 }
 
-// DisposePackageVersionsWithContext mocks base method
+// DisposePackageVersionsWithContext mocks base method.
 func (m *MockCodeArtifactAPI) DisposePackageVersionsWithContext(arg0 context.Context, arg1 *codeartifact.DisposePackageVersionsInput, arg2 ...request.Option) (*codeartifact.DisposePackageVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockCodeArtifactAPI) DisposePackageVersionsWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DisposePackageVersionsWithContext indicates an expected call of DisposePackageVersionsWithContext
+// DisposePackageVersionsWithContext indicates an expected call of DisposePackageVersionsWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) DisposePackageVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisposePackageVersionsWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).DisposePackageVersionsWithContext), varargs...)
 }
 
-// GetAuthorizationToken mocks base method
+// GetAuthorizationToken mocks base method.
 func (m *MockCodeArtifactAPI) GetAuthorizationToken(arg0 *codeartifact.GetAuthorizationTokenInput) (*codeartifact.GetAuthorizationTokenOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAuthorizationToken", arg0)
@@ -744,13 +745,13 @@ func (m *MockCodeArtifactAPI) GetAuthorizationToken(arg0 *codeartifact.GetAuthor
 	return ret0, ret1
 }
 
-// GetAuthorizationToken indicates an expected call of GetAuthorizationToken
+// GetAuthorizationToken indicates an expected call of GetAuthorizationToken.
 func (mr *MockCodeArtifactAPIMockRecorder) GetAuthorizationToken(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAuthorizationToken", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetAuthorizationToken), arg0)
 }
 
-// GetAuthorizationTokenRequest mocks base method
+// GetAuthorizationTokenRequest mocks base method.
 func (m *MockCodeArtifactAPI) GetAuthorizationTokenRequest(arg0 *codeartifact.GetAuthorizationTokenInput) (*request.Request, *codeartifact.GetAuthorizationTokenOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAuthorizationTokenRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockCodeArtifactAPI) GetAuthorizationTokenRequest(arg0 *codeartifact.Ge
 	return ret0, ret1
 }
 
-// GetAuthorizationTokenRequest indicates an expected call of GetAuthorizationTokenRequest
+// GetAuthorizationTokenRequest indicates an expected call of GetAuthorizationTokenRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) GetAuthorizationTokenRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAuthorizationTokenRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetAuthorizationTokenRequest), arg0)
 }
 
-// GetAuthorizationTokenWithContext mocks base method
+// GetAuthorizationTokenWithContext mocks base method.
 func (m *MockCodeArtifactAPI) GetAuthorizationTokenWithContext(arg0 context.Context, arg1 *codeartifact.GetAuthorizationTokenInput, arg2 ...request.Option) (*codeartifact.GetAuthorizationTokenOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockCodeArtifactAPI) GetAuthorizationTokenWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// GetAuthorizationTokenWithContext indicates an expected call of GetAuthorizationTokenWithContext
+// GetAuthorizationTokenWithContext indicates an expected call of GetAuthorizationTokenWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) GetAuthorizationTokenWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAuthorizationTokenWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetAuthorizationTokenWithContext), varargs...)
 }
 
-// GetDomainPermissionsPolicy mocks base method
+// GetDomainPermissionsPolicy mocks base method.
 func (m *MockCodeArtifactAPI) GetDomainPermissionsPolicy(arg0 *codeartifact.GetDomainPermissionsPolicyInput) (*codeartifact.GetDomainPermissionsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomainPermissionsPolicy", arg0)
@@ -794,13 +795,13 @@ func (m *MockCodeArtifactAPI) GetDomainPermissionsPolicy(arg0 *codeartifact.GetD
 	return ret0, ret1
 }
 
-// GetDomainPermissionsPolicy indicates an expected call of GetDomainPermissionsPolicy
+// GetDomainPermissionsPolicy indicates an expected call of GetDomainPermissionsPolicy.
 func (mr *MockCodeArtifactAPIMockRecorder) GetDomainPermissionsPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainPermissionsPolicy", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetDomainPermissionsPolicy), arg0)
 }
 
-// GetDomainPermissionsPolicyRequest mocks base method
+// GetDomainPermissionsPolicyRequest mocks base method.
 func (m *MockCodeArtifactAPI) GetDomainPermissionsPolicyRequest(arg0 *codeartifact.GetDomainPermissionsPolicyInput) (*request.Request, *codeartifact.GetDomainPermissionsPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomainPermissionsPolicyRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockCodeArtifactAPI) GetDomainPermissionsPolicyRequest(arg0 *codeartifa
 	return ret0, ret1
 }
 
-// GetDomainPermissionsPolicyRequest indicates an expected call of GetDomainPermissionsPolicyRequest
+// GetDomainPermissionsPolicyRequest indicates an expected call of GetDomainPermissionsPolicyRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) GetDomainPermissionsPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainPermissionsPolicyRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetDomainPermissionsPolicyRequest), arg0)
 }
 
-// GetDomainPermissionsPolicyWithContext mocks base method
+// GetDomainPermissionsPolicyWithContext mocks base method.
 func (m *MockCodeArtifactAPI) GetDomainPermissionsPolicyWithContext(arg0 context.Context, arg1 *codeartifact.GetDomainPermissionsPolicyInput, arg2 ...request.Option) (*codeartifact.GetDomainPermissionsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockCodeArtifactAPI) GetDomainPermissionsPolicyWithContext(arg0 context
 	return ret0, ret1
 }
 
-// GetDomainPermissionsPolicyWithContext indicates an expected call of GetDomainPermissionsPolicyWithContext
+// GetDomainPermissionsPolicyWithContext indicates an expected call of GetDomainPermissionsPolicyWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) GetDomainPermissionsPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainPermissionsPolicyWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetDomainPermissionsPolicyWithContext), varargs...)
 }
 
-// GetPackageVersionAsset mocks base method
+// GetPackageVersionAsset mocks base method.
 func (m *MockCodeArtifactAPI) GetPackageVersionAsset(arg0 *codeartifact.GetPackageVersionAssetInput) (*codeartifact.GetPackageVersionAssetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetPackageVersionAsset", arg0)
@@ -844,13 +845,13 @@ func (m *MockCodeArtifactAPI) GetPackageVersionAsset(arg0 *codeartifact.GetPacka
 	return ret0, ret1
 }
 
-// GetPackageVersionAsset indicates an expected call of GetPackageVersionAsset
+// GetPackageVersionAsset indicates an expected call of GetPackageVersionAsset.
 func (mr *MockCodeArtifactAPIMockRecorder) GetPackageVersionAsset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPackageVersionAsset", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetPackageVersionAsset), arg0)
 }
 
-// GetPackageVersionAssetRequest mocks base method
+// GetPackageVersionAssetRequest mocks base method.
 func (m *MockCodeArtifactAPI) GetPackageVersionAssetRequest(arg0 *codeartifact.GetPackageVersionAssetInput) (*request.Request, *codeartifact.GetPackageVersionAssetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetPackageVersionAssetRequest", arg0)
@@ -859,13 +860,13 @@ func (m *MockCodeArtifactAPI) GetPackageVersionAssetRequest(arg0 *codeartifact.G
 	return ret0, ret1
 }
 
-// GetPackageVersionAssetRequest indicates an expected call of GetPackageVersionAssetRequest
+// GetPackageVersionAssetRequest indicates an expected call of GetPackageVersionAssetRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) GetPackageVersionAssetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPackageVersionAssetRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetPackageVersionAssetRequest), arg0)
 }
 
-// GetPackageVersionAssetWithContext mocks base method
+// GetPackageVersionAssetWithContext mocks base method.
 func (m *MockCodeArtifactAPI) GetPackageVersionAssetWithContext(arg0 context.Context, arg1 *codeartifact.GetPackageVersionAssetInput, arg2 ...request.Option) (*codeartifact.GetPackageVersionAssetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +879,14 @@ func (m *MockCodeArtifactAPI) GetPackageVersionAssetWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// GetPackageVersionAssetWithContext indicates an expected call of GetPackageVersionAssetWithContext
+// GetPackageVersionAssetWithContext indicates an expected call of GetPackageVersionAssetWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) GetPackageVersionAssetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPackageVersionAssetWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetPackageVersionAssetWithContext), varargs...)
 }
 
-// GetPackageVersionReadme mocks base method
+// GetPackageVersionReadme mocks base method.
 func (m *MockCodeArtifactAPI) GetPackageVersionReadme(arg0 *codeartifact.GetPackageVersionReadmeInput) (*codeartifact.GetPackageVersionReadmeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetPackageVersionReadme", arg0)
@@ -894,13 +895,13 @@ func (m *MockCodeArtifactAPI) GetPackageVersionReadme(arg0 *codeartifact.GetPack
 	return ret0, ret1
 }
 
-// GetPackageVersionReadme indicates an expected call of GetPackageVersionReadme
+// GetPackageVersionReadme indicates an expected call of GetPackageVersionReadme.
 func (mr *MockCodeArtifactAPIMockRecorder) GetPackageVersionReadme(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPackageVersionReadme", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetPackageVersionReadme), arg0)
 }
 
-// GetPackageVersionReadmeRequest mocks base method
+// GetPackageVersionReadmeRequest mocks base method.
 func (m *MockCodeArtifactAPI) GetPackageVersionReadmeRequest(arg0 *codeartifact.GetPackageVersionReadmeInput) (*request.Request, *codeartifact.GetPackageVersionReadmeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetPackageVersionReadmeRequest", arg0)
@@ -909,13 +910,13 @@ func (m *MockCodeArtifactAPI) GetPackageVersionReadmeRequest(arg0 *codeartifact.
 	return ret0, ret1
 }
 
-// GetPackageVersionReadmeRequest indicates an expected call of GetPackageVersionReadmeRequest
+// GetPackageVersionReadmeRequest indicates an expected call of GetPackageVersionReadmeRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) GetPackageVersionReadmeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPackageVersionReadmeRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetPackageVersionReadmeRequest), arg0)
 }
 
-// GetPackageVersionReadmeWithContext mocks base method
+// GetPackageVersionReadmeWithContext mocks base method.
 func (m *MockCodeArtifactAPI) GetPackageVersionReadmeWithContext(arg0 context.Context, arg1 *codeartifact.GetPackageVersionReadmeInput, arg2 ...request.Option) (*codeartifact.GetPackageVersionReadmeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -928,14 +929,14 @@ func (m *MockCodeArtifactAPI) GetPackageVersionReadmeWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// GetPackageVersionReadmeWithContext indicates an expected call of GetPackageVersionReadmeWithContext
+// GetPackageVersionReadmeWithContext indicates an expected call of GetPackageVersionReadmeWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) GetPackageVersionReadmeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPackageVersionReadmeWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetPackageVersionReadmeWithContext), varargs...)
 }
 
-// GetRepositoryEndpoint mocks base method
+// GetRepositoryEndpoint mocks base method.
 func (m *MockCodeArtifactAPI) GetRepositoryEndpoint(arg0 *codeartifact.GetRepositoryEndpointInput) (*codeartifact.GetRepositoryEndpointOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRepositoryEndpoint", arg0)
@@ -944,13 +945,13 @@ func (m *MockCodeArtifactAPI) GetRepositoryEndpoint(arg0 *codeartifact.GetReposi
 	return ret0, ret1
 }
 
-// GetRepositoryEndpoint indicates an expected call of GetRepositoryEndpoint
+// GetRepositoryEndpoint indicates an expected call of GetRepositoryEndpoint.
 func (mr *MockCodeArtifactAPIMockRecorder) GetRepositoryEndpoint(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRepositoryEndpoint", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetRepositoryEndpoint), arg0)
 }
 
-// GetRepositoryEndpointRequest mocks base method
+// GetRepositoryEndpointRequest mocks base method.
 func (m *MockCodeArtifactAPI) GetRepositoryEndpointRequest(arg0 *codeartifact.GetRepositoryEndpointInput) (*request.Request, *codeartifact.GetRepositoryEndpointOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRepositoryEndpointRequest", arg0)
@@ -959,13 +960,13 @@ func (m *MockCodeArtifactAPI) GetRepositoryEndpointRequest(arg0 *codeartifact.Ge
 	return ret0, ret1
 }
 
-// GetRepositoryEndpointRequest indicates an expected call of GetRepositoryEndpointRequest
+// GetRepositoryEndpointRequest indicates an expected call of GetRepositoryEndpointRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) GetRepositoryEndpointRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRepositoryEndpointRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetRepositoryEndpointRequest), arg0)
 }
 
-// GetRepositoryEndpointWithContext mocks base method
+// GetRepositoryEndpointWithContext mocks base method.
 func (m *MockCodeArtifactAPI) GetRepositoryEndpointWithContext(arg0 context.Context, arg1 *codeartifact.GetRepositoryEndpointInput, arg2 ...request.Option) (*codeartifact.GetRepositoryEndpointOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -978,14 +979,14 @@ func (m *MockCodeArtifactAPI) GetRepositoryEndpointWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// GetRepositoryEndpointWithContext indicates an expected call of GetRepositoryEndpointWithContext
+// GetRepositoryEndpointWithContext indicates an expected call of GetRepositoryEndpointWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) GetRepositoryEndpointWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRepositoryEndpointWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetRepositoryEndpointWithContext), varargs...)
 }
 
-// GetRepositoryPermissionsPolicy mocks base method
+// GetRepositoryPermissionsPolicy mocks base method.
 func (m *MockCodeArtifactAPI) GetRepositoryPermissionsPolicy(arg0 *codeartifact.GetRepositoryPermissionsPolicyInput) (*codeartifact.GetRepositoryPermissionsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRepositoryPermissionsPolicy", arg0)
@@ -994,13 +995,13 @@ func (m *MockCodeArtifactAPI) GetRepositoryPermissionsPolicy(arg0 *codeartifact.
 	return ret0, ret1
 }
 
-// GetRepositoryPermissionsPolicy indicates an expected call of GetRepositoryPermissionsPolicy
+// GetRepositoryPermissionsPolicy indicates an expected call of GetRepositoryPermissionsPolicy.
 func (mr *MockCodeArtifactAPIMockRecorder) GetRepositoryPermissionsPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRepositoryPermissionsPolicy", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetRepositoryPermissionsPolicy), arg0)
 }
 
-// GetRepositoryPermissionsPolicyRequest mocks base method
+// GetRepositoryPermissionsPolicyRequest mocks base method.
 func (m *MockCodeArtifactAPI) GetRepositoryPermissionsPolicyRequest(arg0 *codeartifact.GetRepositoryPermissionsPolicyInput) (*request.Request, *codeartifact.GetRepositoryPermissionsPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRepositoryPermissionsPolicyRequest", arg0)
@@ -1009,13 +1010,13 @@ func (m *MockCodeArtifactAPI) GetRepositoryPermissionsPolicyRequest(arg0 *codear
 	return ret0, ret1
 }
 
-// GetRepositoryPermissionsPolicyRequest indicates an expected call of GetRepositoryPermissionsPolicyRequest
+// GetRepositoryPermissionsPolicyRequest indicates an expected call of GetRepositoryPermissionsPolicyRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) GetRepositoryPermissionsPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRepositoryPermissionsPolicyRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetRepositoryPermissionsPolicyRequest), arg0)
 }
 
-// GetRepositoryPermissionsPolicyWithContext mocks base method
+// GetRepositoryPermissionsPolicyWithContext mocks base method.
 func (m *MockCodeArtifactAPI) GetRepositoryPermissionsPolicyWithContext(arg0 context.Context, arg1 *codeartifact.GetRepositoryPermissionsPolicyInput, arg2 ...request.Option) (*codeartifact.GetRepositoryPermissionsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1028,14 +1029,14 @@ func (m *MockCodeArtifactAPI) GetRepositoryPermissionsPolicyWithContext(arg0 con
 	return ret0, ret1
 }
 
-// GetRepositoryPermissionsPolicyWithContext indicates an expected call of GetRepositoryPermissionsPolicyWithContext
+// GetRepositoryPermissionsPolicyWithContext indicates an expected call of GetRepositoryPermissionsPolicyWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) GetRepositoryPermissionsPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRepositoryPermissionsPolicyWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).GetRepositoryPermissionsPolicyWithContext), varargs...)
 }
 
-// ListDomains mocks base method
+// ListDomains mocks base method.
 func (m *MockCodeArtifactAPI) ListDomains(arg0 *codeartifact.ListDomainsInput) (*codeartifact.ListDomainsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomains", arg0)
@@ -1044,13 +1045,13 @@ func (m *MockCodeArtifactAPI) ListDomains(arg0 *codeartifact.ListDomainsInput) (
 	return ret0, ret1
 }
 
-// ListDomains indicates an expected call of ListDomains
+// ListDomains indicates an expected call of ListDomains.
 func (mr *MockCodeArtifactAPIMockRecorder) ListDomains(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomains", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListDomains), arg0)
 }
 
-// ListDomainsPages mocks base method
+// ListDomainsPages mocks base method.
 func (m *MockCodeArtifactAPI) ListDomainsPages(arg0 *codeartifact.ListDomainsInput, arg1 func(*codeartifact.ListDomainsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomainsPages", arg0, arg1)
@@ -1058,13 +1059,13 @@ func (m *MockCodeArtifactAPI) ListDomainsPages(arg0 *codeartifact.ListDomainsInp
 	return ret0
 }
 
-// ListDomainsPages indicates an expected call of ListDomainsPages
+// ListDomainsPages indicates an expected call of ListDomainsPages.
 func (mr *MockCodeArtifactAPIMockRecorder) ListDomainsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainsPages", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListDomainsPages), arg0, arg1)
 }
 
-// ListDomainsPagesWithContext mocks base method
+// ListDomainsPagesWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListDomainsPagesWithContext(arg0 context.Context, arg1 *codeartifact.ListDomainsInput, arg2 func(*codeartifact.ListDomainsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1076,14 +1077,14 @@ func (m *MockCodeArtifactAPI) ListDomainsPagesWithContext(arg0 context.Context, 
 	return ret0
 }
 
-// ListDomainsPagesWithContext indicates an expected call of ListDomainsPagesWithContext
+// ListDomainsPagesWithContext indicates an expected call of ListDomainsPagesWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListDomainsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainsPagesWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListDomainsPagesWithContext), varargs...)
 }
 
-// ListDomainsRequest mocks base method
+// ListDomainsRequest mocks base method.
 func (m *MockCodeArtifactAPI) ListDomainsRequest(arg0 *codeartifact.ListDomainsInput) (*request.Request, *codeartifact.ListDomainsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomainsRequest", arg0)
@@ -1092,13 +1093,13 @@ func (m *MockCodeArtifactAPI) ListDomainsRequest(arg0 *codeartifact.ListDomainsI
 	return ret0, ret1
 }
 
-// ListDomainsRequest indicates an expected call of ListDomainsRequest
+// ListDomainsRequest indicates an expected call of ListDomainsRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) ListDomainsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainsRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListDomainsRequest), arg0)
 }
 
-// ListDomainsWithContext mocks base method
+// ListDomainsWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListDomainsWithContext(arg0 context.Context, arg1 *codeartifact.ListDomainsInput, arg2 ...request.Option) (*codeartifact.ListDomainsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1111,14 +1112,14 @@ func (m *MockCodeArtifactAPI) ListDomainsWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListDomainsWithContext indicates an expected call of ListDomainsWithContext
+// ListDomainsWithContext indicates an expected call of ListDomainsWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListDomainsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainsWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListDomainsWithContext), varargs...)
 }
 
-// ListPackageVersionAssets mocks base method
+// ListPackageVersionAssets mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersionAssets(arg0 *codeartifact.ListPackageVersionAssetsInput) (*codeartifact.ListPackageVersionAssetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackageVersionAssets", arg0)
@@ -1127,13 +1128,13 @@ func (m *MockCodeArtifactAPI) ListPackageVersionAssets(arg0 *codeartifact.ListPa
 	return ret0, ret1
 }
 
-// ListPackageVersionAssets indicates an expected call of ListPackageVersionAssets
+// ListPackageVersionAssets indicates an expected call of ListPackageVersionAssets.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersionAssets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersionAssets", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersionAssets), arg0)
 }
 
-// ListPackageVersionAssetsPages mocks base method
+// ListPackageVersionAssetsPages mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersionAssetsPages(arg0 *codeartifact.ListPackageVersionAssetsInput, arg1 func(*codeartifact.ListPackageVersionAssetsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackageVersionAssetsPages", arg0, arg1)
@@ -1141,13 +1142,13 @@ func (m *MockCodeArtifactAPI) ListPackageVersionAssetsPages(arg0 *codeartifact.L
 	return ret0
 }
 
-// ListPackageVersionAssetsPages indicates an expected call of ListPackageVersionAssetsPages
+// ListPackageVersionAssetsPages indicates an expected call of ListPackageVersionAssetsPages.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersionAssetsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersionAssetsPages", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersionAssetsPages), arg0, arg1)
 }
 
-// ListPackageVersionAssetsPagesWithContext mocks base method
+// ListPackageVersionAssetsPagesWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersionAssetsPagesWithContext(arg0 context.Context, arg1 *codeartifact.ListPackageVersionAssetsInput, arg2 func(*codeartifact.ListPackageVersionAssetsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1159,14 +1160,14 @@ func (m *MockCodeArtifactAPI) ListPackageVersionAssetsPagesWithContext(arg0 cont
 	return ret0
 }
 
-// ListPackageVersionAssetsPagesWithContext indicates an expected call of ListPackageVersionAssetsPagesWithContext
+// ListPackageVersionAssetsPagesWithContext indicates an expected call of ListPackageVersionAssetsPagesWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersionAssetsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersionAssetsPagesWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersionAssetsPagesWithContext), varargs...)
 }
 
-// ListPackageVersionAssetsRequest mocks base method
+// ListPackageVersionAssetsRequest mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersionAssetsRequest(arg0 *codeartifact.ListPackageVersionAssetsInput) (*request.Request, *codeartifact.ListPackageVersionAssetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackageVersionAssetsRequest", arg0)
@@ -1175,13 +1176,13 @@ func (m *MockCodeArtifactAPI) ListPackageVersionAssetsRequest(arg0 *codeartifact
 	return ret0, ret1
 }
 
-// ListPackageVersionAssetsRequest indicates an expected call of ListPackageVersionAssetsRequest
+// ListPackageVersionAssetsRequest indicates an expected call of ListPackageVersionAssetsRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersionAssetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersionAssetsRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersionAssetsRequest), arg0)
 }
 
-// ListPackageVersionAssetsWithContext mocks base method
+// ListPackageVersionAssetsWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersionAssetsWithContext(arg0 context.Context, arg1 *codeartifact.ListPackageVersionAssetsInput, arg2 ...request.Option) (*codeartifact.ListPackageVersionAssetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1194,14 +1195,14 @@ func (m *MockCodeArtifactAPI) ListPackageVersionAssetsWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// ListPackageVersionAssetsWithContext indicates an expected call of ListPackageVersionAssetsWithContext
+// ListPackageVersionAssetsWithContext indicates an expected call of ListPackageVersionAssetsWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersionAssetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersionAssetsWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersionAssetsWithContext), varargs...)
 }
 
-// ListPackageVersionDependencies mocks base method
+// ListPackageVersionDependencies mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersionDependencies(arg0 *codeartifact.ListPackageVersionDependenciesInput) (*codeartifact.ListPackageVersionDependenciesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackageVersionDependencies", arg0)
@@ -1210,13 +1211,13 @@ func (m *MockCodeArtifactAPI) ListPackageVersionDependencies(arg0 *codeartifact.
 	return ret0, ret1
 }
 
-// ListPackageVersionDependencies indicates an expected call of ListPackageVersionDependencies
+// ListPackageVersionDependencies indicates an expected call of ListPackageVersionDependencies.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersionDependencies(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersionDependencies", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersionDependencies), arg0)
 }
 
-// ListPackageVersionDependenciesRequest mocks base method
+// ListPackageVersionDependenciesRequest mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersionDependenciesRequest(arg0 *codeartifact.ListPackageVersionDependenciesInput) (*request.Request, *codeartifact.ListPackageVersionDependenciesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackageVersionDependenciesRequest", arg0)
@@ -1225,13 +1226,13 @@ func (m *MockCodeArtifactAPI) ListPackageVersionDependenciesRequest(arg0 *codear
 	return ret0, ret1
 }
 
-// ListPackageVersionDependenciesRequest indicates an expected call of ListPackageVersionDependenciesRequest
+// ListPackageVersionDependenciesRequest indicates an expected call of ListPackageVersionDependenciesRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersionDependenciesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersionDependenciesRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersionDependenciesRequest), arg0)
 }
 
-// ListPackageVersionDependenciesWithContext mocks base method
+// ListPackageVersionDependenciesWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersionDependenciesWithContext(arg0 context.Context, arg1 *codeartifact.ListPackageVersionDependenciesInput, arg2 ...request.Option) (*codeartifact.ListPackageVersionDependenciesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1244,14 +1245,14 @@ func (m *MockCodeArtifactAPI) ListPackageVersionDependenciesWithContext(arg0 con
 	return ret0, ret1
 }
 
-// ListPackageVersionDependenciesWithContext indicates an expected call of ListPackageVersionDependenciesWithContext
+// ListPackageVersionDependenciesWithContext indicates an expected call of ListPackageVersionDependenciesWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersionDependenciesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersionDependenciesWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersionDependenciesWithContext), varargs...)
 }
 
-// ListPackageVersions mocks base method
+// ListPackageVersions mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersions(arg0 *codeartifact.ListPackageVersionsInput) (*codeartifact.ListPackageVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackageVersions", arg0)
@@ -1260,13 +1261,13 @@ func (m *MockCodeArtifactAPI) ListPackageVersions(arg0 *codeartifact.ListPackage
 	return ret0, ret1
 }
 
-// ListPackageVersions indicates an expected call of ListPackageVersions
+// ListPackageVersions indicates an expected call of ListPackageVersions.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersions", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersions), arg0)
 }
 
-// ListPackageVersionsPages mocks base method
+// ListPackageVersionsPages mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersionsPages(arg0 *codeartifact.ListPackageVersionsInput, arg1 func(*codeartifact.ListPackageVersionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackageVersionsPages", arg0, arg1)
@@ -1274,13 +1275,13 @@ func (m *MockCodeArtifactAPI) ListPackageVersionsPages(arg0 *codeartifact.ListPa
 	return ret0
 }
 
-// ListPackageVersionsPages indicates an expected call of ListPackageVersionsPages
+// ListPackageVersionsPages indicates an expected call of ListPackageVersionsPages.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersionsPages", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersionsPages), arg0, arg1)
 }
 
-// ListPackageVersionsPagesWithContext mocks base method
+// ListPackageVersionsPagesWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersionsPagesWithContext(arg0 context.Context, arg1 *codeartifact.ListPackageVersionsInput, arg2 func(*codeartifact.ListPackageVersionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1292,14 +1293,14 @@ func (m *MockCodeArtifactAPI) ListPackageVersionsPagesWithContext(arg0 context.C
 	return ret0
 }
 
-// ListPackageVersionsPagesWithContext indicates an expected call of ListPackageVersionsPagesWithContext
+// ListPackageVersionsPagesWithContext indicates an expected call of ListPackageVersionsPagesWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersionsPagesWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersionsPagesWithContext), varargs...)
 }
 
-// ListPackageVersionsRequest mocks base method
+// ListPackageVersionsRequest mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersionsRequest(arg0 *codeartifact.ListPackageVersionsInput) (*request.Request, *codeartifact.ListPackageVersionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackageVersionsRequest", arg0)
@@ -1308,13 +1309,13 @@ func (m *MockCodeArtifactAPI) ListPackageVersionsRequest(arg0 *codeartifact.List
 	return ret0, ret1
 }
 
-// ListPackageVersionsRequest indicates an expected call of ListPackageVersionsRequest
+// ListPackageVersionsRequest indicates an expected call of ListPackageVersionsRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersionsRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersionsRequest), arg0)
 }
 
-// ListPackageVersionsWithContext mocks base method
+// ListPackageVersionsWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListPackageVersionsWithContext(arg0 context.Context, arg1 *codeartifact.ListPackageVersionsInput, arg2 ...request.Option) (*codeartifact.ListPackageVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1327,14 +1328,14 @@ func (m *MockCodeArtifactAPI) ListPackageVersionsWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListPackageVersionsWithContext indicates an expected call of ListPackageVersionsWithContext
+// ListPackageVersionsWithContext indicates an expected call of ListPackageVersionsWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackageVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackageVersionsWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackageVersionsWithContext), varargs...)
 }
 
-// ListPackages mocks base method
+// ListPackages mocks base method.
 func (m *MockCodeArtifactAPI) ListPackages(arg0 *codeartifact.ListPackagesInput) (*codeartifact.ListPackagesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackages", arg0)
@@ -1343,13 +1344,13 @@ func (m *MockCodeArtifactAPI) ListPackages(arg0 *codeartifact.ListPackagesInput)
 	return ret0, ret1
 }
 
-// ListPackages indicates an expected call of ListPackages
+// ListPackages indicates an expected call of ListPackages.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackages(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackages", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackages), arg0)
 }
 
-// ListPackagesPages mocks base method
+// ListPackagesPages mocks base method.
 func (m *MockCodeArtifactAPI) ListPackagesPages(arg0 *codeartifact.ListPackagesInput, arg1 func(*codeartifact.ListPackagesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackagesPages", arg0, arg1)
@@ -1357,13 +1358,13 @@ func (m *MockCodeArtifactAPI) ListPackagesPages(arg0 *codeartifact.ListPackagesI
 	return ret0
 }
 
-// ListPackagesPages indicates an expected call of ListPackagesPages
+// ListPackagesPages indicates an expected call of ListPackagesPages.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackagesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagesPages", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackagesPages), arg0, arg1)
 }
 
-// ListPackagesPagesWithContext mocks base method
+// ListPackagesPagesWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListPackagesPagesWithContext(arg0 context.Context, arg1 *codeartifact.ListPackagesInput, arg2 func(*codeartifact.ListPackagesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1375,14 +1376,14 @@ func (m *MockCodeArtifactAPI) ListPackagesPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListPackagesPagesWithContext indicates an expected call of ListPackagesPagesWithContext
+// ListPackagesPagesWithContext indicates an expected call of ListPackagesPagesWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackagesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagesPagesWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackagesPagesWithContext), varargs...)
 }
 
-// ListPackagesRequest mocks base method
+// ListPackagesRequest mocks base method.
 func (m *MockCodeArtifactAPI) ListPackagesRequest(arg0 *codeartifact.ListPackagesInput) (*request.Request, *codeartifact.ListPackagesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackagesRequest", arg0)
@@ -1391,13 +1392,13 @@ func (m *MockCodeArtifactAPI) ListPackagesRequest(arg0 *codeartifact.ListPackage
 	return ret0, ret1
 }
 
-// ListPackagesRequest indicates an expected call of ListPackagesRequest
+// ListPackagesRequest indicates an expected call of ListPackagesRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackagesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagesRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackagesRequest), arg0)
 }
 
-// ListPackagesWithContext mocks base method
+// ListPackagesWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListPackagesWithContext(arg0 context.Context, arg1 *codeartifact.ListPackagesInput, arg2 ...request.Option) (*codeartifact.ListPackagesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1410,14 +1411,14 @@ func (m *MockCodeArtifactAPI) ListPackagesWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListPackagesWithContext indicates an expected call of ListPackagesWithContext
+// ListPackagesWithContext indicates an expected call of ListPackagesWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListPackagesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagesWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListPackagesWithContext), varargs...)
 }
 
-// ListRepositories mocks base method
+// ListRepositories mocks base method.
 func (m *MockCodeArtifactAPI) ListRepositories(arg0 *codeartifact.ListRepositoriesInput) (*codeartifact.ListRepositoriesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRepositories", arg0)
@@ -1426,13 +1427,13 @@ func (m *MockCodeArtifactAPI) ListRepositories(arg0 *codeartifact.ListRepositori
 	return ret0, ret1
 }
 
-// ListRepositories indicates an expected call of ListRepositories
+// ListRepositories indicates an expected call of ListRepositories.
 func (mr *MockCodeArtifactAPIMockRecorder) ListRepositories(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositories", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListRepositories), arg0)
 }
 
-// ListRepositoriesInDomain mocks base method
+// ListRepositoriesInDomain mocks base method.
 func (m *MockCodeArtifactAPI) ListRepositoriesInDomain(arg0 *codeartifact.ListRepositoriesInDomainInput) (*codeartifact.ListRepositoriesInDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRepositoriesInDomain", arg0)
@@ -1441,13 +1442,13 @@ func (m *MockCodeArtifactAPI) ListRepositoriesInDomain(arg0 *codeartifact.ListRe
 	return ret0, ret1
 }
 
-// ListRepositoriesInDomain indicates an expected call of ListRepositoriesInDomain
+// ListRepositoriesInDomain indicates an expected call of ListRepositoriesInDomain.
 func (mr *MockCodeArtifactAPIMockRecorder) ListRepositoriesInDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoriesInDomain", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListRepositoriesInDomain), arg0)
 }
 
-// ListRepositoriesInDomainPages mocks base method
+// ListRepositoriesInDomainPages mocks base method.
 func (m *MockCodeArtifactAPI) ListRepositoriesInDomainPages(arg0 *codeartifact.ListRepositoriesInDomainInput, arg1 func(*codeartifact.ListRepositoriesInDomainOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRepositoriesInDomainPages", arg0, arg1)
@@ -1455,13 +1456,13 @@ func (m *MockCodeArtifactAPI) ListRepositoriesInDomainPages(arg0 *codeartifact.L
 	return ret0
 }
 
-// ListRepositoriesInDomainPages indicates an expected call of ListRepositoriesInDomainPages
+// ListRepositoriesInDomainPages indicates an expected call of ListRepositoriesInDomainPages.
 func (mr *MockCodeArtifactAPIMockRecorder) ListRepositoriesInDomainPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoriesInDomainPages", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListRepositoriesInDomainPages), arg0, arg1)
 }
 
-// ListRepositoriesInDomainPagesWithContext mocks base method
+// ListRepositoriesInDomainPagesWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListRepositoriesInDomainPagesWithContext(arg0 context.Context, arg1 *codeartifact.ListRepositoriesInDomainInput, arg2 func(*codeartifact.ListRepositoriesInDomainOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1473,14 +1474,14 @@ func (m *MockCodeArtifactAPI) ListRepositoriesInDomainPagesWithContext(arg0 cont
 	return ret0
 }
 
-// ListRepositoriesInDomainPagesWithContext indicates an expected call of ListRepositoriesInDomainPagesWithContext
+// ListRepositoriesInDomainPagesWithContext indicates an expected call of ListRepositoriesInDomainPagesWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListRepositoriesInDomainPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoriesInDomainPagesWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListRepositoriesInDomainPagesWithContext), varargs...)
 }
 
-// ListRepositoriesInDomainRequest mocks base method
+// ListRepositoriesInDomainRequest mocks base method.
 func (m *MockCodeArtifactAPI) ListRepositoriesInDomainRequest(arg0 *codeartifact.ListRepositoriesInDomainInput) (*request.Request, *codeartifact.ListRepositoriesInDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRepositoriesInDomainRequest", arg0)
@@ -1489,13 +1490,13 @@ func (m *MockCodeArtifactAPI) ListRepositoriesInDomainRequest(arg0 *codeartifact
 	return ret0, ret1
 }
 
-// ListRepositoriesInDomainRequest indicates an expected call of ListRepositoriesInDomainRequest
+// ListRepositoriesInDomainRequest indicates an expected call of ListRepositoriesInDomainRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) ListRepositoriesInDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoriesInDomainRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListRepositoriesInDomainRequest), arg0)
 }
 
-// ListRepositoriesInDomainWithContext mocks base method
+// ListRepositoriesInDomainWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListRepositoriesInDomainWithContext(arg0 context.Context, arg1 *codeartifact.ListRepositoriesInDomainInput, arg2 ...request.Option) (*codeartifact.ListRepositoriesInDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1508,14 +1509,14 @@ func (m *MockCodeArtifactAPI) ListRepositoriesInDomainWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// ListRepositoriesInDomainWithContext indicates an expected call of ListRepositoriesInDomainWithContext
+// ListRepositoriesInDomainWithContext indicates an expected call of ListRepositoriesInDomainWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListRepositoriesInDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoriesInDomainWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListRepositoriesInDomainWithContext), varargs...)
 }
 
-// ListRepositoriesPages mocks base method
+// ListRepositoriesPages mocks base method.
 func (m *MockCodeArtifactAPI) ListRepositoriesPages(arg0 *codeartifact.ListRepositoriesInput, arg1 func(*codeartifact.ListRepositoriesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRepositoriesPages", arg0, arg1)
@@ -1523,13 +1524,13 @@ func (m *MockCodeArtifactAPI) ListRepositoriesPages(arg0 *codeartifact.ListRepos
 	return ret0
 }
 
-// ListRepositoriesPages indicates an expected call of ListRepositoriesPages
+// ListRepositoriesPages indicates an expected call of ListRepositoriesPages.
 func (mr *MockCodeArtifactAPIMockRecorder) ListRepositoriesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoriesPages", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListRepositoriesPages), arg0, arg1)
 }
 
-// ListRepositoriesPagesWithContext mocks base method
+// ListRepositoriesPagesWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListRepositoriesPagesWithContext(arg0 context.Context, arg1 *codeartifact.ListRepositoriesInput, arg2 func(*codeartifact.ListRepositoriesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1541,14 +1542,14 @@ func (m *MockCodeArtifactAPI) ListRepositoriesPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListRepositoriesPagesWithContext indicates an expected call of ListRepositoriesPagesWithContext
+// ListRepositoriesPagesWithContext indicates an expected call of ListRepositoriesPagesWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListRepositoriesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoriesPagesWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListRepositoriesPagesWithContext), varargs...)
 }
 
-// ListRepositoriesRequest mocks base method
+// ListRepositoriesRequest mocks base method.
 func (m *MockCodeArtifactAPI) ListRepositoriesRequest(arg0 *codeartifact.ListRepositoriesInput) (*request.Request, *codeartifact.ListRepositoriesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRepositoriesRequest", arg0)
@@ -1557,13 +1558,13 @@ func (m *MockCodeArtifactAPI) ListRepositoriesRequest(arg0 *codeartifact.ListRep
 	return ret0, ret1
 }
 
-// ListRepositoriesRequest indicates an expected call of ListRepositoriesRequest
+// ListRepositoriesRequest indicates an expected call of ListRepositoriesRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) ListRepositoriesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoriesRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListRepositoriesRequest), arg0)
 }
 
-// ListRepositoriesWithContext mocks base method
+// ListRepositoriesWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListRepositoriesWithContext(arg0 context.Context, arg1 *codeartifact.ListRepositoriesInput, arg2 ...request.Option) (*codeartifact.ListRepositoriesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1576,14 +1577,14 @@ func (m *MockCodeArtifactAPI) ListRepositoriesWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListRepositoriesWithContext indicates an expected call of ListRepositoriesWithContext
+// ListRepositoriesWithContext indicates an expected call of ListRepositoriesWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListRepositoriesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRepositoriesWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListRepositoriesWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockCodeArtifactAPI) ListTagsForResource(arg0 *codeartifact.ListTagsForResourceInput) (*codeartifact.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1592,13 +1593,13 @@ func (m *MockCodeArtifactAPI) ListTagsForResource(arg0 *codeartifact.ListTagsFor
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockCodeArtifactAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockCodeArtifactAPI) ListTagsForResourceRequest(arg0 *codeartifact.ListTagsForResourceInput) (*request.Request, *codeartifact.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1607,13 +1608,13 @@ func (m *MockCodeArtifactAPI) ListTagsForResourceRequest(arg0 *codeartifact.List
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockCodeArtifactAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *codeartifact.ListTagsForResourceInput, arg2 ...request.Option) (*codeartifact.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1626,14 +1627,14 @@ func (m *MockCodeArtifactAPI) ListTagsForResourceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PutDomainPermissionsPolicy mocks base method
+// PutDomainPermissionsPolicy mocks base method.
 func (m *MockCodeArtifactAPI) PutDomainPermissionsPolicy(arg0 *codeartifact.PutDomainPermissionsPolicyInput) (*codeartifact.PutDomainPermissionsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutDomainPermissionsPolicy", arg0)
@@ -1642,13 +1643,13 @@ func (m *MockCodeArtifactAPI) PutDomainPermissionsPolicy(arg0 *codeartifact.PutD
 	return ret0, ret1
 }
 
-// PutDomainPermissionsPolicy indicates an expected call of PutDomainPermissionsPolicy
+// PutDomainPermissionsPolicy indicates an expected call of PutDomainPermissionsPolicy.
 func (mr *MockCodeArtifactAPIMockRecorder) PutDomainPermissionsPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDomainPermissionsPolicy", reflect.TypeOf((*MockCodeArtifactAPI)(nil).PutDomainPermissionsPolicy), arg0)
 }
 
-// PutDomainPermissionsPolicyRequest mocks base method
+// PutDomainPermissionsPolicyRequest mocks base method.
 func (m *MockCodeArtifactAPI) PutDomainPermissionsPolicyRequest(arg0 *codeartifact.PutDomainPermissionsPolicyInput) (*request.Request, *codeartifact.PutDomainPermissionsPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutDomainPermissionsPolicyRequest", arg0)
@@ -1657,13 +1658,13 @@ func (m *MockCodeArtifactAPI) PutDomainPermissionsPolicyRequest(arg0 *codeartifa
 	return ret0, ret1
 }
 
-// PutDomainPermissionsPolicyRequest indicates an expected call of PutDomainPermissionsPolicyRequest
+// PutDomainPermissionsPolicyRequest indicates an expected call of PutDomainPermissionsPolicyRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) PutDomainPermissionsPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDomainPermissionsPolicyRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).PutDomainPermissionsPolicyRequest), arg0)
 }
 
-// PutDomainPermissionsPolicyWithContext mocks base method
+// PutDomainPermissionsPolicyWithContext mocks base method.
 func (m *MockCodeArtifactAPI) PutDomainPermissionsPolicyWithContext(arg0 context.Context, arg1 *codeartifact.PutDomainPermissionsPolicyInput, arg2 ...request.Option) (*codeartifact.PutDomainPermissionsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1676,14 +1677,14 @@ func (m *MockCodeArtifactAPI) PutDomainPermissionsPolicyWithContext(arg0 context
 	return ret0, ret1
 }
 
-// PutDomainPermissionsPolicyWithContext indicates an expected call of PutDomainPermissionsPolicyWithContext
+// PutDomainPermissionsPolicyWithContext indicates an expected call of PutDomainPermissionsPolicyWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) PutDomainPermissionsPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutDomainPermissionsPolicyWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).PutDomainPermissionsPolicyWithContext), varargs...)
 }
 
-// PutRepositoryPermissionsPolicy mocks base method
+// PutRepositoryPermissionsPolicy mocks base method.
 func (m *MockCodeArtifactAPI) PutRepositoryPermissionsPolicy(arg0 *codeartifact.PutRepositoryPermissionsPolicyInput) (*codeartifact.PutRepositoryPermissionsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutRepositoryPermissionsPolicy", arg0)
@@ -1692,13 +1693,13 @@ func (m *MockCodeArtifactAPI) PutRepositoryPermissionsPolicy(arg0 *codeartifact.
 	return ret0, ret1
 }
 
-// PutRepositoryPermissionsPolicy indicates an expected call of PutRepositoryPermissionsPolicy
+// PutRepositoryPermissionsPolicy indicates an expected call of PutRepositoryPermissionsPolicy.
 func (mr *MockCodeArtifactAPIMockRecorder) PutRepositoryPermissionsPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutRepositoryPermissionsPolicy", reflect.TypeOf((*MockCodeArtifactAPI)(nil).PutRepositoryPermissionsPolicy), arg0)
 }
 
-// PutRepositoryPermissionsPolicyRequest mocks base method
+// PutRepositoryPermissionsPolicyRequest mocks base method.
 func (m *MockCodeArtifactAPI) PutRepositoryPermissionsPolicyRequest(arg0 *codeartifact.PutRepositoryPermissionsPolicyInput) (*request.Request, *codeartifact.PutRepositoryPermissionsPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutRepositoryPermissionsPolicyRequest", arg0)
@@ -1707,13 +1708,13 @@ func (m *MockCodeArtifactAPI) PutRepositoryPermissionsPolicyRequest(arg0 *codear
 	return ret0, ret1
 }
 
-// PutRepositoryPermissionsPolicyRequest indicates an expected call of PutRepositoryPermissionsPolicyRequest
+// PutRepositoryPermissionsPolicyRequest indicates an expected call of PutRepositoryPermissionsPolicyRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) PutRepositoryPermissionsPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutRepositoryPermissionsPolicyRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).PutRepositoryPermissionsPolicyRequest), arg0)
 }
 
-// PutRepositoryPermissionsPolicyWithContext mocks base method
+// PutRepositoryPermissionsPolicyWithContext mocks base method.
 func (m *MockCodeArtifactAPI) PutRepositoryPermissionsPolicyWithContext(arg0 context.Context, arg1 *codeartifact.PutRepositoryPermissionsPolicyInput, arg2 ...request.Option) (*codeartifact.PutRepositoryPermissionsPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1726,14 +1727,14 @@ func (m *MockCodeArtifactAPI) PutRepositoryPermissionsPolicyWithContext(arg0 con
 	return ret0, ret1
 }
 
-// PutRepositoryPermissionsPolicyWithContext indicates an expected call of PutRepositoryPermissionsPolicyWithContext
+// PutRepositoryPermissionsPolicyWithContext indicates an expected call of PutRepositoryPermissionsPolicyWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) PutRepositoryPermissionsPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutRepositoryPermissionsPolicyWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).PutRepositoryPermissionsPolicyWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockCodeArtifactAPI) TagResource(arg0 *codeartifact.TagResourceInput) (*codeartifact.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1742,13 +1743,13 @@ func (m *MockCodeArtifactAPI) TagResource(arg0 *codeartifact.TagResourceInput) (
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockCodeArtifactAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockCodeArtifactAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockCodeArtifactAPI) TagResourceRequest(arg0 *codeartifact.TagResourceInput) (*request.Request, *codeartifact.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1757,13 +1758,13 @@ func (m *MockCodeArtifactAPI) TagResourceRequest(arg0 *codeartifact.TagResourceI
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockCodeArtifactAPI) TagResourceWithContext(arg0 context.Context, arg1 *codeartifact.TagResourceInput, arg2 ...request.Option) (*codeartifact.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1776,14 +1777,14 @@ func (m *MockCodeArtifactAPI) TagResourceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockCodeArtifactAPI) UntagResource(arg0 *codeartifact.UntagResourceInput) (*codeartifact.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1792,13 +1793,13 @@ func (m *MockCodeArtifactAPI) UntagResource(arg0 *codeartifact.UntagResourceInpu
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockCodeArtifactAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockCodeArtifactAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockCodeArtifactAPI) UntagResourceRequest(arg0 *codeartifact.UntagResourceInput) (*request.Request, *codeartifact.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1807,13 +1808,13 @@ func (m *MockCodeArtifactAPI) UntagResourceRequest(arg0 *codeartifact.UntagResou
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockCodeArtifactAPI) UntagResourceWithContext(arg0 context.Context, arg1 *codeartifact.UntagResourceInput, arg2 ...request.Option) (*codeartifact.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1826,14 +1827,14 @@ func (m *MockCodeArtifactAPI) UntagResourceWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdatePackageVersionsStatus mocks base method
+// UpdatePackageVersionsStatus mocks base method.
 func (m *MockCodeArtifactAPI) UpdatePackageVersionsStatus(arg0 *codeartifact.UpdatePackageVersionsStatusInput) (*codeartifact.UpdatePackageVersionsStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdatePackageVersionsStatus", arg0)
@@ -1842,13 +1843,13 @@ func (m *MockCodeArtifactAPI) UpdatePackageVersionsStatus(arg0 *codeartifact.Upd
 	return ret0, ret1
 }
 
-// UpdatePackageVersionsStatus indicates an expected call of UpdatePackageVersionsStatus
+// UpdatePackageVersionsStatus indicates an expected call of UpdatePackageVersionsStatus.
 func (mr *MockCodeArtifactAPIMockRecorder) UpdatePackageVersionsStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePackageVersionsStatus", reflect.TypeOf((*MockCodeArtifactAPI)(nil).UpdatePackageVersionsStatus), arg0)
 }
 
-// UpdatePackageVersionsStatusRequest mocks base method
+// UpdatePackageVersionsStatusRequest mocks base method.
 func (m *MockCodeArtifactAPI) UpdatePackageVersionsStatusRequest(arg0 *codeartifact.UpdatePackageVersionsStatusInput) (*request.Request, *codeartifact.UpdatePackageVersionsStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdatePackageVersionsStatusRequest", arg0)
@@ -1857,13 +1858,13 @@ func (m *MockCodeArtifactAPI) UpdatePackageVersionsStatusRequest(arg0 *codeartif
 	return ret0, ret1
 }
 
-// UpdatePackageVersionsStatusRequest indicates an expected call of UpdatePackageVersionsStatusRequest
+// UpdatePackageVersionsStatusRequest indicates an expected call of UpdatePackageVersionsStatusRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) UpdatePackageVersionsStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePackageVersionsStatusRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).UpdatePackageVersionsStatusRequest), arg0)
 }
 
-// UpdatePackageVersionsStatusWithContext mocks base method
+// UpdatePackageVersionsStatusWithContext mocks base method.
 func (m *MockCodeArtifactAPI) UpdatePackageVersionsStatusWithContext(arg0 context.Context, arg1 *codeartifact.UpdatePackageVersionsStatusInput, arg2 ...request.Option) (*codeartifact.UpdatePackageVersionsStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1876,14 +1877,14 @@ func (m *MockCodeArtifactAPI) UpdatePackageVersionsStatusWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// UpdatePackageVersionsStatusWithContext indicates an expected call of UpdatePackageVersionsStatusWithContext
+// UpdatePackageVersionsStatusWithContext indicates an expected call of UpdatePackageVersionsStatusWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) UpdatePackageVersionsStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePackageVersionsStatusWithContext", reflect.TypeOf((*MockCodeArtifactAPI)(nil).UpdatePackageVersionsStatusWithContext), varargs...)
 }
 
-// UpdateRepository mocks base method
+// UpdateRepository mocks base method.
 func (m *MockCodeArtifactAPI) UpdateRepository(arg0 *codeartifact.UpdateRepositoryInput) (*codeartifact.UpdateRepositoryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRepository", arg0)
@@ -1892,13 +1893,13 @@ func (m *MockCodeArtifactAPI) UpdateRepository(arg0 *codeartifact.UpdateReposito
 	return ret0, ret1
 }
 
-// UpdateRepository indicates an expected call of UpdateRepository
+// UpdateRepository indicates an expected call of UpdateRepository.
 func (mr *MockCodeArtifactAPIMockRecorder) UpdateRepository(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRepository", reflect.TypeOf((*MockCodeArtifactAPI)(nil).UpdateRepository), arg0)
 }
 
-// UpdateRepositoryRequest mocks base method
+// UpdateRepositoryRequest mocks base method.
 func (m *MockCodeArtifactAPI) UpdateRepositoryRequest(arg0 *codeartifact.UpdateRepositoryInput) (*request.Request, *codeartifact.UpdateRepositoryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRepositoryRequest", arg0)
@@ -1907,13 +1908,13 @@ func (m *MockCodeArtifactAPI) UpdateRepositoryRequest(arg0 *codeartifact.UpdateR
 	return ret0, ret1
 }
 
-// UpdateRepositoryRequest indicates an expected call of UpdateRepositoryRequest
+// UpdateRepositoryRequest indicates an expected call of UpdateRepositoryRequest.
 func (mr *MockCodeArtifactAPIMockRecorder) UpdateRepositoryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRepositoryRequest", reflect.TypeOf((*MockCodeArtifactAPI)(nil).UpdateRepositoryRequest), arg0)
 }
 
-// UpdateRepositoryWithContext mocks base method
+// UpdateRepositoryWithContext mocks base method.
 func (m *MockCodeArtifactAPI) UpdateRepositoryWithContext(arg0 context.Context, arg1 *codeartifact.UpdateRepositoryInput, arg2 ...request.Option) (*codeartifact.UpdateRepositoryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1926,7 +1927,7 @@ func (m *MockCodeArtifactAPI) UpdateRepositoryWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// UpdateRepositoryWithContext indicates an expected call of UpdateRepositoryWithContext
+// UpdateRepositoryWithContext indicates an expected call of UpdateRepositoryWithContext.
 func (mr *MockCodeArtifactAPIMockRecorder) UpdateRepositoryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

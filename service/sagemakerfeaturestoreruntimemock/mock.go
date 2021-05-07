@@ -6,36 +6,37 @@ package sagemakerfeaturestoreruntimemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	sagemakerfeaturestoreruntime "github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockSageMakerFeatureStoreRuntimeAPI is a mock of SageMakerFeatureStoreRuntimeAPI interface
+// MockSageMakerFeatureStoreRuntimeAPI is a mock of SageMakerFeatureStoreRuntimeAPI interface.
 type MockSageMakerFeatureStoreRuntimeAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockSageMakerFeatureStoreRuntimeAPIMockRecorder
 }
 
-// MockSageMakerFeatureStoreRuntimeAPIMockRecorder is the mock recorder for MockSageMakerFeatureStoreRuntimeAPI
+// MockSageMakerFeatureStoreRuntimeAPIMockRecorder is the mock recorder for MockSageMakerFeatureStoreRuntimeAPI.
 type MockSageMakerFeatureStoreRuntimeAPIMockRecorder struct {
 	mock *MockSageMakerFeatureStoreRuntimeAPI
 }
 
-// NewMockSageMakerFeatureStoreRuntimeAPI creates a new mock instance
+// NewMockSageMakerFeatureStoreRuntimeAPI creates a new mock instance.
 func NewMockSageMakerFeatureStoreRuntimeAPI(ctrl *gomock.Controller) *MockSageMakerFeatureStoreRuntimeAPI {
 	mock := &MockSageMakerFeatureStoreRuntimeAPI{ctrl: ctrl}
 	mock.recorder = &MockSageMakerFeatureStoreRuntimeAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockSageMakerFeatureStoreRuntimeAPI) EXPECT() *MockSageMakerFeatureStoreRuntimeAPIMockRecorder {
 	return m.recorder
 }
 
-// DeleteRecord mocks base method
+// DeleteRecord mocks base method.
 func (m *MockSageMakerFeatureStoreRuntimeAPI) DeleteRecord(arg0 *sagemakerfeaturestoreruntime.DeleteRecordInput) (*sagemakerfeaturestoreruntime.DeleteRecordOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRecord", arg0)
@@ -44,13 +45,13 @@ func (m *MockSageMakerFeatureStoreRuntimeAPI) DeleteRecord(arg0 *sagemakerfeatur
 	return ret0, ret1
 }
 
-// DeleteRecord indicates an expected call of DeleteRecord
+// DeleteRecord indicates an expected call of DeleteRecord.
 func (mr *MockSageMakerFeatureStoreRuntimeAPIMockRecorder) DeleteRecord(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRecord", reflect.TypeOf((*MockSageMakerFeatureStoreRuntimeAPI)(nil).DeleteRecord), arg0)
 }
 
-// DeleteRecordRequest mocks base method
+// DeleteRecordRequest mocks base method.
 func (m *MockSageMakerFeatureStoreRuntimeAPI) DeleteRecordRequest(arg0 *sagemakerfeaturestoreruntime.DeleteRecordInput) (*request.Request, *sagemakerfeaturestoreruntime.DeleteRecordOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRecordRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockSageMakerFeatureStoreRuntimeAPI) DeleteRecordRequest(arg0 *sagemake
 	return ret0, ret1
 }
 
-// DeleteRecordRequest indicates an expected call of DeleteRecordRequest
+// DeleteRecordRequest indicates an expected call of DeleteRecordRequest.
 func (mr *MockSageMakerFeatureStoreRuntimeAPIMockRecorder) DeleteRecordRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRecordRequest", reflect.TypeOf((*MockSageMakerFeatureStoreRuntimeAPI)(nil).DeleteRecordRequest), arg0)
 }
 
-// DeleteRecordWithContext mocks base method
+// DeleteRecordWithContext mocks base method.
 func (m *MockSageMakerFeatureStoreRuntimeAPI) DeleteRecordWithContext(arg0 context.Context, arg1 *sagemakerfeaturestoreruntime.DeleteRecordInput, arg2 ...request.Option) (*sagemakerfeaturestoreruntime.DeleteRecordOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockSageMakerFeatureStoreRuntimeAPI) DeleteRecordWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// DeleteRecordWithContext indicates an expected call of DeleteRecordWithContext
+// DeleteRecordWithContext indicates an expected call of DeleteRecordWithContext.
 func (mr *MockSageMakerFeatureStoreRuntimeAPIMockRecorder) DeleteRecordWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRecordWithContext", reflect.TypeOf((*MockSageMakerFeatureStoreRuntimeAPI)(nil).DeleteRecordWithContext), varargs...)
 }
 
-// GetRecord mocks base method
+// GetRecord mocks base method.
 func (m *MockSageMakerFeatureStoreRuntimeAPI) GetRecord(arg0 *sagemakerfeaturestoreruntime.GetRecordInput) (*sagemakerfeaturestoreruntime.GetRecordOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRecord", arg0)
@@ -94,13 +95,13 @@ func (m *MockSageMakerFeatureStoreRuntimeAPI) GetRecord(arg0 *sagemakerfeaturest
 	return ret0, ret1
 }
 
-// GetRecord indicates an expected call of GetRecord
+// GetRecord indicates an expected call of GetRecord.
 func (mr *MockSageMakerFeatureStoreRuntimeAPIMockRecorder) GetRecord(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecord", reflect.TypeOf((*MockSageMakerFeatureStoreRuntimeAPI)(nil).GetRecord), arg0)
 }
 
-// GetRecordRequest mocks base method
+// GetRecordRequest mocks base method.
 func (m *MockSageMakerFeatureStoreRuntimeAPI) GetRecordRequest(arg0 *sagemakerfeaturestoreruntime.GetRecordInput) (*request.Request, *sagemakerfeaturestoreruntime.GetRecordOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRecordRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockSageMakerFeatureStoreRuntimeAPI) GetRecordRequest(arg0 *sagemakerfe
 	return ret0, ret1
 }
 
-// GetRecordRequest indicates an expected call of GetRecordRequest
+// GetRecordRequest indicates an expected call of GetRecordRequest.
 func (mr *MockSageMakerFeatureStoreRuntimeAPIMockRecorder) GetRecordRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecordRequest", reflect.TypeOf((*MockSageMakerFeatureStoreRuntimeAPI)(nil).GetRecordRequest), arg0)
 }
 
-// GetRecordWithContext mocks base method
+// GetRecordWithContext mocks base method.
 func (m *MockSageMakerFeatureStoreRuntimeAPI) GetRecordWithContext(arg0 context.Context, arg1 *sagemakerfeaturestoreruntime.GetRecordInput, arg2 ...request.Option) (*sagemakerfeaturestoreruntime.GetRecordOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockSageMakerFeatureStoreRuntimeAPI) GetRecordWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// GetRecordWithContext indicates an expected call of GetRecordWithContext
+// GetRecordWithContext indicates an expected call of GetRecordWithContext.
 func (mr *MockSageMakerFeatureStoreRuntimeAPIMockRecorder) GetRecordWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecordWithContext", reflect.TypeOf((*MockSageMakerFeatureStoreRuntimeAPI)(nil).GetRecordWithContext), varargs...)
 }
 
-// PutRecord mocks base method
+// PutRecord mocks base method.
 func (m *MockSageMakerFeatureStoreRuntimeAPI) PutRecord(arg0 *sagemakerfeaturestoreruntime.PutRecordInput) (*sagemakerfeaturestoreruntime.PutRecordOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutRecord", arg0)
@@ -144,13 +145,13 @@ func (m *MockSageMakerFeatureStoreRuntimeAPI) PutRecord(arg0 *sagemakerfeaturest
 	return ret0, ret1
 }
 
-// PutRecord indicates an expected call of PutRecord
+// PutRecord indicates an expected call of PutRecord.
 func (mr *MockSageMakerFeatureStoreRuntimeAPIMockRecorder) PutRecord(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutRecord", reflect.TypeOf((*MockSageMakerFeatureStoreRuntimeAPI)(nil).PutRecord), arg0)
 }
 
-// PutRecordRequest mocks base method
+// PutRecordRequest mocks base method.
 func (m *MockSageMakerFeatureStoreRuntimeAPI) PutRecordRequest(arg0 *sagemakerfeaturestoreruntime.PutRecordInput) (*request.Request, *sagemakerfeaturestoreruntime.PutRecordOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutRecordRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockSageMakerFeatureStoreRuntimeAPI) PutRecordRequest(arg0 *sagemakerfe
 	return ret0, ret1
 }
 
-// PutRecordRequest indicates an expected call of PutRecordRequest
+// PutRecordRequest indicates an expected call of PutRecordRequest.
 func (mr *MockSageMakerFeatureStoreRuntimeAPIMockRecorder) PutRecordRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutRecordRequest", reflect.TypeOf((*MockSageMakerFeatureStoreRuntimeAPI)(nil).PutRecordRequest), arg0)
 }
 
-// PutRecordWithContext mocks base method
+// PutRecordWithContext mocks base method.
 func (m *MockSageMakerFeatureStoreRuntimeAPI) PutRecordWithContext(arg0 context.Context, arg1 *sagemakerfeaturestoreruntime.PutRecordInput, arg2 ...request.Option) (*sagemakerfeaturestoreruntime.PutRecordOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,7 +179,7 @@ func (m *MockSageMakerFeatureStoreRuntimeAPI) PutRecordWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// PutRecordWithContext indicates an expected call of PutRecordWithContext
+// PutRecordWithContext indicates an expected call of PutRecordWithContext.
 func (mr *MockSageMakerFeatureStoreRuntimeAPIMockRecorder) PutRecordWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

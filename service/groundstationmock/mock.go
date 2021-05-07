@@ -6,36 +6,37 @@ package groundstationmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	groundstation "github.com/aws/aws-sdk-go/service/groundstation"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockGroundStationAPI is a mock of GroundStationAPI interface
+// MockGroundStationAPI is a mock of GroundStationAPI interface.
 type MockGroundStationAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockGroundStationAPIMockRecorder
 }
 
-// MockGroundStationAPIMockRecorder is the mock recorder for MockGroundStationAPI
+// MockGroundStationAPIMockRecorder is the mock recorder for MockGroundStationAPI.
 type MockGroundStationAPIMockRecorder struct {
 	mock *MockGroundStationAPI
 }
 
-// NewMockGroundStationAPI creates a new mock instance
+// NewMockGroundStationAPI creates a new mock instance.
 func NewMockGroundStationAPI(ctrl *gomock.Controller) *MockGroundStationAPI {
 	mock := &MockGroundStationAPI{ctrl: ctrl}
 	mock.recorder = &MockGroundStationAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockGroundStationAPI) EXPECT() *MockGroundStationAPIMockRecorder {
 	return m.recorder
 }
 
-// CancelContact mocks base method
+// CancelContact mocks base method.
 func (m *MockGroundStationAPI) CancelContact(arg0 *groundstation.CancelContactInput) (*groundstation.CancelContactOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelContact", arg0)
@@ -44,13 +45,13 @@ func (m *MockGroundStationAPI) CancelContact(arg0 *groundstation.CancelContactIn
 	return ret0, ret1
 }
 
-// CancelContact indicates an expected call of CancelContact
+// CancelContact indicates an expected call of CancelContact.
 func (mr *MockGroundStationAPIMockRecorder) CancelContact(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelContact", reflect.TypeOf((*MockGroundStationAPI)(nil).CancelContact), arg0)
 }
 
-// CancelContactRequest mocks base method
+// CancelContactRequest mocks base method.
 func (m *MockGroundStationAPI) CancelContactRequest(arg0 *groundstation.CancelContactInput) (*request.Request, *groundstation.CancelContactOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelContactRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockGroundStationAPI) CancelContactRequest(arg0 *groundstation.CancelCo
 	return ret0, ret1
 }
 
-// CancelContactRequest indicates an expected call of CancelContactRequest
+// CancelContactRequest indicates an expected call of CancelContactRequest.
 func (mr *MockGroundStationAPIMockRecorder) CancelContactRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelContactRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).CancelContactRequest), arg0)
 }
 
-// CancelContactWithContext mocks base method
+// CancelContactWithContext mocks base method.
 func (m *MockGroundStationAPI) CancelContactWithContext(arg0 context.Context, arg1 *groundstation.CancelContactInput, arg2 ...request.Option) (*groundstation.CancelContactOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockGroundStationAPI) CancelContactWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CancelContactWithContext indicates an expected call of CancelContactWithContext
+// CancelContactWithContext indicates an expected call of CancelContactWithContext.
 func (mr *MockGroundStationAPIMockRecorder) CancelContactWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelContactWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).CancelContactWithContext), varargs...)
 }
 
-// CreateConfig mocks base method
+// CreateConfig mocks base method.
 func (m *MockGroundStationAPI) CreateConfig(arg0 *groundstation.CreateConfigInput) (*groundstation.CreateConfigOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConfig", arg0)
@@ -94,13 +95,13 @@ func (m *MockGroundStationAPI) CreateConfig(arg0 *groundstation.CreateConfigInpu
 	return ret0, ret1
 }
 
-// CreateConfig indicates an expected call of CreateConfig
+// CreateConfig indicates an expected call of CreateConfig.
 func (mr *MockGroundStationAPIMockRecorder) CreateConfig(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfig", reflect.TypeOf((*MockGroundStationAPI)(nil).CreateConfig), arg0)
 }
 
-// CreateConfigRequest mocks base method
+// CreateConfigRequest mocks base method.
 func (m *MockGroundStationAPI) CreateConfigRequest(arg0 *groundstation.CreateConfigInput) (*request.Request, *groundstation.CreateConfigOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConfigRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockGroundStationAPI) CreateConfigRequest(arg0 *groundstation.CreateCon
 	return ret0, ret1
 }
 
-// CreateConfigRequest indicates an expected call of CreateConfigRequest
+// CreateConfigRequest indicates an expected call of CreateConfigRequest.
 func (mr *MockGroundStationAPIMockRecorder) CreateConfigRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).CreateConfigRequest), arg0)
 }
 
-// CreateConfigWithContext mocks base method
+// CreateConfigWithContext mocks base method.
 func (m *MockGroundStationAPI) CreateConfigWithContext(arg0 context.Context, arg1 *groundstation.CreateConfigInput, arg2 ...request.Option) (*groundstation.CreateConfigOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockGroundStationAPI) CreateConfigWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// CreateConfigWithContext indicates an expected call of CreateConfigWithContext
+// CreateConfigWithContext indicates an expected call of CreateConfigWithContext.
 func (mr *MockGroundStationAPIMockRecorder) CreateConfigWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).CreateConfigWithContext), varargs...)
 }
 
-// CreateDataflowEndpointGroup mocks base method
+// CreateDataflowEndpointGroup mocks base method.
 func (m *MockGroundStationAPI) CreateDataflowEndpointGroup(arg0 *groundstation.CreateDataflowEndpointGroupInput) (*groundstation.CreateDataflowEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDataflowEndpointGroup", arg0)
@@ -144,13 +145,13 @@ func (m *MockGroundStationAPI) CreateDataflowEndpointGroup(arg0 *groundstation.C
 	return ret0, ret1
 }
 
-// CreateDataflowEndpointGroup indicates an expected call of CreateDataflowEndpointGroup
+// CreateDataflowEndpointGroup indicates an expected call of CreateDataflowEndpointGroup.
 func (mr *MockGroundStationAPIMockRecorder) CreateDataflowEndpointGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataflowEndpointGroup", reflect.TypeOf((*MockGroundStationAPI)(nil).CreateDataflowEndpointGroup), arg0)
 }
 
-// CreateDataflowEndpointGroupRequest mocks base method
+// CreateDataflowEndpointGroupRequest mocks base method.
 func (m *MockGroundStationAPI) CreateDataflowEndpointGroupRequest(arg0 *groundstation.CreateDataflowEndpointGroupInput) (*request.Request, *groundstation.CreateDataflowEndpointGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDataflowEndpointGroupRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockGroundStationAPI) CreateDataflowEndpointGroupRequest(arg0 *groundst
 	return ret0, ret1
 }
 
-// CreateDataflowEndpointGroupRequest indicates an expected call of CreateDataflowEndpointGroupRequest
+// CreateDataflowEndpointGroupRequest indicates an expected call of CreateDataflowEndpointGroupRequest.
 func (mr *MockGroundStationAPIMockRecorder) CreateDataflowEndpointGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataflowEndpointGroupRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).CreateDataflowEndpointGroupRequest), arg0)
 }
 
-// CreateDataflowEndpointGroupWithContext mocks base method
+// CreateDataflowEndpointGroupWithContext mocks base method.
 func (m *MockGroundStationAPI) CreateDataflowEndpointGroupWithContext(arg0 context.Context, arg1 *groundstation.CreateDataflowEndpointGroupInput, arg2 ...request.Option) (*groundstation.CreateDataflowEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockGroundStationAPI) CreateDataflowEndpointGroupWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// CreateDataflowEndpointGroupWithContext indicates an expected call of CreateDataflowEndpointGroupWithContext
+// CreateDataflowEndpointGroupWithContext indicates an expected call of CreateDataflowEndpointGroupWithContext.
 func (mr *MockGroundStationAPIMockRecorder) CreateDataflowEndpointGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataflowEndpointGroupWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).CreateDataflowEndpointGroupWithContext), varargs...)
 }
 
-// CreateMissionProfile mocks base method
+// CreateMissionProfile mocks base method.
 func (m *MockGroundStationAPI) CreateMissionProfile(arg0 *groundstation.CreateMissionProfileInput) (*groundstation.CreateMissionProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMissionProfile", arg0)
@@ -194,13 +195,13 @@ func (m *MockGroundStationAPI) CreateMissionProfile(arg0 *groundstation.CreateMi
 	return ret0, ret1
 }
 
-// CreateMissionProfile indicates an expected call of CreateMissionProfile
+// CreateMissionProfile indicates an expected call of CreateMissionProfile.
 func (mr *MockGroundStationAPIMockRecorder) CreateMissionProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMissionProfile", reflect.TypeOf((*MockGroundStationAPI)(nil).CreateMissionProfile), arg0)
 }
 
-// CreateMissionProfileRequest mocks base method
+// CreateMissionProfileRequest mocks base method.
 func (m *MockGroundStationAPI) CreateMissionProfileRequest(arg0 *groundstation.CreateMissionProfileInput) (*request.Request, *groundstation.CreateMissionProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMissionProfileRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockGroundStationAPI) CreateMissionProfileRequest(arg0 *groundstation.C
 	return ret0, ret1
 }
 
-// CreateMissionProfileRequest indicates an expected call of CreateMissionProfileRequest
+// CreateMissionProfileRequest indicates an expected call of CreateMissionProfileRequest.
 func (mr *MockGroundStationAPIMockRecorder) CreateMissionProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMissionProfileRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).CreateMissionProfileRequest), arg0)
 }
 
-// CreateMissionProfileWithContext mocks base method
+// CreateMissionProfileWithContext mocks base method.
 func (m *MockGroundStationAPI) CreateMissionProfileWithContext(arg0 context.Context, arg1 *groundstation.CreateMissionProfileInput, arg2 ...request.Option) (*groundstation.CreateMissionProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockGroundStationAPI) CreateMissionProfileWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// CreateMissionProfileWithContext indicates an expected call of CreateMissionProfileWithContext
+// CreateMissionProfileWithContext indicates an expected call of CreateMissionProfileWithContext.
 func (mr *MockGroundStationAPIMockRecorder) CreateMissionProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMissionProfileWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).CreateMissionProfileWithContext), varargs...)
 }
 
-// DeleteConfig mocks base method
+// DeleteConfig mocks base method.
 func (m *MockGroundStationAPI) DeleteConfig(arg0 *groundstation.DeleteConfigInput) (*groundstation.DeleteConfigOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConfig", arg0)
@@ -244,13 +245,13 @@ func (m *MockGroundStationAPI) DeleteConfig(arg0 *groundstation.DeleteConfigInpu
 	return ret0, ret1
 }
 
-// DeleteConfig indicates an expected call of DeleteConfig
+// DeleteConfig indicates an expected call of DeleteConfig.
 func (mr *MockGroundStationAPIMockRecorder) DeleteConfig(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfig", reflect.TypeOf((*MockGroundStationAPI)(nil).DeleteConfig), arg0)
 }
 
-// DeleteConfigRequest mocks base method
+// DeleteConfigRequest mocks base method.
 func (m *MockGroundStationAPI) DeleteConfigRequest(arg0 *groundstation.DeleteConfigInput) (*request.Request, *groundstation.DeleteConfigOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConfigRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockGroundStationAPI) DeleteConfigRequest(arg0 *groundstation.DeleteCon
 	return ret0, ret1
 }
 
-// DeleteConfigRequest indicates an expected call of DeleteConfigRequest
+// DeleteConfigRequest indicates an expected call of DeleteConfigRequest.
 func (mr *MockGroundStationAPIMockRecorder) DeleteConfigRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).DeleteConfigRequest), arg0)
 }
 
-// DeleteConfigWithContext mocks base method
+// DeleteConfigWithContext mocks base method.
 func (m *MockGroundStationAPI) DeleteConfigWithContext(arg0 context.Context, arg1 *groundstation.DeleteConfigInput, arg2 ...request.Option) (*groundstation.DeleteConfigOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockGroundStationAPI) DeleteConfigWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DeleteConfigWithContext indicates an expected call of DeleteConfigWithContext
+// DeleteConfigWithContext indicates an expected call of DeleteConfigWithContext.
 func (mr *MockGroundStationAPIMockRecorder) DeleteConfigWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).DeleteConfigWithContext), varargs...)
 }
 
-// DeleteDataflowEndpointGroup mocks base method
+// DeleteDataflowEndpointGroup mocks base method.
 func (m *MockGroundStationAPI) DeleteDataflowEndpointGroup(arg0 *groundstation.DeleteDataflowEndpointGroupInput) (*groundstation.DeleteDataflowEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDataflowEndpointGroup", arg0)
@@ -294,13 +295,13 @@ func (m *MockGroundStationAPI) DeleteDataflowEndpointGroup(arg0 *groundstation.D
 	return ret0, ret1
 }
 
-// DeleteDataflowEndpointGroup indicates an expected call of DeleteDataflowEndpointGroup
+// DeleteDataflowEndpointGroup indicates an expected call of DeleteDataflowEndpointGroup.
 func (mr *MockGroundStationAPIMockRecorder) DeleteDataflowEndpointGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataflowEndpointGroup", reflect.TypeOf((*MockGroundStationAPI)(nil).DeleteDataflowEndpointGroup), arg0)
 }
 
-// DeleteDataflowEndpointGroupRequest mocks base method
+// DeleteDataflowEndpointGroupRequest mocks base method.
 func (m *MockGroundStationAPI) DeleteDataflowEndpointGroupRequest(arg0 *groundstation.DeleteDataflowEndpointGroupInput) (*request.Request, *groundstation.DeleteDataflowEndpointGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDataflowEndpointGroupRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockGroundStationAPI) DeleteDataflowEndpointGroupRequest(arg0 *groundst
 	return ret0, ret1
 }
 
-// DeleteDataflowEndpointGroupRequest indicates an expected call of DeleteDataflowEndpointGroupRequest
+// DeleteDataflowEndpointGroupRequest indicates an expected call of DeleteDataflowEndpointGroupRequest.
 func (mr *MockGroundStationAPIMockRecorder) DeleteDataflowEndpointGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataflowEndpointGroupRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).DeleteDataflowEndpointGroupRequest), arg0)
 }
 
-// DeleteDataflowEndpointGroupWithContext mocks base method
+// DeleteDataflowEndpointGroupWithContext mocks base method.
 func (m *MockGroundStationAPI) DeleteDataflowEndpointGroupWithContext(arg0 context.Context, arg1 *groundstation.DeleteDataflowEndpointGroupInput, arg2 ...request.Option) (*groundstation.DeleteDataflowEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockGroundStationAPI) DeleteDataflowEndpointGroupWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// DeleteDataflowEndpointGroupWithContext indicates an expected call of DeleteDataflowEndpointGroupWithContext
+// DeleteDataflowEndpointGroupWithContext indicates an expected call of DeleteDataflowEndpointGroupWithContext.
 func (mr *MockGroundStationAPIMockRecorder) DeleteDataflowEndpointGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataflowEndpointGroupWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).DeleteDataflowEndpointGroupWithContext), varargs...)
 }
 
-// DeleteMissionProfile mocks base method
+// DeleteMissionProfile mocks base method.
 func (m *MockGroundStationAPI) DeleteMissionProfile(arg0 *groundstation.DeleteMissionProfileInput) (*groundstation.DeleteMissionProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMissionProfile", arg0)
@@ -344,13 +345,13 @@ func (m *MockGroundStationAPI) DeleteMissionProfile(arg0 *groundstation.DeleteMi
 	return ret0, ret1
 }
 
-// DeleteMissionProfile indicates an expected call of DeleteMissionProfile
+// DeleteMissionProfile indicates an expected call of DeleteMissionProfile.
 func (mr *MockGroundStationAPIMockRecorder) DeleteMissionProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMissionProfile", reflect.TypeOf((*MockGroundStationAPI)(nil).DeleteMissionProfile), arg0)
 }
 
-// DeleteMissionProfileRequest mocks base method
+// DeleteMissionProfileRequest mocks base method.
 func (m *MockGroundStationAPI) DeleteMissionProfileRequest(arg0 *groundstation.DeleteMissionProfileInput) (*request.Request, *groundstation.DeleteMissionProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMissionProfileRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockGroundStationAPI) DeleteMissionProfileRequest(arg0 *groundstation.D
 	return ret0, ret1
 }
 
-// DeleteMissionProfileRequest indicates an expected call of DeleteMissionProfileRequest
+// DeleteMissionProfileRequest indicates an expected call of DeleteMissionProfileRequest.
 func (mr *MockGroundStationAPIMockRecorder) DeleteMissionProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMissionProfileRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).DeleteMissionProfileRequest), arg0)
 }
 
-// DeleteMissionProfileWithContext mocks base method
+// DeleteMissionProfileWithContext mocks base method.
 func (m *MockGroundStationAPI) DeleteMissionProfileWithContext(arg0 context.Context, arg1 *groundstation.DeleteMissionProfileInput, arg2 ...request.Option) (*groundstation.DeleteMissionProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockGroundStationAPI) DeleteMissionProfileWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DeleteMissionProfileWithContext indicates an expected call of DeleteMissionProfileWithContext
+// DeleteMissionProfileWithContext indicates an expected call of DeleteMissionProfileWithContext.
 func (mr *MockGroundStationAPIMockRecorder) DeleteMissionProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMissionProfileWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).DeleteMissionProfileWithContext), varargs...)
 }
 
-// DescribeContact mocks base method
+// DescribeContact mocks base method.
 func (m *MockGroundStationAPI) DescribeContact(arg0 *groundstation.DescribeContactInput) (*groundstation.DescribeContactOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeContact", arg0)
@@ -394,13 +395,13 @@ func (m *MockGroundStationAPI) DescribeContact(arg0 *groundstation.DescribeConta
 	return ret0, ret1
 }
 
-// DescribeContact indicates an expected call of DescribeContact
+// DescribeContact indicates an expected call of DescribeContact.
 func (mr *MockGroundStationAPIMockRecorder) DescribeContact(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeContact", reflect.TypeOf((*MockGroundStationAPI)(nil).DescribeContact), arg0)
 }
 
-// DescribeContactRequest mocks base method
+// DescribeContactRequest mocks base method.
 func (m *MockGroundStationAPI) DescribeContactRequest(arg0 *groundstation.DescribeContactInput) (*request.Request, *groundstation.DescribeContactOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeContactRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockGroundStationAPI) DescribeContactRequest(arg0 *groundstation.Descri
 	return ret0, ret1
 }
 
-// DescribeContactRequest indicates an expected call of DescribeContactRequest
+// DescribeContactRequest indicates an expected call of DescribeContactRequest.
 func (mr *MockGroundStationAPIMockRecorder) DescribeContactRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeContactRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).DescribeContactRequest), arg0)
 }
 
-// DescribeContactWithContext mocks base method
+// DescribeContactWithContext mocks base method.
 func (m *MockGroundStationAPI) DescribeContactWithContext(arg0 context.Context, arg1 *groundstation.DescribeContactInput, arg2 ...request.Option) (*groundstation.DescribeContactOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockGroundStationAPI) DescribeContactWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DescribeContactWithContext indicates an expected call of DescribeContactWithContext
+// DescribeContactWithContext indicates an expected call of DescribeContactWithContext.
 func (mr *MockGroundStationAPIMockRecorder) DescribeContactWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeContactWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).DescribeContactWithContext), varargs...)
 }
 
-// GetConfig mocks base method
+// GetConfig mocks base method.
 func (m *MockGroundStationAPI) GetConfig(arg0 *groundstation.GetConfigInput) (*groundstation.GetConfigOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConfig", arg0)
@@ -444,13 +445,13 @@ func (m *MockGroundStationAPI) GetConfig(arg0 *groundstation.GetConfigInput) (*g
 	return ret0, ret1
 }
 
-// GetConfig indicates an expected call of GetConfig
+// GetConfig indicates an expected call of GetConfig.
 func (mr *MockGroundStationAPIMockRecorder) GetConfig(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfig", reflect.TypeOf((*MockGroundStationAPI)(nil).GetConfig), arg0)
 }
 
-// GetConfigRequest mocks base method
+// GetConfigRequest mocks base method.
 func (m *MockGroundStationAPI) GetConfigRequest(arg0 *groundstation.GetConfigInput) (*request.Request, *groundstation.GetConfigOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConfigRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockGroundStationAPI) GetConfigRequest(arg0 *groundstation.GetConfigInp
 	return ret0, ret1
 }
 
-// GetConfigRequest indicates an expected call of GetConfigRequest
+// GetConfigRequest indicates an expected call of GetConfigRequest.
 func (mr *MockGroundStationAPIMockRecorder) GetConfigRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).GetConfigRequest), arg0)
 }
 
-// GetConfigWithContext mocks base method
+// GetConfigWithContext mocks base method.
 func (m *MockGroundStationAPI) GetConfigWithContext(arg0 context.Context, arg1 *groundstation.GetConfigInput, arg2 ...request.Option) (*groundstation.GetConfigOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockGroundStationAPI) GetConfigWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// GetConfigWithContext indicates an expected call of GetConfigWithContext
+// GetConfigWithContext indicates an expected call of GetConfigWithContext.
 func (mr *MockGroundStationAPIMockRecorder) GetConfigWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).GetConfigWithContext), varargs...)
 }
 
-// GetDataflowEndpointGroup mocks base method
+// GetDataflowEndpointGroup mocks base method.
 func (m *MockGroundStationAPI) GetDataflowEndpointGroup(arg0 *groundstation.GetDataflowEndpointGroupInput) (*groundstation.GetDataflowEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDataflowEndpointGroup", arg0)
@@ -494,13 +495,13 @@ func (m *MockGroundStationAPI) GetDataflowEndpointGroup(arg0 *groundstation.GetD
 	return ret0, ret1
 }
 
-// GetDataflowEndpointGroup indicates an expected call of GetDataflowEndpointGroup
+// GetDataflowEndpointGroup indicates an expected call of GetDataflowEndpointGroup.
 func (mr *MockGroundStationAPIMockRecorder) GetDataflowEndpointGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDataflowEndpointGroup", reflect.TypeOf((*MockGroundStationAPI)(nil).GetDataflowEndpointGroup), arg0)
 }
 
-// GetDataflowEndpointGroupRequest mocks base method
+// GetDataflowEndpointGroupRequest mocks base method.
 func (m *MockGroundStationAPI) GetDataflowEndpointGroupRequest(arg0 *groundstation.GetDataflowEndpointGroupInput) (*request.Request, *groundstation.GetDataflowEndpointGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDataflowEndpointGroupRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockGroundStationAPI) GetDataflowEndpointGroupRequest(arg0 *groundstati
 	return ret0, ret1
 }
 
-// GetDataflowEndpointGroupRequest indicates an expected call of GetDataflowEndpointGroupRequest
+// GetDataflowEndpointGroupRequest indicates an expected call of GetDataflowEndpointGroupRequest.
 func (mr *MockGroundStationAPIMockRecorder) GetDataflowEndpointGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDataflowEndpointGroupRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).GetDataflowEndpointGroupRequest), arg0)
 }
 
-// GetDataflowEndpointGroupWithContext mocks base method
+// GetDataflowEndpointGroupWithContext mocks base method.
 func (m *MockGroundStationAPI) GetDataflowEndpointGroupWithContext(arg0 context.Context, arg1 *groundstation.GetDataflowEndpointGroupInput, arg2 ...request.Option) (*groundstation.GetDataflowEndpointGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockGroundStationAPI) GetDataflowEndpointGroupWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// GetDataflowEndpointGroupWithContext indicates an expected call of GetDataflowEndpointGroupWithContext
+// GetDataflowEndpointGroupWithContext indicates an expected call of GetDataflowEndpointGroupWithContext.
 func (mr *MockGroundStationAPIMockRecorder) GetDataflowEndpointGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDataflowEndpointGroupWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).GetDataflowEndpointGroupWithContext), varargs...)
 }
 
-// GetMinuteUsage mocks base method
+// GetMinuteUsage mocks base method.
 func (m *MockGroundStationAPI) GetMinuteUsage(arg0 *groundstation.GetMinuteUsageInput) (*groundstation.GetMinuteUsageOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMinuteUsage", arg0)
@@ -544,13 +545,13 @@ func (m *MockGroundStationAPI) GetMinuteUsage(arg0 *groundstation.GetMinuteUsage
 	return ret0, ret1
 }
 
-// GetMinuteUsage indicates an expected call of GetMinuteUsage
+// GetMinuteUsage indicates an expected call of GetMinuteUsage.
 func (mr *MockGroundStationAPIMockRecorder) GetMinuteUsage(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMinuteUsage", reflect.TypeOf((*MockGroundStationAPI)(nil).GetMinuteUsage), arg0)
 }
 
-// GetMinuteUsageRequest mocks base method
+// GetMinuteUsageRequest mocks base method.
 func (m *MockGroundStationAPI) GetMinuteUsageRequest(arg0 *groundstation.GetMinuteUsageInput) (*request.Request, *groundstation.GetMinuteUsageOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMinuteUsageRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockGroundStationAPI) GetMinuteUsageRequest(arg0 *groundstation.GetMinu
 	return ret0, ret1
 }
 
-// GetMinuteUsageRequest indicates an expected call of GetMinuteUsageRequest
+// GetMinuteUsageRequest indicates an expected call of GetMinuteUsageRequest.
 func (mr *MockGroundStationAPIMockRecorder) GetMinuteUsageRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMinuteUsageRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).GetMinuteUsageRequest), arg0)
 }
 
-// GetMinuteUsageWithContext mocks base method
+// GetMinuteUsageWithContext mocks base method.
 func (m *MockGroundStationAPI) GetMinuteUsageWithContext(arg0 context.Context, arg1 *groundstation.GetMinuteUsageInput, arg2 ...request.Option) (*groundstation.GetMinuteUsageOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockGroundStationAPI) GetMinuteUsageWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// GetMinuteUsageWithContext indicates an expected call of GetMinuteUsageWithContext
+// GetMinuteUsageWithContext indicates an expected call of GetMinuteUsageWithContext.
 func (mr *MockGroundStationAPIMockRecorder) GetMinuteUsageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMinuteUsageWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).GetMinuteUsageWithContext), varargs...)
 }
 
-// GetMissionProfile mocks base method
+// GetMissionProfile mocks base method.
 func (m *MockGroundStationAPI) GetMissionProfile(arg0 *groundstation.GetMissionProfileInput) (*groundstation.GetMissionProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMissionProfile", arg0)
@@ -594,13 +595,13 @@ func (m *MockGroundStationAPI) GetMissionProfile(arg0 *groundstation.GetMissionP
 	return ret0, ret1
 }
 
-// GetMissionProfile indicates an expected call of GetMissionProfile
+// GetMissionProfile indicates an expected call of GetMissionProfile.
 func (mr *MockGroundStationAPIMockRecorder) GetMissionProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMissionProfile", reflect.TypeOf((*MockGroundStationAPI)(nil).GetMissionProfile), arg0)
 }
 
-// GetMissionProfileRequest mocks base method
+// GetMissionProfileRequest mocks base method.
 func (m *MockGroundStationAPI) GetMissionProfileRequest(arg0 *groundstation.GetMissionProfileInput) (*request.Request, *groundstation.GetMissionProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMissionProfileRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockGroundStationAPI) GetMissionProfileRequest(arg0 *groundstation.GetM
 	return ret0, ret1
 }
 
-// GetMissionProfileRequest indicates an expected call of GetMissionProfileRequest
+// GetMissionProfileRequest indicates an expected call of GetMissionProfileRequest.
 func (mr *MockGroundStationAPIMockRecorder) GetMissionProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMissionProfileRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).GetMissionProfileRequest), arg0)
 }
 
-// GetMissionProfileWithContext mocks base method
+// GetMissionProfileWithContext mocks base method.
 func (m *MockGroundStationAPI) GetMissionProfileWithContext(arg0 context.Context, arg1 *groundstation.GetMissionProfileInput, arg2 ...request.Option) (*groundstation.GetMissionProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockGroundStationAPI) GetMissionProfileWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// GetMissionProfileWithContext indicates an expected call of GetMissionProfileWithContext
+// GetMissionProfileWithContext indicates an expected call of GetMissionProfileWithContext.
 func (mr *MockGroundStationAPIMockRecorder) GetMissionProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMissionProfileWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).GetMissionProfileWithContext), varargs...)
 }
 
-// GetSatellite mocks base method
+// GetSatellite mocks base method.
 func (m *MockGroundStationAPI) GetSatellite(arg0 *groundstation.GetSatelliteInput) (*groundstation.GetSatelliteOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSatellite", arg0)
@@ -644,13 +645,13 @@ func (m *MockGroundStationAPI) GetSatellite(arg0 *groundstation.GetSatelliteInpu
 	return ret0, ret1
 }
 
-// GetSatellite indicates an expected call of GetSatellite
+// GetSatellite indicates an expected call of GetSatellite.
 func (mr *MockGroundStationAPIMockRecorder) GetSatellite(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSatellite", reflect.TypeOf((*MockGroundStationAPI)(nil).GetSatellite), arg0)
 }
 
-// GetSatelliteRequest mocks base method
+// GetSatelliteRequest mocks base method.
 func (m *MockGroundStationAPI) GetSatelliteRequest(arg0 *groundstation.GetSatelliteInput) (*request.Request, *groundstation.GetSatelliteOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSatelliteRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockGroundStationAPI) GetSatelliteRequest(arg0 *groundstation.GetSatell
 	return ret0, ret1
 }
 
-// GetSatelliteRequest indicates an expected call of GetSatelliteRequest
+// GetSatelliteRequest indicates an expected call of GetSatelliteRequest.
 func (mr *MockGroundStationAPIMockRecorder) GetSatelliteRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSatelliteRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).GetSatelliteRequest), arg0)
 }
 
-// GetSatelliteWithContext mocks base method
+// GetSatelliteWithContext mocks base method.
 func (m *MockGroundStationAPI) GetSatelliteWithContext(arg0 context.Context, arg1 *groundstation.GetSatelliteInput, arg2 ...request.Option) (*groundstation.GetSatelliteOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockGroundStationAPI) GetSatelliteWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetSatelliteWithContext indicates an expected call of GetSatelliteWithContext
+// GetSatelliteWithContext indicates an expected call of GetSatelliteWithContext.
 func (mr *MockGroundStationAPIMockRecorder) GetSatelliteWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSatelliteWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).GetSatelliteWithContext), varargs...)
 }
 
-// ListConfigs mocks base method
+// ListConfigs mocks base method.
 func (m *MockGroundStationAPI) ListConfigs(arg0 *groundstation.ListConfigsInput) (*groundstation.ListConfigsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConfigs", arg0)
@@ -694,13 +695,13 @@ func (m *MockGroundStationAPI) ListConfigs(arg0 *groundstation.ListConfigsInput)
 	return ret0, ret1
 }
 
-// ListConfigs indicates an expected call of ListConfigs
+// ListConfigs indicates an expected call of ListConfigs.
 func (mr *MockGroundStationAPIMockRecorder) ListConfigs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigs", reflect.TypeOf((*MockGroundStationAPI)(nil).ListConfigs), arg0)
 }
 
-// ListConfigsPages mocks base method
+// ListConfigsPages mocks base method.
 func (m *MockGroundStationAPI) ListConfigsPages(arg0 *groundstation.ListConfigsInput, arg1 func(*groundstation.ListConfigsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConfigsPages", arg0, arg1)
@@ -708,13 +709,13 @@ func (m *MockGroundStationAPI) ListConfigsPages(arg0 *groundstation.ListConfigsI
 	return ret0
 }
 
-// ListConfigsPages indicates an expected call of ListConfigsPages
+// ListConfigsPages indicates an expected call of ListConfigsPages.
 func (mr *MockGroundStationAPIMockRecorder) ListConfigsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigsPages", reflect.TypeOf((*MockGroundStationAPI)(nil).ListConfigsPages), arg0, arg1)
 }
 
-// ListConfigsPagesWithContext mocks base method
+// ListConfigsPagesWithContext mocks base method.
 func (m *MockGroundStationAPI) ListConfigsPagesWithContext(arg0 context.Context, arg1 *groundstation.ListConfigsInput, arg2 func(*groundstation.ListConfigsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -726,14 +727,14 @@ func (m *MockGroundStationAPI) ListConfigsPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListConfigsPagesWithContext indicates an expected call of ListConfigsPagesWithContext
+// ListConfigsPagesWithContext indicates an expected call of ListConfigsPagesWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListConfigsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigsPagesWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListConfigsPagesWithContext), varargs...)
 }
 
-// ListConfigsRequest mocks base method
+// ListConfigsRequest mocks base method.
 func (m *MockGroundStationAPI) ListConfigsRequest(arg0 *groundstation.ListConfigsInput) (*request.Request, *groundstation.ListConfigsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConfigsRequest", arg0)
@@ -742,13 +743,13 @@ func (m *MockGroundStationAPI) ListConfigsRequest(arg0 *groundstation.ListConfig
 	return ret0, ret1
 }
 
-// ListConfigsRequest indicates an expected call of ListConfigsRequest
+// ListConfigsRequest indicates an expected call of ListConfigsRequest.
 func (mr *MockGroundStationAPIMockRecorder) ListConfigsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigsRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).ListConfigsRequest), arg0)
 }
 
-// ListConfigsWithContext mocks base method
+// ListConfigsWithContext mocks base method.
 func (m *MockGroundStationAPI) ListConfigsWithContext(arg0 context.Context, arg1 *groundstation.ListConfigsInput, arg2 ...request.Option) (*groundstation.ListConfigsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -761,14 +762,14 @@ func (m *MockGroundStationAPI) ListConfigsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListConfigsWithContext indicates an expected call of ListConfigsWithContext
+// ListConfigsWithContext indicates an expected call of ListConfigsWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListConfigsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigsWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListConfigsWithContext), varargs...)
 }
 
-// ListContacts mocks base method
+// ListContacts mocks base method.
 func (m *MockGroundStationAPI) ListContacts(arg0 *groundstation.ListContactsInput) (*groundstation.ListContactsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContacts", arg0)
@@ -777,13 +778,13 @@ func (m *MockGroundStationAPI) ListContacts(arg0 *groundstation.ListContactsInpu
 	return ret0, ret1
 }
 
-// ListContacts indicates an expected call of ListContacts
+// ListContacts indicates an expected call of ListContacts.
 func (mr *MockGroundStationAPIMockRecorder) ListContacts(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContacts", reflect.TypeOf((*MockGroundStationAPI)(nil).ListContacts), arg0)
 }
 
-// ListContactsPages mocks base method
+// ListContactsPages mocks base method.
 func (m *MockGroundStationAPI) ListContactsPages(arg0 *groundstation.ListContactsInput, arg1 func(*groundstation.ListContactsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContactsPages", arg0, arg1)
@@ -791,13 +792,13 @@ func (m *MockGroundStationAPI) ListContactsPages(arg0 *groundstation.ListContact
 	return ret0
 }
 
-// ListContactsPages indicates an expected call of ListContactsPages
+// ListContactsPages indicates an expected call of ListContactsPages.
 func (mr *MockGroundStationAPIMockRecorder) ListContactsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactsPages", reflect.TypeOf((*MockGroundStationAPI)(nil).ListContactsPages), arg0, arg1)
 }
 
-// ListContactsPagesWithContext mocks base method
+// ListContactsPagesWithContext mocks base method.
 func (m *MockGroundStationAPI) ListContactsPagesWithContext(arg0 context.Context, arg1 *groundstation.ListContactsInput, arg2 func(*groundstation.ListContactsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -809,14 +810,14 @@ func (m *MockGroundStationAPI) ListContactsPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListContactsPagesWithContext indicates an expected call of ListContactsPagesWithContext
+// ListContactsPagesWithContext indicates an expected call of ListContactsPagesWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListContactsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactsPagesWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListContactsPagesWithContext), varargs...)
 }
 
-// ListContactsRequest mocks base method
+// ListContactsRequest mocks base method.
 func (m *MockGroundStationAPI) ListContactsRequest(arg0 *groundstation.ListContactsInput) (*request.Request, *groundstation.ListContactsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContactsRequest", arg0)
@@ -825,13 +826,13 @@ func (m *MockGroundStationAPI) ListContactsRequest(arg0 *groundstation.ListConta
 	return ret0, ret1
 }
 
-// ListContactsRequest indicates an expected call of ListContactsRequest
+// ListContactsRequest indicates an expected call of ListContactsRequest.
 func (mr *MockGroundStationAPIMockRecorder) ListContactsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactsRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).ListContactsRequest), arg0)
 }
 
-// ListContactsWithContext mocks base method
+// ListContactsWithContext mocks base method.
 func (m *MockGroundStationAPI) ListContactsWithContext(arg0 context.Context, arg1 *groundstation.ListContactsInput, arg2 ...request.Option) (*groundstation.ListContactsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -844,14 +845,14 @@ func (m *MockGroundStationAPI) ListContactsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListContactsWithContext indicates an expected call of ListContactsWithContext
+// ListContactsWithContext indicates an expected call of ListContactsWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListContactsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContactsWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListContactsWithContext), varargs...)
 }
 
-// ListDataflowEndpointGroups mocks base method
+// ListDataflowEndpointGroups mocks base method.
 func (m *MockGroundStationAPI) ListDataflowEndpointGroups(arg0 *groundstation.ListDataflowEndpointGroupsInput) (*groundstation.ListDataflowEndpointGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataflowEndpointGroups", arg0)
@@ -860,13 +861,13 @@ func (m *MockGroundStationAPI) ListDataflowEndpointGroups(arg0 *groundstation.Li
 	return ret0, ret1
 }
 
-// ListDataflowEndpointGroups indicates an expected call of ListDataflowEndpointGroups
+// ListDataflowEndpointGroups indicates an expected call of ListDataflowEndpointGroups.
 func (mr *MockGroundStationAPIMockRecorder) ListDataflowEndpointGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataflowEndpointGroups", reflect.TypeOf((*MockGroundStationAPI)(nil).ListDataflowEndpointGroups), arg0)
 }
 
-// ListDataflowEndpointGroupsPages mocks base method
+// ListDataflowEndpointGroupsPages mocks base method.
 func (m *MockGroundStationAPI) ListDataflowEndpointGroupsPages(arg0 *groundstation.ListDataflowEndpointGroupsInput, arg1 func(*groundstation.ListDataflowEndpointGroupsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataflowEndpointGroupsPages", arg0, arg1)
@@ -874,13 +875,13 @@ func (m *MockGroundStationAPI) ListDataflowEndpointGroupsPages(arg0 *groundstati
 	return ret0
 }
 
-// ListDataflowEndpointGroupsPages indicates an expected call of ListDataflowEndpointGroupsPages
+// ListDataflowEndpointGroupsPages indicates an expected call of ListDataflowEndpointGroupsPages.
 func (mr *MockGroundStationAPIMockRecorder) ListDataflowEndpointGroupsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataflowEndpointGroupsPages", reflect.TypeOf((*MockGroundStationAPI)(nil).ListDataflowEndpointGroupsPages), arg0, arg1)
 }
 
-// ListDataflowEndpointGroupsPagesWithContext mocks base method
+// ListDataflowEndpointGroupsPagesWithContext mocks base method.
 func (m *MockGroundStationAPI) ListDataflowEndpointGroupsPagesWithContext(arg0 context.Context, arg1 *groundstation.ListDataflowEndpointGroupsInput, arg2 func(*groundstation.ListDataflowEndpointGroupsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -892,14 +893,14 @@ func (m *MockGroundStationAPI) ListDataflowEndpointGroupsPagesWithContext(arg0 c
 	return ret0
 }
 
-// ListDataflowEndpointGroupsPagesWithContext indicates an expected call of ListDataflowEndpointGroupsPagesWithContext
+// ListDataflowEndpointGroupsPagesWithContext indicates an expected call of ListDataflowEndpointGroupsPagesWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListDataflowEndpointGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataflowEndpointGroupsPagesWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListDataflowEndpointGroupsPagesWithContext), varargs...)
 }
 
-// ListDataflowEndpointGroupsRequest mocks base method
+// ListDataflowEndpointGroupsRequest mocks base method.
 func (m *MockGroundStationAPI) ListDataflowEndpointGroupsRequest(arg0 *groundstation.ListDataflowEndpointGroupsInput) (*request.Request, *groundstation.ListDataflowEndpointGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataflowEndpointGroupsRequest", arg0)
@@ -908,13 +909,13 @@ func (m *MockGroundStationAPI) ListDataflowEndpointGroupsRequest(arg0 *groundsta
 	return ret0, ret1
 }
 
-// ListDataflowEndpointGroupsRequest indicates an expected call of ListDataflowEndpointGroupsRequest
+// ListDataflowEndpointGroupsRequest indicates an expected call of ListDataflowEndpointGroupsRequest.
 func (mr *MockGroundStationAPIMockRecorder) ListDataflowEndpointGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataflowEndpointGroupsRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).ListDataflowEndpointGroupsRequest), arg0)
 }
 
-// ListDataflowEndpointGroupsWithContext mocks base method
+// ListDataflowEndpointGroupsWithContext mocks base method.
 func (m *MockGroundStationAPI) ListDataflowEndpointGroupsWithContext(arg0 context.Context, arg1 *groundstation.ListDataflowEndpointGroupsInput, arg2 ...request.Option) (*groundstation.ListDataflowEndpointGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -927,14 +928,14 @@ func (m *MockGroundStationAPI) ListDataflowEndpointGroupsWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// ListDataflowEndpointGroupsWithContext indicates an expected call of ListDataflowEndpointGroupsWithContext
+// ListDataflowEndpointGroupsWithContext indicates an expected call of ListDataflowEndpointGroupsWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListDataflowEndpointGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataflowEndpointGroupsWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListDataflowEndpointGroupsWithContext), varargs...)
 }
 
-// ListGroundStations mocks base method
+// ListGroundStations mocks base method.
 func (m *MockGroundStationAPI) ListGroundStations(arg0 *groundstation.ListGroundStationsInput) (*groundstation.ListGroundStationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListGroundStations", arg0)
@@ -943,13 +944,13 @@ func (m *MockGroundStationAPI) ListGroundStations(arg0 *groundstation.ListGround
 	return ret0, ret1
 }
 
-// ListGroundStations indicates an expected call of ListGroundStations
+// ListGroundStations indicates an expected call of ListGroundStations.
 func (mr *MockGroundStationAPIMockRecorder) ListGroundStations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGroundStations", reflect.TypeOf((*MockGroundStationAPI)(nil).ListGroundStations), arg0)
 }
 
-// ListGroundStationsPages mocks base method
+// ListGroundStationsPages mocks base method.
 func (m *MockGroundStationAPI) ListGroundStationsPages(arg0 *groundstation.ListGroundStationsInput, arg1 func(*groundstation.ListGroundStationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListGroundStationsPages", arg0, arg1)
@@ -957,13 +958,13 @@ func (m *MockGroundStationAPI) ListGroundStationsPages(arg0 *groundstation.ListG
 	return ret0
 }
 
-// ListGroundStationsPages indicates an expected call of ListGroundStationsPages
+// ListGroundStationsPages indicates an expected call of ListGroundStationsPages.
 func (mr *MockGroundStationAPIMockRecorder) ListGroundStationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGroundStationsPages", reflect.TypeOf((*MockGroundStationAPI)(nil).ListGroundStationsPages), arg0, arg1)
 }
 
-// ListGroundStationsPagesWithContext mocks base method
+// ListGroundStationsPagesWithContext mocks base method.
 func (m *MockGroundStationAPI) ListGroundStationsPagesWithContext(arg0 context.Context, arg1 *groundstation.ListGroundStationsInput, arg2 func(*groundstation.ListGroundStationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -975,14 +976,14 @@ func (m *MockGroundStationAPI) ListGroundStationsPagesWithContext(arg0 context.C
 	return ret0
 }
 
-// ListGroundStationsPagesWithContext indicates an expected call of ListGroundStationsPagesWithContext
+// ListGroundStationsPagesWithContext indicates an expected call of ListGroundStationsPagesWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListGroundStationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGroundStationsPagesWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListGroundStationsPagesWithContext), varargs...)
 }
 
-// ListGroundStationsRequest mocks base method
+// ListGroundStationsRequest mocks base method.
 func (m *MockGroundStationAPI) ListGroundStationsRequest(arg0 *groundstation.ListGroundStationsInput) (*request.Request, *groundstation.ListGroundStationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListGroundStationsRequest", arg0)
@@ -991,13 +992,13 @@ func (m *MockGroundStationAPI) ListGroundStationsRequest(arg0 *groundstation.Lis
 	return ret0, ret1
 }
 
-// ListGroundStationsRequest indicates an expected call of ListGroundStationsRequest
+// ListGroundStationsRequest indicates an expected call of ListGroundStationsRequest.
 func (mr *MockGroundStationAPIMockRecorder) ListGroundStationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGroundStationsRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).ListGroundStationsRequest), arg0)
 }
 
-// ListGroundStationsWithContext mocks base method
+// ListGroundStationsWithContext mocks base method.
 func (m *MockGroundStationAPI) ListGroundStationsWithContext(arg0 context.Context, arg1 *groundstation.ListGroundStationsInput, arg2 ...request.Option) (*groundstation.ListGroundStationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1010,14 +1011,14 @@ func (m *MockGroundStationAPI) ListGroundStationsWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListGroundStationsWithContext indicates an expected call of ListGroundStationsWithContext
+// ListGroundStationsWithContext indicates an expected call of ListGroundStationsWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListGroundStationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGroundStationsWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListGroundStationsWithContext), varargs...)
 }
 
-// ListMissionProfiles mocks base method
+// ListMissionProfiles mocks base method.
 func (m *MockGroundStationAPI) ListMissionProfiles(arg0 *groundstation.ListMissionProfilesInput) (*groundstation.ListMissionProfilesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMissionProfiles", arg0)
@@ -1026,13 +1027,13 @@ func (m *MockGroundStationAPI) ListMissionProfiles(arg0 *groundstation.ListMissi
 	return ret0, ret1
 }
 
-// ListMissionProfiles indicates an expected call of ListMissionProfiles
+// ListMissionProfiles indicates an expected call of ListMissionProfiles.
 func (mr *MockGroundStationAPIMockRecorder) ListMissionProfiles(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMissionProfiles", reflect.TypeOf((*MockGroundStationAPI)(nil).ListMissionProfiles), arg0)
 }
 
-// ListMissionProfilesPages mocks base method
+// ListMissionProfilesPages mocks base method.
 func (m *MockGroundStationAPI) ListMissionProfilesPages(arg0 *groundstation.ListMissionProfilesInput, arg1 func(*groundstation.ListMissionProfilesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMissionProfilesPages", arg0, arg1)
@@ -1040,13 +1041,13 @@ func (m *MockGroundStationAPI) ListMissionProfilesPages(arg0 *groundstation.List
 	return ret0
 }
 
-// ListMissionProfilesPages indicates an expected call of ListMissionProfilesPages
+// ListMissionProfilesPages indicates an expected call of ListMissionProfilesPages.
 func (mr *MockGroundStationAPIMockRecorder) ListMissionProfilesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMissionProfilesPages", reflect.TypeOf((*MockGroundStationAPI)(nil).ListMissionProfilesPages), arg0, arg1)
 }
 
-// ListMissionProfilesPagesWithContext mocks base method
+// ListMissionProfilesPagesWithContext mocks base method.
 func (m *MockGroundStationAPI) ListMissionProfilesPagesWithContext(arg0 context.Context, arg1 *groundstation.ListMissionProfilesInput, arg2 func(*groundstation.ListMissionProfilesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1058,14 +1059,14 @@ func (m *MockGroundStationAPI) ListMissionProfilesPagesWithContext(arg0 context.
 	return ret0
 }
 
-// ListMissionProfilesPagesWithContext indicates an expected call of ListMissionProfilesPagesWithContext
+// ListMissionProfilesPagesWithContext indicates an expected call of ListMissionProfilesPagesWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListMissionProfilesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMissionProfilesPagesWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListMissionProfilesPagesWithContext), varargs...)
 }
 
-// ListMissionProfilesRequest mocks base method
+// ListMissionProfilesRequest mocks base method.
 func (m *MockGroundStationAPI) ListMissionProfilesRequest(arg0 *groundstation.ListMissionProfilesInput) (*request.Request, *groundstation.ListMissionProfilesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMissionProfilesRequest", arg0)
@@ -1074,13 +1075,13 @@ func (m *MockGroundStationAPI) ListMissionProfilesRequest(arg0 *groundstation.Li
 	return ret0, ret1
 }
 
-// ListMissionProfilesRequest indicates an expected call of ListMissionProfilesRequest
+// ListMissionProfilesRequest indicates an expected call of ListMissionProfilesRequest.
 func (mr *MockGroundStationAPIMockRecorder) ListMissionProfilesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMissionProfilesRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).ListMissionProfilesRequest), arg0)
 }
 
-// ListMissionProfilesWithContext mocks base method
+// ListMissionProfilesWithContext mocks base method.
 func (m *MockGroundStationAPI) ListMissionProfilesWithContext(arg0 context.Context, arg1 *groundstation.ListMissionProfilesInput, arg2 ...request.Option) (*groundstation.ListMissionProfilesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1093,14 +1094,14 @@ func (m *MockGroundStationAPI) ListMissionProfilesWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListMissionProfilesWithContext indicates an expected call of ListMissionProfilesWithContext
+// ListMissionProfilesWithContext indicates an expected call of ListMissionProfilesWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListMissionProfilesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMissionProfilesWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListMissionProfilesWithContext), varargs...)
 }
 
-// ListSatellites mocks base method
+// ListSatellites mocks base method.
 func (m *MockGroundStationAPI) ListSatellites(arg0 *groundstation.ListSatellitesInput) (*groundstation.ListSatellitesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSatellites", arg0)
@@ -1109,13 +1110,13 @@ func (m *MockGroundStationAPI) ListSatellites(arg0 *groundstation.ListSatellites
 	return ret0, ret1
 }
 
-// ListSatellites indicates an expected call of ListSatellites
+// ListSatellites indicates an expected call of ListSatellites.
 func (mr *MockGroundStationAPIMockRecorder) ListSatellites(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSatellites", reflect.TypeOf((*MockGroundStationAPI)(nil).ListSatellites), arg0)
 }
 
-// ListSatellitesPages mocks base method
+// ListSatellitesPages mocks base method.
 func (m *MockGroundStationAPI) ListSatellitesPages(arg0 *groundstation.ListSatellitesInput, arg1 func(*groundstation.ListSatellitesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSatellitesPages", arg0, arg1)
@@ -1123,13 +1124,13 @@ func (m *MockGroundStationAPI) ListSatellitesPages(arg0 *groundstation.ListSatel
 	return ret0
 }
 
-// ListSatellitesPages indicates an expected call of ListSatellitesPages
+// ListSatellitesPages indicates an expected call of ListSatellitesPages.
 func (mr *MockGroundStationAPIMockRecorder) ListSatellitesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSatellitesPages", reflect.TypeOf((*MockGroundStationAPI)(nil).ListSatellitesPages), arg0, arg1)
 }
 
-// ListSatellitesPagesWithContext mocks base method
+// ListSatellitesPagesWithContext mocks base method.
 func (m *MockGroundStationAPI) ListSatellitesPagesWithContext(arg0 context.Context, arg1 *groundstation.ListSatellitesInput, arg2 func(*groundstation.ListSatellitesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1141,14 +1142,14 @@ func (m *MockGroundStationAPI) ListSatellitesPagesWithContext(arg0 context.Conte
 	return ret0
 }
 
-// ListSatellitesPagesWithContext indicates an expected call of ListSatellitesPagesWithContext
+// ListSatellitesPagesWithContext indicates an expected call of ListSatellitesPagesWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListSatellitesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSatellitesPagesWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListSatellitesPagesWithContext), varargs...)
 }
 
-// ListSatellitesRequest mocks base method
+// ListSatellitesRequest mocks base method.
 func (m *MockGroundStationAPI) ListSatellitesRequest(arg0 *groundstation.ListSatellitesInput) (*request.Request, *groundstation.ListSatellitesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSatellitesRequest", arg0)
@@ -1157,13 +1158,13 @@ func (m *MockGroundStationAPI) ListSatellitesRequest(arg0 *groundstation.ListSat
 	return ret0, ret1
 }
 
-// ListSatellitesRequest indicates an expected call of ListSatellitesRequest
+// ListSatellitesRequest indicates an expected call of ListSatellitesRequest.
 func (mr *MockGroundStationAPIMockRecorder) ListSatellitesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSatellitesRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).ListSatellitesRequest), arg0)
 }
 
-// ListSatellitesWithContext mocks base method
+// ListSatellitesWithContext mocks base method.
 func (m *MockGroundStationAPI) ListSatellitesWithContext(arg0 context.Context, arg1 *groundstation.ListSatellitesInput, arg2 ...request.Option) (*groundstation.ListSatellitesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1176,14 +1177,14 @@ func (m *MockGroundStationAPI) ListSatellitesWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ListSatellitesWithContext indicates an expected call of ListSatellitesWithContext
+// ListSatellitesWithContext indicates an expected call of ListSatellitesWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListSatellitesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSatellitesWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListSatellitesWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockGroundStationAPI) ListTagsForResource(arg0 *groundstation.ListTagsForResourceInput) (*groundstation.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1192,13 +1193,13 @@ func (m *MockGroundStationAPI) ListTagsForResource(arg0 *groundstation.ListTagsF
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockGroundStationAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockGroundStationAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockGroundStationAPI) ListTagsForResourceRequest(arg0 *groundstation.ListTagsForResourceInput) (*request.Request, *groundstation.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1207,13 +1208,13 @@ func (m *MockGroundStationAPI) ListTagsForResourceRequest(arg0 *groundstation.Li
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockGroundStationAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockGroundStationAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *groundstation.ListTagsForResourceInput, arg2 ...request.Option) (*groundstation.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1226,14 +1227,14 @@ func (m *MockGroundStationAPI) ListTagsForResourceWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// ReserveContact mocks base method
+// ReserveContact mocks base method.
 func (m *MockGroundStationAPI) ReserveContact(arg0 *groundstation.ReserveContactInput) (*groundstation.ReserveContactOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ReserveContact", arg0)
@@ -1242,13 +1243,13 @@ func (m *MockGroundStationAPI) ReserveContact(arg0 *groundstation.ReserveContact
 	return ret0, ret1
 }
 
-// ReserveContact indicates an expected call of ReserveContact
+// ReserveContact indicates an expected call of ReserveContact.
 func (mr *MockGroundStationAPIMockRecorder) ReserveContact(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReserveContact", reflect.TypeOf((*MockGroundStationAPI)(nil).ReserveContact), arg0)
 }
 
-// ReserveContactRequest mocks base method
+// ReserveContactRequest mocks base method.
 func (m *MockGroundStationAPI) ReserveContactRequest(arg0 *groundstation.ReserveContactInput) (*request.Request, *groundstation.ReserveContactOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ReserveContactRequest", arg0)
@@ -1257,13 +1258,13 @@ func (m *MockGroundStationAPI) ReserveContactRequest(arg0 *groundstation.Reserve
 	return ret0, ret1
 }
 
-// ReserveContactRequest indicates an expected call of ReserveContactRequest
+// ReserveContactRequest indicates an expected call of ReserveContactRequest.
 func (mr *MockGroundStationAPIMockRecorder) ReserveContactRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReserveContactRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).ReserveContactRequest), arg0)
 }
 
-// ReserveContactWithContext mocks base method
+// ReserveContactWithContext mocks base method.
 func (m *MockGroundStationAPI) ReserveContactWithContext(arg0 context.Context, arg1 *groundstation.ReserveContactInput, arg2 ...request.Option) (*groundstation.ReserveContactOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1276,14 +1277,14 @@ func (m *MockGroundStationAPI) ReserveContactWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ReserveContactWithContext indicates an expected call of ReserveContactWithContext
+// ReserveContactWithContext indicates an expected call of ReserveContactWithContext.
 func (mr *MockGroundStationAPIMockRecorder) ReserveContactWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReserveContactWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).ReserveContactWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockGroundStationAPI) TagResource(arg0 *groundstation.TagResourceInput) (*groundstation.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1292,13 +1293,13 @@ func (m *MockGroundStationAPI) TagResource(arg0 *groundstation.TagResourceInput)
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockGroundStationAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockGroundStationAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockGroundStationAPI) TagResourceRequest(arg0 *groundstation.TagResourceInput) (*request.Request, *groundstation.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1307,13 +1308,13 @@ func (m *MockGroundStationAPI) TagResourceRequest(arg0 *groundstation.TagResourc
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockGroundStationAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockGroundStationAPI) TagResourceWithContext(arg0 context.Context, arg1 *groundstation.TagResourceInput, arg2 ...request.Option) (*groundstation.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1326,14 +1327,14 @@ func (m *MockGroundStationAPI) TagResourceWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockGroundStationAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockGroundStationAPI) UntagResource(arg0 *groundstation.UntagResourceInput) (*groundstation.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1342,13 +1343,13 @@ func (m *MockGroundStationAPI) UntagResource(arg0 *groundstation.UntagResourceIn
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockGroundStationAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockGroundStationAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockGroundStationAPI) UntagResourceRequest(arg0 *groundstation.UntagResourceInput) (*request.Request, *groundstation.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1357,13 +1358,13 @@ func (m *MockGroundStationAPI) UntagResourceRequest(arg0 *groundstation.UntagRes
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockGroundStationAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockGroundStationAPI) UntagResourceWithContext(arg0 context.Context, arg1 *groundstation.UntagResourceInput, arg2 ...request.Option) (*groundstation.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1376,14 +1377,14 @@ func (m *MockGroundStationAPI) UntagResourceWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockGroundStationAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateConfig mocks base method
+// UpdateConfig mocks base method.
 func (m *MockGroundStationAPI) UpdateConfig(arg0 *groundstation.UpdateConfigInput) (*groundstation.UpdateConfigOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateConfig", arg0)
@@ -1392,13 +1393,13 @@ func (m *MockGroundStationAPI) UpdateConfig(arg0 *groundstation.UpdateConfigInpu
 	return ret0, ret1
 }
 
-// UpdateConfig indicates an expected call of UpdateConfig
+// UpdateConfig indicates an expected call of UpdateConfig.
 func (mr *MockGroundStationAPIMockRecorder) UpdateConfig(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConfig", reflect.TypeOf((*MockGroundStationAPI)(nil).UpdateConfig), arg0)
 }
 
-// UpdateConfigRequest mocks base method
+// UpdateConfigRequest mocks base method.
 func (m *MockGroundStationAPI) UpdateConfigRequest(arg0 *groundstation.UpdateConfigInput) (*request.Request, *groundstation.UpdateConfigOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateConfigRequest", arg0)
@@ -1407,13 +1408,13 @@ func (m *MockGroundStationAPI) UpdateConfigRequest(arg0 *groundstation.UpdateCon
 	return ret0, ret1
 }
 
-// UpdateConfigRequest indicates an expected call of UpdateConfigRequest
+// UpdateConfigRequest indicates an expected call of UpdateConfigRequest.
 func (mr *MockGroundStationAPIMockRecorder) UpdateConfigRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConfigRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).UpdateConfigRequest), arg0)
 }
 
-// UpdateConfigWithContext mocks base method
+// UpdateConfigWithContext mocks base method.
 func (m *MockGroundStationAPI) UpdateConfigWithContext(arg0 context.Context, arg1 *groundstation.UpdateConfigInput, arg2 ...request.Option) (*groundstation.UpdateConfigOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1426,14 +1427,14 @@ func (m *MockGroundStationAPI) UpdateConfigWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UpdateConfigWithContext indicates an expected call of UpdateConfigWithContext
+// UpdateConfigWithContext indicates an expected call of UpdateConfigWithContext.
 func (mr *MockGroundStationAPIMockRecorder) UpdateConfigWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConfigWithContext", reflect.TypeOf((*MockGroundStationAPI)(nil).UpdateConfigWithContext), varargs...)
 }
 
-// UpdateMissionProfile mocks base method
+// UpdateMissionProfile mocks base method.
 func (m *MockGroundStationAPI) UpdateMissionProfile(arg0 *groundstation.UpdateMissionProfileInput) (*groundstation.UpdateMissionProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMissionProfile", arg0)
@@ -1442,13 +1443,13 @@ func (m *MockGroundStationAPI) UpdateMissionProfile(arg0 *groundstation.UpdateMi
 	return ret0, ret1
 }
 
-// UpdateMissionProfile indicates an expected call of UpdateMissionProfile
+// UpdateMissionProfile indicates an expected call of UpdateMissionProfile.
 func (mr *MockGroundStationAPIMockRecorder) UpdateMissionProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMissionProfile", reflect.TypeOf((*MockGroundStationAPI)(nil).UpdateMissionProfile), arg0)
 }
 
-// UpdateMissionProfileRequest mocks base method
+// UpdateMissionProfileRequest mocks base method.
 func (m *MockGroundStationAPI) UpdateMissionProfileRequest(arg0 *groundstation.UpdateMissionProfileInput) (*request.Request, *groundstation.UpdateMissionProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMissionProfileRequest", arg0)
@@ -1457,13 +1458,13 @@ func (m *MockGroundStationAPI) UpdateMissionProfileRequest(arg0 *groundstation.U
 	return ret0, ret1
 }
 
-// UpdateMissionProfileRequest indicates an expected call of UpdateMissionProfileRequest
+// UpdateMissionProfileRequest indicates an expected call of UpdateMissionProfileRequest.
 func (mr *MockGroundStationAPIMockRecorder) UpdateMissionProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMissionProfileRequest", reflect.TypeOf((*MockGroundStationAPI)(nil).UpdateMissionProfileRequest), arg0)
 }
 
-// UpdateMissionProfileWithContext mocks base method
+// UpdateMissionProfileWithContext mocks base method.
 func (m *MockGroundStationAPI) UpdateMissionProfileWithContext(arg0 context.Context, arg1 *groundstation.UpdateMissionProfileInput, arg2 ...request.Option) (*groundstation.UpdateMissionProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1476,7 +1477,7 @@ func (m *MockGroundStationAPI) UpdateMissionProfileWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// UpdateMissionProfileWithContext indicates an expected call of UpdateMissionProfileWithContext
+// UpdateMissionProfileWithContext indicates an expected call of UpdateMissionProfileWithContext.
 func (mr *MockGroundStationAPIMockRecorder) UpdateMissionProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

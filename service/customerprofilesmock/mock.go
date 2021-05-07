@@ -6,36 +6,37 @@ package customerprofilesmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	customerprofiles "github.com/aws/aws-sdk-go/service/customerprofiles"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockCustomerProfilesAPI is a mock of CustomerProfilesAPI interface
+// MockCustomerProfilesAPI is a mock of CustomerProfilesAPI interface.
 type MockCustomerProfilesAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockCustomerProfilesAPIMockRecorder
 }
 
-// MockCustomerProfilesAPIMockRecorder is the mock recorder for MockCustomerProfilesAPI
+// MockCustomerProfilesAPIMockRecorder is the mock recorder for MockCustomerProfilesAPI.
 type MockCustomerProfilesAPIMockRecorder struct {
 	mock *MockCustomerProfilesAPI
 }
 
-// NewMockCustomerProfilesAPI creates a new mock instance
+// NewMockCustomerProfilesAPI creates a new mock instance.
 func NewMockCustomerProfilesAPI(ctrl *gomock.Controller) *MockCustomerProfilesAPI {
 	mock := &MockCustomerProfilesAPI{ctrl: ctrl}
 	mock.recorder = &MockCustomerProfilesAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockCustomerProfilesAPI) EXPECT() *MockCustomerProfilesAPIMockRecorder {
 	return m.recorder
 }
 
-// AddProfileKey mocks base method
+// AddProfileKey mocks base method.
 func (m *MockCustomerProfilesAPI) AddProfileKey(arg0 *customerprofiles.AddProfileKeyInput) (*customerprofiles.AddProfileKeyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AddProfileKey", arg0)
@@ -44,13 +45,13 @@ func (m *MockCustomerProfilesAPI) AddProfileKey(arg0 *customerprofiles.AddProfil
 	return ret0, ret1
 }
 
-// AddProfileKey indicates an expected call of AddProfileKey
+// AddProfileKey indicates an expected call of AddProfileKey.
 func (mr *MockCustomerProfilesAPIMockRecorder) AddProfileKey(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddProfileKey", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).AddProfileKey), arg0)
 }
 
-// AddProfileKeyRequest mocks base method
+// AddProfileKeyRequest mocks base method.
 func (m *MockCustomerProfilesAPI) AddProfileKeyRequest(arg0 *customerprofiles.AddProfileKeyInput) (*request.Request, *customerprofiles.AddProfileKeyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AddProfileKeyRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockCustomerProfilesAPI) AddProfileKeyRequest(arg0 *customerprofiles.Ad
 	return ret0, ret1
 }
 
-// AddProfileKeyRequest indicates an expected call of AddProfileKeyRequest
+// AddProfileKeyRequest indicates an expected call of AddProfileKeyRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) AddProfileKeyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddProfileKeyRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).AddProfileKeyRequest), arg0)
 }
 
-// AddProfileKeyWithContext mocks base method
+// AddProfileKeyWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) AddProfileKeyWithContext(arg0 context.Context, arg1 *customerprofiles.AddProfileKeyInput, arg2 ...request.Option) (*customerprofiles.AddProfileKeyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockCustomerProfilesAPI) AddProfileKeyWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// AddProfileKeyWithContext indicates an expected call of AddProfileKeyWithContext
+// AddProfileKeyWithContext indicates an expected call of AddProfileKeyWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) AddProfileKeyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddProfileKeyWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).AddProfileKeyWithContext), varargs...)
 }
 
-// CreateDomain mocks base method
+// CreateDomain mocks base method.
 func (m *MockCustomerProfilesAPI) CreateDomain(arg0 *customerprofiles.CreateDomainInput) (*customerprofiles.CreateDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDomain", arg0)
@@ -94,13 +95,13 @@ func (m *MockCustomerProfilesAPI) CreateDomain(arg0 *customerprofiles.CreateDoma
 	return ret0, ret1
 }
 
-// CreateDomain indicates an expected call of CreateDomain
+// CreateDomain indicates an expected call of CreateDomain.
 func (mr *MockCustomerProfilesAPIMockRecorder) CreateDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomain", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).CreateDomain), arg0)
 }
 
-// CreateDomainRequest mocks base method
+// CreateDomainRequest mocks base method.
 func (m *MockCustomerProfilesAPI) CreateDomainRequest(arg0 *customerprofiles.CreateDomainInput) (*request.Request, *customerprofiles.CreateDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDomainRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockCustomerProfilesAPI) CreateDomainRequest(arg0 *customerprofiles.Cre
 	return ret0, ret1
 }
 
-// CreateDomainRequest indicates an expected call of CreateDomainRequest
+// CreateDomainRequest indicates an expected call of CreateDomainRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) CreateDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).CreateDomainRequest), arg0)
 }
 
-// CreateDomainWithContext mocks base method
+// CreateDomainWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) CreateDomainWithContext(arg0 context.Context, arg1 *customerprofiles.CreateDomainInput, arg2 ...request.Option) (*customerprofiles.CreateDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockCustomerProfilesAPI) CreateDomainWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// CreateDomainWithContext indicates an expected call of CreateDomainWithContext
+// CreateDomainWithContext indicates an expected call of CreateDomainWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) CreateDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).CreateDomainWithContext), varargs...)
 }
 
-// CreateProfile mocks base method
+// CreateProfile mocks base method.
 func (m *MockCustomerProfilesAPI) CreateProfile(arg0 *customerprofiles.CreateProfileInput) (*customerprofiles.CreateProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateProfile", arg0)
@@ -144,13 +145,13 @@ func (m *MockCustomerProfilesAPI) CreateProfile(arg0 *customerprofiles.CreatePro
 	return ret0, ret1
 }
 
-// CreateProfile indicates an expected call of CreateProfile
+// CreateProfile indicates an expected call of CreateProfile.
 func (mr *MockCustomerProfilesAPIMockRecorder) CreateProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProfile", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).CreateProfile), arg0)
 }
 
-// CreateProfileRequest mocks base method
+// CreateProfileRequest mocks base method.
 func (m *MockCustomerProfilesAPI) CreateProfileRequest(arg0 *customerprofiles.CreateProfileInput) (*request.Request, *customerprofiles.CreateProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateProfileRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockCustomerProfilesAPI) CreateProfileRequest(arg0 *customerprofiles.Cr
 	return ret0, ret1
 }
 
-// CreateProfileRequest indicates an expected call of CreateProfileRequest
+// CreateProfileRequest indicates an expected call of CreateProfileRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) CreateProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProfileRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).CreateProfileRequest), arg0)
 }
 
-// CreateProfileWithContext mocks base method
+// CreateProfileWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) CreateProfileWithContext(arg0 context.Context, arg1 *customerprofiles.CreateProfileInput, arg2 ...request.Option) (*customerprofiles.CreateProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockCustomerProfilesAPI) CreateProfileWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateProfileWithContext indicates an expected call of CreateProfileWithContext
+// CreateProfileWithContext indicates an expected call of CreateProfileWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) CreateProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProfileWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).CreateProfileWithContext), varargs...)
 }
 
-// DeleteDomain mocks base method
+// DeleteDomain mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteDomain(arg0 *customerprofiles.DeleteDomainInput) (*customerprofiles.DeleteDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDomain", arg0)
@@ -194,13 +195,13 @@ func (m *MockCustomerProfilesAPI) DeleteDomain(arg0 *customerprofiles.DeleteDoma
 	return ret0, ret1
 }
 
-// DeleteDomain indicates an expected call of DeleteDomain
+// DeleteDomain indicates an expected call of DeleteDomain.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomain", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteDomain), arg0)
 }
 
-// DeleteDomainRequest mocks base method
+// DeleteDomainRequest mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteDomainRequest(arg0 *customerprofiles.DeleteDomainInput) (*request.Request, *customerprofiles.DeleteDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDomainRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockCustomerProfilesAPI) DeleteDomainRequest(arg0 *customerprofiles.Del
 	return ret0, ret1
 }
 
-// DeleteDomainRequest indicates an expected call of DeleteDomainRequest
+// DeleteDomainRequest indicates an expected call of DeleteDomainRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteDomainRequest), arg0)
 }
 
-// DeleteDomainWithContext mocks base method
+// DeleteDomainWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteDomainWithContext(arg0 context.Context, arg1 *customerprofiles.DeleteDomainInput, arg2 ...request.Option) (*customerprofiles.DeleteDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockCustomerProfilesAPI) DeleteDomainWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DeleteDomainWithContext indicates an expected call of DeleteDomainWithContext
+// DeleteDomainWithContext indicates an expected call of DeleteDomainWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteDomainWithContext), varargs...)
 }
 
-// DeleteIntegration mocks base method
+// DeleteIntegration mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteIntegration(arg0 *customerprofiles.DeleteIntegrationInput) (*customerprofiles.DeleteIntegrationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteIntegration", arg0)
@@ -244,13 +245,13 @@ func (m *MockCustomerProfilesAPI) DeleteIntegration(arg0 *customerprofiles.Delet
 	return ret0, ret1
 }
 
-// DeleteIntegration indicates an expected call of DeleteIntegration
+// DeleteIntegration indicates an expected call of DeleteIntegration.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteIntegration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteIntegration", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteIntegration), arg0)
 }
 
-// DeleteIntegrationRequest mocks base method
+// DeleteIntegrationRequest mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteIntegrationRequest(arg0 *customerprofiles.DeleteIntegrationInput) (*request.Request, *customerprofiles.DeleteIntegrationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteIntegrationRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockCustomerProfilesAPI) DeleteIntegrationRequest(arg0 *customerprofile
 	return ret0, ret1
 }
 
-// DeleteIntegrationRequest indicates an expected call of DeleteIntegrationRequest
+// DeleteIntegrationRequest indicates an expected call of DeleteIntegrationRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteIntegrationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteIntegrationRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteIntegrationRequest), arg0)
 }
 
-// DeleteIntegrationWithContext mocks base method
+// DeleteIntegrationWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteIntegrationWithContext(arg0 context.Context, arg1 *customerprofiles.DeleteIntegrationInput, arg2 ...request.Option) (*customerprofiles.DeleteIntegrationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockCustomerProfilesAPI) DeleteIntegrationWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DeleteIntegrationWithContext indicates an expected call of DeleteIntegrationWithContext
+// DeleteIntegrationWithContext indicates an expected call of DeleteIntegrationWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteIntegrationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteIntegrationWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteIntegrationWithContext), varargs...)
 }
 
-// DeleteProfile mocks base method
+// DeleteProfile mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteProfile(arg0 *customerprofiles.DeleteProfileInput) (*customerprofiles.DeleteProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProfile", arg0)
@@ -294,13 +295,13 @@ func (m *MockCustomerProfilesAPI) DeleteProfile(arg0 *customerprofiles.DeletePro
 	return ret0, ret1
 }
 
-// DeleteProfile indicates an expected call of DeleteProfile
+// DeleteProfile indicates an expected call of DeleteProfile.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfile", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfile), arg0)
 }
 
-// DeleteProfileKey mocks base method
+// DeleteProfileKey mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteProfileKey(arg0 *customerprofiles.DeleteProfileKeyInput) (*customerprofiles.DeleteProfileKeyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProfileKey", arg0)
@@ -309,13 +310,13 @@ func (m *MockCustomerProfilesAPI) DeleteProfileKey(arg0 *customerprofiles.Delete
 	return ret0, ret1
 }
 
-// DeleteProfileKey indicates an expected call of DeleteProfileKey
+// DeleteProfileKey indicates an expected call of DeleteProfileKey.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfileKey(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfileKey", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfileKey), arg0)
 }
 
-// DeleteProfileKeyRequest mocks base method
+// DeleteProfileKeyRequest mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteProfileKeyRequest(arg0 *customerprofiles.DeleteProfileKeyInput) (*request.Request, *customerprofiles.DeleteProfileKeyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProfileKeyRequest", arg0)
@@ -324,13 +325,13 @@ func (m *MockCustomerProfilesAPI) DeleteProfileKeyRequest(arg0 *customerprofiles
 	return ret0, ret1
 }
 
-// DeleteProfileKeyRequest indicates an expected call of DeleteProfileKeyRequest
+// DeleteProfileKeyRequest indicates an expected call of DeleteProfileKeyRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfileKeyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfileKeyRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfileKeyRequest), arg0)
 }
 
-// DeleteProfileKeyWithContext mocks base method
+// DeleteProfileKeyWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteProfileKeyWithContext(arg0 context.Context, arg1 *customerprofiles.DeleteProfileKeyInput, arg2 ...request.Option) (*customerprofiles.DeleteProfileKeyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -343,14 +344,14 @@ func (m *MockCustomerProfilesAPI) DeleteProfileKeyWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DeleteProfileKeyWithContext indicates an expected call of DeleteProfileKeyWithContext
+// DeleteProfileKeyWithContext indicates an expected call of DeleteProfileKeyWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfileKeyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfileKeyWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfileKeyWithContext), varargs...)
 }
 
-// DeleteProfileObject mocks base method
+// DeleteProfileObject mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteProfileObject(arg0 *customerprofiles.DeleteProfileObjectInput) (*customerprofiles.DeleteProfileObjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProfileObject", arg0)
@@ -359,13 +360,13 @@ func (m *MockCustomerProfilesAPI) DeleteProfileObject(arg0 *customerprofiles.Del
 	return ret0, ret1
 }
 
-// DeleteProfileObject indicates an expected call of DeleteProfileObject
+// DeleteProfileObject indicates an expected call of DeleteProfileObject.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfileObject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfileObject", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfileObject), arg0)
 }
 
-// DeleteProfileObjectRequest mocks base method
+// DeleteProfileObjectRequest mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteProfileObjectRequest(arg0 *customerprofiles.DeleteProfileObjectInput) (*request.Request, *customerprofiles.DeleteProfileObjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProfileObjectRequest", arg0)
@@ -374,13 +375,13 @@ func (m *MockCustomerProfilesAPI) DeleteProfileObjectRequest(arg0 *customerprofi
 	return ret0, ret1
 }
 
-// DeleteProfileObjectRequest indicates an expected call of DeleteProfileObjectRequest
+// DeleteProfileObjectRequest indicates an expected call of DeleteProfileObjectRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfileObjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfileObjectRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfileObjectRequest), arg0)
 }
 
-// DeleteProfileObjectType mocks base method
+// DeleteProfileObjectType mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteProfileObjectType(arg0 *customerprofiles.DeleteProfileObjectTypeInput) (*customerprofiles.DeleteProfileObjectTypeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProfileObjectType", arg0)
@@ -389,13 +390,13 @@ func (m *MockCustomerProfilesAPI) DeleteProfileObjectType(arg0 *customerprofiles
 	return ret0, ret1
 }
 
-// DeleteProfileObjectType indicates an expected call of DeleteProfileObjectType
+// DeleteProfileObjectType indicates an expected call of DeleteProfileObjectType.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfileObjectType(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfileObjectType", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfileObjectType), arg0)
 }
 
-// DeleteProfileObjectTypeRequest mocks base method
+// DeleteProfileObjectTypeRequest mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteProfileObjectTypeRequest(arg0 *customerprofiles.DeleteProfileObjectTypeInput) (*request.Request, *customerprofiles.DeleteProfileObjectTypeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProfileObjectTypeRequest", arg0)
@@ -404,13 +405,13 @@ func (m *MockCustomerProfilesAPI) DeleteProfileObjectTypeRequest(arg0 *customerp
 	return ret0, ret1
 }
 
-// DeleteProfileObjectTypeRequest indicates an expected call of DeleteProfileObjectTypeRequest
+// DeleteProfileObjectTypeRequest indicates an expected call of DeleteProfileObjectTypeRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfileObjectTypeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfileObjectTypeRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfileObjectTypeRequest), arg0)
 }
 
-// DeleteProfileObjectTypeWithContext mocks base method
+// DeleteProfileObjectTypeWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteProfileObjectTypeWithContext(arg0 context.Context, arg1 *customerprofiles.DeleteProfileObjectTypeInput, arg2 ...request.Option) (*customerprofiles.DeleteProfileObjectTypeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -423,14 +424,14 @@ func (m *MockCustomerProfilesAPI) DeleteProfileObjectTypeWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// DeleteProfileObjectTypeWithContext indicates an expected call of DeleteProfileObjectTypeWithContext
+// DeleteProfileObjectTypeWithContext indicates an expected call of DeleteProfileObjectTypeWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfileObjectTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfileObjectTypeWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfileObjectTypeWithContext), varargs...)
 }
 
-// DeleteProfileObjectWithContext mocks base method
+// DeleteProfileObjectWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteProfileObjectWithContext(arg0 context.Context, arg1 *customerprofiles.DeleteProfileObjectInput, arg2 ...request.Option) (*customerprofiles.DeleteProfileObjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -443,14 +444,14 @@ func (m *MockCustomerProfilesAPI) DeleteProfileObjectWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DeleteProfileObjectWithContext indicates an expected call of DeleteProfileObjectWithContext
+// DeleteProfileObjectWithContext indicates an expected call of DeleteProfileObjectWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfileObjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfileObjectWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfileObjectWithContext), varargs...)
 }
 
-// DeleteProfileRequest mocks base method
+// DeleteProfileRequest mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteProfileRequest(arg0 *customerprofiles.DeleteProfileInput) (*request.Request, *customerprofiles.DeleteProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProfileRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockCustomerProfilesAPI) DeleteProfileRequest(arg0 *customerprofiles.De
 	return ret0, ret1
 }
 
-// DeleteProfileRequest indicates an expected call of DeleteProfileRequest
+// DeleteProfileRequest indicates an expected call of DeleteProfileRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfileRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfileRequest), arg0)
 }
 
-// DeleteProfileWithContext mocks base method
+// DeleteProfileWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) DeleteProfileWithContext(arg0 context.Context, arg1 *customerprofiles.DeleteProfileInput, arg2 ...request.Option) (*customerprofiles.DeleteProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockCustomerProfilesAPI) DeleteProfileWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteProfileWithContext indicates an expected call of DeleteProfileWithContext
+// DeleteProfileWithContext indicates an expected call of DeleteProfileWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfileWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfileWithContext), varargs...)
 }
 
-// GetDomain mocks base method
+// GetDomain mocks base method.
 func (m *MockCustomerProfilesAPI) GetDomain(arg0 *customerprofiles.GetDomainInput) (*customerprofiles.GetDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomain", arg0)
@@ -494,13 +495,13 @@ func (m *MockCustomerProfilesAPI) GetDomain(arg0 *customerprofiles.GetDomainInpu
 	return ret0, ret1
 }
 
-// GetDomain indicates an expected call of GetDomain
+// GetDomain indicates an expected call of GetDomain.
 func (mr *MockCustomerProfilesAPIMockRecorder) GetDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomain", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetDomain), arg0)
 }
 
-// GetDomainRequest mocks base method
+// GetDomainRequest mocks base method.
 func (m *MockCustomerProfilesAPI) GetDomainRequest(arg0 *customerprofiles.GetDomainInput) (*request.Request, *customerprofiles.GetDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomainRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockCustomerProfilesAPI) GetDomainRequest(arg0 *customerprofiles.GetDom
 	return ret0, ret1
 }
 
-// GetDomainRequest indicates an expected call of GetDomainRequest
+// GetDomainRequest indicates an expected call of GetDomainRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) GetDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetDomainRequest), arg0)
 }
 
-// GetDomainWithContext mocks base method
+// GetDomainWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) GetDomainWithContext(arg0 context.Context, arg1 *customerprofiles.GetDomainInput, arg2 ...request.Option) (*customerprofiles.GetDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockCustomerProfilesAPI) GetDomainWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetDomainWithContext indicates an expected call of GetDomainWithContext
+// GetDomainWithContext indicates an expected call of GetDomainWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) GetDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetDomainWithContext), varargs...)
 }
 
-// GetIntegration mocks base method
+// GetIntegration mocks base method.
 func (m *MockCustomerProfilesAPI) GetIntegration(arg0 *customerprofiles.GetIntegrationInput) (*customerprofiles.GetIntegrationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetIntegration", arg0)
@@ -544,13 +545,13 @@ func (m *MockCustomerProfilesAPI) GetIntegration(arg0 *customerprofiles.GetInteg
 	return ret0, ret1
 }
 
-// GetIntegration indicates an expected call of GetIntegration
+// GetIntegration indicates an expected call of GetIntegration.
 func (mr *MockCustomerProfilesAPIMockRecorder) GetIntegration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIntegration", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetIntegration), arg0)
 }
 
-// GetIntegrationRequest mocks base method
+// GetIntegrationRequest mocks base method.
 func (m *MockCustomerProfilesAPI) GetIntegrationRequest(arg0 *customerprofiles.GetIntegrationInput) (*request.Request, *customerprofiles.GetIntegrationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetIntegrationRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockCustomerProfilesAPI) GetIntegrationRequest(arg0 *customerprofiles.G
 	return ret0, ret1
 }
 
-// GetIntegrationRequest indicates an expected call of GetIntegrationRequest
+// GetIntegrationRequest indicates an expected call of GetIntegrationRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) GetIntegrationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIntegrationRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetIntegrationRequest), arg0)
 }
 
-// GetIntegrationWithContext mocks base method
+// GetIntegrationWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) GetIntegrationWithContext(arg0 context.Context, arg1 *customerprofiles.GetIntegrationInput, arg2 ...request.Option) (*customerprofiles.GetIntegrationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,64 @@ func (m *MockCustomerProfilesAPI) GetIntegrationWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// GetIntegrationWithContext indicates an expected call of GetIntegrationWithContext
+// GetIntegrationWithContext indicates an expected call of GetIntegrationWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) GetIntegrationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIntegrationWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetIntegrationWithContext), varargs...)
 }
 
-// GetProfileObjectType mocks base method
+// GetMatches mocks base method.
+func (m *MockCustomerProfilesAPI) GetMatches(arg0 *customerprofiles.GetMatchesInput) (*customerprofiles.GetMatchesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetMatches", arg0)
+	ret0, _ := ret[0].(*customerprofiles.GetMatchesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetMatches indicates an expected call of GetMatches.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetMatches(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMatches", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetMatches), arg0)
+}
+
+// GetMatchesRequest mocks base method.
+func (m *MockCustomerProfilesAPI) GetMatchesRequest(arg0 *customerprofiles.GetMatchesInput) (*request.Request, *customerprofiles.GetMatchesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetMatchesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*customerprofiles.GetMatchesOutput)
+	return ret0, ret1
+}
+
+// GetMatchesRequest indicates an expected call of GetMatchesRequest.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetMatchesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMatchesRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetMatchesRequest), arg0)
+}
+
+// GetMatchesWithContext mocks base method.
+func (m *MockCustomerProfilesAPI) GetMatchesWithContext(arg0 context.Context, arg1 *customerprofiles.GetMatchesInput, arg2 ...request.Option) (*customerprofiles.GetMatchesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetMatchesWithContext", varargs...)
+	ret0, _ := ret[0].(*customerprofiles.GetMatchesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetMatchesWithContext indicates an expected call of GetMatchesWithContext.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetMatchesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMatchesWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetMatchesWithContext), varargs...)
+}
+
+// GetProfileObjectType mocks base method.
 func (m *MockCustomerProfilesAPI) GetProfileObjectType(arg0 *customerprofiles.GetProfileObjectTypeInput) (*customerprofiles.GetProfileObjectTypeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetProfileObjectType", arg0)
@@ -594,13 +645,13 @@ func (m *MockCustomerProfilesAPI) GetProfileObjectType(arg0 *customerprofiles.Ge
 	return ret0, ret1
 }
 
-// GetProfileObjectType indicates an expected call of GetProfileObjectType
+// GetProfileObjectType indicates an expected call of GetProfileObjectType.
 func (mr *MockCustomerProfilesAPIMockRecorder) GetProfileObjectType(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProfileObjectType", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetProfileObjectType), arg0)
 }
 
-// GetProfileObjectTypeRequest mocks base method
+// GetProfileObjectTypeRequest mocks base method.
 func (m *MockCustomerProfilesAPI) GetProfileObjectTypeRequest(arg0 *customerprofiles.GetProfileObjectTypeInput) (*request.Request, *customerprofiles.GetProfileObjectTypeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetProfileObjectTypeRequest", arg0)
@@ -609,13 +660,13 @@ func (m *MockCustomerProfilesAPI) GetProfileObjectTypeRequest(arg0 *customerprof
 	return ret0, ret1
 }
 
-// GetProfileObjectTypeRequest indicates an expected call of GetProfileObjectTypeRequest
+// GetProfileObjectTypeRequest indicates an expected call of GetProfileObjectTypeRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) GetProfileObjectTypeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProfileObjectTypeRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetProfileObjectTypeRequest), arg0)
 }
 
-// GetProfileObjectTypeTemplate mocks base method
+// GetProfileObjectTypeTemplate mocks base method.
 func (m *MockCustomerProfilesAPI) GetProfileObjectTypeTemplate(arg0 *customerprofiles.GetProfileObjectTypeTemplateInput) (*customerprofiles.GetProfileObjectTypeTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetProfileObjectTypeTemplate", arg0)
@@ -624,13 +675,13 @@ func (m *MockCustomerProfilesAPI) GetProfileObjectTypeTemplate(arg0 *customerpro
 	return ret0, ret1
 }
 
-// GetProfileObjectTypeTemplate indicates an expected call of GetProfileObjectTypeTemplate
+// GetProfileObjectTypeTemplate indicates an expected call of GetProfileObjectTypeTemplate.
 func (mr *MockCustomerProfilesAPIMockRecorder) GetProfileObjectTypeTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProfileObjectTypeTemplate", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetProfileObjectTypeTemplate), arg0)
 }
 
-// GetProfileObjectTypeTemplateRequest mocks base method
+// GetProfileObjectTypeTemplateRequest mocks base method.
 func (m *MockCustomerProfilesAPI) GetProfileObjectTypeTemplateRequest(arg0 *customerprofiles.GetProfileObjectTypeTemplateInput) (*request.Request, *customerprofiles.GetProfileObjectTypeTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetProfileObjectTypeTemplateRequest", arg0)
@@ -639,13 +690,13 @@ func (m *MockCustomerProfilesAPI) GetProfileObjectTypeTemplateRequest(arg0 *cust
 	return ret0, ret1
 }
 
-// GetProfileObjectTypeTemplateRequest indicates an expected call of GetProfileObjectTypeTemplateRequest
+// GetProfileObjectTypeTemplateRequest indicates an expected call of GetProfileObjectTypeTemplateRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) GetProfileObjectTypeTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProfileObjectTypeTemplateRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetProfileObjectTypeTemplateRequest), arg0)
 }
 
-// GetProfileObjectTypeTemplateWithContext mocks base method
+// GetProfileObjectTypeTemplateWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) GetProfileObjectTypeTemplateWithContext(arg0 context.Context, arg1 *customerprofiles.GetProfileObjectTypeTemplateInput, arg2 ...request.Option) (*customerprofiles.GetProfileObjectTypeTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -658,14 +709,14 @@ func (m *MockCustomerProfilesAPI) GetProfileObjectTypeTemplateWithContext(arg0 c
 	return ret0, ret1
 }
 
-// GetProfileObjectTypeTemplateWithContext indicates an expected call of GetProfileObjectTypeTemplateWithContext
+// GetProfileObjectTypeTemplateWithContext indicates an expected call of GetProfileObjectTypeTemplateWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) GetProfileObjectTypeTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProfileObjectTypeTemplateWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetProfileObjectTypeTemplateWithContext), varargs...)
 }
 
-// GetProfileObjectTypeWithContext mocks base method
+// GetProfileObjectTypeWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) GetProfileObjectTypeWithContext(arg0 context.Context, arg1 *customerprofiles.GetProfileObjectTypeInput, arg2 ...request.Option) (*customerprofiles.GetProfileObjectTypeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +729,14 @@ func (m *MockCustomerProfilesAPI) GetProfileObjectTypeWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// GetProfileObjectTypeWithContext indicates an expected call of GetProfileObjectTypeWithContext
+// GetProfileObjectTypeWithContext indicates an expected call of GetProfileObjectTypeWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) GetProfileObjectTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProfileObjectTypeWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetProfileObjectTypeWithContext), varargs...)
 }
 
-// ListAccountIntegrations mocks base method
+// ListAccountIntegrations mocks base method.
 func (m *MockCustomerProfilesAPI) ListAccountIntegrations(arg0 *customerprofiles.ListAccountIntegrationsInput) (*customerprofiles.ListAccountIntegrationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountIntegrations", arg0)
@@ -694,13 +745,13 @@ func (m *MockCustomerProfilesAPI) ListAccountIntegrations(arg0 *customerprofiles
 	return ret0, ret1
 }
 
-// ListAccountIntegrations indicates an expected call of ListAccountIntegrations
+// ListAccountIntegrations indicates an expected call of ListAccountIntegrations.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListAccountIntegrations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountIntegrations", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListAccountIntegrations), arg0)
 }
 
-// ListAccountIntegrationsRequest mocks base method
+// ListAccountIntegrationsRequest mocks base method.
 func (m *MockCustomerProfilesAPI) ListAccountIntegrationsRequest(arg0 *customerprofiles.ListAccountIntegrationsInput) (*request.Request, *customerprofiles.ListAccountIntegrationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountIntegrationsRequest", arg0)
@@ -709,13 +760,13 @@ func (m *MockCustomerProfilesAPI) ListAccountIntegrationsRequest(arg0 *customerp
 	return ret0, ret1
 }
 
-// ListAccountIntegrationsRequest indicates an expected call of ListAccountIntegrationsRequest
+// ListAccountIntegrationsRequest indicates an expected call of ListAccountIntegrationsRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListAccountIntegrationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountIntegrationsRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListAccountIntegrationsRequest), arg0)
 }
 
-// ListAccountIntegrationsWithContext mocks base method
+// ListAccountIntegrationsWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) ListAccountIntegrationsWithContext(arg0 context.Context, arg1 *customerprofiles.ListAccountIntegrationsInput, arg2 ...request.Option) (*customerprofiles.ListAccountIntegrationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +779,14 @@ func (m *MockCustomerProfilesAPI) ListAccountIntegrationsWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// ListAccountIntegrationsWithContext indicates an expected call of ListAccountIntegrationsWithContext
+// ListAccountIntegrationsWithContext indicates an expected call of ListAccountIntegrationsWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListAccountIntegrationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountIntegrationsWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListAccountIntegrationsWithContext), varargs...)
 }
 
-// ListDomains mocks base method
+// ListDomains mocks base method.
 func (m *MockCustomerProfilesAPI) ListDomains(arg0 *customerprofiles.ListDomainsInput) (*customerprofiles.ListDomainsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomains", arg0)
@@ -744,13 +795,13 @@ func (m *MockCustomerProfilesAPI) ListDomains(arg0 *customerprofiles.ListDomains
 	return ret0, ret1
 }
 
-// ListDomains indicates an expected call of ListDomains
+// ListDomains indicates an expected call of ListDomains.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListDomains(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomains", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListDomains), arg0)
 }
 
-// ListDomainsRequest mocks base method
+// ListDomainsRequest mocks base method.
 func (m *MockCustomerProfilesAPI) ListDomainsRequest(arg0 *customerprofiles.ListDomainsInput) (*request.Request, *customerprofiles.ListDomainsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomainsRequest", arg0)
@@ -759,13 +810,13 @@ func (m *MockCustomerProfilesAPI) ListDomainsRequest(arg0 *customerprofiles.List
 	return ret0, ret1
 }
 
-// ListDomainsRequest indicates an expected call of ListDomainsRequest
+// ListDomainsRequest indicates an expected call of ListDomainsRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListDomainsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainsRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListDomainsRequest), arg0)
 }
 
-// ListDomainsWithContext mocks base method
+// ListDomainsWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) ListDomainsWithContext(arg0 context.Context, arg1 *customerprofiles.ListDomainsInput, arg2 ...request.Option) (*customerprofiles.ListDomainsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +829,14 @@ func (m *MockCustomerProfilesAPI) ListDomainsWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ListDomainsWithContext indicates an expected call of ListDomainsWithContext
+// ListDomainsWithContext indicates an expected call of ListDomainsWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListDomainsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainsWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListDomainsWithContext), varargs...)
 }
 
-// ListIntegrations mocks base method
+// ListIntegrations mocks base method.
 func (m *MockCustomerProfilesAPI) ListIntegrations(arg0 *customerprofiles.ListIntegrationsInput) (*customerprofiles.ListIntegrationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListIntegrations", arg0)
@@ -794,13 +845,13 @@ func (m *MockCustomerProfilesAPI) ListIntegrations(arg0 *customerprofiles.ListIn
 	return ret0, ret1
 }
 
-// ListIntegrations indicates an expected call of ListIntegrations
+// ListIntegrations indicates an expected call of ListIntegrations.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListIntegrations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIntegrations", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListIntegrations), arg0)
 }
 
-// ListIntegrationsRequest mocks base method
+// ListIntegrationsRequest mocks base method.
 func (m *MockCustomerProfilesAPI) ListIntegrationsRequest(arg0 *customerprofiles.ListIntegrationsInput) (*request.Request, *customerprofiles.ListIntegrationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListIntegrationsRequest", arg0)
@@ -809,13 +860,13 @@ func (m *MockCustomerProfilesAPI) ListIntegrationsRequest(arg0 *customerprofiles
 	return ret0, ret1
 }
 
-// ListIntegrationsRequest indicates an expected call of ListIntegrationsRequest
+// ListIntegrationsRequest indicates an expected call of ListIntegrationsRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListIntegrationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIntegrationsRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListIntegrationsRequest), arg0)
 }
 
-// ListIntegrationsWithContext mocks base method
+// ListIntegrationsWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) ListIntegrationsWithContext(arg0 context.Context, arg1 *customerprofiles.ListIntegrationsInput, arg2 ...request.Option) (*customerprofiles.ListIntegrationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +879,14 @@ func (m *MockCustomerProfilesAPI) ListIntegrationsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListIntegrationsWithContext indicates an expected call of ListIntegrationsWithContext
+// ListIntegrationsWithContext indicates an expected call of ListIntegrationsWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListIntegrationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIntegrationsWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListIntegrationsWithContext), varargs...)
 }
 
-// ListProfileObjectTypeTemplates mocks base method
+// ListProfileObjectTypeTemplates mocks base method.
 func (m *MockCustomerProfilesAPI) ListProfileObjectTypeTemplates(arg0 *customerprofiles.ListProfileObjectTypeTemplatesInput) (*customerprofiles.ListProfileObjectTypeTemplatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProfileObjectTypeTemplates", arg0)
@@ -844,13 +895,13 @@ func (m *MockCustomerProfilesAPI) ListProfileObjectTypeTemplates(arg0 *customerp
 	return ret0, ret1
 }
 
-// ListProfileObjectTypeTemplates indicates an expected call of ListProfileObjectTypeTemplates
+// ListProfileObjectTypeTemplates indicates an expected call of ListProfileObjectTypeTemplates.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListProfileObjectTypeTemplates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProfileObjectTypeTemplates", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListProfileObjectTypeTemplates), arg0)
 }
 
-// ListProfileObjectTypeTemplatesRequest mocks base method
+// ListProfileObjectTypeTemplatesRequest mocks base method.
 func (m *MockCustomerProfilesAPI) ListProfileObjectTypeTemplatesRequest(arg0 *customerprofiles.ListProfileObjectTypeTemplatesInput) (*request.Request, *customerprofiles.ListProfileObjectTypeTemplatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProfileObjectTypeTemplatesRequest", arg0)
@@ -859,13 +910,13 @@ func (m *MockCustomerProfilesAPI) ListProfileObjectTypeTemplatesRequest(arg0 *cu
 	return ret0, ret1
 }
 
-// ListProfileObjectTypeTemplatesRequest indicates an expected call of ListProfileObjectTypeTemplatesRequest
+// ListProfileObjectTypeTemplatesRequest indicates an expected call of ListProfileObjectTypeTemplatesRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListProfileObjectTypeTemplatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProfileObjectTypeTemplatesRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListProfileObjectTypeTemplatesRequest), arg0)
 }
 
-// ListProfileObjectTypeTemplatesWithContext mocks base method
+// ListProfileObjectTypeTemplatesWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) ListProfileObjectTypeTemplatesWithContext(arg0 context.Context, arg1 *customerprofiles.ListProfileObjectTypeTemplatesInput, arg2 ...request.Option) (*customerprofiles.ListProfileObjectTypeTemplatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +929,14 @@ func (m *MockCustomerProfilesAPI) ListProfileObjectTypeTemplatesWithContext(arg0
 	return ret0, ret1
 }
 
-// ListProfileObjectTypeTemplatesWithContext indicates an expected call of ListProfileObjectTypeTemplatesWithContext
+// ListProfileObjectTypeTemplatesWithContext indicates an expected call of ListProfileObjectTypeTemplatesWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListProfileObjectTypeTemplatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProfileObjectTypeTemplatesWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListProfileObjectTypeTemplatesWithContext), varargs...)
 }
 
-// ListProfileObjectTypes mocks base method
+// ListProfileObjectTypes mocks base method.
 func (m *MockCustomerProfilesAPI) ListProfileObjectTypes(arg0 *customerprofiles.ListProfileObjectTypesInput) (*customerprofiles.ListProfileObjectTypesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProfileObjectTypes", arg0)
@@ -894,13 +945,13 @@ func (m *MockCustomerProfilesAPI) ListProfileObjectTypes(arg0 *customerprofiles.
 	return ret0, ret1
 }
 
-// ListProfileObjectTypes indicates an expected call of ListProfileObjectTypes
+// ListProfileObjectTypes indicates an expected call of ListProfileObjectTypes.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListProfileObjectTypes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProfileObjectTypes", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListProfileObjectTypes), arg0)
 }
 
-// ListProfileObjectTypesRequest mocks base method
+// ListProfileObjectTypesRequest mocks base method.
 func (m *MockCustomerProfilesAPI) ListProfileObjectTypesRequest(arg0 *customerprofiles.ListProfileObjectTypesInput) (*request.Request, *customerprofiles.ListProfileObjectTypesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProfileObjectTypesRequest", arg0)
@@ -909,13 +960,13 @@ func (m *MockCustomerProfilesAPI) ListProfileObjectTypesRequest(arg0 *customerpr
 	return ret0, ret1
 }
 
-// ListProfileObjectTypesRequest indicates an expected call of ListProfileObjectTypesRequest
+// ListProfileObjectTypesRequest indicates an expected call of ListProfileObjectTypesRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListProfileObjectTypesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProfileObjectTypesRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListProfileObjectTypesRequest), arg0)
 }
 
-// ListProfileObjectTypesWithContext mocks base method
+// ListProfileObjectTypesWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) ListProfileObjectTypesWithContext(arg0 context.Context, arg1 *customerprofiles.ListProfileObjectTypesInput, arg2 ...request.Option) (*customerprofiles.ListProfileObjectTypesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -928,14 +979,14 @@ func (m *MockCustomerProfilesAPI) ListProfileObjectTypesWithContext(arg0 context
 	return ret0, ret1
 }
 
-// ListProfileObjectTypesWithContext indicates an expected call of ListProfileObjectTypesWithContext
+// ListProfileObjectTypesWithContext indicates an expected call of ListProfileObjectTypesWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListProfileObjectTypesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProfileObjectTypesWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListProfileObjectTypesWithContext), varargs...)
 }
 
-// ListProfileObjects mocks base method
+// ListProfileObjects mocks base method.
 func (m *MockCustomerProfilesAPI) ListProfileObjects(arg0 *customerprofiles.ListProfileObjectsInput) (*customerprofiles.ListProfileObjectsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProfileObjects", arg0)
@@ -944,13 +995,13 @@ func (m *MockCustomerProfilesAPI) ListProfileObjects(arg0 *customerprofiles.List
 	return ret0, ret1
 }
 
-// ListProfileObjects indicates an expected call of ListProfileObjects
+// ListProfileObjects indicates an expected call of ListProfileObjects.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListProfileObjects(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProfileObjects", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListProfileObjects), arg0)
 }
 
-// ListProfileObjectsRequest mocks base method
+// ListProfileObjectsRequest mocks base method.
 func (m *MockCustomerProfilesAPI) ListProfileObjectsRequest(arg0 *customerprofiles.ListProfileObjectsInput) (*request.Request, *customerprofiles.ListProfileObjectsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProfileObjectsRequest", arg0)
@@ -959,13 +1010,13 @@ func (m *MockCustomerProfilesAPI) ListProfileObjectsRequest(arg0 *customerprofil
 	return ret0, ret1
 }
 
-// ListProfileObjectsRequest indicates an expected call of ListProfileObjectsRequest
+// ListProfileObjectsRequest indicates an expected call of ListProfileObjectsRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListProfileObjectsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProfileObjectsRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListProfileObjectsRequest), arg0)
 }
 
-// ListProfileObjectsWithContext mocks base method
+// ListProfileObjectsWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) ListProfileObjectsWithContext(arg0 context.Context, arg1 *customerprofiles.ListProfileObjectsInput, arg2 ...request.Option) (*customerprofiles.ListProfileObjectsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -978,14 +1029,14 @@ func (m *MockCustomerProfilesAPI) ListProfileObjectsWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListProfileObjectsWithContext indicates an expected call of ListProfileObjectsWithContext
+// ListProfileObjectsWithContext indicates an expected call of ListProfileObjectsWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListProfileObjectsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProfileObjectsWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListProfileObjectsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockCustomerProfilesAPI) ListTagsForResource(arg0 *customerprofiles.ListTagsForResourceInput) (*customerprofiles.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -994,13 +1045,13 @@ func (m *MockCustomerProfilesAPI) ListTagsForResource(arg0 *customerprofiles.Lis
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockCustomerProfilesAPI) ListTagsForResourceRequest(arg0 *customerprofiles.ListTagsForResourceInput) (*request.Request, *customerprofiles.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1009,13 +1060,13 @@ func (m *MockCustomerProfilesAPI) ListTagsForResourceRequest(arg0 *customerprofi
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *customerprofiles.ListTagsForResourceInput, arg2 ...request.Option) (*customerprofiles.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1028,14 +1079,64 @@ func (m *MockCustomerProfilesAPI) ListTagsForResourceWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PutIntegration mocks base method
+// MergeProfiles mocks base method.
+func (m *MockCustomerProfilesAPI) MergeProfiles(arg0 *customerprofiles.MergeProfilesInput) (*customerprofiles.MergeProfilesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "MergeProfiles", arg0)
+	ret0, _ := ret[0].(*customerprofiles.MergeProfilesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// MergeProfiles indicates an expected call of MergeProfiles.
+func (mr *MockCustomerProfilesAPIMockRecorder) MergeProfiles(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "MergeProfiles", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).MergeProfiles), arg0)
+}
+
+// MergeProfilesRequest mocks base method.
+func (m *MockCustomerProfilesAPI) MergeProfilesRequest(arg0 *customerprofiles.MergeProfilesInput) (*request.Request, *customerprofiles.MergeProfilesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "MergeProfilesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*customerprofiles.MergeProfilesOutput)
+	return ret0, ret1
+}
+
+// MergeProfilesRequest indicates an expected call of MergeProfilesRequest.
+func (mr *MockCustomerProfilesAPIMockRecorder) MergeProfilesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "MergeProfilesRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).MergeProfilesRequest), arg0)
+}
+
+// MergeProfilesWithContext mocks base method.
+func (m *MockCustomerProfilesAPI) MergeProfilesWithContext(arg0 context.Context, arg1 *customerprofiles.MergeProfilesInput, arg2 ...request.Option) (*customerprofiles.MergeProfilesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "MergeProfilesWithContext", varargs...)
+	ret0, _ := ret[0].(*customerprofiles.MergeProfilesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// MergeProfilesWithContext indicates an expected call of MergeProfilesWithContext.
+func (mr *MockCustomerProfilesAPIMockRecorder) MergeProfilesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "MergeProfilesWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).MergeProfilesWithContext), varargs...)
+}
+
+// PutIntegration mocks base method.
 func (m *MockCustomerProfilesAPI) PutIntegration(arg0 *customerprofiles.PutIntegrationInput) (*customerprofiles.PutIntegrationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutIntegration", arg0)
@@ -1044,13 +1145,13 @@ func (m *MockCustomerProfilesAPI) PutIntegration(arg0 *customerprofiles.PutInteg
 	return ret0, ret1
 }
 
-// PutIntegration indicates an expected call of PutIntegration
+// PutIntegration indicates an expected call of PutIntegration.
 func (mr *MockCustomerProfilesAPIMockRecorder) PutIntegration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutIntegration", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).PutIntegration), arg0)
 }
 
-// PutIntegrationRequest mocks base method
+// PutIntegrationRequest mocks base method.
 func (m *MockCustomerProfilesAPI) PutIntegrationRequest(arg0 *customerprofiles.PutIntegrationInput) (*request.Request, *customerprofiles.PutIntegrationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutIntegrationRequest", arg0)
@@ -1059,13 +1160,13 @@ func (m *MockCustomerProfilesAPI) PutIntegrationRequest(arg0 *customerprofiles.P
 	return ret0, ret1
 }
 
-// PutIntegrationRequest indicates an expected call of PutIntegrationRequest
+// PutIntegrationRequest indicates an expected call of PutIntegrationRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) PutIntegrationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutIntegrationRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).PutIntegrationRequest), arg0)
 }
 
-// PutIntegrationWithContext mocks base method
+// PutIntegrationWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) PutIntegrationWithContext(arg0 context.Context, arg1 *customerprofiles.PutIntegrationInput, arg2 ...request.Option) (*customerprofiles.PutIntegrationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1078,14 +1179,14 @@ func (m *MockCustomerProfilesAPI) PutIntegrationWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// PutIntegrationWithContext indicates an expected call of PutIntegrationWithContext
+// PutIntegrationWithContext indicates an expected call of PutIntegrationWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) PutIntegrationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutIntegrationWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).PutIntegrationWithContext), varargs...)
 }
 
-// PutProfileObject mocks base method
+// PutProfileObject mocks base method.
 func (m *MockCustomerProfilesAPI) PutProfileObject(arg0 *customerprofiles.PutProfileObjectInput) (*customerprofiles.PutProfileObjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutProfileObject", arg0)
@@ -1094,13 +1195,13 @@ func (m *MockCustomerProfilesAPI) PutProfileObject(arg0 *customerprofiles.PutPro
 	return ret0, ret1
 }
 
-// PutProfileObject indicates an expected call of PutProfileObject
+// PutProfileObject indicates an expected call of PutProfileObject.
 func (mr *MockCustomerProfilesAPIMockRecorder) PutProfileObject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutProfileObject", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).PutProfileObject), arg0)
 }
 
-// PutProfileObjectRequest mocks base method
+// PutProfileObjectRequest mocks base method.
 func (m *MockCustomerProfilesAPI) PutProfileObjectRequest(arg0 *customerprofiles.PutProfileObjectInput) (*request.Request, *customerprofiles.PutProfileObjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutProfileObjectRequest", arg0)
@@ -1109,13 +1210,13 @@ func (m *MockCustomerProfilesAPI) PutProfileObjectRequest(arg0 *customerprofiles
 	return ret0, ret1
 }
 
-// PutProfileObjectRequest indicates an expected call of PutProfileObjectRequest
+// PutProfileObjectRequest indicates an expected call of PutProfileObjectRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) PutProfileObjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutProfileObjectRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).PutProfileObjectRequest), arg0)
 }
 
-// PutProfileObjectType mocks base method
+// PutProfileObjectType mocks base method.
 func (m *MockCustomerProfilesAPI) PutProfileObjectType(arg0 *customerprofiles.PutProfileObjectTypeInput) (*customerprofiles.PutProfileObjectTypeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutProfileObjectType", arg0)
@@ -1124,13 +1225,13 @@ func (m *MockCustomerProfilesAPI) PutProfileObjectType(arg0 *customerprofiles.Pu
 	return ret0, ret1
 }
 
-// PutProfileObjectType indicates an expected call of PutProfileObjectType
+// PutProfileObjectType indicates an expected call of PutProfileObjectType.
 func (mr *MockCustomerProfilesAPIMockRecorder) PutProfileObjectType(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutProfileObjectType", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).PutProfileObjectType), arg0)
 }
 
-// PutProfileObjectTypeRequest mocks base method
+// PutProfileObjectTypeRequest mocks base method.
 func (m *MockCustomerProfilesAPI) PutProfileObjectTypeRequest(arg0 *customerprofiles.PutProfileObjectTypeInput) (*request.Request, *customerprofiles.PutProfileObjectTypeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutProfileObjectTypeRequest", arg0)
@@ -1139,13 +1240,13 @@ func (m *MockCustomerProfilesAPI) PutProfileObjectTypeRequest(arg0 *customerprof
 	return ret0, ret1
 }
 
-// PutProfileObjectTypeRequest indicates an expected call of PutProfileObjectTypeRequest
+// PutProfileObjectTypeRequest indicates an expected call of PutProfileObjectTypeRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) PutProfileObjectTypeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutProfileObjectTypeRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).PutProfileObjectTypeRequest), arg0)
 }
 
-// PutProfileObjectTypeWithContext mocks base method
+// PutProfileObjectTypeWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) PutProfileObjectTypeWithContext(arg0 context.Context, arg1 *customerprofiles.PutProfileObjectTypeInput, arg2 ...request.Option) (*customerprofiles.PutProfileObjectTypeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1158,14 +1259,14 @@ func (m *MockCustomerProfilesAPI) PutProfileObjectTypeWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// PutProfileObjectTypeWithContext indicates an expected call of PutProfileObjectTypeWithContext
+// PutProfileObjectTypeWithContext indicates an expected call of PutProfileObjectTypeWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) PutProfileObjectTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutProfileObjectTypeWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).PutProfileObjectTypeWithContext), varargs...)
 }
 
-// PutProfileObjectWithContext mocks base method
+// PutProfileObjectWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) PutProfileObjectWithContext(arg0 context.Context, arg1 *customerprofiles.PutProfileObjectInput, arg2 ...request.Option) (*customerprofiles.PutProfileObjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1178,14 +1279,14 @@ func (m *MockCustomerProfilesAPI) PutProfileObjectWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// PutProfileObjectWithContext indicates an expected call of PutProfileObjectWithContext
+// PutProfileObjectWithContext indicates an expected call of PutProfileObjectWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) PutProfileObjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutProfileObjectWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).PutProfileObjectWithContext), varargs...)
 }
 
-// SearchProfiles mocks base method
+// SearchProfiles mocks base method.
 func (m *MockCustomerProfilesAPI) SearchProfiles(arg0 *customerprofiles.SearchProfilesInput) (*customerprofiles.SearchProfilesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchProfiles", arg0)
@@ -1194,13 +1295,13 @@ func (m *MockCustomerProfilesAPI) SearchProfiles(arg0 *customerprofiles.SearchPr
 	return ret0, ret1
 }
 
-// SearchProfiles indicates an expected call of SearchProfiles
+// SearchProfiles indicates an expected call of SearchProfiles.
 func (mr *MockCustomerProfilesAPIMockRecorder) SearchProfiles(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchProfiles", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).SearchProfiles), arg0)
 }
 
-// SearchProfilesRequest mocks base method
+// SearchProfilesRequest mocks base method.
 func (m *MockCustomerProfilesAPI) SearchProfilesRequest(arg0 *customerprofiles.SearchProfilesInput) (*request.Request, *customerprofiles.SearchProfilesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchProfilesRequest", arg0)
@@ -1209,13 +1310,13 @@ func (m *MockCustomerProfilesAPI) SearchProfilesRequest(arg0 *customerprofiles.S
 	return ret0, ret1
 }
 
-// SearchProfilesRequest indicates an expected call of SearchProfilesRequest
+// SearchProfilesRequest indicates an expected call of SearchProfilesRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) SearchProfilesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchProfilesRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).SearchProfilesRequest), arg0)
 }
 
-// SearchProfilesWithContext mocks base method
+// SearchProfilesWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) SearchProfilesWithContext(arg0 context.Context, arg1 *customerprofiles.SearchProfilesInput, arg2 ...request.Option) (*customerprofiles.SearchProfilesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1228,14 +1329,14 @@ func (m *MockCustomerProfilesAPI) SearchProfilesWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// SearchProfilesWithContext indicates an expected call of SearchProfilesWithContext
+// SearchProfilesWithContext indicates an expected call of SearchProfilesWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) SearchProfilesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchProfilesWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).SearchProfilesWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockCustomerProfilesAPI) TagResource(arg0 *customerprofiles.TagResourceInput) (*customerprofiles.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1244,13 +1345,13 @@ func (m *MockCustomerProfilesAPI) TagResource(arg0 *customerprofiles.TagResource
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockCustomerProfilesAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockCustomerProfilesAPI) TagResourceRequest(arg0 *customerprofiles.TagResourceInput) (*request.Request, *customerprofiles.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1259,13 +1360,13 @@ func (m *MockCustomerProfilesAPI) TagResourceRequest(arg0 *customerprofiles.TagR
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) TagResourceWithContext(arg0 context.Context, arg1 *customerprofiles.TagResourceInput, arg2 ...request.Option) (*customerprofiles.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1278,14 +1379,14 @@ func (m *MockCustomerProfilesAPI) TagResourceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockCustomerProfilesAPI) UntagResource(arg0 *customerprofiles.UntagResourceInput) (*customerprofiles.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1294,13 +1395,13 @@ func (m *MockCustomerProfilesAPI) UntagResource(arg0 *customerprofiles.UntagReso
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockCustomerProfilesAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockCustomerProfilesAPI) UntagResourceRequest(arg0 *customerprofiles.UntagResourceInput) (*request.Request, *customerprofiles.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1309,13 +1410,13 @@ func (m *MockCustomerProfilesAPI) UntagResourceRequest(arg0 *customerprofiles.Un
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) UntagResourceWithContext(arg0 context.Context, arg1 *customerprofiles.UntagResourceInput, arg2 ...request.Option) (*customerprofiles.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1328,14 +1429,14 @@ func (m *MockCustomerProfilesAPI) UntagResourceWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateDomain mocks base method
+// UpdateDomain mocks base method.
 func (m *MockCustomerProfilesAPI) UpdateDomain(arg0 *customerprofiles.UpdateDomainInput) (*customerprofiles.UpdateDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDomain", arg0)
@@ -1344,13 +1445,13 @@ func (m *MockCustomerProfilesAPI) UpdateDomain(arg0 *customerprofiles.UpdateDoma
 	return ret0, ret1
 }
 
-// UpdateDomain indicates an expected call of UpdateDomain
+// UpdateDomain indicates an expected call of UpdateDomain.
 func (mr *MockCustomerProfilesAPIMockRecorder) UpdateDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDomain", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).UpdateDomain), arg0)
 }
 
-// UpdateDomainRequest mocks base method
+// UpdateDomainRequest mocks base method.
 func (m *MockCustomerProfilesAPI) UpdateDomainRequest(arg0 *customerprofiles.UpdateDomainInput) (*request.Request, *customerprofiles.UpdateDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDomainRequest", arg0)
@@ -1359,13 +1460,13 @@ func (m *MockCustomerProfilesAPI) UpdateDomainRequest(arg0 *customerprofiles.Upd
 	return ret0, ret1
 }
 
-// UpdateDomainRequest indicates an expected call of UpdateDomainRequest
+// UpdateDomainRequest indicates an expected call of UpdateDomainRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) UpdateDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDomainRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).UpdateDomainRequest), arg0)
 }
 
-// UpdateDomainWithContext mocks base method
+// UpdateDomainWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) UpdateDomainWithContext(arg0 context.Context, arg1 *customerprofiles.UpdateDomainInput, arg2 ...request.Option) (*customerprofiles.UpdateDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1378,14 +1479,14 @@ func (m *MockCustomerProfilesAPI) UpdateDomainWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// UpdateDomainWithContext indicates an expected call of UpdateDomainWithContext
+// UpdateDomainWithContext indicates an expected call of UpdateDomainWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) UpdateDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDomainWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).UpdateDomainWithContext), varargs...)
 }
 
-// UpdateProfile mocks base method
+// UpdateProfile mocks base method.
 func (m *MockCustomerProfilesAPI) UpdateProfile(arg0 *customerprofiles.UpdateProfileInput) (*customerprofiles.UpdateProfileOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateProfile", arg0)
@@ -1394,13 +1495,13 @@ func (m *MockCustomerProfilesAPI) UpdateProfile(arg0 *customerprofiles.UpdatePro
 	return ret0, ret1
 }
 
-// UpdateProfile indicates an expected call of UpdateProfile
+// UpdateProfile indicates an expected call of UpdateProfile.
 func (mr *MockCustomerProfilesAPIMockRecorder) UpdateProfile(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateProfile", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).UpdateProfile), arg0)
 }
 
-// UpdateProfileRequest mocks base method
+// UpdateProfileRequest mocks base method.
 func (m *MockCustomerProfilesAPI) UpdateProfileRequest(arg0 *customerprofiles.UpdateProfileInput) (*request.Request, *customerprofiles.UpdateProfileOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateProfileRequest", arg0)
@@ -1409,13 +1510,13 @@ func (m *MockCustomerProfilesAPI) UpdateProfileRequest(arg0 *customerprofiles.Up
 	return ret0, ret1
 }
 
-// UpdateProfileRequest indicates an expected call of UpdateProfileRequest
+// UpdateProfileRequest indicates an expected call of UpdateProfileRequest.
 func (mr *MockCustomerProfilesAPIMockRecorder) UpdateProfileRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateProfileRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).UpdateProfileRequest), arg0)
 }
 
-// UpdateProfileWithContext mocks base method
+// UpdateProfileWithContext mocks base method.
 func (m *MockCustomerProfilesAPI) UpdateProfileWithContext(arg0 context.Context, arg1 *customerprofiles.UpdateProfileInput, arg2 ...request.Option) (*customerprofiles.UpdateProfileOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1428,7 +1529,7 @@ func (m *MockCustomerProfilesAPI) UpdateProfileWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// UpdateProfileWithContext indicates an expected call of UpdateProfileWithContext
+// UpdateProfileWithContext indicates an expected call of UpdateProfileWithContext.
 func (mr *MockCustomerProfilesAPIMockRecorder) UpdateProfileWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

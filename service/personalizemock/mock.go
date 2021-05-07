@@ -6,36 +6,37 @@ package personalizemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	personalize "github.com/aws/aws-sdk-go/service/personalize"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockPersonalizeAPI is a mock of PersonalizeAPI interface
+// MockPersonalizeAPI is a mock of PersonalizeAPI interface.
 type MockPersonalizeAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockPersonalizeAPIMockRecorder
 }
 
-// MockPersonalizeAPIMockRecorder is the mock recorder for MockPersonalizeAPI
+// MockPersonalizeAPIMockRecorder is the mock recorder for MockPersonalizeAPI.
 type MockPersonalizeAPIMockRecorder struct {
 	mock *MockPersonalizeAPI
 }
 
-// NewMockPersonalizeAPI creates a new mock instance
+// NewMockPersonalizeAPI creates a new mock instance.
 func NewMockPersonalizeAPI(ctrl *gomock.Controller) *MockPersonalizeAPI {
 	mock := &MockPersonalizeAPI{ctrl: ctrl}
 	mock.recorder = &MockPersonalizeAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockPersonalizeAPI) EXPECT() *MockPersonalizeAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateBatchInferenceJob mocks base method
+// CreateBatchInferenceJob mocks base method.
 func (m *MockPersonalizeAPI) CreateBatchInferenceJob(arg0 *personalize.CreateBatchInferenceJobInput) (*personalize.CreateBatchInferenceJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBatchInferenceJob", arg0)
@@ -44,13 +45,13 @@ func (m *MockPersonalizeAPI) CreateBatchInferenceJob(arg0 *personalize.CreateBat
 	return ret0, ret1
 }
 
-// CreateBatchInferenceJob indicates an expected call of CreateBatchInferenceJob
+// CreateBatchInferenceJob indicates an expected call of CreateBatchInferenceJob.
 func (mr *MockPersonalizeAPIMockRecorder) CreateBatchInferenceJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBatchInferenceJob", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateBatchInferenceJob), arg0)
 }
 
-// CreateBatchInferenceJobRequest mocks base method
+// CreateBatchInferenceJobRequest mocks base method.
 func (m *MockPersonalizeAPI) CreateBatchInferenceJobRequest(arg0 *personalize.CreateBatchInferenceJobInput) (*request.Request, *personalize.CreateBatchInferenceJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBatchInferenceJobRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockPersonalizeAPI) CreateBatchInferenceJobRequest(arg0 *personalize.Cr
 	return ret0, ret1
 }
 
-// CreateBatchInferenceJobRequest indicates an expected call of CreateBatchInferenceJobRequest
+// CreateBatchInferenceJobRequest indicates an expected call of CreateBatchInferenceJobRequest.
 func (mr *MockPersonalizeAPIMockRecorder) CreateBatchInferenceJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBatchInferenceJobRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateBatchInferenceJobRequest), arg0)
 }
 
-// CreateBatchInferenceJobWithContext mocks base method
+// CreateBatchInferenceJobWithContext mocks base method.
 func (m *MockPersonalizeAPI) CreateBatchInferenceJobWithContext(arg0 context.Context, arg1 *personalize.CreateBatchInferenceJobInput, arg2 ...request.Option) (*personalize.CreateBatchInferenceJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockPersonalizeAPI) CreateBatchInferenceJobWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// CreateBatchInferenceJobWithContext indicates an expected call of CreateBatchInferenceJobWithContext
+// CreateBatchInferenceJobWithContext indicates an expected call of CreateBatchInferenceJobWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) CreateBatchInferenceJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBatchInferenceJobWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateBatchInferenceJobWithContext), varargs...)
 }
 
-// CreateCampaign mocks base method
+// CreateCampaign mocks base method.
 func (m *MockPersonalizeAPI) CreateCampaign(arg0 *personalize.CreateCampaignInput) (*personalize.CreateCampaignOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCampaign", arg0)
@@ -94,13 +95,13 @@ func (m *MockPersonalizeAPI) CreateCampaign(arg0 *personalize.CreateCampaignInpu
 	return ret0, ret1
 }
 
-// CreateCampaign indicates an expected call of CreateCampaign
+// CreateCampaign indicates an expected call of CreateCampaign.
 func (mr *MockPersonalizeAPIMockRecorder) CreateCampaign(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCampaign", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateCampaign), arg0)
 }
 
-// CreateCampaignRequest mocks base method
+// CreateCampaignRequest mocks base method.
 func (m *MockPersonalizeAPI) CreateCampaignRequest(arg0 *personalize.CreateCampaignInput) (*request.Request, *personalize.CreateCampaignOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCampaignRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockPersonalizeAPI) CreateCampaignRequest(arg0 *personalize.CreateCampa
 	return ret0, ret1
 }
 
-// CreateCampaignRequest indicates an expected call of CreateCampaignRequest
+// CreateCampaignRequest indicates an expected call of CreateCampaignRequest.
 func (mr *MockPersonalizeAPIMockRecorder) CreateCampaignRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCampaignRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateCampaignRequest), arg0)
 }
 
-// CreateCampaignWithContext mocks base method
+// CreateCampaignWithContext mocks base method.
 func (m *MockPersonalizeAPI) CreateCampaignWithContext(arg0 context.Context, arg1 *personalize.CreateCampaignInput, arg2 ...request.Option) (*personalize.CreateCampaignOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockPersonalizeAPI) CreateCampaignWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// CreateCampaignWithContext indicates an expected call of CreateCampaignWithContext
+// CreateCampaignWithContext indicates an expected call of CreateCampaignWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) CreateCampaignWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCampaignWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateCampaignWithContext), varargs...)
 }
 
-// CreateDataset mocks base method
+// CreateDataset mocks base method.
 func (m *MockPersonalizeAPI) CreateDataset(arg0 *personalize.CreateDatasetInput) (*personalize.CreateDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDataset", arg0)
@@ -144,13 +145,63 @@ func (m *MockPersonalizeAPI) CreateDataset(arg0 *personalize.CreateDatasetInput)
 	return ret0, ret1
 }
 
-// CreateDataset indicates an expected call of CreateDataset
+// CreateDataset indicates an expected call of CreateDataset.
 func (mr *MockPersonalizeAPIMockRecorder) CreateDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataset", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateDataset), arg0)
 }
 
-// CreateDatasetGroup mocks base method
+// CreateDatasetExportJob mocks base method.
+func (m *MockPersonalizeAPI) CreateDatasetExportJob(arg0 *personalize.CreateDatasetExportJobInput) (*personalize.CreateDatasetExportJobOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateDatasetExportJob", arg0)
+	ret0, _ := ret[0].(*personalize.CreateDatasetExportJobOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateDatasetExportJob indicates an expected call of CreateDatasetExportJob.
+func (mr *MockPersonalizeAPIMockRecorder) CreateDatasetExportJob(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetExportJob", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateDatasetExportJob), arg0)
+}
+
+// CreateDatasetExportJobRequest mocks base method.
+func (m *MockPersonalizeAPI) CreateDatasetExportJobRequest(arg0 *personalize.CreateDatasetExportJobInput) (*request.Request, *personalize.CreateDatasetExportJobOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateDatasetExportJobRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*personalize.CreateDatasetExportJobOutput)
+	return ret0, ret1
+}
+
+// CreateDatasetExportJobRequest indicates an expected call of CreateDatasetExportJobRequest.
+func (mr *MockPersonalizeAPIMockRecorder) CreateDatasetExportJobRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetExportJobRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateDatasetExportJobRequest), arg0)
+}
+
+// CreateDatasetExportJobWithContext mocks base method.
+func (m *MockPersonalizeAPI) CreateDatasetExportJobWithContext(arg0 context.Context, arg1 *personalize.CreateDatasetExportJobInput, arg2 ...request.Option) (*personalize.CreateDatasetExportJobOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateDatasetExportJobWithContext", varargs...)
+	ret0, _ := ret[0].(*personalize.CreateDatasetExportJobOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateDatasetExportJobWithContext indicates an expected call of CreateDatasetExportJobWithContext.
+func (mr *MockPersonalizeAPIMockRecorder) CreateDatasetExportJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetExportJobWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateDatasetExportJobWithContext), varargs...)
+}
+
+// CreateDatasetGroup mocks base method.
 func (m *MockPersonalizeAPI) CreateDatasetGroup(arg0 *personalize.CreateDatasetGroupInput) (*personalize.CreateDatasetGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDatasetGroup", arg0)
@@ -159,13 +210,13 @@ func (m *MockPersonalizeAPI) CreateDatasetGroup(arg0 *personalize.CreateDatasetG
 	return ret0, ret1
 }
 
-// CreateDatasetGroup indicates an expected call of CreateDatasetGroup
+// CreateDatasetGroup indicates an expected call of CreateDatasetGroup.
 func (mr *MockPersonalizeAPIMockRecorder) CreateDatasetGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetGroup", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateDatasetGroup), arg0)
 }
 
-// CreateDatasetGroupRequest mocks base method
+// CreateDatasetGroupRequest mocks base method.
 func (m *MockPersonalizeAPI) CreateDatasetGroupRequest(arg0 *personalize.CreateDatasetGroupInput) (*request.Request, *personalize.CreateDatasetGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDatasetGroupRequest", arg0)
@@ -174,13 +225,13 @@ func (m *MockPersonalizeAPI) CreateDatasetGroupRequest(arg0 *personalize.CreateD
 	return ret0, ret1
 }
 
-// CreateDatasetGroupRequest indicates an expected call of CreateDatasetGroupRequest
+// CreateDatasetGroupRequest indicates an expected call of CreateDatasetGroupRequest.
 func (mr *MockPersonalizeAPIMockRecorder) CreateDatasetGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetGroupRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateDatasetGroupRequest), arg0)
 }
 
-// CreateDatasetGroupWithContext mocks base method
+// CreateDatasetGroupWithContext mocks base method.
 func (m *MockPersonalizeAPI) CreateDatasetGroupWithContext(arg0 context.Context, arg1 *personalize.CreateDatasetGroupInput, arg2 ...request.Option) (*personalize.CreateDatasetGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -193,14 +244,14 @@ func (m *MockPersonalizeAPI) CreateDatasetGroupWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateDatasetGroupWithContext indicates an expected call of CreateDatasetGroupWithContext
+// CreateDatasetGroupWithContext indicates an expected call of CreateDatasetGroupWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) CreateDatasetGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetGroupWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateDatasetGroupWithContext), varargs...)
 }
 
-// CreateDatasetImportJob mocks base method
+// CreateDatasetImportJob mocks base method.
 func (m *MockPersonalizeAPI) CreateDatasetImportJob(arg0 *personalize.CreateDatasetImportJobInput) (*personalize.CreateDatasetImportJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDatasetImportJob", arg0)
@@ -209,13 +260,13 @@ func (m *MockPersonalizeAPI) CreateDatasetImportJob(arg0 *personalize.CreateData
 	return ret0, ret1
 }
 
-// CreateDatasetImportJob indicates an expected call of CreateDatasetImportJob
+// CreateDatasetImportJob indicates an expected call of CreateDatasetImportJob.
 func (mr *MockPersonalizeAPIMockRecorder) CreateDatasetImportJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetImportJob", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateDatasetImportJob), arg0)
 }
 
-// CreateDatasetImportJobRequest mocks base method
+// CreateDatasetImportJobRequest mocks base method.
 func (m *MockPersonalizeAPI) CreateDatasetImportJobRequest(arg0 *personalize.CreateDatasetImportJobInput) (*request.Request, *personalize.CreateDatasetImportJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDatasetImportJobRequest", arg0)
@@ -224,13 +275,13 @@ func (m *MockPersonalizeAPI) CreateDatasetImportJobRequest(arg0 *personalize.Cre
 	return ret0, ret1
 }
 
-// CreateDatasetImportJobRequest indicates an expected call of CreateDatasetImportJobRequest
+// CreateDatasetImportJobRequest indicates an expected call of CreateDatasetImportJobRequest.
 func (mr *MockPersonalizeAPIMockRecorder) CreateDatasetImportJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetImportJobRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateDatasetImportJobRequest), arg0)
 }
 
-// CreateDatasetImportJobWithContext mocks base method
+// CreateDatasetImportJobWithContext mocks base method.
 func (m *MockPersonalizeAPI) CreateDatasetImportJobWithContext(arg0 context.Context, arg1 *personalize.CreateDatasetImportJobInput, arg2 ...request.Option) (*personalize.CreateDatasetImportJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -243,14 +294,14 @@ func (m *MockPersonalizeAPI) CreateDatasetImportJobWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// CreateDatasetImportJobWithContext indicates an expected call of CreateDatasetImportJobWithContext
+// CreateDatasetImportJobWithContext indicates an expected call of CreateDatasetImportJobWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) CreateDatasetImportJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetImportJobWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateDatasetImportJobWithContext), varargs...)
 }
 
-// CreateDatasetRequest mocks base method
+// CreateDatasetRequest mocks base method.
 func (m *MockPersonalizeAPI) CreateDatasetRequest(arg0 *personalize.CreateDatasetInput) (*request.Request, *personalize.CreateDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDatasetRequest", arg0)
@@ -259,13 +310,13 @@ func (m *MockPersonalizeAPI) CreateDatasetRequest(arg0 *personalize.CreateDatase
 	return ret0, ret1
 }
 
-// CreateDatasetRequest indicates an expected call of CreateDatasetRequest
+// CreateDatasetRequest indicates an expected call of CreateDatasetRequest.
 func (mr *MockPersonalizeAPIMockRecorder) CreateDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateDatasetRequest), arg0)
 }
 
-// CreateDatasetWithContext mocks base method
+// CreateDatasetWithContext mocks base method.
 func (m *MockPersonalizeAPI) CreateDatasetWithContext(arg0 context.Context, arg1 *personalize.CreateDatasetInput, arg2 ...request.Option) (*personalize.CreateDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +329,14 @@ func (m *MockPersonalizeAPI) CreateDatasetWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// CreateDatasetWithContext indicates an expected call of CreateDatasetWithContext
+// CreateDatasetWithContext indicates an expected call of CreateDatasetWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) CreateDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateDatasetWithContext), varargs...)
 }
 
-// CreateEventTracker mocks base method
+// CreateEventTracker mocks base method.
 func (m *MockPersonalizeAPI) CreateEventTracker(arg0 *personalize.CreateEventTrackerInput) (*personalize.CreateEventTrackerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEventTracker", arg0)
@@ -294,13 +345,13 @@ func (m *MockPersonalizeAPI) CreateEventTracker(arg0 *personalize.CreateEventTra
 	return ret0, ret1
 }
 
-// CreateEventTracker indicates an expected call of CreateEventTracker
+// CreateEventTracker indicates an expected call of CreateEventTracker.
 func (mr *MockPersonalizeAPIMockRecorder) CreateEventTracker(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEventTracker", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateEventTracker), arg0)
 }
 
-// CreateEventTrackerRequest mocks base method
+// CreateEventTrackerRequest mocks base method.
 func (m *MockPersonalizeAPI) CreateEventTrackerRequest(arg0 *personalize.CreateEventTrackerInput) (*request.Request, *personalize.CreateEventTrackerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateEventTrackerRequest", arg0)
@@ -309,13 +360,13 @@ func (m *MockPersonalizeAPI) CreateEventTrackerRequest(arg0 *personalize.CreateE
 	return ret0, ret1
 }
 
-// CreateEventTrackerRequest indicates an expected call of CreateEventTrackerRequest
+// CreateEventTrackerRequest indicates an expected call of CreateEventTrackerRequest.
 func (mr *MockPersonalizeAPIMockRecorder) CreateEventTrackerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEventTrackerRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateEventTrackerRequest), arg0)
 }
 
-// CreateEventTrackerWithContext mocks base method
+// CreateEventTrackerWithContext mocks base method.
 func (m *MockPersonalizeAPI) CreateEventTrackerWithContext(arg0 context.Context, arg1 *personalize.CreateEventTrackerInput, arg2 ...request.Option) (*personalize.CreateEventTrackerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +379,14 @@ func (m *MockPersonalizeAPI) CreateEventTrackerWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateEventTrackerWithContext indicates an expected call of CreateEventTrackerWithContext
+// CreateEventTrackerWithContext indicates an expected call of CreateEventTrackerWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) CreateEventTrackerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEventTrackerWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateEventTrackerWithContext), varargs...)
 }
 
-// CreateFilter mocks base method
+// CreateFilter mocks base method.
 func (m *MockPersonalizeAPI) CreateFilter(arg0 *personalize.CreateFilterInput) (*personalize.CreateFilterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFilter", arg0)
@@ -344,13 +395,13 @@ func (m *MockPersonalizeAPI) CreateFilter(arg0 *personalize.CreateFilterInput) (
 	return ret0, ret1
 }
 
-// CreateFilter indicates an expected call of CreateFilter
+// CreateFilter indicates an expected call of CreateFilter.
 func (mr *MockPersonalizeAPIMockRecorder) CreateFilter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFilter", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateFilter), arg0)
 }
 
-// CreateFilterRequest mocks base method
+// CreateFilterRequest mocks base method.
 func (m *MockPersonalizeAPI) CreateFilterRequest(arg0 *personalize.CreateFilterInput) (*request.Request, *personalize.CreateFilterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFilterRequest", arg0)
@@ -359,13 +410,13 @@ func (m *MockPersonalizeAPI) CreateFilterRequest(arg0 *personalize.CreateFilterI
 	return ret0, ret1
 }
 
-// CreateFilterRequest indicates an expected call of CreateFilterRequest
+// CreateFilterRequest indicates an expected call of CreateFilterRequest.
 func (mr *MockPersonalizeAPIMockRecorder) CreateFilterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFilterRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateFilterRequest), arg0)
 }
 
-// CreateFilterWithContext mocks base method
+// CreateFilterWithContext mocks base method.
 func (m *MockPersonalizeAPI) CreateFilterWithContext(arg0 context.Context, arg1 *personalize.CreateFilterInput, arg2 ...request.Option) (*personalize.CreateFilterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +429,14 @@ func (m *MockPersonalizeAPI) CreateFilterWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// CreateFilterWithContext indicates an expected call of CreateFilterWithContext
+// CreateFilterWithContext indicates an expected call of CreateFilterWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) CreateFilterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFilterWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateFilterWithContext), varargs...)
 }
 
-// CreateSchema mocks base method
+// CreateSchema mocks base method.
 func (m *MockPersonalizeAPI) CreateSchema(arg0 *personalize.CreateSchemaInput) (*personalize.CreateSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSchema", arg0)
@@ -394,13 +445,13 @@ func (m *MockPersonalizeAPI) CreateSchema(arg0 *personalize.CreateSchemaInput) (
 	return ret0, ret1
 }
 
-// CreateSchema indicates an expected call of CreateSchema
+// CreateSchema indicates an expected call of CreateSchema.
 func (mr *MockPersonalizeAPIMockRecorder) CreateSchema(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSchema", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateSchema), arg0)
 }
 
-// CreateSchemaRequest mocks base method
+// CreateSchemaRequest mocks base method.
 func (m *MockPersonalizeAPI) CreateSchemaRequest(arg0 *personalize.CreateSchemaInput) (*request.Request, *personalize.CreateSchemaOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSchemaRequest", arg0)
@@ -409,13 +460,13 @@ func (m *MockPersonalizeAPI) CreateSchemaRequest(arg0 *personalize.CreateSchemaI
 	return ret0, ret1
 }
 
-// CreateSchemaRequest indicates an expected call of CreateSchemaRequest
+// CreateSchemaRequest indicates an expected call of CreateSchemaRequest.
 func (mr *MockPersonalizeAPIMockRecorder) CreateSchemaRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSchemaRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateSchemaRequest), arg0)
 }
 
-// CreateSchemaWithContext mocks base method
+// CreateSchemaWithContext mocks base method.
 func (m *MockPersonalizeAPI) CreateSchemaWithContext(arg0 context.Context, arg1 *personalize.CreateSchemaInput, arg2 ...request.Option) (*personalize.CreateSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +479,14 @@ func (m *MockPersonalizeAPI) CreateSchemaWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// CreateSchemaWithContext indicates an expected call of CreateSchemaWithContext
+// CreateSchemaWithContext indicates an expected call of CreateSchemaWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) CreateSchemaWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSchemaWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateSchemaWithContext), varargs...)
 }
 
-// CreateSolution mocks base method
+// CreateSolution mocks base method.
 func (m *MockPersonalizeAPI) CreateSolution(arg0 *personalize.CreateSolutionInput) (*personalize.CreateSolutionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSolution", arg0)
@@ -444,13 +495,13 @@ func (m *MockPersonalizeAPI) CreateSolution(arg0 *personalize.CreateSolutionInpu
 	return ret0, ret1
 }
 
-// CreateSolution indicates an expected call of CreateSolution
+// CreateSolution indicates an expected call of CreateSolution.
 func (mr *MockPersonalizeAPIMockRecorder) CreateSolution(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSolution", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateSolution), arg0)
 }
 
-// CreateSolutionRequest mocks base method
+// CreateSolutionRequest mocks base method.
 func (m *MockPersonalizeAPI) CreateSolutionRequest(arg0 *personalize.CreateSolutionInput) (*request.Request, *personalize.CreateSolutionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSolutionRequest", arg0)
@@ -459,13 +510,13 @@ func (m *MockPersonalizeAPI) CreateSolutionRequest(arg0 *personalize.CreateSolut
 	return ret0, ret1
 }
 
-// CreateSolutionRequest indicates an expected call of CreateSolutionRequest
+// CreateSolutionRequest indicates an expected call of CreateSolutionRequest.
 func (mr *MockPersonalizeAPIMockRecorder) CreateSolutionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSolutionRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateSolutionRequest), arg0)
 }
 
-// CreateSolutionVersion mocks base method
+// CreateSolutionVersion mocks base method.
 func (m *MockPersonalizeAPI) CreateSolutionVersion(arg0 *personalize.CreateSolutionVersionInput) (*personalize.CreateSolutionVersionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSolutionVersion", arg0)
@@ -474,13 +525,13 @@ func (m *MockPersonalizeAPI) CreateSolutionVersion(arg0 *personalize.CreateSolut
 	return ret0, ret1
 }
 
-// CreateSolutionVersion indicates an expected call of CreateSolutionVersion
+// CreateSolutionVersion indicates an expected call of CreateSolutionVersion.
 func (mr *MockPersonalizeAPIMockRecorder) CreateSolutionVersion(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSolutionVersion", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateSolutionVersion), arg0)
 }
 
-// CreateSolutionVersionRequest mocks base method
+// CreateSolutionVersionRequest mocks base method.
 func (m *MockPersonalizeAPI) CreateSolutionVersionRequest(arg0 *personalize.CreateSolutionVersionInput) (*request.Request, *personalize.CreateSolutionVersionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSolutionVersionRequest", arg0)
@@ -489,13 +540,13 @@ func (m *MockPersonalizeAPI) CreateSolutionVersionRequest(arg0 *personalize.Crea
 	return ret0, ret1
 }
 
-// CreateSolutionVersionRequest indicates an expected call of CreateSolutionVersionRequest
+// CreateSolutionVersionRequest indicates an expected call of CreateSolutionVersionRequest.
 func (mr *MockPersonalizeAPIMockRecorder) CreateSolutionVersionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSolutionVersionRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateSolutionVersionRequest), arg0)
 }
 
-// CreateSolutionVersionWithContext mocks base method
+// CreateSolutionVersionWithContext mocks base method.
 func (m *MockPersonalizeAPI) CreateSolutionVersionWithContext(arg0 context.Context, arg1 *personalize.CreateSolutionVersionInput, arg2 ...request.Option) (*personalize.CreateSolutionVersionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -508,14 +559,14 @@ func (m *MockPersonalizeAPI) CreateSolutionVersionWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// CreateSolutionVersionWithContext indicates an expected call of CreateSolutionVersionWithContext
+// CreateSolutionVersionWithContext indicates an expected call of CreateSolutionVersionWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) CreateSolutionVersionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSolutionVersionWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateSolutionVersionWithContext), varargs...)
 }
 
-// CreateSolutionWithContext mocks base method
+// CreateSolutionWithContext mocks base method.
 func (m *MockPersonalizeAPI) CreateSolutionWithContext(arg0 context.Context, arg1 *personalize.CreateSolutionInput, arg2 ...request.Option) (*personalize.CreateSolutionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +579,14 @@ func (m *MockPersonalizeAPI) CreateSolutionWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// CreateSolutionWithContext indicates an expected call of CreateSolutionWithContext
+// CreateSolutionWithContext indicates an expected call of CreateSolutionWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) CreateSolutionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSolutionWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).CreateSolutionWithContext), varargs...)
 }
 
-// DeleteCampaign mocks base method
+// DeleteCampaign mocks base method.
 func (m *MockPersonalizeAPI) DeleteCampaign(arg0 *personalize.DeleteCampaignInput) (*personalize.DeleteCampaignOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCampaign", arg0)
@@ -544,13 +595,13 @@ func (m *MockPersonalizeAPI) DeleteCampaign(arg0 *personalize.DeleteCampaignInpu
 	return ret0, ret1
 }
 
-// DeleteCampaign indicates an expected call of DeleteCampaign
+// DeleteCampaign indicates an expected call of DeleteCampaign.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteCampaign(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCampaign", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteCampaign), arg0)
 }
 
-// DeleteCampaignRequest mocks base method
+// DeleteCampaignRequest mocks base method.
 func (m *MockPersonalizeAPI) DeleteCampaignRequest(arg0 *personalize.DeleteCampaignInput) (*request.Request, *personalize.DeleteCampaignOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCampaignRequest", arg0)
@@ -559,13 +610,13 @@ func (m *MockPersonalizeAPI) DeleteCampaignRequest(arg0 *personalize.DeleteCampa
 	return ret0, ret1
 }
 
-// DeleteCampaignRequest indicates an expected call of DeleteCampaignRequest
+// DeleteCampaignRequest indicates an expected call of DeleteCampaignRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteCampaignRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCampaignRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteCampaignRequest), arg0)
 }
 
-// DeleteCampaignWithContext mocks base method
+// DeleteCampaignWithContext mocks base method.
 func (m *MockPersonalizeAPI) DeleteCampaignWithContext(arg0 context.Context, arg1 *personalize.DeleteCampaignInput, arg2 ...request.Option) (*personalize.DeleteCampaignOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +629,14 @@ func (m *MockPersonalizeAPI) DeleteCampaignWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DeleteCampaignWithContext indicates an expected call of DeleteCampaignWithContext
+// DeleteCampaignWithContext indicates an expected call of DeleteCampaignWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteCampaignWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCampaignWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteCampaignWithContext), varargs...)
 }
 
-// DeleteDataset mocks base method
+// DeleteDataset mocks base method.
 func (m *MockPersonalizeAPI) DeleteDataset(arg0 *personalize.DeleteDatasetInput) (*personalize.DeleteDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDataset", arg0)
@@ -594,13 +645,13 @@ func (m *MockPersonalizeAPI) DeleteDataset(arg0 *personalize.DeleteDatasetInput)
 	return ret0, ret1
 }
 
-// DeleteDataset indicates an expected call of DeleteDataset
+// DeleteDataset indicates an expected call of DeleteDataset.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataset", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteDataset), arg0)
 }
 
-// DeleteDatasetGroup mocks base method
+// DeleteDatasetGroup mocks base method.
 func (m *MockPersonalizeAPI) DeleteDatasetGroup(arg0 *personalize.DeleteDatasetGroupInput) (*personalize.DeleteDatasetGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDatasetGroup", arg0)
@@ -609,13 +660,13 @@ func (m *MockPersonalizeAPI) DeleteDatasetGroup(arg0 *personalize.DeleteDatasetG
 	return ret0, ret1
 }
 
-// DeleteDatasetGroup indicates an expected call of DeleteDatasetGroup
+// DeleteDatasetGroup indicates an expected call of DeleteDatasetGroup.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteDatasetGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatasetGroup", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteDatasetGroup), arg0)
 }
 
-// DeleteDatasetGroupRequest mocks base method
+// DeleteDatasetGroupRequest mocks base method.
 func (m *MockPersonalizeAPI) DeleteDatasetGroupRequest(arg0 *personalize.DeleteDatasetGroupInput) (*request.Request, *personalize.DeleteDatasetGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDatasetGroupRequest", arg0)
@@ -624,13 +675,13 @@ func (m *MockPersonalizeAPI) DeleteDatasetGroupRequest(arg0 *personalize.DeleteD
 	return ret0, ret1
 }
 
-// DeleteDatasetGroupRequest indicates an expected call of DeleteDatasetGroupRequest
+// DeleteDatasetGroupRequest indicates an expected call of DeleteDatasetGroupRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteDatasetGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatasetGroupRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteDatasetGroupRequest), arg0)
 }
 
-// DeleteDatasetGroupWithContext mocks base method
+// DeleteDatasetGroupWithContext mocks base method.
 func (m *MockPersonalizeAPI) DeleteDatasetGroupWithContext(arg0 context.Context, arg1 *personalize.DeleteDatasetGroupInput, arg2 ...request.Option) (*personalize.DeleteDatasetGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -643,14 +694,14 @@ func (m *MockPersonalizeAPI) DeleteDatasetGroupWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteDatasetGroupWithContext indicates an expected call of DeleteDatasetGroupWithContext
+// DeleteDatasetGroupWithContext indicates an expected call of DeleteDatasetGroupWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteDatasetGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatasetGroupWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteDatasetGroupWithContext), varargs...)
 }
 
-// DeleteDatasetRequest mocks base method
+// DeleteDatasetRequest mocks base method.
 func (m *MockPersonalizeAPI) DeleteDatasetRequest(arg0 *personalize.DeleteDatasetInput) (*request.Request, *personalize.DeleteDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDatasetRequest", arg0)
@@ -659,13 +710,13 @@ func (m *MockPersonalizeAPI) DeleteDatasetRequest(arg0 *personalize.DeleteDatase
 	return ret0, ret1
 }
 
-// DeleteDatasetRequest indicates an expected call of DeleteDatasetRequest
+// DeleteDatasetRequest indicates an expected call of DeleteDatasetRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatasetRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteDatasetRequest), arg0)
 }
 
-// DeleteDatasetWithContext mocks base method
+// DeleteDatasetWithContext mocks base method.
 func (m *MockPersonalizeAPI) DeleteDatasetWithContext(arg0 context.Context, arg1 *personalize.DeleteDatasetInput, arg2 ...request.Option) (*personalize.DeleteDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +729,14 @@ func (m *MockPersonalizeAPI) DeleteDatasetWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DeleteDatasetWithContext indicates an expected call of DeleteDatasetWithContext
+// DeleteDatasetWithContext indicates an expected call of DeleteDatasetWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatasetWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteDatasetWithContext), varargs...)
 }
 
-// DeleteEventTracker mocks base method
+// DeleteEventTracker mocks base method.
 func (m *MockPersonalizeAPI) DeleteEventTracker(arg0 *personalize.DeleteEventTrackerInput) (*personalize.DeleteEventTrackerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEventTracker", arg0)
@@ -694,13 +745,13 @@ func (m *MockPersonalizeAPI) DeleteEventTracker(arg0 *personalize.DeleteEventTra
 	return ret0, ret1
 }
 
-// DeleteEventTracker indicates an expected call of DeleteEventTracker
+// DeleteEventTracker indicates an expected call of DeleteEventTracker.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteEventTracker(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEventTracker", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteEventTracker), arg0)
 }
 
-// DeleteEventTrackerRequest mocks base method
+// DeleteEventTrackerRequest mocks base method.
 func (m *MockPersonalizeAPI) DeleteEventTrackerRequest(arg0 *personalize.DeleteEventTrackerInput) (*request.Request, *personalize.DeleteEventTrackerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteEventTrackerRequest", arg0)
@@ -709,13 +760,13 @@ func (m *MockPersonalizeAPI) DeleteEventTrackerRequest(arg0 *personalize.DeleteE
 	return ret0, ret1
 }
 
-// DeleteEventTrackerRequest indicates an expected call of DeleteEventTrackerRequest
+// DeleteEventTrackerRequest indicates an expected call of DeleteEventTrackerRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteEventTrackerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEventTrackerRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteEventTrackerRequest), arg0)
 }
 
-// DeleteEventTrackerWithContext mocks base method
+// DeleteEventTrackerWithContext mocks base method.
 func (m *MockPersonalizeAPI) DeleteEventTrackerWithContext(arg0 context.Context, arg1 *personalize.DeleteEventTrackerInput, arg2 ...request.Option) (*personalize.DeleteEventTrackerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +779,14 @@ func (m *MockPersonalizeAPI) DeleteEventTrackerWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteEventTrackerWithContext indicates an expected call of DeleteEventTrackerWithContext
+// DeleteEventTrackerWithContext indicates an expected call of DeleteEventTrackerWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteEventTrackerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEventTrackerWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteEventTrackerWithContext), varargs...)
 }
 
-// DeleteFilter mocks base method
+// DeleteFilter mocks base method.
 func (m *MockPersonalizeAPI) DeleteFilter(arg0 *personalize.DeleteFilterInput) (*personalize.DeleteFilterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFilter", arg0)
@@ -744,13 +795,13 @@ func (m *MockPersonalizeAPI) DeleteFilter(arg0 *personalize.DeleteFilterInput) (
 	return ret0, ret1
 }
 
-// DeleteFilter indicates an expected call of DeleteFilter
+// DeleteFilter indicates an expected call of DeleteFilter.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteFilter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFilter", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteFilter), arg0)
 }
 
-// DeleteFilterRequest mocks base method
+// DeleteFilterRequest mocks base method.
 func (m *MockPersonalizeAPI) DeleteFilterRequest(arg0 *personalize.DeleteFilterInput) (*request.Request, *personalize.DeleteFilterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFilterRequest", arg0)
@@ -759,13 +810,13 @@ func (m *MockPersonalizeAPI) DeleteFilterRequest(arg0 *personalize.DeleteFilterI
 	return ret0, ret1
 }
 
-// DeleteFilterRequest indicates an expected call of DeleteFilterRequest
+// DeleteFilterRequest indicates an expected call of DeleteFilterRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteFilterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFilterRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteFilterRequest), arg0)
 }
 
-// DeleteFilterWithContext mocks base method
+// DeleteFilterWithContext mocks base method.
 func (m *MockPersonalizeAPI) DeleteFilterWithContext(arg0 context.Context, arg1 *personalize.DeleteFilterInput, arg2 ...request.Option) (*personalize.DeleteFilterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +829,14 @@ func (m *MockPersonalizeAPI) DeleteFilterWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DeleteFilterWithContext indicates an expected call of DeleteFilterWithContext
+// DeleteFilterWithContext indicates an expected call of DeleteFilterWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteFilterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFilterWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteFilterWithContext), varargs...)
 }
 
-// DeleteSchema mocks base method
+// DeleteSchema mocks base method.
 func (m *MockPersonalizeAPI) DeleteSchema(arg0 *personalize.DeleteSchemaInput) (*personalize.DeleteSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSchema", arg0)
@@ -794,13 +845,13 @@ func (m *MockPersonalizeAPI) DeleteSchema(arg0 *personalize.DeleteSchemaInput) (
 	return ret0, ret1
 }
 
-// DeleteSchema indicates an expected call of DeleteSchema
+// DeleteSchema indicates an expected call of DeleteSchema.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteSchema(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSchema", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteSchema), arg0)
 }
 
-// DeleteSchemaRequest mocks base method
+// DeleteSchemaRequest mocks base method.
 func (m *MockPersonalizeAPI) DeleteSchemaRequest(arg0 *personalize.DeleteSchemaInput) (*request.Request, *personalize.DeleteSchemaOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSchemaRequest", arg0)
@@ -809,13 +860,13 @@ func (m *MockPersonalizeAPI) DeleteSchemaRequest(arg0 *personalize.DeleteSchemaI
 	return ret0, ret1
 }
 
-// DeleteSchemaRequest indicates an expected call of DeleteSchemaRequest
+// DeleteSchemaRequest indicates an expected call of DeleteSchemaRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteSchemaRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSchemaRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteSchemaRequest), arg0)
 }
 
-// DeleteSchemaWithContext mocks base method
+// DeleteSchemaWithContext mocks base method.
 func (m *MockPersonalizeAPI) DeleteSchemaWithContext(arg0 context.Context, arg1 *personalize.DeleteSchemaInput, arg2 ...request.Option) (*personalize.DeleteSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +879,14 @@ func (m *MockPersonalizeAPI) DeleteSchemaWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DeleteSchemaWithContext indicates an expected call of DeleteSchemaWithContext
+// DeleteSchemaWithContext indicates an expected call of DeleteSchemaWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteSchemaWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSchemaWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteSchemaWithContext), varargs...)
 }
 
-// DeleteSolution mocks base method
+// DeleteSolution mocks base method.
 func (m *MockPersonalizeAPI) DeleteSolution(arg0 *personalize.DeleteSolutionInput) (*personalize.DeleteSolutionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSolution", arg0)
@@ -844,13 +895,13 @@ func (m *MockPersonalizeAPI) DeleteSolution(arg0 *personalize.DeleteSolutionInpu
 	return ret0, ret1
 }
 
-// DeleteSolution indicates an expected call of DeleteSolution
+// DeleteSolution indicates an expected call of DeleteSolution.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteSolution(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSolution", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteSolution), arg0)
 }
 
-// DeleteSolutionRequest mocks base method
+// DeleteSolutionRequest mocks base method.
 func (m *MockPersonalizeAPI) DeleteSolutionRequest(arg0 *personalize.DeleteSolutionInput) (*request.Request, *personalize.DeleteSolutionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSolutionRequest", arg0)
@@ -859,13 +910,13 @@ func (m *MockPersonalizeAPI) DeleteSolutionRequest(arg0 *personalize.DeleteSolut
 	return ret0, ret1
 }
 
-// DeleteSolutionRequest indicates an expected call of DeleteSolutionRequest
+// DeleteSolutionRequest indicates an expected call of DeleteSolutionRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteSolutionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSolutionRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteSolutionRequest), arg0)
 }
 
-// DeleteSolutionWithContext mocks base method
+// DeleteSolutionWithContext mocks base method.
 func (m *MockPersonalizeAPI) DeleteSolutionWithContext(arg0 context.Context, arg1 *personalize.DeleteSolutionInput, arg2 ...request.Option) (*personalize.DeleteSolutionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +929,14 @@ func (m *MockPersonalizeAPI) DeleteSolutionWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DeleteSolutionWithContext indicates an expected call of DeleteSolutionWithContext
+// DeleteSolutionWithContext indicates an expected call of DeleteSolutionWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DeleteSolutionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSolutionWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DeleteSolutionWithContext), varargs...)
 }
 
-// DescribeAlgorithm mocks base method
+// DescribeAlgorithm mocks base method.
 func (m *MockPersonalizeAPI) DescribeAlgorithm(arg0 *personalize.DescribeAlgorithmInput) (*personalize.DescribeAlgorithmOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAlgorithm", arg0)
@@ -894,13 +945,13 @@ func (m *MockPersonalizeAPI) DescribeAlgorithm(arg0 *personalize.DescribeAlgorit
 	return ret0, ret1
 }
 
-// DescribeAlgorithm indicates an expected call of DescribeAlgorithm
+// DescribeAlgorithm indicates an expected call of DescribeAlgorithm.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeAlgorithm(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAlgorithm", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeAlgorithm), arg0)
 }
 
-// DescribeAlgorithmRequest mocks base method
+// DescribeAlgorithmRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeAlgorithmRequest(arg0 *personalize.DescribeAlgorithmInput) (*request.Request, *personalize.DescribeAlgorithmOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAlgorithmRequest", arg0)
@@ -909,13 +960,13 @@ func (m *MockPersonalizeAPI) DescribeAlgorithmRequest(arg0 *personalize.Describe
 	return ret0, ret1
 }
 
-// DescribeAlgorithmRequest indicates an expected call of DescribeAlgorithmRequest
+// DescribeAlgorithmRequest indicates an expected call of DescribeAlgorithmRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeAlgorithmRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAlgorithmRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeAlgorithmRequest), arg0)
 }
 
-// DescribeAlgorithmWithContext mocks base method
+// DescribeAlgorithmWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeAlgorithmWithContext(arg0 context.Context, arg1 *personalize.DescribeAlgorithmInput, arg2 ...request.Option) (*personalize.DescribeAlgorithmOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -928,14 +979,14 @@ func (m *MockPersonalizeAPI) DescribeAlgorithmWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DescribeAlgorithmWithContext indicates an expected call of DescribeAlgorithmWithContext
+// DescribeAlgorithmWithContext indicates an expected call of DescribeAlgorithmWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeAlgorithmWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAlgorithmWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeAlgorithmWithContext), varargs...)
 }
 
-// DescribeBatchInferenceJob mocks base method
+// DescribeBatchInferenceJob mocks base method.
 func (m *MockPersonalizeAPI) DescribeBatchInferenceJob(arg0 *personalize.DescribeBatchInferenceJobInput) (*personalize.DescribeBatchInferenceJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBatchInferenceJob", arg0)
@@ -944,13 +995,13 @@ func (m *MockPersonalizeAPI) DescribeBatchInferenceJob(arg0 *personalize.Describ
 	return ret0, ret1
 }
 
-// DescribeBatchInferenceJob indicates an expected call of DescribeBatchInferenceJob
+// DescribeBatchInferenceJob indicates an expected call of DescribeBatchInferenceJob.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeBatchInferenceJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBatchInferenceJob", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeBatchInferenceJob), arg0)
 }
 
-// DescribeBatchInferenceJobRequest mocks base method
+// DescribeBatchInferenceJobRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeBatchInferenceJobRequest(arg0 *personalize.DescribeBatchInferenceJobInput) (*request.Request, *personalize.DescribeBatchInferenceJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBatchInferenceJobRequest", arg0)
@@ -959,13 +1010,13 @@ func (m *MockPersonalizeAPI) DescribeBatchInferenceJobRequest(arg0 *personalize.
 	return ret0, ret1
 }
 
-// DescribeBatchInferenceJobRequest indicates an expected call of DescribeBatchInferenceJobRequest
+// DescribeBatchInferenceJobRequest indicates an expected call of DescribeBatchInferenceJobRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeBatchInferenceJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBatchInferenceJobRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeBatchInferenceJobRequest), arg0)
 }
 
-// DescribeBatchInferenceJobWithContext mocks base method
+// DescribeBatchInferenceJobWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeBatchInferenceJobWithContext(arg0 context.Context, arg1 *personalize.DescribeBatchInferenceJobInput, arg2 ...request.Option) (*personalize.DescribeBatchInferenceJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -978,14 +1029,14 @@ func (m *MockPersonalizeAPI) DescribeBatchInferenceJobWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DescribeBatchInferenceJobWithContext indicates an expected call of DescribeBatchInferenceJobWithContext
+// DescribeBatchInferenceJobWithContext indicates an expected call of DescribeBatchInferenceJobWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeBatchInferenceJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBatchInferenceJobWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeBatchInferenceJobWithContext), varargs...)
 }
 
-// DescribeCampaign mocks base method
+// DescribeCampaign mocks base method.
 func (m *MockPersonalizeAPI) DescribeCampaign(arg0 *personalize.DescribeCampaignInput) (*personalize.DescribeCampaignOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCampaign", arg0)
@@ -994,13 +1045,13 @@ func (m *MockPersonalizeAPI) DescribeCampaign(arg0 *personalize.DescribeCampaign
 	return ret0, ret1
 }
 
-// DescribeCampaign indicates an expected call of DescribeCampaign
+// DescribeCampaign indicates an expected call of DescribeCampaign.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeCampaign(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCampaign", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeCampaign), arg0)
 }
 
-// DescribeCampaignRequest mocks base method
+// DescribeCampaignRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeCampaignRequest(arg0 *personalize.DescribeCampaignInput) (*request.Request, *personalize.DescribeCampaignOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCampaignRequest", arg0)
@@ -1009,13 +1060,13 @@ func (m *MockPersonalizeAPI) DescribeCampaignRequest(arg0 *personalize.DescribeC
 	return ret0, ret1
 }
 
-// DescribeCampaignRequest indicates an expected call of DescribeCampaignRequest
+// DescribeCampaignRequest indicates an expected call of DescribeCampaignRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeCampaignRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCampaignRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeCampaignRequest), arg0)
 }
 
-// DescribeCampaignWithContext mocks base method
+// DescribeCampaignWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeCampaignWithContext(arg0 context.Context, arg1 *personalize.DescribeCampaignInput, arg2 ...request.Option) (*personalize.DescribeCampaignOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1028,14 +1079,14 @@ func (m *MockPersonalizeAPI) DescribeCampaignWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DescribeCampaignWithContext indicates an expected call of DescribeCampaignWithContext
+// DescribeCampaignWithContext indicates an expected call of DescribeCampaignWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeCampaignWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCampaignWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeCampaignWithContext), varargs...)
 }
 
-// DescribeDataset mocks base method
+// DescribeDataset mocks base method.
 func (m *MockPersonalizeAPI) DescribeDataset(arg0 *personalize.DescribeDatasetInput) (*personalize.DescribeDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDataset", arg0)
@@ -1044,13 +1095,63 @@ func (m *MockPersonalizeAPI) DescribeDataset(arg0 *personalize.DescribeDatasetIn
 	return ret0, ret1
 }
 
-// DescribeDataset indicates an expected call of DescribeDataset
+// DescribeDataset indicates an expected call of DescribeDataset.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDataset", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeDataset), arg0)
 }
 
-// DescribeDatasetGroup mocks base method
+// DescribeDatasetExportJob mocks base method.
+func (m *MockPersonalizeAPI) DescribeDatasetExportJob(arg0 *personalize.DescribeDatasetExportJobInput) (*personalize.DescribeDatasetExportJobOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeDatasetExportJob", arg0)
+	ret0, _ := ret[0].(*personalize.DescribeDatasetExportJobOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeDatasetExportJob indicates an expected call of DescribeDatasetExportJob.
+func (mr *MockPersonalizeAPIMockRecorder) DescribeDatasetExportJob(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetExportJob", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeDatasetExportJob), arg0)
+}
+
+// DescribeDatasetExportJobRequest mocks base method.
+func (m *MockPersonalizeAPI) DescribeDatasetExportJobRequest(arg0 *personalize.DescribeDatasetExportJobInput) (*request.Request, *personalize.DescribeDatasetExportJobOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeDatasetExportJobRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*personalize.DescribeDatasetExportJobOutput)
+	return ret0, ret1
+}
+
+// DescribeDatasetExportJobRequest indicates an expected call of DescribeDatasetExportJobRequest.
+func (mr *MockPersonalizeAPIMockRecorder) DescribeDatasetExportJobRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetExportJobRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeDatasetExportJobRequest), arg0)
+}
+
+// DescribeDatasetExportJobWithContext mocks base method.
+func (m *MockPersonalizeAPI) DescribeDatasetExportJobWithContext(arg0 context.Context, arg1 *personalize.DescribeDatasetExportJobInput, arg2 ...request.Option) (*personalize.DescribeDatasetExportJobOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeDatasetExportJobWithContext", varargs...)
+	ret0, _ := ret[0].(*personalize.DescribeDatasetExportJobOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeDatasetExportJobWithContext indicates an expected call of DescribeDatasetExportJobWithContext.
+func (mr *MockPersonalizeAPIMockRecorder) DescribeDatasetExportJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetExportJobWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeDatasetExportJobWithContext), varargs...)
+}
+
+// DescribeDatasetGroup mocks base method.
 func (m *MockPersonalizeAPI) DescribeDatasetGroup(arg0 *personalize.DescribeDatasetGroupInput) (*personalize.DescribeDatasetGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDatasetGroup", arg0)
@@ -1059,13 +1160,13 @@ func (m *MockPersonalizeAPI) DescribeDatasetGroup(arg0 *personalize.DescribeData
 	return ret0, ret1
 }
 
-// DescribeDatasetGroup indicates an expected call of DescribeDatasetGroup
+// DescribeDatasetGroup indicates an expected call of DescribeDatasetGroup.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeDatasetGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetGroup", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeDatasetGroup), arg0)
 }
 
-// DescribeDatasetGroupRequest mocks base method
+// DescribeDatasetGroupRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeDatasetGroupRequest(arg0 *personalize.DescribeDatasetGroupInput) (*request.Request, *personalize.DescribeDatasetGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDatasetGroupRequest", arg0)
@@ -1074,13 +1175,13 @@ func (m *MockPersonalizeAPI) DescribeDatasetGroupRequest(arg0 *personalize.Descr
 	return ret0, ret1
 }
 
-// DescribeDatasetGroupRequest indicates an expected call of DescribeDatasetGroupRequest
+// DescribeDatasetGroupRequest indicates an expected call of DescribeDatasetGroupRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeDatasetGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetGroupRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeDatasetGroupRequest), arg0)
 }
 
-// DescribeDatasetGroupWithContext mocks base method
+// DescribeDatasetGroupWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeDatasetGroupWithContext(arg0 context.Context, arg1 *personalize.DescribeDatasetGroupInput, arg2 ...request.Option) (*personalize.DescribeDatasetGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1093,14 +1194,14 @@ func (m *MockPersonalizeAPI) DescribeDatasetGroupWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DescribeDatasetGroupWithContext indicates an expected call of DescribeDatasetGroupWithContext
+// DescribeDatasetGroupWithContext indicates an expected call of DescribeDatasetGroupWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeDatasetGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetGroupWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeDatasetGroupWithContext), varargs...)
 }
 
-// DescribeDatasetImportJob mocks base method
+// DescribeDatasetImportJob mocks base method.
 func (m *MockPersonalizeAPI) DescribeDatasetImportJob(arg0 *personalize.DescribeDatasetImportJobInput) (*personalize.DescribeDatasetImportJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDatasetImportJob", arg0)
@@ -1109,13 +1210,13 @@ func (m *MockPersonalizeAPI) DescribeDatasetImportJob(arg0 *personalize.Describe
 	return ret0, ret1
 }
 
-// DescribeDatasetImportJob indicates an expected call of DescribeDatasetImportJob
+// DescribeDatasetImportJob indicates an expected call of DescribeDatasetImportJob.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeDatasetImportJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetImportJob", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeDatasetImportJob), arg0)
 }
 
-// DescribeDatasetImportJobRequest mocks base method
+// DescribeDatasetImportJobRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeDatasetImportJobRequest(arg0 *personalize.DescribeDatasetImportJobInput) (*request.Request, *personalize.DescribeDatasetImportJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDatasetImportJobRequest", arg0)
@@ -1124,13 +1225,13 @@ func (m *MockPersonalizeAPI) DescribeDatasetImportJobRequest(arg0 *personalize.D
 	return ret0, ret1
 }
 
-// DescribeDatasetImportJobRequest indicates an expected call of DescribeDatasetImportJobRequest
+// DescribeDatasetImportJobRequest indicates an expected call of DescribeDatasetImportJobRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeDatasetImportJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetImportJobRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeDatasetImportJobRequest), arg0)
 }
 
-// DescribeDatasetImportJobWithContext mocks base method
+// DescribeDatasetImportJobWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeDatasetImportJobWithContext(arg0 context.Context, arg1 *personalize.DescribeDatasetImportJobInput, arg2 ...request.Option) (*personalize.DescribeDatasetImportJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1143,14 +1244,14 @@ func (m *MockPersonalizeAPI) DescribeDatasetImportJobWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DescribeDatasetImportJobWithContext indicates an expected call of DescribeDatasetImportJobWithContext
+// DescribeDatasetImportJobWithContext indicates an expected call of DescribeDatasetImportJobWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeDatasetImportJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetImportJobWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeDatasetImportJobWithContext), varargs...)
 }
 
-// DescribeDatasetRequest mocks base method
+// DescribeDatasetRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeDatasetRequest(arg0 *personalize.DescribeDatasetInput) (*request.Request, *personalize.DescribeDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDatasetRequest", arg0)
@@ -1159,13 +1260,13 @@ func (m *MockPersonalizeAPI) DescribeDatasetRequest(arg0 *personalize.DescribeDa
 	return ret0, ret1
 }
 
-// DescribeDatasetRequest indicates an expected call of DescribeDatasetRequest
+// DescribeDatasetRequest indicates an expected call of DescribeDatasetRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeDatasetRequest), arg0)
 }
 
-// DescribeDatasetWithContext mocks base method
+// DescribeDatasetWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeDatasetWithContext(arg0 context.Context, arg1 *personalize.DescribeDatasetInput, arg2 ...request.Option) (*personalize.DescribeDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1178,14 +1279,14 @@ func (m *MockPersonalizeAPI) DescribeDatasetWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DescribeDatasetWithContext indicates an expected call of DescribeDatasetWithContext
+// DescribeDatasetWithContext indicates an expected call of DescribeDatasetWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeDatasetWithContext), varargs...)
 }
 
-// DescribeEventTracker mocks base method
+// DescribeEventTracker mocks base method.
 func (m *MockPersonalizeAPI) DescribeEventTracker(arg0 *personalize.DescribeEventTrackerInput) (*personalize.DescribeEventTrackerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeEventTracker", arg0)
@@ -1194,13 +1295,13 @@ func (m *MockPersonalizeAPI) DescribeEventTracker(arg0 *personalize.DescribeEven
 	return ret0, ret1
 }
 
-// DescribeEventTracker indicates an expected call of DescribeEventTracker
+// DescribeEventTracker indicates an expected call of DescribeEventTracker.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeEventTracker(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeEventTracker", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeEventTracker), arg0)
 }
 
-// DescribeEventTrackerRequest mocks base method
+// DescribeEventTrackerRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeEventTrackerRequest(arg0 *personalize.DescribeEventTrackerInput) (*request.Request, *personalize.DescribeEventTrackerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeEventTrackerRequest", arg0)
@@ -1209,13 +1310,13 @@ func (m *MockPersonalizeAPI) DescribeEventTrackerRequest(arg0 *personalize.Descr
 	return ret0, ret1
 }
 
-// DescribeEventTrackerRequest indicates an expected call of DescribeEventTrackerRequest
+// DescribeEventTrackerRequest indicates an expected call of DescribeEventTrackerRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeEventTrackerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeEventTrackerRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeEventTrackerRequest), arg0)
 }
 
-// DescribeEventTrackerWithContext mocks base method
+// DescribeEventTrackerWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeEventTrackerWithContext(arg0 context.Context, arg1 *personalize.DescribeEventTrackerInput, arg2 ...request.Option) (*personalize.DescribeEventTrackerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1228,14 +1329,14 @@ func (m *MockPersonalizeAPI) DescribeEventTrackerWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DescribeEventTrackerWithContext indicates an expected call of DescribeEventTrackerWithContext
+// DescribeEventTrackerWithContext indicates an expected call of DescribeEventTrackerWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeEventTrackerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeEventTrackerWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeEventTrackerWithContext), varargs...)
 }
 
-// DescribeFeatureTransformation mocks base method
+// DescribeFeatureTransformation mocks base method.
 func (m *MockPersonalizeAPI) DescribeFeatureTransformation(arg0 *personalize.DescribeFeatureTransformationInput) (*personalize.DescribeFeatureTransformationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFeatureTransformation", arg0)
@@ -1244,13 +1345,13 @@ func (m *MockPersonalizeAPI) DescribeFeatureTransformation(arg0 *personalize.Des
 	return ret0, ret1
 }
 
-// DescribeFeatureTransformation indicates an expected call of DescribeFeatureTransformation
+// DescribeFeatureTransformation indicates an expected call of DescribeFeatureTransformation.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeFeatureTransformation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFeatureTransformation", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeFeatureTransformation), arg0)
 }
 
-// DescribeFeatureTransformationRequest mocks base method
+// DescribeFeatureTransformationRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeFeatureTransformationRequest(arg0 *personalize.DescribeFeatureTransformationInput) (*request.Request, *personalize.DescribeFeatureTransformationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFeatureTransformationRequest", arg0)
@@ -1259,13 +1360,13 @@ func (m *MockPersonalizeAPI) DescribeFeatureTransformationRequest(arg0 *personal
 	return ret0, ret1
 }
 
-// DescribeFeatureTransformationRequest indicates an expected call of DescribeFeatureTransformationRequest
+// DescribeFeatureTransformationRequest indicates an expected call of DescribeFeatureTransformationRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeFeatureTransformationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFeatureTransformationRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeFeatureTransformationRequest), arg0)
 }
 
-// DescribeFeatureTransformationWithContext mocks base method
+// DescribeFeatureTransformationWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeFeatureTransformationWithContext(arg0 context.Context, arg1 *personalize.DescribeFeatureTransformationInput, arg2 ...request.Option) (*personalize.DescribeFeatureTransformationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1278,14 +1379,14 @@ func (m *MockPersonalizeAPI) DescribeFeatureTransformationWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// DescribeFeatureTransformationWithContext indicates an expected call of DescribeFeatureTransformationWithContext
+// DescribeFeatureTransformationWithContext indicates an expected call of DescribeFeatureTransformationWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeFeatureTransformationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFeatureTransformationWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeFeatureTransformationWithContext), varargs...)
 }
 
-// DescribeFilter mocks base method
+// DescribeFilter mocks base method.
 func (m *MockPersonalizeAPI) DescribeFilter(arg0 *personalize.DescribeFilterInput) (*personalize.DescribeFilterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFilter", arg0)
@@ -1294,13 +1395,13 @@ func (m *MockPersonalizeAPI) DescribeFilter(arg0 *personalize.DescribeFilterInpu
 	return ret0, ret1
 }
 
-// DescribeFilter indicates an expected call of DescribeFilter
+// DescribeFilter indicates an expected call of DescribeFilter.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeFilter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFilter", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeFilter), arg0)
 }
 
-// DescribeFilterRequest mocks base method
+// DescribeFilterRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeFilterRequest(arg0 *personalize.DescribeFilterInput) (*request.Request, *personalize.DescribeFilterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFilterRequest", arg0)
@@ -1309,13 +1410,13 @@ func (m *MockPersonalizeAPI) DescribeFilterRequest(arg0 *personalize.DescribeFil
 	return ret0, ret1
 }
 
-// DescribeFilterRequest indicates an expected call of DescribeFilterRequest
+// DescribeFilterRequest indicates an expected call of DescribeFilterRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeFilterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFilterRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeFilterRequest), arg0)
 }
 
-// DescribeFilterWithContext mocks base method
+// DescribeFilterWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeFilterWithContext(arg0 context.Context, arg1 *personalize.DescribeFilterInput, arg2 ...request.Option) (*personalize.DescribeFilterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1328,14 +1429,14 @@ func (m *MockPersonalizeAPI) DescribeFilterWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DescribeFilterWithContext indicates an expected call of DescribeFilterWithContext
+// DescribeFilterWithContext indicates an expected call of DescribeFilterWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeFilterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFilterWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeFilterWithContext), varargs...)
 }
 
-// DescribeRecipe mocks base method
+// DescribeRecipe mocks base method.
 func (m *MockPersonalizeAPI) DescribeRecipe(arg0 *personalize.DescribeRecipeInput) (*personalize.DescribeRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRecipe", arg0)
@@ -1344,13 +1445,13 @@ func (m *MockPersonalizeAPI) DescribeRecipe(arg0 *personalize.DescribeRecipeInpu
 	return ret0, ret1
 }
 
-// DescribeRecipe indicates an expected call of DescribeRecipe
+// DescribeRecipe indicates an expected call of DescribeRecipe.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeRecipe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecipe", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeRecipe), arg0)
 }
 
-// DescribeRecipeRequest mocks base method
+// DescribeRecipeRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeRecipeRequest(arg0 *personalize.DescribeRecipeInput) (*request.Request, *personalize.DescribeRecipeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRecipeRequest", arg0)
@@ -1359,13 +1460,13 @@ func (m *MockPersonalizeAPI) DescribeRecipeRequest(arg0 *personalize.DescribeRec
 	return ret0, ret1
 }
 
-// DescribeRecipeRequest indicates an expected call of DescribeRecipeRequest
+// DescribeRecipeRequest indicates an expected call of DescribeRecipeRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeRecipeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecipeRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeRecipeRequest), arg0)
 }
 
-// DescribeRecipeWithContext mocks base method
+// DescribeRecipeWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeRecipeWithContext(arg0 context.Context, arg1 *personalize.DescribeRecipeInput, arg2 ...request.Option) (*personalize.DescribeRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1378,14 +1479,14 @@ func (m *MockPersonalizeAPI) DescribeRecipeWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DescribeRecipeWithContext indicates an expected call of DescribeRecipeWithContext
+// DescribeRecipeWithContext indicates an expected call of DescribeRecipeWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeRecipeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecipeWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeRecipeWithContext), varargs...)
 }
 
-// DescribeSchema mocks base method
+// DescribeSchema mocks base method.
 func (m *MockPersonalizeAPI) DescribeSchema(arg0 *personalize.DescribeSchemaInput) (*personalize.DescribeSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSchema", arg0)
@@ -1394,13 +1495,13 @@ func (m *MockPersonalizeAPI) DescribeSchema(arg0 *personalize.DescribeSchemaInpu
 	return ret0, ret1
 }
 
-// DescribeSchema indicates an expected call of DescribeSchema
+// DescribeSchema indicates an expected call of DescribeSchema.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeSchema(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSchema", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeSchema), arg0)
 }
 
-// DescribeSchemaRequest mocks base method
+// DescribeSchemaRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeSchemaRequest(arg0 *personalize.DescribeSchemaInput) (*request.Request, *personalize.DescribeSchemaOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSchemaRequest", arg0)
@@ -1409,13 +1510,13 @@ func (m *MockPersonalizeAPI) DescribeSchemaRequest(arg0 *personalize.DescribeSch
 	return ret0, ret1
 }
 
-// DescribeSchemaRequest indicates an expected call of DescribeSchemaRequest
+// DescribeSchemaRequest indicates an expected call of DescribeSchemaRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeSchemaRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSchemaRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeSchemaRequest), arg0)
 }
 
-// DescribeSchemaWithContext mocks base method
+// DescribeSchemaWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeSchemaWithContext(arg0 context.Context, arg1 *personalize.DescribeSchemaInput, arg2 ...request.Option) (*personalize.DescribeSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1428,14 +1529,14 @@ func (m *MockPersonalizeAPI) DescribeSchemaWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DescribeSchemaWithContext indicates an expected call of DescribeSchemaWithContext
+// DescribeSchemaWithContext indicates an expected call of DescribeSchemaWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeSchemaWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSchemaWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeSchemaWithContext), varargs...)
 }
 
-// DescribeSolution mocks base method
+// DescribeSolution mocks base method.
 func (m *MockPersonalizeAPI) DescribeSolution(arg0 *personalize.DescribeSolutionInput) (*personalize.DescribeSolutionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSolution", arg0)
@@ -1444,13 +1545,13 @@ func (m *MockPersonalizeAPI) DescribeSolution(arg0 *personalize.DescribeSolution
 	return ret0, ret1
 }
 
-// DescribeSolution indicates an expected call of DescribeSolution
+// DescribeSolution indicates an expected call of DescribeSolution.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeSolution(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSolution", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeSolution), arg0)
 }
 
-// DescribeSolutionRequest mocks base method
+// DescribeSolutionRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeSolutionRequest(arg0 *personalize.DescribeSolutionInput) (*request.Request, *personalize.DescribeSolutionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSolutionRequest", arg0)
@@ -1459,13 +1560,13 @@ func (m *MockPersonalizeAPI) DescribeSolutionRequest(arg0 *personalize.DescribeS
 	return ret0, ret1
 }
 
-// DescribeSolutionRequest indicates an expected call of DescribeSolutionRequest
+// DescribeSolutionRequest indicates an expected call of DescribeSolutionRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeSolutionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSolutionRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeSolutionRequest), arg0)
 }
 
-// DescribeSolutionVersion mocks base method
+// DescribeSolutionVersion mocks base method.
 func (m *MockPersonalizeAPI) DescribeSolutionVersion(arg0 *personalize.DescribeSolutionVersionInput) (*personalize.DescribeSolutionVersionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSolutionVersion", arg0)
@@ -1474,13 +1575,13 @@ func (m *MockPersonalizeAPI) DescribeSolutionVersion(arg0 *personalize.DescribeS
 	return ret0, ret1
 }
 
-// DescribeSolutionVersion indicates an expected call of DescribeSolutionVersion
+// DescribeSolutionVersion indicates an expected call of DescribeSolutionVersion.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeSolutionVersion(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSolutionVersion", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeSolutionVersion), arg0)
 }
 
-// DescribeSolutionVersionRequest mocks base method
+// DescribeSolutionVersionRequest mocks base method.
 func (m *MockPersonalizeAPI) DescribeSolutionVersionRequest(arg0 *personalize.DescribeSolutionVersionInput) (*request.Request, *personalize.DescribeSolutionVersionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSolutionVersionRequest", arg0)
@@ -1489,13 +1590,13 @@ func (m *MockPersonalizeAPI) DescribeSolutionVersionRequest(arg0 *personalize.De
 	return ret0, ret1
 }
 
-// DescribeSolutionVersionRequest indicates an expected call of DescribeSolutionVersionRequest
+// DescribeSolutionVersionRequest indicates an expected call of DescribeSolutionVersionRequest.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeSolutionVersionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSolutionVersionRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeSolutionVersionRequest), arg0)
 }
 
-// DescribeSolutionVersionWithContext mocks base method
+// DescribeSolutionVersionWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeSolutionVersionWithContext(arg0 context.Context, arg1 *personalize.DescribeSolutionVersionInput, arg2 ...request.Option) (*personalize.DescribeSolutionVersionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1508,14 +1609,14 @@ func (m *MockPersonalizeAPI) DescribeSolutionVersionWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DescribeSolutionVersionWithContext indicates an expected call of DescribeSolutionVersionWithContext
+// DescribeSolutionVersionWithContext indicates an expected call of DescribeSolutionVersionWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeSolutionVersionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSolutionVersionWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeSolutionVersionWithContext), varargs...)
 }
 
-// DescribeSolutionWithContext mocks base method
+// DescribeSolutionWithContext mocks base method.
 func (m *MockPersonalizeAPI) DescribeSolutionWithContext(arg0 context.Context, arg1 *personalize.DescribeSolutionInput, arg2 ...request.Option) (*personalize.DescribeSolutionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1528,14 +1629,14 @@ func (m *MockPersonalizeAPI) DescribeSolutionWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DescribeSolutionWithContext indicates an expected call of DescribeSolutionWithContext
+// DescribeSolutionWithContext indicates an expected call of DescribeSolutionWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) DescribeSolutionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSolutionWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).DescribeSolutionWithContext), varargs...)
 }
 
-// GetSolutionMetrics mocks base method
+// GetSolutionMetrics mocks base method.
 func (m *MockPersonalizeAPI) GetSolutionMetrics(arg0 *personalize.GetSolutionMetricsInput) (*personalize.GetSolutionMetricsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSolutionMetrics", arg0)
@@ -1544,13 +1645,13 @@ func (m *MockPersonalizeAPI) GetSolutionMetrics(arg0 *personalize.GetSolutionMet
 	return ret0, ret1
 }
 
-// GetSolutionMetrics indicates an expected call of GetSolutionMetrics
+// GetSolutionMetrics indicates an expected call of GetSolutionMetrics.
 func (mr *MockPersonalizeAPIMockRecorder) GetSolutionMetrics(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSolutionMetrics", reflect.TypeOf((*MockPersonalizeAPI)(nil).GetSolutionMetrics), arg0)
 }
 
-// GetSolutionMetricsRequest mocks base method
+// GetSolutionMetricsRequest mocks base method.
 func (m *MockPersonalizeAPI) GetSolutionMetricsRequest(arg0 *personalize.GetSolutionMetricsInput) (*request.Request, *personalize.GetSolutionMetricsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSolutionMetricsRequest", arg0)
@@ -1559,13 +1660,13 @@ func (m *MockPersonalizeAPI) GetSolutionMetricsRequest(arg0 *personalize.GetSolu
 	return ret0, ret1
 }
 
-// GetSolutionMetricsRequest indicates an expected call of GetSolutionMetricsRequest
+// GetSolutionMetricsRequest indicates an expected call of GetSolutionMetricsRequest.
 func (mr *MockPersonalizeAPIMockRecorder) GetSolutionMetricsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSolutionMetricsRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).GetSolutionMetricsRequest), arg0)
 }
 
-// GetSolutionMetricsWithContext mocks base method
+// GetSolutionMetricsWithContext mocks base method.
 func (m *MockPersonalizeAPI) GetSolutionMetricsWithContext(arg0 context.Context, arg1 *personalize.GetSolutionMetricsInput, arg2 ...request.Option) (*personalize.GetSolutionMetricsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1578,14 +1679,14 @@ func (m *MockPersonalizeAPI) GetSolutionMetricsWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// GetSolutionMetricsWithContext indicates an expected call of GetSolutionMetricsWithContext
+// GetSolutionMetricsWithContext indicates an expected call of GetSolutionMetricsWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) GetSolutionMetricsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSolutionMetricsWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).GetSolutionMetricsWithContext), varargs...)
 }
 
-// ListBatchInferenceJobs mocks base method
+// ListBatchInferenceJobs mocks base method.
 func (m *MockPersonalizeAPI) ListBatchInferenceJobs(arg0 *personalize.ListBatchInferenceJobsInput) (*personalize.ListBatchInferenceJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBatchInferenceJobs", arg0)
@@ -1594,13 +1695,13 @@ func (m *MockPersonalizeAPI) ListBatchInferenceJobs(arg0 *personalize.ListBatchI
 	return ret0, ret1
 }
 
-// ListBatchInferenceJobs indicates an expected call of ListBatchInferenceJobs
+// ListBatchInferenceJobs indicates an expected call of ListBatchInferenceJobs.
 func (mr *MockPersonalizeAPIMockRecorder) ListBatchInferenceJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBatchInferenceJobs", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListBatchInferenceJobs), arg0)
 }
 
-// ListBatchInferenceJobsPages mocks base method
+// ListBatchInferenceJobsPages mocks base method.
 func (m *MockPersonalizeAPI) ListBatchInferenceJobsPages(arg0 *personalize.ListBatchInferenceJobsInput, arg1 func(*personalize.ListBatchInferenceJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBatchInferenceJobsPages", arg0, arg1)
@@ -1608,13 +1709,13 @@ func (m *MockPersonalizeAPI) ListBatchInferenceJobsPages(arg0 *personalize.ListB
 	return ret0
 }
 
-// ListBatchInferenceJobsPages indicates an expected call of ListBatchInferenceJobsPages
+// ListBatchInferenceJobsPages indicates an expected call of ListBatchInferenceJobsPages.
 func (mr *MockPersonalizeAPIMockRecorder) ListBatchInferenceJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBatchInferenceJobsPages", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListBatchInferenceJobsPages), arg0, arg1)
 }
 
-// ListBatchInferenceJobsPagesWithContext mocks base method
+// ListBatchInferenceJobsPagesWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListBatchInferenceJobsPagesWithContext(arg0 context.Context, arg1 *personalize.ListBatchInferenceJobsInput, arg2 func(*personalize.ListBatchInferenceJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1626,14 +1727,14 @@ func (m *MockPersonalizeAPI) ListBatchInferenceJobsPagesWithContext(arg0 context
 	return ret0
 }
 
-// ListBatchInferenceJobsPagesWithContext indicates an expected call of ListBatchInferenceJobsPagesWithContext
+// ListBatchInferenceJobsPagesWithContext indicates an expected call of ListBatchInferenceJobsPagesWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListBatchInferenceJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBatchInferenceJobsPagesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListBatchInferenceJobsPagesWithContext), varargs...)
 }
 
-// ListBatchInferenceJobsRequest mocks base method
+// ListBatchInferenceJobsRequest mocks base method.
 func (m *MockPersonalizeAPI) ListBatchInferenceJobsRequest(arg0 *personalize.ListBatchInferenceJobsInput) (*request.Request, *personalize.ListBatchInferenceJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBatchInferenceJobsRequest", arg0)
@@ -1642,13 +1743,13 @@ func (m *MockPersonalizeAPI) ListBatchInferenceJobsRequest(arg0 *personalize.Lis
 	return ret0, ret1
 }
 
-// ListBatchInferenceJobsRequest indicates an expected call of ListBatchInferenceJobsRequest
+// ListBatchInferenceJobsRequest indicates an expected call of ListBatchInferenceJobsRequest.
 func (mr *MockPersonalizeAPIMockRecorder) ListBatchInferenceJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBatchInferenceJobsRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListBatchInferenceJobsRequest), arg0)
 }
 
-// ListBatchInferenceJobsWithContext mocks base method
+// ListBatchInferenceJobsWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListBatchInferenceJobsWithContext(arg0 context.Context, arg1 *personalize.ListBatchInferenceJobsInput, arg2 ...request.Option) (*personalize.ListBatchInferenceJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1661,14 +1762,14 @@ func (m *MockPersonalizeAPI) ListBatchInferenceJobsWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListBatchInferenceJobsWithContext indicates an expected call of ListBatchInferenceJobsWithContext
+// ListBatchInferenceJobsWithContext indicates an expected call of ListBatchInferenceJobsWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListBatchInferenceJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBatchInferenceJobsWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListBatchInferenceJobsWithContext), varargs...)
 }
 
-// ListCampaigns mocks base method
+// ListCampaigns mocks base method.
 func (m *MockPersonalizeAPI) ListCampaigns(arg0 *personalize.ListCampaignsInput) (*personalize.ListCampaignsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCampaigns", arg0)
@@ -1677,13 +1778,13 @@ func (m *MockPersonalizeAPI) ListCampaigns(arg0 *personalize.ListCampaignsInput)
 	return ret0, ret1
 }
 
-// ListCampaigns indicates an expected call of ListCampaigns
+// ListCampaigns indicates an expected call of ListCampaigns.
 func (mr *MockPersonalizeAPIMockRecorder) ListCampaigns(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCampaigns", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListCampaigns), arg0)
 }
 
-// ListCampaignsPages mocks base method
+// ListCampaignsPages mocks base method.
 func (m *MockPersonalizeAPI) ListCampaignsPages(arg0 *personalize.ListCampaignsInput, arg1 func(*personalize.ListCampaignsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCampaignsPages", arg0, arg1)
@@ -1691,13 +1792,13 @@ func (m *MockPersonalizeAPI) ListCampaignsPages(arg0 *personalize.ListCampaignsI
 	return ret0
 }
 
-// ListCampaignsPages indicates an expected call of ListCampaignsPages
+// ListCampaignsPages indicates an expected call of ListCampaignsPages.
 func (mr *MockPersonalizeAPIMockRecorder) ListCampaignsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCampaignsPages", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListCampaignsPages), arg0, arg1)
 }
 
-// ListCampaignsPagesWithContext mocks base method
+// ListCampaignsPagesWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListCampaignsPagesWithContext(arg0 context.Context, arg1 *personalize.ListCampaignsInput, arg2 func(*personalize.ListCampaignsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1709,14 +1810,14 @@ func (m *MockPersonalizeAPI) ListCampaignsPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListCampaignsPagesWithContext indicates an expected call of ListCampaignsPagesWithContext
+// ListCampaignsPagesWithContext indicates an expected call of ListCampaignsPagesWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListCampaignsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCampaignsPagesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListCampaignsPagesWithContext), varargs...)
 }
 
-// ListCampaignsRequest mocks base method
+// ListCampaignsRequest mocks base method.
 func (m *MockPersonalizeAPI) ListCampaignsRequest(arg0 *personalize.ListCampaignsInput) (*request.Request, *personalize.ListCampaignsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCampaignsRequest", arg0)
@@ -1725,13 +1826,13 @@ func (m *MockPersonalizeAPI) ListCampaignsRequest(arg0 *personalize.ListCampaign
 	return ret0, ret1
 }
 
-// ListCampaignsRequest indicates an expected call of ListCampaignsRequest
+// ListCampaignsRequest indicates an expected call of ListCampaignsRequest.
 func (mr *MockPersonalizeAPIMockRecorder) ListCampaignsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCampaignsRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListCampaignsRequest), arg0)
 }
 
-// ListCampaignsWithContext mocks base method
+// ListCampaignsWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListCampaignsWithContext(arg0 context.Context, arg1 *personalize.ListCampaignsInput, arg2 ...request.Option) (*personalize.ListCampaignsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1744,14 +1845,97 @@ func (m *MockPersonalizeAPI) ListCampaignsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListCampaignsWithContext indicates an expected call of ListCampaignsWithContext
+// ListCampaignsWithContext indicates an expected call of ListCampaignsWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListCampaignsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCampaignsWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListCampaignsWithContext), varargs...)
 }
 
-// ListDatasetGroups mocks base method
+// ListDatasetExportJobs mocks base method.
+func (m *MockPersonalizeAPI) ListDatasetExportJobs(arg0 *personalize.ListDatasetExportJobsInput) (*personalize.ListDatasetExportJobsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListDatasetExportJobs", arg0)
+	ret0, _ := ret[0].(*personalize.ListDatasetExportJobsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListDatasetExportJobs indicates an expected call of ListDatasetExportJobs.
+func (mr *MockPersonalizeAPIMockRecorder) ListDatasetExportJobs(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetExportJobs", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetExportJobs), arg0)
+}
+
+// ListDatasetExportJobsPages mocks base method.
+func (m *MockPersonalizeAPI) ListDatasetExportJobsPages(arg0 *personalize.ListDatasetExportJobsInput, arg1 func(*personalize.ListDatasetExportJobsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListDatasetExportJobsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListDatasetExportJobsPages indicates an expected call of ListDatasetExportJobsPages.
+func (mr *MockPersonalizeAPIMockRecorder) ListDatasetExportJobsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetExportJobsPages", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetExportJobsPages), arg0, arg1)
+}
+
+// ListDatasetExportJobsPagesWithContext mocks base method.
+func (m *MockPersonalizeAPI) ListDatasetExportJobsPagesWithContext(arg0 context.Context, arg1 *personalize.ListDatasetExportJobsInput, arg2 func(*personalize.ListDatasetExportJobsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListDatasetExportJobsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListDatasetExportJobsPagesWithContext indicates an expected call of ListDatasetExportJobsPagesWithContext.
+func (mr *MockPersonalizeAPIMockRecorder) ListDatasetExportJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetExportJobsPagesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetExportJobsPagesWithContext), varargs...)
+}
+
+// ListDatasetExportJobsRequest mocks base method.
+func (m *MockPersonalizeAPI) ListDatasetExportJobsRequest(arg0 *personalize.ListDatasetExportJobsInput) (*request.Request, *personalize.ListDatasetExportJobsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListDatasetExportJobsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*personalize.ListDatasetExportJobsOutput)
+	return ret0, ret1
+}
+
+// ListDatasetExportJobsRequest indicates an expected call of ListDatasetExportJobsRequest.
+func (mr *MockPersonalizeAPIMockRecorder) ListDatasetExportJobsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetExportJobsRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetExportJobsRequest), arg0)
+}
+
+// ListDatasetExportJobsWithContext mocks base method.
+func (m *MockPersonalizeAPI) ListDatasetExportJobsWithContext(arg0 context.Context, arg1 *personalize.ListDatasetExportJobsInput, arg2 ...request.Option) (*personalize.ListDatasetExportJobsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListDatasetExportJobsWithContext", varargs...)
+	ret0, _ := ret[0].(*personalize.ListDatasetExportJobsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListDatasetExportJobsWithContext indicates an expected call of ListDatasetExportJobsWithContext.
+func (mr *MockPersonalizeAPIMockRecorder) ListDatasetExportJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetExportJobsWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetExportJobsWithContext), varargs...)
+}
+
+// ListDatasetGroups mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetGroups(arg0 *personalize.ListDatasetGroupsInput) (*personalize.ListDatasetGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetGroups", arg0)
@@ -1760,13 +1944,13 @@ func (m *MockPersonalizeAPI) ListDatasetGroups(arg0 *personalize.ListDatasetGrou
 	return ret0, ret1
 }
 
-// ListDatasetGroups indicates an expected call of ListDatasetGroups
+// ListDatasetGroups indicates an expected call of ListDatasetGroups.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetGroups", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetGroups), arg0)
 }
 
-// ListDatasetGroupsPages mocks base method
+// ListDatasetGroupsPages mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetGroupsPages(arg0 *personalize.ListDatasetGroupsInput, arg1 func(*personalize.ListDatasetGroupsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetGroupsPages", arg0, arg1)
@@ -1774,13 +1958,13 @@ func (m *MockPersonalizeAPI) ListDatasetGroupsPages(arg0 *personalize.ListDatase
 	return ret0
 }
 
-// ListDatasetGroupsPages indicates an expected call of ListDatasetGroupsPages
+// ListDatasetGroupsPages indicates an expected call of ListDatasetGroupsPages.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetGroupsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetGroupsPages", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetGroupsPages), arg0, arg1)
 }
 
-// ListDatasetGroupsPagesWithContext mocks base method
+// ListDatasetGroupsPagesWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetGroupsPagesWithContext(arg0 context.Context, arg1 *personalize.ListDatasetGroupsInput, arg2 func(*personalize.ListDatasetGroupsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1792,14 +1976,14 @@ func (m *MockPersonalizeAPI) ListDatasetGroupsPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListDatasetGroupsPagesWithContext indicates an expected call of ListDatasetGroupsPagesWithContext
+// ListDatasetGroupsPagesWithContext indicates an expected call of ListDatasetGroupsPagesWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetGroupsPagesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetGroupsPagesWithContext), varargs...)
 }
 
-// ListDatasetGroupsRequest mocks base method
+// ListDatasetGroupsRequest mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetGroupsRequest(arg0 *personalize.ListDatasetGroupsInput) (*request.Request, *personalize.ListDatasetGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetGroupsRequest", arg0)
@@ -1808,13 +1992,13 @@ func (m *MockPersonalizeAPI) ListDatasetGroupsRequest(arg0 *personalize.ListData
 	return ret0, ret1
 }
 
-// ListDatasetGroupsRequest indicates an expected call of ListDatasetGroupsRequest
+// ListDatasetGroupsRequest indicates an expected call of ListDatasetGroupsRequest.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetGroupsRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetGroupsRequest), arg0)
 }
 
-// ListDatasetGroupsWithContext mocks base method
+// ListDatasetGroupsWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetGroupsWithContext(arg0 context.Context, arg1 *personalize.ListDatasetGroupsInput, arg2 ...request.Option) (*personalize.ListDatasetGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1827,14 +2011,14 @@ func (m *MockPersonalizeAPI) ListDatasetGroupsWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListDatasetGroupsWithContext indicates an expected call of ListDatasetGroupsWithContext
+// ListDatasetGroupsWithContext indicates an expected call of ListDatasetGroupsWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetGroupsWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetGroupsWithContext), varargs...)
 }
 
-// ListDatasetImportJobs mocks base method
+// ListDatasetImportJobs mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetImportJobs(arg0 *personalize.ListDatasetImportJobsInput) (*personalize.ListDatasetImportJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetImportJobs", arg0)
@@ -1843,13 +2027,13 @@ func (m *MockPersonalizeAPI) ListDatasetImportJobs(arg0 *personalize.ListDataset
 	return ret0, ret1
 }
 
-// ListDatasetImportJobs indicates an expected call of ListDatasetImportJobs
+// ListDatasetImportJobs indicates an expected call of ListDatasetImportJobs.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetImportJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetImportJobs", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetImportJobs), arg0)
 }
 
-// ListDatasetImportJobsPages mocks base method
+// ListDatasetImportJobsPages mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetImportJobsPages(arg0 *personalize.ListDatasetImportJobsInput, arg1 func(*personalize.ListDatasetImportJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetImportJobsPages", arg0, arg1)
@@ -1857,13 +2041,13 @@ func (m *MockPersonalizeAPI) ListDatasetImportJobsPages(arg0 *personalize.ListDa
 	return ret0
 }
 
-// ListDatasetImportJobsPages indicates an expected call of ListDatasetImportJobsPages
+// ListDatasetImportJobsPages indicates an expected call of ListDatasetImportJobsPages.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetImportJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetImportJobsPages", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetImportJobsPages), arg0, arg1)
 }
 
-// ListDatasetImportJobsPagesWithContext mocks base method
+// ListDatasetImportJobsPagesWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetImportJobsPagesWithContext(arg0 context.Context, arg1 *personalize.ListDatasetImportJobsInput, arg2 func(*personalize.ListDatasetImportJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1875,14 +2059,14 @@ func (m *MockPersonalizeAPI) ListDatasetImportJobsPagesWithContext(arg0 context.
 	return ret0
 }
 
-// ListDatasetImportJobsPagesWithContext indicates an expected call of ListDatasetImportJobsPagesWithContext
+// ListDatasetImportJobsPagesWithContext indicates an expected call of ListDatasetImportJobsPagesWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetImportJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetImportJobsPagesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetImportJobsPagesWithContext), varargs...)
 }
 
-// ListDatasetImportJobsRequest mocks base method
+// ListDatasetImportJobsRequest mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetImportJobsRequest(arg0 *personalize.ListDatasetImportJobsInput) (*request.Request, *personalize.ListDatasetImportJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetImportJobsRequest", arg0)
@@ -1891,13 +2075,13 @@ func (m *MockPersonalizeAPI) ListDatasetImportJobsRequest(arg0 *personalize.List
 	return ret0, ret1
 }
 
-// ListDatasetImportJobsRequest indicates an expected call of ListDatasetImportJobsRequest
+// ListDatasetImportJobsRequest indicates an expected call of ListDatasetImportJobsRequest.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetImportJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetImportJobsRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetImportJobsRequest), arg0)
 }
 
-// ListDatasetImportJobsWithContext mocks base method
+// ListDatasetImportJobsWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetImportJobsWithContext(arg0 context.Context, arg1 *personalize.ListDatasetImportJobsInput, arg2 ...request.Option) (*personalize.ListDatasetImportJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1910,14 +2094,14 @@ func (m *MockPersonalizeAPI) ListDatasetImportJobsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListDatasetImportJobsWithContext indicates an expected call of ListDatasetImportJobsWithContext
+// ListDatasetImportJobsWithContext indicates an expected call of ListDatasetImportJobsWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetImportJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetImportJobsWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetImportJobsWithContext), varargs...)
 }
 
-// ListDatasets mocks base method
+// ListDatasets mocks base method.
 func (m *MockPersonalizeAPI) ListDatasets(arg0 *personalize.ListDatasetsInput) (*personalize.ListDatasetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasets", arg0)
@@ -1926,13 +2110,13 @@ func (m *MockPersonalizeAPI) ListDatasets(arg0 *personalize.ListDatasetsInput) (
 	return ret0, ret1
 }
 
-// ListDatasets indicates an expected call of ListDatasets
+// ListDatasets indicates an expected call of ListDatasets.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasets", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasets), arg0)
 }
 
-// ListDatasetsPages mocks base method
+// ListDatasetsPages mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetsPages(arg0 *personalize.ListDatasetsInput, arg1 func(*personalize.ListDatasetsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetsPages", arg0, arg1)
@@ -1940,13 +2124,13 @@ func (m *MockPersonalizeAPI) ListDatasetsPages(arg0 *personalize.ListDatasetsInp
 	return ret0
 }
 
-// ListDatasetsPages indicates an expected call of ListDatasetsPages
+// ListDatasetsPages indicates an expected call of ListDatasetsPages.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetsPages", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetsPages), arg0, arg1)
 }
 
-// ListDatasetsPagesWithContext mocks base method
+// ListDatasetsPagesWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetsPagesWithContext(arg0 context.Context, arg1 *personalize.ListDatasetsInput, arg2 func(*personalize.ListDatasetsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1958,14 +2142,14 @@ func (m *MockPersonalizeAPI) ListDatasetsPagesWithContext(arg0 context.Context, 
 	return ret0
 }
 
-// ListDatasetsPagesWithContext indicates an expected call of ListDatasetsPagesWithContext
+// ListDatasetsPagesWithContext indicates an expected call of ListDatasetsPagesWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetsPagesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetsPagesWithContext), varargs...)
 }
 
-// ListDatasetsRequest mocks base method
+// ListDatasetsRequest mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetsRequest(arg0 *personalize.ListDatasetsInput) (*request.Request, *personalize.ListDatasetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetsRequest", arg0)
@@ -1974,13 +2158,13 @@ func (m *MockPersonalizeAPI) ListDatasetsRequest(arg0 *personalize.ListDatasetsI
 	return ret0, ret1
 }
 
-// ListDatasetsRequest indicates an expected call of ListDatasetsRequest
+// ListDatasetsRequest indicates an expected call of ListDatasetsRequest.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetsRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetsRequest), arg0)
 }
 
-// ListDatasetsWithContext mocks base method
+// ListDatasetsWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListDatasetsWithContext(arg0 context.Context, arg1 *personalize.ListDatasetsInput, arg2 ...request.Option) (*personalize.ListDatasetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1993,14 +2177,14 @@ func (m *MockPersonalizeAPI) ListDatasetsWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListDatasetsWithContext indicates an expected call of ListDatasetsWithContext
+// ListDatasetsWithContext indicates an expected call of ListDatasetsWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListDatasetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetsWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListDatasetsWithContext), varargs...)
 }
 
-// ListEventTrackers mocks base method
+// ListEventTrackers mocks base method.
 func (m *MockPersonalizeAPI) ListEventTrackers(arg0 *personalize.ListEventTrackersInput) (*personalize.ListEventTrackersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEventTrackers", arg0)
@@ -2009,13 +2193,13 @@ func (m *MockPersonalizeAPI) ListEventTrackers(arg0 *personalize.ListEventTracke
 	return ret0, ret1
 }
 
-// ListEventTrackers indicates an expected call of ListEventTrackers
+// ListEventTrackers indicates an expected call of ListEventTrackers.
 func (mr *MockPersonalizeAPIMockRecorder) ListEventTrackers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventTrackers", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListEventTrackers), arg0)
 }
 
-// ListEventTrackersPages mocks base method
+// ListEventTrackersPages mocks base method.
 func (m *MockPersonalizeAPI) ListEventTrackersPages(arg0 *personalize.ListEventTrackersInput, arg1 func(*personalize.ListEventTrackersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEventTrackersPages", arg0, arg1)
@@ -2023,13 +2207,13 @@ func (m *MockPersonalizeAPI) ListEventTrackersPages(arg0 *personalize.ListEventT
 	return ret0
 }
 
-// ListEventTrackersPages indicates an expected call of ListEventTrackersPages
+// ListEventTrackersPages indicates an expected call of ListEventTrackersPages.
 func (mr *MockPersonalizeAPIMockRecorder) ListEventTrackersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventTrackersPages", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListEventTrackersPages), arg0, arg1)
 }
 
-// ListEventTrackersPagesWithContext mocks base method
+// ListEventTrackersPagesWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListEventTrackersPagesWithContext(arg0 context.Context, arg1 *personalize.ListEventTrackersInput, arg2 func(*personalize.ListEventTrackersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2041,14 +2225,14 @@ func (m *MockPersonalizeAPI) ListEventTrackersPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListEventTrackersPagesWithContext indicates an expected call of ListEventTrackersPagesWithContext
+// ListEventTrackersPagesWithContext indicates an expected call of ListEventTrackersPagesWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListEventTrackersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventTrackersPagesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListEventTrackersPagesWithContext), varargs...)
 }
 
-// ListEventTrackersRequest mocks base method
+// ListEventTrackersRequest mocks base method.
 func (m *MockPersonalizeAPI) ListEventTrackersRequest(arg0 *personalize.ListEventTrackersInput) (*request.Request, *personalize.ListEventTrackersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEventTrackersRequest", arg0)
@@ -2057,13 +2241,13 @@ func (m *MockPersonalizeAPI) ListEventTrackersRequest(arg0 *personalize.ListEven
 	return ret0, ret1
 }
 
-// ListEventTrackersRequest indicates an expected call of ListEventTrackersRequest
+// ListEventTrackersRequest indicates an expected call of ListEventTrackersRequest.
 func (mr *MockPersonalizeAPIMockRecorder) ListEventTrackersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventTrackersRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListEventTrackersRequest), arg0)
 }
 
-// ListEventTrackersWithContext mocks base method
+// ListEventTrackersWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListEventTrackersWithContext(arg0 context.Context, arg1 *personalize.ListEventTrackersInput, arg2 ...request.Option) (*personalize.ListEventTrackersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2076,14 +2260,14 @@ func (m *MockPersonalizeAPI) ListEventTrackersWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListEventTrackersWithContext indicates an expected call of ListEventTrackersWithContext
+// ListEventTrackersWithContext indicates an expected call of ListEventTrackersWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListEventTrackersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventTrackersWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListEventTrackersWithContext), varargs...)
 }
 
-// ListFilters mocks base method
+// ListFilters mocks base method.
 func (m *MockPersonalizeAPI) ListFilters(arg0 *personalize.ListFiltersInput) (*personalize.ListFiltersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFilters", arg0)
@@ -2092,13 +2276,46 @@ func (m *MockPersonalizeAPI) ListFilters(arg0 *personalize.ListFiltersInput) (*p
 	return ret0, ret1
 }
 
-// ListFilters indicates an expected call of ListFilters
+// ListFilters indicates an expected call of ListFilters.
 func (mr *MockPersonalizeAPIMockRecorder) ListFilters(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFilters", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListFilters), arg0)
 }
 
-// ListFiltersRequest mocks base method
+// ListFiltersPages mocks base method.
+func (m *MockPersonalizeAPI) ListFiltersPages(arg0 *personalize.ListFiltersInput, arg1 func(*personalize.ListFiltersOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListFiltersPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListFiltersPages indicates an expected call of ListFiltersPages.
+func (mr *MockPersonalizeAPIMockRecorder) ListFiltersPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFiltersPages", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListFiltersPages), arg0, arg1)
+}
+
+// ListFiltersPagesWithContext mocks base method.
+func (m *MockPersonalizeAPI) ListFiltersPagesWithContext(arg0 context.Context, arg1 *personalize.ListFiltersInput, arg2 func(*personalize.ListFiltersOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListFiltersPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListFiltersPagesWithContext indicates an expected call of ListFiltersPagesWithContext.
+func (mr *MockPersonalizeAPIMockRecorder) ListFiltersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFiltersPagesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListFiltersPagesWithContext), varargs...)
+}
+
+// ListFiltersRequest mocks base method.
 func (m *MockPersonalizeAPI) ListFiltersRequest(arg0 *personalize.ListFiltersInput) (*request.Request, *personalize.ListFiltersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFiltersRequest", arg0)
@@ -2107,13 +2324,13 @@ func (m *MockPersonalizeAPI) ListFiltersRequest(arg0 *personalize.ListFiltersInp
 	return ret0, ret1
 }
 
-// ListFiltersRequest indicates an expected call of ListFiltersRequest
+// ListFiltersRequest indicates an expected call of ListFiltersRequest.
 func (mr *MockPersonalizeAPIMockRecorder) ListFiltersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFiltersRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListFiltersRequest), arg0)
 }
 
-// ListFiltersWithContext mocks base method
+// ListFiltersWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListFiltersWithContext(arg0 context.Context, arg1 *personalize.ListFiltersInput, arg2 ...request.Option) (*personalize.ListFiltersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2126,14 +2343,14 @@ func (m *MockPersonalizeAPI) ListFiltersWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ListFiltersWithContext indicates an expected call of ListFiltersWithContext
+// ListFiltersWithContext indicates an expected call of ListFiltersWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListFiltersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFiltersWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListFiltersWithContext), varargs...)
 }
 
-// ListRecipes mocks base method
+// ListRecipes mocks base method.
 func (m *MockPersonalizeAPI) ListRecipes(arg0 *personalize.ListRecipesInput) (*personalize.ListRecipesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecipes", arg0)
@@ -2142,13 +2359,13 @@ func (m *MockPersonalizeAPI) ListRecipes(arg0 *personalize.ListRecipesInput) (*p
 	return ret0, ret1
 }
 
-// ListRecipes indicates an expected call of ListRecipes
+// ListRecipes indicates an expected call of ListRecipes.
 func (mr *MockPersonalizeAPIMockRecorder) ListRecipes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipes", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListRecipes), arg0)
 }
 
-// ListRecipesPages mocks base method
+// ListRecipesPages mocks base method.
 func (m *MockPersonalizeAPI) ListRecipesPages(arg0 *personalize.ListRecipesInput, arg1 func(*personalize.ListRecipesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecipesPages", arg0, arg1)
@@ -2156,13 +2373,13 @@ func (m *MockPersonalizeAPI) ListRecipesPages(arg0 *personalize.ListRecipesInput
 	return ret0
 }
 
-// ListRecipesPages indicates an expected call of ListRecipesPages
+// ListRecipesPages indicates an expected call of ListRecipesPages.
 func (mr *MockPersonalizeAPIMockRecorder) ListRecipesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipesPages", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListRecipesPages), arg0, arg1)
 }
 
-// ListRecipesPagesWithContext mocks base method
+// ListRecipesPagesWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListRecipesPagesWithContext(arg0 context.Context, arg1 *personalize.ListRecipesInput, arg2 func(*personalize.ListRecipesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2174,14 +2391,14 @@ func (m *MockPersonalizeAPI) ListRecipesPagesWithContext(arg0 context.Context, a
 	return ret0
 }
 
-// ListRecipesPagesWithContext indicates an expected call of ListRecipesPagesWithContext
+// ListRecipesPagesWithContext indicates an expected call of ListRecipesPagesWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListRecipesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipesPagesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListRecipesPagesWithContext), varargs...)
 }
 
-// ListRecipesRequest mocks base method
+// ListRecipesRequest mocks base method.
 func (m *MockPersonalizeAPI) ListRecipesRequest(arg0 *personalize.ListRecipesInput) (*request.Request, *personalize.ListRecipesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecipesRequest", arg0)
@@ -2190,13 +2407,13 @@ func (m *MockPersonalizeAPI) ListRecipesRequest(arg0 *personalize.ListRecipesInp
 	return ret0, ret1
 }
 
-// ListRecipesRequest indicates an expected call of ListRecipesRequest
+// ListRecipesRequest indicates an expected call of ListRecipesRequest.
 func (mr *MockPersonalizeAPIMockRecorder) ListRecipesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipesRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListRecipesRequest), arg0)
 }
 
-// ListRecipesWithContext mocks base method
+// ListRecipesWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListRecipesWithContext(arg0 context.Context, arg1 *personalize.ListRecipesInput, arg2 ...request.Option) (*personalize.ListRecipesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2209,14 +2426,14 @@ func (m *MockPersonalizeAPI) ListRecipesWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ListRecipesWithContext indicates an expected call of ListRecipesWithContext
+// ListRecipesWithContext indicates an expected call of ListRecipesWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListRecipesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListRecipesWithContext), varargs...)
 }
 
-// ListSchemas mocks base method
+// ListSchemas mocks base method.
 func (m *MockPersonalizeAPI) ListSchemas(arg0 *personalize.ListSchemasInput) (*personalize.ListSchemasOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchemas", arg0)
@@ -2225,13 +2442,13 @@ func (m *MockPersonalizeAPI) ListSchemas(arg0 *personalize.ListSchemasInput) (*p
 	return ret0, ret1
 }
 
-// ListSchemas indicates an expected call of ListSchemas
+// ListSchemas indicates an expected call of ListSchemas.
 func (mr *MockPersonalizeAPIMockRecorder) ListSchemas(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemas", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSchemas), arg0)
 }
 
-// ListSchemasPages mocks base method
+// ListSchemasPages mocks base method.
 func (m *MockPersonalizeAPI) ListSchemasPages(arg0 *personalize.ListSchemasInput, arg1 func(*personalize.ListSchemasOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchemasPages", arg0, arg1)
@@ -2239,13 +2456,13 @@ func (m *MockPersonalizeAPI) ListSchemasPages(arg0 *personalize.ListSchemasInput
 	return ret0
 }
 
-// ListSchemasPages indicates an expected call of ListSchemasPages
+// ListSchemasPages indicates an expected call of ListSchemasPages.
 func (mr *MockPersonalizeAPIMockRecorder) ListSchemasPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemasPages", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSchemasPages), arg0, arg1)
 }
 
-// ListSchemasPagesWithContext mocks base method
+// ListSchemasPagesWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListSchemasPagesWithContext(arg0 context.Context, arg1 *personalize.ListSchemasInput, arg2 func(*personalize.ListSchemasOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2257,14 +2474,14 @@ func (m *MockPersonalizeAPI) ListSchemasPagesWithContext(arg0 context.Context, a
 	return ret0
 }
 
-// ListSchemasPagesWithContext indicates an expected call of ListSchemasPagesWithContext
+// ListSchemasPagesWithContext indicates an expected call of ListSchemasPagesWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListSchemasPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemasPagesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSchemasPagesWithContext), varargs...)
 }
 
-// ListSchemasRequest mocks base method
+// ListSchemasRequest mocks base method.
 func (m *MockPersonalizeAPI) ListSchemasRequest(arg0 *personalize.ListSchemasInput) (*request.Request, *personalize.ListSchemasOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchemasRequest", arg0)
@@ -2273,13 +2490,13 @@ func (m *MockPersonalizeAPI) ListSchemasRequest(arg0 *personalize.ListSchemasInp
 	return ret0, ret1
 }
 
-// ListSchemasRequest indicates an expected call of ListSchemasRequest
+// ListSchemasRequest indicates an expected call of ListSchemasRequest.
 func (mr *MockPersonalizeAPIMockRecorder) ListSchemasRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemasRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSchemasRequest), arg0)
 }
 
-// ListSchemasWithContext mocks base method
+// ListSchemasWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListSchemasWithContext(arg0 context.Context, arg1 *personalize.ListSchemasInput, arg2 ...request.Option) (*personalize.ListSchemasOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2292,14 +2509,14 @@ func (m *MockPersonalizeAPI) ListSchemasWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ListSchemasWithContext indicates an expected call of ListSchemasWithContext
+// ListSchemasWithContext indicates an expected call of ListSchemasWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListSchemasWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemasWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSchemasWithContext), varargs...)
 }
 
-// ListSolutionVersions mocks base method
+// ListSolutionVersions mocks base method.
 func (m *MockPersonalizeAPI) ListSolutionVersions(arg0 *personalize.ListSolutionVersionsInput) (*personalize.ListSolutionVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSolutionVersions", arg0)
@@ -2308,13 +2525,13 @@ func (m *MockPersonalizeAPI) ListSolutionVersions(arg0 *personalize.ListSolution
 	return ret0, ret1
 }
 
-// ListSolutionVersions indicates an expected call of ListSolutionVersions
+// ListSolutionVersions indicates an expected call of ListSolutionVersions.
 func (mr *MockPersonalizeAPIMockRecorder) ListSolutionVersions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSolutionVersions", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSolutionVersions), arg0)
 }
 
-// ListSolutionVersionsPages mocks base method
+// ListSolutionVersionsPages mocks base method.
 func (m *MockPersonalizeAPI) ListSolutionVersionsPages(arg0 *personalize.ListSolutionVersionsInput, arg1 func(*personalize.ListSolutionVersionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSolutionVersionsPages", arg0, arg1)
@@ -2322,13 +2539,13 @@ func (m *MockPersonalizeAPI) ListSolutionVersionsPages(arg0 *personalize.ListSol
 	return ret0
 }
 
-// ListSolutionVersionsPages indicates an expected call of ListSolutionVersionsPages
+// ListSolutionVersionsPages indicates an expected call of ListSolutionVersionsPages.
 func (mr *MockPersonalizeAPIMockRecorder) ListSolutionVersionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSolutionVersionsPages", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSolutionVersionsPages), arg0, arg1)
 }
 
-// ListSolutionVersionsPagesWithContext mocks base method
+// ListSolutionVersionsPagesWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListSolutionVersionsPagesWithContext(arg0 context.Context, arg1 *personalize.ListSolutionVersionsInput, arg2 func(*personalize.ListSolutionVersionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2340,14 +2557,14 @@ func (m *MockPersonalizeAPI) ListSolutionVersionsPagesWithContext(arg0 context.C
 	return ret0
 }
 
-// ListSolutionVersionsPagesWithContext indicates an expected call of ListSolutionVersionsPagesWithContext
+// ListSolutionVersionsPagesWithContext indicates an expected call of ListSolutionVersionsPagesWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListSolutionVersionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSolutionVersionsPagesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSolutionVersionsPagesWithContext), varargs...)
 }
 
-// ListSolutionVersionsRequest mocks base method
+// ListSolutionVersionsRequest mocks base method.
 func (m *MockPersonalizeAPI) ListSolutionVersionsRequest(arg0 *personalize.ListSolutionVersionsInput) (*request.Request, *personalize.ListSolutionVersionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSolutionVersionsRequest", arg0)
@@ -2356,13 +2573,13 @@ func (m *MockPersonalizeAPI) ListSolutionVersionsRequest(arg0 *personalize.ListS
 	return ret0, ret1
 }
 
-// ListSolutionVersionsRequest indicates an expected call of ListSolutionVersionsRequest
+// ListSolutionVersionsRequest indicates an expected call of ListSolutionVersionsRequest.
 func (mr *MockPersonalizeAPIMockRecorder) ListSolutionVersionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSolutionVersionsRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSolutionVersionsRequest), arg0)
 }
 
-// ListSolutionVersionsWithContext mocks base method
+// ListSolutionVersionsWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListSolutionVersionsWithContext(arg0 context.Context, arg1 *personalize.ListSolutionVersionsInput, arg2 ...request.Option) (*personalize.ListSolutionVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2375,14 +2592,14 @@ func (m *MockPersonalizeAPI) ListSolutionVersionsWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListSolutionVersionsWithContext indicates an expected call of ListSolutionVersionsWithContext
+// ListSolutionVersionsWithContext indicates an expected call of ListSolutionVersionsWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListSolutionVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSolutionVersionsWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSolutionVersionsWithContext), varargs...)
 }
 
-// ListSolutions mocks base method
+// ListSolutions mocks base method.
 func (m *MockPersonalizeAPI) ListSolutions(arg0 *personalize.ListSolutionsInput) (*personalize.ListSolutionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSolutions", arg0)
@@ -2391,13 +2608,13 @@ func (m *MockPersonalizeAPI) ListSolutions(arg0 *personalize.ListSolutionsInput)
 	return ret0, ret1
 }
 
-// ListSolutions indicates an expected call of ListSolutions
+// ListSolutions indicates an expected call of ListSolutions.
 func (mr *MockPersonalizeAPIMockRecorder) ListSolutions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSolutions", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSolutions), arg0)
 }
 
-// ListSolutionsPages mocks base method
+// ListSolutionsPages mocks base method.
 func (m *MockPersonalizeAPI) ListSolutionsPages(arg0 *personalize.ListSolutionsInput, arg1 func(*personalize.ListSolutionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSolutionsPages", arg0, arg1)
@@ -2405,13 +2622,13 @@ func (m *MockPersonalizeAPI) ListSolutionsPages(arg0 *personalize.ListSolutionsI
 	return ret0
 }
 
-// ListSolutionsPages indicates an expected call of ListSolutionsPages
+// ListSolutionsPages indicates an expected call of ListSolutionsPages.
 func (mr *MockPersonalizeAPIMockRecorder) ListSolutionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSolutionsPages", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSolutionsPages), arg0, arg1)
 }
 
-// ListSolutionsPagesWithContext mocks base method
+// ListSolutionsPagesWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListSolutionsPagesWithContext(arg0 context.Context, arg1 *personalize.ListSolutionsInput, arg2 func(*personalize.ListSolutionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2423,14 +2640,14 @@ func (m *MockPersonalizeAPI) ListSolutionsPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListSolutionsPagesWithContext indicates an expected call of ListSolutionsPagesWithContext
+// ListSolutionsPagesWithContext indicates an expected call of ListSolutionsPagesWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListSolutionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSolutionsPagesWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSolutionsPagesWithContext), varargs...)
 }
 
-// ListSolutionsRequest mocks base method
+// ListSolutionsRequest mocks base method.
 func (m *MockPersonalizeAPI) ListSolutionsRequest(arg0 *personalize.ListSolutionsInput) (*request.Request, *personalize.ListSolutionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSolutionsRequest", arg0)
@@ -2439,13 +2656,13 @@ func (m *MockPersonalizeAPI) ListSolutionsRequest(arg0 *personalize.ListSolution
 	return ret0, ret1
 }
 
-// ListSolutionsRequest indicates an expected call of ListSolutionsRequest
+// ListSolutionsRequest indicates an expected call of ListSolutionsRequest.
 func (mr *MockPersonalizeAPIMockRecorder) ListSolutionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSolutionsRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSolutionsRequest), arg0)
 }
 
-// ListSolutionsWithContext mocks base method
+// ListSolutionsWithContext mocks base method.
 func (m *MockPersonalizeAPI) ListSolutionsWithContext(arg0 context.Context, arg1 *personalize.ListSolutionsInput, arg2 ...request.Option) (*personalize.ListSolutionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2458,14 +2675,14 @@ func (m *MockPersonalizeAPI) ListSolutionsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListSolutionsWithContext indicates an expected call of ListSolutionsWithContext
+// ListSolutionsWithContext indicates an expected call of ListSolutionsWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) ListSolutionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSolutionsWithContext", reflect.TypeOf((*MockPersonalizeAPI)(nil).ListSolutionsWithContext), varargs...)
 }
 
-// UpdateCampaign mocks base method
+// UpdateCampaign mocks base method.
 func (m *MockPersonalizeAPI) UpdateCampaign(arg0 *personalize.UpdateCampaignInput) (*personalize.UpdateCampaignOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCampaign", arg0)
@@ -2474,13 +2691,13 @@ func (m *MockPersonalizeAPI) UpdateCampaign(arg0 *personalize.UpdateCampaignInpu
 	return ret0, ret1
 }
 
-// UpdateCampaign indicates an expected call of UpdateCampaign
+// UpdateCampaign indicates an expected call of UpdateCampaign.
 func (mr *MockPersonalizeAPIMockRecorder) UpdateCampaign(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCampaign", reflect.TypeOf((*MockPersonalizeAPI)(nil).UpdateCampaign), arg0)
 }
 
-// UpdateCampaignRequest mocks base method
+// UpdateCampaignRequest mocks base method.
 func (m *MockPersonalizeAPI) UpdateCampaignRequest(arg0 *personalize.UpdateCampaignInput) (*request.Request, *personalize.UpdateCampaignOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCampaignRequest", arg0)
@@ -2489,13 +2706,13 @@ func (m *MockPersonalizeAPI) UpdateCampaignRequest(arg0 *personalize.UpdateCampa
 	return ret0, ret1
 }
 
-// UpdateCampaignRequest indicates an expected call of UpdateCampaignRequest
+// UpdateCampaignRequest indicates an expected call of UpdateCampaignRequest.
 func (mr *MockPersonalizeAPIMockRecorder) UpdateCampaignRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCampaignRequest", reflect.TypeOf((*MockPersonalizeAPI)(nil).UpdateCampaignRequest), arg0)
 }
 
-// UpdateCampaignWithContext mocks base method
+// UpdateCampaignWithContext mocks base method.
 func (m *MockPersonalizeAPI) UpdateCampaignWithContext(arg0 context.Context, arg1 *personalize.UpdateCampaignInput, arg2 ...request.Option) (*personalize.UpdateCampaignOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2508,7 +2725,7 @@ func (m *MockPersonalizeAPI) UpdateCampaignWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UpdateCampaignWithContext indicates an expected call of UpdateCampaignWithContext
+// UpdateCampaignWithContext indicates an expected call of UpdateCampaignWithContext.
 func (mr *MockPersonalizeAPIMockRecorder) UpdateCampaignWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

@@ -6,36 +6,37 @@ package cognitosyncmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	cognitosync "github.com/aws/aws-sdk-go/service/cognitosync"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockCognitoSyncAPI is a mock of CognitoSyncAPI interface
+// MockCognitoSyncAPI is a mock of CognitoSyncAPI interface.
 type MockCognitoSyncAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockCognitoSyncAPIMockRecorder
 }
 
-// MockCognitoSyncAPIMockRecorder is the mock recorder for MockCognitoSyncAPI
+// MockCognitoSyncAPIMockRecorder is the mock recorder for MockCognitoSyncAPI.
 type MockCognitoSyncAPIMockRecorder struct {
 	mock *MockCognitoSyncAPI
 }
 
-// NewMockCognitoSyncAPI creates a new mock instance
+// NewMockCognitoSyncAPI creates a new mock instance.
 func NewMockCognitoSyncAPI(ctrl *gomock.Controller) *MockCognitoSyncAPI {
 	mock := &MockCognitoSyncAPI{ctrl: ctrl}
 	mock.recorder = &MockCognitoSyncAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockCognitoSyncAPI) EXPECT() *MockCognitoSyncAPIMockRecorder {
 	return m.recorder
 }
 
-// BulkPublish mocks base method
+// BulkPublish mocks base method.
 func (m *MockCognitoSyncAPI) BulkPublish(arg0 *cognitosync.BulkPublishInput) (*cognitosync.BulkPublishOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BulkPublish", arg0)
@@ -44,13 +45,13 @@ func (m *MockCognitoSyncAPI) BulkPublish(arg0 *cognitosync.BulkPublishInput) (*c
 	return ret0, ret1
 }
 
-// BulkPublish indicates an expected call of BulkPublish
+// BulkPublish indicates an expected call of BulkPublish.
 func (mr *MockCognitoSyncAPIMockRecorder) BulkPublish(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BulkPublish", reflect.TypeOf((*MockCognitoSyncAPI)(nil).BulkPublish), arg0)
 }
 
-// BulkPublishRequest mocks base method
+// BulkPublishRequest mocks base method.
 func (m *MockCognitoSyncAPI) BulkPublishRequest(arg0 *cognitosync.BulkPublishInput) (*request.Request, *cognitosync.BulkPublishOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BulkPublishRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockCognitoSyncAPI) BulkPublishRequest(arg0 *cognitosync.BulkPublishInp
 	return ret0, ret1
 }
 
-// BulkPublishRequest indicates an expected call of BulkPublishRequest
+// BulkPublishRequest indicates an expected call of BulkPublishRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) BulkPublishRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BulkPublishRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).BulkPublishRequest), arg0)
 }
 
-// BulkPublishWithContext mocks base method
+// BulkPublishWithContext mocks base method.
 func (m *MockCognitoSyncAPI) BulkPublishWithContext(arg0 context.Context, arg1 *cognitosync.BulkPublishInput, arg2 ...request.Option) (*cognitosync.BulkPublishOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockCognitoSyncAPI) BulkPublishWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// BulkPublishWithContext indicates an expected call of BulkPublishWithContext
+// BulkPublishWithContext indicates an expected call of BulkPublishWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) BulkPublishWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BulkPublishWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).BulkPublishWithContext), varargs...)
 }
 
-// DeleteDataset mocks base method
+// DeleteDataset mocks base method.
 func (m *MockCognitoSyncAPI) DeleteDataset(arg0 *cognitosync.DeleteDatasetInput) (*cognitosync.DeleteDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDataset", arg0)
@@ -94,13 +95,13 @@ func (m *MockCognitoSyncAPI) DeleteDataset(arg0 *cognitosync.DeleteDatasetInput)
 	return ret0, ret1
 }
 
-// DeleteDataset indicates an expected call of DeleteDataset
+// DeleteDataset indicates an expected call of DeleteDataset.
 func (mr *MockCognitoSyncAPIMockRecorder) DeleteDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataset", reflect.TypeOf((*MockCognitoSyncAPI)(nil).DeleteDataset), arg0)
 }
 
-// DeleteDatasetRequest mocks base method
+// DeleteDatasetRequest mocks base method.
 func (m *MockCognitoSyncAPI) DeleteDatasetRequest(arg0 *cognitosync.DeleteDatasetInput) (*request.Request, *cognitosync.DeleteDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDatasetRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockCognitoSyncAPI) DeleteDatasetRequest(arg0 *cognitosync.DeleteDatase
 	return ret0, ret1
 }
 
-// DeleteDatasetRequest indicates an expected call of DeleteDatasetRequest
+// DeleteDatasetRequest indicates an expected call of DeleteDatasetRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) DeleteDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatasetRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).DeleteDatasetRequest), arg0)
 }
 
-// DeleteDatasetWithContext mocks base method
+// DeleteDatasetWithContext mocks base method.
 func (m *MockCognitoSyncAPI) DeleteDatasetWithContext(arg0 context.Context, arg1 *cognitosync.DeleteDatasetInput, arg2 ...request.Option) (*cognitosync.DeleteDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockCognitoSyncAPI) DeleteDatasetWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DeleteDatasetWithContext indicates an expected call of DeleteDatasetWithContext
+// DeleteDatasetWithContext indicates an expected call of DeleteDatasetWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) DeleteDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatasetWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).DeleteDatasetWithContext), varargs...)
 }
 
-// DescribeDataset mocks base method
+// DescribeDataset mocks base method.
 func (m *MockCognitoSyncAPI) DescribeDataset(arg0 *cognitosync.DescribeDatasetInput) (*cognitosync.DescribeDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDataset", arg0)
@@ -144,13 +145,13 @@ func (m *MockCognitoSyncAPI) DescribeDataset(arg0 *cognitosync.DescribeDatasetIn
 	return ret0, ret1
 }
 
-// DescribeDataset indicates an expected call of DescribeDataset
+// DescribeDataset indicates an expected call of DescribeDataset.
 func (mr *MockCognitoSyncAPIMockRecorder) DescribeDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDataset", reflect.TypeOf((*MockCognitoSyncAPI)(nil).DescribeDataset), arg0)
 }
 
-// DescribeDatasetRequest mocks base method
+// DescribeDatasetRequest mocks base method.
 func (m *MockCognitoSyncAPI) DescribeDatasetRequest(arg0 *cognitosync.DescribeDatasetInput) (*request.Request, *cognitosync.DescribeDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDatasetRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockCognitoSyncAPI) DescribeDatasetRequest(arg0 *cognitosync.DescribeDa
 	return ret0, ret1
 }
 
-// DescribeDatasetRequest indicates an expected call of DescribeDatasetRequest
+// DescribeDatasetRequest indicates an expected call of DescribeDatasetRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) DescribeDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).DescribeDatasetRequest), arg0)
 }
 
-// DescribeDatasetWithContext mocks base method
+// DescribeDatasetWithContext mocks base method.
 func (m *MockCognitoSyncAPI) DescribeDatasetWithContext(arg0 context.Context, arg1 *cognitosync.DescribeDatasetInput, arg2 ...request.Option) (*cognitosync.DescribeDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockCognitoSyncAPI) DescribeDatasetWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DescribeDatasetWithContext indicates an expected call of DescribeDatasetWithContext
+// DescribeDatasetWithContext indicates an expected call of DescribeDatasetWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) DescribeDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).DescribeDatasetWithContext), varargs...)
 }
 
-// DescribeIdentityPoolUsage mocks base method
+// DescribeIdentityPoolUsage mocks base method.
 func (m *MockCognitoSyncAPI) DescribeIdentityPoolUsage(arg0 *cognitosync.DescribeIdentityPoolUsageInput) (*cognitosync.DescribeIdentityPoolUsageOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeIdentityPoolUsage", arg0)
@@ -194,13 +195,13 @@ func (m *MockCognitoSyncAPI) DescribeIdentityPoolUsage(arg0 *cognitosync.Describ
 	return ret0, ret1
 }
 
-// DescribeIdentityPoolUsage indicates an expected call of DescribeIdentityPoolUsage
+// DescribeIdentityPoolUsage indicates an expected call of DescribeIdentityPoolUsage.
 func (mr *MockCognitoSyncAPIMockRecorder) DescribeIdentityPoolUsage(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIdentityPoolUsage", reflect.TypeOf((*MockCognitoSyncAPI)(nil).DescribeIdentityPoolUsage), arg0)
 }
 
-// DescribeIdentityPoolUsageRequest mocks base method
+// DescribeIdentityPoolUsageRequest mocks base method.
 func (m *MockCognitoSyncAPI) DescribeIdentityPoolUsageRequest(arg0 *cognitosync.DescribeIdentityPoolUsageInput) (*request.Request, *cognitosync.DescribeIdentityPoolUsageOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeIdentityPoolUsageRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockCognitoSyncAPI) DescribeIdentityPoolUsageRequest(arg0 *cognitosync.
 	return ret0, ret1
 }
 
-// DescribeIdentityPoolUsageRequest indicates an expected call of DescribeIdentityPoolUsageRequest
+// DescribeIdentityPoolUsageRequest indicates an expected call of DescribeIdentityPoolUsageRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) DescribeIdentityPoolUsageRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIdentityPoolUsageRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).DescribeIdentityPoolUsageRequest), arg0)
 }
 
-// DescribeIdentityPoolUsageWithContext mocks base method
+// DescribeIdentityPoolUsageWithContext mocks base method.
 func (m *MockCognitoSyncAPI) DescribeIdentityPoolUsageWithContext(arg0 context.Context, arg1 *cognitosync.DescribeIdentityPoolUsageInput, arg2 ...request.Option) (*cognitosync.DescribeIdentityPoolUsageOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockCognitoSyncAPI) DescribeIdentityPoolUsageWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DescribeIdentityPoolUsageWithContext indicates an expected call of DescribeIdentityPoolUsageWithContext
+// DescribeIdentityPoolUsageWithContext indicates an expected call of DescribeIdentityPoolUsageWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) DescribeIdentityPoolUsageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIdentityPoolUsageWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).DescribeIdentityPoolUsageWithContext), varargs...)
 }
 
-// DescribeIdentityUsage mocks base method
+// DescribeIdentityUsage mocks base method.
 func (m *MockCognitoSyncAPI) DescribeIdentityUsage(arg0 *cognitosync.DescribeIdentityUsageInput) (*cognitosync.DescribeIdentityUsageOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeIdentityUsage", arg0)
@@ -244,13 +245,13 @@ func (m *MockCognitoSyncAPI) DescribeIdentityUsage(arg0 *cognitosync.DescribeIde
 	return ret0, ret1
 }
 
-// DescribeIdentityUsage indicates an expected call of DescribeIdentityUsage
+// DescribeIdentityUsage indicates an expected call of DescribeIdentityUsage.
 func (mr *MockCognitoSyncAPIMockRecorder) DescribeIdentityUsage(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIdentityUsage", reflect.TypeOf((*MockCognitoSyncAPI)(nil).DescribeIdentityUsage), arg0)
 }
 
-// DescribeIdentityUsageRequest mocks base method
+// DescribeIdentityUsageRequest mocks base method.
 func (m *MockCognitoSyncAPI) DescribeIdentityUsageRequest(arg0 *cognitosync.DescribeIdentityUsageInput) (*request.Request, *cognitosync.DescribeIdentityUsageOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeIdentityUsageRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockCognitoSyncAPI) DescribeIdentityUsageRequest(arg0 *cognitosync.Desc
 	return ret0, ret1
 }
 
-// DescribeIdentityUsageRequest indicates an expected call of DescribeIdentityUsageRequest
+// DescribeIdentityUsageRequest indicates an expected call of DescribeIdentityUsageRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) DescribeIdentityUsageRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIdentityUsageRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).DescribeIdentityUsageRequest), arg0)
 }
 
-// DescribeIdentityUsageWithContext mocks base method
+// DescribeIdentityUsageWithContext mocks base method.
 func (m *MockCognitoSyncAPI) DescribeIdentityUsageWithContext(arg0 context.Context, arg1 *cognitosync.DescribeIdentityUsageInput, arg2 ...request.Option) (*cognitosync.DescribeIdentityUsageOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockCognitoSyncAPI) DescribeIdentityUsageWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DescribeIdentityUsageWithContext indicates an expected call of DescribeIdentityUsageWithContext
+// DescribeIdentityUsageWithContext indicates an expected call of DescribeIdentityUsageWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) DescribeIdentityUsageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIdentityUsageWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).DescribeIdentityUsageWithContext), varargs...)
 }
 
-// GetBulkPublishDetails mocks base method
+// GetBulkPublishDetails mocks base method.
 func (m *MockCognitoSyncAPI) GetBulkPublishDetails(arg0 *cognitosync.GetBulkPublishDetailsInput) (*cognitosync.GetBulkPublishDetailsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBulkPublishDetails", arg0)
@@ -294,13 +295,13 @@ func (m *MockCognitoSyncAPI) GetBulkPublishDetails(arg0 *cognitosync.GetBulkPubl
 	return ret0, ret1
 }
 
-// GetBulkPublishDetails indicates an expected call of GetBulkPublishDetails
+// GetBulkPublishDetails indicates an expected call of GetBulkPublishDetails.
 func (mr *MockCognitoSyncAPIMockRecorder) GetBulkPublishDetails(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBulkPublishDetails", reflect.TypeOf((*MockCognitoSyncAPI)(nil).GetBulkPublishDetails), arg0)
 }
 
-// GetBulkPublishDetailsRequest mocks base method
+// GetBulkPublishDetailsRequest mocks base method.
 func (m *MockCognitoSyncAPI) GetBulkPublishDetailsRequest(arg0 *cognitosync.GetBulkPublishDetailsInput) (*request.Request, *cognitosync.GetBulkPublishDetailsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBulkPublishDetailsRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockCognitoSyncAPI) GetBulkPublishDetailsRequest(arg0 *cognitosync.GetB
 	return ret0, ret1
 }
 
-// GetBulkPublishDetailsRequest indicates an expected call of GetBulkPublishDetailsRequest
+// GetBulkPublishDetailsRequest indicates an expected call of GetBulkPublishDetailsRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) GetBulkPublishDetailsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBulkPublishDetailsRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).GetBulkPublishDetailsRequest), arg0)
 }
 
-// GetBulkPublishDetailsWithContext mocks base method
+// GetBulkPublishDetailsWithContext mocks base method.
 func (m *MockCognitoSyncAPI) GetBulkPublishDetailsWithContext(arg0 context.Context, arg1 *cognitosync.GetBulkPublishDetailsInput, arg2 ...request.Option) (*cognitosync.GetBulkPublishDetailsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockCognitoSyncAPI) GetBulkPublishDetailsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// GetBulkPublishDetailsWithContext indicates an expected call of GetBulkPublishDetailsWithContext
+// GetBulkPublishDetailsWithContext indicates an expected call of GetBulkPublishDetailsWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) GetBulkPublishDetailsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBulkPublishDetailsWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).GetBulkPublishDetailsWithContext), varargs...)
 }
 
-// GetCognitoEvents mocks base method
+// GetCognitoEvents mocks base method.
 func (m *MockCognitoSyncAPI) GetCognitoEvents(arg0 *cognitosync.GetCognitoEventsInput) (*cognitosync.GetCognitoEventsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCognitoEvents", arg0)
@@ -344,13 +345,13 @@ func (m *MockCognitoSyncAPI) GetCognitoEvents(arg0 *cognitosync.GetCognitoEvents
 	return ret0, ret1
 }
 
-// GetCognitoEvents indicates an expected call of GetCognitoEvents
+// GetCognitoEvents indicates an expected call of GetCognitoEvents.
 func (mr *MockCognitoSyncAPIMockRecorder) GetCognitoEvents(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCognitoEvents", reflect.TypeOf((*MockCognitoSyncAPI)(nil).GetCognitoEvents), arg0)
 }
 
-// GetCognitoEventsRequest mocks base method
+// GetCognitoEventsRequest mocks base method.
 func (m *MockCognitoSyncAPI) GetCognitoEventsRequest(arg0 *cognitosync.GetCognitoEventsInput) (*request.Request, *cognitosync.GetCognitoEventsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCognitoEventsRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockCognitoSyncAPI) GetCognitoEventsRequest(arg0 *cognitosync.GetCognit
 	return ret0, ret1
 }
 
-// GetCognitoEventsRequest indicates an expected call of GetCognitoEventsRequest
+// GetCognitoEventsRequest indicates an expected call of GetCognitoEventsRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) GetCognitoEventsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCognitoEventsRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).GetCognitoEventsRequest), arg0)
 }
 
-// GetCognitoEventsWithContext mocks base method
+// GetCognitoEventsWithContext mocks base method.
 func (m *MockCognitoSyncAPI) GetCognitoEventsWithContext(arg0 context.Context, arg1 *cognitosync.GetCognitoEventsInput, arg2 ...request.Option) (*cognitosync.GetCognitoEventsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockCognitoSyncAPI) GetCognitoEventsWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// GetCognitoEventsWithContext indicates an expected call of GetCognitoEventsWithContext
+// GetCognitoEventsWithContext indicates an expected call of GetCognitoEventsWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) GetCognitoEventsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCognitoEventsWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).GetCognitoEventsWithContext), varargs...)
 }
 
-// GetIdentityPoolConfiguration mocks base method
+// GetIdentityPoolConfiguration mocks base method.
 func (m *MockCognitoSyncAPI) GetIdentityPoolConfiguration(arg0 *cognitosync.GetIdentityPoolConfigurationInput) (*cognitosync.GetIdentityPoolConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetIdentityPoolConfiguration", arg0)
@@ -394,13 +395,13 @@ func (m *MockCognitoSyncAPI) GetIdentityPoolConfiguration(arg0 *cognitosync.GetI
 	return ret0, ret1
 }
 
-// GetIdentityPoolConfiguration indicates an expected call of GetIdentityPoolConfiguration
+// GetIdentityPoolConfiguration indicates an expected call of GetIdentityPoolConfiguration.
 func (mr *MockCognitoSyncAPIMockRecorder) GetIdentityPoolConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIdentityPoolConfiguration", reflect.TypeOf((*MockCognitoSyncAPI)(nil).GetIdentityPoolConfiguration), arg0)
 }
 
-// GetIdentityPoolConfigurationRequest mocks base method
+// GetIdentityPoolConfigurationRequest mocks base method.
 func (m *MockCognitoSyncAPI) GetIdentityPoolConfigurationRequest(arg0 *cognitosync.GetIdentityPoolConfigurationInput) (*request.Request, *cognitosync.GetIdentityPoolConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetIdentityPoolConfigurationRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockCognitoSyncAPI) GetIdentityPoolConfigurationRequest(arg0 *cognitosy
 	return ret0, ret1
 }
 
-// GetIdentityPoolConfigurationRequest indicates an expected call of GetIdentityPoolConfigurationRequest
+// GetIdentityPoolConfigurationRequest indicates an expected call of GetIdentityPoolConfigurationRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) GetIdentityPoolConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIdentityPoolConfigurationRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).GetIdentityPoolConfigurationRequest), arg0)
 }
 
-// GetIdentityPoolConfigurationWithContext mocks base method
+// GetIdentityPoolConfigurationWithContext mocks base method.
 func (m *MockCognitoSyncAPI) GetIdentityPoolConfigurationWithContext(arg0 context.Context, arg1 *cognitosync.GetIdentityPoolConfigurationInput, arg2 ...request.Option) (*cognitosync.GetIdentityPoolConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockCognitoSyncAPI) GetIdentityPoolConfigurationWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// GetIdentityPoolConfigurationWithContext indicates an expected call of GetIdentityPoolConfigurationWithContext
+// GetIdentityPoolConfigurationWithContext indicates an expected call of GetIdentityPoolConfigurationWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) GetIdentityPoolConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIdentityPoolConfigurationWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).GetIdentityPoolConfigurationWithContext), varargs...)
 }
 
-// ListDatasets mocks base method
+// ListDatasets mocks base method.
 func (m *MockCognitoSyncAPI) ListDatasets(arg0 *cognitosync.ListDatasetsInput) (*cognitosync.ListDatasetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasets", arg0)
@@ -444,13 +445,13 @@ func (m *MockCognitoSyncAPI) ListDatasets(arg0 *cognitosync.ListDatasetsInput) (
 	return ret0, ret1
 }
 
-// ListDatasets indicates an expected call of ListDatasets
+// ListDatasets indicates an expected call of ListDatasets.
 func (mr *MockCognitoSyncAPIMockRecorder) ListDatasets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasets", reflect.TypeOf((*MockCognitoSyncAPI)(nil).ListDatasets), arg0)
 }
 
-// ListDatasetsRequest mocks base method
+// ListDatasetsRequest mocks base method.
 func (m *MockCognitoSyncAPI) ListDatasetsRequest(arg0 *cognitosync.ListDatasetsInput) (*request.Request, *cognitosync.ListDatasetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetsRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockCognitoSyncAPI) ListDatasetsRequest(arg0 *cognitosync.ListDatasetsI
 	return ret0, ret1
 }
 
-// ListDatasetsRequest indicates an expected call of ListDatasetsRequest
+// ListDatasetsRequest indicates an expected call of ListDatasetsRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) ListDatasetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetsRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).ListDatasetsRequest), arg0)
 }
 
-// ListDatasetsWithContext mocks base method
+// ListDatasetsWithContext mocks base method.
 func (m *MockCognitoSyncAPI) ListDatasetsWithContext(arg0 context.Context, arg1 *cognitosync.ListDatasetsInput, arg2 ...request.Option) (*cognitosync.ListDatasetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockCognitoSyncAPI) ListDatasetsWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListDatasetsWithContext indicates an expected call of ListDatasetsWithContext
+// ListDatasetsWithContext indicates an expected call of ListDatasetsWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) ListDatasetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetsWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).ListDatasetsWithContext), varargs...)
 }
 
-// ListIdentityPoolUsage mocks base method
+// ListIdentityPoolUsage mocks base method.
 func (m *MockCognitoSyncAPI) ListIdentityPoolUsage(arg0 *cognitosync.ListIdentityPoolUsageInput) (*cognitosync.ListIdentityPoolUsageOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListIdentityPoolUsage", arg0)
@@ -494,13 +495,13 @@ func (m *MockCognitoSyncAPI) ListIdentityPoolUsage(arg0 *cognitosync.ListIdentit
 	return ret0, ret1
 }
 
-// ListIdentityPoolUsage indicates an expected call of ListIdentityPoolUsage
+// ListIdentityPoolUsage indicates an expected call of ListIdentityPoolUsage.
 func (mr *MockCognitoSyncAPIMockRecorder) ListIdentityPoolUsage(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIdentityPoolUsage", reflect.TypeOf((*MockCognitoSyncAPI)(nil).ListIdentityPoolUsage), arg0)
 }
 
-// ListIdentityPoolUsageRequest mocks base method
+// ListIdentityPoolUsageRequest mocks base method.
 func (m *MockCognitoSyncAPI) ListIdentityPoolUsageRequest(arg0 *cognitosync.ListIdentityPoolUsageInput) (*request.Request, *cognitosync.ListIdentityPoolUsageOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListIdentityPoolUsageRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockCognitoSyncAPI) ListIdentityPoolUsageRequest(arg0 *cognitosync.List
 	return ret0, ret1
 }
 
-// ListIdentityPoolUsageRequest indicates an expected call of ListIdentityPoolUsageRequest
+// ListIdentityPoolUsageRequest indicates an expected call of ListIdentityPoolUsageRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) ListIdentityPoolUsageRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIdentityPoolUsageRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).ListIdentityPoolUsageRequest), arg0)
 }
 
-// ListIdentityPoolUsageWithContext mocks base method
+// ListIdentityPoolUsageWithContext mocks base method.
 func (m *MockCognitoSyncAPI) ListIdentityPoolUsageWithContext(arg0 context.Context, arg1 *cognitosync.ListIdentityPoolUsageInput, arg2 ...request.Option) (*cognitosync.ListIdentityPoolUsageOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockCognitoSyncAPI) ListIdentityPoolUsageWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListIdentityPoolUsageWithContext indicates an expected call of ListIdentityPoolUsageWithContext
+// ListIdentityPoolUsageWithContext indicates an expected call of ListIdentityPoolUsageWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) ListIdentityPoolUsageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIdentityPoolUsageWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).ListIdentityPoolUsageWithContext), varargs...)
 }
 
-// ListRecords mocks base method
+// ListRecords mocks base method.
 func (m *MockCognitoSyncAPI) ListRecords(arg0 *cognitosync.ListRecordsInput) (*cognitosync.ListRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecords", arg0)
@@ -544,13 +545,13 @@ func (m *MockCognitoSyncAPI) ListRecords(arg0 *cognitosync.ListRecordsInput) (*c
 	return ret0, ret1
 }
 
-// ListRecords indicates an expected call of ListRecords
+// ListRecords indicates an expected call of ListRecords.
 func (mr *MockCognitoSyncAPIMockRecorder) ListRecords(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecords", reflect.TypeOf((*MockCognitoSyncAPI)(nil).ListRecords), arg0)
 }
 
-// ListRecordsRequest mocks base method
+// ListRecordsRequest mocks base method.
 func (m *MockCognitoSyncAPI) ListRecordsRequest(arg0 *cognitosync.ListRecordsInput) (*request.Request, *cognitosync.ListRecordsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecordsRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockCognitoSyncAPI) ListRecordsRequest(arg0 *cognitosync.ListRecordsInp
 	return ret0, ret1
 }
 
-// ListRecordsRequest indicates an expected call of ListRecordsRequest
+// ListRecordsRequest indicates an expected call of ListRecordsRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) ListRecordsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecordsRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).ListRecordsRequest), arg0)
 }
 
-// ListRecordsWithContext mocks base method
+// ListRecordsWithContext mocks base method.
 func (m *MockCognitoSyncAPI) ListRecordsWithContext(arg0 context.Context, arg1 *cognitosync.ListRecordsInput, arg2 ...request.Option) (*cognitosync.ListRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockCognitoSyncAPI) ListRecordsWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ListRecordsWithContext indicates an expected call of ListRecordsWithContext
+// ListRecordsWithContext indicates an expected call of ListRecordsWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) ListRecordsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecordsWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).ListRecordsWithContext), varargs...)
 }
 
-// RegisterDevice mocks base method
+// RegisterDevice mocks base method.
 func (m *MockCognitoSyncAPI) RegisterDevice(arg0 *cognitosync.RegisterDeviceInput) (*cognitosync.RegisterDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RegisterDevice", arg0)
@@ -594,13 +595,13 @@ func (m *MockCognitoSyncAPI) RegisterDevice(arg0 *cognitosync.RegisterDeviceInpu
 	return ret0, ret1
 }
 
-// RegisterDevice indicates an expected call of RegisterDevice
+// RegisterDevice indicates an expected call of RegisterDevice.
 func (mr *MockCognitoSyncAPIMockRecorder) RegisterDevice(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RegisterDevice", reflect.TypeOf((*MockCognitoSyncAPI)(nil).RegisterDevice), arg0)
 }
 
-// RegisterDeviceRequest mocks base method
+// RegisterDeviceRequest mocks base method.
 func (m *MockCognitoSyncAPI) RegisterDeviceRequest(arg0 *cognitosync.RegisterDeviceInput) (*request.Request, *cognitosync.RegisterDeviceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RegisterDeviceRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockCognitoSyncAPI) RegisterDeviceRequest(arg0 *cognitosync.RegisterDev
 	return ret0, ret1
 }
 
-// RegisterDeviceRequest indicates an expected call of RegisterDeviceRequest
+// RegisterDeviceRequest indicates an expected call of RegisterDeviceRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) RegisterDeviceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RegisterDeviceRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).RegisterDeviceRequest), arg0)
 }
 
-// RegisterDeviceWithContext mocks base method
+// RegisterDeviceWithContext mocks base method.
 func (m *MockCognitoSyncAPI) RegisterDeviceWithContext(arg0 context.Context, arg1 *cognitosync.RegisterDeviceInput, arg2 ...request.Option) (*cognitosync.RegisterDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockCognitoSyncAPI) RegisterDeviceWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// RegisterDeviceWithContext indicates an expected call of RegisterDeviceWithContext
+// RegisterDeviceWithContext indicates an expected call of RegisterDeviceWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) RegisterDeviceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RegisterDeviceWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).RegisterDeviceWithContext), varargs...)
 }
 
-// SetCognitoEvents mocks base method
+// SetCognitoEvents mocks base method.
 func (m *MockCognitoSyncAPI) SetCognitoEvents(arg0 *cognitosync.SetCognitoEventsInput) (*cognitosync.SetCognitoEventsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SetCognitoEvents", arg0)
@@ -644,13 +645,13 @@ func (m *MockCognitoSyncAPI) SetCognitoEvents(arg0 *cognitosync.SetCognitoEvents
 	return ret0, ret1
 }
 
-// SetCognitoEvents indicates an expected call of SetCognitoEvents
+// SetCognitoEvents indicates an expected call of SetCognitoEvents.
 func (mr *MockCognitoSyncAPIMockRecorder) SetCognitoEvents(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetCognitoEvents", reflect.TypeOf((*MockCognitoSyncAPI)(nil).SetCognitoEvents), arg0)
 }
 
-// SetCognitoEventsRequest mocks base method
+// SetCognitoEventsRequest mocks base method.
 func (m *MockCognitoSyncAPI) SetCognitoEventsRequest(arg0 *cognitosync.SetCognitoEventsInput) (*request.Request, *cognitosync.SetCognitoEventsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SetCognitoEventsRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockCognitoSyncAPI) SetCognitoEventsRequest(arg0 *cognitosync.SetCognit
 	return ret0, ret1
 }
 
-// SetCognitoEventsRequest indicates an expected call of SetCognitoEventsRequest
+// SetCognitoEventsRequest indicates an expected call of SetCognitoEventsRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) SetCognitoEventsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetCognitoEventsRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).SetCognitoEventsRequest), arg0)
 }
 
-// SetCognitoEventsWithContext mocks base method
+// SetCognitoEventsWithContext mocks base method.
 func (m *MockCognitoSyncAPI) SetCognitoEventsWithContext(arg0 context.Context, arg1 *cognitosync.SetCognitoEventsInput, arg2 ...request.Option) (*cognitosync.SetCognitoEventsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockCognitoSyncAPI) SetCognitoEventsWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// SetCognitoEventsWithContext indicates an expected call of SetCognitoEventsWithContext
+// SetCognitoEventsWithContext indicates an expected call of SetCognitoEventsWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) SetCognitoEventsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetCognitoEventsWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).SetCognitoEventsWithContext), varargs...)
 }
 
-// SetIdentityPoolConfiguration mocks base method
+// SetIdentityPoolConfiguration mocks base method.
 func (m *MockCognitoSyncAPI) SetIdentityPoolConfiguration(arg0 *cognitosync.SetIdentityPoolConfigurationInput) (*cognitosync.SetIdentityPoolConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SetIdentityPoolConfiguration", arg0)
@@ -694,13 +695,13 @@ func (m *MockCognitoSyncAPI) SetIdentityPoolConfiguration(arg0 *cognitosync.SetI
 	return ret0, ret1
 }
 
-// SetIdentityPoolConfiguration indicates an expected call of SetIdentityPoolConfiguration
+// SetIdentityPoolConfiguration indicates an expected call of SetIdentityPoolConfiguration.
 func (mr *MockCognitoSyncAPIMockRecorder) SetIdentityPoolConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetIdentityPoolConfiguration", reflect.TypeOf((*MockCognitoSyncAPI)(nil).SetIdentityPoolConfiguration), arg0)
 }
 
-// SetIdentityPoolConfigurationRequest mocks base method
+// SetIdentityPoolConfigurationRequest mocks base method.
 func (m *MockCognitoSyncAPI) SetIdentityPoolConfigurationRequest(arg0 *cognitosync.SetIdentityPoolConfigurationInput) (*request.Request, *cognitosync.SetIdentityPoolConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SetIdentityPoolConfigurationRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockCognitoSyncAPI) SetIdentityPoolConfigurationRequest(arg0 *cognitosy
 	return ret0, ret1
 }
 
-// SetIdentityPoolConfigurationRequest indicates an expected call of SetIdentityPoolConfigurationRequest
+// SetIdentityPoolConfigurationRequest indicates an expected call of SetIdentityPoolConfigurationRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) SetIdentityPoolConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetIdentityPoolConfigurationRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).SetIdentityPoolConfigurationRequest), arg0)
 }
 
-// SetIdentityPoolConfigurationWithContext mocks base method
+// SetIdentityPoolConfigurationWithContext mocks base method.
 func (m *MockCognitoSyncAPI) SetIdentityPoolConfigurationWithContext(arg0 context.Context, arg1 *cognitosync.SetIdentityPoolConfigurationInput, arg2 ...request.Option) (*cognitosync.SetIdentityPoolConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockCognitoSyncAPI) SetIdentityPoolConfigurationWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// SetIdentityPoolConfigurationWithContext indicates an expected call of SetIdentityPoolConfigurationWithContext
+// SetIdentityPoolConfigurationWithContext indicates an expected call of SetIdentityPoolConfigurationWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) SetIdentityPoolConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetIdentityPoolConfigurationWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).SetIdentityPoolConfigurationWithContext), varargs...)
 }
 
-// SubscribeToDataset mocks base method
+// SubscribeToDataset mocks base method.
 func (m *MockCognitoSyncAPI) SubscribeToDataset(arg0 *cognitosync.SubscribeToDatasetInput) (*cognitosync.SubscribeToDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SubscribeToDataset", arg0)
@@ -744,13 +745,13 @@ func (m *MockCognitoSyncAPI) SubscribeToDataset(arg0 *cognitosync.SubscribeToDat
 	return ret0, ret1
 }
 
-// SubscribeToDataset indicates an expected call of SubscribeToDataset
+// SubscribeToDataset indicates an expected call of SubscribeToDataset.
 func (mr *MockCognitoSyncAPIMockRecorder) SubscribeToDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SubscribeToDataset", reflect.TypeOf((*MockCognitoSyncAPI)(nil).SubscribeToDataset), arg0)
 }
 
-// SubscribeToDatasetRequest mocks base method
+// SubscribeToDatasetRequest mocks base method.
 func (m *MockCognitoSyncAPI) SubscribeToDatasetRequest(arg0 *cognitosync.SubscribeToDatasetInput) (*request.Request, *cognitosync.SubscribeToDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SubscribeToDatasetRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockCognitoSyncAPI) SubscribeToDatasetRequest(arg0 *cognitosync.Subscri
 	return ret0, ret1
 }
 
-// SubscribeToDatasetRequest indicates an expected call of SubscribeToDatasetRequest
+// SubscribeToDatasetRequest indicates an expected call of SubscribeToDatasetRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) SubscribeToDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SubscribeToDatasetRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).SubscribeToDatasetRequest), arg0)
 }
 
-// SubscribeToDatasetWithContext mocks base method
+// SubscribeToDatasetWithContext mocks base method.
 func (m *MockCognitoSyncAPI) SubscribeToDatasetWithContext(arg0 context.Context, arg1 *cognitosync.SubscribeToDatasetInput, arg2 ...request.Option) (*cognitosync.SubscribeToDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockCognitoSyncAPI) SubscribeToDatasetWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// SubscribeToDatasetWithContext indicates an expected call of SubscribeToDatasetWithContext
+// SubscribeToDatasetWithContext indicates an expected call of SubscribeToDatasetWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) SubscribeToDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SubscribeToDatasetWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).SubscribeToDatasetWithContext), varargs...)
 }
 
-// UnsubscribeFromDataset mocks base method
+// UnsubscribeFromDataset mocks base method.
 func (m *MockCognitoSyncAPI) UnsubscribeFromDataset(arg0 *cognitosync.UnsubscribeFromDatasetInput) (*cognitosync.UnsubscribeFromDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UnsubscribeFromDataset", arg0)
@@ -794,13 +795,13 @@ func (m *MockCognitoSyncAPI) UnsubscribeFromDataset(arg0 *cognitosync.Unsubscrib
 	return ret0, ret1
 }
 
-// UnsubscribeFromDataset indicates an expected call of UnsubscribeFromDataset
+// UnsubscribeFromDataset indicates an expected call of UnsubscribeFromDataset.
 func (mr *MockCognitoSyncAPIMockRecorder) UnsubscribeFromDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UnsubscribeFromDataset", reflect.TypeOf((*MockCognitoSyncAPI)(nil).UnsubscribeFromDataset), arg0)
 }
 
-// UnsubscribeFromDatasetRequest mocks base method
+// UnsubscribeFromDatasetRequest mocks base method.
 func (m *MockCognitoSyncAPI) UnsubscribeFromDatasetRequest(arg0 *cognitosync.UnsubscribeFromDatasetInput) (*request.Request, *cognitosync.UnsubscribeFromDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UnsubscribeFromDatasetRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockCognitoSyncAPI) UnsubscribeFromDatasetRequest(arg0 *cognitosync.Uns
 	return ret0, ret1
 }
 
-// UnsubscribeFromDatasetRequest indicates an expected call of UnsubscribeFromDatasetRequest
+// UnsubscribeFromDatasetRequest indicates an expected call of UnsubscribeFromDatasetRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) UnsubscribeFromDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UnsubscribeFromDatasetRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).UnsubscribeFromDatasetRequest), arg0)
 }
 
-// UnsubscribeFromDatasetWithContext mocks base method
+// UnsubscribeFromDatasetWithContext mocks base method.
 func (m *MockCognitoSyncAPI) UnsubscribeFromDatasetWithContext(arg0 context.Context, arg1 *cognitosync.UnsubscribeFromDatasetInput, arg2 ...request.Option) (*cognitosync.UnsubscribeFromDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockCognitoSyncAPI) UnsubscribeFromDatasetWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// UnsubscribeFromDatasetWithContext indicates an expected call of UnsubscribeFromDatasetWithContext
+// UnsubscribeFromDatasetWithContext indicates an expected call of UnsubscribeFromDatasetWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) UnsubscribeFromDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UnsubscribeFromDatasetWithContext", reflect.TypeOf((*MockCognitoSyncAPI)(nil).UnsubscribeFromDatasetWithContext), varargs...)
 }
 
-// UpdateRecords mocks base method
+// UpdateRecords mocks base method.
 func (m *MockCognitoSyncAPI) UpdateRecords(arg0 *cognitosync.UpdateRecordsInput) (*cognitosync.UpdateRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRecords", arg0)
@@ -844,13 +845,13 @@ func (m *MockCognitoSyncAPI) UpdateRecords(arg0 *cognitosync.UpdateRecordsInput)
 	return ret0, ret1
 }
 
-// UpdateRecords indicates an expected call of UpdateRecords
+// UpdateRecords indicates an expected call of UpdateRecords.
 func (mr *MockCognitoSyncAPIMockRecorder) UpdateRecords(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRecords", reflect.TypeOf((*MockCognitoSyncAPI)(nil).UpdateRecords), arg0)
 }
 
-// UpdateRecordsRequest mocks base method
+// UpdateRecordsRequest mocks base method.
 func (m *MockCognitoSyncAPI) UpdateRecordsRequest(arg0 *cognitosync.UpdateRecordsInput) (*request.Request, *cognitosync.UpdateRecordsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRecordsRequest", arg0)
@@ -859,13 +860,13 @@ func (m *MockCognitoSyncAPI) UpdateRecordsRequest(arg0 *cognitosync.UpdateRecord
 	return ret0, ret1
 }
 
-// UpdateRecordsRequest indicates an expected call of UpdateRecordsRequest
+// UpdateRecordsRequest indicates an expected call of UpdateRecordsRequest.
 func (mr *MockCognitoSyncAPIMockRecorder) UpdateRecordsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRecordsRequest", reflect.TypeOf((*MockCognitoSyncAPI)(nil).UpdateRecordsRequest), arg0)
 }
 
-// UpdateRecordsWithContext mocks base method
+// UpdateRecordsWithContext mocks base method.
 func (m *MockCognitoSyncAPI) UpdateRecordsWithContext(arg0 context.Context, arg1 *cognitosync.UpdateRecordsInput, arg2 ...request.Option) (*cognitosync.UpdateRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,7 +879,7 @@ func (m *MockCognitoSyncAPI) UpdateRecordsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// UpdateRecordsWithContext indicates an expected call of UpdateRecordsWithContext
+// UpdateRecordsWithContext indicates an expected call of UpdateRecordsWithContext.
 func (mr *MockCognitoSyncAPIMockRecorder) UpdateRecordsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

@@ -6,36 +6,37 @@ package detectivemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	detective "github.com/aws/aws-sdk-go/service/detective"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockDetectiveAPI is a mock of DetectiveAPI interface
+// MockDetectiveAPI is a mock of DetectiveAPI interface.
 type MockDetectiveAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockDetectiveAPIMockRecorder
 }
 
-// MockDetectiveAPIMockRecorder is the mock recorder for MockDetectiveAPI
+// MockDetectiveAPIMockRecorder is the mock recorder for MockDetectiveAPI.
 type MockDetectiveAPIMockRecorder struct {
 	mock *MockDetectiveAPI
 }
 
-// NewMockDetectiveAPI creates a new mock instance
+// NewMockDetectiveAPI creates a new mock instance.
 func NewMockDetectiveAPI(ctrl *gomock.Controller) *MockDetectiveAPI {
 	mock := &MockDetectiveAPI{ctrl: ctrl}
 	mock.recorder = &MockDetectiveAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockDetectiveAPI) EXPECT() *MockDetectiveAPIMockRecorder {
 	return m.recorder
 }
 
-// AcceptInvitation mocks base method
+// AcceptInvitation mocks base method.
 func (m *MockDetectiveAPI) AcceptInvitation(arg0 *detective.AcceptInvitationInput) (*detective.AcceptInvitationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AcceptInvitation", arg0)
@@ -44,13 +45,13 @@ func (m *MockDetectiveAPI) AcceptInvitation(arg0 *detective.AcceptInvitationInpu
 	return ret0, ret1
 }
 
-// AcceptInvitation indicates an expected call of AcceptInvitation
+// AcceptInvitation indicates an expected call of AcceptInvitation.
 func (mr *MockDetectiveAPIMockRecorder) AcceptInvitation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptInvitation", reflect.TypeOf((*MockDetectiveAPI)(nil).AcceptInvitation), arg0)
 }
 
-// AcceptInvitationRequest mocks base method
+// AcceptInvitationRequest mocks base method.
 func (m *MockDetectiveAPI) AcceptInvitationRequest(arg0 *detective.AcceptInvitationInput) (*request.Request, *detective.AcceptInvitationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AcceptInvitationRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockDetectiveAPI) AcceptInvitationRequest(arg0 *detective.AcceptInvitat
 	return ret0, ret1
 }
 
-// AcceptInvitationRequest indicates an expected call of AcceptInvitationRequest
+// AcceptInvitationRequest indicates an expected call of AcceptInvitationRequest.
 func (mr *MockDetectiveAPIMockRecorder) AcceptInvitationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptInvitationRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).AcceptInvitationRequest), arg0)
 }
 
-// AcceptInvitationWithContext mocks base method
+// AcceptInvitationWithContext mocks base method.
 func (m *MockDetectiveAPI) AcceptInvitationWithContext(arg0 context.Context, arg1 *detective.AcceptInvitationInput, arg2 ...request.Option) (*detective.AcceptInvitationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockDetectiveAPI) AcceptInvitationWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// AcceptInvitationWithContext indicates an expected call of AcceptInvitationWithContext
+// AcceptInvitationWithContext indicates an expected call of AcceptInvitationWithContext.
 func (mr *MockDetectiveAPIMockRecorder) AcceptInvitationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptInvitationWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).AcceptInvitationWithContext), varargs...)
 }
 
-// CreateGraph mocks base method
+// CreateGraph mocks base method.
 func (m *MockDetectiveAPI) CreateGraph(arg0 *detective.CreateGraphInput) (*detective.CreateGraphOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateGraph", arg0)
@@ -94,13 +95,13 @@ func (m *MockDetectiveAPI) CreateGraph(arg0 *detective.CreateGraphInput) (*detec
 	return ret0, ret1
 }
 
-// CreateGraph indicates an expected call of CreateGraph
+// CreateGraph indicates an expected call of CreateGraph.
 func (mr *MockDetectiveAPIMockRecorder) CreateGraph(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateGraph", reflect.TypeOf((*MockDetectiveAPI)(nil).CreateGraph), arg0)
 }
 
-// CreateGraphRequest mocks base method
+// CreateGraphRequest mocks base method.
 func (m *MockDetectiveAPI) CreateGraphRequest(arg0 *detective.CreateGraphInput) (*request.Request, *detective.CreateGraphOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateGraphRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockDetectiveAPI) CreateGraphRequest(arg0 *detective.CreateGraphInput) 
 	return ret0, ret1
 }
 
-// CreateGraphRequest indicates an expected call of CreateGraphRequest
+// CreateGraphRequest indicates an expected call of CreateGraphRequest.
 func (mr *MockDetectiveAPIMockRecorder) CreateGraphRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateGraphRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).CreateGraphRequest), arg0)
 }
 
-// CreateGraphWithContext mocks base method
+// CreateGraphWithContext mocks base method.
 func (m *MockDetectiveAPI) CreateGraphWithContext(arg0 context.Context, arg1 *detective.CreateGraphInput, arg2 ...request.Option) (*detective.CreateGraphOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockDetectiveAPI) CreateGraphWithContext(arg0 context.Context, arg1 *de
 	return ret0, ret1
 }
 
-// CreateGraphWithContext indicates an expected call of CreateGraphWithContext
+// CreateGraphWithContext indicates an expected call of CreateGraphWithContext.
 func (mr *MockDetectiveAPIMockRecorder) CreateGraphWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateGraphWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).CreateGraphWithContext), varargs...)
 }
 
-// CreateMembers mocks base method
+// CreateMembers mocks base method.
 func (m *MockDetectiveAPI) CreateMembers(arg0 *detective.CreateMembersInput) (*detective.CreateMembersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMembers", arg0)
@@ -144,13 +145,13 @@ func (m *MockDetectiveAPI) CreateMembers(arg0 *detective.CreateMembersInput) (*d
 	return ret0, ret1
 }
 
-// CreateMembers indicates an expected call of CreateMembers
+// CreateMembers indicates an expected call of CreateMembers.
 func (mr *MockDetectiveAPIMockRecorder) CreateMembers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMembers", reflect.TypeOf((*MockDetectiveAPI)(nil).CreateMembers), arg0)
 }
 
-// CreateMembersRequest mocks base method
+// CreateMembersRequest mocks base method.
 func (m *MockDetectiveAPI) CreateMembersRequest(arg0 *detective.CreateMembersInput) (*request.Request, *detective.CreateMembersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMembersRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockDetectiveAPI) CreateMembersRequest(arg0 *detective.CreateMembersInp
 	return ret0, ret1
 }
 
-// CreateMembersRequest indicates an expected call of CreateMembersRequest
+// CreateMembersRequest indicates an expected call of CreateMembersRequest.
 func (mr *MockDetectiveAPIMockRecorder) CreateMembersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMembersRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).CreateMembersRequest), arg0)
 }
 
-// CreateMembersWithContext mocks base method
+// CreateMembersWithContext mocks base method.
 func (m *MockDetectiveAPI) CreateMembersWithContext(arg0 context.Context, arg1 *detective.CreateMembersInput, arg2 ...request.Option) (*detective.CreateMembersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockDetectiveAPI) CreateMembersWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// CreateMembersWithContext indicates an expected call of CreateMembersWithContext
+// CreateMembersWithContext indicates an expected call of CreateMembersWithContext.
 func (mr *MockDetectiveAPIMockRecorder) CreateMembersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMembersWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).CreateMembersWithContext), varargs...)
 }
 
-// DeleteGraph mocks base method
+// DeleteGraph mocks base method.
 func (m *MockDetectiveAPI) DeleteGraph(arg0 *detective.DeleteGraphInput) (*detective.DeleteGraphOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteGraph", arg0)
@@ -194,13 +195,13 @@ func (m *MockDetectiveAPI) DeleteGraph(arg0 *detective.DeleteGraphInput) (*detec
 	return ret0, ret1
 }
 
-// DeleteGraph indicates an expected call of DeleteGraph
+// DeleteGraph indicates an expected call of DeleteGraph.
 func (mr *MockDetectiveAPIMockRecorder) DeleteGraph(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteGraph", reflect.TypeOf((*MockDetectiveAPI)(nil).DeleteGraph), arg0)
 }
 
-// DeleteGraphRequest mocks base method
+// DeleteGraphRequest mocks base method.
 func (m *MockDetectiveAPI) DeleteGraphRequest(arg0 *detective.DeleteGraphInput) (*request.Request, *detective.DeleteGraphOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteGraphRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockDetectiveAPI) DeleteGraphRequest(arg0 *detective.DeleteGraphInput) 
 	return ret0, ret1
 }
 
-// DeleteGraphRequest indicates an expected call of DeleteGraphRequest
+// DeleteGraphRequest indicates an expected call of DeleteGraphRequest.
 func (mr *MockDetectiveAPIMockRecorder) DeleteGraphRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteGraphRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).DeleteGraphRequest), arg0)
 }
 
-// DeleteGraphWithContext mocks base method
+// DeleteGraphWithContext mocks base method.
 func (m *MockDetectiveAPI) DeleteGraphWithContext(arg0 context.Context, arg1 *detective.DeleteGraphInput, arg2 ...request.Option) (*detective.DeleteGraphOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockDetectiveAPI) DeleteGraphWithContext(arg0 context.Context, arg1 *de
 	return ret0, ret1
 }
 
-// DeleteGraphWithContext indicates an expected call of DeleteGraphWithContext
+// DeleteGraphWithContext indicates an expected call of DeleteGraphWithContext.
 func (mr *MockDetectiveAPIMockRecorder) DeleteGraphWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteGraphWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).DeleteGraphWithContext), varargs...)
 }
 
-// DeleteMembers mocks base method
+// DeleteMembers mocks base method.
 func (m *MockDetectiveAPI) DeleteMembers(arg0 *detective.DeleteMembersInput) (*detective.DeleteMembersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMembers", arg0)
@@ -244,13 +245,13 @@ func (m *MockDetectiveAPI) DeleteMembers(arg0 *detective.DeleteMembersInput) (*d
 	return ret0, ret1
 }
 
-// DeleteMembers indicates an expected call of DeleteMembers
+// DeleteMembers indicates an expected call of DeleteMembers.
 func (mr *MockDetectiveAPIMockRecorder) DeleteMembers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMembers", reflect.TypeOf((*MockDetectiveAPI)(nil).DeleteMembers), arg0)
 }
 
-// DeleteMembersRequest mocks base method
+// DeleteMembersRequest mocks base method.
 func (m *MockDetectiveAPI) DeleteMembersRequest(arg0 *detective.DeleteMembersInput) (*request.Request, *detective.DeleteMembersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMembersRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockDetectiveAPI) DeleteMembersRequest(arg0 *detective.DeleteMembersInp
 	return ret0, ret1
 }
 
-// DeleteMembersRequest indicates an expected call of DeleteMembersRequest
+// DeleteMembersRequest indicates an expected call of DeleteMembersRequest.
 func (mr *MockDetectiveAPIMockRecorder) DeleteMembersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMembersRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).DeleteMembersRequest), arg0)
 }
 
-// DeleteMembersWithContext mocks base method
+// DeleteMembersWithContext mocks base method.
 func (m *MockDetectiveAPI) DeleteMembersWithContext(arg0 context.Context, arg1 *detective.DeleteMembersInput, arg2 ...request.Option) (*detective.DeleteMembersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockDetectiveAPI) DeleteMembersWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DeleteMembersWithContext indicates an expected call of DeleteMembersWithContext
+// DeleteMembersWithContext indicates an expected call of DeleteMembersWithContext.
 func (mr *MockDetectiveAPIMockRecorder) DeleteMembersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMembersWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).DeleteMembersWithContext), varargs...)
 }
 
-// DisassociateMembership mocks base method
+// DisassociateMembership mocks base method.
 func (m *MockDetectiveAPI) DisassociateMembership(arg0 *detective.DisassociateMembershipInput) (*detective.DisassociateMembershipOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateMembership", arg0)
@@ -294,13 +295,13 @@ func (m *MockDetectiveAPI) DisassociateMembership(arg0 *detective.DisassociateMe
 	return ret0, ret1
 }
 
-// DisassociateMembership indicates an expected call of DisassociateMembership
+// DisassociateMembership indicates an expected call of DisassociateMembership.
 func (mr *MockDetectiveAPIMockRecorder) DisassociateMembership(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateMembership", reflect.TypeOf((*MockDetectiveAPI)(nil).DisassociateMembership), arg0)
 }
 
-// DisassociateMembershipRequest mocks base method
+// DisassociateMembershipRequest mocks base method.
 func (m *MockDetectiveAPI) DisassociateMembershipRequest(arg0 *detective.DisassociateMembershipInput) (*request.Request, *detective.DisassociateMembershipOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateMembershipRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockDetectiveAPI) DisassociateMembershipRequest(arg0 *detective.Disasso
 	return ret0, ret1
 }
 
-// DisassociateMembershipRequest indicates an expected call of DisassociateMembershipRequest
+// DisassociateMembershipRequest indicates an expected call of DisassociateMembershipRequest.
 func (mr *MockDetectiveAPIMockRecorder) DisassociateMembershipRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateMembershipRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).DisassociateMembershipRequest), arg0)
 }
 
-// DisassociateMembershipWithContext mocks base method
+// DisassociateMembershipWithContext mocks base method.
 func (m *MockDetectiveAPI) DisassociateMembershipWithContext(arg0 context.Context, arg1 *detective.DisassociateMembershipInput, arg2 ...request.Option) (*detective.DisassociateMembershipOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockDetectiveAPI) DisassociateMembershipWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DisassociateMembershipWithContext indicates an expected call of DisassociateMembershipWithContext
+// DisassociateMembershipWithContext indicates an expected call of DisassociateMembershipWithContext.
 func (mr *MockDetectiveAPIMockRecorder) DisassociateMembershipWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateMembershipWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).DisassociateMembershipWithContext), varargs...)
 }
 
-// GetMembers mocks base method
+// GetMembers mocks base method.
 func (m *MockDetectiveAPI) GetMembers(arg0 *detective.GetMembersInput) (*detective.GetMembersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMembers", arg0)
@@ -344,13 +345,13 @@ func (m *MockDetectiveAPI) GetMembers(arg0 *detective.GetMembersInput) (*detecti
 	return ret0, ret1
 }
 
-// GetMembers indicates an expected call of GetMembers
+// GetMembers indicates an expected call of GetMembers.
 func (mr *MockDetectiveAPIMockRecorder) GetMembers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMembers", reflect.TypeOf((*MockDetectiveAPI)(nil).GetMembers), arg0)
 }
 
-// GetMembersRequest mocks base method
+// GetMembersRequest mocks base method.
 func (m *MockDetectiveAPI) GetMembersRequest(arg0 *detective.GetMembersInput) (*request.Request, *detective.GetMembersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMembersRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockDetectiveAPI) GetMembersRequest(arg0 *detective.GetMembersInput) (*
 	return ret0, ret1
 }
 
-// GetMembersRequest indicates an expected call of GetMembersRequest
+// GetMembersRequest indicates an expected call of GetMembersRequest.
 func (mr *MockDetectiveAPIMockRecorder) GetMembersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMembersRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).GetMembersRequest), arg0)
 }
 
-// GetMembersWithContext mocks base method
+// GetMembersWithContext mocks base method.
 func (m *MockDetectiveAPI) GetMembersWithContext(arg0 context.Context, arg1 *detective.GetMembersInput, arg2 ...request.Option) (*detective.GetMembersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockDetectiveAPI) GetMembersWithContext(arg0 context.Context, arg1 *det
 	return ret0, ret1
 }
 
-// GetMembersWithContext indicates an expected call of GetMembersWithContext
+// GetMembersWithContext indicates an expected call of GetMembersWithContext.
 func (mr *MockDetectiveAPIMockRecorder) GetMembersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMembersWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).GetMembersWithContext), varargs...)
 }
 
-// ListGraphs mocks base method
+// ListGraphs mocks base method.
 func (m *MockDetectiveAPI) ListGraphs(arg0 *detective.ListGraphsInput) (*detective.ListGraphsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListGraphs", arg0)
@@ -394,13 +395,13 @@ func (m *MockDetectiveAPI) ListGraphs(arg0 *detective.ListGraphsInput) (*detecti
 	return ret0, ret1
 }
 
-// ListGraphs indicates an expected call of ListGraphs
+// ListGraphs indicates an expected call of ListGraphs.
 func (mr *MockDetectiveAPIMockRecorder) ListGraphs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGraphs", reflect.TypeOf((*MockDetectiveAPI)(nil).ListGraphs), arg0)
 }
 
-// ListGraphsPages mocks base method
+// ListGraphsPages mocks base method.
 func (m *MockDetectiveAPI) ListGraphsPages(arg0 *detective.ListGraphsInput, arg1 func(*detective.ListGraphsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListGraphsPages", arg0, arg1)
@@ -408,13 +409,13 @@ func (m *MockDetectiveAPI) ListGraphsPages(arg0 *detective.ListGraphsInput, arg1
 	return ret0
 }
 
-// ListGraphsPages indicates an expected call of ListGraphsPages
+// ListGraphsPages indicates an expected call of ListGraphsPages.
 func (mr *MockDetectiveAPIMockRecorder) ListGraphsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGraphsPages", reflect.TypeOf((*MockDetectiveAPI)(nil).ListGraphsPages), arg0, arg1)
 }
 
-// ListGraphsPagesWithContext mocks base method
+// ListGraphsPagesWithContext mocks base method.
 func (m *MockDetectiveAPI) ListGraphsPagesWithContext(arg0 context.Context, arg1 *detective.ListGraphsInput, arg2 func(*detective.ListGraphsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -426,14 +427,14 @@ func (m *MockDetectiveAPI) ListGraphsPagesWithContext(arg0 context.Context, arg1
 	return ret0
 }
 
-// ListGraphsPagesWithContext indicates an expected call of ListGraphsPagesWithContext
+// ListGraphsPagesWithContext indicates an expected call of ListGraphsPagesWithContext.
 func (mr *MockDetectiveAPIMockRecorder) ListGraphsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGraphsPagesWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).ListGraphsPagesWithContext), varargs...)
 }
 
-// ListGraphsRequest mocks base method
+// ListGraphsRequest mocks base method.
 func (m *MockDetectiveAPI) ListGraphsRequest(arg0 *detective.ListGraphsInput) (*request.Request, *detective.ListGraphsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListGraphsRequest", arg0)
@@ -442,13 +443,13 @@ func (m *MockDetectiveAPI) ListGraphsRequest(arg0 *detective.ListGraphsInput) (*
 	return ret0, ret1
 }
 
-// ListGraphsRequest indicates an expected call of ListGraphsRequest
+// ListGraphsRequest indicates an expected call of ListGraphsRequest.
 func (mr *MockDetectiveAPIMockRecorder) ListGraphsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGraphsRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).ListGraphsRequest), arg0)
 }
 
-// ListGraphsWithContext mocks base method
+// ListGraphsWithContext mocks base method.
 func (m *MockDetectiveAPI) ListGraphsWithContext(arg0 context.Context, arg1 *detective.ListGraphsInput, arg2 ...request.Option) (*detective.ListGraphsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -461,14 +462,14 @@ func (m *MockDetectiveAPI) ListGraphsWithContext(arg0 context.Context, arg1 *det
 	return ret0, ret1
 }
 
-// ListGraphsWithContext indicates an expected call of ListGraphsWithContext
+// ListGraphsWithContext indicates an expected call of ListGraphsWithContext.
 func (mr *MockDetectiveAPIMockRecorder) ListGraphsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGraphsWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).ListGraphsWithContext), varargs...)
 }
 
-// ListInvitations mocks base method
+// ListInvitations mocks base method.
 func (m *MockDetectiveAPI) ListInvitations(arg0 *detective.ListInvitationsInput) (*detective.ListInvitationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInvitations", arg0)
@@ -477,13 +478,13 @@ func (m *MockDetectiveAPI) ListInvitations(arg0 *detective.ListInvitationsInput)
 	return ret0, ret1
 }
 
-// ListInvitations indicates an expected call of ListInvitations
+// ListInvitations indicates an expected call of ListInvitations.
 func (mr *MockDetectiveAPIMockRecorder) ListInvitations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInvitations", reflect.TypeOf((*MockDetectiveAPI)(nil).ListInvitations), arg0)
 }
 
-// ListInvitationsPages mocks base method
+// ListInvitationsPages mocks base method.
 func (m *MockDetectiveAPI) ListInvitationsPages(arg0 *detective.ListInvitationsInput, arg1 func(*detective.ListInvitationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInvitationsPages", arg0, arg1)
@@ -491,13 +492,13 @@ func (m *MockDetectiveAPI) ListInvitationsPages(arg0 *detective.ListInvitationsI
 	return ret0
 }
 
-// ListInvitationsPages indicates an expected call of ListInvitationsPages
+// ListInvitationsPages indicates an expected call of ListInvitationsPages.
 func (mr *MockDetectiveAPIMockRecorder) ListInvitationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInvitationsPages", reflect.TypeOf((*MockDetectiveAPI)(nil).ListInvitationsPages), arg0, arg1)
 }
 
-// ListInvitationsPagesWithContext mocks base method
+// ListInvitationsPagesWithContext mocks base method.
 func (m *MockDetectiveAPI) ListInvitationsPagesWithContext(arg0 context.Context, arg1 *detective.ListInvitationsInput, arg2 func(*detective.ListInvitationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -509,14 +510,14 @@ func (m *MockDetectiveAPI) ListInvitationsPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListInvitationsPagesWithContext indicates an expected call of ListInvitationsPagesWithContext
+// ListInvitationsPagesWithContext indicates an expected call of ListInvitationsPagesWithContext.
 func (mr *MockDetectiveAPIMockRecorder) ListInvitationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInvitationsPagesWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).ListInvitationsPagesWithContext), varargs...)
 }
 
-// ListInvitationsRequest mocks base method
+// ListInvitationsRequest mocks base method.
 func (m *MockDetectiveAPI) ListInvitationsRequest(arg0 *detective.ListInvitationsInput) (*request.Request, *detective.ListInvitationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInvitationsRequest", arg0)
@@ -525,13 +526,13 @@ func (m *MockDetectiveAPI) ListInvitationsRequest(arg0 *detective.ListInvitation
 	return ret0, ret1
 }
 
-// ListInvitationsRequest indicates an expected call of ListInvitationsRequest
+// ListInvitationsRequest indicates an expected call of ListInvitationsRequest.
 func (mr *MockDetectiveAPIMockRecorder) ListInvitationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInvitationsRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).ListInvitationsRequest), arg0)
 }
 
-// ListInvitationsWithContext mocks base method
+// ListInvitationsWithContext mocks base method.
 func (m *MockDetectiveAPI) ListInvitationsWithContext(arg0 context.Context, arg1 *detective.ListInvitationsInput, arg2 ...request.Option) (*detective.ListInvitationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -544,14 +545,14 @@ func (m *MockDetectiveAPI) ListInvitationsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListInvitationsWithContext indicates an expected call of ListInvitationsWithContext
+// ListInvitationsWithContext indicates an expected call of ListInvitationsWithContext.
 func (mr *MockDetectiveAPIMockRecorder) ListInvitationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInvitationsWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).ListInvitationsWithContext), varargs...)
 }
 
-// ListMembers mocks base method
+// ListMembers mocks base method.
 func (m *MockDetectiveAPI) ListMembers(arg0 *detective.ListMembersInput) (*detective.ListMembersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMembers", arg0)
@@ -560,13 +561,13 @@ func (m *MockDetectiveAPI) ListMembers(arg0 *detective.ListMembersInput) (*detec
 	return ret0, ret1
 }
 
-// ListMembers indicates an expected call of ListMembers
+// ListMembers indicates an expected call of ListMembers.
 func (mr *MockDetectiveAPIMockRecorder) ListMembers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMembers", reflect.TypeOf((*MockDetectiveAPI)(nil).ListMembers), arg0)
 }
 
-// ListMembersPages mocks base method
+// ListMembersPages mocks base method.
 func (m *MockDetectiveAPI) ListMembersPages(arg0 *detective.ListMembersInput, arg1 func(*detective.ListMembersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMembersPages", arg0, arg1)
@@ -574,13 +575,13 @@ func (m *MockDetectiveAPI) ListMembersPages(arg0 *detective.ListMembersInput, ar
 	return ret0
 }
 
-// ListMembersPages indicates an expected call of ListMembersPages
+// ListMembersPages indicates an expected call of ListMembersPages.
 func (mr *MockDetectiveAPIMockRecorder) ListMembersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMembersPages", reflect.TypeOf((*MockDetectiveAPI)(nil).ListMembersPages), arg0, arg1)
 }
 
-// ListMembersPagesWithContext mocks base method
+// ListMembersPagesWithContext mocks base method.
 func (m *MockDetectiveAPI) ListMembersPagesWithContext(arg0 context.Context, arg1 *detective.ListMembersInput, arg2 func(*detective.ListMembersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -592,14 +593,14 @@ func (m *MockDetectiveAPI) ListMembersPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// ListMembersPagesWithContext indicates an expected call of ListMembersPagesWithContext
+// ListMembersPagesWithContext indicates an expected call of ListMembersPagesWithContext.
 func (mr *MockDetectiveAPIMockRecorder) ListMembersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMembersPagesWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).ListMembersPagesWithContext), varargs...)
 }
 
-// ListMembersRequest mocks base method
+// ListMembersRequest mocks base method.
 func (m *MockDetectiveAPI) ListMembersRequest(arg0 *detective.ListMembersInput) (*request.Request, *detective.ListMembersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMembersRequest", arg0)
@@ -608,13 +609,13 @@ func (m *MockDetectiveAPI) ListMembersRequest(arg0 *detective.ListMembersInput) 
 	return ret0, ret1
 }
 
-// ListMembersRequest indicates an expected call of ListMembersRequest
+// ListMembersRequest indicates an expected call of ListMembersRequest.
 func (mr *MockDetectiveAPIMockRecorder) ListMembersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMembersRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).ListMembersRequest), arg0)
 }
 
-// ListMembersWithContext mocks base method
+// ListMembersWithContext mocks base method.
 func (m *MockDetectiveAPI) ListMembersWithContext(arg0 context.Context, arg1 *detective.ListMembersInput, arg2 ...request.Option) (*detective.ListMembersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -627,14 +628,64 @@ func (m *MockDetectiveAPI) ListMembersWithContext(arg0 context.Context, arg1 *de
 	return ret0, ret1
 }
 
-// ListMembersWithContext indicates an expected call of ListMembersWithContext
+// ListMembersWithContext indicates an expected call of ListMembersWithContext.
 func (mr *MockDetectiveAPIMockRecorder) ListMembersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMembersWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).ListMembersWithContext), varargs...)
 }
 
-// RejectInvitation mocks base method
+// ListTagsForResource mocks base method.
+func (m *MockDetectiveAPI) ListTagsForResource(arg0 *detective.ListTagsForResourceInput) (*detective.ListTagsForResourceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
+	ret0, _ := ret[0].(*detective.ListTagsForResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListTagsForResource indicates an expected call of ListTagsForResource.
+func (mr *MockDetectiveAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockDetectiveAPI)(nil).ListTagsForResource), arg0)
+}
+
+// ListTagsForResourceRequest mocks base method.
+func (m *MockDetectiveAPI) ListTagsForResourceRequest(arg0 *detective.ListTagsForResourceInput) (*request.Request, *detective.ListTagsForResourceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*detective.ListTagsForResourceOutput)
+	return ret0, ret1
+}
+
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
+func (mr *MockDetectiveAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).ListTagsForResourceRequest), arg0)
+}
+
+// ListTagsForResourceWithContext mocks base method.
+func (m *MockDetectiveAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *detective.ListTagsForResourceInput, arg2 ...request.Option) (*detective.ListTagsForResourceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListTagsForResourceWithContext", varargs...)
+	ret0, _ := ret[0].(*detective.ListTagsForResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
+func (mr *MockDetectiveAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).ListTagsForResourceWithContext), varargs...)
+}
+
+// RejectInvitation mocks base method.
 func (m *MockDetectiveAPI) RejectInvitation(arg0 *detective.RejectInvitationInput) (*detective.RejectInvitationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RejectInvitation", arg0)
@@ -643,13 +694,13 @@ func (m *MockDetectiveAPI) RejectInvitation(arg0 *detective.RejectInvitationInpu
 	return ret0, ret1
 }
 
-// RejectInvitation indicates an expected call of RejectInvitation
+// RejectInvitation indicates an expected call of RejectInvitation.
 func (mr *MockDetectiveAPIMockRecorder) RejectInvitation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RejectInvitation", reflect.TypeOf((*MockDetectiveAPI)(nil).RejectInvitation), arg0)
 }
 
-// RejectInvitationRequest mocks base method
+// RejectInvitationRequest mocks base method.
 func (m *MockDetectiveAPI) RejectInvitationRequest(arg0 *detective.RejectInvitationInput) (*request.Request, *detective.RejectInvitationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RejectInvitationRequest", arg0)
@@ -658,13 +709,13 @@ func (m *MockDetectiveAPI) RejectInvitationRequest(arg0 *detective.RejectInvitat
 	return ret0, ret1
 }
 
-// RejectInvitationRequest indicates an expected call of RejectInvitationRequest
+// RejectInvitationRequest indicates an expected call of RejectInvitationRequest.
 func (mr *MockDetectiveAPIMockRecorder) RejectInvitationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RejectInvitationRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).RejectInvitationRequest), arg0)
 }
 
-// RejectInvitationWithContext mocks base method
+// RejectInvitationWithContext mocks base method.
 func (m *MockDetectiveAPI) RejectInvitationWithContext(arg0 context.Context, arg1 *detective.RejectInvitationInput, arg2 ...request.Option) (*detective.RejectInvitationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -677,14 +728,14 @@ func (m *MockDetectiveAPI) RejectInvitationWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// RejectInvitationWithContext indicates an expected call of RejectInvitationWithContext
+// RejectInvitationWithContext indicates an expected call of RejectInvitationWithContext.
 func (mr *MockDetectiveAPIMockRecorder) RejectInvitationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RejectInvitationWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).RejectInvitationWithContext), varargs...)
 }
 
-// StartMonitoringMember mocks base method
+// StartMonitoringMember mocks base method.
 func (m *MockDetectiveAPI) StartMonitoringMember(arg0 *detective.StartMonitoringMemberInput) (*detective.StartMonitoringMemberOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartMonitoringMember", arg0)
@@ -693,13 +744,13 @@ func (m *MockDetectiveAPI) StartMonitoringMember(arg0 *detective.StartMonitoring
 	return ret0, ret1
 }
 
-// StartMonitoringMember indicates an expected call of StartMonitoringMember
+// StartMonitoringMember indicates an expected call of StartMonitoringMember.
 func (mr *MockDetectiveAPIMockRecorder) StartMonitoringMember(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMonitoringMember", reflect.TypeOf((*MockDetectiveAPI)(nil).StartMonitoringMember), arg0)
 }
 
-// StartMonitoringMemberRequest mocks base method
+// StartMonitoringMemberRequest mocks base method.
 func (m *MockDetectiveAPI) StartMonitoringMemberRequest(arg0 *detective.StartMonitoringMemberInput) (*request.Request, *detective.StartMonitoringMemberOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartMonitoringMemberRequest", arg0)
@@ -708,13 +759,13 @@ func (m *MockDetectiveAPI) StartMonitoringMemberRequest(arg0 *detective.StartMon
 	return ret0, ret1
 }
 
-// StartMonitoringMemberRequest indicates an expected call of StartMonitoringMemberRequest
+// StartMonitoringMemberRequest indicates an expected call of StartMonitoringMemberRequest.
 func (mr *MockDetectiveAPIMockRecorder) StartMonitoringMemberRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMonitoringMemberRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).StartMonitoringMemberRequest), arg0)
 }
 
-// StartMonitoringMemberWithContext mocks base method
+// StartMonitoringMemberWithContext mocks base method.
 func (m *MockDetectiveAPI) StartMonitoringMemberWithContext(arg0 context.Context, arg1 *detective.StartMonitoringMemberInput, arg2 ...request.Option) (*detective.StartMonitoringMemberOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -727,9 +778,109 @@ func (m *MockDetectiveAPI) StartMonitoringMemberWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// StartMonitoringMemberWithContext indicates an expected call of StartMonitoringMemberWithContext
+// StartMonitoringMemberWithContext indicates an expected call of StartMonitoringMemberWithContext.
 func (mr *MockDetectiveAPIMockRecorder) StartMonitoringMemberWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMonitoringMemberWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).StartMonitoringMemberWithContext), varargs...)
+}
+
+// TagResource mocks base method.
+func (m *MockDetectiveAPI) TagResource(arg0 *detective.TagResourceInput) (*detective.TagResourceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "TagResource", arg0)
+	ret0, _ := ret[0].(*detective.TagResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// TagResource indicates an expected call of TagResource.
+func (mr *MockDetectiveAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockDetectiveAPI)(nil).TagResource), arg0)
+}
+
+// TagResourceRequest mocks base method.
+func (m *MockDetectiveAPI) TagResourceRequest(arg0 *detective.TagResourceInput) (*request.Request, *detective.TagResourceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*detective.TagResourceOutput)
+	return ret0, ret1
+}
+
+// TagResourceRequest indicates an expected call of TagResourceRequest.
+func (mr *MockDetectiveAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).TagResourceRequest), arg0)
+}
+
+// TagResourceWithContext mocks base method.
+func (m *MockDetectiveAPI) TagResourceWithContext(arg0 context.Context, arg1 *detective.TagResourceInput, arg2 ...request.Option) (*detective.TagResourceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "TagResourceWithContext", varargs...)
+	ret0, _ := ret[0].(*detective.TagResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
+func (mr *MockDetectiveAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).TagResourceWithContext), varargs...)
+}
+
+// UntagResource mocks base method.
+func (m *MockDetectiveAPI) UntagResource(arg0 *detective.UntagResourceInput) (*detective.UntagResourceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UntagResource", arg0)
+	ret0, _ := ret[0].(*detective.UntagResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UntagResource indicates an expected call of UntagResource.
+func (mr *MockDetectiveAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockDetectiveAPI)(nil).UntagResource), arg0)
+}
+
+// UntagResourceRequest mocks base method.
+func (m *MockDetectiveAPI) UntagResourceRequest(arg0 *detective.UntagResourceInput) (*request.Request, *detective.UntagResourceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*detective.UntagResourceOutput)
+	return ret0, ret1
+}
+
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
+func (mr *MockDetectiveAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockDetectiveAPI)(nil).UntagResourceRequest), arg0)
+}
+
+// UntagResourceWithContext mocks base method.
+func (m *MockDetectiveAPI) UntagResourceWithContext(arg0 context.Context, arg1 *detective.UntagResourceInput, arg2 ...request.Option) (*detective.UntagResourceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UntagResourceWithContext", varargs...)
+	ret0, _ := ret[0].(*detective.UntagResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
+func (mr *MockDetectiveAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockDetectiveAPI)(nil).UntagResourceWithContext), varargs...)
 }

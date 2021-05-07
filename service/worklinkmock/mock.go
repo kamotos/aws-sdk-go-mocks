@@ -6,36 +6,37 @@ package worklinkmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	worklink "github.com/aws/aws-sdk-go/service/worklink"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockWorkLinkAPI is a mock of WorkLinkAPI interface
+// MockWorkLinkAPI is a mock of WorkLinkAPI interface.
 type MockWorkLinkAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockWorkLinkAPIMockRecorder
 }
 
-// MockWorkLinkAPIMockRecorder is the mock recorder for MockWorkLinkAPI
+// MockWorkLinkAPIMockRecorder is the mock recorder for MockWorkLinkAPI.
 type MockWorkLinkAPIMockRecorder struct {
 	mock *MockWorkLinkAPI
 }
 
-// NewMockWorkLinkAPI creates a new mock instance
+// NewMockWorkLinkAPI creates a new mock instance.
 func NewMockWorkLinkAPI(ctrl *gomock.Controller) *MockWorkLinkAPI {
 	mock := &MockWorkLinkAPI{ctrl: ctrl}
 	mock.recorder = &MockWorkLinkAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockWorkLinkAPI) EXPECT() *MockWorkLinkAPIMockRecorder {
 	return m.recorder
 }
 
-// AssociateDomain mocks base method
+// AssociateDomain mocks base method.
 func (m *MockWorkLinkAPI) AssociateDomain(arg0 *worklink.AssociateDomainInput) (*worklink.AssociateDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateDomain", arg0)
@@ -44,13 +45,13 @@ func (m *MockWorkLinkAPI) AssociateDomain(arg0 *worklink.AssociateDomainInput) (
 	return ret0, ret1
 }
 
-// AssociateDomain indicates an expected call of AssociateDomain
+// AssociateDomain indicates an expected call of AssociateDomain.
 func (mr *MockWorkLinkAPIMockRecorder) AssociateDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateDomain", reflect.TypeOf((*MockWorkLinkAPI)(nil).AssociateDomain), arg0)
 }
 
-// AssociateDomainRequest mocks base method
+// AssociateDomainRequest mocks base method.
 func (m *MockWorkLinkAPI) AssociateDomainRequest(arg0 *worklink.AssociateDomainInput) (*request.Request, *worklink.AssociateDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateDomainRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockWorkLinkAPI) AssociateDomainRequest(arg0 *worklink.AssociateDomainI
 	return ret0, ret1
 }
 
-// AssociateDomainRequest indicates an expected call of AssociateDomainRequest
+// AssociateDomainRequest indicates an expected call of AssociateDomainRequest.
 func (mr *MockWorkLinkAPIMockRecorder) AssociateDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateDomainRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).AssociateDomainRequest), arg0)
 }
 
-// AssociateDomainWithContext mocks base method
+// AssociateDomainWithContext mocks base method.
 func (m *MockWorkLinkAPI) AssociateDomainWithContext(arg0 context.Context, arg1 *worklink.AssociateDomainInput, arg2 ...request.Option) (*worklink.AssociateDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockWorkLinkAPI) AssociateDomainWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// AssociateDomainWithContext indicates an expected call of AssociateDomainWithContext
+// AssociateDomainWithContext indicates an expected call of AssociateDomainWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) AssociateDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateDomainWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).AssociateDomainWithContext), varargs...)
 }
 
-// AssociateWebsiteAuthorizationProvider mocks base method
+// AssociateWebsiteAuthorizationProvider mocks base method.
 func (m *MockWorkLinkAPI) AssociateWebsiteAuthorizationProvider(arg0 *worklink.AssociateWebsiteAuthorizationProviderInput) (*worklink.AssociateWebsiteAuthorizationProviderOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateWebsiteAuthorizationProvider", arg0)
@@ -94,13 +95,13 @@ func (m *MockWorkLinkAPI) AssociateWebsiteAuthorizationProvider(arg0 *worklink.A
 	return ret0, ret1
 }
 
-// AssociateWebsiteAuthorizationProvider indicates an expected call of AssociateWebsiteAuthorizationProvider
+// AssociateWebsiteAuthorizationProvider indicates an expected call of AssociateWebsiteAuthorizationProvider.
 func (mr *MockWorkLinkAPIMockRecorder) AssociateWebsiteAuthorizationProvider(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateWebsiteAuthorizationProvider", reflect.TypeOf((*MockWorkLinkAPI)(nil).AssociateWebsiteAuthorizationProvider), arg0)
 }
 
-// AssociateWebsiteAuthorizationProviderRequest mocks base method
+// AssociateWebsiteAuthorizationProviderRequest mocks base method.
 func (m *MockWorkLinkAPI) AssociateWebsiteAuthorizationProviderRequest(arg0 *worklink.AssociateWebsiteAuthorizationProviderInput) (*request.Request, *worklink.AssociateWebsiteAuthorizationProviderOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateWebsiteAuthorizationProviderRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockWorkLinkAPI) AssociateWebsiteAuthorizationProviderRequest(arg0 *wor
 	return ret0, ret1
 }
 
-// AssociateWebsiteAuthorizationProviderRequest indicates an expected call of AssociateWebsiteAuthorizationProviderRequest
+// AssociateWebsiteAuthorizationProviderRequest indicates an expected call of AssociateWebsiteAuthorizationProviderRequest.
 func (mr *MockWorkLinkAPIMockRecorder) AssociateWebsiteAuthorizationProviderRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateWebsiteAuthorizationProviderRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).AssociateWebsiteAuthorizationProviderRequest), arg0)
 }
 
-// AssociateWebsiteAuthorizationProviderWithContext mocks base method
+// AssociateWebsiteAuthorizationProviderWithContext mocks base method.
 func (m *MockWorkLinkAPI) AssociateWebsiteAuthorizationProviderWithContext(arg0 context.Context, arg1 *worklink.AssociateWebsiteAuthorizationProviderInput, arg2 ...request.Option) (*worklink.AssociateWebsiteAuthorizationProviderOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockWorkLinkAPI) AssociateWebsiteAuthorizationProviderWithContext(arg0 
 	return ret0, ret1
 }
 
-// AssociateWebsiteAuthorizationProviderWithContext indicates an expected call of AssociateWebsiteAuthorizationProviderWithContext
+// AssociateWebsiteAuthorizationProviderWithContext indicates an expected call of AssociateWebsiteAuthorizationProviderWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) AssociateWebsiteAuthorizationProviderWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateWebsiteAuthorizationProviderWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).AssociateWebsiteAuthorizationProviderWithContext), varargs...)
 }
 
-// AssociateWebsiteCertificateAuthority mocks base method
+// AssociateWebsiteCertificateAuthority mocks base method.
 func (m *MockWorkLinkAPI) AssociateWebsiteCertificateAuthority(arg0 *worklink.AssociateWebsiteCertificateAuthorityInput) (*worklink.AssociateWebsiteCertificateAuthorityOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateWebsiteCertificateAuthority", arg0)
@@ -144,13 +145,13 @@ func (m *MockWorkLinkAPI) AssociateWebsiteCertificateAuthority(arg0 *worklink.As
 	return ret0, ret1
 }
 
-// AssociateWebsiteCertificateAuthority indicates an expected call of AssociateWebsiteCertificateAuthority
+// AssociateWebsiteCertificateAuthority indicates an expected call of AssociateWebsiteCertificateAuthority.
 func (mr *MockWorkLinkAPIMockRecorder) AssociateWebsiteCertificateAuthority(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateWebsiteCertificateAuthority", reflect.TypeOf((*MockWorkLinkAPI)(nil).AssociateWebsiteCertificateAuthority), arg0)
 }
 
-// AssociateWebsiteCertificateAuthorityRequest mocks base method
+// AssociateWebsiteCertificateAuthorityRequest mocks base method.
 func (m *MockWorkLinkAPI) AssociateWebsiteCertificateAuthorityRequest(arg0 *worklink.AssociateWebsiteCertificateAuthorityInput) (*request.Request, *worklink.AssociateWebsiteCertificateAuthorityOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateWebsiteCertificateAuthorityRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockWorkLinkAPI) AssociateWebsiteCertificateAuthorityRequest(arg0 *work
 	return ret0, ret1
 }
 
-// AssociateWebsiteCertificateAuthorityRequest indicates an expected call of AssociateWebsiteCertificateAuthorityRequest
+// AssociateWebsiteCertificateAuthorityRequest indicates an expected call of AssociateWebsiteCertificateAuthorityRequest.
 func (mr *MockWorkLinkAPIMockRecorder) AssociateWebsiteCertificateAuthorityRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateWebsiteCertificateAuthorityRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).AssociateWebsiteCertificateAuthorityRequest), arg0)
 }
 
-// AssociateWebsiteCertificateAuthorityWithContext mocks base method
+// AssociateWebsiteCertificateAuthorityWithContext mocks base method.
 func (m *MockWorkLinkAPI) AssociateWebsiteCertificateAuthorityWithContext(arg0 context.Context, arg1 *worklink.AssociateWebsiteCertificateAuthorityInput, arg2 ...request.Option) (*worklink.AssociateWebsiteCertificateAuthorityOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockWorkLinkAPI) AssociateWebsiteCertificateAuthorityWithContext(arg0 c
 	return ret0, ret1
 }
 
-// AssociateWebsiteCertificateAuthorityWithContext indicates an expected call of AssociateWebsiteCertificateAuthorityWithContext
+// AssociateWebsiteCertificateAuthorityWithContext indicates an expected call of AssociateWebsiteCertificateAuthorityWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) AssociateWebsiteCertificateAuthorityWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateWebsiteCertificateAuthorityWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).AssociateWebsiteCertificateAuthorityWithContext), varargs...)
 }
 
-// CreateFleet mocks base method
+// CreateFleet mocks base method.
 func (m *MockWorkLinkAPI) CreateFleet(arg0 *worklink.CreateFleetInput) (*worklink.CreateFleetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFleet", arg0)
@@ -194,13 +195,13 @@ func (m *MockWorkLinkAPI) CreateFleet(arg0 *worklink.CreateFleetInput) (*worklin
 	return ret0, ret1
 }
 
-// CreateFleet indicates an expected call of CreateFleet
+// CreateFleet indicates an expected call of CreateFleet.
 func (mr *MockWorkLinkAPIMockRecorder) CreateFleet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFleet", reflect.TypeOf((*MockWorkLinkAPI)(nil).CreateFleet), arg0)
 }
 
-// CreateFleetRequest mocks base method
+// CreateFleetRequest mocks base method.
 func (m *MockWorkLinkAPI) CreateFleetRequest(arg0 *worklink.CreateFleetInput) (*request.Request, *worklink.CreateFleetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFleetRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockWorkLinkAPI) CreateFleetRequest(arg0 *worklink.CreateFleetInput) (*
 	return ret0, ret1
 }
 
-// CreateFleetRequest indicates an expected call of CreateFleetRequest
+// CreateFleetRequest indicates an expected call of CreateFleetRequest.
 func (mr *MockWorkLinkAPIMockRecorder) CreateFleetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFleetRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).CreateFleetRequest), arg0)
 }
 
-// CreateFleetWithContext mocks base method
+// CreateFleetWithContext mocks base method.
 func (m *MockWorkLinkAPI) CreateFleetWithContext(arg0 context.Context, arg1 *worklink.CreateFleetInput, arg2 ...request.Option) (*worklink.CreateFleetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockWorkLinkAPI) CreateFleetWithContext(arg0 context.Context, arg1 *wor
 	return ret0, ret1
 }
 
-// CreateFleetWithContext indicates an expected call of CreateFleetWithContext
+// CreateFleetWithContext indicates an expected call of CreateFleetWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) CreateFleetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFleetWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).CreateFleetWithContext), varargs...)
 }
 
-// DeleteFleet mocks base method
+// DeleteFleet mocks base method.
 func (m *MockWorkLinkAPI) DeleteFleet(arg0 *worklink.DeleteFleetInput) (*worklink.DeleteFleetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFleet", arg0)
@@ -244,13 +245,13 @@ func (m *MockWorkLinkAPI) DeleteFleet(arg0 *worklink.DeleteFleetInput) (*worklin
 	return ret0, ret1
 }
 
-// DeleteFleet indicates an expected call of DeleteFleet
+// DeleteFleet indicates an expected call of DeleteFleet.
 func (mr *MockWorkLinkAPIMockRecorder) DeleteFleet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFleet", reflect.TypeOf((*MockWorkLinkAPI)(nil).DeleteFleet), arg0)
 }
 
-// DeleteFleetRequest mocks base method
+// DeleteFleetRequest mocks base method.
 func (m *MockWorkLinkAPI) DeleteFleetRequest(arg0 *worklink.DeleteFleetInput) (*request.Request, *worklink.DeleteFleetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFleetRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockWorkLinkAPI) DeleteFleetRequest(arg0 *worklink.DeleteFleetInput) (*
 	return ret0, ret1
 }
 
-// DeleteFleetRequest indicates an expected call of DeleteFleetRequest
+// DeleteFleetRequest indicates an expected call of DeleteFleetRequest.
 func (mr *MockWorkLinkAPIMockRecorder) DeleteFleetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFleetRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).DeleteFleetRequest), arg0)
 }
 
-// DeleteFleetWithContext mocks base method
+// DeleteFleetWithContext mocks base method.
 func (m *MockWorkLinkAPI) DeleteFleetWithContext(arg0 context.Context, arg1 *worklink.DeleteFleetInput, arg2 ...request.Option) (*worklink.DeleteFleetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockWorkLinkAPI) DeleteFleetWithContext(arg0 context.Context, arg1 *wor
 	return ret0, ret1
 }
 
-// DeleteFleetWithContext indicates an expected call of DeleteFleetWithContext
+// DeleteFleetWithContext indicates an expected call of DeleteFleetWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) DeleteFleetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFleetWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).DeleteFleetWithContext), varargs...)
 }
 
-// DescribeAuditStreamConfiguration mocks base method
+// DescribeAuditStreamConfiguration mocks base method.
 func (m *MockWorkLinkAPI) DescribeAuditStreamConfiguration(arg0 *worklink.DescribeAuditStreamConfigurationInput) (*worklink.DescribeAuditStreamConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAuditStreamConfiguration", arg0)
@@ -294,13 +295,13 @@ func (m *MockWorkLinkAPI) DescribeAuditStreamConfiguration(arg0 *worklink.Descri
 	return ret0, ret1
 }
 
-// DescribeAuditStreamConfiguration indicates an expected call of DescribeAuditStreamConfiguration
+// DescribeAuditStreamConfiguration indicates an expected call of DescribeAuditStreamConfiguration.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeAuditStreamConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAuditStreamConfiguration", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeAuditStreamConfiguration), arg0)
 }
 
-// DescribeAuditStreamConfigurationRequest mocks base method
+// DescribeAuditStreamConfigurationRequest mocks base method.
 func (m *MockWorkLinkAPI) DescribeAuditStreamConfigurationRequest(arg0 *worklink.DescribeAuditStreamConfigurationInput) (*request.Request, *worklink.DescribeAuditStreamConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAuditStreamConfigurationRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockWorkLinkAPI) DescribeAuditStreamConfigurationRequest(arg0 *worklink
 	return ret0, ret1
 }
 
-// DescribeAuditStreamConfigurationRequest indicates an expected call of DescribeAuditStreamConfigurationRequest
+// DescribeAuditStreamConfigurationRequest indicates an expected call of DescribeAuditStreamConfigurationRequest.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeAuditStreamConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAuditStreamConfigurationRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeAuditStreamConfigurationRequest), arg0)
 }
 
-// DescribeAuditStreamConfigurationWithContext mocks base method
+// DescribeAuditStreamConfigurationWithContext mocks base method.
 func (m *MockWorkLinkAPI) DescribeAuditStreamConfigurationWithContext(arg0 context.Context, arg1 *worklink.DescribeAuditStreamConfigurationInput, arg2 ...request.Option) (*worklink.DescribeAuditStreamConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockWorkLinkAPI) DescribeAuditStreamConfigurationWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// DescribeAuditStreamConfigurationWithContext indicates an expected call of DescribeAuditStreamConfigurationWithContext
+// DescribeAuditStreamConfigurationWithContext indicates an expected call of DescribeAuditStreamConfigurationWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeAuditStreamConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAuditStreamConfigurationWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeAuditStreamConfigurationWithContext), varargs...)
 }
 
-// DescribeCompanyNetworkConfiguration mocks base method
+// DescribeCompanyNetworkConfiguration mocks base method.
 func (m *MockWorkLinkAPI) DescribeCompanyNetworkConfiguration(arg0 *worklink.DescribeCompanyNetworkConfigurationInput) (*worklink.DescribeCompanyNetworkConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCompanyNetworkConfiguration", arg0)
@@ -344,13 +345,13 @@ func (m *MockWorkLinkAPI) DescribeCompanyNetworkConfiguration(arg0 *worklink.Des
 	return ret0, ret1
 }
 
-// DescribeCompanyNetworkConfiguration indicates an expected call of DescribeCompanyNetworkConfiguration
+// DescribeCompanyNetworkConfiguration indicates an expected call of DescribeCompanyNetworkConfiguration.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeCompanyNetworkConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCompanyNetworkConfiguration", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeCompanyNetworkConfiguration), arg0)
 }
 
-// DescribeCompanyNetworkConfigurationRequest mocks base method
+// DescribeCompanyNetworkConfigurationRequest mocks base method.
 func (m *MockWorkLinkAPI) DescribeCompanyNetworkConfigurationRequest(arg0 *worklink.DescribeCompanyNetworkConfigurationInput) (*request.Request, *worklink.DescribeCompanyNetworkConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCompanyNetworkConfigurationRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockWorkLinkAPI) DescribeCompanyNetworkConfigurationRequest(arg0 *workl
 	return ret0, ret1
 }
 
-// DescribeCompanyNetworkConfigurationRequest indicates an expected call of DescribeCompanyNetworkConfigurationRequest
+// DescribeCompanyNetworkConfigurationRequest indicates an expected call of DescribeCompanyNetworkConfigurationRequest.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeCompanyNetworkConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCompanyNetworkConfigurationRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeCompanyNetworkConfigurationRequest), arg0)
 }
 
-// DescribeCompanyNetworkConfigurationWithContext mocks base method
+// DescribeCompanyNetworkConfigurationWithContext mocks base method.
 func (m *MockWorkLinkAPI) DescribeCompanyNetworkConfigurationWithContext(arg0 context.Context, arg1 *worklink.DescribeCompanyNetworkConfigurationInput, arg2 ...request.Option) (*worklink.DescribeCompanyNetworkConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockWorkLinkAPI) DescribeCompanyNetworkConfigurationWithContext(arg0 co
 	return ret0, ret1
 }
 
-// DescribeCompanyNetworkConfigurationWithContext indicates an expected call of DescribeCompanyNetworkConfigurationWithContext
+// DescribeCompanyNetworkConfigurationWithContext indicates an expected call of DescribeCompanyNetworkConfigurationWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeCompanyNetworkConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCompanyNetworkConfigurationWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeCompanyNetworkConfigurationWithContext), varargs...)
 }
 
-// DescribeDevice mocks base method
+// DescribeDevice mocks base method.
 func (m *MockWorkLinkAPI) DescribeDevice(arg0 *worklink.DescribeDeviceInput) (*worklink.DescribeDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDevice", arg0)
@@ -394,13 +395,13 @@ func (m *MockWorkLinkAPI) DescribeDevice(arg0 *worklink.DescribeDeviceInput) (*w
 	return ret0, ret1
 }
 
-// DescribeDevice indicates an expected call of DescribeDevice
+// DescribeDevice indicates an expected call of DescribeDevice.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeDevice(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDevice", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeDevice), arg0)
 }
 
-// DescribeDevicePolicyConfiguration mocks base method
+// DescribeDevicePolicyConfiguration mocks base method.
 func (m *MockWorkLinkAPI) DescribeDevicePolicyConfiguration(arg0 *worklink.DescribeDevicePolicyConfigurationInput) (*worklink.DescribeDevicePolicyConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDevicePolicyConfiguration", arg0)
@@ -409,13 +410,13 @@ func (m *MockWorkLinkAPI) DescribeDevicePolicyConfiguration(arg0 *worklink.Descr
 	return ret0, ret1
 }
 
-// DescribeDevicePolicyConfiguration indicates an expected call of DescribeDevicePolicyConfiguration
+// DescribeDevicePolicyConfiguration indicates an expected call of DescribeDevicePolicyConfiguration.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeDevicePolicyConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDevicePolicyConfiguration", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeDevicePolicyConfiguration), arg0)
 }
 
-// DescribeDevicePolicyConfigurationRequest mocks base method
+// DescribeDevicePolicyConfigurationRequest mocks base method.
 func (m *MockWorkLinkAPI) DescribeDevicePolicyConfigurationRequest(arg0 *worklink.DescribeDevicePolicyConfigurationInput) (*request.Request, *worklink.DescribeDevicePolicyConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDevicePolicyConfigurationRequest", arg0)
@@ -424,13 +425,13 @@ func (m *MockWorkLinkAPI) DescribeDevicePolicyConfigurationRequest(arg0 *worklin
 	return ret0, ret1
 }
 
-// DescribeDevicePolicyConfigurationRequest indicates an expected call of DescribeDevicePolicyConfigurationRequest
+// DescribeDevicePolicyConfigurationRequest indicates an expected call of DescribeDevicePolicyConfigurationRequest.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeDevicePolicyConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDevicePolicyConfigurationRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeDevicePolicyConfigurationRequest), arg0)
 }
 
-// DescribeDevicePolicyConfigurationWithContext mocks base method
+// DescribeDevicePolicyConfigurationWithContext mocks base method.
 func (m *MockWorkLinkAPI) DescribeDevicePolicyConfigurationWithContext(arg0 context.Context, arg1 *worklink.DescribeDevicePolicyConfigurationInput, arg2 ...request.Option) (*worklink.DescribeDevicePolicyConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -443,14 +444,14 @@ func (m *MockWorkLinkAPI) DescribeDevicePolicyConfigurationWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// DescribeDevicePolicyConfigurationWithContext indicates an expected call of DescribeDevicePolicyConfigurationWithContext
+// DescribeDevicePolicyConfigurationWithContext indicates an expected call of DescribeDevicePolicyConfigurationWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeDevicePolicyConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDevicePolicyConfigurationWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeDevicePolicyConfigurationWithContext), varargs...)
 }
 
-// DescribeDeviceRequest mocks base method
+// DescribeDeviceRequest mocks base method.
 func (m *MockWorkLinkAPI) DescribeDeviceRequest(arg0 *worklink.DescribeDeviceInput) (*request.Request, *worklink.DescribeDeviceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDeviceRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockWorkLinkAPI) DescribeDeviceRequest(arg0 *worklink.DescribeDeviceInp
 	return ret0, ret1
 }
 
-// DescribeDeviceRequest indicates an expected call of DescribeDeviceRequest
+// DescribeDeviceRequest indicates an expected call of DescribeDeviceRequest.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeDeviceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDeviceRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeDeviceRequest), arg0)
 }
 
-// DescribeDeviceWithContext mocks base method
+// DescribeDeviceWithContext mocks base method.
 func (m *MockWorkLinkAPI) DescribeDeviceWithContext(arg0 context.Context, arg1 *worklink.DescribeDeviceInput, arg2 ...request.Option) (*worklink.DescribeDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockWorkLinkAPI) DescribeDeviceWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DescribeDeviceWithContext indicates an expected call of DescribeDeviceWithContext
+// DescribeDeviceWithContext indicates an expected call of DescribeDeviceWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeDeviceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDeviceWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeDeviceWithContext), varargs...)
 }
 
-// DescribeDomain mocks base method
+// DescribeDomain mocks base method.
 func (m *MockWorkLinkAPI) DescribeDomain(arg0 *worklink.DescribeDomainInput) (*worklink.DescribeDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDomain", arg0)
@@ -494,13 +495,13 @@ func (m *MockWorkLinkAPI) DescribeDomain(arg0 *worklink.DescribeDomainInput) (*w
 	return ret0, ret1
 }
 
-// DescribeDomain indicates an expected call of DescribeDomain
+// DescribeDomain indicates an expected call of DescribeDomain.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDomain", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeDomain), arg0)
 }
 
-// DescribeDomainRequest mocks base method
+// DescribeDomainRequest mocks base method.
 func (m *MockWorkLinkAPI) DescribeDomainRequest(arg0 *worklink.DescribeDomainInput) (*request.Request, *worklink.DescribeDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDomainRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockWorkLinkAPI) DescribeDomainRequest(arg0 *worklink.DescribeDomainInp
 	return ret0, ret1
 }
 
-// DescribeDomainRequest indicates an expected call of DescribeDomainRequest
+// DescribeDomainRequest indicates an expected call of DescribeDomainRequest.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDomainRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeDomainRequest), arg0)
 }
 
-// DescribeDomainWithContext mocks base method
+// DescribeDomainWithContext mocks base method.
 func (m *MockWorkLinkAPI) DescribeDomainWithContext(arg0 context.Context, arg1 *worklink.DescribeDomainInput, arg2 ...request.Option) (*worklink.DescribeDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockWorkLinkAPI) DescribeDomainWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DescribeDomainWithContext indicates an expected call of DescribeDomainWithContext
+// DescribeDomainWithContext indicates an expected call of DescribeDomainWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDomainWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeDomainWithContext), varargs...)
 }
 
-// DescribeFleetMetadata mocks base method
+// DescribeFleetMetadata mocks base method.
 func (m *MockWorkLinkAPI) DescribeFleetMetadata(arg0 *worklink.DescribeFleetMetadataInput) (*worklink.DescribeFleetMetadataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFleetMetadata", arg0)
@@ -544,13 +545,13 @@ func (m *MockWorkLinkAPI) DescribeFleetMetadata(arg0 *worklink.DescribeFleetMeta
 	return ret0, ret1
 }
 
-// DescribeFleetMetadata indicates an expected call of DescribeFleetMetadata
+// DescribeFleetMetadata indicates an expected call of DescribeFleetMetadata.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeFleetMetadata(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFleetMetadata", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeFleetMetadata), arg0)
 }
 
-// DescribeFleetMetadataRequest mocks base method
+// DescribeFleetMetadataRequest mocks base method.
 func (m *MockWorkLinkAPI) DescribeFleetMetadataRequest(arg0 *worklink.DescribeFleetMetadataInput) (*request.Request, *worklink.DescribeFleetMetadataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFleetMetadataRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockWorkLinkAPI) DescribeFleetMetadataRequest(arg0 *worklink.DescribeFl
 	return ret0, ret1
 }
 
-// DescribeFleetMetadataRequest indicates an expected call of DescribeFleetMetadataRequest
+// DescribeFleetMetadataRequest indicates an expected call of DescribeFleetMetadataRequest.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeFleetMetadataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFleetMetadataRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeFleetMetadataRequest), arg0)
 }
 
-// DescribeFleetMetadataWithContext mocks base method
+// DescribeFleetMetadataWithContext mocks base method.
 func (m *MockWorkLinkAPI) DescribeFleetMetadataWithContext(arg0 context.Context, arg1 *worklink.DescribeFleetMetadataInput, arg2 ...request.Option) (*worklink.DescribeFleetMetadataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockWorkLinkAPI) DescribeFleetMetadataWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DescribeFleetMetadataWithContext indicates an expected call of DescribeFleetMetadataWithContext
+// DescribeFleetMetadataWithContext indicates an expected call of DescribeFleetMetadataWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeFleetMetadataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFleetMetadataWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeFleetMetadataWithContext), varargs...)
 }
 
-// DescribeIdentityProviderConfiguration mocks base method
+// DescribeIdentityProviderConfiguration mocks base method.
 func (m *MockWorkLinkAPI) DescribeIdentityProviderConfiguration(arg0 *worklink.DescribeIdentityProviderConfigurationInput) (*worklink.DescribeIdentityProviderConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeIdentityProviderConfiguration", arg0)
@@ -594,13 +595,13 @@ func (m *MockWorkLinkAPI) DescribeIdentityProviderConfiguration(arg0 *worklink.D
 	return ret0, ret1
 }
 
-// DescribeIdentityProviderConfiguration indicates an expected call of DescribeIdentityProviderConfiguration
+// DescribeIdentityProviderConfiguration indicates an expected call of DescribeIdentityProviderConfiguration.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeIdentityProviderConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIdentityProviderConfiguration", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeIdentityProviderConfiguration), arg0)
 }
 
-// DescribeIdentityProviderConfigurationRequest mocks base method
+// DescribeIdentityProviderConfigurationRequest mocks base method.
 func (m *MockWorkLinkAPI) DescribeIdentityProviderConfigurationRequest(arg0 *worklink.DescribeIdentityProviderConfigurationInput) (*request.Request, *worklink.DescribeIdentityProviderConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeIdentityProviderConfigurationRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockWorkLinkAPI) DescribeIdentityProviderConfigurationRequest(arg0 *wor
 	return ret0, ret1
 }
 
-// DescribeIdentityProviderConfigurationRequest indicates an expected call of DescribeIdentityProviderConfigurationRequest
+// DescribeIdentityProviderConfigurationRequest indicates an expected call of DescribeIdentityProviderConfigurationRequest.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeIdentityProviderConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIdentityProviderConfigurationRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeIdentityProviderConfigurationRequest), arg0)
 }
 
-// DescribeIdentityProviderConfigurationWithContext mocks base method
+// DescribeIdentityProviderConfigurationWithContext mocks base method.
 func (m *MockWorkLinkAPI) DescribeIdentityProviderConfigurationWithContext(arg0 context.Context, arg1 *worklink.DescribeIdentityProviderConfigurationInput, arg2 ...request.Option) (*worklink.DescribeIdentityProviderConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockWorkLinkAPI) DescribeIdentityProviderConfigurationWithContext(arg0 
 	return ret0, ret1
 }
 
-// DescribeIdentityProviderConfigurationWithContext indicates an expected call of DescribeIdentityProviderConfigurationWithContext
+// DescribeIdentityProviderConfigurationWithContext indicates an expected call of DescribeIdentityProviderConfigurationWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeIdentityProviderConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIdentityProviderConfigurationWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeIdentityProviderConfigurationWithContext), varargs...)
 }
 
-// DescribeWebsiteCertificateAuthority mocks base method
+// DescribeWebsiteCertificateAuthority mocks base method.
 func (m *MockWorkLinkAPI) DescribeWebsiteCertificateAuthority(arg0 *worklink.DescribeWebsiteCertificateAuthorityInput) (*worklink.DescribeWebsiteCertificateAuthorityOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeWebsiteCertificateAuthority", arg0)
@@ -644,13 +645,13 @@ func (m *MockWorkLinkAPI) DescribeWebsiteCertificateAuthority(arg0 *worklink.Des
 	return ret0, ret1
 }
 
-// DescribeWebsiteCertificateAuthority indicates an expected call of DescribeWebsiteCertificateAuthority
+// DescribeWebsiteCertificateAuthority indicates an expected call of DescribeWebsiteCertificateAuthority.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeWebsiteCertificateAuthority(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeWebsiteCertificateAuthority", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeWebsiteCertificateAuthority), arg0)
 }
 
-// DescribeWebsiteCertificateAuthorityRequest mocks base method
+// DescribeWebsiteCertificateAuthorityRequest mocks base method.
 func (m *MockWorkLinkAPI) DescribeWebsiteCertificateAuthorityRequest(arg0 *worklink.DescribeWebsiteCertificateAuthorityInput) (*request.Request, *worklink.DescribeWebsiteCertificateAuthorityOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeWebsiteCertificateAuthorityRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockWorkLinkAPI) DescribeWebsiteCertificateAuthorityRequest(arg0 *workl
 	return ret0, ret1
 }
 
-// DescribeWebsiteCertificateAuthorityRequest indicates an expected call of DescribeWebsiteCertificateAuthorityRequest
+// DescribeWebsiteCertificateAuthorityRequest indicates an expected call of DescribeWebsiteCertificateAuthorityRequest.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeWebsiteCertificateAuthorityRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeWebsiteCertificateAuthorityRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeWebsiteCertificateAuthorityRequest), arg0)
 }
 
-// DescribeWebsiteCertificateAuthorityWithContext mocks base method
+// DescribeWebsiteCertificateAuthorityWithContext mocks base method.
 func (m *MockWorkLinkAPI) DescribeWebsiteCertificateAuthorityWithContext(arg0 context.Context, arg1 *worklink.DescribeWebsiteCertificateAuthorityInput, arg2 ...request.Option) (*worklink.DescribeWebsiteCertificateAuthorityOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockWorkLinkAPI) DescribeWebsiteCertificateAuthorityWithContext(arg0 co
 	return ret0, ret1
 }
 
-// DescribeWebsiteCertificateAuthorityWithContext indicates an expected call of DescribeWebsiteCertificateAuthorityWithContext
+// DescribeWebsiteCertificateAuthorityWithContext indicates an expected call of DescribeWebsiteCertificateAuthorityWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) DescribeWebsiteCertificateAuthorityWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeWebsiteCertificateAuthorityWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).DescribeWebsiteCertificateAuthorityWithContext), varargs...)
 }
 
-// DisassociateDomain mocks base method
+// DisassociateDomain mocks base method.
 func (m *MockWorkLinkAPI) DisassociateDomain(arg0 *worklink.DisassociateDomainInput) (*worklink.DisassociateDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateDomain", arg0)
@@ -694,13 +695,13 @@ func (m *MockWorkLinkAPI) DisassociateDomain(arg0 *worklink.DisassociateDomainIn
 	return ret0, ret1
 }
 
-// DisassociateDomain indicates an expected call of DisassociateDomain
+// DisassociateDomain indicates an expected call of DisassociateDomain.
 func (mr *MockWorkLinkAPIMockRecorder) DisassociateDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateDomain", reflect.TypeOf((*MockWorkLinkAPI)(nil).DisassociateDomain), arg0)
 }
 
-// DisassociateDomainRequest mocks base method
+// DisassociateDomainRequest mocks base method.
 func (m *MockWorkLinkAPI) DisassociateDomainRequest(arg0 *worklink.DisassociateDomainInput) (*request.Request, *worklink.DisassociateDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateDomainRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockWorkLinkAPI) DisassociateDomainRequest(arg0 *worklink.DisassociateD
 	return ret0, ret1
 }
 
-// DisassociateDomainRequest indicates an expected call of DisassociateDomainRequest
+// DisassociateDomainRequest indicates an expected call of DisassociateDomainRequest.
 func (mr *MockWorkLinkAPIMockRecorder) DisassociateDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateDomainRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).DisassociateDomainRequest), arg0)
 }
 
-// DisassociateDomainWithContext mocks base method
+// DisassociateDomainWithContext mocks base method.
 func (m *MockWorkLinkAPI) DisassociateDomainWithContext(arg0 context.Context, arg1 *worklink.DisassociateDomainInput, arg2 ...request.Option) (*worklink.DisassociateDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockWorkLinkAPI) DisassociateDomainWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DisassociateDomainWithContext indicates an expected call of DisassociateDomainWithContext
+// DisassociateDomainWithContext indicates an expected call of DisassociateDomainWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) DisassociateDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateDomainWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).DisassociateDomainWithContext), varargs...)
 }
 
-// DisassociateWebsiteAuthorizationProvider mocks base method
+// DisassociateWebsiteAuthorizationProvider mocks base method.
 func (m *MockWorkLinkAPI) DisassociateWebsiteAuthorizationProvider(arg0 *worklink.DisassociateWebsiteAuthorizationProviderInput) (*worklink.DisassociateWebsiteAuthorizationProviderOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateWebsiteAuthorizationProvider", arg0)
@@ -744,13 +745,13 @@ func (m *MockWorkLinkAPI) DisassociateWebsiteAuthorizationProvider(arg0 *worklin
 	return ret0, ret1
 }
 
-// DisassociateWebsiteAuthorizationProvider indicates an expected call of DisassociateWebsiteAuthorizationProvider
+// DisassociateWebsiteAuthorizationProvider indicates an expected call of DisassociateWebsiteAuthorizationProvider.
 func (mr *MockWorkLinkAPIMockRecorder) DisassociateWebsiteAuthorizationProvider(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateWebsiteAuthorizationProvider", reflect.TypeOf((*MockWorkLinkAPI)(nil).DisassociateWebsiteAuthorizationProvider), arg0)
 }
 
-// DisassociateWebsiteAuthorizationProviderRequest mocks base method
+// DisassociateWebsiteAuthorizationProviderRequest mocks base method.
 func (m *MockWorkLinkAPI) DisassociateWebsiteAuthorizationProviderRequest(arg0 *worklink.DisassociateWebsiteAuthorizationProviderInput) (*request.Request, *worklink.DisassociateWebsiteAuthorizationProviderOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateWebsiteAuthorizationProviderRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockWorkLinkAPI) DisassociateWebsiteAuthorizationProviderRequest(arg0 *
 	return ret0, ret1
 }
 
-// DisassociateWebsiteAuthorizationProviderRequest indicates an expected call of DisassociateWebsiteAuthorizationProviderRequest
+// DisassociateWebsiteAuthorizationProviderRequest indicates an expected call of DisassociateWebsiteAuthorizationProviderRequest.
 func (mr *MockWorkLinkAPIMockRecorder) DisassociateWebsiteAuthorizationProviderRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateWebsiteAuthorizationProviderRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).DisassociateWebsiteAuthorizationProviderRequest), arg0)
 }
 
-// DisassociateWebsiteAuthorizationProviderWithContext mocks base method
+// DisassociateWebsiteAuthorizationProviderWithContext mocks base method.
 func (m *MockWorkLinkAPI) DisassociateWebsiteAuthorizationProviderWithContext(arg0 context.Context, arg1 *worklink.DisassociateWebsiteAuthorizationProviderInput, arg2 ...request.Option) (*worklink.DisassociateWebsiteAuthorizationProviderOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockWorkLinkAPI) DisassociateWebsiteAuthorizationProviderWithContext(ar
 	return ret0, ret1
 }
 
-// DisassociateWebsiteAuthorizationProviderWithContext indicates an expected call of DisassociateWebsiteAuthorizationProviderWithContext
+// DisassociateWebsiteAuthorizationProviderWithContext indicates an expected call of DisassociateWebsiteAuthorizationProviderWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) DisassociateWebsiteAuthorizationProviderWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateWebsiteAuthorizationProviderWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).DisassociateWebsiteAuthorizationProviderWithContext), varargs...)
 }
 
-// DisassociateWebsiteCertificateAuthority mocks base method
+// DisassociateWebsiteCertificateAuthority mocks base method.
 func (m *MockWorkLinkAPI) DisassociateWebsiteCertificateAuthority(arg0 *worklink.DisassociateWebsiteCertificateAuthorityInput) (*worklink.DisassociateWebsiteCertificateAuthorityOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateWebsiteCertificateAuthority", arg0)
@@ -794,13 +795,13 @@ func (m *MockWorkLinkAPI) DisassociateWebsiteCertificateAuthority(arg0 *worklink
 	return ret0, ret1
 }
 
-// DisassociateWebsiteCertificateAuthority indicates an expected call of DisassociateWebsiteCertificateAuthority
+// DisassociateWebsiteCertificateAuthority indicates an expected call of DisassociateWebsiteCertificateAuthority.
 func (mr *MockWorkLinkAPIMockRecorder) DisassociateWebsiteCertificateAuthority(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateWebsiteCertificateAuthority", reflect.TypeOf((*MockWorkLinkAPI)(nil).DisassociateWebsiteCertificateAuthority), arg0)
 }
 
-// DisassociateWebsiteCertificateAuthorityRequest mocks base method
+// DisassociateWebsiteCertificateAuthorityRequest mocks base method.
 func (m *MockWorkLinkAPI) DisassociateWebsiteCertificateAuthorityRequest(arg0 *worklink.DisassociateWebsiteCertificateAuthorityInput) (*request.Request, *worklink.DisassociateWebsiteCertificateAuthorityOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateWebsiteCertificateAuthorityRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockWorkLinkAPI) DisassociateWebsiteCertificateAuthorityRequest(arg0 *w
 	return ret0, ret1
 }
 
-// DisassociateWebsiteCertificateAuthorityRequest indicates an expected call of DisassociateWebsiteCertificateAuthorityRequest
+// DisassociateWebsiteCertificateAuthorityRequest indicates an expected call of DisassociateWebsiteCertificateAuthorityRequest.
 func (mr *MockWorkLinkAPIMockRecorder) DisassociateWebsiteCertificateAuthorityRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateWebsiteCertificateAuthorityRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).DisassociateWebsiteCertificateAuthorityRequest), arg0)
 }
 
-// DisassociateWebsiteCertificateAuthorityWithContext mocks base method
+// DisassociateWebsiteCertificateAuthorityWithContext mocks base method.
 func (m *MockWorkLinkAPI) DisassociateWebsiteCertificateAuthorityWithContext(arg0 context.Context, arg1 *worklink.DisassociateWebsiteCertificateAuthorityInput, arg2 ...request.Option) (*worklink.DisassociateWebsiteCertificateAuthorityOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockWorkLinkAPI) DisassociateWebsiteCertificateAuthorityWithContext(arg
 	return ret0, ret1
 }
 
-// DisassociateWebsiteCertificateAuthorityWithContext indicates an expected call of DisassociateWebsiteCertificateAuthorityWithContext
+// DisassociateWebsiteCertificateAuthorityWithContext indicates an expected call of DisassociateWebsiteCertificateAuthorityWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) DisassociateWebsiteCertificateAuthorityWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateWebsiteCertificateAuthorityWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).DisassociateWebsiteCertificateAuthorityWithContext), varargs...)
 }
 
-// ListDevices mocks base method
+// ListDevices mocks base method.
 func (m *MockWorkLinkAPI) ListDevices(arg0 *worklink.ListDevicesInput) (*worklink.ListDevicesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDevices", arg0)
@@ -844,13 +845,13 @@ func (m *MockWorkLinkAPI) ListDevices(arg0 *worklink.ListDevicesInput) (*worklin
 	return ret0, ret1
 }
 
-// ListDevices indicates an expected call of ListDevices
+// ListDevices indicates an expected call of ListDevices.
 func (mr *MockWorkLinkAPIMockRecorder) ListDevices(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDevices", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListDevices), arg0)
 }
 
-// ListDevicesPages mocks base method
+// ListDevicesPages mocks base method.
 func (m *MockWorkLinkAPI) ListDevicesPages(arg0 *worklink.ListDevicesInput, arg1 func(*worklink.ListDevicesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDevicesPages", arg0, arg1)
@@ -858,13 +859,13 @@ func (m *MockWorkLinkAPI) ListDevicesPages(arg0 *worklink.ListDevicesInput, arg1
 	return ret0
 }
 
-// ListDevicesPages indicates an expected call of ListDevicesPages
+// ListDevicesPages indicates an expected call of ListDevicesPages.
 func (mr *MockWorkLinkAPIMockRecorder) ListDevicesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDevicesPages", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListDevicesPages), arg0, arg1)
 }
 
-// ListDevicesPagesWithContext mocks base method
+// ListDevicesPagesWithContext mocks base method.
 func (m *MockWorkLinkAPI) ListDevicesPagesWithContext(arg0 context.Context, arg1 *worklink.ListDevicesInput, arg2 func(*worklink.ListDevicesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -876,14 +877,14 @@ func (m *MockWorkLinkAPI) ListDevicesPagesWithContext(arg0 context.Context, arg1
 	return ret0
 }
 
-// ListDevicesPagesWithContext indicates an expected call of ListDevicesPagesWithContext
+// ListDevicesPagesWithContext indicates an expected call of ListDevicesPagesWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) ListDevicesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDevicesPagesWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListDevicesPagesWithContext), varargs...)
 }
 
-// ListDevicesRequest mocks base method
+// ListDevicesRequest mocks base method.
 func (m *MockWorkLinkAPI) ListDevicesRequest(arg0 *worklink.ListDevicesInput) (*request.Request, *worklink.ListDevicesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDevicesRequest", arg0)
@@ -892,13 +893,13 @@ func (m *MockWorkLinkAPI) ListDevicesRequest(arg0 *worklink.ListDevicesInput) (*
 	return ret0, ret1
 }
 
-// ListDevicesRequest indicates an expected call of ListDevicesRequest
+// ListDevicesRequest indicates an expected call of ListDevicesRequest.
 func (mr *MockWorkLinkAPIMockRecorder) ListDevicesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDevicesRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListDevicesRequest), arg0)
 }
 
-// ListDevicesWithContext mocks base method
+// ListDevicesWithContext mocks base method.
 func (m *MockWorkLinkAPI) ListDevicesWithContext(arg0 context.Context, arg1 *worklink.ListDevicesInput, arg2 ...request.Option) (*worklink.ListDevicesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -911,14 +912,14 @@ func (m *MockWorkLinkAPI) ListDevicesWithContext(arg0 context.Context, arg1 *wor
 	return ret0, ret1
 }
 
-// ListDevicesWithContext indicates an expected call of ListDevicesWithContext
+// ListDevicesWithContext indicates an expected call of ListDevicesWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) ListDevicesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDevicesWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListDevicesWithContext), varargs...)
 }
 
-// ListDomains mocks base method
+// ListDomains mocks base method.
 func (m *MockWorkLinkAPI) ListDomains(arg0 *worklink.ListDomainsInput) (*worklink.ListDomainsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomains", arg0)
@@ -927,13 +928,13 @@ func (m *MockWorkLinkAPI) ListDomains(arg0 *worklink.ListDomainsInput) (*worklin
 	return ret0, ret1
 }
 
-// ListDomains indicates an expected call of ListDomains
+// ListDomains indicates an expected call of ListDomains.
 func (mr *MockWorkLinkAPIMockRecorder) ListDomains(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomains", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListDomains), arg0)
 }
 
-// ListDomainsPages mocks base method
+// ListDomainsPages mocks base method.
 func (m *MockWorkLinkAPI) ListDomainsPages(arg0 *worklink.ListDomainsInput, arg1 func(*worklink.ListDomainsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomainsPages", arg0, arg1)
@@ -941,13 +942,13 @@ func (m *MockWorkLinkAPI) ListDomainsPages(arg0 *worklink.ListDomainsInput, arg1
 	return ret0
 }
 
-// ListDomainsPages indicates an expected call of ListDomainsPages
+// ListDomainsPages indicates an expected call of ListDomainsPages.
 func (mr *MockWorkLinkAPIMockRecorder) ListDomainsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainsPages", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListDomainsPages), arg0, arg1)
 }
 
-// ListDomainsPagesWithContext mocks base method
+// ListDomainsPagesWithContext mocks base method.
 func (m *MockWorkLinkAPI) ListDomainsPagesWithContext(arg0 context.Context, arg1 *worklink.ListDomainsInput, arg2 func(*worklink.ListDomainsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -959,14 +960,14 @@ func (m *MockWorkLinkAPI) ListDomainsPagesWithContext(arg0 context.Context, arg1
 	return ret0
 }
 
-// ListDomainsPagesWithContext indicates an expected call of ListDomainsPagesWithContext
+// ListDomainsPagesWithContext indicates an expected call of ListDomainsPagesWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) ListDomainsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainsPagesWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListDomainsPagesWithContext), varargs...)
 }
 
-// ListDomainsRequest mocks base method
+// ListDomainsRequest mocks base method.
 func (m *MockWorkLinkAPI) ListDomainsRequest(arg0 *worklink.ListDomainsInput) (*request.Request, *worklink.ListDomainsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomainsRequest", arg0)
@@ -975,13 +976,13 @@ func (m *MockWorkLinkAPI) ListDomainsRequest(arg0 *worklink.ListDomainsInput) (*
 	return ret0, ret1
 }
 
-// ListDomainsRequest indicates an expected call of ListDomainsRequest
+// ListDomainsRequest indicates an expected call of ListDomainsRequest.
 func (mr *MockWorkLinkAPIMockRecorder) ListDomainsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainsRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListDomainsRequest), arg0)
 }
 
-// ListDomainsWithContext mocks base method
+// ListDomainsWithContext mocks base method.
 func (m *MockWorkLinkAPI) ListDomainsWithContext(arg0 context.Context, arg1 *worklink.ListDomainsInput, arg2 ...request.Option) (*worklink.ListDomainsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -994,14 +995,14 @@ func (m *MockWorkLinkAPI) ListDomainsWithContext(arg0 context.Context, arg1 *wor
 	return ret0, ret1
 }
 
-// ListDomainsWithContext indicates an expected call of ListDomainsWithContext
+// ListDomainsWithContext indicates an expected call of ListDomainsWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) ListDomainsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainsWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListDomainsWithContext), varargs...)
 }
 
-// ListFleets mocks base method
+// ListFleets mocks base method.
 func (m *MockWorkLinkAPI) ListFleets(arg0 *worklink.ListFleetsInput) (*worklink.ListFleetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFleets", arg0)
@@ -1010,13 +1011,13 @@ func (m *MockWorkLinkAPI) ListFleets(arg0 *worklink.ListFleetsInput) (*worklink.
 	return ret0, ret1
 }
 
-// ListFleets indicates an expected call of ListFleets
+// ListFleets indicates an expected call of ListFleets.
 func (mr *MockWorkLinkAPIMockRecorder) ListFleets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFleets", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListFleets), arg0)
 }
 
-// ListFleetsPages mocks base method
+// ListFleetsPages mocks base method.
 func (m *MockWorkLinkAPI) ListFleetsPages(arg0 *worklink.ListFleetsInput, arg1 func(*worklink.ListFleetsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFleetsPages", arg0, arg1)
@@ -1024,13 +1025,13 @@ func (m *MockWorkLinkAPI) ListFleetsPages(arg0 *worklink.ListFleetsInput, arg1 f
 	return ret0
 }
 
-// ListFleetsPages indicates an expected call of ListFleetsPages
+// ListFleetsPages indicates an expected call of ListFleetsPages.
 func (mr *MockWorkLinkAPIMockRecorder) ListFleetsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFleetsPages", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListFleetsPages), arg0, arg1)
 }
 
-// ListFleetsPagesWithContext mocks base method
+// ListFleetsPagesWithContext mocks base method.
 func (m *MockWorkLinkAPI) ListFleetsPagesWithContext(arg0 context.Context, arg1 *worklink.ListFleetsInput, arg2 func(*worklink.ListFleetsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1042,14 +1043,14 @@ func (m *MockWorkLinkAPI) ListFleetsPagesWithContext(arg0 context.Context, arg1 
 	return ret0
 }
 
-// ListFleetsPagesWithContext indicates an expected call of ListFleetsPagesWithContext
+// ListFleetsPagesWithContext indicates an expected call of ListFleetsPagesWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) ListFleetsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFleetsPagesWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListFleetsPagesWithContext), varargs...)
 }
 
-// ListFleetsRequest mocks base method
+// ListFleetsRequest mocks base method.
 func (m *MockWorkLinkAPI) ListFleetsRequest(arg0 *worklink.ListFleetsInput) (*request.Request, *worklink.ListFleetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFleetsRequest", arg0)
@@ -1058,13 +1059,13 @@ func (m *MockWorkLinkAPI) ListFleetsRequest(arg0 *worklink.ListFleetsInput) (*re
 	return ret0, ret1
 }
 
-// ListFleetsRequest indicates an expected call of ListFleetsRequest
+// ListFleetsRequest indicates an expected call of ListFleetsRequest.
 func (mr *MockWorkLinkAPIMockRecorder) ListFleetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFleetsRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListFleetsRequest), arg0)
 }
 
-// ListFleetsWithContext mocks base method
+// ListFleetsWithContext mocks base method.
 func (m *MockWorkLinkAPI) ListFleetsWithContext(arg0 context.Context, arg1 *worklink.ListFleetsInput, arg2 ...request.Option) (*worklink.ListFleetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1077,14 +1078,14 @@ func (m *MockWorkLinkAPI) ListFleetsWithContext(arg0 context.Context, arg1 *work
 	return ret0, ret1
 }
 
-// ListFleetsWithContext indicates an expected call of ListFleetsWithContext
+// ListFleetsWithContext indicates an expected call of ListFleetsWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) ListFleetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFleetsWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListFleetsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockWorkLinkAPI) ListTagsForResource(arg0 *worklink.ListTagsForResourceInput) (*worklink.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1093,13 +1094,13 @@ func (m *MockWorkLinkAPI) ListTagsForResource(arg0 *worklink.ListTagsForResource
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockWorkLinkAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockWorkLinkAPI) ListTagsForResourceRequest(arg0 *worklink.ListTagsForResourceInput) (*request.Request, *worklink.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1108,13 +1109,13 @@ func (m *MockWorkLinkAPI) ListTagsForResourceRequest(arg0 *worklink.ListTagsForR
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockWorkLinkAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockWorkLinkAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *worklink.ListTagsForResourceInput, arg2 ...request.Option) (*worklink.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1127,14 +1128,14 @@ func (m *MockWorkLinkAPI) ListTagsForResourceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// ListWebsiteAuthorizationProviders mocks base method
+// ListWebsiteAuthorizationProviders mocks base method.
 func (m *MockWorkLinkAPI) ListWebsiteAuthorizationProviders(arg0 *worklink.ListWebsiteAuthorizationProvidersInput) (*worklink.ListWebsiteAuthorizationProvidersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWebsiteAuthorizationProviders", arg0)
@@ -1143,13 +1144,13 @@ func (m *MockWorkLinkAPI) ListWebsiteAuthorizationProviders(arg0 *worklink.ListW
 	return ret0, ret1
 }
 
-// ListWebsiteAuthorizationProviders indicates an expected call of ListWebsiteAuthorizationProviders
+// ListWebsiteAuthorizationProviders indicates an expected call of ListWebsiteAuthorizationProviders.
 func (mr *MockWorkLinkAPIMockRecorder) ListWebsiteAuthorizationProviders(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebsiteAuthorizationProviders", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListWebsiteAuthorizationProviders), arg0)
 }
 
-// ListWebsiteAuthorizationProvidersPages mocks base method
+// ListWebsiteAuthorizationProvidersPages mocks base method.
 func (m *MockWorkLinkAPI) ListWebsiteAuthorizationProvidersPages(arg0 *worklink.ListWebsiteAuthorizationProvidersInput, arg1 func(*worklink.ListWebsiteAuthorizationProvidersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWebsiteAuthorizationProvidersPages", arg0, arg1)
@@ -1157,13 +1158,13 @@ func (m *MockWorkLinkAPI) ListWebsiteAuthorizationProvidersPages(arg0 *worklink.
 	return ret0
 }
 
-// ListWebsiteAuthorizationProvidersPages indicates an expected call of ListWebsiteAuthorizationProvidersPages
+// ListWebsiteAuthorizationProvidersPages indicates an expected call of ListWebsiteAuthorizationProvidersPages.
 func (mr *MockWorkLinkAPIMockRecorder) ListWebsiteAuthorizationProvidersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebsiteAuthorizationProvidersPages", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListWebsiteAuthorizationProvidersPages), arg0, arg1)
 }
 
-// ListWebsiteAuthorizationProvidersPagesWithContext mocks base method
+// ListWebsiteAuthorizationProvidersPagesWithContext mocks base method.
 func (m *MockWorkLinkAPI) ListWebsiteAuthorizationProvidersPagesWithContext(arg0 context.Context, arg1 *worklink.ListWebsiteAuthorizationProvidersInput, arg2 func(*worklink.ListWebsiteAuthorizationProvidersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1175,14 +1176,14 @@ func (m *MockWorkLinkAPI) ListWebsiteAuthorizationProvidersPagesWithContext(arg0
 	return ret0
 }
 
-// ListWebsiteAuthorizationProvidersPagesWithContext indicates an expected call of ListWebsiteAuthorizationProvidersPagesWithContext
+// ListWebsiteAuthorizationProvidersPagesWithContext indicates an expected call of ListWebsiteAuthorizationProvidersPagesWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) ListWebsiteAuthorizationProvidersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebsiteAuthorizationProvidersPagesWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListWebsiteAuthorizationProvidersPagesWithContext), varargs...)
 }
 
-// ListWebsiteAuthorizationProvidersRequest mocks base method
+// ListWebsiteAuthorizationProvidersRequest mocks base method.
 func (m *MockWorkLinkAPI) ListWebsiteAuthorizationProvidersRequest(arg0 *worklink.ListWebsiteAuthorizationProvidersInput) (*request.Request, *worklink.ListWebsiteAuthorizationProvidersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWebsiteAuthorizationProvidersRequest", arg0)
@@ -1191,13 +1192,13 @@ func (m *MockWorkLinkAPI) ListWebsiteAuthorizationProvidersRequest(arg0 *worklin
 	return ret0, ret1
 }
 
-// ListWebsiteAuthorizationProvidersRequest indicates an expected call of ListWebsiteAuthorizationProvidersRequest
+// ListWebsiteAuthorizationProvidersRequest indicates an expected call of ListWebsiteAuthorizationProvidersRequest.
 func (mr *MockWorkLinkAPIMockRecorder) ListWebsiteAuthorizationProvidersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebsiteAuthorizationProvidersRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListWebsiteAuthorizationProvidersRequest), arg0)
 }
 
-// ListWebsiteAuthorizationProvidersWithContext mocks base method
+// ListWebsiteAuthorizationProvidersWithContext mocks base method.
 func (m *MockWorkLinkAPI) ListWebsiteAuthorizationProvidersWithContext(arg0 context.Context, arg1 *worklink.ListWebsiteAuthorizationProvidersInput, arg2 ...request.Option) (*worklink.ListWebsiteAuthorizationProvidersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1210,14 +1211,14 @@ func (m *MockWorkLinkAPI) ListWebsiteAuthorizationProvidersWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// ListWebsiteAuthorizationProvidersWithContext indicates an expected call of ListWebsiteAuthorizationProvidersWithContext
+// ListWebsiteAuthorizationProvidersWithContext indicates an expected call of ListWebsiteAuthorizationProvidersWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) ListWebsiteAuthorizationProvidersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebsiteAuthorizationProvidersWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListWebsiteAuthorizationProvidersWithContext), varargs...)
 }
 
-// ListWebsiteCertificateAuthorities mocks base method
+// ListWebsiteCertificateAuthorities mocks base method.
 func (m *MockWorkLinkAPI) ListWebsiteCertificateAuthorities(arg0 *worklink.ListWebsiteCertificateAuthoritiesInput) (*worklink.ListWebsiteCertificateAuthoritiesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWebsiteCertificateAuthorities", arg0)
@@ -1226,13 +1227,13 @@ func (m *MockWorkLinkAPI) ListWebsiteCertificateAuthorities(arg0 *worklink.ListW
 	return ret0, ret1
 }
 
-// ListWebsiteCertificateAuthorities indicates an expected call of ListWebsiteCertificateAuthorities
+// ListWebsiteCertificateAuthorities indicates an expected call of ListWebsiteCertificateAuthorities.
 func (mr *MockWorkLinkAPIMockRecorder) ListWebsiteCertificateAuthorities(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebsiteCertificateAuthorities", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListWebsiteCertificateAuthorities), arg0)
 }
 
-// ListWebsiteCertificateAuthoritiesPages mocks base method
+// ListWebsiteCertificateAuthoritiesPages mocks base method.
 func (m *MockWorkLinkAPI) ListWebsiteCertificateAuthoritiesPages(arg0 *worklink.ListWebsiteCertificateAuthoritiesInput, arg1 func(*worklink.ListWebsiteCertificateAuthoritiesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWebsiteCertificateAuthoritiesPages", arg0, arg1)
@@ -1240,13 +1241,13 @@ func (m *MockWorkLinkAPI) ListWebsiteCertificateAuthoritiesPages(arg0 *worklink.
 	return ret0
 }
 
-// ListWebsiteCertificateAuthoritiesPages indicates an expected call of ListWebsiteCertificateAuthoritiesPages
+// ListWebsiteCertificateAuthoritiesPages indicates an expected call of ListWebsiteCertificateAuthoritiesPages.
 func (mr *MockWorkLinkAPIMockRecorder) ListWebsiteCertificateAuthoritiesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebsiteCertificateAuthoritiesPages", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListWebsiteCertificateAuthoritiesPages), arg0, arg1)
 }
 
-// ListWebsiteCertificateAuthoritiesPagesWithContext mocks base method
+// ListWebsiteCertificateAuthoritiesPagesWithContext mocks base method.
 func (m *MockWorkLinkAPI) ListWebsiteCertificateAuthoritiesPagesWithContext(arg0 context.Context, arg1 *worklink.ListWebsiteCertificateAuthoritiesInput, arg2 func(*worklink.ListWebsiteCertificateAuthoritiesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1258,14 +1259,14 @@ func (m *MockWorkLinkAPI) ListWebsiteCertificateAuthoritiesPagesWithContext(arg0
 	return ret0
 }
 
-// ListWebsiteCertificateAuthoritiesPagesWithContext indicates an expected call of ListWebsiteCertificateAuthoritiesPagesWithContext
+// ListWebsiteCertificateAuthoritiesPagesWithContext indicates an expected call of ListWebsiteCertificateAuthoritiesPagesWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) ListWebsiteCertificateAuthoritiesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebsiteCertificateAuthoritiesPagesWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListWebsiteCertificateAuthoritiesPagesWithContext), varargs...)
 }
 
-// ListWebsiteCertificateAuthoritiesRequest mocks base method
+// ListWebsiteCertificateAuthoritiesRequest mocks base method.
 func (m *MockWorkLinkAPI) ListWebsiteCertificateAuthoritiesRequest(arg0 *worklink.ListWebsiteCertificateAuthoritiesInput) (*request.Request, *worklink.ListWebsiteCertificateAuthoritiesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWebsiteCertificateAuthoritiesRequest", arg0)
@@ -1274,13 +1275,13 @@ func (m *MockWorkLinkAPI) ListWebsiteCertificateAuthoritiesRequest(arg0 *worklin
 	return ret0, ret1
 }
 
-// ListWebsiteCertificateAuthoritiesRequest indicates an expected call of ListWebsiteCertificateAuthoritiesRequest
+// ListWebsiteCertificateAuthoritiesRequest indicates an expected call of ListWebsiteCertificateAuthoritiesRequest.
 func (mr *MockWorkLinkAPIMockRecorder) ListWebsiteCertificateAuthoritiesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebsiteCertificateAuthoritiesRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListWebsiteCertificateAuthoritiesRequest), arg0)
 }
 
-// ListWebsiteCertificateAuthoritiesWithContext mocks base method
+// ListWebsiteCertificateAuthoritiesWithContext mocks base method.
 func (m *MockWorkLinkAPI) ListWebsiteCertificateAuthoritiesWithContext(arg0 context.Context, arg1 *worklink.ListWebsiteCertificateAuthoritiesInput, arg2 ...request.Option) (*worklink.ListWebsiteCertificateAuthoritiesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1293,14 +1294,14 @@ func (m *MockWorkLinkAPI) ListWebsiteCertificateAuthoritiesWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// ListWebsiteCertificateAuthoritiesWithContext indicates an expected call of ListWebsiteCertificateAuthoritiesWithContext
+// ListWebsiteCertificateAuthoritiesWithContext indicates an expected call of ListWebsiteCertificateAuthoritiesWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) ListWebsiteCertificateAuthoritiesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebsiteCertificateAuthoritiesWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).ListWebsiteCertificateAuthoritiesWithContext), varargs...)
 }
 
-// RestoreDomainAccess mocks base method
+// RestoreDomainAccess mocks base method.
 func (m *MockWorkLinkAPI) RestoreDomainAccess(arg0 *worklink.RestoreDomainAccessInput) (*worklink.RestoreDomainAccessOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RestoreDomainAccess", arg0)
@@ -1309,13 +1310,13 @@ func (m *MockWorkLinkAPI) RestoreDomainAccess(arg0 *worklink.RestoreDomainAccess
 	return ret0, ret1
 }
 
-// RestoreDomainAccess indicates an expected call of RestoreDomainAccess
+// RestoreDomainAccess indicates an expected call of RestoreDomainAccess.
 func (mr *MockWorkLinkAPIMockRecorder) RestoreDomainAccess(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RestoreDomainAccess", reflect.TypeOf((*MockWorkLinkAPI)(nil).RestoreDomainAccess), arg0)
 }
 
-// RestoreDomainAccessRequest mocks base method
+// RestoreDomainAccessRequest mocks base method.
 func (m *MockWorkLinkAPI) RestoreDomainAccessRequest(arg0 *worklink.RestoreDomainAccessInput) (*request.Request, *worklink.RestoreDomainAccessOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RestoreDomainAccessRequest", arg0)
@@ -1324,13 +1325,13 @@ func (m *MockWorkLinkAPI) RestoreDomainAccessRequest(arg0 *worklink.RestoreDomai
 	return ret0, ret1
 }
 
-// RestoreDomainAccessRequest indicates an expected call of RestoreDomainAccessRequest
+// RestoreDomainAccessRequest indicates an expected call of RestoreDomainAccessRequest.
 func (mr *MockWorkLinkAPIMockRecorder) RestoreDomainAccessRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RestoreDomainAccessRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).RestoreDomainAccessRequest), arg0)
 }
 
-// RestoreDomainAccessWithContext mocks base method
+// RestoreDomainAccessWithContext mocks base method.
 func (m *MockWorkLinkAPI) RestoreDomainAccessWithContext(arg0 context.Context, arg1 *worklink.RestoreDomainAccessInput, arg2 ...request.Option) (*worklink.RestoreDomainAccessOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1343,14 +1344,14 @@ func (m *MockWorkLinkAPI) RestoreDomainAccessWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// RestoreDomainAccessWithContext indicates an expected call of RestoreDomainAccessWithContext
+// RestoreDomainAccessWithContext indicates an expected call of RestoreDomainAccessWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) RestoreDomainAccessWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RestoreDomainAccessWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).RestoreDomainAccessWithContext), varargs...)
 }
 
-// RevokeDomainAccess mocks base method
+// RevokeDomainAccess mocks base method.
 func (m *MockWorkLinkAPI) RevokeDomainAccess(arg0 *worklink.RevokeDomainAccessInput) (*worklink.RevokeDomainAccessOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RevokeDomainAccess", arg0)
@@ -1359,13 +1360,13 @@ func (m *MockWorkLinkAPI) RevokeDomainAccess(arg0 *worklink.RevokeDomainAccessIn
 	return ret0, ret1
 }
 
-// RevokeDomainAccess indicates an expected call of RevokeDomainAccess
+// RevokeDomainAccess indicates an expected call of RevokeDomainAccess.
 func (mr *MockWorkLinkAPIMockRecorder) RevokeDomainAccess(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokeDomainAccess", reflect.TypeOf((*MockWorkLinkAPI)(nil).RevokeDomainAccess), arg0)
 }
 
-// RevokeDomainAccessRequest mocks base method
+// RevokeDomainAccessRequest mocks base method.
 func (m *MockWorkLinkAPI) RevokeDomainAccessRequest(arg0 *worklink.RevokeDomainAccessInput) (*request.Request, *worklink.RevokeDomainAccessOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RevokeDomainAccessRequest", arg0)
@@ -1374,13 +1375,13 @@ func (m *MockWorkLinkAPI) RevokeDomainAccessRequest(arg0 *worklink.RevokeDomainA
 	return ret0, ret1
 }
 
-// RevokeDomainAccessRequest indicates an expected call of RevokeDomainAccessRequest
+// RevokeDomainAccessRequest indicates an expected call of RevokeDomainAccessRequest.
 func (mr *MockWorkLinkAPIMockRecorder) RevokeDomainAccessRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokeDomainAccessRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).RevokeDomainAccessRequest), arg0)
 }
 
-// RevokeDomainAccessWithContext mocks base method
+// RevokeDomainAccessWithContext mocks base method.
 func (m *MockWorkLinkAPI) RevokeDomainAccessWithContext(arg0 context.Context, arg1 *worklink.RevokeDomainAccessInput, arg2 ...request.Option) (*worklink.RevokeDomainAccessOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1393,14 +1394,14 @@ func (m *MockWorkLinkAPI) RevokeDomainAccessWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// RevokeDomainAccessWithContext indicates an expected call of RevokeDomainAccessWithContext
+// RevokeDomainAccessWithContext indicates an expected call of RevokeDomainAccessWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) RevokeDomainAccessWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokeDomainAccessWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).RevokeDomainAccessWithContext), varargs...)
 }
 
-// SignOutUser mocks base method
+// SignOutUser mocks base method.
 func (m *MockWorkLinkAPI) SignOutUser(arg0 *worklink.SignOutUserInput) (*worklink.SignOutUserOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SignOutUser", arg0)
@@ -1409,13 +1410,13 @@ func (m *MockWorkLinkAPI) SignOutUser(arg0 *worklink.SignOutUserInput) (*worklin
 	return ret0, ret1
 }
 
-// SignOutUser indicates an expected call of SignOutUser
+// SignOutUser indicates an expected call of SignOutUser.
 func (mr *MockWorkLinkAPIMockRecorder) SignOutUser(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SignOutUser", reflect.TypeOf((*MockWorkLinkAPI)(nil).SignOutUser), arg0)
 }
 
-// SignOutUserRequest mocks base method
+// SignOutUserRequest mocks base method.
 func (m *MockWorkLinkAPI) SignOutUserRequest(arg0 *worklink.SignOutUserInput) (*request.Request, *worklink.SignOutUserOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SignOutUserRequest", arg0)
@@ -1424,13 +1425,13 @@ func (m *MockWorkLinkAPI) SignOutUserRequest(arg0 *worklink.SignOutUserInput) (*
 	return ret0, ret1
 }
 
-// SignOutUserRequest indicates an expected call of SignOutUserRequest
+// SignOutUserRequest indicates an expected call of SignOutUserRequest.
 func (mr *MockWorkLinkAPIMockRecorder) SignOutUserRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SignOutUserRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).SignOutUserRequest), arg0)
 }
 
-// SignOutUserWithContext mocks base method
+// SignOutUserWithContext mocks base method.
 func (m *MockWorkLinkAPI) SignOutUserWithContext(arg0 context.Context, arg1 *worklink.SignOutUserInput, arg2 ...request.Option) (*worklink.SignOutUserOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1443,14 +1444,14 @@ func (m *MockWorkLinkAPI) SignOutUserWithContext(arg0 context.Context, arg1 *wor
 	return ret0, ret1
 }
 
-// SignOutUserWithContext indicates an expected call of SignOutUserWithContext
+// SignOutUserWithContext indicates an expected call of SignOutUserWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) SignOutUserWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SignOutUserWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).SignOutUserWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockWorkLinkAPI) TagResource(arg0 *worklink.TagResourceInput) (*worklink.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1459,13 +1460,13 @@ func (m *MockWorkLinkAPI) TagResource(arg0 *worklink.TagResourceInput) (*worklin
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockWorkLinkAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockWorkLinkAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockWorkLinkAPI) TagResourceRequest(arg0 *worklink.TagResourceInput) (*request.Request, *worklink.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1474,13 +1475,13 @@ func (m *MockWorkLinkAPI) TagResourceRequest(arg0 *worklink.TagResourceInput) (*
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockWorkLinkAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockWorkLinkAPI) TagResourceWithContext(arg0 context.Context, arg1 *worklink.TagResourceInput, arg2 ...request.Option) (*worklink.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1493,14 +1494,14 @@ func (m *MockWorkLinkAPI) TagResourceWithContext(arg0 context.Context, arg1 *wor
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockWorkLinkAPI) UntagResource(arg0 *worklink.UntagResourceInput) (*worklink.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1509,13 +1510,13 @@ func (m *MockWorkLinkAPI) UntagResource(arg0 *worklink.UntagResourceInput) (*wor
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockWorkLinkAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockWorkLinkAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockWorkLinkAPI) UntagResourceRequest(arg0 *worklink.UntagResourceInput) (*request.Request, *worklink.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1524,13 +1525,13 @@ func (m *MockWorkLinkAPI) UntagResourceRequest(arg0 *worklink.UntagResourceInput
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockWorkLinkAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockWorkLinkAPI) UntagResourceWithContext(arg0 context.Context, arg1 *worklink.UntagResourceInput, arg2 ...request.Option) (*worklink.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1543,14 +1544,14 @@ func (m *MockWorkLinkAPI) UntagResourceWithContext(arg0 context.Context, arg1 *w
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateAuditStreamConfiguration mocks base method
+// UpdateAuditStreamConfiguration mocks base method.
 func (m *MockWorkLinkAPI) UpdateAuditStreamConfiguration(arg0 *worklink.UpdateAuditStreamConfigurationInput) (*worklink.UpdateAuditStreamConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAuditStreamConfiguration", arg0)
@@ -1559,13 +1560,13 @@ func (m *MockWorkLinkAPI) UpdateAuditStreamConfiguration(arg0 *worklink.UpdateAu
 	return ret0, ret1
 }
 
-// UpdateAuditStreamConfiguration indicates an expected call of UpdateAuditStreamConfiguration
+// UpdateAuditStreamConfiguration indicates an expected call of UpdateAuditStreamConfiguration.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateAuditStreamConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAuditStreamConfiguration", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateAuditStreamConfiguration), arg0)
 }
 
-// UpdateAuditStreamConfigurationRequest mocks base method
+// UpdateAuditStreamConfigurationRequest mocks base method.
 func (m *MockWorkLinkAPI) UpdateAuditStreamConfigurationRequest(arg0 *worklink.UpdateAuditStreamConfigurationInput) (*request.Request, *worklink.UpdateAuditStreamConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAuditStreamConfigurationRequest", arg0)
@@ -1574,13 +1575,13 @@ func (m *MockWorkLinkAPI) UpdateAuditStreamConfigurationRequest(arg0 *worklink.U
 	return ret0, ret1
 }
 
-// UpdateAuditStreamConfigurationRequest indicates an expected call of UpdateAuditStreamConfigurationRequest
+// UpdateAuditStreamConfigurationRequest indicates an expected call of UpdateAuditStreamConfigurationRequest.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateAuditStreamConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAuditStreamConfigurationRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateAuditStreamConfigurationRequest), arg0)
 }
 
-// UpdateAuditStreamConfigurationWithContext mocks base method
+// UpdateAuditStreamConfigurationWithContext mocks base method.
 func (m *MockWorkLinkAPI) UpdateAuditStreamConfigurationWithContext(arg0 context.Context, arg1 *worklink.UpdateAuditStreamConfigurationInput, arg2 ...request.Option) (*worklink.UpdateAuditStreamConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1593,14 +1594,14 @@ func (m *MockWorkLinkAPI) UpdateAuditStreamConfigurationWithContext(arg0 context
 	return ret0, ret1
 }
 
-// UpdateAuditStreamConfigurationWithContext indicates an expected call of UpdateAuditStreamConfigurationWithContext
+// UpdateAuditStreamConfigurationWithContext indicates an expected call of UpdateAuditStreamConfigurationWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateAuditStreamConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAuditStreamConfigurationWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateAuditStreamConfigurationWithContext), varargs...)
 }
 
-// UpdateCompanyNetworkConfiguration mocks base method
+// UpdateCompanyNetworkConfiguration mocks base method.
 func (m *MockWorkLinkAPI) UpdateCompanyNetworkConfiguration(arg0 *worklink.UpdateCompanyNetworkConfigurationInput) (*worklink.UpdateCompanyNetworkConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCompanyNetworkConfiguration", arg0)
@@ -1609,13 +1610,13 @@ func (m *MockWorkLinkAPI) UpdateCompanyNetworkConfiguration(arg0 *worklink.Updat
 	return ret0, ret1
 }
 
-// UpdateCompanyNetworkConfiguration indicates an expected call of UpdateCompanyNetworkConfiguration
+// UpdateCompanyNetworkConfiguration indicates an expected call of UpdateCompanyNetworkConfiguration.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateCompanyNetworkConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCompanyNetworkConfiguration", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateCompanyNetworkConfiguration), arg0)
 }
 
-// UpdateCompanyNetworkConfigurationRequest mocks base method
+// UpdateCompanyNetworkConfigurationRequest mocks base method.
 func (m *MockWorkLinkAPI) UpdateCompanyNetworkConfigurationRequest(arg0 *worklink.UpdateCompanyNetworkConfigurationInput) (*request.Request, *worklink.UpdateCompanyNetworkConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateCompanyNetworkConfigurationRequest", arg0)
@@ -1624,13 +1625,13 @@ func (m *MockWorkLinkAPI) UpdateCompanyNetworkConfigurationRequest(arg0 *worklin
 	return ret0, ret1
 }
 
-// UpdateCompanyNetworkConfigurationRequest indicates an expected call of UpdateCompanyNetworkConfigurationRequest
+// UpdateCompanyNetworkConfigurationRequest indicates an expected call of UpdateCompanyNetworkConfigurationRequest.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateCompanyNetworkConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCompanyNetworkConfigurationRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateCompanyNetworkConfigurationRequest), arg0)
 }
 
-// UpdateCompanyNetworkConfigurationWithContext mocks base method
+// UpdateCompanyNetworkConfigurationWithContext mocks base method.
 func (m *MockWorkLinkAPI) UpdateCompanyNetworkConfigurationWithContext(arg0 context.Context, arg1 *worklink.UpdateCompanyNetworkConfigurationInput, arg2 ...request.Option) (*worklink.UpdateCompanyNetworkConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1643,14 +1644,14 @@ func (m *MockWorkLinkAPI) UpdateCompanyNetworkConfigurationWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// UpdateCompanyNetworkConfigurationWithContext indicates an expected call of UpdateCompanyNetworkConfigurationWithContext
+// UpdateCompanyNetworkConfigurationWithContext indicates an expected call of UpdateCompanyNetworkConfigurationWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateCompanyNetworkConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateCompanyNetworkConfigurationWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateCompanyNetworkConfigurationWithContext), varargs...)
 }
 
-// UpdateDevicePolicyConfiguration mocks base method
+// UpdateDevicePolicyConfiguration mocks base method.
 func (m *MockWorkLinkAPI) UpdateDevicePolicyConfiguration(arg0 *worklink.UpdateDevicePolicyConfigurationInput) (*worklink.UpdateDevicePolicyConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDevicePolicyConfiguration", arg0)
@@ -1659,13 +1660,13 @@ func (m *MockWorkLinkAPI) UpdateDevicePolicyConfiguration(arg0 *worklink.UpdateD
 	return ret0, ret1
 }
 
-// UpdateDevicePolicyConfiguration indicates an expected call of UpdateDevicePolicyConfiguration
+// UpdateDevicePolicyConfiguration indicates an expected call of UpdateDevicePolicyConfiguration.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateDevicePolicyConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDevicePolicyConfiguration", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateDevicePolicyConfiguration), arg0)
 }
 
-// UpdateDevicePolicyConfigurationRequest mocks base method
+// UpdateDevicePolicyConfigurationRequest mocks base method.
 func (m *MockWorkLinkAPI) UpdateDevicePolicyConfigurationRequest(arg0 *worklink.UpdateDevicePolicyConfigurationInput) (*request.Request, *worklink.UpdateDevicePolicyConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDevicePolicyConfigurationRequest", arg0)
@@ -1674,13 +1675,13 @@ func (m *MockWorkLinkAPI) UpdateDevicePolicyConfigurationRequest(arg0 *worklink.
 	return ret0, ret1
 }
 
-// UpdateDevicePolicyConfigurationRequest indicates an expected call of UpdateDevicePolicyConfigurationRequest
+// UpdateDevicePolicyConfigurationRequest indicates an expected call of UpdateDevicePolicyConfigurationRequest.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateDevicePolicyConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDevicePolicyConfigurationRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateDevicePolicyConfigurationRequest), arg0)
 }
 
-// UpdateDevicePolicyConfigurationWithContext mocks base method
+// UpdateDevicePolicyConfigurationWithContext mocks base method.
 func (m *MockWorkLinkAPI) UpdateDevicePolicyConfigurationWithContext(arg0 context.Context, arg1 *worklink.UpdateDevicePolicyConfigurationInput, arg2 ...request.Option) (*worklink.UpdateDevicePolicyConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1693,14 +1694,14 @@ func (m *MockWorkLinkAPI) UpdateDevicePolicyConfigurationWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// UpdateDevicePolicyConfigurationWithContext indicates an expected call of UpdateDevicePolicyConfigurationWithContext
+// UpdateDevicePolicyConfigurationWithContext indicates an expected call of UpdateDevicePolicyConfigurationWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateDevicePolicyConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDevicePolicyConfigurationWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateDevicePolicyConfigurationWithContext), varargs...)
 }
 
-// UpdateDomainMetadata mocks base method
+// UpdateDomainMetadata mocks base method.
 func (m *MockWorkLinkAPI) UpdateDomainMetadata(arg0 *worklink.UpdateDomainMetadataInput) (*worklink.UpdateDomainMetadataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDomainMetadata", arg0)
@@ -1709,13 +1710,13 @@ func (m *MockWorkLinkAPI) UpdateDomainMetadata(arg0 *worklink.UpdateDomainMetada
 	return ret0, ret1
 }
 
-// UpdateDomainMetadata indicates an expected call of UpdateDomainMetadata
+// UpdateDomainMetadata indicates an expected call of UpdateDomainMetadata.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateDomainMetadata(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDomainMetadata", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateDomainMetadata), arg0)
 }
 
-// UpdateDomainMetadataRequest mocks base method
+// UpdateDomainMetadataRequest mocks base method.
 func (m *MockWorkLinkAPI) UpdateDomainMetadataRequest(arg0 *worklink.UpdateDomainMetadataInput) (*request.Request, *worklink.UpdateDomainMetadataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDomainMetadataRequest", arg0)
@@ -1724,13 +1725,13 @@ func (m *MockWorkLinkAPI) UpdateDomainMetadataRequest(arg0 *worklink.UpdateDomai
 	return ret0, ret1
 }
 
-// UpdateDomainMetadataRequest indicates an expected call of UpdateDomainMetadataRequest
+// UpdateDomainMetadataRequest indicates an expected call of UpdateDomainMetadataRequest.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateDomainMetadataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDomainMetadataRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateDomainMetadataRequest), arg0)
 }
 
-// UpdateDomainMetadataWithContext mocks base method
+// UpdateDomainMetadataWithContext mocks base method.
 func (m *MockWorkLinkAPI) UpdateDomainMetadataWithContext(arg0 context.Context, arg1 *worklink.UpdateDomainMetadataInput, arg2 ...request.Option) (*worklink.UpdateDomainMetadataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1743,14 +1744,14 @@ func (m *MockWorkLinkAPI) UpdateDomainMetadataWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// UpdateDomainMetadataWithContext indicates an expected call of UpdateDomainMetadataWithContext
+// UpdateDomainMetadataWithContext indicates an expected call of UpdateDomainMetadataWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateDomainMetadataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDomainMetadataWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateDomainMetadataWithContext), varargs...)
 }
 
-// UpdateFleetMetadata mocks base method
+// UpdateFleetMetadata mocks base method.
 func (m *MockWorkLinkAPI) UpdateFleetMetadata(arg0 *worklink.UpdateFleetMetadataInput) (*worklink.UpdateFleetMetadataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFleetMetadata", arg0)
@@ -1759,13 +1760,13 @@ func (m *MockWorkLinkAPI) UpdateFleetMetadata(arg0 *worklink.UpdateFleetMetadata
 	return ret0, ret1
 }
 
-// UpdateFleetMetadata indicates an expected call of UpdateFleetMetadata
+// UpdateFleetMetadata indicates an expected call of UpdateFleetMetadata.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateFleetMetadata(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFleetMetadata", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateFleetMetadata), arg0)
 }
 
-// UpdateFleetMetadataRequest mocks base method
+// UpdateFleetMetadataRequest mocks base method.
 func (m *MockWorkLinkAPI) UpdateFleetMetadataRequest(arg0 *worklink.UpdateFleetMetadataInput) (*request.Request, *worklink.UpdateFleetMetadataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFleetMetadataRequest", arg0)
@@ -1774,13 +1775,13 @@ func (m *MockWorkLinkAPI) UpdateFleetMetadataRequest(arg0 *worklink.UpdateFleetM
 	return ret0, ret1
 }
 
-// UpdateFleetMetadataRequest indicates an expected call of UpdateFleetMetadataRequest
+// UpdateFleetMetadataRequest indicates an expected call of UpdateFleetMetadataRequest.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateFleetMetadataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFleetMetadataRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateFleetMetadataRequest), arg0)
 }
 
-// UpdateFleetMetadataWithContext mocks base method
+// UpdateFleetMetadataWithContext mocks base method.
 func (m *MockWorkLinkAPI) UpdateFleetMetadataWithContext(arg0 context.Context, arg1 *worklink.UpdateFleetMetadataInput, arg2 ...request.Option) (*worklink.UpdateFleetMetadataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1793,14 +1794,14 @@ func (m *MockWorkLinkAPI) UpdateFleetMetadataWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UpdateFleetMetadataWithContext indicates an expected call of UpdateFleetMetadataWithContext
+// UpdateFleetMetadataWithContext indicates an expected call of UpdateFleetMetadataWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateFleetMetadataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFleetMetadataWithContext", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateFleetMetadataWithContext), varargs...)
 }
 
-// UpdateIdentityProviderConfiguration mocks base method
+// UpdateIdentityProviderConfiguration mocks base method.
 func (m *MockWorkLinkAPI) UpdateIdentityProviderConfiguration(arg0 *worklink.UpdateIdentityProviderConfigurationInput) (*worklink.UpdateIdentityProviderConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateIdentityProviderConfiguration", arg0)
@@ -1809,13 +1810,13 @@ func (m *MockWorkLinkAPI) UpdateIdentityProviderConfiguration(arg0 *worklink.Upd
 	return ret0, ret1
 }
 
-// UpdateIdentityProviderConfiguration indicates an expected call of UpdateIdentityProviderConfiguration
+// UpdateIdentityProviderConfiguration indicates an expected call of UpdateIdentityProviderConfiguration.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateIdentityProviderConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateIdentityProviderConfiguration", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateIdentityProviderConfiguration), arg0)
 }
 
-// UpdateIdentityProviderConfigurationRequest mocks base method
+// UpdateIdentityProviderConfigurationRequest mocks base method.
 func (m *MockWorkLinkAPI) UpdateIdentityProviderConfigurationRequest(arg0 *worklink.UpdateIdentityProviderConfigurationInput) (*request.Request, *worklink.UpdateIdentityProviderConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateIdentityProviderConfigurationRequest", arg0)
@@ -1824,13 +1825,13 @@ func (m *MockWorkLinkAPI) UpdateIdentityProviderConfigurationRequest(arg0 *workl
 	return ret0, ret1
 }
 
-// UpdateIdentityProviderConfigurationRequest indicates an expected call of UpdateIdentityProviderConfigurationRequest
+// UpdateIdentityProviderConfigurationRequest indicates an expected call of UpdateIdentityProviderConfigurationRequest.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateIdentityProviderConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateIdentityProviderConfigurationRequest", reflect.TypeOf((*MockWorkLinkAPI)(nil).UpdateIdentityProviderConfigurationRequest), arg0)
 }
 
-// UpdateIdentityProviderConfigurationWithContext mocks base method
+// UpdateIdentityProviderConfigurationWithContext mocks base method.
 func (m *MockWorkLinkAPI) UpdateIdentityProviderConfigurationWithContext(arg0 context.Context, arg1 *worklink.UpdateIdentityProviderConfigurationInput, arg2 ...request.Option) (*worklink.UpdateIdentityProviderConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1843,7 +1844,7 @@ func (m *MockWorkLinkAPI) UpdateIdentityProviderConfigurationWithContext(arg0 co
 	return ret0, ret1
 }
 
-// UpdateIdentityProviderConfigurationWithContext indicates an expected call of UpdateIdentityProviderConfigurationWithContext
+// UpdateIdentityProviderConfigurationWithContext indicates an expected call of UpdateIdentityProviderConfigurationWithContext.
 func (mr *MockWorkLinkAPIMockRecorder) UpdateIdentityProviderConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

@@ -6,36 +6,37 @@ package schemasmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	schemas "github.com/aws/aws-sdk-go/service/schemas"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockSchemasAPI is a mock of SchemasAPI interface
+// MockSchemasAPI is a mock of SchemasAPI interface.
 type MockSchemasAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockSchemasAPIMockRecorder
 }
 
-// MockSchemasAPIMockRecorder is the mock recorder for MockSchemasAPI
+// MockSchemasAPIMockRecorder is the mock recorder for MockSchemasAPI.
 type MockSchemasAPIMockRecorder struct {
 	mock *MockSchemasAPI
 }
 
-// NewMockSchemasAPI creates a new mock instance
+// NewMockSchemasAPI creates a new mock instance.
 func NewMockSchemasAPI(ctrl *gomock.Controller) *MockSchemasAPI {
 	mock := &MockSchemasAPI{ctrl: ctrl}
 	mock.recorder = &MockSchemasAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockSchemasAPI) EXPECT() *MockSchemasAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateDiscoverer mocks base method
+// CreateDiscoverer mocks base method.
 func (m *MockSchemasAPI) CreateDiscoverer(arg0 *schemas.CreateDiscovererInput) (*schemas.CreateDiscovererOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDiscoverer", arg0)
@@ -44,13 +45,13 @@ func (m *MockSchemasAPI) CreateDiscoverer(arg0 *schemas.CreateDiscovererInput) (
 	return ret0, ret1
 }
 
-// CreateDiscoverer indicates an expected call of CreateDiscoverer
+// CreateDiscoverer indicates an expected call of CreateDiscoverer.
 func (mr *MockSchemasAPIMockRecorder) CreateDiscoverer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDiscoverer", reflect.TypeOf((*MockSchemasAPI)(nil).CreateDiscoverer), arg0)
 }
 
-// CreateDiscovererRequest mocks base method
+// CreateDiscovererRequest mocks base method.
 func (m *MockSchemasAPI) CreateDiscovererRequest(arg0 *schemas.CreateDiscovererInput) (*request.Request, *schemas.CreateDiscovererOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDiscovererRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockSchemasAPI) CreateDiscovererRequest(arg0 *schemas.CreateDiscovererI
 	return ret0, ret1
 }
 
-// CreateDiscovererRequest indicates an expected call of CreateDiscovererRequest
+// CreateDiscovererRequest indicates an expected call of CreateDiscovererRequest.
 func (mr *MockSchemasAPIMockRecorder) CreateDiscovererRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDiscovererRequest", reflect.TypeOf((*MockSchemasAPI)(nil).CreateDiscovererRequest), arg0)
 }
 
-// CreateDiscovererWithContext mocks base method
+// CreateDiscovererWithContext mocks base method.
 func (m *MockSchemasAPI) CreateDiscovererWithContext(arg0 context.Context, arg1 *schemas.CreateDiscovererInput, arg2 ...request.Option) (*schemas.CreateDiscovererOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockSchemasAPI) CreateDiscovererWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// CreateDiscovererWithContext indicates an expected call of CreateDiscovererWithContext
+// CreateDiscovererWithContext indicates an expected call of CreateDiscovererWithContext.
 func (mr *MockSchemasAPIMockRecorder) CreateDiscovererWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDiscovererWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).CreateDiscovererWithContext), varargs...)
 }
 
-// CreateRegistry mocks base method
+// CreateRegistry mocks base method.
 func (m *MockSchemasAPI) CreateRegistry(arg0 *schemas.CreateRegistryInput) (*schemas.CreateRegistryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRegistry", arg0)
@@ -94,13 +95,13 @@ func (m *MockSchemasAPI) CreateRegistry(arg0 *schemas.CreateRegistryInput) (*sch
 	return ret0, ret1
 }
 
-// CreateRegistry indicates an expected call of CreateRegistry
+// CreateRegistry indicates an expected call of CreateRegistry.
 func (mr *MockSchemasAPIMockRecorder) CreateRegistry(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRegistry", reflect.TypeOf((*MockSchemasAPI)(nil).CreateRegistry), arg0)
 }
 
-// CreateRegistryRequest mocks base method
+// CreateRegistryRequest mocks base method.
 func (m *MockSchemasAPI) CreateRegistryRequest(arg0 *schemas.CreateRegistryInput) (*request.Request, *schemas.CreateRegistryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRegistryRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockSchemasAPI) CreateRegistryRequest(arg0 *schemas.CreateRegistryInput
 	return ret0, ret1
 }
 
-// CreateRegistryRequest indicates an expected call of CreateRegistryRequest
+// CreateRegistryRequest indicates an expected call of CreateRegistryRequest.
 func (mr *MockSchemasAPIMockRecorder) CreateRegistryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRegistryRequest", reflect.TypeOf((*MockSchemasAPI)(nil).CreateRegistryRequest), arg0)
 }
 
-// CreateRegistryWithContext mocks base method
+// CreateRegistryWithContext mocks base method.
 func (m *MockSchemasAPI) CreateRegistryWithContext(arg0 context.Context, arg1 *schemas.CreateRegistryInput, arg2 ...request.Option) (*schemas.CreateRegistryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockSchemasAPI) CreateRegistryWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// CreateRegistryWithContext indicates an expected call of CreateRegistryWithContext
+// CreateRegistryWithContext indicates an expected call of CreateRegistryWithContext.
 func (mr *MockSchemasAPIMockRecorder) CreateRegistryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRegistryWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).CreateRegistryWithContext), varargs...)
 }
 
-// CreateSchema mocks base method
+// CreateSchema mocks base method.
 func (m *MockSchemasAPI) CreateSchema(arg0 *schemas.CreateSchemaInput) (*schemas.CreateSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSchema", arg0)
@@ -144,13 +145,13 @@ func (m *MockSchemasAPI) CreateSchema(arg0 *schemas.CreateSchemaInput) (*schemas
 	return ret0, ret1
 }
 
-// CreateSchema indicates an expected call of CreateSchema
+// CreateSchema indicates an expected call of CreateSchema.
 func (mr *MockSchemasAPIMockRecorder) CreateSchema(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSchema", reflect.TypeOf((*MockSchemasAPI)(nil).CreateSchema), arg0)
 }
 
-// CreateSchemaRequest mocks base method
+// CreateSchemaRequest mocks base method.
 func (m *MockSchemasAPI) CreateSchemaRequest(arg0 *schemas.CreateSchemaInput) (*request.Request, *schemas.CreateSchemaOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSchemaRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockSchemasAPI) CreateSchemaRequest(arg0 *schemas.CreateSchemaInput) (*
 	return ret0, ret1
 }
 
-// CreateSchemaRequest indicates an expected call of CreateSchemaRequest
+// CreateSchemaRequest indicates an expected call of CreateSchemaRequest.
 func (mr *MockSchemasAPIMockRecorder) CreateSchemaRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSchemaRequest", reflect.TypeOf((*MockSchemasAPI)(nil).CreateSchemaRequest), arg0)
 }
 
-// CreateSchemaWithContext mocks base method
+// CreateSchemaWithContext mocks base method.
 func (m *MockSchemasAPI) CreateSchemaWithContext(arg0 context.Context, arg1 *schemas.CreateSchemaInput, arg2 ...request.Option) (*schemas.CreateSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockSchemasAPI) CreateSchemaWithContext(arg0 context.Context, arg1 *sch
 	return ret0, ret1
 }
 
-// CreateSchemaWithContext indicates an expected call of CreateSchemaWithContext
+// CreateSchemaWithContext indicates an expected call of CreateSchemaWithContext.
 func (mr *MockSchemasAPIMockRecorder) CreateSchemaWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSchemaWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).CreateSchemaWithContext), varargs...)
 }
 
-// DeleteDiscoverer mocks base method
+// DeleteDiscoverer mocks base method.
 func (m *MockSchemasAPI) DeleteDiscoverer(arg0 *schemas.DeleteDiscovererInput) (*schemas.DeleteDiscovererOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDiscoverer", arg0)
@@ -194,13 +195,13 @@ func (m *MockSchemasAPI) DeleteDiscoverer(arg0 *schemas.DeleteDiscovererInput) (
 	return ret0, ret1
 }
 
-// DeleteDiscoverer indicates an expected call of DeleteDiscoverer
+// DeleteDiscoverer indicates an expected call of DeleteDiscoverer.
 func (mr *MockSchemasAPIMockRecorder) DeleteDiscoverer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDiscoverer", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteDiscoverer), arg0)
 }
 
-// DeleteDiscovererRequest mocks base method
+// DeleteDiscovererRequest mocks base method.
 func (m *MockSchemasAPI) DeleteDiscovererRequest(arg0 *schemas.DeleteDiscovererInput) (*request.Request, *schemas.DeleteDiscovererOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDiscovererRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockSchemasAPI) DeleteDiscovererRequest(arg0 *schemas.DeleteDiscovererI
 	return ret0, ret1
 }
 
-// DeleteDiscovererRequest indicates an expected call of DeleteDiscovererRequest
+// DeleteDiscovererRequest indicates an expected call of DeleteDiscovererRequest.
 func (mr *MockSchemasAPIMockRecorder) DeleteDiscovererRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDiscovererRequest", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteDiscovererRequest), arg0)
 }
 
-// DeleteDiscovererWithContext mocks base method
+// DeleteDiscovererWithContext mocks base method.
 func (m *MockSchemasAPI) DeleteDiscovererWithContext(arg0 context.Context, arg1 *schemas.DeleteDiscovererInput, arg2 ...request.Option) (*schemas.DeleteDiscovererOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockSchemasAPI) DeleteDiscovererWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DeleteDiscovererWithContext indicates an expected call of DeleteDiscovererWithContext
+// DeleteDiscovererWithContext indicates an expected call of DeleteDiscovererWithContext.
 func (mr *MockSchemasAPIMockRecorder) DeleteDiscovererWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDiscovererWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteDiscovererWithContext), varargs...)
 }
 
-// DeleteRegistry mocks base method
+// DeleteRegistry mocks base method.
 func (m *MockSchemasAPI) DeleteRegistry(arg0 *schemas.DeleteRegistryInput) (*schemas.DeleteRegistryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRegistry", arg0)
@@ -244,13 +245,13 @@ func (m *MockSchemasAPI) DeleteRegistry(arg0 *schemas.DeleteRegistryInput) (*sch
 	return ret0, ret1
 }
 
-// DeleteRegistry indicates an expected call of DeleteRegistry
+// DeleteRegistry indicates an expected call of DeleteRegistry.
 func (mr *MockSchemasAPIMockRecorder) DeleteRegistry(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRegistry", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteRegistry), arg0)
 }
 
-// DeleteRegistryRequest mocks base method
+// DeleteRegistryRequest mocks base method.
 func (m *MockSchemasAPI) DeleteRegistryRequest(arg0 *schemas.DeleteRegistryInput) (*request.Request, *schemas.DeleteRegistryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRegistryRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockSchemasAPI) DeleteRegistryRequest(arg0 *schemas.DeleteRegistryInput
 	return ret0, ret1
 }
 
-// DeleteRegistryRequest indicates an expected call of DeleteRegistryRequest
+// DeleteRegistryRequest indicates an expected call of DeleteRegistryRequest.
 func (mr *MockSchemasAPIMockRecorder) DeleteRegistryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRegistryRequest", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteRegistryRequest), arg0)
 }
 
-// DeleteRegistryWithContext mocks base method
+// DeleteRegistryWithContext mocks base method.
 func (m *MockSchemasAPI) DeleteRegistryWithContext(arg0 context.Context, arg1 *schemas.DeleteRegistryInput, arg2 ...request.Option) (*schemas.DeleteRegistryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockSchemasAPI) DeleteRegistryWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// DeleteRegistryWithContext indicates an expected call of DeleteRegistryWithContext
+// DeleteRegistryWithContext indicates an expected call of DeleteRegistryWithContext.
 func (mr *MockSchemasAPIMockRecorder) DeleteRegistryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRegistryWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteRegistryWithContext), varargs...)
 }
 
-// DeleteResourcePolicy mocks base method
+// DeleteResourcePolicy mocks base method.
 func (m *MockSchemasAPI) DeleteResourcePolicy(arg0 *schemas.DeleteResourcePolicyInput) (*schemas.DeleteResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteResourcePolicy", arg0)
@@ -294,13 +295,13 @@ func (m *MockSchemasAPI) DeleteResourcePolicy(arg0 *schemas.DeleteResourcePolicy
 	return ret0, ret1
 }
 
-// DeleteResourcePolicy indicates an expected call of DeleteResourcePolicy
+// DeleteResourcePolicy indicates an expected call of DeleteResourcePolicy.
 func (mr *MockSchemasAPIMockRecorder) DeleteResourcePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicy", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteResourcePolicy), arg0)
 }
 
-// DeleteResourcePolicyRequest mocks base method
+// DeleteResourcePolicyRequest mocks base method.
 func (m *MockSchemasAPI) DeleteResourcePolicyRequest(arg0 *schemas.DeleteResourcePolicyInput) (*request.Request, *schemas.DeleteResourcePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteResourcePolicyRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockSchemasAPI) DeleteResourcePolicyRequest(arg0 *schemas.DeleteResourc
 	return ret0, ret1
 }
 
-// DeleteResourcePolicyRequest indicates an expected call of DeleteResourcePolicyRequest
+// DeleteResourcePolicyRequest indicates an expected call of DeleteResourcePolicyRequest.
 func (mr *MockSchemasAPIMockRecorder) DeleteResourcePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyRequest", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteResourcePolicyRequest), arg0)
 }
 
-// DeleteResourcePolicyWithContext mocks base method
+// DeleteResourcePolicyWithContext mocks base method.
 func (m *MockSchemasAPI) DeleteResourcePolicyWithContext(arg0 context.Context, arg1 *schemas.DeleteResourcePolicyInput, arg2 ...request.Option) (*schemas.DeleteResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockSchemasAPI) DeleteResourcePolicyWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteResourcePolicyWithContext indicates an expected call of DeleteResourcePolicyWithContext
+// DeleteResourcePolicyWithContext indicates an expected call of DeleteResourcePolicyWithContext.
 func (mr *MockSchemasAPIMockRecorder) DeleteResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteResourcePolicyWithContext), varargs...)
 }
 
-// DeleteSchema mocks base method
+// DeleteSchema mocks base method.
 func (m *MockSchemasAPI) DeleteSchema(arg0 *schemas.DeleteSchemaInput) (*schemas.DeleteSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSchema", arg0)
@@ -344,13 +345,13 @@ func (m *MockSchemasAPI) DeleteSchema(arg0 *schemas.DeleteSchemaInput) (*schemas
 	return ret0, ret1
 }
 
-// DeleteSchema indicates an expected call of DeleteSchema
+// DeleteSchema indicates an expected call of DeleteSchema.
 func (mr *MockSchemasAPIMockRecorder) DeleteSchema(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSchema", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteSchema), arg0)
 }
 
-// DeleteSchemaRequest mocks base method
+// DeleteSchemaRequest mocks base method.
 func (m *MockSchemasAPI) DeleteSchemaRequest(arg0 *schemas.DeleteSchemaInput) (*request.Request, *schemas.DeleteSchemaOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSchemaRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockSchemasAPI) DeleteSchemaRequest(arg0 *schemas.DeleteSchemaInput) (*
 	return ret0, ret1
 }
 
-// DeleteSchemaRequest indicates an expected call of DeleteSchemaRequest
+// DeleteSchemaRequest indicates an expected call of DeleteSchemaRequest.
 func (mr *MockSchemasAPIMockRecorder) DeleteSchemaRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSchemaRequest", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteSchemaRequest), arg0)
 }
 
-// DeleteSchemaVersion mocks base method
+// DeleteSchemaVersion mocks base method.
 func (m *MockSchemasAPI) DeleteSchemaVersion(arg0 *schemas.DeleteSchemaVersionInput) (*schemas.DeleteSchemaVersionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSchemaVersion", arg0)
@@ -374,13 +375,13 @@ func (m *MockSchemasAPI) DeleteSchemaVersion(arg0 *schemas.DeleteSchemaVersionIn
 	return ret0, ret1
 }
 
-// DeleteSchemaVersion indicates an expected call of DeleteSchemaVersion
+// DeleteSchemaVersion indicates an expected call of DeleteSchemaVersion.
 func (mr *MockSchemasAPIMockRecorder) DeleteSchemaVersion(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSchemaVersion", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteSchemaVersion), arg0)
 }
 
-// DeleteSchemaVersionRequest mocks base method
+// DeleteSchemaVersionRequest mocks base method.
 func (m *MockSchemasAPI) DeleteSchemaVersionRequest(arg0 *schemas.DeleteSchemaVersionInput) (*request.Request, *schemas.DeleteSchemaVersionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSchemaVersionRequest", arg0)
@@ -389,13 +390,13 @@ func (m *MockSchemasAPI) DeleteSchemaVersionRequest(arg0 *schemas.DeleteSchemaVe
 	return ret0, ret1
 }
 
-// DeleteSchemaVersionRequest indicates an expected call of DeleteSchemaVersionRequest
+// DeleteSchemaVersionRequest indicates an expected call of DeleteSchemaVersionRequest.
 func (mr *MockSchemasAPIMockRecorder) DeleteSchemaVersionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSchemaVersionRequest", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteSchemaVersionRequest), arg0)
 }
 
-// DeleteSchemaVersionWithContext mocks base method
+// DeleteSchemaVersionWithContext mocks base method.
 func (m *MockSchemasAPI) DeleteSchemaVersionWithContext(arg0 context.Context, arg1 *schemas.DeleteSchemaVersionInput, arg2 ...request.Option) (*schemas.DeleteSchemaVersionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -408,14 +409,14 @@ func (m *MockSchemasAPI) DeleteSchemaVersionWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteSchemaVersionWithContext indicates an expected call of DeleteSchemaVersionWithContext
+// DeleteSchemaVersionWithContext indicates an expected call of DeleteSchemaVersionWithContext.
 func (mr *MockSchemasAPIMockRecorder) DeleteSchemaVersionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSchemaVersionWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteSchemaVersionWithContext), varargs...)
 }
 
-// DeleteSchemaWithContext mocks base method
+// DeleteSchemaWithContext mocks base method.
 func (m *MockSchemasAPI) DeleteSchemaWithContext(arg0 context.Context, arg1 *schemas.DeleteSchemaInput, arg2 ...request.Option) (*schemas.DeleteSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockSchemasAPI) DeleteSchemaWithContext(arg0 context.Context, arg1 *sch
 	return ret0, ret1
 }
 
-// DeleteSchemaWithContext indicates an expected call of DeleteSchemaWithContext
+// DeleteSchemaWithContext indicates an expected call of DeleteSchemaWithContext.
 func (mr *MockSchemasAPIMockRecorder) DeleteSchemaWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSchemaWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).DeleteSchemaWithContext), varargs...)
 }
 
-// DescribeCodeBinding mocks base method
+// DescribeCodeBinding mocks base method.
 func (m *MockSchemasAPI) DescribeCodeBinding(arg0 *schemas.DescribeCodeBindingInput) (*schemas.DescribeCodeBindingOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCodeBinding", arg0)
@@ -444,13 +445,13 @@ func (m *MockSchemasAPI) DescribeCodeBinding(arg0 *schemas.DescribeCodeBindingIn
 	return ret0, ret1
 }
 
-// DescribeCodeBinding indicates an expected call of DescribeCodeBinding
+// DescribeCodeBinding indicates an expected call of DescribeCodeBinding.
 func (mr *MockSchemasAPIMockRecorder) DescribeCodeBinding(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCodeBinding", reflect.TypeOf((*MockSchemasAPI)(nil).DescribeCodeBinding), arg0)
 }
 
-// DescribeCodeBindingRequest mocks base method
+// DescribeCodeBindingRequest mocks base method.
 func (m *MockSchemasAPI) DescribeCodeBindingRequest(arg0 *schemas.DescribeCodeBindingInput) (*request.Request, *schemas.DescribeCodeBindingOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCodeBindingRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockSchemasAPI) DescribeCodeBindingRequest(arg0 *schemas.DescribeCodeBi
 	return ret0, ret1
 }
 
-// DescribeCodeBindingRequest indicates an expected call of DescribeCodeBindingRequest
+// DescribeCodeBindingRequest indicates an expected call of DescribeCodeBindingRequest.
 func (mr *MockSchemasAPIMockRecorder) DescribeCodeBindingRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCodeBindingRequest", reflect.TypeOf((*MockSchemasAPI)(nil).DescribeCodeBindingRequest), arg0)
 }
 
-// DescribeCodeBindingWithContext mocks base method
+// DescribeCodeBindingWithContext mocks base method.
 func (m *MockSchemasAPI) DescribeCodeBindingWithContext(arg0 context.Context, arg1 *schemas.DescribeCodeBindingInput, arg2 ...request.Option) (*schemas.DescribeCodeBindingOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockSchemasAPI) DescribeCodeBindingWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DescribeCodeBindingWithContext indicates an expected call of DescribeCodeBindingWithContext
+// DescribeCodeBindingWithContext indicates an expected call of DescribeCodeBindingWithContext.
 func (mr *MockSchemasAPIMockRecorder) DescribeCodeBindingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCodeBindingWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).DescribeCodeBindingWithContext), varargs...)
 }
 
-// DescribeDiscoverer mocks base method
+// DescribeDiscoverer mocks base method.
 func (m *MockSchemasAPI) DescribeDiscoverer(arg0 *schemas.DescribeDiscovererInput) (*schemas.DescribeDiscovererOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDiscoverer", arg0)
@@ -494,13 +495,13 @@ func (m *MockSchemasAPI) DescribeDiscoverer(arg0 *schemas.DescribeDiscovererInpu
 	return ret0, ret1
 }
 
-// DescribeDiscoverer indicates an expected call of DescribeDiscoverer
+// DescribeDiscoverer indicates an expected call of DescribeDiscoverer.
 func (mr *MockSchemasAPIMockRecorder) DescribeDiscoverer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDiscoverer", reflect.TypeOf((*MockSchemasAPI)(nil).DescribeDiscoverer), arg0)
 }
 
-// DescribeDiscovererRequest mocks base method
+// DescribeDiscovererRequest mocks base method.
 func (m *MockSchemasAPI) DescribeDiscovererRequest(arg0 *schemas.DescribeDiscovererInput) (*request.Request, *schemas.DescribeDiscovererOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDiscovererRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockSchemasAPI) DescribeDiscovererRequest(arg0 *schemas.DescribeDiscove
 	return ret0, ret1
 }
 
-// DescribeDiscovererRequest indicates an expected call of DescribeDiscovererRequest
+// DescribeDiscovererRequest indicates an expected call of DescribeDiscovererRequest.
 func (mr *MockSchemasAPIMockRecorder) DescribeDiscovererRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDiscovererRequest", reflect.TypeOf((*MockSchemasAPI)(nil).DescribeDiscovererRequest), arg0)
 }
 
-// DescribeDiscovererWithContext mocks base method
+// DescribeDiscovererWithContext mocks base method.
 func (m *MockSchemasAPI) DescribeDiscovererWithContext(arg0 context.Context, arg1 *schemas.DescribeDiscovererInput, arg2 ...request.Option) (*schemas.DescribeDiscovererOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockSchemasAPI) DescribeDiscovererWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DescribeDiscovererWithContext indicates an expected call of DescribeDiscovererWithContext
+// DescribeDiscovererWithContext indicates an expected call of DescribeDiscovererWithContext.
 func (mr *MockSchemasAPIMockRecorder) DescribeDiscovererWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDiscovererWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).DescribeDiscovererWithContext), varargs...)
 }
 
-// DescribeRegistry mocks base method
+// DescribeRegistry mocks base method.
 func (m *MockSchemasAPI) DescribeRegistry(arg0 *schemas.DescribeRegistryInput) (*schemas.DescribeRegistryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRegistry", arg0)
@@ -544,13 +545,13 @@ func (m *MockSchemasAPI) DescribeRegistry(arg0 *schemas.DescribeRegistryInput) (
 	return ret0, ret1
 }
 
-// DescribeRegistry indicates an expected call of DescribeRegistry
+// DescribeRegistry indicates an expected call of DescribeRegistry.
 func (mr *MockSchemasAPIMockRecorder) DescribeRegistry(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRegistry", reflect.TypeOf((*MockSchemasAPI)(nil).DescribeRegistry), arg0)
 }
 
-// DescribeRegistryRequest mocks base method
+// DescribeRegistryRequest mocks base method.
 func (m *MockSchemasAPI) DescribeRegistryRequest(arg0 *schemas.DescribeRegistryInput) (*request.Request, *schemas.DescribeRegistryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRegistryRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockSchemasAPI) DescribeRegistryRequest(arg0 *schemas.DescribeRegistryI
 	return ret0, ret1
 }
 
-// DescribeRegistryRequest indicates an expected call of DescribeRegistryRequest
+// DescribeRegistryRequest indicates an expected call of DescribeRegistryRequest.
 func (mr *MockSchemasAPIMockRecorder) DescribeRegistryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRegistryRequest", reflect.TypeOf((*MockSchemasAPI)(nil).DescribeRegistryRequest), arg0)
 }
 
-// DescribeRegistryWithContext mocks base method
+// DescribeRegistryWithContext mocks base method.
 func (m *MockSchemasAPI) DescribeRegistryWithContext(arg0 context.Context, arg1 *schemas.DescribeRegistryInput, arg2 ...request.Option) (*schemas.DescribeRegistryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockSchemasAPI) DescribeRegistryWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DescribeRegistryWithContext indicates an expected call of DescribeRegistryWithContext
+// DescribeRegistryWithContext indicates an expected call of DescribeRegistryWithContext.
 func (mr *MockSchemasAPIMockRecorder) DescribeRegistryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRegistryWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).DescribeRegistryWithContext), varargs...)
 }
 
-// DescribeSchema mocks base method
+// DescribeSchema mocks base method.
 func (m *MockSchemasAPI) DescribeSchema(arg0 *schemas.DescribeSchemaInput) (*schemas.DescribeSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSchema", arg0)
@@ -594,13 +595,13 @@ func (m *MockSchemasAPI) DescribeSchema(arg0 *schemas.DescribeSchemaInput) (*sch
 	return ret0, ret1
 }
 
-// DescribeSchema indicates an expected call of DescribeSchema
+// DescribeSchema indicates an expected call of DescribeSchema.
 func (mr *MockSchemasAPIMockRecorder) DescribeSchema(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSchema", reflect.TypeOf((*MockSchemasAPI)(nil).DescribeSchema), arg0)
 }
 
-// DescribeSchemaRequest mocks base method
+// DescribeSchemaRequest mocks base method.
 func (m *MockSchemasAPI) DescribeSchemaRequest(arg0 *schemas.DescribeSchemaInput) (*request.Request, *schemas.DescribeSchemaOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSchemaRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockSchemasAPI) DescribeSchemaRequest(arg0 *schemas.DescribeSchemaInput
 	return ret0, ret1
 }
 
-// DescribeSchemaRequest indicates an expected call of DescribeSchemaRequest
+// DescribeSchemaRequest indicates an expected call of DescribeSchemaRequest.
 func (mr *MockSchemasAPIMockRecorder) DescribeSchemaRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSchemaRequest", reflect.TypeOf((*MockSchemasAPI)(nil).DescribeSchemaRequest), arg0)
 }
 
-// DescribeSchemaWithContext mocks base method
+// DescribeSchemaWithContext mocks base method.
 func (m *MockSchemasAPI) DescribeSchemaWithContext(arg0 context.Context, arg1 *schemas.DescribeSchemaInput, arg2 ...request.Option) (*schemas.DescribeSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockSchemasAPI) DescribeSchemaWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// DescribeSchemaWithContext indicates an expected call of DescribeSchemaWithContext
+// DescribeSchemaWithContext indicates an expected call of DescribeSchemaWithContext.
 func (mr *MockSchemasAPIMockRecorder) DescribeSchemaWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSchemaWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).DescribeSchemaWithContext), varargs...)
 }
 
-// ExportSchema mocks base method
+// ExportSchema mocks base method.
 func (m *MockSchemasAPI) ExportSchema(arg0 *schemas.ExportSchemaInput) (*schemas.ExportSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExportSchema", arg0)
@@ -644,13 +645,13 @@ func (m *MockSchemasAPI) ExportSchema(arg0 *schemas.ExportSchemaInput) (*schemas
 	return ret0, ret1
 }
 
-// ExportSchema indicates an expected call of ExportSchema
+// ExportSchema indicates an expected call of ExportSchema.
 func (mr *MockSchemasAPIMockRecorder) ExportSchema(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportSchema", reflect.TypeOf((*MockSchemasAPI)(nil).ExportSchema), arg0)
 }
 
-// ExportSchemaRequest mocks base method
+// ExportSchemaRequest mocks base method.
 func (m *MockSchemasAPI) ExportSchemaRequest(arg0 *schemas.ExportSchemaInput) (*request.Request, *schemas.ExportSchemaOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExportSchemaRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockSchemasAPI) ExportSchemaRequest(arg0 *schemas.ExportSchemaInput) (*
 	return ret0, ret1
 }
 
-// ExportSchemaRequest indicates an expected call of ExportSchemaRequest
+// ExportSchemaRequest indicates an expected call of ExportSchemaRequest.
 func (mr *MockSchemasAPIMockRecorder) ExportSchemaRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportSchemaRequest", reflect.TypeOf((*MockSchemasAPI)(nil).ExportSchemaRequest), arg0)
 }
 
-// ExportSchemaWithContext mocks base method
+// ExportSchemaWithContext mocks base method.
 func (m *MockSchemasAPI) ExportSchemaWithContext(arg0 context.Context, arg1 *schemas.ExportSchemaInput, arg2 ...request.Option) (*schemas.ExportSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockSchemasAPI) ExportSchemaWithContext(arg0 context.Context, arg1 *sch
 	return ret0, ret1
 }
 
-// ExportSchemaWithContext indicates an expected call of ExportSchemaWithContext
+// ExportSchemaWithContext indicates an expected call of ExportSchemaWithContext.
 func (mr *MockSchemasAPIMockRecorder) ExportSchemaWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportSchemaWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).ExportSchemaWithContext), varargs...)
 }
 
-// GetCodeBindingSource mocks base method
+// GetCodeBindingSource mocks base method.
 func (m *MockSchemasAPI) GetCodeBindingSource(arg0 *schemas.GetCodeBindingSourceInput) (*schemas.GetCodeBindingSourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCodeBindingSource", arg0)
@@ -694,13 +695,13 @@ func (m *MockSchemasAPI) GetCodeBindingSource(arg0 *schemas.GetCodeBindingSource
 	return ret0, ret1
 }
 
-// GetCodeBindingSource indicates an expected call of GetCodeBindingSource
+// GetCodeBindingSource indicates an expected call of GetCodeBindingSource.
 func (mr *MockSchemasAPIMockRecorder) GetCodeBindingSource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCodeBindingSource", reflect.TypeOf((*MockSchemasAPI)(nil).GetCodeBindingSource), arg0)
 }
 
-// GetCodeBindingSourceRequest mocks base method
+// GetCodeBindingSourceRequest mocks base method.
 func (m *MockSchemasAPI) GetCodeBindingSourceRequest(arg0 *schemas.GetCodeBindingSourceInput) (*request.Request, *schemas.GetCodeBindingSourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCodeBindingSourceRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockSchemasAPI) GetCodeBindingSourceRequest(arg0 *schemas.GetCodeBindin
 	return ret0, ret1
 }
 
-// GetCodeBindingSourceRequest indicates an expected call of GetCodeBindingSourceRequest
+// GetCodeBindingSourceRequest indicates an expected call of GetCodeBindingSourceRequest.
 func (mr *MockSchemasAPIMockRecorder) GetCodeBindingSourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCodeBindingSourceRequest", reflect.TypeOf((*MockSchemasAPI)(nil).GetCodeBindingSourceRequest), arg0)
 }
 
-// GetCodeBindingSourceWithContext mocks base method
+// GetCodeBindingSourceWithContext mocks base method.
 func (m *MockSchemasAPI) GetCodeBindingSourceWithContext(arg0 context.Context, arg1 *schemas.GetCodeBindingSourceInput, arg2 ...request.Option) (*schemas.GetCodeBindingSourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockSchemasAPI) GetCodeBindingSourceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// GetCodeBindingSourceWithContext indicates an expected call of GetCodeBindingSourceWithContext
+// GetCodeBindingSourceWithContext indicates an expected call of GetCodeBindingSourceWithContext.
 func (mr *MockSchemasAPIMockRecorder) GetCodeBindingSourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCodeBindingSourceWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).GetCodeBindingSourceWithContext), varargs...)
 }
 
-// GetDiscoveredSchema mocks base method
+// GetDiscoveredSchema mocks base method.
 func (m *MockSchemasAPI) GetDiscoveredSchema(arg0 *schemas.GetDiscoveredSchemaInput) (*schemas.GetDiscoveredSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDiscoveredSchema", arg0)
@@ -744,13 +745,13 @@ func (m *MockSchemasAPI) GetDiscoveredSchema(arg0 *schemas.GetDiscoveredSchemaIn
 	return ret0, ret1
 }
 
-// GetDiscoveredSchema indicates an expected call of GetDiscoveredSchema
+// GetDiscoveredSchema indicates an expected call of GetDiscoveredSchema.
 func (mr *MockSchemasAPIMockRecorder) GetDiscoveredSchema(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiscoveredSchema", reflect.TypeOf((*MockSchemasAPI)(nil).GetDiscoveredSchema), arg0)
 }
 
-// GetDiscoveredSchemaRequest mocks base method
+// GetDiscoveredSchemaRequest mocks base method.
 func (m *MockSchemasAPI) GetDiscoveredSchemaRequest(arg0 *schemas.GetDiscoveredSchemaInput) (*request.Request, *schemas.GetDiscoveredSchemaOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDiscoveredSchemaRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockSchemasAPI) GetDiscoveredSchemaRequest(arg0 *schemas.GetDiscoveredS
 	return ret0, ret1
 }
 
-// GetDiscoveredSchemaRequest indicates an expected call of GetDiscoveredSchemaRequest
+// GetDiscoveredSchemaRequest indicates an expected call of GetDiscoveredSchemaRequest.
 func (mr *MockSchemasAPIMockRecorder) GetDiscoveredSchemaRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiscoveredSchemaRequest", reflect.TypeOf((*MockSchemasAPI)(nil).GetDiscoveredSchemaRequest), arg0)
 }
 
-// GetDiscoveredSchemaWithContext mocks base method
+// GetDiscoveredSchemaWithContext mocks base method.
 func (m *MockSchemasAPI) GetDiscoveredSchemaWithContext(arg0 context.Context, arg1 *schemas.GetDiscoveredSchemaInput, arg2 ...request.Option) (*schemas.GetDiscoveredSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockSchemasAPI) GetDiscoveredSchemaWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// GetDiscoveredSchemaWithContext indicates an expected call of GetDiscoveredSchemaWithContext
+// GetDiscoveredSchemaWithContext indicates an expected call of GetDiscoveredSchemaWithContext.
 func (mr *MockSchemasAPIMockRecorder) GetDiscoveredSchemaWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiscoveredSchemaWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).GetDiscoveredSchemaWithContext), varargs...)
 }
 
-// GetResourcePolicy mocks base method
+// GetResourcePolicy mocks base method.
 func (m *MockSchemasAPI) GetResourcePolicy(arg0 *schemas.GetResourcePolicyInput) (*schemas.GetResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetResourcePolicy", arg0)
@@ -794,13 +795,13 @@ func (m *MockSchemasAPI) GetResourcePolicy(arg0 *schemas.GetResourcePolicyInput)
 	return ret0, ret1
 }
 
-// GetResourcePolicy indicates an expected call of GetResourcePolicy
+// GetResourcePolicy indicates an expected call of GetResourcePolicy.
 func (mr *MockSchemasAPIMockRecorder) GetResourcePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourcePolicy", reflect.TypeOf((*MockSchemasAPI)(nil).GetResourcePolicy), arg0)
 }
 
-// GetResourcePolicyRequest mocks base method
+// GetResourcePolicyRequest mocks base method.
 func (m *MockSchemasAPI) GetResourcePolicyRequest(arg0 *schemas.GetResourcePolicyInput) (*request.Request, *schemas.GetResourcePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetResourcePolicyRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockSchemasAPI) GetResourcePolicyRequest(arg0 *schemas.GetResourcePolic
 	return ret0, ret1
 }
 
-// GetResourcePolicyRequest indicates an expected call of GetResourcePolicyRequest
+// GetResourcePolicyRequest indicates an expected call of GetResourcePolicyRequest.
 func (mr *MockSchemasAPIMockRecorder) GetResourcePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourcePolicyRequest", reflect.TypeOf((*MockSchemasAPI)(nil).GetResourcePolicyRequest), arg0)
 }
 
-// GetResourcePolicyWithContext mocks base method
+// GetResourcePolicyWithContext mocks base method.
 func (m *MockSchemasAPI) GetResourcePolicyWithContext(arg0 context.Context, arg1 *schemas.GetResourcePolicyInput, arg2 ...request.Option) (*schemas.GetResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockSchemasAPI) GetResourcePolicyWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetResourcePolicyWithContext indicates an expected call of GetResourcePolicyWithContext
+// GetResourcePolicyWithContext indicates an expected call of GetResourcePolicyWithContext.
 func (mr *MockSchemasAPIMockRecorder) GetResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourcePolicyWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).GetResourcePolicyWithContext), varargs...)
 }
 
-// ListDiscoverers mocks base method
+// ListDiscoverers mocks base method.
 func (m *MockSchemasAPI) ListDiscoverers(arg0 *schemas.ListDiscoverersInput) (*schemas.ListDiscoverersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDiscoverers", arg0)
@@ -844,13 +845,13 @@ func (m *MockSchemasAPI) ListDiscoverers(arg0 *schemas.ListDiscoverersInput) (*s
 	return ret0, ret1
 }
 
-// ListDiscoverers indicates an expected call of ListDiscoverers
+// ListDiscoverers indicates an expected call of ListDiscoverers.
 func (mr *MockSchemasAPIMockRecorder) ListDiscoverers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDiscoverers", reflect.TypeOf((*MockSchemasAPI)(nil).ListDiscoverers), arg0)
 }
 
-// ListDiscoverersPages mocks base method
+// ListDiscoverersPages mocks base method.
 func (m *MockSchemasAPI) ListDiscoverersPages(arg0 *schemas.ListDiscoverersInput, arg1 func(*schemas.ListDiscoverersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDiscoverersPages", arg0, arg1)
@@ -858,13 +859,13 @@ func (m *MockSchemasAPI) ListDiscoverersPages(arg0 *schemas.ListDiscoverersInput
 	return ret0
 }
 
-// ListDiscoverersPages indicates an expected call of ListDiscoverersPages
+// ListDiscoverersPages indicates an expected call of ListDiscoverersPages.
 func (mr *MockSchemasAPIMockRecorder) ListDiscoverersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDiscoverersPages", reflect.TypeOf((*MockSchemasAPI)(nil).ListDiscoverersPages), arg0, arg1)
 }
 
-// ListDiscoverersPagesWithContext mocks base method
+// ListDiscoverersPagesWithContext mocks base method.
 func (m *MockSchemasAPI) ListDiscoverersPagesWithContext(arg0 context.Context, arg1 *schemas.ListDiscoverersInput, arg2 func(*schemas.ListDiscoverersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -876,14 +877,14 @@ func (m *MockSchemasAPI) ListDiscoverersPagesWithContext(arg0 context.Context, a
 	return ret0
 }
 
-// ListDiscoverersPagesWithContext indicates an expected call of ListDiscoverersPagesWithContext
+// ListDiscoverersPagesWithContext indicates an expected call of ListDiscoverersPagesWithContext.
 func (mr *MockSchemasAPIMockRecorder) ListDiscoverersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDiscoverersPagesWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).ListDiscoverersPagesWithContext), varargs...)
 }
 
-// ListDiscoverersRequest mocks base method
+// ListDiscoverersRequest mocks base method.
 func (m *MockSchemasAPI) ListDiscoverersRequest(arg0 *schemas.ListDiscoverersInput) (*request.Request, *schemas.ListDiscoverersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDiscoverersRequest", arg0)
@@ -892,13 +893,13 @@ func (m *MockSchemasAPI) ListDiscoverersRequest(arg0 *schemas.ListDiscoverersInp
 	return ret0, ret1
 }
 
-// ListDiscoverersRequest indicates an expected call of ListDiscoverersRequest
+// ListDiscoverersRequest indicates an expected call of ListDiscoverersRequest.
 func (mr *MockSchemasAPIMockRecorder) ListDiscoverersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDiscoverersRequest", reflect.TypeOf((*MockSchemasAPI)(nil).ListDiscoverersRequest), arg0)
 }
 
-// ListDiscoverersWithContext mocks base method
+// ListDiscoverersWithContext mocks base method.
 func (m *MockSchemasAPI) ListDiscoverersWithContext(arg0 context.Context, arg1 *schemas.ListDiscoverersInput, arg2 ...request.Option) (*schemas.ListDiscoverersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -911,14 +912,14 @@ func (m *MockSchemasAPI) ListDiscoverersWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ListDiscoverersWithContext indicates an expected call of ListDiscoverersWithContext
+// ListDiscoverersWithContext indicates an expected call of ListDiscoverersWithContext.
 func (mr *MockSchemasAPIMockRecorder) ListDiscoverersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDiscoverersWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).ListDiscoverersWithContext), varargs...)
 }
 
-// ListRegistries mocks base method
+// ListRegistries mocks base method.
 func (m *MockSchemasAPI) ListRegistries(arg0 *schemas.ListRegistriesInput) (*schemas.ListRegistriesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRegistries", arg0)
@@ -927,13 +928,13 @@ func (m *MockSchemasAPI) ListRegistries(arg0 *schemas.ListRegistriesInput) (*sch
 	return ret0, ret1
 }
 
-// ListRegistries indicates an expected call of ListRegistries
+// ListRegistries indicates an expected call of ListRegistries.
 func (mr *MockSchemasAPIMockRecorder) ListRegistries(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRegistries", reflect.TypeOf((*MockSchemasAPI)(nil).ListRegistries), arg0)
 }
 
-// ListRegistriesPages mocks base method
+// ListRegistriesPages mocks base method.
 func (m *MockSchemasAPI) ListRegistriesPages(arg0 *schemas.ListRegistriesInput, arg1 func(*schemas.ListRegistriesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRegistriesPages", arg0, arg1)
@@ -941,13 +942,13 @@ func (m *MockSchemasAPI) ListRegistriesPages(arg0 *schemas.ListRegistriesInput, 
 	return ret0
 }
 
-// ListRegistriesPages indicates an expected call of ListRegistriesPages
+// ListRegistriesPages indicates an expected call of ListRegistriesPages.
 func (mr *MockSchemasAPIMockRecorder) ListRegistriesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRegistriesPages", reflect.TypeOf((*MockSchemasAPI)(nil).ListRegistriesPages), arg0, arg1)
 }
 
-// ListRegistriesPagesWithContext mocks base method
+// ListRegistriesPagesWithContext mocks base method.
 func (m *MockSchemasAPI) ListRegistriesPagesWithContext(arg0 context.Context, arg1 *schemas.ListRegistriesInput, arg2 func(*schemas.ListRegistriesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -959,14 +960,14 @@ func (m *MockSchemasAPI) ListRegistriesPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// ListRegistriesPagesWithContext indicates an expected call of ListRegistriesPagesWithContext
+// ListRegistriesPagesWithContext indicates an expected call of ListRegistriesPagesWithContext.
 func (mr *MockSchemasAPIMockRecorder) ListRegistriesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRegistriesPagesWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).ListRegistriesPagesWithContext), varargs...)
 }
 
-// ListRegistriesRequest mocks base method
+// ListRegistriesRequest mocks base method.
 func (m *MockSchemasAPI) ListRegistriesRequest(arg0 *schemas.ListRegistriesInput) (*request.Request, *schemas.ListRegistriesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRegistriesRequest", arg0)
@@ -975,13 +976,13 @@ func (m *MockSchemasAPI) ListRegistriesRequest(arg0 *schemas.ListRegistriesInput
 	return ret0, ret1
 }
 
-// ListRegistriesRequest indicates an expected call of ListRegistriesRequest
+// ListRegistriesRequest indicates an expected call of ListRegistriesRequest.
 func (mr *MockSchemasAPIMockRecorder) ListRegistriesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRegistriesRequest", reflect.TypeOf((*MockSchemasAPI)(nil).ListRegistriesRequest), arg0)
 }
 
-// ListRegistriesWithContext mocks base method
+// ListRegistriesWithContext mocks base method.
 func (m *MockSchemasAPI) ListRegistriesWithContext(arg0 context.Context, arg1 *schemas.ListRegistriesInput, arg2 ...request.Option) (*schemas.ListRegistriesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -994,14 +995,14 @@ func (m *MockSchemasAPI) ListRegistriesWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// ListRegistriesWithContext indicates an expected call of ListRegistriesWithContext
+// ListRegistriesWithContext indicates an expected call of ListRegistriesWithContext.
 func (mr *MockSchemasAPIMockRecorder) ListRegistriesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRegistriesWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).ListRegistriesWithContext), varargs...)
 }
 
-// ListSchemaVersions mocks base method
+// ListSchemaVersions mocks base method.
 func (m *MockSchemasAPI) ListSchemaVersions(arg0 *schemas.ListSchemaVersionsInput) (*schemas.ListSchemaVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchemaVersions", arg0)
@@ -1010,13 +1011,13 @@ func (m *MockSchemasAPI) ListSchemaVersions(arg0 *schemas.ListSchemaVersionsInpu
 	return ret0, ret1
 }
 
-// ListSchemaVersions indicates an expected call of ListSchemaVersions
+// ListSchemaVersions indicates an expected call of ListSchemaVersions.
 func (mr *MockSchemasAPIMockRecorder) ListSchemaVersions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemaVersions", reflect.TypeOf((*MockSchemasAPI)(nil).ListSchemaVersions), arg0)
 }
 
-// ListSchemaVersionsPages mocks base method
+// ListSchemaVersionsPages mocks base method.
 func (m *MockSchemasAPI) ListSchemaVersionsPages(arg0 *schemas.ListSchemaVersionsInput, arg1 func(*schemas.ListSchemaVersionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchemaVersionsPages", arg0, arg1)
@@ -1024,13 +1025,13 @@ func (m *MockSchemasAPI) ListSchemaVersionsPages(arg0 *schemas.ListSchemaVersion
 	return ret0
 }
 
-// ListSchemaVersionsPages indicates an expected call of ListSchemaVersionsPages
+// ListSchemaVersionsPages indicates an expected call of ListSchemaVersionsPages.
 func (mr *MockSchemasAPIMockRecorder) ListSchemaVersionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemaVersionsPages", reflect.TypeOf((*MockSchemasAPI)(nil).ListSchemaVersionsPages), arg0, arg1)
 }
 
-// ListSchemaVersionsPagesWithContext mocks base method
+// ListSchemaVersionsPagesWithContext mocks base method.
 func (m *MockSchemasAPI) ListSchemaVersionsPagesWithContext(arg0 context.Context, arg1 *schemas.ListSchemaVersionsInput, arg2 func(*schemas.ListSchemaVersionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1042,14 +1043,14 @@ func (m *MockSchemasAPI) ListSchemaVersionsPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListSchemaVersionsPagesWithContext indicates an expected call of ListSchemaVersionsPagesWithContext
+// ListSchemaVersionsPagesWithContext indicates an expected call of ListSchemaVersionsPagesWithContext.
 func (mr *MockSchemasAPIMockRecorder) ListSchemaVersionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemaVersionsPagesWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).ListSchemaVersionsPagesWithContext), varargs...)
 }
 
-// ListSchemaVersionsRequest mocks base method
+// ListSchemaVersionsRequest mocks base method.
 func (m *MockSchemasAPI) ListSchemaVersionsRequest(arg0 *schemas.ListSchemaVersionsInput) (*request.Request, *schemas.ListSchemaVersionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchemaVersionsRequest", arg0)
@@ -1058,13 +1059,13 @@ func (m *MockSchemasAPI) ListSchemaVersionsRequest(arg0 *schemas.ListSchemaVersi
 	return ret0, ret1
 }
 
-// ListSchemaVersionsRequest indicates an expected call of ListSchemaVersionsRequest
+// ListSchemaVersionsRequest indicates an expected call of ListSchemaVersionsRequest.
 func (mr *MockSchemasAPIMockRecorder) ListSchemaVersionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemaVersionsRequest", reflect.TypeOf((*MockSchemasAPI)(nil).ListSchemaVersionsRequest), arg0)
 }
 
-// ListSchemaVersionsWithContext mocks base method
+// ListSchemaVersionsWithContext mocks base method.
 func (m *MockSchemasAPI) ListSchemaVersionsWithContext(arg0 context.Context, arg1 *schemas.ListSchemaVersionsInput, arg2 ...request.Option) (*schemas.ListSchemaVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1077,14 +1078,14 @@ func (m *MockSchemasAPI) ListSchemaVersionsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListSchemaVersionsWithContext indicates an expected call of ListSchemaVersionsWithContext
+// ListSchemaVersionsWithContext indicates an expected call of ListSchemaVersionsWithContext.
 func (mr *MockSchemasAPIMockRecorder) ListSchemaVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemaVersionsWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).ListSchemaVersionsWithContext), varargs...)
 }
 
-// ListSchemas mocks base method
+// ListSchemas mocks base method.
 func (m *MockSchemasAPI) ListSchemas(arg0 *schemas.ListSchemasInput) (*schemas.ListSchemasOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchemas", arg0)
@@ -1093,13 +1094,13 @@ func (m *MockSchemasAPI) ListSchemas(arg0 *schemas.ListSchemasInput) (*schemas.L
 	return ret0, ret1
 }
 
-// ListSchemas indicates an expected call of ListSchemas
+// ListSchemas indicates an expected call of ListSchemas.
 func (mr *MockSchemasAPIMockRecorder) ListSchemas(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemas", reflect.TypeOf((*MockSchemasAPI)(nil).ListSchemas), arg0)
 }
 
-// ListSchemasPages mocks base method
+// ListSchemasPages mocks base method.
 func (m *MockSchemasAPI) ListSchemasPages(arg0 *schemas.ListSchemasInput, arg1 func(*schemas.ListSchemasOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchemasPages", arg0, arg1)
@@ -1107,13 +1108,13 @@ func (m *MockSchemasAPI) ListSchemasPages(arg0 *schemas.ListSchemasInput, arg1 f
 	return ret0
 }
 
-// ListSchemasPages indicates an expected call of ListSchemasPages
+// ListSchemasPages indicates an expected call of ListSchemasPages.
 func (mr *MockSchemasAPIMockRecorder) ListSchemasPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemasPages", reflect.TypeOf((*MockSchemasAPI)(nil).ListSchemasPages), arg0, arg1)
 }
 
-// ListSchemasPagesWithContext mocks base method
+// ListSchemasPagesWithContext mocks base method.
 func (m *MockSchemasAPI) ListSchemasPagesWithContext(arg0 context.Context, arg1 *schemas.ListSchemasInput, arg2 func(*schemas.ListSchemasOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1125,14 +1126,14 @@ func (m *MockSchemasAPI) ListSchemasPagesWithContext(arg0 context.Context, arg1 
 	return ret0
 }
 
-// ListSchemasPagesWithContext indicates an expected call of ListSchemasPagesWithContext
+// ListSchemasPagesWithContext indicates an expected call of ListSchemasPagesWithContext.
 func (mr *MockSchemasAPIMockRecorder) ListSchemasPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemasPagesWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).ListSchemasPagesWithContext), varargs...)
 }
 
-// ListSchemasRequest mocks base method
+// ListSchemasRequest mocks base method.
 func (m *MockSchemasAPI) ListSchemasRequest(arg0 *schemas.ListSchemasInput) (*request.Request, *schemas.ListSchemasOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchemasRequest", arg0)
@@ -1141,13 +1142,13 @@ func (m *MockSchemasAPI) ListSchemasRequest(arg0 *schemas.ListSchemasInput) (*re
 	return ret0, ret1
 }
 
-// ListSchemasRequest indicates an expected call of ListSchemasRequest
+// ListSchemasRequest indicates an expected call of ListSchemasRequest.
 func (mr *MockSchemasAPIMockRecorder) ListSchemasRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemasRequest", reflect.TypeOf((*MockSchemasAPI)(nil).ListSchemasRequest), arg0)
 }
 
-// ListSchemasWithContext mocks base method
+// ListSchemasWithContext mocks base method.
 func (m *MockSchemasAPI) ListSchemasWithContext(arg0 context.Context, arg1 *schemas.ListSchemasInput, arg2 ...request.Option) (*schemas.ListSchemasOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1160,14 +1161,14 @@ func (m *MockSchemasAPI) ListSchemasWithContext(arg0 context.Context, arg1 *sche
 	return ret0, ret1
 }
 
-// ListSchemasWithContext indicates an expected call of ListSchemasWithContext
+// ListSchemasWithContext indicates an expected call of ListSchemasWithContext.
 func (mr *MockSchemasAPIMockRecorder) ListSchemasWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchemasWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).ListSchemasWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockSchemasAPI) ListTagsForResource(arg0 *schemas.ListTagsForResourceInput) (*schemas.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1176,13 +1177,13 @@ func (m *MockSchemasAPI) ListTagsForResource(arg0 *schemas.ListTagsForResourceIn
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockSchemasAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockSchemasAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockSchemasAPI) ListTagsForResourceRequest(arg0 *schemas.ListTagsForResourceInput) (*request.Request, *schemas.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1191,13 +1192,13 @@ func (m *MockSchemasAPI) ListTagsForResourceRequest(arg0 *schemas.ListTagsForRes
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockSchemasAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockSchemasAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockSchemasAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *schemas.ListTagsForResourceInput, arg2 ...request.Option) (*schemas.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1210,14 +1211,14 @@ func (m *MockSchemasAPI) ListTagsForResourceWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockSchemasAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PutCodeBinding mocks base method
+// PutCodeBinding mocks base method.
 func (m *MockSchemasAPI) PutCodeBinding(arg0 *schemas.PutCodeBindingInput) (*schemas.PutCodeBindingOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutCodeBinding", arg0)
@@ -1226,13 +1227,13 @@ func (m *MockSchemasAPI) PutCodeBinding(arg0 *schemas.PutCodeBindingInput) (*sch
 	return ret0, ret1
 }
 
-// PutCodeBinding indicates an expected call of PutCodeBinding
+// PutCodeBinding indicates an expected call of PutCodeBinding.
 func (mr *MockSchemasAPIMockRecorder) PutCodeBinding(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutCodeBinding", reflect.TypeOf((*MockSchemasAPI)(nil).PutCodeBinding), arg0)
 }
 
-// PutCodeBindingRequest mocks base method
+// PutCodeBindingRequest mocks base method.
 func (m *MockSchemasAPI) PutCodeBindingRequest(arg0 *schemas.PutCodeBindingInput) (*request.Request, *schemas.PutCodeBindingOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutCodeBindingRequest", arg0)
@@ -1241,13 +1242,13 @@ func (m *MockSchemasAPI) PutCodeBindingRequest(arg0 *schemas.PutCodeBindingInput
 	return ret0, ret1
 }
 
-// PutCodeBindingRequest indicates an expected call of PutCodeBindingRequest
+// PutCodeBindingRequest indicates an expected call of PutCodeBindingRequest.
 func (mr *MockSchemasAPIMockRecorder) PutCodeBindingRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutCodeBindingRequest", reflect.TypeOf((*MockSchemasAPI)(nil).PutCodeBindingRequest), arg0)
 }
 
-// PutCodeBindingWithContext mocks base method
+// PutCodeBindingWithContext mocks base method.
 func (m *MockSchemasAPI) PutCodeBindingWithContext(arg0 context.Context, arg1 *schemas.PutCodeBindingInput, arg2 ...request.Option) (*schemas.PutCodeBindingOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1260,14 +1261,14 @@ func (m *MockSchemasAPI) PutCodeBindingWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// PutCodeBindingWithContext indicates an expected call of PutCodeBindingWithContext
+// PutCodeBindingWithContext indicates an expected call of PutCodeBindingWithContext.
 func (mr *MockSchemasAPIMockRecorder) PutCodeBindingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutCodeBindingWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).PutCodeBindingWithContext), varargs...)
 }
 
-// PutResourcePolicy mocks base method
+// PutResourcePolicy mocks base method.
 func (m *MockSchemasAPI) PutResourcePolicy(arg0 *schemas.PutResourcePolicyInput) (*schemas.PutResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutResourcePolicy", arg0)
@@ -1276,13 +1277,13 @@ func (m *MockSchemasAPI) PutResourcePolicy(arg0 *schemas.PutResourcePolicyInput)
 	return ret0, ret1
 }
 
-// PutResourcePolicy indicates an expected call of PutResourcePolicy
+// PutResourcePolicy indicates an expected call of PutResourcePolicy.
 func (mr *MockSchemasAPIMockRecorder) PutResourcePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutResourcePolicy", reflect.TypeOf((*MockSchemasAPI)(nil).PutResourcePolicy), arg0)
 }
 
-// PutResourcePolicyRequest mocks base method
+// PutResourcePolicyRequest mocks base method.
 func (m *MockSchemasAPI) PutResourcePolicyRequest(arg0 *schemas.PutResourcePolicyInput) (*request.Request, *schemas.PutResourcePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutResourcePolicyRequest", arg0)
@@ -1291,13 +1292,13 @@ func (m *MockSchemasAPI) PutResourcePolicyRequest(arg0 *schemas.PutResourcePolic
 	return ret0, ret1
 }
 
-// PutResourcePolicyRequest indicates an expected call of PutResourcePolicyRequest
+// PutResourcePolicyRequest indicates an expected call of PutResourcePolicyRequest.
 func (mr *MockSchemasAPIMockRecorder) PutResourcePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutResourcePolicyRequest", reflect.TypeOf((*MockSchemasAPI)(nil).PutResourcePolicyRequest), arg0)
 }
 
-// PutResourcePolicyWithContext mocks base method
+// PutResourcePolicyWithContext mocks base method.
 func (m *MockSchemasAPI) PutResourcePolicyWithContext(arg0 context.Context, arg1 *schemas.PutResourcePolicyInput, arg2 ...request.Option) (*schemas.PutResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1310,14 +1311,14 @@ func (m *MockSchemasAPI) PutResourcePolicyWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// PutResourcePolicyWithContext indicates an expected call of PutResourcePolicyWithContext
+// PutResourcePolicyWithContext indicates an expected call of PutResourcePolicyWithContext.
 func (mr *MockSchemasAPIMockRecorder) PutResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutResourcePolicyWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).PutResourcePolicyWithContext), varargs...)
 }
 
-// SearchSchemas mocks base method
+// SearchSchemas mocks base method.
 func (m *MockSchemasAPI) SearchSchemas(arg0 *schemas.SearchSchemasInput) (*schemas.SearchSchemasOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchSchemas", arg0)
@@ -1326,13 +1327,13 @@ func (m *MockSchemasAPI) SearchSchemas(arg0 *schemas.SearchSchemasInput) (*schem
 	return ret0, ret1
 }
 
-// SearchSchemas indicates an expected call of SearchSchemas
+// SearchSchemas indicates an expected call of SearchSchemas.
 func (mr *MockSchemasAPIMockRecorder) SearchSchemas(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSchemas", reflect.TypeOf((*MockSchemasAPI)(nil).SearchSchemas), arg0)
 }
 
-// SearchSchemasPages mocks base method
+// SearchSchemasPages mocks base method.
 func (m *MockSchemasAPI) SearchSchemasPages(arg0 *schemas.SearchSchemasInput, arg1 func(*schemas.SearchSchemasOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchSchemasPages", arg0, arg1)
@@ -1340,13 +1341,13 @@ func (m *MockSchemasAPI) SearchSchemasPages(arg0 *schemas.SearchSchemasInput, ar
 	return ret0
 }
 
-// SearchSchemasPages indicates an expected call of SearchSchemasPages
+// SearchSchemasPages indicates an expected call of SearchSchemasPages.
 func (mr *MockSchemasAPIMockRecorder) SearchSchemasPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSchemasPages", reflect.TypeOf((*MockSchemasAPI)(nil).SearchSchemasPages), arg0, arg1)
 }
 
-// SearchSchemasPagesWithContext mocks base method
+// SearchSchemasPagesWithContext mocks base method.
 func (m *MockSchemasAPI) SearchSchemasPagesWithContext(arg0 context.Context, arg1 *schemas.SearchSchemasInput, arg2 func(*schemas.SearchSchemasOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1358,14 +1359,14 @@ func (m *MockSchemasAPI) SearchSchemasPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// SearchSchemasPagesWithContext indicates an expected call of SearchSchemasPagesWithContext
+// SearchSchemasPagesWithContext indicates an expected call of SearchSchemasPagesWithContext.
 func (mr *MockSchemasAPIMockRecorder) SearchSchemasPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSchemasPagesWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).SearchSchemasPagesWithContext), varargs...)
 }
 
-// SearchSchemasRequest mocks base method
+// SearchSchemasRequest mocks base method.
 func (m *MockSchemasAPI) SearchSchemasRequest(arg0 *schemas.SearchSchemasInput) (*request.Request, *schemas.SearchSchemasOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchSchemasRequest", arg0)
@@ -1374,13 +1375,13 @@ func (m *MockSchemasAPI) SearchSchemasRequest(arg0 *schemas.SearchSchemasInput) 
 	return ret0, ret1
 }
 
-// SearchSchemasRequest indicates an expected call of SearchSchemasRequest
+// SearchSchemasRequest indicates an expected call of SearchSchemasRequest.
 func (mr *MockSchemasAPIMockRecorder) SearchSchemasRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSchemasRequest", reflect.TypeOf((*MockSchemasAPI)(nil).SearchSchemasRequest), arg0)
 }
 
-// SearchSchemasWithContext mocks base method
+// SearchSchemasWithContext mocks base method.
 func (m *MockSchemasAPI) SearchSchemasWithContext(arg0 context.Context, arg1 *schemas.SearchSchemasInput, arg2 ...request.Option) (*schemas.SearchSchemasOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1393,14 +1394,14 @@ func (m *MockSchemasAPI) SearchSchemasWithContext(arg0 context.Context, arg1 *sc
 	return ret0, ret1
 }
 
-// SearchSchemasWithContext indicates an expected call of SearchSchemasWithContext
+// SearchSchemasWithContext indicates an expected call of SearchSchemasWithContext.
 func (mr *MockSchemasAPIMockRecorder) SearchSchemasWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSchemasWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).SearchSchemasWithContext), varargs...)
 }
 
-// StartDiscoverer mocks base method
+// StartDiscoverer mocks base method.
 func (m *MockSchemasAPI) StartDiscoverer(arg0 *schemas.StartDiscovererInput) (*schemas.StartDiscovererOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartDiscoverer", arg0)
@@ -1409,13 +1410,13 @@ func (m *MockSchemasAPI) StartDiscoverer(arg0 *schemas.StartDiscovererInput) (*s
 	return ret0, ret1
 }
 
-// StartDiscoverer indicates an expected call of StartDiscoverer
+// StartDiscoverer indicates an expected call of StartDiscoverer.
 func (mr *MockSchemasAPIMockRecorder) StartDiscoverer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDiscoverer", reflect.TypeOf((*MockSchemasAPI)(nil).StartDiscoverer), arg0)
 }
 
-// StartDiscovererRequest mocks base method
+// StartDiscovererRequest mocks base method.
 func (m *MockSchemasAPI) StartDiscovererRequest(arg0 *schemas.StartDiscovererInput) (*request.Request, *schemas.StartDiscovererOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartDiscovererRequest", arg0)
@@ -1424,13 +1425,13 @@ func (m *MockSchemasAPI) StartDiscovererRequest(arg0 *schemas.StartDiscovererInp
 	return ret0, ret1
 }
 
-// StartDiscovererRequest indicates an expected call of StartDiscovererRequest
+// StartDiscovererRequest indicates an expected call of StartDiscovererRequest.
 func (mr *MockSchemasAPIMockRecorder) StartDiscovererRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDiscovererRequest", reflect.TypeOf((*MockSchemasAPI)(nil).StartDiscovererRequest), arg0)
 }
 
-// StartDiscovererWithContext mocks base method
+// StartDiscovererWithContext mocks base method.
 func (m *MockSchemasAPI) StartDiscovererWithContext(arg0 context.Context, arg1 *schemas.StartDiscovererInput, arg2 ...request.Option) (*schemas.StartDiscovererOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1443,14 +1444,14 @@ func (m *MockSchemasAPI) StartDiscovererWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// StartDiscovererWithContext indicates an expected call of StartDiscovererWithContext
+// StartDiscovererWithContext indicates an expected call of StartDiscovererWithContext.
 func (mr *MockSchemasAPIMockRecorder) StartDiscovererWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDiscovererWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).StartDiscovererWithContext), varargs...)
 }
 
-// StopDiscoverer mocks base method
+// StopDiscoverer mocks base method.
 func (m *MockSchemasAPI) StopDiscoverer(arg0 *schemas.StopDiscovererInput) (*schemas.StopDiscovererOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopDiscoverer", arg0)
@@ -1459,13 +1460,13 @@ func (m *MockSchemasAPI) StopDiscoverer(arg0 *schemas.StopDiscovererInput) (*sch
 	return ret0, ret1
 }
 
-// StopDiscoverer indicates an expected call of StopDiscoverer
+// StopDiscoverer indicates an expected call of StopDiscoverer.
 func (mr *MockSchemasAPIMockRecorder) StopDiscoverer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopDiscoverer", reflect.TypeOf((*MockSchemasAPI)(nil).StopDiscoverer), arg0)
 }
 
-// StopDiscovererRequest mocks base method
+// StopDiscovererRequest mocks base method.
 func (m *MockSchemasAPI) StopDiscovererRequest(arg0 *schemas.StopDiscovererInput) (*request.Request, *schemas.StopDiscovererOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopDiscovererRequest", arg0)
@@ -1474,13 +1475,13 @@ func (m *MockSchemasAPI) StopDiscovererRequest(arg0 *schemas.StopDiscovererInput
 	return ret0, ret1
 }
 
-// StopDiscovererRequest indicates an expected call of StopDiscovererRequest
+// StopDiscovererRequest indicates an expected call of StopDiscovererRequest.
 func (mr *MockSchemasAPIMockRecorder) StopDiscovererRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopDiscovererRequest", reflect.TypeOf((*MockSchemasAPI)(nil).StopDiscovererRequest), arg0)
 }
 
-// StopDiscovererWithContext mocks base method
+// StopDiscovererWithContext mocks base method.
 func (m *MockSchemasAPI) StopDiscovererWithContext(arg0 context.Context, arg1 *schemas.StopDiscovererInput, arg2 ...request.Option) (*schemas.StopDiscovererOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1493,14 +1494,14 @@ func (m *MockSchemasAPI) StopDiscovererWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// StopDiscovererWithContext indicates an expected call of StopDiscovererWithContext
+// StopDiscovererWithContext indicates an expected call of StopDiscovererWithContext.
 func (mr *MockSchemasAPIMockRecorder) StopDiscovererWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopDiscovererWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).StopDiscovererWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockSchemasAPI) TagResource(arg0 *schemas.TagResourceInput) (*schemas.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1509,13 +1510,13 @@ func (m *MockSchemasAPI) TagResource(arg0 *schemas.TagResourceInput) (*schemas.T
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockSchemasAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockSchemasAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockSchemasAPI) TagResourceRequest(arg0 *schemas.TagResourceInput) (*request.Request, *schemas.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1524,13 +1525,13 @@ func (m *MockSchemasAPI) TagResourceRequest(arg0 *schemas.TagResourceInput) (*re
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockSchemasAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockSchemasAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockSchemasAPI) TagResourceWithContext(arg0 context.Context, arg1 *schemas.TagResourceInput, arg2 ...request.Option) (*schemas.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1543,14 +1544,14 @@ func (m *MockSchemasAPI) TagResourceWithContext(arg0 context.Context, arg1 *sche
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockSchemasAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockSchemasAPI) UntagResource(arg0 *schemas.UntagResourceInput) (*schemas.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1559,13 +1560,13 @@ func (m *MockSchemasAPI) UntagResource(arg0 *schemas.UntagResourceInput) (*schem
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockSchemasAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockSchemasAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockSchemasAPI) UntagResourceRequest(arg0 *schemas.UntagResourceInput) (*request.Request, *schemas.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1574,13 +1575,13 @@ func (m *MockSchemasAPI) UntagResourceRequest(arg0 *schemas.UntagResourceInput) 
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockSchemasAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockSchemasAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockSchemasAPI) UntagResourceWithContext(arg0 context.Context, arg1 *schemas.UntagResourceInput, arg2 ...request.Option) (*schemas.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1593,14 +1594,14 @@ func (m *MockSchemasAPI) UntagResourceWithContext(arg0 context.Context, arg1 *sc
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockSchemasAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateDiscoverer mocks base method
+// UpdateDiscoverer mocks base method.
 func (m *MockSchemasAPI) UpdateDiscoverer(arg0 *schemas.UpdateDiscovererInput) (*schemas.UpdateDiscovererOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDiscoverer", arg0)
@@ -1609,13 +1610,13 @@ func (m *MockSchemasAPI) UpdateDiscoverer(arg0 *schemas.UpdateDiscovererInput) (
 	return ret0, ret1
 }
 
-// UpdateDiscoverer indicates an expected call of UpdateDiscoverer
+// UpdateDiscoverer indicates an expected call of UpdateDiscoverer.
 func (mr *MockSchemasAPIMockRecorder) UpdateDiscoverer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDiscoverer", reflect.TypeOf((*MockSchemasAPI)(nil).UpdateDiscoverer), arg0)
 }
 
-// UpdateDiscovererRequest mocks base method
+// UpdateDiscovererRequest mocks base method.
 func (m *MockSchemasAPI) UpdateDiscovererRequest(arg0 *schemas.UpdateDiscovererInput) (*request.Request, *schemas.UpdateDiscovererOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDiscovererRequest", arg0)
@@ -1624,13 +1625,13 @@ func (m *MockSchemasAPI) UpdateDiscovererRequest(arg0 *schemas.UpdateDiscovererI
 	return ret0, ret1
 }
 
-// UpdateDiscovererRequest indicates an expected call of UpdateDiscovererRequest
+// UpdateDiscovererRequest indicates an expected call of UpdateDiscovererRequest.
 func (mr *MockSchemasAPIMockRecorder) UpdateDiscovererRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDiscovererRequest", reflect.TypeOf((*MockSchemasAPI)(nil).UpdateDiscovererRequest), arg0)
 }
 
-// UpdateDiscovererWithContext mocks base method
+// UpdateDiscovererWithContext mocks base method.
 func (m *MockSchemasAPI) UpdateDiscovererWithContext(arg0 context.Context, arg1 *schemas.UpdateDiscovererInput, arg2 ...request.Option) (*schemas.UpdateDiscovererOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1643,14 +1644,14 @@ func (m *MockSchemasAPI) UpdateDiscovererWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// UpdateDiscovererWithContext indicates an expected call of UpdateDiscovererWithContext
+// UpdateDiscovererWithContext indicates an expected call of UpdateDiscovererWithContext.
 func (mr *MockSchemasAPIMockRecorder) UpdateDiscovererWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDiscovererWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).UpdateDiscovererWithContext), varargs...)
 }
 
-// UpdateRegistry mocks base method
+// UpdateRegistry mocks base method.
 func (m *MockSchemasAPI) UpdateRegistry(arg0 *schemas.UpdateRegistryInput) (*schemas.UpdateRegistryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRegistry", arg0)
@@ -1659,13 +1660,13 @@ func (m *MockSchemasAPI) UpdateRegistry(arg0 *schemas.UpdateRegistryInput) (*sch
 	return ret0, ret1
 }
 
-// UpdateRegistry indicates an expected call of UpdateRegistry
+// UpdateRegistry indicates an expected call of UpdateRegistry.
 func (mr *MockSchemasAPIMockRecorder) UpdateRegistry(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRegistry", reflect.TypeOf((*MockSchemasAPI)(nil).UpdateRegistry), arg0)
 }
 
-// UpdateRegistryRequest mocks base method
+// UpdateRegistryRequest mocks base method.
 func (m *MockSchemasAPI) UpdateRegistryRequest(arg0 *schemas.UpdateRegistryInput) (*request.Request, *schemas.UpdateRegistryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRegistryRequest", arg0)
@@ -1674,13 +1675,13 @@ func (m *MockSchemasAPI) UpdateRegistryRequest(arg0 *schemas.UpdateRegistryInput
 	return ret0, ret1
 }
 
-// UpdateRegistryRequest indicates an expected call of UpdateRegistryRequest
+// UpdateRegistryRequest indicates an expected call of UpdateRegistryRequest.
 func (mr *MockSchemasAPIMockRecorder) UpdateRegistryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRegistryRequest", reflect.TypeOf((*MockSchemasAPI)(nil).UpdateRegistryRequest), arg0)
 }
 
-// UpdateRegistryWithContext mocks base method
+// UpdateRegistryWithContext mocks base method.
 func (m *MockSchemasAPI) UpdateRegistryWithContext(arg0 context.Context, arg1 *schemas.UpdateRegistryInput, arg2 ...request.Option) (*schemas.UpdateRegistryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1693,14 +1694,14 @@ func (m *MockSchemasAPI) UpdateRegistryWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// UpdateRegistryWithContext indicates an expected call of UpdateRegistryWithContext
+// UpdateRegistryWithContext indicates an expected call of UpdateRegistryWithContext.
 func (mr *MockSchemasAPIMockRecorder) UpdateRegistryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRegistryWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).UpdateRegistryWithContext), varargs...)
 }
 
-// UpdateSchema mocks base method
+// UpdateSchema mocks base method.
 func (m *MockSchemasAPI) UpdateSchema(arg0 *schemas.UpdateSchemaInput) (*schemas.UpdateSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSchema", arg0)
@@ -1709,13 +1710,13 @@ func (m *MockSchemasAPI) UpdateSchema(arg0 *schemas.UpdateSchemaInput) (*schemas
 	return ret0, ret1
 }
 
-// UpdateSchema indicates an expected call of UpdateSchema
+// UpdateSchema indicates an expected call of UpdateSchema.
 func (mr *MockSchemasAPIMockRecorder) UpdateSchema(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSchema", reflect.TypeOf((*MockSchemasAPI)(nil).UpdateSchema), arg0)
 }
 
-// UpdateSchemaRequest mocks base method
+// UpdateSchemaRequest mocks base method.
 func (m *MockSchemasAPI) UpdateSchemaRequest(arg0 *schemas.UpdateSchemaInput) (*request.Request, *schemas.UpdateSchemaOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSchemaRequest", arg0)
@@ -1724,13 +1725,13 @@ func (m *MockSchemasAPI) UpdateSchemaRequest(arg0 *schemas.UpdateSchemaInput) (*
 	return ret0, ret1
 }
 
-// UpdateSchemaRequest indicates an expected call of UpdateSchemaRequest
+// UpdateSchemaRequest indicates an expected call of UpdateSchemaRequest.
 func (mr *MockSchemasAPIMockRecorder) UpdateSchemaRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSchemaRequest", reflect.TypeOf((*MockSchemasAPI)(nil).UpdateSchemaRequest), arg0)
 }
 
-// UpdateSchemaWithContext mocks base method
+// UpdateSchemaWithContext mocks base method.
 func (m *MockSchemasAPI) UpdateSchemaWithContext(arg0 context.Context, arg1 *schemas.UpdateSchemaInput, arg2 ...request.Option) (*schemas.UpdateSchemaOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1743,14 +1744,14 @@ func (m *MockSchemasAPI) UpdateSchemaWithContext(arg0 context.Context, arg1 *sch
 	return ret0, ret1
 }
 
-// UpdateSchemaWithContext indicates an expected call of UpdateSchemaWithContext
+// UpdateSchemaWithContext indicates an expected call of UpdateSchemaWithContext.
 func (mr *MockSchemasAPIMockRecorder) UpdateSchemaWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSchemaWithContext", reflect.TypeOf((*MockSchemasAPI)(nil).UpdateSchemaWithContext), varargs...)
 }
 
-// WaitUntilCodeBindingExists mocks base method
+// WaitUntilCodeBindingExists mocks base method.
 func (m *MockSchemasAPI) WaitUntilCodeBindingExists(arg0 *schemas.DescribeCodeBindingInput) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WaitUntilCodeBindingExists", arg0)
@@ -1758,13 +1759,13 @@ func (m *MockSchemasAPI) WaitUntilCodeBindingExists(arg0 *schemas.DescribeCodeBi
 	return ret0
 }
 
-// WaitUntilCodeBindingExists indicates an expected call of WaitUntilCodeBindingExists
+// WaitUntilCodeBindingExists indicates an expected call of WaitUntilCodeBindingExists.
 func (mr *MockSchemasAPIMockRecorder) WaitUntilCodeBindingExists(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilCodeBindingExists", reflect.TypeOf((*MockSchemasAPI)(nil).WaitUntilCodeBindingExists), arg0)
 }
 
-// WaitUntilCodeBindingExistsWithContext mocks base method
+// WaitUntilCodeBindingExistsWithContext mocks base method.
 func (m *MockSchemasAPI) WaitUntilCodeBindingExistsWithContext(arg0 context.Context, arg1 *schemas.DescribeCodeBindingInput, arg2 ...request.WaiterOption) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1776,7 +1777,7 @@ func (m *MockSchemasAPI) WaitUntilCodeBindingExistsWithContext(arg0 context.Cont
 	return ret0
 }
 
-// WaitUntilCodeBindingExistsWithContext indicates an expected call of WaitUntilCodeBindingExistsWithContext
+// WaitUntilCodeBindingExistsWithContext indicates an expected call of WaitUntilCodeBindingExistsWithContext.
 func (mr *MockSchemasAPIMockRecorder) WaitUntilCodeBindingExistsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

@@ -6,36 +6,37 @@ package pinpointsmsvoicemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	pinpointsmsvoice "github.com/aws/aws-sdk-go/service/pinpointsmsvoice"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockPinpointSMSVoiceAPI is a mock of PinpointSMSVoiceAPI interface
+// MockPinpointSMSVoiceAPI is a mock of PinpointSMSVoiceAPI interface.
 type MockPinpointSMSVoiceAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockPinpointSMSVoiceAPIMockRecorder
 }
 
-// MockPinpointSMSVoiceAPIMockRecorder is the mock recorder for MockPinpointSMSVoiceAPI
+// MockPinpointSMSVoiceAPIMockRecorder is the mock recorder for MockPinpointSMSVoiceAPI.
 type MockPinpointSMSVoiceAPIMockRecorder struct {
 	mock *MockPinpointSMSVoiceAPI
 }
 
-// NewMockPinpointSMSVoiceAPI creates a new mock instance
+// NewMockPinpointSMSVoiceAPI creates a new mock instance.
 func NewMockPinpointSMSVoiceAPI(ctrl *gomock.Controller) *MockPinpointSMSVoiceAPI {
 	mock := &MockPinpointSMSVoiceAPI{ctrl: ctrl}
 	mock.recorder = &MockPinpointSMSVoiceAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockPinpointSMSVoiceAPI) EXPECT() *MockPinpointSMSVoiceAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateConfigurationSet mocks base method
+// CreateConfigurationSet mocks base method.
 func (m *MockPinpointSMSVoiceAPI) CreateConfigurationSet(arg0 *pinpointsmsvoice.CreateConfigurationSetInput) (*pinpointsmsvoice.CreateConfigurationSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConfigurationSet", arg0)
@@ -44,13 +45,13 @@ func (m *MockPinpointSMSVoiceAPI) CreateConfigurationSet(arg0 *pinpointsmsvoice.
 	return ret0, ret1
 }
 
-// CreateConfigurationSet indicates an expected call of CreateConfigurationSet
+// CreateConfigurationSet indicates an expected call of CreateConfigurationSet.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) CreateConfigurationSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationSet", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).CreateConfigurationSet), arg0)
 }
 
-// CreateConfigurationSetEventDestination mocks base method
+// CreateConfigurationSetEventDestination mocks base method.
 func (m *MockPinpointSMSVoiceAPI) CreateConfigurationSetEventDestination(arg0 *pinpointsmsvoice.CreateConfigurationSetEventDestinationInput) (*pinpointsmsvoice.CreateConfigurationSetEventDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConfigurationSetEventDestination", arg0)
@@ -59,13 +60,13 @@ func (m *MockPinpointSMSVoiceAPI) CreateConfigurationSetEventDestination(arg0 *p
 	return ret0, ret1
 }
 
-// CreateConfigurationSetEventDestination indicates an expected call of CreateConfigurationSetEventDestination
+// CreateConfigurationSetEventDestination indicates an expected call of CreateConfigurationSetEventDestination.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) CreateConfigurationSetEventDestination(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationSetEventDestination", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).CreateConfigurationSetEventDestination), arg0)
 }
 
-// CreateConfigurationSetEventDestinationRequest mocks base method
+// CreateConfigurationSetEventDestinationRequest mocks base method.
 func (m *MockPinpointSMSVoiceAPI) CreateConfigurationSetEventDestinationRequest(arg0 *pinpointsmsvoice.CreateConfigurationSetEventDestinationInput) (*request.Request, *pinpointsmsvoice.CreateConfigurationSetEventDestinationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConfigurationSetEventDestinationRequest", arg0)
@@ -74,13 +75,13 @@ func (m *MockPinpointSMSVoiceAPI) CreateConfigurationSetEventDestinationRequest(
 	return ret0, ret1
 }
 
-// CreateConfigurationSetEventDestinationRequest indicates an expected call of CreateConfigurationSetEventDestinationRequest
+// CreateConfigurationSetEventDestinationRequest indicates an expected call of CreateConfigurationSetEventDestinationRequest.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) CreateConfigurationSetEventDestinationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationSetEventDestinationRequest", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).CreateConfigurationSetEventDestinationRequest), arg0)
 }
 
-// CreateConfigurationSetEventDestinationWithContext mocks base method
+// CreateConfigurationSetEventDestinationWithContext mocks base method.
 func (m *MockPinpointSMSVoiceAPI) CreateConfigurationSetEventDestinationWithContext(arg0 context.Context, arg1 *pinpointsmsvoice.CreateConfigurationSetEventDestinationInput, arg2 ...request.Option) (*pinpointsmsvoice.CreateConfigurationSetEventDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -93,14 +94,14 @@ func (m *MockPinpointSMSVoiceAPI) CreateConfigurationSetEventDestinationWithCont
 	return ret0, ret1
 }
 
-// CreateConfigurationSetEventDestinationWithContext indicates an expected call of CreateConfigurationSetEventDestinationWithContext
+// CreateConfigurationSetEventDestinationWithContext indicates an expected call of CreateConfigurationSetEventDestinationWithContext.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) CreateConfigurationSetEventDestinationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationSetEventDestinationWithContext", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).CreateConfigurationSetEventDestinationWithContext), varargs...)
 }
 
-// CreateConfigurationSetRequest mocks base method
+// CreateConfigurationSetRequest mocks base method.
 func (m *MockPinpointSMSVoiceAPI) CreateConfigurationSetRequest(arg0 *pinpointsmsvoice.CreateConfigurationSetInput) (*request.Request, *pinpointsmsvoice.CreateConfigurationSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConfigurationSetRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockPinpointSMSVoiceAPI) CreateConfigurationSetRequest(arg0 *pinpointsm
 	return ret0, ret1
 }
 
-// CreateConfigurationSetRequest indicates an expected call of CreateConfigurationSetRequest
+// CreateConfigurationSetRequest indicates an expected call of CreateConfigurationSetRequest.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) CreateConfigurationSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationSetRequest", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).CreateConfigurationSetRequest), arg0)
 }
 
-// CreateConfigurationSetWithContext mocks base method
+// CreateConfigurationSetWithContext mocks base method.
 func (m *MockPinpointSMSVoiceAPI) CreateConfigurationSetWithContext(arg0 context.Context, arg1 *pinpointsmsvoice.CreateConfigurationSetInput, arg2 ...request.Option) (*pinpointsmsvoice.CreateConfigurationSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockPinpointSMSVoiceAPI) CreateConfigurationSetWithContext(arg0 context
 	return ret0, ret1
 }
 
-// CreateConfigurationSetWithContext indicates an expected call of CreateConfigurationSetWithContext
+// CreateConfigurationSetWithContext indicates an expected call of CreateConfigurationSetWithContext.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) CreateConfigurationSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConfigurationSetWithContext", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).CreateConfigurationSetWithContext), varargs...)
 }
 
-// DeleteConfigurationSet mocks base method
+// DeleteConfigurationSet mocks base method.
 func (m *MockPinpointSMSVoiceAPI) DeleteConfigurationSet(arg0 *pinpointsmsvoice.DeleteConfigurationSetInput) (*pinpointsmsvoice.DeleteConfigurationSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConfigurationSet", arg0)
@@ -144,13 +145,13 @@ func (m *MockPinpointSMSVoiceAPI) DeleteConfigurationSet(arg0 *pinpointsmsvoice.
 	return ret0, ret1
 }
 
-// DeleteConfigurationSet indicates an expected call of DeleteConfigurationSet
+// DeleteConfigurationSet indicates an expected call of DeleteConfigurationSet.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) DeleteConfigurationSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationSet", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).DeleteConfigurationSet), arg0)
 }
 
-// DeleteConfigurationSetEventDestination mocks base method
+// DeleteConfigurationSetEventDestination mocks base method.
 func (m *MockPinpointSMSVoiceAPI) DeleteConfigurationSetEventDestination(arg0 *pinpointsmsvoice.DeleteConfigurationSetEventDestinationInput) (*pinpointsmsvoice.DeleteConfigurationSetEventDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConfigurationSetEventDestination", arg0)
@@ -159,13 +160,13 @@ func (m *MockPinpointSMSVoiceAPI) DeleteConfigurationSetEventDestination(arg0 *p
 	return ret0, ret1
 }
 
-// DeleteConfigurationSetEventDestination indicates an expected call of DeleteConfigurationSetEventDestination
+// DeleteConfigurationSetEventDestination indicates an expected call of DeleteConfigurationSetEventDestination.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) DeleteConfigurationSetEventDestination(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationSetEventDestination", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).DeleteConfigurationSetEventDestination), arg0)
 }
 
-// DeleteConfigurationSetEventDestinationRequest mocks base method
+// DeleteConfigurationSetEventDestinationRequest mocks base method.
 func (m *MockPinpointSMSVoiceAPI) DeleteConfigurationSetEventDestinationRequest(arg0 *pinpointsmsvoice.DeleteConfigurationSetEventDestinationInput) (*request.Request, *pinpointsmsvoice.DeleteConfigurationSetEventDestinationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConfigurationSetEventDestinationRequest", arg0)
@@ -174,13 +175,13 @@ func (m *MockPinpointSMSVoiceAPI) DeleteConfigurationSetEventDestinationRequest(
 	return ret0, ret1
 }
 
-// DeleteConfigurationSetEventDestinationRequest indicates an expected call of DeleteConfigurationSetEventDestinationRequest
+// DeleteConfigurationSetEventDestinationRequest indicates an expected call of DeleteConfigurationSetEventDestinationRequest.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) DeleteConfigurationSetEventDestinationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationSetEventDestinationRequest", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).DeleteConfigurationSetEventDestinationRequest), arg0)
 }
 
-// DeleteConfigurationSetEventDestinationWithContext mocks base method
+// DeleteConfigurationSetEventDestinationWithContext mocks base method.
 func (m *MockPinpointSMSVoiceAPI) DeleteConfigurationSetEventDestinationWithContext(arg0 context.Context, arg1 *pinpointsmsvoice.DeleteConfigurationSetEventDestinationInput, arg2 ...request.Option) (*pinpointsmsvoice.DeleteConfigurationSetEventDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -193,14 +194,14 @@ func (m *MockPinpointSMSVoiceAPI) DeleteConfigurationSetEventDestinationWithCont
 	return ret0, ret1
 }
 
-// DeleteConfigurationSetEventDestinationWithContext indicates an expected call of DeleteConfigurationSetEventDestinationWithContext
+// DeleteConfigurationSetEventDestinationWithContext indicates an expected call of DeleteConfigurationSetEventDestinationWithContext.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) DeleteConfigurationSetEventDestinationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationSetEventDestinationWithContext", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).DeleteConfigurationSetEventDestinationWithContext), varargs...)
 }
 
-// DeleteConfigurationSetRequest mocks base method
+// DeleteConfigurationSetRequest mocks base method.
 func (m *MockPinpointSMSVoiceAPI) DeleteConfigurationSetRequest(arg0 *pinpointsmsvoice.DeleteConfigurationSetInput) (*request.Request, *pinpointsmsvoice.DeleteConfigurationSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConfigurationSetRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockPinpointSMSVoiceAPI) DeleteConfigurationSetRequest(arg0 *pinpointsm
 	return ret0, ret1
 }
 
-// DeleteConfigurationSetRequest indicates an expected call of DeleteConfigurationSetRequest
+// DeleteConfigurationSetRequest indicates an expected call of DeleteConfigurationSetRequest.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) DeleteConfigurationSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationSetRequest", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).DeleteConfigurationSetRequest), arg0)
 }
 
-// DeleteConfigurationSetWithContext mocks base method
+// DeleteConfigurationSetWithContext mocks base method.
 func (m *MockPinpointSMSVoiceAPI) DeleteConfigurationSetWithContext(arg0 context.Context, arg1 *pinpointsmsvoice.DeleteConfigurationSetInput, arg2 ...request.Option) (*pinpointsmsvoice.DeleteConfigurationSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockPinpointSMSVoiceAPI) DeleteConfigurationSetWithContext(arg0 context
 	return ret0, ret1
 }
 
-// DeleteConfigurationSetWithContext indicates an expected call of DeleteConfigurationSetWithContext
+// DeleteConfigurationSetWithContext indicates an expected call of DeleteConfigurationSetWithContext.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) DeleteConfigurationSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConfigurationSetWithContext", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).DeleteConfigurationSetWithContext), varargs...)
 }
 
-// GetConfigurationSetEventDestinations mocks base method
+// GetConfigurationSetEventDestinations mocks base method.
 func (m *MockPinpointSMSVoiceAPI) GetConfigurationSetEventDestinations(arg0 *pinpointsmsvoice.GetConfigurationSetEventDestinationsInput) (*pinpointsmsvoice.GetConfigurationSetEventDestinationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConfigurationSetEventDestinations", arg0)
@@ -244,13 +245,13 @@ func (m *MockPinpointSMSVoiceAPI) GetConfigurationSetEventDestinations(arg0 *pin
 	return ret0, ret1
 }
 
-// GetConfigurationSetEventDestinations indicates an expected call of GetConfigurationSetEventDestinations
+// GetConfigurationSetEventDestinations indicates an expected call of GetConfigurationSetEventDestinations.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) GetConfigurationSetEventDestinations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationSetEventDestinations", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).GetConfigurationSetEventDestinations), arg0)
 }
 
-// GetConfigurationSetEventDestinationsRequest mocks base method
+// GetConfigurationSetEventDestinationsRequest mocks base method.
 func (m *MockPinpointSMSVoiceAPI) GetConfigurationSetEventDestinationsRequest(arg0 *pinpointsmsvoice.GetConfigurationSetEventDestinationsInput) (*request.Request, *pinpointsmsvoice.GetConfigurationSetEventDestinationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetConfigurationSetEventDestinationsRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockPinpointSMSVoiceAPI) GetConfigurationSetEventDestinationsRequest(ar
 	return ret0, ret1
 }
 
-// GetConfigurationSetEventDestinationsRequest indicates an expected call of GetConfigurationSetEventDestinationsRequest
+// GetConfigurationSetEventDestinationsRequest indicates an expected call of GetConfigurationSetEventDestinationsRequest.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) GetConfigurationSetEventDestinationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationSetEventDestinationsRequest", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).GetConfigurationSetEventDestinationsRequest), arg0)
 }
 
-// GetConfigurationSetEventDestinationsWithContext mocks base method
+// GetConfigurationSetEventDestinationsWithContext mocks base method.
 func (m *MockPinpointSMSVoiceAPI) GetConfigurationSetEventDestinationsWithContext(arg0 context.Context, arg1 *pinpointsmsvoice.GetConfigurationSetEventDestinationsInput, arg2 ...request.Option) (*pinpointsmsvoice.GetConfigurationSetEventDestinationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockPinpointSMSVoiceAPI) GetConfigurationSetEventDestinationsWithContex
 	return ret0, ret1
 }
 
-// GetConfigurationSetEventDestinationsWithContext indicates an expected call of GetConfigurationSetEventDestinationsWithContext
+// GetConfigurationSetEventDestinationsWithContext indicates an expected call of GetConfigurationSetEventDestinationsWithContext.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) GetConfigurationSetEventDestinationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfigurationSetEventDestinationsWithContext", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).GetConfigurationSetEventDestinationsWithContext), varargs...)
 }
 
-// ListConfigurationSets mocks base method
+// ListConfigurationSets mocks base method.
 func (m *MockPinpointSMSVoiceAPI) ListConfigurationSets(arg0 *pinpointsmsvoice.ListConfigurationSetsInput) (*pinpointsmsvoice.ListConfigurationSetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConfigurationSets", arg0)
@@ -294,13 +295,13 @@ func (m *MockPinpointSMSVoiceAPI) ListConfigurationSets(arg0 *pinpointsmsvoice.L
 	return ret0, ret1
 }
 
-// ListConfigurationSets indicates an expected call of ListConfigurationSets
+// ListConfigurationSets indicates an expected call of ListConfigurationSets.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) ListConfigurationSets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationSets", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).ListConfigurationSets), arg0)
 }
 
-// ListConfigurationSetsRequest mocks base method
+// ListConfigurationSetsRequest mocks base method.
 func (m *MockPinpointSMSVoiceAPI) ListConfigurationSetsRequest(arg0 *pinpointsmsvoice.ListConfigurationSetsInput) (*request.Request, *pinpointsmsvoice.ListConfigurationSetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListConfigurationSetsRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockPinpointSMSVoiceAPI) ListConfigurationSetsRequest(arg0 *pinpointsms
 	return ret0, ret1
 }
 
-// ListConfigurationSetsRequest indicates an expected call of ListConfigurationSetsRequest
+// ListConfigurationSetsRequest indicates an expected call of ListConfigurationSetsRequest.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) ListConfigurationSetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationSetsRequest", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).ListConfigurationSetsRequest), arg0)
 }
 
-// ListConfigurationSetsWithContext mocks base method
+// ListConfigurationSetsWithContext mocks base method.
 func (m *MockPinpointSMSVoiceAPI) ListConfigurationSetsWithContext(arg0 context.Context, arg1 *pinpointsmsvoice.ListConfigurationSetsInput, arg2 ...request.Option) (*pinpointsmsvoice.ListConfigurationSetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockPinpointSMSVoiceAPI) ListConfigurationSetsWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// ListConfigurationSetsWithContext indicates an expected call of ListConfigurationSetsWithContext
+// ListConfigurationSetsWithContext indicates an expected call of ListConfigurationSetsWithContext.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) ListConfigurationSetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConfigurationSetsWithContext", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).ListConfigurationSetsWithContext), varargs...)
 }
 
-// SendVoiceMessage mocks base method
+// SendVoiceMessage mocks base method.
 func (m *MockPinpointSMSVoiceAPI) SendVoiceMessage(arg0 *pinpointsmsvoice.SendVoiceMessageInput) (*pinpointsmsvoice.SendVoiceMessageOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendVoiceMessage", arg0)
@@ -344,13 +345,13 @@ func (m *MockPinpointSMSVoiceAPI) SendVoiceMessage(arg0 *pinpointsmsvoice.SendVo
 	return ret0, ret1
 }
 
-// SendVoiceMessage indicates an expected call of SendVoiceMessage
+// SendVoiceMessage indicates an expected call of SendVoiceMessage.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) SendVoiceMessage(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendVoiceMessage", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).SendVoiceMessage), arg0)
 }
 
-// SendVoiceMessageRequest mocks base method
+// SendVoiceMessageRequest mocks base method.
 func (m *MockPinpointSMSVoiceAPI) SendVoiceMessageRequest(arg0 *pinpointsmsvoice.SendVoiceMessageInput) (*request.Request, *pinpointsmsvoice.SendVoiceMessageOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendVoiceMessageRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockPinpointSMSVoiceAPI) SendVoiceMessageRequest(arg0 *pinpointsmsvoice
 	return ret0, ret1
 }
 
-// SendVoiceMessageRequest indicates an expected call of SendVoiceMessageRequest
+// SendVoiceMessageRequest indicates an expected call of SendVoiceMessageRequest.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) SendVoiceMessageRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendVoiceMessageRequest", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).SendVoiceMessageRequest), arg0)
 }
 
-// SendVoiceMessageWithContext mocks base method
+// SendVoiceMessageWithContext mocks base method.
 func (m *MockPinpointSMSVoiceAPI) SendVoiceMessageWithContext(arg0 context.Context, arg1 *pinpointsmsvoice.SendVoiceMessageInput, arg2 ...request.Option) (*pinpointsmsvoice.SendVoiceMessageOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockPinpointSMSVoiceAPI) SendVoiceMessageWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// SendVoiceMessageWithContext indicates an expected call of SendVoiceMessageWithContext
+// SendVoiceMessageWithContext indicates an expected call of SendVoiceMessageWithContext.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) SendVoiceMessageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendVoiceMessageWithContext", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).SendVoiceMessageWithContext), varargs...)
 }
 
-// UpdateConfigurationSetEventDestination mocks base method
+// UpdateConfigurationSetEventDestination mocks base method.
 func (m *MockPinpointSMSVoiceAPI) UpdateConfigurationSetEventDestination(arg0 *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput) (*pinpointsmsvoice.UpdateConfigurationSetEventDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateConfigurationSetEventDestination", arg0)
@@ -394,13 +395,13 @@ func (m *MockPinpointSMSVoiceAPI) UpdateConfigurationSetEventDestination(arg0 *p
 	return ret0, ret1
 }
 
-// UpdateConfigurationSetEventDestination indicates an expected call of UpdateConfigurationSetEventDestination
+// UpdateConfigurationSetEventDestination indicates an expected call of UpdateConfigurationSetEventDestination.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) UpdateConfigurationSetEventDestination(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConfigurationSetEventDestination", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).UpdateConfigurationSetEventDestination), arg0)
 }
 
-// UpdateConfigurationSetEventDestinationRequest mocks base method
+// UpdateConfigurationSetEventDestinationRequest mocks base method.
 func (m *MockPinpointSMSVoiceAPI) UpdateConfigurationSetEventDestinationRequest(arg0 *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput) (*request.Request, *pinpointsmsvoice.UpdateConfigurationSetEventDestinationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateConfigurationSetEventDestinationRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockPinpointSMSVoiceAPI) UpdateConfigurationSetEventDestinationRequest(
 	return ret0, ret1
 }
 
-// UpdateConfigurationSetEventDestinationRequest indicates an expected call of UpdateConfigurationSetEventDestinationRequest
+// UpdateConfigurationSetEventDestinationRequest indicates an expected call of UpdateConfigurationSetEventDestinationRequest.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) UpdateConfigurationSetEventDestinationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConfigurationSetEventDestinationRequest", reflect.TypeOf((*MockPinpointSMSVoiceAPI)(nil).UpdateConfigurationSetEventDestinationRequest), arg0)
 }
 
-// UpdateConfigurationSetEventDestinationWithContext mocks base method
+// UpdateConfigurationSetEventDestinationWithContext mocks base method.
 func (m *MockPinpointSMSVoiceAPI) UpdateConfigurationSetEventDestinationWithContext(arg0 context.Context, arg1 *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput, arg2 ...request.Option) (*pinpointsmsvoice.UpdateConfigurationSetEventDestinationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,7 +429,7 @@ func (m *MockPinpointSMSVoiceAPI) UpdateConfigurationSetEventDestinationWithCont
 	return ret0, ret1
 }
 
-// UpdateConfigurationSetEventDestinationWithContext indicates an expected call of UpdateConfigurationSetEventDestinationWithContext
+// UpdateConfigurationSetEventDestinationWithContext indicates an expected call of UpdateConfigurationSetEventDestinationWithContext.
 func (mr *MockPinpointSMSVoiceAPIMockRecorder) UpdateConfigurationSetEventDestinationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

@@ -6,36 +6,37 @@ package imagebuildermock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	imagebuilder "github.com/aws/aws-sdk-go/service/imagebuilder"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockImagebuilderAPI is a mock of ImagebuilderAPI interface
+// MockImagebuilderAPI is a mock of ImagebuilderAPI interface.
 type MockImagebuilderAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockImagebuilderAPIMockRecorder
 }
 
-// MockImagebuilderAPIMockRecorder is the mock recorder for MockImagebuilderAPI
+// MockImagebuilderAPIMockRecorder is the mock recorder for MockImagebuilderAPI.
 type MockImagebuilderAPIMockRecorder struct {
 	mock *MockImagebuilderAPI
 }
 
-// NewMockImagebuilderAPI creates a new mock instance
+// NewMockImagebuilderAPI creates a new mock instance.
 func NewMockImagebuilderAPI(ctrl *gomock.Controller) *MockImagebuilderAPI {
 	mock := &MockImagebuilderAPI{ctrl: ctrl}
 	mock.recorder = &MockImagebuilderAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockImagebuilderAPI) EXPECT() *MockImagebuilderAPIMockRecorder {
 	return m.recorder
 }
 
-// CancelImageCreation mocks base method
+// CancelImageCreation mocks base method.
 func (m *MockImagebuilderAPI) CancelImageCreation(arg0 *imagebuilder.CancelImageCreationInput) (*imagebuilder.CancelImageCreationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelImageCreation", arg0)
@@ -44,13 +45,13 @@ func (m *MockImagebuilderAPI) CancelImageCreation(arg0 *imagebuilder.CancelImage
 	return ret0, ret1
 }
 
-// CancelImageCreation indicates an expected call of CancelImageCreation
+// CancelImageCreation indicates an expected call of CancelImageCreation.
 func (mr *MockImagebuilderAPIMockRecorder) CancelImageCreation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelImageCreation", reflect.TypeOf((*MockImagebuilderAPI)(nil).CancelImageCreation), arg0)
 }
 
-// CancelImageCreationRequest mocks base method
+// CancelImageCreationRequest mocks base method.
 func (m *MockImagebuilderAPI) CancelImageCreationRequest(arg0 *imagebuilder.CancelImageCreationInput) (*request.Request, *imagebuilder.CancelImageCreationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelImageCreationRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockImagebuilderAPI) CancelImageCreationRequest(arg0 *imagebuilder.Canc
 	return ret0, ret1
 }
 
-// CancelImageCreationRequest indicates an expected call of CancelImageCreationRequest
+// CancelImageCreationRequest indicates an expected call of CancelImageCreationRequest.
 func (mr *MockImagebuilderAPIMockRecorder) CancelImageCreationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelImageCreationRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).CancelImageCreationRequest), arg0)
 }
 
-// CancelImageCreationWithContext mocks base method
+// CancelImageCreationWithContext mocks base method.
 func (m *MockImagebuilderAPI) CancelImageCreationWithContext(arg0 context.Context, arg1 *imagebuilder.CancelImageCreationInput, arg2 ...request.Option) (*imagebuilder.CancelImageCreationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockImagebuilderAPI) CancelImageCreationWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CancelImageCreationWithContext indicates an expected call of CancelImageCreationWithContext
+// CancelImageCreationWithContext indicates an expected call of CancelImageCreationWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) CancelImageCreationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelImageCreationWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).CancelImageCreationWithContext), varargs...)
 }
 
-// CreateComponent mocks base method
+// CreateComponent mocks base method.
 func (m *MockImagebuilderAPI) CreateComponent(arg0 *imagebuilder.CreateComponentInput) (*imagebuilder.CreateComponentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateComponent", arg0)
@@ -94,13 +95,13 @@ func (m *MockImagebuilderAPI) CreateComponent(arg0 *imagebuilder.CreateComponent
 	return ret0, ret1
 }
 
-// CreateComponent indicates an expected call of CreateComponent
+// CreateComponent indicates an expected call of CreateComponent.
 func (mr *MockImagebuilderAPIMockRecorder) CreateComponent(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateComponent", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateComponent), arg0)
 }
 
-// CreateComponentRequest mocks base method
+// CreateComponentRequest mocks base method.
 func (m *MockImagebuilderAPI) CreateComponentRequest(arg0 *imagebuilder.CreateComponentInput) (*request.Request, *imagebuilder.CreateComponentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateComponentRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockImagebuilderAPI) CreateComponentRequest(arg0 *imagebuilder.CreateCo
 	return ret0, ret1
 }
 
-// CreateComponentRequest indicates an expected call of CreateComponentRequest
+// CreateComponentRequest indicates an expected call of CreateComponentRequest.
 func (mr *MockImagebuilderAPIMockRecorder) CreateComponentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateComponentRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateComponentRequest), arg0)
 }
 
-// CreateComponentWithContext mocks base method
+// CreateComponentWithContext mocks base method.
 func (m *MockImagebuilderAPI) CreateComponentWithContext(arg0 context.Context, arg1 *imagebuilder.CreateComponentInput, arg2 ...request.Option) (*imagebuilder.CreateComponentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockImagebuilderAPI) CreateComponentWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// CreateComponentWithContext indicates an expected call of CreateComponentWithContext
+// CreateComponentWithContext indicates an expected call of CreateComponentWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) CreateComponentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateComponentWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateComponentWithContext), varargs...)
 }
 
-// CreateContainerRecipe mocks base method
+// CreateContainerRecipe mocks base method.
 func (m *MockImagebuilderAPI) CreateContainerRecipe(arg0 *imagebuilder.CreateContainerRecipeInput) (*imagebuilder.CreateContainerRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContainerRecipe", arg0)
@@ -144,13 +145,13 @@ func (m *MockImagebuilderAPI) CreateContainerRecipe(arg0 *imagebuilder.CreateCon
 	return ret0, ret1
 }
 
-// CreateContainerRecipe indicates an expected call of CreateContainerRecipe
+// CreateContainerRecipe indicates an expected call of CreateContainerRecipe.
 func (mr *MockImagebuilderAPIMockRecorder) CreateContainerRecipe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerRecipe", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateContainerRecipe), arg0)
 }
 
-// CreateContainerRecipeRequest mocks base method
+// CreateContainerRecipeRequest mocks base method.
 func (m *MockImagebuilderAPI) CreateContainerRecipeRequest(arg0 *imagebuilder.CreateContainerRecipeInput) (*request.Request, *imagebuilder.CreateContainerRecipeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContainerRecipeRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockImagebuilderAPI) CreateContainerRecipeRequest(arg0 *imagebuilder.Cr
 	return ret0, ret1
 }
 
-// CreateContainerRecipeRequest indicates an expected call of CreateContainerRecipeRequest
+// CreateContainerRecipeRequest indicates an expected call of CreateContainerRecipeRequest.
 func (mr *MockImagebuilderAPIMockRecorder) CreateContainerRecipeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerRecipeRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateContainerRecipeRequest), arg0)
 }
 
-// CreateContainerRecipeWithContext mocks base method
+// CreateContainerRecipeWithContext mocks base method.
 func (m *MockImagebuilderAPI) CreateContainerRecipeWithContext(arg0 context.Context, arg1 *imagebuilder.CreateContainerRecipeInput, arg2 ...request.Option) (*imagebuilder.CreateContainerRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockImagebuilderAPI) CreateContainerRecipeWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// CreateContainerRecipeWithContext indicates an expected call of CreateContainerRecipeWithContext
+// CreateContainerRecipeWithContext indicates an expected call of CreateContainerRecipeWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) CreateContainerRecipeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerRecipeWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateContainerRecipeWithContext), varargs...)
 }
 
-// CreateDistributionConfiguration mocks base method
+// CreateDistributionConfiguration mocks base method.
 func (m *MockImagebuilderAPI) CreateDistributionConfiguration(arg0 *imagebuilder.CreateDistributionConfigurationInput) (*imagebuilder.CreateDistributionConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDistributionConfiguration", arg0)
@@ -194,13 +195,13 @@ func (m *MockImagebuilderAPI) CreateDistributionConfiguration(arg0 *imagebuilder
 	return ret0, ret1
 }
 
-// CreateDistributionConfiguration indicates an expected call of CreateDistributionConfiguration
+// CreateDistributionConfiguration indicates an expected call of CreateDistributionConfiguration.
 func (mr *MockImagebuilderAPIMockRecorder) CreateDistributionConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDistributionConfiguration", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateDistributionConfiguration), arg0)
 }
 
-// CreateDistributionConfigurationRequest mocks base method
+// CreateDistributionConfigurationRequest mocks base method.
 func (m *MockImagebuilderAPI) CreateDistributionConfigurationRequest(arg0 *imagebuilder.CreateDistributionConfigurationInput) (*request.Request, *imagebuilder.CreateDistributionConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDistributionConfigurationRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockImagebuilderAPI) CreateDistributionConfigurationRequest(arg0 *image
 	return ret0, ret1
 }
 
-// CreateDistributionConfigurationRequest indicates an expected call of CreateDistributionConfigurationRequest
+// CreateDistributionConfigurationRequest indicates an expected call of CreateDistributionConfigurationRequest.
 func (mr *MockImagebuilderAPIMockRecorder) CreateDistributionConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDistributionConfigurationRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateDistributionConfigurationRequest), arg0)
 }
 
-// CreateDistributionConfigurationWithContext mocks base method
+// CreateDistributionConfigurationWithContext mocks base method.
 func (m *MockImagebuilderAPI) CreateDistributionConfigurationWithContext(arg0 context.Context, arg1 *imagebuilder.CreateDistributionConfigurationInput, arg2 ...request.Option) (*imagebuilder.CreateDistributionConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockImagebuilderAPI) CreateDistributionConfigurationWithContext(arg0 co
 	return ret0, ret1
 }
 
-// CreateDistributionConfigurationWithContext indicates an expected call of CreateDistributionConfigurationWithContext
+// CreateDistributionConfigurationWithContext indicates an expected call of CreateDistributionConfigurationWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) CreateDistributionConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDistributionConfigurationWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateDistributionConfigurationWithContext), varargs...)
 }
 
-// CreateImage mocks base method
+// CreateImage mocks base method.
 func (m *MockImagebuilderAPI) CreateImage(arg0 *imagebuilder.CreateImageInput) (*imagebuilder.CreateImageOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateImage", arg0)
@@ -244,13 +245,13 @@ func (m *MockImagebuilderAPI) CreateImage(arg0 *imagebuilder.CreateImageInput) (
 	return ret0, ret1
 }
 
-// CreateImage indicates an expected call of CreateImage
+// CreateImage indicates an expected call of CreateImage.
 func (mr *MockImagebuilderAPIMockRecorder) CreateImage(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImage", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateImage), arg0)
 }
 
-// CreateImagePipeline mocks base method
+// CreateImagePipeline mocks base method.
 func (m *MockImagebuilderAPI) CreateImagePipeline(arg0 *imagebuilder.CreateImagePipelineInput) (*imagebuilder.CreateImagePipelineOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateImagePipeline", arg0)
@@ -259,13 +260,13 @@ func (m *MockImagebuilderAPI) CreateImagePipeline(arg0 *imagebuilder.CreateImage
 	return ret0, ret1
 }
 
-// CreateImagePipeline indicates an expected call of CreateImagePipeline
+// CreateImagePipeline indicates an expected call of CreateImagePipeline.
 func (mr *MockImagebuilderAPIMockRecorder) CreateImagePipeline(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImagePipeline", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateImagePipeline), arg0)
 }
 
-// CreateImagePipelineRequest mocks base method
+// CreateImagePipelineRequest mocks base method.
 func (m *MockImagebuilderAPI) CreateImagePipelineRequest(arg0 *imagebuilder.CreateImagePipelineInput) (*request.Request, *imagebuilder.CreateImagePipelineOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateImagePipelineRequest", arg0)
@@ -274,13 +275,13 @@ func (m *MockImagebuilderAPI) CreateImagePipelineRequest(arg0 *imagebuilder.Crea
 	return ret0, ret1
 }
 
-// CreateImagePipelineRequest indicates an expected call of CreateImagePipelineRequest
+// CreateImagePipelineRequest indicates an expected call of CreateImagePipelineRequest.
 func (mr *MockImagebuilderAPIMockRecorder) CreateImagePipelineRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImagePipelineRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateImagePipelineRequest), arg0)
 }
 
-// CreateImagePipelineWithContext mocks base method
+// CreateImagePipelineWithContext mocks base method.
 func (m *MockImagebuilderAPI) CreateImagePipelineWithContext(arg0 context.Context, arg1 *imagebuilder.CreateImagePipelineInput, arg2 ...request.Option) (*imagebuilder.CreateImagePipelineOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -293,14 +294,14 @@ func (m *MockImagebuilderAPI) CreateImagePipelineWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CreateImagePipelineWithContext indicates an expected call of CreateImagePipelineWithContext
+// CreateImagePipelineWithContext indicates an expected call of CreateImagePipelineWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) CreateImagePipelineWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImagePipelineWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateImagePipelineWithContext), varargs...)
 }
 
-// CreateImageRecipe mocks base method
+// CreateImageRecipe mocks base method.
 func (m *MockImagebuilderAPI) CreateImageRecipe(arg0 *imagebuilder.CreateImageRecipeInput) (*imagebuilder.CreateImageRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateImageRecipe", arg0)
@@ -309,13 +310,13 @@ func (m *MockImagebuilderAPI) CreateImageRecipe(arg0 *imagebuilder.CreateImageRe
 	return ret0, ret1
 }
 
-// CreateImageRecipe indicates an expected call of CreateImageRecipe
+// CreateImageRecipe indicates an expected call of CreateImageRecipe.
 func (mr *MockImagebuilderAPIMockRecorder) CreateImageRecipe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImageRecipe", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateImageRecipe), arg0)
 }
 
-// CreateImageRecipeRequest mocks base method
+// CreateImageRecipeRequest mocks base method.
 func (m *MockImagebuilderAPI) CreateImageRecipeRequest(arg0 *imagebuilder.CreateImageRecipeInput) (*request.Request, *imagebuilder.CreateImageRecipeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateImageRecipeRequest", arg0)
@@ -324,13 +325,13 @@ func (m *MockImagebuilderAPI) CreateImageRecipeRequest(arg0 *imagebuilder.Create
 	return ret0, ret1
 }
 
-// CreateImageRecipeRequest indicates an expected call of CreateImageRecipeRequest
+// CreateImageRecipeRequest indicates an expected call of CreateImageRecipeRequest.
 func (mr *MockImagebuilderAPIMockRecorder) CreateImageRecipeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImageRecipeRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateImageRecipeRequest), arg0)
 }
 
-// CreateImageRecipeWithContext mocks base method
+// CreateImageRecipeWithContext mocks base method.
 func (m *MockImagebuilderAPI) CreateImageRecipeWithContext(arg0 context.Context, arg1 *imagebuilder.CreateImageRecipeInput, arg2 ...request.Option) (*imagebuilder.CreateImageRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -343,14 +344,14 @@ func (m *MockImagebuilderAPI) CreateImageRecipeWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateImageRecipeWithContext indicates an expected call of CreateImageRecipeWithContext
+// CreateImageRecipeWithContext indicates an expected call of CreateImageRecipeWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) CreateImageRecipeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImageRecipeWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateImageRecipeWithContext), varargs...)
 }
 
-// CreateImageRequest mocks base method
+// CreateImageRequest mocks base method.
 func (m *MockImagebuilderAPI) CreateImageRequest(arg0 *imagebuilder.CreateImageInput) (*request.Request, *imagebuilder.CreateImageOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateImageRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockImagebuilderAPI) CreateImageRequest(arg0 *imagebuilder.CreateImageI
 	return ret0, ret1
 }
 
-// CreateImageRequest indicates an expected call of CreateImageRequest
+// CreateImageRequest indicates an expected call of CreateImageRequest.
 func (mr *MockImagebuilderAPIMockRecorder) CreateImageRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImageRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateImageRequest), arg0)
 }
 
-// CreateImageWithContext mocks base method
+// CreateImageWithContext mocks base method.
 func (m *MockImagebuilderAPI) CreateImageWithContext(arg0 context.Context, arg1 *imagebuilder.CreateImageInput, arg2 ...request.Option) (*imagebuilder.CreateImageOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockImagebuilderAPI) CreateImageWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// CreateImageWithContext indicates an expected call of CreateImageWithContext
+// CreateImageWithContext indicates an expected call of CreateImageWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) CreateImageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImageWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateImageWithContext), varargs...)
 }
 
-// CreateInfrastructureConfiguration mocks base method
+// CreateInfrastructureConfiguration mocks base method.
 func (m *MockImagebuilderAPI) CreateInfrastructureConfiguration(arg0 *imagebuilder.CreateInfrastructureConfigurationInput) (*imagebuilder.CreateInfrastructureConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInfrastructureConfiguration", arg0)
@@ -394,13 +395,13 @@ func (m *MockImagebuilderAPI) CreateInfrastructureConfiguration(arg0 *imagebuild
 	return ret0, ret1
 }
 
-// CreateInfrastructureConfiguration indicates an expected call of CreateInfrastructureConfiguration
+// CreateInfrastructureConfiguration indicates an expected call of CreateInfrastructureConfiguration.
 func (mr *MockImagebuilderAPIMockRecorder) CreateInfrastructureConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInfrastructureConfiguration", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateInfrastructureConfiguration), arg0)
 }
 
-// CreateInfrastructureConfigurationRequest mocks base method
+// CreateInfrastructureConfigurationRequest mocks base method.
 func (m *MockImagebuilderAPI) CreateInfrastructureConfigurationRequest(arg0 *imagebuilder.CreateInfrastructureConfigurationInput) (*request.Request, *imagebuilder.CreateInfrastructureConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInfrastructureConfigurationRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockImagebuilderAPI) CreateInfrastructureConfigurationRequest(arg0 *ima
 	return ret0, ret1
 }
 
-// CreateInfrastructureConfigurationRequest indicates an expected call of CreateInfrastructureConfigurationRequest
+// CreateInfrastructureConfigurationRequest indicates an expected call of CreateInfrastructureConfigurationRequest.
 func (mr *MockImagebuilderAPIMockRecorder) CreateInfrastructureConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInfrastructureConfigurationRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateInfrastructureConfigurationRequest), arg0)
 }
 
-// CreateInfrastructureConfigurationWithContext mocks base method
+// CreateInfrastructureConfigurationWithContext mocks base method.
 func (m *MockImagebuilderAPI) CreateInfrastructureConfigurationWithContext(arg0 context.Context, arg1 *imagebuilder.CreateInfrastructureConfigurationInput, arg2 ...request.Option) (*imagebuilder.CreateInfrastructureConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockImagebuilderAPI) CreateInfrastructureConfigurationWithContext(arg0 
 	return ret0, ret1
 }
 
-// CreateInfrastructureConfigurationWithContext indicates an expected call of CreateInfrastructureConfigurationWithContext
+// CreateInfrastructureConfigurationWithContext indicates an expected call of CreateInfrastructureConfigurationWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) CreateInfrastructureConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInfrastructureConfigurationWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).CreateInfrastructureConfigurationWithContext), varargs...)
 }
 
-// DeleteComponent mocks base method
+// DeleteComponent mocks base method.
 func (m *MockImagebuilderAPI) DeleteComponent(arg0 *imagebuilder.DeleteComponentInput) (*imagebuilder.DeleteComponentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteComponent", arg0)
@@ -444,13 +445,13 @@ func (m *MockImagebuilderAPI) DeleteComponent(arg0 *imagebuilder.DeleteComponent
 	return ret0, ret1
 }
 
-// DeleteComponent indicates an expected call of DeleteComponent
+// DeleteComponent indicates an expected call of DeleteComponent.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteComponent(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteComponent", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteComponent), arg0)
 }
 
-// DeleteComponentRequest mocks base method
+// DeleteComponentRequest mocks base method.
 func (m *MockImagebuilderAPI) DeleteComponentRequest(arg0 *imagebuilder.DeleteComponentInput) (*request.Request, *imagebuilder.DeleteComponentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteComponentRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockImagebuilderAPI) DeleteComponentRequest(arg0 *imagebuilder.DeleteCo
 	return ret0, ret1
 }
 
-// DeleteComponentRequest indicates an expected call of DeleteComponentRequest
+// DeleteComponentRequest indicates an expected call of DeleteComponentRequest.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteComponentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteComponentRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteComponentRequest), arg0)
 }
 
-// DeleteComponentWithContext mocks base method
+// DeleteComponentWithContext mocks base method.
 func (m *MockImagebuilderAPI) DeleteComponentWithContext(arg0 context.Context, arg1 *imagebuilder.DeleteComponentInput, arg2 ...request.Option) (*imagebuilder.DeleteComponentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockImagebuilderAPI) DeleteComponentWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteComponentWithContext indicates an expected call of DeleteComponentWithContext
+// DeleteComponentWithContext indicates an expected call of DeleteComponentWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteComponentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteComponentWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteComponentWithContext), varargs...)
 }
 
-// DeleteContainerRecipe mocks base method
+// DeleteContainerRecipe mocks base method.
 func (m *MockImagebuilderAPI) DeleteContainerRecipe(arg0 *imagebuilder.DeleteContainerRecipeInput) (*imagebuilder.DeleteContainerRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContainerRecipe", arg0)
@@ -494,13 +495,13 @@ func (m *MockImagebuilderAPI) DeleteContainerRecipe(arg0 *imagebuilder.DeleteCon
 	return ret0, ret1
 }
 
-// DeleteContainerRecipe indicates an expected call of DeleteContainerRecipe
+// DeleteContainerRecipe indicates an expected call of DeleteContainerRecipe.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteContainerRecipe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerRecipe", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteContainerRecipe), arg0)
 }
 
-// DeleteContainerRecipeRequest mocks base method
+// DeleteContainerRecipeRequest mocks base method.
 func (m *MockImagebuilderAPI) DeleteContainerRecipeRequest(arg0 *imagebuilder.DeleteContainerRecipeInput) (*request.Request, *imagebuilder.DeleteContainerRecipeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContainerRecipeRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockImagebuilderAPI) DeleteContainerRecipeRequest(arg0 *imagebuilder.De
 	return ret0, ret1
 }
 
-// DeleteContainerRecipeRequest indicates an expected call of DeleteContainerRecipeRequest
+// DeleteContainerRecipeRequest indicates an expected call of DeleteContainerRecipeRequest.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteContainerRecipeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerRecipeRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteContainerRecipeRequest), arg0)
 }
 
-// DeleteContainerRecipeWithContext mocks base method
+// DeleteContainerRecipeWithContext mocks base method.
 func (m *MockImagebuilderAPI) DeleteContainerRecipeWithContext(arg0 context.Context, arg1 *imagebuilder.DeleteContainerRecipeInput, arg2 ...request.Option) (*imagebuilder.DeleteContainerRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockImagebuilderAPI) DeleteContainerRecipeWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DeleteContainerRecipeWithContext indicates an expected call of DeleteContainerRecipeWithContext
+// DeleteContainerRecipeWithContext indicates an expected call of DeleteContainerRecipeWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteContainerRecipeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerRecipeWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteContainerRecipeWithContext), varargs...)
 }
 
-// DeleteDistributionConfiguration mocks base method
+// DeleteDistributionConfiguration mocks base method.
 func (m *MockImagebuilderAPI) DeleteDistributionConfiguration(arg0 *imagebuilder.DeleteDistributionConfigurationInput) (*imagebuilder.DeleteDistributionConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDistributionConfiguration", arg0)
@@ -544,13 +545,13 @@ func (m *MockImagebuilderAPI) DeleteDistributionConfiguration(arg0 *imagebuilder
 	return ret0, ret1
 }
 
-// DeleteDistributionConfiguration indicates an expected call of DeleteDistributionConfiguration
+// DeleteDistributionConfiguration indicates an expected call of DeleteDistributionConfiguration.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteDistributionConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDistributionConfiguration", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteDistributionConfiguration), arg0)
 }
 
-// DeleteDistributionConfigurationRequest mocks base method
+// DeleteDistributionConfigurationRequest mocks base method.
 func (m *MockImagebuilderAPI) DeleteDistributionConfigurationRequest(arg0 *imagebuilder.DeleteDistributionConfigurationInput) (*request.Request, *imagebuilder.DeleteDistributionConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDistributionConfigurationRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockImagebuilderAPI) DeleteDistributionConfigurationRequest(arg0 *image
 	return ret0, ret1
 }
 
-// DeleteDistributionConfigurationRequest indicates an expected call of DeleteDistributionConfigurationRequest
+// DeleteDistributionConfigurationRequest indicates an expected call of DeleteDistributionConfigurationRequest.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteDistributionConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDistributionConfigurationRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteDistributionConfigurationRequest), arg0)
 }
 
-// DeleteDistributionConfigurationWithContext mocks base method
+// DeleteDistributionConfigurationWithContext mocks base method.
 func (m *MockImagebuilderAPI) DeleteDistributionConfigurationWithContext(arg0 context.Context, arg1 *imagebuilder.DeleteDistributionConfigurationInput, arg2 ...request.Option) (*imagebuilder.DeleteDistributionConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockImagebuilderAPI) DeleteDistributionConfigurationWithContext(arg0 co
 	return ret0, ret1
 }
 
-// DeleteDistributionConfigurationWithContext indicates an expected call of DeleteDistributionConfigurationWithContext
+// DeleteDistributionConfigurationWithContext indicates an expected call of DeleteDistributionConfigurationWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteDistributionConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDistributionConfigurationWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteDistributionConfigurationWithContext), varargs...)
 }
 
-// DeleteImage mocks base method
+// DeleteImage mocks base method.
 func (m *MockImagebuilderAPI) DeleteImage(arg0 *imagebuilder.DeleteImageInput) (*imagebuilder.DeleteImageOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteImage", arg0)
@@ -594,13 +595,13 @@ func (m *MockImagebuilderAPI) DeleteImage(arg0 *imagebuilder.DeleteImageInput) (
 	return ret0, ret1
 }
 
-// DeleteImage indicates an expected call of DeleteImage
+// DeleteImage indicates an expected call of DeleteImage.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteImage(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteImage", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteImage), arg0)
 }
 
-// DeleteImagePipeline mocks base method
+// DeleteImagePipeline mocks base method.
 func (m *MockImagebuilderAPI) DeleteImagePipeline(arg0 *imagebuilder.DeleteImagePipelineInput) (*imagebuilder.DeleteImagePipelineOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteImagePipeline", arg0)
@@ -609,13 +610,13 @@ func (m *MockImagebuilderAPI) DeleteImagePipeline(arg0 *imagebuilder.DeleteImage
 	return ret0, ret1
 }
 
-// DeleteImagePipeline indicates an expected call of DeleteImagePipeline
+// DeleteImagePipeline indicates an expected call of DeleteImagePipeline.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteImagePipeline(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteImagePipeline", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteImagePipeline), arg0)
 }
 
-// DeleteImagePipelineRequest mocks base method
+// DeleteImagePipelineRequest mocks base method.
 func (m *MockImagebuilderAPI) DeleteImagePipelineRequest(arg0 *imagebuilder.DeleteImagePipelineInput) (*request.Request, *imagebuilder.DeleteImagePipelineOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteImagePipelineRequest", arg0)
@@ -624,13 +625,13 @@ func (m *MockImagebuilderAPI) DeleteImagePipelineRequest(arg0 *imagebuilder.Dele
 	return ret0, ret1
 }
 
-// DeleteImagePipelineRequest indicates an expected call of DeleteImagePipelineRequest
+// DeleteImagePipelineRequest indicates an expected call of DeleteImagePipelineRequest.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteImagePipelineRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteImagePipelineRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteImagePipelineRequest), arg0)
 }
 
-// DeleteImagePipelineWithContext mocks base method
+// DeleteImagePipelineWithContext mocks base method.
 func (m *MockImagebuilderAPI) DeleteImagePipelineWithContext(arg0 context.Context, arg1 *imagebuilder.DeleteImagePipelineInput, arg2 ...request.Option) (*imagebuilder.DeleteImagePipelineOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -643,14 +644,14 @@ func (m *MockImagebuilderAPI) DeleteImagePipelineWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteImagePipelineWithContext indicates an expected call of DeleteImagePipelineWithContext
+// DeleteImagePipelineWithContext indicates an expected call of DeleteImagePipelineWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteImagePipelineWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteImagePipelineWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteImagePipelineWithContext), varargs...)
 }
 
-// DeleteImageRecipe mocks base method
+// DeleteImageRecipe mocks base method.
 func (m *MockImagebuilderAPI) DeleteImageRecipe(arg0 *imagebuilder.DeleteImageRecipeInput) (*imagebuilder.DeleteImageRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteImageRecipe", arg0)
@@ -659,13 +660,13 @@ func (m *MockImagebuilderAPI) DeleteImageRecipe(arg0 *imagebuilder.DeleteImageRe
 	return ret0, ret1
 }
 
-// DeleteImageRecipe indicates an expected call of DeleteImageRecipe
+// DeleteImageRecipe indicates an expected call of DeleteImageRecipe.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteImageRecipe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteImageRecipe", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteImageRecipe), arg0)
 }
 
-// DeleteImageRecipeRequest mocks base method
+// DeleteImageRecipeRequest mocks base method.
 func (m *MockImagebuilderAPI) DeleteImageRecipeRequest(arg0 *imagebuilder.DeleteImageRecipeInput) (*request.Request, *imagebuilder.DeleteImageRecipeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteImageRecipeRequest", arg0)
@@ -674,13 +675,13 @@ func (m *MockImagebuilderAPI) DeleteImageRecipeRequest(arg0 *imagebuilder.Delete
 	return ret0, ret1
 }
 
-// DeleteImageRecipeRequest indicates an expected call of DeleteImageRecipeRequest
+// DeleteImageRecipeRequest indicates an expected call of DeleteImageRecipeRequest.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteImageRecipeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteImageRecipeRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteImageRecipeRequest), arg0)
 }
 
-// DeleteImageRecipeWithContext mocks base method
+// DeleteImageRecipeWithContext mocks base method.
 func (m *MockImagebuilderAPI) DeleteImageRecipeWithContext(arg0 context.Context, arg1 *imagebuilder.DeleteImageRecipeInput, arg2 ...request.Option) (*imagebuilder.DeleteImageRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -693,14 +694,14 @@ func (m *MockImagebuilderAPI) DeleteImageRecipeWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteImageRecipeWithContext indicates an expected call of DeleteImageRecipeWithContext
+// DeleteImageRecipeWithContext indicates an expected call of DeleteImageRecipeWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteImageRecipeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteImageRecipeWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteImageRecipeWithContext), varargs...)
 }
 
-// DeleteImageRequest mocks base method
+// DeleteImageRequest mocks base method.
 func (m *MockImagebuilderAPI) DeleteImageRequest(arg0 *imagebuilder.DeleteImageInput) (*request.Request, *imagebuilder.DeleteImageOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteImageRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockImagebuilderAPI) DeleteImageRequest(arg0 *imagebuilder.DeleteImageI
 	return ret0, ret1
 }
 
-// DeleteImageRequest indicates an expected call of DeleteImageRequest
+// DeleteImageRequest indicates an expected call of DeleteImageRequest.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteImageRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteImageRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteImageRequest), arg0)
 }
 
-// DeleteImageWithContext mocks base method
+// DeleteImageWithContext mocks base method.
 func (m *MockImagebuilderAPI) DeleteImageWithContext(arg0 context.Context, arg1 *imagebuilder.DeleteImageInput, arg2 ...request.Option) (*imagebuilder.DeleteImageOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockImagebuilderAPI) DeleteImageWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DeleteImageWithContext indicates an expected call of DeleteImageWithContext
+// DeleteImageWithContext indicates an expected call of DeleteImageWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteImageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteImageWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteImageWithContext), varargs...)
 }
 
-// DeleteInfrastructureConfiguration mocks base method
+// DeleteInfrastructureConfiguration mocks base method.
 func (m *MockImagebuilderAPI) DeleteInfrastructureConfiguration(arg0 *imagebuilder.DeleteInfrastructureConfigurationInput) (*imagebuilder.DeleteInfrastructureConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInfrastructureConfiguration", arg0)
@@ -744,13 +745,13 @@ func (m *MockImagebuilderAPI) DeleteInfrastructureConfiguration(arg0 *imagebuild
 	return ret0, ret1
 }
 
-// DeleteInfrastructureConfiguration indicates an expected call of DeleteInfrastructureConfiguration
+// DeleteInfrastructureConfiguration indicates an expected call of DeleteInfrastructureConfiguration.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteInfrastructureConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInfrastructureConfiguration", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteInfrastructureConfiguration), arg0)
 }
 
-// DeleteInfrastructureConfigurationRequest mocks base method
+// DeleteInfrastructureConfigurationRequest mocks base method.
 func (m *MockImagebuilderAPI) DeleteInfrastructureConfigurationRequest(arg0 *imagebuilder.DeleteInfrastructureConfigurationInput) (*request.Request, *imagebuilder.DeleteInfrastructureConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInfrastructureConfigurationRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockImagebuilderAPI) DeleteInfrastructureConfigurationRequest(arg0 *ima
 	return ret0, ret1
 }
 
-// DeleteInfrastructureConfigurationRequest indicates an expected call of DeleteInfrastructureConfigurationRequest
+// DeleteInfrastructureConfigurationRequest indicates an expected call of DeleteInfrastructureConfigurationRequest.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteInfrastructureConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInfrastructureConfigurationRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteInfrastructureConfigurationRequest), arg0)
 }
 
-// DeleteInfrastructureConfigurationWithContext mocks base method
+// DeleteInfrastructureConfigurationWithContext mocks base method.
 func (m *MockImagebuilderAPI) DeleteInfrastructureConfigurationWithContext(arg0 context.Context, arg1 *imagebuilder.DeleteInfrastructureConfigurationInput, arg2 ...request.Option) (*imagebuilder.DeleteInfrastructureConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockImagebuilderAPI) DeleteInfrastructureConfigurationWithContext(arg0 
 	return ret0, ret1
 }
 
-// DeleteInfrastructureConfigurationWithContext indicates an expected call of DeleteInfrastructureConfigurationWithContext
+// DeleteInfrastructureConfigurationWithContext indicates an expected call of DeleteInfrastructureConfigurationWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) DeleteInfrastructureConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInfrastructureConfigurationWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).DeleteInfrastructureConfigurationWithContext), varargs...)
 }
 
-// GetComponent mocks base method
+// GetComponent mocks base method.
 func (m *MockImagebuilderAPI) GetComponent(arg0 *imagebuilder.GetComponentInput) (*imagebuilder.GetComponentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetComponent", arg0)
@@ -794,13 +795,13 @@ func (m *MockImagebuilderAPI) GetComponent(arg0 *imagebuilder.GetComponentInput)
 	return ret0, ret1
 }
 
-// GetComponent indicates an expected call of GetComponent
+// GetComponent indicates an expected call of GetComponent.
 func (mr *MockImagebuilderAPIMockRecorder) GetComponent(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComponent", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetComponent), arg0)
 }
 
-// GetComponentPolicy mocks base method
+// GetComponentPolicy mocks base method.
 func (m *MockImagebuilderAPI) GetComponentPolicy(arg0 *imagebuilder.GetComponentPolicyInput) (*imagebuilder.GetComponentPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetComponentPolicy", arg0)
@@ -809,13 +810,13 @@ func (m *MockImagebuilderAPI) GetComponentPolicy(arg0 *imagebuilder.GetComponent
 	return ret0, ret1
 }
 
-// GetComponentPolicy indicates an expected call of GetComponentPolicy
+// GetComponentPolicy indicates an expected call of GetComponentPolicy.
 func (mr *MockImagebuilderAPIMockRecorder) GetComponentPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComponentPolicy", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetComponentPolicy), arg0)
 }
 
-// GetComponentPolicyRequest mocks base method
+// GetComponentPolicyRequest mocks base method.
 func (m *MockImagebuilderAPI) GetComponentPolicyRequest(arg0 *imagebuilder.GetComponentPolicyInput) (*request.Request, *imagebuilder.GetComponentPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetComponentPolicyRequest", arg0)
@@ -824,13 +825,13 @@ func (m *MockImagebuilderAPI) GetComponentPolicyRequest(arg0 *imagebuilder.GetCo
 	return ret0, ret1
 }
 
-// GetComponentPolicyRequest indicates an expected call of GetComponentPolicyRequest
+// GetComponentPolicyRequest indicates an expected call of GetComponentPolicyRequest.
 func (mr *MockImagebuilderAPIMockRecorder) GetComponentPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComponentPolicyRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetComponentPolicyRequest), arg0)
 }
 
-// GetComponentPolicyWithContext mocks base method
+// GetComponentPolicyWithContext mocks base method.
 func (m *MockImagebuilderAPI) GetComponentPolicyWithContext(arg0 context.Context, arg1 *imagebuilder.GetComponentPolicyInput, arg2 ...request.Option) (*imagebuilder.GetComponentPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -843,14 +844,14 @@ func (m *MockImagebuilderAPI) GetComponentPolicyWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// GetComponentPolicyWithContext indicates an expected call of GetComponentPolicyWithContext
+// GetComponentPolicyWithContext indicates an expected call of GetComponentPolicyWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) GetComponentPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComponentPolicyWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetComponentPolicyWithContext), varargs...)
 }
 
-// GetComponentRequest mocks base method
+// GetComponentRequest mocks base method.
 func (m *MockImagebuilderAPI) GetComponentRequest(arg0 *imagebuilder.GetComponentInput) (*request.Request, *imagebuilder.GetComponentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetComponentRequest", arg0)
@@ -859,13 +860,13 @@ func (m *MockImagebuilderAPI) GetComponentRequest(arg0 *imagebuilder.GetComponen
 	return ret0, ret1
 }
 
-// GetComponentRequest indicates an expected call of GetComponentRequest
+// GetComponentRequest indicates an expected call of GetComponentRequest.
 func (mr *MockImagebuilderAPIMockRecorder) GetComponentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComponentRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetComponentRequest), arg0)
 }
 
-// GetComponentWithContext mocks base method
+// GetComponentWithContext mocks base method.
 func (m *MockImagebuilderAPI) GetComponentWithContext(arg0 context.Context, arg1 *imagebuilder.GetComponentInput, arg2 ...request.Option) (*imagebuilder.GetComponentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +879,14 @@ func (m *MockImagebuilderAPI) GetComponentWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetComponentWithContext indicates an expected call of GetComponentWithContext
+// GetComponentWithContext indicates an expected call of GetComponentWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) GetComponentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComponentWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetComponentWithContext), varargs...)
 }
 
-// GetContainerRecipe mocks base method
+// GetContainerRecipe mocks base method.
 func (m *MockImagebuilderAPI) GetContainerRecipe(arg0 *imagebuilder.GetContainerRecipeInput) (*imagebuilder.GetContainerRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerRecipe", arg0)
@@ -894,13 +895,13 @@ func (m *MockImagebuilderAPI) GetContainerRecipe(arg0 *imagebuilder.GetContainer
 	return ret0, ret1
 }
 
-// GetContainerRecipe indicates an expected call of GetContainerRecipe
+// GetContainerRecipe indicates an expected call of GetContainerRecipe.
 func (mr *MockImagebuilderAPIMockRecorder) GetContainerRecipe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerRecipe", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetContainerRecipe), arg0)
 }
 
-// GetContainerRecipePolicy mocks base method
+// GetContainerRecipePolicy mocks base method.
 func (m *MockImagebuilderAPI) GetContainerRecipePolicy(arg0 *imagebuilder.GetContainerRecipePolicyInput) (*imagebuilder.GetContainerRecipePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerRecipePolicy", arg0)
@@ -909,13 +910,13 @@ func (m *MockImagebuilderAPI) GetContainerRecipePolicy(arg0 *imagebuilder.GetCon
 	return ret0, ret1
 }
 
-// GetContainerRecipePolicy indicates an expected call of GetContainerRecipePolicy
+// GetContainerRecipePolicy indicates an expected call of GetContainerRecipePolicy.
 func (mr *MockImagebuilderAPIMockRecorder) GetContainerRecipePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerRecipePolicy", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetContainerRecipePolicy), arg0)
 }
 
-// GetContainerRecipePolicyRequest mocks base method
+// GetContainerRecipePolicyRequest mocks base method.
 func (m *MockImagebuilderAPI) GetContainerRecipePolicyRequest(arg0 *imagebuilder.GetContainerRecipePolicyInput) (*request.Request, *imagebuilder.GetContainerRecipePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerRecipePolicyRequest", arg0)
@@ -924,13 +925,13 @@ func (m *MockImagebuilderAPI) GetContainerRecipePolicyRequest(arg0 *imagebuilder
 	return ret0, ret1
 }
 
-// GetContainerRecipePolicyRequest indicates an expected call of GetContainerRecipePolicyRequest
+// GetContainerRecipePolicyRequest indicates an expected call of GetContainerRecipePolicyRequest.
 func (mr *MockImagebuilderAPIMockRecorder) GetContainerRecipePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerRecipePolicyRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetContainerRecipePolicyRequest), arg0)
 }
 
-// GetContainerRecipePolicyWithContext mocks base method
+// GetContainerRecipePolicyWithContext mocks base method.
 func (m *MockImagebuilderAPI) GetContainerRecipePolicyWithContext(arg0 context.Context, arg1 *imagebuilder.GetContainerRecipePolicyInput, arg2 ...request.Option) (*imagebuilder.GetContainerRecipePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -943,14 +944,14 @@ func (m *MockImagebuilderAPI) GetContainerRecipePolicyWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// GetContainerRecipePolicyWithContext indicates an expected call of GetContainerRecipePolicyWithContext
+// GetContainerRecipePolicyWithContext indicates an expected call of GetContainerRecipePolicyWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) GetContainerRecipePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerRecipePolicyWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetContainerRecipePolicyWithContext), varargs...)
 }
 
-// GetContainerRecipeRequest mocks base method
+// GetContainerRecipeRequest mocks base method.
 func (m *MockImagebuilderAPI) GetContainerRecipeRequest(arg0 *imagebuilder.GetContainerRecipeInput) (*request.Request, *imagebuilder.GetContainerRecipeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerRecipeRequest", arg0)
@@ -959,13 +960,13 @@ func (m *MockImagebuilderAPI) GetContainerRecipeRequest(arg0 *imagebuilder.GetCo
 	return ret0, ret1
 }
 
-// GetContainerRecipeRequest indicates an expected call of GetContainerRecipeRequest
+// GetContainerRecipeRequest indicates an expected call of GetContainerRecipeRequest.
 func (mr *MockImagebuilderAPIMockRecorder) GetContainerRecipeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerRecipeRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetContainerRecipeRequest), arg0)
 }
 
-// GetContainerRecipeWithContext mocks base method
+// GetContainerRecipeWithContext mocks base method.
 func (m *MockImagebuilderAPI) GetContainerRecipeWithContext(arg0 context.Context, arg1 *imagebuilder.GetContainerRecipeInput, arg2 ...request.Option) (*imagebuilder.GetContainerRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -978,14 +979,14 @@ func (m *MockImagebuilderAPI) GetContainerRecipeWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// GetContainerRecipeWithContext indicates an expected call of GetContainerRecipeWithContext
+// GetContainerRecipeWithContext indicates an expected call of GetContainerRecipeWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) GetContainerRecipeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerRecipeWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetContainerRecipeWithContext), varargs...)
 }
 
-// GetDistributionConfiguration mocks base method
+// GetDistributionConfiguration mocks base method.
 func (m *MockImagebuilderAPI) GetDistributionConfiguration(arg0 *imagebuilder.GetDistributionConfigurationInput) (*imagebuilder.GetDistributionConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDistributionConfiguration", arg0)
@@ -994,13 +995,13 @@ func (m *MockImagebuilderAPI) GetDistributionConfiguration(arg0 *imagebuilder.Ge
 	return ret0, ret1
 }
 
-// GetDistributionConfiguration indicates an expected call of GetDistributionConfiguration
+// GetDistributionConfiguration indicates an expected call of GetDistributionConfiguration.
 func (mr *MockImagebuilderAPIMockRecorder) GetDistributionConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionConfiguration", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetDistributionConfiguration), arg0)
 }
 
-// GetDistributionConfigurationRequest mocks base method
+// GetDistributionConfigurationRequest mocks base method.
 func (m *MockImagebuilderAPI) GetDistributionConfigurationRequest(arg0 *imagebuilder.GetDistributionConfigurationInput) (*request.Request, *imagebuilder.GetDistributionConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDistributionConfigurationRequest", arg0)
@@ -1009,13 +1010,13 @@ func (m *MockImagebuilderAPI) GetDistributionConfigurationRequest(arg0 *imagebui
 	return ret0, ret1
 }
 
-// GetDistributionConfigurationRequest indicates an expected call of GetDistributionConfigurationRequest
+// GetDistributionConfigurationRequest indicates an expected call of GetDistributionConfigurationRequest.
 func (mr *MockImagebuilderAPIMockRecorder) GetDistributionConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionConfigurationRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetDistributionConfigurationRequest), arg0)
 }
 
-// GetDistributionConfigurationWithContext mocks base method
+// GetDistributionConfigurationWithContext mocks base method.
 func (m *MockImagebuilderAPI) GetDistributionConfigurationWithContext(arg0 context.Context, arg1 *imagebuilder.GetDistributionConfigurationInput, arg2 ...request.Option) (*imagebuilder.GetDistributionConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1028,14 +1029,14 @@ func (m *MockImagebuilderAPI) GetDistributionConfigurationWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// GetDistributionConfigurationWithContext indicates an expected call of GetDistributionConfigurationWithContext
+// GetDistributionConfigurationWithContext indicates an expected call of GetDistributionConfigurationWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) GetDistributionConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionConfigurationWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetDistributionConfigurationWithContext), varargs...)
 }
 
-// GetImage mocks base method
+// GetImage mocks base method.
 func (m *MockImagebuilderAPI) GetImage(arg0 *imagebuilder.GetImageInput) (*imagebuilder.GetImageOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetImage", arg0)
@@ -1044,13 +1045,13 @@ func (m *MockImagebuilderAPI) GetImage(arg0 *imagebuilder.GetImageInput) (*image
 	return ret0, ret1
 }
 
-// GetImage indicates an expected call of GetImage
+// GetImage indicates an expected call of GetImage.
 func (mr *MockImagebuilderAPIMockRecorder) GetImage(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImage", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImage), arg0)
 }
 
-// GetImagePipeline mocks base method
+// GetImagePipeline mocks base method.
 func (m *MockImagebuilderAPI) GetImagePipeline(arg0 *imagebuilder.GetImagePipelineInput) (*imagebuilder.GetImagePipelineOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetImagePipeline", arg0)
@@ -1059,13 +1060,13 @@ func (m *MockImagebuilderAPI) GetImagePipeline(arg0 *imagebuilder.GetImagePipeli
 	return ret0, ret1
 }
 
-// GetImagePipeline indicates an expected call of GetImagePipeline
+// GetImagePipeline indicates an expected call of GetImagePipeline.
 func (mr *MockImagebuilderAPIMockRecorder) GetImagePipeline(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImagePipeline", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImagePipeline), arg0)
 }
 
-// GetImagePipelineRequest mocks base method
+// GetImagePipelineRequest mocks base method.
 func (m *MockImagebuilderAPI) GetImagePipelineRequest(arg0 *imagebuilder.GetImagePipelineInput) (*request.Request, *imagebuilder.GetImagePipelineOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetImagePipelineRequest", arg0)
@@ -1074,13 +1075,13 @@ func (m *MockImagebuilderAPI) GetImagePipelineRequest(arg0 *imagebuilder.GetImag
 	return ret0, ret1
 }
 
-// GetImagePipelineRequest indicates an expected call of GetImagePipelineRequest
+// GetImagePipelineRequest indicates an expected call of GetImagePipelineRequest.
 func (mr *MockImagebuilderAPIMockRecorder) GetImagePipelineRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImagePipelineRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImagePipelineRequest), arg0)
 }
 
-// GetImagePipelineWithContext mocks base method
+// GetImagePipelineWithContext mocks base method.
 func (m *MockImagebuilderAPI) GetImagePipelineWithContext(arg0 context.Context, arg1 *imagebuilder.GetImagePipelineInput, arg2 ...request.Option) (*imagebuilder.GetImagePipelineOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1093,14 +1094,14 @@ func (m *MockImagebuilderAPI) GetImagePipelineWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// GetImagePipelineWithContext indicates an expected call of GetImagePipelineWithContext
+// GetImagePipelineWithContext indicates an expected call of GetImagePipelineWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) GetImagePipelineWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImagePipelineWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImagePipelineWithContext), varargs...)
 }
 
-// GetImagePolicy mocks base method
+// GetImagePolicy mocks base method.
 func (m *MockImagebuilderAPI) GetImagePolicy(arg0 *imagebuilder.GetImagePolicyInput) (*imagebuilder.GetImagePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetImagePolicy", arg0)
@@ -1109,13 +1110,13 @@ func (m *MockImagebuilderAPI) GetImagePolicy(arg0 *imagebuilder.GetImagePolicyIn
 	return ret0, ret1
 }
 
-// GetImagePolicy indicates an expected call of GetImagePolicy
+// GetImagePolicy indicates an expected call of GetImagePolicy.
 func (mr *MockImagebuilderAPIMockRecorder) GetImagePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImagePolicy", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImagePolicy), arg0)
 }
 
-// GetImagePolicyRequest mocks base method
+// GetImagePolicyRequest mocks base method.
 func (m *MockImagebuilderAPI) GetImagePolicyRequest(arg0 *imagebuilder.GetImagePolicyInput) (*request.Request, *imagebuilder.GetImagePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetImagePolicyRequest", arg0)
@@ -1124,13 +1125,13 @@ func (m *MockImagebuilderAPI) GetImagePolicyRequest(arg0 *imagebuilder.GetImageP
 	return ret0, ret1
 }
 
-// GetImagePolicyRequest indicates an expected call of GetImagePolicyRequest
+// GetImagePolicyRequest indicates an expected call of GetImagePolicyRequest.
 func (mr *MockImagebuilderAPIMockRecorder) GetImagePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImagePolicyRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImagePolicyRequest), arg0)
 }
 
-// GetImagePolicyWithContext mocks base method
+// GetImagePolicyWithContext mocks base method.
 func (m *MockImagebuilderAPI) GetImagePolicyWithContext(arg0 context.Context, arg1 *imagebuilder.GetImagePolicyInput, arg2 ...request.Option) (*imagebuilder.GetImagePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1143,14 +1144,14 @@ func (m *MockImagebuilderAPI) GetImagePolicyWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// GetImagePolicyWithContext indicates an expected call of GetImagePolicyWithContext
+// GetImagePolicyWithContext indicates an expected call of GetImagePolicyWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) GetImagePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImagePolicyWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImagePolicyWithContext), varargs...)
 }
 
-// GetImageRecipe mocks base method
+// GetImageRecipe mocks base method.
 func (m *MockImagebuilderAPI) GetImageRecipe(arg0 *imagebuilder.GetImageRecipeInput) (*imagebuilder.GetImageRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetImageRecipe", arg0)
@@ -1159,13 +1160,13 @@ func (m *MockImagebuilderAPI) GetImageRecipe(arg0 *imagebuilder.GetImageRecipeIn
 	return ret0, ret1
 }
 
-// GetImageRecipe indicates an expected call of GetImageRecipe
+// GetImageRecipe indicates an expected call of GetImageRecipe.
 func (mr *MockImagebuilderAPIMockRecorder) GetImageRecipe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImageRecipe", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImageRecipe), arg0)
 }
 
-// GetImageRecipePolicy mocks base method
+// GetImageRecipePolicy mocks base method.
 func (m *MockImagebuilderAPI) GetImageRecipePolicy(arg0 *imagebuilder.GetImageRecipePolicyInput) (*imagebuilder.GetImageRecipePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetImageRecipePolicy", arg0)
@@ -1174,13 +1175,13 @@ func (m *MockImagebuilderAPI) GetImageRecipePolicy(arg0 *imagebuilder.GetImageRe
 	return ret0, ret1
 }
 
-// GetImageRecipePolicy indicates an expected call of GetImageRecipePolicy
+// GetImageRecipePolicy indicates an expected call of GetImageRecipePolicy.
 func (mr *MockImagebuilderAPIMockRecorder) GetImageRecipePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImageRecipePolicy", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImageRecipePolicy), arg0)
 }
 
-// GetImageRecipePolicyRequest mocks base method
+// GetImageRecipePolicyRequest mocks base method.
 func (m *MockImagebuilderAPI) GetImageRecipePolicyRequest(arg0 *imagebuilder.GetImageRecipePolicyInput) (*request.Request, *imagebuilder.GetImageRecipePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetImageRecipePolicyRequest", arg0)
@@ -1189,13 +1190,13 @@ func (m *MockImagebuilderAPI) GetImageRecipePolicyRequest(arg0 *imagebuilder.Get
 	return ret0, ret1
 }
 
-// GetImageRecipePolicyRequest indicates an expected call of GetImageRecipePolicyRequest
+// GetImageRecipePolicyRequest indicates an expected call of GetImageRecipePolicyRequest.
 func (mr *MockImagebuilderAPIMockRecorder) GetImageRecipePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImageRecipePolicyRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImageRecipePolicyRequest), arg0)
 }
 
-// GetImageRecipePolicyWithContext mocks base method
+// GetImageRecipePolicyWithContext mocks base method.
 func (m *MockImagebuilderAPI) GetImageRecipePolicyWithContext(arg0 context.Context, arg1 *imagebuilder.GetImageRecipePolicyInput, arg2 ...request.Option) (*imagebuilder.GetImageRecipePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1208,14 +1209,14 @@ func (m *MockImagebuilderAPI) GetImageRecipePolicyWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// GetImageRecipePolicyWithContext indicates an expected call of GetImageRecipePolicyWithContext
+// GetImageRecipePolicyWithContext indicates an expected call of GetImageRecipePolicyWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) GetImageRecipePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImageRecipePolicyWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImageRecipePolicyWithContext), varargs...)
 }
 
-// GetImageRecipeRequest mocks base method
+// GetImageRecipeRequest mocks base method.
 func (m *MockImagebuilderAPI) GetImageRecipeRequest(arg0 *imagebuilder.GetImageRecipeInput) (*request.Request, *imagebuilder.GetImageRecipeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetImageRecipeRequest", arg0)
@@ -1224,13 +1225,13 @@ func (m *MockImagebuilderAPI) GetImageRecipeRequest(arg0 *imagebuilder.GetImageR
 	return ret0, ret1
 }
 
-// GetImageRecipeRequest indicates an expected call of GetImageRecipeRequest
+// GetImageRecipeRequest indicates an expected call of GetImageRecipeRequest.
 func (mr *MockImagebuilderAPIMockRecorder) GetImageRecipeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImageRecipeRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImageRecipeRequest), arg0)
 }
 
-// GetImageRecipeWithContext mocks base method
+// GetImageRecipeWithContext mocks base method.
 func (m *MockImagebuilderAPI) GetImageRecipeWithContext(arg0 context.Context, arg1 *imagebuilder.GetImageRecipeInput, arg2 ...request.Option) (*imagebuilder.GetImageRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1243,14 +1244,14 @@ func (m *MockImagebuilderAPI) GetImageRecipeWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// GetImageRecipeWithContext indicates an expected call of GetImageRecipeWithContext
+// GetImageRecipeWithContext indicates an expected call of GetImageRecipeWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) GetImageRecipeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImageRecipeWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImageRecipeWithContext), varargs...)
 }
 
-// GetImageRequest mocks base method
+// GetImageRequest mocks base method.
 func (m *MockImagebuilderAPI) GetImageRequest(arg0 *imagebuilder.GetImageInput) (*request.Request, *imagebuilder.GetImageOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetImageRequest", arg0)
@@ -1259,13 +1260,13 @@ func (m *MockImagebuilderAPI) GetImageRequest(arg0 *imagebuilder.GetImageInput) 
 	return ret0, ret1
 }
 
-// GetImageRequest indicates an expected call of GetImageRequest
+// GetImageRequest indicates an expected call of GetImageRequest.
 func (mr *MockImagebuilderAPIMockRecorder) GetImageRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImageRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImageRequest), arg0)
 }
 
-// GetImageWithContext mocks base method
+// GetImageWithContext mocks base method.
 func (m *MockImagebuilderAPI) GetImageWithContext(arg0 context.Context, arg1 *imagebuilder.GetImageInput, arg2 ...request.Option) (*imagebuilder.GetImageOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1278,14 +1279,14 @@ func (m *MockImagebuilderAPI) GetImageWithContext(arg0 context.Context, arg1 *im
 	return ret0, ret1
 }
 
-// GetImageWithContext indicates an expected call of GetImageWithContext
+// GetImageWithContext indicates an expected call of GetImageWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) GetImageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImageWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetImageWithContext), varargs...)
 }
 
-// GetInfrastructureConfiguration mocks base method
+// GetInfrastructureConfiguration mocks base method.
 func (m *MockImagebuilderAPI) GetInfrastructureConfiguration(arg0 *imagebuilder.GetInfrastructureConfigurationInput) (*imagebuilder.GetInfrastructureConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInfrastructureConfiguration", arg0)
@@ -1294,13 +1295,13 @@ func (m *MockImagebuilderAPI) GetInfrastructureConfiguration(arg0 *imagebuilder.
 	return ret0, ret1
 }
 
-// GetInfrastructureConfiguration indicates an expected call of GetInfrastructureConfiguration
+// GetInfrastructureConfiguration indicates an expected call of GetInfrastructureConfiguration.
 func (mr *MockImagebuilderAPIMockRecorder) GetInfrastructureConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInfrastructureConfiguration", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetInfrastructureConfiguration), arg0)
 }
 
-// GetInfrastructureConfigurationRequest mocks base method
+// GetInfrastructureConfigurationRequest mocks base method.
 func (m *MockImagebuilderAPI) GetInfrastructureConfigurationRequest(arg0 *imagebuilder.GetInfrastructureConfigurationInput) (*request.Request, *imagebuilder.GetInfrastructureConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInfrastructureConfigurationRequest", arg0)
@@ -1309,13 +1310,13 @@ func (m *MockImagebuilderAPI) GetInfrastructureConfigurationRequest(arg0 *imageb
 	return ret0, ret1
 }
 
-// GetInfrastructureConfigurationRequest indicates an expected call of GetInfrastructureConfigurationRequest
+// GetInfrastructureConfigurationRequest indicates an expected call of GetInfrastructureConfigurationRequest.
 func (mr *MockImagebuilderAPIMockRecorder) GetInfrastructureConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInfrastructureConfigurationRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetInfrastructureConfigurationRequest), arg0)
 }
 
-// GetInfrastructureConfigurationWithContext mocks base method
+// GetInfrastructureConfigurationWithContext mocks base method.
 func (m *MockImagebuilderAPI) GetInfrastructureConfigurationWithContext(arg0 context.Context, arg1 *imagebuilder.GetInfrastructureConfigurationInput, arg2 ...request.Option) (*imagebuilder.GetInfrastructureConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1328,14 +1329,14 @@ func (m *MockImagebuilderAPI) GetInfrastructureConfigurationWithContext(arg0 con
 	return ret0, ret1
 }
 
-// GetInfrastructureConfigurationWithContext indicates an expected call of GetInfrastructureConfigurationWithContext
+// GetInfrastructureConfigurationWithContext indicates an expected call of GetInfrastructureConfigurationWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) GetInfrastructureConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInfrastructureConfigurationWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).GetInfrastructureConfigurationWithContext), varargs...)
 }
 
-// ImportComponent mocks base method
+// ImportComponent mocks base method.
 func (m *MockImagebuilderAPI) ImportComponent(arg0 *imagebuilder.ImportComponentInput) (*imagebuilder.ImportComponentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ImportComponent", arg0)
@@ -1344,13 +1345,13 @@ func (m *MockImagebuilderAPI) ImportComponent(arg0 *imagebuilder.ImportComponent
 	return ret0, ret1
 }
 
-// ImportComponent indicates an expected call of ImportComponent
+// ImportComponent indicates an expected call of ImportComponent.
 func (mr *MockImagebuilderAPIMockRecorder) ImportComponent(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportComponent", reflect.TypeOf((*MockImagebuilderAPI)(nil).ImportComponent), arg0)
 }
 
-// ImportComponentRequest mocks base method
+// ImportComponentRequest mocks base method.
 func (m *MockImagebuilderAPI) ImportComponentRequest(arg0 *imagebuilder.ImportComponentInput) (*request.Request, *imagebuilder.ImportComponentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ImportComponentRequest", arg0)
@@ -1359,13 +1360,13 @@ func (m *MockImagebuilderAPI) ImportComponentRequest(arg0 *imagebuilder.ImportCo
 	return ret0, ret1
 }
 
-// ImportComponentRequest indicates an expected call of ImportComponentRequest
+// ImportComponentRequest indicates an expected call of ImportComponentRequest.
 func (mr *MockImagebuilderAPIMockRecorder) ImportComponentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportComponentRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ImportComponentRequest), arg0)
 }
 
-// ImportComponentWithContext mocks base method
+// ImportComponentWithContext mocks base method.
 func (m *MockImagebuilderAPI) ImportComponentWithContext(arg0 context.Context, arg1 *imagebuilder.ImportComponentInput, arg2 ...request.Option) (*imagebuilder.ImportComponentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1378,14 +1379,14 @@ func (m *MockImagebuilderAPI) ImportComponentWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ImportComponentWithContext indicates an expected call of ImportComponentWithContext
+// ImportComponentWithContext indicates an expected call of ImportComponentWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ImportComponentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportComponentWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ImportComponentWithContext), varargs...)
 }
 
-// ListComponentBuildVersions mocks base method
+// ListComponentBuildVersions mocks base method.
 func (m *MockImagebuilderAPI) ListComponentBuildVersions(arg0 *imagebuilder.ListComponentBuildVersionsInput) (*imagebuilder.ListComponentBuildVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComponentBuildVersions", arg0)
@@ -1394,13 +1395,13 @@ func (m *MockImagebuilderAPI) ListComponentBuildVersions(arg0 *imagebuilder.List
 	return ret0, ret1
 }
 
-// ListComponentBuildVersions indicates an expected call of ListComponentBuildVersions
+// ListComponentBuildVersions indicates an expected call of ListComponentBuildVersions.
 func (mr *MockImagebuilderAPIMockRecorder) ListComponentBuildVersions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentBuildVersions", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListComponentBuildVersions), arg0)
 }
 
-// ListComponentBuildVersionsPages mocks base method
+// ListComponentBuildVersionsPages mocks base method.
 func (m *MockImagebuilderAPI) ListComponentBuildVersionsPages(arg0 *imagebuilder.ListComponentBuildVersionsInput, arg1 func(*imagebuilder.ListComponentBuildVersionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComponentBuildVersionsPages", arg0, arg1)
@@ -1408,13 +1409,13 @@ func (m *MockImagebuilderAPI) ListComponentBuildVersionsPages(arg0 *imagebuilder
 	return ret0
 }
 
-// ListComponentBuildVersionsPages indicates an expected call of ListComponentBuildVersionsPages
+// ListComponentBuildVersionsPages indicates an expected call of ListComponentBuildVersionsPages.
 func (mr *MockImagebuilderAPIMockRecorder) ListComponentBuildVersionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentBuildVersionsPages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListComponentBuildVersionsPages), arg0, arg1)
 }
 
-// ListComponentBuildVersionsPagesWithContext mocks base method
+// ListComponentBuildVersionsPagesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListComponentBuildVersionsPagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListComponentBuildVersionsInput, arg2 func(*imagebuilder.ListComponentBuildVersionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1426,14 +1427,14 @@ func (m *MockImagebuilderAPI) ListComponentBuildVersionsPagesWithContext(arg0 co
 	return ret0
 }
 
-// ListComponentBuildVersionsPagesWithContext indicates an expected call of ListComponentBuildVersionsPagesWithContext
+// ListComponentBuildVersionsPagesWithContext indicates an expected call of ListComponentBuildVersionsPagesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListComponentBuildVersionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentBuildVersionsPagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListComponentBuildVersionsPagesWithContext), varargs...)
 }
 
-// ListComponentBuildVersionsRequest mocks base method
+// ListComponentBuildVersionsRequest mocks base method.
 func (m *MockImagebuilderAPI) ListComponentBuildVersionsRequest(arg0 *imagebuilder.ListComponentBuildVersionsInput) (*request.Request, *imagebuilder.ListComponentBuildVersionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComponentBuildVersionsRequest", arg0)
@@ -1442,13 +1443,13 @@ func (m *MockImagebuilderAPI) ListComponentBuildVersionsRequest(arg0 *imagebuild
 	return ret0, ret1
 }
 
-// ListComponentBuildVersionsRequest indicates an expected call of ListComponentBuildVersionsRequest
+// ListComponentBuildVersionsRequest indicates an expected call of ListComponentBuildVersionsRequest.
 func (mr *MockImagebuilderAPIMockRecorder) ListComponentBuildVersionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentBuildVersionsRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListComponentBuildVersionsRequest), arg0)
 }
 
-// ListComponentBuildVersionsWithContext mocks base method
+// ListComponentBuildVersionsWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListComponentBuildVersionsWithContext(arg0 context.Context, arg1 *imagebuilder.ListComponentBuildVersionsInput, arg2 ...request.Option) (*imagebuilder.ListComponentBuildVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1461,14 +1462,14 @@ func (m *MockImagebuilderAPI) ListComponentBuildVersionsWithContext(arg0 context
 	return ret0, ret1
 }
 
-// ListComponentBuildVersionsWithContext indicates an expected call of ListComponentBuildVersionsWithContext
+// ListComponentBuildVersionsWithContext indicates an expected call of ListComponentBuildVersionsWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListComponentBuildVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentBuildVersionsWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListComponentBuildVersionsWithContext), varargs...)
 }
 
-// ListComponents mocks base method
+// ListComponents mocks base method.
 func (m *MockImagebuilderAPI) ListComponents(arg0 *imagebuilder.ListComponentsInput) (*imagebuilder.ListComponentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComponents", arg0)
@@ -1477,13 +1478,13 @@ func (m *MockImagebuilderAPI) ListComponents(arg0 *imagebuilder.ListComponentsIn
 	return ret0, ret1
 }
 
-// ListComponents indicates an expected call of ListComponents
+// ListComponents indicates an expected call of ListComponents.
 func (mr *MockImagebuilderAPIMockRecorder) ListComponents(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponents", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListComponents), arg0)
 }
 
-// ListComponentsPages mocks base method
+// ListComponentsPages mocks base method.
 func (m *MockImagebuilderAPI) ListComponentsPages(arg0 *imagebuilder.ListComponentsInput, arg1 func(*imagebuilder.ListComponentsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComponentsPages", arg0, arg1)
@@ -1491,13 +1492,13 @@ func (m *MockImagebuilderAPI) ListComponentsPages(arg0 *imagebuilder.ListCompone
 	return ret0
 }
 
-// ListComponentsPages indicates an expected call of ListComponentsPages
+// ListComponentsPages indicates an expected call of ListComponentsPages.
 func (mr *MockImagebuilderAPIMockRecorder) ListComponentsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentsPages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListComponentsPages), arg0, arg1)
 }
 
-// ListComponentsPagesWithContext mocks base method
+// ListComponentsPagesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListComponentsPagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListComponentsInput, arg2 func(*imagebuilder.ListComponentsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1509,14 +1510,14 @@ func (m *MockImagebuilderAPI) ListComponentsPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListComponentsPagesWithContext indicates an expected call of ListComponentsPagesWithContext
+// ListComponentsPagesWithContext indicates an expected call of ListComponentsPagesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListComponentsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentsPagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListComponentsPagesWithContext), varargs...)
 }
 
-// ListComponentsRequest mocks base method
+// ListComponentsRequest mocks base method.
 func (m *MockImagebuilderAPI) ListComponentsRequest(arg0 *imagebuilder.ListComponentsInput) (*request.Request, *imagebuilder.ListComponentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComponentsRequest", arg0)
@@ -1525,13 +1526,13 @@ func (m *MockImagebuilderAPI) ListComponentsRequest(arg0 *imagebuilder.ListCompo
 	return ret0, ret1
 }
 
-// ListComponentsRequest indicates an expected call of ListComponentsRequest
+// ListComponentsRequest indicates an expected call of ListComponentsRequest.
 func (mr *MockImagebuilderAPIMockRecorder) ListComponentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentsRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListComponentsRequest), arg0)
 }
 
-// ListComponentsWithContext mocks base method
+// ListComponentsWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListComponentsWithContext(arg0 context.Context, arg1 *imagebuilder.ListComponentsInput, arg2 ...request.Option) (*imagebuilder.ListComponentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1544,14 +1545,14 @@ func (m *MockImagebuilderAPI) ListComponentsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListComponentsWithContext indicates an expected call of ListComponentsWithContext
+// ListComponentsWithContext indicates an expected call of ListComponentsWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListComponentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentsWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListComponentsWithContext), varargs...)
 }
 
-// ListContainerRecipes mocks base method
+// ListContainerRecipes mocks base method.
 func (m *MockImagebuilderAPI) ListContainerRecipes(arg0 *imagebuilder.ListContainerRecipesInput) (*imagebuilder.ListContainerRecipesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContainerRecipes", arg0)
@@ -1560,13 +1561,13 @@ func (m *MockImagebuilderAPI) ListContainerRecipes(arg0 *imagebuilder.ListContai
 	return ret0, ret1
 }
 
-// ListContainerRecipes indicates an expected call of ListContainerRecipes
+// ListContainerRecipes indicates an expected call of ListContainerRecipes.
 func (mr *MockImagebuilderAPIMockRecorder) ListContainerRecipes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContainerRecipes", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListContainerRecipes), arg0)
 }
 
-// ListContainerRecipesPages mocks base method
+// ListContainerRecipesPages mocks base method.
 func (m *MockImagebuilderAPI) ListContainerRecipesPages(arg0 *imagebuilder.ListContainerRecipesInput, arg1 func(*imagebuilder.ListContainerRecipesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContainerRecipesPages", arg0, arg1)
@@ -1574,13 +1575,13 @@ func (m *MockImagebuilderAPI) ListContainerRecipesPages(arg0 *imagebuilder.ListC
 	return ret0
 }
 
-// ListContainerRecipesPages indicates an expected call of ListContainerRecipesPages
+// ListContainerRecipesPages indicates an expected call of ListContainerRecipesPages.
 func (mr *MockImagebuilderAPIMockRecorder) ListContainerRecipesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContainerRecipesPages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListContainerRecipesPages), arg0, arg1)
 }
 
-// ListContainerRecipesPagesWithContext mocks base method
+// ListContainerRecipesPagesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListContainerRecipesPagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListContainerRecipesInput, arg2 func(*imagebuilder.ListContainerRecipesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1592,14 +1593,14 @@ func (m *MockImagebuilderAPI) ListContainerRecipesPagesWithContext(arg0 context.
 	return ret0
 }
 
-// ListContainerRecipesPagesWithContext indicates an expected call of ListContainerRecipesPagesWithContext
+// ListContainerRecipesPagesWithContext indicates an expected call of ListContainerRecipesPagesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListContainerRecipesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContainerRecipesPagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListContainerRecipesPagesWithContext), varargs...)
 }
 
-// ListContainerRecipesRequest mocks base method
+// ListContainerRecipesRequest mocks base method.
 func (m *MockImagebuilderAPI) ListContainerRecipesRequest(arg0 *imagebuilder.ListContainerRecipesInput) (*request.Request, *imagebuilder.ListContainerRecipesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListContainerRecipesRequest", arg0)
@@ -1608,13 +1609,13 @@ func (m *MockImagebuilderAPI) ListContainerRecipesRequest(arg0 *imagebuilder.Lis
 	return ret0, ret1
 }
 
-// ListContainerRecipesRequest indicates an expected call of ListContainerRecipesRequest
+// ListContainerRecipesRequest indicates an expected call of ListContainerRecipesRequest.
 func (mr *MockImagebuilderAPIMockRecorder) ListContainerRecipesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContainerRecipesRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListContainerRecipesRequest), arg0)
 }
 
-// ListContainerRecipesWithContext mocks base method
+// ListContainerRecipesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListContainerRecipesWithContext(arg0 context.Context, arg1 *imagebuilder.ListContainerRecipesInput, arg2 ...request.Option) (*imagebuilder.ListContainerRecipesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1627,14 +1628,14 @@ func (m *MockImagebuilderAPI) ListContainerRecipesWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListContainerRecipesWithContext indicates an expected call of ListContainerRecipesWithContext
+// ListContainerRecipesWithContext indicates an expected call of ListContainerRecipesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListContainerRecipesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListContainerRecipesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListContainerRecipesWithContext), varargs...)
 }
 
-// ListDistributionConfigurations mocks base method
+// ListDistributionConfigurations mocks base method.
 func (m *MockImagebuilderAPI) ListDistributionConfigurations(arg0 *imagebuilder.ListDistributionConfigurationsInput) (*imagebuilder.ListDistributionConfigurationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDistributionConfigurations", arg0)
@@ -1643,13 +1644,13 @@ func (m *MockImagebuilderAPI) ListDistributionConfigurations(arg0 *imagebuilder.
 	return ret0, ret1
 }
 
-// ListDistributionConfigurations indicates an expected call of ListDistributionConfigurations
+// ListDistributionConfigurations indicates an expected call of ListDistributionConfigurations.
 func (mr *MockImagebuilderAPIMockRecorder) ListDistributionConfigurations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDistributionConfigurations", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListDistributionConfigurations), arg0)
 }
 
-// ListDistributionConfigurationsPages mocks base method
+// ListDistributionConfigurationsPages mocks base method.
 func (m *MockImagebuilderAPI) ListDistributionConfigurationsPages(arg0 *imagebuilder.ListDistributionConfigurationsInput, arg1 func(*imagebuilder.ListDistributionConfigurationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDistributionConfigurationsPages", arg0, arg1)
@@ -1657,13 +1658,13 @@ func (m *MockImagebuilderAPI) ListDistributionConfigurationsPages(arg0 *imagebui
 	return ret0
 }
 
-// ListDistributionConfigurationsPages indicates an expected call of ListDistributionConfigurationsPages
+// ListDistributionConfigurationsPages indicates an expected call of ListDistributionConfigurationsPages.
 func (mr *MockImagebuilderAPIMockRecorder) ListDistributionConfigurationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDistributionConfigurationsPages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListDistributionConfigurationsPages), arg0, arg1)
 }
 
-// ListDistributionConfigurationsPagesWithContext mocks base method
+// ListDistributionConfigurationsPagesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListDistributionConfigurationsPagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListDistributionConfigurationsInput, arg2 func(*imagebuilder.ListDistributionConfigurationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1675,14 +1676,14 @@ func (m *MockImagebuilderAPI) ListDistributionConfigurationsPagesWithContext(arg
 	return ret0
 }
 
-// ListDistributionConfigurationsPagesWithContext indicates an expected call of ListDistributionConfigurationsPagesWithContext
+// ListDistributionConfigurationsPagesWithContext indicates an expected call of ListDistributionConfigurationsPagesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListDistributionConfigurationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDistributionConfigurationsPagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListDistributionConfigurationsPagesWithContext), varargs...)
 }
 
-// ListDistributionConfigurationsRequest mocks base method
+// ListDistributionConfigurationsRequest mocks base method.
 func (m *MockImagebuilderAPI) ListDistributionConfigurationsRequest(arg0 *imagebuilder.ListDistributionConfigurationsInput) (*request.Request, *imagebuilder.ListDistributionConfigurationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDistributionConfigurationsRequest", arg0)
@@ -1691,13 +1692,13 @@ func (m *MockImagebuilderAPI) ListDistributionConfigurationsRequest(arg0 *imageb
 	return ret0, ret1
 }
 
-// ListDistributionConfigurationsRequest indicates an expected call of ListDistributionConfigurationsRequest
+// ListDistributionConfigurationsRequest indicates an expected call of ListDistributionConfigurationsRequest.
 func (mr *MockImagebuilderAPIMockRecorder) ListDistributionConfigurationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDistributionConfigurationsRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListDistributionConfigurationsRequest), arg0)
 }
 
-// ListDistributionConfigurationsWithContext mocks base method
+// ListDistributionConfigurationsWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListDistributionConfigurationsWithContext(arg0 context.Context, arg1 *imagebuilder.ListDistributionConfigurationsInput, arg2 ...request.Option) (*imagebuilder.ListDistributionConfigurationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1710,14 +1711,14 @@ func (m *MockImagebuilderAPI) ListDistributionConfigurationsWithContext(arg0 con
 	return ret0, ret1
 }
 
-// ListDistributionConfigurationsWithContext indicates an expected call of ListDistributionConfigurationsWithContext
+// ListDistributionConfigurationsWithContext indicates an expected call of ListDistributionConfigurationsWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListDistributionConfigurationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDistributionConfigurationsWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListDistributionConfigurationsWithContext), varargs...)
 }
 
-// ListImageBuildVersions mocks base method
+// ListImageBuildVersions mocks base method.
 func (m *MockImagebuilderAPI) ListImageBuildVersions(arg0 *imagebuilder.ListImageBuildVersionsInput) (*imagebuilder.ListImageBuildVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImageBuildVersions", arg0)
@@ -1726,13 +1727,13 @@ func (m *MockImagebuilderAPI) ListImageBuildVersions(arg0 *imagebuilder.ListImag
 	return ret0, ret1
 }
 
-// ListImageBuildVersions indicates an expected call of ListImageBuildVersions
+// ListImageBuildVersions indicates an expected call of ListImageBuildVersions.
 func (mr *MockImagebuilderAPIMockRecorder) ListImageBuildVersions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImageBuildVersions", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImageBuildVersions), arg0)
 }
 
-// ListImageBuildVersionsPages mocks base method
+// ListImageBuildVersionsPages mocks base method.
 func (m *MockImagebuilderAPI) ListImageBuildVersionsPages(arg0 *imagebuilder.ListImageBuildVersionsInput, arg1 func(*imagebuilder.ListImageBuildVersionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImageBuildVersionsPages", arg0, arg1)
@@ -1740,13 +1741,13 @@ func (m *MockImagebuilderAPI) ListImageBuildVersionsPages(arg0 *imagebuilder.Lis
 	return ret0
 }
 
-// ListImageBuildVersionsPages indicates an expected call of ListImageBuildVersionsPages
+// ListImageBuildVersionsPages indicates an expected call of ListImageBuildVersionsPages.
 func (mr *MockImagebuilderAPIMockRecorder) ListImageBuildVersionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImageBuildVersionsPages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImageBuildVersionsPages), arg0, arg1)
 }
 
-// ListImageBuildVersionsPagesWithContext mocks base method
+// ListImageBuildVersionsPagesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListImageBuildVersionsPagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListImageBuildVersionsInput, arg2 func(*imagebuilder.ListImageBuildVersionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1758,14 +1759,14 @@ func (m *MockImagebuilderAPI) ListImageBuildVersionsPagesWithContext(arg0 contex
 	return ret0
 }
 
-// ListImageBuildVersionsPagesWithContext indicates an expected call of ListImageBuildVersionsPagesWithContext
+// ListImageBuildVersionsPagesWithContext indicates an expected call of ListImageBuildVersionsPagesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListImageBuildVersionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImageBuildVersionsPagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImageBuildVersionsPagesWithContext), varargs...)
 }
 
-// ListImageBuildVersionsRequest mocks base method
+// ListImageBuildVersionsRequest mocks base method.
 func (m *MockImagebuilderAPI) ListImageBuildVersionsRequest(arg0 *imagebuilder.ListImageBuildVersionsInput) (*request.Request, *imagebuilder.ListImageBuildVersionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImageBuildVersionsRequest", arg0)
@@ -1774,13 +1775,13 @@ func (m *MockImagebuilderAPI) ListImageBuildVersionsRequest(arg0 *imagebuilder.L
 	return ret0, ret1
 }
 
-// ListImageBuildVersionsRequest indicates an expected call of ListImageBuildVersionsRequest
+// ListImageBuildVersionsRequest indicates an expected call of ListImageBuildVersionsRequest.
 func (mr *MockImagebuilderAPIMockRecorder) ListImageBuildVersionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImageBuildVersionsRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImageBuildVersionsRequest), arg0)
 }
 
-// ListImageBuildVersionsWithContext mocks base method
+// ListImageBuildVersionsWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListImageBuildVersionsWithContext(arg0 context.Context, arg1 *imagebuilder.ListImageBuildVersionsInput, arg2 ...request.Option) (*imagebuilder.ListImageBuildVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1793,14 +1794,97 @@ func (m *MockImagebuilderAPI) ListImageBuildVersionsWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListImageBuildVersionsWithContext indicates an expected call of ListImageBuildVersionsWithContext
+// ListImageBuildVersionsWithContext indicates an expected call of ListImageBuildVersionsWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListImageBuildVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImageBuildVersionsWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImageBuildVersionsWithContext), varargs...)
 }
 
-// ListImagePipelineImages mocks base method
+// ListImagePackages mocks base method.
+func (m *MockImagebuilderAPI) ListImagePackages(arg0 *imagebuilder.ListImagePackagesInput) (*imagebuilder.ListImagePackagesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListImagePackages", arg0)
+	ret0, _ := ret[0].(*imagebuilder.ListImagePackagesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListImagePackages indicates an expected call of ListImagePackages.
+func (mr *MockImagebuilderAPIMockRecorder) ListImagePackages(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePackages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePackages), arg0)
+}
+
+// ListImagePackagesPages mocks base method.
+func (m *MockImagebuilderAPI) ListImagePackagesPages(arg0 *imagebuilder.ListImagePackagesInput, arg1 func(*imagebuilder.ListImagePackagesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListImagePackagesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListImagePackagesPages indicates an expected call of ListImagePackagesPages.
+func (mr *MockImagebuilderAPIMockRecorder) ListImagePackagesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePackagesPages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePackagesPages), arg0, arg1)
+}
+
+// ListImagePackagesPagesWithContext mocks base method.
+func (m *MockImagebuilderAPI) ListImagePackagesPagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListImagePackagesInput, arg2 func(*imagebuilder.ListImagePackagesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListImagePackagesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListImagePackagesPagesWithContext indicates an expected call of ListImagePackagesPagesWithContext.
+func (mr *MockImagebuilderAPIMockRecorder) ListImagePackagesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePackagesPagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePackagesPagesWithContext), varargs...)
+}
+
+// ListImagePackagesRequest mocks base method.
+func (m *MockImagebuilderAPI) ListImagePackagesRequest(arg0 *imagebuilder.ListImagePackagesInput) (*request.Request, *imagebuilder.ListImagePackagesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListImagePackagesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*imagebuilder.ListImagePackagesOutput)
+	return ret0, ret1
+}
+
+// ListImagePackagesRequest indicates an expected call of ListImagePackagesRequest.
+func (mr *MockImagebuilderAPIMockRecorder) ListImagePackagesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePackagesRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePackagesRequest), arg0)
+}
+
+// ListImagePackagesWithContext mocks base method.
+func (m *MockImagebuilderAPI) ListImagePackagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListImagePackagesInput, arg2 ...request.Option) (*imagebuilder.ListImagePackagesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListImagePackagesWithContext", varargs...)
+	ret0, _ := ret[0].(*imagebuilder.ListImagePackagesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListImagePackagesWithContext indicates an expected call of ListImagePackagesWithContext.
+func (mr *MockImagebuilderAPIMockRecorder) ListImagePackagesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePackagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePackagesWithContext), varargs...)
+}
+
+// ListImagePipelineImages mocks base method.
 func (m *MockImagebuilderAPI) ListImagePipelineImages(arg0 *imagebuilder.ListImagePipelineImagesInput) (*imagebuilder.ListImagePipelineImagesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImagePipelineImages", arg0)
@@ -1809,13 +1893,13 @@ func (m *MockImagebuilderAPI) ListImagePipelineImages(arg0 *imagebuilder.ListIma
 	return ret0, ret1
 }
 
-// ListImagePipelineImages indicates an expected call of ListImagePipelineImages
+// ListImagePipelineImages indicates an expected call of ListImagePipelineImages.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagePipelineImages(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePipelineImages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePipelineImages), arg0)
 }
 
-// ListImagePipelineImagesPages mocks base method
+// ListImagePipelineImagesPages mocks base method.
 func (m *MockImagebuilderAPI) ListImagePipelineImagesPages(arg0 *imagebuilder.ListImagePipelineImagesInput, arg1 func(*imagebuilder.ListImagePipelineImagesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImagePipelineImagesPages", arg0, arg1)
@@ -1823,13 +1907,13 @@ func (m *MockImagebuilderAPI) ListImagePipelineImagesPages(arg0 *imagebuilder.Li
 	return ret0
 }
 
-// ListImagePipelineImagesPages indicates an expected call of ListImagePipelineImagesPages
+// ListImagePipelineImagesPages indicates an expected call of ListImagePipelineImagesPages.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagePipelineImagesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePipelineImagesPages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePipelineImagesPages), arg0, arg1)
 }
 
-// ListImagePipelineImagesPagesWithContext mocks base method
+// ListImagePipelineImagesPagesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListImagePipelineImagesPagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListImagePipelineImagesInput, arg2 func(*imagebuilder.ListImagePipelineImagesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1841,14 +1925,14 @@ func (m *MockImagebuilderAPI) ListImagePipelineImagesPagesWithContext(arg0 conte
 	return ret0
 }
 
-// ListImagePipelineImagesPagesWithContext indicates an expected call of ListImagePipelineImagesPagesWithContext
+// ListImagePipelineImagesPagesWithContext indicates an expected call of ListImagePipelineImagesPagesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagePipelineImagesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePipelineImagesPagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePipelineImagesPagesWithContext), varargs...)
 }
 
-// ListImagePipelineImagesRequest mocks base method
+// ListImagePipelineImagesRequest mocks base method.
 func (m *MockImagebuilderAPI) ListImagePipelineImagesRequest(arg0 *imagebuilder.ListImagePipelineImagesInput) (*request.Request, *imagebuilder.ListImagePipelineImagesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImagePipelineImagesRequest", arg0)
@@ -1857,13 +1941,13 @@ func (m *MockImagebuilderAPI) ListImagePipelineImagesRequest(arg0 *imagebuilder.
 	return ret0, ret1
 }
 
-// ListImagePipelineImagesRequest indicates an expected call of ListImagePipelineImagesRequest
+// ListImagePipelineImagesRequest indicates an expected call of ListImagePipelineImagesRequest.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagePipelineImagesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePipelineImagesRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePipelineImagesRequest), arg0)
 }
 
-// ListImagePipelineImagesWithContext mocks base method
+// ListImagePipelineImagesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListImagePipelineImagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListImagePipelineImagesInput, arg2 ...request.Option) (*imagebuilder.ListImagePipelineImagesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1876,14 +1960,14 @@ func (m *MockImagebuilderAPI) ListImagePipelineImagesWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListImagePipelineImagesWithContext indicates an expected call of ListImagePipelineImagesWithContext
+// ListImagePipelineImagesWithContext indicates an expected call of ListImagePipelineImagesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagePipelineImagesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePipelineImagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePipelineImagesWithContext), varargs...)
 }
 
-// ListImagePipelines mocks base method
+// ListImagePipelines mocks base method.
 func (m *MockImagebuilderAPI) ListImagePipelines(arg0 *imagebuilder.ListImagePipelinesInput) (*imagebuilder.ListImagePipelinesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImagePipelines", arg0)
@@ -1892,13 +1976,13 @@ func (m *MockImagebuilderAPI) ListImagePipelines(arg0 *imagebuilder.ListImagePip
 	return ret0, ret1
 }
 
-// ListImagePipelines indicates an expected call of ListImagePipelines
+// ListImagePipelines indicates an expected call of ListImagePipelines.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagePipelines(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePipelines", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePipelines), arg0)
 }
 
-// ListImagePipelinesPages mocks base method
+// ListImagePipelinesPages mocks base method.
 func (m *MockImagebuilderAPI) ListImagePipelinesPages(arg0 *imagebuilder.ListImagePipelinesInput, arg1 func(*imagebuilder.ListImagePipelinesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImagePipelinesPages", arg0, arg1)
@@ -1906,13 +1990,13 @@ func (m *MockImagebuilderAPI) ListImagePipelinesPages(arg0 *imagebuilder.ListIma
 	return ret0
 }
 
-// ListImagePipelinesPages indicates an expected call of ListImagePipelinesPages
+// ListImagePipelinesPages indicates an expected call of ListImagePipelinesPages.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagePipelinesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePipelinesPages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePipelinesPages), arg0, arg1)
 }
 
-// ListImagePipelinesPagesWithContext mocks base method
+// ListImagePipelinesPagesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListImagePipelinesPagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListImagePipelinesInput, arg2 func(*imagebuilder.ListImagePipelinesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1924,14 +2008,14 @@ func (m *MockImagebuilderAPI) ListImagePipelinesPagesWithContext(arg0 context.Co
 	return ret0
 }
 
-// ListImagePipelinesPagesWithContext indicates an expected call of ListImagePipelinesPagesWithContext
+// ListImagePipelinesPagesWithContext indicates an expected call of ListImagePipelinesPagesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagePipelinesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePipelinesPagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePipelinesPagesWithContext), varargs...)
 }
 
-// ListImagePipelinesRequest mocks base method
+// ListImagePipelinesRequest mocks base method.
 func (m *MockImagebuilderAPI) ListImagePipelinesRequest(arg0 *imagebuilder.ListImagePipelinesInput) (*request.Request, *imagebuilder.ListImagePipelinesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImagePipelinesRequest", arg0)
@@ -1940,13 +2024,13 @@ func (m *MockImagebuilderAPI) ListImagePipelinesRequest(arg0 *imagebuilder.ListI
 	return ret0, ret1
 }
 
-// ListImagePipelinesRequest indicates an expected call of ListImagePipelinesRequest
+// ListImagePipelinesRequest indicates an expected call of ListImagePipelinesRequest.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagePipelinesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePipelinesRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePipelinesRequest), arg0)
 }
 
-// ListImagePipelinesWithContext mocks base method
+// ListImagePipelinesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListImagePipelinesWithContext(arg0 context.Context, arg1 *imagebuilder.ListImagePipelinesInput, arg2 ...request.Option) (*imagebuilder.ListImagePipelinesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1959,14 +2043,14 @@ func (m *MockImagebuilderAPI) ListImagePipelinesWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListImagePipelinesWithContext indicates an expected call of ListImagePipelinesWithContext
+// ListImagePipelinesWithContext indicates an expected call of ListImagePipelinesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagePipelinesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagePipelinesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagePipelinesWithContext), varargs...)
 }
 
-// ListImageRecipes mocks base method
+// ListImageRecipes mocks base method.
 func (m *MockImagebuilderAPI) ListImageRecipes(arg0 *imagebuilder.ListImageRecipesInput) (*imagebuilder.ListImageRecipesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImageRecipes", arg0)
@@ -1975,13 +2059,13 @@ func (m *MockImagebuilderAPI) ListImageRecipes(arg0 *imagebuilder.ListImageRecip
 	return ret0, ret1
 }
 
-// ListImageRecipes indicates an expected call of ListImageRecipes
+// ListImageRecipes indicates an expected call of ListImageRecipes.
 func (mr *MockImagebuilderAPIMockRecorder) ListImageRecipes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImageRecipes", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImageRecipes), arg0)
 }
 
-// ListImageRecipesPages mocks base method
+// ListImageRecipesPages mocks base method.
 func (m *MockImagebuilderAPI) ListImageRecipesPages(arg0 *imagebuilder.ListImageRecipesInput, arg1 func(*imagebuilder.ListImageRecipesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImageRecipesPages", arg0, arg1)
@@ -1989,13 +2073,13 @@ func (m *MockImagebuilderAPI) ListImageRecipesPages(arg0 *imagebuilder.ListImage
 	return ret0
 }
 
-// ListImageRecipesPages indicates an expected call of ListImageRecipesPages
+// ListImageRecipesPages indicates an expected call of ListImageRecipesPages.
 func (mr *MockImagebuilderAPIMockRecorder) ListImageRecipesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImageRecipesPages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImageRecipesPages), arg0, arg1)
 }
 
-// ListImageRecipesPagesWithContext mocks base method
+// ListImageRecipesPagesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListImageRecipesPagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListImageRecipesInput, arg2 func(*imagebuilder.ListImageRecipesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2007,14 +2091,14 @@ func (m *MockImagebuilderAPI) ListImageRecipesPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListImageRecipesPagesWithContext indicates an expected call of ListImageRecipesPagesWithContext
+// ListImageRecipesPagesWithContext indicates an expected call of ListImageRecipesPagesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListImageRecipesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImageRecipesPagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImageRecipesPagesWithContext), varargs...)
 }
 
-// ListImageRecipesRequest mocks base method
+// ListImageRecipesRequest mocks base method.
 func (m *MockImagebuilderAPI) ListImageRecipesRequest(arg0 *imagebuilder.ListImageRecipesInput) (*request.Request, *imagebuilder.ListImageRecipesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImageRecipesRequest", arg0)
@@ -2023,13 +2107,13 @@ func (m *MockImagebuilderAPI) ListImageRecipesRequest(arg0 *imagebuilder.ListIma
 	return ret0, ret1
 }
 
-// ListImageRecipesRequest indicates an expected call of ListImageRecipesRequest
+// ListImageRecipesRequest indicates an expected call of ListImageRecipesRequest.
 func (mr *MockImagebuilderAPIMockRecorder) ListImageRecipesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImageRecipesRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImageRecipesRequest), arg0)
 }
 
-// ListImageRecipesWithContext mocks base method
+// ListImageRecipesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListImageRecipesWithContext(arg0 context.Context, arg1 *imagebuilder.ListImageRecipesInput, arg2 ...request.Option) (*imagebuilder.ListImageRecipesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2042,14 +2126,14 @@ func (m *MockImagebuilderAPI) ListImageRecipesWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListImageRecipesWithContext indicates an expected call of ListImageRecipesWithContext
+// ListImageRecipesWithContext indicates an expected call of ListImageRecipesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListImageRecipesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImageRecipesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImageRecipesWithContext), varargs...)
 }
 
-// ListImages mocks base method
+// ListImages mocks base method.
 func (m *MockImagebuilderAPI) ListImages(arg0 *imagebuilder.ListImagesInput) (*imagebuilder.ListImagesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImages", arg0)
@@ -2058,13 +2142,13 @@ func (m *MockImagebuilderAPI) ListImages(arg0 *imagebuilder.ListImagesInput) (*i
 	return ret0, ret1
 }
 
-// ListImages indicates an expected call of ListImages
+// ListImages indicates an expected call of ListImages.
 func (mr *MockImagebuilderAPIMockRecorder) ListImages(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImages), arg0)
 }
 
-// ListImagesPages mocks base method
+// ListImagesPages mocks base method.
 func (m *MockImagebuilderAPI) ListImagesPages(arg0 *imagebuilder.ListImagesInput, arg1 func(*imagebuilder.ListImagesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImagesPages", arg0, arg1)
@@ -2072,13 +2156,13 @@ func (m *MockImagebuilderAPI) ListImagesPages(arg0 *imagebuilder.ListImagesInput
 	return ret0
 }
 
-// ListImagesPages indicates an expected call of ListImagesPages
+// ListImagesPages indicates an expected call of ListImagesPages.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagesPages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagesPages), arg0, arg1)
 }
 
-// ListImagesPagesWithContext mocks base method
+// ListImagesPagesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListImagesPagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListImagesInput, arg2 func(*imagebuilder.ListImagesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2090,14 +2174,14 @@ func (m *MockImagebuilderAPI) ListImagesPagesWithContext(arg0 context.Context, a
 	return ret0
 }
 
-// ListImagesPagesWithContext indicates an expected call of ListImagesPagesWithContext
+// ListImagesPagesWithContext indicates an expected call of ListImagesPagesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagesPagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagesPagesWithContext), varargs...)
 }
 
-// ListImagesRequest mocks base method
+// ListImagesRequest mocks base method.
 func (m *MockImagebuilderAPI) ListImagesRequest(arg0 *imagebuilder.ListImagesInput) (*request.Request, *imagebuilder.ListImagesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListImagesRequest", arg0)
@@ -2106,13 +2190,13 @@ func (m *MockImagebuilderAPI) ListImagesRequest(arg0 *imagebuilder.ListImagesInp
 	return ret0, ret1
 }
 
-// ListImagesRequest indicates an expected call of ListImagesRequest
+// ListImagesRequest indicates an expected call of ListImagesRequest.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagesRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagesRequest), arg0)
 }
 
-// ListImagesWithContext mocks base method
+// ListImagesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListImagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListImagesInput, arg2 ...request.Option) (*imagebuilder.ListImagesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2125,14 +2209,14 @@ func (m *MockImagebuilderAPI) ListImagesWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ListImagesWithContext indicates an expected call of ListImagesWithContext
+// ListImagesWithContext indicates an expected call of ListImagesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListImagesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListImagesWithContext), varargs...)
 }
 
-// ListInfrastructureConfigurations mocks base method
+// ListInfrastructureConfigurations mocks base method.
 func (m *MockImagebuilderAPI) ListInfrastructureConfigurations(arg0 *imagebuilder.ListInfrastructureConfigurationsInput) (*imagebuilder.ListInfrastructureConfigurationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInfrastructureConfigurations", arg0)
@@ -2141,13 +2225,13 @@ func (m *MockImagebuilderAPI) ListInfrastructureConfigurations(arg0 *imagebuilde
 	return ret0, ret1
 }
 
-// ListInfrastructureConfigurations indicates an expected call of ListInfrastructureConfigurations
+// ListInfrastructureConfigurations indicates an expected call of ListInfrastructureConfigurations.
 func (mr *MockImagebuilderAPIMockRecorder) ListInfrastructureConfigurations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInfrastructureConfigurations", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListInfrastructureConfigurations), arg0)
 }
 
-// ListInfrastructureConfigurationsPages mocks base method
+// ListInfrastructureConfigurationsPages mocks base method.
 func (m *MockImagebuilderAPI) ListInfrastructureConfigurationsPages(arg0 *imagebuilder.ListInfrastructureConfigurationsInput, arg1 func(*imagebuilder.ListInfrastructureConfigurationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInfrastructureConfigurationsPages", arg0, arg1)
@@ -2155,13 +2239,13 @@ func (m *MockImagebuilderAPI) ListInfrastructureConfigurationsPages(arg0 *imageb
 	return ret0
 }
 
-// ListInfrastructureConfigurationsPages indicates an expected call of ListInfrastructureConfigurationsPages
+// ListInfrastructureConfigurationsPages indicates an expected call of ListInfrastructureConfigurationsPages.
 func (mr *MockImagebuilderAPIMockRecorder) ListInfrastructureConfigurationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInfrastructureConfigurationsPages", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListInfrastructureConfigurationsPages), arg0, arg1)
 }
 
-// ListInfrastructureConfigurationsPagesWithContext mocks base method
+// ListInfrastructureConfigurationsPagesWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListInfrastructureConfigurationsPagesWithContext(arg0 context.Context, arg1 *imagebuilder.ListInfrastructureConfigurationsInput, arg2 func(*imagebuilder.ListInfrastructureConfigurationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2173,14 +2257,14 @@ func (m *MockImagebuilderAPI) ListInfrastructureConfigurationsPagesWithContext(a
 	return ret0
 }
 
-// ListInfrastructureConfigurationsPagesWithContext indicates an expected call of ListInfrastructureConfigurationsPagesWithContext
+// ListInfrastructureConfigurationsPagesWithContext indicates an expected call of ListInfrastructureConfigurationsPagesWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListInfrastructureConfigurationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInfrastructureConfigurationsPagesWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListInfrastructureConfigurationsPagesWithContext), varargs...)
 }
 
-// ListInfrastructureConfigurationsRequest mocks base method
+// ListInfrastructureConfigurationsRequest mocks base method.
 func (m *MockImagebuilderAPI) ListInfrastructureConfigurationsRequest(arg0 *imagebuilder.ListInfrastructureConfigurationsInput) (*request.Request, *imagebuilder.ListInfrastructureConfigurationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInfrastructureConfigurationsRequest", arg0)
@@ -2189,13 +2273,13 @@ func (m *MockImagebuilderAPI) ListInfrastructureConfigurationsRequest(arg0 *imag
 	return ret0, ret1
 }
 
-// ListInfrastructureConfigurationsRequest indicates an expected call of ListInfrastructureConfigurationsRequest
+// ListInfrastructureConfigurationsRequest indicates an expected call of ListInfrastructureConfigurationsRequest.
 func (mr *MockImagebuilderAPIMockRecorder) ListInfrastructureConfigurationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInfrastructureConfigurationsRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListInfrastructureConfigurationsRequest), arg0)
 }
 
-// ListInfrastructureConfigurationsWithContext mocks base method
+// ListInfrastructureConfigurationsWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListInfrastructureConfigurationsWithContext(arg0 context.Context, arg1 *imagebuilder.ListInfrastructureConfigurationsInput, arg2 ...request.Option) (*imagebuilder.ListInfrastructureConfigurationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2208,14 +2292,14 @@ func (m *MockImagebuilderAPI) ListInfrastructureConfigurationsWithContext(arg0 c
 	return ret0, ret1
 }
 
-// ListInfrastructureConfigurationsWithContext indicates an expected call of ListInfrastructureConfigurationsWithContext
+// ListInfrastructureConfigurationsWithContext indicates an expected call of ListInfrastructureConfigurationsWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListInfrastructureConfigurationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInfrastructureConfigurationsWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListInfrastructureConfigurationsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockImagebuilderAPI) ListTagsForResource(arg0 *imagebuilder.ListTagsForResourceInput) (*imagebuilder.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -2224,13 +2308,13 @@ func (m *MockImagebuilderAPI) ListTagsForResource(arg0 *imagebuilder.ListTagsFor
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockImagebuilderAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockImagebuilderAPI) ListTagsForResourceRequest(arg0 *imagebuilder.ListTagsForResourceInput) (*request.Request, *imagebuilder.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -2239,13 +2323,13 @@ func (m *MockImagebuilderAPI) ListTagsForResourceRequest(arg0 *imagebuilder.List
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockImagebuilderAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockImagebuilderAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *imagebuilder.ListTagsForResourceInput, arg2 ...request.Option) (*imagebuilder.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2258,14 +2342,14 @@ func (m *MockImagebuilderAPI) ListTagsForResourceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PutComponentPolicy mocks base method
+// PutComponentPolicy mocks base method.
 func (m *MockImagebuilderAPI) PutComponentPolicy(arg0 *imagebuilder.PutComponentPolicyInput) (*imagebuilder.PutComponentPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutComponentPolicy", arg0)
@@ -2274,13 +2358,13 @@ func (m *MockImagebuilderAPI) PutComponentPolicy(arg0 *imagebuilder.PutComponent
 	return ret0, ret1
 }
 
-// PutComponentPolicy indicates an expected call of PutComponentPolicy
+// PutComponentPolicy indicates an expected call of PutComponentPolicy.
 func (mr *MockImagebuilderAPIMockRecorder) PutComponentPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutComponentPolicy", reflect.TypeOf((*MockImagebuilderAPI)(nil).PutComponentPolicy), arg0)
 }
 
-// PutComponentPolicyRequest mocks base method
+// PutComponentPolicyRequest mocks base method.
 func (m *MockImagebuilderAPI) PutComponentPolicyRequest(arg0 *imagebuilder.PutComponentPolicyInput) (*request.Request, *imagebuilder.PutComponentPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutComponentPolicyRequest", arg0)
@@ -2289,13 +2373,13 @@ func (m *MockImagebuilderAPI) PutComponentPolicyRequest(arg0 *imagebuilder.PutCo
 	return ret0, ret1
 }
 
-// PutComponentPolicyRequest indicates an expected call of PutComponentPolicyRequest
+// PutComponentPolicyRequest indicates an expected call of PutComponentPolicyRequest.
 func (mr *MockImagebuilderAPIMockRecorder) PutComponentPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutComponentPolicyRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).PutComponentPolicyRequest), arg0)
 }
 
-// PutComponentPolicyWithContext mocks base method
+// PutComponentPolicyWithContext mocks base method.
 func (m *MockImagebuilderAPI) PutComponentPolicyWithContext(arg0 context.Context, arg1 *imagebuilder.PutComponentPolicyInput, arg2 ...request.Option) (*imagebuilder.PutComponentPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2308,14 +2392,14 @@ func (m *MockImagebuilderAPI) PutComponentPolicyWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// PutComponentPolicyWithContext indicates an expected call of PutComponentPolicyWithContext
+// PutComponentPolicyWithContext indicates an expected call of PutComponentPolicyWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) PutComponentPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutComponentPolicyWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).PutComponentPolicyWithContext), varargs...)
 }
 
-// PutContainerRecipePolicy mocks base method
+// PutContainerRecipePolicy mocks base method.
 func (m *MockImagebuilderAPI) PutContainerRecipePolicy(arg0 *imagebuilder.PutContainerRecipePolicyInput) (*imagebuilder.PutContainerRecipePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutContainerRecipePolicy", arg0)
@@ -2324,13 +2408,13 @@ func (m *MockImagebuilderAPI) PutContainerRecipePolicy(arg0 *imagebuilder.PutCon
 	return ret0, ret1
 }
 
-// PutContainerRecipePolicy indicates an expected call of PutContainerRecipePolicy
+// PutContainerRecipePolicy indicates an expected call of PutContainerRecipePolicy.
 func (mr *MockImagebuilderAPIMockRecorder) PutContainerRecipePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutContainerRecipePolicy", reflect.TypeOf((*MockImagebuilderAPI)(nil).PutContainerRecipePolicy), arg0)
 }
 
-// PutContainerRecipePolicyRequest mocks base method
+// PutContainerRecipePolicyRequest mocks base method.
 func (m *MockImagebuilderAPI) PutContainerRecipePolicyRequest(arg0 *imagebuilder.PutContainerRecipePolicyInput) (*request.Request, *imagebuilder.PutContainerRecipePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutContainerRecipePolicyRequest", arg0)
@@ -2339,13 +2423,13 @@ func (m *MockImagebuilderAPI) PutContainerRecipePolicyRequest(arg0 *imagebuilder
 	return ret0, ret1
 }
 
-// PutContainerRecipePolicyRequest indicates an expected call of PutContainerRecipePolicyRequest
+// PutContainerRecipePolicyRequest indicates an expected call of PutContainerRecipePolicyRequest.
 func (mr *MockImagebuilderAPIMockRecorder) PutContainerRecipePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutContainerRecipePolicyRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).PutContainerRecipePolicyRequest), arg0)
 }
 
-// PutContainerRecipePolicyWithContext mocks base method
+// PutContainerRecipePolicyWithContext mocks base method.
 func (m *MockImagebuilderAPI) PutContainerRecipePolicyWithContext(arg0 context.Context, arg1 *imagebuilder.PutContainerRecipePolicyInput, arg2 ...request.Option) (*imagebuilder.PutContainerRecipePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2358,14 +2442,14 @@ func (m *MockImagebuilderAPI) PutContainerRecipePolicyWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// PutContainerRecipePolicyWithContext indicates an expected call of PutContainerRecipePolicyWithContext
+// PutContainerRecipePolicyWithContext indicates an expected call of PutContainerRecipePolicyWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) PutContainerRecipePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutContainerRecipePolicyWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).PutContainerRecipePolicyWithContext), varargs...)
 }
 
-// PutImagePolicy mocks base method
+// PutImagePolicy mocks base method.
 func (m *MockImagebuilderAPI) PutImagePolicy(arg0 *imagebuilder.PutImagePolicyInput) (*imagebuilder.PutImagePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutImagePolicy", arg0)
@@ -2374,13 +2458,13 @@ func (m *MockImagebuilderAPI) PutImagePolicy(arg0 *imagebuilder.PutImagePolicyIn
 	return ret0, ret1
 }
 
-// PutImagePolicy indicates an expected call of PutImagePolicy
+// PutImagePolicy indicates an expected call of PutImagePolicy.
 func (mr *MockImagebuilderAPIMockRecorder) PutImagePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutImagePolicy", reflect.TypeOf((*MockImagebuilderAPI)(nil).PutImagePolicy), arg0)
 }
 
-// PutImagePolicyRequest mocks base method
+// PutImagePolicyRequest mocks base method.
 func (m *MockImagebuilderAPI) PutImagePolicyRequest(arg0 *imagebuilder.PutImagePolicyInput) (*request.Request, *imagebuilder.PutImagePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutImagePolicyRequest", arg0)
@@ -2389,13 +2473,13 @@ func (m *MockImagebuilderAPI) PutImagePolicyRequest(arg0 *imagebuilder.PutImageP
 	return ret0, ret1
 }
 
-// PutImagePolicyRequest indicates an expected call of PutImagePolicyRequest
+// PutImagePolicyRequest indicates an expected call of PutImagePolicyRequest.
 func (mr *MockImagebuilderAPIMockRecorder) PutImagePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutImagePolicyRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).PutImagePolicyRequest), arg0)
 }
 
-// PutImagePolicyWithContext mocks base method
+// PutImagePolicyWithContext mocks base method.
 func (m *MockImagebuilderAPI) PutImagePolicyWithContext(arg0 context.Context, arg1 *imagebuilder.PutImagePolicyInput, arg2 ...request.Option) (*imagebuilder.PutImagePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2408,14 +2492,14 @@ func (m *MockImagebuilderAPI) PutImagePolicyWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// PutImagePolicyWithContext indicates an expected call of PutImagePolicyWithContext
+// PutImagePolicyWithContext indicates an expected call of PutImagePolicyWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) PutImagePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutImagePolicyWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).PutImagePolicyWithContext), varargs...)
 }
 
-// PutImageRecipePolicy mocks base method
+// PutImageRecipePolicy mocks base method.
 func (m *MockImagebuilderAPI) PutImageRecipePolicy(arg0 *imagebuilder.PutImageRecipePolicyInput) (*imagebuilder.PutImageRecipePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutImageRecipePolicy", arg0)
@@ -2424,13 +2508,13 @@ func (m *MockImagebuilderAPI) PutImageRecipePolicy(arg0 *imagebuilder.PutImageRe
 	return ret0, ret1
 }
 
-// PutImageRecipePolicy indicates an expected call of PutImageRecipePolicy
+// PutImageRecipePolicy indicates an expected call of PutImageRecipePolicy.
 func (mr *MockImagebuilderAPIMockRecorder) PutImageRecipePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutImageRecipePolicy", reflect.TypeOf((*MockImagebuilderAPI)(nil).PutImageRecipePolicy), arg0)
 }
 
-// PutImageRecipePolicyRequest mocks base method
+// PutImageRecipePolicyRequest mocks base method.
 func (m *MockImagebuilderAPI) PutImageRecipePolicyRequest(arg0 *imagebuilder.PutImageRecipePolicyInput) (*request.Request, *imagebuilder.PutImageRecipePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutImageRecipePolicyRequest", arg0)
@@ -2439,13 +2523,13 @@ func (m *MockImagebuilderAPI) PutImageRecipePolicyRequest(arg0 *imagebuilder.Put
 	return ret0, ret1
 }
 
-// PutImageRecipePolicyRequest indicates an expected call of PutImageRecipePolicyRequest
+// PutImageRecipePolicyRequest indicates an expected call of PutImageRecipePolicyRequest.
 func (mr *MockImagebuilderAPIMockRecorder) PutImageRecipePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutImageRecipePolicyRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).PutImageRecipePolicyRequest), arg0)
 }
 
-// PutImageRecipePolicyWithContext mocks base method
+// PutImageRecipePolicyWithContext mocks base method.
 func (m *MockImagebuilderAPI) PutImageRecipePolicyWithContext(arg0 context.Context, arg1 *imagebuilder.PutImageRecipePolicyInput, arg2 ...request.Option) (*imagebuilder.PutImageRecipePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2458,14 +2542,14 @@ func (m *MockImagebuilderAPI) PutImageRecipePolicyWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// PutImageRecipePolicyWithContext indicates an expected call of PutImageRecipePolicyWithContext
+// PutImageRecipePolicyWithContext indicates an expected call of PutImageRecipePolicyWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) PutImageRecipePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutImageRecipePolicyWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).PutImageRecipePolicyWithContext), varargs...)
 }
 
-// StartImagePipelineExecution mocks base method
+// StartImagePipelineExecution mocks base method.
 func (m *MockImagebuilderAPI) StartImagePipelineExecution(arg0 *imagebuilder.StartImagePipelineExecutionInput) (*imagebuilder.StartImagePipelineExecutionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartImagePipelineExecution", arg0)
@@ -2474,13 +2558,13 @@ func (m *MockImagebuilderAPI) StartImagePipelineExecution(arg0 *imagebuilder.Sta
 	return ret0, ret1
 }
 
-// StartImagePipelineExecution indicates an expected call of StartImagePipelineExecution
+// StartImagePipelineExecution indicates an expected call of StartImagePipelineExecution.
 func (mr *MockImagebuilderAPIMockRecorder) StartImagePipelineExecution(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartImagePipelineExecution", reflect.TypeOf((*MockImagebuilderAPI)(nil).StartImagePipelineExecution), arg0)
 }
 
-// StartImagePipelineExecutionRequest mocks base method
+// StartImagePipelineExecutionRequest mocks base method.
 func (m *MockImagebuilderAPI) StartImagePipelineExecutionRequest(arg0 *imagebuilder.StartImagePipelineExecutionInput) (*request.Request, *imagebuilder.StartImagePipelineExecutionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartImagePipelineExecutionRequest", arg0)
@@ -2489,13 +2573,13 @@ func (m *MockImagebuilderAPI) StartImagePipelineExecutionRequest(arg0 *imagebuil
 	return ret0, ret1
 }
 
-// StartImagePipelineExecutionRequest indicates an expected call of StartImagePipelineExecutionRequest
+// StartImagePipelineExecutionRequest indicates an expected call of StartImagePipelineExecutionRequest.
 func (mr *MockImagebuilderAPIMockRecorder) StartImagePipelineExecutionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartImagePipelineExecutionRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).StartImagePipelineExecutionRequest), arg0)
 }
 
-// StartImagePipelineExecutionWithContext mocks base method
+// StartImagePipelineExecutionWithContext mocks base method.
 func (m *MockImagebuilderAPI) StartImagePipelineExecutionWithContext(arg0 context.Context, arg1 *imagebuilder.StartImagePipelineExecutionInput, arg2 ...request.Option) (*imagebuilder.StartImagePipelineExecutionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2508,14 +2592,14 @@ func (m *MockImagebuilderAPI) StartImagePipelineExecutionWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// StartImagePipelineExecutionWithContext indicates an expected call of StartImagePipelineExecutionWithContext
+// StartImagePipelineExecutionWithContext indicates an expected call of StartImagePipelineExecutionWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) StartImagePipelineExecutionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartImagePipelineExecutionWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).StartImagePipelineExecutionWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockImagebuilderAPI) TagResource(arg0 *imagebuilder.TagResourceInput) (*imagebuilder.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -2524,13 +2608,13 @@ func (m *MockImagebuilderAPI) TagResource(arg0 *imagebuilder.TagResourceInput) (
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockImagebuilderAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockImagebuilderAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockImagebuilderAPI) TagResourceRequest(arg0 *imagebuilder.TagResourceInput) (*request.Request, *imagebuilder.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -2539,13 +2623,13 @@ func (m *MockImagebuilderAPI) TagResourceRequest(arg0 *imagebuilder.TagResourceI
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockImagebuilderAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockImagebuilderAPI) TagResourceWithContext(arg0 context.Context, arg1 *imagebuilder.TagResourceInput, arg2 ...request.Option) (*imagebuilder.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2558,14 +2642,14 @@ func (m *MockImagebuilderAPI) TagResourceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockImagebuilderAPI) UntagResource(arg0 *imagebuilder.UntagResourceInput) (*imagebuilder.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -2574,13 +2658,13 @@ func (m *MockImagebuilderAPI) UntagResource(arg0 *imagebuilder.UntagResourceInpu
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockImagebuilderAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockImagebuilderAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockImagebuilderAPI) UntagResourceRequest(arg0 *imagebuilder.UntagResourceInput) (*request.Request, *imagebuilder.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -2589,13 +2673,13 @@ func (m *MockImagebuilderAPI) UntagResourceRequest(arg0 *imagebuilder.UntagResou
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockImagebuilderAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockImagebuilderAPI) UntagResourceWithContext(arg0 context.Context, arg1 *imagebuilder.UntagResourceInput, arg2 ...request.Option) (*imagebuilder.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2608,14 +2692,14 @@ func (m *MockImagebuilderAPI) UntagResourceWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateDistributionConfiguration mocks base method
+// UpdateDistributionConfiguration mocks base method.
 func (m *MockImagebuilderAPI) UpdateDistributionConfiguration(arg0 *imagebuilder.UpdateDistributionConfigurationInput) (*imagebuilder.UpdateDistributionConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDistributionConfiguration", arg0)
@@ -2624,13 +2708,13 @@ func (m *MockImagebuilderAPI) UpdateDistributionConfiguration(arg0 *imagebuilder
 	return ret0, ret1
 }
 
-// UpdateDistributionConfiguration indicates an expected call of UpdateDistributionConfiguration
+// UpdateDistributionConfiguration indicates an expected call of UpdateDistributionConfiguration.
 func (mr *MockImagebuilderAPIMockRecorder) UpdateDistributionConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDistributionConfiguration", reflect.TypeOf((*MockImagebuilderAPI)(nil).UpdateDistributionConfiguration), arg0)
 }
 
-// UpdateDistributionConfigurationRequest mocks base method
+// UpdateDistributionConfigurationRequest mocks base method.
 func (m *MockImagebuilderAPI) UpdateDistributionConfigurationRequest(arg0 *imagebuilder.UpdateDistributionConfigurationInput) (*request.Request, *imagebuilder.UpdateDistributionConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDistributionConfigurationRequest", arg0)
@@ -2639,13 +2723,13 @@ func (m *MockImagebuilderAPI) UpdateDistributionConfigurationRequest(arg0 *image
 	return ret0, ret1
 }
 
-// UpdateDistributionConfigurationRequest indicates an expected call of UpdateDistributionConfigurationRequest
+// UpdateDistributionConfigurationRequest indicates an expected call of UpdateDistributionConfigurationRequest.
 func (mr *MockImagebuilderAPIMockRecorder) UpdateDistributionConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDistributionConfigurationRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).UpdateDistributionConfigurationRequest), arg0)
 }
 
-// UpdateDistributionConfigurationWithContext mocks base method
+// UpdateDistributionConfigurationWithContext mocks base method.
 func (m *MockImagebuilderAPI) UpdateDistributionConfigurationWithContext(arg0 context.Context, arg1 *imagebuilder.UpdateDistributionConfigurationInput, arg2 ...request.Option) (*imagebuilder.UpdateDistributionConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2658,14 +2742,14 @@ func (m *MockImagebuilderAPI) UpdateDistributionConfigurationWithContext(arg0 co
 	return ret0, ret1
 }
 
-// UpdateDistributionConfigurationWithContext indicates an expected call of UpdateDistributionConfigurationWithContext
+// UpdateDistributionConfigurationWithContext indicates an expected call of UpdateDistributionConfigurationWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) UpdateDistributionConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDistributionConfigurationWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).UpdateDistributionConfigurationWithContext), varargs...)
 }
 
-// UpdateImagePipeline mocks base method
+// UpdateImagePipeline mocks base method.
 func (m *MockImagebuilderAPI) UpdateImagePipeline(arg0 *imagebuilder.UpdateImagePipelineInput) (*imagebuilder.UpdateImagePipelineOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateImagePipeline", arg0)
@@ -2674,13 +2758,13 @@ func (m *MockImagebuilderAPI) UpdateImagePipeline(arg0 *imagebuilder.UpdateImage
 	return ret0, ret1
 }
 
-// UpdateImagePipeline indicates an expected call of UpdateImagePipeline
+// UpdateImagePipeline indicates an expected call of UpdateImagePipeline.
 func (mr *MockImagebuilderAPIMockRecorder) UpdateImagePipeline(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateImagePipeline", reflect.TypeOf((*MockImagebuilderAPI)(nil).UpdateImagePipeline), arg0)
 }
 
-// UpdateImagePipelineRequest mocks base method
+// UpdateImagePipelineRequest mocks base method.
 func (m *MockImagebuilderAPI) UpdateImagePipelineRequest(arg0 *imagebuilder.UpdateImagePipelineInput) (*request.Request, *imagebuilder.UpdateImagePipelineOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateImagePipelineRequest", arg0)
@@ -2689,13 +2773,13 @@ func (m *MockImagebuilderAPI) UpdateImagePipelineRequest(arg0 *imagebuilder.Upda
 	return ret0, ret1
 }
 
-// UpdateImagePipelineRequest indicates an expected call of UpdateImagePipelineRequest
+// UpdateImagePipelineRequest indicates an expected call of UpdateImagePipelineRequest.
 func (mr *MockImagebuilderAPIMockRecorder) UpdateImagePipelineRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateImagePipelineRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).UpdateImagePipelineRequest), arg0)
 }
 
-// UpdateImagePipelineWithContext mocks base method
+// UpdateImagePipelineWithContext mocks base method.
 func (m *MockImagebuilderAPI) UpdateImagePipelineWithContext(arg0 context.Context, arg1 *imagebuilder.UpdateImagePipelineInput, arg2 ...request.Option) (*imagebuilder.UpdateImagePipelineOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2708,14 +2792,14 @@ func (m *MockImagebuilderAPI) UpdateImagePipelineWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// UpdateImagePipelineWithContext indicates an expected call of UpdateImagePipelineWithContext
+// UpdateImagePipelineWithContext indicates an expected call of UpdateImagePipelineWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) UpdateImagePipelineWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateImagePipelineWithContext", reflect.TypeOf((*MockImagebuilderAPI)(nil).UpdateImagePipelineWithContext), varargs...)
 }
 
-// UpdateInfrastructureConfiguration mocks base method
+// UpdateInfrastructureConfiguration mocks base method.
 func (m *MockImagebuilderAPI) UpdateInfrastructureConfiguration(arg0 *imagebuilder.UpdateInfrastructureConfigurationInput) (*imagebuilder.UpdateInfrastructureConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateInfrastructureConfiguration", arg0)
@@ -2724,13 +2808,13 @@ func (m *MockImagebuilderAPI) UpdateInfrastructureConfiguration(arg0 *imagebuild
 	return ret0, ret1
 }
 
-// UpdateInfrastructureConfiguration indicates an expected call of UpdateInfrastructureConfiguration
+// UpdateInfrastructureConfiguration indicates an expected call of UpdateInfrastructureConfiguration.
 func (mr *MockImagebuilderAPIMockRecorder) UpdateInfrastructureConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInfrastructureConfiguration", reflect.TypeOf((*MockImagebuilderAPI)(nil).UpdateInfrastructureConfiguration), arg0)
 }
 
-// UpdateInfrastructureConfigurationRequest mocks base method
+// UpdateInfrastructureConfigurationRequest mocks base method.
 func (m *MockImagebuilderAPI) UpdateInfrastructureConfigurationRequest(arg0 *imagebuilder.UpdateInfrastructureConfigurationInput) (*request.Request, *imagebuilder.UpdateInfrastructureConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateInfrastructureConfigurationRequest", arg0)
@@ -2739,13 +2823,13 @@ func (m *MockImagebuilderAPI) UpdateInfrastructureConfigurationRequest(arg0 *ima
 	return ret0, ret1
 }
 
-// UpdateInfrastructureConfigurationRequest indicates an expected call of UpdateInfrastructureConfigurationRequest
+// UpdateInfrastructureConfigurationRequest indicates an expected call of UpdateInfrastructureConfigurationRequest.
 func (mr *MockImagebuilderAPIMockRecorder) UpdateInfrastructureConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInfrastructureConfigurationRequest", reflect.TypeOf((*MockImagebuilderAPI)(nil).UpdateInfrastructureConfigurationRequest), arg0)
 }
 
-// UpdateInfrastructureConfigurationWithContext mocks base method
+// UpdateInfrastructureConfigurationWithContext mocks base method.
 func (m *MockImagebuilderAPI) UpdateInfrastructureConfigurationWithContext(arg0 context.Context, arg1 *imagebuilder.UpdateInfrastructureConfigurationInput, arg2 ...request.Option) (*imagebuilder.UpdateInfrastructureConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2758,7 +2842,7 @@ func (m *MockImagebuilderAPI) UpdateInfrastructureConfigurationWithContext(arg0 
 	return ret0, ret1
 }
 
-// UpdateInfrastructureConfigurationWithContext indicates an expected call of UpdateInfrastructureConfigurationWithContext
+// UpdateInfrastructureConfigurationWithContext indicates an expected call of UpdateInfrastructureConfigurationWithContext.
 func (mr *MockImagebuilderAPIMockRecorder) UpdateInfrastructureConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

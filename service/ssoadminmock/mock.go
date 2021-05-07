@@ -6,36 +6,37 @@ package ssoadminmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	ssoadmin "github.com/aws/aws-sdk-go/service/ssoadmin"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockSSOAdminAPI is a mock of SSOAdminAPI interface
+// MockSSOAdminAPI is a mock of SSOAdminAPI interface.
 type MockSSOAdminAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockSSOAdminAPIMockRecorder
 }
 
-// MockSSOAdminAPIMockRecorder is the mock recorder for MockSSOAdminAPI
+// MockSSOAdminAPIMockRecorder is the mock recorder for MockSSOAdminAPI.
 type MockSSOAdminAPIMockRecorder struct {
 	mock *MockSSOAdminAPI
 }
 
-// NewMockSSOAdminAPI creates a new mock instance
+// NewMockSSOAdminAPI creates a new mock instance.
 func NewMockSSOAdminAPI(ctrl *gomock.Controller) *MockSSOAdminAPI {
 	mock := &MockSSOAdminAPI{ctrl: ctrl}
 	mock.recorder = &MockSSOAdminAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockSSOAdminAPI) EXPECT() *MockSSOAdminAPIMockRecorder {
 	return m.recorder
 }
 
-// AttachManagedPolicyToPermissionSet mocks base method
+// AttachManagedPolicyToPermissionSet mocks base method.
 func (m *MockSSOAdminAPI) AttachManagedPolicyToPermissionSet(arg0 *ssoadmin.AttachManagedPolicyToPermissionSetInput) (*ssoadmin.AttachManagedPolicyToPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AttachManagedPolicyToPermissionSet", arg0)
@@ -44,13 +45,13 @@ func (m *MockSSOAdminAPI) AttachManagedPolicyToPermissionSet(arg0 *ssoadmin.Atta
 	return ret0, ret1
 }
 
-// AttachManagedPolicyToPermissionSet indicates an expected call of AttachManagedPolicyToPermissionSet
+// AttachManagedPolicyToPermissionSet indicates an expected call of AttachManagedPolicyToPermissionSet.
 func (mr *MockSSOAdminAPIMockRecorder) AttachManagedPolicyToPermissionSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachManagedPolicyToPermissionSet", reflect.TypeOf((*MockSSOAdminAPI)(nil).AttachManagedPolicyToPermissionSet), arg0)
 }
 
-// AttachManagedPolicyToPermissionSetRequest mocks base method
+// AttachManagedPolicyToPermissionSetRequest mocks base method.
 func (m *MockSSOAdminAPI) AttachManagedPolicyToPermissionSetRequest(arg0 *ssoadmin.AttachManagedPolicyToPermissionSetInput) (*request.Request, *ssoadmin.AttachManagedPolicyToPermissionSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AttachManagedPolicyToPermissionSetRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockSSOAdminAPI) AttachManagedPolicyToPermissionSetRequest(arg0 *ssoadm
 	return ret0, ret1
 }
 
-// AttachManagedPolicyToPermissionSetRequest indicates an expected call of AttachManagedPolicyToPermissionSetRequest
+// AttachManagedPolicyToPermissionSetRequest indicates an expected call of AttachManagedPolicyToPermissionSetRequest.
 func (mr *MockSSOAdminAPIMockRecorder) AttachManagedPolicyToPermissionSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachManagedPolicyToPermissionSetRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).AttachManagedPolicyToPermissionSetRequest), arg0)
 }
 
-// AttachManagedPolicyToPermissionSetWithContext mocks base method
+// AttachManagedPolicyToPermissionSetWithContext mocks base method.
 func (m *MockSSOAdminAPI) AttachManagedPolicyToPermissionSetWithContext(arg0 context.Context, arg1 *ssoadmin.AttachManagedPolicyToPermissionSetInput, arg2 ...request.Option) (*ssoadmin.AttachManagedPolicyToPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockSSOAdminAPI) AttachManagedPolicyToPermissionSetWithContext(arg0 con
 	return ret0, ret1
 }
 
-// AttachManagedPolicyToPermissionSetWithContext indicates an expected call of AttachManagedPolicyToPermissionSetWithContext
+// AttachManagedPolicyToPermissionSetWithContext indicates an expected call of AttachManagedPolicyToPermissionSetWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) AttachManagedPolicyToPermissionSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachManagedPolicyToPermissionSetWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).AttachManagedPolicyToPermissionSetWithContext), varargs...)
 }
 
-// CreateAccountAssignment mocks base method
+// CreateAccountAssignment mocks base method.
 func (m *MockSSOAdminAPI) CreateAccountAssignment(arg0 *ssoadmin.CreateAccountAssignmentInput) (*ssoadmin.CreateAccountAssignmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAccountAssignment", arg0)
@@ -94,13 +95,13 @@ func (m *MockSSOAdminAPI) CreateAccountAssignment(arg0 *ssoadmin.CreateAccountAs
 	return ret0, ret1
 }
 
-// CreateAccountAssignment indicates an expected call of CreateAccountAssignment
+// CreateAccountAssignment indicates an expected call of CreateAccountAssignment.
 func (mr *MockSSOAdminAPIMockRecorder) CreateAccountAssignment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAccountAssignment", reflect.TypeOf((*MockSSOAdminAPI)(nil).CreateAccountAssignment), arg0)
 }
 
-// CreateAccountAssignmentRequest mocks base method
+// CreateAccountAssignmentRequest mocks base method.
 func (m *MockSSOAdminAPI) CreateAccountAssignmentRequest(arg0 *ssoadmin.CreateAccountAssignmentInput) (*request.Request, *ssoadmin.CreateAccountAssignmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAccountAssignmentRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockSSOAdminAPI) CreateAccountAssignmentRequest(arg0 *ssoadmin.CreateAc
 	return ret0, ret1
 }
 
-// CreateAccountAssignmentRequest indicates an expected call of CreateAccountAssignmentRequest
+// CreateAccountAssignmentRequest indicates an expected call of CreateAccountAssignmentRequest.
 func (mr *MockSSOAdminAPIMockRecorder) CreateAccountAssignmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAccountAssignmentRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).CreateAccountAssignmentRequest), arg0)
 }
 
-// CreateAccountAssignmentWithContext mocks base method
+// CreateAccountAssignmentWithContext mocks base method.
 func (m *MockSSOAdminAPI) CreateAccountAssignmentWithContext(arg0 context.Context, arg1 *ssoadmin.CreateAccountAssignmentInput, arg2 ...request.Option) (*ssoadmin.CreateAccountAssignmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockSSOAdminAPI) CreateAccountAssignmentWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CreateAccountAssignmentWithContext indicates an expected call of CreateAccountAssignmentWithContext
+// CreateAccountAssignmentWithContext indicates an expected call of CreateAccountAssignmentWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) CreateAccountAssignmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAccountAssignmentWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).CreateAccountAssignmentWithContext), varargs...)
 }
 
-// CreateInstanceAccessControlAttributeConfiguration mocks base method
+// CreateInstanceAccessControlAttributeConfiguration mocks base method.
 func (m *MockSSOAdminAPI) CreateInstanceAccessControlAttributeConfiguration(arg0 *ssoadmin.CreateInstanceAccessControlAttributeConfigurationInput) (*ssoadmin.CreateInstanceAccessControlAttributeConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInstanceAccessControlAttributeConfiguration", arg0)
@@ -144,13 +145,13 @@ func (m *MockSSOAdminAPI) CreateInstanceAccessControlAttributeConfiguration(arg0
 	return ret0, ret1
 }
 
-// CreateInstanceAccessControlAttributeConfiguration indicates an expected call of CreateInstanceAccessControlAttributeConfiguration
+// CreateInstanceAccessControlAttributeConfiguration indicates an expected call of CreateInstanceAccessControlAttributeConfiguration.
 func (mr *MockSSOAdminAPIMockRecorder) CreateInstanceAccessControlAttributeConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInstanceAccessControlAttributeConfiguration", reflect.TypeOf((*MockSSOAdminAPI)(nil).CreateInstanceAccessControlAttributeConfiguration), arg0)
 }
 
-// CreateInstanceAccessControlAttributeConfigurationRequest mocks base method
+// CreateInstanceAccessControlAttributeConfigurationRequest mocks base method.
 func (m *MockSSOAdminAPI) CreateInstanceAccessControlAttributeConfigurationRequest(arg0 *ssoadmin.CreateInstanceAccessControlAttributeConfigurationInput) (*request.Request, *ssoadmin.CreateInstanceAccessControlAttributeConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInstanceAccessControlAttributeConfigurationRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockSSOAdminAPI) CreateInstanceAccessControlAttributeConfigurationReque
 	return ret0, ret1
 }
 
-// CreateInstanceAccessControlAttributeConfigurationRequest indicates an expected call of CreateInstanceAccessControlAttributeConfigurationRequest
+// CreateInstanceAccessControlAttributeConfigurationRequest indicates an expected call of CreateInstanceAccessControlAttributeConfigurationRequest.
 func (mr *MockSSOAdminAPIMockRecorder) CreateInstanceAccessControlAttributeConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInstanceAccessControlAttributeConfigurationRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).CreateInstanceAccessControlAttributeConfigurationRequest), arg0)
 }
 
-// CreateInstanceAccessControlAttributeConfigurationWithContext mocks base method
+// CreateInstanceAccessControlAttributeConfigurationWithContext mocks base method.
 func (m *MockSSOAdminAPI) CreateInstanceAccessControlAttributeConfigurationWithContext(arg0 context.Context, arg1 *ssoadmin.CreateInstanceAccessControlAttributeConfigurationInput, arg2 ...request.Option) (*ssoadmin.CreateInstanceAccessControlAttributeConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockSSOAdminAPI) CreateInstanceAccessControlAttributeConfigurationWithC
 	return ret0, ret1
 }
 
-// CreateInstanceAccessControlAttributeConfigurationWithContext indicates an expected call of CreateInstanceAccessControlAttributeConfigurationWithContext
+// CreateInstanceAccessControlAttributeConfigurationWithContext indicates an expected call of CreateInstanceAccessControlAttributeConfigurationWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) CreateInstanceAccessControlAttributeConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInstanceAccessControlAttributeConfigurationWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).CreateInstanceAccessControlAttributeConfigurationWithContext), varargs...)
 }
 
-// CreatePermissionSet mocks base method
+// CreatePermissionSet mocks base method.
 func (m *MockSSOAdminAPI) CreatePermissionSet(arg0 *ssoadmin.CreatePermissionSetInput) (*ssoadmin.CreatePermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreatePermissionSet", arg0)
@@ -194,13 +195,13 @@ func (m *MockSSOAdminAPI) CreatePermissionSet(arg0 *ssoadmin.CreatePermissionSet
 	return ret0, ret1
 }
 
-// CreatePermissionSet indicates an expected call of CreatePermissionSet
+// CreatePermissionSet indicates an expected call of CreatePermissionSet.
 func (mr *MockSSOAdminAPIMockRecorder) CreatePermissionSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePermissionSet", reflect.TypeOf((*MockSSOAdminAPI)(nil).CreatePermissionSet), arg0)
 }
 
-// CreatePermissionSetRequest mocks base method
+// CreatePermissionSetRequest mocks base method.
 func (m *MockSSOAdminAPI) CreatePermissionSetRequest(arg0 *ssoadmin.CreatePermissionSetInput) (*request.Request, *ssoadmin.CreatePermissionSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreatePermissionSetRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockSSOAdminAPI) CreatePermissionSetRequest(arg0 *ssoadmin.CreatePermis
 	return ret0, ret1
 }
 
-// CreatePermissionSetRequest indicates an expected call of CreatePermissionSetRequest
+// CreatePermissionSetRequest indicates an expected call of CreatePermissionSetRequest.
 func (mr *MockSSOAdminAPIMockRecorder) CreatePermissionSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePermissionSetRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).CreatePermissionSetRequest), arg0)
 }
 
-// CreatePermissionSetWithContext mocks base method
+// CreatePermissionSetWithContext mocks base method.
 func (m *MockSSOAdminAPI) CreatePermissionSetWithContext(arg0 context.Context, arg1 *ssoadmin.CreatePermissionSetInput, arg2 ...request.Option) (*ssoadmin.CreatePermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockSSOAdminAPI) CreatePermissionSetWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// CreatePermissionSetWithContext indicates an expected call of CreatePermissionSetWithContext
+// CreatePermissionSetWithContext indicates an expected call of CreatePermissionSetWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) CreatePermissionSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePermissionSetWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).CreatePermissionSetWithContext), varargs...)
 }
 
-// DeleteAccountAssignment mocks base method
+// DeleteAccountAssignment mocks base method.
 func (m *MockSSOAdminAPI) DeleteAccountAssignment(arg0 *ssoadmin.DeleteAccountAssignmentInput) (*ssoadmin.DeleteAccountAssignmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAccountAssignment", arg0)
@@ -244,13 +245,13 @@ func (m *MockSSOAdminAPI) DeleteAccountAssignment(arg0 *ssoadmin.DeleteAccountAs
 	return ret0, ret1
 }
 
-// DeleteAccountAssignment indicates an expected call of DeleteAccountAssignment
+// DeleteAccountAssignment indicates an expected call of DeleteAccountAssignment.
 func (mr *MockSSOAdminAPIMockRecorder) DeleteAccountAssignment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAccountAssignment", reflect.TypeOf((*MockSSOAdminAPI)(nil).DeleteAccountAssignment), arg0)
 }
 
-// DeleteAccountAssignmentRequest mocks base method
+// DeleteAccountAssignmentRequest mocks base method.
 func (m *MockSSOAdminAPI) DeleteAccountAssignmentRequest(arg0 *ssoadmin.DeleteAccountAssignmentInput) (*request.Request, *ssoadmin.DeleteAccountAssignmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAccountAssignmentRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockSSOAdminAPI) DeleteAccountAssignmentRequest(arg0 *ssoadmin.DeleteAc
 	return ret0, ret1
 }
 
-// DeleteAccountAssignmentRequest indicates an expected call of DeleteAccountAssignmentRequest
+// DeleteAccountAssignmentRequest indicates an expected call of DeleteAccountAssignmentRequest.
 func (mr *MockSSOAdminAPIMockRecorder) DeleteAccountAssignmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAccountAssignmentRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).DeleteAccountAssignmentRequest), arg0)
 }
 
-// DeleteAccountAssignmentWithContext mocks base method
+// DeleteAccountAssignmentWithContext mocks base method.
 func (m *MockSSOAdminAPI) DeleteAccountAssignmentWithContext(arg0 context.Context, arg1 *ssoadmin.DeleteAccountAssignmentInput, arg2 ...request.Option) (*ssoadmin.DeleteAccountAssignmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockSSOAdminAPI) DeleteAccountAssignmentWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteAccountAssignmentWithContext indicates an expected call of DeleteAccountAssignmentWithContext
+// DeleteAccountAssignmentWithContext indicates an expected call of DeleteAccountAssignmentWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) DeleteAccountAssignmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAccountAssignmentWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).DeleteAccountAssignmentWithContext), varargs...)
 }
 
-// DeleteInlinePolicyFromPermissionSet mocks base method
+// DeleteInlinePolicyFromPermissionSet mocks base method.
 func (m *MockSSOAdminAPI) DeleteInlinePolicyFromPermissionSet(arg0 *ssoadmin.DeleteInlinePolicyFromPermissionSetInput) (*ssoadmin.DeleteInlinePolicyFromPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInlinePolicyFromPermissionSet", arg0)
@@ -294,13 +295,13 @@ func (m *MockSSOAdminAPI) DeleteInlinePolicyFromPermissionSet(arg0 *ssoadmin.Del
 	return ret0, ret1
 }
 
-// DeleteInlinePolicyFromPermissionSet indicates an expected call of DeleteInlinePolicyFromPermissionSet
+// DeleteInlinePolicyFromPermissionSet indicates an expected call of DeleteInlinePolicyFromPermissionSet.
 func (mr *MockSSOAdminAPIMockRecorder) DeleteInlinePolicyFromPermissionSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInlinePolicyFromPermissionSet", reflect.TypeOf((*MockSSOAdminAPI)(nil).DeleteInlinePolicyFromPermissionSet), arg0)
 }
 
-// DeleteInlinePolicyFromPermissionSetRequest mocks base method
+// DeleteInlinePolicyFromPermissionSetRequest mocks base method.
 func (m *MockSSOAdminAPI) DeleteInlinePolicyFromPermissionSetRequest(arg0 *ssoadmin.DeleteInlinePolicyFromPermissionSetInput) (*request.Request, *ssoadmin.DeleteInlinePolicyFromPermissionSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInlinePolicyFromPermissionSetRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockSSOAdminAPI) DeleteInlinePolicyFromPermissionSetRequest(arg0 *ssoad
 	return ret0, ret1
 }
 
-// DeleteInlinePolicyFromPermissionSetRequest indicates an expected call of DeleteInlinePolicyFromPermissionSetRequest
+// DeleteInlinePolicyFromPermissionSetRequest indicates an expected call of DeleteInlinePolicyFromPermissionSetRequest.
 func (mr *MockSSOAdminAPIMockRecorder) DeleteInlinePolicyFromPermissionSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInlinePolicyFromPermissionSetRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).DeleteInlinePolicyFromPermissionSetRequest), arg0)
 }
 
-// DeleteInlinePolicyFromPermissionSetWithContext mocks base method
+// DeleteInlinePolicyFromPermissionSetWithContext mocks base method.
 func (m *MockSSOAdminAPI) DeleteInlinePolicyFromPermissionSetWithContext(arg0 context.Context, arg1 *ssoadmin.DeleteInlinePolicyFromPermissionSetInput, arg2 ...request.Option) (*ssoadmin.DeleteInlinePolicyFromPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockSSOAdminAPI) DeleteInlinePolicyFromPermissionSetWithContext(arg0 co
 	return ret0, ret1
 }
 
-// DeleteInlinePolicyFromPermissionSetWithContext indicates an expected call of DeleteInlinePolicyFromPermissionSetWithContext
+// DeleteInlinePolicyFromPermissionSetWithContext indicates an expected call of DeleteInlinePolicyFromPermissionSetWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) DeleteInlinePolicyFromPermissionSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInlinePolicyFromPermissionSetWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).DeleteInlinePolicyFromPermissionSetWithContext), varargs...)
 }
 
-// DeleteInstanceAccessControlAttributeConfiguration mocks base method
+// DeleteInstanceAccessControlAttributeConfiguration mocks base method.
 func (m *MockSSOAdminAPI) DeleteInstanceAccessControlAttributeConfiguration(arg0 *ssoadmin.DeleteInstanceAccessControlAttributeConfigurationInput) (*ssoadmin.DeleteInstanceAccessControlAttributeConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInstanceAccessControlAttributeConfiguration", arg0)
@@ -344,13 +345,13 @@ func (m *MockSSOAdminAPI) DeleteInstanceAccessControlAttributeConfiguration(arg0
 	return ret0, ret1
 }
 
-// DeleteInstanceAccessControlAttributeConfiguration indicates an expected call of DeleteInstanceAccessControlAttributeConfiguration
+// DeleteInstanceAccessControlAttributeConfiguration indicates an expected call of DeleteInstanceAccessControlAttributeConfiguration.
 func (mr *MockSSOAdminAPIMockRecorder) DeleteInstanceAccessControlAttributeConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInstanceAccessControlAttributeConfiguration", reflect.TypeOf((*MockSSOAdminAPI)(nil).DeleteInstanceAccessControlAttributeConfiguration), arg0)
 }
 
-// DeleteInstanceAccessControlAttributeConfigurationRequest mocks base method
+// DeleteInstanceAccessControlAttributeConfigurationRequest mocks base method.
 func (m *MockSSOAdminAPI) DeleteInstanceAccessControlAttributeConfigurationRequest(arg0 *ssoadmin.DeleteInstanceAccessControlAttributeConfigurationInput) (*request.Request, *ssoadmin.DeleteInstanceAccessControlAttributeConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInstanceAccessControlAttributeConfigurationRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockSSOAdminAPI) DeleteInstanceAccessControlAttributeConfigurationReque
 	return ret0, ret1
 }
 
-// DeleteInstanceAccessControlAttributeConfigurationRequest indicates an expected call of DeleteInstanceAccessControlAttributeConfigurationRequest
+// DeleteInstanceAccessControlAttributeConfigurationRequest indicates an expected call of DeleteInstanceAccessControlAttributeConfigurationRequest.
 func (mr *MockSSOAdminAPIMockRecorder) DeleteInstanceAccessControlAttributeConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInstanceAccessControlAttributeConfigurationRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).DeleteInstanceAccessControlAttributeConfigurationRequest), arg0)
 }
 
-// DeleteInstanceAccessControlAttributeConfigurationWithContext mocks base method
+// DeleteInstanceAccessControlAttributeConfigurationWithContext mocks base method.
 func (m *MockSSOAdminAPI) DeleteInstanceAccessControlAttributeConfigurationWithContext(arg0 context.Context, arg1 *ssoadmin.DeleteInstanceAccessControlAttributeConfigurationInput, arg2 ...request.Option) (*ssoadmin.DeleteInstanceAccessControlAttributeConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockSSOAdminAPI) DeleteInstanceAccessControlAttributeConfigurationWithC
 	return ret0, ret1
 }
 
-// DeleteInstanceAccessControlAttributeConfigurationWithContext indicates an expected call of DeleteInstanceAccessControlAttributeConfigurationWithContext
+// DeleteInstanceAccessControlAttributeConfigurationWithContext indicates an expected call of DeleteInstanceAccessControlAttributeConfigurationWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) DeleteInstanceAccessControlAttributeConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInstanceAccessControlAttributeConfigurationWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).DeleteInstanceAccessControlAttributeConfigurationWithContext), varargs...)
 }
 
-// DeletePermissionSet mocks base method
+// DeletePermissionSet mocks base method.
 func (m *MockSSOAdminAPI) DeletePermissionSet(arg0 *ssoadmin.DeletePermissionSetInput) (*ssoadmin.DeletePermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeletePermissionSet", arg0)
@@ -394,13 +395,13 @@ func (m *MockSSOAdminAPI) DeletePermissionSet(arg0 *ssoadmin.DeletePermissionSet
 	return ret0, ret1
 }
 
-// DeletePermissionSet indicates an expected call of DeletePermissionSet
+// DeletePermissionSet indicates an expected call of DeletePermissionSet.
 func (mr *MockSSOAdminAPIMockRecorder) DeletePermissionSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePermissionSet", reflect.TypeOf((*MockSSOAdminAPI)(nil).DeletePermissionSet), arg0)
 }
 
-// DeletePermissionSetRequest mocks base method
+// DeletePermissionSetRequest mocks base method.
 func (m *MockSSOAdminAPI) DeletePermissionSetRequest(arg0 *ssoadmin.DeletePermissionSetInput) (*request.Request, *ssoadmin.DeletePermissionSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeletePermissionSetRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockSSOAdminAPI) DeletePermissionSetRequest(arg0 *ssoadmin.DeletePermis
 	return ret0, ret1
 }
 
-// DeletePermissionSetRequest indicates an expected call of DeletePermissionSetRequest
+// DeletePermissionSetRequest indicates an expected call of DeletePermissionSetRequest.
 func (mr *MockSSOAdminAPIMockRecorder) DeletePermissionSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePermissionSetRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).DeletePermissionSetRequest), arg0)
 }
 
-// DeletePermissionSetWithContext mocks base method
+// DeletePermissionSetWithContext mocks base method.
 func (m *MockSSOAdminAPI) DeletePermissionSetWithContext(arg0 context.Context, arg1 *ssoadmin.DeletePermissionSetInput, arg2 ...request.Option) (*ssoadmin.DeletePermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockSSOAdminAPI) DeletePermissionSetWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeletePermissionSetWithContext indicates an expected call of DeletePermissionSetWithContext
+// DeletePermissionSetWithContext indicates an expected call of DeletePermissionSetWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) DeletePermissionSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePermissionSetWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).DeletePermissionSetWithContext), varargs...)
 }
 
-// DescribeAccountAssignmentCreationStatus mocks base method
+// DescribeAccountAssignmentCreationStatus mocks base method.
 func (m *MockSSOAdminAPI) DescribeAccountAssignmentCreationStatus(arg0 *ssoadmin.DescribeAccountAssignmentCreationStatusInput) (*ssoadmin.DescribeAccountAssignmentCreationStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAccountAssignmentCreationStatus", arg0)
@@ -444,13 +445,13 @@ func (m *MockSSOAdminAPI) DescribeAccountAssignmentCreationStatus(arg0 *ssoadmin
 	return ret0, ret1
 }
 
-// DescribeAccountAssignmentCreationStatus indicates an expected call of DescribeAccountAssignmentCreationStatus
+// DescribeAccountAssignmentCreationStatus indicates an expected call of DescribeAccountAssignmentCreationStatus.
 func (mr *MockSSOAdminAPIMockRecorder) DescribeAccountAssignmentCreationStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAccountAssignmentCreationStatus", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribeAccountAssignmentCreationStatus), arg0)
 }
 
-// DescribeAccountAssignmentCreationStatusRequest mocks base method
+// DescribeAccountAssignmentCreationStatusRequest mocks base method.
 func (m *MockSSOAdminAPI) DescribeAccountAssignmentCreationStatusRequest(arg0 *ssoadmin.DescribeAccountAssignmentCreationStatusInput) (*request.Request, *ssoadmin.DescribeAccountAssignmentCreationStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAccountAssignmentCreationStatusRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockSSOAdminAPI) DescribeAccountAssignmentCreationStatusRequest(arg0 *s
 	return ret0, ret1
 }
 
-// DescribeAccountAssignmentCreationStatusRequest indicates an expected call of DescribeAccountAssignmentCreationStatusRequest
+// DescribeAccountAssignmentCreationStatusRequest indicates an expected call of DescribeAccountAssignmentCreationStatusRequest.
 func (mr *MockSSOAdminAPIMockRecorder) DescribeAccountAssignmentCreationStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAccountAssignmentCreationStatusRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribeAccountAssignmentCreationStatusRequest), arg0)
 }
 
-// DescribeAccountAssignmentCreationStatusWithContext mocks base method
+// DescribeAccountAssignmentCreationStatusWithContext mocks base method.
 func (m *MockSSOAdminAPI) DescribeAccountAssignmentCreationStatusWithContext(arg0 context.Context, arg1 *ssoadmin.DescribeAccountAssignmentCreationStatusInput, arg2 ...request.Option) (*ssoadmin.DescribeAccountAssignmentCreationStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockSSOAdminAPI) DescribeAccountAssignmentCreationStatusWithContext(arg
 	return ret0, ret1
 }
 
-// DescribeAccountAssignmentCreationStatusWithContext indicates an expected call of DescribeAccountAssignmentCreationStatusWithContext
+// DescribeAccountAssignmentCreationStatusWithContext indicates an expected call of DescribeAccountAssignmentCreationStatusWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) DescribeAccountAssignmentCreationStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAccountAssignmentCreationStatusWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribeAccountAssignmentCreationStatusWithContext), varargs...)
 }
 
-// DescribeAccountAssignmentDeletionStatus mocks base method
+// DescribeAccountAssignmentDeletionStatus mocks base method.
 func (m *MockSSOAdminAPI) DescribeAccountAssignmentDeletionStatus(arg0 *ssoadmin.DescribeAccountAssignmentDeletionStatusInput) (*ssoadmin.DescribeAccountAssignmentDeletionStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAccountAssignmentDeletionStatus", arg0)
@@ -494,13 +495,13 @@ func (m *MockSSOAdminAPI) DescribeAccountAssignmentDeletionStatus(arg0 *ssoadmin
 	return ret0, ret1
 }
 
-// DescribeAccountAssignmentDeletionStatus indicates an expected call of DescribeAccountAssignmentDeletionStatus
+// DescribeAccountAssignmentDeletionStatus indicates an expected call of DescribeAccountAssignmentDeletionStatus.
 func (mr *MockSSOAdminAPIMockRecorder) DescribeAccountAssignmentDeletionStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAccountAssignmentDeletionStatus", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribeAccountAssignmentDeletionStatus), arg0)
 }
 
-// DescribeAccountAssignmentDeletionStatusRequest mocks base method
+// DescribeAccountAssignmentDeletionStatusRequest mocks base method.
 func (m *MockSSOAdminAPI) DescribeAccountAssignmentDeletionStatusRequest(arg0 *ssoadmin.DescribeAccountAssignmentDeletionStatusInput) (*request.Request, *ssoadmin.DescribeAccountAssignmentDeletionStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAccountAssignmentDeletionStatusRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockSSOAdminAPI) DescribeAccountAssignmentDeletionStatusRequest(arg0 *s
 	return ret0, ret1
 }
 
-// DescribeAccountAssignmentDeletionStatusRequest indicates an expected call of DescribeAccountAssignmentDeletionStatusRequest
+// DescribeAccountAssignmentDeletionStatusRequest indicates an expected call of DescribeAccountAssignmentDeletionStatusRequest.
 func (mr *MockSSOAdminAPIMockRecorder) DescribeAccountAssignmentDeletionStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAccountAssignmentDeletionStatusRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribeAccountAssignmentDeletionStatusRequest), arg0)
 }
 
-// DescribeAccountAssignmentDeletionStatusWithContext mocks base method
+// DescribeAccountAssignmentDeletionStatusWithContext mocks base method.
 func (m *MockSSOAdminAPI) DescribeAccountAssignmentDeletionStatusWithContext(arg0 context.Context, arg1 *ssoadmin.DescribeAccountAssignmentDeletionStatusInput, arg2 ...request.Option) (*ssoadmin.DescribeAccountAssignmentDeletionStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockSSOAdminAPI) DescribeAccountAssignmentDeletionStatusWithContext(arg
 	return ret0, ret1
 }
 
-// DescribeAccountAssignmentDeletionStatusWithContext indicates an expected call of DescribeAccountAssignmentDeletionStatusWithContext
+// DescribeAccountAssignmentDeletionStatusWithContext indicates an expected call of DescribeAccountAssignmentDeletionStatusWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) DescribeAccountAssignmentDeletionStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAccountAssignmentDeletionStatusWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribeAccountAssignmentDeletionStatusWithContext), varargs...)
 }
 
-// DescribeInstanceAccessControlAttributeConfiguration mocks base method
+// DescribeInstanceAccessControlAttributeConfiguration mocks base method.
 func (m *MockSSOAdminAPI) DescribeInstanceAccessControlAttributeConfiguration(arg0 *ssoadmin.DescribeInstanceAccessControlAttributeConfigurationInput) (*ssoadmin.DescribeInstanceAccessControlAttributeConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInstanceAccessControlAttributeConfiguration", arg0)
@@ -544,13 +545,13 @@ func (m *MockSSOAdminAPI) DescribeInstanceAccessControlAttributeConfiguration(ar
 	return ret0, ret1
 }
 
-// DescribeInstanceAccessControlAttributeConfiguration indicates an expected call of DescribeInstanceAccessControlAttributeConfiguration
+// DescribeInstanceAccessControlAttributeConfiguration indicates an expected call of DescribeInstanceAccessControlAttributeConfiguration.
 func (mr *MockSSOAdminAPIMockRecorder) DescribeInstanceAccessControlAttributeConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInstanceAccessControlAttributeConfiguration", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribeInstanceAccessControlAttributeConfiguration), arg0)
 }
 
-// DescribeInstanceAccessControlAttributeConfigurationRequest mocks base method
+// DescribeInstanceAccessControlAttributeConfigurationRequest mocks base method.
 func (m *MockSSOAdminAPI) DescribeInstanceAccessControlAttributeConfigurationRequest(arg0 *ssoadmin.DescribeInstanceAccessControlAttributeConfigurationInput) (*request.Request, *ssoadmin.DescribeInstanceAccessControlAttributeConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInstanceAccessControlAttributeConfigurationRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockSSOAdminAPI) DescribeInstanceAccessControlAttributeConfigurationReq
 	return ret0, ret1
 }
 
-// DescribeInstanceAccessControlAttributeConfigurationRequest indicates an expected call of DescribeInstanceAccessControlAttributeConfigurationRequest
+// DescribeInstanceAccessControlAttributeConfigurationRequest indicates an expected call of DescribeInstanceAccessControlAttributeConfigurationRequest.
 func (mr *MockSSOAdminAPIMockRecorder) DescribeInstanceAccessControlAttributeConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInstanceAccessControlAttributeConfigurationRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribeInstanceAccessControlAttributeConfigurationRequest), arg0)
 }
 
-// DescribeInstanceAccessControlAttributeConfigurationWithContext mocks base method
+// DescribeInstanceAccessControlAttributeConfigurationWithContext mocks base method.
 func (m *MockSSOAdminAPI) DescribeInstanceAccessControlAttributeConfigurationWithContext(arg0 context.Context, arg1 *ssoadmin.DescribeInstanceAccessControlAttributeConfigurationInput, arg2 ...request.Option) (*ssoadmin.DescribeInstanceAccessControlAttributeConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockSSOAdminAPI) DescribeInstanceAccessControlAttributeConfigurationWit
 	return ret0, ret1
 }
 
-// DescribeInstanceAccessControlAttributeConfigurationWithContext indicates an expected call of DescribeInstanceAccessControlAttributeConfigurationWithContext
+// DescribeInstanceAccessControlAttributeConfigurationWithContext indicates an expected call of DescribeInstanceAccessControlAttributeConfigurationWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) DescribeInstanceAccessControlAttributeConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInstanceAccessControlAttributeConfigurationWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribeInstanceAccessControlAttributeConfigurationWithContext), varargs...)
 }
 
-// DescribePermissionSet mocks base method
+// DescribePermissionSet mocks base method.
 func (m *MockSSOAdminAPI) DescribePermissionSet(arg0 *ssoadmin.DescribePermissionSetInput) (*ssoadmin.DescribePermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribePermissionSet", arg0)
@@ -594,13 +595,13 @@ func (m *MockSSOAdminAPI) DescribePermissionSet(arg0 *ssoadmin.DescribePermissio
 	return ret0, ret1
 }
 
-// DescribePermissionSet indicates an expected call of DescribePermissionSet
+// DescribePermissionSet indicates an expected call of DescribePermissionSet.
 func (mr *MockSSOAdminAPIMockRecorder) DescribePermissionSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePermissionSet", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribePermissionSet), arg0)
 }
 
-// DescribePermissionSetProvisioningStatus mocks base method
+// DescribePermissionSetProvisioningStatus mocks base method.
 func (m *MockSSOAdminAPI) DescribePermissionSetProvisioningStatus(arg0 *ssoadmin.DescribePermissionSetProvisioningStatusInput) (*ssoadmin.DescribePermissionSetProvisioningStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribePermissionSetProvisioningStatus", arg0)
@@ -609,13 +610,13 @@ func (m *MockSSOAdminAPI) DescribePermissionSetProvisioningStatus(arg0 *ssoadmin
 	return ret0, ret1
 }
 
-// DescribePermissionSetProvisioningStatus indicates an expected call of DescribePermissionSetProvisioningStatus
+// DescribePermissionSetProvisioningStatus indicates an expected call of DescribePermissionSetProvisioningStatus.
 func (mr *MockSSOAdminAPIMockRecorder) DescribePermissionSetProvisioningStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePermissionSetProvisioningStatus", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribePermissionSetProvisioningStatus), arg0)
 }
 
-// DescribePermissionSetProvisioningStatusRequest mocks base method
+// DescribePermissionSetProvisioningStatusRequest mocks base method.
 func (m *MockSSOAdminAPI) DescribePermissionSetProvisioningStatusRequest(arg0 *ssoadmin.DescribePermissionSetProvisioningStatusInput) (*request.Request, *ssoadmin.DescribePermissionSetProvisioningStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribePermissionSetProvisioningStatusRequest", arg0)
@@ -624,13 +625,13 @@ func (m *MockSSOAdminAPI) DescribePermissionSetProvisioningStatusRequest(arg0 *s
 	return ret0, ret1
 }
 
-// DescribePermissionSetProvisioningStatusRequest indicates an expected call of DescribePermissionSetProvisioningStatusRequest
+// DescribePermissionSetProvisioningStatusRequest indicates an expected call of DescribePermissionSetProvisioningStatusRequest.
 func (mr *MockSSOAdminAPIMockRecorder) DescribePermissionSetProvisioningStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePermissionSetProvisioningStatusRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribePermissionSetProvisioningStatusRequest), arg0)
 }
 
-// DescribePermissionSetProvisioningStatusWithContext mocks base method
+// DescribePermissionSetProvisioningStatusWithContext mocks base method.
 func (m *MockSSOAdminAPI) DescribePermissionSetProvisioningStatusWithContext(arg0 context.Context, arg1 *ssoadmin.DescribePermissionSetProvisioningStatusInput, arg2 ...request.Option) (*ssoadmin.DescribePermissionSetProvisioningStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -643,14 +644,14 @@ func (m *MockSSOAdminAPI) DescribePermissionSetProvisioningStatusWithContext(arg
 	return ret0, ret1
 }
 
-// DescribePermissionSetProvisioningStatusWithContext indicates an expected call of DescribePermissionSetProvisioningStatusWithContext
+// DescribePermissionSetProvisioningStatusWithContext indicates an expected call of DescribePermissionSetProvisioningStatusWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) DescribePermissionSetProvisioningStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePermissionSetProvisioningStatusWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribePermissionSetProvisioningStatusWithContext), varargs...)
 }
 
-// DescribePermissionSetRequest mocks base method
+// DescribePermissionSetRequest mocks base method.
 func (m *MockSSOAdminAPI) DescribePermissionSetRequest(arg0 *ssoadmin.DescribePermissionSetInput) (*request.Request, *ssoadmin.DescribePermissionSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribePermissionSetRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockSSOAdminAPI) DescribePermissionSetRequest(arg0 *ssoadmin.DescribePe
 	return ret0, ret1
 }
 
-// DescribePermissionSetRequest indicates an expected call of DescribePermissionSetRequest
+// DescribePermissionSetRequest indicates an expected call of DescribePermissionSetRequest.
 func (mr *MockSSOAdminAPIMockRecorder) DescribePermissionSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePermissionSetRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribePermissionSetRequest), arg0)
 }
 
-// DescribePermissionSetWithContext mocks base method
+// DescribePermissionSetWithContext mocks base method.
 func (m *MockSSOAdminAPI) DescribePermissionSetWithContext(arg0 context.Context, arg1 *ssoadmin.DescribePermissionSetInput, arg2 ...request.Option) (*ssoadmin.DescribePermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockSSOAdminAPI) DescribePermissionSetWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DescribePermissionSetWithContext indicates an expected call of DescribePermissionSetWithContext
+// DescribePermissionSetWithContext indicates an expected call of DescribePermissionSetWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) DescribePermissionSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePermissionSetWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).DescribePermissionSetWithContext), varargs...)
 }
 
-// DetachManagedPolicyFromPermissionSet mocks base method
+// DetachManagedPolicyFromPermissionSet mocks base method.
 func (m *MockSSOAdminAPI) DetachManagedPolicyFromPermissionSet(arg0 *ssoadmin.DetachManagedPolicyFromPermissionSetInput) (*ssoadmin.DetachManagedPolicyFromPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetachManagedPolicyFromPermissionSet", arg0)
@@ -694,13 +695,13 @@ func (m *MockSSOAdminAPI) DetachManagedPolicyFromPermissionSet(arg0 *ssoadmin.De
 	return ret0, ret1
 }
 
-// DetachManagedPolicyFromPermissionSet indicates an expected call of DetachManagedPolicyFromPermissionSet
+// DetachManagedPolicyFromPermissionSet indicates an expected call of DetachManagedPolicyFromPermissionSet.
 func (mr *MockSSOAdminAPIMockRecorder) DetachManagedPolicyFromPermissionSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachManagedPolicyFromPermissionSet", reflect.TypeOf((*MockSSOAdminAPI)(nil).DetachManagedPolicyFromPermissionSet), arg0)
 }
 
-// DetachManagedPolicyFromPermissionSetRequest mocks base method
+// DetachManagedPolicyFromPermissionSetRequest mocks base method.
 func (m *MockSSOAdminAPI) DetachManagedPolicyFromPermissionSetRequest(arg0 *ssoadmin.DetachManagedPolicyFromPermissionSetInput) (*request.Request, *ssoadmin.DetachManagedPolicyFromPermissionSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetachManagedPolicyFromPermissionSetRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockSSOAdminAPI) DetachManagedPolicyFromPermissionSetRequest(arg0 *ssoa
 	return ret0, ret1
 }
 
-// DetachManagedPolicyFromPermissionSetRequest indicates an expected call of DetachManagedPolicyFromPermissionSetRequest
+// DetachManagedPolicyFromPermissionSetRequest indicates an expected call of DetachManagedPolicyFromPermissionSetRequest.
 func (mr *MockSSOAdminAPIMockRecorder) DetachManagedPolicyFromPermissionSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachManagedPolicyFromPermissionSetRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).DetachManagedPolicyFromPermissionSetRequest), arg0)
 }
 
-// DetachManagedPolicyFromPermissionSetWithContext mocks base method
+// DetachManagedPolicyFromPermissionSetWithContext mocks base method.
 func (m *MockSSOAdminAPI) DetachManagedPolicyFromPermissionSetWithContext(arg0 context.Context, arg1 *ssoadmin.DetachManagedPolicyFromPermissionSetInput, arg2 ...request.Option) (*ssoadmin.DetachManagedPolicyFromPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockSSOAdminAPI) DetachManagedPolicyFromPermissionSetWithContext(arg0 c
 	return ret0, ret1
 }
 
-// DetachManagedPolicyFromPermissionSetWithContext indicates an expected call of DetachManagedPolicyFromPermissionSetWithContext
+// DetachManagedPolicyFromPermissionSetWithContext indicates an expected call of DetachManagedPolicyFromPermissionSetWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) DetachManagedPolicyFromPermissionSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachManagedPolicyFromPermissionSetWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).DetachManagedPolicyFromPermissionSetWithContext), varargs...)
 }
 
-// GetInlinePolicyForPermissionSet mocks base method
+// GetInlinePolicyForPermissionSet mocks base method.
 func (m *MockSSOAdminAPI) GetInlinePolicyForPermissionSet(arg0 *ssoadmin.GetInlinePolicyForPermissionSetInput) (*ssoadmin.GetInlinePolicyForPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInlinePolicyForPermissionSet", arg0)
@@ -744,13 +745,13 @@ func (m *MockSSOAdminAPI) GetInlinePolicyForPermissionSet(arg0 *ssoadmin.GetInli
 	return ret0, ret1
 }
 
-// GetInlinePolicyForPermissionSet indicates an expected call of GetInlinePolicyForPermissionSet
+// GetInlinePolicyForPermissionSet indicates an expected call of GetInlinePolicyForPermissionSet.
 func (mr *MockSSOAdminAPIMockRecorder) GetInlinePolicyForPermissionSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInlinePolicyForPermissionSet", reflect.TypeOf((*MockSSOAdminAPI)(nil).GetInlinePolicyForPermissionSet), arg0)
 }
 
-// GetInlinePolicyForPermissionSetRequest mocks base method
+// GetInlinePolicyForPermissionSetRequest mocks base method.
 func (m *MockSSOAdminAPI) GetInlinePolicyForPermissionSetRequest(arg0 *ssoadmin.GetInlinePolicyForPermissionSetInput) (*request.Request, *ssoadmin.GetInlinePolicyForPermissionSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInlinePolicyForPermissionSetRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockSSOAdminAPI) GetInlinePolicyForPermissionSetRequest(arg0 *ssoadmin.
 	return ret0, ret1
 }
 
-// GetInlinePolicyForPermissionSetRequest indicates an expected call of GetInlinePolicyForPermissionSetRequest
+// GetInlinePolicyForPermissionSetRequest indicates an expected call of GetInlinePolicyForPermissionSetRequest.
 func (mr *MockSSOAdminAPIMockRecorder) GetInlinePolicyForPermissionSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInlinePolicyForPermissionSetRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).GetInlinePolicyForPermissionSetRequest), arg0)
 }
 
-// GetInlinePolicyForPermissionSetWithContext mocks base method
+// GetInlinePolicyForPermissionSetWithContext mocks base method.
 func (m *MockSSOAdminAPI) GetInlinePolicyForPermissionSetWithContext(arg0 context.Context, arg1 *ssoadmin.GetInlinePolicyForPermissionSetInput, arg2 ...request.Option) (*ssoadmin.GetInlinePolicyForPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockSSOAdminAPI) GetInlinePolicyForPermissionSetWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// GetInlinePolicyForPermissionSetWithContext indicates an expected call of GetInlinePolicyForPermissionSetWithContext
+// GetInlinePolicyForPermissionSetWithContext indicates an expected call of GetInlinePolicyForPermissionSetWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) GetInlinePolicyForPermissionSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInlinePolicyForPermissionSetWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).GetInlinePolicyForPermissionSetWithContext), varargs...)
 }
 
-// ListAccountAssignmentCreationStatus mocks base method
+// ListAccountAssignmentCreationStatus mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentCreationStatus(arg0 *ssoadmin.ListAccountAssignmentCreationStatusInput) (*ssoadmin.ListAccountAssignmentCreationStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountAssignmentCreationStatus", arg0)
@@ -794,13 +795,13 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentCreationStatus(arg0 *ssoadmin.Lis
 	return ret0, ret1
 }
 
-// ListAccountAssignmentCreationStatus indicates an expected call of ListAccountAssignmentCreationStatus
+// ListAccountAssignmentCreationStatus indicates an expected call of ListAccountAssignmentCreationStatus.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentCreationStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentCreationStatus", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentCreationStatus), arg0)
 }
 
-// ListAccountAssignmentCreationStatusPages mocks base method
+// ListAccountAssignmentCreationStatusPages mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentCreationStatusPages(arg0 *ssoadmin.ListAccountAssignmentCreationStatusInput, arg1 func(*ssoadmin.ListAccountAssignmentCreationStatusOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountAssignmentCreationStatusPages", arg0, arg1)
@@ -808,13 +809,13 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentCreationStatusPages(arg0 *ssoadmi
 	return ret0
 }
 
-// ListAccountAssignmentCreationStatusPages indicates an expected call of ListAccountAssignmentCreationStatusPages
+// ListAccountAssignmentCreationStatusPages indicates an expected call of ListAccountAssignmentCreationStatusPages.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentCreationStatusPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentCreationStatusPages", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentCreationStatusPages), arg0, arg1)
 }
 
-// ListAccountAssignmentCreationStatusPagesWithContext mocks base method
+// ListAccountAssignmentCreationStatusPagesWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentCreationStatusPagesWithContext(arg0 context.Context, arg1 *ssoadmin.ListAccountAssignmentCreationStatusInput, arg2 func(*ssoadmin.ListAccountAssignmentCreationStatusOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -826,14 +827,14 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentCreationStatusPagesWithContext(ar
 	return ret0
 }
 
-// ListAccountAssignmentCreationStatusPagesWithContext indicates an expected call of ListAccountAssignmentCreationStatusPagesWithContext
+// ListAccountAssignmentCreationStatusPagesWithContext indicates an expected call of ListAccountAssignmentCreationStatusPagesWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentCreationStatusPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentCreationStatusPagesWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentCreationStatusPagesWithContext), varargs...)
 }
 
-// ListAccountAssignmentCreationStatusRequest mocks base method
+// ListAccountAssignmentCreationStatusRequest mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentCreationStatusRequest(arg0 *ssoadmin.ListAccountAssignmentCreationStatusInput) (*request.Request, *ssoadmin.ListAccountAssignmentCreationStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountAssignmentCreationStatusRequest", arg0)
@@ -842,13 +843,13 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentCreationStatusRequest(arg0 *ssoad
 	return ret0, ret1
 }
 
-// ListAccountAssignmentCreationStatusRequest indicates an expected call of ListAccountAssignmentCreationStatusRequest
+// ListAccountAssignmentCreationStatusRequest indicates an expected call of ListAccountAssignmentCreationStatusRequest.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentCreationStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentCreationStatusRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentCreationStatusRequest), arg0)
 }
 
-// ListAccountAssignmentCreationStatusWithContext mocks base method
+// ListAccountAssignmentCreationStatusWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentCreationStatusWithContext(arg0 context.Context, arg1 *ssoadmin.ListAccountAssignmentCreationStatusInput, arg2 ...request.Option) (*ssoadmin.ListAccountAssignmentCreationStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -861,14 +862,14 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentCreationStatusWithContext(arg0 co
 	return ret0, ret1
 }
 
-// ListAccountAssignmentCreationStatusWithContext indicates an expected call of ListAccountAssignmentCreationStatusWithContext
+// ListAccountAssignmentCreationStatusWithContext indicates an expected call of ListAccountAssignmentCreationStatusWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentCreationStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentCreationStatusWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentCreationStatusWithContext), varargs...)
 }
 
-// ListAccountAssignmentDeletionStatus mocks base method
+// ListAccountAssignmentDeletionStatus mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentDeletionStatus(arg0 *ssoadmin.ListAccountAssignmentDeletionStatusInput) (*ssoadmin.ListAccountAssignmentDeletionStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountAssignmentDeletionStatus", arg0)
@@ -877,13 +878,13 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentDeletionStatus(arg0 *ssoadmin.Lis
 	return ret0, ret1
 }
 
-// ListAccountAssignmentDeletionStatus indicates an expected call of ListAccountAssignmentDeletionStatus
+// ListAccountAssignmentDeletionStatus indicates an expected call of ListAccountAssignmentDeletionStatus.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentDeletionStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentDeletionStatus", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentDeletionStatus), arg0)
 }
 
-// ListAccountAssignmentDeletionStatusPages mocks base method
+// ListAccountAssignmentDeletionStatusPages mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentDeletionStatusPages(arg0 *ssoadmin.ListAccountAssignmentDeletionStatusInput, arg1 func(*ssoadmin.ListAccountAssignmentDeletionStatusOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountAssignmentDeletionStatusPages", arg0, arg1)
@@ -891,13 +892,13 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentDeletionStatusPages(arg0 *ssoadmi
 	return ret0
 }
 
-// ListAccountAssignmentDeletionStatusPages indicates an expected call of ListAccountAssignmentDeletionStatusPages
+// ListAccountAssignmentDeletionStatusPages indicates an expected call of ListAccountAssignmentDeletionStatusPages.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentDeletionStatusPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentDeletionStatusPages", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentDeletionStatusPages), arg0, arg1)
 }
 
-// ListAccountAssignmentDeletionStatusPagesWithContext mocks base method
+// ListAccountAssignmentDeletionStatusPagesWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentDeletionStatusPagesWithContext(arg0 context.Context, arg1 *ssoadmin.ListAccountAssignmentDeletionStatusInput, arg2 func(*ssoadmin.ListAccountAssignmentDeletionStatusOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -909,14 +910,14 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentDeletionStatusPagesWithContext(ar
 	return ret0
 }
 
-// ListAccountAssignmentDeletionStatusPagesWithContext indicates an expected call of ListAccountAssignmentDeletionStatusPagesWithContext
+// ListAccountAssignmentDeletionStatusPagesWithContext indicates an expected call of ListAccountAssignmentDeletionStatusPagesWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentDeletionStatusPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentDeletionStatusPagesWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentDeletionStatusPagesWithContext), varargs...)
 }
 
-// ListAccountAssignmentDeletionStatusRequest mocks base method
+// ListAccountAssignmentDeletionStatusRequest mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentDeletionStatusRequest(arg0 *ssoadmin.ListAccountAssignmentDeletionStatusInput) (*request.Request, *ssoadmin.ListAccountAssignmentDeletionStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountAssignmentDeletionStatusRequest", arg0)
@@ -925,13 +926,13 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentDeletionStatusRequest(arg0 *ssoad
 	return ret0, ret1
 }
 
-// ListAccountAssignmentDeletionStatusRequest indicates an expected call of ListAccountAssignmentDeletionStatusRequest
+// ListAccountAssignmentDeletionStatusRequest indicates an expected call of ListAccountAssignmentDeletionStatusRequest.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentDeletionStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentDeletionStatusRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentDeletionStatusRequest), arg0)
 }
 
-// ListAccountAssignmentDeletionStatusWithContext mocks base method
+// ListAccountAssignmentDeletionStatusWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentDeletionStatusWithContext(arg0 context.Context, arg1 *ssoadmin.ListAccountAssignmentDeletionStatusInput, arg2 ...request.Option) (*ssoadmin.ListAccountAssignmentDeletionStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -944,14 +945,14 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentDeletionStatusWithContext(arg0 co
 	return ret0, ret1
 }
 
-// ListAccountAssignmentDeletionStatusWithContext indicates an expected call of ListAccountAssignmentDeletionStatusWithContext
+// ListAccountAssignmentDeletionStatusWithContext indicates an expected call of ListAccountAssignmentDeletionStatusWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentDeletionStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentDeletionStatusWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentDeletionStatusWithContext), varargs...)
 }
 
-// ListAccountAssignments mocks base method
+// ListAccountAssignments mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignments(arg0 *ssoadmin.ListAccountAssignmentsInput) (*ssoadmin.ListAccountAssignmentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountAssignments", arg0)
@@ -960,13 +961,13 @@ func (m *MockSSOAdminAPI) ListAccountAssignments(arg0 *ssoadmin.ListAccountAssig
 	return ret0, ret1
 }
 
-// ListAccountAssignments indicates an expected call of ListAccountAssignments
+// ListAccountAssignments indicates an expected call of ListAccountAssignments.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignments(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignments", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignments), arg0)
 }
 
-// ListAccountAssignmentsPages mocks base method
+// ListAccountAssignmentsPages mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentsPages(arg0 *ssoadmin.ListAccountAssignmentsInput, arg1 func(*ssoadmin.ListAccountAssignmentsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountAssignmentsPages", arg0, arg1)
@@ -974,13 +975,13 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentsPages(arg0 *ssoadmin.ListAccount
 	return ret0
 }
 
-// ListAccountAssignmentsPages indicates an expected call of ListAccountAssignmentsPages
+// ListAccountAssignmentsPages indicates an expected call of ListAccountAssignmentsPages.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentsPages", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentsPages), arg0, arg1)
 }
 
-// ListAccountAssignmentsPagesWithContext mocks base method
+// ListAccountAssignmentsPagesWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentsPagesWithContext(arg0 context.Context, arg1 *ssoadmin.ListAccountAssignmentsInput, arg2 func(*ssoadmin.ListAccountAssignmentsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -992,14 +993,14 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentsPagesWithContext(arg0 context.Co
 	return ret0
 }
 
-// ListAccountAssignmentsPagesWithContext indicates an expected call of ListAccountAssignmentsPagesWithContext
+// ListAccountAssignmentsPagesWithContext indicates an expected call of ListAccountAssignmentsPagesWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentsPagesWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentsPagesWithContext), varargs...)
 }
 
-// ListAccountAssignmentsRequest mocks base method
+// ListAccountAssignmentsRequest mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentsRequest(arg0 *ssoadmin.ListAccountAssignmentsInput) (*request.Request, *ssoadmin.ListAccountAssignmentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountAssignmentsRequest", arg0)
@@ -1008,13 +1009,13 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentsRequest(arg0 *ssoadmin.ListAccou
 	return ret0, ret1
 }
 
-// ListAccountAssignmentsRequest indicates an expected call of ListAccountAssignmentsRequest
+// ListAccountAssignmentsRequest indicates an expected call of ListAccountAssignmentsRequest.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentsRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentsRequest), arg0)
 }
 
-// ListAccountAssignmentsWithContext mocks base method
+// ListAccountAssignmentsWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListAccountAssignmentsWithContext(arg0 context.Context, arg1 *ssoadmin.ListAccountAssignmentsInput, arg2 ...request.Option) (*ssoadmin.ListAccountAssignmentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1027,14 +1028,14 @@ func (m *MockSSOAdminAPI) ListAccountAssignmentsWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListAccountAssignmentsWithContext indicates an expected call of ListAccountAssignmentsWithContext
+// ListAccountAssignmentsWithContext indicates an expected call of ListAccountAssignmentsWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountAssignmentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountAssignmentsWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountAssignmentsWithContext), varargs...)
 }
 
-// ListAccountsForProvisionedPermissionSet mocks base method
+// ListAccountsForProvisionedPermissionSet mocks base method.
 func (m *MockSSOAdminAPI) ListAccountsForProvisionedPermissionSet(arg0 *ssoadmin.ListAccountsForProvisionedPermissionSetInput) (*ssoadmin.ListAccountsForProvisionedPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountsForProvisionedPermissionSet", arg0)
@@ -1043,13 +1044,13 @@ func (m *MockSSOAdminAPI) ListAccountsForProvisionedPermissionSet(arg0 *ssoadmin
 	return ret0, ret1
 }
 
-// ListAccountsForProvisionedPermissionSet indicates an expected call of ListAccountsForProvisionedPermissionSet
+// ListAccountsForProvisionedPermissionSet indicates an expected call of ListAccountsForProvisionedPermissionSet.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountsForProvisionedPermissionSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountsForProvisionedPermissionSet", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountsForProvisionedPermissionSet), arg0)
 }
 
-// ListAccountsForProvisionedPermissionSetPages mocks base method
+// ListAccountsForProvisionedPermissionSetPages mocks base method.
 func (m *MockSSOAdminAPI) ListAccountsForProvisionedPermissionSetPages(arg0 *ssoadmin.ListAccountsForProvisionedPermissionSetInput, arg1 func(*ssoadmin.ListAccountsForProvisionedPermissionSetOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountsForProvisionedPermissionSetPages", arg0, arg1)
@@ -1057,13 +1058,13 @@ func (m *MockSSOAdminAPI) ListAccountsForProvisionedPermissionSetPages(arg0 *sso
 	return ret0
 }
 
-// ListAccountsForProvisionedPermissionSetPages indicates an expected call of ListAccountsForProvisionedPermissionSetPages
+// ListAccountsForProvisionedPermissionSetPages indicates an expected call of ListAccountsForProvisionedPermissionSetPages.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountsForProvisionedPermissionSetPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountsForProvisionedPermissionSetPages", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountsForProvisionedPermissionSetPages), arg0, arg1)
 }
 
-// ListAccountsForProvisionedPermissionSetPagesWithContext mocks base method
+// ListAccountsForProvisionedPermissionSetPagesWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListAccountsForProvisionedPermissionSetPagesWithContext(arg0 context.Context, arg1 *ssoadmin.ListAccountsForProvisionedPermissionSetInput, arg2 func(*ssoadmin.ListAccountsForProvisionedPermissionSetOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1075,14 +1076,14 @@ func (m *MockSSOAdminAPI) ListAccountsForProvisionedPermissionSetPagesWithContex
 	return ret0
 }
 
-// ListAccountsForProvisionedPermissionSetPagesWithContext indicates an expected call of ListAccountsForProvisionedPermissionSetPagesWithContext
+// ListAccountsForProvisionedPermissionSetPagesWithContext indicates an expected call of ListAccountsForProvisionedPermissionSetPagesWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountsForProvisionedPermissionSetPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountsForProvisionedPermissionSetPagesWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountsForProvisionedPermissionSetPagesWithContext), varargs...)
 }
 
-// ListAccountsForProvisionedPermissionSetRequest mocks base method
+// ListAccountsForProvisionedPermissionSetRequest mocks base method.
 func (m *MockSSOAdminAPI) ListAccountsForProvisionedPermissionSetRequest(arg0 *ssoadmin.ListAccountsForProvisionedPermissionSetInput) (*request.Request, *ssoadmin.ListAccountsForProvisionedPermissionSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAccountsForProvisionedPermissionSetRequest", arg0)
@@ -1091,13 +1092,13 @@ func (m *MockSSOAdminAPI) ListAccountsForProvisionedPermissionSetRequest(arg0 *s
 	return ret0, ret1
 }
 
-// ListAccountsForProvisionedPermissionSetRequest indicates an expected call of ListAccountsForProvisionedPermissionSetRequest
+// ListAccountsForProvisionedPermissionSetRequest indicates an expected call of ListAccountsForProvisionedPermissionSetRequest.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountsForProvisionedPermissionSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountsForProvisionedPermissionSetRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountsForProvisionedPermissionSetRequest), arg0)
 }
 
-// ListAccountsForProvisionedPermissionSetWithContext mocks base method
+// ListAccountsForProvisionedPermissionSetWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListAccountsForProvisionedPermissionSetWithContext(arg0 context.Context, arg1 *ssoadmin.ListAccountsForProvisionedPermissionSetInput, arg2 ...request.Option) (*ssoadmin.ListAccountsForProvisionedPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1110,14 +1111,14 @@ func (m *MockSSOAdminAPI) ListAccountsForProvisionedPermissionSetWithContext(arg
 	return ret0, ret1
 }
 
-// ListAccountsForProvisionedPermissionSetWithContext indicates an expected call of ListAccountsForProvisionedPermissionSetWithContext
+// ListAccountsForProvisionedPermissionSetWithContext indicates an expected call of ListAccountsForProvisionedPermissionSetWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListAccountsForProvisionedPermissionSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAccountsForProvisionedPermissionSetWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListAccountsForProvisionedPermissionSetWithContext), varargs...)
 }
 
-// ListInstances mocks base method
+// ListInstances mocks base method.
 func (m *MockSSOAdminAPI) ListInstances(arg0 *ssoadmin.ListInstancesInput) (*ssoadmin.ListInstancesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInstances", arg0)
@@ -1126,13 +1127,13 @@ func (m *MockSSOAdminAPI) ListInstances(arg0 *ssoadmin.ListInstancesInput) (*sso
 	return ret0, ret1
 }
 
-// ListInstances indicates an expected call of ListInstances
+// ListInstances indicates an expected call of ListInstances.
 func (mr *MockSSOAdminAPIMockRecorder) ListInstances(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInstances", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListInstances), arg0)
 }
 
-// ListInstancesPages mocks base method
+// ListInstancesPages mocks base method.
 func (m *MockSSOAdminAPI) ListInstancesPages(arg0 *ssoadmin.ListInstancesInput, arg1 func(*ssoadmin.ListInstancesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInstancesPages", arg0, arg1)
@@ -1140,13 +1141,13 @@ func (m *MockSSOAdminAPI) ListInstancesPages(arg0 *ssoadmin.ListInstancesInput, 
 	return ret0
 }
 
-// ListInstancesPages indicates an expected call of ListInstancesPages
+// ListInstancesPages indicates an expected call of ListInstancesPages.
 func (mr *MockSSOAdminAPIMockRecorder) ListInstancesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInstancesPages", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListInstancesPages), arg0, arg1)
 }
 
-// ListInstancesPagesWithContext mocks base method
+// ListInstancesPagesWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListInstancesPagesWithContext(arg0 context.Context, arg1 *ssoadmin.ListInstancesInput, arg2 func(*ssoadmin.ListInstancesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1158,14 +1159,14 @@ func (m *MockSSOAdminAPI) ListInstancesPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// ListInstancesPagesWithContext indicates an expected call of ListInstancesPagesWithContext
+// ListInstancesPagesWithContext indicates an expected call of ListInstancesPagesWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListInstancesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInstancesPagesWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListInstancesPagesWithContext), varargs...)
 }
 
-// ListInstancesRequest mocks base method
+// ListInstancesRequest mocks base method.
 func (m *MockSSOAdminAPI) ListInstancesRequest(arg0 *ssoadmin.ListInstancesInput) (*request.Request, *ssoadmin.ListInstancesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInstancesRequest", arg0)
@@ -1174,13 +1175,13 @@ func (m *MockSSOAdminAPI) ListInstancesRequest(arg0 *ssoadmin.ListInstancesInput
 	return ret0, ret1
 }
 
-// ListInstancesRequest indicates an expected call of ListInstancesRequest
+// ListInstancesRequest indicates an expected call of ListInstancesRequest.
 func (mr *MockSSOAdminAPIMockRecorder) ListInstancesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInstancesRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListInstancesRequest), arg0)
 }
 
-// ListInstancesWithContext mocks base method
+// ListInstancesWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListInstancesWithContext(arg0 context.Context, arg1 *ssoadmin.ListInstancesInput, arg2 ...request.Option) (*ssoadmin.ListInstancesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1193,14 +1194,14 @@ func (m *MockSSOAdminAPI) ListInstancesWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// ListInstancesWithContext indicates an expected call of ListInstancesWithContext
+// ListInstancesWithContext indicates an expected call of ListInstancesWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListInstancesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInstancesWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListInstancesWithContext), varargs...)
 }
 
-// ListManagedPoliciesInPermissionSet mocks base method
+// ListManagedPoliciesInPermissionSet mocks base method.
 func (m *MockSSOAdminAPI) ListManagedPoliciesInPermissionSet(arg0 *ssoadmin.ListManagedPoliciesInPermissionSetInput) (*ssoadmin.ListManagedPoliciesInPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListManagedPoliciesInPermissionSet", arg0)
@@ -1209,13 +1210,13 @@ func (m *MockSSOAdminAPI) ListManagedPoliciesInPermissionSet(arg0 *ssoadmin.List
 	return ret0, ret1
 }
 
-// ListManagedPoliciesInPermissionSet indicates an expected call of ListManagedPoliciesInPermissionSet
+// ListManagedPoliciesInPermissionSet indicates an expected call of ListManagedPoliciesInPermissionSet.
 func (mr *MockSSOAdminAPIMockRecorder) ListManagedPoliciesInPermissionSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListManagedPoliciesInPermissionSet", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListManagedPoliciesInPermissionSet), arg0)
 }
 
-// ListManagedPoliciesInPermissionSetPages mocks base method
+// ListManagedPoliciesInPermissionSetPages mocks base method.
 func (m *MockSSOAdminAPI) ListManagedPoliciesInPermissionSetPages(arg0 *ssoadmin.ListManagedPoliciesInPermissionSetInput, arg1 func(*ssoadmin.ListManagedPoliciesInPermissionSetOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListManagedPoliciesInPermissionSetPages", arg0, arg1)
@@ -1223,13 +1224,13 @@ func (m *MockSSOAdminAPI) ListManagedPoliciesInPermissionSetPages(arg0 *ssoadmin
 	return ret0
 }
 
-// ListManagedPoliciesInPermissionSetPages indicates an expected call of ListManagedPoliciesInPermissionSetPages
+// ListManagedPoliciesInPermissionSetPages indicates an expected call of ListManagedPoliciesInPermissionSetPages.
 func (mr *MockSSOAdminAPIMockRecorder) ListManagedPoliciesInPermissionSetPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListManagedPoliciesInPermissionSetPages", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListManagedPoliciesInPermissionSetPages), arg0, arg1)
 }
 
-// ListManagedPoliciesInPermissionSetPagesWithContext mocks base method
+// ListManagedPoliciesInPermissionSetPagesWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListManagedPoliciesInPermissionSetPagesWithContext(arg0 context.Context, arg1 *ssoadmin.ListManagedPoliciesInPermissionSetInput, arg2 func(*ssoadmin.ListManagedPoliciesInPermissionSetOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1241,14 +1242,14 @@ func (m *MockSSOAdminAPI) ListManagedPoliciesInPermissionSetPagesWithContext(arg
 	return ret0
 }
 
-// ListManagedPoliciesInPermissionSetPagesWithContext indicates an expected call of ListManagedPoliciesInPermissionSetPagesWithContext
+// ListManagedPoliciesInPermissionSetPagesWithContext indicates an expected call of ListManagedPoliciesInPermissionSetPagesWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListManagedPoliciesInPermissionSetPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListManagedPoliciesInPermissionSetPagesWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListManagedPoliciesInPermissionSetPagesWithContext), varargs...)
 }
 
-// ListManagedPoliciesInPermissionSetRequest mocks base method
+// ListManagedPoliciesInPermissionSetRequest mocks base method.
 func (m *MockSSOAdminAPI) ListManagedPoliciesInPermissionSetRequest(arg0 *ssoadmin.ListManagedPoliciesInPermissionSetInput) (*request.Request, *ssoadmin.ListManagedPoliciesInPermissionSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListManagedPoliciesInPermissionSetRequest", arg0)
@@ -1257,13 +1258,13 @@ func (m *MockSSOAdminAPI) ListManagedPoliciesInPermissionSetRequest(arg0 *ssoadm
 	return ret0, ret1
 }
 
-// ListManagedPoliciesInPermissionSetRequest indicates an expected call of ListManagedPoliciesInPermissionSetRequest
+// ListManagedPoliciesInPermissionSetRequest indicates an expected call of ListManagedPoliciesInPermissionSetRequest.
 func (mr *MockSSOAdminAPIMockRecorder) ListManagedPoliciesInPermissionSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListManagedPoliciesInPermissionSetRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListManagedPoliciesInPermissionSetRequest), arg0)
 }
 
-// ListManagedPoliciesInPermissionSetWithContext mocks base method
+// ListManagedPoliciesInPermissionSetWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListManagedPoliciesInPermissionSetWithContext(arg0 context.Context, arg1 *ssoadmin.ListManagedPoliciesInPermissionSetInput, arg2 ...request.Option) (*ssoadmin.ListManagedPoliciesInPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1276,14 +1277,14 @@ func (m *MockSSOAdminAPI) ListManagedPoliciesInPermissionSetWithContext(arg0 con
 	return ret0, ret1
 }
 
-// ListManagedPoliciesInPermissionSetWithContext indicates an expected call of ListManagedPoliciesInPermissionSetWithContext
+// ListManagedPoliciesInPermissionSetWithContext indicates an expected call of ListManagedPoliciesInPermissionSetWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListManagedPoliciesInPermissionSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListManagedPoliciesInPermissionSetWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListManagedPoliciesInPermissionSetWithContext), varargs...)
 }
 
-// ListPermissionSetProvisioningStatus mocks base method
+// ListPermissionSetProvisioningStatus mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetProvisioningStatus(arg0 *ssoadmin.ListPermissionSetProvisioningStatusInput) (*ssoadmin.ListPermissionSetProvisioningStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPermissionSetProvisioningStatus", arg0)
@@ -1292,13 +1293,13 @@ func (m *MockSSOAdminAPI) ListPermissionSetProvisioningStatus(arg0 *ssoadmin.Lis
 	return ret0, ret1
 }
 
-// ListPermissionSetProvisioningStatus indicates an expected call of ListPermissionSetProvisioningStatus
+// ListPermissionSetProvisioningStatus indicates an expected call of ListPermissionSetProvisioningStatus.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetProvisioningStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetProvisioningStatus", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetProvisioningStatus), arg0)
 }
 
-// ListPermissionSetProvisioningStatusPages mocks base method
+// ListPermissionSetProvisioningStatusPages mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetProvisioningStatusPages(arg0 *ssoadmin.ListPermissionSetProvisioningStatusInput, arg1 func(*ssoadmin.ListPermissionSetProvisioningStatusOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPermissionSetProvisioningStatusPages", arg0, arg1)
@@ -1306,13 +1307,13 @@ func (m *MockSSOAdminAPI) ListPermissionSetProvisioningStatusPages(arg0 *ssoadmi
 	return ret0
 }
 
-// ListPermissionSetProvisioningStatusPages indicates an expected call of ListPermissionSetProvisioningStatusPages
+// ListPermissionSetProvisioningStatusPages indicates an expected call of ListPermissionSetProvisioningStatusPages.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetProvisioningStatusPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetProvisioningStatusPages", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetProvisioningStatusPages), arg0, arg1)
 }
 
-// ListPermissionSetProvisioningStatusPagesWithContext mocks base method
+// ListPermissionSetProvisioningStatusPagesWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetProvisioningStatusPagesWithContext(arg0 context.Context, arg1 *ssoadmin.ListPermissionSetProvisioningStatusInput, arg2 func(*ssoadmin.ListPermissionSetProvisioningStatusOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1324,14 +1325,14 @@ func (m *MockSSOAdminAPI) ListPermissionSetProvisioningStatusPagesWithContext(ar
 	return ret0
 }
 
-// ListPermissionSetProvisioningStatusPagesWithContext indicates an expected call of ListPermissionSetProvisioningStatusPagesWithContext
+// ListPermissionSetProvisioningStatusPagesWithContext indicates an expected call of ListPermissionSetProvisioningStatusPagesWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetProvisioningStatusPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetProvisioningStatusPagesWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetProvisioningStatusPagesWithContext), varargs...)
 }
 
-// ListPermissionSetProvisioningStatusRequest mocks base method
+// ListPermissionSetProvisioningStatusRequest mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetProvisioningStatusRequest(arg0 *ssoadmin.ListPermissionSetProvisioningStatusInput) (*request.Request, *ssoadmin.ListPermissionSetProvisioningStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPermissionSetProvisioningStatusRequest", arg0)
@@ -1340,13 +1341,13 @@ func (m *MockSSOAdminAPI) ListPermissionSetProvisioningStatusRequest(arg0 *ssoad
 	return ret0, ret1
 }
 
-// ListPermissionSetProvisioningStatusRequest indicates an expected call of ListPermissionSetProvisioningStatusRequest
+// ListPermissionSetProvisioningStatusRequest indicates an expected call of ListPermissionSetProvisioningStatusRequest.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetProvisioningStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetProvisioningStatusRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetProvisioningStatusRequest), arg0)
 }
 
-// ListPermissionSetProvisioningStatusWithContext mocks base method
+// ListPermissionSetProvisioningStatusWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetProvisioningStatusWithContext(arg0 context.Context, arg1 *ssoadmin.ListPermissionSetProvisioningStatusInput, arg2 ...request.Option) (*ssoadmin.ListPermissionSetProvisioningStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1359,14 +1360,14 @@ func (m *MockSSOAdminAPI) ListPermissionSetProvisioningStatusWithContext(arg0 co
 	return ret0, ret1
 }
 
-// ListPermissionSetProvisioningStatusWithContext indicates an expected call of ListPermissionSetProvisioningStatusWithContext
+// ListPermissionSetProvisioningStatusWithContext indicates an expected call of ListPermissionSetProvisioningStatusWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetProvisioningStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetProvisioningStatusWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetProvisioningStatusWithContext), varargs...)
 }
 
-// ListPermissionSets mocks base method
+// ListPermissionSets mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSets(arg0 *ssoadmin.ListPermissionSetsInput) (*ssoadmin.ListPermissionSetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPermissionSets", arg0)
@@ -1375,13 +1376,13 @@ func (m *MockSSOAdminAPI) ListPermissionSets(arg0 *ssoadmin.ListPermissionSetsIn
 	return ret0, ret1
 }
 
-// ListPermissionSets indicates an expected call of ListPermissionSets
+// ListPermissionSets indicates an expected call of ListPermissionSets.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSets", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSets), arg0)
 }
 
-// ListPermissionSetsPages mocks base method
+// ListPermissionSetsPages mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetsPages(arg0 *ssoadmin.ListPermissionSetsInput, arg1 func(*ssoadmin.ListPermissionSetsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPermissionSetsPages", arg0, arg1)
@@ -1389,13 +1390,13 @@ func (m *MockSSOAdminAPI) ListPermissionSetsPages(arg0 *ssoadmin.ListPermissionS
 	return ret0
 }
 
-// ListPermissionSetsPages indicates an expected call of ListPermissionSetsPages
+// ListPermissionSetsPages indicates an expected call of ListPermissionSetsPages.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetsPages", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetsPages), arg0, arg1)
 }
 
-// ListPermissionSetsPagesWithContext mocks base method
+// ListPermissionSetsPagesWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetsPagesWithContext(arg0 context.Context, arg1 *ssoadmin.ListPermissionSetsInput, arg2 func(*ssoadmin.ListPermissionSetsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1407,14 +1408,14 @@ func (m *MockSSOAdminAPI) ListPermissionSetsPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListPermissionSetsPagesWithContext indicates an expected call of ListPermissionSetsPagesWithContext
+// ListPermissionSetsPagesWithContext indicates an expected call of ListPermissionSetsPagesWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetsPagesWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetsPagesWithContext), varargs...)
 }
 
-// ListPermissionSetsProvisionedToAccount mocks base method
+// ListPermissionSetsProvisionedToAccount mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetsProvisionedToAccount(arg0 *ssoadmin.ListPermissionSetsProvisionedToAccountInput) (*ssoadmin.ListPermissionSetsProvisionedToAccountOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPermissionSetsProvisionedToAccount", arg0)
@@ -1423,13 +1424,13 @@ func (m *MockSSOAdminAPI) ListPermissionSetsProvisionedToAccount(arg0 *ssoadmin.
 	return ret0, ret1
 }
 
-// ListPermissionSetsProvisionedToAccount indicates an expected call of ListPermissionSetsProvisionedToAccount
+// ListPermissionSetsProvisionedToAccount indicates an expected call of ListPermissionSetsProvisionedToAccount.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetsProvisionedToAccount(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetsProvisionedToAccount", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetsProvisionedToAccount), arg0)
 }
 
-// ListPermissionSetsProvisionedToAccountPages mocks base method
+// ListPermissionSetsProvisionedToAccountPages mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetsProvisionedToAccountPages(arg0 *ssoadmin.ListPermissionSetsProvisionedToAccountInput, arg1 func(*ssoadmin.ListPermissionSetsProvisionedToAccountOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPermissionSetsProvisionedToAccountPages", arg0, arg1)
@@ -1437,13 +1438,13 @@ func (m *MockSSOAdminAPI) ListPermissionSetsProvisionedToAccountPages(arg0 *ssoa
 	return ret0
 }
 
-// ListPermissionSetsProvisionedToAccountPages indicates an expected call of ListPermissionSetsProvisionedToAccountPages
+// ListPermissionSetsProvisionedToAccountPages indicates an expected call of ListPermissionSetsProvisionedToAccountPages.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetsProvisionedToAccountPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetsProvisionedToAccountPages", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetsProvisionedToAccountPages), arg0, arg1)
 }
 
-// ListPermissionSetsProvisionedToAccountPagesWithContext mocks base method
+// ListPermissionSetsProvisionedToAccountPagesWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetsProvisionedToAccountPagesWithContext(arg0 context.Context, arg1 *ssoadmin.ListPermissionSetsProvisionedToAccountInput, arg2 func(*ssoadmin.ListPermissionSetsProvisionedToAccountOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1455,14 +1456,14 @@ func (m *MockSSOAdminAPI) ListPermissionSetsProvisionedToAccountPagesWithContext
 	return ret0
 }
 
-// ListPermissionSetsProvisionedToAccountPagesWithContext indicates an expected call of ListPermissionSetsProvisionedToAccountPagesWithContext
+// ListPermissionSetsProvisionedToAccountPagesWithContext indicates an expected call of ListPermissionSetsProvisionedToAccountPagesWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetsProvisionedToAccountPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetsProvisionedToAccountPagesWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetsProvisionedToAccountPagesWithContext), varargs...)
 }
 
-// ListPermissionSetsProvisionedToAccountRequest mocks base method
+// ListPermissionSetsProvisionedToAccountRequest mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetsProvisionedToAccountRequest(arg0 *ssoadmin.ListPermissionSetsProvisionedToAccountInput) (*request.Request, *ssoadmin.ListPermissionSetsProvisionedToAccountOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPermissionSetsProvisionedToAccountRequest", arg0)
@@ -1471,13 +1472,13 @@ func (m *MockSSOAdminAPI) ListPermissionSetsProvisionedToAccountRequest(arg0 *ss
 	return ret0, ret1
 }
 
-// ListPermissionSetsProvisionedToAccountRequest indicates an expected call of ListPermissionSetsProvisionedToAccountRequest
+// ListPermissionSetsProvisionedToAccountRequest indicates an expected call of ListPermissionSetsProvisionedToAccountRequest.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetsProvisionedToAccountRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetsProvisionedToAccountRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetsProvisionedToAccountRequest), arg0)
 }
 
-// ListPermissionSetsProvisionedToAccountWithContext mocks base method
+// ListPermissionSetsProvisionedToAccountWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetsProvisionedToAccountWithContext(arg0 context.Context, arg1 *ssoadmin.ListPermissionSetsProvisionedToAccountInput, arg2 ...request.Option) (*ssoadmin.ListPermissionSetsProvisionedToAccountOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1490,14 +1491,14 @@ func (m *MockSSOAdminAPI) ListPermissionSetsProvisionedToAccountWithContext(arg0
 	return ret0, ret1
 }
 
-// ListPermissionSetsProvisionedToAccountWithContext indicates an expected call of ListPermissionSetsProvisionedToAccountWithContext
+// ListPermissionSetsProvisionedToAccountWithContext indicates an expected call of ListPermissionSetsProvisionedToAccountWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetsProvisionedToAccountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetsProvisionedToAccountWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetsProvisionedToAccountWithContext), varargs...)
 }
 
-// ListPermissionSetsRequest mocks base method
+// ListPermissionSetsRequest mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetsRequest(arg0 *ssoadmin.ListPermissionSetsInput) (*request.Request, *ssoadmin.ListPermissionSetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPermissionSetsRequest", arg0)
@@ -1506,13 +1507,13 @@ func (m *MockSSOAdminAPI) ListPermissionSetsRequest(arg0 *ssoadmin.ListPermissio
 	return ret0, ret1
 }
 
-// ListPermissionSetsRequest indicates an expected call of ListPermissionSetsRequest
+// ListPermissionSetsRequest indicates an expected call of ListPermissionSetsRequest.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetsRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetsRequest), arg0)
 }
 
-// ListPermissionSetsWithContext mocks base method
+// ListPermissionSetsWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListPermissionSetsWithContext(arg0 context.Context, arg1 *ssoadmin.ListPermissionSetsInput, arg2 ...request.Option) (*ssoadmin.ListPermissionSetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1525,14 +1526,14 @@ func (m *MockSSOAdminAPI) ListPermissionSetsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListPermissionSetsWithContext indicates an expected call of ListPermissionSetsWithContext
+// ListPermissionSetsWithContext indicates an expected call of ListPermissionSetsWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListPermissionSetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionSetsWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListPermissionSetsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockSSOAdminAPI) ListTagsForResource(arg0 *ssoadmin.ListTagsForResourceInput) (*ssoadmin.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1541,13 +1542,13 @@ func (m *MockSSOAdminAPI) ListTagsForResource(arg0 *ssoadmin.ListTagsForResource
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockSSOAdminAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourcePages mocks base method
+// ListTagsForResourcePages mocks base method.
 func (m *MockSSOAdminAPI) ListTagsForResourcePages(arg0 *ssoadmin.ListTagsForResourceInput, arg1 func(*ssoadmin.ListTagsForResourceOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourcePages", arg0, arg1)
@@ -1555,13 +1556,13 @@ func (m *MockSSOAdminAPI) ListTagsForResourcePages(arg0 *ssoadmin.ListTagsForRes
 	return ret0
 }
 
-// ListTagsForResourcePages indicates an expected call of ListTagsForResourcePages
+// ListTagsForResourcePages indicates an expected call of ListTagsForResourcePages.
 func (mr *MockSSOAdminAPIMockRecorder) ListTagsForResourcePages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourcePages", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListTagsForResourcePages), arg0, arg1)
 }
 
-// ListTagsForResourcePagesWithContext mocks base method
+// ListTagsForResourcePagesWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListTagsForResourcePagesWithContext(arg0 context.Context, arg1 *ssoadmin.ListTagsForResourceInput, arg2 func(*ssoadmin.ListTagsForResourceOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1573,14 +1574,14 @@ func (m *MockSSOAdminAPI) ListTagsForResourcePagesWithContext(arg0 context.Conte
 	return ret0
 }
 
-// ListTagsForResourcePagesWithContext indicates an expected call of ListTagsForResourcePagesWithContext
+// ListTagsForResourcePagesWithContext indicates an expected call of ListTagsForResourcePagesWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListTagsForResourcePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourcePagesWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListTagsForResourcePagesWithContext), varargs...)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockSSOAdminAPI) ListTagsForResourceRequest(arg0 *ssoadmin.ListTagsForResourceInput) (*request.Request, *ssoadmin.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1589,13 +1590,13 @@ func (m *MockSSOAdminAPI) ListTagsForResourceRequest(arg0 *ssoadmin.ListTagsForR
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockSSOAdminAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockSSOAdminAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *ssoadmin.ListTagsForResourceInput, arg2 ...request.Option) (*ssoadmin.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1608,14 +1609,14 @@ func (m *MockSSOAdminAPI) ListTagsForResourceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// ProvisionPermissionSet mocks base method
+// ProvisionPermissionSet mocks base method.
 func (m *MockSSOAdminAPI) ProvisionPermissionSet(arg0 *ssoadmin.ProvisionPermissionSetInput) (*ssoadmin.ProvisionPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ProvisionPermissionSet", arg0)
@@ -1624,13 +1625,13 @@ func (m *MockSSOAdminAPI) ProvisionPermissionSet(arg0 *ssoadmin.ProvisionPermiss
 	return ret0, ret1
 }
 
-// ProvisionPermissionSet indicates an expected call of ProvisionPermissionSet
+// ProvisionPermissionSet indicates an expected call of ProvisionPermissionSet.
 func (mr *MockSSOAdminAPIMockRecorder) ProvisionPermissionSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ProvisionPermissionSet", reflect.TypeOf((*MockSSOAdminAPI)(nil).ProvisionPermissionSet), arg0)
 }
 
-// ProvisionPermissionSetRequest mocks base method
+// ProvisionPermissionSetRequest mocks base method.
 func (m *MockSSOAdminAPI) ProvisionPermissionSetRequest(arg0 *ssoadmin.ProvisionPermissionSetInput) (*request.Request, *ssoadmin.ProvisionPermissionSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ProvisionPermissionSetRequest", arg0)
@@ -1639,13 +1640,13 @@ func (m *MockSSOAdminAPI) ProvisionPermissionSetRequest(arg0 *ssoadmin.Provision
 	return ret0, ret1
 }
 
-// ProvisionPermissionSetRequest indicates an expected call of ProvisionPermissionSetRequest
+// ProvisionPermissionSetRequest indicates an expected call of ProvisionPermissionSetRequest.
 func (mr *MockSSOAdminAPIMockRecorder) ProvisionPermissionSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ProvisionPermissionSetRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).ProvisionPermissionSetRequest), arg0)
 }
 
-// ProvisionPermissionSetWithContext mocks base method
+// ProvisionPermissionSetWithContext mocks base method.
 func (m *MockSSOAdminAPI) ProvisionPermissionSetWithContext(arg0 context.Context, arg1 *ssoadmin.ProvisionPermissionSetInput, arg2 ...request.Option) (*ssoadmin.ProvisionPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1658,14 +1659,14 @@ func (m *MockSSOAdminAPI) ProvisionPermissionSetWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ProvisionPermissionSetWithContext indicates an expected call of ProvisionPermissionSetWithContext
+// ProvisionPermissionSetWithContext indicates an expected call of ProvisionPermissionSetWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) ProvisionPermissionSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ProvisionPermissionSetWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).ProvisionPermissionSetWithContext), varargs...)
 }
 
-// PutInlinePolicyToPermissionSet mocks base method
+// PutInlinePolicyToPermissionSet mocks base method.
 func (m *MockSSOAdminAPI) PutInlinePolicyToPermissionSet(arg0 *ssoadmin.PutInlinePolicyToPermissionSetInput) (*ssoadmin.PutInlinePolicyToPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutInlinePolicyToPermissionSet", arg0)
@@ -1674,13 +1675,13 @@ func (m *MockSSOAdminAPI) PutInlinePolicyToPermissionSet(arg0 *ssoadmin.PutInlin
 	return ret0, ret1
 }
 
-// PutInlinePolicyToPermissionSet indicates an expected call of PutInlinePolicyToPermissionSet
+// PutInlinePolicyToPermissionSet indicates an expected call of PutInlinePolicyToPermissionSet.
 func (mr *MockSSOAdminAPIMockRecorder) PutInlinePolicyToPermissionSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutInlinePolicyToPermissionSet", reflect.TypeOf((*MockSSOAdminAPI)(nil).PutInlinePolicyToPermissionSet), arg0)
 }
 
-// PutInlinePolicyToPermissionSetRequest mocks base method
+// PutInlinePolicyToPermissionSetRequest mocks base method.
 func (m *MockSSOAdminAPI) PutInlinePolicyToPermissionSetRequest(arg0 *ssoadmin.PutInlinePolicyToPermissionSetInput) (*request.Request, *ssoadmin.PutInlinePolicyToPermissionSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutInlinePolicyToPermissionSetRequest", arg0)
@@ -1689,13 +1690,13 @@ func (m *MockSSOAdminAPI) PutInlinePolicyToPermissionSetRequest(arg0 *ssoadmin.P
 	return ret0, ret1
 }
 
-// PutInlinePolicyToPermissionSetRequest indicates an expected call of PutInlinePolicyToPermissionSetRequest
+// PutInlinePolicyToPermissionSetRequest indicates an expected call of PutInlinePolicyToPermissionSetRequest.
 func (mr *MockSSOAdminAPIMockRecorder) PutInlinePolicyToPermissionSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutInlinePolicyToPermissionSetRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).PutInlinePolicyToPermissionSetRequest), arg0)
 }
 
-// PutInlinePolicyToPermissionSetWithContext mocks base method
+// PutInlinePolicyToPermissionSetWithContext mocks base method.
 func (m *MockSSOAdminAPI) PutInlinePolicyToPermissionSetWithContext(arg0 context.Context, arg1 *ssoadmin.PutInlinePolicyToPermissionSetInput, arg2 ...request.Option) (*ssoadmin.PutInlinePolicyToPermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1708,14 +1709,14 @@ func (m *MockSSOAdminAPI) PutInlinePolicyToPermissionSetWithContext(arg0 context
 	return ret0, ret1
 }
 
-// PutInlinePolicyToPermissionSetWithContext indicates an expected call of PutInlinePolicyToPermissionSetWithContext
+// PutInlinePolicyToPermissionSetWithContext indicates an expected call of PutInlinePolicyToPermissionSetWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) PutInlinePolicyToPermissionSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutInlinePolicyToPermissionSetWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).PutInlinePolicyToPermissionSetWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockSSOAdminAPI) TagResource(arg0 *ssoadmin.TagResourceInput) (*ssoadmin.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1724,13 +1725,13 @@ func (m *MockSSOAdminAPI) TagResource(arg0 *ssoadmin.TagResourceInput) (*ssoadmi
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockSSOAdminAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockSSOAdminAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockSSOAdminAPI) TagResourceRequest(arg0 *ssoadmin.TagResourceInput) (*request.Request, *ssoadmin.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1739,13 +1740,13 @@ func (m *MockSSOAdminAPI) TagResourceRequest(arg0 *ssoadmin.TagResourceInput) (*
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockSSOAdminAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockSSOAdminAPI) TagResourceWithContext(arg0 context.Context, arg1 *ssoadmin.TagResourceInput, arg2 ...request.Option) (*ssoadmin.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1758,14 +1759,14 @@ func (m *MockSSOAdminAPI) TagResourceWithContext(arg0 context.Context, arg1 *sso
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockSSOAdminAPI) UntagResource(arg0 *ssoadmin.UntagResourceInput) (*ssoadmin.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1774,13 +1775,13 @@ func (m *MockSSOAdminAPI) UntagResource(arg0 *ssoadmin.UntagResourceInput) (*sso
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockSSOAdminAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockSSOAdminAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockSSOAdminAPI) UntagResourceRequest(arg0 *ssoadmin.UntagResourceInput) (*request.Request, *ssoadmin.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1789,13 +1790,13 @@ func (m *MockSSOAdminAPI) UntagResourceRequest(arg0 *ssoadmin.UntagResourceInput
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockSSOAdminAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockSSOAdminAPI) UntagResourceWithContext(arg0 context.Context, arg1 *ssoadmin.UntagResourceInput, arg2 ...request.Option) (*ssoadmin.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1808,14 +1809,14 @@ func (m *MockSSOAdminAPI) UntagResourceWithContext(arg0 context.Context, arg1 *s
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateInstanceAccessControlAttributeConfiguration mocks base method
+// UpdateInstanceAccessControlAttributeConfiguration mocks base method.
 func (m *MockSSOAdminAPI) UpdateInstanceAccessControlAttributeConfiguration(arg0 *ssoadmin.UpdateInstanceAccessControlAttributeConfigurationInput) (*ssoadmin.UpdateInstanceAccessControlAttributeConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateInstanceAccessControlAttributeConfiguration", arg0)
@@ -1824,13 +1825,13 @@ func (m *MockSSOAdminAPI) UpdateInstanceAccessControlAttributeConfiguration(arg0
 	return ret0, ret1
 }
 
-// UpdateInstanceAccessControlAttributeConfiguration indicates an expected call of UpdateInstanceAccessControlAttributeConfiguration
+// UpdateInstanceAccessControlAttributeConfiguration indicates an expected call of UpdateInstanceAccessControlAttributeConfiguration.
 func (mr *MockSSOAdminAPIMockRecorder) UpdateInstanceAccessControlAttributeConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInstanceAccessControlAttributeConfiguration", reflect.TypeOf((*MockSSOAdminAPI)(nil).UpdateInstanceAccessControlAttributeConfiguration), arg0)
 }
 
-// UpdateInstanceAccessControlAttributeConfigurationRequest mocks base method
+// UpdateInstanceAccessControlAttributeConfigurationRequest mocks base method.
 func (m *MockSSOAdminAPI) UpdateInstanceAccessControlAttributeConfigurationRequest(arg0 *ssoadmin.UpdateInstanceAccessControlAttributeConfigurationInput) (*request.Request, *ssoadmin.UpdateInstanceAccessControlAttributeConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateInstanceAccessControlAttributeConfigurationRequest", arg0)
@@ -1839,13 +1840,13 @@ func (m *MockSSOAdminAPI) UpdateInstanceAccessControlAttributeConfigurationReque
 	return ret0, ret1
 }
 
-// UpdateInstanceAccessControlAttributeConfigurationRequest indicates an expected call of UpdateInstanceAccessControlAttributeConfigurationRequest
+// UpdateInstanceAccessControlAttributeConfigurationRequest indicates an expected call of UpdateInstanceAccessControlAttributeConfigurationRequest.
 func (mr *MockSSOAdminAPIMockRecorder) UpdateInstanceAccessControlAttributeConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInstanceAccessControlAttributeConfigurationRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).UpdateInstanceAccessControlAttributeConfigurationRequest), arg0)
 }
 
-// UpdateInstanceAccessControlAttributeConfigurationWithContext mocks base method
+// UpdateInstanceAccessControlAttributeConfigurationWithContext mocks base method.
 func (m *MockSSOAdminAPI) UpdateInstanceAccessControlAttributeConfigurationWithContext(arg0 context.Context, arg1 *ssoadmin.UpdateInstanceAccessControlAttributeConfigurationInput, arg2 ...request.Option) (*ssoadmin.UpdateInstanceAccessControlAttributeConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1858,14 +1859,14 @@ func (m *MockSSOAdminAPI) UpdateInstanceAccessControlAttributeConfigurationWithC
 	return ret0, ret1
 }
 
-// UpdateInstanceAccessControlAttributeConfigurationWithContext indicates an expected call of UpdateInstanceAccessControlAttributeConfigurationWithContext
+// UpdateInstanceAccessControlAttributeConfigurationWithContext indicates an expected call of UpdateInstanceAccessControlAttributeConfigurationWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) UpdateInstanceAccessControlAttributeConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInstanceAccessControlAttributeConfigurationWithContext", reflect.TypeOf((*MockSSOAdminAPI)(nil).UpdateInstanceAccessControlAttributeConfigurationWithContext), varargs...)
 }
 
-// UpdatePermissionSet mocks base method
+// UpdatePermissionSet mocks base method.
 func (m *MockSSOAdminAPI) UpdatePermissionSet(arg0 *ssoadmin.UpdatePermissionSetInput) (*ssoadmin.UpdatePermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdatePermissionSet", arg0)
@@ -1874,13 +1875,13 @@ func (m *MockSSOAdminAPI) UpdatePermissionSet(arg0 *ssoadmin.UpdatePermissionSet
 	return ret0, ret1
 }
 
-// UpdatePermissionSet indicates an expected call of UpdatePermissionSet
+// UpdatePermissionSet indicates an expected call of UpdatePermissionSet.
 func (mr *MockSSOAdminAPIMockRecorder) UpdatePermissionSet(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePermissionSet", reflect.TypeOf((*MockSSOAdminAPI)(nil).UpdatePermissionSet), arg0)
 }
 
-// UpdatePermissionSetRequest mocks base method
+// UpdatePermissionSetRequest mocks base method.
 func (m *MockSSOAdminAPI) UpdatePermissionSetRequest(arg0 *ssoadmin.UpdatePermissionSetInput) (*request.Request, *ssoadmin.UpdatePermissionSetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdatePermissionSetRequest", arg0)
@@ -1889,13 +1890,13 @@ func (m *MockSSOAdminAPI) UpdatePermissionSetRequest(arg0 *ssoadmin.UpdatePermis
 	return ret0, ret1
 }
 
-// UpdatePermissionSetRequest indicates an expected call of UpdatePermissionSetRequest
+// UpdatePermissionSetRequest indicates an expected call of UpdatePermissionSetRequest.
 func (mr *MockSSOAdminAPIMockRecorder) UpdatePermissionSetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePermissionSetRequest", reflect.TypeOf((*MockSSOAdminAPI)(nil).UpdatePermissionSetRequest), arg0)
 }
 
-// UpdatePermissionSetWithContext mocks base method
+// UpdatePermissionSetWithContext mocks base method.
 func (m *MockSSOAdminAPI) UpdatePermissionSetWithContext(arg0 context.Context, arg1 *ssoadmin.UpdatePermissionSetInput, arg2 ...request.Option) (*ssoadmin.UpdatePermissionSetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1908,7 +1909,7 @@ func (m *MockSSOAdminAPI) UpdatePermissionSetWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UpdatePermissionSetWithContext indicates an expected call of UpdatePermissionSetWithContext
+// UpdatePermissionSetWithContext indicates an expected call of UpdatePermissionSetWithContext.
 func (mr *MockSSOAdminAPIMockRecorder) UpdatePermissionSetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

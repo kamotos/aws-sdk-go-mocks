@@ -6,36 +6,37 @@ package amplifymock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	amplify "github.com/aws/aws-sdk-go/service/amplify"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockAmplifyAPI is a mock of AmplifyAPI interface
+// MockAmplifyAPI is a mock of AmplifyAPI interface.
 type MockAmplifyAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockAmplifyAPIMockRecorder
 }
 
-// MockAmplifyAPIMockRecorder is the mock recorder for MockAmplifyAPI
+// MockAmplifyAPIMockRecorder is the mock recorder for MockAmplifyAPI.
 type MockAmplifyAPIMockRecorder struct {
 	mock *MockAmplifyAPI
 }
 
-// NewMockAmplifyAPI creates a new mock instance
+// NewMockAmplifyAPI creates a new mock instance.
 func NewMockAmplifyAPI(ctrl *gomock.Controller) *MockAmplifyAPI {
 	mock := &MockAmplifyAPI{ctrl: ctrl}
 	mock.recorder = &MockAmplifyAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockAmplifyAPI) EXPECT() *MockAmplifyAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateApp mocks base method
+// CreateApp mocks base method.
 func (m *MockAmplifyAPI) CreateApp(arg0 *amplify.CreateAppInput) (*amplify.CreateAppOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateApp", arg0)
@@ -44,13 +45,13 @@ func (m *MockAmplifyAPI) CreateApp(arg0 *amplify.CreateAppInput) (*amplify.Creat
 	return ret0, ret1
 }
 
-// CreateApp indicates an expected call of CreateApp
+// CreateApp indicates an expected call of CreateApp.
 func (mr *MockAmplifyAPIMockRecorder) CreateApp(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateApp", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateApp), arg0)
 }
 
-// CreateAppRequest mocks base method
+// CreateAppRequest mocks base method.
 func (m *MockAmplifyAPI) CreateAppRequest(arg0 *amplify.CreateAppInput) (*request.Request, *amplify.CreateAppOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAppRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockAmplifyAPI) CreateAppRequest(arg0 *amplify.CreateAppInput) (*reques
 	return ret0, ret1
 }
 
-// CreateAppRequest indicates an expected call of CreateAppRequest
+// CreateAppRequest indicates an expected call of CreateAppRequest.
 func (mr *MockAmplifyAPIMockRecorder) CreateAppRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAppRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateAppRequest), arg0)
 }
 
-// CreateAppWithContext mocks base method
+// CreateAppWithContext mocks base method.
 func (m *MockAmplifyAPI) CreateAppWithContext(arg0 context.Context, arg1 *amplify.CreateAppInput, arg2 ...request.Option) (*amplify.CreateAppOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockAmplifyAPI) CreateAppWithContext(arg0 context.Context, arg1 *amplif
 	return ret0, ret1
 }
 
-// CreateAppWithContext indicates an expected call of CreateAppWithContext
+// CreateAppWithContext indicates an expected call of CreateAppWithContext.
 func (mr *MockAmplifyAPIMockRecorder) CreateAppWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAppWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateAppWithContext), varargs...)
 }
 
-// CreateBackendEnvironment mocks base method
+// CreateBackendEnvironment mocks base method.
 func (m *MockAmplifyAPI) CreateBackendEnvironment(arg0 *amplify.CreateBackendEnvironmentInput) (*amplify.CreateBackendEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBackendEnvironment", arg0)
@@ -94,13 +95,13 @@ func (m *MockAmplifyAPI) CreateBackendEnvironment(arg0 *amplify.CreateBackendEnv
 	return ret0, ret1
 }
 
-// CreateBackendEnvironment indicates an expected call of CreateBackendEnvironment
+// CreateBackendEnvironment indicates an expected call of CreateBackendEnvironment.
 func (mr *MockAmplifyAPIMockRecorder) CreateBackendEnvironment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBackendEnvironment", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateBackendEnvironment), arg0)
 }
 
-// CreateBackendEnvironmentRequest mocks base method
+// CreateBackendEnvironmentRequest mocks base method.
 func (m *MockAmplifyAPI) CreateBackendEnvironmentRequest(arg0 *amplify.CreateBackendEnvironmentInput) (*request.Request, *amplify.CreateBackendEnvironmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBackendEnvironmentRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockAmplifyAPI) CreateBackendEnvironmentRequest(arg0 *amplify.CreateBac
 	return ret0, ret1
 }
 
-// CreateBackendEnvironmentRequest indicates an expected call of CreateBackendEnvironmentRequest
+// CreateBackendEnvironmentRequest indicates an expected call of CreateBackendEnvironmentRequest.
 func (mr *MockAmplifyAPIMockRecorder) CreateBackendEnvironmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBackendEnvironmentRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateBackendEnvironmentRequest), arg0)
 }
 
-// CreateBackendEnvironmentWithContext mocks base method
+// CreateBackendEnvironmentWithContext mocks base method.
 func (m *MockAmplifyAPI) CreateBackendEnvironmentWithContext(arg0 context.Context, arg1 *amplify.CreateBackendEnvironmentInput, arg2 ...request.Option) (*amplify.CreateBackendEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockAmplifyAPI) CreateBackendEnvironmentWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CreateBackendEnvironmentWithContext indicates an expected call of CreateBackendEnvironmentWithContext
+// CreateBackendEnvironmentWithContext indicates an expected call of CreateBackendEnvironmentWithContext.
 func (mr *MockAmplifyAPIMockRecorder) CreateBackendEnvironmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBackendEnvironmentWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateBackendEnvironmentWithContext), varargs...)
 }
 
-// CreateBranch mocks base method
+// CreateBranch mocks base method.
 func (m *MockAmplifyAPI) CreateBranch(arg0 *amplify.CreateBranchInput) (*amplify.CreateBranchOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBranch", arg0)
@@ -144,13 +145,13 @@ func (m *MockAmplifyAPI) CreateBranch(arg0 *amplify.CreateBranchInput) (*amplify
 	return ret0, ret1
 }
 
-// CreateBranch indicates an expected call of CreateBranch
+// CreateBranch indicates an expected call of CreateBranch.
 func (mr *MockAmplifyAPIMockRecorder) CreateBranch(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBranch", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateBranch), arg0)
 }
 
-// CreateBranchRequest mocks base method
+// CreateBranchRequest mocks base method.
 func (m *MockAmplifyAPI) CreateBranchRequest(arg0 *amplify.CreateBranchInput) (*request.Request, *amplify.CreateBranchOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBranchRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockAmplifyAPI) CreateBranchRequest(arg0 *amplify.CreateBranchInput) (*
 	return ret0, ret1
 }
 
-// CreateBranchRequest indicates an expected call of CreateBranchRequest
+// CreateBranchRequest indicates an expected call of CreateBranchRequest.
 func (mr *MockAmplifyAPIMockRecorder) CreateBranchRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBranchRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateBranchRequest), arg0)
 }
 
-// CreateBranchWithContext mocks base method
+// CreateBranchWithContext mocks base method.
 func (m *MockAmplifyAPI) CreateBranchWithContext(arg0 context.Context, arg1 *amplify.CreateBranchInput, arg2 ...request.Option) (*amplify.CreateBranchOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockAmplifyAPI) CreateBranchWithContext(arg0 context.Context, arg1 *amp
 	return ret0, ret1
 }
 
-// CreateBranchWithContext indicates an expected call of CreateBranchWithContext
+// CreateBranchWithContext indicates an expected call of CreateBranchWithContext.
 func (mr *MockAmplifyAPIMockRecorder) CreateBranchWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBranchWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateBranchWithContext), varargs...)
 }
 
-// CreateDeployment mocks base method
+// CreateDeployment mocks base method.
 func (m *MockAmplifyAPI) CreateDeployment(arg0 *amplify.CreateDeploymentInput) (*amplify.CreateDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDeployment", arg0)
@@ -194,13 +195,13 @@ func (m *MockAmplifyAPI) CreateDeployment(arg0 *amplify.CreateDeploymentInput) (
 	return ret0, ret1
 }
 
-// CreateDeployment indicates an expected call of CreateDeployment
+// CreateDeployment indicates an expected call of CreateDeployment.
 func (mr *MockAmplifyAPIMockRecorder) CreateDeployment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDeployment", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateDeployment), arg0)
 }
 
-// CreateDeploymentRequest mocks base method
+// CreateDeploymentRequest mocks base method.
 func (m *MockAmplifyAPI) CreateDeploymentRequest(arg0 *amplify.CreateDeploymentInput) (*request.Request, *amplify.CreateDeploymentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDeploymentRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockAmplifyAPI) CreateDeploymentRequest(arg0 *amplify.CreateDeploymentI
 	return ret0, ret1
 }
 
-// CreateDeploymentRequest indicates an expected call of CreateDeploymentRequest
+// CreateDeploymentRequest indicates an expected call of CreateDeploymentRequest.
 func (mr *MockAmplifyAPIMockRecorder) CreateDeploymentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDeploymentRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateDeploymentRequest), arg0)
 }
 
-// CreateDeploymentWithContext mocks base method
+// CreateDeploymentWithContext mocks base method.
 func (m *MockAmplifyAPI) CreateDeploymentWithContext(arg0 context.Context, arg1 *amplify.CreateDeploymentInput, arg2 ...request.Option) (*amplify.CreateDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockAmplifyAPI) CreateDeploymentWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// CreateDeploymentWithContext indicates an expected call of CreateDeploymentWithContext
+// CreateDeploymentWithContext indicates an expected call of CreateDeploymentWithContext.
 func (mr *MockAmplifyAPIMockRecorder) CreateDeploymentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDeploymentWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateDeploymentWithContext), varargs...)
 }
 
-// CreateDomainAssociation mocks base method
+// CreateDomainAssociation mocks base method.
 func (m *MockAmplifyAPI) CreateDomainAssociation(arg0 *amplify.CreateDomainAssociationInput) (*amplify.CreateDomainAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDomainAssociation", arg0)
@@ -244,13 +245,13 @@ func (m *MockAmplifyAPI) CreateDomainAssociation(arg0 *amplify.CreateDomainAssoc
 	return ret0, ret1
 }
 
-// CreateDomainAssociation indicates an expected call of CreateDomainAssociation
+// CreateDomainAssociation indicates an expected call of CreateDomainAssociation.
 func (mr *MockAmplifyAPIMockRecorder) CreateDomainAssociation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainAssociation", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateDomainAssociation), arg0)
 }
 
-// CreateDomainAssociationRequest mocks base method
+// CreateDomainAssociationRequest mocks base method.
 func (m *MockAmplifyAPI) CreateDomainAssociationRequest(arg0 *amplify.CreateDomainAssociationInput) (*request.Request, *amplify.CreateDomainAssociationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDomainAssociationRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockAmplifyAPI) CreateDomainAssociationRequest(arg0 *amplify.CreateDoma
 	return ret0, ret1
 }
 
-// CreateDomainAssociationRequest indicates an expected call of CreateDomainAssociationRequest
+// CreateDomainAssociationRequest indicates an expected call of CreateDomainAssociationRequest.
 func (mr *MockAmplifyAPIMockRecorder) CreateDomainAssociationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainAssociationRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateDomainAssociationRequest), arg0)
 }
 
-// CreateDomainAssociationWithContext mocks base method
+// CreateDomainAssociationWithContext mocks base method.
 func (m *MockAmplifyAPI) CreateDomainAssociationWithContext(arg0 context.Context, arg1 *amplify.CreateDomainAssociationInput, arg2 ...request.Option) (*amplify.CreateDomainAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockAmplifyAPI) CreateDomainAssociationWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// CreateDomainAssociationWithContext indicates an expected call of CreateDomainAssociationWithContext
+// CreateDomainAssociationWithContext indicates an expected call of CreateDomainAssociationWithContext.
 func (mr *MockAmplifyAPIMockRecorder) CreateDomainAssociationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainAssociationWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateDomainAssociationWithContext), varargs...)
 }
 
-// CreateWebhook mocks base method
+// CreateWebhook mocks base method.
 func (m *MockAmplifyAPI) CreateWebhook(arg0 *amplify.CreateWebhookInput) (*amplify.CreateWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWebhook", arg0)
@@ -294,13 +295,13 @@ func (m *MockAmplifyAPI) CreateWebhook(arg0 *amplify.CreateWebhookInput) (*ampli
 	return ret0, ret1
 }
 
-// CreateWebhook indicates an expected call of CreateWebhook
+// CreateWebhook indicates an expected call of CreateWebhook.
 func (mr *MockAmplifyAPIMockRecorder) CreateWebhook(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWebhook", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateWebhook), arg0)
 }
 
-// CreateWebhookRequest mocks base method
+// CreateWebhookRequest mocks base method.
 func (m *MockAmplifyAPI) CreateWebhookRequest(arg0 *amplify.CreateWebhookInput) (*request.Request, *amplify.CreateWebhookOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWebhookRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockAmplifyAPI) CreateWebhookRequest(arg0 *amplify.CreateWebhookInput) 
 	return ret0, ret1
 }
 
-// CreateWebhookRequest indicates an expected call of CreateWebhookRequest
+// CreateWebhookRequest indicates an expected call of CreateWebhookRequest.
 func (mr *MockAmplifyAPIMockRecorder) CreateWebhookRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWebhookRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateWebhookRequest), arg0)
 }
 
-// CreateWebhookWithContext mocks base method
+// CreateWebhookWithContext mocks base method.
 func (m *MockAmplifyAPI) CreateWebhookWithContext(arg0 context.Context, arg1 *amplify.CreateWebhookInput, arg2 ...request.Option) (*amplify.CreateWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockAmplifyAPI) CreateWebhookWithContext(arg0 context.Context, arg1 *am
 	return ret0, ret1
 }
 
-// CreateWebhookWithContext indicates an expected call of CreateWebhookWithContext
+// CreateWebhookWithContext indicates an expected call of CreateWebhookWithContext.
 func (mr *MockAmplifyAPIMockRecorder) CreateWebhookWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWebhookWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).CreateWebhookWithContext), varargs...)
 }
 
-// DeleteApp mocks base method
+// DeleteApp mocks base method.
 func (m *MockAmplifyAPI) DeleteApp(arg0 *amplify.DeleteAppInput) (*amplify.DeleteAppOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteApp", arg0)
@@ -344,13 +345,13 @@ func (m *MockAmplifyAPI) DeleteApp(arg0 *amplify.DeleteAppInput) (*amplify.Delet
 	return ret0, ret1
 }
 
-// DeleteApp indicates an expected call of DeleteApp
+// DeleteApp indicates an expected call of DeleteApp.
 func (mr *MockAmplifyAPIMockRecorder) DeleteApp(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteApp", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteApp), arg0)
 }
 
-// DeleteAppRequest mocks base method
+// DeleteAppRequest mocks base method.
 func (m *MockAmplifyAPI) DeleteAppRequest(arg0 *amplify.DeleteAppInput) (*request.Request, *amplify.DeleteAppOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAppRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockAmplifyAPI) DeleteAppRequest(arg0 *amplify.DeleteAppInput) (*reques
 	return ret0, ret1
 }
 
-// DeleteAppRequest indicates an expected call of DeleteAppRequest
+// DeleteAppRequest indicates an expected call of DeleteAppRequest.
 func (mr *MockAmplifyAPIMockRecorder) DeleteAppRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAppRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteAppRequest), arg0)
 }
 
-// DeleteAppWithContext mocks base method
+// DeleteAppWithContext mocks base method.
 func (m *MockAmplifyAPI) DeleteAppWithContext(arg0 context.Context, arg1 *amplify.DeleteAppInput, arg2 ...request.Option) (*amplify.DeleteAppOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockAmplifyAPI) DeleteAppWithContext(arg0 context.Context, arg1 *amplif
 	return ret0, ret1
 }
 
-// DeleteAppWithContext indicates an expected call of DeleteAppWithContext
+// DeleteAppWithContext indicates an expected call of DeleteAppWithContext.
 func (mr *MockAmplifyAPIMockRecorder) DeleteAppWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAppWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteAppWithContext), varargs...)
 }
 
-// DeleteBackendEnvironment mocks base method
+// DeleteBackendEnvironment mocks base method.
 func (m *MockAmplifyAPI) DeleteBackendEnvironment(arg0 *amplify.DeleteBackendEnvironmentInput) (*amplify.DeleteBackendEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBackendEnvironment", arg0)
@@ -394,13 +395,13 @@ func (m *MockAmplifyAPI) DeleteBackendEnvironment(arg0 *amplify.DeleteBackendEnv
 	return ret0, ret1
 }
 
-// DeleteBackendEnvironment indicates an expected call of DeleteBackendEnvironment
+// DeleteBackendEnvironment indicates an expected call of DeleteBackendEnvironment.
 func (mr *MockAmplifyAPIMockRecorder) DeleteBackendEnvironment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackendEnvironment", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteBackendEnvironment), arg0)
 }
 
-// DeleteBackendEnvironmentRequest mocks base method
+// DeleteBackendEnvironmentRequest mocks base method.
 func (m *MockAmplifyAPI) DeleteBackendEnvironmentRequest(arg0 *amplify.DeleteBackendEnvironmentInput) (*request.Request, *amplify.DeleteBackendEnvironmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBackendEnvironmentRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockAmplifyAPI) DeleteBackendEnvironmentRequest(arg0 *amplify.DeleteBac
 	return ret0, ret1
 }
 
-// DeleteBackendEnvironmentRequest indicates an expected call of DeleteBackendEnvironmentRequest
+// DeleteBackendEnvironmentRequest indicates an expected call of DeleteBackendEnvironmentRequest.
 func (mr *MockAmplifyAPIMockRecorder) DeleteBackendEnvironmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackendEnvironmentRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteBackendEnvironmentRequest), arg0)
 }
 
-// DeleteBackendEnvironmentWithContext mocks base method
+// DeleteBackendEnvironmentWithContext mocks base method.
 func (m *MockAmplifyAPI) DeleteBackendEnvironmentWithContext(arg0 context.Context, arg1 *amplify.DeleteBackendEnvironmentInput, arg2 ...request.Option) (*amplify.DeleteBackendEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockAmplifyAPI) DeleteBackendEnvironmentWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteBackendEnvironmentWithContext indicates an expected call of DeleteBackendEnvironmentWithContext
+// DeleteBackendEnvironmentWithContext indicates an expected call of DeleteBackendEnvironmentWithContext.
 func (mr *MockAmplifyAPIMockRecorder) DeleteBackendEnvironmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackendEnvironmentWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteBackendEnvironmentWithContext), varargs...)
 }
 
-// DeleteBranch mocks base method
+// DeleteBranch mocks base method.
 func (m *MockAmplifyAPI) DeleteBranch(arg0 *amplify.DeleteBranchInput) (*amplify.DeleteBranchOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBranch", arg0)
@@ -444,13 +445,13 @@ func (m *MockAmplifyAPI) DeleteBranch(arg0 *amplify.DeleteBranchInput) (*amplify
 	return ret0, ret1
 }
 
-// DeleteBranch indicates an expected call of DeleteBranch
+// DeleteBranch indicates an expected call of DeleteBranch.
 func (mr *MockAmplifyAPIMockRecorder) DeleteBranch(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBranch", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteBranch), arg0)
 }
 
-// DeleteBranchRequest mocks base method
+// DeleteBranchRequest mocks base method.
 func (m *MockAmplifyAPI) DeleteBranchRequest(arg0 *amplify.DeleteBranchInput) (*request.Request, *amplify.DeleteBranchOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBranchRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockAmplifyAPI) DeleteBranchRequest(arg0 *amplify.DeleteBranchInput) (*
 	return ret0, ret1
 }
 
-// DeleteBranchRequest indicates an expected call of DeleteBranchRequest
+// DeleteBranchRequest indicates an expected call of DeleteBranchRequest.
 func (mr *MockAmplifyAPIMockRecorder) DeleteBranchRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBranchRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteBranchRequest), arg0)
 }
 
-// DeleteBranchWithContext mocks base method
+// DeleteBranchWithContext mocks base method.
 func (m *MockAmplifyAPI) DeleteBranchWithContext(arg0 context.Context, arg1 *amplify.DeleteBranchInput, arg2 ...request.Option) (*amplify.DeleteBranchOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockAmplifyAPI) DeleteBranchWithContext(arg0 context.Context, arg1 *amp
 	return ret0, ret1
 }
 
-// DeleteBranchWithContext indicates an expected call of DeleteBranchWithContext
+// DeleteBranchWithContext indicates an expected call of DeleteBranchWithContext.
 func (mr *MockAmplifyAPIMockRecorder) DeleteBranchWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBranchWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteBranchWithContext), varargs...)
 }
 
-// DeleteDomainAssociation mocks base method
+// DeleteDomainAssociation mocks base method.
 func (m *MockAmplifyAPI) DeleteDomainAssociation(arg0 *amplify.DeleteDomainAssociationInput) (*amplify.DeleteDomainAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDomainAssociation", arg0)
@@ -494,13 +495,13 @@ func (m *MockAmplifyAPI) DeleteDomainAssociation(arg0 *amplify.DeleteDomainAssoc
 	return ret0, ret1
 }
 
-// DeleteDomainAssociation indicates an expected call of DeleteDomainAssociation
+// DeleteDomainAssociation indicates an expected call of DeleteDomainAssociation.
 func (mr *MockAmplifyAPIMockRecorder) DeleteDomainAssociation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainAssociation", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteDomainAssociation), arg0)
 }
 
-// DeleteDomainAssociationRequest mocks base method
+// DeleteDomainAssociationRequest mocks base method.
 func (m *MockAmplifyAPI) DeleteDomainAssociationRequest(arg0 *amplify.DeleteDomainAssociationInput) (*request.Request, *amplify.DeleteDomainAssociationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDomainAssociationRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockAmplifyAPI) DeleteDomainAssociationRequest(arg0 *amplify.DeleteDoma
 	return ret0, ret1
 }
 
-// DeleteDomainAssociationRequest indicates an expected call of DeleteDomainAssociationRequest
+// DeleteDomainAssociationRequest indicates an expected call of DeleteDomainAssociationRequest.
 func (mr *MockAmplifyAPIMockRecorder) DeleteDomainAssociationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainAssociationRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteDomainAssociationRequest), arg0)
 }
 
-// DeleteDomainAssociationWithContext mocks base method
+// DeleteDomainAssociationWithContext mocks base method.
 func (m *MockAmplifyAPI) DeleteDomainAssociationWithContext(arg0 context.Context, arg1 *amplify.DeleteDomainAssociationInput, arg2 ...request.Option) (*amplify.DeleteDomainAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockAmplifyAPI) DeleteDomainAssociationWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// DeleteDomainAssociationWithContext indicates an expected call of DeleteDomainAssociationWithContext
+// DeleteDomainAssociationWithContext indicates an expected call of DeleteDomainAssociationWithContext.
 func (mr *MockAmplifyAPIMockRecorder) DeleteDomainAssociationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainAssociationWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteDomainAssociationWithContext), varargs...)
 }
 
-// DeleteJob mocks base method
+// DeleteJob mocks base method.
 func (m *MockAmplifyAPI) DeleteJob(arg0 *amplify.DeleteJobInput) (*amplify.DeleteJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteJob", arg0)
@@ -544,13 +545,13 @@ func (m *MockAmplifyAPI) DeleteJob(arg0 *amplify.DeleteJobInput) (*amplify.Delet
 	return ret0, ret1
 }
 
-// DeleteJob indicates an expected call of DeleteJob
+// DeleteJob indicates an expected call of DeleteJob.
 func (mr *MockAmplifyAPIMockRecorder) DeleteJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteJob", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteJob), arg0)
 }
 
-// DeleteJobRequest mocks base method
+// DeleteJobRequest mocks base method.
 func (m *MockAmplifyAPI) DeleteJobRequest(arg0 *amplify.DeleteJobInput) (*request.Request, *amplify.DeleteJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteJobRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockAmplifyAPI) DeleteJobRequest(arg0 *amplify.DeleteJobInput) (*reques
 	return ret0, ret1
 }
 
-// DeleteJobRequest indicates an expected call of DeleteJobRequest
+// DeleteJobRequest indicates an expected call of DeleteJobRequest.
 func (mr *MockAmplifyAPIMockRecorder) DeleteJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteJobRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteJobRequest), arg0)
 }
 
-// DeleteJobWithContext mocks base method
+// DeleteJobWithContext mocks base method.
 func (m *MockAmplifyAPI) DeleteJobWithContext(arg0 context.Context, arg1 *amplify.DeleteJobInput, arg2 ...request.Option) (*amplify.DeleteJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockAmplifyAPI) DeleteJobWithContext(arg0 context.Context, arg1 *amplif
 	return ret0, ret1
 }
 
-// DeleteJobWithContext indicates an expected call of DeleteJobWithContext
+// DeleteJobWithContext indicates an expected call of DeleteJobWithContext.
 func (mr *MockAmplifyAPIMockRecorder) DeleteJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteJobWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteJobWithContext), varargs...)
 }
 
-// DeleteWebhook mocks base method
+// DeleteWebhook mocks base method.
 func (m *MockAmplifyAPI) DeleteWebhook(arg0 *amplify.DeleteWebhookInput) (*amplify.DeleteWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteWebhook", arg0)
@@ -594,13 +595,13 @@ func (m *MockAmplifyAPI) DeleteWebhook(arg0 *amplify.DeleteWebhookInput) (*ampli
 	return ret0, ret1
 }
 
-// DeleteWebhook indicates an expected call of DeleteWebhook
+// DeleteWebhook indicates an expected call of DeleteWebhook.
 func (mr *MockAmplifyAPIMockRecorder) DeleteWebhook(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWebhook", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteWebhook), arg0)
 }
 
-// DeleteWebhookRequest mocks base method
+// DeleteWebhookRequest mocks base method.
 func (m *MockAmplifyAPI) DeleteWebhookRequest(arg0 *amplify.DeleteWebhookInput) (*request.Request, *amplify.DeleteWebhookOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteWebhookRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockAmplifyAPI) DeleteWebhookRequest(arg0 *amplify.DeleteWebhookInput) 
 	return ret0, ret1
 }
 
-// DeleteWebhookRequest indicates an expected call of DeleteWebhookRequest
+// DeleteWebhookRequest indicates an expected call of DeleteWebhookRequest.
 func (mr *MockAmplifyAPIMockRecorder) DeleteWebhookRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWebhookRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteWebhookRequest), arg0)
 }
 
-// DeleteWebhookWithContext mocks base method
+// DeleteWebhookWithContext mocks base method.
 func (m *MockAmplifyAPI) DeleteWebhookWithContext(arg0 context.Context, arg1 *amplify.DeleteWebhookInput, arg2 ...request.Option) (*amplify.DeleteWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockAmplifyAPI) DeleteWebhookWithContext(arg0 context.Context, arg1 *am
 	return ret0, ret1
 }
 
-// DeleteWebhookWithContext indicates an expected call of DeleteWebhookWithContext
+// DeleteWebhookWithContext indicates an expected call of DeleteWebhookWithContext.
 func (mr *MockAmplifyAPIMockRecorder) DeleteWebhookWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWebhookWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).DeleteWebhookWithContext), varargs...)
 }
 
-// GenerateAccessLogs mocks base method
+// GenerateAccessLogs mocks base method.
 func (m *MockAmplifyAPI) GenerateAccessLogs(arg0 *amplify.GenerateAccessLogsInput) (*amplify.GenerateAccessLogsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GenerateAccessLogs", arg0)
@@ -644,13 +645,13 @@ func (m *MockAmplifyAPI) GenerateAccessLogs(arg0 *amplify.GenerateAccessLogsInpu
 	return ret0, ret1
 }
 
-// GenerateAccessLogs indicates an expected call of GenerateAccessLogs
+// GenerateAccessLogs indicates an expected call of GenerateAccessLogs.
 func (mr *MockAmplifyAPIMockRecorder) GenerateAccessLogs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GenerateAccessLogs", reflect.TypeOf((*MockAmplifyAPI)(nil).GenerateAccessLogs), arg0)
 }
 
-// GenerateAccessLogsRequest mocks base method
+// GenerateAccessLogsRequest mocks base method.
 func (m *MockAmplifyAPI) GenerateAccessLogsRequest(arg0 *amplify.GenerateAccessLogsInput) (*request.Request, *amplify.GenerateAccessLogsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GenerateAccessLogsRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockAmplifyAPI) GenerateAccessLogsRequest(arg0 *amplify.GenerateAccessL
 	return ret0, ret1
 }
 
-// GenerateAccessLogsRequest indicates an expected call of GenerateAccessLogsRequest
+// GenerateAccessLogsRequest indicates an expected call of GenerateAccessLogsRequest.
 func (mr *MockAmplifyAPIMockRecorder) GenerateAccessLogsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GenerateAccessLogsRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).GenerateAccessLogsRequest), arg0)
 }
 
-// GenerateAccessLogsWithContext mocks base method
+// GenerateAccessLogsWithContext mocks base method.
 func (m *MockAmplifyAPI) GenerateAccessLogsWithContext(arg0 context.Context, arg1 *amplify.GenerateAccessLogsInput, arg2 ...request.Option) (*amplify.GenerateAccessLogsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockAmplifyAPI) GenerateAccessLogsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GenerateAccessLogsWithContext indicates an expected call of GenerateAccessLogsWithContext
+// GenerateAccessLogsWithContext indicates an expected call of GenerateAccessLogsWithContext.
 func (mr *MockAmplifyAPIMockRecorder) GenerateAccessLogsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GenerateAccessLogsWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).GenerateAccessLogsWithContext), varargs...)
 }
 
-// GetApp mocks base method
+// GetApp mocks base method.
 func (m *MockAmplifyAPI) GetApp(arg0 *amplify.GetAppInput) (*amplify.GetAppOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetApp", arg0)
@@ -694,13 +695,13 @@ func (m *MockAmplifyAPI) GetApp(arg0 *amplify.GetAppInput) (*amplify.GetAppOutpu
 	return ret0, ret1
 }
 
-// GetApp indicates an expected call of GetApp
+// GetApp indicates an expected call of GetApp.
 func (mr *MockAmplifyAPIMockRecorder) GetApp(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetApp", reflect.TypeOf((*MockAmplifyAPI)(nil).GetApp), arg0)
 }
 
-// GetAppRequest mocks base method
+// GetAppRequest mocks base method.
 func (m *MockAmplifyAPI) GetAppRequest(arg0 *amplify.GetAppInput) (*request.Request, *amplify.GetAppOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAppRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockAmplifyAPI) GetAppRequest(arg0 *amplify.GetAppInput) (*request.Requ
 	return ret0, ret1
 }
 
-// GetAppRequest indicates an expected call of GetAppRequest
+// GetAppRequest indicates an expected call of GetAppRequest.
 func (mr *MockAmplifyAPIMockRecorder) GetAppRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAppRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).GetAppRequest), arg0)
 }
 
-// GetAppWithContext mocks base method
+// GetAppWithContext mocks base method.
 func (m *MockAmplifyAPI) GetAppWithContext(arg0 context.Context, arg1 *amplify.GetAppInput, arg2 ...request.Option) (*amplify.GetAppOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockAmplifyAPI) GetAppWithContext(arg0 context.Context, arg1 *amplify.G
 	return ret0, ret1
 }
 
-// GetAppWithContext indicates an expected call of GetAppWithContext
+// GetAppWithContext indicates an expected call of GetAppWithContext.
 func (mr *MockAmplifyAPIMockRecorder) GetAppWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAppWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).GetAppWithContext), varargs...)
 }
 
-// GetArtifactUrl mocks base method
+// GetArtifactUrl mocks base method.
 func (m *MockAmplifyAPI) GetArtifactUrl(arg0 *amplify.GetArtifactUrlInput) (*amplify.GetArtifactUrlOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetArtifactUrl", arg0)
@@ -744,13 +745,13 @@ func (m *MockAmplifyAPI) GetArtifactUrl(arg0 *amplify.GetArtifactUrlInput) (*amp
 	return ret0, ret1
 }
 
-// GetArtifactUrl indicates an expected call of GetArtifactUrl
+// GetArtifactUrl indicates an expected call of GetArtifactUrl.
 func (mr *MockAmplifyAPIMockRecorder) GetArtifactUrl(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetArtifactUrl", reflect.TypeOf((*MockAmplifyAPI)(nil).GetArtifactUrl), arg0)
 }
 
-// GetArtifactUrlRequest mocks base method
+// GetArtifactUrlRequest mocks base method.
 func (m *MockAmplifyAPI) GetArtifactUrlRequest(arg0 *amplify.GetArtifactUrlInput) (*request.Request, *amplify.GetArtifactUrlOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetArtifactUrlRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockAmplifyAPI) GetArtifactUrlRequest(arg0 *amplify.GetArtifactUrlInput
 	return ret0, ret1
 }
 
-// GetArtifactUrlRequest indicates an expected call of GetArtifactUrlRequest
+// GetArtifactUrlRequest indicates an expected call of GetArtifactUrlRequest.
 func (mr *MockAmplifyAPIMockRecorder) GetArtifactUrlRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetArtifactUrlRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).GetArtifactUrlRequest), arg0)
 }
 
-// GetArtifactUrlWithContext mocks base method
+// GetArtifactUrlWithContext mocks base method.
 func (m *MockAmplifyAPI) GetArtifactUrlWithContext(arg0 context.Context, arg1 *amplify.GetArtifactUrlInput, arg2 ...request.Option) (*amplify.GetArtifactUrlOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockAmplifyAPI) GetArtifactUrlWithContext(arg0 context.Context, arg1 *a
 	return ret0, ret1
 }
 
-// GetArtifactUrlWithContext indicates an expected call of GetArtifactUrlWithContext
+// GetArtifactUrlWithContext indicates an expected call of GetArtifactUrlWithContext.
 func (mr *MockAmplifyAPIMockRecorder) GetArtifactUrlWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetArtifactUrlWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).GetArtifactUrlWithContext), varargs...)
 }
 
-// GetBackendEnvironment mocks base method
+// GetBackendEnvironment mocks base method.
 func (m *MockAmplifyAPI) GetBackendEnvironment(arg0 *amplify.GetBackendEnvironmentInput) (*amplify.GetBackendEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackendEnvironment", arg0)
@@ -794,13 +795,13 @@ func (m *MockAmplifyAPI) GetBackendEnvironment(arg0 *amplify.GetBackendEnvironme
 	return ret0, ret1
 }
 
-// GetBackendEnvironment indicates an expected call of GetBackendEnvironment
+// GetBackendEnvironment indicates an expected call of GetBackendEnvironment.
 func (mr *MockAmplifyAPIMockRecorder) GetBackendEnvironment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackendEnvironment", reflect.TypeOf((*MockAmplifyAPI)(nil).GetBackendEnvironment), arg0)
 }
 
-// GetBackendEnvironmentRequest mocks base method
+// GetBackendEnvironmentRequest mocks base method.
 func (m *MockAmplifyAPI) GetBackendEnvironmentRequest(arg0 *amplify.GetBackendEnvironmentInput) (*request.Request, *amplify.GetBackendEnvironmentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackendEnvironmentRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockAmplifyAPI) GetBackendEnvironmentRequest(arg0 *amplify.GetBackendEn
 	return ret0, ret1
 }
 
-// GetBackendEnvironmentRequest indicates an expected call of GetBackendEnvironmentRequest
+// GetBackendEnvironmentRequest indicates an expected call of GetBackendEnvironmentRequest.
 func (mr *MockAmplifyAPIMockRecorder) GetBackendEnvironmentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackendEnvironmentRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).GetBackendEnvironmentRequest), arg0)
 }
 
-// GetBackendEnvironmentWithContext mocks base method
+// GetBackendEnvironmentWithContext mocks base method.
 func (m *MockAmplifyAPI) GetBackendEnvironmentWithContext(arg0 context.Context, arg1 *amplify.GetBackendEnvironmentInput, arg2 ...request.Option) (*amplify.GetBackendEnvironmentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockAmplifyAPI) GetBackendEnvironmentWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// GetBackendEnvironmentWithContext indicates an expected call of GetBackendEnvironmentWithContext
+// GetBackendEnvironmentWithContext indicates an expected call of GetBackendEnvironmentWithContext.
 func (mr *MockAmplifyAPIMockRecorder) GetBackendEnvironmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackendEnvironmentWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).GetBackendEnvironmentWithContext), varargs...)
 }
 
-// GetBranch mocks base method
+// GetBranch mocks base method.
 func (m *MockAmplifyAPI) GetBranch(arg0 *amplify.GetBranchInput) (*amplify.GetBranchOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBranch", arg0)
@@ -844,13 +845,13 @@ func (m *MockAmplifyAPI) GetBranch(arg0 *amplify.GetBranchInput) (*amplify.GetBr
 	return ret0, ret1
 }
 
-// GetBranch indicates an expected call of GetBranch
+// GetBranch indicates an expected call of GetBranch.
 func (mr *MockAmplifyAPIMockRecorder) GetBranch(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBranch", reflect.TypeOf((*MockAmplifyAPI)(nil).GetBranch), arg0)
 }
 
-// GetBranchRequest mocks base method
+// GetBranchRequest mocks base method.
 func (m *MockAmplifyAPI) GetBranchRequest(arg0 *amplify.GetBranchInput) (*request.Request, *amplify.GetBranchOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBranchRequest", arg0)
@@ -859,13 +860,13 @@ func (m *MockAmplifyAPI) GetBranchRequest(arg0 *amplify.GetBranchInput) (*reques
 	return ret0, ret1
 }
 
-// GetBranchRequest indicates an expected call of GetBranchRequest
+// GetBranchRequest indicates an expected call of GetBranchRequest.
 func (mr *MockAmplifyAPIMockRecorder) GetBranchRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBranchRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).GetBranchRequest), arg0)
 }
 
-// GetBranchWithContext mocks base method
+// GetBranchWithContext mocks base method.
 func (m *MockAmplifyAPI) GetBranchWithContext(arg0 context.Context, arg1 *amplify.GetBranchInput, arg2 ...request.Option) (*amplify.GetBranchOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +879,14 @@ func (m *MockAmplifyAPI) GetBranchWithContext(arg0 context.Context, arg1 *amplif
 	return ret0, ret1
 }
 
-// GetBranchWithContext indicates an expected call of GetBranchWithContext
+// GetBranchWithContext indicates an expected call of GetBranchWithContext.
 func (mr *MockAmplifyAPIMockRecorder) GetBranchWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBranchWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).GetBranchWithContext), varargs...)
 }
 
-// GetDomainAssociation mocks base method
+// GetDomainAssociation mocks base method.
 func (m *MockAmplifyAPI) GetDomainAssociation(arg0 *amplify.GetDomainAssociationInput) (*amplify.GetDomainAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomainAssociation", arg0)
@@ -894,13 +895,13 @@ func (m *MockAmplifyAPI) GetDomainAssociation(arg0 *amplify.GetDomainAssociation
 	return ret0, ret1
 }
 
-// GetDomainAssociation indicates an expected call of GetDomainAssociation
+// GetDomainAssociation indicates an expected call of GetDomainAssociation.
 func (mr *MockAmplifyAPIMockRecorder) GetDomainAssociation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainAssociation", reflect.TypeOf((*MockAmplifyAPI)(nil).GetDomainAssociation), arg0)
 }
 
-// GetDomainAssociationRequest mocks base method
+// GetDomainAssociationRequest mocks base method.
 func (m *MockAmplifyAPI) GetDomainAssociationRequest(arg0 *amplify.GetDomainAssociationInput) (*request.Request, *amplify.GetDomainAssociationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomainAssociationRequest", arg0)
@@ -909,13 +910,13 @@ func (m *MockAmplifyAPI) GetDomainAssociationRequest(arg0 *amplify.GetDomainAsso
 	return ret0, ret1
 }
 
-// GetDomainAssociationRequest indicates an expected call of GetDomainAssociationRequest
+// GetDomainAssociationRequest indicates an expected call of GetDomainAssociationRequest.
 func (mr *MockAmplifyAPIMockRecorder) GetDomainAssociationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainAssociationRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).GetDomainAssociationRequest), arg0)
 }
 
-// GetDomainAssociationWithContext mocks base method
+// GetDomainAssociationWithContext mocks base method.
 func (m *MockAmplifyAPI) GetDomainAssociationWithContext(arg0 context.Context, arg1 *amplify.GetDomainAssociationInput, arg2 ...request.Option) (*amplify.GetDomainAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -928,14 +929,14 @@ func (m *MockAmplifyAPI) GetDomainAssociationWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// GetDomainAssociationWithContext indicates an expected call of GetDomainAssociationWithContext
+// GetDomainAssociationWithContext indicates an expected call of GetDomainAssociationWithContext.
 func (mr *MockAmplifyAPIMockRecorder) GetDomainAssociationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainAssociationWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).GetDomainAssociationWithContext), varargs...)
 }
 
-// GetJob mocks base method
+// GetJob mocks base method.
 func (m *MockAmplifyAPI) GetJob(arg0 *amplify.GetJobInput) (*amplify.GetJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetJob", arg0)
@@ -944,13 +945,13 @@ func (m *MockAmplifyAPI) GetJob(arg0 *amplify.GetJobInput) (*amplify.GetJobOutpu
 	return ret0, ret1
 }
 
-// GetJob indicates an expected call of GetJob
+// GetJob indicates an expected call of GetJob.
 func (mr *MockAmplifyAPIMockRecorder) GetJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetJob", reflect.TypeOf((*MockAmplifyAPI)(nil).GetJob), arg0)
 }
 
-// GetJobRequest mocks base method
+// GetJobRequest mocks base method.
 func (m *MockAmplifyAPI) GetJobRequest(arg0 *amplify.GetJobInput) (*request.Request, *amplify.GetJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetJobRequest", arg0)
@@ -959,13 +960,13 @@ func (m *MockAmplifyAPI) GetJobRequest(arg0 *amplify.GetJobInput) (*request.Requ
 	return ret0, ret1
 }
 
-// GetJobRequest indicates an expected call of GetJobRequest
+// GetJobRequest indicates an expected call of GetJobRequest.
 func (mr *MockAmplifyAPIMockRecorder) GetJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetJobRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).GetJobRequest), arg0)
 }
 
-// GetJobWithContext mocks base method
+// GetJobWithContext mocks base method.
 func (m *MockAmplifyAPI) GetJobWithContext(arg0 context.Context, arg1 *amplify.GetJobInput, arg2 ...request.Option) (*amplify.GetJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -978,14 +979,14 @@ func (m *MockAmplifyAPI) GetJobWithContext(arg0 context.Context, arg1 *amplify.G
 	return ret0, ret1
 }
 
-// GetJobWithContext indicates an expected call of GetJobWithContext
+// GetJobWithContext indicates an expected call of GetJobWithContext.
 func (mr *MockAmplifyAPIMockRecorder) GetJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetJobWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).GetJobWithContext), varargs...)
 }
 
-// GetWebhook mocks base method
+// GetWebhook mocks base method.
 func (m *MockAmplifyAPI) GetWebhook(arg0 *amplify.GetWebhookInput) (*amplify.GetWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetWebhook", arg0)
@@ -994,13 +995,13 @@ func (m *MockAmplifyAPI) GetWebhook(arg0 *amplify.GetWebhookInput) (*amplify.Get
 	return ret0, ret1
 }
 
-// GetWebhook indicates an expected call of GetWebhook
+// GetWebhook indicates an expected call of GetWebhook.
 func (mr *MockAmplifyAPIMockRecorder) GetWebhook(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWebhook", reflect.TypeOf((*MockAmplifyAPI)(nil).GetWebhook), arg0)
 }
 
-// GetWebhookRequest mocks base method
+// GetWebhookRequest mocks base method.
 func (m *MockAmplifyAPI) GetWebhookRequest(arg0 *amplify.GetWebhookInput) (*request.Request, *amplify.GetWebhookOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetWebhookRequest", arg0)
@@ -1009,13 +1010,13 @@ func (m *MockAmplifyAPI) GetWebhookRequest(arg0 *amplify.GetWebhookInput) (*requ
 	return ret0, ret1
 }
 
-// GetWebhookRequest indicates an expected call of GetWebhookRequest
+// GetWebhookRequest indicates an expected call of GetWebhookRequest.
 func (mr *MockAmplifyAPIMockRecorder) GetWebhookRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWebhookRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).GetWebhookRequest), arg0)
 }
 
-// GetWebhookWithContext mocks base method
+// GetWebhookWithContext mocks base method.
 func (m *MockAmplifyAPI) GetWebhookWithContext(arg0 context.Context, arg1 *amplify.GetWebhookInput, arg2 ...request.Option) (*amplify.GetWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1028,14 +1029,14 @@ func (m *MockAmplifyAPI) GetWebhookWithContext(arg0 context.Context, arg1 *ampli
 	return ret0, ret1
 }
 
-// GetWebhookWithContext indicates an expected call of GetWebhookWithContext
+// GetWebhookWithContext indicates an expected call of GetWebhookWithContext.
 func (mr *MockAmplifyAPIMockRecorder) GetWebhookWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWebhookWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).GetWebhookWithContext), varargs...)
 }
 
-// ListApps mocks base method
+// ListApps mocks base method.
 func (m *MockAmplifyAPI) ListApps(arg0 *amplify.ListAppsInput) (*amplify.ListAppsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListApps", arg0)
@@ -1044,13 +1045,13 @@ func (m *MockAmplifyAPI) ListApps(arg0 *amplify.ListAppsInput) (*amplify.ListApp
 	return ret0, ret1
 }
 
-// ListApps indicates an expected call of ListApps
+// ListApps indicates an expected call of ListApps.
 func (mr *MockAmplifyAPIMockRecorder) ListApps(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListApps", reflect.TypeOf((*MockAmplifyAPI)(nil).ListApps), arg0)
 }
 
-// ListAppsRequest mocks base method
+// ListAppsRequest mocks base method.
 func (m *MockAmplifyAPI) ListAppsRequest(arg0 *amplify.ListAppsInput) (*request.Request, *amplify.ListAppsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAppsRequest", arg0)
@@ -1059,13 +1060,13 @@ func (m *MockAmplifyAPI) ListAppsRequest(arg0 *amplify.ListAppsInput) (*request.
 	return ret0, ret1
 }
 
-// ListAppsRequest indicates an expected call of ListAppsRequest
+// ListAppsRequest indicates an expected call of ListAppsRequest.
 func (mr *MockAmplifyAPIMockRecorder) ListAppsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAppsRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).ListAppsRequest), arg0)
 }
 
-// ListAppsWithContext mocks base method
+// ListAppsWithContext mocks base method.
 func (m *MockAmplifyAPI) ListAppsWithContext(arg0 context.Context, arg1 *amplify.ListAppsInput, arg2 ...request.Option) (*amplify.ListAppsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1078,14 +1079,14 @@ func (m *MockAmplifyAPI) ListAppsWithContext(arg0 context.Context, arg1 *amplify
 	return ret0, ret1
 }
 
-// ListAppsWithContext indicates an expected call of ListAppsWithContext
+// ListAppsWithContext indicates an expected call of ListAppsWithContext.
 func (mr *MockAmplifyAPIMockRecorder) ListAppsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAppsWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).ListAppsWithContext), varargs...)
 }
 
-// ListArtifacts mocks base method
+// ListArtifacts mocks base method.
 func (m *MockAmplifyAPI) ListArtifacts(arg0 *amplify.ListArtifactsInput) (*amplify.ListArtifactsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListArtifacts", arg0)
@@ -1094,13 +1095,13 @@ func (m *MockAmplifyAPI) ListArtifacts(arg0 *amplify.ListArtifactsInput) (*ampli
 	return ret0, ret1
 }
 
-// ListArtifacts indicates an expected call of ListArtifacts
+// ListArtifacts indicates an expected call of ListArtifacts.
 func (mr *MockAmplifyAPIMockRecorder) ListArtifacts(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListArtifacts", reflect.TypeOf((*MockAmplifyAPI)(nil).ListArtifacts), arg0)
 }
 
-// ListArtifactsRequest mocks base method
+// ListArtifactsRequest mocks base method.
 func (m *MockAmplifyAPI) ListArtifactsRequest(arg0 *amplify.ListArtifactsInput) (*request.Request, *amplify.ListArtifactsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListArtifactsRequest", arg0)
@@ -1109,13 +1110,13 @@ func (m *MockAmplifyAPI) ListArtifactsRequest(arg0 *amplify.ListArtifactsInput) 
 	return ret0, ret1
 }
 
-// ListArtifactsRequest indicates an expected call of ListArtifactsRequest
+// ListArtifactsRequest indicates an expected call of ListArtifactsRequest.
 func (mr *MockAmplifyAPIMockRecorder) ListArtifactsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListArtifactsRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).ListArtifactsRequest), arg0)
 }
 
-// ListArtifactsWithContext mocks base method
+// ListArtifactsWithContext mocks base method.
 func (m *MockAmplifyAPI) ListArtifactsWithContext(arg0 context.Context, arg1 *amplify.ListArtifactsInput, arg2 ...request.Option) (*amplify.ListArtifactsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1128,14 +1129,14 @@ func (m *MockAmplifyAPI) ListArtifactsWithContext(arg0 context.Context, arg1 *am
 	return ret0, ret1
 }
 
-// ListArtifactsWithContext indicates an expected call of ListArtifactsWithContext
+// ListArtifactsWithContext indicates an expected call of ListArtifactsWithContext.
 func (mr *MockAmplifyAPIMockRecorder) ListArtifactsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListArtifactsWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).ListArtifactsWithContext), varargs...)
 }
 
-// ListBackendEnvironments mocks base method
+// ListBackendEnvironments mocks base method.
 func (m *MockAmplifyAPI) ListBackendEnvironments(arg0 *amplify.ListBackendEnvironmentsInput) (*amplify.ListBackendEnvironmentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackendEnvironments", arg0)
@@ -1144,13 +1145,13 @@ func (m *MockAmplifyAPI) ListBackendEnvironments(arg0 *amplify.ListBackendEnviro
 	return ret0, ret1
 }
 
-// ListBackendEnvironments indicates an expected call of ListBackendEnvironments
+// ListBackendEnvironments indicates an expected call of ListBackendEnvironments.
 func (mr *MockAmplifyAPIMockRecorder) ListBackendEnvironments(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackendEnvironments", reflect.TypeOf((*MockAmplifyAPI)(nil).ListBackendEnvironments), arg0)
 }
 
-// ListBackendEnvironmentsRequest mocks base method
+// ListBackendEnvironmentsRequest mocks base method.
 func (m *MockAmplifyAPI) ListBackendEnvironmentsRequest(arg0 *amplify.ListBackendEnvironmentsInput) (*request.Request, *amplify.ListBackendEnvironmentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackendEnvironmentsRequest", arg0)
@@ -1159,13 +1160,13 @@ func (m *MockAmplifyAPI) ListBackendEnvironmentsRequest(arg0 *amplify.ListBacken
 	return ret0, ret1
 }
 
-// ListBackendEnvironmentsRequest indicates an expected call of ListBackendEnvironmentsRequest
+// ListBackendEnvironmentsRequest indicates an expected call of ListBackendEnvironmentsRequest.
 func (mr *MockAmplifyAPIMockRecorder) ListBackendEnvironmentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackendEnvironmentsRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).ListBackendEnvironmentsRequest), arg0)
 }
 
-// ListBackendEnvironmentsWithContext mocks base method
+// ListBackendEnvironmentsWithContext mocks base method.
 func (m *MockAmplifyAPI) ListBackendEnvironmentsWithContext(arg0 context.Context, arg1 *amplify.ListBackendEnvironmentsInput, arg2 ...request.Option) (*amplify.ListBackendEnvironmentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1178,14 +1179,14 @@ func (m *MockAmplifyAPI) ListBackendEnvironmentsWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListBackendEnvironmentsWithContext indicates an expected call of ListBackendEnvironmentsWithContext
+// ListBackendEnvironmentsWithContext indicates an expected call of ListBackendEnvironmentsWithContext.
 func (mr *MockAmplifyAPIMockRecorder) ListBackendEnvironmentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackendEnvironmentsWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).ListBackendEnvironmentsWithContext), varargs...)
 }
 
-// ListBranches mocks base method
+// ListBranches mocks base method.
 func (m *MockAmplifyAPI) ListBranches(arg0 *amplify.ListBranchesInput) (*amplify.ListBranchesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBranches", arg0)
@@ -1194,13 +1195,13 @@ func (m *MockAmplifyAPI) ListBranches(arg0 *amplify.ListBranchesInput) (*amplify
 	return ret0, ret1
 }
 
-// ListBranches indicates an expected call of ListBranches
+// ListBranches indicates an expected call of ListBranches.
 func (mr *MockAmplifyAPIMockRecorder) ListBranches(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBranches", reflect.TypeOf((*MockAmplifyAPI)(nil).ListBranches), arg0)
 }
 
-// ListBranchesRequest mocks base method
+// ListBranchesRequest mocks base method.
 func (m *MockAmplifyAPI) ListBranchesRequest(arg0 *amplify.ListBranchesInput) (*request.Request, *amplify.ListBranchesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBranchesRequest", arg0)
@@ -1209,13 +1210,13 @@ func (m *MockAmplifyAPI) ListBranchesRequest(arg0 *amplify.ListBranchesInput) (*
 	return ret0, ret1
 }
 
-// ListBranchesRequest indicates an expected call of ListBranchesRequest
+// ListBranchesRequest indicates an expected call of ListBranchesRequest.
 func (mr *MockAmplifyAPIMockRecorder) ListBranchesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBranchesRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).ListBranchesRequest), arg0)
 }
 
-// ListBranchesWithContext mocks base method
+// ListBranchesWithContext mocks base method.
 func (m *MockAmplifyAPI) ListBranchesWithContext(arg0 context.Context, arg1 *amplify.ListBranchesInput, arg2 ...request.Option) (*amplify.ListBranchesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1228,14 +1229,14 @@ func (m *MockAmplifyAPI) ListBranchesWithContext(arg0 context.Context, arg1 *amp
 	return ret0, ret1
 }
 
-// ListBranchesWithContext indicates an expected call of ListBranchesWithContext
+// ListBranchesWithContext indicates an expected call of ListBranchesWithContext.
 func (mr *MockAmplifyAPIMockRecorder) ListBranchesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBranchesWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).ListBranchesWithContext), varargs...)
 }
 
-// ListDomainAssociations mocks base method
+// ListDomainAssociations mocks base method.
 func (m *MockAmplifyAPI) ListDomainAssociations(arg0 *amplify.ListDomainAssociationsInput) (*amplify.ListDomainAssociationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomainAssociations", arg0)
@@ -1244,13 +1245,13 @@ func (m *MockAmplifyAPI) ListDomainAssociations(arg0 *amplify.ListDomainAssociat
 	return ret0, ret1
 }
 
-// ListDomainAssociations indicates an expected call of ListDomainAssociations
+// ListDomainAssociations indicates an expected call of ListDomainAssociations.
 func (mr *MockAmplifyAPIMockRecorder) ListDomainAssociations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainAssociations", reflect.TypeOf((*MockAmplifyAPI)(nil).ListDomainAssociations), arg0)
 }
 
-// ListDomainAssociationsRequest mocks base method
+// ListDomainAssociationsRequest mocks base method.
 func (m *MockAmplifyAPI) ListDomainAssociationsRequest(arg0 *amplify.ListDomainAssociationsInput) (*request.Request, *amplify.ListDomainAssociationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDomainAssociationsRequest", arg0)
@@ -1259,13 +1260,13 @@ func (m *MockAmplifyAPI) ListDomainAssociationsRequest(arg0 *amplify.ListDomainA
 	return ret0, ret1
 }
 
-// ListDomainAssociationsRequest indicates an expected call of ListDomainAssociationsRequest
+// ListDomainAssociationsRequest indicates an expected call of ListDomainAssociationsRequest.
 func (mr *MockAmplifyAPIMockRecorder) ListDomainAssociationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainAssociationsRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).ListDomainAssociationsRequest), arg0)
 }
 
-// ListDomainAssociationsWithContext mocks base method
+// ListDomainAssociationsWithContext mocks base method.
 func (m *MockAmplifyAPI) ListDomainAssociationsWithContext(arg0 context.Context, arg1 *amplify.ListDomainAssociationsInput, arg2 ...request.Option) (*amplify.ListDomainAssociationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1278,14 +1279,14 @@ func (m *MockAmplifyAPI) ListDomainAssociationsWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// ListDomainAssociationsWithContext indicates an expected call of ListDomainAssociationsWithContext
+// ListDomainAssociationsWithContext indicates an expected call of ListDomainAssociationsWithContext.
 func (mr *MockAmplifyAPIMockRecorder) ListDomainAssociationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainAssociationsWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).ListDomainAssociationsWithContext), varargs...)
 }
 
-// ListJobs mocks base method
+// ListJobs mocks base method.
 func (m *MockAmplifyAPI) ListJobs(arg0 *amplify.ListJobsInput) (*amplify.ListJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobs", arg0)
@@ -1294,13 +1295,13 @@ func (m *MockAmplifyAPI) ListJobs(arg0 *amplify.ListJobsInput) (*amplify.ListJob
 	return ret0, ret1
 }
 
-// ListJobs indicates an expected call of ListJobs
+// ListJobs indicates an expected call of ListJobs.
 func (mr *MockAmplifyAPIMockRecorder) ListJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobs", reflect.TypeOf((*MockAmplifyAPI)(nil).ListJobs), arg0)
 }
 
-// ListJobsRequest mocks base method
+// ListJobsRequest mocks base method.
 func (m *MockAmplifyAPI) ListJobsRequest(arg0 *amplify.ListJobsInput) (*request.Request, *amplify.ListJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobsRequest", arg0)
@@ -1309,13 +1310,13 @@ func (m *MockAmplifyAPI) ListJobsRequest(arg0 *amplify.ListJobsInput) (*request.
 	return ret0, ret1
 }
 
-// ListJobsRequest indicates an expected call of ListJobsRequest
+// ListJobsRequest indicates an expected call of ListJobsRequest.
 func (mr *MockAmplifyAPIMockRecorder) ListJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).ListJobsRequest), arg0)
 }
 
-// ListJobsWithContext mocks base method
+// ListJobsWithContext mocks base method.
 func (m *MockAmplifyAPI) ListJobsWithContext(arg0 context.Context, arg1 *amplify.ListJobsInput, arg2 ...request.Option) (*amplify.ListJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1328,14 +1329,14 @@ func (m *MockAmplifyAPI) ListJobsWithContext(arg0 context.Context, arg1 *amplify
 	return ret0, ret1
 }
 
-// ListJobsWithContext indicates an expected call of ListJobsWithContext
+// ListJobsWithContext indicates an expected call of ListJobsWithContext.
 func (mr *MockAmplifyAPIMockRecorder) ListJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).ListJobsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockAmplifyAPI) ListTagsForResource(arg0 *amplify.ListTagsForResourceInput) (*amplify.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1344,13 +1345,13 @@ func (m *MockAmplifyAPI) ListTagsForResource(arg0 *amplify.ListTagsForResourceIn
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockAmplifyAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockAmplifyAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockAmplifyAPI) ListTagsForResourceRequest(arg0 *amplify.ListTagsForResourceInput) (*request.Request, *amplify.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1359,13 +1360,13 @@ func (m *MockAmplifyAPI) ListTagsForResourceRequest(arg0 *amplify.ListTagsForRes
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockAmplifyAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockAmplifyAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *amplify.ListTagsForResourceInput, arg2 ...request.Option) (*amplify.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1378,14 +1379,14 @@ func (m *MockAmplifyAPI) ListTagsForResourceWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockAmplifyAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// ListWebhooks mocks base method
+// ListWebhooks mocks base method.
 func (m *MockAmplifyAPI) ListWebhooks(arg0 *amplify.ListWebhooksInput) (*amplify.ListWebhooksOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWebhooks", arg0)
@@ -1394,13 +1395,13 @@ func (m *MockAmplifyAPI) ListWebhooks(arg0 *amplify.ListWebhooksInput) (*amplify
 	return ret0, ret1
 }
 
-// ListWebhooks indicates an expected call of ListWebhooks
+// ListWebhooks indicates an expected call of ListWebhooks.
 func (mr *MockAmplifyAPIMockRecorder) ListWebhooks(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebhooks", reflect.TypeOf((*MockAmplifyAPI)(nil).ListWebhooks), arg0)
 }
 
-// ListWebhooksRequest mocks base method
+// ListWebhooksRequest mocks base method.
 func (m *MockAmplifyAPI) ListWebhooksRequest(arg0 *amplify.ListWebhooksInput) (*request.Request, *amplify.ListWebhooksOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWebhooksRequest", arg0)
@@ -1409,13 +1410,13 @@ func (m *MockAmplifyAPI) ListWebhooksRequest(arg0 *amplify.ListWebhooksInput) (*
 	return ret0, ret1
 }
 
-// ListWebhooksRequest indicates an expected call of ListWebhooksRequest
+// ListWebhooksRequest indicates an expected call of ListWebhooksRequest.
 func (mr *MockAmplifyAPIMockRecorder) ListWebhooksRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebhooksRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).ListWebhooksRequest), arg0)
 }
 
-// ListWebhooksWithContext mocks base method
+// ListWebhooksWithContext mocks base method.
 func (m *MockAmplifyAPI) ListWebhooksWithContext(arg0 context.Context, arg1 *amplify.ListWebhooksInput, arg2 ...request.Option) (*amplify.ListWebhooksOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1428,14 +1429,14 @@ func (m *MockAmplifyAPI) ListWebhooksWithContext(arg0 context.Context, arg1 *amp
 	return ret0, ret1
 }
 
-// ListWebhooksWithContext indicates an expected call of ListWebhooksWithContext
+// ListWebhooksWithContext indicates an expected call of ListWebhooksWithContext.
 func (mr *MockAmplifyAPIMockRecorder) ListWebhooksWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWebhooksWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).ListWebhooksWithContext), varargs...)
 }
 
-// StartDeployment mocks base method
+// StartDeployment mocks base method.
 func (m *MockAmplifyAPI) StartDeployment(arg0 *amplify.StartDeploymentInput) (*amplify.StartDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartDeployment", arg0)
@@ -1444,13 +1445,13 @@ func (m *MockAmplifyAPI) StartDeployment(arg0 *amplify.StartDeploymentInput) (*a
 	return ret0, ret1
 }
 
-// StartDeployment indicates an expected call of StartDeployment
+// StartDeployment indicates an expected call of StartDeployment.
 func (mr *MockAmplifyAPIMockRecorder) StartDeployment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDeployment", reflect.TypeOf((*MockAmplifyAPI)(nil).StartDeployment), arg0)
 }
 
-// StartDeploymentRequest mocks base method
+// StartDeploymentRequest mocks base method.
 func (m *MockAmplifyAPI) StartDeploymentRequest(arg0 *amplify.StartDeploymentInput) (*request.Request, *amplify.StartDeploymentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartDeploymentRequest", arg0)
@@ -1459,13 +1460,13 @@ func (m *MockAmplifyAPI) StartDeploymentRequest(arg0 *amplify.StartDeploymentInp
 	return ret0, ret1
 }
 
-// StartDeploymentRequest indicates an expected call of StartDeploymentRequest
+// StartDeploymentRequest indicates an expected call of StartDeploymentRequest.
 func (mr *MockAmplifyAPIMockRecorder) StartDeploymentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDeploymentRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).StartDeploymentRequest), arg0)
 }
 
-// StartDeploymentWithContext mocks base method
+// StartDeploymentWithContext mocks base method.
 func (m *MockAmplifyAPI) StartDeploymentWithContext(arg0 context.Context, arg1 *amplify.StartDeploymentInput, arg2 ...request.Option) (*amplify.StartDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1478,14 +1479,14 @@ func (m *MockAmplifyAPI) StartDeploymentWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// StartDeploymentWithContext indicates an expected call of StartDeploymentWithContext
+// StartDeploymentWithContext indicates an expected call of StartDeploymentWithContext.
 func (mr *MockAmplifyAPIMockRecorder) StartDeploymentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDeploymentWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).StartDeploymentWithContext), varargs...)
 }
 
-// StartJob mocks base method
+// StartJob mocks base method.
 func (m *MockAmplifyAPI) StartJob(arg0 *amplify.StartJobInput) (*amplify.StartJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartJob", arg0)
@@ -1494,13 +1495,13 @@ func (m *MockAmplifyAPI) StartJob(arg0 *amplify.StartJobInput) (*amplify.StartJo
 	return ret0, ret1
 }
 
-// StartJob indicates an expected call of StartJob
+// StartJob indicates an expected call of StartJob.
 func (mr *MockAmplifyAPIMockRecorder) StartJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartJob", reflect.TypeOf((*MockAmplifyAPI)(nil).StartJob), arg0)
 }
 
-// StartJobRequest mocks base method
+// StartJobRequest mocks base method.
 func (m *MockAmplifyAPI) StartJobRequest(arg0 *amplify.StartJobInput) (*request.Request, *amplify.StartJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartJobRequest", arg0)
@@ -1509,13 +1510,13 @@ func (m *MockAmplifyAPI) StartJobRequest(arg0 *amplify.StartJobInput) (*request.
 	return ret0, ret1
 }
 
-// StartJobRequest indicates an expected call of StartJobRequest
+// StartJobRequest indicates an expected call of StartJobRequest.
 func (mr *MockAmplifyAPIMockRecorder) StartJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartJobRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).StartJobRequest), arg0)
 }
 
-// StartJobWithContext mocks base method
+// StartJobWithContext mocks base method.
 func (m *MockAmplifyAPI) StartJobWithContext(arg0 context.Context, arg1 *amplify.StartJobInput, arg2 ...request.Option) (*amplify.StartJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1528,14 +1529,14 @@ func (m *MockAmplifyAPI) StartJobWithContext(arg0 context.Context, arg1 *amplify
 	return ret0, ret1
 }
 
-// StartJobWithContext indicates an expected call of StartJobWithContext
+// StartJobWithContext indicates an expected call of StartJobWithContext.
 func (mr *MockAmplifyAPIMockRecorder) StartJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartJobWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).StartJobWithContext), varargs...)
 }
 
-// StopJob mocks base method
+// StopJob mocks base method.
 func (m *MockAmplifyAPI) StopJob(arg0 *amplify.StopJobInput) (*amplify.StopJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopJob", arg0)
@@ -1544,13 +1545,13 @@ func (m *MockAmplifyAPI) StopJob(arg0 *amplify.StopJobInput) (*amplify.StopJobOu
 	return ret0, ret1
 }
 
-// StopJob indicates an expected call of StopJob
+// StopJob indicates an expected call of StopJob.
 func (mr *MockAmplifyAPIMockRecorder) StopJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopJob", reflect.TypeOf((*MockAmplifyAPI)(nil).StopJob), arg0)
 }
 
-// StopJobRequest mocks base method
+// StopJobRequest mocks base method.
 func (m *MockAmplifyAPI) StopJobRequest(arg0 *amplify.StopJobInput) (*request.Request, *amplify.StopJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopJobRequest", arg0)
@@ -1559,13 +1560,13 @@ func (m *MockAmplifyAPI) StopJobRequest(arg0 *amplify.StopJobInput) (*request.Re
 	return ret0, ret1
 }
 
-// StopJobRequest indicates an expected call of StopJobRequest
+// StopJobRequest indicates an expected call of StopJobRequest.
 func (mr *MockAmplifyAPIMockRecorder) StopJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopJobRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).StopJobRequest), arg0)
 }
 
-// StopJobWithContext mocks base method
+// StopJobWithContext mocks base method.
 func (m *MockAmplifyAPI) StopJobWithContext(arg0 context.Context, arg1 *amplify.StopJobInput, arg2 ...request.Option) (*amplify.StopJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1578,14 +1579,14 @@ func (m *MockAmplifyAPI) StopJobWithContext(arg0 context.Context, arg1 *amplify.
 	return ret0, ret1
 }
 
-// StopJobWithContext indicates an expected call of StopJobWithContext
+// StopJobWithContext indicates an expected call of StopJobWithContext.
 func (mr *MockAmplifyAPIMockRecorder) StopJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopJobWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).StopJobWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockAmplifyAPI) TagResource(arg0 *amplify.TagResourceInput) (*amplify.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1594,13 +1595,13 @@ func (m *MockAmplifyAPI) TagResource(arg0 *amplify.TagResourceInput) (*amplify.T
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockAmplifyAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockAmplifyAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockAmplifyAPI) TagResourceRequest(arg0 *amplify.TagResourceInput) (*request.Request, *amplify.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1609,13 +1610,13 @@ func (m *MockAmplifyAPI) TagResourceRequest(arg0 *amplify.TagResourceInput) (*re
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockAmplifyAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockAmplifyAPI) TagResourceWithContext(arg0 context.Context, arg1 *amplify.TagResourceInput, arg2 ...request.Option) (*amplify.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1628,14 +1629,14 @@ func (m *MockAmplifyAPI) TagResourceWithContext(arg0 context.Context, arg1 *ampl
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockAmplifyAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockAmplifyAPI) UntagResource(arg0 *amplify.UntagResourceInput) (*amplify.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1644,13 +1645,13 @@ func (m *MockAmplifyAPI) UntagResource(arg0 *amplify.UntagResourceInput) (*ampli
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockAmplifyAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockAmplifyAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockAmplifyAPI) UntagResourceRequest(arg0 *amplify.UntagResourceInput) (*request.Request, *amplify.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1659,13 +1660,13 @@ func (m *MockAmplifyAPI) UntagResourceRequest(arg0 *amplify.UntagResourceInput) 
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockAmplifyAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockAmplifyAPI) UntagResourceWithContext(arg0 context.Context, arg1 *amplify.UntagResourceInput, arg2 ...request.Option) (*amplify.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1678,14 +1679,14 @@ func (m *MockAmplifyAPI) UntagResourceWithContext(arg0 context.Context, arg1 *am
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockAmplifyAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateApp mocks base method
+// UpdateApp mocks base method.
 func (m *MockAmplifyAPI) UpdateApp(arg0 *amplify.UpdateAppInput) (*amplify.UpdateAppOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateApp", arg0)
@@ -1694,13 +1695,13 @@ func (m *MockAmplifyAPI) UpdateApp(arg0 *amplify.UpdateAppInput) (*amplify.Updat
 	return ret0, ret1
 }
 
-// UpdateApp indicates an expected call of UpdateApp
+// UpdateApp indicates an expected call of UpdateApp.
 func (mr *MockAmplifyAPIMockRecorder) UpdateApp(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateApp", reflect.TypeOf((*MockAmplifyAPI)(nil).UpdateApp), arg0)
 }
 
-// UpdateAppRequest mocks base method
+// UpdateAppRequest mocks base method.
 func (m *MockAmplifyAPI) UpdateAppRequest(arg0 *amplify.UpdateAppInput) (*request.Request, *amplify.UpdateAppOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAppRequest", arg0)
@@ -1709,13 +1710,13 @@ func (m *MockAmplifyAPI) UpdateAppRequest(arg0 *amplify.UpdateAppInput) (*reques
 	return ret0, ret1
 }
 
-// UpdateAppRequest indicates an expected call of UpdateAppRequest
+// UpdateAppRequest indicates an expected call of UpdateAppRequest.
 func (mr *MockAmplifyAPIMockRecorder) UpdateAppRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAppRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).UpdateAppRequest), arg0)
 }
 
-// UpdateAppWithContext mocks base method
+// UpdateAppWithContext mocks base method.
 func (m *MockAmplifyAPI) UpdateAppWithContext(arg0 context.Context, arg1 *amplify.UpdateAppInput, arg2 ...request.Option) (*amplify.UpdateAppOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1728,14 +1729,14 @@ func (m *MockAmplifyAPI) UpdateAppWithContext(arg0 context.Context, arg1 *amplif
 	return ret0, ret1
 }
 
-// UpdateAppWithContext indicates an expected call of UpdateAppWithContext
+// UpdateAppWithContext indicates an expected call of UpdateAppWithContext.
 func (mr *MockAmplifyAPIMockRecorder) UpdateAppWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAppWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).UpdateAppWithContext), varargs...)
 }
 
-// UpdateBranch mocks base method
+// UpdateBranch mocks base method.
 func (m *MockAmplifyAPI) UpdateBranch(arg0 *amplify.UpdateBranchInput) (*amplify.UpdateBranchOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateBranch", arg0)
@@ -1744,13 +1745,13 @@ func (m *MockAmplifyAPI) UpdateBranch(arg0 *amplify.UpdateBranchInput) (*amplify
 	return ret0, ret1
 }
 
-// UpdateBranch indicates an expected call of UpdateBranch
+// UpdateBranch indicates an expected call of UpdateBranch.
 func (mr *MockAmplifyAPIMockRecorder) UpdateBranch(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBranch", reflect.TypeOf((*MockAmplifyAPI)(nil).UpdateBranch), arg0)
 }
 
-// UpdateBranchRequest mocks base method
+// UpdateBranchRequest mocks base method.
 func (m *MockAmplifyAPI) UpdateBranchRequest(arg0 *amplify.UpdateBranchInput) (*request.Request, *amplify.UpdateBranchOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateBranchRequest", arg0)
@@ -1759,13 +1760,13 @@ func (m *MockAmplifyAPI) UpdateBranchRequest(arg0 *amplify.UpdateBranchInput) (*
 	return ret0, ret1
 }
 
-// UpdateBranchRequest indicates an expected call of UpdateBranchRequest
+// UpdateBranchRequest indicates an expected call of UpdateBranchRequest.
 func (mr *MockAmplifyAPIMockRecorder) UpdateBranchRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBranchRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).UpdateBranchRequest), arg0)
 }
 
-// UpdateBranchWithContext mocks base method
+// UpdateBranchWithContext mocks base method.
 func (m *MockAmplifyAPI) UpdateBranchWithContext(arg0 context.Context, arg1 *amplify.UpdateBranchInput, arg2 ...request.Option) (*amplify.UpdateBranchOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1778,14 +1779,14 @@ func (m *MockAmplifyAPI) UpdateBranchWithContext(arg0 context.Context, arg1 *amp
 	return ret0, ret1
 }
 
-// UpdateBranchWithContext indicates an expected call of UpdateBranchWithContext
+// UpdateBranchWithContext indicates an expected call of UpdateBranchWithContext.
 func (mr *MockAmplifyAPIMockRecorder) UpdateBranchWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBranchWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).UpdateBranchWithContext), varargs...)
 }
 
-// UpdateDomainAssociation mocks base method
+// UpdateDomainAssociation mocks base method.
 func (m *MockAmplifyAPI) UpdateDomainAssociation(arg0 *amplify.UpdateDomainAssociationInput) (*amplify.UpdateDomainAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDomainAssociation", arg0)
@@ -1794,13 +1795,13 @@ func (m *MockAmplifyAPI) UpdateDomainAssociation(arg0 *amplify.UpdateDomainAssoc
 	return ret0, ret1
 }
 
-// UpdateDomainAssociation indicates an expected call of UpdateDomainAssociation
+// UpdateDomainAssociation indicates an expected call of UpdateDomainAssociation.
 func (mr *MockAmplifyAPIMockRecorder) UpdateDomainAssociation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDomainAssociation", reflect.TypeOf((*MockAmplifyAPI)(nil).UpdateDomainAssociation), arg0)
 }
 
-// UpdateDomainAssociationRequest mocks base method
+// UpdateDomainAssociationRequest mocks base method.
 func (m *MockAmplifyAPI) UpdateDomainAssociationRequest(arg0 *amplify.UpdateDomainAssociationInput) (*request.Request, *amplify.UpdateDomainAssociationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDomainAssociationRequest", arg0)
@@ -1809,13 +1810,13 @@ func (m *MockAmplifyAPI) UpdateDomainAssociationRequest(arg0 *amplify.UpdateDoma
 	return ret0, ret1
 }
 
-// UpdateDomainAssociationRequest indicates an expected call of UpdateDomainAssociationRequest
+// UpdateDomainAssociationRequest indicates an expected call of UpdateDomainAssociationRequest.
 func (mr *MockAmplifyAPIMockRecorder) UpdateDomainAssociationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDomainAssociationRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).UpdateDomainAssociationRequest), arg0)
 }
 
-// UpdateDomainAssociationWithContext mocks base method
+// UpdateDomainAssociationWithContext mocks base method.
 func (m *MockAmplifyAPI) UpdateDomainAssociationWithContext(arg0 context.Context, arg1 *amplify.UpdateDomainAssociationInput, arg2 ...request.Option) (*amplify.UpdateDomainAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1828,14 +1829,14 @@ func (m *MockAmplifyAPI) UpdateDomainAssociationWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// UpdateDomainAssociationWithContext indicates an expected call of UpdateDomainAssociationWithContext
+// UpdateDomainAssociationWithContext indicates an expected call of UpdateDomainAssociationWithContext.
 func (mr *MockAmplifyAPIMockRecorder) UpdateDomainAssociationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDomainAssociationWithContext", reflect.TypeOf((*MockAmplifyAPI)(nil).UpdateDomainAssociationWithContext), varargs...)
 }
 
-// UpdateWebhook mocks base method
+// UpdateWebhook mocks base method.
 func (m *MockAmplifyAPI) UpdateWebhook(arg0 *amplify.UpdateWebhookInput) (*amplify.UpdateWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateWebhook", arg0)
@@ -1844,13 +1845,13 @@ func (m *MockAmplifyAPI) UpdateWebhook(arg0 *amplify.UpdateWebhookInput) (*ampli
 	return ret0, ret1
 }
 
-// UpdateWebhook indicates an expected call of UpdateWebhook
+// UpdateWebhook indicates an expected call of UpdateWebhook.
 func (mr *MockAmplifyAPIMockRecorder) UpdateWebhook(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWebhook", reflect.TypeOf((*MockAmplifyAPI)(nil).UpdateWebhook), arg0)
 }
 
-// UpdateWebhookRequest mocks base method
+// UpdateWebhookRequest mocks base method.
 func (m *MockAmplifyAPI) UpdateWebhookRequest(arg0 *amplify.UpdateWebhookInput) (*request.Request, *amplify.UpdateWebhookOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateWebhookRequest", arg0)
@@ -1859,13 +1860,13 @@ func (m *MockAmplifyAPI) UpdateWebhookRequest(arg0 *amplify.UpdateWebhookInput) 
 	return ret0, ret1
 }
 
-// UpdateWebhookRequest indicates an expected call of UpdateWebhookRequest
+// UpdateWebhookRequest indicates an expected call of UpdateWebhookRequest.
 func (mr *MockAmplifyAPIMockRecorder) UpdateWebhookRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWebhookRequest", reflect.TypeOf((*MockAmplifyAPI)(nil).UpdateWebhookRequest), arg0)
 }
 
-// UpdateWebhookWithContext mocks base method
+// UpdateWebhookWithContext mocks base method.
 func (m *MockAmplifyAPI) UpdateWebhookWithContext(arg0 context.Context, arg1 *amplify.UpdateWebhookInput, arg2 ...request.Option) (*amplify.UpdateWebhookOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1878,7 +1879,7 @@ func (m *MockAmplifyAPI) UpdateWebhookWithContext(arg0 context.Context, arg1 *am
 	return ret0, ret1
 }
 
-// UpdateWebhookWithContext indicates an expected call of UpdateWebhookWithContext
+// UpdateWebhookWithContext indicates an expected call of UpdateWebhookWithContext.
 func (mr *MockAmplifyAPIMockRecorder) UpdateWebhookWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

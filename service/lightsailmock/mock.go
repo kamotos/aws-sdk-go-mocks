@@ -6,36 +6,37 @@ package lightsailmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	lightsail "github.com/aws/aws-sdk-go/service/lightsail"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockLightsailAPI is a mock of LightsailAPI interface
+// MockLightsailAPI is a mock of LightsailAPI interface.
 type MockLightsailAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockLightsailAPIMockRecorder
 }
 
-// MockLightsailAPIMockRecorder is the mock recorder for MockLightsailAPI
+// MockLightsailAPIMockRecorder is the mock recorder for MockLightsailAPI.
 type MockLightsailAPIMockRecorder struct {
 	mock *MockLightsailAPI
 }
 
-// NewMockLightsailAPI creates a new mock instance
+// NewMockLightsailAPI creates a new mock instance.
 func NewMockLightsailAPI(ctrl *gomock.Controller) *MockLightsailAPI {
 	mock := &MockLightsailAPI{ctrl: ctrl}
 	mock.recorder = &MockLightsailAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockLightsailAPI) EXPECT() *MockLightsailAPIMockRecorder {
 	return m.recorder
 }
 
-// AllocateStaticIp mocks base method
+// AllocateStaticIp mocks base method.
 func (m *MockLightsailAPI) AllocateStaticIp(arg0 *lightsail.AllocateStaticIpInput) (*lightsail.AllocateStaticIpOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllocateStaticIp", arg0)
@@ -44,13 +45,13 @@ func (m *MockLightsailAPI) AllocateStaticIp(arg0 *lightsail.AllocateStaticIpInpu
 	return ret0, ret1
 }
 
-// AllocateStaticIp indicates an expected call of AllocateStaticIp
+// AllocateStaticIp indicates an expected call of AllocateStaticIp.
 func (mr *MockLightsailAPIMockRecorder) AllocateStaticIp(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocateStaticIp", reflect.TypeOf((*MockLightsailAPI)(nil).AllocateStaticIp), arg0)
 }
 
-// AllocateStaticIpRequest mocks base method
+// AllocateStaticIpRequest mocks base method.
 func (m *MockLightsailAPI) AllocateStaticIpRequest(arg0 *lightsail.AllocateStaticIpInput) (*request.Request, *lightsail.AllocateStaticIpOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllocateStaticIpRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockLightsailAPI) AllocateStaticIpRequest(arg0 *lightsail.AllocateStati
 	return ret0, ret1
 }
 
-// AllocateStaticIpRequest indicates an expected call of AllocateStaticIpRequest
+// AllocateStaticIpRequest indicates an expected call of AllocateStaticIpRequest.
 func (mr *MockLightsailAPIMockRecorder) AllocateStaticIpRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocateStaticIpRequest", reflect.TypeOf((*MockLightsailAPI)(nil).AllocateStaticIpRequest), arg0)
 }
 
-// AllocateStaticIpWithContext mocks base method
+// AllocateStaticIpWithContext mocks base method.
 func (m *MockLightsailAPI) AllocateStaticIpWithContext(arg0 context.Context, arg1 *lightsail.AllocateStaticIpInput, arg2 ...request.Option) (*lightsail.AllocateStaticIpOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockLightsailAPI) AllocateStaticIpWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// AllocateStaticIpWithContext indicates an expected call of AllocateStaticIpWithContext
+// AllocateStaticIpWithContext indicates an expected call of AllocateStaticIpWithContext.
 func (mr *MockLightsailAPIMockRecorder) AllocateStaticIpWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocateStaticIpWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).AllocateStaticIpWithContext), varargs...)
 }
 
-// AttachCertificateToDistribution mocks base method
+// AttachCertificateToDistribution mocks base method.
 func (m *MockLightsailAPI) AttachCertificateToDistribution(arg0 *lightsail.AttachCertificateToDistributionInput) (*lightsail.AttachCertificateToDistributionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AttachCertificateToDistribution", arg0)
@@ -94,13 +95,13 @@ func (m *MockLightsailAPI) AttachCertificateToDistribution(arg0 *lightsail.Attac
 	return ret0, ret1
 }
 
-// AttachCertificateToDistribution indicates an expected call of AttachCertificateToDistribution
+// AttachCertificateToDistribution indicates an expected call of AttachCertificateToDistribution.
 func (mr *MockLightsailAPIMockRecorder) AttachCertificateToDistribution(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachCertificateToDistribution", reflect.TypeOf((*MockLightsailAPI)(nil).AttachCertificateToDistribution), arg0)
 }
 
-// AttachCertificateToDistributionRequest mocks base method
+// AttachCertificateToDistributionRequest mocks base method.
 func (m *MockLightsailAPI) AttachCertificateToDistributionRequest(arg0 *lightsail.AttachCertificateToDistributionInput) (*request.Request, *lightsail.AttachCertificateToDistributionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AttachCertificateToDistributionRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockLightsailAPI) AttachCertificateToDistributionRequest(arg0 *lightsai
 	return ret0, ret1
 }
 
-// AttachCertificateToDistributionRequest indicates an expected call of AttachCertificateToDistributionRequest
+// AttachCertificateToDistributionRequest indicates an expected call of AttachCertificateToDistributionRequest.
 func (mr *MockLightsailAPIMockRecorder) AttachCertificateToDistributionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachCertificateToDistributionRequest", reflect.TypeOf((*MockLightsailAPI)(nil).AttachCertificateToDistributionRequest), arg0)
 }
 
-// AttachCertificateToDistributionWithContext mocks base method
+// AttachCertificateToDistributionWithContext mocks base method.
 func (m *MockLightsailAPI) AttachCertificateToDistributionWithContext(arg0 context.Context, arg1 *lightsail.AttachCertificateToDistributionInput, arg2 ...request.Option) (*lightsail.AttachCertificateToDistributionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockLightsailAPI) AttachCertificateToDistributionWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// AttachCertificateToDistributionWithContext indicates an expected call of AttachCertificateToDistributionWithContext
+// AttachCertificateToDistributionWithContext indicates an expected call of AttachCertificateToDistributionWithContext.
 func (mr *MockLightsailAPIMockRecorder) AttachCertificateToDistributionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachCertificateToDistributionWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).AttachCertificateToDistributionWithContext), varargs...)
 }
 
-// AttachDisk mocks base method
+// AttachDisk mocks base method.
 func (m *MockLightsailAPI) AttachDisk(arg0 *lightsail.AttachDiskInput) (*lightsail.AttachDiskOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AttachDisk", arg0)
@@ -144,13 +145,13 @@ func (m *MockLightsailAPI) AttachDisk(arg0 *lightsail.AttachDiskInput) (*lightsa
 	return ret0, ret1
 }
 
-// AttachDisk indicates an expected call of AttachDisk
+// AttachDisk indicates an expected call of AttachDisk.
 func (mr *MockLightsailAPIMockRecorder) AttachDisk(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachDisk", reflect.TypeOf((*MockLightsailAPI)(nil).AttachDisk), arg0)
 }
 
-// AttachDiskRequest mocks base method
+// AttachDiskRequest mocks base method.
 func (m *MockLightsailAPI) AttachDiskRequest(arg0 *lightsail.AttachDiskInput) (*request.Request, *lightsail.AttachDiskOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AttachDiskRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockLightsailAPI) AttachDiskRequest(arg0 *lightsail.AttachDiskInput) (*
 	return ret0, ret1
 }
 
-// AttachDiskRequest indicates an expected call of AttachDiskRequest
+// AttachDiskRequest indicates an expected call of AttachDiskRequest.
 func (mr *MockLightsailAPIMockRecorder) AttachDiskRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachDiskRequest", reflect.TypeOf((*MockLightsailAPI)(nil).AttachDiskRequest), arg0)
 }
 
-// AttachDiskWithContext mocks base method
+// AttachDiskWithContext mocks base method.
 func (m *MockLightsailAPI) AttachDiskWithContext(arg0 context.Context, arg1 *lightsail.AttachDiskInput, arg2 ...request.Option) (*lightsail.AttachDiskOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockLightsailAPI) AttachDiskWithContext(arg0 context.Context, arg1 *lig
 	return ret0, ret1
 }
 
-// AttachDiskWithContext indicates an expected call of AttachDiskWithContext
+// AttachDiskWithContext indicates an expected call of AttachDiskWithContext.
 func (mr *MockLightsailAPIMockRecorder) AttachDiskWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachDiskWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).AttachDiskWithContext), varargs...)
 }
 
-// AttachInstancesToLoadBalancer mocks base method
+// AttachInstancesToLoadBalancer mocks base method.
 func (m *MockLightsailAPI) AttachInstancesToLoadBalancer(arg0 *lightsail.AttachInstancesToLoadBalancerInput) (*lightsail.AttachInstancesToLoadBalancerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AttachInstancesToLoadBalancer", arg0)
@@ -194,13 +195,13 @@ func (m *MockLightsailAPI) AttachInstancesToLoadBalancer(arg0 *lightsail.AttachI
 	return ret0, ret1
 }
 
-// AttachInstancesToLoadBalancer indicates an expected call of AttachInstancesToLoadBalancer
+// AttachInstancesToLoadBalancer indicates an expected call of AttachInstancesToLoadBalancer.
 func (mr *MockLightsailAPIMockRecorder) AttachInstancesToLoadBalancer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachInstancesToLoadBalancer", reflect.TypeOf((*MockLightsailAPI)(nil).AttachInstancesToLoadBalancer), arg0)
 }
 
-// AttachInstancesToLoadBalancerRequest mocks base method
+// AttachInstancesToLoadBalancerRequest mocks base method.
 func (m *MockLightsailAPI) AttachInstancesToLoadBalancerRequest(arg0 *lightsail.AttachInstancesToLoadBalancerInput) (*request.Request, *lightsail.AttachInstancesToLoadBalancerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AttachInstancesToLoadBalancerRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockLightsailAPI) AttachInstancesToLoadBalancerRequest(arg0 *lightsail.
 	return ret0, ret1
 }
 
-// AttachInstancesToLoadBalancerRequest indicates an expected call of AttachInstancesToLoadBalancerRequest
+// AttachInstancesToLoadBalancerRequest indicates an expected call of AttachInstancesToLoadBalancerRequest.
 func (mr *MockLightsailAPIMockRecorder) AttachInstancesToLoadBalancerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachInstancesToLoadBalancerRequest", reflect.TypeOf((*MockLightsailAPI)(nil).AttachInstancesToLoadBalancerRequest), arg0)
 }
 
-// AttachInstancesToLoadBalancerWithContext mocks base method
+// AttachInstancesToLoadBalancerWithContext mocks base method.
 func (m *MockLightsailAPI) AttachInstancesToLoadBalancerWithContext(arg0 context.Context, arg1 *lightsail.AttachInstancesToLoadBalancerInput, arg2 ...request.Option) (*lightsail.AttachInstancesToLoadBalancerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockLightsailAPI) AttachInstancesToLoadBalancerWithContext(arg0 context
 	return ret0, ret1
 }
 
-// AttachInstancesToLoadBalancerWithContext indicates an expected call of AttachInstancesToLoadBalancerWithContext
+// AttachInstancesToLoadBalancerWithContext indicates an expected call of AttachInstancesToLoadBalancerWithContext.
 func (mr *MockLightsailAPIMockRecorder) AttachInstancesToLoadBalancerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachInstancesToLoadBalancerWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).AttachInstancesToLoadBalancerWithContext), varargs...)
 }
 
-// AttachLoadBalancerTlsCertificate mocks base method
+// AttachLoadBalancerTlsCertificate mocks base method.
 func (m *MockLightsailAPI) AttachLoadBalancerTlsCertificate(arg0 *lightsail.AttachLoadBalancerTlsCertificateInput) (*lightsail.AttachLoadBalancerTlsCertificateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AttachLoadBalancerTlsCertificate", arg0)
@@ -244,13 +245,13 @@ func (m *MockLightsailAPI) AttachLoadBalancerTlsCertificate(arg0 *lightsail.Atta
 	return ret0, ret1
 }
 
-// AttachLoadBalancerTlsCertificate indicates an expected call of AttachLoadBalancerTlsCertificate
+// AttachLoadBalancerTlsCertificate indicates an expected call of AttachLoadBalancerTlsCertificate.
 func (mr *MockLightsailAPIMockRecorder) AttachLoadBalancerTlsCertificate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachLoadBalancerTlsCertificate", reflect.TypeOf((*MockLightsailAPI)(nil).AttachLoadBalancerTlsCertificate), arg0)
 }
 
-// AttachLoadBalancerTlsCertificateRequest mocks base method
+// AttachLoadBalancerTlsCertificateRequest mocks base method.
 func (m *MockLightsailAPI) AttachLoadBalancerTlsCertificateRequest(arg0 *lightsail.AttachLoadBalancerTlsCertificateInput) (*request.Request, *lightsail.AttachLoadBalancerTlsCertificateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AttachLoadBalancerTlsCertificateRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockLightsailAPI) AttachLoadBalancerTlsCertificateRequest(arg0 *lightsa
 	return ret0, ret1
 }
 
-// AttachLoadBalancerTlsCertificateRequest indicates an expected call of AttachLoadBalancerTlsCertificateRequest
+// AttachLoadBalancerTlsCertificateRequest indicates an expected call of AttachLoadBalancerTlsCertificateRequest.
 func (mr *MockLightsailAPIMockRecorder) AttachLoadBalancerTlsCertificateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachLoadBalancerTlsCertificateRequest", reflect.TypeOf((*MockLightsailAPI)(nil).AttachLoadBalancerTlsCertificateRequest), arg0)
 }
 
-// AttachLoadBalancerTlsCertificateWithContext mocks base method
+// AttachLoadBalancerTlsCertificateWithContext mocks base method.
 func (m *MockLightsailAPI) AttachLoadBalancerTlsCertificateWithContext(arg0 context.Context, arg1 *lightsail.AttachLoadBalancerTlsCertificateInput, arg2 ...request.Option) (*lightsail.AttachLoadBalancerTlsCertificateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockLightsailAPI) AttachLoadBalancerTlsCertificateWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// AttachLoadBalancerTlsCertificateWithContext indicates an expected call of AttachLoadBalancerTlsCertificateWithContext
+// AttachLoadBalancerTlsCertificateWithContext indicates an expected call of AttachLoadBalancerTlsCertificateWithContext.
 func (mr *MockLightsailAPIMockRecorder) AttachLoadBalancerTlsCertificateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachLoadBalancerTlsCertificateWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).AttachLoadBalancerTlsCertificateWithContext), varargs...)
 }
 
-// AttachStaticIp mocks base method
+// AttachStaticIp mocks base method.
 func (m *MockLightsailAPI) AttachStaticIp(arg0 *lightsail.AttachStaticIpInput) (*lightsail.AttachStaticIpOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AttachStaticIp", arg0)
@@ -294,13 +295,13 @@ func (m *MockLightsailAPI) AttachStaticIp(arg0 *lightsail.AttachStaticIpInput) (
 	return ret0, ret1
 }
 
-// AttachStaticIp indicates an expected call of AttachStaticIp
+// AttachStaticIp indicates an expected call of AttachStaticIp.
 func (mr *MockLightsailAPIMockRecorder) AttachStaticIp(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachStaticIp", reflect.TypeOf((*MockLightsailAPI)(nil).AttachStaticIp), arg0)
 }
 
-// AttachStaticIpRequest mocks base method
+// AttachStaticIpRequest mocks base method.
 func (m *MockLightsailAPI) AttachStaticIpRequest(arg0 *lightsail.AttachStaticIpInput) (*request.Request, *lightsail.AttachStaticIpOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AttachStaticIpRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockLightsailAPI) AttachStaticIpRequest(arg0 *lightsail.AttachStaticIpI
 	return ret0, ret1
 }
 
-// AttachStaticIpRequest indicates an expected call of AttachStaticIpRequest
+// AttachStaticIpRequest indicates an expected call of AttachStaticIpRequest.
 func (mr *MockLightsailAPIMockRecorder) AttachStaticIpRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachStaticIpRequest", reflect.TypeOf((*MockLightsailAPI)(nil).AttachStaticIpRequest), arg0)
 }
 
-// AttachStaticIpWithContext mocks base method
+// AttachStaticIpWithContext mocks base method.
 func (m *MockLightsailAPI) AttachStaticIpWithContext(arg0 context.Context, arg1 *lightsail.AttachStaticIpInput, arg2 ...request.Option) (*lightsail.AttachStaticIpOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockLightsailAPI) AttachStaticIpWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// AttachStaticIpWithContext indicates an expected call of AttachStaticIpWithContext
+// AttachStaticIpWithContext indicates an expected call of AttachStaticIpWithContext.
 func (mr *MockLightsailAPIMockRecorder) AttachStaticIpWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AttachStaticIpWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).AttachStaticIpWithContext), varargs...)
 }
 
-// CloseInstancePublicPorts mocks base method
+// CloseInstancePublicPorts mocks base method.
 func (m *MockLightsailAPI) CloseInstancePublicPorts(arg0 *lightsail.CloseInstancePublicPortsInput) (*lightsail.CloseInstancePublicPortsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CloseInstancePublicPorts", arg0)
@@ -344,13 +345,13 @@ func (m *MockLightsailAPI) CloseInstancePublicPorts(arg0 *lightsail.CloseInstanc
 	return ret0, ret1
 }
 
-// CloseInstancePublicPorts indicates an expected call of CloseInstancePublicPorts
+// CloseInstancePublicPorts indicates an expected call of CloseInstancePublicPorts.
 func (mr *MockLightsailAPIMockRecorder) CloseInstancePublicPorts(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CloseInstancePublicPorts", reflect.TypeOf((*MockLightsailAPI)(nil).CloseInstancePublicPorts), arg0)
 }
 
-// CloseInstancePublicPortsRequest mocks base method
+// CloseInstancePublicPortsRequest mocks base method.
 func (m *MockLightsailAPI) CloseInstancePublicPortsRequest(arg0 *lightsail.CloseInstancePublicPortsInput) (*request.Request, *lightsail.CloseInstancePublicPortsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CloseInstancePublicPortsRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockLightsailAPI) CloseInstancePublicPortsRequest(arg0 *lightsail.Close
 	return ret0, ret1
 }
 
-// CloseInstancePublicPortsRequest indicates an expected call of CloseInstancePublicPortsRequest
+// CloseInstancePublicPortsRequest indicates an expected call of CloseInstancePublicPortsRequest.
 func (mr *MockLightsailAPIMockRecorder) CloseInstancePublicPortsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CloseInstancePublicPortsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CloseInstancePublicPortsRequest), arg0)
 }
 
-// CloseInstancePublicPortsWithContext mocks base method
+// CloseInstancePublicPortsWithContext mocks base method.
 func (m *MockLightsailAPI) CloseInstancePublicPortsWithContext(arg0 context.Context, arg1 *lightsail.CloseInstancePublicPortsInput, arg2 ...request.Option) (*lightsail.CloseInstancePublicPortsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockLightsailAPI) CloseInstancePublicPortsWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// CloseInstancePublicPortsWithContext indicates an expected call of CloseInstancePublicPortsWithContext
+// CloseInstancePublicPortsWithContext indicates an expected call of CloseInstancePublicPortsWithContext.
 func (mr *MockLightsailAPIMockRecorder) CloseInstancePublicPortsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CloseInstancePublicPortsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CloseInstancePublicPortsWithContext), varargs...)
 }
 
-// CopySnapshot mocks base method
+// CopySnapshot mocks base method.
 func (m *MockLightsailAPI) CopySnapshot(arg0 *lightsail.CopySnapshotInput) (*lightsail.CopySnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CopySnapshot", arg0)
@@ -394,13 +395,13 @@ func (m *MockLightsailAPI) CopySnapshot(arg0 *lightsail.CopySnapshotInput) (*lig
 	return ret0, ret1
 }
 
-// CopySnapshot indicates an expected call of CopySnapshot
+// CopySnapshot indicates an expected call of CopySnapshot.
 func (mr *MockLightsailAPIMockRecorder) CopySnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CopySnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).CopySnapshot), arg0)
 }
 
-// CopySnapshotRequest mocks base method
+// CopySnapshotRequest mocks base method.
 func (m *MockLightsailAPI) CopySnapshotRequest(arg0 *lightsail.CopySnapshotInput) (*request.Request, *lightsail.CopySnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CopySnapshotRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockLightsailAPI) CopySnapshotRequest(arg0 *lightsail.CopySnapshotInput
 	return ret0, ret1
 }
 
-// CopySnapshotRequest indicates an expected call of CopySnapshotRequest
+// CopySnapshotRequest indicates an expected call of CopySnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) CopySnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CopySnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CopySnapshotRequest), arg0)
 }
 
-// CopySnapshotWithContext mocks base method
+// CopySnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) CopySnapshotWithContext(arg0 context.Context, arg1 *lightsail.CopySnapshotInput, arg2 ...request.Option) (*lightsail.CopySnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockLightsailAPI) CopySnapshotWithContext(arg0 context.Context, arg1 *l
 	return ret0, ret1
 }
 
-// CopySnapshotWithContext indicates an expected call of CopySnapshotWithContext
+// CopySnapshotWithContext indicates an expected call of CopySnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) CopySnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CopySnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CopySnapshotWithContext), varargs...)
 }
 
-// CreateCertificate mocks base method
+// CreateCertificate mocks base method.
 func (m *MockLightsailAPI) CreateCertificate(arg0 *lightsail.CreateCertificateInput) (*lightsail.CreateCertificateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCertificate", arg0)
@@ -444,13 +445,13 @@ func (m *MockLightsailAPI) CreateCertificate(arg0 *lightsail.CreateCertificateIn
 	return ret0, ret1
 }
 
-// CreateCertificate indicates an expected call of CreateCertificate
+// CreateCertificate indicates an expected call of CreateCertificate.
 func (mr *MockLightsailAPIMockRecorder) CreateCertificate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCertificate", reflect.TypeOf((*MockLightsailAPI)(nil).CreateCertificate), arg0)
 }
 
-// CreateCertificateRequest mocks base method
+// CreateCertificateRequest mocks base method.
 func (m *MockLightsailAPI) CreateCertificateRequest(arg0 *lightsail.CreateCertificateInput) (*request.Request, *lightsail.CreateCertificateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCertificateRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockLightsailAPI) CreateCertificateRequest(arg0 *lightsail.CreateCertif
 	return ret0, ret1
 }
 
-// CreateCertificateRequest indicates an expected call of CreateCertificateRequest
+// CreateCertificateRequest indicates an expected call of CreateCertificateRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateCertificateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCertificateRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateCertificateRequest), arg0)
 }
 
-// CreateCertificateWithContext mocks base method
+// CreateCertificateWithContext mocks base method.
 func (m *MockLightsailAPI) CreateCertificateWithContext(arg0 context.Context, arg1 *lightsail.CreateCertificateInput, arg2 ...request.Option) (*lightsail.CreateCertificateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockLightsailAPI) CreateCertificateWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateCertificateWithContext indicates an expected call of CreateCertificateWithContext
+// CreateCertificateWithContext indicates an expected call of CreateCertificateWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateCertificateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCertificateWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateCertificateWithContext), varargs...)
 }
 
-// CreateCloudFormationStack mocks base method
+// CreateCloudFormationStack mocks base method.
 func (m *MockLightsailAPI) CreateCloudFormationStack(arg0 *lightsail.CreateCloudFormationStackInput) (*lightsail.CreateCloudFormationStackOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCloudFormationStack", arg0)
@@ -494,13 +495,13 @@ func (m *MockLightsailAPI) CreateCloudFormationStack(arg0 *lightsail.CreateCloud
 	return ret0, ret1
 }
 
-// CreateCloudFormationStack indicates an expected call of CreateCloudFormationStack
+// CreateCloudFormationStack indicates an expected call of CreateCloudFormationStack.
 func (mr *MockLightsailAPIMockRecorder) CreateCloudFormationStack(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCloudFormationStack", reflect.TypeOf((*MockLightsailAPI)(nil).CreateCloudFormationStack), arg0)
 }
 
-// CreateCloudFormationStackRequest mocks base method
+// CreateCloudFormationStackRequest mocks base method.
 func (m *MockLightsailAPI) CreateCloudFormationStackRequest(arg0 *lightsail.CreateCloudFormationStackInput) (*request.Request, *lightsail.CreateCloudFormationStackOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCloudFormationStackRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockLightsailAPI) CreateCloudFormationStackRequest(arg0 *lightsail.Crea
 	return ret0, ret1
 }
 
-// CreateCloudFormationStackRequest indicates an expected call of CreateCloudFormationStackRequest
+// CreateCloudFormationStackRequest indicates an expected call of CreateCloudFormationStackRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateCloudFormationStackRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCloudFormationStackRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateCloudFormationStackRequest), arg0)
 }
 
-// CreateCloudFormationStackWithContext mocks base method
+// CreateCloudFormationStackWithContext mocks base method.
 func (m *MockLightsailAPI) CreateCloudFormationStackWithContext(arg0 context.Context, arg1 *lightsail.CreateCloudFormationStackInput, arg2 ...request.Option) (*lightsail.CreateCloudFormationStackOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockLightsailAPI) CreateCloudFormationStackWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// CreateCloudFormationStackWithContext indicates an expected call of CreateCloudFormationStackWithContext
+// CreateCloudFormationStackWithContext indicates an expected call of CreateCloudFormationStackWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateCloudFormationStackWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCloudFormationStackWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateCloudFormationStackWithContext), varargs...)
 }
 
-// CreateContactMethod mocks base method
+// CreateContactMethod mocks base method.
 func (m *MockLightsailAPI) CreateContactMethod(arg0 *lightsail.CreateContactMethodInput) (*lightsail.CreateContactMethodOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContactMethod", arg0)
@@ -544,13 +545,13 @@ func (m *MockLightsailAPI) CreateContactMethod(arg0 *lightsail.CreateContactMeth
 	return ret0, ret1
 }
 
-// CreateContactMethod indicates an expected call of CreateContactMethod
+// CreateContactMethod indicates an expected call of CreateContactMethod.
 func (mr *MockLightsailAPIMockRecorder) CreateContactMethod(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContactMethod", reflect.TypeOf((*MockLightsailAPI)(nil).CreateContactMethod), arg0)
 }
 
-// CreateContactMethodRequest mocks base method
+// CreateContactMethodRequest mocks base method.
 func (m *MockLightsailAPI) CreateContactMethodRequest(arg0 *lightsail.CreateContactMethodInput) (*request.Request, *lightsail.CreateContactMethodOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContactMethodRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockLightsailAPI) CreateContactMethodRequest(arg0 *lightsail.CreateCont
 	return ret0, ret1
 }
 
-// CreateContactMethodRequest indicates an expected call of CreateContactMethodRequest
+// CreateContactMethodRequest indicates an expected call of CreateContactMethodRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateContactMethodRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContactMethodRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateContactMethodRequest), arg0)
 }
 
-// CreateContactMethodWithContext mocks base method
+// CreateContactMethodWithContext mocks base method.
 func (m *MockLightsailAPI) CreateContactMethodWithContext(arg0 context.Context, arg1 *lightsail.CreateContactMethodInput, arg2 ...request.Option) (*lightsail.CreateContactMethodOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockLightsailAPI) CreateContactMethodWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// CreateContactMethodWithContext indicates an expected call of CreateContactMethodWithContext
+// CreateContactMethodWithContext indicates an expected call of CreateContactMethodWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateContactMethodWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContactMethodWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateContactMethodWithContext), varargs...)
 }
 
-// CreateContainerService mocks base method
+// CreateContainerService mocks base method.
 func (m *MockLightsailAPI) CreateContainerService(arg0 *lightsail.CreateContainerServiceInput) (*lightsail.CreateContainerServiceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContainerService", arg0)
@@ -594,13 +595,13 @@ func (m *MockLightsailAPI) CreateContainerService(arg0 *lightsail.CreateContaine
 	return ret0, ret1
 }
 
-// CreateContainerService indicates an expected call of CreateContainerService
+// CreateContainerService indicates an expected call of CreateContainerService.
 func (mr *MockLightsailAPIMockRecorder) CreateContainerService(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerService", reflect.TypeOf((*MockLightsailAPI)(nil).CreateContainerService), arg0)
 }
 
-// CreateContainerServiceDeployment mocks base method
+// CreateContainerServiceDeployment mocks base method.
 func (m *MockLightsailAPI) CreateContainerServiceDeployment(arg0 *lightsail.CreateContainerServiceDeploymentInput) (*lightsail.CreateContainerServiceDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContainerServiceDeployment", arg0)
@@ -609,13 +610,13 @@ func (m *MockLightsailAPI) CreateContainerServiceDeployment(arg0 *lightsail.Crea
 	return ret0, ret1
 }
 
-// CreateContainerServiceDeployment indicates an expected call of CreateContainerServiceDeployment
+// CreateContainerServiceDeployment indicates an expected call of CreateContainerServiceDeployment.
 func (mr *MockLightsailAPIMockRecorder) CreateContainerServiceDeployment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerServiceDeployment", reflect.TypeOf((*MockLightsailAPI)(nil).CreateContainerServiceDeployment), arg0)
 }
 
-// CreateContainerServiceDeploymentRequest mocks base method
+// CreateContainerServiceDeploymentRequest mocks base method.
 func (m *MockLightsailAPI) CreateContainerServiceDeploymentRequest(arg0 *lightsail.CreateContainerServiceDeploymentInput) (*request.Request, *lightsail.CreateContainerServiceDeploymentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContainerServiceDeploymentRequest", arg0)
@@ -624,13 +625,13 @@ func (m *MockLightsailAPI) CreateContainerServiceDeploymentRequest(arg0 *lightsa
 	return ret0, ret1
 }
 
-// CreateContainerServiceDeploymentRequest indicates an expected call of CreateContainerServiceDeploymentRequest
+// CreateContainerServiceDeploymentRequest indicates an expected call of CreateContainerServiceDeploymentRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateContainerServiceDeploymentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerServiceDeploymentRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateContainerServiceDeploymentRequest), arg0)
 }
 
-// CreateContainerServiceDeploymentWithContext mocks base method
+// CreateContainerServiceDeploymentWithContext mocks base method.
 func (m *MockLightsailAPI) CreateContainerServiceDeploymentWithContext(arg0 context.Context, arg1 *lightsail.CreateContainerServiceDeploymentInput, arg2 ...request.Option) (*lightsail.CreateContainerServiceDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -643,14 +644,14 @@ func (m *MockLightsailAPI) CreateContainerServiceDeploymentWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// CreateContainerServiceDeploymentWithContext indicates an expected call of CreateContainerServiceDeploymentWithContext
+// CreateContainerServiceDeploymentWithContext indicates an expected call of CreateContainerServiceDeploymentWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateContainerServiceDeploymentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerServiceDeploymentWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateContainerServiceDeploymentWithContext), varargs...)
 }
 
-// CreateContainerServiceRegistryLogin mocks base method
+// CreateContainerServiceRegistryLogin mocks base method.
 func (m *MockLightsailAPI) CreateContainerServiceRegistryLogin(arg0 *lightsail.CreateContainerServiceRegistryLoginInput) (*lightsail.CreateContainerServiceRegistryLoginOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContainerServiceRegistryLogin", arg0)
@@ -659,13 +660,13 @@ func (m *MockLightsailAPI) CreateContainerServiceRegistryLogin(arg0 *lightsail.C
 	return ret0, ret1
 }
 
-// CreateContainerServiceRegistryLogin indicates an expected call of CreateContainerServiceRegistryLogin
+// CreateContainerServiceRegistryLogin indicates an expected call of CreateContainerServiceRegistryLogin.
 func (mr *MockLightsailAPIMockRecorder) CreateContainerServiceRegistryLogin(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerServiceRegistryLogin", reflect.TypeOf((*MockLightsailAPI)(nil).CreateContainerServiceRegistryLogin), arg0)
 }
 
-// CreateContainerServiceRegistryLoginRequest mocks base method
+// CreateContainerServiceRegistryLoginRequest mocks base method.
 func (m *MockLightsailAPI) CreateContainerServiceRegistryLoginRequest(arg0 *lightsail.CreateContainerServiceRegistryLoginInput) (*request.Request, *lightsail.CreateContainerServiceRegistryLoginOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContainerServiceRegistryLoginRequest", arg0)
@@ -674,13 +675,13 @@ func (m *MockLightsailAPI) CreateContainerServiceRegistryLoginRequest(arg0 *ligh
 	return ret0, ret1
 }
 
-// CreateContainerServiceRegistryLoginRequest indicates an expected call of CreateContainerServiceRegistryLoginRequest
+// CreateContainerServiceRegistryLoginRequest indicates an expected call of CreateContainerServiceRegistryLoginRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateContainerServiceRegistryLoginRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerServiceRegistryLoginRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateContainerServiceRegistryLoginRequest), arg0)
 }
 
-// CreateContainerServiceRegistryLoginWithContext mocks base method
+// CreateContainerServiceRegistryLoginWithContext mocks base method.
 func (m *MockLightsailAPI) CreateContainerServiceRegistryLoginWithContext(arg0 context.Context, arg1 *lightsail.CreateContainerServiceRegistryLoginInput, arg2 ...request.Option) (*lightsail.CreateContainerServiceRegistryLoginOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -693,14 +694,14 @@ func (m *MockLightsailAPI) CreateContainerServiceRegistryLoginWithContext(arg0 c
 	return ret0, ret1
 }
 
-// CreateContainerServiceRegistryLoginWithContext indicates an expected call of CreateContainerServiceRegistryLoginWithContext
+// CreateContainerServiceRegistryLoginWithContext indicates an expected call of CreateContainerServiceRegistryLoginWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateContainerServiceRegistryLoginWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerServiceRegistryLoginWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateContainerServiceRegistryLoginWithContext), varargs...)
 }
 
-// CreateContainerServiceRequest mocks base method
+// CreateContainerServiceRequest mocks base method.
 func (m *MockLightsailAPI) CreateContainerServiceRequest(arg0 *lightsail.CreateContainerServiceInput) (*request.Request, *lightsail.CreateContainerServiceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateContainerServiceRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockLightsailAPI) CreateContainerServiceRequest(arg0 *lightsail.CreateC
 	return ret0, ret1
 }
 
-// CreateContainerServiceRequest indicates an expected call of CreateContainerServiceRequest
+// CreateContainerServiceRequest indicates an expected call of CreateContainerServiceRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateContainerServiceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerServiceRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateContainerServiceRequest), arg0)
 }
 
-// CreateContainerServiceWithContext mocks base method
+// CreateContainerServiceWithContext mocks base method.
 func (m *MockLightsailAPI) CreateContainerServiceWithContext(arg0 context.Context, arg1 *lightsail.CreateContainerServiceInput, arg2 ...request.Option) (*lightsail.CreateContainerServiceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockLightsailAPI) CreateContainerServiceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CreateContainerServiceWithContext indicates an expected call of CreateContainerServiceWithContext
+// CreateContainerServiceWithContext indicates an expected call of CreateContainerServiceWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateContainerServiceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateContainerServiceWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateContainerServiceWithContext), varargs...)
 }
 
-// CreateDisk mocks base method
+// CreateDisk mocks base method.
 func (m *MockLightsailAPI) CreateDisk(arg0 *lightsail.CreateDiskInput) (*lightsail.CreateDiskOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDisk", arg0)
@@ -744,13 +745,13 @@ func (m *MockLightsailAPI) CreateDisk(arg0 *lightsail.CreateDiskInput) (*lightsa
 	return ret0, ret1
 }
 
-// CreateDisk indicates an expected call of CreateDisk
+// CreateDisk indicates an expected call of CreateDisk.
 func (mr *MockLightsailAPIMockRecorder) CreateDisk(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDisk", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDisk), arg0)
 }
 
-// CreateDiskFromSnapshot mocks base method
+// CreateDiskFromSnapshot mocks base method.
 func (m *MockLightsailAPI) CreateDiskFromSnapshot(arg0 *lightsail.CreateDiskFromSnapshotInput) (*lightsail.CreateDiskFromSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDiskFromSnapshot", arg0)
@@ -759,13 +760,13 @@ func (m *MockLightsailAPI) CreateDiskFromSnapshot(arg0 *lightsail.CreateDiskFrom
 	return ret0, ret1
 }
 
-// CreateDiskFromSnapshot indicates an expected call of CreateDiskFromSnapshot
+// CreateDiskFromSnapshot indicates an expected call of CreateDiskFromSnapshot.
 func (mr *MockLightsailAPIMockRecorder) CreateDiskFromSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDiskFromSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDiskFromSnapshot), arg0)
 }
 
-// CreateDiskFromSnapshotRequest mocks base method
+// CreateDiskFromSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) CreateDiskFromSnapshotRequest(arg0 *lightsail.CreateDiskFromSnapshotInput) (*request.Request, *lightsail.CreateDiskFromSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDiskFromSnapshotRequest", arg0)
@@ -774,13 +775,13 @@ func (m *MockLightsailAPI) CreateDiskFromSnapshotRequest(arg0 *lightsail.CreateD
 	return ret0, ret1
 }
 
-// CreateDiskFromSnapshotRequest indicates an expected call of CreateDiskFromSnapshotRequest
+// CreateDiskFromSnapshotRequest indicates an expected call of CreateDiskFromSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateDiskFromSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDiskFromSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDiskFromSnapshotRequest), arg0)
 }
 
-// CreateDiskFromSnapshotWithContext mocks base method
+// CreateDiskFromSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) CreateDiskFromSnapshotWithContext(arg0 context.Context, arg1 *lightsail.CreateDiskFromSnapshotInput, arg2 ...request.Option) (*lightsail.CreateDiskFromSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -793,14 +794,14 @@ func (m *MockLightsailAPI) CreateDiskFromSnapshotWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CreateDiskFromSnapshotWithContext indicates an expected call of CreateDiskFromSnapshotWithContext
+// CreateDiskFromSnapshotWithContext indicates an expected call of CreateDiskFromSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateDiskFromSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDiskFromSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDiskFromSnapshotWithContext), varargs...)
 }
 
-// CreateDiskRequest mocks base method
+// CreateDiskRequest mocks base method.
 func (m *MockLightsailAPI) CreateDiskRequest(arg0 *lightsail.CreateDiskInput) (*request.Request, *lightsail.CreateDiskOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDiskRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockLightsailAPI) CreateDiskRequest(arg0 *lightsail.CreateDiskInput) (*
 	return ret0, ret1
 }
 
-// CreateDiskRequest indicates an expected call of CreateDiskRequest
+// CreateDiskRequest indicates an expected call of CreateDiskRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateDiskRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDiskRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDiskRequest), arg0)
 }
 
-// CreateDiskSnapshot mocks base method
+// CreateDiskSnapshot mocks base method.
 func (m *MockLightsailAPI) CreateDiskSnapshot(arg0 *lightsail.CreateDiskSnapshotInput) (*lightsail.CreateDiskSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDiskSnapshot", arg0)
@@ -824,13 +825,13 @@ func (m *MockLightsailAPI) CreateDiskSnapshot(arg0 *lightsail.CreateDiskSnapshot
 	return ret0, ret1
 }
 
-// CreateDiskSnapshot indicates an expected call of CreateDiskSnapshot
+// CreateDiskSnapshot indicates an expected call of CreateDiskSnapshot.
 func (mr *MockLightsailAPIMockRecorder) CreateDiskSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDiskSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDiskSnapshot), arg0)
 }
 
-// CreateDiskSnapshotRequest mocks base method
+// CreateDiskSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) CreateDiskSnapshotRequest(arg0 *lightsail.CreateDiskSnapshotInput) (*request.Request, *lightsail.CreateDiskSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDiskSnapshotRequest", arg0)
@@ -839,13 +840,13 @@ func (m *MockLightsailAPI) CreateDiskSnapshotRequest(arg0 *lightsail.CreateDiskS
 	return ret0, ret1
 }
 
-// CreateDiskSnapshotRequest indicates an expected call of CreateDiskSnapshotRequest
+// CreateDiskSnapshotRequest indicates an expected call of CreateDiskSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateDiskSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDiskSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDiskSnapshotRequest), arg0)
 }
 
-// CreateDiskSnapshotWithContext mocks base method
+// CreateDiskSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) CreateDiskSnapshotWithContext(arg0 context.Context, arg1 *lightsail.CreateDiskSnapshotInput, arg2 ...request.Option) (*lightsail.CreateDiskSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -858,14 +859,14 @@ func (m *MockLightsailAPI) CreateDiskSnapshotWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// CreateDiskSnapshotWithContext indicates an expected call of CreateDiskSnapshotWithContext
+// CreateDiskSnapshotWithContext indicates an expected call of CreateDiskSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateDiskSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDiskSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDiskSnapshotWithContext), varargs...)
 }
 
-// CreateDiskWithContext mocks base method
+// CreateDiskWithContext mocks base method.
 func (m *MockLightsailAPI) CreateDiskWithContext(arg0 context.Context, arg1 *lightsail.CreateDiskInput, arg2 ...request.Option) (*lightsail.CreateDiskOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +879,14 @@ func (m *MockLightsailAPI) CreateDiskWithContext(arg0 context.Context, arg1 *lig
 	return ret0, ret1
 }
 
-// CreateDiskWithContext indicates an expected call of CreateDiskWithContext
+// CreateDiskWithContext indicates an expected call of CreateDiskWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateDiskWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDiskWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDiskWithContext), varargs...)
 }
 
-// CreateDistribution mocks base method
+// CreateDistribution mocks base method.
 func (m *MockLightsailAPI) CreateDistribution(arg0 *lightsail.CreateDistributionInput) (*lightsail.CreateDistributionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDistribution", arg0)
@@ -894,13 +895,13 @@ func (m *MockLightsailAPI) CreateDistribution(arg0 *lightsail.CreateDistribution
 	return ret0, ret1
 }
 
-// CreateDistribution indicates an expected call of CreateDistribution
+// CreateDistribution indicates an expected call of CreateDistribution.
 func (mr *MockLightsailAPIMockRecorder) CreateDistribution(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDistribution", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDistribution), arg0)
 }
 
-// CreateDistributionRequest mocks base method
+// CreateDistributionRequest mocks base method.
 func (m *MockLightsailAPI) CreateDistributionRequest(arg0 *lightsail.CreateDistributionInput) (*request.Request, *lightsail.CreateDistributionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDistributionRequest", arg0)
@@ -909,13 +910,13 @@ func (m *MockLightsailAPI) CreateDistributionRequest(arg0 *lightsail.CreateDistr
 	return ret0, ret1
 }
 
-// CreateDistributionRequest indicates an expected call of CreateDistributionRequest
+// CreateDistributionRequest indicates an expected call of CreateDistributionRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateDistributionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDistributionRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDistributionRequest), arg0)
 }
 
-// CreateDistributionWithContext mocks base method
+// CreateDistributionWithContext mocks base method.
 func (m *MockLightsailAPI) CreateDistributionWithContext(arg0 context.Context, arg1 *lightsail.CreateDistributionInput, arg2 ...request.Option) (*lightsail.CreateDistributionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -928,14 +929,14 @@ func (m *MockLightsailAPI) CreateDistributionWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// CreateDistributionWithContext indicates an expected call of CreateDistributionWithContext
+// CreateDistributionWithContext indicates an expected call of CreateDistributionWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateDistributionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDistributionWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDistributionWithContext), varargs...)
 }
 
-// CreateDomain mocks base method
+// CreateDomain mocks base method.
 func (m *MockLightsailAPI) CreateDomain(arg0 *lightsail.CreateDomainInput) (*lightsail.CreateDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDomain", arg0)
@@ -944,13 +945,13 @@ func (m *MockLightsailAPI) CreateDomain(arg0 *lightsail.CreateDomainInput) (*lig
 	return ret0, ret1
 }
 
-// CreateDomain indicates an expected call of CreateDomain
+// CreateDomain indicates an expected call of CreateDomain.
 func (mr *MockLightsailAPIMockRecorder) CreateDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomain", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDomain), arg0)
 }
 
-// CreateDomainEntry mocks base method
+// CreateDomainEntry mocks base method.
 func (m *MockLightsailAPI) CreateDomainEntry(arg0 *lightsail.CreateDomainEntryInput) (*lightsail.CreateDomainEntryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDomainEntry", arg0)
@@ -959,13 +960,13 @@ func (m *MockLightsailAPI) CreateDomainEntry(arg0 *lightsail.CreateDomainEntryIn
 	return ret0, ret1
 }
 
-// CreateDomainEntry indicates an expected call of CreateDomainEntry
+// CreateDomainEntry indicates an expected call of CreateDomainEntry.
 func (mr *MockLightsailAPIMockRecorder) CreateDomainEntry(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainEntry", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDomainEntry), arg0)
 }
 
-// CreateDomainEntryRequest mocks base method
+// CreateDomainEntryRequest mocks base method.
 func (m *MockLightsailAPI) CreateDomainEntryRequest(arg0 *lightsail.CreateDomainEntryInput) (*request.Request, *lightsail.CreateDomainEntryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDomainEntryRequest", arg0)
@@ -974,13 +975,13 @@ func (m *MockLightsailAPI) CreateDomainEntryRequest(arg0 *lightsail.CreateDomain
 	return ret0, ret1
 }
 
-// CreateDomainEntryRequest indicates an expected call of CreateDomainEntryRequest
+// CreateDomainEntryRequest indicates an expected call of CreateDomainEntryRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateDomainEntryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainEntryRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDomainEntryRequest), arg0)
 }
 
-// CreateDomainEntryWithContext mocks base method
+// CreateDomainEntryWithContext mocks base method.
 func (m *MockLightsailAPI) CreateDomainEntryWithContext(arg0 context.Context, arg1 *lightsail.CreateDomainEntryInput, arg2 ...request.Option) (*lightsail.CreateDomainEntryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -993,14 +994,14 @@ func (m *MockLightsailAPI) CreateDomainEntryWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateDomainEntryWithContext indicates an expected call of CreateDomainEntryWithContext
+// CreateDomainEntryWithContext indicates an expected call of CreateDomainEntryWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateDomainEntryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainEntryWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDomainEntryWithContext), varargs...)
 }
 
-// CreateDomainRequest mocks base method
+// CreateDomainRequest mocks base method.
 func (m *MockLightsailAPI) CreateDomainRequest(arg0 *lightsail.CreateDomainInput) (*request.Request, *lightsail.CreateDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDomainRequest", arg0)
@@ -1009,13 +1010,13 @@ func (m *MockLightsailAPI) CreateDomainRequest(arg0 *lightsail.CreateDomainInput
 	return ret0, ret1
 }
 
-// CreateDomainRequest indicates an expected call of CreateDomainRequest
+// CreateDomainRequest indicates an expected call of CreateDomainRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDomainRequest), arg0)
 }
 
-// CreateDomainWithContext mocks base method
+// CreateDomainWithContext mocks base method.
 func (m *MockLightsailAPI) CreateDomainWithContext(arg0 context.Context, arg1 *lightsail.CreateDomainInput, arg2 ...request.Option) (*lightsail.CreateDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1028,14 +1029,14 @@ func (m *MockLightsailAPI) CreateDomainWithContext(arg0 context.Context, arg1 *l
 	return ret0, ret1
 }
 
-// CreateDomainWithContext indicates an expected call of CreateDomainWithContext
+// CreateDomainWithContext indicates an expected call of CreateDomainWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateDomainWithContext), varargs...)
 }
 
-// CreateInstanceSnapshot mocks base method
+// CreateInstanceSnapshot mocks base method.
 func (m *MockLightsailAPI) CreateInstanceSnapshot(arg0 *lightsail.CreateInstanceSnapshotInput) (*lightsail.CreateInstanceSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInstanceSnapshot", arg0)
@@ -1044,13 +1045,13 @@ func (m *MockLightsailAPI) CreateInstanceSnapshot(arg0 *lightsail.CreateInstance
 	return ret0, ret1
 }
 
-// CreateInstanceSnapshot indicates an expected call of CreateInstanceSnapshot
+// CreateInstanceSnapshot indicates an expected call of CreateInstanceSnapshot.
 func (mr *MockLightsailAPIMockRecorder) CreateInstanceSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInstanceSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).CreateInstanceSnapshot), arg0)
 }
 
-// CreateInstanceSnapshotRequest mocks base method
+// CreateInstanceSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) CreateInstanceSnapshotRequest(arg0 *lightsail.CreateInstanceSnapshotInput) (*request.Request, *lightsail.CreateInstanceSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInstanceSnapshotRequest", arg0)
@@ -1059,13 +1060,13 @@ func (m *MockLightsailAPI) CreateInstanceSnapshotRequest(arg0 *lightsail.CreateI
 	return ret0, ret1
 }
 
-// CreateInstanceSnapshotRequest indicates an expected call of CreateInstanceSnapshotRequest
+// CreateInstanceSnapshotRequest indicates an expected call of CreateInstanceSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateInstanceSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInstanceSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateInstanceSnapshotRequest), arg0)
 }
 
-// CreateInstanceSnapshotWithContext mocks base method
+// CreateInstanceSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) CreateInstanceSnapshotWithContext(arg0 context.Context, arg1 *lightsail.CreateInstanceSnapshotInput, arg2 ...request.Option) (*lightsail.CreateInstanceSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1078,14 +1079,14 @@ func (m *MockLightsailAPI) CreateInstanceSnapshotWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CreateInstanceSnapshotWithContext indicates an expected call of CreateInstanceSnapshotWithContext
+// CreateInstanceSnapshotWithContext indicates an expected call of CreateInstanceSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateInstanceSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInstanceSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateInstanceSnapshotWithContext), varargs...)
 }
 
-// CreateInstances mocks base method
+// CreateInstances mocks base method.
 func (m *MockLightsailAPI) CreateInstances(arg0 *lightsail.CreateInstancesInput) (*lightsail.CreateInstancesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInstances", arg0)
@@ -1094,13 +1095,13 @@ func (m *MockLightsailAPI) CreateInstances(arg0 *lightsail.CreateInstancesInput)
 	return ret0, ret1
 }
 
-// CreateInstances indicates an expected call of CreateInstances
+// CreateInstances indicates an expected call of CreateInstances.
 func (mr *MockLightsailAPIMockRecorder) CreateInstances(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInstances", reflect.TypeOf((*MockLightsailAPI)(nil).CreateInstances), arg0)
 }
 
-// CreateInstancesFromSnapshot mocks base method
+// CreateInstancesFromSnapshot mocks base method.
 func (m *MockLightsailAPI) CreateInstancesFromSnapshot(arg0 *lightsail.CreateInstancesFromSnapshotInput) (*lightsail.CreateInstancesFromSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInstancesFromSnapshot", arg0)
@@ -1109,13 +1110,13 @@ func (m *MockLightsailAPI) CreateInstancesFromSnapshot(arg0 *lightsail.CreateIns
 	return ret0, ret1
 }
 
-// CreateInstancesFromSnapshot indicates an expected call of CreateInstancesFromSnapshot
+// CreateInstancesFromSnapshot indicates an expected call of CreateInstancesFromSnapshot.
 func (mr *MockLightsailAPIMockRecorder) CreateInstancesFromSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInstancesFromSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).CreateInstancesFromSnapshot), arg0)
 }
 
-// CreateInstancesFromSnapshotRequest mocks base method
+// CreateInstancesFromSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) CreateInstancesFromSnapshotRequest(arg0 *lightsail.CreateInstancesFromSnapshotInput) (*request.Request, *lightsail.CreateInstancesFromSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInstancesFromSnapshotRequest", arg0)
@@ -1124,13 +1125,13 @@ func (m *MockLightsailAPI) CreateInstancesFromSnapshotRequest(arg0 *lightsail.Cr
 	return ret0, ret1
 }
 
-// CreateInstancesFromSnapshotRequest indicates an expected call of CreateInstancesFromSnapshotRequest
+// CreateInstancesFromSnapshotRequest indicates an expected call of CreateInstancesFromSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateInstancesFromSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInstancesFromSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateInstancesFromSnapshotRequest), arg0)
 }
 
-// CreateInstancesFromSnapshotWithContext mocks base method
+// CreateInstancesFromSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) CreateInstancesFromSnapshotWithContext(arg0 context.Context, arg1 *lightsail.CreateInstancesFromSnapshotInput, arg2 ...request.Option) (*lightsail.CreateInstancesFromSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1143,14 +1144,14 @@ func (m *MockLightsailAPI) CreateInstancesFromSnapshotWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// CreateInstancesFromSnapshotWithContext indicates an expected call of CreateInstancesFromSnapshotWithContext
+// CreateInstancesFromSnapshotWithContext indicates an expected call of CreateInstancesFromSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateInstancesFromSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInstancesFromSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateInstancesFromSnapshotWithContext), varargs...)
 }
 
-// CreateInstancesRequest mocks base method
+// CreateInstancesRequest mocks base method.
 func (m *MockLightsailAPI) CreateInstancesRequest(arg0 *lightsail.CreateInstancesInput) (*request.Request, *lightsail.CreateInstancesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInstancesRequest", arg0)
@@ -1159,13 +1160,13 @@ func (m *MockLightsailAPI) CreateInstancesRequest(arg0 *lightsail.CreateInstance
 	return ret0, ret1
 }
 
-// CreateInstancesRequest indicates an expected call of CreateInstancesRequest
+// CreateInstancesRequest indicates an expected call of CreateInstancesRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateInstancesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInstancesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateInstancesRequest), arg0)
 }
 
-// CreateInstancesWithContext mocks base method
+// CreateInstancesWithContext mocks base method.
 func (m *MockLightsailAPI) CreateInstancesWithContext(arg0 context.Context, arg1 *lightsail.CreateInstancesInput, arg2 ...request.Option) (*lightsail.CreateInstancesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1178,14 +1179,14 @@ func (m *MockLightsailAPI) CreateInstancesWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// CreateInstancesWithContext indicates an expected call of CreateInstancesWithContext
+// CreateInstancesWithContext indicates an expected call of CreateInstancesWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateInstancesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInstancesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateInstancesWithContext), varargs...)
 }
 
-// CreateKeyPair mocks base method
+// CreateKeyPair mocks base method.
 func (m *MockLightsailAPI) CreateKeyPair(arg0 *lightsail.CreateKeyPairInput) (*lightsail.CreateKeyPairOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateKeyPair", arg0)
@@ -1194,13 +1195,13 @@ func (m *MockLightsailAPI) CreateKeyPair(arg0 *lightsail.CreateKeyPairInput) (*l
 	return ret0, ret1
 }
 
-// CreateKeyPair indicates an expected call of CreateKeyPair
+// CreateKeyPair indicates an expected call of CreateKeyPair.
 func (mr *MockLightsailAPIMockRecorder) CreateKeyPair(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateKeyPair", reflect.TypeOf((*MockLightsailAPI)(nil).CreateKeyPair), arg0)
 }
 
-// CreateKeyPairRequest mocks base method
+// CreateKeyPairRequest mocks base method.
 func (m *MockLightsailAPI) CreateKeyPairRequest(arg0 *lightsail.CreateKeyPairInput) (*request.Request, *lightsail.CreateKeyPairOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateKeyPairRequest", arg0)
@@ -1209,13 +1210,13 @@ func (m *MockLightsailAPI) CreateKeyPairRequest(arg0 *lightsail.CreateKeyPairInp
 	return ret0, ret1
 }
 
-// CreateKeyPairRequest indicates an expected call of CreateKeyPairRequest
+// CreateKeyPairRequest indicates an expected call of CreateKeyPairRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateKeyPairRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateKeyPairRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateKeyPairRequest), arg0)
 }
 
-// CreateKeyPairWithContext mocks base method
+// CreateKeyPairWithContext mocks base method.
 func (m *MockLightsailAPI) CreateKeyPairWithContext(arg0 context.Context, arg1 *lightsail.CreateKeyPairInput, arg2 ...request.Option) (*lightsail.CreateKeyPairOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1228,14 +1229,14 @@ func (m *MockLightsailAPI) CreateKeyPairWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// CreateKeyPairWithContext indicates an expected call of CreateKeyPairWithContext
+// CreateKeyPairWithContext indicates an expected call of CreateKeyPairWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateKeyPairWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateKeyPairWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateKeyPairWithContext), varargs...)
 }
 
-// CreateLoadBalancer mocks base method
+// CreateLoadBalancer mocks base method.
 func (m *MockLightsailAPI) CreateLoadBalancer(arg0 *lightsail.CreateLoadBalancerInput) (*lightsail.CreateLoadBalancerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateLoadBalancer", arg0)
@@ -1244,13 +1245,13 @@ func (m *MockLightsailAPI) CreateLoadBalancer(arg0 *lightsail.CreateLoadBalancer
 	return ret0, ret1
 }
 
-// CreateLoadBalancer indicates an expected call of CreateLoadBalancer
+// CreateLoadBalancer indicates an expected call of CreateLoadBalancer.
 func (mr *MockLightsailAPIMockRecorder) CreateLoadBalancer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLoadBalancer", reflect.TypeOf((*MockLightsailAPI)(nil).CreateLoadBalancer), arg0)
 }
 
-// CreateLoadBalancerRequest mocks base method
+// CreateLoadBalancerRequest mocks base method.
 func (m *MockLightsailAPI) CreateLoadBalancerRequest(arg0 *lightsail.CreateLoadBalancerInput) (*request.Request, *lightsail.CreateLoadBalancerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateLoadBalancerRequest", arg0)
@@ -1259,13 +1260,13 @@ func (m *MockLightsailAPI) CreateLoadBalancerRequest(arg0 *lightsail.CreateLoadB
 	return ret0, ret1
 }
 
-// CreateLoadBalancerRequest indicates an expected call of CreateLoadBalancerRequest
+// CreateLoadBalancerRequest indicates an expected call of CreateLoadBalancerRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateLoadBalancerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLoadBalancerRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateLoadBalancerRequest), arg0)
 }
 
-// CreateLoadBalancerTlsCertificate mocks base method
+// CreateLoadBalancerTlsCertificate mocks base method.
 func (m *MockLightsailAPI) CreateLoadBalancerTlsCertificate(arg0 *lightsail.CreateLoadBalancerTlsCertificateInput) (*lightsail.CreateLoadBalancerTlsCertificateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateLoadBalancerTlsCertificate", arg0)
@@ -1274,13 +1275,13 @@ func (m *MockLightsailAPI) CreateLoadBalancerTlsCertificate(arg0 *lightsail.Crea
 	return ret0, ret1
 }
 
-// CreateLoadBalancerTlsCertificate indicates an expected call of CreateLoadBalancerTlsCertificate
+// CreateLoadBalancerTlsCertificate indicates an expected call of CreateLoadBalancerTlsCertificate.
 func (mr *MockLightsailAPIMockRecorder) CreateLoadBalancerTlsCertificate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLoadBalancerTlsCertificate", reflect.TypeOf((*MockLightsailAPI)(nil).CreateLoadBalancerTlsCertificate), arg0)
 }
 
-// CreateLoadBalancerTlsCertificateRequest mocks base method
+// CreateLoadBalancerTlsCertificateRequest mocks base method.
 func (m *MockLightsailAPI) CreateLoadBalancerTlsCertificateRequest(arg0 *lightsail.CreateLoadBalancerTlsCertificateInput) (*request.Request, *lightsail.CreateLoadBalancerTlsCertificateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateLoadBalancerTlsCertificateRequest", arg0)
@@ -1289,13 +1290,13 @@ func (m *MockLightsailAPI) CreateLoadBalancerTlsCertificateRequest(arg0 *lightsa
 	return ret0, ret1
 }
 
-// CreateLoadBalancerTlsCertificateRequest indicates an expected call of CreateLoadBalancerTlsCertificateRequest
+// CreateLoadBalancerTlsCertificateRequest indicates an expected call of CreateLoadBalancerTlsCertificateRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateLoadBalancerTlsCertificateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLoadBalancerTlsCertificateRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateLoadBalancerTlsCertificateRequest), arg0)
 }
 
-// CreateLoadBalancerTlsCertificateWithContext mocks base method
+// CreateLoadBalancerTlsCertificateWithContext mocks base method.
 func (m *MockLightsailAPI) CreateLoadBalancerTlsCertificateWithContext(arg0 context.Context, arg1 *lightsail.CreateLoadBalancerTlsCertificateInput, arg2 ...request.Option) (*lightsail.CreateLoadBalancerTlsCertificateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1308,14 +1309,14 @@ func (m *MockLightsailAPI) CreateLoadBalancerTlsCertificateWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// CreateLoadBalancerTlsCertificateWithContext indicates an expected call of CreateLoadBalancerTlsCertificateWithContext
+// CreateLoadBalancerTlsCertificateWithContext indicates an expected call of CreateLoadBalancerTlsCertificateWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateLoadBalancerTlsCertificateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLoadBalancerTlsCertificateWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateLoadBalancerTlsCertificateWithContext), varargs...)
 }
 
-// CreateLoadBalancerWithContext mocks base method
+// CreateLoadBalancerWithContext mocks base method.
 func (m *MockLightsailAPI) CreateLoadBalancerWithContext(arg0 context.Context, arg1 *lightsail.CreateLoadBalancerInput, arg2 ...request.Option) (*lightsail.CreateLoadBalancerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1328,14 +1329,14 @@ func (m *MockLightsailAPI) CreateLoadBalancerWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// CreateLoadBalancerWithContext indicates an expected call of CreateLoadBalancerWithContext
+// CreateLoadBalancerWithContext indicates an expected call of CreateLoadBalancerWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateLoadBalancerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLoadBalancerWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateLoadBalancerWithContext), varargs...)
 }
 
-// CreateRelationalDatabase mocks base method
+// CreateRelationalDatabase mocks base method.
 func (m *MockLightsailAPI) CreateRelationalDatabase(arg0 *lightsail.CreateRelationalDatabaseInput) (*lightsail.CreateRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRelationalDatabase", arg0)
@@ -1344,13 +1345,13 @@ func (m *MockLightsailAPI) CreateRelationalDatabase(arg0 *lightsail.CreateRelati
 	return ret0, ret1
 }
 
-// CreateRelationalDatabase indicates an expected call of CreateRelationalDatabase
+// CreateRelationalDatabase indicates an expected call of CreateRelationalDatabase.
 func (mr *MockLightsailAPIMockRecorder) CreateRelationalDatabase(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRelationalDatabase", reflect.TypeOf((*MockLightsailAPI)(nil).CreateRelationalDatabase), arg0)
 }
 
-// CreateRelationalDatabaseFromSnapshot mocks base method
+// CreateRelationalDatabaseFromSnapshot mocks base method.
 func (m *MockLightsailAPI) CreateRelationalDatabaseFromSnapshot(arg0 *lightsail.CreateRelationalDatabaseFromSnapshotInput) (*lightsail.CreateRelationalDatabaseFromSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRelationalDatabaseFromSnapshot", arg0)
@@ -1359,13 +1360,13 @@ func (m *MockLightsailAPI) CreateRelationalDatabaseFromSnapshot(arg0 *lightsail.
 	return ret0, ret1
 }
 
-// CreateRelationalDatabaseFromSnapshot indicates an expected call of CreateRelationalDatabaseFromSnapshot
+// CreateRelationalDatabaseFromSnapshot indicates an expected call of CreateRelationalDatabaseFromSnapshot.
 func (mr *MockLightsailAPIMockRecorder) CreateRelationalDatabaseFromSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRelationalDatabaseFromSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).CreateRelationalDatabaseFromSnapshot), arg0)
 }
 
-// CreateRelationalDatabaseFromSnapshotRequest mocks base method
+// CreateRelationalDatabaseFromSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) CreateRelationalDatabaseFromSnapshotRequest(arg0 *lightsail.CreateRelationalDatabaseFromSnapshotInput) (*request.Request, *lightsail.CreateRelationalDatabaseFromSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRelationalDatabaseFromSnapshotRequest", arg0)
@@ -1374,13 +1375,13 @@ func (m *MockLightsailAPI) CreateRelationalDatabaseFromSnapshotRequest(arg0 *lig
 	return ret0, ret1
 }
 
-// CreateRelationalDatabaseFromSnapshotRequest indicates an expected call of CreateRelationalDatabaseFromSnapshotRequest
+// CreateRelationalDatabaseFromSnapshotRequest indicates an expected call of CreateRelationalDatabaseFromSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateRelationalDatabaseFromSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRelationalDatabaseFromSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateRelationalDatabaseFromSnapshotRequest), arg0)
 }
 
-// CreateRelationalDatabaseFromSnapshotWithContext mocks base method
+// CreateRelationalDatabaseFromSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) CreateRelationalDatabaseFromSnapshotWithContext(arg0 context.Context, arg1 *lightsail.CreateRelationalDatabaseFromSnapshotInput, arg2 ...request.Option) (*lightsail.CreateRelationalDatabaseFromSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1393,14 +1394,14 @@ func (m *MockLightsailAPI) CreateRelationalDatabaseFromSnapshotWithContext(arg0 
 	return ret0, ret1
 }
 
-// CreateRelationalDatabaseFromSnapshotWithContext indicates an expected call of CreateRelationalDatabaseFromSnapshotWithContext
+// CreateRelationalDatabaseFromSnapshotWithContext indicates an expected call of CreateRelationalDatabaseFromSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateRelationalDatabaseFromSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRelationalDatabaseFromSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateRelationalDatabaseFromSnapshotWithContext), varargs...)
 }
 
-// CreateRelationalDatabaseRequest mocks base method
+// CreateRelationalDatabaseRequest mocks base method.
 func (m *MockLightsailAPI) CreateRelationalDatabaseRequest(arg0 *lightsail.CreateRelationalDatabaseInput) (*request.Request, *lightsail.CreateRelationalDatabaseOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRelationalDatabaseRequest", arg0)
@@ -1409,13 +1410,13 @@ func (m *MockLightsailAPI) CreateRelationalDatabaseRequest(arg0 *lightsail.Creat
 	return ret0, ret1
 }
 
-// CreateRelationalDatabaseRequest indicates an expected call of CreateRelationalDatabaseRequest
+// CreateRelationalDatabaseRequest indicates an expected call of CreateRelationalDatabaseRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateRelationalDatabaseRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRelationalDatabaseRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateRelationalDatabaseRequest), arg0)
 }
 
-// CreateRelationalDatabaseSnapshot mocks base method
+// CreateRelationalDatabaseSnapshot mocks base method.
 func (m *MockLightsailAPI) CreateRelationalDatabaseSnapshot(arg0 *lightsail.CreateRelationalDatabaseSnapshotInput) (*lightsail.CreateRelationalDatabaseSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRelationalDatabaseSnapshot", arg0)
@@ -1424,13 +1425,13 @@ func (m *MockLightsailAPI) CreateRelationalDatabaseSnapshot(arg0 *lightsail.Crea
 	return ret0, ret1
 }
 
-// CreateRelationalDatabaseSnapshot indicates an expected call of CreateRelationalDatabaseSnapshot
+// CreateRelationalDatabaseSnapshot indicates an expected call of CreateRelationalDatabaseSnapshot.
 func (mr *MockLightsailAPIMockRecorder) CreateRelationalDatabaseSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRelationalDatabaseSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).CreateRelationalDatabaseSnapshot), arg0)
 }
 
-// CreateRelationalDatabaseSnapshotRequest mocks base method
+// CreateRelationalDatabaseSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) CreateRelationalDatabaseSnapshotRequest(arg0 *lightsail.CreateRelationalDatabaseSnapshotInput) (*request.Request, *lightsail.CreateRelationalDatabaseSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRelationalDatabaseSnapshotRequest", arg0)
@@ -1439,13 +1440,13 @@ func (m *MockLightsailAPI) CreateRelationalDatabaseSnapshotRequest(arg0 *lightsa
 	return ret0, ret1
 }
 
-// CreateRelationalDatabaseSnapshotRequest indicates an expected call of CreateRelationalDatabaseSnapshotRequest
+// CreateRelationalDatabaseSnapshotRequest indicates an expected call of CreateRelationalDatabaseSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) CreateRelationalDatabaseSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRelationalDatabaseSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateRelationalDatabaseSnapshotRequest), arg0)
 }
 
-// CreateRelationalDatabaseSnapshotWithContext mocks base method
+// CreateRelationalDatabaseSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) CreateRelationalDatabaseSnapshotWithContext(arg0 context.Context, arg1 *lightsail.CreateRelationalDatabaseSnapshotInput, arg2 ...request.Option) (*lightsail.CreateRelationalDatabaseSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1458,14 +1459,14 @@ func (m *MockLightsailAPI) CreateRelationalDatabaseSnapshotWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// CreateRelationalDatabaseSnapshotWithContext indicates an expected call of CreateRelationalDatabaseSnapshotWithContext
+// CreateRelationalDatabaseSnapshotWithContext indicates an expected call of CreateRelationalDatabaseSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateRelationalDatabaseSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRelationalDatabaseSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateRelationalDatabaseSnapshotWithContext), varargs...)
 }
 
-// CreateRelationalDatabaseWithContext mocks base method
+// CreateRelationalDatabaseWithContext mocks base method.
 func (m *MockLightsailAPI) CreateRelationalDatabaseWithContext(arg0 context.Context, arg1 *lightsail.CreateRelationalDatabaseInput, arg2 ...request.Option) (*lightsail.CreateRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1478,14 +1479,14 @@ func (m *MockLightsailAPI) CreateRelationalDatabaseWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// CreateRelationalDatabaseWithContext indicates an expected call of CreateRelationalDatabaseWithContext
+// CreateRelationalDatabaseWithContext indicates an expected call of CreateRelationalDatabaseWithContext.
 func (mr *MockLightsailAPIMockRecorder) CreateRelationalDatabaseWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRelationalDatabaseWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateRelationalDatabaseWithContext), varargs...)
 }
 
-// DeleteAlarm mocks base method
+// DeleteAlarm mocks base method.
 func (m *MockLightsailAPI) DeleteAlarm(arg0 *lightsail.DeleteAlarmInput) (*lightsail.DeleteAlarmOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAlarm", arg0)
@@ -1494,13 +1495,13 @@ func (m *MockLightsailAPI) DeleteAlarm(arg0 *lightsail.DeleteAlarmInput) (*light
 	return ret0, ret1
 }
 
-// DeleteAlarm indicates an expected call of DeleteAlarm
+// DeleteAlarm indicates an expected call of DeleteAlarm.
 func (mr *MockLightsailAPIMockRecorder) DeleteAlarm(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAlarm", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteAlarm), arg0)
 }
 
-// DeleteAlarmRequest mocks base method
+// DeleteAlarmRequest mocks base method.
 func (m *MockLightsailAPI) DeleteAlarmRequest(arg0 *lightsail.DeleteAlarmInput) (*request.Request, *lightsail.DeleteAlarmOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAlarmRequest", arg0)
@@ -1509,13 +1510,13 @@ func (m *MockLightsailAPI) DeleteAlarmRequest(arg0 *lightsail.DeleteAlarmInput) 
 	return ret0, ret1
 }
 
-// DeleteAlarmRequest indicates an expected call of DeleteAlarmRequest
+// DeleteAlarmRequest indicates an expected call of DeleteAlarmRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteAlarmRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAlarmRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteAlarmRequest), arg0)
 }
 
-// DeleteAlarmWithContext mocks base method
+// DeleteAlarmWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteAlarmWithContext(arg0 context.Context, arg1 *lightsail.DeleteAlarmInput, arg2 ...request.Option) (*lightsail.DeleteAlarmOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1528,14 +1529,14 @@ func (m *MockLightsailAPI) DeleteAlarmWithContext(arg0 context.Context, arg1 *li
 	return ret0, ret1
 }
 
-// DeleteAlarmWithContext indicates an expected call of DeleteAlarmWithContext
+// DeleteAlarmWithContext indicates an expected call of DeleteAlarmWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteAlarmWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAlarmWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteAlarmWithContext), varargs...)
 }
 
-// DeleteAutoSnapshot mocks base method
+// DeleteAutoSnapshot mocks base method.
 func (m *MockLightsailAPI) DeleteAutoSnapshot(arg0 *lightsail.DeleteAutoSnapshotInput) (*lightsail.DeleteAutoSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAutoSnapshot", arg0)
@@ -1544,13 +1545,13 @@ func (m *MockLightsailAPI) DeleteAutoSnapshot(arg0 *lightsail.DeleteAutoSnapshot
 	return ret0, ret1
 }
 
-// DeleteAutoSnapshot indicates an expected call of DeleteAutoSnapshot
+// DeleteAutoSnapshot indicates an expected call of DeleteAutoSnapshot.
 func (mr *MockLightsailAPIMockRecorder) DeleteAutoSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAutoSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteAutoSnapshot), arg0)
 }
 
-// DeleteAutoSnapshotRequest mocks base method
+// DeleteAutoSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) DeleteAutoSnapshotRequest(arg0 *lightsail.DeleteAutoSnapshotInput) (*request.Request, *lightsail.DeleteAutoSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAutoSnapshotRequest", arg0)
@@ -1559,13 +1560,13 @@ func (m *MockLightsailAPI) DeleteAutoSnapshotRequest(arg0 *lightsail.DeleteAutoS
 	return ret0, ret1
 }
 
-// DeleteAutoSnapshotRequest indicates an expected call of DeleteAutoSnapshotRequest
+// DeleteAutoSnapshotRequest indicates an expected call of DeleteAutoSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteAutoSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAutoSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteAutoSnapshotRequest), arg0)
 }
 
-// DeleteAutoSnapshotWithContext mocks base method
+// DeleteAutoSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteAutoSnapshotWithContext(arg0 context.Context, arg1 *lightsail.DeleteAutoSnapshotInput, arg2 ...request.Option) (*lightsail.DeleteAutoSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1578,14 +1579,14 @@ func (m *MockLightsailAPI) DeleteAutoSnapshotWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteAutoSnapshotWithContext indicates an expected call of DeleteAutoSnapshotWithContext
+// DeleteAutoSnapshotWithContext indicates an expected call of DeleteAutoSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteAutoSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAutoSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteAutoSnapshotWithContext), varargs...)
 }
 
-// DeleteCertificate mocks base method
+// DeleteCertificate mocks base method.
 func (m *MockLightsailAPI) DeleteCertificate(arg0 *lightsail.DeleteCertificateInput) (*lightsail.DeleteCertificateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCertificate", arg0)
@@ -1594,13 +1595,13 @@ func (m *MockLightsailAPI) DeleteCertificate(arg0 *lightsail.DeleteCertificateIn
 	return ret0, ret1
 }
 
-// DeleteCertificate indicates an expected call of DeleteCertificate
+// DeleteCertificate indicates an expected call of DeleteCertificate.
 func (mr *MockLightsailAPIMockRecorder) DeleteCertificate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCertificate", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteCertificate), arg0)
 }
 
-// DeleteCertificateRequest mocks base method
+// DeleteCertificateRequest mocks base method.
 func (m *MockLightsailAPI) DeleteCertificateRequest(arg0 *lightsail.DeleteCertificateInput) (*request.Request, *lightsail.DeleteCertificateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCertificateRequest", arg0)
@@ -1609,13 +1610,13 @@ func (m *MockLightsailAPI) DeleteCertificateRequest(arg0 *lightsail.DeleteCertif
 	return ret0, ret1
 }
 
-// DeleteCertificateRequest indicates an expected call of DeleteCertificateRequest
+// DeleteCertificateRequest indicates an expected call of DeleteCertificateRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteCertificateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCertificateRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteCertificateRequest), arg0)
 }
 
-// DeleteCertificateWithContext mocks base method
+// DeleteCertificateWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteCertificateWithContext(arg0 context.Context, arg1 *lightsail.DeleteCertificateInput, arg2 ...request.Option) (*lightsail.DeleteCertificateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1628,14 +1629,14 @@ func (m *MockLightsailAPI) DeleteCertificateWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteCertificateWithContext indicates an expected call of DeleteCertificateWithContext
+// DeleteCertificateWithContext indicates an expected call of DeleteCertificateWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteCertificateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCertificateWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteCertificateWithContext), varargs...)
 }
 
-// DeleteContactMethod mocks base method
+// DeleteContactMethod mocks base method.
 func (m *MockLightsailAPI) DeleteContactMethod(arg0 *lightsail.DeleteContactMethodInput) (*lightsail.DeleteContactMethodOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContactMethod", arg0)
@@ -1644,13 +1645,13 @@ func (m *MockLightsailAPI) DeleteContactMethod(arg0 *lightsail.DeleteContactMeth
 	return ret0, ret1
 }
 
-// DeleteContactMethod indicates an expected call of DeleteContactMethod
+// DeleteContactMethod indicates an expected call of DeleteContactMethod.
 func (mr *MockLightsailAPIMockRecorder) DeleteContactMethod(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContactMethod", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteContactMethod), arg0)
 }
 
-// DeleteContactMethodRequest mocks base method
+// DeleteContactMethodRequest mocks base method.
 func (m *MockLightsailAPI) DeleteContactMethodRequest(arg0 *lightsail.DeleteContactMethodInput) (*request.Request, *lightsail.DeleteContactMethodOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContactMethodRequest", arg0)
@@ -1659,13 +1660,13 @@ func (m *MockLightsailAPI) DeleteContactMethodRequest(arg0 *lightsail.DeleteCont
 	return ret0, ret1
 }
 
-// DeleteContactMethodRequest indicates an expected call of DeleteContactMethodRequest
+// DeleteContactMethodRequest indicates an expected call of DeleteContactMethodRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteContactMethodRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContactMethodRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteContactMethodRequest), arg0)
 }
 
-// DeleteContactMethodWithContext mocks base method
+// DeleteContactMethodWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteContactMethodWithContext(arg0 context.Context, arg1 *lightsail.DeleteContactMethodInput, arg2 ...request.Option) (*lightsail.DeleteContactMethodOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1678,14 +1679,14 @@ func (m *MockLightsailAPI) DeleteContactMethodWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DeleteContactMethodWithContext indicates an expected call of DeleteContactMethodWithContext
+// DeleteContactMethodWithContext indicates an expected call of DeleteContactMethodWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteContactMethodWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContactMethodWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteContactMethodWithContext), varargs...)
 }
 
-// DeleteContainerImage mocks base method
+// DeleteContainerImage mocks base method.
 func (m *MockLightsailAPI) DeleteContainerImage(arg0 *lightsail.DeleteContainerImageInput) (*lightsail.DeleteContainerImageOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContainerImage", arg0)
@@ -1694,13 +1695,13 @@ func (m *MockLightsailAPI) DeleteContainerImage(arg0 *lightsail.DeleteContainerI
 	return ret0, ret1
 }
 
-// DeleteContainerImage indicates an expected call of DeleteContainerImage
+// DeleteContainerImage indicates an expected call of DeleteContainerImage.
 func (mr *MockLightsailAPIMockRecorder) DeleteContainerImage(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerImage", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteContainerImage), arg0)
 }
 
-// DeleteContainerImageRequest mocks base method
+// DeleteContainerImageRequest mocks base method.
 func (m *MockLightsailAPI) DeleteContainerImageRequest(arg0 *lightsail.DeleteContainerImageInput) (*request.Request, *lightsail.DeleteContainerImageOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContainerImageRequest", arg0)
@@ -1709,13 +1710,13 @@ func (m *MockLightsailAPI) DeleteContainerImageRequest(arg0 *lightsail.DeleteCon
 	return ret0, ret1
 }
 
-// DeleteContainerImageRequest indicates an expected call of DeleteContainerImageRequest
+// DeleteContainerImageRequest indicates an expected call of DeleteContainerImageRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteContainerImageRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerImageRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteContainerImageRequest), arg0)
 }
 
-// DeleteContainerImageWithContext mocks base method
+// DeleteContainerImageWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteContainerImageWithContext(arg0 context.Context, arg1 *lightsail.DeleteContainerImageInput, arg2 ...request.Option) (*lightsail.DeleteContainerImageOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1728,14 +1729,14 @@ func (m *MockLightsailAPI) DeleteContainerImageWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteContainerImageWithContext indicates an expected call of DeleteContainerImageWithContext
+// DeleteContainerImageWithContext indicates an expected call of DeleteContainerImageWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteContainerImageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerImageWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteContainerImageWithContext), varargs...)
 }
 
-// DeleteContainerService mocks base method
+// DeleteContainerService mocks base method.
 func (m *MockLightsailAPI) DeleteContainerService(arg0 *lightsail.DeleteContainerServiceInput) (*lightsail.DeleteContainerServiceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContainerService", arg0)
@@ -1744,13 +1745,13 @@ func (m *MockLightsailAPI) DeleteContainerService(arg0 *lightsail.DeleteContaine
 	return ret0, ret1
 }
 
-// DeleteContainerService indicates an expected call of DeleteContainerService
+// DeleteContainerService indicates an expected call of DeleteContainerService.
 func (mr *MockLightsailAPIMockRecorder) DeleteContainerService(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerService", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteContainerService), arg0)
 }
 
-// DeleteContainerServiceRequest mocks base method
+// DeleteContainerServiceRequest mocks base method.
 func (m *MockLightsailAPI) DeleteContainerServiceRequest(arg0 *lightsail.DeleteContainerServiceInput) (*request.Request, *lightsail.DeleteContainerServiceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteContainerServiceRequest", arg0)
@@ -1759,13 +1760,13 @@ func (m *MockLightsailAPI) DeleteContainerServiceRequest(arg0 *lightsail.DeleteC
 	return ret0, ret1
 }
 
-// DeleteContainerServiceRequest indicates an expected call of DeleteContainerServiceRequest
+// DeleteContainerServiceRequest indicates an expected call of DeleteContainerServiceRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteContainerServiceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerServiceRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteContainerServiceRequest), arg0)
 }
 
-// DeleteContainerServiceWithContext mocks base method
+// DeleteContainerServiceWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteContainerServiceWithContext(arg0 context.Context, arg1 *lightsail.DeleteContainerServiceInput, arg2 ...request.Option) (*lightsail.DeleteContainerServiceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1778,14 +1779,14 @@ func (m *MockLightsailAPI) DeleteContainerServiceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteContainerServiceWithContext indicates an expected call of DeleteContainerServiceWithContext
+// DeleteContainerServiceWithContext indicates an expected call of DeleteContainerServiceWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteContainerServiceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteContainerServiceWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteContainerServiceWithContext), varargs...)
 }
 
-// DeleteDisk mocks base method
+// DeleteDisk mocks base method.
 func (m *MockLightsailAPI) DeleteDisk(arg0 *lightsail.DeleteDiskInput) (*lightsail.DeleteDiskOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDisk", arg0)
@@ -1794,13 +1795,13 @@ func (m *MockLightsailAPI) DeleteDisk(arg0 *lightsail.DeleteDiskInput) (*lightsa
 	return ret0, ret1
 }
 
-// DeleteDisk indicates an expected call of DeleteDisk
+// DeleteDisk indicates an expected call of DeleteDisk.
 func (mr *MockLightsailAPIMockRecorder) DeleteDisk(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDisk", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDisk), arg0)
 }
 
-// DeleteDiskRequest mocks base method
+// DeleteDiskRequest mocks base method.
 func (m *MockLightsailAPI) DeleteDiskRequest(arg0 *lightsail.DeleteDiskInput) (*request.Request, *lightsail.DeleteDiskOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDiskRequest", arg0)
@@ -1809,13 +1810,13 @@ func (m *MockLightsailAPI) DeleteDiskRequest(arg0 *lightsail.DeleteDiskInput) (*
 	return ret0, ret1
 }
 
-// DeleteDiskRequest indicates an expected call of DeleteDiskRequest
+// DeleteDiskRequest indicates an expected call of DeleteDiskRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteDiskRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDiskRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDiskRequest), arg0)
 }
 
-// DeleteDiskSnapshot mocks base method
+// DeleteDiskSnapshot mocks base method.
 func (m *MockLightsailAPI) DeleteDiskSnapshot(arg0 *lightsail.DeleteDiskSnapshotInput) (*lightsail.DeleteDiskSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDiskSnapshot", arg0)
@@ -1824,13 +1825,13 @@ func (m *MockLightsailAPI) DeleteDiskSnapshot(arg0 *lightsail.DeleteDiskSnapshot
 	return ret0, ret1
 }
 
-// DeleteDiskSnapshot indicates an expected call of DeleteDiskSnapshot
+// DeleteDiskSnapshot indicates an expected call of DeleteDiskSnapshot.
 func (mr *MockLightsailAPIMockRecorder) DeleteDiskSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDiskSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDiskSnapshot), arg0)
 }
 
-// DeleteDiskSnapshotRequest mocks base method
+// DeleteDiskSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) DeleteDiskSnapshotRequest(arg0 *lightsail.DeleteDiskSnapshotInput) (*request.Request, *lightsail.DeleteDiskSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDiskSnapshotRequest", arg0)
@@ -1839,13 +1840,13 @@ func (m *MockLightsailAPI) DeleteDiskSnapshotRequest(arg0 *lightsail.DeleteDiskS
 	return ret0, ret1
 }
 
-// DeleteDiskSnapshotRequest indicates an expected call of DeleteDiskSnapshotRequest
+// DeleteDiskSnapshotRequest indicates an expected call of DeleteDiskSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteDiskSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDiskSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDiskSnapshotRequest), arg0)
 }
 
-// DeleteDiskSnapshotWithContext mocks base method
+// DeleteDiskSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteDiskSnapshotWithContext(arg0 context.Context, arg1 *lightsail.DeleteDiskSnapshotInput, arg2 ...request.Option) (*lightsail.DeleteDiskSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1858,14 +1859,14 @@ func (m *MockLightsailAPI) DeleteDiskSnapshotWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteDiskSnapshotWithContext indicates an expected call of DeleteDiskSnapshotWithContext
+// DeleteDiskSnapshotWithContext indicates an expected call of DeleteDiskSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteDiskSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDiskSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDiskSnapshotWithContext), varargs...)
 }
 
-// DeleteDiskWithContext mocks base method
+// DeleteDiskWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteDiskWithContext(arg0 context.Context, arg1 *lightsail.DeleteDiskInput, arg2 ...request.Option) (*lightsail.DeleteDiskOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1878,14 +1879,14 @@ func (m *MockLightsailAPI) DeleteDiskWithContext(arg0 context.Context, arg1 *lig
 	return ret0, ret1
 }
 
-// DeleteDiskWithContext indicates an expected call of DeleteDiskWithContext
+// DeleteDiskWithContext indicates an expected call of DeleteDiskWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteDiskWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDiskWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDiskWithContext), varargs...)
 }
 
-// DeleteDistribution mocks base method
+// DeleteDistribution mocks base method.
 func (m *MockLightsailAPI) DeleteDistribution(arg0 *lightsail.DeleteDistributionInput) (*lightsail.DeleteDistributionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDistribution", arg0)
@@ -1894,13 +1895,13 @@ func (m *MockLightsailAPI) DeleteDistribution(arg0 *lightsail.DeleteDistribution
 	return ret0, ret1
 }
 
-// DeleteDistribution indicates an expected call of DeleteDistribution
+// DeleteDistribution indicates an expected call of DeleteDistribution.
 func (mr *MockLightsailAPIMockRecorder) DeleteDistribution(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDistribution", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDistribution), arg0)
 }
 
-// DeleteDistributionRequest mocks base method
+// DeleteDistributionRequest mocks base method.
 func (m *MockLightsailAPI) DeleteDistributionRequest(arg0 *lightsail.DeleteDistributionInput) (*request.Request, *lightsail.DeleteDistributionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDistributionRequest", arg0)
@@ -1909,13 +1910,13 @@ func (m *MockLightsailAPI) DeleteDistributionRequest(arg0 *lightsail.DeleteDistr
 	return ret0, ret1
 }
 
-// DeleteDistributionRequest indicates an expected call of DeleteDistributionRequest
+// DeleteDistributionRequest indicates an expected call of DeleteDistributionRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteDistributionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDistributionRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDistributionRequest), arg0)
 }
 
-// DeleteDistributionWithContext mocks base method
+// DeleteDistributionWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteDistributionWithContext(arg0 context.Context, arg1 *lightsail.DeleteDistributionInput, arg2 ...request.Option) (*lightsail.DeleteDistributionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1928,14 +1929,14 @@ func (m *MockLightsailAPI) DeleteDistributionWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteDistributionWithContext indicates an expected call of DeleteDistributionWithContext
+// DeleteDistributionWithContext indicates an expected call of DeleteDistributionWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteDistributionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDistributionWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDistributionWithContext), varargs...)
 }
 
-// DeleteDomain mocks base method
+// DeleteDomain mocks base method.
 func (m *MockLightsailAPI) DeleteDomain(arg0 *lightsail.DeleteDomainInput) (*lightsail.DeleteDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDomain", arg0)
@@ -1944,13 +1945,13 @@ func (m *MockLightsailAPI) DeleteDomain(arg0 *lightsail.DeleteDomainInput) (*lig
 	return ret0, ret1
 }
 
-// DeleteDomain indicates an expected call of DeleteDomain
+// DeleteDomain indicates an expected call of DeleteDomain.
 func (mr *MockLightsailAPIMockRecorder) DeleteDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomain", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDomain), arg0)
 }
 
-// DeleteDomainEntry mocks base method
+// DeleteDomainEntry mocks base method.
 func (m *MockLightsailAPI) DeleteDomainEntry(arg0 *lightsail.DeleteDomainEntryInput) (*lightsail.DeleteDomainEntryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDomainEntry", arg0)
@@ -1959,13 +1960,13 @@ func (m *MockLightsailAPI) DeleteDomainEntry(arg0 *lightsail.DeleteDomainEntryIn
 	return ret0, ret1
 }
 
-// DeleteDomainEntry indicates an expected call of DeleteDomainEntry
+// DeleteDomainEntry indicates an expected call of DeleteDomainEntry.
 func (mr *MockLightsailAPIMockRecorder) DeleteDomainEntry(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainEntry", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDomainEntry), arg0)
 }
 
-// DeleteDomainEntryRequest mocks base method
+// DeleteDomainEntryRequest mocks base method.
 func (m *MockLightsailAPI) DeleteDomainEntryRequest(arg0 *lightsail.DeleteDomainEntryInput) (*request.Request, *lightsail.DeleteDomainEntryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDomainEntryRequest", arg0)
@@ -1974,13 +1975,13 @@ func (m *MockLightsailAPI) DeleteDomainEntryRequest(arg0 *lightsail.DeleteDomain
 	return ret0, ret1
 }
 
-// DeleteDomainEntryRequest indicates an expected call of DeleteDomainEntryRequest
+// DeleteDomainEntryRequest indicates an expected call of DeleteDomainEntryRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteDomainEntryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainEntryRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDomainEntryRequest), arg0)
 }
 
-// DeleteDomainEntryWithContext mocks base method
+// DeleteDomainEntryWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteDomainEntryWithContext(arg0 context.Context, arg1 *lightsail.DeleteDomainEntryInput, arg2 ...request.Option) (*lightsail.DeleteDomainEntryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1993,14 +1994,14 @@ func (m *MockLightsailAPI) DeleteDomainEntryWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteDomainEntryWithContext indicates an expected call of DeleteDomainEntryWithContext
+// DeleteDomainEntryWithContext indicates an expected call of DeleteDomainEntryWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteDomainEntryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainEntryWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDomainEntryWithContext), varargs...)
 }
 
-// DeleteDomainRequest mocks base method
+// DeleteDomainRequest mocks base method.
 func (m *MockLightsailAPI) DeleteDomainRequest(arg0 *lightsail.DeleteDomainInput) (*request.Request, *lightsail.DeleteDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDomainRequest", arg0)
@@ -2009,13 +2010,13 @@ func (m *MockLightsailAPI) DeleteDomainRequest(arg0 *lightsail.DeleteDomainInput
 	return ret0, ret1
 }
 
-// DeleteDomainRequest indicates an expected call of DeleteDomainRequest
+// DeleteDomainRequest indicates an expected call of DeleteDomainRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDomainRequest), arg0)
 }
 
-// DeleteDomainWithContext mocks base method
+// DeleteDomainWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteDomainWithContext(arg0 context.Context, arg1 *lightsail.DeleteDomainInput, arg2 ...request.Option) (*lightsail.DeleteDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2028,14 +2029,14 @@ func (m *MockLightsailAPI) DeleteDomainWithContext(arg0 context.Context, arg1 *l
 	return ret0, ret1
 }
 
-// DeleteDomainWithContext indicates an expected call of DeleteDomainWithContext
+// DeleteDomainWithContext indicates an expected call of DeleteDomainWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDomainWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteDomainWithContext), varargs...)
 }
 
-// DeleteInstance mocks base method
+// DeleteInstance mocks base method.
 func (m *MockLightsailAPI) DeleteInstance(arg0 *lightsail.DeleteInstanceInput) (*lightsail.DeleteInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInstance", arg0)
@@ -2044,13 +2045,13 @@ func (m *MockLightsailAPI) DeleteInstance(arg0 *lightsail.DeleteInstanceInput) (
 	return ret0, ret1
 }
 
-// DeleteInstance indicates an expected call of DeleteInstance
+// DeleteInstance indicates an expected call of DeleteInstance.
 func (mr *MockLightsailAPIMockRecorder) DeleteInstance(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInstance", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteInstance), arg0)
 }
 
-// DeleteInstanceRequest mocks base method
+// DeleteInstanceRequest mocks base method.
 func (m *MockLightsailAPI) DeleteInstanceRequest(arg0 *lightsail.DeleteInstanceInput) (*request.Request, *lightsail.DeleteInstanceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInstanceRequest", arg0)
@@ -2059,13 +2060,13 @@ func (m *MockLightsailAPI) DeleteInstanceRequest(arg0 *lightsail.DeleteInstanceI
 	return ret0, ret1
 }
 
-// DeleteInstanceRequest indicates an expected call of DeleteInstanceRequest
+// DeleteInstanceRequest indicates an expected call of DeleteInstanceRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteInstanceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInstanceRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteInstanceRequest), arg0)
 }
 
-// DeleteInstanceSnapshot mocks base method
+// DeleteInstanceSnapshot mocks base method.
 func (m *MockLightsailAPI) DeleteInstanceSnapshot(arg0 *lightsail.DeleteInstanceSnapshotInput) (*lightsail.DeleteInstanceSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInstanceSnapshot", arg0)
@@ -2074,13 +2075,13 @@ func (m *MockLightsailAPI) DeleteInstanceSnapshot(arg0 *lightsail.DeleteInstance
 	return ret0, ret1
 }
 
-// DeleteInstanceSnapshot indicates an expected call of DeleteInstanceSnapshot
+// DeleteInstanceSnapshot indicates an expected call of DeleteInstanceSnapshot.
 func (mr *MockLightsailAPIMockRecorder) DeleteInstanceSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInstanceSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteInstanceSnapshot), arg0)
 }
 
-// DeleteInstanceSnapshotRequest mocks base method
+// DeleteInstanceSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) DeleteInstanceSnapshotRequest(arg0 *lightsail.DeleteInstanceSnapshotInput) (*request.Request, *lightsail.DeleteInstanceSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInstanceSnapshotRequest", arg0)
@@ -2089,13 +2090,13 @@ func (m *MockLightsailAPI) DeleteInstanceSnapshotRequest(arg0 *lightsail.DeleteI
 	return ret0, ret1
 }
 
-// DeleteInstanceSnapshotRequest indicates an expected call of DeleteInstanceSnapshotRequest
+// DeleteInstanceSnapshotRequest indicates an expected call of DeleteInstanceSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteInstanceSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInstanceSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteInstanceSnapshotRequest), arg0)
 }
 
-// DeleteInstanceSnapshotWithContext mocks base method
+// DeleteInstanceSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteInstanceSnapshotWithContext(arg0 context.Context, arg1 *lightsail.DeleteInstanceSnapshotInput, arg2 ...request.Option) (*lightsail.DeleteInstanceSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2108,14 +2109,14 @@ func (m *MockLightsailAPI) DeleteInstanceSnapshotWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteInstanceSnapshotWithContext indicates an expected call of DeleteInstanceSnapshotWithContext
+// DeleteInstanceSnapshotWithContext indicates an expected call of DeleteInstanceSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteInstanceSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInstanceSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteInstanceSnapshotWithContext), varargs...)
 }
 
-// DeleteInstanceWithContext mocks base method
+// DeleteInstanceWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteInstanceWithContext(arg0 context.Context, arg1 *lightsail.DeleteInstanceInput, arg2 ...request.Option) (*lightsail.DeleteInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2128,14 +2129,14 @@ func (m *MockLightsailAPI) DeleteInstanceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DeleteInstanceWithContext indicates an expected call of DeleteInstanceWithContext
+// DeleteInstanceWithContext indicates an expected call of DeleteInstanceWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteInstanceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInstanceWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteInstanceWithContext), varargs...)
 }
 
-// DeleteKeyPair mocks base method
+// DeleteKeyPair mocks base method.
 func (m *MockLightsailAPI) DeleteKeyPair(arg0 *lightsail.DeleteKeyPairInput) (*lightsail.DeleteKeyPairOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteKeyPair", arg0)
@@ -2144,13 +2145,13 @@ func (m *MockLightsailAPI) DeleteKeyPair(arg0 *lightsail.DeleteKeyPairInput) (*l
 	return ret0, ret1
 }
 
-// DeleteKeyPair indicates an expected call of DeleteKeyPair
+// DeleteKeyPair indicates an expected call of DeleteKeyPair.
 func (mr *MockLightsailAPIMockRecorder) DeleteKeyPair(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteKeyPair", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteKeyPair), arg0)
 }
 
-// DeleteKeyPairRequest mocks base method
+// DeleteKeyPairRequest mocks base method.
 func (m *MockLightsailAPI) DeleteKeyPairRequest(arg0 *lightsail.DeleteKeyPairInput) (*request.Request, *lightsail.DeleteKeyPairOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteKeyPairRequest", arg0)
@@ -2159,13 +2160,13 @@ func (m *MockLightsailAPI) DeleteKeyPairRequest(arg0 *lightsail.DeleteKeyPairInp
 	return ret0, ret1
 }
 
-// DeleteKeyPairRequest indicates an expected call of DeleteKeyPairRequest
+// DeleteKeyPairRequest indicates an expected call of DeleteKeyPairRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteKeyPairRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteKeyPairRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteKeyPairRequest), arg0)
 }
 
-// DeleteKeyPairWithContext mocks base method
+// DeleteKeyPairWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteKeyPairWithContext(arg0 context.Context, arg1 *lightsail.DeleteKeyPairInput, arg2 ...request.Option) (*lightsail.DeleteKeyPairOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2178,14 +2179,14 @@ func (m *MockLightsailAPI) DeleteKeyPairWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DeleteKeyPairWithContext indicates an expected call of DeleteKeyPairWithContext
+// DeleteKeyPairWithContext indicates an expected call of DeleteKeyPairWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteKeyPairWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteKeyPairWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteKeyPairWithContext), varargs...)
 }
 
-// DeleteKnownHostKeys mocks base method
+// DeleteKnownHostKeys mocks base method.
 func (m *MockLightsailAPI) DeleteKnownHostKeys(arg0 *lightsail.DeleteKnownHostKeysInput) (*lightsail.DeleteKnownHostKeysOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteKnownHostKeys", arg0)
@@ -2194,13 +2195,13 @@ func (m *MockLightsailAPI) DeleteKnownHostKeys(arg0 *lightsail.DeleteKnownHostKe
 	return ret0, ret1
 }
 
-// DeleteKnownHostKeys indicates an expected call of DeleteKnownHostKeys
+// DeleteKnownHostKeys indicates an expected call of DeleteKnownHostKeys.
 func (mr *MockLightsailAPIMockRecorder) DeleteKnownHostKeys(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteKnownHostKeys", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteKnownHostKeys), arg0)
 }
 
-// DeleteKnownHostKeysRequest mocks base method
+// DeleteKnownHostKeysRequest mocks base method.
 func (m *MockLightsailAPI) DeleteKnownHostKeysRequest(arg0 *lightsail.DeleteKnownHostKeysInput) (*request.Request, *lightsail.DeleteKnownHostKeysOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteKnownHostKeysRequest", arg0)
@@ -2209,13 +2210,13 @@ func (m *MockLightsailAPI) DeleteKnownHostKeysRequest(arg0 *lightsail.DeleteKnow
 	return ret0, ret1
 }
 
-// DeleteKnownHostKeysRequest indicates an expected call of DeleteKnownHostKeysRequest
+// DeleteKnownHostKeysRequest indicates an expected call of DeleteKnownHostKeysRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteKnownHostKeysRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteKnownHostKeysRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteKnownHostKeysRequest), arg0)
 }
 
-// DeleteKnownHostKeysWithContext mocks base method
+// DeleteKnownHostKeysWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteKnownHostKeysWithContext(arg0 context.Context, arg1 *lightsail.DeleteKnownHostKeysInput, arg2 ...request.Option) (*lightsail.DeleteKnownHostKeysOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2228,14 +2229,14 @@ func (m *MockLightsailAPI) DeleteKnownHostKeysWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DeleteKnownHostKeysWithContext indicates an expected call of DeleteKnownHostKeysWithContext
+// DeleteKnownHostKeysWithContext indicates an expected call of DeleteKnownHostKeysWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteKnownHostKeysWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteKnownHostKeysWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteKnownHostKeysWithContext), varargs...)
 }
 
-// DeleteLoadBalancer mocks base method
+// DeleteLoadBalancer mocks base method.
 func (m *MockLightsailAPI) DeleteLoadBalancer(arg0 *lightsail.DeleteLoadBalancerInput) (*lightsail.DeleteLoadBalancerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLoadBalancer", arg0)
@@ -2244,13 +2245,13 @@ func (m *MockLightsailAPI) DeleteLoadBalancer(arg0 *lightsail.DeleteLoadBalancer
 	return ret0, ret1
 }
 
-// DeleteLoadBalancer indicates an expected call of DeleteLoadBalancer
+// DeleteLoadBalancer indicates an expected call of DeleteLoadBalancer.
 func (mr *MockLightsailAPIMockRecorder) DeleteLoadBalancer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLoadBalancer", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteLoadBalancer), arg0)
 }
 
-// DeleteLoadBalancerRequest mocks base method
+// DeleteLoadBalancerRequest mocks base method.
 func (m *MockLightsailAPI) DeleteLoadBalancerRequest(arg0 *lightsail.DeleteLoadBalancerInput) (*request.Request, *lightsail.DeleteLoadBalancerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLoadBalancerRequest", arg0)
@@ -2259,13 +2260,13 @@ func (m *MockLightsailAPI) DeleteLoadBalancerRequest(arg0 *lightsail.DeleteLoadB
 	return ret0, ret1
 }
 
-// DeleteLoadBalancerRequest indicates an expected call of DeleteLoadBalancerRequest
+// DeleteLoadBalancerRequest indicates an expected call of DeleteLoadBalancerRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteLoadBalancerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLoadBalancerRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteLoadBalancerRequest), arg0)
 }
 
-// DeleteLoadBalancerTlsCertificate mocks base method
+// DeleteLoadBalancerTlsCertificate mocks base method.
 func (m *MockLightsailAPI) DeleteLoadBalancerTlsCertificate(arg0 *lightsail.DeleteLoadBalancerTlsCertificateInput) (*lightsail.DeleteLoadBalancerTlsCertificateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLoadBalancerTlsCertificate", arg0)
@@ -2274,13 +2275,13 @@ func (m *MockLightsailAPI) DeleteLoadBalancerTlsCertificate(arg0 *lightsail.Dele
 	return ret0, ret1
 }
 
-// DeleteLoadBalancerTlsCertificate indicates an expected call of DeleteLoadBalancerTlsCertificate
+// DeleteLoadBalancerTlsCertificate indicates an expected call of DeleteLoadBalancerTlsCertificate.
 func (mr *MockLightsailAPIMockRecorder) DeleteLoadBalancerTlsCertificate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLoadBalancerTlsCertificate", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteLoadBalancerTlsCertificate), arg0)
 }
 
-// DeleteLoadBalancerTlsCertificateRequest mocks base method
+// DeleteLoadBalancerTlsCertificateRequest mocks base method.
 func (m *MockLightsailAPI) DeleteLoadBalancerTlsCertificateRequest(arg0 *lightsail.DeleteLoadBalancerTlsCertificateInput) (*request.Request, *lightsail.DeleteLoadBalancerTlsCertificateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLoadBalancerTlsCertificateRequest", arg0)
@@ -2289,13 +2290,13 @@ func (m *MockLightsailAPI) DeleteLoadBalancerTlsCertificateRequest(arg0 *lightsa
 	return ret0, ret1
 }
 
-// DeleteLoadBalancerTlsCertificateRequest indicates an expected call of DeleteLoadBalancerTlsCertificateRequest
+// DeleteLoadBalancerTlsCertificateRequest indicates an expected call of DeleteLoadBalancerTlsCertificateRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteLoadBalancerTlsCertificateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLoadBalancerTlsCertificateRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteLoadBalancerTlsCertificateRequest), arg0)
 }
 
-// DeleteLoadBalancerTlsCertificateWithContext mocks base method
+// DeleteLoadBalancerTlsCertificateWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteLoadBalancerTlsCertificateWithContext(arg0 context.Context, arg1 *lightsail.DeleteLoadBalancerTlsCertificateInput, arg2 ...request.Option) (*lightsail.DeleteLoadBalancerTlsCertificateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2308,14 +2309,14 @@ func (m *MockLightsailAPI) DeleteLoadBalancerTlsCertificateWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// DeleteLoadBalancerTlsCertificateWithContext indicates an expected call of DeleteLoadBalancerTlsCertificateWithContext
+// DeleteLoadBalancerTlsCertificateWithContext indicates an expected call of DeleteLoadBalancerTlsCertificateWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteLoadBalancerTlsCertificateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLoadBalancerTlsCertificateWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteLoadBalancerTlsCertificateWithContext), varargs...)
 }
 
-// DeleteLoadBalancerWithContext mocks base method
+// DeleteLoadBalancerWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteLoadBalancerWithContext(arg0 context.Context, arg1 *lightsail.DeleteLoadBalancerInput, arg2 ...request.Option) (*lightsail.DeleteLoadBalancerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2328,14 +2329,14 @@ func (m *MockLightsailAPI) DeleteLoadBalancerWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteLoadBalancerWithContext indicates an expected call of DeleteLoadBalancerWithContext
+// DeleteLoadBalancerWithContext indicates an expected call of DeleteLoadBalancerWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteLoadBalancerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLoadBalancerWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteLoadBalancerWithContext), varargs...)
 }
 
-// DeleteRelationalDatabase mocks base method
+// DeleteRelationalDatabase mocks base method.
 func (m *MockLightsailAPI) DeleteRelationalDatabase(arg0 *lightsail.DeleteRelationalDatabaseInput) (*lightsail.DeleteRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRelationalDatabase", arg0)
@@ -2344,13 +2345,13 @@ func (m *MockLightsailAPI) DeleteRelationalDatabase(arg0 *lightsail.DeleteRelati
 	return ret0, ret1
 }
 
-// DeleteRelationalDatabase indicates an expected call of DeleteRelationalDatabase
+// DeleteRelationalDatabase indicates an expected call of DeleteRelationalDatabase.
 func (mr *MockLightsailAPIMockRecorder) DeleteRelationalDatabase(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRelationalDatabase", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteRelationalDatabase), arg0)
 }
 
-// DeleteRelationalDatabaseRequest mocks base method
+// DeleteRelationalDatabaseRequest mocks base method.
 func (m *MockLightsailAPI) DeleteRelationalDatabaseRequest(arg0 *lightsail.DeleteRelationalDatabaseInput) (*request.Request, *lightsail.DeleteRelationalDatabaseOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRelationalDatabaseRequest", arg0)
@@ -2359,13 +2360,13 @@ func (m *MockLightsailAPI) DeleteRelationalDatabaseRequest(arg0 *lightsail.Delet
 	return ret0, ret1
 }
 
-// DeleteRelationalDatabaseRequest indicates an expected call of DeleteRelationalDatabaseRequest
+// DeleteRelationalDatabaseRequest indicates an expected call of DeleteRelationalDatabaseRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteRelationalDatabaseRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRelationalDatabaseRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteRelationalDatabaseRequest), arg0)
 }
 
-// DeleteRelationalDatabaseSnapshot mocks base method
+// DeleteRelationalDatabaseSnapshot mocks base method.
 func (m *MockLightsailAPI) DeleteRelationalDatabaseSnapshot(arg0 *lightsail.DeleteRelationalDatabaseSnapshotInput) (*lightsail.DeleteRelationalDatabaseSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRelationalDatabaseSnapshot", arg0)
@@ -2374,13 +2375,13 @@ func (m *MockLightsailAPI) DeleteRelationalDatabaseSnapshot(arg0 *lightsail.Dele
 	return ret0, ret1
 }
 
-// DeleteRelationalDatabaseSnapshot indicates an expected call of DeleteRelationalDatabaseSnapshot
+// DeleteRelationalDatabaseSnapshot indicates an expected call of DeleteRelationalDatabaseSnapshot.
 func (mr *MockLightsailAPIMockRecorder) DeleteRelationalDatabaseSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRelationalDatabaseSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteRelationalDatabaseSnapshot), arg0)
 }
 
-// DeleteRelationalDatabaseSnapshotRequest mocks base method
+// DeleteRelationalDatabaseSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) DeleteRelationalDatabaseSnapshotRequest(arg0 *lightsail.DeleteRelationalDatabaseSnapshotInput) (*request.Request, *lightsail.DeleteRelationalDatabaseSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRelationalDatabaseSnapshotRequest", arg0)
@@ -2389,13 +2390,13 @@ func (m *MockLightsailAPI) DeleteRelationalDatabaseSnapshotRequest(arg0 *lightsa
 	return ret0, ret1
 }
 
-// DeleteRelationalDatabaseSnapshotRequest indicates an expected call of DeleteRelationalDatabaseSnapshotRequest
+// DeleteRelationalDatabaseSnapshotRequest indicates an expected call of DeleteRelationalDatabaseSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) DeleteRelationalDatabaseSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRelationalDatabaseSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteRelationalDatabaseSnapshotRequest), arg0)
 }
 
-// DeleteRelationalDatabaseSnapshotWithContext mocks base method
+// DeleteRelationalDatabaseSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteRelationalDatabaseSnapshotWithContext(arg0 context.Context, arg1 *lightsail.DeleteRelationalDatabaseSnapshotInput, arg2 ...request.Option) (*lightsail.DeleteRelationalDatabaseSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2408,14 +2409,14 @@ func (m *MockLightsailAPI) DeleteRelationalDatabaseSnapshotWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// DeleteRelationalDatabaseSnapshotWithContext indicates an expected call of DeleteRelationalDatabaseSnapshotWithContext
+// DeleteRelationalDatabaseSnapshotWithContext indicates an expected call of DeleteRelationalDatabaseSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteRelationalDatabaseSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRelationalDatabaseSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteRelationalDatabaseSnapshotWithContext), varargs...)
 }
 
-// DeleteRelationalDatabaseWithContext mocks base method
+// DeleteRelationalDatabaseWithContext mocks base method.
 func (m *MockLightsailAPI) DeleteRelationalDatabaseWithContext(arg0 context.Context, arg1 *lightsail.DeleteRelationalDatabaseInput, arg2 ...request.Option) (*lightsail.DeleteRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2428,14 +2429,14 @@ func (m *MockLightsailAPI) DeleteRelationalDatabaseWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DeleteRelationalDatabaseWithContext indicates an expected call of DeleteRelationalDatabaseWithContext
+// DeleteRelationalDatabaseWithContext indicates an expected call of DeleteRelationalDatabaseWithContext.
 func (mr *MockLightsailAPIMockRecorder) DeleteRelationalDatabaseWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRelationalDatabaseWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteRelationalDatabaseWithContext), varargs...)
 }
 
-// DetachCertificateFromDistribution mocks base method
+// DetachCertificateFromDistribution mocks base method.
 func (m *MockLightsailAPI) DetachCertificateFromDistribution(arg0 *lightsail.DetachCertificateFromDistributionInput) (*lightsail.DetachCertificateFromDistributionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetachCertificateFromDistribution", arg0)
@@ -2444,13 +2445,13 @@ func (m *MockLightsailAPI) DetachCertificateFromDistribution(arg0 *lightsail.Det
 	return ret0, ret1
 }
 
-// DetachCertificateFromDistribution indicates an expected call of DetachCertificateFromDistribution
+// DetachCertificateFromDistribution indicates an expected call of DetachCertificateFromDistribution.
 func (mr *MockLightsailAPIMockRecorder) DetachCertificateFromDistribution(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachCertificateFromDistribution", reflect.TypeOf((*MockLightsailAPI)(nil).DetachCertificateFromDistribution), arg0)
 }
 
-// DetachCertificateFromDistributionRequest mocks base method
+// DetachCertificateFromDistributionRequest mocks base method.
 func (m *MockLightsailAPI) DetachCertificateFromDistributionRequest(arg0 *lightsail.DetachCertificateFromDistributionInput) (*request.Request, *lightsail.DetachCertificateFromDistributionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetachCertificateFromDistributionRequest", arg0)
@@ -2459,13 +2460,13 @@ func (m *MockLightsailAPI) DetachCertificateFromDistributionRequest(arg0 *lights
 	return ret0, ret1
 }
 
-// DetachCertificateFromDistributionRequest indicates an expected call of DetachCertificateFromDistributionRequest
+// DetachCertificateFromDistributionRequest indicates an expected call of DetachCertificateFromDistributionRequest.
 func (mr *MockLightsailAPIMockRecorder) DetachCertificateFromDistributionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachCertificateFromDistributionRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DetachCertificateFromDistributionRequest), arg0)
 }
 
-// DetachCertificateFromDistributionWithContext mocks base method
+// DetachCertificateFromDistributionWithContext mocks base method.
 func (m *MockLightsailAPI) DetachCertificateFromDistributionWithContext(arg0 context.Context, arg1 *lightsail.DetachCertificateFromDistributionInput, arg2 ...request.Option) (*lightsail.DetachCertificateFromDistributionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2478,14 +2479,14 @@ func (m *MockLightsailAPI) DetachCertificateFromDistributionWithContext(arg0 con
 	return ret0, ret1
 }
 
-// DetachCertificateFromDistributionWithContext indicates an expected call of DetachCertificateFromDistributionWithContext
+// DetachCertificateFromDistributionWithContext indicates an expected call of DetachCertificateFromDistributionWithContext.
 func (mr *MockLightsailAPIMockRecorder) DetachCertificateFromDistributionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachCertificateFromDistributionWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DetachCertificateFromDistributionWithContext), varargs...)
 }
 
-// DetachDisk mocks base method
+// DetachDisk mocks base method.
 func (m *MockLightsailAPI) DetachDisk(arg0 *lightsail.DetachDiskInput) (*lightsail.DetachDiskOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetachDisk", arg0)
@@ -2494,13 +2495,13 @@ func (m *MockLightsailAPI) DetachDisk(arg0 *lightsail.DetachDiskInput) (*lightsa
 	return ret0, ret1
 }
 
-// DetachDisk indicates an expected call of DetachDisk
+// DetachDisk indicates an expected call of DetachDisk.
 func (mr *MockLightsailAPIMockRecorder) DetachDisk(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachDisk", reflect.TypeOf((*MockLightsailAPI)(nil).DetachDisk), arg0)
 }
 
-// DetachDiskRequest mocks base method
+// DetachDiskRequest mocks base method.
 func (m *MockLightsailAPI) DetachDiskRequest(arg0 *lightsail.DetachDiskInput) (*request.Request, *lightsail.DetachDiskOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetachDiskRequest", arg0)
@@ -2509,13 +2510,13 @@ func (m *MockLightsailAPI) DetachDiskRequest(arg0 *lightsail.DetachDiskInput) (*
 	return ret0, ret1
 }
 
-// DetachDiskRequest indicates an expected call of DetachDiskRequest
+// DetachDiskRequest indicates an expected call of DetachDiskRequest.
 func (mr *MockLightsailAPIMockRecorder) DetachDiskRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachDiskRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DetachDiskRequest), arg0)
 }
 
-// DetachDiskWithContext mocks base method
+// DetachDiskWithContext mocks base method.
 func (m *MockLightsailAPI) DetachDiskWithContext(arg0 context.Context, arg1 *lightsail.DetachDiskInput, arg2 ...request.Option) (*lightsail.DetachDiskOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2528,14 +2529,14 @@ func (m *MockLightsailAPI) DetachDiskWithContext(arg0 context.Context, arg1 *lig
 	return ret0, ret1
 }
 
-// DetachDiskWithContext indicates an expected call of DetachDiskWithContext
+// DetachDiskWithContext indicates an expected call of DetachDiskWithContext.
 func (mr *MockLightsailAPIMockRecorder) DetachDiskWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachDiskWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DetachDiskWithContext), varargs...)
 }
 
-// DetachInstancesFromLoadBalancer mocks base method
+// DetachInstancesFromLoadBalancer mocks base method.
 func (m *MockLightsailAPI) DetachInstancesFromLoadBalancer(arg0 *lightsail.DetachInstancesFromLoadBalancerInput) (*lightsail.DetachInstancesFromLoadBalancerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetachInstancesFromLoadBalancer", arg0)
@@ -2544,13 +2545,13 @@ func (m *MockLightsailAPI) DetachInstancesFromLoadBalancer(arg0 *lightsail.Detac
 	return ret0, ret1
 }
 
-// DetachInstancesFromLoadBalancer indicates an expected call of DetachInstancesFromLoadBalancer
+// DetachInstancesFromLoadBalancer indicates an expected call of DetachInstancesFromLoadBalancer.
 func (mr *MockLightsailAPIMockRecorder) DetachInstancesFromLoadBalancer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachInstancesFromLoadBalancer", reflect.TypeOf((*MockLightsailAPI)(nil).DetachInstancesFromLoadBalancer), arg0)
 }
 
-// DetachInstancesFromLoadBalancerRequest mocks base method
+// DetachInstancesFromLoadBalancerRequest mocks base method.
 func (m *MockLightsailAPI) DetachInstancesFromLoadBalancerRequest(arg0 *lightsail.DetachInstancesFromLoadBalancerInput) (*request.Request, *lightsail.DetachInstancesFromLoadBalancerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetachInstancesFromLoadBalancerRequest", arg0)
@@ -2559,13 +2560,13 @@ func (m *MockLightsailAPI) DetachInstancesFromLoadBalancerRequest(arg0 *lightsai
 	return ret0, ret1
 }
 
-// DetachInstancesFromLoadBalancerRequest indicates an expected call of DetachInstancesFromLoadBalancerRequest
+// DetachInstancesFromLoadBalancerRequest indicates an expected call of DetachInstancesFromLoadBalancerRequest.
 func (mr *MockLightsailAPIMockRecorder) DetachInstancesFromLoadBalancerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachInstancesFromLoadBalancerRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DetachInstancesFromLoadBalancerRequest), arg0)
 }
 
-// DetachInstancesFromLoadBalancerWithContext mocks base method
+// DetachInstancesFromLoadBalancerWithContext mocks base method.
 func (m *MockLightsailAPI) DetachInstancesFromLoadBalancerWithContext(arg0 context.Context, arg1 *lightsail.DetachInstancesFromLoadBalancerInput, arg2 ...request.Option) (*lightsail.DetachInstancesFromLoadBalancerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2578,14 +2579,14 @@ func (m *MockLightsailAPI) DetachInstancesFromLoadBalancerWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// DetachInstancesFromLoadBalancerWithContext indicates an expected call of DetachInstancesFromLoadBalancerWithContext
+// DetachInstancesFromLoadBalancerWithContext indicates an expected call of DetachInstancesFromLoadBalancerWithContext.
 func (mr *MockLightsailAPIMockRecorder) DetachInstancesFromLoadBalancerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachInstancesFromLoadBalancerWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DetachInstancesFromLoadBalancerWithContext), varargs...)
 }
 
-// DetachStaticIp mocks base method
+// DetachStaticIp mocks base method.
 func (m *MockLightsailAPI) DetachStaticIp(arg0 *lightsail.DetachStaticIpInput) (*lightsail.DetachStaticIpOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetachStaticIp", arg0)
@@ -2594,13 +2595,13 @@ func (m *MockLightsailAPI) DetachStaticIp(arg0 *lightsail.DetachStaticIpInput) (
 	return ret0, ret1
 }
 
-// DetachStaticIp indicates an expected call of DetachStaticIp
+// DetachStaticIp indicates an expected call of DetachStaticIp.
 func (mr *MockLightsailAPIMockRecorder) DetachStaticIp(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachStaticIp", reflect.TypeOf((*MockLightsailAPI)(nil).DetachStaticIp), arg0)
 }
 
-// DetachStaticIpRequest mocks base method
+// DetachStaticIpRequest mocks base method.
 func (m *MockLightsailAPI) DetachStaticIpRequest(arg0 *lightsail.DetachStaticIpInput) (*request.Request, *lightsail.DetachStaticIpOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetachStaticIpRequest", arg0)
@@ -2609,13 +2610,13 @@ func (m *MockLightsailAPI) DetachStaticIpRequest(arg0 *lightsail.DetachStaticIpI
 	return ret0, ret1
 }
 
-// DetachStaticIpRequest indicates an expected call of DetachStaticIpRequest
+// DetachStaticIpRequest indicates an expected call of DetachStaticIpRequest.
 func (mr *MockLightsailAPIMockRecorder) DetachStaticIpRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachStaticIpRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DetachStaticIpRequest), arg0)
 }
 
-// DetachStaticIpWithContext mocks base method
+// DetachStaticIpWithContext mocks base method.
 func (m *MockLightsailAPI) DetachStaticIpWithContext(arg0 context.Context, arg1 *lightsail.DetachStaticIpInput, arg2 ...request.Option) (*lightsail.DetachStaticIpOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2628,14 +2629,14 @@ func (m *MockLightsailAPI) DetachStaticIpWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DetachStaticIpWithContext indicates an expected call of DetachStaticIpWithContext
+// DetachStaticIpWithContext indicates an expected call of DetachStaticIpWithContext.
 func (mr *MockLightsailAPIMockRecorder) DetachStaticIpWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetachStaticIpWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DetachStaticIpWithContext), varargs...)
 }
 
-// DisableAddOn mocks base method
+// DisableAddOn mocks base method.
 func (m *MockLightsailAPI) DisableAddOn(arg0 *lightsail.DisableAddOnInput) (*lightsail.DisableAddOnOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisableAddOn", arg0)
@@ -2644,13 +2645,13 @@ func (m *MockLightsailAPI) DisableAddOn(arg0 *lightsail.DisableAddOnInput) (*lig
 	return ret0, ret1
 }
 
-// DisableAddOn indicates an expected call of DisableAddOn
+// DisableAddOn indicates an expected call of DisableAddOn.
 func (mr *MockLightsailAPIMockRecorder) DisableAddOn(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisableAddOn", reflect.TypeOf((*MockLightsailAPI)(nil).DisableAddOn), arg0)
 }
 
-// DisableAddOnRequest mocks base method
+// DisableAddOnRequest mocks base method.
 func (m *MockLightsailAPI) DisableAddOnRequest(arg0 *lightsail.DisableAddOnInput) (*request.Request, *lightsail.DisableAddOnOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisableAddOnRequest", arg0)
@@ -2659,13 +2660,13 @@ func (m *MockLightsailAPI) DisableAddOnRequest(arg0 *lightsail.DisableAddOnInput
 	return ret0, ret1
 }
 
-// DisableAddOnRequest indicates an expected call of DisableAddOnRequest
+// DisableAddOnRequest indicates an expected call of DisableAddOnRequest.
 func (mr *MockLightsailAPIMockRecorder) DisableAddOnRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisableAddOnRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DisableAddOnRequest), arg0)
 }
 
-// DisableAddOnWithContext mocks base method
+// DisableAddOnWithContext mocks base method.
 func (m *MockLightsailAPI) DisableAddOnWithContext(arg0 context.Context, arg1 *lightsail.DisableAddOnInput, arg2 ...request.Option) (*lightsail.DisableAddOnOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2678,14 +2679,14 @@ func (m *MockLightsailAPI) DisableAddOnWithContext(arg0 context.Context, arg1 *l
 	return ret0, ret1
 }
 
-// DisableAddOnWithContext indicates an expected call of DisableAddOnWithContext
+// DisableAddOnWithContext indicates an expected call of DisableAddOnWithContext.
 func (mr *MockLightsailAPIMockRecorder) DisableAddOnWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisableAddOnWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DisableAddOnWithContext), varargs...)
 }
 
-// DownloadDefaultKeyPair mocks base method
+// DownloadDefaultKeyPair mocks base method.
 func (m *MockLightsailAPI) DownloadDefaultKeyPair(arg0 *lightsail.DownloadDefaultKeyPairInput) (*lightsail.DownloadDefaultKeyPairOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DownloadDefaultKeyPair", arg0)
@@ -2694,13 +2695,13 @@ func (m *MockLightsailAPI) DownloadDefaultKeyPair(arg0 *lightsail.DownloadDefaul
 	return ret0, ret1
 }
 
-// DownloadDefaultKeyPair indicates an expected call of DownloadDefaultKeyPair
+// DownloadDefaultKeyPair indicates an expected call of DownloadDefaultKeyPair.
 func (mr *MockLightsailAPIMockRecorder) DownloadDefaultKeyPair(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DownloadDefaultKeyPair", reflect.TypeOf((*MockLightsailAPI)(nil).DownloadDefaultKeyPair), arg0)
 }
 
-// DownloadDefaultKeyPairRequest mocks base method
+// DownloadDefaultKeyPairRequest mocks base method.
 func (m *MockLightsailAPI) DownloadDefaultKeyPairRequest(arg0 *lightsail.DownloadDefaultKeyPairInput) (*request.Request, *lightsail.DownloadDefaultKeyPairOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DownloadDefaultKeyPairRequest", arg0)
@@ -2709,13 +2710,13 @@ func (m *MockLightsailAPI) DownloadDefaultKeyPairRequest(arg0 *lightsail.Downloa
 	return ret0, ret1
 }
 
-// DownloadDefaultKeyPairRequest indicates an expected call of DownloadDefaultKeyPairRequest
+// DownloadDefaultKeyPairRequest indicates an expected call of DownloadDefaultKeyPairRequest.
 func (mr *MockLightsailAPIMockRecorder) DownloadDefaultKeyPairRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DownloadDefaultKeyPairRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DownloadDefaultKeyPairRequest), arg0)
 }
 
-// DownloadDefaultKeyPairWithContext mocks base method
+// DownloadDefaultKeyPairWithContext mocks base method.
 func (m *MockLightsailAPI) DownloadDefaultKeyPairWithContext(arg0 context.Context, arg1 *lightsail.DownloadDefaultKeyPairInput, arg2 ...request.Option) (*lightsail.DownloadDefaultKeyPairOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2728,14 +2729,14 @@ func (m *MockLightsailAPI) DownloadDefaultKeyPairWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DownloadDefaultKeyPairWithContext indicates an expected call of DownloadDefaultKeyPairWithContext
+// DownloadDefaultKeyPairWithContext indicates an expected call of DownloadDefaultKeyPairWithContext.
 func (mr *MockLightsailAPIMockRecorder) DownloadDefaultKeyPairWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DownloadDefaultKeyPairWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DownloadDefaultKeyPairWithContext), varargs...)
 }
 
-// EnableAddOn mocks base method
+// EnableAddOn mocks base method.
 func (m *MockLightsailAPI) EnableAddOn(arg0 *lightsail.EnableAddOnInput) (*lightsail.EnableAddOnOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "EnableAddOn", arg0)
@@ -2744,13 +2745,13 @@ func (m *MockLightsailAPI) EnableAddOn(arg0 *lightsail.EnableAddOnInput) (*light
 	return ret0, ret1
 }
 
-// EnableAddOn indicates an expected call of EnableAddOn
+// EnableAddOn indicates an expected call of EnableAddOn.
 func (mr *MockLightsailAPIMockRecorder) EnableAddOn(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "EnableAddOn", reflect.TypeOf((*MockLightsailAPI)(nil).EnableAddOn), arg0)
 }
 
-// EnableAddOnRequest mocks base method
+// EnableAddOnRequest mocks base method.
 func (m *MockLightsailAPI) EnableAddOnRequest(arg0 *lightsail.EnableAddOnInput) (*request.Request, *lightsail.EnableAddOnOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "EnableAddOnRequest", arg0)
@@ -2759,13 +2760,13 @@ func (m *MockLightsailAPI) EnableAddOnRequest(arg0 *lightsail.EnableAddOnInput) 
 	return ret0, ret1
 }
 
-// EnableAddOnRequest indicates an expected call of EnableAddOnRequest
+// EnableAddOnRequest indicates an expected call of EnableAddOnRequest.
 func (mr *MockLightsailAPIMockRecorder) EnableAddOnRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "EnableAddOnRequest", reflect.TypeOf((*MockLightsailAPI)(nil).EnableAddOnRequest), arg0)
 }
 
-// EnableAddOnWithContext mocks base method
+// EnableAddOnWithContext mocks base method.
 func (m *MockLightsailAPI) EnableAddOnWithContext(arg0 context.Context, arg1 *lightsail.EnableAddOnInput, arg2 ...request.Option) (*lightsail.EnableAddOnOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2778,14 +2779,14 @@ func (m *MockLightsailAPI) EnableAddOnWithContext(arg0 context.Context, arg1 *li
 	return ret0, ret1
 }
 
-// EnableAddOnWithContext indicates an expected call of EnableAddOnWithContext
+// EnableAddOnWithContext indicates an expected call of EnableAddOnWithContext.
 func (mr *MockLightsailAPIMockRecorder) EnableAddOnWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "EnableAddOnWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).EnableAddOnWithContext), varargs...)
 }
 
-// ExportSnapshot mocks base method
+// ExportSnapshot mocks base method.
 func (m *MockLightsailAPI) ExportSnapshot(arg0 *lightsail.ExportSnapshotInput) (*lightsail.ExportSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExportSnapshot", arg0)
@@ -2794,13 +2795,13 @@ func (m *MockLightsailAPI) ExportSnapshot(arg0 *lightsail.ExportSnapshotInput) (
 	return ret0, ret1
 }
 
-// ExportSnapshot indicates an expected call of ExportSnapshot
+// ExportSnapshot indicates an expected call of ExportSnapshot.
 func (mr *MockLightsailAPIMockRecorder) ExportSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).ExportSnapshot), arg0)
 }
 
-// ExportSnapshotRequest mocks base method
+// ExportSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) ExportSnapshotRequest(arg0 *lightsail.ExportSnapshotInput) (*request.Request, *lightsail.ExportSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExportSnapshotRequest", arg0)
@@ -2809,13 +2810,13 @@ func (m *MockLightsailAPI) ExportSnapshotRequest(arg0 *lightsail.ExportSnapshotI
 	return ret0, ret1
 }
 
-// ExportSnapshotRequest indicates an expected call of ExportSnapshotRequest
+// ExportSnapshotRequest indicates an expected call of ExportSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) ExportSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).ExportSnapshotRequest), arg0)
 }
 
-// ExportSnapshotWithContext mocks base method
+// ExportSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) ExportSnapshotWithContext(arg0 context.Context, arg1 *lightsail.ExportSnapshotInput, arg2 ...request.Option) (*lightsail.ExportSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2828,14 +2829,14 @@ func (m *MockLightsailAPI) ExportSnapshotWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ExportSnapshotWithContext indicates an expected call of ExportSnapshotWithContext
+// ExportSnapshotWithContext indicates an expected call of ExportSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) ExportSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).ExportSnapshotWithContext), varargs...)
 }
 
-// GetActiveNames mocks base method
+// GetActiveNames mocks base method.
 func (m *MockLightsailAPI) GetActiveNames(arg0 *lightsail.GetActiveNamesInput) (*lightsail.GetActiveNamesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetActiveNames", arg0)
@@ -2844,13 +2845,13 @@ func (m *MockLightsailAPI) GetActiveNames(arg0 *lightsail.GetActiveNamesInput) (
 	return ret0, ret1
 }
 
-// GetActiveNames indicates an expected call of GetActiveNames
+// GetActiveNames indicates an expected call of GetActiveNames.
 func (mr *MockLightsailAPIMockRecorder) GetActiveNames(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetActiveNames", reflect.TypeOf((*MockLightsailAPI)(nil).GetActiveNames), arg0)
 }
 
-// GetActiveNamesRequest mocks base method
+// GetActiveNamesRequest mocks base method.
 func (m *MockLightsailAPI) GetActiveNamesRequest(arg0 *lightsail.GetActiveNamesInput) (*request.Request, *lightsail.GetActiveNamesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetActiveNamesRequest", arg0)
@@ -2859,13 +2860,13 @@ func (m *MockLightsailAPI) GetActiveNamesRequest(arg0 *lightsail.GetActiveNamesI
 	return ret0, ret1
 }
 
-// GetActiveNamesRequest indicates an expected call of GetActiveNamesRequest
+// GetActiveNamesRequest indicates an expected call of GetActiveNamesRequest.
 func (mr *MockLightsailAPIMockRecorder) GetActiveNamesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetActiveNamesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetActiveNamesRequest), arg0)
 }
 
-// GetActiveNamesWithContext mocks base method
+// GetActiveNamesWithContext mocks base method.
 func (m *MockLightsailAPI) GetActiveNamesWithContext(arg0 context.Context, arg1 *lightsail.GetActiveNamesInput, arg2 ...request.Option) (*lightsail.GetActiveNamesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2878,14 +2879,14 @@ func (m *MockLightsailAPI) GetActiveNamesWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// GetActiveNamesWithContext indicates an expected call of GetActiveNamesWithContext
+// GetActiveNamesWithContext indicates an expected call of GetActiveNamesWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetActiveNamesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetActiveNamesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetActiveNamesWithContext), varargs...)
 }
 
-// GetAlarms mocks base method
+// GetAlarms mocks base method.
 func (m *MockLightsailAPI) GetAlarms(arg0 *lightsail.GetAlarmsInput) (*lightsail.GetAlarmsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAlarms", arg0)
@@ -2894,13 +2895,13 @@ func (m *MockLightsailAPI) GetAlarms(arg0 *lightsail.GetAlarmsInput) (*lightsail
 	return ret0, ret1
 }
 
-// GetAlarms indicates an expected call of GetAlarms
+// GetAlarms indicates an expected call of GetAlarms.
 func (mr *MockLightsailAPIMockRecorder) GetAlarms(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAlarms", reflect.TypeOf((*MockLightsailAPI)(nil).GetAlarms), arg0)
 }
 
-// GetAlarmsRequest mocks base method
+// GetAlarmsRequest mocks base method.
 func (m *MockLightsailAPI) GetAlarmsRequest(arg0 *lightsail.GetAlarmsInput) (*request.Request, *lightsail.GetAlarmsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAlarmsRequest", arg0)
@@ -2909,13 +2910,13 @@ func (m *MockLightsailAPI) GetAlarmsRequest(arg0 *lightsail.GetAlarmsInput) (*re
 	return ret0, ret1
 }
 
-// GetAlarmsRequest indicates an expected call of GetAlarmsRequest
+// GetAlarmsRequest indicates an expected call of GetAlarmsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetAlarmsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAlarmsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetAlarmsRequest), arg0)
 }
 
-// GetAlarmsWithContext mocks base method
+// GetAlarmsWithContext mocks base method.
 func (m *MockLightsailAPI) GetAlarmsWithContext(arg0 context.Context, arg1 *lightsail.GetAlarmsInput, arg2 ...request.Option) (*lightsail.GetAlarmsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2928,14 +2929,14 @@ func (m *MockLightsailAPI) GetAlarmsWithContext(arg0 context.Context, arg1 *ligh
 	return ret0, ret1
 }
 
-// GetAlarmsWithContext indicates an expected call of GetAlarmsWithContext
+// GetAlarmsWithContext indicates an expected call of GetAlarmsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetAlarmsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAlarmsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetAlarmsWithContext), varargs...)
 }
 
-// GetAutoSnapshots mocks base method
+// GetAutoSnapshots mocks base method.
 func (m *MockLightsailAPI) GetAutoSnapshots(arg0 *lightsail.GetAutoSnapshotsInput) (*lightsail.GetAutoSnapshotsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAutoSnapshots", arg0)
@@ -2944,13 +2945,13 @@ func (m *MockLightsailAPI) GetAutoSnapshots(arg0 *lightsail.GetAutoSnapshotsInpu
 	return ret0, ret1
 }
 
-// GetAutoSnapshots indicates an expected call of GetAutoSnapshots
+// GetAutoSnapshots indicates an expected call of GetAutoSnapshots.
 func (mr *MockLightsailAPIMockRecorder) GetAutoSnapshots(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAutoSnapshots", reflect.TypeOf((*MockLightsailAPI)(nil).GetAutoSnapshots), arg0)
 }
 
-// GetAutoSnapshotsRequest mocks base method
+// GetAutoSnapshotsRequest mocks base method.
 func (m *MockLightsailAPI) GetAutoSnapshotsRequest(arg0 *lightsail.GetAutoSnapshotsInput) (*request.Request, *lightsail.GetAutoSnapshotsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAutoSnapshotsRequest", arg0)
@@ -2959,13 +2960,13 @@ func (m *MockLightsailAPI) GetAutoSnapshotsRequest(arg0 *lightsail.GetAutoSnapsh
 	return ret0, ret1
 }
 
-// GetAutoSnapshotsRequest indicates an expected call of GetAutoSnapshotsRequest
+// GetAutoSnapshotsRequest indicates an expected call of GetAutoSnapshotsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetAutoSnapshotsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAutoSnapshotsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetAutoSnapshotsRequest), arg0)
 }
 
-// GetAutoSnapshotsWithContext mocks base method
+// GetAutoSnapshotsWithContext mocks base method.
 func (m *MockLightsailAPI) GetAutoSnapshotsWithContext(arg0 context.Context, arg1 *lightsail.GetAutoSnapshotsInput, arg2 ...request.Option) (*lightsail.GetAutoSnapshotsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2978,14 +2979,14 @@ func (m *MockLightsailAPI) GetAutoSnapshotsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetAutoSnapshotsWithContext indicates an expected call of GetAutoSnapshotsWithContext
+// GetAutoSnapshotsWithContext indicates an expected call of GetAutoSnapshotsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetAutoSnapshotsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAutoSnapshotsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetAutoSnapshotsWithContext), varargs...)
 }
 
-// GetBlueprints mocks base method
+// GetBlueprints mocks base method.
 func (m *MockLightsailAPI) GetBlueprints(arg0 *lightsail.GetBlueprintsInput) (*lightsail.GetBlueprintsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBlueprints", arg0)
@@ -2994,13 +2995,13 @@ func (m *MockLightsailAPI) GetBlueprints(arg0 *lightsail.GetBlueprintsInput) (*l
 	return ret0, ret1
 }
 
-// GetBlueprints indicates an expected call of GetBlueprints
+// GetBlueprints indicates an expected call of GetBlueprints.
 func (mr *MockLightsailAPIMockRecorder) GetBlueprints(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlueprints", reflect.TypeOf((*MockLightsailAPI)(nil).GetBlueprints), arg0)
 }
 
-// GetBlueprintsRequest mocks base method
+// GetBlueprintsRequest mocks base method.
 func (m *MockLightsailAPI) GetBlueprintsRequest(arg0 *lightsail.GetBlueprintsInput) (*request.Request, *lightsail.GetBlueprintsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBlueprintsRequest", arg0)
@@ -3009,13 +3010,13 @@ func (m *MockLightsailAPI) GetBlueprintsRequest(arg0 *lightsail.GetBlueprintsInp
 	return ret0, ret1
 }
 
-// GetBlueprintsRequest indicates an expected call of GetBlueprintsRequest
+// GetBlueprintsRequest indicates an expected call of GetBlueprintsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetBlueprintsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlueprintsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetBlueprintsRequest), arg0)
 }
 
-// GetBlueprintsWithContext mocks base method
+// GetBlueprintsWithContext mocks base method.
 func (m *MockLightsailAPI) GetBlueprintsWithContext(arg0 context.Context, arg1 *lightsail.GetBlueprintsInput, arg2 ...request.Option) (*lightsail.GetBlueprintsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3028,14 +3029,14 @@ func (m *MockLightsailAPI) GetBlueprintsWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// GetBlueprintsWithContext indicates an expected call of GetBlueprintsWithContext
+// GetBlueprintsWithContext indicates an expected call of GetBlueprintsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetBlueprintsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlueprintsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetBlueprintsWithContext), varargs...)
 }
 
-// GetBundles mocks base method
+// GetBundles mocks base method.
 func (m *MockLightsailAPI) GetBundles(arg0 *lightsail.GetBundlesInput) (*lightsail.GetBundlesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBundles", arg0)
@@ -3044,13 +3045,13 @@ func (m *MockLightsailAPI) GetBundles(arg0 *lightsail.GetBundlesInput) (*lightsa
 	return ret0, ret1
 }
 
-// GetBundles indicates an expected call of GetBundles
+// GetBundles indicates an expected call of GetBundles.
 func (mr *MockLightsailAPIMockRecorder) GetBundles(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBundles", reflect.TypeOf((*MockLightsailAPI)(nil).GetBundles), arg0)
 }
 
-// GetBundlesRequest mocks base method
+// GetBundlesRequest mocks base method.
 func (m *MockLightsailAPI) GetBundlesRequest(arg0 *lightsail.GetBundlesInput) (*request.Request, *lightsail.GetBundlesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBundlesRequest", arg0)
@@ -3059,13 +3060,13 @@ func (m *MockLightsailAPI) GetBundlesRequest(arg0 *lightsail.GetBundlesInput) (*
 	return ret0, ret1
 }
 
-// GetBundlesRequest indicates an expected call of GetBundlesRequest
+// GetBundlesRequest indicates an expected call of GetBundlesRequest.
 func (mr *MockLightsailAPIMockRecorder) GetBundlesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBundlesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetBundlesRequest), arg0)
 }
 
-// GetBundlesWithContext mocks base method
+// GetBundlesWithContext mocks base method.
 func (m *MockLightsailAPI) GetBundlesWithContext(arg0 context.Context, arg1 *lightsail.GetBundlesInput, arg2 ...request.Option) (*lightsail.GetBundlesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3078,14 +3079,14 @@ func (m *MockLightsailAPI) GetBundlesWithContext(arg0 context.Context, arg1 *lig
 	return ret0, ret1
 }
 
-// GetBundlesWithContext indicates an expected call of GetBundlesWithContext
+// GetBundlesWithContext indicates an expected call of GetBundlesWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetBundlesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBundlesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetBundlesWithContext), varargs...)
 }
 
-// GetCertificates mocks base method
+// GetCertificates mocks base method.
 func (m *MockLightsailAPI) GetCertificates(arg0 *lightsail.GetCertificatesInput) (*lightsail.GetCertificatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCertificates", arg0)
@@ -3094,13 +3095,13 @@ func (m *MockLightsailAPI) GetCertificates(arg0 *lightsail.GetCertificatesInput)
 	return ret0, ret1
 }
 
-// GetCertificates indicates an expected call of GetCertificates
+// GetCertificates indicates an expected call of GetCertificates.
 func (mr *MockLightsailAPIMockRecorder) GetCertificates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCertificates", reflect.TypeOf((*MockLightsailAPI)(nil).GetCertificates), arg0)
 }
 
-// GetCertificatesRequest mocks base method
+// GetCertificatesRequest mocks base method.
 func (m *MockLightsailAPI) GetCertificatesRequest(arg0 *lightsail.GetCertificatesInput) (*request.Request, *lightsail.GetCertificatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCertificatesRequest", arg0)
@@ -3109,13 +3110,13 @@ func (m *MockLightsailAPI) GetCertificatesRequest(arg0 *lightsail.GetCertificate
 	return ret0, ret1
 }
 
-// GetCertificatesRequest indicates an expected call of GetCertificatesRequest
+// GetCertificatesRequest indicates an expected call of GetCertificatesRequest.
 func (mr *MockLightsailAPIMockRecorder) GetCertificatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCertificatesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetCertificatesRequest), arg0)
 }
 
-// GetCertificatesWithContext mocks base method
+// GetCertificatesWithContext mocks base method.
 func (m *MockLightsailAPI) GetCertificatesWithContext(arg0 context.Context, arg1 *lightsail.GetCertificatesInput, arg2 ...request.Option) (*lightsail.GetCertificatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3128,14 +3129,14 @@ func (m *MockLightsailAPI) GetCertificatesWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetCertificatesWithContext indicates an expected call of GetCertificatesWithContext
+// GetCertificatesWithContext indicates an expected call of GetCertificatesWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetCertificatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCertificatesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetCertificatesWithContext), varargs...)
 }
 
-// GetCloudFormationStackRecords mocks base method
+// GetCloudFormationStackRecords mocks base method.
 func (m *MockLightsailAPI) GetCloudFormationStackRecords(arg0 *lightsail.GetCloudFormationStackRecordsInput) (*lightsail.GetCloudFormationStackRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCloudFormationStackRecords", arg0)
@@ -3144,13 +3145,13 @@ func (m *MockLightsailAPI) GetCloudFormationStackRecords(arg0 *lightsail.GetClou
 	return ret0, ret1
 }
 
-// GetCloudFormationStackRecords indicates an expected call of GetCloudFormationStackRecords
+// GetCloudFormationStackRecords indicates an expected call of GetCloudFormationStackRecords.
 func (mr *MockLightsailAPIMockRecorder) GetCloudFormationStackRecords(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCloudFormationStackRecords", reflect.TypeOf((*MockLightsailAPI)(nil).GetCloudFormationStackRecords), arg0)
 }
 
-// GetCloudFormationStackRecordsRequest mocks base method
+// GetCloudFormationStackRecordsRequest mocks base method.
 func (m *MockLightsailAPI) GetCloudFormationStackRecordsRequest(arg0 *lightsail.GetCloudFormationStackRecordsInput) (*request.Request, *lightsail.GetCloudFormationStackRecordsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCloudFormationStackRecordsRequest", arg0)
@@ -3159,13 +3160,13 @@ func (m *MockLightsailAPI) GetCloudFormationStackRecordsRequest(arg0 *lightsail.
 	return ret0, ret1
 }
 
-// GetCloudFormationStackRecordsRequest indicates an expected call of GetCloudFormationStackRecordsRequest
+// GetCloudFormationStackRecordsRequest indicates an expected call of GetCloudFormationStackRecordsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetCloudFormationStackRecordsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCloudFormationStackRecordsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetCloudFormationStackRecordsRequest), arg0)
 }
 
-// GetCloudFormationStackRecordsWithContext mocks base method
+// GetCloudFormationStackRecordsWithContext mocks base method.
 func (m *MockLightsailAPI) GetCloudFormationStackRecordsWithContext(arg0 context.Context, arg1 *lightsail.GetCloudFormationStackRecordsInput, arg2 ...request.Option) (*lightsail.GetCloudFormationStackRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3178,14 +3179,14 @@ func (m *MockLightsailAPI) GetCloudFormationStackRecordsWithContext(arg0 context
 	return ret0, ret1
 }
 
-// GetCloudFormationStackRecordsWithContext indicates an expected call of GetCloudFormationStackRecordsWithContext
+// GetCloudFormationStackRecordsWithContext indicates an expected call of GetCloudFormationStackRecordsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetCloudFormationStackRecordsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCloudFormationStackRecordsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetCloudFormationStackRecordsWithContext), varargs...)
 }
 
-// GetContactMethods mocks base method
+// GetContactMethods mocks base method.
 func (m *MockLightsailAPI) GetContactMethods(arg0 *lightsail.GetContactMethodsInput) (*lightsail.GetContactMethodsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContactMethods", arg0)
@@ -3194,13 +3195,13 @@ func (m *MockLightsailAPI) GetContactMethods(arg0 *lightsail.GetContactMethodsIn
 	return ret0, ret1
 }
 
-// GetContactMethods indicates an expected call of GetContactMethods
+// GetContactMethods indicates an expected call of GetContactMethods.
 func (mr *MockLightsailAPIMockRecorder) GetContactMethods(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContactMethods", reflect.TypeOf((*MockLightsailAPI)(nil).GetContactMethods), arg0)
 }
 
-// GetContactMethodsRequest mocks base method
+// GetContactMethodsRequest mocks base method.
 func (m *MockLightsailAPI) GetContactMethodsRequest(arg0 *lightsail.GetContactMethodsInput) (*request.Request, *lightsail.GetContactMethodsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContactMethodsRequest", arg0)
@@ -3209,13 +3210,13 @@ func (m *MockLightsailAPI) GetContactMethodsRequest(arg0 *lightsail.GetContactMe
 	return ret0, ret1
 }
 
-// GetContactMethodsRequest indicates an expected call of GetContactMethodsRequest
+// GetContactMethodsRequest indicates an expected call of GetContactMethodsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetContactMethodsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContactMethodsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetContactMethodsRequest), arg0)
 }
 
-// GetContactMethodsWithContext mocks base method
+// GetContactMethodsWithContext mocks base method.
 func (m *MockLightsailAPI) GetContactMethodsWithContext(arg0 context.Context, arg1 *lightsail.GetContactMethodsInput, arg2 ...request.Option) (*lightsail.GetContactMethodsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3228,14 +3229,14 @@ func (m *MockLightsailAPI) GetContactMethodsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// GetContactMethodsWithContext indicates an expected call of GetContactMethodsWithContext
+// GetContactMethodsWithContext indicates an expected call of GetContactMethodsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetContactMethodsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContactMethodsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetContactMethodsWithContext), varargs...)
 }
 
-// GetContainerAPIMetadata mocks base method
+// GetContainerAPIMetadata mocks base method.
 func (m *MockLightsailAPI) GetContainerAPIMetadata(arg0 *lightsail.GetContainerAPIMetadataInput) (*lightsail.GetContainerAPIMetadataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerAPIMetadata", arg0)
@@ -3244,13 +3245,13 @@ func (m *MockLightsailAPI) GetContainerAPIMetadata(arg0 *lightsail.GetContainerA
 	return ret0, ret1
 }
 
-// GetContainerAPIMetadata indicates an expected call of GetContainerAPIMetadata
+// GetContainerAPIMetadata indicates an expected call of GetContainerAPIMetadata.
 func (mr *MockLightsailAPIMockRecorder) GetContainerAPIMetadata(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerAPIMetadata", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerAPIMetadata), arg0)
 }
 
-// GetContainerAPIMetadataRequest mocks base method
+// GetContainerAPIMetadataRequest mocks base method.
 func (m *MockLightsailAPI) GetContainerAPIMetadataRequest(arg0 *lightsail.GetContainerAPIMetadataInput) (*request.Request, *lightsail.GetContainerAPIMetadataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerAPIMetadataRequest", arg0)
@@ -3259,13 +3260,13 @@ func (m *MockLightsailAPI) GetContainerAPIMetadataRequest(arg0 *lightsail.GetCon
 	return ret0, ret1
 }
 
-// GetContainerAPIMetadataRequest indicates an expected call of GetContainerAPIMetadataRequest
+// GetContainerAPIMetadataRequest indicates an expected call of GetContainerAPIMetadataRequest.
 func (mr *MockLightsailAPIMockRecorder) GetContainerAPIMetadataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerAPIMetadataRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerAPIMetadataRequest), arg0)
 }
 
-// GetContainerAPIMetadataWithContext mocks base method
+// GetContainerAPIMetadataWithContext mocks base method.
 func (m *MockLightsailAPI) GetContainerAPIMetadataWithContext(arg0 context.Context, arg1 *lightsail.GetContainerAPIMetadataInput, arg2 ...request.Option) (*lightsail.GetContainerAPIMetadataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3278,14 +3279,14 @@ func (m *MockLightsailAPI) GetContainerAPIMetadataWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// GetContainerAPIMetadataWithContext indicates an expected call of GetContainerAPIMetadataWithContext
+// GetContainerAPIMetadataWithContext indicates an expected call of GetContainerAPIMetadataWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetContainerAPIMetadataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerAPIMetadataWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerAPIMetadataWithContext), varargs...)
 }
 
-// GetContainerImages mocks base method
+// GetContainerImages mocks base method.
 func (m *MockLightsailAPI) GetContainerImages(arg0 *lightsail.GetContainerImagesInput) (*lightsail.GetContainerImagesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerImages", arg0)
@@ -3294,13 +3295,13 @@ func (m *MockLightsailAPI) GetContainerImages(arg0 *lightsail.GetContainerImages
 	return ret0, ret1
 }
 
-// GetContainerImages indicates an expected call of GetContainerImages
+// GetContainerImages indicates an expected call of GetContainerImages.
 func (mr *MockLightsailAPIMockRecorder) GetContainerImages(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerImages", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerImages), arg0)
 }
 
-// GetContainerImagesRequest mocks base method
+// GetContainerImagesRequest mocks base method.
 func (m *MockLightsailAPI) GetContainerImagesRequest(arg0 *lightsail.GetContainerImagesInput) (*request.Request, *lightsail.GetContainerImagesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerImagesRequest", arg0)
@@ -3309,13 +3310,13 @@ func (m *MockLightsailAPI) GetContainerImagesRequest(arg0 *lightsail.GetContaine
 	return ret0, ret1
 }
 
-// GetContainerImagesRequest indicates an expected call of GetContainerImagesRequest
+// GetContainerImagesRequest indicates an expected call of GetContainerImagesRequest.
 func (mr *MockLightsailAPIMockRecorder) GetContainerImagesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerImagesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerImagesRequest), arg0)
 }
 
-// GetContainerImagesWithContext mocks base method
+// GetContainerImagesWithContext mocks base method.
 func (m *MockLightsailAPI) GetContainerImagesWithContext(arg0 context.Context, arg1 *lightsail.GetContainerImagesInput, arg2 ...request.Option) (*lightsail.GetContainerImagesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3328,14 +3329,14 @@ func (m *MockLightsailAPI) GetContainerImagesWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// GetContainerImagesWithContext indicates an expected call of GetContainerImagesWithContext
+// GetContainerImagesWithContext indicates an expected call of GetContainerImagesWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetContainerImagesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerImagesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerImagesWithContext), varargs...)
 }
 
-// GetContainerLog mocks base method
+// GetContainerLog mocks base method.
 func (m *MockLightsailAPI) GetContainerLog(arg0 *lightsail.GetContainerLogInput) (*lightsail.GetContainerLogOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerLog", arg0)
@@ -3344,13 +3345,13 @@ func (m *MockLightsailAPI) GetContainerLog(arg0 *lightsail.GetContainerLogInput)
 	return ret0, ret1
 }
 
-// GetContainerLog indicates an expected call of GetContainerLog
+// GetContainerLog indicates an expected call of GetContainerLog.
 func (mr *MockLightsailAPIMockRecorder) GetContainerLog(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerLog", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerLog), arg0)
 }
 
-// GetContainerLogRequest mocks base method
+// GetContainerLogRequest mocks base method.
 func (m *MockLightsailAPI) GetContainerLogRequest(arg0 *lightsail.GetContainerLogInput) (*request.Request, *lightsail.GetContainerLogOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerLogRequest", arg0)
@@ -3359,13 +3360,13 @@ func (m *MockLightsailAPI) GetContainerLogRequest(arg0 *lightsail.GetContainerLo
 	return ret0, ret1
 }
 
-// GetContainerLogRequest indicates an expected call of GetContainerLogRequest
+// GetContainerLogRequest indicates an expected call of GetContainerLogRequest.
 func (mr *MockLightsailAPIMockRecorder) GetContainerLogRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerLogRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerLogRequest), arg0)
 }
 
-// GetContainerLogWithContext mocks base method
+// GetContainerLogWithContext mocks base method.
 func (m *MockLightsailAPI) GetContainerLogWithContext(arg0 context.Context, arg1 *lightsail.GetContainerLogInput, arg2 ...request.Option) (*lightsail.GetContainerLogOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3378,14 +3379,14 @@ func (m *MockLightsailAPI) GetContainerLogWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetContainerLogWithContext indicates an expected call of GetContainerLogWithContext
+// GetContainerLogWithContext indicates an expected call of GetContainerLogWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetContainerLogWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerLogWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerLogWithContext), varargs...)
 }
 
-// GetContainerServiceDeployments mocks base method
+// GetContainerServiceDeployments mocks base method.
 func (m *MockLightsailAPI) GetContainerServiceDeployments(arg0 *lightsail.GetContainerServiceDeploymentsInput) (*lightsail.GetContainerServiceDeploymentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerServiceDeployments", arg0)
@@ -3394,13 +3395,13 @@ func (m *MockLightsailAPI) GetContainerServiceDeployments(arg0 *lightsail.GetCon
 	return ret0, ret1
 }
 
-// GetContainerServiceDeployments indicates an expected call of GetContainerServiceDeployments
+// GetContainerServiceDeployments indicates an expected call of GetContainerServiceDeployments.
 func (mr *MockLightsailAPIMockRecorder) GetContainerServiceDeployments(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerServiceDeployments", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerServiceDeployments), arg0)
 }
 
-// GetContainerServiceDeploymentsRequest mocks base method
+// GetContainerServiceDeploymentsRequest mocks base method.
 func (m *MockLightsailAPI) GetContainerServiceDeploymentsRequest(arg0 *lightsail.GetContainerServiceDeploymentsInput) (*request.Request, *lightsail.GetContainerServiceDeploymentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerServiceDeploymentsRequest", arg0)
@@ -3409,13 +3410,13 @@ func (m *MockLightsailAPI) GetContainerServiceDeploymentsRequest(arg0 *lightsail
 	return ret0, ret1
 }
 
-// GetContainerServiceDeploymentsRequest indicates an expected call of GetContainerServiceDeploymentsRequest
+// GetContainerServiceDeploymentsRequest indicates an expected call of GetContainerServiceDeploymentsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetContainerServiceDeploymentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerServiceDeploymentsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerServiceDeploymentsRequest), arg0)
 }
 
-// GetContainerServiceDeploymentsWithContext mocks base method
+// GetContainerServiceDeploymentsWithContext mocks base method.
 func (m *MockLightsailAPI) GetContainerServiceDeploymentsWithContext(arg0 context.Context, arg1 *lightsail.GetContainerServiceDeploymentsInput, arg2 ...request.Option) (*lightsail.GetContainerServiceDeploymentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3428,14 +3429,14 @@ func (m *MockLightsailAPI) GetContainerServiceDeploymentsWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// GetContainerServiceDeploymentsWithContext indicates an expected call of GetContainerServiceDeploymentsWithContext
+// GetContainerServiceDeploymentsWithContext indicates an expected call of GetContainerServiceDeploymentsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetContainerServiceDeploymentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerServiceDeploymentsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerServiceDeploymentsWithContext), varargs...)
 }
 
-// GetContainerServiceMetricData mocks base method
+// GetContainerServiceMetricData mocks base method.
 func (m *MockLightsailAPI) GetContainerServiceMetricData(arg0 *lightsail.GetContainerServiceMetricDataInput) (*lightsail.GetContainerServiceMetricDataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerServiceMetricData", arg0)
@@ -3444,13 +3445,13 @@ func (m *MockLightsailAPI) GetContainerServiceMetricData(arg0 *lightsail.GetCont
 	return ret0, ret1
 }
 
-// GetContainerServiceMetricData indicates an expected call of GetContainerServiceMetricData
+// GetContainerServiceMetricData indicates an expected call of GetContainerServiceMetricData.
 func (mr *MockLightsailAPIMockRecorder) GetContainerServiceMetricData(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerServiceMetricData", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerServiceMetricData), arg0)
 }
 
-// GetContainerServiceMetricDataRequest mocks base method
+// GetContainerServiceMetricDataRequest mocks base method.
 func (m *MockLightsailAPI) GetContainerServiceMetricDataRequest(arg0 *lightsail.GetContainerServiceMetricDataInput) (*request.Request, *lightsail.GetContainerServiceMetricDataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerServiceMetricDataRequest", arg0)
@@ -3459,13 +3460,13 @@ func (m *MockLightsailAPI) GetContainerServiceMetricDataRequest(arg0 *lightsail.
 	return ret0, ret1
 }
 
-// GetContainerServiceMetricDataRequest indicates an expected call of GetContainerServiceMetricDataRequest
+// GetContainerServiceMetricDataRequest indicates an expected call of GetContainerServiceMetricDataRequest.
 func (mr *MockLightsailAPIMockRecorder) GetContainerServiceMetricDataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerServiceMetricDataRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerServiceMetricDataRequest), arg0)
 }
 
-// GetContainerServiceMetricDataWithContext mocks base method
+// GetContainerServiceMetricDataWithContext mocks base method.
 func (m *MockLightsailAPI) GetContainerServiceMetricDataWithContext(arg0 context.Context, arg1 *lightsail.GetContainerServiceMetricDataInput, arg2 ...request.Option) (*lightsail.GetContainerServiceMetricDataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3478,14 +3479,14 @@ func (m *MockLightsailAPI) GetContainerServiceMetricDataWithContext(arg0 context
 	return ret0, ret1
 }
 
-// GetContainerServiceMetricDataWithContext indicates an expected call of GetContainerServiceMetricDataWithContext
+// GetContainerServiceMetricDataWithContext indicates an expected call of GetContainerServiceMetricDataWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetContainerServiceMetricDataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerServiceMetricDataWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerServiceMetricDataWithContext), varargs...)
 }
 
-// GetContainerServicePowers mocks base method
+// GetContainerServicePowers mocks base method.
 func (m *MockLightsailAPI) GetContainerServicePowers(arg0 *lightsail.GetContainerServicePowersInput) (*lightsail.GetContainerServicePowersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerServicePowers", arg0)
@@ -3494,13 +3495,13 @@ func (m *MockLightsailAPI) GetContainerServicePowers(arg0 *lightsail.GetContaine
 	return ret0, ret1
 }
 
-// GetContainerServicePowers indicates an expected call of GetContainerServicePowers
+// GetContainerServicePowers indicates an expected call of GetContainerServicePowers.
 func (mr *MockLightsailAPIMockRecorder) GetContainerServicePowers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerServicePowers", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerServicePowers), arg0)
 }
 
-// GetContainerServicePowersRequest mocks base method
+// GetContainerServicePowersRequest mocks base method.
 func (m *MockLightsailAPI) GetContainerServicePowersRequest(arg0 *lightsail.GetContainerServicePowersInput) (*request.Request, *lightsail.GetContainerServicePowersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerServicePowersRequest", arg0)
@@ -3509,13 +3510,13 @@ func (m *MockLightsailAPI) GetContainerServicePowersRequest(arg0 *lightsail.GetC
 	return ret0, ret1
 }
 
-// GetContainerServicePowersRequest indicates an expected call of GetContainerServicePowersRequest
+// GetContainerServicePowersRequest indicates an expected call of GetContainerServicePowersRequest.
 func (mr *MockLightsailAPIMockRecorder) GetContainerServicePowersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerServicePowersRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerServicePowersRequest), arg0)
 }
 
-// GetContainerServicePowersWithContext mocks base method
+// GetContainerServicePowersWithContext mocks base method.
 func (m *MockLightsailAPI) GetContainerServicePowersWithContext(arg0 context.Context, arg1 *lightsail.GetContainerServicePowersInput, arg2 ...request.Option) (*lightsail.GetContainerServicePowersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3528,14 +3529,14 @@ func (m *MockLightsailAPI) GetContainerServicePowersWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// GetContainerServicePowersWithContext indicates an expected call of GetContainerServicePowersWithContext
+// GetContainerServicePowersWithContext indicates an expected call of GetContainerServicePowersWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetContainerServicePowersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerServicePowersWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerServicePowersWithContext), varargs...)
 }
 
-// GetContainerServices mocks base method
+// GetContainerServices mocks base method.
 func (m *MockLightsailAPI) GetContainerServices(arg0 *lightsail.GetContainerServicesInput) (*lightsail.GetContainerServicesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerServices", arg0)
@@ -3544,13 +3545,13 @@ func (m *MockLightsailAPI) GetContainerServices(arg0 *lightsail.GetContainerServ
 	return ret0, ret1
 }
 
-// GetContainerServices indicates an expected call of GetContainerServices
+// GetContainerServices indicates an expected call of GetContainerServices.
 func (mr *MockLightsailAPIMockRecorder) GetContainerServices(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerServices", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerServices), arg0)
 }
 
-// GetContainerServicesRequest mocks base method
+// GetContainerServicesRequest mocks base method.
 func (m *MockLightsailAPI) GetContainerServicesRequest(arg0 *lightsail.GetContainerServicesInput) (*request.Request, *lightsail.GetContainerServicesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetContainerServicesRequest", arg0)
@@ -3559,13 +3560,13 @@ func (m *MockLightsailAPI) GetContainerServicesRequest(arg0 *lightsail.GetContai
 	return ret0, ret1
 }
 
-// GetContainerServicesRequest indicates an expected call of GetContainerServicesRequest
+// GetContainerServicesRequest indicates an expected call of GetContainerServicesRequest.
 func (mr *MockLightsailAPIMockRecorder) GetContainerServicesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerServicesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerServicesRequest), arg0)
 }
 
-// GetContainerServicesWithContext mocks base method
+// GetContainerServicesWithContext mocks base method.
 func (m *MockLightsailAPI) GetContainerServicesWithContext(arg0 context.Context, arg1 *lightsail.GetContainerServicesInput, arg2 ...request.Option) (*lightsail.GetContainerServicesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3578,14 +3579,14 @@ func (m *MockLightsailAPI) GetContainerServicesWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// GetContainerServicesWithContext indicates an expected call of GetContainerServicesWithContext
+// GetContainerServicesWithContext indicates an expected call of GetContainerServicesWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetContainerServicesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContainerServicesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetContainerServicesWithContext), varargs...)
 }
 
-// GetDisk mocks base method
+// GetDisk mocks base method.
 func (m *MockLightsailAPI) GetDisk(arg0 *lightsail.GetDiskInput) (*lightsail.GetDiskOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDisk", arg0)
@@ -3594,13 +3595,13 @@ func (m *MockLightsailAPI) GetDisk(arg0 *lightsail.GetDiskInput) (*lightsail.Get
 	return ret0, ret1
 }
 
-// GetDisk indicates an expected call of GetDisk
+// GetDisk indicates an expected call of GetDisk.
 func (mr *MockLightsailAPIMockRecorder) GetDisk(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDisk", reflect.TypeOf((*MockLightsailAPI)(nil).GetDisk), arg0)
 }
 
-// GetDiskRequest mocks base method
+// GetDiskRequest mocks base method.
 func (m *MockLightsailAPI) GetDiskRequest(arg0 *lightsail.GetDiskInput) (*request.Request, *lightsail.GetDiskOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDiskRequest", arg0)
@@ -3609,13 +3610,13 @@ func (m *MockLightsailAPI) GetDiskRequest(arg0 *lightsail.GetDiskInput) (*reques
 	return ret0, ret1
 }
 
-// GetDiskRequest indicates an expected call of GetDiskRequest
+// GetDiskRequest indicates an expected call of GetDiskRequest.
 func (mr *MockLightsailAPIMockRecorder) GetDiskRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiskRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetDiskRequest), arg0)
 }
 
-// GetDiskSnapshot mocks base method
+// GetDiskSnapshot mocks base method.
 func (m *MockLightsailAPI) GetDiskSnapshot(arg0 *lightsail.GetDiskSnapshotInput) (*lightsail.GetDiskSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDiskSnapshot", arg0)
@@ -3624,13 +3625,13 @@ func (m *MockLightsailAPI) GetDiskSnapshot(arg0 *lightsail.GetDiskSnapshotInput)
 	return ret0, ret1
 }
 
-// GetDiskSnapshot indicates an expected call of GetDiskSnapshot
+// GetDiskSnapshot indicates an expected call of GetDiskSnapshot.
 func (mr *MockLightsailAPIMockRecorder) GetDiskSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiskSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).GetDiskSnapshot), arg0)
 }
 
-// GetDiskSnapshotRequest mocks base method
+// GetDiskSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) GetDiskSnapshotRequest(arg0 *lightsail.GetDiskSnapshotInput) (*request.Request, *lightsail.GetDiskSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDiskSnapshotRequest", arg0)
@@ -3639,13 +3640,13 @@ func (m *MockLightsailAPI) GetDiskSnapshotRequest(arg0 *lightsail.GetDiskSnapsho
 	return ret0, ret1
 }
 
-// GetDiskSnapshotRequest indicates an expected call of GetDiskSnapshotRequest
+// GetDiskSnapshotRequest indicates an expected call of GetDiskSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) GetDiskSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiskSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetDiskSnapshotRequest), arg0)
 }
 
-// GetDiskSnapshotWithContext mocks base method
+// GetDiskSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) GetDiskSnapshotWithContext(arg0 context.Context, arg1 *lightsail.GetDiskSnapshotInput, arg2 ...request.Option) (*lightsail.GetDiskSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3658,14 +3659,14 @@ func (m *MockLightsailAPI) GetDiskSnapshotWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetDiskSnapshotWithContext indicates an expected call of GetDiskSnapshotWithContext
+// GetDiskSnapshotWithContext indicates an expected call of GetDiskSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetDiskSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiskSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetDiskSnapshotWithContext), varargs...)
 }
 
-// GetDiskSnapshots mocks base method
+// GetDiskSnapshots mocks base method.
 func (m *MockLightsailAPI) GetDiskSnapshots(arg0 *lightsail.GetDiskSnapshotsInput) (*lightsail.GetDiskSnapshotsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDiskSnapshots", arg0)
@@ -3674,13 +3675,13 @@ func (m *MockLightsailAPI) GetDiskSnapshots(arg0 *lightsail.GetDiskSnapshotsInpu
 	return ret0, ret1
 }
 
-// GetDiskSnapshots indicates an expected call of GetDiskSnapshots
+// GetDiskSnapshots indicates an expected call of GetDiskSnapshots.
 func (mr *MockLightsailAPIMockRecorder) GetDiskSnapshots(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiskSnapshots", reflect.TypeOf((*MockLightsailAPI)(nil).GetDiskSnapshots), arg0)
 }
 
-// GetDiskSnapshotsRequest mocks base method
+// GetDiskSnapshotsRequest mocks base method.
 func (m *MockLightsailAPI) GetDiskSnapshotsRequest(arg0 *lightsail.GetDiskSnapshotsInput) (*request.Request, *lightsail.GetDiskSnapshotsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDiskSnapshotsRequest", arg0)
@@ -3689,13 +3690,13 @@ func (m *MockLightsailAPI) GetDiskSnapshotsRequest(arg0 *lightsail.GetDiskSnapsh
 	return ret0, ret1
 }
 
-// GetDiskSnapshotsRequest indicates an expected call of GetDiskSnapshotsRequest
+// GetDiskSnapshotsRequest indicates an expected call of GetDiskSnapshotsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetDiskSnapshotsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiskSnapshotsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetDiskSnapshotsRequest), arg0)
 }
 
-// GetDiskSnapshotsWithContext mocks base method
+// GetDiskSnapshotsWithContext mocks base method.
 func (m *MockLightsailAPI) GetDiskSnapshotsWithContext(arg0 context.Context, arg1 *lightsail.GetDiskSnapshotsInput, arg2 ...request.Option) (*lightsail.GetDiskSnapshotsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3708,14 +3709,14 @@ func (m *MockLightsailAPI) GetDiskSnapshotsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetDiskSnapshotsWithContext indicates an expected call of GetDiskSnapshotsWithContext
+// GetDiskSnapshotsWithContext indicates an expected call of GetDiskSnapshotsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetDiskSnapshotsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiskSnapshotsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetDiskSnapshotsWithContext), varargs...)
 }
 
-// GetDiskWithContext mocks base method
+// GetDiskWithContext mocks base method.
 func (m *MockLightsailAPI) GetDiskWithContext(arg0 context.Context, arg1 *lightsail.GetDiskInput, arg2 ...request.Option) (*lightsail.GetDiskOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3728,14 +3729,14 @@ func (m *MockLightsailAPI) GetDiskWithContext(arg0 context.Context, arg1 *lights
 	return ret0, ret1
 }
 
-// GetDiskWithContext indicates an expected call of GetDiskWithContext
+// GetDiskWithContext indicates an expected call of GetDiskWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetDiskWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiskWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetDiskWithContext), varargs...)
 }
 
-// GetDisks mocks base method
+// GetDisks mocks base method.
 func (m *MockLightsailAPI) GetDisks(arg0 *lightsail.GetDisksInput) (*lightsail.GetDisksOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDisks", arg0)
@@ -3744,13 +3745,13 @@ func (m *MockLightsailAPI) GetDisks(arg0 *lightsail.GetDisksInput) (*lightsail.G
 	return ret0, ret1
 }
 
-// GetDisks indicates an expected call of GetDisks
+// GetDisks indicates an expected call of GetDisks.
 func (mr *MockLightsailAPIMockRecorder) GetDisks(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDisks", reflect.TypeOf((*MockLightsailAPI)(nil).GetDisks), arg0)
 }
 
-// GetDisksRequest mocks base method
+// GetDisksRequest mocks base method.
 func (m *MockLightsailAPI) GetDisksRequest(arg0 *lightsail.GetDisksInput) (*request.Request, *lightsail.GetDisksOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDisksRequest", arg0)
@@ -3759,13 +3760,13 @@ func (m *MockLightsailAPI) GetDisksRequest(arg0 *lightsail.GetDisksInput) (*requ
 	return ret0, ret1
 }
 
-// GetDisksRequest indicates an expected call of GetDisksRequest
+// GetDisksRequest indicates an expected call of GetDisksRequest.
 func (mr *MockLightsailAPIMockRecorder) GetDisksRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDisksRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetDisksRequest), arg0)
 }
 
-// GetDisksWithContext mocks base method
+// GetDisksWithContext mocks base method.
 func (m *MockLightsailAPI) GetDisksWithContext(arg0 context.Context, arg1 *lightsail.GetDisksInput, arg2 ...request.Option) (*lightsail.GetDisksOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3778,14 +3779,14 @@ func (m *MockLightsailAPI) GetDisksWithContext(arg0 context.Context, arg1 *light
 	return ret0, ret1
 }
 
-// GetDisksWithContext indicates an expected call of GetDisksWithContext
+// GetDisksWithContext indicates an expected call of GetDisksWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetDisksWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDisksWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetDisksWithContext), varargs...)
 }
 
-// GetDistributionBundles mocks base method
+// GetDistributionBundles mocks base method.
 func (m *MockLightsailAPI) GetDistributionBundles(arg0 *lightsail.GetDistributionBundlesInput) (*lightsail.GetDistributionBundlesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDistributionBundles", arg0)
@@ -3794,13 +3795,13 @@ func (m *MockLightsailAPI) GetDistributionBundles(arg0 *lightsail.GetDistributio
 	return ret0, ret1
 }
 
-// GetDistributionBundles indicates an expected call of GetDistributionBundles
+// GetDistributionBundles indicates an expected call of GetDistributionBundles.
 func (mr *MockLightsailAPIMockRecorder) GetDistributionBundles(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionBundles", reflect.TypeOf((*MockLightsailAPI)(nil).GetDistributionBundles), arg0)
 }
 
-// GetDistributionBundlesRequest mocks base method
+// GetDistributionBundlesRequest mocks base method.
 func (m *MockLightsailAPI) GetDistributionBundlesRequest(arg0 *lightsail.GetDistributionBundlesInput) (*request.Request, *lightsail.GetDistributionBundlesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDistributionBundlesRequest", arg0)
@@ -3809,13 +3810,13 @@ func (m *MockLightsailAPI) GetDistributionBundlesRequest(arg0 *lightsail.GetDist
 	return ret0, ret1
 }
 
-// GetDistributionBundlesRequest indicates an expected call of GetDistributionBundlesRequest
+// GetDistributionBundlesRequest indicates an expected call of GetDistributionBundlesRequest.
 func (mr *MockLightsailAPIMockRecorder) GetDistributionBundlesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionBundlesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetDistributionBundlesRequest), arg0)
 }
 
-// GetDistributionBundlesWithContext mocks base method
+// GetDistributionBundlesWithContext mocks base method.
 func (m *MockLightsailAPI) GetDistributionBundlesWithContext(arg0 context.Context, arg1 *lightsail.GetDistributionBundlesInput, arg2 ...request.Option) (*lightsail.GetDistributionBundlesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3828,14 +3829,14 @@ func (m *MockLightsailAPI) GetDistributionBundlesWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// GetDistributionBundlesWithContext indicates an expected call of GetDistributionBundlesWithContext
+// GetDistributionBundlesWithContext indicates an expected call of GetDistributionBundlesWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetDistributionBundlesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionBundlesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetDistributionBundlesWithContext), varargs...)
 }
 
-// GetDistributionLatestCacheReset mocks base method
+// GetDistributionLatestCacheReset mocks base method.
 func (m *MockLightsailAPI) GetDistributionLatestCacheReset(arg0 *lightsail.GetDistributionLatestCacheResetInput) (*lightsail.GetDistributionLatestCacheResetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDistributionLatestCacheReset", arg0)
@@ -3844,13 +3845,13 @@ func (m *MockLightsailAPI) GetDistributionLatestCacheReset(arg0 *lightsail.GetDi
 	return ret0, ret1
 }
 
-// GetDistributionLatestCacheReset indicates an expected call of GetDistributionLatestCacheReset
+// GetDistributionLatestCacheReset indicates an expected call of GetDistributionLatestCacheReset.
 func (mr *MockLightsailAPIMockRecorder) GetDistributionLatestCacheReset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionLatestCacheReset", reflect.TypeOf((*MockLightsailAPI)(nil).GetDistributionLatestCacheReset), arg0)
 }
 
-// GetDistributionLatestCacheResetRequest mocks base method
+// GetDistributionLatestCacheResetRequest mocks base method.
 func (m *MockLightsailAPI) GetDistributionLatestCacheResetRequest(arg0 *lightsail.GetDistributionLatestCacheResetInput) (*request.Request, *lightsail.GetDistributionLatestCacheResetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDistributionLatestCacheResetRequest", arg0)
@@ -3859,13 +3860,13 @@ func (m *MockLightsailAPI) GetDistributionLatestCacheResetRequest(arg0 *lightsai
 	return ret0, ret1
 }
 
-// GetDistributionLatestCacheResetRequest indicates an expected call of GetDistributionLatestCacheResetRequest
+// GetDistributionLatestCacheResetRequest indicates an expected call of GetDistributionLatestCacheResetRequest.
 func (mr *MockLightsailAPIMockRecorder) GetDistributionLatestCacheResetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionLatestCacheResetRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetDistributionLatestCacheResetRequest), arg0)
 }
 
-// GetDistributionLatestCacheResetWithContext mocks base method
+// GetDistributionLatestCacheResetWithContext mocks base method.
 func (m *MockLightsailAPI) GetDistributionLatestCacheResetWithContext(arg0 context.Context, arg1 *lightsail.GetDistributionLatestCacheResetInput, arg2 ...request.Option) (*lightsail.GetDistributionLatestCacheResetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3878,14 +3879,14 @@ func (m *MockLightsailAPI) GetDistributionLatestCacheResetWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// GetDistributionLatestCacheResetWithContext indicates an expected call of GetDistributionLatestCacheResetWithContext
+// GetDistributionLatestCacheResetWithContext indicates an expected call of GetDistributionLatestCacheResetWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetDistributionLatestCacheResetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionLatestCacheResetWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetDistributionLatestCacheResetWithContext), varargs...)
 }
 
-// GetDistributionMetricData mocks base method
+// GetDistributionMetricData mocks base method.
 func (m *MockLightsailAPI) GetDistributionMetricData(arg0 *lightsail.GetDistributionMetricDataInput) (*lightsail.GetDistributionMetricDataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDistributionMetricData", arg0)
@@ -3894,13 +3895,13 @@ func (m *MockLightsailAPI) GetDistributionMetricData(arg0 *lightsail.GetDistribu
 	return ret0, ret1
 }
 
-// GetDistributionMetricData indicates an expected call of GetDistributionMetricData
+// GetDistributionMetricData indicates an expected call of GetDistributionMetricData.
 func (mr *MockLightsailAPIMockRecorder) GetDistributionMetricData(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionMetricData", reflect.TypeOf((*MockLightsailAPI)(nil).GetDistributionMetricData), arg0)
 }
 
-// GetDistributionMetricDataRequest mocks base method
+// GetDistributionMetricDataRequest mocks base method.
 func (m *MockLightsailAPI) GetDistributionMetricDataRequest(arg0 *lightsail.GetDistributionMetricDataInput) (*request.Request, *lightsail.GetDistributionMetricDataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDistributionMetricDataRequest", arg0)
@@ -3909,13 +3910,13 @@ func (m *MockLightsailAPI) GetDistributionMetricDataRequest(arg0 *lightsail.GetD
 	return ret0, ret1
 }
 
-// GetDistributionMetricDataRequest indicates an expected call of GetDistributionMetricDataRequest
+// GetDistributionMetricDataRequest indicates an expected call of GetDistributionMetricDataRequest.
 func (mr *MockLightsailAPIMockRecorder) GetDistributionMetricDataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionMetricDataRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetDistributionMetricDataRequest), arg0)
 }
 
-// GetDistributionMetricDataWithContext mocks base method
+// GetDistributionMetricDataWithContext mocks base method.
 func (m *MockLightsailAPI) GetDistributionMetricDataWithContext(arg0 context.Context, arg1 *lightsail.GetDistributionMetricDataInput, arg2 ...request.Option) (*lightsail.GetDistributionMetricDataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3928,14 +3929,14 @@ func (m *MockLightsailAPI) GetDistributionMetricDataWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// GetDistributionMetricDataWithContext indicates an expected call of GetDistributionMetricDataWithContext
+// GetDistributionMetricDataWithContext indicates an expected call of GetDistributionMetricDataWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetDistributionMetricDataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionMetricDataWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetDistributionMetricDataWithContext), varargs...)
 }
 
-// GetDistributions mocks base method
+// GetDistributions mocks base method.
 func (m *MockLightsailAPI) GetDistributions(arg0 *lightsail.GetDistributionsInput) (*lightsail.GetDistributionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDistributions", arg0)
@@ -3944,13 +3945,13 @@ func (m *MockLightsailAPI) GetDistributions(arg0 *lightsail.GetDistributionsInpu
 	return ret0, ret1
 }
 
-// GetDistributions indicates an expected call of GetDistributions
+// GetDistributions indicates an expected call of GetDistributions.
 func (mr *MockLightsailAPIMockRecorder) GetDistributions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributions", reflect.TypeOf((*MockLightsailAPI)(nil).GetDistributions), arg0)
 }
 
-// GetDistributionsRequest mocks base method
+// GetDistributionsRequest mocks base method.
 func (m *MockLightsailAPI) GetDistributionsRequest(arg0 *lightsail.GetDistributionsInput) (*request.Request, *lightsail.GetDistributionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDistributionsRequest", arg0)
@@ -3959,13 +3960,13 @@ func (m *MockLightsailAPI) GetDistributionsRequest(arg0 *lightsail.GetDistributi
 	return ret0, ret1
 }
 
-// GetDistributionsRequest indicates an expected call of GetDistributionsRequest
+// GetDistributionsRequest indicates an expected call of GetDistributionsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetDistributionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetDistributionsRequest), arg0)
 }
 
-// GetDistributionsWithContext mocks base method
+// GetDistributionsWithContext mocks base method.
 func (m *MockLightsailAPI) GetDistributionsWithContext(arg0 context.Context, arg1 *lightsail.GetDistributionsInput, arg2 ...request.Option) (*lightsail.GetDistributionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3978,14 +3979,14 @@ func (m *MockLightsailAPI) GetDistributionsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetDistributionsWithContext indicates an expected call of GetDistributionsWithContext
+// GetDistributionsWithContext indicates an expected call of GetDistributionsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetDistributionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDistributionsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetDistributionsWithContext), varargs...)
 }
 
-// GetDomain mocks base method
+// GetDomain mocks base method.
 func (m *MockLightsailAPI) GetDomain(arg0 *lightsail.GetDomainInput) (*lightsail.GetDomainOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomain", arg0)
@@ -3994,13 +3995,13 @@ func (m *MockLightsailAPI) GetDomain(arg0 *lightsail.GetDomainInput) (*lightsail
 	return ret0, ret1
 }
 
-// GetDomain indicates an expected call of GetDomain
+// GetDomain indicates an expected call of GetDomain.
 func (mr *MockLightsailAPIMockRecorder) GetDomain(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomain", reflect.TypeOf((*MockLightsailAPI)(nil).GetDomain), arg0)
 }
 
-// GetDomainRequest mocks base method
+// GetDomainRequest mocks base method.
 func (m *MockLightsailAPI) GetDomainRequest(arg0 *lightsail.GetDomainInput) (*request.Request, *lightsail.GetDomainOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomainRequest", arg0)
@@ -4009,13 +4010,13 @@ func (m *MockLightsailAPI) GetDomainRequest(arg0 *lightsail.GetDomainInput) (*re
 	return ret0, ret1
 }
 
-// GetDomainRequest indicates an expected call of GetDomainRequest
+// GetDomainRequest indicates an expected call of GetDomainRequest.
 func (mr *MockLightsailAPIMockRecorder) GetDomainRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetDomainRequest), arg0)
 }
 
-// GetDomainWithContext mocks base method
+// GetDomainWithContext mocks base method.
 func (m *MockLightsailAPI) GetDomainWithContext(arg0 context.Context, arg1 *lightsail.GetDomainInput, arg2 ...request.Option) (*lightsail.GetDomainOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4028,14 +4029,14 @@ func (m *MockLightsailAPI) GetDomainWithContext(arg0 context.Context, arg1 *ligh
 	return ret0, ret1
 }
 
-// GetDomainWithContext indicates an expected call of GetDomainWithContext
+// GetDomainWithContext indicates an expected call of GetDomainWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetDomainWithContext), varargs...)
 }
 
-// GetDomains mocks base method
+// GetDomains mocks base method.
 func (m *MockLightsailAPI) GetDomains(arg0 *lightsail.GetDomainsInput) (*lightsail.GetDomainsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomains", arg0)
@@ -4044,13 +4045,13 @@ func (m *MockLightsailAPI) GetDomains(arg0 *lightsail.GetDomainsInput) (*lightsa
 	return ret0, ret1
 }
 
-// GetDomains indicates an expected call of GetDomains
+// GetDomains indicates an expected call of GetDomains.
 func (mr *MockLightsailAPIMockRecorder) GetDomains(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomains", reflect.TypeOf((*MockLightsailAPI)(nil).GetDomains), arg0)
 }
 
-// GetDomainsRequest mocks base method
+// GetDomainsRequest mocks base method.
 func (m *MockLightsailAPI) GetDomainsRequest(arg0 *lightsail.GetDomainsInput) (*request.Request, *lightsail.GetDomainsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDomainsRequest", arg0)
@@ -4059,13 +4060,13 @@ func (m *MockLightsailAPI) GetDomainsRequest(arg0 *lightsail.GetDomainsInput) (*
 	return ret0, ret1
 }
 
-// GetDomainsRequest indicates an expected call of GetDomainsRequest
+// GetDomainsRequest indicates an expected call of GetDomainsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetDomainsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetDomainsRequest), arg0)
 }
 
-// GetDomainsWithContext mocks base method
+// GetDomainsWithContext mocks base method.
 func (m *MockLightsailAPI) GetDomainsWithContext(arg0 context.Context, arg1 *lightsail.GetDomainsInput, arg2 ...request.Option) (*lightsail.GetDomainsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4078,14 +4079,14 @@ func (m *MockLightsailAPI) GetDomainsWithContext(arg0 context.Context, arg1 *lig
 	return ret0, ret1
 }
 
-// GetDomainsWithContext indicates an expected call of GetDomainsWithContext
+// GetDomainsWithContext indicates an expected call of GetDomainsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetDomainsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetDomainsWithContext), varargs...)
 }
 
-// GetExportSnapshotRecords mocks base method
+// GetExportSnapshotRecords mocks base method.
 func (m *MockLightsailAPI) GetExportSnapshotRecords(arg0 *lightsail.GetExportSnapshotRecordsInput) (*lightsail.GetExportSnapshotRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetExportSnapshotRecords", arg0)
@@ -4094,13 +4095,13 @@ func (m *MockLightsailAPI) GetExportSnapshotRecords(arg0 *lightsail.GetExportSna
 	return ret0, ret1
 }
 
-// GetExportSnapshotRecords indicates an expected call of GetExportSnapshotRecords
+// GetExportSnapshotRecords indicates an expected call of GetExportSnapshotRecords.
 func (mr *MockLightsailAPIMockRecorder) GetExportSnapshotRecords(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetExportSnapshotRecords", reflect.TypeOf((*MockLightsailAPI)(nil).GetExportSnapshotRecords), arg0)
 }
 
-// GetExportSnapshotRecordsRequest mocks base method
+// GetExportSnapshotRecordsRequest mocks base method.
 func (m *MockLightsailAPI) GetExportSnapshotRecordsRequest(arg0 *lightsail.GetExportSnapshotRecordsInput) (*request.Request, *lightsail.GetExportSnapshotRecordsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetExportSnapshotRecordsRequest", arg0)
@@ -4109,13 +4110,13 @@ func (m *MockLightsailAPI) GetExportSnapshotRecordsRequest(arg0 *lightsail.GetEx
 	return ret0, ret1
 }
 
-// GetExportSnapshotRecordsRequest indicates an expected call of GetExportSnapshotRecordsRequest
+// GetExportSnapshotRecordsRequest indicates an expected call of GetExportSnapshotRecordsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetExportSnapshotRecordsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetExportSnapshotRecordsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetExportSnapshotRecordsRequest), arg0)
 }
 
-// GetExportSnapshotRecordsWithContext mocks base method
+// GetExportSnapshotRecordsWithContext mocks base method.
 func (m *MockLightsailAPI) GetExportSnapshotRecordsWithContext(arg0 context.Context, arg1 *lightsail.GetExportSnapshotRecordsInput, arg2 ...request.Option) (*lightsail.GetExportSnapshotRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4128,14 +4129,14 @@ func (m *MockLightsailAPI) GetExportSnapshotRecordsWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// GetExportSnapshotRecordsWithContext indicates an expected call of GetExportSnapshotRecordsWithContext
+// GetExportSnapshotRecordsWithContext indicates an expected call of GetExportSnapshotRecordsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetExportSnapshotRecordsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetExportSnapshotRecordsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetExportSnapshotRecordsWithContext), varargs...)
 }
 
-// GetInstance mocks base method
+// GetInstance mocks base method.
 func (m *MockLightsailAPI) GetInstance(arg0 *lightsail.GetInstanceInput) (*lightsail.GetInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstance", arg0)
@@ -4144,13 +4145,13 @@ func (m *MockLightsailAPI) GetInstance(arg0 *lightsail.GetInstanceInput) (*light
 	return ret0, ret1
 }
 
-// GetInstance indicates an expected call of GetInstance
+// GetInstance indicates an expected call of GetInstance.
 func (mr *MockLightsailAPIMockRecorder) GetInstance(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstance", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstance), arg0)
 }
 
-// GetInstanceAccessDetails mocks base method
+// GetInstanceAccessDetails mocks base method.
 func (m *MockLightsailAPI) GetInstanceAccessDetails(arg0 *lightsail.GetInstanceAccessDetailsInput) (*lightsail.GetInstanceAccessDetailsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstanceAccessDetails", arg0)
@@ -4159,13 +4160,13 @@ func (m *MockLightsailAPI) GetInstanceAccessDetails(arg0 *lightsail.GetInstanceA
 	return ret0, ret1
 }
 
-// GetInstanceAccessDetails indicates an expected call of GetInstanceAccessDetails
+// GetInstanceAccessDetails indicates an expected call of GetInstanceAccessDetails.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceAccessDetails(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceAccessDetails", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceAccessDetails), arg0)
 }
 
-// GetInstanceAccessDetailsRequest mocks base method
+// GetInstanceAccessDetailsRequest mocks base method.
 func (m *MockLightsailAPI) GetInstanceAccessDetailsRequest(arg0 *lightsail.GetInstanceAccessDetailsInput) (*request.Request, *lightsail.GetInstanceAccessDetailsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstanceAccessDetailsRequest", arg0)
@@ -4174,13 +4175,13 @@ func (m *MockLightsailAPI) GetInstanceAccessDetailsRequest(arg0 *lightsail.GetIn
 	return ret0, ret1
 }
 
-// GetInstanceAccessDetailsRequest indicates an expected call of GetInstanceAccessDetailsRequest
+// GetInstanceAccessDetailsRequest indicates an expected call of GetInstanceAccessDetailsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceAccessDetailsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceAccessDetailsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceAccessDetailsRequest), arg0)
 }
 
-// GetInstanceAccessDetailsWithContext mocks base method
+// GetInstanceAccessDetailsWithContext mocks base method.
 func (m *MockLightsailAPI) GetInstanceAccessDetailsWithContext(arg0 context.Context, arg1 *lightsail.GetInstanceAccessDetailsInput, arg2 ...request.Option) (*lightsail.GetInstanceAccessDetailsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4193,14 +4194,14 @@ func (m *MockLightsailAPI) GetInstanceAccessDetailsWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// GetInstanceAccessDetailsWithContext indicates an expected call of GetInstanceAccessDetailsWithContext
+// GetInstanceAccessDetailsWithContext indicates an expected call of GetInstanceAccessDetailsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceAccessDetailsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceAccessDetailsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceAccessDetailsWithContext), varargs...)
 }
 
-// GetInstanceMetricData mocks base method
+// GetInstanceMetricData mocks base method.
 func (m *MockLightsailAPI) GetInstanceMetricData(arg0 *lightsail.GetInstanceMetricDataInput) (*lightsail.GetInstanceMetricDataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstanceMetricData", arg0)
@@ -4209,13 +4210,13 @@ func (m *MockLightsailAPI) GetInstanceMetricData(arg0 *lightsail.GetInstanceMetr
 	return ret0, ret1
 }
 
-// GetInstanceMetricData indicates an expected call of GetInstanceMetricData
+// GetInstanceMetricData indicates an expected call of GetInstanceMetricData.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceMetricData(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceMetricData", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceMetricData), arg0)
 }
 
-// GetInstanceMetricDataRequest mocks base method
+// GetInstanceMetricDataRequest mocks base method.
 func (m *MockLightsailAPI) GetInstanceMetricDataRequest(arg0 *lightsail.GetInstanceMetricDataInput) (*request.Request, *lightsail.GetInstanceMetricDataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstanceMetricDataRequest", arg0)
@@ -4224,13 +4225,13 @@ func (m *MockLightsailAPI) GetInstanceMetricDataRequest(arg0 *lightsail.GetInsta
 	return ret0, ret1
 }
 
-// GetInstanceMetricDataRequest indicates an expected call of GetInstanceMetricDataRequest
+// GetInstanceMetricDataRequest indicates an expected call of GetInstanceMetricDataRequest.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceMetricDataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceMetricDataRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceMetricDataRequest), arg0)
 }
 
-// GetInstanceMetricDataWithContext mocks base method
+// GetInstanceMetricDataWithContext mocks base method.
 func (m *MockLightsailAPI) GetInstanceMetricDataWithContext(arg0 context.Context, arg1 *lightsail.GetInstanceMetricDataInput, arg2 ...request.Option) (*lightsail.GetInstanceMetricDataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4243,14 +4244,14 @@ func (m *MockLightsailAPI) GetInstanceMetricDataWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// GetInstanceMetricDataWithContext indicates an expected call of GetInstanceMetricDataWithContext
+// GetInstanceMetricDataWithContext indicates an expected call of GetInstanceMetricDataWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceMetricDataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceMetricDataWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceMetricDataWithContext), varargs...)
 }
 
-// GetInstancePortStates mocks base method
+// GetInstancePortStates mocks base method.
 func (m *MockLightsailAPI) GetInstancePortStates(arg0 *lightsail.GetInstancePortStatesInput) (*lightsail.GetInstancePortStatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstancePortStates", arg0)
@@ -4259,13 +4260,13 @@ func (m *MockLightsailAPI) GetInstancePortStates(arg0 *lightsail.GetInstancePort
 	return ret0, ret1
 }
 
-// GetInstancePortStates indicates an expected call of GetInstancePortStates
+// GetInstancePortStates indicates an expected call of GetInstancePortStates.
 func (mr *MockLightsailAPIMockRecorder) GetInstancePortStates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstancePortStates", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstancePortStates), arg0)
 }
 
-// GetInstancePortStatesRequest mocks base method
+// GetInstancePortStatesRequest mocks base method.
 func (m *MockLightsailAPI) GetInstancePortStatesRequest(arg0 *lightsail.GetInstancePortStatesInput) (*request.Request, *lightsail.GetInstancePortStatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstancePortStatesRequest", arg0)
@@ -4274,13 +4275,13 @@ func (m *MockLightsailAPI) GetInstancePortStatesRequest(arg0 *lightsail.GetInsta
 	return ret0, ret1
 }
 
-// GetInstancePortStatesRequest indicates an expected call of GetInstancePortStatesRequest
+// GetInstancePortStatesRequest indicates an expected call of GetInstancePortStatesRequest.
 func (mr *MockLightsailAPIMockRecorder) GetInstancePortStatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstancePortStatesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstancePortStatesRequest), arg0)
 }
 
-// GetInstancePortStatesWithContext mocks base method
+// GetInstancePortStatesWithContext mocks base method.
 func (m *MockLightsailAPI) GetInstancePortStatesWithContext(arg0 context.Context, arg1 *lightsail.GetInstancePortStatesInput, arg2 ...request.Option) (*lightsail.GetInstancePortStatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4293,14 +4294,14 @@ func (m *MockLightsailAPI) GetInstancePortStatesWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// GetInstancePortStatesWithContext indicates an expected call of GetInstancePortStatesWithContext
+// GetInstancePortStatesWithContext indicates an expected call of GetInstancePortStatesWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetInstancePortStatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstancePortStatesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstancePortStatesWithContext), varargs...)
 }
 
-// GetInstanceRequest mocks base method
+// GetInstanceRequest mocks base method.
 func (m *MockLightsailAPI) GetInstanceRequest(arg0 *lightsail.GetInstanceInput) (*request.Request, *lightsail.GetInstanceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstanceRequest", arg0)
@@ -4309,13 +4310,13 @@ func (m *MockLightsailAPI) GetInstanceRequest(arg0 *lightsail.GetInstanceInput) 
 	return ret0, ret1
 }
 
-// GetInstanceRequest indicates an expected call of GetInstanceRequest
+// GetInstanceRequest indicates an expected call of GetInstanceRequest.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceRequest), arg0)
 }
 
-// GetInstanceSnapshot mocks base method
+// GetInstanceSnapshot mocks base method.
 func (m *MockLightsailAPI) GetInstanceSnapshot(arg0 *lightsail.GetInstanceSnapshotInput) (*lightsail.GetInstanceSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstanceSnapshot", arg0)
@@ -4324,13 +4325,13 @@ func (m *MockLightsailAPI) GetInstanceSnapshot(arg0 *lightsail.GetInstanceSnapsh
 	return ret0, ret1
 }
 
-// GetInstanceSnapshot indicates an expected call of GetInstanceSnapshot
+// GetInstanceSnapshot indicates an expected call of GetInstanceSnapshot.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceSnapshot), arg0)
 }
 
-// GetInstanceSnapshotRequest mocks base method
+// GetInstanceSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) GetInstanceSnapshotRequest(arg0 *lightsail.GetInstanceSnapshotInput) (*request.Request, *lightsail.GetInstanceSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstanceSnapshotRequest", arg0)
@@ -4339,13 +4340,13 @@ func (m *MockLightsailAPI) GetInstanceSnapshotRequest(arg0 *lightsail.GetInstanc
 	return ret0, ret1
 }
 
-// GetInstanceSnapshotRequest indicates an expected call of GetInstanceSnapshotRequest
+// GetInstanceSnapshotRequest indicates an expected call of GetInstanceSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceSnapshotRequest), arg0)
 }
 
-// GetInstanceSnapshotWithContext mocks base method
+// GetInstanceSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) GetInstanceSnapshotWithContext(arg0 context.Context, arg1 *lightsail.GetInstanceSnapshotInput, arg2 ...request.Option) (*lightsail.GetInstanceSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4358,14 +4359,14 @@ func (m *MockLightsailAPI) GetInstanceSnapshotWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// GetInstanceSnapshotWithContext indicates an expected call of GetInstanceSnapshotWithContext
+// GetInstanceSnapshotWithContext indicates an expected call of GetInstanceSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceSnapshotWithContext), varargs...)
 }
 
-// GetInstanceSnapshots mocks base method
+// GetInstanceSnapshots mocks base method.
 func (m *MockLightsailAPI) GetInstanceSnapshots(arg0 *lightsail.GetInstanceSnapshotsInput) (*lightsail.GetInstanceSnapshotsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstanceSnapshots", arg0)
@@ -4374,13 +4375,13 @@ func (m *MockLightsailAPI) GetInstanceSnapshots(arg0 *lightsail.GetInstanceSnaps
 	return ret0, ret1
 }
 
-// GetInstanceSnapshots indicates an expected call of GetInstanceSnapshots
+// GetInstanceSnapshots indicates an expected call of GetInstanceSnapshots.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceSnapshots(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceSnapshots", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceSnapshots), arg0)
 }
 
-// GetInstanceSnapshotsRequest mocks base method
+// GetInstanceSnapshotsRequest mocks base method.
 func (m *MockLightsailAPI) GetInstanceSnapshotsRequest(arg0 *lightsail.GetInstanceSnapshotsInput) (*request.Request, *lightsail.GetInstanceSnapshotsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstanceSnapshotsRequest", arg0)
@@ -4389,13 +4390,13 @@ func (m *MockLightsailAPI) GetInstanceSnapshotsRequest(arg0 *lightsail.GetInstan
 	return ret0, ret1
 }
 
-// GetInstanceSnapshotsRequest indicates an expected call of GetInstanceSnapshotsRequest
+// GetInstanceSnapshotsRequest indicates an expected call of GetInstanceSnapshotsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceSnapshotsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceSnapshotsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceSnapshotsRequest), arg0)
 }
 
-// GetInstanceSnapshotsWithContext mocks base method
+// GetInstanceSnapshotsWithContext mocks base method.
 func (m *MockLightsailAPI) GetInstanceSnapshotsWithContext(arg0 context.Context, arg1 *lightsail.GetInstanceSnapshotsInput, arg2 ...request.Option) (*lightsail.GetInstanceSnapshotsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4408,14 +4409,14 @@ func (m *MockLightsailAPI) GetInstanceSnapshotsWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// GetInstanceSnapshotsWithContext indicates an expected call of GetInstanceSnapshotsWithContext
+// GetInstanceSnapshotsWithContext indicates an expected call of GetInstanceSnapshotsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceSnapshotsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceSnapshotsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceSnapshotsWithContext), varargs...)
 }
 
-// GetInstanceState mocks base method
+// GetInstanceState mocks base method.
 func (m *MockLightsailAPI) GetInstanceState(arg0 *lightsail.GetInstanceStateInput) (*lightsail.GetInstanceStateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstanceState", arg0)
@@ -4424,13 +4425,13 @@ func (m *MockLightsailAPI) GetInstanceState(arg0 *lightsail.GetInstanceStateInpu
 	return ret0, ret1
 }
 
-// GetInstanceState indicates an expected call of GetInstanceState
+// GetInstanceState indicates an expected call of GetInstanceState.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceState(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceState", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceState), arg0)
 }
 
-// GetInstanceStateRequest mocks base method
+// GetInstanceStateRequest mocks base method.
 func (m *MockLightsailAPI) GetInstanceStateRequest(arg0 *lightsail.GetInstanceStateInput) (*request.Request, *lightsail.GetInstanceStateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstanceStateRequest", arg0)
@@ -4439,13 +4440,13 @@ func (m *MockLightsailAPI) GetInstanceStateRequest(arg0 *lightsail.GetInstanceSt
 	return ret0, ret1
 }
 
-// GetInstanceStateRequest indicates an expected call of GetInstanceStateRequest
+// GetInstanceStateRequest indicates an expected call of GetInstanceStateRequest.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceStateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceStateRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceStateRequest), arg0)
 }
 
-// GetInstanceStateWithContext mocks base method
+// GetInstanceStateWithContext mocks base method.
 func (m *MockLightsailAPI) GetInstanceStateWithContext(arg0 context.Context, arg1 *lightsail.GetInstanceStateInput, arg2 ...request.Option) (*lightsail.GetInstanceStateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4458,14 +4459,14 @@ func (m *MockLightsailAPI) GetInstanceStateWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetInstanceStateWithContext indicates an expected call of GetInstanceStateWithContext
+// GetInstanceStateWithContext indicates an expected call of GetInstanceStateWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceStateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceStateWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceStateWithContext), varargs...)
 }
 
-// GetInstanceWithContext mocks base method
+// GetInstanceWithContext mocks base method.
 func (m *MockLightsailAPI) GetInstanceWithContext(arg0 context.Context, arg1 *lightsail.GetInstanceInput, arg2 ...request.Option) (*lightsail.GetInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4478,14 +4479,14 @@ func (m *MockLightsailAPI) GetInstanceWithContext(arg0 context.Context, arg1 *li
 	return ret0, ret1
 }
 
-// GetInstanceWithContext indicates an expected call of GetInstanceWithContext
+// GetInstanceWithContext indicates an expected call of GetInstanceWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetInstanceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstanceWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstanceWithContext), varargs...)
 }
 
-// GetInstances mocks base method
+// GetInstances mocks base method.
 func (m *MockLightsailAPI) GetInstances(arg0 *lightsail.GetInstancesInput) (*lightsail.GetInstancesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstances", arg0)
@@ -4494,13 +4495,13 @@ func (m *MockLightsailAPI) GetInstances(arg0 *lightsail.GetInstancesInput) (*lig
 	return ret0, ret1
 }
 
-// GetInstances indicates an expected call of GetInstances
+// GetInstances indicates an expected call of GetInstances.
 func (mr *MockLightsailAPIMockRecorder) GetInstances(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstances", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstances), arg0)
 }
 
-// GetInstancesRequest mocks base method
+// GetInstancesRequest mocks base method.
 func (m *MockLightsailAPI) GetInstancesRequest(arg0 *lightsail.GetInstancesInput) (*request.Request, *lightsail.GetInstancesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInstancesRequest", arg0)
@@ -4509,13 +4510,13 @@ func (m *MockLightsailAPI) GetInstancesRequest(arg0 *lightsail.GetInstancesInput
 	return ret0, ret1
 }
 
-// GetInstancesRequest indicates an expected call of GetInstancesRequest
+// GetInstancesRequest indicates an expected call of GetInstancesRequest.
 func (mr *MockLightsailAPIMockRecorder) GetInstancesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstancesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstancesRequest), arg0)
 }
 
-// GetInstancesWithContext mocks base method
+// GetInstancesWithContext mocks base method.
 func (m *MockLightsailAPI) GetInstancesWithContext(arg0 context.Context, arg1 *lightsail.GetInstancesInput, arg2 ...request.Option) (*lightsail.GetInstancesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4528,14 +4529,14 @@ func (m *MockLightsailAPI) GetInstancesWithContext(arg0 context.Context, arg1 *l
 	return ret0, ret1
 }
 
-// GetInstancesWithContext indicates an expected call of GetInstancesWithContext
+// GetInstancesWithContext indicates an expected call of GetInstancesWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetInstancesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInstancesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetInstancesWithContext), varargs...)
 }
 
-// GetKeyPair mocks base method
+// GetKeyPair mocks base method.
 func (m *MockLightsailAPI) GetKeyPair(arg0 *lightsail.GetKeyPairInput) (*lightsail.GetKeyPairOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetKeyPair", arg0)
@@ -4544,13 +4545,13 @@ func (m *MockLightsailAPI) GetKeyPair(arg0 *lightsail.GetKeyPairInput) (*lightsa
 	return ret0, ret1
 }
 
-// GetKeyPair indicates an expected call of GetKeyPair
+// GetKeyPair indicates an expected call of GetKeyPair.
 func (mr *MockLightsailAPIMockRecorder) GetKeyPair(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetKeyPair", reflect.TypeOf((*MockLightsailAPI)(nil).GetKeyPair), arg0)
 }
 
-// GetKeyPairRequest mocks base method
+// GetKeyPairRequest mocks base method.
 func (m *MockLightsailAPI) GetKeyPairRequest(arg0 *lightsail.GetKeyPairInput) (*request.Request, *lightsail.GetKeyPairOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetKeyPairRequest", arg0)
@@ -4559,13 +4560,13 @@ func (m *MockLightsailAPI) GetKeyPairRequest(arg0 *lightsail.GetKeyPairInput) (*
 	return ret0, ret1
 }
 
-// GetKeyPairRequest indicates an expected call of GetKeyPairRequest
+// GetKeyPairRequest indicates an expected call of GetKeyPairRequest.
 func (mr *MockLightsailAPIMockRecorder) GetKeyPairRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetKeyPairRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetKeyPairRequest), arg0)
 }
 
-// GetKeyPairWithContext mocks base method
+// GetKeyPairWithContext mocks base method.
 func (m *MockLightsailAPI) GetKeyPairWithContext(arg0 context.Context, arg1 *lightsail.GetKeyPairInput, arg2 ...request.Option) (*lightsail.GetKeyPairOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4578,14 +4579,14 @@ func (m *MockLightsailAPI) GetKeyPairWithContext(arg0 context.Context, arg1 *lig
 	return ret0, ret1
 }
 
-// GetKeyPairWithContext indicates an expected call of GetKeyPairWithContext
+// GetKeyPairWithContext indicates an expected call of GetKeyPairWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetKeyPairWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetKeyPairWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetKeyPairWithContext), varargs...)
 }
 
-// GetKeyPairs mocks base method
+// GetKeyPairs mocks base method.
 func (m *MockLightsailAPI) GetKeyPairs(arg0 *lightsail.GetKeyPairsInput) (*lightsail.GetKeyPairsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetKeyPairs", arg0)
@@ -4594,13 +4595,13 @@ func (m *MockLightsailAPI) GetKeyPairs(arg0 *lightsail.GetKeyPairsInput) (*light
 	return ret0, ret1
 }
 
-// GetKeyPairs indicates an expected call of GetKeyPairs
+// GetKeyPairs indicates an expected call of GetKeyPairs.
 func (mr *MockLightsailAPIMockRecorder) GetKeyPairs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetKeyPairs", reflect.TypeOf((*MockLightsailAPI)(nil).GetKeyPairs), arg0)
 }
 
-// GetKeyPairsRequest mocks base method
+// GetKeyPairsRequest mocks base method.
 func (m *MockLightsailAPI) GetKeyPairsRequest(arg0 *lightsail.GetKeyPairsInput) (*request.Request, *lightsail.GetKeyPairsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetKeyPairsRequest", arg0)
@@ -4609,13 +4610,13 @@ func (m *MockLightsailAPI) GetKeyPairsRequest(arg0 *lightsail.GetKeyPairsInput) 
 	return ret0, ret1
 }
 
-// GetKeyPairsRequest indicates an expected call of GetKeyPairsRequest
+// GetKeyPairsRequest indicates an expected call of GetKeyPairsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetKeyPairsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetKeyPairsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetKeyPairsRequest), arg0)
 }
 
-// GetKeyPairsWithContext mocks base method
+// GetKeyPairsWithContext mocks base method.
 func (m *MockLightsailAPI) GetKeyPairsWithContext(arg0 context.Context, arg1 *lightsail.GetKeyPairsInput, arg2 ...request.Option) (*lightsail.GetKeyPairsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4628,14 +4629,14 @@ func (m *MockLightsailAPI) GetKeyPairsWithContext(arg0 context.Context, arg1 *li
 	return ret0, ret1
 }
 
-// GetKeyPairsWithContext indicates an expected call of GetKeyPairsWithContext
+// GetKeyPairsWithContext indicates an expected call of GetKeyPairsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetKeyPairsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetKeyPairsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetKeyPairsWithContext), varargs...)
 }
 
-// GetLoadBalancer mocks base method
+// GetLoadBalancer mocks base method.
 func (m *MockLightsailAPI) GetLoadBalancer(arg0 *lightsail.GetLoadBalancerInput) (*lightsail.GetLoadBalancerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLoadBalancer", arg0)
@@ -4644,13 +4645,13 @@ func (m *MockLightsailAPI) GetLoadBalancer(arg0 *lightsail.GetLoadBalancerInput)
 	return ret0, ret1
 }
 
-// GetLoadBalancer indicates an expected call of GetLoadBalancer
+// GetLoadBalancer indicates an expected call of GetLoadBalancer.
 func (mr *MockLightsailAPIMockRecorder) GetLoadBalancer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoadBalancer", reflect.TypeOf((*MockLightsailAPI)(nil).GetLoadBalancer), arg0)
 }
 
-// GetLoadBalancerMetricData mocks base method
+// GetLoadBalancerMetricData mocks base method.
 func (m *MockLightsailAPI) GetLoadBalancerMetricData(arg0 *lightsail.GetLoadBalancerMetricDataInput) (*lightsail.GetLoadBalancerMetricDataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLoadBalancerMetricData", arg0)
@@ -4659,13 +4660,13 @@ func (m *MockLightsailAPI) GetLoadBalancerMetricData(arg0 *lightsail.GetLoadBala
 	return ret0, ret1
 }
 
-// GetLoadBalancerMetricData indicates an expected call of GetLoadBalancerMetricData
+// GetLoadBalancerMetricData indicates an expected call of GetLoadBalancerMetricData.
 func (mr *MockLightsailAPIMockRecorder) GetLoadBalancerMetricData(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoadBalancerMetricData", reflect.TypeOf((*MockLightsailAPI)(nil).GetLoadBalancerMetricData), arg0)
 }
 
-// GetLoadBalancerMetricDataRequest mocks base method
+// GetLoadBalancerMetricDataRequest mocks base method.
 func (m *MockLightsailAPI) GetLoadBalancerMetricDataRequest(arg0 *lightsail.GetLoadBalancerMetricDataInput) (*request.Request, *lightsail.GetLoadBalancerMetricDataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLoadBalancerMetricDataRequest", arg0)
@@ -4674,13 +4675,13 @@ func (m *MockLightsailAPI) GetLoadBalancerMetricDataRequest(arg0 *lightsail.GetL
 	return ret0, ret1
 }
 
-// GetLoadBalancerMetricDataRequest indicates an expected call of GetLoadBalancerMetricDataRequest
+// GetLoadBalancerMetricDataRequest indicates an expected call of GetLoadBalancerMetricDataRequest.
 func (mr *MockLightsailAPIMockRecorder) GetLoadBalancerMetricDataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoadBalancerMetricDataRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetLoadBalancerMetricDataRequest), arg0)
 }
 
-// GetLoadBalancerMetricDataWithContext mocks base method
+// GetLoadBalancerMetricDataWithContext mocks base method.
 func (m *MockLightsailAPI) GetLoadBalancerMetricDataWithContext(arg0 context.Context, arg1 *lightsail.GetLoadBalancerMetricDataInput, arg2 ...request.Option) (*lightsail.GetLoadBalancerMetricDataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4693,14 +4694,14 @@ func (m *MockLightsailAPI) GetLoadBalancerMetricDataWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// GetLoadBalancerMetricDataWithContext indicates an expected call of GetLoadBalancerMetricDataWithContext
+// GetLoadBalancerMetricDataWithContext indicates an expected call of GetLoadBalancerMetricDataWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetLoadBalancerMetricDataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoadBalancerMetricDataWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetLoadBalancerMetricDataWithContext), varargs...)
 }
 
-// GetLoadBalancerRequest mocks base method
+// GetLoadBalancerRequest mocks base method.
 func (m *MockLightsailAPI) GetLoadBalancerRequest(arg0 *lightsail.GetLoadBalancerInput) (*request.Request, *lightsail.GetLoadBalancerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLoadBalancerRequest", arg0)
@@ -4709,13 +4710,13 @@ func (m *MockLightsailAPI) GetLoadBalancerRequest(arg0 *lightsail.GetLoadBalance
 	return ret0, ret1
 }
 
-// GetLoadBalancerRequest indicates an expected call of GetLoadBalancerRequest
+// GetLoadBalancerRequest indicates an expected call of GetLoadBalancerRequest.
 func (mr *MockLightsailAPIMockRecorder) GetLoadBalancerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoadBalancerRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetLoadBalancerRequest), arg0)
 }
 
-// GetLoadBalancerTlsCertificates mocks base method
+// GetLoadBalancerTlsCertificates mocks base method.
 func (m *MockLightsailAPI) GetLoadBalancerTlsCertificates(arg0 *lightsail.GetLoadBalancerTlsCertificatesInput) (*lightsail.GetLoadBalancerTlsCertificatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLoadBalancerTlsCertificates", arg0)
@@ -4724,13 +4725,13 @@ func (m *MockLightsailAPI) GetLoadBalancerTlsCertificates(arg0 *lightsail.GetLoa
 	return ret0, ret1
 }
 
-// GetLoadBalancerTlsCertificates indicates an expected call of GetLoadBalancerTlsCertificates
+// GetLoadBalancerTlsCertificates indicates an expected call of GetLoadBalancerTlsCertificates.
 func (mr *MockLightsailAPIMockRecorder) GetLoadBalancerTlsCertificates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoadBalancerTlsCertificates", reflect.TypeOf((*MockLightsailAPI)(nil).GetLoadBalancerTlsCertificates), arg0)
 }
 
-// GetLoadBalancerTlsCertificatesRequest mocks base method
+// GetLoadBalancerTlsCertificatesRequest mocks base method.
 func (m *MockLightsailAPI) GetLoadBalancerTlsCertificatesRequest(arg0 *lightsail.GetLoadBalancerTlsCertificatesInput) (*request.Request, *lightsail.GetLoadBalancerTlsCertificatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLoadBalancerTlsCertificatesRequest", arg0)
@@ -4739,13 +4740,13 @@ func (m *MockLightsailAPI) GetLoadBalancerTlsCertificatesRequest(arg0 *lightsail
 	return ret0, ret1
 }
 
-// GetLoadBalancerTlsCertificatesRequest indicates an expected call of GetLoadBalancerTlsCertificatesRequest
+// GetLoadBalancerTlsCertificatesRequest indicates an expected call of GetLoadBalancerTlsCertificatesRequest.
 func (mr *MockLightsailAPIMockRecorder) GetLoadBalancerTlsCertificatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoadBalancerTlsCertificatesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetLoadBalancerTlsCertificatesRequest), arg0)
 }
 
-// GetLoadBalancerTlsCertificatesWithContext mocks base method
+// GetLoadBalancerTlsCertificatesWithContext mocks base method.
 func (m *MockLightsailAPI) GetLoadBalancerTlsCertificatesWithContext(arg0 context.Context, arg1 *lightsail.GetLoadBalancerTlsCertificatesInput, arg2 ...request.Option) (*lightsail.GetLoadBalancerTlsCertificatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4758,14 +4759,14 @@ func (m *MockLightsailAPI) GetLoadBalancerTlsCertificatesWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// GetLoadBalancerTlsCertificatesWithContext indicates an expected call of GetLoadBalancerTlsCertificatesWithContext
+// GetLoadBalancerTlsCertificatesWithContext indicates an expected call of GetLoadBalancerTlsCertificatesWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetLoadBalancerTlsCertificatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoadBalancerTlsCertificatesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetLoadBalancerTlsCertificatesWithContext), varargs...)
 }
 
-// GetLoadBalancerWithContext mocks base method
+// GetLoadBalancerWithContext mocks base method.
 func (m *MockLightsailAPI) GetLoadBalancerWithContext(arg0 context.Context, arg1 *lightsail.GetLoadBalancerInput, arg2 ...request.Option) (*lightsail.GetLoadBalancerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4778,14 +4779,14 @@ func (m *MockLightsailAPI) GetLoadBalancerWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetLoadBalancerWithContext indicates an expected call of GetLoadBalancerWithContext
+// GetLoadBalancerWithContext indicates an expected call of GetLoadBalancerWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetLoadBalancerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoadBalancerWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetLoadBalancerWithContext), varargs...)
 }
 
-// GetLoadBalancers mocks base method
+// GetLoadBalancers mocks base method.
 func (m *MockLightsailAPI) GetLoadBalancers(arg0 *lightsail.GetLoadBalancersInput) (*lightsail.GetLoadBalancersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLoadBalancers", arg0)
@@ -4794,13 +4795,13 @@ func (m *MockLightsailAPI) GetLoadBalancers(arg0 *lightsail.GetLoadBalancersInpu
 	return ret0, ret1
 }
 
-// GetLoadBalancers indicates an expected call of GetLoadBalancers
+// GetLoadBalancers indicates an expected call of GetLoadBalancers.
 func (mr *MockLightsailAPIMockRecorder) GetLoadBalancers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoadBalancers", reflect.TypeOf((*MockLightsailAPI)(nil).GetLoadBalancers), arg0)
 }
 
-// GetLoadBalancersRequest mocks base method
+// GetLoadBalancersRequest mocks base method.
 func (m *MockLightsailAPI) GetLoadBalancersRequest(arg0 *lightsail.GetLoadBalancersInput) (*request.Request, *lightsail.GetLoadBalancersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLoadBalancersRequest", arg0)
@@ -4809,13 +4810,13 @@ func (m *MockLightsailAPI) GetLoadBalancersRequest(arg0 *lightsail.GetLoadBalanc
 	return ret0, ret1
 }
 
-// GetLoadBalancersRequest indicates an expected call of GetLoadBalancersRequest
+// GetLoadBalancersRequest indicates an expected call of GetLoadBalancersRequest.
 func (mr *MockLightsailAPIMockRecorder) GetLoadBalancersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoadBalancersRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetLoadBalancersRequest), arg0)
 }
 
-// GetLoadBalancersWithContext mocks base method
+// GetLoadBalancersWithContext mocks base method.
 func (m *MockLightsailAPI) GetLoadBalancersWithContext(arg0 context.Context, arg1 *lightsail.GetLoadBalancersInput, arg2 ...request.Option) (*lightsail.GetLoadBalancersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4828,14 +4829,14 @@ func (m *MockLightsailAPI) GetLoadBalancersWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetLoadBalancersWithContext indicates an expected call of GetLoadBalancersWithContext
+// GetLoadBalancersWithContext indicates an expected call of GetLoadBalancersWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetLoadBalancersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoadBalancersWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetLoadBalancersWithContext), varargs...)
 }
 
-// GetOperation mocks base method
+// GetOperation mocks base method.
 func (m *MockLightsailAPI) GetOperation(arg0 *lightsail.GetOperationInput) (*lightsail.GetOperationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetOperation", arg0)
@@ -4844,13 +4845,13 @@ func (m *MockLightsailAPI) GetOperation(arg0 *lightsail.GetOperationInput) (*lig
 	return ret0, ret1
 }
 
-// GetOperation indicates an expected call of GetOperation
+// GetOperation indicates an expected call of GetOperation.
 func (mr *MockLightsailAPIMockRecorder) GetOperation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOperation", reflect.TypeOf((*MockLightsailAPI)(nil).GetOperation), arg0)
 }
 
-// GetOperationRequest mocks base method
+// GetOperationRequest mocks base method.
 func (m *MockLightsailAPI) GetOperationRequest(arg0 *lightsail.GetOperationInput) (*request.Request, *lightsail.GetOperationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetOperationRequest", arg0)
@@ -4859,13 +4860,13 @@ func (m *MockLightsailAPI) GetOperationRequest(arg0 *lightsail.GetOperationInput
 	return ret0, ret1
 }
 
-// GetOperationRequest indicates an expected call of GetOperationRequest
+// GetOperationRequest indicates an expected call of GetOperationRequest.
 func (mr *MockLightsailAPIMockRecorder) GetOperationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOperationRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetOperationRequest), arg0)
 }
 
-// GetOperationWithContext mocks base method
+// GetOperationWithContext mocks base method.
 func (m *MockLightsailAPI) GetOperationWithContext(arg0 context.Context, arg1 *lightsail.GetOperationInput, arg2 ...request.Option) (*lightsail.GetOperationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4878,14 +4879,14 @@ func (m *MockLightsailAPI) GetOperationWithContext(arg0 context.Context, arg1 *l
 	return ret0, ret1
 }
 
-// GetOperationWithContext indicates an expected call of GetOperationWithContext
+// GetOperationWithContext indicates an expected call of GetOperationWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetOperationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOperationWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetOperationWithContext), varargs...)
 }
 
-// GetOperations mocks base method
+// GetOperations mocks base method.
 func (m *MockLightsailAPI) GetOperations(arg0 *lightsail.GetOperationsInput) (*lightsail.GetOperationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetOperations", arg0)
@@ -4894,13 +4895,13 @@ func (m *MockLightsailAPI) GetOperations(arg0 *lightsail.GetOperationsInput) (*l
 	return ret0, ret1
 }
 
-// GetOperations indicates an expected call of GetOperations
+// GetOperations indicates an expected call of GetOperations.
 func (mr *MockLightsailAPIMockRecorder) GetOperations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOperations", reflect.TypeOf((*MockLightsailAPI)(nil).GetOperations), arg0)
 }
 
-// GetOperationsForResource mocks base method
+// GetOperationsForResource mocks base method.
 func (m *MockLightsailAPI) GetOperationsForResource(arg0 *lightsail.GetOperationsForResourceInput) (*lightsail.GetOperationsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetOperationsForResource", arg0)
@@ -4909,13 +4910,13 @@ func (m *MockLightsailAPI) GetOperationsForResource(arg0 *lightsail.GetOperation
 	return ret0, ret1
 }
 
-// GetOperationsForResource indicates an expected call of GetOperationsForResource
+// GetOperationsForResource indicates an expected call of GetOperationsForResource.
 func (mr *MockLightsailAPIMockRecorder) GetOperationsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOperationsForResource", reflect.TypeOf((*MockLightsailAPI)(nil).GetOperationsForResource), arg0)
 }
 
-// GetOperationsForResourceRequest mocks base method
+// GetOperationsForResourceRequest mocks base method.
 func (m *MockLightsailAPI) GetOperationsForResourceRequest(arg0 *lightsail.GetOperationsForResourceInput) (*request.Request, *lightsail.GetOperationsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetOperationsForResourceRequest", arg0)
@@ -4924,13 +4925,13 @@ func (m *MockLightsailAPI) GetOperationsForResourceRequest(arg0 *lightsail.GetOp
 	return ret0, ret1
 }
 
-// GetOperationsForResourceRequest indicates an expected call of GetOperationsForResourceRequest
+// GetOperationsForResourceRequest indicates an expected call of GetOperationsForResourceRequest.
 func (mr *MockLightsailAPIMockRecorder) GetOperationsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOperationsForResourceRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetOperationsForResourceRequest), arg0)
 }
 
-// GetOperationsForResourceWithContext mocks base method
+// GetOperationsForResourceWithContext mocks base method.
 func (m *MockLightsailAPI) GetOperationsForResourceWithContext(arg0 context.Context, arg1 *lightsail.GetOperationsForResourceInput, arg2 ...request.Option) (*lightsail.GetOperationsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4943,14 +4944,14 @@ func (m *MockLightsailAPI) GetOperationsForResourceWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// GetOperationsForResourceWithContext indicates an expected call of GetOperationsForResourceWithContext
+// GetOperationsForResourceWithContext indicates an expected call of GetOperationsForResourceWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetOperationsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOperationsForResourceWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetOperationsForResourceWithContext), varargs...)
 }
 
-// GetOperationsRequest mocks base method
+// GetOperationsRequest mocks base method.
 func (m *MockLightsailAPI) GetOperationsRequest(arg0 *lightsail.GetOperationsInput) (*request.Request, *lightsail.GetOperationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetOperationsRequest", arg0)
@@ -4959,13 +4960,13 @@ func (m *MockLightsailAPI) GetOperationsRequest(arg0 *lightsail.GetOperationsInp
 	return ret0, ret1
 }
 
-// GetOperationsRequest indicates an expected call of GetOperationsRequest
+// GetOperationsRequest indicates an expected call of GetOperationsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetOperationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOperationsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetOperationsRequest), arg0)
 }
 
-// GetOperationsWithContext mocks base method
+// GetOperationsWithContext mocks base method.
 func (m *MockLightsailAPI) GetOperationsWithContext(arg0 context.Context, arg1 *lightsail.GetOperationsInput, arg2 ...request.Option) (*lightsail.GetOperationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -4978,14 +4979,14 @@ func (m *MockLightsailAPI) GetOperationsWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// GetOperationsWithContext indicates an expected call of GetOperationsWithContext
+// GetOperationsWithContext indicates an expected call of GetOperationsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetOperationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOperationsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetOperationsWithContext), varargs...)
 }
 
-// GetRegions mocks base method
+// GetRegions mocks base method.
 func (m *MockLightsailAPI) GetRegions(arg0 *lightsail.GetRegionsInput) (*lightsail.GetRegionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRegions", arg0)
@@ -4994,13 +4995,13 @@ func (m *MockLightsailAPI) GetRegions(arg0 *lightsail.GetRegionsInput) (*lightsa
 	return ret0, ret1
 }
 
-// GetRegions indicates an expected call of GetRegions
+// GetRegions indicates an expected call of GetRegions.
 func (mr *MockLightsailAPIMockRecorder) GetRegions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRegions", reflect.TypeOf((*MockLightsailAPI)(nil).GetRegions), arg0)
 }
 
-// GetRegionsRequest mocks base method
+// GetRegionsRequest mocks base method.
 func (m *MockLightsailAPI) GetRegionsRequest(arg0 *lightsail.GetRegionsInput) (*request.Request, *lightsail.GetRegionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRegionsRequest", arg0)
@@ -5009,13 +5010,13 @@ func (m *MockLightsailAPI) GetRegionsRequest(arg0 *lightsail.GetRegionsInput) (*
 	return ret0, ret1
 }
 
-// GetRegionsRequest indicates an expected call of GetRegionsRequest
+// GetRegionsRequest indicates an expected call of GetRegionsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRegionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRegionsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRegionsRequest), arg0)
 }
 
-// GetRegionsWithContext mocks base method
+// GetRegionsWithContext mocks base method.
 func (m *MockLightsailAPI) GetRegionsWithContext(arg0 context.Context, arg1 *lightsail.GetRegionsInput, arg2 ...request.Option) (*lightsail.GetRegionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5028,14 +5029,14 @@ func (m *MockLightsailAPI) GetRegionsWithContext(arg0 context.Context, arg1 *lig
 	return ret0, ret1
 }
 
-// GetRegionsWithContext indicates an expected call of GetRegionsWithContext
+// GetRegionsWithContext indicates an expected call of GetRegionsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRegionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRegionsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRegionsWithContext), varargs...)
 }
 
-// GetRelationalDatabase mocks base method
+// GetRelationalDatabase mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabase(arg0 *lightsail.GetRelationalDatabaseInput) (*lightsail.GetRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabase", arg0)
@@ -5044,13 +5045,13 @@ func (m *MockLightsailAPI) GetRelationalDatabase(arg0 *lightsail.GetRelationalDa
 	return ret0, ret1
 }
 
-// GetRelationalDatabase indicates an expected call of GetRelationalDatabase
+// GetRelationalDatabase indicates an expected call of GetRelationalDatabase.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabase(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabase", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabase), arg0)
 }
 
-// GetRelationalDatabaseBlueprints mocks base method
+// GetRelationalDatabaseBlueprints mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseBlueprints(arg0 *lightsail.GetRelationalDatabaseBlueprintsInput) (*lightsail.GetRelationalDatabaseBlueprintsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseBlueprints", arg0)
@@ -5059,13 +5060,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseBlueprints(arg0 *lightsail.GetRe
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseBlueprints indicates an expected call of GetRelationalDatabaseBlueprints
+// GetRelationalDatabaseBlueprints indicates an expected call of GetRelationalDatabaseBlueprints.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseBlueprints(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseBlueprints", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseBlueprints), arg0)
 }
 
-// GetRelationalDatabaseBlueprintsRequest mocks base method
+// GetRelationalDatabaseBlueprintsRequest mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseBlueprintsRequest(arg0 *lightsail.GetRelationalDatabaseBlueprintsInput) (*request.Request, *lightsail.GetRelationalDatabaseBlueprintsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseBlueprintsRequest", arg0)
@@ -5074,13 +5075,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseBlueprintsRequest(arg0 *lightsai
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseBlueprintsRequest indicates an expected call of GetRelationalDatabaseBlueprintsRequest
+// GetRelationalDatabaseBlueprintsRequest indicates an expected call of GetRelationalDatabaseBlueprintsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseBlueprintsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseBlueprintsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseBlueprintsRequest), arg0)
 }
 
-// GetRelationalDatabaseBlueprintsWithContext mocks base method
+// GetRelationalDatabaseBlueprintsWithContext mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseBlueprintsWithContext(arg0 context.Context, arg1 *lightsail.GetRelationalDatabaseBlueprintsInput, arg2 ...request.Option) (*lightsail.GetRelationalDatabaseBlueprintsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5093,14 +5094,14 @@ func (m *MockLightsailAPI) GetRelationalDatabaseBlueprintsWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseBlueprintsWithContext indicates an expected call of GetRelationalDatabaseBlueprintsWithContext
+// GetRelationalDatabaseBlueprintsWithContext indicates an expected call of GetRelationalDatabaseBlueprintsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseBlueprintsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseBlueprintsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseBlueprintsWithContext), varargs...)
 }
 
-// GetRelationalDatabaseBundles mocks base method
+// GetRelationalDatabaseBundles mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseBundles(arg0 *lightsail.GetRelationalDatabaseBundlesInput) (*lightsail.GetRelationalDatabaseBundlesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseBundles", arg0)
@@ -5109,13 +5110,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseBundles(arg0 *lightsail.GetRelat
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseBundles indicates an expected call of GetRelationalDatabaseBundles
+// GetRelationalDatabaseBundles indicates an expected call of GetRelationalDatabaseBundles.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseBundles(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseBundles", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseBundles), arg0)
 }
 
-// GetRelationalDatabaseBundlesRequest mocks base method
+// GetRelationalDatabaseBundlesRequest mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseBundlesRequest(arg0 *lightsail.GetRelationalDatabaseBundlesInput) (*request.Request, *lightsail.GetRelationalDatabaseBundlesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseBundlesRequest", arg0)
@@ -5124,13 +5125,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseBundlesRequest(arg0 *lightsail.G
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseBundlesRequest indicates an expected call of GetRelationalDatabaseBundlesRequest
+// GetRelationalDatabaseBundlesRequest indicates an expected call of GetRelationalDatabaseBundlesRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseBundlesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseBundlesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseBundlesRequest), arg0)
 }
 
-// GetRelationalDatabaseBundlesWithContext mocks base method
+// GetRelationalDatabaseBundlesWithContext mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseBundlesWithContext(arg0 context.Context, arg1 *lightsail.GetRelationalDatabaseBundlesInput, arg2 ...request.Option) (*lightsail.GetRelationalDatabaseBundlesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5143,14 +5144,14 @@ func (m *MockLightsailAPI) GetRelationalDatabaseBundlesWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseBundlesWithContext indicates an expected call of GetRelationalDatabaseBundlesWithContext
+// GetRelationalDatabaseBundlesWithContext indicates an expected call of GetRelationalDatabaseBundlesWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseBundlesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseBundlesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseBundlesWithContext), varargs...)
 }
 
-// GetRelationalDatabaseEvents mocks base method
+// GetRelationalDatabaseEvents mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseEvents(arg0 *lightsail.GetRelationalDatabaseEventsInput) (*lightsail.GetRelationalDatabaseEventsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseEvents", arg0)
@@ -5159,13 +5160,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseEvents(arg0 *lightsail.GetRelati
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseEvents indicates an expected call of GetRelationalDatabaseEvents
+// GetRelationalDatabaseEvents indicates an expected call of GetRelationalDatabaseEvents.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseEvents(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseEvents", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseEvents), arg0)
 }
 
-// GetRelationalDatabaseEventsRequest mocks base method
+// GetRelationalDatabaseEventsRequest mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseEventsRequest(arg0 *lightsail.GetRelationalDatabaseEventsInput) (*request.Request, *lightsail.GetRelationalDatabaseEventsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseEventsRequest", arg0)
@@ -5174,13 +5175,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseEventsRequest(arg0 *lightsail.Ge
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseEventsRequest indicates an expected call of GetRelationalDatabaseEventsRequest
+// GetRelationalDatabaseEventsRequest indicates an expected call of GetRelationalDatabaseEventsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseEventsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseEventsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseEventsRequest), arg0)
 }
 
-// GetRelationalDatabaseEventsWithContext mocks base method
+// GetRelationalDatabaseEventsWithContext mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseEventsWithContext(arg0 context.Context, arg1 *lightsail.GetRelationalDatabaseEventsInput, arg2 ...request.Option) (*lightsail.GetRelationalDatabaseEventsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5193,14 +5194,14 @@ func (m *MockLightsailAPI) GetRelationalDatabaseEventsWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseEventsWithContext indicates an expected call of GetRelationalDatabaseEventsWithContext
+// GetRelationalDatabaseEventsWithContext indicates an expected call of GetRelationalDatabaseEventsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseEventsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseEventsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseEventsWithContext), varargs...)
 }
 
-// GetRelationalDatabaseLogEvents mocks base method
+// GetRelationalDatabaseLogEvents mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseLogEvents(arg0 *lightsail.GetRelationalDatabaseLogEventsInput) (*lightsail.GetRelationalDatabaseLogEventsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseLogEvents", arg0)
@@ -5209,13 +5210,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseLogEvents(arg0 *lightsail.GetRel
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseLogEvents indicates an expected call of GetRelationalDatabaseLogEvents
+// GetRelationalDatabaseLogEvents indicates an expected call of GetRelationalDatabaseLogEvents.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseLogEvents(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseLogEvents", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseLogEvents), arg0)
 }
 
-// GetRelationalDatabaseLogEventsRequest mocks base method
+// GetRelationalDatabaseLogEventsRequest mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseLogEventsRequest(arg0 *lightsail.GetRelationalDatabaseLogEventsInput) (*request.Request, *lightsail.GetRelationalDatabaseLogEventsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseLogEventsRequest", arg0)
@@ -5224,13 +5225,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseLogEventsRequest(arg0 *lightsail
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseLogEventsRequest indicates an expected call of GetRelationalDatabaseLogEventsRequest
+// GetRelationalDatabaseLogEventsRequest indicates an expected call of GetRelationalDatabaseLogEventsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseLogEventsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseLogEventsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseLogEventsRequest), arg0)
 }
 
-// GetRelationalDatabaseLogEventsWithContext mocks base method
+// GetRelationalDatabaseLogEventsWithContext mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseLogEventsWithContext(arg0 context.Context, arg1 *lightsail.GetRelationalDatabaseLogEventsInput, arg2 ...request.Option) (*lightsail.GetRelationalDatabaseLogEventsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5243,14 +5244,14 @@ func (m *MockLightsailAPI) GetRelationalDatabaseLogEventsWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseLogEventsWithContext indicates an expected call of GetRelationalDatabaseLogEventsWithContext
+// GetRelationalDatabaseLogEventsWithContext indicates an expected call of GetRelationalDatabaseLogEventsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseLogEventsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseLogEventsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseLogEventsWithContext), varargs...)
 }
 
-// GetRelationalDatabaseLogStreams mocks base method
+// GetRelationalDatabaseLogStreams mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseLogStreams(arg0 *lightsail.GetRelationalDatabaseLogStreamsInput) (*lightsail.GetRelationalDatabaseLogStreamsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseLogStreams", arg0)
@@ -5259,13 +5260,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseLogStreams(arg0 *lightsail.GetRe
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseLogStreams indicates an expected call of GetRelationalDatabaseLogStreams
+// GetRelationalDatabaseLogStreams indicates an expected call of GetRelationalDatabaseLogStreams.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseLogStreams(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseLogStreams", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseLogStreams), arg0)
 }
 
-// GetRelationalDatabaseLogStreamsRequest mocks base method
+// GetRelationalDatabaseLogStreamsRequest mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseLogStreamsRequest(arg0 *lightsail.GetRelationalDatabaseLogStreamsInput) (*request.Request, *lightsail.GetRelationalDatabaseLogStreamsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseLogStreamsRequest", arg0)
@@ -5274,13 +5275,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseLogStreamsRequest(arg0 *lightsai
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseLogStreamsRequest indicates an expected call of GetRelationalDatabaseLogStreamsRequest
+// GetRelationalDatabaseLogStreamsRequest indicates an expected call of GetRelationalDatabaseLogStreamsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseLogStreamsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseLogStreamsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseLogStreamsRequest), arg0)
 }
 
-// GetRelationalDatabaseLogStreamsWithContext mocks base method
+// GetRelationalDatabaseLogStreamsWithContext mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseLogStreamsWithContext(arg0 context.Context, arg1 *lightsail.GetRelationalDatabaseLogStreamsInput, arg2 ...request.Option) (*lightsail.GetRelationalDatabaseLogStreamsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5293,14 +5294,14 @@ func (m *MockLightsailAPI) GetRelationalDatabaseLogStreamsWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseLogStreamsWithContext indicates an expected call of GetRelationalDatabaseLogStreamsWithContext
+// GetRelationalDatabaseLogStreamsWithContext indicates an expected call of GetRelationalDatabaseLogStreamsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseLogStreamsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseLogStreamsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseLogStreamsWithContext), varargs...)
 }
 
-// GetRelationalDatabaseMasterUserPassword mocks base method
+// GetRelationalDatabaseMasterUserPassword mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseMasterUserPassword(arg0 *lightsail.GetRelationalDatabaseMasterUserPasswordInput) (*lightsail.GetRelationalDatabaseMasterUserPasswordOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseMasterUserPassword", arg0)
@@ -5309,13 +5310,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseMasterUserPassword(arg0 *lightsa
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseMasterUserPassword indicates an expected call of GetRelationalDatabaseMasterUserPassword
+// GetRelationalDatabaseMasterUserPassword indicates an expected call of GetRelationalDatabaseMasterUserPassword.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseMasterUserPassword(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseMasterUserPassword", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseMasterUserPassword), arg0)
 }
 
-// GetRelationalDatabaseMasterUserPasswordRequest mocks base method
+// GetRelationalDatabaseMasterUserPasswordRequest mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseMasterUserPasswordRequest(arg0 *lightsail.GetRelationalDatabaseMasterUserPasswordInput) (*request.Request, *lightsail.GetRelationalDatabaseMasterUserPasswordOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseMasterUserPasswordRequest", arg0)
@@ -5324,13 +5325,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseMasterUserPasswordRequest(arg0 *
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseMasterUserPasswordRequest indicates an expected call of GetRelationalDatabaseMasterUserPasswordRequest
+// GetRelationalDatabaseMasterUserPasswordRequest indicates an expected call of GetRelationalDatabaseMasterUserPasswordRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseMasterUserPasswordRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseMasterUserPasswordRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseMasterUserPasswordRequest), arg0)
 }
 
-// GetRelationalDatabaseMasterUserPasswordWithContext mocks base method
+// GetRelationalDatabaseMasterUserPasswordWithContext mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseMasterUserPasswordWithContext(arg0 context.Context, arg1 *lightsail.GetRelationalDatabaseMasterUserPasswordInput, arg2 ...request.Option) (*lightsail.GetRelationalDatabaseMasterUserPasswordOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5343,14 +5344,14 @@ func (m *MockLightsailAPI) GetRelationalDatabaseMasterUserPasswordWithContext(ar
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseMasterUserPasswordWithContext indicates an expected call of GetRelationalDatabaseMasterUserPasswordWithContext
+// GetRelationalDatabaseMasterUserPasswordWithContext indicates an expected call of GetRelationalDatabaseMasterUserPasswordWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseMasterUserPasswordWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseMasterUserPasswordWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseMasterUserPasswordWithContext), varargs...)
 }
 
-// GetRelationalDatabaseMetricData mocks base method
+// GetRelationalDatabaseMetricData mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseMetricData(arg0 *lightsail.GetRelationalDatabaseMetricDataInput) (*lightsail.GetRelationalDatabaseMetricDataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseMetricData", arg0)
@@ -5359,13 +5360,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseMetricData(arg0 *lightsail.GetRe
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseMetricData indicates an expected call of GetRelationalDatabaseMetricData
+// GetRelationalDatabaseMetricData indicates an expected call of GetRelationalDatabaseMetricData.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseMetricData(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseMetricData", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseMetricData), arg0)
 }
 
-// GetRelationalDatabaseMetricDataRequest mocks base method
+// GetRelationalDatabaseMetricDataRequest mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseMetricDataRequest(arg0 *lightsail.GetRelationalDatabaseMetricDataInput) (*request.Request, *lightsail.GetRelationalDatabaseMetricDataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseMetricDataRequest", arg0)
@@ -5374,13 +5375,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseMetricDataRequest(arg0 *lightsai
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseMetricDataRequest indicates an expected call of GetRelationalDatabaseMetricDataRequest
+// GetRelationalDatabaseMetricDataRequest indicates an expected call of GetRelationalDatabaseMetricDataRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseMetricDataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseMetricDataRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseMetricDataRequest), arg0)
 }
 
-// GetRelationalDatabaseMetricDataWithContext mocks base method
+// GetRelationalDatabaseMetricDataWithContext mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseMetricDataWithContext(arg0 context.Context, arg1 *lightsail.GetRelationalDatabaseMetricDataInput, arg2 ...request.Option) (*lightsail.GetRelationalDatabaseMetricDataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5393,14 +5394,14 @@ func (m *MockLightsailAPI) GetRelationalDatabaseMetricDataWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseMetricDataWithContext indicates an expected call of GetRelationalDatabaseMetricDataWithContext
+// GetRelationalDatabaseMetricDataWithContext indicates an expected call of GetRelationalDatabaseMetricDataWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseMetricDataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseMetricDataWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseMetricDataWithContext), varargs...)
 }
 
-// GetRelationalDatabaseParameters mocks base method
+// GetRelationalDatabaseParameters mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseParameters(arg0 *lightsail.GetRelationalDatabaseParametersInput) (*lightsail.GetRelationalDatabaseParametersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseParameters", arg0)
@@ -5409,13 +5410,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseParameters(arg0 *lightsail.GetRe
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseParameters indicates an expected call of GetRelationalDatabaseParameters
+// GetRelationalDatabaseParameters indicates an expected call of GetRelationalDatabaseParameters.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseParameters(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseParameters", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseParameters), arg0)
 }
 
-// GetRelationalDatabaseParametersRequest mocks base method
+// GetRelationalDatabaseParametersRequest mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseParametersRequest(arg0 *lightsail.GetRelationalDatabaseParametersInput) (*request.Request, *lightsail.GetRelationalDatabaseParametersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseParametersRequest", arg0)
@@ -5424,13 +5425,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseParametersRequest(arg0 *lightsai
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseParametersRequest indicates an expected call of GetRelationalDatabaseParametersRequest
+// GetRelationalDatabaseParametersRequest indicates an expected call of GetRelationalDatabaseParametersRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseParametersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseParametersRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseParametersRequest), arg0)
 }
 
-// GetRelationalDatabaseParametersWithContext mocks base method
+// GetRelationalDatabaseParametersWithContext mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseParametersWithContext(arg0 context.Context, arg1 *lightsail.GetRelationalDatabaseParametersInput, arg2 ...request.Option) (*lightsail.GetRelationalDatabaseParametersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5443,14 +5444,14 @@ func (m *MockLightsailAPI) GetRelationalDatabaseParametersWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseParametersWithContext indicates an expected call of GetRelationalDatabaseParametersWithContext
+// GetRelationalDatabaseParametersWithContext indicates an expected call of GetRelationalDatabaseParametersWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseParametersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseParametersWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseParametersWithContext), varargs...)
 }
 
-// GetRelationalDatabaseRequest mocks base method
+// GetRelationalDatabaseRequest mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseRequest(arg0 *lightsail.GetRelationalDatabaseInput) (*request.Request, *lightsail.GetRelationalDatabaseOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseRequest", arg0)
@@ -5459,13 +5460,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseRequest(arg0 *lightsail.GetRelat
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseRequest indicates an expected call of GetRelationalDatabaseRequest
+// GetRelationalDatabaseRequest indicates an expected call of GetRelationalDatabaseRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseRequest), arg0)
 }
 
-// GetRelationalDatabaseSnapshot mocks base method
+// GetRelationalDatabaseSnapshot mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseSnapshot(arg0 *lightsail.GetRelationalDatabaseSnapshotInput) (*lightsail.GetRelationalDatabaseSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseSnapshot", arg0)
@@ -5474,13 +5475,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseSnapshot(arg0 *lightsail.GetRela
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseSnapshot indicates an expected call of GetRelationalDatabaseSnapshot
+// GetRelationalDatabaseSnapshot indicates an expected call of GetRelationalDatabaseSnapshot.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseSnapshot(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseSnapshot", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseSnapshot), arg0)
 }
 
-// GetRelationalDatabaseSnapshotRequest mocks base method
+// GetRelationalDatabaseSnapshotRequest mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseSnapshotRequest(arg0 *lightsail.GetRelationalDatabaseSnapshotInput) (*request.Request, *lightsail.GetRelationalDatabaseSnapshotOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseSnapshotRequest", arg0)
@@ -5489,13 +5490,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseSnapshotRequest(arg0 *lightsail.
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseSnapshotRequest indicates an expected call of GetRelationalDatabaseSnapshotRequest
+// GetRelationalDatabaseSnapshotRequest indicates an expected call of GetRelationalDatabaseSnapshotRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseSnapshotRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseSnapshotRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseSnapshotRequest), arg0)
 }
 
-// GetRelationalDatabaseSnapshotWithContext mocks base method
+// GetRelationalDatabaseSnapshotWithContext mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseSnapshotWithContext(arg0 context.Context, arg1 *lightsail.GetRelationalDatabaseSnapshotInput, arg2 ...request.Option) (*lightsail.GetRelationalDatabaseSnapshotOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5508,14 +5509,14 @@ func (m *MockLightsailAPI) GetRelationalDatabaseSnapshotWithContext(arg0 context
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseSnapshotWithContext indicates an expected call of GetRelationalDatabaseSnapshotWithContext
+// GetRelationalDatabaseSnapshotWithContext indicates an expected call of GetRelationalDatabaseSnapshotWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseSnapshotWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseSnapshotWithContext), varargs...)
 }
 
-// GetRelationalDatabaseSnapshots mocks base method
+// GetRelationalDatabaseSnapshots mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseSnapshots(arg0 *lightsail.GetRelationalDatabaseSnapshotsInput) (*lightsail.GetRelationalDatabaseSnapshotsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseSnapshots", arg0)
@@ -5524,13 +5525,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseSnapshots(arg0 *lightsail.GetRel
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseSnapshots indicates an expected call of GetRelationalDatabaseSnapshots
+// GetRelationalDatabaseSnapshots indicates an expected call of GetRelationalDatabaseSnapshots.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseSnapshots(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseSnapshots", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseSnapshots), arg0)
 }
 
-// GetRelationalDatabaseSnapshotsRequest mocks base method
+// GetRelationalDatabaseSnapshotsRequest mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseSnapshotsRequest(arg0 *lightsail.GetRelationalDatabaseSnapshotsInput) (*request.Request, *lightsail.GetRelationalDatabaseSnapshotsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabaseSnapshotsRequest", arg0)
@@ -5539,13 +5540,13 @@ func (m *MockLightsailAPI) GetRelationalDatabaseSnapshotsRequest(arg0 *lightsail
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseSnapshotsRequest indicates an expected call of GetRelationalDatabaseSnapshotsRequest
+// GetRelationalDatabaseSnapshotsRequest indicates an expected call of GetRelationalDatabaseSnapshotsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseSnapshotsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseSnapshotsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseSnapshotsRequest), arg0)
 }
 
-// GetRelationalDatabaseSnapshotsWithContext mocks base method
+// GetRelationalDatabaseSnapshotsWithContext mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseSnapshotsWithContext(arg0 context.Context, arg1 *lightsail.GetRelationalDatabaseSnapshotsInput, arg2 ...request.Option) (*lightsail.GetRelationalDatabaseSnapshotsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5558,14 +5559,14 @@ func (m *MockLightsailAPI) GetRelationalDatabaseSnapshotsWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseSnapshotsWithContext indicates an expected call of GetRelationalDatabaseSnapshotsWithContext
+// GetRelationalDatabaseSnapshotsWithContext indicates an expected call of GetRelationalDatabaseSnapshotsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseSnapshotsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseSnapshotsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseSnapshotsWithContext), varargs...)
 }
 
-// GetRelationalDatabaseWithContext mocks base method
+// GetRelationalDatabaseWithContext mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabaseWithContext(arg0 context.Context, arg1 *lightsail.GetRelationalDatabaseInput, arg2 ...request.Option) (*lightsail.GetRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5578,14 +5579,14 @@ func (m *MockLightsailAPI) GetRelationalDatabaseWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// GetRelationalDatabaseWithContext indicates an expected call of GetRelationalDatabaseWithContext
+// GetRelationalDatabaseWithContext indicates an expected call of GetRelationalDatabaseWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabaseWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabaseWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabaseWithContext), varargs...)
 }
 
-// GetRelationalDatabases mocks base method
+// GetRelationalDatabases mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabases(arg0 *lightsail.GetRelationalDatabasesInput) (*lightsail.GetRelationalDatabasesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabases", arg0)
@@ -5594,13 +5595,13 @@ func (m *MockLightsailAPI) GetRelationalDatabases(arg0 *lightsail.GetRelationalD
 	return ret0, ret1
 }
 
-// GetRelationalDatabases indicates an expected call of GetRelationalDatabases
+// GetRelationalDatabases indicates an expected call of GetRelationalDatabases.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabases(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabases", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabases), arg0)
 }
 
-// GetRelationalDatabasesRequest mocks base method
+// GetRelationalDatabasesRequest mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabasesRequest(arg0 *lightsail.GetRelationalDatabasesInput) (*request.Request, *lightsail.GetRelationalDatabasesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRelationalDatabasesRequest", arg0)
@@ -5609,13 +5610,13 @@ func (m *MockLightsailAPI) GetRelationalDatabasesRequest(arg0 *lightsail.GetRela
 	return ret0, ret1
 }
 
-// GetRelationalDatabasesRequest indicates an expected call of GetRelationalDatabasesRequest
+// GetRelationalDatabasesRequest indicates an expected call of GetRelationalDatabasesRequest.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabasesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabasesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabasesRequest), arg0)
 }
 
-// GetRelationalDatabasesWithContext mocks base method
+// GetRelationalDatabasesWithContext mocks base method.
 func (m *MockLightsailAPI) GetRelationalDatabasesWithContext(arg0 context.Context, arg1 *lightsail.GetRelationalDatabasesInput, arg2 ...request.Option) (*lightsail.GetRelationalDatabasesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5628,14 +5629,14 @@ func (m *MockLightsailAPI) GetRelationalDatabasesWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// GetRelationalDatabasesWithContext indicates an expected call of GetRelationalDatabasesWithContext
+// GetRelationalDatabasesWithContext indicates an expected call of GetRelationalDatabasesWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetRelationalDatabasesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRelationalDatabasesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetRelationalDatabasesWithContext), varargs...)
 }
 
-// GetStaticIp mocks base method
+// GetStaticIp mocks base method.
 func (m *MockLightsailAPI) GetStaticIp(arg0 *lightsail.GetStaticIpInput) (*lightsail.GetStaticIpOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetStaticIp", arg0)
@@ -5644,13 +5645,13 @@ func (m *MockLightsailAPI) GetStaticIp(arg0 *lightsail.GetStaticIpInput) (*light
 	return ret0, ret1
 }
 
-// GetStaticIp indicates an expected call of GetStaticIp
+// GetStaticIp indicates an expected call of GetStaticIp.
 func (mr *MockLightsailAPIMockRecorder) GetStaticIp(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStaticIp", reflect.TypeOf((*MockLightsailAPI)(nil).GetStaticIp), arg0)
 }
 
-// GetStaticIpRequest mocks base method
+// GetStaticIpRequest mocks base method.
 func (m *MockLightsailAPI) GetStaticIpRequest(arg0 *lightsail.GetStaticIpInput) (*request.Request, *lightsail.GetStaticIpOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetStaticIpRequest", arg0)
@@ -5659,13 +5660,13 @@ func (m *MockLightsailAPI) GetStaticIpRequest(arg0 *lightsail.GetStaticIpInput) 
 	return ret0, ret1
 }
 
-// GetStaticIpRequest indicates an expected call of GetStaticIpRequest
+// GetStaticIpRequest indicates an expected call of GetStaticIpRequest.
 func (mr *MockLightsailAPIMockRecorder) GetStaticIpRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStaticIpRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetStaticIpRequest), arg0)
 }
 
-// GetStaticIpWithContext mocks base method
+// GetStaticIpWithContext mocks base method.
 func (m *MockLightsailAPI) GetStaticIpWithContext(arg0 context.Context, arg1 *lightsail.GetStaticIpInput, arg2 ...request.Option) (*lightsail.GetStaticIpOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5678,14 +5679,14 @@ func (m *MockLightsailAPI) GetStaticIpWithContext(arg0 context.Context, arg1 *li
 	return ret0, ret1
 }
 
-// GetStaticIpWithContext indicates an expected call of GetStaticIpWithContext
+// GetStaticIpWithContext indicates an expected call of GetStaticIpWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetStaticIpWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStaticIpWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetStaticIpWithContext), varargs...)
 }
 
-// GetStaticIps mocks base method
+// GetStaticIps mocks base method.
 func (m *MockLightsailAPI) GetStaticIps(arg0 *lightsail.GetStaticIpsInput) (*lightsail.GetStaticIpsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetStaticIps", arg0)
@@ -5694,13 +5695,13 @@ func (m *MockLightsailAPI) GetStaticIps(arg0 *lightsail.GetStaticIpsInput) (*lig
 	return ret0, ret1
 }
 
-// GetStaticIps indicates an expected call of GetStaticIps
+// GetStaticIps indicates an expected call of GetStaticIps.
 func (mr *MockLightsailAPIMockRecorder) GetStaticIps(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStaticIps", reflect.TypeOf((*MockLightsailAPI)(nil).GetStaticIps), arg0)
 }
 
-// GetStaticIpsRequest mocks base method
+// GetStaticIpsRequest mocks base method.
 func (m *MockLightsailAPI) GetStaticIpsRequest(arg0 *lightsail.GetStaticIpsInput) (*request.Request, *lightsail.GetStaticIpsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetStaticIpsRequest", arg0)
@@ -5709,13 +5710,13 @@ func (m *MockLightsailAPI) GetStaticIpsRequest(arg0 *lightsail.GetStaticIpsInput
 	return ret0, ret1
 }
 
-// GetStaticIpsRequest indicates an expected call of GetStaticIpsRequest
+// GetStaticIpsRequest indicates an expected call of GetStaticIpsRequest.
 func (mr *MockLightsailAPIMockRecorder) GetStaticIpsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStaticIpsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetStaticIpsRequest), arg0)
 }
 
-// GetStaticIpsWithContext mocks base method
+// GetStaticIpsWithContext mocks base method.
 func (m *MockLightsailAPI) GetStaticIpsWithContext(arg0 context.Context, arg1 *lightsail.GetStaticIpsInput, arg2 ...request.Option) (*lightsail.GetStaticIpsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5728,14 +5729,14 @@ func (m *MockLightsailAPI) GetStaticIpsWithContext(arg0 context.Context, arg1 *l
 	return ret0, ret1
 }
 
-// GetStaticIpsWithContext indicates an expected call of GetStaticIpsWithContext
+// GetStaticIpsWithContext indicates an expected call of GetStaticIpsWithContext.
 func (mr *MockLightsailAPIMockRecorder) GetStaticIpsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStaticIpsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetStaticIpsWithContext), varargs...)
 }
 
-// ImportKeyPair mocks base method
+// ImportKeyPair mocks base method.
 func (m *MockLightsailAPI) ImportKeyPair(arg0 *lightsail.ImportKeyPairInput) (*lightsail.ImportKeyPairOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ImportKeyPair", arg0)
@@ -5744,13 +5745,13 @@ func (m *MockLightsailAPI) ImportKeyPair(arg0 *lightsail.ImportKeyPairInput) (*l
 	return ret0, ret1
 }
 
-// ImportKeyPair indicates an expected call of ImportKeyPair
+// ImportKeyPair indicates an expected call of ImportKeyPair.
 func (mr *MockLightsailAPIMockRecorder) ImportKeyPair(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportKeyPair", reflect.TypeOf((*MockLightsailAPI)(nil).ImportKeyPair), arg0)
 }
 
-// ImportKeyPairRequest mocks base method
+// ImportKeyPairRequest mocks base method.
 func (m *MockLightsailAPI) ImportKeyPairRequest(arg0 *lightsail.ImportKeyPairInput) (*request.Request, *lightsail.ImportKeyPairOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ImportKeyPairRequest", arg0)
@@ -5759,13 +5760,13 @@ func (m *MockLightsailAPI) ImportKeyPairRequest(arg0 *lightsail.ImportKeyPairInp
 	return ret0, ret1
 }
 
-// ImportKeyPairRequest indicates an expected call of ImportKeyPairRequest
+// ImportKeyPairRequest indicates an expected call of ImportKeyPairRequest.
 func (mr *MockLightsailAPIMockRecorder) ImportKeyPairRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportKeyPairRequest", reflect.TypeOf((*MockLightsailAPI)(nil).ImportKeyPairRequest), arg0)
 }
 
-// ImportKeyPairWithContext mocks base method
+// ImportKeyPairWithContext mocks base method.
 func (m *MockLightsailAPI) ImportKeyPairWithContext(arg0 context.Context, arg1 *lightsail.ImportKeyPairInput, arg2 ...request.Option) (*lightsail.ImportKeyPairOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5778,14 +5779,14 @@ func (m *MockLightsailAPI) ImportKeyPairWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ImportKeyPairWithContext indicates an expected call of ImportKeyPairWithContext
+// ImportKeyPairWithContext indicates an expected call of ImportKeyPairWithContext.
 func (mr *MockLightsailAPIMockRecorder) ImportKeyPairWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportKeyPairWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).ImportKeyPairWithContext), varargs...)
 }
 
-// IsVpcPeered mocks base method
+// IsVpcPeered mocks base method.
 func (m *MockLightsailAPI) IsVpcPeered(arg0 *lightsail.IsVpcPeeredInput) (*lightsail.IsVpcPeeredOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "IsVpcPeered", arg0)
@@ -5794,13 +5795,13 @@ func (m *MockLightsailAPI) IsVpcPeered(arg0 *lightsail.IsVpcPeeredInput) (*light
 	return ret0, ret1
 }
 
-// IsVpcPeered indicates an expected call of IsVpcPeered
+// IsVpcPeered indicates an expected call of IsVpcPeered.
 func (mr *MockLightsailAPIMockRecorder) IsVpcPeered(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IsVpcPeered", reflect.TypeOf((*MockLightsailAPI)(nil).IsVpcPeered), arg0)
 }
 
-// IsVpcPeeredRequest mocks base method
+// IsVpcPeeredRequest mocks base method.
 func (m *MockLightsailAPI) IsVpcPeeredRequest(arg0 *lightsail.IsVpcPeeredInput) (*request.Request, *lightsail.IsVpcPeeredOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "IsVpcPeeredRequest", arg0)
@@ -5809,13 +5810,13 @@ func (m *MockLightsailAPI) IsVpcPeeredRequest(arg0 *lightsail.IsVpcPeeredInput) 
 	return ret0, ret1
 }
 
-// IsVpcPeeredRequest indicates an expected call of IsVpcPeeredRequest
+// IsVpcPeeredRequest indicates an expected call of IsVpcPeeredRequest.
 func (mr *MockLightsailAPIMockRecorder) IsVpcPeeredRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IsVpcPeeredRequest", reflect.TypeOf((*MockLightsailAPI)(nil).IsVpcPeeredRequest), arg0)
 }
 
-// IsVpcPeeredWithContext mocks base method
+// IsVpcPeeredWithContext mocks base method.
 func (m *MockLightsailAPI) IsVpcPeeredWithContext(arg0 context.Context, arg1 *lightsail.IsVpcPeeredInput, arg2 ...request.Option) (*lightsail.IsVpcPeeredOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5828,14 +5829,14 @@ func (m *MockLightsailAPI) IsVpcPeeredWithContext(arg0 context.Context, arg1 *li
 	return ret0, ret1
 }
 
-// IsVpcPeeredWithContext indicates an expected call of IsVpcPeeredWithContext
+// IsVpcPeeredWithContext indicates an expected call of IsVpcPeeredWithContext.
 func (mr *MockLightsailAPIMockRecorder) IsVpcPeeredWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IsVpcPeeredWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).IsVpcPeeredWithContext), varargs...)
 }
 
-// OpenInstancePublicPorts mocks base method
+// OpenInstancePublicPorts mocks base method.
 func (m *MockLightsailAPI) OpenInstancePublicPorts(arg0 *lightsail.OpenInstancePublicPortsInput) (*lightsail.OpenInstancePublicPortsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "OpenInstancePublicPorts", arg0)
@@ -5844,13 +5845,13 @@ func (m *MockLightsailAPI) OpenInstancePublicPorts(arg0 *lightsail.OpenInstanceP
 	return ret0, ret1
 }
 
-// OpenInstancePublicPorts indicates an expected call of OpenInstancePublicPorts
+// OpenInstancePublicPorts indicates an expected call of OpenInstancePublicPorts.
 func (mr *MockLightsailAPIMockRecorder) OpenInstancePublicPorts(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OpenInstancePublicPorts", reflect.TypeOf((*MockLightsailAPI)(nil).OpenInstancePublicPorts), arg0)
 }
 
-// OpenInstancePublicPortsRequest mocks base method
+// OpenInstancePublicPortsRequest mocks base method.
 func (m *MockLightsailAPI) OpenInstancePublicPortsRequest(arg0 *lightsail.OpenInstancePublicPortsInput) (*request.Request, *lightsail.OpenInstancePublicPortsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "OpenInstancePublicPortsRequest", arg0)
@@ -5859,13 +5860,13 @@ func (m *MockLightsailAPI) OpenInstancePublicPortsRequest(arg0 *lightsail.OpenIn
 	return ret0, ret1
 }
 
-// OpenInstancePublicPortsRequest indicates an expected call of OpenInstancePublicPortsRequest
+// OpenInstancePublicPortsRequest indicates an expected call of OpenInstancePublicPortsRequest.
 func (mr *MockLightsailAPIMockRecorder) OpenInstancePublicPortsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OpenInstancePublicPortsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).OpenInstancePublicPortsRequest), arg0)
 }
 
-// OpenInstancePublicPortsWithContext mocks base method
+// OpenInstancePublicPortsWithContext mocks base method.
 func (m *MockLightsailAPI) OpenInstancePublicPortsWithContext(arg0 context.Context, arg1 *lightsail.OpenInstancePublicPortsInput, arg2 ...request.Option) (*lightsail.OpenInstancePublicPortsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5878,14 +5879,14 @@ func (m *MockLightsailAPI) OpenInstancePublicPortsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// OpenInstancePublicPortsWithContext indicates an expected call of OpenInstancePublicPortsWithContext
+// OpenInstancePublicPortsWithContext indicates an expected call of OpenInstancePublicPortsWithContext.
 func (mr *MockLightsailAPIMockRecorder) OpenInstancePublicPortsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OpenInstancePublicPortsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).OpenInstancePublicPortsWithContext), varargs...)
 }
 
-// PeerVpc mocks base method
+// PeerVpc mocks base method.
 func (m *MockLightsailAPI) PeerVpc(arg0 *lightsail.PeerVpcInput) (*lightsail.PeerVpcOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PeerVpc", arg0)
@@ -5894,13 +5895,13 @@ func (m *MockLightsailAPI) PeerVpc(arg0 *lightsail.PeerVpcInput) (*lightsail.Pee
 	return ret0, ret1
 }
 
-// PeerVpc indicates an expected call of PeerVpc
+// PeerVpc indicates an expected call of PeerVpc.
 func (mr *MockLightsailAPIMockRecorder) PeerVpc(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PeerVpc", reflect.TypeOf((*MockLightsailAPI)(nil).PeerVpc), arg0)
 }
 
-// PeerVpcRequest mocks base method
+// PeerVpcRequest mocks base method.
 func (m *MockLightsailAPI) PeerVpcRequest(arg0 *lightsail.PeerVpcInput) (*request.Request, *lightsail.PeerVpcOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PeerVpcRequest", arg0)
@@ -5909,13 +5910,13 @@ func (m *MockLightsailAPI) PeerVpcRequest(arg0 *lightsail.PeerVpcInput) (*reques
 	return ret0, ret1
 }
 
-// PeerVpcRequest indicates an expected call of PeerVpcRequest
+// PeerVpcRequest indicates an expected call of PeerVpcRequest.
 func (mr *MockLightsailAPIMockRecorder) PeerVpcRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PeerVpcRequest", reflect.TypeOf((*MockLightsailAPI)(nil).PeerVpcRequest), arg0)
 }
 
-// PeerVpcWithContext mocks base method
+// PeerVpcWithContext mocks base method.
 func (m *MockLightsailAPI) PeerVpcWithContext(arg0 context.Context, arg1 *lightsail.PeerVpcInput, arg2 ...request.Option) (*lightsail.PeerVpcOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5928,14 +5929,14 @@ func (m *MockLightsailAPI) PeerVpcWithContext(arg0 context.Context, arg1 *lights
 	return ret0, ret1
 }
 
-// PeerVpcWithContext indicates an expected call of PeerVpcWithContext
+// PeerVpcWithContext indicates an expected call of PeerVpcWithContext.
 func (mr *MockLightsailAPIMockRecorder) PeerVpcWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PeerVpcWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).PeerVpcWithContext), varargs...)
 }
 
-// PutAlarm mocks base method
+// PutAlarm mocks base method.
 func (m *MockLightsailAPI) PutAlarm(arg0 *lightsail.PutAlarmInput) (*lightsail.PutAlarmOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutAlarm", arg0)
@@ -5944,13 +5945,13 @@ func (m *MockLightsailAPI) PutAlarm(arg0 *lightsail.PutAlarmInput) (*lightsail.P
 	return ret0, ret1
 }
 
-// PutAlarm indicates an expected call of PutAlarm
+// PutAlarm indicates an expected call of PutAlarm.
 func (mr *MockLightsailAPIMockRecorder) PutAlarm(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAlarm", reflect.TypeOf((*MockLightsailAPI)(nil).PutAlarm), arg0)
 }
 
-// PutAlarmRequest mocks base method
+// PutAlarmRequest mocks base method.
 func (m *MockLightsailAPI) PutAlarmRequest(arg0 *lightsail.PutAlarmInput) (*request.Request, *lightsail.PutAlarmOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutAlarmRequest", arg0)
@@ -5959,13 +5960,13 @@ func (m *MockLightsailAPI) PutAlarmRequest(arg0 *lightsail.PutAlarmInput) (*requ
 	return ret0, ret1
 }
 
-// PutAlarmRequest indicates an expected call of PutAlarmRequest
+// PutAlarmRequest indicates an expected call of PutAlarmRequest.
 func (mr *MockLightsailAPIMockRecorder) PutAlarmRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAlarmRequest", reflect.TypeOf((*MockLightsailAPI)(nil).PutAlarmRequest), arg0)
 }
 
-// PutAlarmWithContext mocks base method
+// PutAlarmWithContext mocks base method.
 func (m *MockLightsailAPI) PutAlarmWithContext(arg0 context.Context, arg1 *lightsail.PutAlarmInput, arg2 ...request.Option) (*lightsail.PutAlarmOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -5978,14 +5979,14 @@ func (m *MockLightsailAPI) PutAlarmWithContext(arg0 context.Context, arg1 *light
 	return ret0, ret1
 }
 
-// PutAlarmWithContext indicates an expected call of PutAlarmWithContext
+// PutAlarmWithContext indicates an expected call of PutAlarmWithContext.
 func (mr *MockLightsailAPIMockRecorder) PutAlarmWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAlarmWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).PutAlarmWithContext), varargs...)
 }
 
-// PutInstancePublicPorts mocks base method
+// PutInstancePublicPorts mocks base method.
 func (m *MockLightsailAPI) PutInstancePublicPorts(arg0 *lightsail.PutInstancePublicPortsInput) (*lightsail.PutInstancePublicPortsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutInstancePublicPorts", arg0)
@@ -5994,13 +5995,13 @@ func (m *MockLightsailAPI) PutInstancePublicPorts(arg0 *lightsail.PutInstancePub
 	return ret0, ret1
 }
 
-// PutInstancePublicPorts indicates an expected call of PutInstancePublicPorts
+// PutInstancePublicPorts indicates an expected call of PutInstancePublicPorts.
 func (mr *MockLightsailAPIMockRecorder) PutInstancePublicPorts(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutInstancePublicPorts", reflect.TypeOf((*MockLightsailAPI)(nil).PutInstancePublicPorts), arg0)
 }
 
-// PutInstancePublicPortsRequest mocks base method
+// PutInstancePublicPortsRequest mocks base method.
 func (m *MockLightsailAPI) PutInstancePublicPortsRequest(arg0 *lightsail.PutInstancePublicPortsInput) (*request.Request, *lightsail.PutInstancePublicPortsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutInstancePublicPortsRequest", arg0)
@@ -6009,13 +6010,13 @@ func (m *MockLightsailAPI) PutInstancePublicPortsRequest(arg0 *lightsail.PutInst
 	return ret0, ret1
 }
 
-// PutInstancePublicPortsRequest indicates an expected call of PutInstancePublicPortsRequest
+// PutInstancePublicPortsRequest indicates an expected call of PutInstancePublicPortsRequest.
 func (mr *MockLightsailAPIMockRecorder) PutInstancePublicPortsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutInstancePublicPortsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).PutInstancePublicPortsRequest), arg0)
 }
 
-// PutInstancePublicPortsWithContext mocks base method
+// PutInstancePublicPortsWithContext mocks base method.
 func (m *MockLightsailAPI) PutInstancePublicPortsWithContext(arg0 context.Context, arg1 *lightsail.PutInstancePublicPortsInput, arg2 ...request.Option) (*lightsail.PutInstancePublicPortsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6028,14 +6029,14 @@ func (m *MockLightsailAPI) PutInstancePublicPortsWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// PutInstancePublicPortsWithContext indicates an expected call of PutInstancePublicPortsWithContext
+// PutInstancePublicPortsWithContext indicates an expected call of PutInstancePublicPortsWithContext.
 func (mr *MockLightsailAPIMockRecorder) PutInstancePublicPortsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutInstancePublicPortsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).PutInstancePublicPortsWithContext), varargs...)
 }
 
-// RebootInstance mocks base method
+// RebootInstance mocks base method.
 func (m *MockLightsailAPI) RebootInstance(arg0 *lightsail.RebootInstanceInput) (*lightsail.RebootInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RebootInstance", arg0)
@@ -6044,13 +6045,13 @@ func (m *MockLightsailAPI) RebootInstance(arg0 *lightsail.RebootInstanceInput) (
 	return ret0, ret1
 }
 
-// RebootInstance indicates an expected call of RebootInstance
+// RebootInstance indicates an expected call of RebootInstance.
 func (mr *MockLightsailAPIMockRecorder) RebootInstance(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RebootInstance", reflect.TypeOf((*MockLightsailAPI)(nil).RebootInstance), arg0)
 }
 
-// RebootInstanceRequest mocks base method
+// RebootInstanceRequest mocks base method.
 func (m *MockLightsailAPI) RebootInstanceRequest(arg0 *lightsail.RebootInstanceInput) (*request.Request, *lightsail.RebootInstanceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RebootInstanceRequest", arg0)
@@ -6059,13 +6060,13 @@ func (m *MockLightsailAPI) RebootInstanceRequest(arg0 *lightsail.RebootInstanceI
 	return ret0, ret1
 }
 
-// RebootInstanceRequest indicates an expected call of RebootInstanceRequest
+// RebootInstanceRequest indicates an expected call of RebootInstanceRequest.
 func (mr *MockLightsailAPIMockRecorder) RebootInstanceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RebootInstanceRequest", reflect.TypeOf((*MockLightsailAPI)(nil).RebootInstanceRequest), arg0)
 }
 
-// RebootInstanceWithContext mocks base method
+// RebootInstanceWithContext mocks base method.
 func (m *MockLightsailAPI) RebootInstanceWithContext(arg0 context.Context, arg1 *lightsail.RebootInstanceInput, arg2 ...request.Option) (*lightsail.RebootInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6078,14 +6079,14 @@ func (m *MockLightsailAPI) RebootInstanceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// RebootInstanceWithContext indicates an expected call of RebootInstanceWithContext
+// RebootInstanceWithContext indicates an expected call of RebootInstanceWithContext.
 func (mr *MockLightsailAPIMockRecorder) RebootInstanceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RebootInstanceWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).RebootInstanceWithContext), varargs...)
 }
 
-// RebootRelationalDatabase mocks base method
+// RebootRelationalDatabase mocks base method.
 func (m *MockLightsailAPI) RebootRelationalDatabase(arg0 *lightsail.RebootRelationalDatabaseInput) (*lightsail.RebootRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RebootRelationalDatabase", arg0)
@@ -6094,13 +6095,13 @@ func (m *MockLightsailAPI) RebootRelationalDatabase(arg0 *lightsail.RebootRelati
 	return ret0, ret1
 }
 
-// RebootRelationalDatabase indicates an expected call of RebootRelationalDatabase
+// RebootRelationalDatabase indicates an expected call of RebootRelationalDatabase.
 func (mr *MockLightsailAPIMockRecorder) RebootRelationalDatabase(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RebootRelationalDatabase", reflect.TypeOf((*MockLightsailAPI)(nil).RebootRelationalDatabase), arg0)
 }
 
-// RebootRelationalDatabaseRequest mocks base method
+// RebootRelationalDatabaseRequest mocks base method.
 func (m *MockLightsailAPI) RebootRelationalDatabaseRequest(arg0 *lightsail.RebootRelationalDatabaseInput) (*request.Request, *lightsail.RebootRelationalDatabaseOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RebootRelationalDatabaseRequest", arg0)
@@ -6109,13 +6110,13 @@ func (m *MockLightsailAPI) RebootRelationalDatabaseRequest(arg0 *lightsail.Reboo
 	return ret0, ret1
 }
 
-// RebootRelationalDatabaseRequest indicates an expected call of RebootRelationalDatabaseRequest
+// RebootRelationalDatabaseRequest indicates an expected call of RebootRelationalDatabaseRequest.
 func (mr *MockLightsailAPIMockRecorder) RebootRelationalDatabaseRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RebootRelationalDatabaseRequest", reflect.TypeOf((*MockLightsailAPI)(nil).RebootRelationalDatabaseRequest), arg0)
 }
 
-// RebootRelationalDatabaseWithContext mocks base method
+// RebootRelationalDatabaseWithContext mocks base method.
 func (m *MockLightsailAPI) RebootRelationalDatabaseWithContext(arg0 context.Context, arg1 *lightsail.RebootRelationalDatabaseInput, arg2 ...request.Option) (*lightsail.RebootRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6128,14 +6129,14 @@ func (m *MockLightsailAPI) RebootRelationalDatabaseWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// RebootRelationalDatabaseWithContext indicates an expected call of RebootRelationalDatabaseWithContext
+// RebootRelationalDatabaseWithContext indicates an expected call of RebootRelationalDatabaseWithContext.
 func (mr *MockLightsailAPIMockRecorder) RebootRelationalDatabaseWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RebootRelationalDatabaseWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).RebootRelationalDatabaseWithContext), varargs...)
 }
 
-// RegisterContainerImage mocks base method
+// RegisterContainerImage mocks base method.
 func (m *MockLightsailAPI) RegisterContainerImage(arg0 *lightsail.RegisterContainerImageInput) (*lightsail.RegisterContainerImageOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RegisterContainerImage", arg0)
@@ -6144,13 +6145,13 @@ func (m *MockLightsailAPI) RegisterContainerImage(arg0 *lightsail.RegisterContai
 	return ret0, ret1
 }
 
-// RegisterContainerImage indicates an expected call of RegisterContainerImage
+// RegisterContainerImage indicates an expected call of RegisterContainerImage.
 func (mr *MockLightsailAPIMockRecorder) RegisterContainerImage(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RegisterContainerImage", reflect.TypeOf((*MockLightsailAPI)(nil).RegisterContainerImage), arg0)
 }
 
-// RegisterContainerImageRequest mocks base method
+// RegisterContainerImageRequest mocks base method.
 func (m *MockLightsailAPI) RegisterContainerImageRequest(arg0 *lightsail.RegisterContainerImageInput) (*request.Request, *lightsail.RegisterContainerImageOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RegisterContainerImageRequest", arg0)
@@ -6159,13 +6160,13 @@ func (m *MockLightsailAPI) RegisterContainerImageRequest(arg0 *lightsail.Registe
 	return ret0, ret1
 }
 
-// RegisterContainerImageRequest indicates an expected call of RegisterContainerImageRequest
+// RegisterContainerImageRequest indicates an expected call of RegisterContainerImageRequest.
 func (mr *MockLightsailAPIMockRecorder) RegisterContainerImageRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RegisterContainerImageRequest", reflect.TypeOf((*MockLightsailAPI)(nil).RegisterContainerImageRequest), arg0)
 }
 
-// RegisterContainerImageWithContext mocks base method
+// RegisterContainerImageWithContext mocks base method.
 func (m *MockLightsailAPI) RegisterContainerImageWithContext(arg0 context.Context, arg1 *lightsail.RegisterContainerImageInput, arg2 ...request.Option) (*lightsail.RegisterContainerImageOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6178,14 +6179,14 @@ func (m *MockLightsailAPI) RegisterContainerImageWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// RegisterContainerImageWithContext indicates an expected call of RegisterContainerImageWithContext
+// RegisterContainerImageWithContext indicates an expected call of RegisterContainerImageWithContext.
 func (mr *MockLightsailAPIMockRecorder) RegisterContainerImageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RegisterContainerImageWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).RegisterContainerImageWithContext), varargs...)
 }
 
-// ReleaseStaticIp mocks base method
+// ReleaseStaticIp mocks base method.
 func (m *MockLightsailAPI) ReleaseStaticIp(arg0 *lightsail.ReleaseStaticIpInput) (*lightsail.ReleaseStaticIpOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ReleaseStaticIp", arg0)
@@ -6194,13 +6195,13 @@ func (m *MockLightsailAPI) ReleaseStaticIp(arg0 *lightsail.ReleaseStaticIpInput)
 	return ret0, ret1
 }
 
-// ReleaseStaticIp indicates an expected call of ReleaseStaticIp
+// ReleaseStaticIp indicates an expected call of ReleaseStaticIp.
 func (mr *MockLightsailAPIMockRecorder) ReleaseStaticIp(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReleaseStaticIp", reflect.TypeOf((*MockLightsailAPI)(nil).ReleaseStaticIp), arg0)
 }
 
-// ReleaseStaticIpRequest mocks base method
+// ReleaseStaticIpRequest mocks base method.
 func (m *MockLightsailAPI) ReleaseStaticIpRequest(arg0 *lightsail.ReleaseStaticIpInput) (*request.Request, *lightsail.ReleaseStaticIpOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ReleaseStaticIpRequest", arg0)
@@ -6209,13 +6210,13 @@ func (m *MockLightsailAPI) ReleaseStaticIpRequest(arg0 *lightsail.ReleaseStaticI
 	return ret0, ret1
 }
 
-// ReleaseStaticIpRequest indicates an expected call of ReleaseStaticIpRequest
+// ReleaseStaticIpRequest indicates an expected call of ReleaseStaticIpRequest.
 func (mr *MockLightsailAPIMockRecorder) ReleaseStaticIpRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReleaseStaticIpRequest", reflect.TypeOf((*MockLightsailAPI)(nil).ReleaseStaticIpRequest), arg0)
 }
 
-// ReleaseStaticIpWithContext mocks base method
+// ReleaseStaticIpWithContext mocks base method.
 func (m *MockLightsailAPI) ReleaseStaticIpWithContext(arg0 context.Context, arg1 *lightsail.ReleaseStaticIpInput, arg2 ...request.Option) (*lightsail.ReleaseStaticIpOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6228,14 +6229,14 @@ func (m *MockLightsailAPI) ReleaseStaticIpWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ReleaseStaticIpWithContext indicates an expected call of ReleaseStaticIpWithContext
+// ReleaseStaticIpWithContext indicates an expected call of ReleaseStaticIpWithContext.
 func (mr *MockLightsailAPIMockRecorder) ReleaseStaticIpWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReleaseStaticIpWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).ReleaseStaticIpWithContext), varargs...)
 }
 
-// ResetDistributionCache mocks base method
+// ResetDistributionCache mocks base method.
 func (m *MockLightsailAPI) ResetDistributionCache(arg0 *lightsail.ResetDistributionCacheInput) (*lightsail.ResetDistributionCacheOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ResetDistributionCache", arg0)
@@ -6244,13 +6245,13 @@ func (m *MockLightsailAPI) ResetDistributionCache(arg0 *lightsail.ResetDistribut
 	return ret0, ret1
 }
 
-// ResetDistributionCache indicates an expected call of ResetDistributionCache
+// ResetDistributionCache indicates an expected call of ResetDistributionCache.
 func (mr *MockLightsailAPIMockRecorder) ResetDistributionCache(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ResetDistributionCache", reflect.TypeOf((*MockLightsailAPI)(nil).ResetDistributionCache), arg0)
 }
 
-// ResetDistributionCacheRequest mocks base method
+// ResetDistributionCacheRequest mocks base method.
 func (m *MockLightsailAPI) ResetDistributionCacheRequest(arg0 *lightsail.ResetDistributionCacheInput) (*request.Request, *lightsail.ResetDistributionCacheOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ResetDistributionCacheRequest", arg0)
@@ -6259,13 +6260,13 @@ func (m *MockLightsailAPI) ResetDistributionCacheRequest(arg0 *lightsail.ResetDi
 	return ret0, ret1
 }
 
-// ResetDistributionCacheRequest indicates an expected call of ResetDistributionCacheRequest
+// ResetDistributionCacheRequest indicates an expected call of ResetDistributionCacheRequest.
 func (mr *MockLightsailAPIMockRecorder) ResetDistributionCacheRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ResetDistributionCacheRequest", reflect.TypeOf((*MockLightsailAPI)(nil).ResetDistributionCacheRequest), arg0)
 }
 
-// ResetDistributionCacheWithContext mocks base method
+// ResetDistributionCacheWithContext mocks base method.
 func (m *MockLightsailAPI) ResetDistributionCacheWithContext(arg0 context.Context, arg1 *lightsail.ResetDistributionCacheInput, arg2 ...request.Option) (*lightsail.ResetDistributionCacheOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6278,14 +6279,14 @@ func (m *MockLightsailAPI) ResetDistributionCacheWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ResetDistributionCacheWithContext indicates an expected call of ResetDistributionCacheWithContext
+// ResetDistributionCacheWithContext indicates an expected call of ResetDistributionCacheWithContext.
 func (mr *MockLightsailAPIMockRecorder) ResetDistributionCacheWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ResetDistributionCacheWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).ResetDistributionCacheWithContext), varargs...)
 }
 
-// SendContactMethodVerification mocks base method
+// SendContactMethodVerification mocks base method.
 func (m *MockLightsailAPI) SendContactMethodVerification(arg0 *lightsail.SendContactMethodVerificationInput) (*lightsail.SendContactMethodVerificationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendContactMethodVerification", arg0)
@@ -6294,13 +6295,13 @@ func (m *MockLightsailAPI) SendContactMethodVerification(arg0 *lightsail.SendCon
 	return ret0, ret1
 }
 
-// SendContactMethodVerification indicates an expected call of SendContactMethodVerification
+// SendContactMethodVerification indicates an expected call of SendContactMethodVerification.
 func (mr *MockLightsailAPIMockRecorder) SendContactMethodVerification(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendContactMethodVerification", reflect.TypeOf((*MockLightsailAPI)(nil).SendContactMethodVerification), arg0)
 }
 
-// SendContactMethodVerificationRequest mocks base method
+// SendContactMethodVerificationRequest mocks base method.
 func (m *MockLightsailAPI) SendContactMethodVerificationRequest(arg0 *lightsail.SendContactMethodVerificationInput) (*request.Request, *lightsail.SendContactMethodVerificationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendContactMethodVerificationRequest", arg0)
@@ -6309,13 +6310,13 @@ func (m *MockLightsailAPI) SendContactMethodVerificationRequest(arg0 *lightsail.
 	return ret0, ret1
 }
 
-// SendContactMethodVerificationRequest indicates an expected call of SendContactMethodVerificationRequest
+// SendContactMethodVerificationRequest indicates an expected call of SendContactMethodVerificationRequest.
 func (mr *MockLightsailAPIMockRecorder) SendContactMethodVerificationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendContactMethodVerificationRequest", reflect.TypeOf((*MockLightsailAPI)(nil).SendContactMethodVerificationRequest), arg0)
 }
 
-// SendContactMethodVerificationWithContext mocks base method
+// SendContactMethodVerificationWithContext mocks base method.
 func (m *MockLightsailAPI) SendContactMethodVerificationWithContext(arg0 context.Context, arg1 *lightsail.SendContactMethodVerificationInput, arg2 ...request.Option) (*lightsail.SendContactMethodVerificationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6328,14 +6329,64 @@ func (m *MockLightsailAPI) SendContactMethodVerificationWithContext(arg0 context
 	return ret0, ret1
 }
 
-// SendContactMethodVerificationWithContext indicates an expected call of SendContactMethodVerificationWithContext
+// SendContactMethodVerificationWithContext indicates an expected call of SendContactMethodVerificationWithContext.
 func (mr *MockLightsailAPIMockRecorder) SendContactMethodVerificationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendContactMethodVerificationWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).SendContactMethodVerificationWithContext), varargs...)
 }
 
-// StartInstance mocks base method
+// SetIpAddressType mocks base method.
+func (m *MockLightsailAPI) SetIpAddressType(arg0 *lightsail.SetIpAddressTypeInput) (*lightsail.SetIpAddressTypeOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SetIpAddressType", arg0)
+	ret0, _ := ret[0].(*lightsail.SetIpAddressTypeOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SetIpAddressType indicates an expected call of SetIpAddressType.
+func (mr *MockLightsailAPIMockRecorder) SetIpAddressType(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetIpAddressType", reflect.TypeOf((*MockLightsailAPI)(nil).SetIpAddressType), arg0)
+}
+
+// SetIpAddressTypeRequest mocks base method.
+func (m *MockLightsailAPI) SetIpAddressTypeRequest(arg0 *lightsail.SetIpAddressTypeInput) (*request.Request, *lightsail.SetIpAddressTypeOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SetIpAddressTypeRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lightsail.SetIpAddressTypeOutput)
+	return ret0, ret1
+}
+
+// SetIpAddressTypeRequest indicates an expected call of SetIpAddressTypeRequest.
+func (mr *MockLightsailAPIMockRecorder) SetIpAddressTypeRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetIpAddressTypeRequest", reflect.TypeOf((*MockLightsailAPI)(nil).SetIpAddressTypeRequest), arg0)
+}
+
+// SetIpAddressTypeWithContext mocks base method.
+func (m *MockLightsailAPI) SetIpAddressTypeWithContext(arg0 context.Context, arg1 *lightsail.SetIpAddressTypeInput, arg2 ...request.Option) (*lightsail.SetIpAddressTypeOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "SetIpAddressTypeWithContext", varargs...)
+	ret0, _ := ret[0].(*lightsail.SetIpAddressTypeOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SetIpAddressTypeWithContext indicates an expected call of SetIpAddressTypeWithContext.
+func (mr *MockLightsailAPIMockRecorder) SetIpAddressTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetIpAddressTypeWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).SetIpAddressTypeWithContext), varargs...)
+}
+
+// StartInstance mocks base method.
 func (m *MockLightsailAPI) StartInstance(arg0 *lightsail.StartInstanceInput) (*lightsail.StartInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartInstance", arg0)
@@ -6344,13 +6395,13 @@ func (m *MockLightsailAPI) StartInstance(arg0 *lightsail.StartInstanceInput) (*l
 	return ret0, ret1
 }
 
-// StartInstance indicates an expected call of StartInstance
+// StartInstance indicates an expected call of StartInstance.
 func (mr *MockLightsailAPIMockRecorder) StartInstance(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartInstance", reflect.TypeOf((*MockLightsailAPI)(nil).StartInstance), arg0)
 }
 
-// StartInstanceRequest mocks base method
+// StartInstanceRequest mocks base method.
 func (m *MockLightsailAPI) StartInstanceRequest(arg0 *lightsail.StartInstanceInput) (*request.Request, *lightsail.StartInstanceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartInstanceRequest", arg0)
@@ -6359,13 +6410,13 @@ func (m *MockLightsailAPI) StartInstanceRequest(arg0 *lightsail.StartInstanceInp
 	return ret0, ret1
 }
 
-// StartInstanceRequest indicates an expected call of StartInstanceRequest
+// StartInstanceRequest indicates an expected call of StartInstanceRequest.
 func (mr *MockLightsailAPIMockRecorder) StartInstanceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartInstanceRequest", reflect.TypeOf((*MockLightsailAPI)(nil).StartInstanceRequest), arg0)
 }
 
-// StartInstanceWithContext mocks base method
+// StartInstanceWithContext mocks base method.
 func (m *MockLightsailAPI) StartInstanceWithContext(arg0 context.Context, arg1 *lightsail.StartInstanceInput, arg2 ...request.Option) (*lightsail.StartInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6378,14 +6429,14 @@ func (m *MockLightsailAPI) StartInstanceWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// StartInstanceWithContext indicates an expected call of StartInstanceWithContext
+// StartInstanceWithContext indicates an expected call of StartInstanceWithContext.
 func (mr *MockLightsailAPIMockRecorder) StartInstanceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartInstanceWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).StartInstanceWithContext), varargs...)
 }
 
-// StartRelationalDatabase mocks base method
+// StartRelationalDatabase mocks base method.
 func (m *MockLightsailAPI) StartRelationalDatabase(arg0 *lightsail.StartRelationalDatabaseInput) (*lightsail.StartRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartRelationalDatabase", arg0)
@@ -6394,13 +6445,13 @@ func (m *MockLightsailAPI) StartRelationalDatabase(arg0 *lightsail.StartRelation
 	return ret0, ret1
 }
 
-// StartRelationalDatabase indicates an expected call of StartRelationalDatabase
+// StartRelationalDatabase indicates an expected call of StartRelationalDatabase.
 func (mr *MockLightsailAPIMockRecorder) StartRelationalDatabase(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartRelationalDatabase", reflect.TypeOf((*MockLightsailAPI)(nil).StartRelationalDatabase), arg0)
 }
 
-// StartRelationalDatabaseRequest mocks base method
+// StartRelationalDatabaseRequest mocks base method.
 func (m *MockLightsailAPI) StartRelationalDatabaseRequest(arg0 *lightsail.StartRelationalDatabaseInput) (*request.Request, *lightsail.StartRelationalDatabaseOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartRelationalDatabaseRequest", arg0)
@@ -6409,13 +6460,13 @@ func (m *MockLightsailAPI) StartRelationalDatabaseRequest(arg0 *lightsail.StartR
 	return ret0, ret1
 }
 
-// StartRelationalDatabaseRequest indicates an expected call of StartRelationalDatabaseRequest
+// StartRelationalDatabaseRequest indicates an expected call of StartRelationalDatabaseRequest.
 func (mr *MockLightsailAPIMockRecorder) StartRelationalDatabaseRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartRelationalDatabaseRequest", reflect.TypeOf((*MockLightsailAPI)(nil).StartRelationalDatabaseRequest), arg0)
 }
 
-// StartRelationalDatabaseWithContext mocks base method
+// StartRelationalDatabaseWithContext mocks base method.
 func (m *MockLightsailAPI) StartRelationalDatabaseWithContext(arg0 context.Context, arg1 *lightsail.StartRelationalDatabaseInput, arg2 ...request.Option) (*lightsail.StartRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6428,14 +6479,14 @@ func (m *MockLightsailAPI) StartRelationalDatabaseWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// StartRelationalDatabaseWithContext indicates an expected call of StartRelationalDatabaseWithContext
+// StartRelationalDatabaseWithContext indicates an expected call of StartRelationalDatabaseWithContext.
 func (mr *MockLightsailAPIMockRecorder) StartRelationalDatabaseWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartRelationalDatabaseWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).StartRelationalDatabaseWithContext), varargs...)
 }
 
-// StopInstance mocks base method
+// StopInstance mocks base method.
 func (m *MockLightsailAPI) StopInstance(arg0 *lightsail.StopInstanceInput) (*lightsail.StopInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopInstance", arg0)
@@ -6444,13 +6495,13 @@ func (m *MockLightsailAPI) StopInstance(arg0 *lightsail.StopInstanceInput) (*lig
 	return ret0, ret1
 }
 
-// StopInstance indicates an expected call of StopInstance
+// StopInstance indicates an expected call of StopInstance.
 func (mr *MockLightsailAPIMockRecorder) StopInstance(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopInstance", reflect.TypeOf((*MockLightsailAPI)(nil).StopInstance), arg0)
 }
 
-// StopInstanceRequest mocks base method
+// StopInstanceRequest mocks base method.
 func (m *MockLightsailAPI) StopInstanceRequest(arg0 *lightsail.StopInstanceInput) (*request.Request, *lightsail.StopInstanceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopInstanceRequest", arg0)
@@ -6459,13 +6510,13 @@ func (m *MockLightsailAPI) StopInstanceRequest(arg0 *lightsail.StopInstanceInput
 	return ret0, ret1
 }
 
-// StopInstanceRequest indicates an expected call of StopInstanceRequest
+// StopInstanceRequest indicates an expected call of StopInstanceRequest.
 func (mr *MockLightsailAPIMockRecorder) StopInstanceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopInstanceRequest", reflect.TypeOf((*MockLightsailAPI)(nil).StopInstanceRequest), arg0)
 }
 
-// StopInstanceWithContext mocks base method
+// StopInstanceWithContext mocks base method.
 func (m *MockLightsailAPI) StopInstanceWithContext(arg0 context.Context, arg1 *lightsail.StopInstanceInput, arg2 ...request.Option) (*lightsail.StopInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6478,14 +6529,14 @@ func (m *MockLightsailAPI) StopInstanceWithContext(arg0 context.Context, arg1 *l
 	return ret0, ret1
 }
 
-// StopInstanceWithContext indicates an expected call of StopInstanceWithContext
+// StopInstanceWithContext indicates an expected call of StopInstanceWithContext.
 func (mr *MockLightsailAPIMockRecorder) StopInstanceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopInstanceWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).StopInstanceWithContext), varargs...)
 }
 
-// StopRelationalDatabase mocks base method
+// StopRelationalDatabase mocks base method.
 func (m *MockLightsailAPI) StopRelationalDatabase(arg0 *lightsail.StopRelationalDatabaseInput) (*lightsail.StopRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopRelationalDatabase", arg0)
@@ -6494,13 +6545,13 @@ func (m *MockLightsailAPI) StopRelationalDatabase(arg0 *lightsail.StopRelational
 	return ret0, ret1
 }
 
-// StopRelationalDatabase indicates an expected call of StopRelationalDatabase
+// StopRelationalDatabase indicates an expected call of StopRelationalDatabase.
 func (mr *MockLightsailAPIMockRecorder) StopRelationalDatabase(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopRelationalDatabase", reflect.TypeOf((*MockLightsailAPI)(nil).StopRelationalDatabase), arg0)
 }
 
-// StopRelationalDatabaseRequest mocks base method
+// StopRelationalDatabaseRequest mocks base method.
 func (m *MockLightsailAPI) StopRelationalDatabaseRequest(arg0 *lightsail.StopRelationalDatabaseInput) (*request.Request, *lightsail.StopRelationalDatabaseOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopRelationalDatabaseRequest", arg0)
@@ -6509,13 +6560,13 @@ func (m *MockLightsailAPI) StopRelationalDatabaseRequest(arg0 *lightsail.StopRel
 	return ret0, ret1
 }
 
-// StopRelationalDatabaseRequest indicates an expected call of StopRelationalDatabaseRequest
+// StopRelationalDatabaseRequest indicates an expected call of StopRelationalDatabaseRequest.
 func (mr *MockLightsailAPIMockRecorder) StopRelationalDatabaseRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopRelationalDatabaseRequest", reflect.TypeOf((*MockLightsailAPI)(nil).StopRelationalDatabaseRequest), arg0)
 }
 
-// StopRelationalDatabaseWithContext mocks base method
+// StopRelationalDatabaseWithContext mocks base method.
 func (m *MockLightsailAPI) StopRelationalDatabaseWithContext(arg0 context.Context, arg1 *lightsail.StopRelationalDatabaseInput, arg2 ...request.Option) (*lightsail.StopRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6528,14 +6579,14 @@ func (m *MockLightsailAPI) StopRelationalDatabaseWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// StopRelationalDatabaseWithContext indicates an expected call of StopRelationalDatabaseWithContext
+// StopRelationalDatabaseWithContext indicates an expected call of StopRelationalDatabaseWithContext.
 func (mr *MockLightsailAPIMockRecorder) StopRelationalDatabaseWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopRelationalDatabaseWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).StopRelationalDatabaseWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockLightsailAPI) TagResource(arg0 *lightsail.TagResourceInput) (*lightsail.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -6544,13 +6595,13 @@ func (m *MockLightsailAPI) TagResource(arg0 *lightsail.TagResourceInput) (*light
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockLightsailAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockLightsailAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockLightsailAPI) TagResourceRequest(arg0 *lightsail.TagResourceInput) (*request.Request, *lightsail.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -6559,13 +6610,13 @@ func (m *MockLightsailAPI) TagResourceRequest(arg0 *lightsail.TagResourceInput) 
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockLightsailAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockLightsailAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockLightsailAPI) TagResourceWithContext(arg0 context.Context, arg1 *lightsail.TagResourceInput, arg2 ...request.Option) (*lightsail.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6578,14 +6629,14 @@ func (m *MockLightsailAPI) TagResourceWithContext(arg0 context.Context, arg1 *li
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockLightsailAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// TestAlarm mocks base method
+// TestAlarm mocks base method.
 func (m *MockLightsailAPI) TestAlarm(arg0 *lightsail.TestAlarmInput) (*lightsail.TestAlarmOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TestAlarm", arg0)
@@ -6594,13 +6645,13 @@ func (m *MockLightsailAPI) TestAlarm(arg0 *lightsail.TestAlarmInput) (*lightsail
 	return ret0, ret1
 }
 
-// TestAlarm indicates an expected call of TestAlarm
+// TestAlarm indicates an expected call of TestAlarm.
 func (mr *MockLightsailAPIMockRecorder) TestAlarm(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TestAlarm", reflect.TypeOf((*MockLightsailAPI)(nil).TestAlarm), arg0)
 }
 
-// TestAlarmRequest mocks base method
+// TestAlarmRequest mocks base method.
 func (m *MockLightsailAPI) TestAlarmRequest(arg0 *lightsail.TestAlarmInput) (*request.Request, *lightsail.TestAlarmOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TestAlarmRequest", arg0)
@@ -6609,13 +6660,13 @@ func (m *MockLightsailAPI) TestAlarmRequest(arg0 *lightsail.TestAlarmInput) (*re
 	return ret0, ret1
 }
 
-// TestAlarmRequest indicates an expected call of TestAlarmRequest
+// TestAlarmRequest indicates an expected call of TestAlarmRequest.
 func (mr *MockLightsailAPIMockRecorder) TestAlarmRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TestAlarmRequest", reflect.TypeOf((*MockLightsailAPI)(nil).TestAlarmRequest), arg0)
 }
 
-// TestAlarmWithContext mocks base method
+// TestAlarmWithContext mocks base method.
 func (m *MockLightsailAPI) TestAlarmWithContext(arg0 context.Context, arg1 *lightsail.TestAlarmInput, arg2 ...request.Option) (*lightsail.TestAlarmOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6628,14 +6679,14 @@ func (m *MockLightsailAPI) TestAlarmWithContext(arg0 context.Context, arg1 *ligh
 	return ret0, ret1
 }
 
-// TestAlarmWithContext indicates an expected call of TestAlarmWithContext
+// TestAlarmWithContext indicates an expected call of TestAlarmWithContext.
 func (mr *MockLightsailAPIMockRecorder) TestAlarmWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TestAlarmWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).TestAlarmWithContext), varargs...)
 }
 
-// UnpeerVpc mocks base method
+// UnpeerVpc mocks base method.
 func (m *MockLightsailAPI) UnpeerVpc(arg0 *lightsail.UnpeerVpcInput) (*lightsail.UnpeerVpcOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UnpeerVpc", arg0)
@@ -6644,13 +6695,13 @@ func (m *MockLightsailAPI) UnpeerVpc(arg0 *lightsail.UnpeerVpcInput) (*lightsail
 	return ret0, ret1
 }
 
-// UnpeerVpc indicates an expected call of UnpeerVpc
+// UnpeerVpc indicates an expected call of UnpeerVpc.
 func (mr *MockLightsailAPIMockRecorder) UnpeerVpc(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UnpeerVpc", reflect.TypeOf((*MockLightsailAPI)(nil).UnpeerVpc), arg0)
 }
 
-// UnpeerVpcRequest mocks base method
+// UnpeerVpcRequest mocks base method.
 func (m *MockLightsailAPI) UnpeerVpcRequest(arg0 *lightsail.UnpeerVpcInput) (*request.Request, *lightsail.UnpeerVpcOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UnpeerVpcRequest", arg0)
@@ -6659,13 +6710,13 @@ func (m *MockLightsailAPI) UnpeerVpcRequest(arg0 *lightsail.UnpeerVpcInput) (*re
 	return ret0, ret1
 }
 
-// UnpeerVpcRequest indicates an expected call of UnpeerVpcRequest
+// UnpeerVpcRequest indicates an expected call of UnpeerVpcRequest.
 func (mr *MockLightsailAPIMockRecorder) UnpeerVpcRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UnpeerVpcRequest", reflect.TypeOf((*MockLightsailAPI)(nil).UnpeerVpcRequest), arg0)
 }
 
-// UnpeerVpcWithContext mocks base method
+// UnpeerVpcWithContext mocks base method.
 func (m *MockLightsailAPI) UnpeerVpcWithContext(arg0 context.Context, arg1 *lightsail.UnpeerVpcInput, arg2 ...request.Option) (*lightsail.UnpeerVpcOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6678,14 +6729,14 @@ func (m *MockLightsailAPI) UnpeerVpcWithContext(arg0 context.Context, arg1 *ligh
 	return ret0, ret1
 }
 
-// UnpeerVpcWithContext indicates an expected call of UnpeerVpcWithContext
+// UnpeerVpcWithContext indicates an expected call of UnpeerVpcWithContext.
 func (mr *MockLightsailAPIMockRecorder) UnpeerVpcWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UnpeerVpcWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).UnpeerVpcWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockLightsailAPI) UntagResource(arg0 *lightsail.UntagResourceInput) (*lightsail.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -6694,13 +6745,13 @@ func (m *MockLightsailAPI) UntagResource(arg0 *lightsail.UntagResourceInput) (*l
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockLightsailAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockLightsailAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockLightsailAPI) UntagResourceRequest(arg0 *lightsail.UntagResourceInput) (*request.Request, *lightsail.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -6709,13 +6760,13 @@ func (m *MockLightsailAPI) UntagResourceRequest(arg0 *lightsail.UntagResourceInp
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockLightsailAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockLightsailAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockLightsailAPI) UntagResourceWithContext(arg0 context.Context, arg1 *lightsail.UntagResourceInput, arg2 ...request.Option) (*lightsail.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6728,14 +6779,14 @@ func (m *MockLightsailAPI) UntagResourceWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockLightsailAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateContainerService mocks base method
+// UpdateContainerService mocks base method.
 func (m *MockLightsailAPI) UpdateContainerService(arg0 *lightsail.UpdateContainerServiceInput) (*lightsail.UpdateContainerServiceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateContainerService", arg0)
@@ -6744,13 +6795,13 @@ func (m *MockLightsailAPI) UpdateContainerService(arg0 *lightsail.UpdateContaine
 	return ret0, ret1
 }
 
-// UpdateContainerService indicates an expected call of UpdateContainerService
+// UpdateContainerService indicates an expected call of UpdateContainerService.
 func (mr *MockLightsailAPIMockRecorder) UpdateContainerService(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateContainerService", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateContainerService), arg0)
 }
 
-// UpdateContainerServiceRequest mocks base method
+// UpdateContainerServiceRequest mocks base method.
 func (m *MockLightsailAPI) UpdateContainerServiceRequest(arg0 *lightsail.UpdateContainerServiceInput) (*request.Request, *lightsail.UpdateContainerServiceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateContainerServiceRequest", arg0)
@@ -6759,13 +6810,13 @@ func (m *MockLightsailAPI) UpdateContainerServiceRequest(arg0 *lightsail.UpdateC
 	return ret0, ret1
 }
 
-// UpdateContainerServiceRequest indicates an expected call of UpdateContainerServiceRequest
+// UpdateContainerServiceRequest indicates an expected call of UpdateContainerServiceRequest.
 func (mr *MockLightsailAPIMockRecorder) UpdateContainerServiceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateContainerServiceRequest", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateContainerServiceRequest), arg0)
 }
 
-// UpdateContainerServiceWithContext mocks base method
+// UpdateContainerServiceWithContext mocks base method.
 func (m *MockLightsailAPI) UpdateContainerServiceWithContext(arg0 context.Context, arg1 *lightsail.UpdateContainerServiceInput, arg2 ...request.Option) (*lightsail.UpdateContainerServiceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6778,14 +6829,14 @@ func (m *MockLightsailAPI) UpdateContainerServiceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// UpdateContainerServiceWithContext indicates an expected call of UpdateContainerServiceWithContext
+// UpdateContainerServiceWithContext indicates an expected call of UpdateContainerServiceWithContext.
 func (mr *MockLightsailAPIMockRecorder) UpdateContainerServiceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateContainerServiceWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateContainerServiceWithContext), varargs...)
 }
 
-// UpdateDistribution mocks base method
+// UpdateDistribution mocks base method.
 func (m *MockLightsailAPI) UpdateDistribution(arg0 *lightsail.UpdateDistributionInput) (*lightsail.UpdateDistributionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDistribution", arg0)
@@ -6794,13 +6845,13 @@ func (m *MockLightsailAPI) UpdateDistribution(arg0 *lightsail.UpdateDistribution
 	return ret0, ret1
 }
 
-// UpdateDistribution indicates an expected call of UpdateDistribution
+// UpdateDistribution indicates an expected call of UpdateDistribution.
 func (mr *MockLightsailAPIMockRecorder) UpdateDistribution(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDistribution", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateDistribution), arg0)
 }
 
-// UpdateDistributionBundle mocks base method
+// UpdateDistributionBundle mocks base method.
 func (m *MockLightsailAPI) UpdateDistributionBundle(arg0 *lightsail.UpdateDistributionBundleInput) (*lightsail.UpdateDistributionBundleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDistributionBundle", arg0)
@@ -6809,13 +6860,13 @@ func (m *MockLightsailAPI) UpdateDistributionBundle(arg0 *lightsail.UpdateDistri
 	return ret0, ret1
 }
 
-// UpdateDistributionBundle indicates an expected call of UpdateDistributionBundle
+// UpdateDistributionBundle indicates an expected call of UpdateDistributionBundle.
 func (mr *MockLightsailAPIMockRecorder) UpdateDistributionBundle(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDistributionBundle", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateDistributionBundle), arg0)
 }
 
-// UpdateDistributionBundleRequest mocks base method
+// UpdateDistributionBundleRequest mocks base method.
 func (m *MockLightsailAPI) UpdateDistributionBundleRequest(arg0 *lightsail.UpdateDistributionBundleInput) (*request.Request, *lightsail.UpdateDistributionBundleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDistributionBundleRequest", arg0)
@@ -6824,13 +6875,13 @@ func (m *MockLightsailAPI) UpdateDistributionBundleRequest(arg0 *lightsail.Updat
 	return ret0, ret1
 }
 
-// UpdateDistributionBundleRequest indicates an expected call of UpdateDistributionBundleRequest
+// UpdateDistributionBundleRequest indicates an expected call of UpdateDistributionBundleRequest.
 func (mr *MockLightsailAPIMockRecorder) UpdateDistributionBundleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDistributionBundleRequest", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateDistributionBundleRequest), arg0)
 }
 
-// UpdateDistributionBundleWithContext mocks base method
+// UpdateDistributionBundleWithContext mocks base method.
 func (m *MockLightsailAPI) UpdateDistributionBundleWithContext(arg0 context.Context, arg1 *lightsail.UpdateDistributionBundleInput, arg2 ...request.Option) (*lightsail.UpdateDistributionBundleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6843,14 +6894,14 @@ func (m *MockLightsailAPI) UpdateDistributionBundleWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// UpdateDistributionBundleWithContext indicates an expected call of UpdateDistributionBundleWithContext
+// UpdateDistributionBundleWithContext indicates an expected call of UpdateDistributionBundleWithContext.
 func (mr *MockLightsailAPIMockRecorder) UpdateDistributionBundleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDistributionBundleWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateDistributionBundleWithContext), varargs...)
 }
 
-// UpdateDistributionRequest mocks base method
+// UpdateDistributionRequest mocks base method.
 func (m *MockLightsailAPI) UpdateDistributionRequest(arg0 *lightsail.UpdateDistributionInput) (*request.Request, *lightsail.UpdateDistributionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDistributionRequest", arg0)
@@ -6859,13 +6910,13 @@ func (m *MockLightsailAPI) UpdateDistributionRequest(arg0 *lightsail.UpdateDistr
 	return ret0, ret1
 }
 
-// UpdateDistributionRequest indicates an expected call of UpdateDistributionRequest
+// UpdateDistributionRequest indicates an expected call of UpdateDistributionRequest.
 func (mr *MockLightsailAPIMockRecorder) UpdateDistributionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDistributionRequest", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateDistributionRequest), arg0)
 }
 
-// UpdateDistributionWithContext mocks base method
+// UpdateDistributionWithContext mocks base method.
 func (m *MockLightsailAPI) UpdateDistributionWithContext(arg0 context.Context, arg1 *lightsail.UpdateDistributionInput, arg2 ...request.Option) (*lightsail.UpdateDistributionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6878,14 +6929,14 @@ func (m *MockLightsailAPI) UpdateDistributionWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UpdateDistributionWithContext indicates an expected call of UpdateDistributionWithContext
+// UpdateDistributionWithContext indicates an expected call of UpdateDistributionWithContext.
 func (mr *MockLightsailAPIMockRecorder) UpdateDistributionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDistributionWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateDistributionWithContext), varargs...)
 }
 
-// UpdateDomainEntry mocks base method
+// UpdateDomainEntry mocks base method.
 func (m *MockLightsailAPI) UpdateDomainEntry(arg0 *lightsail.UpdateDomainEntryInput) (*lightsail.UpdateDomainEntryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDomainEntry", arg0)
@@ -6894,13 +6945,13 @@ func (m *MockLightsailAPI) UpdateDomainEntry(arg0 *lightsail.UpdateDomainEntryIn
 	return ret0, ret1
 }
 
-// UpdateDomainEntry indicates an expected call of UpdateDomainEntry
+// UpdateDomainEntry indicates an expected call of UpdateDomainEntry.
 func (mr *MockLightsailAPIMockRecorder) UpdateDomainEntry(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDomainEntry", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateDomainEntry), arg0)
 }
 
-// UpdateDomainEntryRequest mocks base method
+// UpdateDomainEntryRequest mocks base method.
 func (m *MockLightsailAPI) UpdateDomainEntryRequest(arg0 *lightsail.UpdateDomainEntryInput) (*request.Request, *lightsail.UpdateDomainEntryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDomainEntryRequest", arg0)
@@ -6909,13 +6960,13 @@ func (m *MockLightsailAPI) UpdateDomainEntryRequest(arg0 *lightsail.UpdateDomain
 	return ret0, ret1
 }
 
-// UpdateDomainEntryRequest indicates an expected call of UpdateDomainEntryRequest
+// UpdateDomainEntryRequest indicates an expected call of UpdateDomainEntryRequest.
 func (mr *MockLightsailAPIMockRecorder) UpdateDomainEntryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDomainEntryRequest", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateDomainEntryRequest), arg0)
 }
 
-// UpdateDomainEntryWithContext mocks base method
+// UpdateDomainEntryWithContext mocks base method.
 func (m *MockLightsailAPI) UpdateDomainEntryWithContext(arg0 context.Context, arg1 *lightsail.UpdateDomainEntryInput, arg2 ...request.Option) (*lightsail.UpdateDomainEntryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6928,14 +6979,14 @@ func (m *MockLightsailAPI) UpdateDomainEntryWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateDomainEntryWithContext indicates an expected call of UpdateDomainEntryWithContext
+// UpdateDomainEntryWithContext indicates an expected call of UpdateDomainEntryWithContext.
 func (mr *MockLightsailAPIMockRecorder) UpdateDomainEntryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDomainEntryWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateDomainEntryWithContext), varargs...)
 }
 
-// UpdateLoadBalancerAttribute mocks base method
+// UpdateLoadBalancerAttribute mocks base method.
 func (m *MockLightsailAPI) UpdateLoadBalancerAttribute(arg0 *lightsail.UpdateLoadBalancerAttributeInput) (*lightsail.UpdateLoadBalancerAttributeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateLoadBalancerAttribute", arg0)
@@ -6944,13 +6995,13 @@ func (m *MockLightsailAPI) UpdateLoadBalancerAttribute(arg0 *lightsail.UpdateLoa
 	return ret0, ret1
 }
 
-// UpdateLoadBalancerAttribute indicates an expected call of UpdateLoadBalancerAttribute
+// UpdateLoadBalancerAttribute indicates an expected call of UpdateLoadBalancerAttribute.
 func (mr *MockLightsailAPIMockRecorder) UpdateLoadBalancerAttribute(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLoadBalancerAttribute", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateLoadBalancerAttribute), arg0)
 }
 
-// UpdateLoadBalancerAttributeRequest mocks base method
+// UpdateLoadBalancerAttributeRequest mocks base method.
 func (m *MockLightsailAPI) UpdateLoadBalancerAttributeRequest(arg0 *lightsail.UpdateLoadBalancerAttributeInput) (*request.Request, *lightsail.UpdateLoadBalancerAttributeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateLoadBalancerAttributeRequest", arg0)
@@ -6959,13 +7010,13 @@ func (m *MockLightsailAPI) UpdateLoadBalancerAttributeRequest(arg0 *lightsail.Up
 	return ret0, ret1
 }
 
-// UpdateLoadBalancerAttributeRequest indicates an expected call of UpdateLoadBalancerAttributeRequest
+// UpdateLoadBalancerAttributeRequest indicates an expected call of UpdateLoadBalancerAttributeRequest.
 func (mr *MockLightsailAPIMockRecorder) UpdateLoadBalancerAttributeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLoadBalancerAttributeRequest", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateLoadBalancerAttributeRequest), arg0)
 }
 
-// UpdateLoadBalancerAttributeWithContext mocks base method
+// UpdateLoadBalancerAttributeWithContext mocks base method.
 func (m *MockLightsailAPI) UpdateLoadBalancerAttributeWithContext(arg0 context.Context, arg1 *lightsail.UpdateLoadBalancerAttributeInput, arg2 ...request.Option) (*lightsail.UpdateLoadBalancerAttributeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -6978,14 +7029,14 @@ func (m *MockLightsailAPI) UpdateLoadBalancerAttributeWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// UpdateLoadBalancerAttributeWithContext indicates an expected call of UpdateLoadBalancerAttributeWithContext
+// UpdateLoadBalancerAttributeWithContext indicates an expected call of UpdateLoadBalancerAttributeWithContext.
 func (mr *MockLightsailAPIMockRecorder) UpdateLoadBalancerAttributeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLoadBalancerAttributeWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateLoadBalancerAttributeWithContext), varargs...)
 }
 
-// UpdateRelationalDatabase mocks base method
+// UpdateRelationalDatabase mocks base method.
 func (m *MockLightsailAPI) UpdateRelationalDatabase(arg0 *lightsail.UpdateRelationalDatabaseInput) (*lightsail.UpdateRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRelationalDatabase", arg0)
@@ -6994,13 +7045,13 @@ func (m *MockLightsailAPI) UpdateRelationalDatabase(arg0 *lightsail.UpdateRelati
 	return ret0, ret1
 }
 
-// UpdateRelationalDatabase indicates an expected call of UpdateRelationalDatabase
+// UpdateRelationalDatabase indicates an expected call of UpdateRelationalDatabase.
 func (mr *MockLightsailAPIMockRecorder) UpdateRelationalDatabase(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRelationalDatabase", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateRelationalDatabase), arg0)
 }
 
-// UpdateRelationalDatabaseParameters mocks base method
+// UpdateRelationalDatabaseParameters mocks base method.
 func (m *MockLightsailAPI) UpdateRelationalDatabaseParameters(arg0 *lightsail.UpdateRelationalDatabaseParametersInput) (*lightsail.UpdateRelationalDatabaseParametersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRelationalDatabaseParameters", arg0)
@@ -7009,13 +7060,13 @@ func (m *MockLightsailAPI) UpdateRelationalDatabaseParameters(arg0 *lightsail.Up
 	return ret0, ret1
 }
 
-// UpdateRelationalDatabaseParameters indicates an expected call of UpdateRelationalDatabaseParameters
+// UpdateRelationalDatabaseParameters indicates an expected call of UpdateRelationalDatabaseParameters.
 func (mr *MockLightsailAPIMockRecorder) UpdateRelationalDatabaseParameters(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRelationalDatabaseParameters", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateRelationalDatabaseParameters), arg0)
 }
 
-// UpdateRelationalDatabaseParametersRequest mocks base method
+// UpdateRelationalDatabaseParametersRequest mocks base method.
 func (m *MockLightsailAPI) UpdateRelationalDatabaseParametersRequest(arg0 *lightsail.UpdateRelationalDatabaseParametersInput) (*request.Request, *lightsail.UpdateRelationalDatabaseParametersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRelationalDatabaseParametersRequest", arg0)
@@ -7024,13 +7075,13 @@ func (m *MockLightsailAPI) UpdateRelationalDatabaseParametersRequest(arg0 *light
 	return ret0, ret1
 }
 
-// UpdateRelationalDatabaseParametersRequest indicates an expected call of UpdateRelationalDatabaseParametersRequest
+// UpdateRelationalDatabaseParametersRequest indicates an expected call of UpdateRelationalDatabaseParametersRequest.
 func (mr *MockLightsailAPIMockRecorder) UpdateRelationalDatabaseParametersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRelationalDatabaseParametersRequest", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateRelationalDatabaseParametersRequest), arg0)
 }
 
-// UpdateRelationalDatabaseParametersWithContext mocks base method
+// UpdateRelationalDatabaseParametersWithContext mocks base method.
 func (m *MockLightsailAPI) UpdateRelationalDatabaseParametersWithContext(arg0 context.Context, arg1 *lightsail.UpdateRelationalDatabaseParametersInput, arg2 ...request.Option) (*lightsail.UpdateRelationalDatabaseParametersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -7043,14 +7094,14 @@ func (m *MockLightsailAPI) UpdateRelationalDatabaseParametersWithContext(arg0 co
 	return ret0, ret1
 }
 
-// UpdateRelationalDatabaseParametersWithContext indicates an expected call of UpdateRelationalDatabaseParametersWithContext
+// UpdateRelationalDatabaseParametersWithContext indicates an expected call of UpdateRelationalDatabaseParametersWithContext.
 func (mr *MockLightsailAPIMockRecorder) UpdateRelationalDatabaseParametersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRelationalDatabaseParametersWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateRelationalDatabaseParametersWithContext), varargs...)
 }
 
-// UpdateRelationalDatabaseRequest mocks base method
+// UpdateRelationalDatabaseRequest mocks base method.
 func (m *MockLightsailAPI) UpdateRelationalDatabaseRequest(arg0 *lightsail.UpdateRelationalDatabaseInput) (*request.Request, *lightsail.UpdateRelationalDatabaseOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRelationalDatabaseRequest", arg0)
@@ -7059,13 +7110,13 @@ func (m *MockLightsailAPI) UpdateRelationalDatabaseRequest(arg0 *lightsail.Updat
 	return ret0, ret1
 }
 
-// UpdateRelationalDatabaseRequest indicates an expected call of UpdateRelationalDatabaseRequest
+// UpdateRelationalDatabaseRequest indicates an expected call of UpdateRelationalDatabaseRequest.
 func (mr *MockLightsailAPIMockRecorder) UpdateRelationalDatabaseRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRelationalDatabaseRequest", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateRelationalDatabaseRequest), arg0)
 }
 
-// UpdateRelationalDatabaseWithContext mocks base method
+// UpdateRelationalDatabaseWithContext mocks base method.
 func (m *MockLightsailAPI) UpdateRelationalDatabaseWithContext(arg0 context.Context, arg1 *lightsail.UpdateRelationalDatabaseInput, arg2 ...request.Option) (*lightsail.UpdateRelationalDatabaseOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -7078,7 +7129,7 @@ func (m *MockLightsailAPI) UpdateRelationalDatabaseWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// UpdateRelationalDatabaseWithContext indicates an expected call of UpdateRelationalDatabaseWithContext
+// UpdateRelationalDatabaseWithContext indicates an expected call of UpdateRelationalDatabaseWithContext.
 func (mr *MockLightsailAPIMockRecorder) UpdateRelationalDatabaseWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

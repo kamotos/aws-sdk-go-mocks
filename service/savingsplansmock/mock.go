@@ -6,36 +6,37 @@ package savingsplansmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	savingsplans "github.com/aws/aws-sdk-go/service/savingsplans"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockSavingsPlansAPI is a mock of SavingsPlansAPI interface
+// MockSavingsPlansAPI is a mock of SavingsPlansAPI interface.
 type MockSavingsPlansAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockSavingsPlansAPIMockRecorder
 }
 
-// MockSavingsPlansAPIMockRecorder is the mock recorder for MockSavingsPlansAPI
+// MockSavingsPlansAPIMockRecorder is the mock recorder for MockSavingsPlansAPI.
 type MockSavingsPlansAPIMockRecorder struct {
 	mock *MockSavingsPlansAPI
 }
 
-// NewMockSavingsPlansAPI creates a new mock instance
+// NewMockSavingsPlansAPI creates a new mock instance.
 func NewMockSavingsPlansAPI(ctrl *gomock.Controller) *MockSavingsPlansAPI {
 	mock := &MockSavingsPlansAPI{ctrl: ctrl}
 	mock.recorder = &MockSavingsPlansAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockSavingsPlansAPI) EXPECT() *MockSavingsPlansAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateSavingsPlan mocks base method
+// CreateSavingsPlan mocks base method.
 func (m *MockSavingsPlansAPI) CreateSavingsPlan(arg0 *savingsplans.CreateSavingsPlanInput) (*savingsplans.CreateSavingsPlanOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSavingsPlan", arg0)
@@ -44,13 +45,13 @@ func (m *MockSavingsPlansAPI) CreateSavingsPlan(arg0 *savingsplans.CreateSavings
 	return ret0, ret1
 }
 
-// CreateSavingsPlan indicates an expected call of CreateSavingsPlan
+// CreateSavingsPlan indicates an expected call of CreateSavingsPlan.
 func (mr *MockSavingsPlansAPIMockRecorder) CreateSavingsPlan(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSavingsPlan", reflect.TypeOf((*MockSavingsPlansAPI)(nil).CreateSavingsPlan), arg0)
 }
 
-// CreateSavingsPlanRequest mocks base method
+// CreateSavingsPlanRequest mocks base method.
 func (m *MockSavingsPlansAPI) CreateSavingsPlanRequest(arg0 *savingsplans.CreateSavingsPlanInput) (*request.Request, *savingsplans.CreateSavingsPlanOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSavingsPlanRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockSavingsPlansAPI) CreateSavingsPlanRequest(arg0 *savingsplans.Create
 	return ret0, ret1
 }
 
-// CreateSavingsPlanRequest indicates an expected call of CreateSavingsPlanRequest
+// CreateSavingsPlanRequest indicates an expected call of CreateSavingsPlanRequest.
 func (mr *MockSavingsPlansAPIMockRecorder) CreateSavingsPlanRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSavingsPlanRequest", reflect.TypeOf((*MockSavingsPlansAPI)(nil).CreateSavingsPlanRequest), arg0)
 }
 
-// CreateSavingsPlanWithContext mocks base method
+// CreateSavingsPlanWithContext mocks base method.
 func (m *MockSavingsPlansAPI) CreateSavingsPlanWithContext(arg0 context.Context, arg1 *savingsplans.CreateSavingsPlanInput, arg2 ...request.Option) (*savingsplans.CreateSavingsPlanOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockSavingsPlansAPI) CreateSavingsPlanWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateSavingsPlanWithContext indicates an expected call of CreateSavingsPlanWithContext
+// CreateSavingsPlanWithContext indicates an expected call of CreateSavingsPlanWithContext.
 func (mr *MockSavingsPlansAPIMockRecorder) CreateSavingsPlanWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSavingsPlanWithContext", reflect.TypeOf((*MockSavingsPlansAPI)(nil).CreateSavingsPlanWithContext), varargs...)
 }
 
-// DeleteQueuedSavingsPlan mocks base method
+// DeleteQueuedSavingsPlan mocks base method.
 func (m *MockSavingsPlansAPI) DeleteQueuedSavingsPlan(arg0 *savingsplans.DeleteQueuedSavingsPlanInput) (*savingsplans.DeleteQueuedSavingsPlanOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteQueuedSavingsPlan", arg0)
@@ -94,13 +95,13 @@ func (m *MockSavingsPlansAPI) DeleteQueuedSavingsPlan(arg0 *savingsplans.DeleteQ
 	return ret0, ret1
 }
 
-// DeleteQueuedSavingsPlan indicates an expected call of DeleteQueuedSavingsPlan
+// DeleteQueuedSavingsPlan indicates an expected call of DeleteQueuedSavingsPlan.
 func (mr *MockSavingsPlansAPIMockRecorder) DeleteQueuedSavingsPlan(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteQueuedSavingsPlan", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DeleteQueuedSavingsPlan), arg0)
 }
 
-// DeleteQueuedSavingsPlanRequest mocks base method
+// DeleteQueuedSavingsPlanRequest mocks base method.
 func (m *MockSavingsPlansAPI) DeleteQueuedSavingsPlanRequest(arg0 *savingsplans.DeleteQueuedSavingsPlanInput) (*request.Request, *savingsplans.DeleteQueuedSavingsPlanOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteQueuedSavingsPlanRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockSavingsPlansAPI) DeleteQueuedSavingsPlanRequest(arg0 *savingsplans.
 	return ret0, ret1
 }
 
-// DeleteQueuedSavingsPlanRequest indicates an expected call of DeleteQueuedSavingsPlanRequest
+// DeleteQueuedSavingsPlanRequest indicates an expected call of DeleteQueuedSavingsPlanRequest.
 func (mr *MockSavingsPlansAPIMockRecorder) DeleteQueuedSavingsPlanRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteQueuedSavingsPlanRequest", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DeleteQueuedSavingsPlanRequest), arg0)
 }
 
-// DeleteQueuedSavingsPlanWithContext mocks base method
+// DeleteQueuedSavingsPlanWithContext mocks base method.
 func (m *MockSavingsPlansAPI) DeleteQueuedSavingsPlanWithContext(arg0 context.Context, arg1 *savingsplans.DeleteQueuedSavingsPlanInput, arg2 ...request.Option) (*savingsplans.DeleteQueuedSavingsPlanOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockSavingsPlansAPI) DeleteQueuedSavingsPlanWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DeleteQueuedSavingsPlanWithContext indicates an expected call of DeleteQueuedSavingsPlanWithContext
+// DeleteQueuedSavingsPlanWithContext indicates an expected call of DeleteQueuedSavingsPlanWithContext.
 func (mr *MockSavingsPlansAPIMockRecorder) DeleteQueuedSavingsPlanWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteQueuedSavingsPlanWithContext", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DeleteQueuedSavingsPlanWithContext), varargs...)
 }
 
-// DescribeSavingsPlanRates mocks base method
+// DescribeSavingsPlanRates mocks base method.
 func (m *MockSavingsPlansAPI) DescribeSavingsPlanRates(arg0 *savingsplans.DescribeSavingsPlanRatesInput) (*savingsplans.DescribeSavingsPlanRatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSavingsPlanRates", arg0)
@@ -144,13 +145,13 @@ func (m *MockSavingsPlansAPI) DescribeSavingsPlanRates(arg0 *savingsplans.Descri
 	return ret0, ret1
 }
 
-// DescribeSavingsPlanRates indicates an expected call of DescribeSavingsPlanRates
+// DescribeSavingsPlanRates indicates an expected call of DescribeSavingsPlanRates.
 func (mr *MockSavingsPlansAPIMockRecorder) DescribeSavingsPlanRates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSavingsPlanRates", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DescribeSavingsPlanRates), arg0)
 }
 
-// DescribeSavingsPlanRatesRequest mocks base method
+// DescribeSavingsPlanRatesRequest mocks base method.
 func (m *MockSavingsPlansAPI) DescribeSavingsPlanRatesRequest(arg0 *savingsplans.DescribeSavingsPlanRatesInput) (*request.Request, *savingsplans.DescribeSavingsPlanRatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSavingsPlanRatesRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockSavingsPlansAPI) DescribeSavingsPlanRatesRequest(arg0 *savingsplans
 	return ret0, ret1
 }
 
-// DescribeSavingsPlanRatesRequest indicates an expected call of DescribeSavingsPlanRatesRequest
+// DescribeSavingsPlanRatesRequest indicates an expected call of DescribeSavingsPlanRatesRequest.
 func (mr *MockSavingsPlansAPIMockRecorder) DescribeSavingsPlanRatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSavingsPlanRatesRequest", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DescribeSavingsPlanRatesRequest), arg0)
 }
 
-// DescribeSavingsPlanRatesWithContext mocks base method
+// DescribeSavingsPlanRatesWithContext mocks base method.
 func (m *MockSavingsPlansAPI) DescribeSavingsPlanRatesWithContext(arg0 context.Context, arg1 *savingsplans.DescribeSavingsPlanRatesInput, arg2 ...request.Option) (*savingsplans.DescribeSavingsPlanRatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockSavingsPlansAPI) DescribeSavingsPlanRatesWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DescribeSavingsPlanRatesWithContext indicates an expected call of DescribeSavingsPlanRatesWithContext
+// DescribeSavingsPlanRatesWithContext indicates an expected call of DescribeSavingsPlanRatesWithContext.
 func (mr *MockSavingsPlansAPIMockRecorder) DescribeSavingsPlanRatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSavingsPlanRatesWithContext", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DescribeSavingsPlanRatesWithContext), varargs...)
 }
 
-// DescribeSavingsPlans mocks base method
+// DescribeSavingsPlans mocks base method.
 func (m *MockSavingsPlansAPI) DescribeSavingsPlans(arg0 *savingsplans.DescribeSavingsPlansInput) (*savingsplans.DescribeSavingsPlansOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSavingsPlans", arg0)
@@ -194,13 +195,13 @@ func (m *MockSavingsPlansAPI) DescribeSavingsPlans(arg0 *savingsplans.DescribeSa
 	return ret0, ret1
 }
 
-// DescribeSavingsPlans indicates an expected call of DescribeSavingsPlans
+// DescribeSavingsPlans indicates an expected call of DescribeSavingsPlans.
 func (mr *MockSavingsPlansAPIMockRecorder) DescribeSavingsPlans(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSavingsPlans", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DescribeSavingsPlans), arg0)
 }
 
-// DescribeSavingsPlansOfferingRates mocks base method
+// DescribeSavingsPlansOfferingRates mocks base method.
 func (m *MockSavingsPlansAPI) DescribeSavingsPlansOfferingRates(arg0 *savingsplans.DescribeSavingsPlansOfferingRatesInput) (*savingsplans.DescribeSavingsPlansOfferingRatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSavingsPlansOfferingRates", arg0)
@@ -209,13 +210,13 @@ func (m *MockSavingsPlansAPI) DescribeSavingsPlansOfferingRates(arg0 *savingspla
 	return ret0, ret1
 }
 
-// DescribeSavingsPlansOfferingRates indicates an expected call of DescribeSavingsPlansOfferingRates
+// DescribeSavingsPlansOfferingRates indicates an expected call of DescribeSavingsPlansOfferingRates.
 func (mr *MockSavingsPlansAPIMockRecorder) DescribeSavingsPlansOfferingRates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSavingsPlansOfferingRates", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DescribeSavingsPlansOfferingRates), arg0)
 }
 
-// DescribeSavingsPlansOfferingRatesRequest mocks base method
+// DescribeSavingsPlansOfferingRatesRequest mocks base method.
 func (m *MockSavingsPlansAPI) DescribeSavingsPlansOfferingRatesRequest(arg0 *savingsplans.DescribeSavingsPlansOfferingRatesInput) (*request.Request, *savingsplans.DescribeSavingsPlansOfferingRatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSavingsPlansOfferingRatesRequest", arg0)
@@ -224,13 +225,13 @@ func (m *MockSavingsPlansAPI) DescribeSavingsPlansOfferingRatesRequest(arg0 *sav
 	return ret0, ret1
 }
 
-// DescribeSavingsPlansOfferingRatesRequest indicates an expected call of DescribeSavingsPlansOfferingRatesRequest
+// DescribeSavingsPlansOfferingRatesRequest indicates an expected call of DescribeSavingsPlansOfferingRatesRequest.
 func (mr *MockSavingsPlansAPIMockRecorder) DescribeSavingsPlansOfferingRatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSavingsPlansOfferingRatesRequest", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DescribeSavingsPlansOfferingRatesRequest), arg0)
 }
 
-// DescribeSavingsPlansOfferingRatesWithContext mocks base method
+// DescribeSavingsPlansOfferingRatesWithContext mocks base method.
 func (m *MockSavingsPlansAPI) DescribeSavingsPlansOfferingRatesWithContext(arg0 context.Context, arg1 *savingsplans.DescribeSavingsPlansOfferingRatesInput, arg2 ...request.Option) (*savingsplans.DescribeSavingsPlansOfferingRatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -243,14 +244,14 @@ func (m *MockSavingsPlansAPI) DescribeSavingsPlansOfferingRatesWithContext(arg0 
 	return ret0, ret1
 }
 
-// DescribeSavingsPlansOfferingRatesWithContext indicates an expected call of DescribeSavingsPlansOfferingRatesWithContext
+// DescribeSavingsPlansOfferingRatesWithContext indicates an expected call of DescribeSavingsPlansOfferingRatesWithContext.
 func (mr *MockSavingsPlansAPIMockRecorder) DescribeSavingsPlansOfferingRatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSavingsPlansOfferingRatesWithContext", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DescribeSavingsPlansOfferingRatesWithContext), varargs...)
 }
 
-// DescribeSavingsPlansOfferings mocks base method
+// DescribeSavingsPlansOfferings mocks base method.
 func (m *MockSavingsPlansAPI) DescribeSavingsPlansOfferings(arg0 *savingsplans.DescribeSavingsPlansOfferingsInput) (*savingsplans.DescribeSavingsPlansOfferingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSavingsPlansOfferings", arg0)
@@ -259,13 +260,13 @@ func (m *MockSavingsPlansAPI) DescribeSavingsPlansOfferings(arg0 *savingsplans.D
 	return ret0, ret1
 }
 
-// DescribeSavingsPlansOfferings indicates an expected call of DescribeSavingsPlansOfferings
+// DescribeSavingsPlansOfferings indicates an expected call of DescribeSavingsPlansOfferings.
 func (mr *MockSavingsPlansAPIMockRecorder) DescribeSavingsPlansOfferings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSavingsPlansOfferings", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DescribeSavingsPlansOfferings), arg0)
 }
 
-// DescribeSavingsPlansOfferingsRequest mocks base method
+// DescribeSavingsPlansOfferingsRequest mocks base method.
 func (m *MockSavingsPlansAPI) DescribeSavingsPlansOfferingsRequest(arg0 *savingsplans.DescribeSavingsPlansOfferingsInput) (*request.Request, *savingsplans.DescribeSavingsPlansOfferingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSavingsPlansOfferingsRequest", arg0)
@@ -274,13 +275,13 @@ func (m *MockSavingsPlansAPI) DescribeSavingsPlansOfferingsRequest(arg0 *savings
 	return ret0, ret1
 }
 
-// DescribeSavingsPlansOfferingsRequest indicates an expected call of DescribeSavingsPlansOfferingsRequest
+// DescribeSavingsPlansOfferingsRequest indicates an expected call of DescribeSavingsPlansOfferingsRequest.
 func (mr *MockSavingsPlansAPIMockRecorder) DescribeSavingsPlansOfferingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSavingsPlansOfferingsRequest", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DescribeSavingsPlansOfferingsRequest), arg0)
 }
 
-// DescribeSavingsPlansOfferingsWithContext mocks base method
+// DescribeSavingsPlansOfferingsWithContext mocks base method.
 func (m *MockSavingsPlansAPI) DescribeSavingsPlansOfferingsWithContext(arg0 context.Context, arg1 *savingsplans.DescribeSavingsPlansOfferingsInput, arg2 ...request.Option) (*savingsplans.DescribeSavingsPlansOfferingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -293,14 +294,14 @@ func (m *MockSavingsPlansAPI) DescribeSavingsPlansOfferingsWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// DescribeSavingsPlansOfferingsWithContext indicates an expected call of DescribeSavingsPlansOfferingsWithContext
+// DescribeSavingsPlansOfferingsWithContext indicates an expected call of DescribeSavingsPlansOfferingsWithContext.
 func (mr *MockSavingsPlansAPIMockRecorder) DescribeSavingsPlansOfferingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSavingsPlansOfferingsWithContext", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DescribeSavingsPlansOfferingsWithContext), varargs...)
 }
 
-// DescribeSavingsPlansRequest mocks base method
+// DescribeSavingsPlansRequest mocks base method.
 func (m *MockSavingsPlansAPI) DescribeSavingsPlansRequest(arg0 *savingsplans.DescribeSavingsPlansInput) (*request.Request, *savingsplans.DescribeSavingsPlansOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSavingsPlansRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockSavingsPlansAPI) DescribeSavingsPlansRequest(arg0 *savingsplans.Des
 	return ret0, ret1
 }
 
-// DescribeSavingsPlansRequest indicates an expected call of DescribeSavingsPlansRequest
+// DescribeSavingsPlansRequest indicates an expected call of DescribeSavingsPlansRequest.
 func (mr *MockSavingsPlansAPIMockRecorder) DescribeSavingsPlansRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSavingsPlansRequest", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DescribeSavingsPlansRequest), arg0)
 }
 
-// DescribeSavingsPlansWithContext mocks base method
+// DescribeSavingsPlansWithContext mocks base method.
 func (m *MockSavingsPlansAPI) DescribeSavingsPlansWithContext(arg0 context.Context, arg1 *savingsplans.DescribeSavingsPlansInput, arg2 ...request.Option) (*savingsplans.DescribeSavingsPlansOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockSavingsPlansAPI) DescribeSavingsPlansWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DescribeSavingsPlansWithContext indicates an expected call of DescribeSavingsPlansWithContext
+// DescribeSavingsPlansWithContext indicates an expected call of DescribeSavingsPlansWithContext.
 func (mr *MockSavingsPlansAPIMockRecorder) DescribeSavingsPlansWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSavingsPlansWithContext", reflect.TypeOf((*MockSavingsPlansAPI)(nil).DescribeSavingsPlansWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockSavingsPlansAPI) ListTagsForResource(arg0 *savingsplans.ListTagsForResourceInput) (*savingsplans.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -344,13 +345,13 @@ func (m *MockSavingsPlansAPI) ListTagsForResource(arg0 *savingsplans.ListTagsFor
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockSavingsPlansAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockSavingsPlansAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockSavingsPlansAPI) ListTagsForResourceRequest(arg0 *savingsplans.ListTagsForResourceInput) (*request.Request, *savingsplans.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockSavingsPlansAPI) ListTagsForResourceRequest(arg0 *savingsplans.List
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockSavingsPlansAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockSavingsPlansAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockSavingsPlansAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *savingsplans.ListTagsForResourceInput, arg2 ...request.Option) (*savingsplans.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockSavingsPlansAPI) ListTagsForResourceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockSavingsPlansAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockSavingsPlansAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockSavingsPlansAPI) TagResource(arg0 *savingsplans.TagResourceInput) (*savingsplans.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -394,13 +395,13 @@ func (m *MockSavingsPlansAPI) TagResource(arg0 *savingsplans.TagResourceInput) (
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockSavingsPlansAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockSavingsPlansAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockSavingsPlansAPI) TagResourceRequest(arg0 *savingsplans.TagResourceInput) (*request.Request, *savingsplans.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockSavingsPlansAPI) TagResourceRequest(arg0 *savingsplans.TagResourceI
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockSavingsPlansAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockSavingsPlansAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockSavingsPlansAPI) TagResourceWithContext(arg0 context.Context, arg1 *savingsplans.TagResourceInput, arg2 ...request.Option) (*savingsplans.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockSavingsPlansAPI) TagResourceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockSavingsPlansAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockSavingsPlansAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockSavingsPlansAPI) UntagResource(arg0 *savingsplans.UntagResourceInput) (*savingsplans.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -444,13 +445,13 @@ func (m *MockSavingsPlansAPI) UntagResource(arg0 *savingsplans.UntagResourceInpu
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockSavingsPlansAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockSavingsPlansAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockSavingsPlansAPI) UntagResourceRequest(arg0 *savingsplans.UntagResourceInput) (*request.Request, *savingsplans.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockSavingsPlansAPI) UntagResourceRequest(arg0 *savingsplans.UntagResou
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockSavingsPlansAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockSavingsPlansAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockSavingsPlansAPI) UntagResourceWithContext(arg0 context.Context, arg1 *savingsplans.UntagResourceInput, arg2 ...request.Option) (*savingsplans.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,7 +479,7 @@ func (m *MockSavingsPlansAPI) UntagResourceWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockSavingsPlansAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

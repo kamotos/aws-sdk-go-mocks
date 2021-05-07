@@ -6,36 +6,87 @@ package mediapackagevodmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	mediapackagevod "github.com/aws/aws-sdk-go/service/mediapackagevod"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockMediaPackageVodAPI is a mock of MediaPackageVodAPI interface
+// MockMediaPackageVodAPI is a mock of MediaPackageVodAPI interface.
 type MockMediaPackageVodAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockMediaPackageVodAPIMockRecorder
 }
 
-// MockMediaPackageVodAPIMockRecorder is the mock recorder for MockMediaPackageVodAPI
+// MockMediaPackageVodAPIMockRecorder is the mock recorder for MockMediaPackageVodAPI.
 type MockMediaPackageVodAPIMockRecorder struct {
 	mock *MockMediaPackageVodAPI
 }
 
-// NewMockMediaPackageVodAPI creates a new mock instance
+// NewMockMediaPackageVodAPI creates a new mock instance.
 func NewMockMediaPackageVodAPI(ctrl *gomock.Controller) *MockMediaPackageVodAPI {
 	mock := &MockMediaPackageVodAPI{ctrl: ctrl}
 	mock.recorder = &MockMediaPackageVodAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockMediaPackageVodAPI) EXPECT() *MockMediaPackageVodAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateAsset mocks base method
+// ConfigureLogs mocks base method.
+func (m *MockMediaPackageVodAPI) ConfigureLogs(arg0 *mediapackagevod.ConfigureLogsInput) (*mediapackagevod.ConfigureLogsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ConfigureLogs", arg0)
+	ret0, _ := ret[0].(*mediapackagevod.ConfigureLogsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ConfigureLogs indicates an expected call of ConfigureLogs.
+func (mr *MockMediaPackageVodAPIMockRecorder) ConfigureLogs(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfigureLogs", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ConfigureLogs), arg0)
+}
+
+// ConfigureLogsRequest mocks base method.
+func (m *MockMediaPackageVodAPI) ConfigureLogsRequest(arg0 *mediapackagevod.ConfigureLogsInput) (*request.Request, *mediapackagevod.ConfigureLogsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ConfigureLogsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*mediapackagevod.ConfigureLogsOutput)
+	return ret0, ret1
+}
+
+// ConfigureLogsRequest indicates an expected call of ConfigureLogsRequest.
+func (mr *MockMediaPackageVodAPIMockRecorder) ConfigureLogsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfigureLogsRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ConfigureLogsRequest), arg0)
+}
+
+// ConfigureLogsWithContext mocks base method.
+func (m *MockMediaPackageVodAPI) ConfigureLogsWithContext(arg0 context.Context, arg1 *mediapackagevod.ConfigureLogsInput, arg2 ...request.Option) (*mediapackagevod.ConfigureLogsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ConfigureLogsWithContext", varargs...)
+	ret0, _ := ret[0].(*mediapackagevod.ConfigureLogsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ConfigureLogsWithContext indicates an expected call of ConfigureLogsWithContext.
+func (mr *MockMediaPackageVodAPIMockRecorder) ConfigureLogsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfigureLogsWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ConfigureLogsWithContext), varargs...)
+}
+
+// CreateAsset mocks base method.
 func (m *MockMediaPackageVodAPI) CreateAsset(arg0 *mediapackagevod.CreateAssetInput) (*mediapackagevod.CreateAssetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAsset", arg0)
@@ -44,13 +95,13 @@ func (m *MockMediaPackageVodAPI) CreateAsset(arg0 *mediapackagevod.CreateAssetIn
 	return ret0, ret1
 }
 
-// CreateAsset indicates an expected call of CreateAsset
+// CreateAsset indicates an expected call of CreateAsset.
 func (mr *MockMediaPackageVodAPIMockRecorder) CreateAsset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAsset", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).CreateAsset), arg0)
 }
 
-// CreateAssetRequest mocks base method
+// CreateAssetRequest mocks base method.
 func (m *MockMediaPackageVodAPI) CreateAssetRequest(arg0 *mediapackagevod.CreateAssetInput) (*request.Request, *mediapackagevod.CreateAssetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateAssetRequest", arg0)
@@ -59,13 +110,13 @@ func (m *MockMediaPackageVodAPI) CreateAssetRequest(arg0 *mediapackagevod.Create
 	return ret0, ret1
 }
 
-// CreateAssetRequest indicates an expected call of CreateAssetRequest
+// CreateAssetRequest indicates an expected call of CreateAssetRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) CreateAssetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAssetRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).CreateAssetRequest), arg0)
 }
 
-// CreateAssetWithContext mocks base method
+// CreateAssetWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) CreateAssetWithContext(arg0 context.Context, arg1 *mediapackagevod.CreateAssetInput, arg2 ...request.Option) (*mediapackagevod.CreateAssetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +129,14 @@ func (m *MockMediaPackageVodAPI) CreateAssetWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateAssetWithContext indicates an expected call of CreateAssetWithContext
+// CreateAssetWithContext indicates an expected call of CreateAssetWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) CreateAssetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateAssetWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).CreateAssetWithContext), varargs...)
 }
 
-// CreatePackagingConfiguration mocks base method
+// CreatePackagingConfiguration mocks base method.
 func (m *MockMediaPackageVodAPI) CreatePackagingConfiguration(arg0 *mediapackagevod.CreatePackagingConfigurationInput) (*mediapackagevod.CreatePackagingConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreatePackagingConfiguration", arg0)
@@ -94,13 +145,13 @@ func (m *MockMediaPackageVodAPI) CreatePackagingConfiguration(arg0 *mediapackage
 	return ret0, ret1
 }
 
-// CreatePackagingConfiguration indicates an expected call of CreatePackagingConfiguration
+// CreatePackagingConfiguration indicates an expected call of CreatePackagingConfiguration.
 func (mr *MockMediaPackageVodAPIMockRecorder) CreatePackagingConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePackagingConfiguration", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).CreatePackagingConfiguration), arg0)
 }
 
-// CreatePackagingConfigurationRequest mocks base method
+// CreatePackagingConfigurationRequest mocks base method.
 func (m *MockMediaPackageVodAPI) CreatePackagingConfigurationRequest(arg0 *mediapackagevod.CreatePackagingConfigurationInput) (*request.Request, *mediapackagevod.CreatePackagingConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreatePackagingConfigurationRequest", arg0)
@@ -109,13 +160,13 @@ func (m *MockMediaPackageVodAPI) CreatePackagingConfigurationRequest(arg0 *media
 	return ret0, ret1
 }
 
-// CreatePackagingConfigurationRequest indicates an expected call of CreatePackagingConfigurationRequest
+// CreatePackagingConfigurationRequest indicates an expected call of CreatePackagingConfigurationRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) CreatePackagingConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePackagingConfigurationRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).CreatePackagingConfigurationRequest), arg0)
 }
 
-// CreatePackagingConfigurationWithContext mocks base method
+// CreatePackagingConfigurationWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) CreatePackagingConfigurationWithContext(arg0 context.Context, arg1 *mediapackagevod.CreatePackagingConfigurationInput, arg2 ...request.Option) (*mediapackagevod.CreatePackagingConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +179,14 @@ func (m *MockMediaPackageVodAPI) CreatePackagingConfigurationWithContext(arg0 co
 	return ret0, ret1
 }
 
-// CreatePackagingConfigurationWithContext indicates an expected call of CreatePackagingConfigurationWithContext
+// CreatePackagingConfigurationWithContext indicates an expected call of CreatePackagingConfigurationWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) CreatePackagingConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePackagingConfigurationWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).CreatePackagingConfigurationWithContext), varargs...)
 }
 
-// CreatePackagingGroup mocks base method
+// CreatePackagingGroup mocks base method.
 func (m *MockMediaPackageVodAPI) CreatePackagingGroup(arg0 *mediapackagevod.CreatePackagingGroupInput) (*mediapackagevod.CreatePackagingGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreatePackagingGroup", arg0)
@@ -144,13 +195,13 @@ func (m *MockMediaPackageVodAPI) CreatePackagingGroup(arg0 *mediapackagevod.Crea
 	return ret0, ret1
 }
 
-// CreatePackagingGroup indicates an expected call of CreatePackagingGroup
+// CreatePackagingGroup indicates an expected call of CreatePackagingGroup.
 func (mr *MockMediaPackageVodAPIMockRecorder) CreatePackagingGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePackagingGroup", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).CreatePackagingGroup), arg0)
 }
 
-// CreatePackagingGroupRequest mocks base method
+// CreatePackagingGroupRequest mocks base method.
 func (m *MockMediaPackageVodAPI) CreatePackagingGroupRequest(arg0 *mediapackagevod.CreatePackagingGroupInput) (*request.Request, *mediapackagevod.CreatePackagingGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreatePackagingGroupRequest", arg0)
@@ -159,13 +210,13 @@ func (m *MockMediaPackageVodAPI) CreatePackagingGroupRequest(arg0 *mediapackagev
 	return ret0, ret1
 }
 
-// CreatePackagingGroupRequest indicates an expected call of CreatePackagingGroupRequest
+// CreatePackagingGroupRequest indicates an expected call of CreatePackagingGroupRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) CreatePackagingGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePackagingGroupRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).CreatePackagingGroupRequest), arg0)
 }
 
-// CreatePackagingGroupWithContext mocks base method
+// CreatePackagingGroupWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) CreatePackagingGroupWithContext(arg0 context.Context, arg1 *mediapackagevod.CreatePackagingGroupInput, arg2 ...request.Option) (*mediapackagevod.CreatePackagingGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +229,14 @@ func (m *MockMediaPackageVodAPI) CreatePackagingGroupWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// CreatePackagingGroupWithContext indicates an expected call of CreatePackagingGroupWithContext
+// CreatePackagingGroupWithContext indicates an expected call of CreatePackagingGroupWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) CreatePackagingGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePackagingGroupWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).CreatePackagingGroupWithContext), varargs...)
 }
 
-// DeleteAsset mocks base method
+// DeleteAsset mocks base method.
 func (m *MockMediaPackageVodAPI) DeleteAsset(arg0 *mediapackagevod.DeleteAssetInput) (*mediapackagevod.DeleteAssetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAsset", arg0)
@@ -194,13 +245,13 @@ func (m *MockMediaPackageVodAPI) DeleteAsset(arg0 *mediapackagevod.DeleteAssetIn
 	return ret0, ret1
 }
 
-// DeleteAsset indicates an expected call of DeleteAsset
+// DeleteAsset indicates an expected call of DeleteAsset.
 func (mr *MockMediaPackageVodAPIMockRecorder) DeleteAsset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAsset", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DeleteAsset), arg0)
 }
 
-// DeleteAssetRequest mocks base method
+// DeleteAssetRequest mocks base method.
 func (m *MockMediaPackageVodAPI) DeleteAssetRequest(arg0 *mediapackagevod.DeleteAssetInput) (*request.Request, *mediapackagevod.DeleteAssetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAssetRequest", arg0)
@@ -209,13 +260,13 @@ func (m *MockMediaPackageVodAPI) DeleteAssetRequest(arg0 *mediapackagevod.Delete
 	return ret0, ret1
 }
 
-// DeleteAssetRequest indicates an expected call of DeleteAssetRequest
+// DeleteAssetRequest indicates an expected call of DeleteAssetRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) DeleteAssetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAssetRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DeleteAssetRequest), arg0)
 }
 
-// DeleteAssetWithContext mocks base method
+// DeleteAssetWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) DeleteAssetWithContext(arg0 context.Context, arg1 *mediapackagevod.DeleteAssetInput, arg2 ...request.Option) (*mediapackagevod.DeleteAssetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +279,14 @@ func (m *MockMediaPackageVodAPI) DeleteAssetWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteAssetWithContext indicates an expected call of DeleteAssetWithContext
+// DeleteAssetWithContext indicates an expected call of DeleteAssetWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) DeleteAssetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAssetWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DeleteAssetWithContext), varargs...)
 }
 
-// DeletePackagingConfiguration mocks base method
+// DeletePackagingConfiguration mocks base method.
 func (m *MockMediaPackageVodAPI) DeletePackagingConfiguration(arg0 *mediapackagevod.DeletePackagingConfigurationInput) (*mediapackagevod.DeletePackagingConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeletePackagingConfiguration", arg0)
@@ -244,13 +295,13 @@ func (m *MockMediaPackageVodAPI) DeletePackagingConfiguration(arg0 *mediapackage
 	return ret0, ret1
 }
 
-// DeletePackagingConfiguration indicates an expected call of DeletePackagingConfiguration
+// DeletePackagingConfiguration indicates an expected call of DeletePackagingConfiguration.
 func (mr *MockMediaPackageVodAPIMockRecorder) DeletePackagingConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePackagingConfiguration", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DeletePackagingConfiguration), arg0)
 }
 
-// DeletePackagingConfigurationRequest mocks base method
+// DeletePackagingConfigurationRequest mocks base method.
 func (m *MockMediaPackageVodAPI) DeletePackagingConfigurationRequest(arg0 *mediapackagevod.DeletePackagingConfigurationInput) (*request.Request, *mediapackagevod.DeletePackagingConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeletePackagingConfigurationRequest", arg0)
@@ -259,13 +310,13 @@ func (m *MockMediaPackageVodAPI) DeletePackagingConfigurationRequest(arg0 *media
 	return ret0, ret1
 }
 
-// DeletePackagingConfigurationRequest indicates an expected call of DeletePackagingConfigurationRequest
+// DeletePackagingConfigurationRequest indicates an expected call of DeletePackagingConfigurationRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) DeletePackagingConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePackagingConfigurationRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DeletePackagingConfigurationRequest), arg0)
 }
 
-// DeletePackagingConfigurationWithContext mocks base method
+// DeletePackagingConfigurationWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) DeletePackagingConfigurationWithContext(arg0 context.Context, arg1 *mediapackagevod.DeletePackagingConfigurationInput, arg2 ...request.Option) (*mediapackagevod.DeletePackagingConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +329,14 @@ func (m *MockMediaPackageVodAPI) DeletePackagingConfigurationWithContext(arg0 co
 	return ret0, ret1
 }
 
-// DeletePackagingConfigurationWithContext indicates an expected call of DeletePackagingConfigurationWithContext
+// DeletePackagingConfigurationWithContext indicates an expected call of DeletePackagingConfigurationWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) DeletePackagingConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePackagingConfigurationWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DeletePackagingConfigurationWithContext), varargs...)
 }
 
-// DeletePackagingGroup mocks base method
+// DeletePackagingGroup mocks base method.
 func (m *MockMediaPackageVodAPI) DeletePackagingGroup(arg0 *mediapackagevod.DeletePackagingGroupInput) (*mediapackagevod.DeletePackagingGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeletePackagingGroup", arg0)
@@ -294,13 +345,13 @@ func (m *MockMediaPackageVodAPI) DeletePackagingGroup(arg0 *mediapackagevod.Dele
 	return ret0, ret1
 }
 
-// DeletePackagingGroup indicates an expected call of DeletePackagingGroup
+// DeletePackagingGroup indicates an expected call of DeletePackagingGroup.
 func (mr *MockMediaPackageVodAPIMockRecorder) DeletePackagingGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePackagingGroup", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DeletePackagingGroup), arg0)
 }
 
-// DeletePackagingGroupRequest mocks base method
+// DeletePackagingGroupRequest mocks base method.
 func (m *MockMediaPackageVodAPI) DeletePackagingGroupRequest(arg0 *mediapackagevod.DeletePackagingGroupInput) (*request.Request, *mediapackagevod.DeletePackagingGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeletePackagingGroupRequest", arg0)
@@ -309,13 +360,13 @@ func (m *MockMediaPackageVodAPI) DeletePackagingGroupRequest(arg0 *mediapackagev
 	return ret0, ret1
 }
 
-// DeletePackagingGroupRequest indicates an expected call of DeletePackagingGroupRequest
+// DeletePackagingGroupRequest indicates an expected call of DeletePackagingGroupRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) DeletePackagingGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePackagingGroupRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DeletePackagingGroupRequest), arg0)
 }
 
-// DeletePackagingGroupWithContext mocks base method
+// DeletePackagingGroupWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) DeletePackagingGroupWithContext(arg0 context.Context, arg1 *mediapackagevod.DeletePackagingGroupInput, arg2 ...request.Option) (*mediapackagevod.DeletePackagingGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +379,14 @@ func (m *MockMediaPackageVodAPI) DeletePackagingGroupWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DeletePackagingGroupWithContext indicates an expected call of DeletePackagingGroupWithContext
+// DeletePackagingGroupWithContext indicates an expected call of DeletePackagingGroupWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) DeletePackagingGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePackagingGroupWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DeletePackagingGroupWithContext), varargs...)
 }
 
-// DescribeAsset mocks base method
+// DescribeAsset mocks base method.
 func (m *MockMediaPackageVodAPI) DescribeAsset(arg0 *mediapackagevod.DescribeAssetInput) (*mediapackagevod.DescribeAssetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAsset", arg0)
@@ -344,13 +395,13 @@ func (m *MockMediaPackageVodAPI) DescribeAsset(arg0 *mediapackagevod.DescribeAss
 	return ret0, ret1
 }
 
-// DescribeAsset indicates an expected call of DescribeAsset
+// DescribeAsset indicates an expected call of DescribeAsset.
 func (mr *MockMediaPackageVodAPIMockRecorder) DescribeAsset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAsset", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DescribeAsset), arg0)
 }
 
-// DescribeAssetRequest mocks base method
+// DescribeAssetRequest mocks base method.
 func (m *MockMediaPackageVodAPI) DescribeAssetRequest(arg0 *mediapackagevod.DescribeAssetInput) (*request.Request, *mediapackagevod.DescribeAssetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeAssetRequest", arg0)
@@ -359,13 +410,13 @@ func (m *MockMediaPackageVodAPI) DescribeAssetRequest(arg0 *mediapackagevod.Desc
 	return ret0, ret1
 }
 
-// DescribeAssetRequest indicates an expected call of DescribeAssetRequest
+// DescribeAssetRequest indicates an expected call of DescribeAssetRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) DescribeAssetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAssetRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DescribeAssetRequest), arg0)
 }
 
-// DescribeAssetWithContext mocks base method
+// DescribeAssetWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) DescribeAssetWithContext(arg0 context.Context, arg1 *mediapackagevod.DescribeAssetInput, arg2 ...request.Option) (*mediapackagevod.DescribeAssetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +429,14 @@ func (m *MockMediaPackageVodAPI) DescribeAssetWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DescribeAssetWithContext indicates an expected call of DescribeAssetWithContext
+// DescribeAssetWithContext indicates an expected call of DescribeAssetWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) DescribeAssetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAssetWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DescribeAssetWithContext), varargs...)
 }
 
-// DescribePackagingConfiguration mocks base method
+// DescribePackagingConfiguration mocks base method.
 func (m *MockMediaPackageVodAPI) DescribePackagingConfiguration(arg0 *mediapackagevod.DescribePackagingConfigurationInput) (*mediapackagevod.DescribePackagingConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribePackagingConfiguration", arg0)
@@ -394,13 +445,13 @@ func (m *MockMediaPackageVodAPI) DescribePackagingConfiguration(arg0 *mediapacka
 	return ret0, ret1
 }
 
-// DescribePackagingConfiguration indicates an expected call of DescribePackagingConfiguration
+// DescribePackagingConfiguration indicates an expected call of DescribePackagingConfiguration.
 func (mr *MockMediaPackageVodAPIMockRecorder) DescribePackagingConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePackagingConfiguration", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DescribePackagingConfiguration), arg0)
 }
 
-// DescribePackagingConfigurationRequest mocks base method
+// DescribePackagingConfigurationRequest mocks base method.
 func (m *MockMediaPackageVodAPI) DescribePackagingConfigurationRequest(arg0 *mediapackagevod.DescribePackagingConfigurationInput) (*request.Request, *mediapackagevod.DescribePackagingConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribePackagingConfigurationRequest", arg0)
@@ -409,13 +460,13 @@ func (m *MockMediaPackageVodAPI) DescribePackagingConfigurationRequest(arg0 *med
 	return ret0, ret1
 }
 
-// DescribePackagingConfigurationRequest indicates an expected call of DescribePackagingConfigurationRequest
+// DescribePackagingConfigurationRequest indicates an expected call of DescribePackagingConfigurationRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) DescribePackagingConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePackagingConfigurationRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DescribePackagingConfigurationRequest), arg0)
 }
 
-// DescribePackagingConfigurationWithContext mocks base method
+// DescribePackagingConfigurationWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) DescribePackagingConfigurationWithContext(arg0 context.Context, arg1 *mediapackagevod.DescribePackagingConfigurationInput, arg2 ...request.Option) (*mediapackagevod.DescribePackagingConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +479,14 @@ func (m *MockMediaPackageVodAPI) DescribePackagingConfigurationWithContext(arg0 
 	return ret0, ret1
 }
 
-// DescribePackagingConfigurationWithContext indicates an expected call of DescribePackagingConfigurationWithContext
+// DescribePackagingConfigurationWithContext indicates an expected call of DescribePackagingConfigurationWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) DescribePackagingConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePackagingConfigurationWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DescribePackagingConfigurationWithContext), varargs...)
 }
 
-// DescribePackagingGroup mocks base method
+// DescribePackagingGroup mocks base method.
 func (m *MockMediaPackageVodAPI) DescribePackagingGroup(arg0 *mediapackagevod.DescribePackagingGroupInput) (*mediapackagevod.DescribePackagingGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribePackagingGroup", arg0)
@@ -444,13 +495,13 @@ func (m *MockMediaPackageVodAPI) DescribePackagingGroup(arg0 *mediapackagevod.De
 	return ret0, ret1
 }
 
-// DescribePackagingGroup indicates an expected call of DescribePackagingGroup
+// DescribePackagingGroup indicates an expected call of DescribePackagingGroup.
 func (mr *MockMediaPackageVodAPIMockRecorder) DescribePackagingGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePackagingGroup", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DescribePackagingGroup), arg0)
 }
 
-// DescribePackagingGroupRequest mocks base method
+// DescribePackagingGroupRequest mocks base method.
 func (m *MockMediaPackageVodAPI) DescribePackagingGroupRequest(arg0 *mediapackagevod.DescribePackagingGroupInput) (*request.Request, *mediapackagevod.DescribePackagingGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribePackagingGroupRequest", arg0)
@@ -459,13 +510,13 @@ func (m *MockMediaPackageVodAPI) DescribePackagingGroupRequest(arg0 *mediapackag
 	return ret0, ret1
 }
 
-// DescribePackagingGroupRequest indicates an expected call of DescribePackagingGroupRequest
+// DescribePackagingGroupRequest indicates an expected call of DescribePackagingGroupRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) DescribePackagingGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePackagingGroupRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DescribePackagingGroupRequest), arg0)
 }
 
-// DescribePackagingGroupWithContext mocks base method
+// DescribePackagingGroupWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) DescribePackagingGroupWithContext(arg0 context.Context, arg1 *mediapackagevod.DescribePackagingGroupInput, arg2 ...request.Option) (*mediapackagevod.DescribePackagingGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +529,14 @@ func (m *MockMediaPackageVodAPI) DescribePackagingGroupWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// DescribePackagingGroupWithContext indicates an expected call of DescribePackagingGroupWithContext
+// DescribePackagingGroupWithContext indicates an expected call of DescribePackagingGroupWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) DescribePackagingGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePackagingGroupWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).DescribePackagingGroupWithContext), varargs...)
 }
 
-// ListAssets mocks base method
+// ListAssets mocks base method.
 func (m *MockMediaPackageVodAPI) ListAssets(arg0 *mediapackagevod.ListAssetsInput) (*mediapackagevod.ListAssetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAssets", arg0)
@@ -494,13 +545,13 @@ func (m *MockMediaPackageVodAPI) ListAssets(arg0 *mediapackagevod.ListAssetsInpu
 	return ret0, ret1
 }
 
-// ListAssets indicates an expected call of ListAssets
+// ListAssets indicates an expected call of ListAssets.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListAssets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssets", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListAssets), arg0)
 }
 
-// ListAssetsPages mocks base method
+// ListAssetsPages mocks base method.
 func (m *MockMediaPackageVodAPI) ListAssetsPages(arg0 *mediapackagevod.ListAssetsInput, arg1 func(*mediapackagevod.ListAssetsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAssetsPages", arg0, arg1)
@@ -508,13 +559,13 @@ func (m *MockMediaPackageVodAPI) ListAssetsPages(arg0 *mediapackagevod.ListAsset
 	return ret0
 }
 
-// ListAssetsPages indicates an expected call of ListAssetsPages
+// ListAssetsPages indicates an expected call of ListAssetsPages.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListAssetsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssetsPages", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListAssetsPages), arg0, arg1)
 }
 
-// ListAssetsPagesWithContext mocks base method
+// ListAssetsPagesWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) ListAssetsPagesWithContext(arg0 context.Context, arg1 *mediapackagevod.ListAssetsInput, arg2 func(*mediapackagevod.ListAssetsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -526,14 +577,14 @@ func (m *MockMediaPackageVodAPI) ListAssetsPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListAssetsPagesWithContext indicates an expected call of ListAssetsPagesWithContext
+// ListAssetsPagesWithContext indicates an expected call of ListAssetsPagesWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListAssetsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssetsPagesWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListAssetsPagesWithContext), varargs...)
 }
 
-// ListAssetsRequest mocks base method
+// ListAssetsRequest mocks base method.
 func (m *MockMediaPackageVodAPI) ListAssetsRequest(arg0 *mediapackagevod.ListAssetsInput) (*request.Request, *mediapackagevod.ListAssetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAssetsRequest", arg0)
@@ -542,13 +593,13 @@ func (m *MockMediaPackageVodAPI) ListAssetsRequest(arg0 *mediapackagevod.ListAss
 	return ret0, ret1
 }
 
-// ListAssetsRequest indicates an expected call of ListAssetsRequest
+// ListAssetsRequest indicates an expected call of ListAssetsRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListAssetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssetsRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListAssetsRequest), arg0)
 }
 
-// ListAssetsWithContext mocks base method
+// ListAssetsWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) ListAssetsWithContext(arg0 context.Context, arg1 *mediapackagevod.ListAssetsInput, arg2 ...request.Option) (*mediapackagevod.ListAssetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -561,14 +612,14 @@ func (m *MockMediaPackageVodAPI) ListAssetsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListAssetsWithContext indicates an expected call of ListAssetsWithContext
+// ListAssetsWithContext indicates an expected call of ListAssetsWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListAssetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssetsWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListAssetsWithContext), varargs...)
 }
 
-// ListPackagingConfigurations mocks base method
+// ListPackagingConfigurations mocks base method.
 func (m *MockMediaPackageVodAPI) ListPackagingConfigurations(arg0 *mediapackagevod.ListPackagingConfigurationsInput) (*mediapackagevod.ListPackagingConfigurationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackagingConfigurations", arg0)
@@ -577,13 +628,13 @@ func (m *MockMediaPackageVodAPI) ListPackagingConfigurations(arg0 *mediapackagev
 	return ret0, ret1
 }
 
-// ListPackagingConfigurations indicates an expected call of ListPackagingConfigurations
+// ListPackagingConfigurations indicates an expected call of ListPackagingConfigurations.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListPackagingConfigurations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagingConfigurations", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListPackagingConfigurations), arg0)
 }
 
-// ListPackagingConfigurationsPages mocks base method
+// ListPackagingConfigurationsPages mocks base method.
 func (m *MockMediaPackageVodAPI) ListPackagingConfigurationsPages(arg0 *mediapackagevod.ListPackagingConfigurationsInput, arg1 func(*mediapackagevod.ListPackagingConfigurationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackagingConfigurationsPages", arg0, arg1)
@@ -591,13 +642,13 @@ func (m *MockMediaPackageVodAPI) ListPackagingConfigurationsPages(arg0 *mediapac
 	return ret0
 }
 
-// ListPackagingConfigurationsPages indicates an expected call of ListPackagingConfigurationsPages
+// ListPackagingConfigurationsPages indicates an expected call of ListPackagingConfigurationsPages.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListPackagingConfigurationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagingConfigurationsPages", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListPackagingConfigurationsPages), arg0, arg1)
 }
 
-// ListPackagingConfigurationsPagesWithContext mocks base method
+// ListPackagingConfigurationsPagesWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) ListPackagingConfigurationsPagesWithContext(arg0 context.Context, arg1 *mediapackagevod.ListPackagingConfigurationsInput, arg2 func(*mediapackagevod.ListPackagingConfigurationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -609,14 +660,14 @@ func (m *MockMediaPackageVodAPI) ListPackagingConfigurationsPagesWithContext(arg
 	return ret0
 }
 
-// ListPackagingConfigurationsPagesWithContext indicates an expected call of ListPackagingConfigurationsPagesWithContext
+// ListPackagingConfigurationsPagesWithContext indicates an expected call of ListPackagingConfigurationsPagesWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListPackagingConfigurationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagingConfigurationsPagesWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListPackagingConfigurationsPagesWithContext), varargs...)
 }
 
-// ListPackagingConfigurationsRequest mocks base method
+// ListPackagingConfigurationsRequest mocks base method.
 func (m *MockMediaPackageVodAPI) ListPackagingConfigurationsRequest(arg0 *mediapackagevod.ListPackagingConfigurationsInput) (*request.Request, *mediapackagevod.ListPackagingConfigurationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackagingConfigurationsRequest", arg0)
@@ -625,13 +676,13 @@ func (m *MockMediaPackageVodAPI) ListPackagingConfigurationsRequest(arg0 *mediap
 	return ret0, ret1
 }
 
-// ListPackagingConfigurationsRequest indicates an expected call of ListPackagingConfigurationsRequest
+// ListPackagingConfigurationsRequest indicates an expected call of ListPackagingConfigurationsRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListPackagingConfigurationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagingConfigurationsRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListPackagingConfigurationsRequest), arg0)
 }
 
-// ListPackagingConfigurationsWithContext mocks base method
+// ListPackagingConfigurationsWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) ListPackagingConfigurationsWithContext(arg0 context.Context, arg1 *mediapackagevod.ListPackagingConfigurationsInput, arg2 ...request.Option) (*mediapackagevod.ListPackagingConfigurationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -644,14 +695,14 @@ func (m *MockMediaPackageVodAPI) ListPackagingConfigurationsWithContext(arg0 con
 	return ret0, ret1
 }
 
-// ListPackagingConfigurationsWithContext indicates an expected call of ListPackagingConfigurationsWithContext
+// ListPackagingConfigurationsWithContext indicates an expected call of ListPackagingConfigurationsWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListPackagingConfigurationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagingConfigurationsWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListPackagingConfigurationsWithContext), varargs...)
 }
 
-// ListPackagingGroups mocks base method
+// ListPackagingGroups mocks base method.
 func (m *MockMediaPackageVodAPI) ListPackagingGroups(arg0 *mediapackagevod.ListPackagingGroupsInput) (*mediapackagevod.ListPackagingGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackagingGroups", arg0)
@@ -660,13 +711,13 @@ func (m *MockMediaPackageVodAPI) ListPackagingGroups(arg0 *mediapackagevod.ListP
 	return ret0, ret1
 }
 
-// ListPackagingGroups indicates an expected call of ListPackagingGroups
+// ListPackagingGroups indicates an expected call of ListPackagingGroups.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListPackagingGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagingGroups", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListPackagingGroups), arg0)
 }
 
-// ListPackagingGroupsPages mocks base method
+// ListPackagingGroupsPages mocks base method.
 func (m *MockMediaPackageVodAPI) ListPackagingGroupsPages(arg0 *mediapackagevod.ListPackagingGroupsInput, arg1 func(*mediapackagevod.ListPackagingGroupsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackagingGroupsPages", arg0, arg1)
@@ -674,13 +725,13 @@ func (m *MockMediaPackageVodAPI) ListPackagingGroupsPages(arg0 *mediapackagevod.
 	return ret0
 }
 
-// ListPackagingGroupsPages indicates an expected call of ListPackagingGroupsPages
+// ListPackagingGroupsPages indicates an expected call of ListPackagingGroupsPages.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListPackagingGroupsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagingGroupsPages", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListPackagingGroupsPages), arg0, arg1)
 }
 
-// ListPackagingGroupsPagesWithContext mocks base method
+// ListPackagingGroupsPagesWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) ListPackagingGroupsPagesWithContext(arg0 context.Context, arg1 *mediapackagevod.ListPackagingGroupsInput, arg2 func(*mediapackagevod.ListPackagingGroupsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -692,14 +743,14 @@ func (m *MockMediaPackageVodAPI) ListPackagingGroupsPagesWithContext(arg0 contex
 	return ret0
 }
 
-// ListPackagingGroupsPagesWithContext indicates an expected call of ListPackagingGroupsPagesWithContext
+// ListPackagingGroupsPagesWithContext indicates an expected call of ListPackagingGroupsPagesWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListPackagingGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagingGroupsPagesWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListPackagingGroupsPagesWithContext), varargs...)
 }
 
-// ListPackagingGroupsRequest mocks base method
+// ListPackagingGroupsRequest mocks base method.
 func (m *MockMediaPackageVodAPI) ListPackagingGroupsRequest(arg0 *mediapackagevod.ListPackagingGroupsInput) (*request.Request, *mediapackagevod.ListPackagingGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPackagingGroupsRequest", arg0)
@@ -708,13 +759,13 @@ func (m *MockMediaPackageVodAPI) ListPackagingGroupsRequest(arg0 *mediapackagevo
 	return ret0, ret1
 }
 
-// ListPackagingGroupsRequest indicates an expected call of ListPackagingGroupsRequest
+// ListPackagingGroupsRequest indicates an expected call of ListPackagingGroupsRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListPackagingGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagingGroupsRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListPackagingGroupsRequest), arg0)
 }
 
-// ListPackagingGroupsWithContext mocks base method
+// ListPackagingGroupsWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) ListPackagingGroupsWithContext(arg0 context.Context, arg1 *mediapackagevod.ListPackagingGroupsInput, arg2 ...request.Option) (*mediapackagevod.ListPackagingGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -727,14 +778,14 @@ func (m *MockMediaPackageVodAPI) ListPackagingGroupsWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListPackagingGroupsWithContext indicates an expected call of ListPackagingGroupsWithContext
+// ListPackagingGroupsWithContext indicates an expected call of ListPackagingGroupsWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListPackagingGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPackagingGroupsWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListPackagingGroupsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockMediaPackageVodAPI) ListTagsForResource(arg0 *mediapackagevod.ListTagsForResourceInput) (*mediapackagevod.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -743,13 +794,13 @@ func (m *MockMediaPackageVodAPI) ListTagsForResource(arg0 *mediapackagevod.ListT
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockMediaPackageVodAPI) ListTagsForResourceRequest(arg0 *mediapackagevod.ListTagsForResourceInput) (*request.Request, *mediapackagevod.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -758,13 +809,13 @@ func (m *MockMediaPackageVodAPI) ListTagsForResourceRequest(arg0 *mediapackagevo
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *mediapackagevod.ListTagsForResourceInput, arg2 ...request.Option) (*mediapackagevod.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -777,14 +828,14 @@ func (m *MockMediaPackageVodAPI) ListTagsForResourceWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockMediaPackageVodAPI) TagResource(arg0 *mediapackagevod.TagResourceInput) (*mediapackagevod.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -793,13 +844,13 @@ func (m *MockMediaPackageVodAPI) TagResource(arg0 *mediapackagevod.TagResourceIn
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockMediaPackageVodAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockMediaPackageVodAPI) TagResourceRequest(arg0 *mediapackagevod.TagResourceInput) (*request.Request, *mediapackagevod.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -808,13 +859,13 @@ func (m *MockMediaPackageVodAPI) TagResourceRequest(arg0 *mediapackagevod.TagRes
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) TagResourceWithContext(arg0 context.Context, arg1 *mediapackagevod.TagResourceInput, arg2 ...request.Option) (*mediapackagevod.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -827,14 +878,14 @@ func (m *MockMediaPackageVodAPI) TagResourceWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockMediaPackageVodAPI) UntagResource(arg0 *mediapackagevod.UntagResourceInput) (*mediapackagevod.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -843,13 +894,13 @@ func (m *MockMediaPackageVodAPI) UntagResource(arg0 *mediapackagevod.UntagResour
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockMediaPackageVodAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockMediaPackageVodAPI) UntagResourceRequest(arg0 *mediapackagevod.UntagResourceInput) (*request.Request, *mediapackagevod.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -858,13 +909,13 @@ func (m *MockMediaPackageVodAPI) UntagResourceRequest(arg0 *mediapackagevod.Unta
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) UntagResourceWithContext(arg0 context.Context, arg1 *mediapackagevod.UntagResourceInput, arg2 ...request.Option) (*mediapackagevod.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -877,14 +928,14 @@ func (m *MockMediaPackageVodAPI) UntagResourceWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdatePackagingGroup mocks base method
+// UpdatePackagingGroup mocks base method.
 func (m *MockMediaPackageVodAPI) UpdatePackagingGroup(arg0 *mediapackagevod.UpdatePackagingGroupInput) (*mediapackagevod.UpdatePackagingGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdatePackagingGroup", arg0)
@@ -893,13 +944,13 @@ func (m *MockMediaPackageVodAPI) UpdatePackagingGroup(arg0 *mediapackagevod.Upda
 	return ret0, ret1
 }
 
-// UpdatePackagingGroup indicates an expected call of UpdatePackagingGroup
+// UpdatePackagingGroup indicates an expected call of UpdatePackagingGroup.
 func (mr *MockMediaPackageVodAPIMockRecorder) UpdatePackagingGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePackagingGroup", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).UpdatePackagingGroup), arg0)
 }
 
-// UpdatePackagingGroupRequest mocks base method
+// UpdatePackagingGroupRequest mocks base method.
 func (m *MockMediaPackageVodAPI) UpdatePackagingGroupRequest(arg0 *mediapackagevod.UpdatePackagingGroupInput) (*request.Request, *mediapackagevod.UpdatePackagingGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdatePackagingGroupRequest", arg0)
@@ -908,13 +959,13 @@ func (m *MockMediaPackageVodAPI) UpdatePackagingGroupRequest(arg0 *mediapackagev
 	return ret0, ret1
 }
 
-// UpdatePackagingGroupRequest indicates an expected call of UpdatePackagingGroupRequest
+// UpdatePackagingGroupRequest indicates an expected call of UpdatePackagingGroupRequest.
 func (mr *MockMediaPackageVodAPIMockRecorder) UpdatePackagingGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePackagingGroupRequest", reflect.TypeOf((*MockMediaPackageVodAPI)(nil).UpdatePackagingGroupRequest), arg0)
 }
 
-// UpdatePackagingGroupWithContext mocks base method
+// UpdatePackagingGroupWithContext mocks base method.
 func (m *MockMediaPackageVodAPI) UpdatePackagingGroupWithContext(arg0 context.Context, arg1 *mediapackagevod.UpdatePackagingGroupInput, arg2 ...request.Option) (*mediapackagevod.UpdatePackagingGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -927,7 +978,7 @@ func (m *MockMediaPackageVodAPI) UpdatePackagingGroupWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// UpdatePackagingGroupWithContext indicates an expected call of UpdatePackagingGroupWithContext
+// UpdatePackagingGroupWithContext indicates an expected call of UpdatePackagingGroupWithContext.
 func (mr *MockMediaPackageVodAPIMockRecorder) UpdatePackagingGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

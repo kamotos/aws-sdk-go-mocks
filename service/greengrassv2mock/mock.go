@@ -6,36 +6,37 @@ package greengrassv2mock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	greengrassv2 "github.com/aws/aws-sdk-go/service/greengrassv2"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockGreengrassV2API is a mock of GreengrassV2API interface
+// MockGreengrassV2API is a mock of GreengrassV2API interface.
 type MockGreengrassV2API struct {
 	ctrl     *gomock.Controller
 	recorder *MockGreengrassV2APIMockRecorder
 }
 
-// MockGreengrassV2APIMockRecorder is the mock recorder for MockGreengrassV2API
+// MockGreengrassV2APIMockRecorder is the mock recorder for MockGreengrassV2API.
 type MockGreengrassV2APIMockRecorder struct {
 	mock *MockGreengrassV2API
 }
 
-// NewMockGreengrassV2API creates a new mock instance
+// NewMockGreengrassV2API creates a new mock instance.
 func NewMockGreengrassV2API(ctrl *gomock.Controller) *MockGreengrassV2API {
 	mock := &MockGreengrassV2API{ctrl: ctrl}
 	mock.recorder = &MockGreengrassV2APIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockGreengrassV2API) EXPECT() *MockGreengrassV2APIMockRecorder {
 	return m.recorder
 }
 
-// CancelDeployment mocks base method
+// CancelDeployment mocks base method.
 func (m *MockGreengrassV2API) CancelDeployment(arg0 *greengrassv2.CancelDeploymentInput) (*greengrassv2.CancelDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelDeployment", arg0)
@@ -44,13 +45,13 @@ func (m *MockGreengrassV2API) CancelDeployment(arg0 *greengrassv2.CancelDeployme
 	return ret0, ret1
 }
 
-// CancelDeployment indicates an expected call of CancelDeployment
+// CancelDeployment indicates an expected call of CancelDeployment.
 func (mr *MockGreengrassV2APIMockRecorder) CancelDeployment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelDeployment", reflect.TypeOf((*MockGreengrassV2API)(nil).CancelDeployment), arg0)
 }
 
-// CancelDeploymentRequest mocks base method
+// CancelDeploymentRequest mocks base method.
 func (m *MockGreengrassV2API) CancelDeploymentRequest(arg0 *greengrassv2.CancelDeploymentInput) (*request.Request, *greengrassv2.CancelDeploymentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelDeploymentRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockGreengrassV2API) CancelDeploymentRequest(arg0 *greengrassv2.CancelD
 	return ret0, ret1
 }
 
-// CancelDeploymentRequest indicates an expected call of CancelDeploymentRequest
+// CancelDeploymentRequest indicates an expected call of CancelDeploymentRequest.
 func (mr *MockGreengrassV2APIMockRecorder) CancelDeploymentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelDeploymentRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).CancelDeploymentRequest), arg0)
 }
 
-// CancelDeploymentWithContext mocks base method
+// CancelDeploymentWithContext mocks base method.
 func (m *MockGreengrassV2API) CancelDeploymentWithContext(arg0 context.Context, arg1 *greengrassv2.CancelDeploymentInput, arg2 ...request.Option) (*greengrassv2.CancelDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockGreengrassV2API) CancelDeploymentWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// CancelDeploymentWithContext indicates an expected call of CancelDeploymentWithContext
+// CancelDeploymentWithContext indicates an expected call of CancelDeploymentWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) CancelDeploymentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelDeploymentWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).CancelDeploymentWithContext), varargs...)
 }
 
-// CreateComponentVersion mocks base method
+// CreateComponentVersion mocks base method.
 func (m *MockGreengrassV2API) CreateComponentVersion(arg0 *greengrassv2.CreateComponentVersionInput) (*greengrassv2.CreateComponentVersionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateComponentVersion", arg0)
@@ -94,13 +95,13 @@ func (m *MockGreengrassV2API) CreateComponentVersion(arg0 *greengrassv2.CreateCo
 	return ret0, ret1
 }
 
-// CreateComponentVersion indicates an expected call of CreateComponentVersion
+// CreateComponentVersion indicates an expected call of CreateComponentVersion.
 func (mr *MockGreengrassV2APIMockRecorder) CreateComponentVersion(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateComponentVersion", reflect.TypeOf((*MockGreengrassV2API)(nil).CreateComponentVersion), arg0)
 }
 
-// CreateComponentVersionRequest mocks base method
+// CreateComponentVersionRequest mocks base method.
 func (m *MockGreengrassV2API) CreateComponentVersionRequest(arg0 *greengrassv2.CreateComponentVersionInput) (*request.Request, *greengrassv2.CreateComponentVersionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateComponentVersionRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockGreengrassV2API) CreateComponentVersionRequest(arg0 *greengrassv2.C
 	return ret0, ret1
 }
 
-// CreateComponentVersionRequest indicates an expected call of CreateComponentVersionRequest
+// CreateComponentVersionRequest indicates an expected call of CreateComponentVersionRequest.
 func (mr *MockGreengrassV2APIMockRecorder) CreateComponentVersionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateComponentVersionRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).CreateComponentVersionRequest), arg0)
 }
 
-// CreateComponentVersionWithContext mocks base method
+// CreateComponentVersionWithContext mocks base method.
 func (m *MockGreengrassV2API) CreateComponentVersionWithContext(arg0 context.Context, arg1 *greengrassv2.CreateComponentVersionInput, arg2 ...request.Option) (*greengrassv2.CreateComponentVersionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockGreengrassV2API) CreateComponentVersionWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// CreateComponentVersionWithContext indicates an expected call of CreateComponentVersionWithContext
+// CreateComponentVersionWithContext indicates an expected call of CreateComponentVersionWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) CreateComponentVersionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateComponentVersionWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).CreateComponentVersionWithContext), varargs...)
 }
 
-// CreateDeployment mocks base method
+// CreateDeployment mocks base method.
 func (m *MockGreengrassV2API) CreateDeployment(arg0 *greengrassv2.CreateDeploymentInput) (*greengrassv2.CreateDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDeployment", arg0)
@@ -144,13 +145,13 @@ func (m *MockGreengrassV2API) CreateDeployment(arg0 *greengrassv2.CreateDeployme
 	return ret0, ret1
 }
 
-// CreateDeployment indicates an expected call of CreateDeployment
+// CreateDeployment indicates an expected call of CreateDeployment.
 func (mr *MockGreengrassV2APIMockRecorder) CreateDeployment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDeployment", reflect.TypeOf((*MockGreengrassV2API)(nil).CreateDeployment), arg0)
 }
 
-// CreateDeploymentRequest mocks base method
+// CreateDeploymentRequest mocks base method.
 func (m *MockGreengrassV2API) CreateDeploymentRequest(arg0 *greengrassv2.CreateDeploymentInput) (*request.Request, *greengrassv2.CreateDeploymentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDeploymentRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockGreengrassV2API) CreateDeploymentRequest(arg0 *greengrassv2.CreateD
 	return ret0, ret1
 }
 
-// CreateDeploymentRequest indicates an expected call of CreateDeploymentRequest
+// CreateDeploymentRequest indicates an expected call of CreateDeploymentRequest.
 func (mr *MockGreengrassV2APIMockRecorder) CreateDeploymentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDeploymentRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).CreateDeploymentRequest), arg0)
 }
 
-// CreateDeploymentWithContext mocks base method
+// CreateDeploymentWithContext mocks base method.
 func (m *MockGreengrassV2API) CreateDeploymentWithContext(arg0 context.Context, arg1 *greengrassv2.CreateDeploymentInput, arg2 ...request.Option) (*greengrassv2.CreateDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockGreengrassV2API) CreateDeploymentWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// CreateDeploymentWithContext indicates an expected call of CreateDeploymentWithContext
+// CreateDeploymentWithContext indicates an expected call of CreateDeploymentWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) CreateDeploymentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDeploymentWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).CreateDeploymentWithContext), varargs...)
 }
 
-// DeleteComponent mocks base method
+// DeleteComponent mocks base method.
 func (m *MockGreengrassV2API) DeleteComponent(arg0 *greengrassv2.DeleteComponentInput) (*greengrassv2.DeleteComponentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteComponent", arg0)
@@ -194,13 +195,13 @@ func (m *MockGreengrassV2API) DeleteComponent(arg0 *greengrassv2.DeleteComponent
 	return ret0, ret1
 }
 
-// DeleteComponent indicates an expected call of DeleteComponent
+// DeleteComponent indicates an expected call of DeleteComponent.
 func (mr *MockGreengrassV2APIMockRecorder) DeleteComponent(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteComponent", reflect.TypeOf((*MockGreengrassV2API)(nil).DeleteComponent), arg0)
 }
 
-// DeleteComponentRequest mocks base method
+// DeleteComponentRequest mocks base method.
 func (m *MockGreengrassV2API) DeleteComponentRequest(arg0 *greengrassv2.DeleteComponentInput) (*request.Request, *greengrassv2.DeleteComponentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteComponentRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockGreengrassV2API) DeleteComponentRequest(arg0 *greengrassv2.DeleteCo
 	return ret0, ret1
 }
 
-// DeleteComponentRequest indicates an expected call of DeleteComponentRequest
+// DeleteComponentRequest indicates an expected call of DeleteComponentRequest.
 func (mr *MockGreengrassV2APIMockRecorder) DeleteComponentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteComponentRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).DeleteComponentRequest), arg0)
 }
 
-// DeleteComponentWithContext mocks base method
+// DeleteComponentWithContext mocks base method.
 func (m *MockGreengrassV2API) DeleteComponentWithContext(arg0 context.Context, arg1 *greengrassv2.DeleteComponentInput, arg2 ...request.Option) (*greengrassv2.DeleteComponentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockGreengrassV2API) DeleteComponentWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteComponentWithContext indicates an expected call of DeleteComponentWithContext
+// DeleteComponentWithContext indicates an expected call of DeleteComponentWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) DeleteComponentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteComponentWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).DeleteComponentWithContext), varargs...)
 }
 
-// DeleteCoreDevice mocks base method
+// DeleteCoreDevice mocks base method.
 func (m *MockGreengrassV2API) DeleteCoreDevice(arg0 *greengrassv2.DeleteCoreDeviceInput) (*greengrassv2.DeleteCoreDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCoreDevice", arg0)
@@ -244,13 +245,13 @@ func (m *MockGreengrassV2API) DeleteCoreDevice(arg0 *greengrassv2.DeleteCoreDevi
 	return ret0, ret1
 }
 
-// DeleteCoreDevice indicates an expected call of DeleteCoreDevice
+// DeleteCoreDevice indicates an expected call of DeleteCoreDevice.
 func (mr *MockGreengrassV2APIMockRecorder) DeleteCoreDevice(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCoreDevice", reflect.TypeOf((*MockGreengrassV2API)(nil).DeleteCoreDevice), arg0)
 }
 
-// DeleteCoreDeviceRequest mocks base method
+// DeleteCoreDeviceRequest mocks base method.
 func (m *MockGreengrassV2API) DeleteCoreDeviceRequest(arg0 *greengrassv2.DeleteCoreDeviceInput) (*request.Request, *greengrassv2.DeleteCoreDeviceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCoreDeviceRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockGreengrassV2API) DeleteCoreDeviceRequest(arg0 *greengrassv2.DeleteC
 	return ret0, ret1
 }
 
-// DeleteCoreDeviceRequest indicates an expected call of DeleteCoreDeviceRequest
+// DeleteCoreDeviceRequest indicates an expected call of DeleteCoreDeviceRequest.
 func (mr *MockGreengrassV2APIMockRecorder) DeleteCoreDeviceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCoreDeviceRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).DeleteCoreDeviceRequest), arg0)
 }
 
-// DeleteCoreDeviceWithContext mocks base method
+// DeleteCoreDeviceWithContext mocks base method.
 func (m *MockGreengrassV2API) DeleteCoreDeviceWithContext(arg0 context.Context, arg1 *greengrassv2.DeleteCoreDeviceInput, arg2 ...request.Option) (*greengrassv2.DeleteCoreDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockGreengrassV2API) DeleteCoreDeviceWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DeleteCoreDeviceWithContext indicates an expected call of DeleteCoreDeviceWithContext
+// DeleteCoreDeviceWithContext indicates an expected call of DeleteCoreDeviceWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) DeleteCoreDeviceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCoreDeviceWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).DeleteCoreDeviceWithContext), varargs...)
 }
 
-// DescribeComponent mocks base method
+// DescribeComponent mocks base method.
 func (m *MockGreengrassV2API) DescribeComponent(arg0 *greengrassv2.DescribeComponentInput) (*greengrassv2.DescribeComponentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeComponent", arg0)
@@ -294,13 +295,13 @@ func (m *MockGreengrassV2API) DescribeComponent(arg0 *greengrassv2.DescribeCompo
 	return ret0, ret1
 }
 
-// DescribeComponent indicates an expected call of DescribeComponent
+// DescribeComponent indicates an expected call of DescribeComponent.
 func (mr *MockGreengrassV2APIMockRecorder) DescribeComponent(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeComponent", reflect.TypeOf((*MockGreengrassV2API)(nil).DescribeComponent), arg0)
 }
 
-// DescribeComponentRequest mocks base method
+// DescribeComponentRequest mocks base method.
 func (m *MockGreengrassV2API) DescribeComponentRequest(arg0 *greengrassv2.DescribeComponentInput) (*request.Request, *greengrassv2.DescribeComponentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeComponentRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockGreengrassV2API) DescribeComponentRequest(arg0 *greengrassv2.Descri
 	return ret0, ret1
 }
 
-// DescribeComponentRequest indicates an expected call of DescribeComponentRequest
+// DescribeComponentRequest indicates an expected call of DescribeComponentRequest.
 func (mr *MockGreengrassV2APIMockRecorder) DescribeComponentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeComponentRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).DescribeComponentRequest), arg0)
 }
 
-// DescribeComponentWithContext mocks base method
+// DescribeComponentWithContext mocks base method.
 func (m *MockGreengrassV2API) DescribeComponentWithContext(arg0 context.Context, arg1 *greengrassv2.DescribeComponentInput, arg2 ...request.Option) (*greengrassv2.DescribeComponentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockGreengrassV2API) DescribeComponentWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DescribeComponentWithContext indicates an expected call of DescribeComponentWithContext
+// DescribeComponentWithContext indicates an expected call of DescribeComponentWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) DescribeComponentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeComponentWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).DescribeComponentWithContext), varargs...)
 }
 
-// GetComponent mocks base method
+// GetComponent mocks base method.
 func (m *MockGreengrassV2API) GetComponent(arg0 *greengrassv2.GetComponentInput) (*greengrassv2.GetComponentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetComponent", arg0)
@@ -344,13 +345,13 @@ func (m *MockGreengrassV2API) GetComponent(arg0 *greengrassv2.GetComponentInput)
 	return ret0, ret1
 }
 
-// GetComponent indicates an expected call of GetComponent
+// GetComponent indicates an expected call of GetComponent.
 func (mr *MockGreengrassV2APIMockRecorder) GetComponent(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComponent", reflect.TypeOf((*MockGreengrassV2API)(nil).GetComponent), arg0)
 }
 
-// GetComponentRequest mocks base method
+// GetComponentRequest mocks base method.
 func (m *MockGreengrassV2API) GetComponentRequest(arg0 *greengrassv2.GetComponentInput) (*request.Request, *greengrassv2.GetComponentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetComponentRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockGreengrassV2API) GetComponentRequest(arg0 *greengrassv2.GetComponen
 	return ret0, ret1
 }
 
-// GetComponentRequest indicates an expected call of GetComponentRequest
+// GetComponentRequest indicates an expected call of GetComponentRequest.
 func (mr *MockGreengrassV2APIMockRecorder) GetComponentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComponentRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).GetComponentRequest), arg0)
 }
 
-// GetComponentVersionArtifact mocks base method
+// GetComponentVersionArtifact mocks base method.
 func (m *MockGreengrassV2API) GetComponentVersionArtifact(arg0 *greengrassv2.GetComponentVersionArtifactInput) (*greengrassv2.GetComponentVersionArtifactOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetComponentVersionArtifact", arg0)
@@ -374,13 +375,13 @@ func (m *MockGreengrassV2API) GetComponentVersionArtifact(arg0 *greengrassv2.Get
 	return ret0, ret1
 }
 
-// GetComponentVersionArtifact indicates an expected call of GetComponentVersionArtifact
+// GetComponentVersionArtifact indicates an expected call of GetComponentVersionArtifact.
 func (mr *MockGreengrassV2APIMockRecorder) GetComponentVersionArtifact(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComponentVersionArtifact", reflect.TypeOf((*MockGreengrassV2API)(nil).GetComponentVersionArtifact), arg0)
 }
 
-// GetComponentVersionArtifactRequest mocks base method
+// GetComponentVersionArtifactRequest mocks base method.
 func (m *MockGreengrassV2API) GetComponentVersionArtifactRequest(arg0 *greengrassv2.GetComponentVersionArtifactInput) (*request.Request, *greengrassv2.GetComponentVersionArtifactOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetComponentVersionArtifactRequest", arg0)
@@ -389,13 +390,13 @@ func (m *MockGreengrassV2API) GetComponentVersionArtifactRequest(arg0 *greengras
 	return ret0, ret1
 }
 
-// GetComponentVersionArtifactRequest indicates an expected call of GetComponentVersionArtifactRequest
+// GetComponentVersionArtifactRequest indicates an expected call of GetComponentVersionArtifactRequest.
 func (mr *MockGreengrassV2APIMockRecorder) GetComponentVersionArtifactRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComponentVersionArtifactRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).GetComponentVersionArtifactRequest), arg0)
 }
 
-// GetComponentVersionArtifactWithContext mocks base method
+// GetComponentVersionArtifactWithContext mocks base method.
 func (m *MockGreengrassV2API) GetComponentVersionArtifactWithContext(arg0 context.Context, arg1 *greengrassv2.GetComponentVersionArtifactInput, arg2 ...request.Option) (*greengrassv2.GetComponentVersionArtifactOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -408,14 +409,14 @@ func (m *MockGreengrassV2API) GetComponentVersionArtifactWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// GetComponentVersionArtifactWithContext indicates an expected call of GetComponentVersionArtifactWithContext
+// GetComponentVersionArtifactWithContext indicates an expected call of GetComponentVersionArtifactWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) GetComponentVersionArtifactWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComponentVersionArtifactWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).GetComponentVersionArtifactWithContext), varargs...)
 }
 
-// GetComponentWithContext mocks base method
+// GetComponentWithContext mocks base method.
 func (m *MockGreengrassV2API) GetComponentWithContext(arg0 context.Context, arg1 *greengrassv2.GetComponentInput, arg2 ...request.Option) (*greengrassv2.GetComponentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockGreengrassV2API) GetComponentWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetComponentWithContext indicates an expected call of GetComponentWithContext
+// GetComponentWithContext indicates an expected call of GetComponentWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) GetComponentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComponentWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).GetComponentWithContext), varargs...)
 }
 
-// GetCoreDevice mocks base method
+// GetCoreDevice mocks base method.
 func (m *MockGreengrassV2API) GetCoreDevice(arg0 *greengrassv2.GetCoreDeviceInput) (*greengrassv2.GetCoreDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCoreDevice", arg0)
@@ -444,13 +445,13 @@ func (m *MockGreengrassV2API) GetCoreDevice(arg0 *greengrassv2.GetCoreDeviceInpu
 	return ret0, ret1
 }
 
-// GetCoreDevice indicates an expected call of GetCoreDevice
+// GetCoreDevice indicates an expected call of GetCoreDevice.
 func (mr *MockGreengrassV2APIMockRecorder) GetCoreDevice(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCoreDevice", reflect.TypeOf((*MockGreengrassV2API)(nil).GetCoreDevice), arg0)
 }
 
-// GetCoreDeviceRequest mocks base method
+// GetCoreDeviceRequest mocks base method.
 func (m *MockGreengrassV2API) GetCoreDeviceRequest(arg0 *greengrassv2.GetCoreDeviceInput) (*request.Request, *greengrassv2.GetCoreDeviceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCoreDeviceRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockGreengrassV2API) GetCoreDeviceRequest(arg0 *greengrassv2.GetCoreDev
 	return ret0, ret1
 }
 
-// GetCoreDeviceRequest indicates an expected call of GetCoreDeviceRequest
+// GetCoreDeviceRequest indicates an expected call of GetCoreDeviceRequest.
 func (mr *MockGreengrassV2APIMockRecorder) GetCoreDeviceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCoreDeviceRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).GetCoreDeviceRequest), arg0)
 }
 
-// GetCoreDeviceWithContext mocks base method
+// GetCoreDeviceWithContext mocks base method.
 func (m *MockGreengrassV2API) GetCoreDeviceWithContext(arg0 context.Context, arg1 *greengrassv2.GetCoreDeviceInput, arg2 ...request.Option) (*greengrassv2.GetCoreDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockGreengrassV2API) GetCoreDeviceWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetCoreDeviceWithContext indicates an expected call of GetCoreDeviceWithContext
+// GetCoreDeviceWithContext indicates an expected call of GetCoreDeviceWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) GetCoreDeviceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCoreDeviceWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).GetCoreDeviceWithContext), varargs...)
 }
 
-// GetDeployment mocks base method
+// GetDeployment mocks base method.
 func (m *MockGreengrassV2API) GetDeployment(arg0 *greengrassv2.GetDeploymentInput) (*greengrassv2.GetDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDeployment", arg0)
@@ -494,13 +495,13 @@ func (m *MockGreengrassV2API) GetDeployment(arg0 *greengrassv2.GetDeploymentInpu
 	return ret0, ret1
 }
 
-// GetDeployment indicates an expected call of GetDeployment
+// GetDeployment indicates an expected call of GetDeployment.
 func (mr *MockGreengrassV2APIMockRecorder) GetDeployment(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeployment", reflect.TypeOf((*MockGreengrassV2API)(nil).GetDeployment), arg0)
 }
 
-// GetDeploymentRequest mocks base method
+// GetDeploymentRequest mocks base method.
 func (m *MockGreengrassV2API) GetDeploymentRequest(arg0 *greengrassv2.GetDeploymentInput) (*request.Request, *greengrassv2.GetDeploymentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDeploymentRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockGreengrassV2API) GetDeploymentRequest(arg0 *greengrassv2.GetDeploym
 	return ret0, ret1
 }
 
-// GetDeploymentRequest indicates an expected call of GetDeploymentRequest
+// GetDeploymentRequest indicates an expected call of GetDeploymentRequest.
 func (mr *MockGreengrassV2APIMockRecorder) GetDeploymentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeploymentRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).GetDeploymentRequest), arg0)
 }
 
-// GetDeploymentWithContext mocks base method
+// GetDeploymentWithContext mocks base method.
 func (m *MockGreengrassV2API) GetDeploymentWithContext(arg0 context.Context, arg1 *greengrassv2.GetDeploymentInput, arg2 ...request.Option) (*greengrassv2.GetDeploymentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockGreengrassV2API) GetDeploymentWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetDeploymentWithContext indicates an expected call of GetDeploymentWithContext
+// GetDeploymentWithContext indicates an expected call of GetDeploymentWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) GetDeploymentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDeploymentWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).GetDeploymentWithContext), varargs...)
 }
 
-// ListComponentVersions mocks base method
+// ListComponentVersions mocks base method.
 func (m *MockGreengrassV2API) ListComponentVersions(arg0 *greengrassv2.ListComponentVersionsInput) (*greengrassv2.ListComponentVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComponentVersions", arg0)
@@ -544,13 +545,13 @@ func (m *MockGreengrassV2API) ListComponentVersions(arg0 *greengrassv2.ListCompo
 	return ret0, ret1
 }
 
-// ListComponentVersions indicates an expected call of ListComponentVersions
+// ListComponentVersions indicates an expected call of ListComponentVersions.
 func (mr *MockGreengrassV2APIMockRecorder) ListComponentVersions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentVersions", reflect.TypeOf((*MockGreengrassV2API)(nil).ListComponentVersions), arg0)
 }
 
-// ListComponentVersionsPages mocks base method
+// ListComponentVersionsPages mocks base method.
 func (m *MockGreengrassV2API) ListComponentVersionsPages(arg0 *greengrassv2.ListComponentVersionsInput, arg1 func(*greengrassv2.ListComponentVersionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComponentVersionsPages", arg0, arg1)
@@ -558,13 +559,13 @@ func (m *MockGreengrassV2API) ListComponentVersionsPages(arg0 *greengrassv2.List
 	return ret0
 }
 
-// ListComponentVersionsPages indicates an expected call of ListComponentVersionsPages
+// ListComponentVersionsPages indicates an expected call of ListComponentVersionsPages.
 func (mr *MockGreengrassV2APIMockRecorder) ListComponentVersionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentVersionsPages", reflect.TypeOf((*MockGreengrassV2API)(nil).ListComponentVersionsPages), arg0, arg1)
 }
 
-// ListComponentVersionsPagesWithContext mocks base method
+// ListComponentVersionsPagesWithContext mocks base method.
 func (m *MockGreengrassV2API) ListComponentVersionsPagesWithContext(arg0 context.Context, arg1 *greengrassv2.ListComponentVersionsInput, arg2 func(*greengrassv2.ListComponentVersionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -576,14 +577,14 @@ func (m *MockGreengrassV2API) ListComponentVersionsPagesWithContext(arg0 context
 	return ret0
 }
 
-// ListComponentVersionsPagesWithContext indicates an expected call of ListComponentVersionsPagesWithContext
+// ListComponentVersionsPagesWithContext indicates an expected call of ListComponentVersionsPagesWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListComponentVersionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentVersionsPagesWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListComponentVersionsPagesWithContext), varargs...)
 }
 
-// ListComponentVersionsRequest mocks base method
+// ListComponentVersionsRequest mocks base method.
 func (m *MockGreengrassV2API) ListComponentVersionsRequest(arg0 *greengrassv2.ListComponentVersionsInput) (*request.Request, *greengrassv2.ListComponentVersionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComponentVersionsRequest", arg0)
@@ -592,13 +593,13 @@ func (m *MockGreengrassV2API) ListComponentVersionsRequest(arg0 *greengrassv2.Li
 	return ret0, ret1
 }
 
-// ListComponentVersionsRequest indicates an expected call of ListComponentVersionsRequest
+// ListComponentVersionsRequest indicates an expected call of ListComponentVersionsRequest.
 func (mr *MockGreengrassV2APIMockRecorder) ListComponentVersionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentVersionsRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).ListComponentVersionsRequest), arg0)
 }
 
-// ListComponentVersionsWithContext mocks base method
+// ListComponentVersionsWithContext mocks base method.
 func (m *MockGreengrassV2API) ListComponentVersionsWithContext(arg0 context.Context, arg1 *greengrassv2.ListComponentVersionsInput, arg2 ...request.Option) (*greengrassv2.ListComponentVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -611,14 +612,14 @@ func (m *MockGreengrassV2API) ListComponentVersionsWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListComponentVersionsWithContext indicates an expected call of ListComponentVersionsWithContext
+// ListComponentVersionsWithContext indicates an expected call of ListComponentVersionsWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListComponentVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentVersionsWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListComponentVersionsWithContext), varargs...)
 }
 
-// ListComponents mocks base method
+// ListComponents mocks base method.
 func (m *MockGreengrassV2API) ListComponents(arg0 *greengrassv2.ListComponentsInput) (*greengrassv2.ListComponentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComponents", arg0)
@@ -627,13 +628,13 @@ func (m *MockGreengrassV2API) ListComponents(arg0 *greengrassv2.ListComponentsIn
 	return ret0, ret1
 }
 
-// ListComponents indicates an expected call of ListComponents
+// ListComponents indicates an expected call of ListComponents.
 func (mr *MockGreengrassV2APIMockRecorder) ListComponents(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponents", reflect.TypeOf((*MockGreengrassV2API)(nil).ListComponents), arg0)
 }
 
-// ListComponentsPages mocks base method
+// ListComponentsPages mocks base method.
 func (m *MockGreengrassV2API) ListComponentsPages(arg0 *greengrassv2.ListComponentsInput, arg1 func(*greengrassv2.ListComponentsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComponentsPages", arg0, arg1)
@@ -641,13 +642,13 @@ func (m *MockGreengrassV2API) ListComponentsPages(arg0 *greengrassv2.ListCompone
 	return ret0
 }
 
-// ListComponentsPages indicates an expected call of ListComponentsPages
+// ListComponentsPages indicates an expected call of ListComponentsPages.
 func (mr *MockGreengrassV2APIMockRecorder) ListComponentsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentsPages", reflect.TypeOf((*MockGreengrassV2API)(nil).ListComponentsPages), arg0, arg1)
 }
 
-// ListComponentsPagesWithContext mocks base method
+// ListComponentsPagesWithContext mocks base method.
 func (m *MockGreengrassV2API) ListComponentsPagesWithContext(arg0 context.Context, arg1 *greengrassv2.ListComponentsInput, arg2 func(*greengrassv2.ListComponentsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -659,14 +660,14 @@ func (m *MockGreengrassV2API) ListComponentsPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListComponentsPagesWithContext indicates an expected call of ListComponentsPagesWithContext
+// ListComponentsPagesWithContext indicates an expected call of ListComponentsPagesWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListComponentsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentsPagesWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListComponentsPagesWithContext), varargs...)
 }
 
-// ListComponentsRequest mocks base method
+// ListComponentsRequest mocks base method.
 func (m *MockGreengrassV2API) ListComponentsRequest(arg0 *greengrassv2.ListComponentsInput) (*request.Request, *greengrassv2.ListComponentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComponentsRequest", arg0)
@@ -675,13 +676,13 @@ func (m *MockGreengrassV2API) ListComponentsRequest(arg0 *greengrassv2.ListCompo
 	return ret0, ret1
 }
 
-// ListComponentsRequest indicates an expected call of ListComponentsRequest
+// ListComponentsRequest indicates an expected call of ListComponentsRequest.
 func (mr *MockGreengrassV2APIMockRecorder) ListComponentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentsRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).ListComponentsRequest), arg0)
 }
 
-// ListComponentsWithContext mocks base method
+// ListComponentsWithContext mocks base method.
 func (m *MockGreengrassV2API) ListComponentsWithContext(arg0 context.Context, arg1 *greengrassv2.ListComponentsInput, arg2 ...request.Option) (*greengrassv2.ListComponentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -694,14 +695,14 @@ func (m *MockGreengrassV2API) ListComponentsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListComponentsWithContext indicates an expected call of ListComponentsWithContext
+// ListComponentsWithContext indicates an expected call of ListComponentsWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListComponentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComponentsWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListComponentsWithContext), varargs...)
 }
 
-// ListCoreDevices mocks base method
+// ListCoreDevices mocks base method.
 func (m *MockGreengrassV2API) ListCoreDevices(arg0 *greengrassv2.ListCoreDevicesInput) (*greengrassv2.ListCoreDevicesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCoreDevices", arg0)
@@ -710,13 +711,13 @@ func (m *MockGreengrassV2API) ListCoreDevices(arg0 *greengrassv2.ListCoreDevices
 	return ret0, ret1
 }
 
-// ListCoreDevices indicates an expected call of ListCoreDevices
+// ListCoreDevices indicates an expected call of ListCoreDevices.
 func (mr *MockGreengrassV2APIMockRecorder) ListCoreDevices(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCoreDevices", reflect.TypeOf((*MockGreengrassV2API)(nil).ListCoreDevices), arg0)
 }
 
-// ListCoreDevicesPages mocks base method
+// ListCoreDevicesPages mocks base method.
 func (m *MockGreengrassV2API) ListCoreDevicesPages(arg0 *greengrassv2.ListCoreDevicesInput, arg1 func(*greengrassv2.ListCoreDevicesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCoreDevicesPages", arg0, arg1)
@@ -724,13 +725,13 @@ func (m *MockGreengrassV2API) ListCoreDevicesPages(arg0 *greengrassv2.ListCoreDe
 	return ret0
 }
 
-// ListCoreDevicesPages indicates an expected call of ListCoreDevicesPages
+// ListCoreDevicesPages indicates an expected call of ListCoreDevicesPages.
 func (mr *MockGreengrassV2APIMockRecorder) ListCoreDevicesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCoreDevicesPages", reflect.TypeOf((*MockGreengrassV2API)(nil).ListCoreDevicesPages), arg0, arg1)
 }
 
-// ListCoreDevicesPagesWithContext mocks base method
+// ListCoreDevicesPagesWithContext mocks base method.
 func (m *MockGreengrassV2API) ListCoreDevicesPagesWithContext(arg0 context.Context, arg1 *greengrassv2.ListCoreDevicesInput, arg2 func(*greengrassv2.ListCoreDevicesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -742,14 +743,14 @@ func (m *MockGreengrassV2API) ListCoreDevicesPagesWithContext(arg0 context.Conte
 	return ret0
 }
 
-// ListCoreDevicesPagesWithContext indicates an expected call of ListCoreDevicesPagesWithContext
+// ListCoreDevicesPagesWithContext indicates an expected call of ListCoreDevicesPagesWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListCoreDevicesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCoreDevicesPagesWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListCoreDevicesPagesWithContext), varargs...)
 }
 
-// ListCoreDevicesRequest mocks base method
+// ListCoreDevicesRequest mocks base method.
 func (m *MockGreengrassV2API) ListCoreDevicesRequest(arg0 *greengrassv2.ListCoreDevicesInput) (*request.Request, *greengrassv2.ListCoreDevicesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCoreDevicesRequest", arg0)
@@ -758,13 +759,13 @@ func (m *MockGreengrassV2API) ListCoreDevicesRequest(arg0 *greengrassv2.ListCore
 	return ret0, ret1
 }
 
-// ListCoreDevicesRequest indicates an expected call of ListCoreDevicesRequest
+// ListCoreDevicesRequest indicates an expected call of ListCoreDevicesRequest.
 func (mr *MockGreengrassV2APIMockRecorder) ListCoreDevicesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCoreDevicesRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).ListCoreDevicesRequest), arg0)
 }
 
-// ListCoreDevicesWithContext mocks base method
+// ListCoreDevicesWithContext mocks base method.
 func (m *MockGreengrassV2API) ListCoreDevicesWithContext(arg0 context.Context, arg1 *greengrassv2.ListCoreDevicesInput, arg2 ...request.Option) (*greengrassv2.ListCoreDevicesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -777,14 +778,14 @@ func (m *MockGreengrassV2API) ListCoreDevicesWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ListCoreDevicesWithContext indicates an expected call of ListCoreDevicesWithContext
+// ListCoreDevicesWithContext indicates an expected call of ListCoreDevicesWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListCoreDevicesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCoreDevicesWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListCoreDevicesWithContext), varargs...)
 }
 
-// ListDeployments mocks base method
+// ListDeployments mocks base method.
 func (m *MockGreengrassV2API) ListDeployments(arg0 *greengrassv2.ListDeploymentsInput) (*greengrassv2.ListDeploymentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDeployments", arg0)
@@ -793,13 +794,13 @@ func (m *MockGreengrassV2API) ListDeployments(arg0 *greengrassv2.ListDeployments
 	return ret0, ret1
 }
 
-// ListDeployments indicates an expected call of ListDeployments
+// ListDeployments indicates an expected call of ListDeployments.
 func (mr *MockGreengrassV2APIMockRecorder) ListDeployments(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeployments", reflect.TypeOf((*MockGreengrassV2API)(nil).ListDeployments), arg0)
 }
 
-// ListDeploymentsPages mocks base method
+// ListDeploymentsPages mocks base method.
 func (m *MockGreengrassV2API) ListDeploymentsPages(arg0 *greengrassv2.ListDeploymentsInput, arg1 func(*greengrassv2.ListDeploymentsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDeploymentsPages", arg0, arg1)
@@ -807,13 +808,13 @@ func (m *MockGreengrassV2API) ListDeploymentsPages(arg0 *greengrassv2.ListDeploy
 	return ret0
 }
 
-// ListDeploymentsPages indicates an expected call of ListDeploymentsPages
+// ListDeploymentsPages indicates an expected call of ListDeploymentsPages.
 func (mr *MockGreengrassV2APIMockRecorder) ListDeploymentsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentsPages", reflect.TypeOf((*MockGreengrassV2API)(nil).ListDeploymentsPages), arg0, arg1)
 }
 
-// ListDeploymentsPagesWithContext mocks base method
+// ListDeploymentsPagesWithContext mocks base method.
 func (m *MockGreengrassV2API) ListDeploymentsPagesWithContext(arg0 context.Context, arg1 *greengrassv2.ListDeploymentsInput, arg2 func(*greengrassv2.ListDeploymentsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -825,14 +826,14 @@ func (m *MockGreengrassV2API) ListDeploymentsPagesWithContext(arg0 context.Conte
 	return ret0
 }
 
-// ListDeploymentsPagesWithContext indicates an expected call of ListDeploymentsPagesWithContext
+// ListDeploymentsPagesWithContext indicates an expected call of ListDeploymentsPagesWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListDeploymentsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentsPagesWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListDeploymentsPagesWithContext), varargs...)
 }
 
-// ListDeploymentsRequest mocks base method
+// ListDeploymentsRequest mocks base method.
 func (m *MockGreengrassV2API) ListDeploymentsRequest(arg0 *greengrassv2.ListDeploymentsInput) (*request.Request, *greengrassv2.ListDeploymentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDeploymentsRequest", arg0)
@@ -841,13 +842,13 @@ func (m *MockGreengrassV2API) ListDeploymentsRequest(arg0 *greengrassv2.ListDepl
 	return ret0, ret1
 }
 
-// ListDeploymentsRequest indicates an expected call of ListDeploymentsRequest
+// ListDeploymentsRequest indicates an expected call of ListDeploymentsRequest.
 func (mr *MockGreengrassV2APIMockRecorder) ListDeploymentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentsRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).ListDeploymentsRequest), arg0)
 }
 
-// ListDeploymentsWithContext mocks base method
+// ListDeploymentsWithContext mocks base method.
 func (m *MockGreengrassV2API) ListDeploymentsWithContext(arg0 context.Context, arg1 *greengrassv2.ListDeploymentsInput, arg2 ...request.Option) (*greengrassv2.ListDeploymentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -860,14 +861,14 @@ func (m *MockGreengrassV2API) ListDeploymentsWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ListDeploymentsWithContext indicates an expected call of ListDeploymentsWithContext
+// ListDeploymentsWithContext indicates an expected call of ListDeploymentsWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListDeploymentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDeploymentsWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListDeploymentsWithContext), varargs...)
 }
 
-// ListEffectiveDeployments mocks base method
+// ListEffectiveDeployments mocks base method.
 func (m *MockGreengrassV2API) ListEffectiveDeployments(arg0 *greengrassv2.ListEffectiveDeploymentsInput) (*greengrassv2.ListEffectiveDeploymentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEffectiveDeployments", arg0)
@@ -876,13 +877,13 @@ func (m *MockGreengrassV2API) ListEffectiveDeployments(arg0 *greengrassv2.ListEf
 	return ret0, ret1
 }
 
-// ListEffectiveDeployments indicates an expected call of ListEffectiveDeployments
+// ListEffectiveDeployments indicates an expected call of ListEffectiveDeployments.
 func (mr *MockGreengrassV2APIMockRecorder) ListEffectiveDeployments(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEffectiveDeployments", reflect.TypeOf((*MockGreengrassV2API)(nil).ListEffectiveDeployments), arg0)
 }
 
-// ListEffectiveDeploymentsPages mocks base method
+// ListEffectiveDeploymentsPages mocks base method.
 func (m *MockGreengrassV2API) ListEffectiveDeploymentsPages(arg0 *greengrassv2.ListEffectiveDeploymentsInput, arg1 func(*greengrassv2.ListEffectiveDeploymentsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEffectiveDeploymentsPages", arg0, arg1)
@@ -890,13 +891,13 @@ func (m *MockGreengrassV2API) ListEffectiveDeploymentsPages(arg0 *greengrassv2.L
 	return ret0
 }
 
-// ListEffectiveDeploymentsPages indicates an expected call of ListEffectiveDeploymentsPages
+// ListEffectiveDeploymentsPages indicates an expected call of ListEffectiveDeploymentsPages.
 func (mr *MockGreengrassV2APIMockRecorder) ListEffectiveDeploymentsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEffectiveDeploymentsPages", reflect.TypeOf((*MockGreengrassV2API)(nil).ListEffectiveDeploymentsPages), arg0, arg1)
 }
 
-// ListEffectiveDeploymentsPagesWithContext mocks base method
+// ListEffectiveDeploymentsPagesWithContext mocks base method.
 func (m *MockGreengrassV2API) ListEffectiveDeploymentsPagesWithContext(arg0 context.Context, arg1 *greengrassv2.ListEffectiveDeploymentsInput, arg2 func(*greengrassv2.ListEffectiveDeploymentsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -908,14 +909,14 @@ func (m *MockGreengrassV2API) ListEffectiveDeploymentsPagesWithContext(arg0 cont
 	return ret0
 }
 
-// ListEffectiveDeploymentsPagesWithContext indicates an expected call of ListEffectiveDeploymentsPagesWithContext
+// ListEffectiveDeploymentsPagesWithContext indicates an expected call of ListEffectiveDeploymentsPagesWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListEffectiveDeploymentsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEffectiveDeploymentsPagesWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListEffectiveDeploymentsPagesWithContext), varargs...)
 }
 
-// ListEffectiveDeploymentsRequest mocks base method
+// ListEffectiveDeploymentsRequest mocks base method.
 func (m *MockGreengrassV2API) ListEffectiveDeploymentsRequest(arg0 *greengrassv2.ListEffectiveDeploymentsInput) (*request.Request, *greengrassv2.ListEffectiveDeploymentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListEffectiveDeploymentsRequest", arg0)
@@ -924,13 +925,13 @@ func (m *MockGreengrassV2API) ListEffectiveDeploymentsRequest(arg0 *greengrassv2
 	return ret0, ret1
 }
 
-// ListEffectiveDeploymentsRequest indicates an expected call of ListEffectiveDeploymentsRequest
+// ListEffectiveDeploymentsRequest indicates an expected call of ListEffectiveDeploymentsRequest.
 func (mr *MockGreengrassV2APIMockRecorder) ListEffectiveDeploymentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEffectiveDeploymentsRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).ListEffectiveDeploymentsRequest), arg0)
 }
 
-// ListEffectiveDeploymentsWithContext mocks base method
+// ListEffectiveDeploymentsWithContext mocks base method.
 func (m *MockGreengrassV2API) ListEffectiveDeploymentsWithContext(arg0 context.Context, arg1 *greengrassv2.ListEffectiveDeploymentsInput, arg2 ...request.Option) (*greengrassv2.ListEffectiveDeploymentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -943,14 +944,14 @@ func (m *MockGreengrassV2API) ListEffectiveDeploymentsWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// ListEffectiveDeploymentsWithContext indicates an expected call of ListEffectiveDeploymentsWithContext
+// ListEffectiveDeploymentsWithContext indicates an expected call of ListEffectiveDeploymentsWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListEffectiveDeploymentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEffectiveDeploymentsWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListEffectiveDeploymentsWithContext), varargs...)
 }
 
-// ListInstalledComponents mocks base method
+// ListInstalledComponents mocks base method.
 func (m *MockGreengrassV2API) ListInstalledComponents(arg0 *greengrassv2.ListInstalledComponentsInput) (*greengrassv2.ListInstalledComponentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInstalledComponents", arg0)
@@ -959,13 +960,13 @@ func (m *MockGreengrassV2API) ListInstalledComponents(arg0 *greengrassv2.ListIns
 	return ret0, ret1
 }
 
-// ListInstalledComponents indicates an expected call of ListInstalledComponents
+// ListInstalledComponents indicates an expected call of ListInstalledComponents.
 func (mr *MockGreengrassV2APIMockRecorder) ListInstalledComponents(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInstalledComponents", reflect.TypeOf((*MockGreengrassV2API)(nil).ListInstalledComponents), arg0)
 }
 
-// ListInstalledComponentsPages mocks base method
+// ListInstalledComponentsPages mocks base method.
 func (m *MockGreengrassV2API) ListInstalledComponentsPages(arg0 *greengrassv2.ListInstalledComponentsInput, arg1 func(*greengrassv2.ListInstalledComponentsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInstalledComponentsPages", arg0, arg1)
@@ -973,13 +974,13 @@ func (m *MockGreengrassV2API) ListInstalledComponentsPages(arg0 *greengrassv2.Li
 	return ret0
 }
 
-// ListInstalledComponentsPages indicates an expected call of ListInstalledComponentsPages
+// ListInstalledComponentsPages indicates an expected call of ListInstalledComponentsPages.
 func (mr *MockGreengrassV2APIMockRecorder) ListInstalledComponentsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInstalledComponentsPages", reflect.TypeOf((*MockGreengrassV2API)(nil).ListInstalledComponentsPages), arg0, arg1)
 }
 
-// ListInstalledComponentsPagesWithContext mocks base method
+// ListInstalledComponentsPagesWithContext mocks base method.
 func (m *MockGreengrassV2API) ListInstalledComponentsPagesWithContext(arg0 context.Context, arg1 *greengrassv2.ListInstalledComponentsInput, arg2 func(*greengrassv2.ListInstalledComponentsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -991,14 +992,14 @@ func (m *MockGreengrassV2API) ListInstalledComponentsPagesWithContext(arg0 conte
 	return ret0
 }
 
-// ListInstalledComponentsPagesWithContext indicates an expected call of ListInstalledComponentsPagesWithContext
+// ListInstalledComponentsPagesWithContext indicates an expected call of ListInstalledComponentsPagesWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListInstalledComponentsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInstalledComponentsPagesWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListInstalledComponentsPagesWithContext), varargs...)
 }
 
-// ListInstalledComponentsRequest mocks base method
+// ListInstalledComponentsRequest mocks base method.
 func (m *MockGreengrassV2API) ListInstalledComponentsRequest(arg0 *greengrassv2.ListInstalledComponentsInput) (*request.Request, *greengrassv2.ListInstalledComponentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInstalledComponentsRequest", arg0)
@@ -1007,13 +1008,13 @@ func (m *MockGreengrassV2API) ListInstalledComponentsRequest(arg0 *greengrassv2.
 	return ret0, ret1
 }
 
-// ListInstalledComponentsRequest indicates an expected call of ListInstalledComponentsRequest
+// ListInstalledComponentsRequest indicates an expected call of ListInstalledComponentsRequest.
 func (mr *MockGreengrassV2APIMockRecorder) ListInstalledComponentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInstalledComponentsRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).ListInstalledComponentsRequest), arg0)
 }
 
-// ListInstalledComponentsWithContext mocks base method
+// ListInstalledComponentsWithContext mocks base method.
 func (m *MockGreengrassV2API) ListInstalledComponentsWithContext(arg0 context.Context, arg1 *greengrassv2.ListInstalledComponentsInput, arg2 ...request.Option) (*greengrassv2.ListInstalledComponentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1026,14 +1027,14 @@ func (m *MockGreengrassV2API) ListInstalledComponentsWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListInstalledComponentsWithContext indicates an expected call of ListInstalledComponentsWithContext
+// ListInstalledComponentsWithContext indicates an expected call of ListInstalledComponentsWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListInstalledComponentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInstalledComponentsWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListInstalledComponentsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockGreengrassV2API) ListTagsForResource(arg0 *greengrassv2.ListTagsForResourceInput) (*greengrassv2.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1042,13 +1043,13 @@ func (m *MockGreengrassV2API) ListTagsForResource(arg0 *greengrassv2.ListTagsFor
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockGreengrassV2APIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockGreengrassV2API)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockGreengrassV2API) ListTagsForResourceRequest(arg0 *greengrassv2.ListTagsForResourceInput) (*request.Request, *greengrassv2.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1057,13 +1058,13 @@ func (m *MockGreengrassV2API) ListTagsForResourceRequest(arg0 *greengrassv2.List
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockGreengrassV2APIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockGreengrassV2API) ListTagsForResourceWithContext(arg0 context.Context, arg1 *greengrassv2.ListTagsForResourceInput, arg2 ...request.Option) (*greengrassv2.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1076,14 +1077,14 @@ func (m *MockGreengrassV2API) ListTagsForResourceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// ResolveComponentCandidates mocks base method
+// ResolveComponentCandidates mocks base method.
 func (m *MockGreengrassV2API) ResolveComponentCandidates(arg0 *greengrassv2.ResolveComponentCandidatesInput) (*greengrassv2.ResolveComponentCandidatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ResolveComponentCandidates", arg0)
@@ -1092,13 +1093,13 @@ func (m *MockGreengrassV2API) ResolveComponentCandidates(arg0 *greengrassv2.Reso
 	return ret0, ret1
 }
 
-// ResolveComponentCandidates indicates an expected call of ResolveComponentCandidates
+// ResolveComponentCandidates indicates an expected call of ResolveComponentCandidates.
 func (mr *MockGreengrassV2APIMockRecorder) ResolveComponentCandidates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ResolveComponentCandidates", reflect.TypeOf((*MockGreengrassV2API)(nil).ResolveComponentCandidates), arg0)
 }
 
-// ResolveComponentCandidatesRequest mocks base method
+// ResolveComponentCandidatesRequest mocks base method.
 func (m *MockGreengrassV2API) ResolveComponentCandidatesRequest(arg0 *greengrassv2.ResolveComponentCandidatesInput) (*request.Request, *greengrassv2.ResolveComponentCandidatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ResolveComponentCandidatesRequest", arg0)
@@ -1107,13 +1108,13 @@ func (m *MockGreengrassV2API) ResolveComponentCandidatesRequest(arg0 *greengrass
 	return ret0, ret1
 }
 
-// ResolveComponentCandidatesRequest indicates an expected call of ResolveComponentCandidatesRequest
+// ResolveComponentCandidatesRequest indicates an expected call of ResolveComponentCandidatesRequest.
 func (mr *MockGreengrassV2APIMockRecorder) ResolveComponentCandidatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ResolveComponentCandidatesRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).ResolveComponentCandidatesRequest), arg0)
 }
 
-// ResolveComponentCandidatesWithContext mocks base method
+// ResolveComponentCandidatesWithContext mocks base method.
 func (m *MockGreengrassV2API) ResolveComponentCandidatesWithContext(arg0 context.Context, arg1 *greengrassv2.ResolveComponentCandidatesInput, arg2 ...request.Option) (*greengrassv2.ResolveComponentCandidatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1126,14 +1127,14 @@ func (m *MockGreengrassV2API) ResolveComponentCandidatesWithContext(arg0 context
 	return ret0, ret1
 }
 
-// ResolveComponentCandidatesWithContext indicates an expected call of ResolveComponentCandidatesWithContext
+// ResolveComponentCandidatesWithContext indicates an expected call of ResolveComponentCandidatesWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) ResolveComponentCandidatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ResolveComponentCandidatesWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).ResolveComponentCandidatesWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockGreengrassV2API) TagResource(arg0 *greengrassv2.TagResourceInput) (*greengrassv2.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1142,13 +1143,13 @@ func (m *MockGreengrassV2API) TagResource(arg0 *greengrassv2.TagResourceInput) (
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockGreengrassV2APIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockGreengrassV2API)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockGreengrassV2API) TagResourceRequest(arg0 *greengrassv2.TagResourceInput) (*request.Request, *greengrassv2.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1157,13 +1158,13 @@ func (m *MockGreengrassV2API) TagResourceRequest(arg0 *greengrassv2.TagResourceI
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockGreengrassV2APIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockGreengrassV2API) TagResourceWithContext(arg0 context.Context, arg1 *greengrassv2.TagResourceInput, arg2 ...request.Option) (*greengrassv2.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1176,14 +1177,14 @@ func (m *MockGreengrassV2API) TagResourceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockGreengrassV2API)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockGreengrassV2API) UntagResource(arg0 *greengrassv2.UntagResourceInput) (*greengrassv2.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1192,13 +1193,13 @@ func (m *MockGreengrassV2API) UntagResource(arg0 *greengrassv2.UntagResourceInpu
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockGreengrassV2APIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockGreengrassV2API)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockGreengrassV2API) UntagResourceRequest(arg0 *greengrassv2.UntagResourceInput) (*request.Request, *greengrassv2.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1207,13 +1208,13 @@ func (m *MockGreengrassV2API) UntagResourceRequest(arg0 *greengrassv2.UntagResou
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockGreengrassV2APIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockGreengrassV2API)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockGreengrassV2API) UntagResourceWithContext(arg0 context.Context, arg1 *greengrassv2.UntagResourceInput, arg2 ...request.Option) (*greengrassv2.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1226,7 +1227,7 @@ func (m *MockGreengrassV2API) UntagResourceWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockGreengrassV2APIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

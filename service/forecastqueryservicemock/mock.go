@@ -6,36 +6,37 @@ package forecastqueryservicemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	forecastqueryservice "github.com/aws/aws-sdk-go/service/forecastqueryservice"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockForecastQueryServiceAPI is a mock of ForecastQueryServiceAPI interface
+// MockForecastQueryServiceAPI is a mock of ForecastQueryServiceAPI interface.
 type MockForecastQueryServiceAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockForecastQueryServiceAPIMockRecorder
 }
 
-// MockForecastQueryServiceAPIMockRecorder is the mock recorder for MockForecastQueryServiceAPI
+// MockForecastQueryServiceAPIMockRecorder is the mock recorder for MockForecastQueryServiceAPI.
 type MockForecastQueryServiceAPIMockRecorder struct {
 	mock *MockForecastQueryServiceAPI
 }
 
-// NewMockForecastQueryServiceAPI creates a new mock instance
+// NewMockForecastQueryServiceAPI creates a new mock instance.
 func NewMockForecastQueryServiceAPI(ctrl *gomock.Controller) *MockForecastQueryServiceAPI {
 	mock := &MockForecastQueryServiceAPI{ctrl: ctrl}
 	mock.recorder = &MockForecastQueryServiceAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockForecastQueryServiceAPI) EXPECT() *MockForecastQueryServiceAPIMockRecorder {
 	return m.recorder
 }
 
-// QueryForecast mocks base method
+// QueryForecast mocks base method.
 func (m *MockForecastQueryServiceAPI) QueryForecast(arg0 *forecastqueryservice.QueryForecastInput) (*forecastqueryservice.QueryForecastOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "QueryForecast", arg0)
@@ -44,13 +45,13 @@ func (m *MockForecastQueryServiceAPI) QueryForecast(arg0 *forecastqueryservice.Q
 	return ret0, ret1
 }
 
-// QueryForecast indicates an expected call of QueryForecast
+// QueryForecast indicates an expected call of QueryForecast.
 func (mr *MockForecastQueryServiceAPIMockRecorder) QueryForecast(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "QueryForecast", reflect.TypeOf((*MockForecastQueryServiceAPI)(nil).QueryForecast), arg0)
 }
 
-// QueryForecastRequest mocks base method
+// QueryForecastRequest mocks base method.
 func (m *MockForecastQueryServiceAPI) QueryForecastRequest(arg0 *forecastqueryservice.QueryForecastInput) (*request.Request, *forecastqueryservice.QueryForecastOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "QueryForecastRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockForecastQueryServiceAPI) QueryForecastRequest(arg0 *forecastqueryse
 	return ret0, ret1
 }
 
-// QueryForecastRequest indicates an expected call of QueryForecastRequest
+// QueryForecastRequest indicates an expected call of QueryForecastRequest.
 func (mr *MockForecastQueryServiceAPIMockRecorder) QueryForecastRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "QueryForecastRequest", reflect.TypeOf((*MockForecastQueryServiceAPI)(nil).QueryForecastRequest), arg0)
 }
 
-// QueryForecastWithContext mocks base method
+// QueryForecastWithContext mocks base method.
 func (m *MockForecastQueryServiceAPI) QueryForecastWithContext(arg0 context.Context, arg1 *forecastqueryservice.QueryForecastInput, arg2 ...request.Option) (*forecastqueryservice.QueryForecastOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,7 +79,7 @@ func (m *MockForecastQueryServiceAPI) QueryForecastWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// QueryForecastWithContext indicates an expected call of QueryForecastWithContext
+// QueryForecastWithContext indicates an expected call of QueryForecastWithContext.
 func (mr *MockForecastQueryServiceAPIMockRecorder) QueryForecastWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

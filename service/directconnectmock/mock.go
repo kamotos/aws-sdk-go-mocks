@@ -6,36 +6,37 @@ package directconnectmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	directconnect "github.com/aws/aws-sdk-go/service/directconnect"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockDirectConnectAPI is a mock of DirectConnectAPI interface
+// MockDirectConnectAPI is a mock of DirectConnectAPI interface.
 type MockDirectConnectAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockDirectConnectAPIMockRecorder
 }
 
-// MockDirectConnectAPIMockRecorder is the mock recorder for MockDirectConnectAPI
+// MockDirectConnectAPIMockRecorder is the mock recorder for MockDirectConnectAPI.
 type MockDirectConnectAPIMockRecorder struct {
 	mock *MockDirectConnectAPI
 }
 
-// NewMockDirectConnectAPI creates a new mock instance
+// NewMockDirectConnectAPI creates a new mock instance.
 func NewMockDirectConnectAPI(ctrl *gomock.Controller) *MockDirectConnectAPI {
 	mock := &MockDirectConnectAPI{ctrl: ctrl}
 	mock.recorder = &MockDirectConnectAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockDirectConnectAPI) EXPECT() *MockDirectConnectAPIMockRecorder {
 	return m.recorder
 }
 
-// AcceptDirectConnectGatewayAssociationProposal mocks base method
+// AcceptDirectConnectGatewayAssociationProposal mocks base method.
 func (m *MockDirectConnectAPI) AcceptDirectConnectGatewayAssociationProposal(arg0 *directconnect.AcceptDirectConnectGatewayAssociationProposalInput) (*directconnect.AcceptDirectConnectGatewayAssociationProposalOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AcceptDirectConnectGatewayAssociationProposal", arg0)
@@ -44,13 +45,13 @@ func (m *MockDirectConnectAPI) AcceptDirectConnectGatewayAssociationProposal(arg
 	return ret0, ret1
 }
 
-// AcceptDirectConnectGatewayAssociationProposal indicates an expected call of AcceptDirectConnectGatewayAssociationProposal
+// AcceptDirectConnectGatewayAssociationProposal indicates an expected call of AcceptDirectConnectGatewayAssociationProposal.
 func (mr *MockDirectConnectAPIMockRecorder) AcceptDirectConnectGatewayAssociationProposal(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptDirectConnectGatewayAssociationProposal", reflect.TypeOf((*MockDirectConnectAPI)(nil).AcceptDirectConnectGatewayAssociationProposal), arg0)
 }
 
-// AcceptDirectConnectGatewayAssociationProposalRequest mocks base method
+// AcceptDirectConnectGatewayAssociationProposalRequest mocks base method.
 func (m *MockDirectConnectAPI) AcceptDirectConnectGatewayAssociationProposalRequest(arg0 *directconnect.AcceptDirectConnectGatewayAssociationProposalInput) (*request.Request, *directconnect.AcceptDirectConnectGatewayAssociationProposalOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AcceptDirectConnectGatewayAssociationProposalRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockDirectConnectAPI) AcceptDirectConnectGatewayAssociationProposalRequ
 	return ret0, ret1
 }
 
-// AcceptDirectConnectGatewayAssociationProposalRequest indicates an expected call of AcceptDirectConnectGatewayAssociationProposalRequest
+// AcceptDirectConnectGatewayAssociationProposalRequest indicates an expected call of AcceptDirectConnectGatewayAssociationProposalRequest.
 func (mr *MockDirectConnectAPIMockRecorder) AcceptDirectConnectGatewayAssociationProposalRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptDirectConnectGatewayAssociationProposalRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).AcceptDirectConnectGatewayAssociationProposalRequest), arg0)
 }
 
-// AcceptDirectConnectGatewayAssociationProposalWithContext mocks base method
+// AcceptDirectConnectGatewayAssociationProposalWithContext mocks base method.
 func (m *MockDirectConnectAPI) AcceptDirectConnectGatewayAssociationProposalWithContext(arg0 context.Context, arg1 *directconnect.AcceptDirectConnectGatewayAssociationProposalInput, arg2 ...request.Option) (*directconnect.AcceptDirectConnectGatewayAssociationProposalOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockDirectConnectAPI) AcceptDirectConnectGatewayAssociationProposalWith
 	return ret0, ret1
 }
 
-// AcceptDirectConnectGatewayAssociationProposalWithContext indicates an expected call of AcceptDirectConnectGatewayAssociationProposalWithContext
+// AcceptDirectConnectGatewayAssociationProposalWithContext indicates an expected call of AcceptDirectConnectGatewayAssociationProposalWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) AcceptDirectConnectGatewayAssociationProposalWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptDirectConnectGatewayAssociationProposalWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).AcceptDirectConnectGatewayAssociationProposalWithContext), varargs...)
 }
 
-// AllocateConnectionOnInterconnect mocks base method
+// AllocateConnectionOnInterconnect mocks base method.
 func (m *MockDirectConnectAPI) AllocateConnectionOnInterconnect(arg0 *directconnect.AllocateConnectionOnInterconnectInput) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllocateConnectionOnInterconnect", arg0)
@@ -94,13 +95,13 @@ func (m *MockDirectConnectAPI) AllocateConnectionOnInterconnect(arg0 *directconn
 	return ret0, ret1
 }
 
-// AllocateConnectionOnInterconnect indicates an expected call of AllocateConnectionOnInterconnect
+// AllocateConnectionOnInterconnect indicates an expected call of AllocateConnectionOnInterconnect.
 func (mr *MockDirectConnectAPIMockRecorder) AllocateConnectionOnInterconnect(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocateConnectionOnInterconnect", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocateConnectionOnInterconnect), arg0)
 }
 
-// AllocateConnectionOnInterconnectRequest mocks base method
+// AllocateConnectionOnInterconnectRequest mocks base method.
 func (m *MockDirectConnectAPI) AllocateConnectionOnInterconnectRequest(arg0 *directconnect.AllocateConnectionOnInterconnectInput) (*request.Request, *directconnect.Connection) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllocateConnectionOnInterconnectRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockDirectConnectAPI) AllocateConnectionOnInterconnectRequest(arg0 *dir
 	return ret0, ret1
 }
 
-// AllocateConnectionOnInterconnectRequest indicates an expected call of AllocateConnectionOnInterconnectRequest
+// AllocateConnectionOnInterconnectRequest indicates an expected call of AllocateConnectionOnInterconnectRequest.
 func (mr *MockDirectConnectAPIMockRecorder) AllocateConnectionOnInterconnectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocateConnectionOnInterconnectRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocateConnectionOnInterconnectRequest), arg0)
 }
 
-// AllocateConnectionOnInterconnectWithContext mocks base method
+// AllocateConnectionOnInterconnectWithContext mocks base method.
 func (m *MockDirectConnectAPI) AllocateConnectionOnInterconnectWithContext(arg0 context.Context, arg1 *directconnect.AllocateConnectionOnInterconnectInput, arg2 ...request.Option) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockDirectConnectAPI) AllocateConnectionOnInterconnectWithContext(arg0 
 	return ret0, ret1
 }
 
-// AllocateConnectionOnInterconnectWithContext indicates an expected call of AllocateConnectionOnInterconnectWithContext
+// AllocateConnectionOnInterconnectWithContext indicates an expected call of AllocateConnectionOnInterconnectWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) AllocateConnectionOnInterconnectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocateConnectionOnInterconnectWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocateConnectionOnInterconnectWithContext), varargs...)
 }
 
-// AllocateHostedConnection mocks base method
+// AllocateHostedConnection mocks base method.
 func (m *MockDirectConnectAPI) AllocateHostedConnection(arg0 *directconnect.AllocateHostedConnectionInput) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllocateHostedConnection", arg0)
@@ -144,13 +145,13 @@ func (m *MockDirectConnectAPI) AllocateHostedConnection(arg0 *directconnect.Allo
 	return ret0, ret1
 }
 
-// AllocateHostedConnection indicates an expected call of AllocateHostedConnection
+// AllocateHostedConnection indicates an expected call of AllocateHostedConnection.
 func (mr *MockDirectConnectAPIMockRecorder) AllocateHostedConnection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocateHostedConnection", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocateHostedConnection), arg0)
 }
 
-// AllocateHostedConnectionRequest mocks base method
+// AllocateHostedConnectionRequest mocks base method.
 func (m *MockDirectConnectAPI) AllocateHostedConnectionRequest(arg0 *directconnect.AllocateHostedConnectionInput) (*request.Request, *directconnect.Connection) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllocateHostedConnectionRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockDirectConnectAPI) AllocateHostedConnectionRequest(arg0 *directconne
 	return ret0, ret1
 }
 
-// AllocateHostedConnectionRequest indicates an expected call of AllocateHostedConnectionRequest
+// AllocateHostedConnectionRequest indicates an expected call of AllocateHostedConnectionRequest.
 func (mr *MockDirectConnectAPIMockRecorder) AllocateHostedConnectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocateHostedConnectionRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocateHostedConnectionRequest), arg0)
 }
 
-// AllocateHostedConnectionWithContext mocks base method
+// AllocateHostedConnectionWithContext mocks base method.
 func (m *MockDirectConnectAPI) AllocateHostedConnectionWithContext(arg0 context.Context, arg1 *directconnect.AllocateHostedConnectionInput, arg2 ...request.Option) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockDirectConnectAPI) AllocateHostedConnectionWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// AllocateHostedConnectionWithContext indicates an expected call of AllocateHostedConnectionWithContext
+// AllocateHostedConnectionWithContext indicates an expected call of AllocateHostedConnectionWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) AllocateHostedConnectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocateHostedConnectionWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocateHostedConnectionWithContext), varargs...)
 }
 
-// AllocatePrivateVirtualInterface mocks base method
+// AllocatePrivateVirtualInterface mocks base method.
 func (m *MockDirectConnectAPI) AllocatePrivateVirtualInterface(arg0 *directconnect.AllocatePrivateVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllocatePrivateVirtualInterface", arg0)
@@ -194,13 +195,13 @@ func (m *MockDirectConnectAPI) AllocatePrivateVirtualInterface(arg0 *directconne
 	return ret0, ret1
 }
 
-// AllocatePrivateVirtualInterface indicates an expected call of AllocatePrivateVirtualInterface
+// AllocatePrivateVirtualInterface indicates an expected call of AllocatePrivateVirtualInterface.
 func (mr *MockDirectConnectAPIMockRecorder) AllocatePrivateVirtualInterface(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocatePrivateVirtualInterface", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocatePrivateVirtualInterface), arg0)
 }
 
-// AllocatePrivateVirtualInterfaceRequest mocks base method
+// AllocatePrivateVirtualInterfaceRequest mocks base method.
 func (m *MockDirectConnectAPI) AllocatePrivateVirtualInterfaceRequest(arg0 *directconnect.AllocatePrivateVirtualInterfaceInput) (*request.Request, *directconnect.VirtualInterface) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllocatePrivateVirtualInterfaceRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockDirectConnectAPI) AllocatePrivateVirtualInterfaceRequest(arg0 *dire
 	return ret0, ret1
 }
 
-// AllocatePrivateVirtualInterfaceRequest indicates an expected call of AllocatePrivateVirtualInterfaceRequest
+// AllocatePrivateVirtualInterfaceRequest indicates an expected call of AllocatePrivateVirtualInterfaceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) AllocatePrivateVirtualInterfaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocatePrivateVirtualInterfaceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocatePrivateVirtualInterfaceRequest), arg0)
 }
 
-// AllocatePrivateVirtualInterfaceWithContext mocks base method
+// AllocatePrivateVirtualInterfaceWithContext mocks base method.
 func (m *MockDirectConnectAPI) AllocatePrivateVirtualInterfaceWithContext(arg0 context.Context, arg1 *directconnect.AllocatePrivateVirtualInterfaceInput, arg2 ...request.Option) (*directconnect.VirtualInterface, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockDirectConnectAPI) AllocatePrivateVirtualInterfaceWithContext(arg0 c
 	return ret0, ret1
 }
 
-// AllocatePrivateVirtualInterfaceWithContext indicates an expected call of AllocatePrivateVirtualInterfaceWithContext
+// AllocatePrivateVirtualInterfaceWithContext indicates an expected call of AllocatePrivateVirtualInterfaceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) AllocatePrivateVirtualInterfaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocatePrivateVirtualInterfaceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocatePrivateVirtualInterfaceWithContext), varargs...)
 }
 
-// AllocatePublicVirtualInterface mocks base method
+// AllocatePublicVirtualInterface mocks base method.
 func (m *MockDirectConnectAPI) AllocatePublicVirtualInterface(arg0 *directconnect.AllocatePublicVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllocatePublicVirtualInterface", arg0)
@@ -244,13 +245,13 @@ func (m *MockDirectConnectAPI) AllocatePublicVirtualInterface(arg0 *directconnec
 	return ret0, ret1
 }
 
-// AllocatePublicVirtualInterface indicates an expected call of AllocatePublicVirtualInterface
+// AllocatePublicVirtualInterface indicates an expected call of AllocatePublicVirtualInterface.
 func (mr *MockDirectConnectAPIMockRecorder) AllocatePublicVirtualInterface(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocatePublicVirtualInterface", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocatePublicVirtualInterface), arg0)
 }
 
-// AllocatePublicVirtualInterfaceRequest mocks base method
+// AllocatePublicVirtualInterfaceRequest mocks base method.
 func (m *MockDirectConnectAPI) AllocatePublicVirtualInterfaceRequest(arg0 *directconnect.AllocatePublicVirtualInterfaceInput) (*request.Request, *directconnect.VirtualInterface) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllocatePublicVirtualInterfaceRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockDirectConnectAPI) AllocatePublicVirtualInterfaceRequest(arg0 *direc
 	return ret0, ret1
 }
 
-// AllocatePublicVirtualInterfaceRequest indicates an expected call of AllocatePublicVirtualInterfaceRequest
+// AllocatePublicVirtualInterfaceRequest indicates an expected call of AllocatePublicVirtualInterfaceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) AllocatePublicVirtualInterfaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocatePublicVirtualInterfaceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocatePublicVirtualInterfaceRequest), arg0)
 }
 
-// AllocatePublicVirtualInterfaceWithContext mocks base method
+// AllocatePublicVirtualInterfaceWithContext mocks base method.
 func (m *MockDirectConnectAPI) AllocatePublicVirtualInterfaceWithContext(arg0 context.Context, arg1 *directconnect.AllocatePublicVirtualInterfaceInput, arg2 ...request.Option) (*directconnect.VirtualInterface, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockDirectConnectAPI) AllocatePublicVirtualInterfaceWithContext(arg0 co
 	return ret0, ret1
 }
 
-// AllocatePublicVirtualInterfaceWithContext indicates an expected call of AllocatePublicVirtualInterfaceWithContext
+// AllocatePublicVirtualInterfaceWithContext indicates an expected call of AllocatePublicVirtualInterfaceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) AllocatePublicVirtualInterfaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocatePublicVirtualInterfaceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocatePublicVirtualInterfaceWithContext), varargs...)
 }
 
-// AllocateTransitVirtualInterface mocks base method
+// AllocateTransitVirtualInterface mocks base method.
 func (m *MockDirectConnectAPI) AllocateTransitVirtualInterface(arg0 *directconnect.AllocateTransitVirtualInterfaceInput) (*directconnect.AllocateTransitVirtualInterfaceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllocateTransitVirtualInterface", arg0)
@@ -294,13 +295,13 @@ func (m *MockDirectConnectAPI) AllocateTransitVirtualInterface(arg0 *directconne
 	return ret0, ret1
 }
 
-// AllocateTransitVirtualInterface indicates an expected call of AllocateTransitVirtualInterface
+// AllocateTransitVirtualInterface indicates an expected call of AllocateTransitVirtualInterface.
 func (mr *MockDirectConnectAPIMockRecorder) AllocateTransitVirtualInterface(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocateTransitVirtualInterface", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocateTransitVirtualInterface), arg0)
 }
 
-// AllocateTransitVirtualInterfaceRequest mocks base method
+// AllocateTransitVirtualInterfaceRequest mocks base method.
 func (m *MockDirectConnectAPI) AllocateTransitVirtualInterfaceRequest(arg0 *directconnect.AllocateTransitVirtualInterfaceInput) (*request.Request, *directconnect.AllocateTransitVirtualInterfaceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AllocateTransitVirtualInterfaceRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockDirectConnectAPI) AllocateTransitVirtualInterfaceRequest(arg0 *dire
 	return ret0, ret1
 }
 
-// AllocateTransitVirtualInterfaceRequest indicates an expected call of AllocateTransitVirtualInterfaceRequest
+// AllocateTransitVirtualInterfaceRequest indicates an expected call of AllocateTransitVirtualInterfaceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) AllocateTransitVirtualInterfaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocateTransitVirtualInterfaceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocateTransitVirtualInterfaceRequest), arg0)
 }
 
-// AllocateTransitVirtualInterfaceWithContext mocks base method
+// AllocateTransitVirtualInterfaceWithContext mocks base method.
 func (m *MockDirectConnectAPI) AllocateTransitVirtualInterfaceWithContext(arg0 context.Context, arg1 *directconnect.AllocateTransitVirtualInterfaceInput, arg2 ...request.Option) (*directconnect.AllocateTransitVirtualInterfaceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockDirectConnectAPI) AllocateTransitVirtualInterfaceWithContext(arg0 c
 	return ret0, ret1
 }
 
-// AllocateTransitVirtualInterfaceWithContext indicates an expected call of AllocateTransitVirtualInterfaceWithContext
+// AllocateTransitVirtualInterfaceWithContext indicates an expected call of AllocateTransitVirtualInterfaceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) AllocateTransitVirtualInterfaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AllocateTransitVirtualInterfaceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).AllocateTransitVirtualInterfaceWithContext), varargs...)
 }
 
-// AssociateConnectionWithLag mocks base method
+// AssociateConnectionWithLag mocks base method.
 func (m *MockDirectConnectAPI) AssociateConnectionWithLag(arg0 *directconnect.AssociateConnectionWithLagInput) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateConnectionWithLag", arg0)
@@ -344,13 +345,13 @@ func (m *MockDirectConnectAPI) AssociateConnectionWithLag(arg0 *directconnect.As
 	return ret0, ret1
 }
 
-// AssociateConnectionWithLag indicates an expected call of AssociateConnectionWithLag
+// AssociateConnectionWithLag indicates an expected call of AssociateConnectionWithLag.
 func (mr *MockDirectConnectAPIMockRecorder) AssociateConnectionWithLag(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateConnectionWithLag", reflect.TypeOf((*MockDirectConnectAPI)(nil).AssociateConnectionWithLag), arg0)
 }
 
-// AssociateConnectionWithLagRequest mocks base method
+// AssociateConnectionWithLagRequest mocks base method.
 func (m *MockDirectConnectAPI) AssociateConnectionWithLagRequest(arg0 *directconnect.AssociateConnectionWithLagInput) (*request.Request, *directconnect.Connection) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateConnectionWithLagRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockDirectConnectAPI) AssociateConnectionWithLagRequest(arg0 *directcon
 	return ret0, ret1
 }
 
-// AssociateConnectionWithLagRequest indicates an expected call of AssociateConnectionWithLagRequest
+// AssociateConnectionWithLagRequest indicates an expected call of AssociateConnectionWithLagRequest.
 func (mr *MockDirectConnectAPIMockRecorder) AssociateConnectionWithLagRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateConnectionWithLagRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).AssociateConnectionWithLagRequest), arg0)
 }
 
-// AssociateConnectionWithLagWithContext mocks base method
+// AssociateConnectionWithLagWithContext mocks base method.
 func (m *MockDirectConnectAPI) AssociateConnectionWithLagWithContext(arg0 context.Context, arg1 *directconnect.AssociateConnectionWithLagInput, arg2 ...request.Option) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockDirectConnectAPI) AssociateConnectionWithLagWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// AssociateConnectionWithLagWithContext indicates an expected call of AssociateConnectionWithLagWithContext
+// AssociateConnectionWithLagWithContext indicates an expected call of AssociateConnectionWithLagWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) AssociateConnectionWithLagWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateConnectionWithLagWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).AssociateConnectionWithLagWithContext), varargs...)
 }
 
-// AssociateHostedConnection mocks base method
+// AssociateHostedConnection mocks base method.
 func (m *MockDirectConnectAPI) AssociateHostedConnection(arg0 *directconnect.AssociateHostedConnectionInput) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateHostedConnection", arg0)
@@ -394,13 +395,13 @@ func (m *MockDirectConnectAPI) AssociateHostedConnection(arg0 *directconnect.Ass
 	return ret0, ret1
 }
 
-// AssociateHostedConnection indicates an expected call of AssociateHostedConnection
+// AssociateHostedConnection indicates an expected call of AssociateHostedConnection.
 func (mr *MockDirectConnectAPIMockRecorder) AssociateHostedConnection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateHostedConnection", reflect.TypeOf((*MockDirectConnectAPI)(nil).AssociateHostedConnection), arg0)
 }
 
-// AssociateHostedConnectionRequest mocks base method
+// AssociateHostedConnectionRequest mocks base method.
 func (m *MockDirectConnectAPI) AssociateHostedConnectionRequest(arg0 *directconnect.AssociateHostedConnectionInput) (*request.Request, *directconnect.Connection) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateHostedConnectionRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockDirectConnectAPI) AssociateHostedConnectionRequest(arg0 *directconn
 	return ret0, ret1
 }
 
-// AssociateHostedConnectionRequest indicates an expected call of AssociateHostedConnectionRequest
+// AssociateHostedConnectionRequest indicates an expected call of AssociateHostedConnectionRequest.
 func (mr *MockDirectConnectAPIMockRecorder) AssociateHostedConnectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateHostedConnectionRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).AssociateHostedConnectionRequest), arg0)
 }
 
-// AssociateHostedConnectionWithContext mocks base method
+// AssociateHostedConnectionWithContext mocks base method.
 func (m *MockDirectConnectAPI) AssociateHostedConnectionWithContext(arg0 context.Context, arg1 *directconnect.AssociateHostedConnectionInput, arg2 ...request.Option) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,64 @@ func (m *MockDirectConnectAPI) AssociateHostedConnectionWithContext(arg0 context
 	return ret0, ret1
 }
 
-// AssociateHostedConnectionWithContext indicates an expected call of AssociateHostedConnectionWithContext
+// AssociateHostedConnectionWithContext indicates an expected call of AssociateHostedConnectionWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) AssociateHostedConnectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateHostedConnectionWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).AssociateHostedConnectionWithContext), varargs...)
 }
 
-// AssociateVirtualInterface mocks base method
+// AssociateMacSecKey mocks base method.
+func (m *MockDirectConnectAPI) AssociateMacSecKey(arg0 *directconnect.AssociateMacSecKeyInput) (*directconnect.AssociateMacSecKeyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AssociateMacSecKey", arg0)
+	ret0, _ := ret[0].(*directconnect.AssociateMacSecKeyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AssociateMacSecKey indicates an expected call of AssociateMacSecKey.
+func (mr *MockDirectConnectAPIMockRecorder) AssociateMacSecKey(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateMacSecKey", reflect.TypeOf((*MockDirectConnectAPI)(nil).AssociateMacSecKey), arg0)
+}
+
+// AssociateMacSecKeyRequest mocks base method.
+func (m *MockDirectConnectAPI) AssociateMacSecKeyRequest(arg0 *directconnect.AssociateMacSecKeyInput) (*request.Request, *directconnect.AssociateMacSecKeyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AssociateMacSecKeyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*directconnect.AssociateMacSecKeyOutput)
+	return ret0, ret1
+}
+
+// AssociateMacSecKeyRequest indicates an expected call of AssociateMacSecKeyRequest.
+func (mr *MockDirectConnectAPIMockRecorder) AssociateMacSecKeyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateMacSecKeyRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).AssociateMacSecKeyRequest), arg0)
+}
+
+// AssociateMacSecKeyWithContext mocks base method.
+func (m *MockDirectConnectAPI) AssociateMacSecKeyWithContext(arg0 context.Context, arg1 *directconnect.AssociateMacSecKeyInput, arg2 ...request.Option) (*directconnect.AssociateMacSecKeyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "AssociateMacSecKeyWithContext", varargs...)
+	ret0, _ := ret[0].(*directconnect.AssociateMacSecKeyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AssociateMacSecKeyWithContext indicates an expected call of AssociateMacSecKeyWithContext.
+func (mr *MockDirectConnectAPIMockRecorder) AssociateMacSecKeyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateMacSecKeyWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).AssociateMacSecKeyWithContext), varargs...)
+}
+
+// AssociateVirtualInterface mocks base method.
 func (m *MockDirectConnectAPI) AssociateVirtualInterface(arg0 *directconnect.AssociateVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateVirtualInterface", arg0)
@@ -444,13 +495,13 @@ func (m *MockDirectConnectAPI) AssociateVirtualInterface(arg0 *directconnect.Ass
 	return ret0, ret1
 }
 
-// AssociateVirtualInterface indicates an expected call of AssociateVirtualInterface
+// AssociateVirtualInterface indicates an expected call of AssociateVirtualInterface.
 func (mr *MockDirectConnectAPIMockRecorder) AssociateVirtualInterface(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateVirtualInterface", reflect.TypeOf((*MockDirectConnectAPI)(nil).AssociateVirtualInterface), arg0)
 }
 
-// AssociateVirtualInterfaceRequest mocks base method
+// AssociateVirtualInterfaceRequest mocks base method.
 func (m *MockDirectConnectAPI) AssociateVirtualInterfaceRequest(arg0 *directconnect.AssociateVirtualInterfaceInput) (*request.Request, *directconnect.VirtualInterface) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateVirtualInterfaceRequest", arg0)
@@ -459,13 +510,13 @@ func (m *MockDirectConnectAPI) AssociateVirtualInterfaceRequest(arg0 *directconn
 	return ret0, ret1
 }
 
-// AssociateVirtualInterfaceRequest indicates an expected call of AssociateVirtualInterfaceRequest
+// AssociateVirtualInterfaceRequest indicates an expected call of AssociateVirtualInterfaceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) AssociateVirtualInterfaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateVirtualInterfaceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).AssociateVirtualInterfaceRequest), arg0)
 }
 
-// AssociateVirtualInterfaceWithContext mocks base method
+// AssociateVirtualInterfaceWithContext mocks base method.
 func (m *MockDirectConnectAPI) AssociateVirtualInterfaceWithContext(arg0 context.Context, arg1 *directconnect.AssociateVirtualInterfaceInput, arg2 ...request.Option) (*directconnect.VirtualInterface, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +529,14 @@ func (m *MockDirectConnectAPI) AssociateVirtualInterfaceWithContext(arg0 context
 	return ret0, ret1
 }
 
-// AssociateVirtualInterfaceWithContext indicates an expected call of AssociateVirtualInterfaceWithContext
+// AssociateVirtualInterfaceWithContext indicates an expected call of AssociateVirtualInterfaceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) AssociateVirtualInterfaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateVirtualInterfaceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).AssociateVirtualInterfaceWithContext), varargs...)
 }
 
-// ConfirmConnection mocks base method
+// ConfirmConnection mocks base method.
 func (m *MockDirectConnectAPI) ConfirmConnection(arg0 *directconnect.ConfirmConnectionInput) (*directconnect.ConfirmConnectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ConfirmConnection", arg0)
@@ -494,13 +545,13 @@ func (m *MockDirectConnectAPI) ConfirmConnection(arg0 *directconnect.ConfirmConn
 	return ret0, ret1
 }
 
-// ConfirmConnection indicates an expected call of ConfirmConnection
+// ConfirmConnection indicates an expected call of ConfirmConnection.
 func (mr *MockDirectConnectAPIMockRecorder) ConfirmConnection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfirmConnection", reflect.TypeOf((*MockDirectConnectAPI)(nil).ConfirmConnection), arg0)
 }
 
-// ConfirmConnectionRequest mocks base method
+// ConfirmConnectionRequest mocks base method.
 func (m *MockDirectConnectAPI) ConfirmConnectionRequest(arg0 *directconnect.ConfirmConnectionInput) (*request.Request, *directconnect.ConfirmConnectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ConfirmConnectionRequest", arg0)
@@ -509,13 +560,13 @@ func (m *MockDirectConnectAPI) ConfirmConnectionRequest(arg0 *directconnect.Conf
 	return ret0, ret1
 }
 
-// ConfirmConnectionRequest indicates an expected call of ConfirmConnectionRequest
+// ConfirmConnectionRequest indicates an expected call of ConfirmConnectionRequest.
 func (mr *MockDirectConnectAPIMockRecorder) ConfirmConnectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfirmConnectionRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).ConfirmConnectionRequest), arg0)
 }
 
-// ConfirmConnectionWithContext mocks base method
+// ConfirmConnectionWithContext mocks base method.
 func (m *MockDirectConnectAPI) ConfirmConnectionWithContext(arg0 context.Context, arg1 *directconnect.ConfirmConnectionInput, arg2 ...request.Option) (*directconnect.ConfirmConnectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +579,14 @@ func (m *MockDirectConnectAPI) ConfirmConnectionWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ConfirmConnectionWithContext indicates an expected call of ConfirmConnectionWithContext
+// ConfirmConnectionWithContext indicates an expected call of ConfirmConnectionWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) ConfirmConnectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfirmConnectionWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).ConfirmConnectionWithContext), varargs...)
 }
 
-// ConfirmPrivateVirtualInterface mocks base method
+// ConfirmPrivateVirtualInterface mocks base method.
 func (m *MockDirectConnectAPI) ConfirmPrivateVirtualInterface(arg0 *directconnect.ConfirmPrivateVirtualInterfaceInput) (*directconnect.ConfirmPrivateVirtualInterfaceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ConfirmPrivateVirtualInterface", arg0)
@@ -544,13 +595,13 @@ func (m *MockDirectConnectAPI) ConfirmPrivateVirtualInterface(arg0 *directconnec
 	return ret0, ret1
 }
 
-// ConfirmPrivateVirtualInterface indicates an expected call of ConfirmPrivateVirtualInterface
+// ConfirmPrivateVirtualInterface indicates an expected call of ConfirmPrivateVirtualInterface.
 func (mr *MockDirectConnectAPIMockRecorder) ConfirmPrivateVirtualInterface(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfirmPrivateVirtualInterface", reflect.TypeOf((*MockDirectConnectAPI)(nil).ConfirmPrivateVirtualInterface), arg0)
 }
 
-// ConfirmPrivateVirtualInterfaceRequest mocks base method
+// ConfirmPrivateVirtualInterfaceRequest mocks base method.
 func (m *MockDirectConnectAPI) ConfirmPrivateVirtualInterfaceRequest(arg0 *directconnect.ConfirmPrivateVirtualInterfaceInput) (*request.Request, *directconnect.ConfirmPrivateVirtualInterfaceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ConfirmPrivateVirtualInterfaceRequest", arg0)
@@ -559,13 +610,13 @@ func (m *MockDirectConnectAPI) ConfirmPrivateVirtualInterfaceRequest(arg0 *direc
 	return ret0, ret1
 }
 
-// ConfirmPrivateVirtualInterfaceRequest indicates an expected call of ConfirmPrivateVirtualInterfaceRequest
+// ConfirmPrivateVirtualInterfaceRequest indicates an expected call of ConfirmPrivateVirtualInterfaceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) ConfirmPrivateVirtualInterfaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfirmPrivateVirtualInterfaceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).ConfirmPrivateVirtualInterfaceRequest), arg0)
 }
 
-// ConfirmPrivateVirtualInterfaceWithContext mocks base method
+// ConfirmPrivateVirtualInterfaceWithContext mocks base method.
 func (m *MockDirectConnectAPI) ConfirmPrivateVirtualInterfaceWithContext(arg0 context.Context, arg1 *directconnect.ConfirmPrivateVirtualInterfaceInput, arg2 ...request.Option) (*directconnect.ConfirmPrivateVirtualInterfaceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +629,14 @@ func (m *MockDirectConnectAPI) ConfirmPrivateVirtualInterfaceWithContext(arg0 co
 	return ret0, ret1
 }
 
-// ConfirmPrivateVirtualInterfaceWithContext indicates an expected call of ConfirmPrivateVirtualInterfaceWithContext
+// ConfirmPrivateVirtualInterfaceWithContext indicates an expected call of ConfirmPrivateVirtualInterfaceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) ConfirmPrivateVirtualInterfaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfirmPrivateVirtualInterfaceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).ConfirmPrivateVirtualInterfaceWithContext), varargs...)
 }
 
-// ConfirmPublicVirtualInterface mocks base method
+// ConfirmPublicVirtualInterface mocks base method.
 func (m *MockDirectConnectAPI) ConfirmPublicVirtualInterface(arg0 *directconnect.ConfirmPublicVirtualInterfaceInput) (*directconnect.ConfirmPublicVirtualInterfaceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ConfirmPublicVirtualInterface", arg0)
@@ -594,13 +645,13 @@ func (m *MockDirectConnectAPI) ConfirmPublicVirtualInterface(arg0 *directconnect
 	return ret0, ret1
 }
 
-// ConfirmPublicVirtualInterface indicates an expected call of ConfirmPublicVirtualInterface
+// ConfirmPublicVirtualInterface indicates an expected call of ConfirmPublicVirtualInterface.
 func (mr *MockDirectConnectAPIMockRecorder) ConfirmPublicVirtualInterface(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfirmPublicVirtualInterface", reflect.TypeOf((*MockDirectConnectAPI)(nil).ConfirmPublicVirtualInterface), arg0)
 }
 
-// ConfirmPublicVirtualInterfaceRequest mocks base method
+// ConfirmPublicVirtualInterfaceRequest mocks base method.
 func (m *MockDirectConnectAPI) ConfirmPublicVirtualInterfaceRequest(arg0 *directconnect.ConfirmPublicVirtualInterfaceInput) (*request.Request, *directconnect.ConfirmPublicVirtualInterfaceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ConfirmPublicVirtualInterfaceRequest", arg0)
@@ -609,13 +660,13 @@ func (m *MockDirectConnectAPI) ConfirmPublicVirtualInterfaceRequest(arg0 *direct
 	return ret0, ret1
 }
 
-// ConfirmPublicVirtualInterfaceRequest indicates an expected call of ConfirmPublicVirtualInterfaceRequest
+// ConfirmPublicVirtualInterfaceRequest indicates an expected call of ConfirmPublicVirtualInterfaceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) ConfirmPublicVirtualInterfaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfirmPublicVirtualInterfaceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).ConfirmPublicVirtualInterfaceRequest), arg0)
 }
 
-// ConfirmPublicVirtualInterfaceWithContext mocks base method
+// ConfirmPublicVirtualInterfaceWithContext mocks base method.
 func (m *MockDirectConnectAPI) ConfirmPublicVirtualInterfaceWithContext(arg0 context.Context, arg1 *directconnect.ConfirmPublicVirtualInterfaceInput, arg2 ...request.Option) (*directconnect.ConfirmPublicVirtualInterfaceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +679,14 @@ func (m *MockDirectConnectAPI) ConfirmPublicVirtualInterfaceWithContext(arg0 con
 	return ret0, ret1
 }
 
-// ConfirmPublicVirtualInterfaceWithContext indicates an expected call of ConfirmPublicVirtualInterfaceWithContext
+// ConfirmPublicVirtualInterfaceWithContext indicates an expected call of ConfirmPublicVirtualInterfaceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) ConfirmPublicVirtualInterfaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfirmPublicVirtualInterfaceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).ConfirmPublicVirtualInterfaceWithContext), varargs...)
 }
 
-// ConfirmTransitVirtualInterface mocks base method
+// ConfirmTransitVirtualInterface mocks base method.
 func (m *MockDirectConnectAPI) ConfirmTransitVirtualInterface(arg0 *directconnect.ConfirmTransitVirtualInterfaceInput) (*directconnect.ConfirmTransitVirtualInterfaceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ConfirmTransitVirtualInterface", arg0)
@@ -644,13 +695,13 @@ func (m *MockDirectConnectAPI) ConfirmTransitVirtualInterface(arg0 *directconnec
 	return ret0, ret1
 }
 
-// ConfirmTransitVirtualInterface indicates an expected call of ConfirmTransitVirtualInterface
+// ConfirmTransitVirtualInterface indicates an expected call of ConfirmTransitVirtualInterface.
 func (mr *MockDirectConnectAPIMockRecorder) ConfirmTransitVirtualInterface(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfirmTransitVirtualInterface", reflect.TypeOf((*MockDirectConnectAPI)(nil).ConfirmTransitVirtualInterface), arg0)
 }
 
-// ConfirmTransitVirtualInterfaceRequest mocks base method
+// ConfirmTransitVirtualInterfaceRequest mocks base method.
 func (m *MockDirectConnectAPI) ConfirmTransitVirtualInterfaceRequest(arg0 *directconnect.ConfirmTransitVirtualInterfaceInput) (*request.Request, *directconnect.ConfirmTransitVirtualInterfaceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ConfirmTransitVirtualInterfaceRequest", arg0)
@@ -659,13 +710,13 @@ func (m *MockDirectConnectAPI) ConfirmTransitVirtualInterfaceRequest(arg0 *direc
 	return ret0, ret1
 }
 
-// ConfirmTransitVirtualInterfaceRequest indicates an expected call of ConfirmTransitVirtualInterfaceRequest
+// ConfirmTransitVirtualInterfaceRequest indicates an expected call of ConfirmTransitVirtualInterfaceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) ConfirmTransitVirtualInterfaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfirmTransitVirtualInterfaceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).ConfirmTransitVirtualInterfaceRequest), arg0)
 }
 
-// ConfirmTransitVirtualInterfaceWithContext mocks base method
+// ConfirmTransitVirtualInterfaceWithContext mocks base method.
 func (m *MockDirectConnectAPI) ConfirmTransitVirtualInterfaceWithContext(arg0 context.Context, arg1 *directconnect.ConfirmTransitVirtualInterfaceInput, arg2 ...request.Option) (*directconnect.ConfirmTransitVirtualInterfaceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +729,14 @@ func (m *MockDirectConnectAPI) ConfirmTransitVirtualInterfaceWithContext(arg0 co
 	return ret0, ret1
 }
 
-// ConfirmTransitVirtualInterfaceWithContext indicates an expected call of ConfirmTransitVirtualInterfaceWithContext
+// ConfirmTransitVirtualInterfaceWithContext indicates an expected call of ConfirmTransitVirtualInterfaceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) ConfirmTransitVirtualInterfaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ConfirmTransitVirtualInterfaceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).ConfirmTransitVirtualInterfaceWithContext), varargs...)
 }
 
-// CreateBGPPeer mocks base method
+// CreateBGPPeer mocks base method.
 func (m *MockDirectConnectAPI) CreateBGPPeer(arg0 *directconnect.CreateBGPPeerInput) (*directconnect.CreateBGPPeerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBGPPeer", arg0)
@@ -694,13 +745,13 @@ func (m *MockDirectConnectAPI) CreateBGPPeer(arg0 *directconnect.CreateBGPPeerIn
 	return ret0, ret1
 }
 
-// CreateBGPPeer indicates an expected call of CreateBGPPeer
+// CreateBGPPeer indicates an expected call of CreateBGPPeer.
 func (mr *MockDirectConnectAPIMockRecorder) CreateBGPPeer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBGPPeer", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateBGPPeer), arg0)
 }
 
-// CreateBGPPeerRequest mocks base method
+// CreateBGPPeerRequest mocks base method.
 func (m *MockDirectConnectAPI) CreateBGPPeerRequest(arg0 *directconnect.CreateBGPPeerInput) (*request.Request, *directconnect.CreateBGPPeerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBGPPeerRequest", arg0)
@@ -709,13 +760,13 @@ func (m *MockDirectConnectAPI) CreateBGPPeerRequest(arg0 *directconnect.CreateBG
 	return ret0, ret1
 }
 
-// CreateBGPPeerRequest indicates an expected call of CreateBGPPeerRequest
+// CreateBGPPeerRequest indicates an expected call of CreateBGPPeerRequest.
 func (mr *MockDirectConnectAPIMockRecorder) CreateBGPPeerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBGPPeerRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateBGPPeerRequest), arg0)
 }
 
-// CreateBGPPeerWithContext mocks base method
+// CreateBGPPeerWithContext mocks base method.
 func (m *MockDirectConnectAPI) CreateBGPPeerWithContext(arg0 context.Context, arg1 *directconnect.CreateBGPPeerInput, arg2 ...request.Option) (*directconnect.CreateBGPPeerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +779,14 @@ func (m *MockDirectConnectAPI) CreateBGPPeerWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateBGPPeerWithContext indicates an expected call of CreateBGPPeerWithContext
+// CreateBGPPeerWithContext indicates an expected call of CreateBGPPeerWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) CreateBGPPeerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBGPPeerWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateBGPPeerWithContext), varargs...)
 }
 
-// CreateConnection mocks base method
+// CreateConnection mocks base method.
 func (m *MockDirectConnectAPI) CreateConnection(arg0 *directconnect.CreateConnectionInput) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConnection", arg0)
@@ -744,13 +795,13 @@ func (m *MockDirectConnectAPI) CreateConnection(arg0 *directconnect.CreateConnec
 	return ret0, ret1
 }
 
-// CreateConnection indicates an expected call of CreateConnection
+// CreateConnection indicates an expected call of CreateConnection.
 func (mr *MockDirectConnectAPIMockRecorder) CreateConnection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConnection", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateConnection), arg0)
 }
 
-// CreateConnectionRequest mocks base method
+// CreateConnectionRequest mocks base method.
 func (m *MockDirectConnectAPI) CreateConnectionRequest(arg0 *directconnect.CreateConnectionInput) (*request.Request, *directconnect.Connection) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateConnectionRequest", arg0)
@@ -759,13 +810,13 @@ func (m *MockDirectConnectAPI) CreateConnectionRequest(arg0 *directconnect.Creat
 	return ret0, ret1
 }
 
-// CreateConnectionRequest indicates an expected call of CreateConnectionRequest
+// CreateConnectionRequest indicates an expected call of CreateConnectionRequest.
 func (mr *MockDirectConnectAPIMockRecorder) CreateConnectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConnectionRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateConnectionRequest), arg0)
 }
 
-// CreateConnectionWithContext mocks base method
+// CreateConnectionWithContext mocks base method.
 func (m *MockDirectConnectAPI) CreateConnectionWithContext(arg0 context.Context, arg1 *directconnect.CreateConnectionInput, arg2 ...request.Option) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +829,14 @@ func (m *MockDirectConnectAPI) CreateConnectionWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateConnectionWithContext indicates an expected call of CreateConnectionWithContext
+// CreateConnectionWithContext indicates an expected call of CreateConnectionWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) CreateConnectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateConnectionWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateConnectionWithContext), varargs...)
 }
 
-// CreateDirectConnectGateway mocks base method
+// CreateDirectConnectGateway mocks base method.
 func (m *MockDirectConnectAPI) CreateDirectConnectGateway(arg0 *directconnect.CreateDirectConnectGatewayInput) (*directconnect.CreateDirectConnectGatewayOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDirectConnectGateway", arg0)
@@ -794,13 +845,13 @@ func (m *MockDirectConnectAPI) CreateDirectConnectGateway(arg0 *directconnect.Cr
 	return ret0, ret1
 }
 
-// CreateDirectConnectGateway indicates an expected call of CreateDirectConnectGateway
+// CreateDirectConnectGateway indicates an expected call of CreateDirectConnectGateway.
 func (mr *MockDirectConnectAPIMockRecorder) CreateDirectConnectGateway(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDirectConnectGateway", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateDirectConnectGateway), arg0)
 }
 
-// CreateDirectConnectGatewayAssociation mocks base method
+// CreateDirectConnectGatewayAssociation mocks base method.
 func (m *MockDirectConnectAPI) CreateDirectConnectGatewayAssociation(arg0 *directconnect.CreateDirectConnectGatewayAssociationInput) (*directconnect.CreateDirectConnectGatewayAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDirectConnectGatewayAssociation", arg0)
@@ -809,13 +860,13 @@ func (m *MockDirectConnectAPI) CreateDirectConnectGatewayAssociation(arg0 *direc
 	return ret0, ret1
 }
 
-// CreateDirectConnectGatewayAssociation indicates an expected call of CreateDirectConnectGatewayAssociation
+// CreateDirectConnectGatewayAssociation indicates an expected call of CreateDirectConnectGatewayAssociation.
 func (mr *MockDirectConnectAPIMockRecorder) CreateDirectConnectGatewayAssociation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDirectConnectGatewayAssociation", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateDirectConnectGatewayAssociation), arg0)
 }
 
-// CreateDirectConnectGatewayAssociationProposal mocks base method
+// CreateDirectConnectGatewayAssociationProposal mocks base method.
 func (m *MockDirectConnectAPI) CreateDirectConnectGatewayAssociationProposal(arg0 *directconnect.CreateDirectConnectGatewayAssociationProposalInput) (*directconnect.CreateDirectConnectGatewayAssociationProposalOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDirectConnectGatewayAssociationProposal", arg0)
@@ -824,13 +875,13 @@ func (m *MockDirectConnectAPI) CreateDirectConnectGatewayAssociationProposal(arg
 	return ret0, ret1
 }
 
-// CreateDirectConnectGatewayAssociationProposal indicates an expected call of CreateDirectConnectGatewayAssociationProposal
+// CreateDirectConnectGatewayAssociationProposal indicates an expected call of CreateDirectConnectGatewayAssociationProposal.
 func (mr *MockDirectConnectAPIMockRecorder) CreateDirectConnectGatewayAssociationProposal(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDirectConnectGatewayAssociationProposal", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateDirectConnectGatewayAssociationProposal), arg0)
 }
 
-// CreateDirectConnectGatewayAssociationProposalRequest mocks base method
+// CreateDirectConnectGatewayAssociationProposalRequest mocks base method.
 func (m *MockDirectConnectAPI) CreateDirectConnectGatewayAssociationProposalRequest(arg0 *directconnect.CreateDirectConnectGatewayAssociationProposalInput) (*request.Request, *directconnect.CreateDirectConnectGatewayAssociationProposalOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDirectConnectGatewayAssociationProposalRequest", arg0)
@@ -839,13 +890,13 @@ func (m *MockDirectConnectAPI) CreateDirectConnectGatewayAssociationProposalRequ
 	return ret0, ret1
 }
 
-// CreateDirectConnectGatewayAssociationProposalRequest indicates an expected call of CreateDirectConnectGatewayAssociationProposalRequest
+// CreateDirectConnectGatewayAssociationProposalRequest indicates an expected call of CreateDirectConnectGatewayAssociationProposalRequest.
 func (mr *MockDirectConnectAPIMockRecorder) CreateDirectConnectGatewayAssociationProposalRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDirectConnectGatewayAssociationProposalRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateDirectConnectGatewayAssociationProposalRequest), arg0)
 }
 
-// CreateDirectConnectGatewayAssociationProposalWithContext mocks base method
+// CreateDirectConnectGatewayAssociationProposalWithContext mocks base method.
 func (m *MockDirectConnectAPI) CreateDirectConnectGatewayAssociationProposalWithContext(arg0 context.Context, arg1 *directconnect.CreateDirectConnectGatewayAssociationProposalInput, arg2 ...request.Option) (*directconnect.CreateDirectConnectGatewayAssociationProposalOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -858,14 +909,14 @@ func (m *MockDirectConnectAPI) CreateDirectConnectGatewayAssociationProposalWith
 	return ret0, ret1
 }
 
-// CreateDirectConnectGatewayAssociationProposalWithContext indicates an expected call of CreateDirectConnectGatewayAssociationProposalWithContext
+// CreateDirectConnectGatewayAssociationProposalWithContext indicates an expected call of CreateDirectConnectGatewayAssociationProposalWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) CreateDirectConnectGatewayAssociationProposalWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDirectConnectGatewayAssociationProposalWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateDirectConnectGatewayAssociationProposalWithContext), varargs...)
 }
 
-// CreateDirectConnectGatewayAssociationRequest mocks base method
+// CreateDirectConnectGatewayAssociationRequest mocks base method.
 func (m *MockDirectConnectAPI) CreateDirectConnectGatewayAssociationRequest(arg0 *directconnect.CreateDirectConnectGatewayAssociationInput) (*request.Request, *directconnect.CreateDirectConnectGatewayAssociationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDirectConnectGatewayAssociationRequest", arg0)
@@ -874,13 +925,13 @@ func (m *MockDirectConnectAPI) CreateDirectConnectGatewayAssociationRequest(arg0
 	return ret0, ret1
 }
 
-// CreateDirectConnectGatewayAssociationRequest indicates an expected call of CreateDirectConnectGatewayAssociationRequest
+// CreateDirectConnectGatewayAssociationRequest indicates an expected call of CreateDirectConnectGatewayAssociationRequest.
 func (mr *MockDirectConnectAPIMockRecorder) CreateDirectConnectGatewayAssociationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDirectConnectGatewayAssociationRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateDirectConnectGatewayAssociationRequest), arg0)
 }
 
-// CreateDirectConnectGatewayAssociationWithContext mocks base method
+// CreateDirectConnectGatewayAssociationWithContext mocks base method.
 func (m *MockDirectConnectAPI) CreateDirectConnectGatewayAssociationWithContext(arg0 context.Context, arg1 *directconnect.CreateDirectConnectGatewayAssociationInput, arg2 ...request.Option) (*directconnect.CreateDirectConnectGatewayAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -893,14 +944,14 @@ func (m *MockDirectConnectAPI) CreateDirectConnectGatewayAssociationWithContext(
 	return ret0, ret1
 }
 
-// CreateDirectConnectGatewayAssociationWithContext indicates an expected call of CreateDirectConnectGatewayAssociationWithContext
+// CreateDirectConnectGatewayAssociationWithContext indicates an expected call of CreateDirectConnectGatewayAssociationWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) CreateDirectConnectGatewayAssociationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDirectConnectGatewayAssociationWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateDirectConnectGatewayAssociationWithContext), varargs...)
 }
 
-// CreateDirectConnectGatewayRequest mocks base method
+// CreateDirectConnectGatewayRequest mocks base method.
 func (m *MockDirectConnectAPI) CreateDirectConnectGatewayRequest(arg0 *directconnect.CreateDirectConnectGatewayInput) (*request.Request, *directconnect.CreateDirectConnectGatewayOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDirectConnectGatewayRequest", arg0)
@@ -909,13 +960,13 @@ func (m *MockDirectConnectAPI) CreateDirectConnectGatewayRequest(arg0 *directcon
 	return ret0, ret1
 }
 
-// CreateDirectConnectGatewayRequest indicates an expected call of CreateDirectConnectGatewayRequest
+// CreateDirectConnectGatewayRequest indicates an expected call of CreateDirectConnectGatewayRequest.
 func (mr *MockDirectConnectAPIMockRecorder) CreateDirectConnectGatewayRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDirectConnectGatewayRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateDirectConnectGatewayRequest), arg0)
 }
 
-// CreateDirectConnectGatewayWithContext mocks base method
+// CreateDirectConnectGatewayWithContext mocks base method.
 func (m *MockDirectConnectAPI) CreateDirectConnectGatewayWithContext(arg0 context.Context, arg1 *directconnect.CreateDirectConnectGatewayInput, arg2 ...request.Option) (*directconnect.CreateDirectConnectGatewayOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -928,14 +979,14 @@ func (m *MockDirectConnectAPI) CreateDirectConnectGatewayWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// CreateDirectConnectGatewayWithContext indicates an expected call of CreateDirectConnectGatewayWithContext
+// CreateDirectConnectGatewayWithContext indicates an expected call of CreateDirectConnectGatewayWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) CreateDirectConnectGatewayWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDirectConnectGatewayWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateDirectConnectGatewayWithContext), varargs...)
 }
 
-// CreateInterconnect mocks base method
+// CreateInterconnect mocks base method.
 func (m *MockDirectConnectAPI) CreateInterconnect(arg0 *directconnect.CreateInterconnectInput) (*directconnect.Interconnect, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInterconnect", arg0)
@@ -944,13 +995,13 @@ func (m *MockDirectConnectAPI) CreateInterconnect(arg0 *directconnect.CreateInte
 	return ret0, ret1
 }
 
-// CreateInterconnect indicates an expected call of CreateInterconnect
+// CreateInterconnect indicates an expected call of CreateInterconnect.
 func (mr *MockDirectConnectAPIMockRecorder) CreateInterconnect(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInterconnect", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateInterconnect), arg0)
 }
 
-// CreateInterconnectRequest mocks base method
+// CreateInterconnectRequest mocks base method.
 func (m *MockDirectConnectAPI) CreateInterconnectRequest(arg0 *directconnect.CreateInterconnectInput) (*request.Request, *directconnect.Interconnect) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInterconnectRequest", arg0)
@@ -959,13 +1010,13 @@ func (m *MockDirectConnectAPI) CreateInterconnectRequest(arg0 *directconnect.Cre
 	return ret0, ret1
 }
 
-// CreateInterconnectRequest indicates an expected call of CreateInterconnectRequest
+// CreateInterconnectRequest indicates an expected call of CreateInterconnectRequest.
 func (mr *MockDirectConnectAPIMockRecorder) CreateInterconnectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInterconnectRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateInterconnectRequest), arg0)
 }
 
-// CreateInterconnectWithContext mocks base method
+// CreateInterconnectWithContext mocks base method.
 func (m *MockDirectConnectAPI) CreateInterconnectWithContext(arg0 context.Context, arg1 *directconnect.CreateInterconnectInput, arg2 ...request.Option) (*directconnect.Interconnect, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -978,14 +1029,14 @@ func (m *MockDirectConnectAPI) CreateInterconnectWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CreateInterconnectWithContext indicates an expected call of CreateInterconnectWithContext
+// CreateInterconnectWithContext indicates an expected call of CreateInterconnectWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) CreateInterconnectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInterconnectWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateInterconnectWithContext), varargs...)
 }
 
-// CreateLag mocks base method
+// CreateLag mocks base method.
 func (m *MockDirectConnectAPI) CreateLag(arg0 *directconnect.CreateLagInput) (*directconnect.Lag, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateLag", arg0)
@@ -994,13 +1045,13 @@ func (m *MockDirectConnectAPI) CreateLag(arg0 *directconnect.CreateLagInput) (*d
 	return ret0, ret1
 }
 
-// CreateLag indicates an expected call of CreateLag
+// CreateLag indicates an expected call of CreateLag.
 func (mr *MockDirectConnectAPIMockRecorder) CreateLag(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLag", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateLag), arg0)
 }
 
-// CreateLagRequest mocks base method
+// CreateLagRequest mocks base method.
 func (m *MockDirectConnectAPI) CreateLagRequest(arg0 *directconnect.CreateLagInput) (*request.Request, *directconnect.Lag) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateLagRequest", arg0)
@@ -1009,13 +1060,13 @@ func (m *MockDirectConnectAPI) CreateLagRequest(arg0 *directconnect.CreateLagInp
 	return ret0, ret1
 }
 
-// CreateLagRequest indicates an expected call of CreateLagRequest
+// CreateLagRequest indicates an expected call of CreateLagRequest.
 func (mr *MockDirectConnectAPIMockRecorder) CreateLagRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLagRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateLagRequest), arg0)
 }
 
-// CreateLagWithContext mocks base method
+// CreateLagWithContext mocks base method.
 func (m *MockDirectConnectAPI) CreateLagWithContext(arg0 context.Context, arg1 *directconnect.CreateLagInput, arg2 ...request.Option) (*directconnect.Lag, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1028,14 +1079,14 @@ func (m *MockDirectConnectAPI) CreateLagWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// CreateLagWithContext indicates an expected call of CreateLagWithContext
+// CreateLagWithContext indicates an expected call of CreateLagWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) CreateLagWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLagWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateLagWithContext), varargs...)
 }
 
-// CreatePrivateVirtualInterface mocks base method
+// CreatePrivateVirtualInterface mocks base method.
 func (m *MockDirectConnectAPI) CreatePrivateVirtualInterface(arg0 *directconnect.CreatePrivateVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreatePrivateVirtualInterface", arg0)
@@ -1044,13 +1095,13 @@ func (m *MockDirectConnectAPI) CreatePrivateVirtualInterface(arg0 *directconnect
 	return ret0, ret1
 }
 
-// CreatePrivateVirtualInterface indicates an expected call of CreatePrivateVirtualInterface
+// CreatePrivateVirtualInterface indicates an expected call of CreatePrivateVirtualInterface.
 func (mr *MockDirectConnectAPIMockRecorder) CreatePrivateVirtualInterface(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePrivateVirtualInterface", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreatePrivateVirtualInterface), arg0)
 }
 
-// CreatePrivateVirtualInterfaceRequest mocks base method
+// CreatePrivateVirtualInterfaceRequest mocks base method.
 func (m *MockDirectConnectAPI) CreatePrivateVirtualInterfaceRequest(arg0 *directconnect.CreatePrivateVirtualInterfaceInput) (*request.Request, *directconnect.VirtualInterface) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreatePrivateVirtualInterfaceRequest", arg0)
@@ -1059,13 +1110,13 @@ func (m *MockDirectConnectAPI) CreatePrivateVirtualInterfaceRequest(arg0 *direct
 	return ret0, ret1
 }
 
-// CreatePrivateVirtualInterfaceRequest indicates an expected call of CreatePrivateVirtualInterfaceRequest
+// CreatePrivateVirtualInterfaceRequest indicates an expected call of CreatePrivateVirtualInterfaceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) CreatePrivateVirtualInterfaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePrivateVirtualInterfaceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreatePrivateVirtualInterfaceRequest), arg0)
 }
 
-// CreatePrivateVirtualInterfaceWithContext mocks base method
+// CreatePrivateVirtualInterfaceWithContext mocks base method.
 func (m *MockDirectConnectAPI) CreatePrivateVirtualInterfaceWithContext(arg0 context.Context, arg1 *directconnect.CreatePrivateVirtualInterfaceInput, arg2 ...request.Option) (*directconnect.VirtualInterface, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1078,14 +1129,14 @@ func (m *MockDirectConnectAPI) CreatePrivateVirtualInterfaceWithContext(arg0 con
 	return ret0, ret1
 }
 
-// CreatePrivateVirtualInterfaceWithContext indicates an expected call of CreatePrivateVirtualInterfaceWithContext
+// CreatePrivateVirtualInterfaceWithContext indicates an expected call of CreatePrivateVirtualInterfaceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) CreatePrivateVirtualInterfaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePrivateVirtualInterfaceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreatePrivateVirtualInterfaceWithContext), varargs...)
 }
 
-// CreatePublicVirtualInterface mocks base method
+// CreatePublicVirtualInterface mocks base method.
 func (m *MockDirectConnectAPI) CreatePublicVirtualInterface(arg0 *directconnect.CreatePublicVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreatePublicVirtualInterface", arg0)
@@ -1094,13 +1145,13 @@ func (m *MockDirectConnectAPI) CreatePublicVirtualInterface(arg0 *directconnect.
 	return ret0, ret1
 }
 
-// CreatePublicVirtualInterface indicates an expected call of CreatePublicVirtualInterface
+// CreatePublicVirtualInterface indicates an expected call of CreatePublicVirtualInterface.
 func (mr *MockDirectConnectAPIMockRecorder) CreatePublicVirtualInterface(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePublicVirtualInterface", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreatePublicVirtualInterface), arg0)
 }
 
-// CreatePublicVirtualInterfaceRequest mocks base method
+// CreatePublicVirtualInterfaceRequest mocks base method.
 func (m *MockDirectConnectAPI) CreatePublicVirtualInterfaceRequest(arg0 *directconnect.CreatePublicVirtualInterfaceInput) (*request.Request, *directconnect.VirtualInterface) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreatePublicVirtualInterfaceRequest", arg0)
@@ -1109,13 +1160,13 @@ func (m *MockDirectConnectAPI) CreatePublicVirtualInterfaceRequest(arg0 *directc
 	return ret0, ret1
 }
 
-// CreatePublicVirtualInterfaceRequest indicates an expected call of CreatePublicVirtualInterfaceRequest
+// CreatePublicVirtualInterfaceRequest indicates an expected call of CreatePublicVirtualInterfaceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) CreatePublicVirtualInterfaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePublicVirtualInterfaceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreatePublicVirtualInterfaceRequest), arg0)
 }
 
-// CreatePublicVirtualInterfaceWithContext mocks base method
+// CreatePublicVirtualInterfaceWithContext mocks base method.
 func (m *MockDirectConnectAPI) CreatePublicVirtualInterfaceWithContext(arg0 context.Context, arg1 *directconnect.CreatePublicVirtualInterfaceInput, arg2 ...request.Option) (*directconnect.VirtualInterface, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1128,14 +1179,14 @@ func (m *MockDirectConnectAPI) CreatePublicVirtualInterfaceWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// CreatePublicVirtualInterfaceWithContext indicates an expected call of CreatePublicVirtualInterfaceWithContext
+// CreatePublicVirtualInterfaceWithContext indicates an expected call of CreatePublicVirtualInterfaceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) CreatePublicVirtualInterfaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePublicVirtualInterfaceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreatePublicVirtualInterfaceWithContext), varargs...)
 }
 
-// CreateTransitVirtualInterface mocks base method
+// CreateTransitVirtualInterface mocks base method.
 func (m *MockDirectConnectAPI) CreateTransitVirtualInterface(arg0 *directconnect.CreateTransitVirtualInterfaceInput) (*directconnect.CreateTransitVirtualInterfaceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateTransitVirtualInterface", arg0)
@@ -1144,13 +1195,13 @@ func (m *MockDirectConnectAPI) CreateTransitVirtualInterface(arg0 *directconnect
 	return ret0, ret1
 }
 
-// CreateTransitVirtualInterface indicates an expected call of CreateTransitVirtualInterface
+// CreateTransitVirtualInterface indicates an expected call of CreateTransitVirtualInterface.
 func (mr *MockDirectConnectAPIMockRecorder) CreateTransitVirtualInterface(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateTransitVirtualInterface", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateTransitVirtualInterface), arg0)
 }
 
-// CreateTransitVirtualInterfaceRequest mocks base method
+// CreateTransitVirtualInterfaceRequest mocks base method.
 func (m *MockDirectConnectAPI) CreateTransitVirtualInterfaceRequest(arg0 *directconnect.CreateTransitVirtualInterfaceInput) (*request.Request, *directconnect.CreateTransitVirtualInterfaceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateTransitVirtualInterfaceRequest", arg0)
@@ -1159,13 +1210,13 @@ func (m *MockDirectConnectAPI) CreateTransitVirtualInterfaceRequest(arg0 *direct
 	return ret0, ret1
 }
 
-// CreateTransitVirtualInterfaceRequest indicates an expected call of CreateTransitVirtualInterfaceRequest
+// CreateTransitVirtualInterfaceRequest indicates an expected call of CreateTransitVirtualInterfaceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) CreateTransitVirtualInterfaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateTransitVirtualInterfaceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateTransitVirtualInterfaceRequest), arg0)
 }
 
-// CreateTransitVirtualInterfaceWithContext mocks base method
+// CreateTransitVirtualInterfaceWithContext mocks base method.
 func (m *MockDirectConnectAPI) CreateTransitVirtualInterfaceWithContext(arg0 context.Context, arg1 *directconnect.CreateTransitVirtualInterfaceInput, arg2 ...request.Option) (*directconnect.CreateTransitVirtualInterfaceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1178,14 +1229,14 @@ func (m *MockDirectConnectAPI) CreateTransitVirtualInterfaceWithContext(arg0 con
 	return ret0, ret1
 }
 
-// CreateTransitVirtualInterfaceWithContext indicates an expected call of CreateTransitVirtualInterfaceWithContext
+// CreateTransitVirtualInterfaceWithContext indicates an expected call of CreateTransitVirtualInterfaceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) CreateTransitVirtualInterfaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateTransitVirtualInterfaceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).CreateTransitVirtualInterfaceWithContext), varargs...)
 }
 
-// DeleteBGPPeer mocks base method
+// DeleteBGPPeer mocks base method.
 func (m *MockDirectConnectAPI) DeleteBGPPeer(arg0 *directconnect.DeleteBGPPeerInput) (*directconnect.DeleteBGPPeerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBGPPeer", arg0)
@@ -1194,13 +1245,13 @@ func (m *MockDirectConnectAPI) DeleteBGPPeer(arg0 *directconnect.DeleteBGPPeerIn
 	return ret0, ret1
 }
 
-// DeleteBGPPeer indicates an expected call of DeleteBGPPeer
+// DeleteBGPPeer indicates an expected call of DeleteBGPPeer.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteBGPPeer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBGPPeer", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteBGPPeer), arg0)
 }
 
-// DeleteBGPPeerRequest mocks base method
+// DeleteBGPPeerRequest mocks base method.
 func (m *MockDirectConnectAPI) DeleteBGPPeerRequest(arg0 *directconnect.DeleteBGPPeerInput) (*request.Request, *directconnect.DeleteBGPPeerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBGPPeerRequest", arg0)
@@ -1209,13 +1260,13 @@ func (m *MockDirectConnectAPI) DeleteBGPPeerRequest(arg0 *directconnect.DeleteBG
 	return ret0, ret1
 }
 
-// DeleteBGPPeerRequest indicates an expected call of DeleteBGPPeerRequest
+// DeleteBGPPeerRequest indicates an expected call of DeleteBGPPeerRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteBGPPeerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBGPPeerRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteBGPPeerRequest), arg0)
 }
 
-// DeleteBGPPeerWithContext mocks base method
+// DeleteBGPPeerWithContext mocks base method.
 func (m *MockDirectConnectAPI) DeleteBGPPeerWithContext(arg0 context.Context, arg1 *directconnect.DeleteBGPPeerInput, arg2 ...request.Option) (*directconnect.DeleteBGPPeerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1228,14 +1279,14 @@ func (m *MockDirectConnectAPI) DeleteBGPPeerWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteBGPPeerWithContext indicates an expected call of DeleteBGPPeerWithContext
+// DeleteBGPPeerWithContext indicates an expected call of DeleteBGPPeerWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteBGPPeerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBGPPeerWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteBGPPeerWithContext), varargs...)
 }
 
-// DeleteConnection mocks base method
+// DeleteConnection mocks base method.
 func (m *MockDirectConnectAPI) DeleteConnection(arg0 *directconnect.DeleteConnectionInput) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConnection", arg0)
@@ -1244,13 +1295,13 @@ func (m *MockDirectConnectAPI) DeleteConnection(arg0 *directconnect.DeleteConnec
 	return ret0, ret1
 }
 
-// DeleteConnection indicates an expected call of DeleteConnection
+// DeleteConnection indicates an expected call of DeleteConnection.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteConnection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConnection", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteConnection), arg0)
 }
 
-// DeleteConnectionRequest mocks base method
+// DeleteConnectionRequest mocks base method.
 func (m *MockDirectConnectAPI) DeleteConnectionRequest(arg0 *directconnect.DeleteConnectionInput) (*request.Request, *directconnect.Connection) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteConnectionRequest", arg0)
@@ -1259,13 +1310,13 @@ func (m *MockDirectConnectAPI) DeleteConnectionRequest(arg0 *directconnect.Delet
 	return ret0, ret1
 }
 
-// DeleteConnectionRequest indicates an expected call of DeleteConnectionRequest
+// DeleteConnectionRequest indicates an expected call of DeleteConnectionRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteConnectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConnectionRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteConnectionRequest), arg0)
 }
 
-// DeleteConnectionWithContext mocks base method
+// DeleteConnectionWithContext mocks base method.
 func (m *MockDirectConnectAPI) DeleteConnectionWithContext(arg0 context.Context, arg1 *directconnect.DeleteConnectionInput, arg2 ...request.Option) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1278,14 +1329,14 @@ func (m *MockDirectConnectAPI) DeleteConnectionWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteConnectionWithContext indicates an expected call of DeleteConnectionWithContext
+// DeleteConnectionWithContext indicates an expected call of DeleteConnectionWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteConnectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteConnectionWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteConnectionWithContext), varargs...)
 }
 
-// DeleteDirectConnectGateway mocks base method
+// DeleteDirectConnectGateway mocks base method.
 func (m *MockDirectConnectAPI) DeleteDirectConnectGateway(arg0 *directconnect.DeleteDirectConnectGatewayInput) (*directconnect.DeleteDirectConnectGatewayOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDirectConnectGateway", arg0)
@@ -1294,13 +1345,13 @@ func (m *MockDirectConnectAPI) DeleteDirectConnectGateway(arg0 *directconnect.De
 	return ret0, ret1
 }
 
-// DeleteDirectConnectGateway indicates an expected call of DeleteDirectConnectGateway
+// DeleteDirectConnectGateway indicates an expected call of DeleteDirectConnectGateway.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteDirectConnectGateway(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDirectConnectGateway", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteDirectConnectGateway), arg0)
 }
 
-// DeleteDirectConnectGatewayAssociation mocks base method
+// DeleteDirectConnectGatewayAssociation mocks base method.
 func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayAssociation(arg0 *directconnect.DeleteDirectConnectGatewayAssociationInput) (*directconnect.DeleteDirectConnectGatewayAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDirectConnectGatewayAssociation", arg0)
@@ -1309,13 +1360,13 @@ func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayAssociation(arg0 *direc
 	return ret0, ret1
 }
 
-// DeleteDirectConnectGatewayAssociation indicates an expected call of DeleteDirectConnectGatewayAssociation
+// DeleteDirectConnectGatewayAssociation indicates an expected call of DeleteDirectConnectGatewayAssociation.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteDirectConnectGatewayAssociation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDirectConnectGatewayAssociation", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteDirectConnectGatewayAssociation), arg0)
 }
 
-// DeleteDirectConnectGatewayAssociationProposal mocks base method
+// DeleteDirectConnectGatewayAssociationProposal mocks base method.
 func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayAssociationProposal(arg0 *directconnect.DeleteDirectConnectGatewayAssociationProposalInput) (*directconnect.DeleteDirectConnectGatewayAssociationProposalOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDirectConnectGatewayAssociationProposal", arg0)
@@ -1324,13 +1375,13 @@ func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayAssociationProposal(arg
 	return ret0, ret1
 }
 
-// DeleteDirectConnectGatewayAssociationProposal indicates an expected call of DeleteDirectConnectGatewayAssociationProposal
+// DeleteDirectConnectGatewayAssociationProposal indicates an expected call of DeleteDirectConnectGatewayAssociationProposal.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteDirectConnectGatewayAssociationProposal(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDirectConnectGatewayAssociationProposal", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteDirectConnectGatewayAssociationProposal), arg0)
 }
 
-// DeleteDirectConnectGatewayAssociationProposalRequest mocks base method
+// DeleteDirectConnectGatewayAssociationProposalRequest mocks base method.
 func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayAssociationProposalRequest(arg0 *directconnect.DeleteDirectConnectGatewayAssociationProposalInput) (*request.Request, *directconnect.DeleteDirectConnectGatewayAssociationProposalOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDirectConnectGatewayAssociationProposalRequest", arg0)
@@ -1339,13 +1390,13 @@ func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayAssociationProposalRequ
 	return ret0, ret1
 }
 
-// DeleteDirectConnectGatewayAssociationProposalRequest indicates an expected call of DeleteDirectConnectGatewayAssociationProposalRequest
+// DeleteDirectConnectGatewayAssociationProposalRequest indicates an expected call of DeleteDirectConnectGatewayAssociationProposalRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteDirectConnectGatewayAssociationProposalRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDirectConnectGatewayAssociationProposalRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteDirectConnectGatewayAssociationProposalRequest), arg0)
 }
 
-// DeleteDirectConnectGatewayAssociationProposalWithContext mocks base method
+// DeleteDirectConnectGatewayAssociationProposalWithContext mocks base method.
 func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayAssociationProposalWithContext(arg0 context.Context, arg1 *directconnect.DeleteDirectConnectGatewayAssociationProposalInput, arg2 ...request.Option) (*directconnect.DeleteDirectConnectGatewayAssociationProposalOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1358,14 +1409,14 @@ func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayAssociationProposalWith
 	return ret0, ret1
 }
 
-// DeleteDirectConnectGatewayAssociationProposalWithContext indicates an expected call of DeleteDirectConnectGatewayAssociationProposalWithContext
+// DeleteDirectConnectGatewayAssociationProposalWithContext indicates an expected call of DeleteDirectConnectGatewayAssociationProposalWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteDirectConnectGatewayAssociationProposalWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDirectConnectGatewayAssociationProposalWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteDirectConnectGatewayAssociationProposalWithContext), varargs...)
 }
 
-// DeleteDirectConnectGatewayAssociationRequest mocks base method
+// DeleteDirectConnectGatewayAssociationRequest mocks base method.
 func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayAssociationRequest(arg0 *directconnect.DeleteDirectConnectGatewayAssociationInput) (*request.Request, *directconnect.DeleteDirectConnectGatewayAssociationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDirectConnectGatewayAssociationRequest", arg0)
@@ -1374,13 +1425,13 @@ func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayAssociationRequest(arg0
 	return ret0, ret1
 }
 
-// DeleteDirectConnectGatewayAssociationRequest indicates an expected call of DeleteDirectConnectGatewayAssociationRequest
+// DeleteDirectConnectGatewayAssociationRequest indicates an expected call of DeleteDirectConnectGatewayAssociationRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteDirectConnectGatewayAssociationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDirectConnectGatewayAssociationRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteDirectConnectGatewayAssociationRequest), arg0)
 }
 
-// DeleteDirectConnectGatewayAssociationWithContext mocks base method
+// DeleteDirectConnectGatewayAssociationWithContext mocks base method.
 func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayAssociationWithContext(arg0 context.Context, arg1 *directconnect.DeleteDirectConnectGatewayAssociationInput, arg2 ...request.Option) (*directconnect.DeleteDirectConnectGatewayAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1393,14 +1444,14 @@ func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayAssociationWithContext(
 	return ret0, ret1
 }
 
-// DeleteDirectConnectGatewayAssociationWithContext indicates an expected call of DeleteDirectConnectGatewayAssociationWithContext
+// DeleteDirectConnectGatewayAssociationWithContext indicates an expected call of DeleteDirectConnectGatewayAssociationWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteDirectConnectGatewayAssociationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDirectConnectGatewayAssociationWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteDirectConnectGatewayAssociationWithContext), varargs...)
 }
 
-// DeleteDirectConnectGatewayRequest mocks base method
+// DeleteDirectConnectGatewayRequest mocks base method.
 func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayRequest(arg0 *directconnect.DeleteDirectConnectGatewayInput) (*request.Request, *directconnect.DeleteDirectConnectGatewayOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDirectConnectGatewayRequest", arg0)
@@ -1409,13 +1460,13 @@ func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayRequest(arg0 *directcon
 	return ret0, ret1
 }
 
-// DeleteDirectConnectGatewayRequest indicates an expected call of DeleteDirectConnectGatewayRequest
+// DeleteDirectConnectGatewayRequest indicates an expected call of DeleteDirectConnectGatewayRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteDirectConnectGatewayRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDirectConnectGatewayRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteDirectConnectGatewayRequest), arg0)
 }
 
-// DeleteDirectConnectGatewayWithContext mocks base method
+// DeleteDirectConnectGatewayWithContext mocks base method.
 func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayWithContext(arg0 context.Context, arg1 *directconnect.DeleteDirectConnectGatewayInput, arg2 ...request.Option) (*directconnect.DeleteDirectConnectGatewayOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1428,14 +1479,14 @@ func (m *MockDirectConnectAPI) DeleteDirectConnectGatewayWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// DeleteDirectConnectGatewayWithContext indicates an expected call of DeleteDirectConnectGatewayWithContext
+// DeleteDirectConnectGatewayWithContext indicates an expected call of DeleteDirectConnectGatewayWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteDirectConnectGatewayWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDirectConnectGatewayWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteDirectConnectGatewayWithContext), varargs...)
 }
 
-// DeleteInterconnect mocks base method
+// DeleteInterconnect mocks base method.
 func (m *MockDirectConnectAPI) DeleteInterconnect(arg0 *directconnect.DeleteInterconnectInput) (*directconnect.DeleteInterconnectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInterconnect", arg0)
@@ -1444,13 +1495,13 @@ func (m *MockDirectConnectAPI) DeleteInterconnect(arg0 *directconnect.DeleteInte
 	return ret0, ret1
 }
 
-// DeleteInterconnect indicates an expected call of DeleteInterconnect
+// DeleteInterconnect indicates an expected call of DeleteInterconnect.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteInterconnect(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInterconnect", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteInterconnect), arg0)
 }
 
-// DeleteInterconnectRequest mocks base method
+// DeleteInterconnectRequest mocks base method.
 func (m *MockDirectConnectAPI) DeleteInterconnectRequest(arg0 *directconnect.DeleteInterconnectInput) (*request.Request, *directconnect.DeleteInterconnectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInterconnectRequest", arg0)
@@ -1459,13 +1510,13 @@ func (m *MockDirectConnectAPI) DeleteInterconnectRequest(arg0 *directconnect.Del
 	return ret0, ret1
 }
 
-// DeleteInterconnectRequest indicates an expected call of DeleteInterconnectRequest
+// DeleteInterconnectRequest indicates an expected call of DeleteInterconnectRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteInterconnectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInterconnectRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteInterconnectRequest), arg0)
 }
 
-// DeleteInterconnectWithContext mocks base method
+// DeleteInterconnectWithContext mocks base method.
 func (m *MockDirectConnectAPI) DeleteInterconnectWithContext(arg0 context.Context, arg1 *directconnect.DeleteInterconnectInput, arg2 ...request.Option) (*directconnect.DeleteInterconnectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1478,14 +1529,14 @@ func (m *MockDirectConnectAPI) DeleteInterconnectWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteInterconnectWithContext indicates an expected call of DeleteInterconnectWithContext
+// DeleteInterconnectWithContext indicates an expected call of DeleteInterconnectWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteInterconnectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInterconnectWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteInterconnectWithContext), varargs...)
 }
 
-// DeleteLag mocks base method
+// DeleteLag mocks base method.
 func (m *MockDirectConnectAPI) DeleteLag(arg0 *directconnect.DeleteLagInput) (*directconnect.Lag, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLag", arg0)
@@ -1494,13 +1545,13 @@ func (m *MockDirectConnectAPI) DeleteLag(arg0 *directconnect.DeleteLagInput) (*d
 	return ret0, ret1
 }
 
-// DeleteLag indicates an expected call of DeleteLag
+// DeleteLag indicates an expected call of DeleteLag.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteLag(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLag", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteLag), arg0)
 }
 
-// DeleteLagRequest mocks base method
+// DeleteLagRequest mocks base method.
 func (m *MockDirectConnectAPI) DeleteLagRequest(arg0 *directconnect.DeleteLagInput) (*request.Request, *directconnect.Lag) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLagRequest", arg0)
@@ -1509,13 +1560,13 @@ func (m *MockDirectConnectAPI) DeleteLagRequest(arg0 *directconnect.DeleteLagInp
 	return ret0, ret1
 }
 
-// DeleteLagRequest indicates an expected call of DeleteLagRequest
+// DeleteLagRequest indicates an expected call of DeleteLagRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteLagRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLagRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteLagRequest), arg0)
 }
 
-// DeleteLagWithContext mocks base method
+// DeleteLagWithContext mocks base method.
 func (m *MockDirectConnectAPI) DeleteLagWithContext(arg0 context.Context, arg1 *directconnect.DeleteLagInput, arg2 ...request.Option) (*directconnect.Lag, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1528,14 +1579,14 @@ func (m *MockDirectConnectAPI) DeleteLagWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DeleteLagWithContext indicates an expected call of DeleteLagWithContext
+// DeleteLagWithContext indicates an expected call of DeleteLagWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteLagWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLagWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteLagWithContext), varargs...)
 }
 
-// DeleteVirtualInterface mocks base method
+// DeleteVirtualInterface mocks base method.
 func (m *MockDirectConnectAPI) DeleteVirtualInterface(arg0 *directconnect.DeleteVirtualInterfaceInput) (*directconnect.DeleteVirtualInterfaceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVirtualInterface", arg0)
@@ -1544,13 +1595,13 @@ func (m *MockDirectConnectAPI) DeleteVirtualInterface(arg0 *directconnect.Delete
 	return ret0, ret1
 }
 
-// DeleteVirtualInterface indicates an expected call of DeleteVirtualInterface
+// DeleteVirtualInterface indicates an expected call of DeleteVirtualInterface.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteVirtualInterface(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualInterface", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteVirtualInterface), arg0)
 }
 
-// DeleteVirtualInterfaceRequest mocks base method
+// DeleteVirtualInterfaceRequest mocks base method.
 func (m *MockDirectConnectAPI) DeleteVirtualInterfaceRequest(arg0 *directconnect.DeleteVirtualInterfaceInput) (*request.Request, *directconnect.DeleteVirtualInterfaceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVirtualInterfaceRequest", arg0)
@@ -1559,13 +1610,13 @@ func (m *MockDirectConnectAPI) DeleteVirtualInterfaceRequest(arg0 *directconnect
 	return ret0, ret1
 }
 
-// DeleteVirtualInterfaceRequest indicates an expected call of DeleteVirtualInterfaceRequest
+// DeleteVirtualInterfaceRequest indicates an expected call of DeleteVirtualInterfaceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteVirtualInterfaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualInterfaceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteVirtualInterfaceRequest), arg0)
 }
 
-// DeleteVirtualInterfaceWithContext mocks base method
+// DeleteVirtualInterfaceWithContext mocks base method.
 func (m *MockDirectConnectAPI) DeleteVirtualInterfaceWithContext(arg0 context.Context, arg1 *directconnect.DeleteVirtualInterfaceInput, arg2 ...request.Option) (*directconnect.DeleteVirtualInterfaceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1578,14 +1629,14 @@ func (m *MockDirectConnectAPI) DeleteVirtualInterfaceWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DeleteVirtualInterfaceWithContext indicates an expected call of DeleteVirtualInterfaceWithContext
+// DeleteVirtualInterfaceWithContext indicates an expected call of DeleteVirtualInterfaceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DeleteVirtualInterfaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualInterfaceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DeleteVirtualInterfaceWithContext), varargs...)
 }
 
-// DescribeConnectionLoa mocks base method
+// DescribeConnectionLoa mocks base method.
 func (m *MockDirectConnectAPI) DescribeConnectionLoa(arg0 *directconnect.DescribeConnectionLoaInput) (*directconnect.DescribeConnectionLoaOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectionLoa", arg0)
@@ -1594,13 +1645,13 @@ func (m *MockDirectConnectAPI) DescribeConnectionLoa(arg0 *directconnect.Describ
 	return ret0, ret1
 }
 
-// DescribeConnectionLoa indicates an expected call of DescribeConnectionLoa
+// DescribeConnectionLoa indicates an expected call of DescribeConnectionLoa.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeConnectionLoa(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectionLoa", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeConnectionLoa), arg0)
 }
 
-// DescribeConnectionLoaRequest mocks base method
+// DescribeConnectionLoaRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeConnectionLoaRequest(arg0 *directconnect.DescribeConnectionLoaInput) (*request.Request, *directconnect.DescribeConnectionLoaOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectionLoaRequest", arg0)
@@ -1609,13 +1660,13 @@ func (m *MockDirectConnectAPI) DescribeConnectionLoaRequest(arg0 *directconnect.
 	return ret0, ret1
 }
 
-// DescribeConnectionLoaRequest indicates an expected call of DescribeConnectionLoaRequest
+// DescribeConnectionLoaRequest indicates an expected call of DescribeConnectionLoaRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeConnectionLoaRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectionLoaRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeConnectionLoaRequest), arg0)
 }
 
-// DescribeConnectionLoaWithContext mocks base method
+// DescribeConnectionLoaWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeConnectionLoaWithContext(arg0 context.Context, arg1 *directconnect.DescribeConnectionLoaInput, arg2 ...request.Option) (*directconnect.DescribeConnectionLoaOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1628,14 +1679,14 @@ func (m *MockDirectConnectAPI) DescribeConnectionLoaWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DescribeConnectionLoaWithContext indicates an expected call of DescribeConnectionLoaWithContext
+// DescribeConnectionLoaWithContext indicates an expected call of DescribeConnectionLoaWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeConnectionLoaWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectionLoaWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeConnectionLoaWithContext), varargs...)
 }
 
-// DescribeConnections mocks base method
+// DescribeConnections mocks base method.
 func (m *MockDirectConnectAPI) DescribeConnections(arg0 *directconnect.DescribeConnectionsInput) (*directconnect.Connections, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnections", arg0)
@@ -1644,13 +1695,13 @@ func (m *MockDirectConnectAPI) DescribeConnections(arg0 *directconnect.DescribeC
 	return ret0, ret1
 }
 
-// DescribeConnections indicates an expected call of DescribeConnections
+// DescribeConnections indicates an expected call of DescribeConnections.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeConnections(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnections", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeConnections), arg0)
 }
 
-// DescribeConnectionsOnInterconnect mocks base method
+// DescribeConnectionsOnInterconnect mocks base method.
 func (m *MockDirectConnectAPI) DescribeConnectionsOnInterconnect(arg0 *directconnect.DescribeConnectionsOnInterconnectInput) (*directconnect.Connections, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectionsOnInterconnect", arg0)
@@ -1659,13 +1710,13 @@ func (m *MockDirectConnectAPI) DescribeConnectionsOnInterconnect(arg0 *directcon
 	return ret0, ret1
 }
 
-// DescribeConnectionsOnInterconnect indicates an expected call of DescribeConnectionsOnInterconnect
+// DescribeConnectionsOnInterconnect indicates an expected call of DescribeConnectionsOnInterconnect.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeConnectionsOnInterconnect(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectionsOnInterconnect", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeConnectionsOnInterconnect), arg0)
 }
 
-// DescribeConnectionsOnInterconnectRequest mocks base method
+// DescribeConnectionsOnInterconnectRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeConnectionsOnInterconnectRequest(arg0 *directconnect.DescribeConnectionsOnInterconnectInput) (*request.Request, *directconnect.Connections) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectionsOnInterconnectRequest", arg0)
@@ -1674,13 +1725,13 @@ func (m *MockDirectConnectAPI) DescribeConnectionsOnInterconnectRequest(arg0 *di
 	return ret0, ret1
 }
 
-// DescribeConnectionsOnInterconnectRequest indicates an expected call of DescribeConnectionsOnInterconnectRequest
+// DescribeConnectionsOnInterconnectRequest indicates an expected call of DescribeConnectionsOnInterconnectRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeConnectionsOnInterconnectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectionsOnInterconnectRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeConnectionsOnInterconnectRequest), arg0)
 }
 
-// DescribeConnectionsOnInterconnectWithContext mocks base method
+// DescribeConnectionsOnInterconnectWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeConnectionsOnInterconnectWithContext(arg0 context.Context, arg1 *directconnect.DescribeConnectionsOnInterconnectInput, arg2 ...request.Option) (*directconnect.Connections, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1693,14 +1744,14 @@ func (m *MockDirectConnectAPI) DescribeConnectionsOnInterconnectWithContext(arg0
 	return ret0, ret1
 }
 
-// DescribeConnectionsOnInterconnectWithContext indicates an expected call of DescribeConnectionsOnInterconnectWithContext
+// DescribeConnectionsOnInterconnectWithContext indicates an expected call of DescribeConnectionsOnInterconnectWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeConnectionsOnInterconnectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectionsOnInterconnectWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeConnectionsOnInterconnectWithContext), varargs...)
 }
 
-// DescribeConnectionsRequest mocks base method
+// DescribeConnectionsRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeConnectionsRequest(arg0 *directconnect.DescribeConnectionsInput) (*request.Request, *directconnect.Connections) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeConnectionsRequest", arg0)
@@ -1709,13 +1760,13 @@ func (m *MockDirectConnectAPI) DescribeConnectionsRequest(arg0 *directconnect.De
 	return ret0, ret1
 }
 
-// DescribeConnectionsRequest indicates an expected call of DescribeConnectionsRequest
+// DescribeConnectionsRequest indicates an expected call of DescribeConnectionsRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeConnectionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectionsRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeConnectionsRequest), arg0)
 }
 
-// DescribeConnectionsWithContext mocks base method
+// DescribeConnectionsWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeConnectionsWithContext(arg0 context.Context, arg1 *directconnect.DescribeConnectionsInput, arg2 ...request.Option) (*directconnect.Connections, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1728,14 +1779,14 @@ func (m *MockDirectConnectAPI) DescribeConnectionsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DescribeConnectionsWithContext indicates an expected call of DescribeConnectionsWithContext
+// DescribeConnectionsWithContext indicates an expected call of DescribeConnectionsWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeConnectionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConnectionsWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeConnectionsWithContext), varargs...)
 }
 
-// DescribeDirectConnectGatewayAssociationProposals mocks base method
+// DescribeDirectConnectGatewayAssociationProposals mocks base method.
 func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAssociationProposals(arg0 *directconnect.DescribeDirectConnectGatewayAssociationProposalsInput) (*directconnect.DescribeDirectConnectGatewayAssociationProposalsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDirectConnectGatewayAssociationProposals", arg0)
@@ -1744,13 +1795,13 @@ func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAssociationProposals(
 	return ret0, ret1
 }
 
-// DescribeDirectConnectGatewayAssociationProposals indicates an expected call of DescribeDirectConnectGatewayAssociationProposals
+// DescribeDirectConnectGatewayAssociationProposals indicates an expected call of DescribeDirectConnectGatewayAssociationProposals.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeDirectConnectGatewayAssociationProposals(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDirectConnectGatewayAssociationProposals", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeDirectConnectGatewayAssociationProposals), arg0)
 }
 
-// DescribeDirectConnectGatewayAssociationProposalsRequest mocks base method
+// DescribeDirectConnectGatewayAssociationProposalsRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAssociationProposalsRequest(arg0 *directconnect.DescribeDirectConnectGatewayAssociationProposalsInput) (*request.Request, *directconnect.DescribeDirectConnectGatewayAssociationProposalsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDirectConnectGatewayAssociationProposalsRequest", arg0)
@@ -1759,13 +1810,13 @@ func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAssociationProposalsR
 	return ret0, ret1
 }
 
-// DescribeDirectConnectGatewayAssociationProposalsRequest indicates an expected call of DescribeDirectConnectGatewayAssociationProposalsRequest
+// DescribeDirectConnectGatewayAssociationProposalsRequest indicates an expected call of DescribeDirectConnectGatewayAssociationProposalsRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeDirectConnectGatewayAssociationProposalsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDirectConnectGatewayAssociationProposalsRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeDirectConnectGatewayAssociationProposalsRequest), arg0)
 }
 
-// DescribeDirectConnectGatewayAssociationProposalsWithContext mocks base method
+// DescribeDirectConnectGatewayAssociationProposalsWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAssociationProposalsWithContext(arg0 context.Context, arg1 *directconnect.DescribeDirectConnectGatewayAssociationProposalsInput, arg2 ...request.Option) (*directconnect.DescribeDirectConnectGatewayAssociationProposalsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1778,14 +1829,14 @@ func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAssociationProposalsW
 	return ret0, ret1
 }
 
-// DescribeDirectConnectGatewayAssociationProposalsWithContext indicates an expected call of DescribeDirectConnectGatewayAssociationProposalsWithContext
+// DescribeDirectConnectGatewayAssociationProposalsWithContext indicates an expected call of DescribeDirectConnectGatewayAssociationProposalsWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeDirectConnectGatewayAssociationProposalsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDirectConnectGatewayAssociationProposalsWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeDirectConnectGatewayAssociationProposalsWithContext), varargs...)
 }
 
-// DescribeDirectConnectGatewayAssociations mocks base method
+// DescribeDirectConnectGatewayAssociations mocks base method.
 func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAssociations(arg0 *directconnect.DescribeDirectConnectGatewayAssociationsInput) (*directconnect.DescribeDirectConnectGatewayAssociationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDirectConnectGatewayAssociations", arg0)
@@ -1794,13 +1845,13 @@ func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAssociations(arg0 *di
 	return ret0, ret1
 }
 
-// DescribeDirectConnectGatewayAssociations indicates an expected call of DescribeDirectConnectGatewayAssociations
+// DescribeDirectConnectGatewayAssociations indicates an expected call of DescribeDirectConnectGatewayAssociations.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeDirectConnectGatewayAssociations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDirectConnectGatewayAssociations", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeDirectConnectGatewayAssociations), arg0)
 }
 
-// DescribeDirectConnectGatewayAssociationsRequest mocks base method
+// DescribeDirectConnectGatewayAssociationsRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAssociationsRequest(arg0 *directconnect.DescribeDirectConnectGatewayAssociationsInput) (*request.Request, *directconnect.DescribeDirectConnectGatewayAssociationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDirectConnectGatewayAssociationsRequest", arg0)
@@ -1809,13 +1860,13 @@ func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAssociationsRequest(a
 	return ret0, ret1
 }
 
-// DescribeDirectConnectGatewayAssociationsRequest indicates an expected call of DescribeDirectConnectGatewayAssociationsRequest
+// DescribeDirectConnectGatewayAssociationsRequest indicates an expected call of DescribeDirectConnectGatewayAssociationsRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeDirectConnectGatewayAssociationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDirectConnectGatewayAssociationsRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeDirectConnectGatewayAssociationsRequest), arg0)
 }
 
-// DescribeDirectConnectGatewayAssociationsWithContext mocks base method
+// DescribeDirectConnectGatewayAssociationsWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAssociationsWithContext(arg0 context.Context, arg1 *directconnect.DescribeDirectConnectGatewayAssociationsInput, arg2 ...request.Option) (*directconnect.DescribeDirectConnectGatewayAssociationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1828,14 +1879,14 @@ func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAssociationsWithConte
 	return ret0, ret1
 }
 
-// DescribeDirectConnectGatewayAssociationsWithContext indicates an expected call of DescribeDirectConnectGatewayAssociationsWithContext
+// DescribeDirectConnectGatewayAssociationsWithContext indicates an expected call of DescribeDirectConnectGatewayAssociationsWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeDirectConnectGatewayAssociationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDirectConnectGatewayAssociationsWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeDirectConnectGatewayAssociationsWithContext), varargs...)
 }
 
-// DescribeDirectConnectGatewayAttachments mocks base method
+// DescribeDirectConnectGatewayAttachments mocks base method.
 func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAttachments(arg0 *directconnect.DescribeDirectConnectGatewayAttachmentsInput) (*directconnect.DescribeDirectConnectGatewayAttachmentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDirectConnectGatewayAttachments", arg0)
@@ -1844,13 +1895,13 @@ func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAttachments(arg0 *dir
 	return ret0, ret1
 }
 
-// DescribeDirectConnectGatewayAttachments indicates an expected call of DescribeDirectConnectGatewayAttachments
+// DescribeDirectConnectGatewayAttachments indicates an expected call of DescribeDirectConnectGatewayAttachments.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeDirectConnectGatewayAttachments(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDirectConnectGatewayAttachments", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeDirectConnectGatewayAttachments), arg0)
 }
 
-// DescribeDirectConnectGatewayAttachmentsRequest mocks base method
+// DescribeDirectConnectGatewayAttachmentsRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAttachmentsRequest(arg0 *directconnect.DescribeDirectConnectGatewayAttachmentsInput) (*request.Request, *directconnect.DescribeDirectConnectGatewayAttachmentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDirectConnectGatewayAttachmentsRequest", arg0)
@@ -1859,13 +1910,13 @@ func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAttachmentsRequest(ar
 	return ret0, ret1
 }
 
-// DescribeDirectConnectGatewayAttachmentsRequest indicates an expected call of DescribeDirectConnectGatewayAttachmentsRequest
+// DescribeDirectConnectGatewayAttachmentsRequest indicates an expected call of DescribeDirectConnectGatewayAttachmentsRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeDirectConnectGatewayAttachmentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDirectConnectGatewayAttachmentsRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeDirectConnectGatewayAttachmentsRequest), arg0)
 }
 
-// DescribeDirectConnectGatewayAttachmentsWithContext mocks base method
+// DescribeDirectConnectGatewayAttachmentsWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAttachmentsWithContext(arg0 context.Context, arg1 *directconnect.DescribeDirectConnectGatewayAttachmentsInput, arg2 ...request.Option) (*directconnect.DescribeDirectConnectGatewayAttachmentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1878,14 +1929,14 @@ func (m *MockDirectConnectAPI) DescribeDirectConnectGatewayAttachmentsWithContex
 	return ret0, ret1
 }
 
-// DescribeDirectConnectGatewayAttachmentsWithContext indicates an expected call of DescribeDirectConnectGatewayAttachmentsWithContext
+// DescribeDirectConnectGatewayAttachmentsWithContext indicates an expected call of DescribeDirectConnectGatewayAttachmentsWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeDirectConnectGatewayAttachmentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDirectConnectGatewayAttachmentsWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeDirectConnectGatewayAttachmentsWithContext), varargs...)
 }
 
-// DescribeDirectConnectGateways mocks base method
+// DescribeDirectConnectGateways mocks base method.
 func (m *MockDirectConnectAPI) DescribeDirectConnectGateways(arg0 *directconnect.DescribeDirectConnectGatewaysInput) (*directconnect.DescribeDirectConnectGatewaysOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDirectConnectGateways", arg0)
@@ -1894,13 +1945,13 @@ func (m *MockDirectConnectAPI) DescribeDirectConnectGateways(arg0 *directconnect
 	return ret0, ret1
 }
 
-// DescribeDirectConnectGateways indicates an expected call of DescribeDirectConnectGateways
+// DescribeDirectConnectGateways indicates an expected call of DescribeDirectConnectGateways.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeDirectConnectGateways(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDirectConnectGateways", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeDirectConnectGateways), arg0)
 }
 
-// DescribeDirectConnectGatewaysRequest mocks base method
+// DescribeDirectConnectGatewaysRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeDirectConnectGatewaysRequest(arg0 *directconnect.DescribeDirectConnectGatewaysInput) (*request.Request, *directconnect.DescribeDirectConnectGatewaysOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDirectConnectGatewaysRequest", arg0)
@@ -1909,13 +1960,13 @@ func (m *MockDirectConnectAPI) DescribeDirectConnectGatewaysRequest(arg0 *direct
 	return ret0, ret1
 }
 
-// DescribeDirectConnectGatewaysRequest indicates an expected call of DescribeDirectConnectGatewaysRequest
+// DescribeDirectConnectGatewaysRequest indicates an expected call of DescribeDirectConnectGatewaysRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeDirectConnectGatewaysRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDirectConnectGatewaysRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeDirectConnectGatewaysRequest), arg0)
 }
 
-// DescribeDirectConnectGatewaysWithContext mocks base method
+// DescribeDirectConnectGatewaysWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeDirectConnectGatewaysWithContext(arg0 context.Context, arg1 *directconnect.DescribeDirectConnectGatewaysInput, arg2 ...request.Option) (*directconnect.DescribeDirectConnectGatewaysOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1928,14 +1979,14 @@ func (m *MockDirectConnectAPI) DescribeDirectConnectGatewaysWithContext(arg0 con
 	return ret0, ret1
 }
 
-// DescribeDirectConnectGatewaysWithContext indicates an expected call of DescribeDirectConnectGatewaysWithContext
+// DescribeDirectConnectGatewaysWithContext indicates an expected call of DescribeDirectConnectGatewaysWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeDirectConnectGatewaysWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDirectConnectGatewaysWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeDirectConnectGatewaysWithContext), varargs...)
 }
 
-// DescribeHostedConnections mocks base method
+// DescribeHostedConnections mocks base method.
 func (m *MockDirectConnectAPI) DescribeHostedConnections(arg0 *directconnect.DescribeHostedConnectionsInput) (*directconnect.Connections, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeHostedConnections", arg0)
@@ -1944,13 +1995,13 @@ func (m *MockDirectConnectAPI) DescribeHostedConnections(arg0 *directconnect.Des
 	return ret0, ret1
 }
 
-// DescribeHostedConnections indicates an expected call of DescribeHostedConnections
+// DescribeHostedConnections indicates an expected call of DescribeHostedConnections.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeHostedConnections(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeHostedConnections", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeHostedConnections), arg0)
 }
 
-// DescribeHostedConnectionsRequest mocks base method
+// DescribeHostedConnectionsRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeHostedConnectionsRequest(arg0 *directconnect.DescribeHostedConnectionsInput) (*request.Request, *directconnect.Connections) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeHostedConnectionsRequest", arg0)
@@ -1959,13 +2010,13 @@ func (m *MockDirectConnectAPI) DescribeHostedConnectionsRequest(arg0 *directconn
 	return ret0, ret1
 }
 
-// DescribeHostedConnectionsRequest indicates an expected call of DescribeHostedConnectionsRequest
+// DescribeHostedConnectionsRequest indicates an expected call of DescribeHostedConnectionsRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeHostedConnectionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeHostedConnectionsRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeHostedConnectionsRequest), arg0)
 }
 
-// DescribeHostedConnectionsWithContext mocks base method
+// DescribeHostedConnectionsWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeHostedConnectionsWithContext(arg0 context.Context, arg1 *directconnect.DescribeHostedConnectionsInput, arg2 ...request.Option) (*directconnect.Connections, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1978,14 +2029,14 @@ func (m *MockDirectConnectAPI) DescribeHostedConnectionsWithContext(arg0 context
 	return ret0, ret1
 }
 
-// DescribeHostedConnectionsWithContext indicates an expected call of DescribeHostedConnectionsWithContext
+// DescribeHostedConnectionsWithContext indicates an expected call of DescribeHostedConnectionsWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeHostedConnectionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeHostedConnectionsWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeHostedConnectionsWithContext), varargs...)
 }
 
-// DescribeInterconnectLoa mocks base method
+// DescribeInterconnectLoa mocks base method.
 func (m *MockDirectConnectAPI) DescribeInterconnectLoa(arg0 *directconnect.DescribeInterconnectLoaInput) (*directconnect.DescribeInterconnectLoaOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInterconnectLoa", arg0)
@@ -1994,13 +2045,13 @@ func (m *MockDirectConnectAPI) DescribeInterconnectLoa(arg0 *directconnect.Descr
 	return ret0, ret1
 }
 
-// DescribeInterconnectLoa indicates an expected call of DescribeInterconnectLoa
+// DescribeInterconnectLoa indicates an expected call of DescribeInterconnectLoa.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeInterconnectLoa(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInterconnectLoa", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeInterconnectLoa), arg0)
 }
 
-// DescribeInterconnectLoaRequest mocks base method
+// DescribeInterconnectLoaRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeInterconnectLoaRequest(arg0 *directconnect.DescribeInterconnectLoaInput) (*request.Request, *directconnect.DescribeInterconnectLoaOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInterconnectLoaRequest", arg0)
@@ -2009,13 +2060,13 @@ func (m *MockDirectConnectAPI) DescribeInterconnectLoaRequest(arg0 *directconnec
 	return ret0, ret1
 }
 
-// DescribeInterconnectLoaRequest indicates an expected call of DescribeInterconnectLoaRequest
+// DescribeInterconnectLoaRequest indicates an expected call of DescribeInterconnectLoaRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeInterconnectLoaRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInterconnectLoaRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeInterconnectLoaRequest), arg0)
 }
 
-// DescribeInterconnectLoaWithContext mocks base method
+// DescribeInterconnectLoaWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeInterconnectLoaWithContext(arg0 context.Context, arg1 *directconnect.DescribeInterconnectLoaInput, arg2 ...request.Option) (*directconnect.DescribeInterconnectLoaOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2028,14 +2079,14 @@ func (m *MockDirectConnectAPI) DescribeInterconnectLoaWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DescribeInterconnectLoaWithContext indicates an expected call of DescribeInterconnectLoaWithContext
+// DescribeInterconnectLoaWithContext indicates an expected call of DescribeInterconnectLoaWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeInterconnectLoaWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInterconnectLoaWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeInterconnectLoaWithContext), varargs...)
 }
 
-// DescribeInterconnects mocks base method
+// DescribeInterconnects mocks base method.
 func (m *MockDirectConnectAPI) DescribeInterconnects(arg0 *directconnect.DescribeInterconnectsInput) (*directconnect.DescribeInterconnectsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInterconnects", arg0)
@@ -2044,13 +2095,13 @@ func (m *MockDirectConnectAPI) DescribeInterconnects(arg0 *directconnect.Describ
 	return ret0, ret1
 }
 
-// DescribeInterconnects indicates an expected call of DescribeInterconnects
+// DescribeInterconnects indicates an expected call of DescribeInterconnects.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeInterconnects(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInterconnects", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeInterconnects), arg0)
 }
 
-// DescribeInterconnectsRequest mocks base method
+// DescribeInterconnectsRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeInterconnectsRequest(arg0 *directconnect.DescribeInterconnectsInput) (*request.Request, *directconnect.DescribeInterconnectsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInterconnectsRequest", arg0)
@@ -2059,13 +2110,13 @@ func (m *MockDirectConnectAPI) DescribeInterconnectsRequest(arg0 *directconnect.
 	return ret0, ret1
 }
 
-// DescribeInterconnectsRequest indicates an expected call of DescribeInterconnectsRequest
+// DescribeInterconnectsRequest indicates an expected call of DescribeInterconnectsRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeInterconnectsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInterconnectsRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeInterconnectsRequest), arg0)
 }
 
-// DescribeInterconnectsWithContext mocks base method
+// DescribeInterconnectsWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeInterconnectsWithContext(arg0 context.Context, arg1 *directconnect.DescribeInterconnectsInput, arg2 ...request.Option) (*directconnect.DescribeInterconnectsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2078,14 +2129,14 @@ func (m *MockDirectConnectAPI) DescribeInterconnectsWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DescribeInterconnectsWithContext indicates an expected call of DescribeInterconnectsWithContext
+// DescribeInterconnectsWithContext indicates an expected call of DescribeInterconnectsWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeInterconnectsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInterconnectsWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeInterconnectsWithContext), varargs...)
 }
 
-// DescribeLags mocks base method
+// DescribeLags mocks base method.
 func (m *MockDirectConnectAPI) DescribeLags(arg0 *directconnect.DescribeLagsInput) (*directconnect.DescribeLagsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeLags", arg0)
@@ -2094,13 +2145,13 @@ func (m *MockDirectConnectAPI) DescribeLags(arg0 *directconnect.DescribeLagsInpu
 	return ret0, ret1
 }
 
-// DescribeLags indicates an expected call of DescribeLags
+// DescribeLags indicates an expected call of DescribeLags.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeLags(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLags", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeLags), arg0)
 }
 
-// DescribeLagsRequest mocks base method
+// DescribeLagsRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeLagsRequest(arg0 *directconnect.DescribeLagsInput) (*request.Request, *directconnect.DescribeLagsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeLagsRequest", arg0)
@@ -2109,13 +2160,13 @@ func (m *MockDirectConnectAPI) DescribeLagsRequest(arg0 *directconnect.DescribeL
 	return ret0, ret1
 }
 
-// DescribeLagsRequest indicates an expected call of DescribeLagsRequest
+// DescribeLagsRequest indicates an expected call of DescribeLagsRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeLagsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLagsRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeLagsRequest), arg0)
 }
 
-// DescribeLagsWithContext mocks base method
+// DescribeLagsWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeLagsWithContext(arg0 context.Context, arg1 *directconnect.DescribeLagsInput, arg2 ...request.Option) (*directconnect.DescribeLagsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2128,14 +2179,14 @@ func (m *MockDirectConnectAPI) DescribeLagsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DescribeLagsWithContext indicates an expected call of DescribeLagsWithContext
+// DescribeLagsWithContext indicates an expected call of DescribeLagsWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeLagsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLagsWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeLagsWithContext), varargs...)
 }
 
-// DescribeLoa mocks base method
+// DescribeLoa mocks base method.
 func (m *MockDirectConnectAPI) DescribeLoa(arg0 *directconnect.DescribeLoaInput) (*directconnect.Loa, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeLoa", arg0)
@@ -2144,13 +2195,13 @@ func (m *MockDirectConnectAPI) DescribeLoa(arg0 *directconnect.DescribeLoaInput)
 	return ret0, ret1
 }
 
-// DescribeLoa indicates an expected call of DescribeLoa
+// DescribeLoa indicates an expected call of DescribeLoa.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeLoa(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLoa", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeLoa), arg0)
 }
 
-// DescribeLoaRequest mocks base method
+// DescribeLoaRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeLoaRequest(arg0 *directconnect.DescribeLoaInput) (*request.Request, *directconnect.Loa) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeLoaRequest", arg0)
@@ -2159,13 +2210,13 @@ func (m *MockDirectConnectAPI) DescribeLoaRequest(arg0 *directconnect.DescribeLo
 	return ret0, ret1
 }
 
-// DescribeLoaRequest indicates an expected call of DescribeLoaRequest
+// DescribeLoaRequest indicates an expected call of DescribeLoaRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeLoaRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLoaRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeLoaRequest), arg0)
 }
 
-// DescribeLoaWithContext mocks base method
+// DescribeLoaWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeLoaWithContext(arg0 context.Context, arg1 *directconnect.DescribeLoaInput, arg2 ...request.Option) (*directconnect.Loa, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2178,14 +2229,14 @@ func (m *MockDirectConnectAPI) DescribeLoaWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DescribeLoaWithContext indicates an expected call of DescribeLoaWithContext
+// DescribeLoaWithContext indicates an expected call of DescribeLoaWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeLoaWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLoaWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeLoaWithContext), varargs...)
 }
 
-// DescribeLocations mocks base method
+// DescribeLocations mocks base method.
 func (m *MockDirectConnectAPI) DescribeLocations(arg0 *directconnect.DescribeLocationsInput) (*directconnect.DescribeLocationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeLocations", arg0)
@@ -2194,13 +2245,13 @@ func (m *MockDirectConnectAPI) DescribeLocations(arg0 *directconnect.DescribeLoc
 	return ret0, ret1
 }
 
-// DescribeLocations indicates an expected call of DescribeLocations
+// DescribeLocations indicates an expected call of DescribeLocations.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeLocations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLocations", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeLocations), arg0)
 }
 
-// DescribeLocationsRequest mocks base method
+// DescribeLocationsRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeLocationsRequest(arg0 *directconnect.DescribeLocationsInput) (*request.Request, *directconnect.DescribeLocationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeLocationsRequest", arg0)
@@ -2209,13 +2260,13 @@ func (m *MockDirectConnectAPI) DescribeLocationsRequest(arg0 *directconnect.Desc
 	return ret0, ret1
 }
 
-// DescribeLocationsRequest indicates an expected call of DescribeLocationsRequest
+// DescribeLocationsRequest indicates an expected call of DescribeLocationsRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeLocationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLocationsRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeLocationsRequest), arg0)
 }
 
-// DescribeLocationsWithContext mocks base method
+// DescribeLocationsWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeLocationsWithContext(arg0 context.Context, arg1 *directconnect.DescribeLocationsInput, arg2 ...request.Option) (*directconnect.DescribeLocationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2228,14 +2279,14 @@ func (m *MockDirectConnectAPI) DescribeLocationsWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// DescribeLocationsWithContext indicates an expected call of DescribeLocationsWithContext
+// DescribeLocationsWithContext indicates an expected call of DescribeLocationsWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeLocationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLocationsWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeLocationsWithContext), varargs...)
 }
 
-// DescribeTags mocks base method
+// DescribeTags mocks base method.
 func (m *MockDirectConnectAPI) DescribeTags(arg0 *directconnect.DescribeTagsInput) (*directconnect.DescribeTagsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeTags", arg0)
@@ -2244,13 +2295,13 @@ func (m *MockDirectConnectAPI) DescribeTags(arg0 *directconnect.DescribeTagsInpu
 	return ret0, ret1
 }
 
-// DescribeTags indicates an expected call of DescribeTags
+// DescribeTags indicates an expected call of DescribeTags.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeTags(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTags", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeTags), arg0)
 }
 
-// DescribeTagsRequest mocks base method
+// DescribeTagsRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeTagsRequest(arg0 *directconnect.DescribeTagsInput) (*request.Request, *directconnect.DescribeTagsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeTagsRequest", arg0)
@@ -2259,13 +2310,13 @@ func (m *MockDirectConnectAPI) DescribeTagsRequest(arg0 *directconnect.DescribeT
 	return ret0, ret1
 }
 
-// DescribeTagsRequest indicates an expected call of DescribeTagsRequest
+// DescribeTagsRequest indicates an expected call of DescribeTagsRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeTagsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTagsRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeTagsRequest), arg0)
 }
 
-// DescribeTagsWithContext mocks base method
+// DescribeTagsWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeTagsWithContext(arg0 context.Context, arg1 *directconnect.DescribeTagsInput, arg2 ...request.Option) (*directconnect.DescribeTagsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2278,14 +2329,14 @@ func (m *MockDirectConnectAPI) DescribeTagsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DescribeTagsWithContext indicates an expected call of DescribeTagsWithContext
+// DescribeTagsWithContext indicates an expected call of DescribeTagsWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeTagsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTagsWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeTagsWithContext), varargs...)
 }
 
-// DescribeVirtualGateways mocks base method
+// DescribeVirtualGateways mocks base method.
 func (m *MockDirectConnectAPI) DescribeVirtualGateways(arg0 *directconnect.DescribeVirtualGatewaysInput) (*directconnect.DescribeVirtualGatewaysOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualGateways", arg0)
@@ -2294,13 +2345,13 @@ func (m *MockDirectConnectAPI) DescribeVirtualGateways(arg0 *directconnect.Descr
 	return ret0, ret1
 }
 
-// DescribeVirtualGateways indicates an expected call of DescribeVirtualGateways
+// DescribeVirtualGateways indicates an expected call of DescribeVirtualGateways.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeVirtualGateways(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualGateways", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeVirtualGateways), arg0)
 }
 
-// DescribeVirtualGatewaysRequest mocks base method
+// DescribeVirtualGatewaysRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeVirtualGatewaysRequest(arg0 *directconnect.DescribeVirtualGatewaysInput) (*request.Request, *directconnect.DescribeVirtualGatewaysOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualGatewaysRequest", arg0)
@@ -2309,13 +2360,13 @@ func (m *MockDirectConnectAPI) DescribeVirtualGatewaysRequest(arg0 *directconnec
 	return ret0, ret1
 }
 
-// DescribeVirtualGatewaysRequest indicates an expected call of DescribeVirtualGatewaysRequest
+// DescribeVirtualGatewaysRequest indicates an expected call of DescribeVirtualGatewaysRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeVirtualGatewaysRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualGatewaysRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeVirtualGatewaysRequest), arg0)
 }
 
-// DescribeVirtualGatewaysWithContext mocks base method
+// DescribeVirtualGatewaysWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeVirtualGatewaysWithContext(arg0 context.Context, arg1 *directconnect.DescribeVirtualGatewaysInput, arg2 ...request.Option) (*directconnect.DescribeVirtualGatewaysOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2328,14 +2379,14 @@ func (m *MockDirectConnectAPI) DescribeVirtualGatewaysWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DescribeVirtualGatewaysWithContext indicates an expected call of DescribeVirtualGatewaysWithContext
+// DescribeVirtualGatewaysWithContext indicates an expected call of DescribeVirtualGatewaysWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeVirtualGatewaysWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualGatewaysWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeVirtualGatewaysWithContext), varargs...)
 }
 
-// DescribeVirtualInterfaces mocks base method
+// DescribeVirtualInterfaces mocks base method.
 func (m *MockDirectConnectAPI) DescribeVirtualInterfaces(arg0 *directconnect.DescribeVirtualInterfacesInput) (*directconnect.DescribeVirtualInterfacesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualInterfaces", arg0)
@@ -2344,13 +2395,13 @@ func (m *MockDirectConnectAPI) DescribeVirtualInterfaces(arg0 *directconnect.Des
 	return ret0, ret1
 }
 
-// DescribeVirtualInterfaces indicates an expected call of DescribeVirtualInterfaces
+// DescribeVirtualInterfaces indicates an expected call of DescribeVirtualInterfaces.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeVirtualInterfaces(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualInterfaces", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeVirtualInterfaces), arg0)
 }
 
-// DescribeVirtualInterfacesRequest mocks base method
+// DescribeVirtualInterfacesRequest mocks base method.
 func (m *MockDirectConnectAPI) DescribeVirtualInterfacesRequest(arg0 *directconnect.DescribeVirtualInterfacesInput) (*request.Request, *directconnect.DescribeVirtualInterfacesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualInterfacesRequest", arg0)
@@ -2359,13 +2410,13 @@ func (m *MockDirectConnectAPI) DescribeVirtualInterfacesRequest(arg0 *directconn
 	return ret0, ret1
 }
 
-// DescribeVirtualInterfacesRequest indicates an expected call of DescribeVirtualInterfacesRequest
+// DescribeVirtualInterfacesRequest indicates an expected call of DescribeVirtualInterfacesRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeVirtualInterfacesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualInterfacesRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeVirtualInterfacesRequest), arg0)
 }
 
-// DescribeVirtualInterfacesWithContext mocks base method
+// DescribeVirtualInterfacesWithContext mocks base method.
 func (m *MockDirectConnectAPI) DescribeVirtualInterfacesWithContext(arg0 context.Context, arg1 *directconnect.DescribeVirtualInterfacesInput, arg2 ...request.Option) (*directconnect.DescribeVirtualInterfacesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2378,14 +2429,14 @@ func (m *MockDirectConnectAPI) DescribeVirtualInterfacesWithContext(arg0 context
 	return ret0, ret1
 }
 
-// DescribeVirtualInterfacesWithContext indicates an expected call of DescribeVirtualInterfacesWithContext
+// DescribeVirtualInterfacesWithContext indicates an expected call of DescribeVirtualInterfacesWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DescribeVirtualInterfacesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualInterfacesWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DescribeVirtualInterfacesWithContext), varargs...)
 }
 
-// DisassociateConnectionFromLag mocks base method
+// DisassociateConnectionFromLag mocks base method.
 func (m *MockDirectConnectAPI) DisassociateConnectionFromLag(arg0 *directconnect.DisassociateConnectionFromLagInput) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateConnectionFromLag", arg0)
@@ -2394,13 +2445,13 @@ func (m *MockDirectConnectAPI) DisassociateConnectionFromLag(arg0 *directconnect
 	return ret0, ret1
 }
 
-// DisassociateConnectionFromLag indicates an expected call of DisassociateConnectionFromLag
+// DisassociateConnectionFromLag indicates an expected call of DisassociateConnectionFromLag.
 func (mr *MockDirectConnectAPIMockRecorder) DisassociateConnectionFromLag(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateConnectionFromLag", reflect.TypeOf((*MockDirectConnectAPI)(nil).DisassociateConnectionFromLag), arg0)
 }
 
-// DisassociateConnectionFromLagRequest mocks base method
+// DisassociateConnectionFromLagRequest mocks base method.
 func (m *MockDirectConnectAPI) DisassociateConnectionFromLagRequest(arg0 *directconnect.DisassociateConnectionFromLagInput) (*request.Request, *directconnect.Connection) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateConnectionFromLagRequest", arg0)
@@ -2409,13 +2460,13 @@ func (m *MockDirectConnectAPI) DisassociateConnectionFromLagRequest(arg0 *direct
 	return ret0, ret1
 }
 
-// DisassociateConnectionFromLagRequest indicates an expected call of DisassociateConnectionFromLagRequest
+// DisassociateConnectionFromLagRequest indicates an expected call of DisassociateConnectionFromLagRequest.
 func (mr *MockDirectConnectAPIMockRecorder) DisassociateConnectionFromLagRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateConnectionFromLagRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DisassociateConnectionFromLagRequest), arg0)
 }
 
-// DisassociateConnectionFromLagWithContext mocks base method
+// DisassociateConnectionFromLagWithContext mocks base method.
 func (m *MockDirectConnectAPI) DisassociateConnectionFromLagWithContext(arg0 context.Context, arg1 *directconnect.DisassociateConnectionFromLagInput, arg2 ...request.Option) (*directconnect.Connection, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2428,14 +2479,64 @@ func (m *MockDirectConnectAPI) DisassociateConnectionFromLagWithContext(arg0 con
 	return ret0, ret1
 }
 
-// DisassociateConnectionFromLagWithContext indicates an expected call of DisassociateConnectionFromLagWithContext
+// DisassociateConnectionFromLagWithContext indicates an expected call of DisassociateConnectionFromLagWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) DisassociateConnectionFromLagWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateConnectionFromLagWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DisassociateConnectionFromLagWithContext), varargs...)
 }
 
-// ListVirtualInterfaceTestHistory mocks base method
+// DisassociateMacSecKey mocks base method.
+func (m *MockDirectConnectAPI) DisassociateMacSecKey(arg0 *directconnect.DisassociateMacSecKeyInput) (*directconnect.DisassociateMacSecKeyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DisassociateMacSecKey", arg0)
+	ret0, _ := ret[0].(*directconnect.DisassociateMacSecKeyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DisassociateMacSecKey indicates an expected call of DisassociateMacSecKey.
+func (mr *MockDirectConnectAPIMockRecorder) DisassociateMacSecKey(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateMacSecKey", reflect.TypeOf((*MockDirectConnectAPI)(nil).DisassociateMacSecKey), arg0)
+}
+
+// DisassociateMacSecKeyRequest mocks base method.
+func (m *MockDirectConnectAPI) DisassociateMacSecKeyRequest(arg0 *directconnect.DisassociateMacSecKeyInput) (*request.Request, *directconnect.DisassociateMacSecKeyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DisassociateMacSecKeyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*directconnect.DisassociateMacSecKeyOutput)
+	return ret0, ret1
+}
+
+// DisassociateMacSecKeyRequest indicates an expected call of DisassociateMacSecKeyRequest.
+func (mr *MockDirectConnectAPIMockRecorder) DisassociateMacSecKeyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateMacSecKeyRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).DisassociateMacSecKeyRequest), arg0)
+}
+
+// DisassociateMacSecKeyWithContext mocks base method.
+func (m *MockDirectConnectAPI) DisassociateMacSecKeyWithContext(arg0 context.Context, arg1 *directconnect.DisassociateMacSecKeyInput, arg2 ...request.Option) (*directconnect.DisassociateMacSecKeyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DisassociateMacSecKeyWithContext", varargs...)
+	ret0, _ := ret[0].(*directconnect.DisassociateMacSecKeyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DisassociateMacSecKeyWithContext indicates an expected call of DisassociateMacSecKeyWithContext.
+func (mr *MockDirectConnectAPIMockRecorder) DisassociateMacSecKeyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateMacSecKeyWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).DisassociateMacSecKeyWithContext), varargs...)
+}
+
+// ListVirtualInterfaceTestHistory mocks base method.
 func (m *MockDirectConnectAPI) ListVirtualInterfaceTestHistory(arg0 *directconnect.ListVirtualInterfaceTestHistoryInput) (*directconnect.ListVirtualInterfaceTestHistoryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualInterfaceTestHistory", arg0)
@@ -2444,13 +2545,13 @@ func (m *MockDirectConnectAPI) ListVirtualInterfaceTestHistory(arg0 *directconne
 	return ret0, ret1
 }
 
-// ListVirtualInterfaceTestHistory indicates an expected call of ListVirtualInterfaceTestHistory
+// ListVirtualInterfaceTestHistory indicates an expected call of ListVirtualInterfaceTestHistory.
 func (mr *MockDirectConnectAPIMockRecorder) ListVirtualInterfaceTestHistory(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualInterfaceTestHistory", reflect.TypeOf((*MockDirectConnectAPI)(nil).ListVirtualInterfaceTestHistory), arg0)
 }
 
-// ListVirtualInterfaceTestHistoryRequest mocks base method
+// ListVirtualInterfaceTestHistoryRequest mocks base method.
 func (m *MockDirectConnectAPI) ListVirtualInterfaceTestHistoryRequest(arg0 *directconnect.ListVirtualInterfaceTestHistoryInput) (*request.Request, *directconnect.ListVirtualInterfaceTestHistoryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualInterfaceTestHistoryRequest", arg0)
@@ -2459,13 +2560,13 @@ func (m *MockDirectConnectAPI) ListVirtualInterfaceTestHistoryRequest(arg0 *dire
 	return ret0, ret1
 }
 
-// ListVirtualInterfaceTestHistoryRequest indicates an expected call of ListVirtualInterfaceTestHistoryRequest
+// ListVirtualInterfaceTestHistoryRequest indicates an expected call of ListVirtualInterfaceTestHistoryRequest.
 func (mr *MockDirectConnectAPIMockRecorder) ListVirtualInterfaceTestHistoryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualInterfaceTestHistoryRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).ListVirtualInterfaceTestHistoryRequest), arg0)
 }
 
-// ListVirtualInterfaceTestHistoryWithContext mocks base method
+// ListVirtualInterfaceTestHistoryWithContext mocks base method.
 func (m *MockDirectConnectAPI) ListVirtualInterfaceTestHistoryWithContext(arg0 context.Context, arg1 *directconnect.ListVirtualInterfaceTestHistoryInput, arg2 ...request.Option) (*directconnect.ListVirtualInterfaceTestHistoryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2478,14 +2579,14 @@ func (m *MockDirectConnectAPI) ListVirtualInterfaceTestHistoryWithContext(arg0 c
 	return ret0, ret1
 }
 
-// ListVirtualInterfaceTestHistoryWithContext indicates an expected call of ListVirtualInterfaceTestHistoryWithContext
+// ListVirtualInterfaceTestHistoryWithContext indicates an expected call of ListVirtualInterfaceTestHistoryWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) ListVirtualInterfaceTestHistoryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualInterfaceTestHistoryWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).ListVirtualInterfaceTestHistoryWithContext), varargs...)
 }
 
-// StartBgpFailoverTest mocks base method
+// StartBgpFailoverTest mocks base method.
 func (m *MockDirectConnectAPI) StartBgpFailoverTest(arg0 *directconnect.StartBgpFailoverTestInput) (*directconnect.StartBgpFailoverTestOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartBgpFailoverTest", arg0)
@@ -2494,13 +2595,13 @@ func (m *MockDirectConnectAPI) StartBgpFailoverTest(arg0 *directconnect.StartBgp
 	return ret0, ret1
 }
 
-// StartBgpFailoverTest indicates an expected call of StartBgpFailoverTest
+// StartBgpFailoverTest indicates an expected call of StartBgpFailoverTest.
 func (mr *MockDirectConnectAPIMockRecorder) StartBgpFailoverTest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBgpFailoverTest", reflect.TypeOf((*MockDirectConnectAPI)(nil).StartBgpFailoverTest), arg0)
 }
 
-// StartBgpFailoverTestRequest mocks base method
+// StartBgpFailoverTestRequest mocks base method.
 func (m *MockDirectConnectAPI) StartBgpFailoverTestRequest(arg0 *directconnect.StartBgpFailoverTestInput) (*request.Request, *directconnect.StartBgpFailoverTestOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartBgpFailoverTestRequest", arg0)
@@ -2509,13 +2610,13 @@ func (m *MockDirectConnectAPI) StartBgpFailoverTestRequest(arg0 *directconnect.S
 	return ret0, ret1
 }
 
-// StartBgpFailoverTestRequest indicates an expected call of StartBgpFailoverTestRequest
+// StartBgpFailoverTestRequest indicates an expected call of StartBgpFailoverTestRequest.
 func (mr *MockDirectConnectAPIMockRecorder) StartBgpFailoverTestRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBgpFailoverTestRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).StartBgpFailoverTestRequest), arg0)
 }
 
-// StartBgpFailoverTestWithContext mocks base method
+// StartBgpFailoverTestWithContext mocks base method.
 func (m *MockDirectConnectAPI) StartBgpFailoverTestWithContext(arg0 context.Context, arg1 *directconnect.StartBgpFailoverTestInput, arg2 ...request.Option) (*directconnect.StartBgpFailoverTestOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2528,14 +2629,14 @@ func (m *MockDirectConnectAPI) StartBgpFailoverTestWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// StartBgpFailoverTestWithContext indicates an expected call of StartBgpFailoverTestWithContext
+// StartBgpFailoverTestWithContext indicates an expected call of StartBgpFailoverTestWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) StartBgpFailoverTestWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBgpFailoverTestWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).StartBgpFailoverTestWithContext), varargs...)
 }
 
-// StopBgpFailoverTest mocks base method
+// StopBgpFailoverTest mocks base method.
 func (m *MockDirectConnectAPI) StopBgpFailoverTest(arg0 *directconnect.StopBgpFailoverTestInput) (*directconnect.StopBgpFailoverTestOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopBgpFailoverTest", arg0)
@@ -2544,13 +2645,13 @@ func (m *MockDirectConnectAPI) StopBgpFailoverTest(arg0 *directconnect.StopBgpFa
 	return ret0, ret1
 }
 
-// StopBgpFailoverTest indicates an expected call of StopBgpFailoverTest
+// StopBgpFailoverTest indicates an expected call of StopBgpFailoverTest.
 func (mr *MockDirectConnectAPIMockRecorder) StopBgpFailoverTest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopBgpFailoverTest", reflect.TypeOf((*MockDirectConnectAPI)(nil).StopBgpFailoverTest), arg0)
 }
 
-// StopBgpFailoverTestRequest mocks base method
+// StopBgpFailoverTestRequest mocks base method.
 func (m *MockDirectConnectAPI) StopBgpFailoverTestRequest(arg0 *directconnect.StopBgpFailoverTestInput) (*request.Request, *directconnect.StopBgpFailoverTestOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopBgpFailoverTestRequest", arg0)
@@ -2559,13 +2660,13 @@ func (m *MockDirectConnectAPI) StopBgpFailoverTestRequest(arg0 *directconnect.St
 	return ret0, ret1
 }
 
-// StopBgpFailoverTestRequest indicates an expected call of StopBgpFailoverTestRequest
+// StopBgpFailoverTestRequest indicates an expected call of StopBgpFailoverTestRequest.
 func (mr *MockDirectConnectAPIMockRecorder) StopBgpFailoverTestRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopBgpFailoverTestRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).StopBgpFailoverTestRequest), arg0)
 }
 
-// StopBgpFailoverTestWithContext mocks base method
+// StopBgpFailoverTestWithContext mocks base method.
 func (m *MockDirectConnectAPI) StopBgpFailoverTestWithContext(arg0 context.Context, arg1 *directconnect.StopBgpFailoverTestInput, arg2 ...request.Option) (*directconnect.StopBgpFailoverTestOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2578,14 +2679,14 @@ func (m *MockDirectConnectAPI) StopBgpFailoverTestWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// StopBgpFailoverTestWithContext indicates an expected call of StopBgpFailoverTestWithContext
+// StopBgpFailoverTestWithContext indicates an expected call of StopBgpFailoverTestWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) StopBgpFailoverTestWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopBgpFailoverTestWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).StopBgpFailoverTestWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockDirectConnectAPI) TagResource(arg0 *directconnect.TagResourceInput) (*directconnect.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -2594,13 +2695,13 @@ func (m *MockDirectConnectAPI) TagResource(arg0 *directconnect.TagResourceInput)
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockDirectConnectAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockDirectConnectAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockDirectConnectAPI) TagResourceRequest(arg0 *directconnect.TagResourceInput) (*request.Request, *directconnect.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -2609,13 +2710,13 @@ func (m *MockDirectConnectAPI) TagResourceRequest(arg0 *directconnect.TagResourc
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockDirectConnectAPI) TagResourceWithContext(arg0 context.Context, arg1 *directconnect.TagResourceInput, arg2 ...request.Option) (*directconnect.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2628,14 +2729,14 @@ func (m *MockDirectConnectAPI) TagResourceWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockDirectConnectAPI) UntagResource(arg0 *directconnect.UntagResourceInput) (*directconnect.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -2644,13 +2745,13 @@ func (m *MockDirectConnectAPI) UntagResource(arg0 *directconnect.UntagResourceIn
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockDirectConnectAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockDirectConnectAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockDirectConnectAPI) UntagResourceRequest(arg0 *directconnect.UntagResourceInput) (*request.Request, *directconnect.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -2659,13 +2760,13 @@ func (m *MockDirectConnectAPI) UntagResourceRequest(arg0 *directconnect.UntagRes
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockDirectConnectAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockDirectConnectAPI) UntagResourceWithContext(arg0 context.Context, arg1 *directconnect.UntagResourceInput, arg2 ...request.Option) (*directconnect.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2678,14 +2779,64 @@ func (m *MockDirectConnectAPI) UntagResourceWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateDirectConnectGatewayAssociation mocks base method
+// UpdateConnection mocks base method.
+func (m *MockDirectConnectAPI) UpdateConnection(arg0 *directconnect.UpdateConnectionInput) (*directconnect.UpdateConnectionOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateConnection", arg0)
+	ret0, _ := ret[0].(*directconnect.UpdateConnectionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateConnection indicates an expected call of UpdateConnection.
+func (mr *MockDirectConnectAPIMockRecorder) UpdateConnection(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConnection", reflect.TypeOf((*MockDirectConnectAPI)(nil).UpdateConnection), arg0)
+}
+
+// UpdateConnectionRequest mocks base method.
+func (m *MockDirectConnectAPI) UpdateConnectionRequest(arg0 *directconnect.UpdateConnectionInput) (*request.Request, *directconnect.UpdateConnectionOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateConnectionRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*directconnect.UpdateConnectionOutput)
+	return ret0, ret1
+}
+
+// UpdateConnectionRequest indicates an expected call of UpdateConnectionRequest.
+func (mr *MockDirectConnectAPIMockRecorder) UpdateConnectionRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConnectionRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).UpdateConnectionRequest), arg0)
+}
+
+// UpdateConnectionWithContext mocks base method.
+func (m *MockDirectConnectAPI) UpdateConnectionWithContext(arg0 context.Context, arg1 *directconnect.UpdateConnectionInput, arg2 ...request.Option) (*directconnect.UpdateConnectionOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateConnectionWithContext", varargs...)
+	ret0, _ := ret[0].(*directconnect.UpdateConnectionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateConnectionWithContext indicates an expected call of UpdateConnectionWithContext.
+func (mr *MockDirectConnectAPIMockRecorder) UpdateConnectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConnectionWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).UpdateConnectionWithContext), varargs...)
+}
+
+// UpdateDirectConnectGatewayAssociation mocks base method.
 func (m *MockDirectConnectAPI) UpdateDirectConnectGatewayAssociation(arg0 *directconnect.UpdateDirectConnectGatewayAssociationInput) (*directconnect.UpdateDirectConnectGatewayAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDirectConnectGatewayAssociation", arg0)
@@ -2694,13 +2845,13 @@ func (m *MockDirectConnectAPI) UpdateDirectConnectGatewayAssociation(arg0 *direc
 	return ret0, ret1
 }
 
-// UpdateDirectConnectGatewayAssociation indicates an expected call of UpdateDirectConnectGatewayAssociation
+// UpdateDirectConnectGatewayAssociation indicates an expected call of UpdateDirectConnectGatewayAssociation.
 func (mr *MockDirectConnectAPIMockRecorder) UpdateDirectConnectGatewayAssociation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDirectConnectGatewayAssociation", reflect.TypeOf((*MockDirectConnectAPI)(nil).UpdateDirectConnectGatewayAssociation), arg0)
 }
 
-// UpdateDirectConnectGatewayAssociationRequest mocks base method
+// UpdateDirectConnectGatewayAssociationRequest mocks base method.
 func (m *MockDirectConnectAPI) UpdateDirectConnectGatewayAssociationRequest(arg0 *directconnect.UpdateDirectConnectGatewayAssociationInput) (*request.Request, *directconnect.UpdateDirectConnectGatewayAssociationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDirectConnectGatewayAssociationRequest", arg0)
@@ -2709,13 +2860,13 @@ func (m *MockDirectConnectAPI) UpdateDirectConnectGatewayAssociationRequest(arg0
 	return ret0, ret1
 }
 
-// UpdateDirectConnectGatewayAssociationRequest indicates an expected call of UpdateDirectConnectGatewayAssociationRequest
+// UpdateDirectConnectGatewayAssociationRequest indicates an expected call of UpdateDirectConnectGatewayAssociationRequest.
 func (mr *MockDirectConnectAPIMockRecorder) UpdateDirectConnectGatewayAssociationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDirectConnectGatewayAssociationRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).UpdateDirectConnectGatewayAssociationRequest), arg0)
 }
 
-// UpdateDirectConnectGatewayAssociationWithContext mocks base method
+// UpdateDirectConnectGatewayAssociationWithContext mocks base method.
 func (m *MockDirectConnectAPI) UpdateDirectConnectGatewayAssociationWithContext(arg0 context.Context, arg1 *directconnect.UpdateDirectConnectGatewayAssociationInput, arg2 ...request.Option) (*directconnect.UpdateDirectConnectGatewayAssociationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2728,14 +2879,14 @@ func (m *MockDirectConnectAPI) UpdateDirectConnectGatewayAssociationWithContext(
 	return ret0, ret1
 }
 
-// UpdateDirectConnectGatewayAssociationWithContext indicates an expected call of UpdateDirectConnectGatewayAssociationWithContext
+// UpdateDirectConnectGatewayAssociationWithContext indicates an expected call of UpdateDirectConnectGatewayAssociationWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) UpdateDirectConnectGatewayAssociationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDirectConnectGatewayAssociationWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).UpdateDirectConnectGatewayAssociationWithContext), varargs...)
 }
 
-// UpdateLag mocks base method
+// UpdateLag mocks base method.
 func (m *MockDirectConnectAPI) UpdateLag(arg0 *directconnect.UpdateLagInput) (*directconnect.Lag, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateLag", arg0)
@@ -2744,13 +2895,13 @@ func (m *MockDirectConnectAPI) UpdateLag(arg0 *directconnect.UpdateLagInput) (*d
 	return ret0, ret1
 }
 
-// UpdateLag indicates an expected call of UpdateLag
+// UpdateLag indicates an expected call of UpdateLag.
 func (mr *MockDirectConnectAPIMockRecorder) UpdateLag(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLag", reflect.TypeOf((*MockDirectConnectAPI)(nil).UpdateLag), arg0)
 }
 
-// UpdateLagRequest mocks base method
+// UpdateLagRequest mocks base method.
 func (m *MockDirectConnectAPI) UpdateLagRequest(arg0 *directconnect.UpdateLagInput) (*request.Request, *directconnect.Lag) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateLagRequest", arg0)
@@ -2759,13 +2910,13 @@ func (m *MockDirectConnectAPI) UpdateLagRequest(arg0 *directconnect.UpdateLagInp
 	return ret0, ret1
 }
 
-// UpdateLagRequest indicates an expected call of UpdateLagRequest
+// UpdateLagRequest indicates an expected call of UpdateLagRequest.
 func (mr *MockDirectConnectAPIMockRecorder) UpdateLagRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLagRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).UpdateLagRequest), arg0)
 }
 
-// UpdateLagWithContext mocks base method
+// UpdateLagWithContext mocks base method.
 func (m *MockDirectConnectAPI) UpdateLagWithContext(arg0 context.Context, arg1 *directconnect.UpdateLagInput, arg2 ...request.Option) (*directconnect.Lag, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2778,14 +2929,14 @@ func (m *MockDirectConnectAPI) UpdateLagWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// UpdateLagWithContext indicates an expected call of UpdateLagWithContext
+// UpdateLagWithContext indicates an expected call of UpdateLagWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) UpdateLagWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLagWithContext", reflect.TypeOf((*MockDirectConnectAPI)(nil).UpdateLagWithContext), varargs...)
 }
 
-// UpdateVirtualInterfaceAttributes mocks base method
+// UpdateVirtualInterfaceAttributes mocks base method.
 func (m *MockDirectConnectAPI) UpdateVirtualInterfaceAttributes(arg0 *directconnect.UpdateVirtualInterfaceAttributesInput) (*directconnect.UpdateVirtualInterfaceAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVirtualInterfaceAttributes", arg0)
@@ -2794,13 +2945,13 @@ func (m *MockDirectConnectAPI) UpdateVirtualInterfaceAttributes(arg0 *directconn
 	return ret0, ret1
 }
 
-// UpdateVirtualInterfaceAttributes indicates an expected call of UpdateVirtualInterfaceAttributes
+// UpdateVirtualInterfaceAttributes indicates an expected call of UpdateVirtualInterfaceAttributes.
 func (mr *MockDirectConnectAPIMockRecorder) UpdateVirtualInterfaceAttributes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualInterfaceAttributes", reflect.TypeOf((*MockDirectConnectAPI)(nil).UpdateVirtualInterfaceAttributes), arg0)
 }
 
-// UpdateVirtualInterfaceAttributesRequest mocks base method
+// UpdateVirtualInterfaceAttributesRequest mocks base method.
 func (m *MockDirectConnectAPI) UpdateVirtualInterfaceAttributesRequest(arg0 *directconnect.UpdateVirtualInterfaceAttributesInput) (*request.Request, *directconnect.UpdateVirtualInterfaceAttributesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVirtualInterfaceAttributesRequest", arg0)
@@ -2809,13 +2960,13 @@ func (m *MockDirectConnectAPI) UpdateVirtualInterfaceAttributesRequest(arg0 *dir
 	return ret0, ret1
 }
 
-// UpdateVirtualInterfaceAttributesRequest indicates an expected call of UpdateVirtualInterfaceAttributesRequest
+// UpdateVirtualInterfaceAttributesRequest indicates an expected call of UpdateVirtualInterfaceAttributesRequest.
 func (mr *MockDirectConnectAPIMockRecorder) UpdateVirtualInterfaceAttributesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualInterfaceAttributesRequest", reflect.TypeOf((*MockDirectConnectAPI)(nil).UpdateVirtualInterfaceAttributesRequest), arg0)
 }
 
-// UpdateVirtualInterfaceAttributesWithContext mocks base method
+// UpdateVirtualInterfaceAttributesWithContext mocks base method.
 func (m *MockDirectConnectAPI) UpdateVirtualInterfaceAttributesWithContext(arg0 context.Context, arg1 *directconnect.UpdateVirtualInterfaceAttributesInput, arg2 ...request.Option) (*directconnect.UpdateVirtualInterfaceAttributesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2828,7 +2979,7 @@ func (m *MockDirectConnectAPI) UpdateVirtualInterfaceAttributesWithContext(arg0 
 	return ret0, ret1
 }
 
-// UpdateVirtualInterfaceAttributesWithContext indicates an expected call of UpdateVirtualInterfaceAttributesWithContext
+// UpdateVirtualInterfaceAttributesWithContext indicates an expected call of UpdateVirtualInterfaceAttributesWithContext.
 func (mr *MockDirectConnectAPIMockRecorder) UpdateVirtualInterfaceAttributesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

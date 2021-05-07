@@ -6,36 +6,37 @@ package textractmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	textract "github.com/aws/aws-sdk-go/service/textract"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockTextractAPI is a mock of TextractAPI interface
+// MockTextractAPI is a mock of TextractAPI interface.
 type MockTextractAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockTextractAPIMockRecorder
 }
 
-// MockTextractAPIMockRecorder is the mock recorder for MockTextractAPI
+// MockTextractAPIMockRecorder is the mock recorder for MockTextractAPI.
 type MockTextractAPIMockRecorder struct {
 	mock *MockTextractAPI
 }
 
-// NewMockTextractAPI creates a new mock instance
+// NewMockTextractAPI creates a new mock instance.
 func NewMockTextractAPI(ctrl *gomock.Controller) *MockTextractAPI {
 	mock := &MockTextractAPI{ctrl: ctrl}
 	mock.recorder = &MockTextractAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockTextractAPI) EXPECT() *MockTextractAPIMockRecorder {
 	return m.recorder
 }
 
-// AnalyzeDocument mocks base method
+// AnalyzeDocument mocks base method.
 func (m *MockTextractAPI) AnalyzeDocument(arg0 *textract.AnalyzeDocumentInput) (*textract.AnalyzeDocumentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AnalyzeDocument", arg0)
@@ -44,13 +45,13 @@ func (m *MockTextractAPI) AnalyzeDocument(arg0 *textract.AnalyzeDocumentInput) (
 	return ret0, ret1
 }
 
-// AnalyzeDocument indicates an expected call of AnalyzeDocument
+// AnalyzeDocument indicates an expected call of AnalyzeDocument.
 func (mr *MockTextractAPIMockRecorder) AnalyzeDocument(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnalyzeDocument", reflect.TypeOf((*MockTextractAPI)(nil).AnalyzeDocument), arg0)
 }
 
-// AnalyzeDocumentRequest mocks base method
+// AnalyzeDocumentRequest mocks base method.
 func (m *MockTextractAPI) AnalyzeDocumentRequest(arg0 *textract.AnalyzeDocumentInput) (*request.Request, *textract.AnalyzeDocumentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AnalyzeDocumentRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockTextractAPI) AnalyzeDocumentRequest(arg0 *textract.AnalyzeDocumentI
 	return ret0, ret1
 }
 
-// AnalyzeDocumentRequest indicates an expected call of AnalyzeDocumentRequest
+// AnalyzeDocumentRequest indicates an expected call of AnalyzeDocumentRequest.
 func (mr *MockTextractAPIMockRecorder) AnalyzeDocumentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnalyzeDocumentRequest", reflect.TypeOf((*MockTextractAPI)(nil).AnalyzeDocumentRequest), arg0)
 }
 
-// AnalyzeDocumentWithContext mocks base method
+// AnalyzeDocumentWithContext mocks base method.
 func (m *MockTextractAPI) AnalyzeDocumentWithContext(arg0 context.Context, arg1 *textract.AnalyzeDocumentInput, arg2 ...request.Option) (*textract.AnalyzeDocumentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockTextractAPI) AnalyzeDocumentWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// AnalyzeDocumentWithContext indicates an expected call of AnalyzeDocumentWithContext
+// AnalyzeDocumentWithContext indicates an expected call of AnalyzeDocumentWithContext.
 func (mr *MockTextractAPIMockRecorder) AnalyzeDocumentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnalyzeDocumentWithContext", reflect.TypeOf((*MockTextractAPI)(nil).AnalyzeDocumentWithContext), varargs...)
 }
 
-// DetectDocumentText mocks base method
+// DetectDocumentText mocks base method.
 func (m *MockTextractAPI) DetectDocumentText(arg0 *textract.DetectDocumentTextInput) (*textract.DetectDocumentTextOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetectDocumentText", arg0)
@@ -94,13 +95,13 @@ func (m *MockTextractAPI) DetectDocumentText(arg0 *textract.DetectDocumentTextIn
 	return ret0, ret1
 }
 
-// DetectDocumentText indicates an expected call of DetectDocumentText
+// DetectDocumentText indicates an expected call of DetectDocumentText.
 func (mr *MockTextractAPIMockRecorder) DetectDocumentText(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetectDocumentText", reflect.TypeOf((*MockTextractAPI)(nil).DetectDocumentText), arg0)
 }
 
-// DetectDocumentTextRequest mocks base method
+// DetectDocumentTextRequest mocks base method.
 func (m *MockTextractAPI) DetectDocumentTextRequest(arg0 *textract.DetectDocumentTextInput) (*request.Request, *textract.DetectDocumentTextOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DetectDocumentTextRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockTextractAPI) DetectDocumentTextRequest(arg0 *textract.DetectDocumen
 	return ret0, ret1
 }
 
-// DetectDocumentTextRequest indicates an expected call of DetectDocumentTextRequest
+// DetectDocumentTextRequest indicates an expected call of DetectDocumentTextRequest.
 func (mr *MockTextractAPIMockRecorder) DetectDocumentTextRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetectDocumentTextRequest", reflect.TypeOf((*MockTextractAPI)(nil).DetectDocumentTextRequest), arg0)
 }
 
-// DetectDocumentTextWithContext mocks base method
+// DetectDocumentTextWithContext mocks base method.
 func (m *MockTextractAPI) DetectDocumentTextWithContext(arg0 context.Context, arg1 *textract.DetectDocumentTextInput, arg2 ...request.Option) (*textract.DetectDocumentTextOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockTextractAPI) DetectDocumentTextWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DetectDocumentTextWithContext indicates an expected call of DetectDocumentTextWithContext
+// DetectDocumentTextWithContext indicates an expected call of DetectDocumentTextWithContext.
 func (mr *MockTextractAPIMockRecorder) DetectDocumentTextWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetectDocumentTextWithContext", reflect.TypeOf((*MockTextractAPI)(nil).DetectDocumentTextWithContext), varargs...)
 }
 
-// GetDocumentAnalysis mocks base method
+// GetDocumentAnalysis mocks base method.
 func (m *MockTextractAPI) GetDocumentAnalysis(arg0 *textract.GetDocumentAnalysisInput) (*textract.GetDocumentAnalysisOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDocumentAnalysis", arg0)
@@ -144,13 +145,13 @@ func (m *MockTextractAPI) GetDocumentAnalysis(arg0 *textract.GetDocumentAnalysis
 	return ret0, ret1
 }
 
-// GetDocumentAnalysis indicates an expected call of GetDocumentAnalysis
+// GetDocumentAnalysis indicates an expected call of GetDocumentAnalysis.
 func (mr *MockTextractAPIMockRecorder) GetDocumentAnalysis(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDocumentAnalysis", reflect.TypeOf((*MockTextractAPI)(nil).GetDocumentAnalysis), arg0)
 }
 
-// GetDocumentAnalysisRequest mocks base method
+// GetDocumentAnalysisRequest mocks base method.
 func (m *MockTextractAPI) GetDocumentAnalysisRequest(arg0 *textract.GetDocumentAnalysisInput) (*request.Request, *textract.GetDocumentAnalysisOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDocumentAnalysisRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockTextractAPI) GetDocumentAnalysisRequest(arg0 *textract.GetDocumentA
 	return ret0, ret1
 }
 
-// GetDocumentAnalysisRequest indicates an expected call of GetDocumentAnalysisRequest
+// GetDocumentAnalysisRequest indicates an expected call of GetDocumentAnalysisRequest.
 func (mr *MockTextractAPIMockRecorder) GetDocumentAnalysisRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDocumentAnalysisRequest", reflect.TypeOf((*MockTextractAPI)(nil).GetDocumentAnalysisRequest), arg0)
 }
 
-// GetDocumentAnalysisWithContext mocks base method
+// GetDocumentAnalysisWithContext mocks base method.
 func (m *MockTextractAPI) GetDocumentAnalysisWithContext(arg0 context.Context, arg1 *textract.GetDocumentAnalysisInput, arg2 ...request.Option) (*textract.GetDocumentAnalysisOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockTextractAPI) GetDocumentAnalysisWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// GetDocumentAnalysisWithContext indicates an expected call of GetDocumentAnalysisWithContext
+// GetDocumentAnalysisWithContext indicates an expected call of GetDocumentAnalysisWithContext.
 func (mr *MockTextractAPIMockRecorder) GetDocumentAnalysisWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDocumentAnalysisWithContext", reflect.TypeOf((*MockTextractAPI)(nil).GetDocumentAnalysisWithContext), varargs...)
 }
 
-// GetDocumentTextDetection mocks base method
+// GetDocumentTextDetection mocks base method.
 func (m *MockTextractAPI) GetDocumentTextDetection(arg0 *textract.GetDocumentTextDetectionInput) (*textract.GetDocumentTextDetectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDocumentTextDetection", arg0)
@@ -194,13 +195,13 @@ func (m *MockTextractAPI) GetDocumentTextDetection(arg0 *textract.GetDocumentTex
 	return ret0, ret1
 }
 
-// GetDocumentTextDetection indicates an expected call of GetDocumentTextDetection
+// GetDocumentTextDetection indicates an expected call of GetDocumentTextDetection.
 func (mr *MockTextractAPIMockRecorder) GetDocumentTextDetection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDocumentTextDetection", reflect.TypeOf((*MockTextractAPI)(nil).GetDocumentTextDetection), arg0)
 }
 
-// GetDocumentTextDetectionRequest mocks base method
+// GetDocumentTextDetectionRequest mocks base method.
 func (m *MockTextractAPI) GetDocumentTextDetectionRequest(arg0 *textract.GetDocumentTextDetectionInput) (*request.Request, *textract.GetDocumentTextDetectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDocumentTextDetectionRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockTextractAPI) GetDocumentTextDetectionRequest(arg0 *textract.GetDocu
 	return ret0, ret1
 }
 
-// GetDocumentTextDetectionRequest indicates an expected call of GetDocumentTextDetectionRequest
+// GetDocumentTextDetectionRequest indicates an expected call of GetDocumentTextDetectionRequest.
 func (mr *MockTextractAPIMockRecorder) GetDocumentTextDetectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDocumentTextDetectionRequest", reflect.TypeOf((*MockTextractAPI)(nil).GetDocumentTextDetectionRequest), arg0)
 }
 
-// GetDocumentTextDetectionWithContext mocks base method
+// GetDocumentTextDetectionWithContext mocks base method.
 func (m *MockTextractAPI) GetDocumentTextDetectionWithContext(arg0 context.Context, arg1 *textract.GetDocumentTextDetectionInput, arg2 ...request.Option) (*textract.GetDocumentTextDetectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockTextractAPI) GetDocumentTextDetectionWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// GetDocumentTextDetectionWithContext indicates an expected call of GetDocumentTextDetectionWithContext
+// GetDocumentTextDetectionWithContext indicates an expected call of GetDocumentTextDetectionWithContext.
 func (mr *MockTextractAPIMockRecorder) GetDocumentTextDetectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDocumentTextDetectionWithContext", reflect.TypeOf((*MockTextractAPI)(nil).GetDocumentTextDetectionWithContext), varargs...)
 }
 
-// StartDocumentAnalysis mocks base method
+// StartDocumentAnalysis mocks base method.
 func (m *MockTextractAPI) StartDocumentAnalysis(arg0 *textract.StartDocumentAnalysisInput) (*textract.StartDocumentAnalysisOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartDocumentAnalysis", arg0)
@@ -244,13 +245,13 @@ func (m *MockTextractAPI) StartDocumentAnalysis(arg0 *textract.StartDocumentAnal
 	return ret0, ret1
 }
 
-// StartDocumentAnalysis indicates an expected call of StartDocumentAnalysis
+// StartDocumentAnalysis indicates an expected call of StartDocumentAnalysis.
 func (mr *MockTextractAPIMockRecorder) StartDocumentAnalysis(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDocumentAnalysis", reflect.TypeOf((*MockTextractAPI)(nil).StartDocumentAnalysis), arg0)
 }
 
-// StartDocumentAnalysisRequest mocks base method
+// StartDocumentAnalysisRequest mocks base method.
 func (m *MockTextractAPI) StartDocumentAnalysisRequest(arg0 *textract.StartDocumentAnalysisInput) (*request.Request, *textract.StartDocumentAnalysisOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartDocumentAnalysisRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockTextractAPI) StartDocumentAnalysisRequest(arg0 *textract.StartDocum
 	return ret0, ret1
 }
 
-// StartDocumentAnalysisRequest indicates an expected call of StartDocumentAnalysisRequest
+// StartDocumentAnalysisRequest indicates an expected call of StartDocumentAnalysisRequest.
 func (mr *MockTextractAPIMockRecorder) StartDocumentAnalysisRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDocumentAnalysisRequest", reflect.TypeOf((*MockTextractAPI)(nil).StartDocumentAnalysisRequest), arg0)
 }
 
-// StartDocumentAnalysisWithContext mocks base method
+// StartDocumentAnalysisWithContext mocks base method.
 func (m *MockTextractAPI) StartDocumentAnalysisWithContext(arg0 context.Context, arg1 *textract.StartDocumentAnalysisInput, arg2 ...request.Option) (*textract.StartDocumentAnalysisOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockTextractAPI) StartDocumentAnalysisWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// StartDocumentAnalysisWithContext indicates an expected call of StartDocumentAnalysisWithContext
+// StartDocumentAnalysisWithContext indicates an expected call of StartDocumentAnalysisWithContext.
 func (mr *MockTextractAPIMockRecorder) StartDocumentAnalysisWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDocumentAnalysisWithContext", reflect.TypeOf((*MockTextractAPI)(nil).StartDocumentAnalysisWithContext), varargs...)
 }
 
-// StartDocumentTextDetection mocks base method
+// StartDocumentTextDetection mocks base method.
 func (m *MockTextractAPI) StartDocumentTextDetection(arg0 *textract.StartDocumentTextDetectionInput) (*textract.StartDocumentTextDetectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartDocumentTextDetection", arg0)
@@ -294,13 +295,13 @@ func (m *MockTextractAPI) StartDocumentTextDetection(arg0 *textract.StartDocumen
 	return ret0, ret1
 }
 
-// StartDocumentTextDetection indicates an expected call of StartDocumentTextDetection
+// StartDocumentTextDetection indicates an expected call of StartDocumentTextDetection.
 func (mr *MockTextractAPIMockRecorder) StartDocumentTextDetection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDocumentTextDetection", reflect.TypeOf((*MockTextractAPI)(nil).StartDocumentTextDetection), arg0)
 }
 
-// StartDocumentTextDetectionRequest mocks base method
+// StartDocumentTextDetectionRequest mocks base method.
 func (m *MockTextractAPI) StartDocumentTextDetectionRequest(arg0 *textract.StartDocumentTextDetectionInput) (*request.Request, *textract.StartDocumentTextDetectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartDocumentTextDetectionRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockTextractAPI) StartDocumentTextDetectionRequest(arg0 *textract.Start
 	return ret0, ret1
 }
 
-// StartDocumentTextDetectionRequest indicates an expected call of StartDocumentTextDetectionRequest
+// StartDocumentTextDetectionRequest indicates an expected call of StartDocumentTextDetectionRequest.
 func (mr *MockTextractAPIMockRecorder) StartDocumentTextDetectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDocumentTextDetectionRequest", reflect.TypeOf((*MockTextractAPI)(nil).StartDocumentTextDetectionRequest), arg0)
 }
 
-// StartDocumentTextDetectionWithContext mocks base method
+// StartDocumentTextDetectionWithContext mocks base method.
 func (m *MockTextractAPI) StartDocumentTextDetectionWithContext(arg0 context.Context, arg1 *textract.StartDocumentTextDetectionInput, arg2 ...request.Option) (*textract.StartDocumentTextDetectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,7 +329,7 @@ func (m *MockTextractAPI) StartDocumentTextDetectionWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// StartDocumentTextDetectionWithContext indicates an expected call of StartDocumentTextDetectionWithContext
+// StartDocumentTextDetectionWithContext indicates an expected call of StartDocumentTextDetectionWithContext.
 func (mr *MockTextractAPIMockRecorder) StartDocumentTextDetectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

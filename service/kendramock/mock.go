@@ -6,36 +6,37 @@ package kendramock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	kendra "github.com/aws/aws-sdk-go/service/kendra"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockKendraAPI is a mock of KendraAPI interface
+// MockKendraAPI is a mock of KendraAPI interface.
 type MockKendraAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockKendraAPIMockRecorder
 }
 
-// MockKendraAPIMockRecorder is the mock recorder for MockKendraAPI
+// MockKendraAPIMockRecorder is the mock recorder for MockKendraAPI.
 type MockKendraAPIMockRecorder struct {
 	mock *MockKendraAPI
 }
 
-// NewMockKendraAPI creates a new mock instance
+// NewMockKendraAPI creates a new mock instance.
 func NewMockKendraAPI(ctrl *gomock.Controller) *MockKendraAPI {
 	mock := &MockKendraAPI{ctrl: ctrl}
 	mock.recorder = &MockKendraAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockKendraAPI) EXPECT() *MockKendraAPIMockRecorder {
 	return m.recorder
 }
 
-// BatchDeleteDocument mocks base method
+// BatchDeleteDocument mocks base method.
 func (m *MockKendraAPI) BatchDeleteDocument(arg0 *kendra.BatchDeleteDocumentInput) (*kendra.BatchDeleteDocumentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchDeleteDocument", arg0)
@@ -44,13 +45,13 @@ func (m *MockKendraAPI) BatchDeleteDocument(arg0 *kendra.BatchDeleteDocumentInpu
 	return ret0, ret1
 }
 
-// BatchDeleteDocument indicates an expected call of BatchDeleteDocument
+// BatchDeleteDocument indicates an expected call of BatchDeleteDocument.
 func (mr *MockKendraAPIMockRecorder) BatchDeleteDocument(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchDeleteDocument", reflect.TypeOf((*MockKendraAPI)(nil).BatchDeleteDocument), arg0)
 }
 
-// BatchDeleteDocumentRequest mocks base method
+// BatchDeleteDocumentRequest mocks base method.
 func (m *MockKendraAPI) BatchDeleteDocumentRequest(arg0 *kendra.BatchDeleteDocumentInput) (*request.Request, *kendra.BatchDeleteDocumentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchDeleteDocumentRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockKendraAPI) BatchDeleteDocumentRequest(arg0 *kendra.BatchDeleteDocum
 	return ret0, ret1
 }
 
-// BatchDeleteDocumentRequest indicates an expected call of BatchDeleteDocumentRequest
+// BatchDeleteDocumentRequest indicates an expected call of BatchDeleteDocumentRequest.
 func (mr *MockKendraAPIMockRecorder) BatchDeleteDocumentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchDeleteDocumentRequest", reflect.TypeOf((*MockKendraAPI)(nil).BatchDeleteDocumentRequest), arg0)
 }
 
-// BatchDeleteDocumentWithContext mocks base method
+// BatchDeleteDocumentWithContext mocks base method.
 func (m *MockKendraAPI) BatchDeleteDocumentWithContext(arg0 context.Context, arg1 *kendra.BatchDeleteDocumentInput, arg2 ...request.Option) (*kendra.BatchDeleteDocumentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockKendraAPI) BatchDeleteDocumentWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// BatchDeleteDocumentWithContext indicates an expected call of BatchDeleteDocumentWithContext
+// BatchDeleteDocumentWithContext indicates an expected call of BatchDeleteDocumentWithContext.
 func (mr *MockKendraAPIMockRecorder) BatchDeleteDocumentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchDeleteDocumentWithContext", reflect.TypeOf((*MockKendraAPI)(nil).BatchDeleteDocumentWithContext), varargs...)
 }
 
-// BatchPutDocument mocks base method
+// BatchPutDocument mocks base method.
 func (m *MockKendraAPI) BatchPutDocument(arg0 *kendra.BatchPutDocumentInput) (*kendra.BatchPutDocumentOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchPutDocument", arg0)
@@ -94,13 +95,13 @@ func (m *MockKendraAPI) BatchPutDocument(arg0 *kendra.BatchPutDocumentInput) (*k
 	return ret0, ret1
 }
 
-// BatchPutDocument indicates an expected call of BatchPutDocument
+// BatchPutDocument indicates an expected call of BatchPutDocument.
 func (mr *MockKendraAPIMockRecorder) BatchPutDocument(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchPutDocument", reflect.TypeOf((*MockKendraAPI)(nil).BatchPutDocument), arg0)
 }
 
-// BatchPutDocumentRequest mocks base method
+// BatchPutDocumentRequest mocks base method.
 func (m *MockKendraAPI) BatchPutDocumentRequest(arg0 *kendra.BatchPutDocumentInput) (*request.Request, *kendra.BatchPutDocumentOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchPutDocumentRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockKendraAPI) BatchPutDocumentRequest(arg0 *kendra.BatchPutDocumentInp
 	return ret0, ret1
 }
 
-// BatchPutDocumentRequest indicates an expected call of BatchPutDocumentRequest
+// BatchPutDocumentRequest indicates an expected call of BatchPutDocumentRequest.
 func (mr *MockKendraAPIMockRecorder) BatchPutDocumentRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchPutDocumentRequest", reflect.TypeOf((*MockKendraAPI)(nil).BatchPutDocumentRequest), arg0)
 }
 
-// BatchPutDocumentWithContext mocks base method
+// BatchPutDocumentWithContext mocks base method.
 func (m *MockKendraAPI) BatchPutDocumentWithContext(arg0 context.Context, arg1 *kendra.BatchPutDocumentInput, arg2 ...request.Option) (*kendra.BatchPutDocumentOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockKendraAPI) BatchPutDocumentWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// BatchPutDocumentWithContext indicates an expected call of BatchPutDocumentWithContext
+// BatchPutDocumentWithContext indicates an expected call of BatchPutDocumentWithContext.
 func (mr *MockKendraAPIMockRecorder) BatchPutDocumentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchPutDocumentWithContext", reflect.TypeOf((*MockKendraAPI)(nil).BatchPutDocumentWithContext), varargs...)
 }
 
-// CreateDataSource mocks base method
+// CreateDataSource mocks base method.
 func (m *MockKendraAPI) CreateDataSource(arg0 *kendra.CreateDataSourceInput) (*kendra.CreateDataSourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDataSource", arg0)
@@ -144,13 +145,13 @@ func (m *MockKendraAPI) CreateDataSource(arg0 *kendra.CreateDataSourceInput) (*k
 	return ret0, ret1
 }
 
-// CreateDataSource indicates an expected call of CreateDataSource
+// CreateDataSource indicates an expected call of CreateDataSource.
 func (mr *MockKendraAPIMockRecorder) CreateDataSource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataSource", reflect.TypeOf((*MockKendraAPI)(nil).CreateDataSource), arg0)
 }
 
-// CreateDataSourceRequest mocks base method
+// CreateDataSourceRequest mocks base method.
 func (m *MockKendraAPI) CreateDataSourceRequest(arg0 *kendra.CreateDataSourceInput) (*request.Request, *kendra.CreateDataSourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDataSourceRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockKendraAPI) CreateDataSourceRequest(arg0 *kendra.CreateDataSourceInp
 	return ret0, ret1
 }
 
-// CreateDataSourceRequest indicates an expected call of CreateDataSourceRequest
+// CreateDataSourceRequest indicates an expected call of CreateDataSourceRequest.
 func (mr *MockKendraAPIMockRecorder) CreateDataSourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataSourceRequest", reflect.TypeOf((*MockKendraAPI)(nil).CreateDataSourceRequest), arg0)
 }
 
-// CreateDataSourceWithContext mocks base method
+// CreateDataSourceWithContext mocks base method.
 func (m *MockKendraAPI) CreateDataSourceWithContext(arg0 context.Context, arg1 *kendra.CreateDataSourceInput, arg2 ...request.Option) (*kendra.CreateDataSourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockKendraAPI) CreateDataSourceWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// CreateDataSourceWithContext indicates an expected call of CreateDataSourceWithContext
+// CreateDataSourceWithContext indicates an expected call of CreateDataSourceWithContext.
 func (mr *MockKendraAPIMockRecorder) CreateDataSourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataSourceWithContext", reflect.TypeOf((*MockKendraAPI)(nil).CreateDataSourceWithContext), varargs...)
 }
 
-// CreateFaq mocks base method
+// CreateFaq mocks base method.
 func (m *MockKendraAPI) CreateFaq(arg0 *kendra.CreateFaqInput) (*kendra.CreateFaqOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFaq", arg0)
@@ -194,13 +195,13 @@ func (m *MockKendraAPI) CreateFaq(arg0 *kendra.CreateFaqInput) (*kendra.CreateFa
 	return ret0, ret1
 }
 
-// CreateFaq indicates an expected call of CreateFaq
+// CreateFaq indicates an expected call of CreateFaq.
 func (mr *MockKendraAPIMockRecorder) CreateFaq(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFaq", reflect.TypeOf((*MockKendraAPI)(nil).CreateFaq), arg0)
 }
 
-// CreateFaqRequest mocks base method
+// CreateFaqRequest mocks base method.
 func (m *MockKendraAPI) CreateFaqRequest(arg0 *kendra.CreateFaqInput) (*request.Request, *kendra.CreateFaqOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFaqRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockKendraAPI) CreateFaqRequest(arg0 *kendra.CreateFaqInput) (*request.
 	return ret0, ret1
 }
 
-// CreateFaqRequest indicates an expected call of CreateFaqRequest
+// CreateFaqRequest indicates an expected call of CreateFaqRequest.
 func (mr *MockKendraAPIMockRecorder) CreateFaqRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFaqRequest", reflect.TypeOf((*MockKendraAPI)(nil).CreateFaqRequest), arg0)
 }
 
-// CreateFaqWithContext mocks base method
+// CreateFaqWithContext mocks base method.
 func (m *MockKendraAPI) CreateFaqWithContext(arg0 context.Context, arg1 *kendra.CreateFaqInput, arg2 ...request.Option) (*kendra.CreateFaqOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockKendraAPI) CreateFaqWithContext(arg0 context.Context, arg1 *kendra.
 	return ret0, ret1
 }
 
-// CreateFaqWithContext indicates an expected call of CreateFaqWithContext
+// CreateFaqWithContext indicates an expected call of CreateFaqWithContext.
 func (mr *MockKendraAPIMockRecorder) CreateFaqWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFaqWithContext", reflect.TypeOf((*MockKendraAPI)(nil).CreateFaqWithContext), varargs...)
 }
 
-// CreateIndex mocks base method
+// CreateIndex mocks base method.
 func (m *MockKendraAPI) CreateIndex(arg0 *kendra.CreateIndexInput) (*kendra.CreateIndexOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateIndex", arg0)
@@ -244,13 +245,13 @@ func (m *MockKendraAPI) CreateIndex(arg0 *kendra.CreateIndexInput) (*kendra.Crea
 	return ret0, ret1
 }
 
-// CreateIndex indicates an expected call of CreateIndex
+// CreateIndex indicates an expected call of CreateIndex.
 func (mr *MockKendraAPIMockRecorder) CreateIndex(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateIndex", reflect.TypeOf((*MockKendraAPI)(nil).CreateIndex), arg0)
 }
 
-// CreateIndexRequest mocks base method
+// CreateIndexRequest mocks base method.
 func (m *MockKendraAPI) CreateIndexRequest(arg0 *kendra.CreateIndexInput) (*request.Request, *kendra.CreateIndexOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateIndexRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockKendraAPI) CreateIndexRequest(arg0 *kendra.CreateIndexInput) (*requ
 	return ret0, ret1
 }
 
-// CreateIndexRequest indicates an expected call of CreateIndexRequest
+// CreateIndexRequest indicates an expected call of CreateIndexRequest.
 func (mr *MockKendraAPIMockRecorder) CreateIndexRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateIndexRequest", reflect.TypeOf((*MockKendraAPI)(nil).CreateIndexRequest), arg0)
 }
 
-// CreateIndexWithContext mocks base method
+// CreateIndexWithContext mocks base method.
 func (m *MockKendraAPI) CreateIndexWithContext(arg0 context.Context, arg1 *kendra.CreateIndexInput, arg2 ...request.Option) (*kendra.CreateIndexOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockKendraAPI) CreateIndexWithContext(arg0 context.Context, arg1 *kendr
 	return ret0, ret1
 }
 
-// CreateIndexWithContext indicates an expected call of CreateIndexWithContext
+// CreateIndexWithContext indicates an expected call of CreateIndexWithContext.
 func (mr *MockKendraAPIMockRecorder) CreateIndexWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateIndexWithContext", reflect.TypeOf((*MockKendraAPI)(nil).CreateIndexWithContext), varargs...)
 }
 
-// CreateThesaurus mocks base method
+// CreateThesaurus mocks base method.
 func (m *MockKendraAPI) CreateThesaurus(arg0 *kendra.CreateThesaurusInput) (*kendra.CreateThesaurusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateThesaurus", arg0)
@@ -294,13 +295,13 @@ func (m *MockKendraAPI) CreateThesaurus(arg0 *kendra.CreateThesaurusInput) (*ken
 	return ret0, ret1
 }
 
-// CreateThesaurus indicates an expected call of CreateThesaurus
+// CreateThesaurus indicates an expected call of CreateThesaurus.
 func (mr *MockKendraAPIMockRecorder) CreateThesaurus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateThesaurus", reflect.TypeOf((*MockKendraAPI)(nil).CreateThesaurus), arg0)
 }
 
-// CreateThesaurusRequest mocks base method
+// CreateThesaurusRequest mocks base method.
 func (m *MockKendraAPI) CreateThesaurusRequest(arg0 *kendra.CreateThesaurusInput) (*request.Request, *kendra.CreateThesaurusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateThesaurusRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockKendraAPI) CreateThesaurusRequest(arg0 *kendra.CreateThesaurusInput
 	return ret0, ret1
 }
 
-// CreateThesaurusRequest indicates an expected call of CreateThesaurusRequest
+// CreateThesaurusRequest indicates an expected call of CreateThesaurusRequest.
 func (mr *MockKendraAPIMockRecorder) CreateThesaurusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateThesaurusRequest", reflect.TypeOf((*MockKendraAPI)(nil).CreateThesaurusRequest), arg0)
 }
 
-// CreateThesaurusWithContext mocks base method
+// CreateThesaurusWithContext mocks base method.
 func (m *MockKendraAPI) CreateThesaurusWithContext(arg0 context.Context, arg1 *kendra.CreateThesaurusInput, arg2 ...request.Option) (*kendra.CreateThesaurusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockKendraAPI) CreateThesaurusWithContext(arg0 context.Context, arg1 *k
 	return ret0, ret1
 }
 
-// CreateThesaurusWithContext indicates an expected call of CreateThesaurusWithContext
+// CreateThesaurusWithContext indicates an expected call of CreateThesaurusWithContext.
 func (mr *MockKendraAPIMockRecorder) CreateThesaurusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateThesaurusWithContext", reflect.TypeOf((*MockKendraAPI)(nil).CreateThesaurusWithContext), varargs...)
 }
 
-// DeleteDataSource mocks base method
+// DeleteDataSource mocks base method.
 func (m *MockKendraAPI) DeleteDataSource(arg0 *kendra.DeleteDataSourceInput) (*kendra.DeleteDataSourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDataSource", arg0)
@@ -344,13 +345,13 @@ func (m *MockKendraAPI) DeleteDataSource(arg0 *kendra.DeleteDataSourceInput) (*k
 	return ret0, ret1
 }
 
-// DeleteDataSource indicates an expected call of DeleteDataSource
+// DeleteDataSource indicates an expected call of DeleteDataSource.
 func (mr *MockKendraAPIMockRecorder) DeleteDataSource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataSource", reflect.TypeOf((*MockKendraAPI)(nil).DeleteDataSource), arg0)
 }
 
-// DeleteDataSourceRequest mocks base method
+// DeleteDataSourceRequest mocks base method.
 func (m *MockKendraAPI) DeleteDataSourceRequest(arg0 *kendra.DeleteDataSourceInput) (*request.Request, *kendra.DeleteDataSourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDataSourceRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockKendraAPI) DeleteDataSourceRequest(arg0 *kendra.DeleteDataSourceInp
 	return ret0, ret1
 }
 
-// DeleteDataSourceRequest indicates an expected call of DeleteDataSourceRequest
+// DeleteDataSourceRequest indicates an expected call of DeleteDataSourceRequest.
 func (mr *MockKendraAPIMockRecorder) DeleteDataSourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataSourceRequest", reflect.TypeOf((*MockKendraAPI)(nil).DeleteDataSourceRequest), arg0)
 }
 
-// DeleteDataSourceWithContext mocks base method
+// DeleteDataSourceWithContext mocks base method.
 func (m *MockKendraAPI) DeleteDataSourceWithContext(arg0 context.Context, arg1 *kendra.DeleteDataSourceInput, arg2 ...request.Option) (*kendra.DeleteDataSourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockKendraAPI) DeleteDataSourceWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DeleteDataSourceWithContext indicates an expected call of DeleteDataSourceWithContext
+// DeleteDataSourceWithContext indicates an expected call of DeleteDataSourceWithContext.
 func (mr *MockKendraAPIMockRecorder) DeleteDataSourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataSourceWithContext", reflect.TypeOf((*MockKendraAPI)(nil).DeleteDataSourceWithContext), varargs...)
 }
 
-// DeleteFaq mocks base method
+// DeleteFaq mocks base method.
 func (m *MockKendraAPI) DeleteFaq(arg0 *kendra.DeleteFaqInput) (*kendra.DeleteFaqOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFaq", arg0)
@@ -394,13 +395,13 @@ func (m *MockKendraAPI) DeleteFaq(arg0 *kendra.DeleteFaqInput) (*kendra.DeleteFa
 	return ret0, ret1
 }
 
-// DeleteFaq indicates an expected call of DeleteFaq
+// DeleteFaq indicates an expected call of DeleteFaq.
 func (mr *MockKendraAPIMockRecorder) DeleteFaq(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFaq", reflect.TypeOf((*MockKendraAPI)(nil).DeleteFaq), arg0)
 }
 
-// DeleteFaqRequest mocks base method
+// DeleteFaqRequest mocks base method.
 func (m *MockKendraAPI) DeleteFaqRequest(arg0 *kendra.DeleteFaqInput) (*request.Request, *kendra.DeleteFaqOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFaqRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockKendraAPI) DeleteFaqRequest(arg0 *kendra.DeleteFaqInput) (*request.
 	return ret0, ret1
 }
 
-// DeleteFaqRequest indicates an expected call of DeleteFaqRequest
+// DeleteFaqRequest indicates an expected call of DeleteFaqRequest.
 func (mr *MockKendraAPIMockRecorder) DeleteFaqRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFaqRequest", reflect.TypeOf((*MockKendraAPI)(nil).DeleteFaqRequest), arg0)
 }
 
-// DeleteFaqWithContext mocks base method
+// DeleteFaqWithContext mocks base method.
 func (m *MockKendraAPI) DeleteFaqWithContext(arg0 context.Context, arg1 *kendra.DeleteFaqInput, arg2 ...request.Option) (*kendra.DeleteFaqOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockKendraAPI) DeleteFaqWithContext(arg0 context.Context, arg1 *kendra.
 	return ret0, ret1
 }
 
-// DeleteFaqWithContext indicates an expected call of DeleteFaqWithContext
+// DeleteFaqWithContext indicates an expected call of DeleteFaqWithContext.
 func (mr *MockKendraAPIMockRecorder) DeleteFaqWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFaqWithContext", reflect.TypeOf((*MockKendraAPI)(nil).DeleteFaqWithContext), varargs...)
 }
 
-// DeleteIndex mocks base method
+// DeleteIndex mocks base method.
 func (m *MockKendraAPI) DeleteIndex(arg0 *kendra.DeleteIndexInput) (*kendra.DeleteIndexOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteIndex", arg0)
@@ -444,13 +445,13 @@ func (m *MockKendraAPI) DeleteIndex(arg0 *kendra.DeleteIndexInput) (*kendra.Dele
 	return ret0, ret1
 }
 
-// DeleteIndex indicates an expected call of DeleteIndex
+// DeleteIndex indicates an expected call of DeleteIndex.
 func (mr *MockKendraAPIMockRecorder) DeleteIndex(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteIndex", reflect.TypeOf((*MockKendraAPI)(nil).DeleteIndex), arg0)
 }
 
-// DeleteIndexRequest mocks base method
+// DeleteIndexRequest mocks base method.
 func (m *MockKendraAPI) DeleteIndexRequest(arg0 *kendra.DeleteIndexInput) (*request.Request, *kendra.DeleteIndexOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteIndexRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockKendraAPI) DeleteIndexRequest(arg0 *kendra.DeleteIndexInput) (*requ
 	return ret0, ret1
 }
 
-// DeleteIndexRequest indicates an expected call of DeleteIndexRequest
+// DeleteIndexRequest indicates an expected call of DeleteIndexRequest.
 func (mr *MockKendraAPIMockRecorder) DeleteIndexRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteIndexRequest", reflect.TypeOf((*MockKendraAPI)(nil).DeleteIndexRequest), arg0)
 }
 
-// DeleteIndexWithContext mocks base method
+// DeleteIndexWithContext mocks base method.
 func (m *MockKendraAPI) DeleteIndexWithContext(arg0 context.Context, arg1 *kendra.DeleteIndexInput, arg2 ...request.Option) (*kendra.DeleteIndexOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockKendraAPI) DeleteIndexWithContext(arg0 context.Context, arg1 *kendr
 	return ret0, ret1
 }
 
-// DeleteIndexWithContext indicates an expected call of DeleteIndexWithContext
+// DeleteIndexWithContext indicates an expected call of DeleteIndexWithContext.
 func (mr *MockKendraAPIMockRecorder) DeleteIndexWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteIndexWithContext", reflect.TypeOf((*MockKendraAPI)(nil).DeleteIndexWithContext), varargs...)
 }
 
-// DeleteThesaurus mocks base method
+// DeleteThesaurus mocks base method.
 func (m *MockKendraAPI) DeleteThesaurus(arg0 *kendra.DeleteThesaurusInput) (*kendra.DeleteThesaurusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteThesaurus", arg0)
@@ -494,13 +495,13 @@ func (m *MockKendraAPI) DeleteThesaurus(arg0 *kendra.DeleteThesaurusInput) (*ken
 	return ret0, ret1
 }
 
-// DeleteThesaurus indicates an expected call of DeleteThesaurus
+// DeleteThesaurus indicates an expected call of DeleteThesaurus.
 func (mr *MockKendraAPIMockRecorder) DeleteThesaurus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteThesaurus", reflect.TypeOf((*MockKendraAPI)(nil).DeleteThesaurus), arg0)
 }
 
-// DeleteThesaurusRequest mocks base method
+// DeleteThesaurusRequest mocks base method.
 func (m *MockKendraAPI) DeleteThesaurusRequest(arg0 *kendra.DeleteThesaurusInput) (*request.Request, *kendra.DeleteThesaurusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteThesaurusRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockKendraAPI) DeleteThesaurusRequest(arg0 *kendra.DeleteThesaurusInput
 	return ret0, ret1
 }
 
-// DeleteThesaurusRequest indicates an expected call of DeleteThesaurusRequest
+// DeleteThesaurusRequest indicates an expected call of DeleteThesaurusRequest.
 func (mr *MockKendraAPIMockRecorder) DeleteThesaurusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteThesaurusRequest", reflect.TypeOf((*MockKendraAPI)(nil).DeleteThesaurusRequest), arg0)
 }
 
-// DeleteThesaurusWithContext mocks base method
+// DeleteThesaurusWithContext mocks base method.
 func (m *MockKendraAPI) DeleteThesaurusWithContext(arg0 context.Context, arg1 *kendra.DeleteThesaurusInput, arg2 ...request.Option) (*kendra.DeleteThesaurusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockKendraAPI) DeleteThesaurusWithContext(arg0 context.Context, arg1 *k
 	return ret0, ret1
 }
 
-// DeleteThesaurusWithContext indicates an expected call of DeleteThesaurusWithContext
+// DeleteThesaurusWithContext indicates an expected call of DeleteThesaurusWithContext.
 func (mr *MockKendraAPIMockRecorder) DeleteThesaurusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteThesaurusWithContext", reflect.TypeOf((*MockKendraAPI)(nil).DeleteThesaurusWithContext), varargs...)
 }
 
-// DescribeDataSource mocks base method
+// DescribeDataSource mocks base method.
 func (m *MockKendraAPI) DescribeDataSource(arg0 *kendra.DescribeDataSourceInput) (*kendra.DescribeDataSourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDataSource", arg0)
@@ -544,13 +545,13 @@ func (m *MockKendraAPI) DescribeDataSource(arg0 *kendra.DescribeDataSourceInput)
 	return ret0, ret1
 }
 
-// DescribeDataSource indicates an expected call of DescribeDataSource
+// DescribeDataSource indicates an expected call of DescribeDataSource.
 func (mr *MockKendraAPIMockRecorder) DescribeDataSource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDataSource", reflect.TypeOf((*MockKendraAPI)(nil).DescribeDataSource), arg0)
 }
 
-// DescribeDataSourceRequest mocks base method
+// DescribeDataSourceRequest mocks base method.
 func (m *MockKendraAPI) DescribeDataSourceRequest(arg0 *kendra.DescribeDataSourceInput) (*request.Request, *kendra.DescribeDataSourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDataSourceRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockKendraAPI) DescribeDataSourceRequest(arg0 *kendra.DescribeDataSourc
 	return ret0, ret1
 }
 
-// DescribeDataSourceRequest indicates an expected call of DescribeDataSourceRequest
+// DescribeDataSourceRequest indicates an expected call of DescribeDataSourceRequest.
 func (mr *MockKendraAPIMockRecorder) DescribeDataSourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDataSourceRequest", reflect.TypeOf((*MockKendraAPI)(nil).DescribeDataSourceRequest), arg0)
 }
 
-// DescribeDataSourceWithContext mocks base method
+// DescribeDataSourceWithContext mocks base method.
 func (m *MockKendraAPI) DescribeDataSourceWithContext(arg0 context.Context, arg1 *kendra.DescribeDataSourceInput, arg2 ...request.Option) (*kendra.DescribeDataSourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockKendraAPI) DescribeDataSourceWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DescribeDataSourceWithContext indicates an expected call of DescribeDataSourceWithContext
+// DescribeDataSourceWithContext indicates an expected call of DescribeDataSourceWithContext.
 func (mr *MockKendraAPIMockRecorder) DescribeDataSourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDataSourceWithContext", reflect.TypeOf((*MockKendraAPI)(nil).DescribeDataSourceWithContext), varargs...)
 }
 
-// DescribeFaq mocks base method
+// DescribeFaq mocks base method.
 func (m *MockKendraAPI) DescribeFaq(arg0 *kendra.DescribeFaqInput) (*kendra.DescribeFaqOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFaq", arg0)
@@ -594,13 +595,13 @@ func (m *MockKendraAPI) DescribeFaq(arg0 *kendra.DescribeFaqInput) (*kendra.Desc
 	return ret0, ret1
 }
 
-// DescribeFaq indicates an expected call of DescribeFaq
+// DescribeFaq indicates an expected call of DescribeFaq.
 func (mr *MockKendraAPIMockRecorder) DescribeFaq(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFaq", reflect.TypeOf((*MockKendraAPI)(nil).DescribeFaq), arg0)
 }
 
-// DescribeFaqRequest mocks base method
+// DescribeFaqRequest mocks base method.
 func (m *MockKendraAPI) DescribeFaqRequest(arg0 *kendra.DescribeFaqInput) (*request.Request, *kendra.DescribeFaqOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFaqRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockKendraAPI) DescribeFaqRequest(arg0 *kendra.DescribeFaqInput) (*requ
 	return ret0, ret1
 }
 
-// DescribeFaqRequest indicates an expected call of DescribeFaqRequest
+// DescribeFaqRequest indicates an expected call of DescribeFaqRequest.
 func (mr *MockKendraAPIMockRecorder) DescribeFaqRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFaqRequest", reflect.TypeOf((*MockKendraAPI)(nil).DescribeFaqRequest), arg0)
 }
 
-// DescribeFaqWithContext mocks base method
+// DescribeFaqWithContext mocks base method.
 func (m *MockKendraAPI) DescribeFaqWithContext(arg0 context.Context, arg1 *kendra.DescribeFaqInput, arg2 ...request.Option) (*kendra.DescribeFaqOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockKendraAPI) DescribeFaqWithContext(arg0 context.Context, arg1 *kendr
 	return ret0, ret1
 }
 
-// DescribeFaqWithContext indicates an expected call of DescribeFaqWithContext
+// DescribeFaqWithContext indicates an expected call of DescribeFaqWithContext.
 func (mr *MockKendraAPIMockRecorder) DescribeFaqWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFaqWithContext", reflect.TypeOf((*MockKendraAPI)(nil).DescribeFaqWithContext), varargs...)
 }
 
-// DescribeIndex mocks base method
+// DescribeIndex mocks base method.
 func (m *MockKendraAPI) DescribeIndex(arg0 *kendra.DescribeIndexInput) (*kendra.DescribeIndexOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeIndex", arg0)
@@ -644,13 +645,13 @@ func (m *MockKendraAPI) DescribeIndex(arg0 *kendra.DescribeIndexInput) (*kendra.
 	return ret0, ret1
 }
 
-// DescribeIndex indicates an expected call of DescribeIndex
+// DescribeIndex indicates an expected call of DescribeIndex.
 func (mr *MockKendraAPIMockRecorder) DescribeIndex(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIndex", reflect.TypeOf((*MockKendraAPI)(nil).DescribeIndex), arg0)
 }
 
-// DescribeIndexRequest mocks base method
+// DescribeIndexRequest mocks base method.
 func (m *MockKendraAPI) DescribeIndexRequest(arg0 *kendra.DescribeIndexInput) (*request.Request, *kendra.DescribeIndexOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeIndexRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockKendraAPI) DescribeIndexRequest(arg0 *kendra.DescribeIndexInput) (*
 	return ret0, ret1
 }
 
-// DescribeIndexRequest indicates an expected call of DescribeIndexRequest
+// DescribeIndexRequest indicates an expected call of DescribeIndexRequest.
 func (mr *MockKendraAPIMockRecorder) DescribeIndexRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIndexRequest", reflect.TypeOf((*MockKendraAPI)(nil).DescribeIndexRequest), arg0)
 }
 
-// DescribeIndexWithContext mocks base method
+// DescribeIndexWithContext mocks base method.
 func (m *MockKendraAPI) DescribeIndexWithContext(arg0 context.Context, arg1 *kendra.DescribeIndexInput, arg2 ...request.Option) (*kendra.DescribeIndexOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockKendraAPI) DescribeIndexWithContext(arg0 context.Context, arg1 *ken
 	return ret0, ret1
 }
 
-// DescribeIndexWithContext indicates an expected call of DescribeIndexWithContext
+// DescribeIndexWithContext indicates an expected call of DescribeIndexWithContext.
 func (mr *MockKendraAPIMockRecorder) DescribeIndexWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIndexWithContext", reflect.TypeOf((*MockKendraAPI)(nil).DescribeIndexWithContext), varargs...)
 }
 
-// DescribeThesaurus mocks base method
+// DescribeThesaurus mocks base method.
 func (m *MockKendraAPI) DescribeThesaurus(arg0 *kendra.DescribeThesaurusInput) (*kendra.DescribeThesaurusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeThesaurus", arg0)
@@ -694,13 +695,13 @@ func (m *MockKendraAPI) DescribeThesaurus(arg0 *kendra.DescribeThesaurusInput) (
 	return ret0, ret1
 }
 
-// DescribeThesaurus indicates an expected call of DescribeThesaurus
+// DescribeThesaurus indicates an expected call of DescribeThesaurus.
 func (mr *MockKendraAPIMockRecorder) DescribeThesaurus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeThesaurus", reflect.TypeOf((*MockKendraAPI)(nil).DescribeThesaurus), arg0)
 }
 
-// DescribeThesaurusRequest mocks base method
+// DescribeThesaurusRequest mocks base method.
 func (m *MockKendraAPI) DescribeThesaurusRequest(arg0 *kendra.DescribeThesaurusInput) (*request.Request, *kendra.DescribeThesaurusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeThesaurusRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockKendraAPI) DescribeThesaurusRequest(arg0 *kendra.DescribeThesaurusI
 	return ret0, ret1
 }
 
-// DescribeThesaurusRequest indicates an expected call of DescribeThesaurusRequest
+// DescribeThesaurusRequest indicates an expected call of DescribeThesaurusRequest.
 func (mr *MockKendraAPIMockRecorder) DescribeThesaurusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeThesaurusRequest", reflect.TypeOf((*MockKendraAPI)(nil).DescribeThesaurusRequest), arg0)
 }
 
-// DescribeThesaurusWithContext mocks base method
+// DescribeThesaurusWithContext mocks base method.
 func (m *MockKendraAPI) DescribeThesaurusWithContext(arg0 context.Context, arg1 *kendra.DescribeThesaurusInput, arg2 ...request.Option) (*kendra.DescribeThesaurusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockKendraAPI) DescribeThesaurusWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DescribeThesaurusWithContext indicates an expected call of DescribeThesaurusWithContext
+// DescribeThesaurusWithContext indicates an expected call of DescribeThesaurusWithContext.
 func (mr *MockKendraAPIMockRecorder) DescribeThesaurusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeThesaurusWithContext", reflect.TypeOf((*MockKendraAPI)(nil).DescribeThesaurusWithContext), varargs...)
 }
 
-// ListDataSourceSyncJobs mocks base method
+// ListDataSourceSyncJobs mocks base method.
 func (m *MockKendraAPI) ListDataSourceSyncJobs(arg0 *kendra.ListDataSourceSyncJobsInput) (*kendra.ListDataSourceSyncJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataSourceSyncJobs", arg0)
@@ -744,13 +745,13 @@ func (m *MockKendraAPI) ListDataSourceSyncJobs(arg0 *kendra.ListDataSourceSyncJo
 	return ret0, ret1
 }
 
-// ListDataSourceSyncJobs indicates an expected call of ListDataSourceSyncJobs
+// ListDataSourceSyncJobs indicates an expected call of ListDataSourceSyncJobs.
 func (mr *MockKendraAPIMockRecorder) ListDataSourceSyncJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSourceSyncJobs", reflect.TypeOf((*MockKendraAPI)(nil).ListDataSourceSyncJobs), arg0)
 }
 
-// ListDataSourceSyncJobsPages mocks base method
+// ListDataSourceSyncJobsPages mocks base method.
 func (m *MockKendraAPI) ListDataSourceSyncJobsPages(arg0 *kendra.ListDataSourceSyncJobsInput, arg1 func(*kendra.ListDataSourceSyncJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataSourceSyncJobsPages", arg0, arg1)
@@ -758,13 +759,13 @@ func (m *MockKendraAPI) ListDataSourceSyncJobsPages(arg0 *kendra.ListDataSourceS
 	return ret0
 }
 
-// ListDataSourceSyncJobsPages indicates an expected call of ListDataSourceSyncJobsPages
+// ListDataSourceSyncJobsPages indicates an expected call of ListDataSourceSyncJobsPages.
 func (mr *MockKendraAPIMockRecorder) ListDataSourceSyncJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSourceSyncJobsPages", reflect.TypeOf((*MockKendraAPI)(nil).ListDataSourceSyncJobsPages), arg0, arg1)
 }
 
-// ListDataSourceSyncJobsPagesWithContext mocks base method
+// ListDataSourceSyncJobsPagesWithContext mocks base method.
 func (m *MockKendraAPI) ListDataSourceSyncJobsPagesWithContext(arg0 context.Context, arg1 *kendra.ListDataSourceSyncJobsInput, arg2 func(*kendra.ListDataSourceSyncJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -776,14 +777,14 @@ func (m *MockKendraAPI) ListDataSourceSyncJobsPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListDataSourceSyncJobsPagesWithContext indicates an expected call of ListDataSourceSyncJobsPagesWithContext
+// ListDataSourceSyncJobsPagesWithContext indicates an expected call of ListDataSourceSyncJobsPagesWithContext.
 func (mr *MockKendraAPIMockRecorder) ListDataSourceSyncJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSourceSyncJobsPagesWithContext", reflect.TypeOf((*MockKendraAPI)(nil).ListDataSourceSyncJobsPagesWithContext), varargs...)
 }
 
-// ListDataSourceSyncJobsRequest mocks base method
+// ListDataSourceSyncJobsRequest mocks base method.
 func (m *MockKendraAPI) ListDataSourceSyncJobsRequest(arg0 *kendra.ListDataSourceSyncJobsInput) (*request.Request, *kendra.ListDataSourceSyncJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataSourceSyncJobsRequest", arg0)
@@ -792,13 +793,13 @@ func (m *MockKendraAPI) ListDataSourceSyncJobsRequest(arg0 *kendra.ListDataSourc
 	return ret0, ret1
 }
 
-// ListDataSourceSyncJobsRequest indicates an expected call of ListDataSourceSyncJobsRequest
+// ListDataSourceSyncJobsRequest indicates an expected call of ListDataSourceSyncJobsRequest.
 func (mr *MockKendraAPIMockRecorder) ListDataSourceSyncJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSourceSyncJobsRequest", reflect.TypeOf((*MockKendraAPI)(nil).ListDataSourceSyncJobsRequest), arg0)
 }
 
-// ListDataSourceSyncJobsWithContext mocks base method
+// ListDataSourceSyncJobsWithContext mocks base method.
 func (m *MockKendraAPI) ListDataSourceSyncJobsWithContext(arg0 context.Context, arg1 *kendra.ListDataSourceSyncJobsInput, arg2 ...request.Option) (*kendra.ListDataSourceSyncJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -811,14 +812,14 @@ func (m *MockKendraAPI) ListDataSourceSyncJobsWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListDataSourceSyncJobsWithContext indicates an expected call of ListDataSourceSyncJobsWithContext
+// ListDataSourceSyncJobsWithContext indicates an expected call of ListDataSourceSyncJobsWithContext.
 func (mr *MockKendraAPIMockRecorder) ListDataSourceSyncJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSourceSyncJobsWithContext", reflect.TypeOf((*MockKendraAPI)(nil).ListDataSourceSyncJobsWithContext), varargs...)
 }
 
-// ListDataSources mocks base method
+// ListDataSources mocks base method.
 func (m *MockKendraAPI) ListDataSources(arg0 *kendra.ListDataSourcesInput) (*kendra.ListDataSourcesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataSources", arg0)
@@ -827,13 +828,13 @@ func (m *MockKendraAPI) ListDataSources(arg0 *kendra.ListDataSourcesInput) (*ken
 	return ret0, ret1
 }
 
-// ListDataSources indicates an expected call of ListDataSources
+// ListDataSources indicates an expected call of ListDataSources.
 func (mr *MockKendraAPIMockRecorder) ListDataSources(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSources", reflect.TypeOf((*MockKendraAPI)(nil).ListDataSources), arg0)
 }
 
-// ListDataSourcesPages mocks base method
+// ListDataSourcesPages mocks base method.
 func (m *MockKendraAPI) ListDataSourcesPages(arg0 *kendra.ListDataSourcesInput, arg1 func(*kendra.ListDataSourcesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataSourcesPages", arg0, arg1)
@@ -841,13 +842,13 @@ func (m *MockKendraAPI) ListDataSourcesPages(arg0 *kendra.ListDataSourcesInput, 
 	return ret0
 }
 
-// ListDataSourcesPages indicates an expected call of ListDataSourcesPages
+// ListDataSourcesPages indicates an expected call of ListDataSourcesPages.
 func (mr *MockKendraAPIMockRecorder) ListDataSourcesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSourcesPages", reflect.TypeOf((*MockKendraAPI)(nil).ListDataSourcesPages), arg0, arg1)
 }
 
-// ListDataSourcesPagesWithContext mocks base method
+// ListDataSourcesPagesWithContext mocks base method.
 func (m *MockKendraAPI) ListDataSourcesPagesWithContext(arg0 context.Context, arg1 *kendra.ListDataSourcesInput, arg2 func(*kendra.ListDataSourcesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -859,14 +860,14 @@ func (m *MockKendraAPI) ListDataSourcesPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// ListDataSourcesPagesWithContext indicates an expected call of ListDataSourcesPagesWithContext
+// ListDataSourcesPagesWithContext indicates an expected call of ListDataSourcesPagesWithContext.
 func (mr *MockKendraAPIMockRecorder) ListDataSourcesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSourcesPagesWithContext", reflect.TypeOf((*MockKendraAPI)(nil).ListDataSourcesPagesWithContext), varargs...)
 }
 
-// ListDataSourcesRequest mocks base method
+// ListDataSourcesRequest mocks base method.
 func (m *MockKendraAPI) ListDataSourcesRequest(arg0 *kendra.ListDataSourcesInput) (*request.Request, *kendra.ListDataSourcesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDataSourcesRequest", arg0)
@@ -875,13 +876,13 @@ func (m *MockKendraAPI) ListDataSourcesRequest(arg0 *kendra.ListDataSourcesInput
 	return ret0, ret1
 }
 
-// ListDataSourcesRequest indicates an expected call of ListDataSourcesRequest
+// ListDataSourcesRequest indicates an expected call of ListDataSourcesRequest.
 func (mr *MockKendraAPIMockRecorder) ListDataSourcesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSourcesRequest", reflect.TypeOf((*MockKendraAPI)(nil).ListDataSourcesRequest), arg0)
 }
 
-// ListDataSourcesWithContext mocks base method
+// ListDataSourcesWithContext mocks base method.
 func (m *MockKendraAPI) ListDataSourcesWithContext(arg0 context.Context, arg1 *kendra.ListDataSourcesInput, arg2 ...request.Option) (*kendra.ListDataSourcesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -894,14 +895,14 @@ func (m *MockKendraAPI) ListDataSourcesWithContext(arg0 context.Context, arg1 *k
 	return ret0, ret1
 }
 
-// ListDataSourcesWithContext indicates an expected call of ListDataSourcesWithContext
+// ListDataSourcesWithContext indicates an expected call of ListDataSourcesWithContext.
 func (mr *MockKendraAPIMockRecorder) ListDataSourcesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSourcesWithContext", reflect.TypeOf((*MockKendraAPI)(nil).ListDataSourcesWithContext), varargs...)
 }
 
-// ListFaqs mocks base method
+// ListFaqs mocks base method.
 func (m *MockKendraAPI) ListFaqs(arg0 *kendra.ListFaqsInput) (*kendra.ListFaqsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFaqs", arg0)
@@ -910,13 +911,13 @@ func (m *MockKendraAPI) ListFaqs(arg0 *kendra.ListFaqsInput) (*kendra.ListFaqsOu
 	return ret0, ret1
 }
 
-// ListFaqs indicates an expected call of ListFaqs
+// ListFaqs indicates an expected call of ListFaqs.
 func (mr *MockKendraAPIMockRecorder) ListFaqs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFaqs", reflect.TypeOf((*MockKendraAPI)(nil).ListFaqs), arg0)
 }
 
-// ListFaqsRequest mocks base method
+// ListFaqsRequest mocks base method.
 func (m *MockKendraAPI) ListFaqsRequest(arg0 *kendra.ListFaqsInput) (*request.Request, *kendra.ListFaqsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFaqsRequest", arg0)
@@ -925,13 +926,13 @@ func (m *MockKendraAPI) ListFaqsRequest(arg0 *kendra.ListFaqsInput) (*request.Re
 	return ret0, ret1
 }
 
-// ListFaqsRequest indicates an expected call of ListFaqsRequest
+// ListFaqsRequest indicates an expected call of ListFaqsRequest.
 func (mr *MockKendraAPIMockRecorder) ListFaqsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFaqsRequest", reflect.TypeOf((*MockKendraAPI)(nil).ListFaqsRequest), arg0)
 }
 
-// ListFaqsWithContext mocks base method
+// ListFaqsWithContext mocks base method.
 func (m *MockKendraAPI) ListFaqsWithContext(arg0 context.Context, arg1 *kendra.ListFaqsInput, arg2 ...request.Option) (*kendra.ListFaqsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -944,14 +945,14 @@ func (m *MockKendraAPI) ListFaqsWithContext(arg0 context.Context, arg1 *kendra.L
 	return ret0, ret1
 }
 
-// ListFaqsWithContext indicates an expected call of ListFaqsWithContext
+// ListFaqsWithContext indicates an expected call of ListFaqsWithContext.
 func (mr *MockKendraAPIMockRecorder) ListFaqsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFaqsWithContext", reflect.TypeOf((*MockKendraAPI)(nil).ListFaqsWithContext), varargs...)
 }
 
-// ListIndices mocks base method
+// ListIndices mocks base method.
 func (m *MockKendraAPI) ListIndices(arg0 *kendra.ListIndicesInput) (*kendra.ListIndicesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListIndices", arg0)
@@ -960,13 +961,13 @@ func (m *MockKendraAPI) ListIndices(arg0 *kendra.ListIndicesInput) (*kendra.List
 	return ret0, ret1
 }
 
-// ListIndices indicates an expected call of ListIndices
+// ListIndices indicates an expected call of ListIndices.
 func (mr *MockKendraAPIMockRecorder) ListIndices(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIndices", reflect.TypeOf((*MockKendraAPI)(nil).ListIndices), arg0)
 }
 
-// ListIndicesPages mocks base method
+// ListIndicesPages mocks base method.
 func (m *MockKendraAPI) ListIndicesPages(arg0 *kendra.ListIndicesInput, arg1 func(*kendra.ListIndicesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListIndicesPages", arg0, arg1)
@@ -974,13 +975,13 @@ func (m *MockKendraAPI) ListIndicesPages(arg0 *kendra.ListIndicesInput, arg1 fun
 	return ret0
 }
 
-// ListIndicesPages indicates an expected call of ListIndicesPages
+// ListIndicesPages indicates an expected call of ListIndicesPages.
 func (mr *MockKendraAPIMockRecorder) ListIndicesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIndicesPages", reflect.TypeOf((*MockKendraAPI)(nil).ListIndicesPages), arg0, arg1)
 }
 
-// ListIndicesPagesWithContext mocks base method
+// ListIndicesPagesWithContext mocks base method.
 func (m *MockKendraAPI) ListIndicesPagesWithContext(arg0 context.Context, arg1 *kendra.ListIndicesInput, arg2 func(*kendra.ListIndicesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -992,14 +993,14 @@ func (m *MockKendraAPI) ListIndicesPagesWithContext(arg0 context.Context, arg1 *
 	return ret0
 }
 
-// ListIndicesPagesWithContext indicates an expected call of ListIndicesPagesWithContext
+// ListIndicesPagesWithContext indicates an expected call of ListIndicesPagesWithContext.
 func (mr *MockKendraAPIMockRecorder) ListIndicesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIndicesPagesWithContext", reflect.TypeOf((*MockKendraAPI)(nil).ListIndicesPagesWithContext), varargs...)
 }
 
-// ListIndicesRequest mocks base method
+// ListIndicesRequest mocks base method.
 func (m *MockKendraAPI) ListIndicesRequest(arg0 *kendra.ListIndicesInput) (*request.Request, *kendra.ListIndicesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListIndicesRequest", arg0)
@@ -1008,13 +1009,13 @@ func (m *MockKendraAPI) ListIndicesRequest(arg0 *kendra.ListIndicesInput) (*requ
 	return ret0, ret1
 }
 
-// ListIndicesRequest indicates an expected call of ListIndicesRequest
+// ListIndicesRequest indicates an expected call of ListIndicesRequest.
 func (mr *MockKendraAPIMockRecorder) ListIndicesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIndicesRequest", reflect.TypeOf((*MockKendraAPI)(nil).ListIndicesRequest), arg0)
 }
 
-// ListIndicesWithContext mocks base method
+// ListIndicesWithContext mocks base method.
 func (m *MockKendraAPI) ListIndicesWithContext(arg0 context.Context, arg1 *kendra.ListIndicesInput, arg2 ...request.Option) (*kendra.ListIndicesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1027,14 +1028,14 @@ func (m *MockKendraAPI) ListIndicesWithContext(arg0 context.Context, arg1 *kendr
 	return ret0, ret1
 }
 
-// ListIndicesWithContext indicates an expected call of ListIndicesWithContext
+// ListIndicesWithContext indicates an expected call of ListIndicesWithContext.
 func (mr *MockKendraAPIMockRecorder) ListIndicesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIndicesWithContext", reflect.TypeOf((*MockKendraAPI)(nil).ListIndicesWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockKendraAPI) ListTagsForResource(arg0 *kendra.ListTagsForResourceInput) (*kendra.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1043,13 +1044,13 @@ func (m *MockKendraAPI) ListTagsForResource(arg0 *kendra.ListTagsForResourceInpu
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockKendraAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockKendraAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockKendraAPI) ListTagsForResourceRequest(arg0 *kendra.ListTagsForResourceInput) (*request.Request, *kendra.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1058,13 +1059,13 @@ func (m *MockKendraAPI) ListTagsForResourceRequest(arg0 *kendra.ListTagsForResou
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockKendraAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockKendraAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockKendraAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *kendra.ListTagsForResourceInput, arg2 ...request.Option) (*kendra.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1077,14 +1078,14 @@ func (m *MockKendraAPI) ListTagsForResourceWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockKendraAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockKendraAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// ListThesauri mocks base method
+// ListThesauri mocks base method.
 func (m *MockKendraAPI) ListThesauri(arg0 *kendra.ListThesauriInput) (*kendra.ListThesauriOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListThesauri", arg0)
@@ -1093,13 +1094,13 @@ func (m *MockKendraAPI) ListThesauri(arg0 *kendra.ListThesauriInput) (*kendra.Li
 	return ret0, ret1
 }
 
-// ListThesauri indicates an expected call of ListThesauri
+// ListThesauri indicates an expected call of ListThesauri.
 func (mr *MockKendraAPIMockRecorder) ListThesauri(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListThesauri", reflect.TypeOf((*MockKendraAPI)(nil).ListThesauri), arg0)
 }
 
-// ListThesauriRequest mocks base method
+// ListThesauriRequest mocks base method.
 func (m *MockKendraAPI) ListThesauriRequest(arg0 *kendra.ListThesauriInput) (*request.Request, *kendra.ListThesauriOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListThesauriRequest", arg0)
@@ -1108,13 +1109,13 @@ func (m *MockKendraAPI) ListThesauriRequest(arg0 *kendra.ListThesauriInput) (*re
 	return ret0, ret1
 }
 
-// ListThesauriRequest indicates an expected call of ListThesauriRequest
+// ListThesauriRequest indicates an expected call of ListThesauriRequest.
 func (mr *MockKendraAPIMockRecorder) ListThesauriRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListThesauriRequest", reflect.TypeOf((*MockKendraAPI)(nil).ListThesauriRequest), arg0)
 }
 
-// ListThesauriWithContext mocks base method
+// ListThesauriWithContext mocks base method.
 func (m *MockKendraAPI) ListThesauriWithContext(arg0 context.Context, arg1 *kendra.ListThesauriInput, arg2 ...request.Option) (*kendra.ListThesauriOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1127,14 +1128,14 @@ func (m *MockKendraAPI) ListThesauriWithContext(arg0 context.Context, arg1 *kend
 	return ret0, ret1
 }
 
-// ListThesauriWithContext indicates an expected call of ListThesauriWithContext
+// ListThesauriWithContext indicates an expected call of ListThesauriWithContext.
 func (mr *MockKendraAPIMockRecorder) ListThesauriWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListThesauriWithContext", reflect.TypeOf((*MockKendraAPI)(nil).ListThesauriWithContext), varargs...)
 }
 
-// Query mocks base method
+// Query mocks base method.
 func (m *MockKendraAPI) Query(arg0 *kendra.QueryInput) (*kendra.QueryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Query", arg0)
@@ -1143,13 +1144,13 @@ func (m *MockKendraAPI) Query(arg0 *kendra.QueryInput) (*kendra.QueryOutput, err
 	return ret0, ret1
 }
 
-// Query indicates an expected call of Query
+// Query indicates an expected call of Query.
 func (mr *MockKendraAPIMockRecorder) Query(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Query", reflect.TypeOf((*MockKendraAPI)(nil).Query), arg0)
 }
 
-// QueryRequest mocks base method
+// QueryRequest mocks base method.
 func (m *MockKendraAPI) QueryRequest(arg0 *kendra.QueryInput) (*request.Request, *kendra.QueryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "QueryRequest", arg0)
@@ -1158,13 +1159,13 @@ func (m *MockKendraAPI) QueryRequest(arg0 *kendra.QueryInput) (*request.Request,
 	return ret0, ret1
 }
 
-// QueryRequest indicates an expected call of QueryRequest
+// QueryRequest indicates an expected call of QueryRequest.
 func (mr *MockKendraAPIMockRecorder) QueryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "QueryRequest", reflect.TypeOf((*MockKendraAPI)(nil).QueryRequest), arg0)
 }
 
-// QueryWithContext mocks base method
+// QueryWithContext mocks base method.
 func (m *MockKendraAPI) QueryWithContext(arg0 context.Context, arg1 *kendra.QueryInput, arg2 ...request.Option) (*kendra.QueryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1177,14 +1178,14 @@ func (m *MockKendraAPI) QueryWithContext(arg0 context.Context, arg1 *kendra.Quer
 	return ret0, ret1
 }
 
-// QueryWithContext indicates an expected call of QueryWithContext
+// QueryWithContext indicates an expected call of QueryWithContext.
 func (mr *MockKendraAPIMockRecorder) QueryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "QueryWithContext", reflect.TypeOf((*MockKendraAPI)(nil).QueryWithContext), varargs...)
 }
 
-// StartDataSourceSyncJob mocks base method
+// StartDataSourceSyncJob mocks base method.
 func (m *MockKendraAPI) StartDataSourceSyncJob(arg0 *kendra.StartDataSourceSyncJobInput) (*kendra.StartDataSourceSyncJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartDataSourceSyncJob", arg0)
@@ -1193,13 +1194,13 @@ func (m *MockKendraAPI) StartDataSourceSyncJob(arg0 *kendra.StartDataSourceSyncJ
 	return ret0, ret1
 }
 
-// StartDataSourceSyncJob indicates an expected call of StartDataSourceSyncJob
+// StartDataSourceSyncJob indicates an expected call of StartDataSourceSyncJob.
 func (mr *MockKendraAPIMockRecorder) StartDataSourceSyncJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDataSourceSyncJob", reflect.TypeOf((*MockKendraAPI)(nil).StartDataSourceSyncJob), arg0)
 }
 
-// StartDataSourceSyncJobRequest mocks base method
+// StartDataSourceSyncJobRequest mocks base method.
 func (m *MockKendraAPI) StartDataSourceSyncJobRequest(arg0 *kendra.StartDataSourceSyncJobInput) (*request.Request, *kendra.StartDataSourceSyncJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartDataSourceSyncJobRequest", arg0)
@@ -1208,13 +1209,13 @@ func (m *MockKendraAPI) StartDataSourceSyncJobRequest(arg0 *kendra.StartDataSour
 	return ret0, ret1
 }
 
-// StartDataSourceSyncJobRequest indicates an expected call of StartDataSourceSyncJobRequest
+// StartDataSourceSyncJobRequest indicates an expected call of StartDataSourceSyncJobRequest.
 func (mr *MockKendraAPIMockRecorder) StartDataSourceSyncJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDataSourceSyncJobRequest", reflect.TypeOf((*MockKendraAPI)(nil).StartDataSourceSyncJobRequest), arg0)
 }
 
-// StartDataSourceSyncJobWithContext mocks base method
+// StartDataSourceSyncJobWithContext mocks base method.
 func (m *MockKendraAPI) StartDataSourceSyncJobWithContext(arg0 context.Context, arg1 *kendra.StartDataSourceSyncJobInput, arg2 ...request.Option) (*kendra.StartDataSourceSyncJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1227,14 +1228,14 @@ func (m *MockKendraAPI) StartDataSourceSyncJobWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// StartDataSourceSyncJobWithContext indicates an expected call of StartDataSourceSyncJobWithContext
+// StartDataSourceSyncJobWithContext indicates an expected call of StartDataSourceSyncJobWithContext.
 func (mr *MockKendraAPIMockRecorder) StartDataSourceSyncJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDataSourceSyncJobWithContext", reflect.TypeOf((*MockKendraAPI)(nil).StartDataSourceSyncJobWithContext), varargs...)
 }
 
-// StopDataSourceSyncJob mocks base method
+// StopDataSourceSyncJob mocks base method.
 func (m *MockKendraAPI) StopDataSourceSyncJob(arg0 *kendra.StopDataSourceSyncJobInput) (*kendra.StopDataSourceSyncJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopDataSourceSyncJob", arg0)
@@ -1243,13 +1244,13 @@ func (m *MockKendraAPI) StopDataSourceSyncJob(arg0 *kendra.StopDataSourceSyncJob
 	return ret0, ret1
 }
 
-// StopDataSourceSyncJob indicates an expected call of StopDataSourceSyncJob
+// StopDataSourceSyncJob indicates an expected call of StopDataSourceSyncJob.
 func (mr *MockKendraAPIMockRecorder) StopDataSourceSyncJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopDataSourceSyncJob", reflect.TypeOf((*MockKendraAPI)(nil).StopDataSourceSyncJob), arg0)
 }
 
-// StopDataSourceSyncJobRequest mocks base method
+// StopDataSourceSyncJobRequest mocks base method.
 func (m *MockKendraAPI) StopDataSourceSyncJobRequest(arg0 *kendra.StopDataSourceSyncJobInput) (*request.Request, *kendra.StopDataSourceSyncJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopDataSourceSyncJobRequest", arg0)
@@ -1258,13 +1259,13 @@ func (m *MockKendraAPI) StopDataSourceSyncJobRequest(arg0 *kendra.StopDataSource
 	return ret0, ret1
 }
 
-// StopDataSourceSyncJobRequest indicates an expected call of StopDataSourceSyncJobRequest
+// StopDataSourceSyncJobRequest indicates an expected call of StopDataSourceSyncJobRequest.
 func (mr *MockKendraAPIMockRecorder) StopDataSourceSyncJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopDataSourceSyncJobRequest", reflect.TypeOf((*MockKendraAPI)(nil).StopDataSourceSyncJobRequest), arg0)
 }
 
-// StopDataSourceSyncJobWithContext mocks base method
+// StopDataSourceSyncJobWithContext mocks base method.
 func (m *MockKendraAPI) StopDataSourceSyncJobWithContext(arg0 context.Context, arg1 *kendra.StopDataSourceSyncJobInput, arg2 ...request.Option) (*kendra.StopDataSourceSyncJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1277,14 +1278,14 @@ func (m *MockKendraAPI) StopDataSourceSyncJobWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// StopDataSourceSyncJobWithContext indicates an expected call of StopDataSourceSyncJobWithContext
+// StopDataSourceSyncJobWithContext indicates an expected call of StopDataSourceSyncJobWithContext.
 func (mr *MockKendraAPIMockRecorder) StopDataSourceSyncJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopDataSourceSyncJobWithContext", reflect.TypeOf((*MockKendraAPI)(nil).StopDataSourceSyncJobWithContext), varargs...)
 }
 
-// SubmitFeedback mocks base method
+// SubmitFeedback mocks base method.
 func (m *MockKendraAPI) SubmitFeedback(arg0 *kendra.SubmitFeedbackInput) (*kendra.SubmitFeedbackOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SubmitFeedback", arg0)
@@ -1293,13 +1294,13 @@ func (m *MockKendraAPI) SubmitFeedback(arg0 *kendra.SubmitFeedbackInput) (*kendr
 	return ret0, ret1
 }
 
-// SubmitFeedback indicates an expected call of SubmitFeedback
+// SubmitFeedback indicates an expected call of SubmitFeedback.
 func (mr *MockKendraAPIMockRecorder) SubmitFeedback(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SubmitFeedback", reflect.TypeOf((*MockKendraAPI)(nil).SubmitFeedback), arg0)
 }
 
-// SubmitFeedbackRequest mocks base method
+// SubmitFeedbackRequest mocks base method.
 func (m *MockKendraAPI) SubmitFeedbackRequest(arg0 *kendra.SubmitFeedbackInput) (*request.Request, *kendra.SubmitFeedbackOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SubmitFeedbackRequest", arg0)
@@ -1308,13 +1309,13 @@ func (m *MockKendraAPI) SubmitFeedbackRequest(arg0 *kendra.SubmitFeedbackInput) 
 	return ret0, ret1
 }
 
-// SubmitFeedbackRequest indicates an expected call of SubmitFeedbackRequest
+// SubmitFeedbackRequest indicates an expected call of SubmitFeedbackRequest.
 func (mr *MockKendraAPIMockRecorder) SubmitFeedbackRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SubmitFeedbackRequest", reflect.TypeOf((*MockKendraAPI)(nil).SubmitFeedbackRequest), arg0)
 }
 
-// SubmitFeedbackWithContext mocks base method
+// SubmitFeedbackWithContext mocks base method.
 func (m *MockKendraAPI) SubmitFeedbackWithContext(arg0 context.Context, arg1 *kendra.SubmitFeedbackInput, arg2 ...request.Option) (*kendra.SubmitFeedbackOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1327,14 +1328,14 @@ func (m *MockKendraAPI) SubmitFeedbackWithContext(arg0 context.Context, arg1 *ke
 	return ret0, ret1
 }
 
-// SubmitFeedbackWithContext indicates an expected call of SubmitFeedbackWithContext
+// SubmitFeedbackWithContext indicates an expected call of SubmitFeedbackWithContext.
 func (mr *MockKendraAPIMockRecorder) SubmitFeedbackWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SubmitFeedbackWithContext", reflect.TypeOf((*MockKendraAPI)(nil).SubmitFeedbackWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockKendraAPI) TagResource(arg0 *kendra.TagResourceInput) (*kendra.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1343,13 +1344,13 @@ func (m *MockKendraAPI) TagResource(arg0 *kendra.TagResourceInput) (*kendra.TagR
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockKendraAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockKendraAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockKendraAPI) TagResourceRequest(arg0 *kendra.TagResourceInput) (*request.Request, *kendra.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1358,13 +1359,13 @@ func (m *MockKendraAPI) TagResourceRequest(arg0 *kendra.TagResourceInput) (*requ
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockKendraAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockKendraAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockKendraAPI) TagResourceWithContext(arg0 context.Context, arg1 *kendra.TagResourceInput, arg2 ...request.Option) (*kendra.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1377,14 +1378,14 @@ func (m *MockKendraAPI) TagResourceWithContext(arg0 context.Context, arg1 *kendr
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockKendraAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockKendraAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockKendraAPI) UntagResource(arg0 *kendra.UntagResourceInput) (*kendra.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1393,13 +1394,13 @@ func (m *MockKendraAPI) UntagResource(arg0 *kendra.UntagResourceInput) (*kendra.
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockKendraAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockKendraAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockKendraAPI) UntagResourceRequest(arg0 *kendra.UntagResourceInput) (*request.Request, *kendra.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1408,13 +1409,13 @@ func (m *MockKendraAPI) UntagResourceRequest(arg0 *kendra.UntagResourceInput) (*
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockKendraAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockKendraAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockKendraAPI) UntagResourceWithContext(arg0 context.Context, arg1 *kendra.UntagResourceInput, arg2 ...request.Option) (*kendra.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1427,14 +1428,14 @@ func (m *MockKendraAPI) UntagResourceWithContext(arg0 context.Context, arg1 *ken
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockKendraAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockKendraAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateDataSource mocks base method
+// UpdateDataSource mocks base method.
 func (m *MockKendraAPI) UpdateDataSource(arg0 *kendra.UpdateDataSourceInput) (*kendra.UpdateDataSourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDataSource", arg0)
@@ -1443,13 +1444,13 @@ func (m *MockKendraAPI) UpdateDataSource(arg0 *kendra.UpdateDataSourceInput) (*k
 	return ret0, ret1
 }
 
-// UpdateDataSource indicates an expected call of UpdateDataSource
+// UpdateDataSource indicates an expected call of UpdateDataSource.
 func (mr *MockKendraAPIMockRecorder) UpdateDataSource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDataSource", reflect.TypeOf((*MockKendraAPI)(nil).UpdateDataSource), arg0)
 }
 
-// UpdateDataSourceRequest mocks base method
+// UpdateDataSourceRequest mocks base method.
 func (m *MockKendraAPI) UpdateDataSourceRequest(arg0 *kendra.UpdateDataSourceInput) (*request.Request, *kendra.UpdateDataSourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDataSourceRequest", arg0)
@@ -1458,13 +1459,13 @@ func (m *MockKendraAPI) UpdateDataSourceRequest(arg0 *kendra.UpdateDataSourceInp
 	return ret0, ret1
 }
 
-// UpdateDataSourceRequest indicates an expected call of UpdateDataSourceRequest
+// UpdateDataSourceRequest indicates an expected call of UpdateDataSourceRequest.
 func (mr *MockKendraAPIMockRecorder) UpdateDataSourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDataSourceRequest", reflect.TypeOf((*MockKendraAPI)(nil).UpdateDataSourceRequest), arg0)
 }
 
-// UpdateDataSourceWithContext mocks base method
+// UpdateDataSourceWithContext mocks base method.
 func (m *MockKendraAPI) UpdateDataSourceWithContext(arg0 context.Context, arg1 *kendra.UpdateDataSourceInput, arg2 ...request.Option) (*kendra.UpdateDataSourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1477,14 +1478,14 @@ func (m *MockKendraAPI) UpdateDataSourceWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// UpdateDataSourceWithContext indicates an expected call of UpdateDataSourceWithContext
+// UpdateDataSourceWithContext indicates an expected call of UpdateDataSourceWithContext.
 func (mr *MockKendraAPIMockRecorder) UpdateDataSourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDataSourceWithContext", reflect.TypeOf((*MockKendraAPI)(nil).UpdateDataSourceWithContext), varargs...)
 }
 
-// UpdateIndex mocks base method
+// UpdateIndex mocks base method.
 func (m *MockKendraAPI) UpdateIndex(arg0 *kendra.UpdateIndexInput) (*kendra.UpdateIndexOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateIndex", arg0)
@@ -1493,13 +1494,13 @@ func (m *MockKendraAPI) UpdateIndex(arg0 *kendra.UpdateIndexInput) (*kendra.Upda
 	return ret0, ret1
 }
 
-// UpdateIndex indicates an expected call of UpdateIndex
+// UpdateIndex indicates an expected call of UpdateIndex.
 func (mr *MockKendraAPIMockRecorder) UpdateIndex(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateIndex", reflect.TypeOf((*MockKendraAPI)(nil).UpdateIndex), arg0)
 }
 
-// UpdateIndexRequest mocks base method
+// UpdateIndexRequest mocks base method.
 func (m *MockKendraAPI) UpdateIndexRequest(arg0 *kendra.UpdateIndexInput) (*request.Request, *kendra.UpdateIndexOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateIndexRequest", arg0)
@@ -1508,13 +1509,13 @@ func (m *MockKendraAPI) UpdateIndexRequest(arg0 *kendra.UpdateIndexInput) (*requ
 	return ret0, ret1
 }
 
-// UpdateIndexRequest indicates an expected call of UpdateIndexRequest
+// UpdateIndexRequest indicates an expected call of UpdateIndexRequest.
 func (mr *MockKendraAPIMockRecorder) UpdateIndexRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateIndexRequest", reflect.TypeOf((*MockKendraAPI)(nil).UpdateIndexRequest), arg0)
 }
 
-// UpdateIndexWithContext mocks base method
+// UpdateIndexWithContext mocks base method.
 func (m *MockKendraAPI) UpdateIndexWithContext(arg0 context.Context, arg1 *kendra.UpdateIndexInput, arg2 ...request.Option) (*kendra.UpdateIndexOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1527,14 +1528,14 @@ func (m *MockKendraAPI) UpdateIndexWithContext(arg0 context.Context, arg1 *kendr
 	return ret0, ret1
 }
 
-// UpdateIndexWithContext indicates an expected call of UpdateIndexWithContext
+// UpdateIndexWithContext indicates an expected call of UpdateIndexWithContext.
 func (mr *MockKendraAPIMockRecorder) UpdateIndexWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateIndexWithContext", reflect.TypeOf((*MockKendraAPI)(nil).UpdateIndexWithContext), varargs...)
 }
 
-// UpdateThesaurus mocks base method
+// UpdateThesaurus mocks base method.
 func (m *MockKendraAPI) UpdateThesaurus(arg0 *kendra.UpdateThesaurusInput) (*kendra.UpdateThesaurusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateThesaurus", arg0)
@@ -1543,13 +1544,13 @@ func (m *MockKendraAPI) UpdateThesaurus(arg0 *kendra.UpdateThesaurusInput) (*ken
 	return ret0, ret1
 }
 
-// UpdateThesaurus indicates an expected call of UpdateThesaurus
+// UpdateThesaurus indicates an expected call of UpdateThesaurus.
 func (mr *MockKendraAPIMockRecorder) UpdateThesaurus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateThesaurus", reflect.TypeOf((*MockKendraAPI)(nil).UpdateThesaurus), arg0)
 }
 
-// UpdateThesaurusRequest mocks base method
+// UpdateThesaurusRequest mocks base method.
 func (m *MockKendraAPI) UpdateThesaurusRequest(arg0 *kendra.UpdateThesaurusInput) (*request.Request, *kendra.UpdateThesaurusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateThesaurusRequest", arg0)
@@ -1558,13 +1559,13 @@ func (m *MockKendraAPI) UpdateThesaurusRequest(arg0 *kendra.UpdateThesaurusInput
 	return ret0, ret1
 }
 
-// UpdateThesaurusRequest indicates an expected call of UpdateThesaurusRequest
+// UpdateThesaurusRequest indicates an expected call of UpdateThesaurusRequest.
 func (mr *MockKendraAPIMockRecorder) UpdateThesaurusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateThesaurusRequest", reflect.TypeOf((*MockKendraAPI)(nil).UpdateThesaurusRequest), arg0)
 }
 
-// UpdateThesaurusWithContext mocks base method
+// UpdateThesaurusWithContext mocks base method.
 func (m *MockKendraAPI) UpdateThesaurusWithContext(arg0 context.Context, arg1 *kendra.UpdateThesaurusInput, arg2 ...request.Option) (*kendra.UpdateThesaurusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1577,7 +1578,7 @@ func (m *MockKendraAPI) UpdateThesaurusWithContext(arg0 context.Context, arg1 *k
 	return ret0, ret1
 }
 
-// UpdateThesaurusWithContext indicates an expected call of UpdateThesaurusWithContext
+// UpdateThesaurusWithContext indicates an expected call of UpdateThesaurusWithContext.
 func (mr *MockKendraAPIMockRecorder) UpdateThesaurusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

@@ -6,36 +6,37 @@ package transcribestreamingservicemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	transcribestreamingservice "github.com/aws/aws-sdk-go/service/transcribestreamingservice"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockTranscribeStreamingServiceAPI is a mock of TranscribeStreamingServiceAPI interface
+// MockTranscribeStreamingServiceAPI is a mock of TranscribeStreamingServiceAPI interface.
 type MockTranscribeStreamingServiceAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockTranscribeStreamingServiceAPIMockRecorder
 }
 
-// MockTranscribeStreamingServiceAPIMockRecorder is the mock recorder for MockTranscribeStreamingServiceAPI
+// MockTranscribeStreamingServiceAPIMockRecorder is the mock recorder for MockTranscribeStreamingServiceAPI.
 type MockTranscribeStreamingServiceAPIMockRecorder struct {
 	mock *MockTranscribeStreamingServiceAPI
 }
 
-// NewMockTranscribeStreamingServiceAPI creates a new mock instance
+// NewMockTranscribeStreamingServiceAPI creates a new mock instance.
 func NewMockTranscribeStreamingServiceAPI(ctrl *gomock.Controller) *MockTranscribeStreamingServiceAPI {
 	mock := &MockTranscribeStreamingServiceAPI{ctrl: ctrl}
 	mock.recorder = &MockTranscribeStreamingServiceAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockTranscribeStreamingServiceAPI) EXPECT() *MockTranscribeStreamingServiceAPIMockRecorder {
 	return m.recorder
 }
 
-// StartMedicalStreamTranscription mocks base method
+// StartMedicalStreamTranscription mocks base method.
 func (m *MockTranscribeStreamingServiceAPI) StartMedicalStreamTranscription(arg0 *transcribestreamingservice.StartMedicalStreamTranscriptionInput) (*transcribestreamingservice.StartMedicalStreamTranscriptionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartMedicalStreamTranscription", arg0)
@@ -44,13 +45,13 @@ func (m *MockTranscribeStreamingServiceAPI) StartMedicalStreamTranscription(arg0
 	return ret0, ret1
 }
 
-// StartMedicalStreamTranscription indicates an expected call of StartMedicalStreamTranscription
+// StartMedicalStreamTranscription indicates an expected call of StartMedicalStreamTranscription.
 func (mr *MockTranscribeStreamingServiceAPIMockRecorder) StartMedicalStreamTranscription(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMedicalStreamTranscription", reflect.TypeOf((*MockTranscribeStreamingServiceAPI)(nil).StartMedicalStreamTranscription), arg0)
 }
 
-// StartMedicalStreamTranscriptionRequest mocks base method
+// StartMedicalStreamTranscriptionRequest mocks base method.
 func (m *MockTranscribeStreamingServiceAPI) StartMedicalStreamTranscriptionRequest(arg0 *transcribestreamingservice.StartMedicalStreamTranscriptionInput) (*request.Request, *transcribestreamingservice.StartMedicalStreamTranscriptionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartMedicalStreamTranscriptionRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockTranscribeStreamingServiceAPI) StartMedicalStreamTranscriptionReque
 	return ret0, ret1
 }
 
-// StartMedicalStreamTranscriptionRequest indicates an expected call of StartMedicalStreamTranscriptionRequest
+// StartMedicalStreamTranscriptionRequest indicates an expected call of StartMedicalStreamTranscriptionRequest.
 func (mr *MockTranscribeStreamingServiceAPIMockRecorder) StartMedicalStreamTranscriptionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMedicalStreamTranscriptionRequest", reflect.TypeOf((*MockTranscribeStreamingServiceAPI)(nil).StartMedicalStreamTranscriptionRequest), arg0)
 }
 
-// StartMedicalStreamTranscriptionWithContext mocks base method
+// StartMedicalStreamTranscriptionWithContext mocks base method.
 func (m *MockTranscribeStreamingServiceAPI) StartMedicalStreamTranscriptionWithContext(arg0 context.Context, arg1 *transcribestreamingservice.StartMedicalStreamTranscriptionInput, arg2 ...request.Option) (*transcribestreamingservice.StartMedicalStreamTranscriptionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockTranscribeStreamingServiceAPI) StartMedicalStreamTranscriptionWithC
 	return ret0, ret1
 }
 
-// StartMedicalStreamTranscriptionWithContext indicates an expected call of StartMedicalStreamTranscriptionWithContext
+// StartMedicalStreamTranscriptionWithContext indicates an expected call of StartMedicalStreamTranscriptionWithContext.
 func (mr *MockTranscribeStreamingServiceAPIMockRecorder) StartMedicalStreamTranscriptionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMedicalStreamTranscriptionWithContext", reflect.TypeOf((*MockTranscribeStreamingServiceAPI)(nil).StartMedicalStreamTranscriptionWithContext), varargs...)
 }
 
-// StartStreamTranscription mocks base method
+// StartStreamTranscription mocks base method.
 func (m *MockTranscribeStreamingServiceAPI) StartStreamTranscription(arg0 *transcribestreamingservice.StartStreamTranscriptionInput) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartStreamTranscription", arg0)
@@ -94,13 +95,13 @@ func (m *MockTranscribeStreamingServiceAPI) StartStreamTranscription(arg0 *trans
 	return ret0, ret1
 }
 
-// StartStreamTranscription indicates an expected call of StartStreamTranscription
+// StartStreamTranscription indicates an expected call of StartStreamTranscription.
 func (mr *MockTranscribeStreamingServiceAPIMockRecorder) StartStreamTranscription(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartStreamTranscription", reflect.TypeOf((*MockTranscribeStreamingServiceAPI)(nil).StartStreamTranscription), arg0)
 }
 
-// StartStreamTranscriptionRequest mocks base method
+// StartStreamTranscriptionRequest mocks base method.
 func (m *MockTranscribeStreamingServiceAPI) StartStreamTranscriptionRequest(arg0 *transcribestreamingservice.StartStreamTranscriptionInput) (*request.Request, *transcribestreamingservice.StartStreamTranscriptionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartStreamTranscriptionRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockTranscribeStreamingServiceAPI) StartStreamTranscriptionRequest(arg0
 	return ret0, ret1
 }
 
-// StartStreamTranscriptionRequest indicates an expected call of StartStreamTranscriptionRequest
+// StartStreamTranscriptionRequest indicates an expected call of StartStreamTranscriptionRequest.
 func (mr *MockTranscribeStreamingServiceAPIMockRecorder) StartStreamTranscriptionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartStreamTranscriptionRequest", reflect.TypeOf((*MockTranscribeStreamingServiceAPI)(nil).StartStreamTranscriptionRequest), arg0)
 }
 
-// StartStreamTranscriptionWithContext mocks base method
+// StartStreamTranscriptionWithContext mocks base method.
 func (m *MockTranscribeStreamingServiceAPI) StartStreamTranscriptionWithContext(arg0 context.Context, arg1 *transcribestreamingservice.StartStreamTranscriptionInput, arg2 ...request.Option) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,7 +129,7 @@ func (m *MockTranscribeStreamingServiceAPI) StartStreamTranscriptionWithContext(
 	return ret0, ret1
 }
 
-// StartStreamTranscriptionWithContext indicates an expected call of StartStreamTranscriptionWithContext
+// StartStreamTranscriptionWithContext indicates an expected call of StartStreamTranscriptionWithContext.
 func (mr *MockTranscribeStreamingServiceAPIMockRecorder) StartStreamTranscriptionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

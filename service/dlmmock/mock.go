@@ -6,36 +6,37 @@ package dlmmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	dlm "github.com/aws/aws-sdk-go/service/dlm"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockDLMAPI is a mock of DLMAPI interface
+// MockDLMAPI is a mock of DLMAPI interface.
 type MockDLMAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockDLMAPIMockRecorder
 }
 
-// MockDLMAPIMockRecorder is the mock recorder for MockDLMAPI
+// MockDLMAPIMockRecorder is the mock recorder for MockDLMAPI.
 type MockDLMAPIMockRecorder struct {
 	mock *MockDLMAPI
 }
 
-// NewMockDLMAPI creates a new mock instance
+// NewMockDLMAPI creates a new mock instance.
 func NewMockDLMAPI(ctrl *gomock.Controller) *MockDLMAPI {
 	mock := &MockDLMAPI{ctrl: ctrl}
 	mock.recorder = &MockDLMAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockDLMAPI) EXPECT() *MockDLMAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateLifecyclePolicy mocks base method
+// CreateLifecyclePolicy mocks base method.
 func (m *MockDLMAPI) CreateLifecyclePolicy(arg0 *dlm.CreateLifecyclePolicyInput) (*dlm.CreateLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateLifecyclePolicy", arg0)
@@ -44,13 +45,13 @@ func (m *MockDLMAPI) CreateLifecyclePolicy(arg0 *dlm.CreateLifecyclePolicyInput)
 	return ret0, ret1
 }
 
-// CreateLifecyclePolicy indicates an expected call of CreateLifecyclePolicy
+// CreateLifecyclePolicy indicates an expected call of CreateLifecyclePolicy.
 func (mr *MockDLMAPIMockRecorder) CreateLifecyclePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLifecyclePolicy", reflect.TypeOf((*MockDLMAPI)(nil).CreateLifecyclePolicy), arg0)
 }
 
-// CreateLifecyclePolicyRequest mocks base method
+// CreateLifecyclePolicyRequest mocks base method.
 func (m *MockDLMAPI) CreateLifecyclePolicyRequest(arg0 *dlm.CreateLifecyclePolicyInput) (*request.Request, *dlm.CreateLifecyclePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateLifecyclePolicyRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockDLMAPI) CreateLifecyclePolicyRequest(arg0 *dlm.CreateLifecyclePolic
 	return ret0, ret1
 }
 
-// CreateLifecyclePolicyRequest indicates an expected call of CreateLifecyclePolicyRequest
+// CreateLifecyclePolicyRequest indicates an expected call of CreateLifecyclePolicyRequest.
 func (mr *MockDLMAPIMockRecorder) CreateLifecyclePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLifecyclePolicyRequest", reflect.TypeOf((*MockDLMAPI)(nil).CreateLifecyclePolicyRequest), arg0)
 }
 
-// CreateLifecyclePolicyWithContext mocks base method
+// CreateLifecyclePolicyWithContext mocks base method.
 func (m *MockDLMAPI) CreateLifecyclePolicyWithContext(arg0 context.Context, arg1 *dlm.CreateLifecyclePolicyInput, arg2 ...request.Option) (*dlm.CreateLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockDLMAPI) CreateLifecyclePolicyWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// CreateLifecyclePolicyWithContext indicates an expected call of CreateLifecyclePolicyWithContext
+// CreateLifecyclePolicyWithContext indicates an expected call of CreateLifecyclePolicyWithContext.
 func (mr *MockDLMAPIMockRecorder) CreateLifecyclePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLifecyclePolicyWithContext", reflect.TypeOf((*MockDLMAPI)(nil).CreateLifecyclePolicyWithContext), varargs...)
 }
 
-// DeleteLifecyclePolicy mocks base method
+// DeleteLifecyclePolicy mocks base method.
 func (m *MockDLMAPI) DeleteLifecyclePolicy(arg0 *dlm.DeleteLifecyclePolicyInput) (*dlm.DeleteLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLifecyclePolicy", arg0)
@@ -94,13 +95,13 @@ func (m *MockDLMAPI) DeleteLifecyclePolicy(arg0 *dlm.DeleteLifecyclePolicyInput)
 	return ret0, ret1
 }
 
-// DeleteLifecyclePolicy indicates an expected call of DeleteLifecyclePolicy
+// DeleteLifecyclePolicy indicates an expected call of DeleteLifecyclePolicy.
 func (mr *MockDLMAPIMockRecorder) DeleteLifecyclePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLifecyclePolicy", reflect.TypeOf((*MockDLMAPI)(nil).DeleteLifecyclePolicy), arg0)
 }
 
-// DeleteLifecyclePolicyRequest mocks base method
+// DeleteLifecyclePolicyRequest mocks base method.
 func (m *MockDLMAPI) DeleteLifecyclePolicyRequest(arg0 *dlm.DeleteLifecyclePolicyInput) (*request.Request, *dlm.DeleteLifecyclePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLifecyclePolicyRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockDLMAPI) DeleteLifecyclePolicyRequest(arg0 *dlm.DeleteLifecyclePolic
 	return ret0, ret1
 }
 
-// DeleteLifecyclePolicyRequest indicates an expected call of DeleteLifecyclePolicyRequest
+// DeleteLifecyclePolicyRequest indicates an expected call of DeleteLifecyclePolicyRequest.
 func (mr *MockDLMAPIMockRecorder) DeleteLifecyclePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLifecyclePolicyRequest", reflect.TypeOf((*MockDLMAPI)(nil).DeleteLifecyclePolicyRequest), arg0)
 }
 
-// DeleteLifecyclePolicyWithContext mocks base method
+// DeleteLifecyclePolicyWithContext mocks base method.
 func (m *MockDLMAPI) DeleteLifecyclePolicyWithContext(arg0 context.Context, arg1 *dlm.DeleteLifecyclePolicyInput, arg2 ...request.Option) (*dlm.DeleteLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockDLMAPI) DeleteLifecyclePolicyWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DeleteLifecyclePolicyWithContext indicates an expected call of DeleteLifecyclePolicyWithContext
+// DeleteLifecyclePolicyWithContext indicates an expected call of DeleteLifecyclePolicyWithContext.
 func (mr *MockDLMAPIMockRecorder) DeleteLifecyclePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLifecyclePolicyWithContext", reflect.TypeOf((*MockDLMAPI)(nil).DeleteLifecyclePolicyWithContext), varargs...)
 }
 
-// GetLifecyclePolicies mocks base method
+// GetLifecyclePolicies mocks base method.
 func (m *MockDLMAPI) GetLifecyclePolicies(arg0 *dlm.GetLifecyclePoliciesInput) (*dlm.GetLifecyclePoliciesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLifecyclePolicies", arg0)
@@ -144,13 +145,13 @@ func (m *MockDLMAPI) GetLifecyclePolicies(arg0 *dlm.GetLifecyclePoliciesInput) (
 	return ret0, ret1
 }
 
-// GetLifecyclePolicies indicates an expected call of GetLifecyclePolicies
+// GetLifecyclePolicies indicates an expected call of GetLifecyclePolicies.
 func (mr *MockDLMAPIMockRecorder) GetLifecyclePolicies(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLifecyclePolicies", reflect.TypeOf((*MockDLMAPI)(nil).GetLifecyclePolicies), arg0)
 }
 
-// GetLifecyclePoliciesRequest mocks base method
+// GetLifecyclePoliciesRequest mocks base method.
 func (m *MockDLMAPI) GetLifecyclePoliciesRequest(arg0 *dlm.GetLifecyclePoliciesInput) (*request.Request, *dlm.GetLifecyclePoliciesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLifecyclePoliciesRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockDLMAPI) GetLifecyclePoliciesRequest(arg0 *dlm.GetLifecyclePoliciesI
 	return ret0, ret1
 }
 
-// GetLifecyclePoliciesRequest indicates an expected call of GetLifecyclePoliciesRequest
+// GetLifecyclePoliciesRequest indicates an expected call of GetLifecyclePoliciesRequest.
 func (mr *MockDLMAPIMockRecorder) GetLifecyclePoliciesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLifecyclePoliciesRequest", reflect.TypeOf((*MockDLMAPI)(nil).GetLifecyclePoliciesRequest), arg0)
 }
 
-// GetLifecyclePoliciesWithContext mocks base method
+// GetLifecyclePoliciesWithContext mocks base method.
 func (m *MockDLMAPI) GetLifecyclePoliciesWithContext(arg0 context.Context, arg1 *dlm.GetLifecyclePoliciesInput, arg2 ...request.Option) (*dlm.GetLifecyclePoliciesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockDLMAPI) GetLifecyclePoliciesWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// GetLifecyclePoliciesWithContext indicates an expected call of GetLifecyclePoliciesWithContext
+// GetLifecyclePoliciesWithContext indicates an expected call of GetLifecyclePoliciesWithContext.
 func (mr *MockDLMAPIMockRecorder) GetLifecyclePoliciesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLifecyclePoliciesWithContext", reflect.TypeOf((*MockDLMAPI)(nil).GetLifecyclePoliciesWithContext), varargs...)
 }
 
-// GetLifecyclePolicy mocks base method
+// GetLifecyclePolicy mocks base method.
 func (m *MockDLMAPI) GetLifecyclePolicy(arg0 *dlm.GetLifecyclePolicyInput) (*dlm.GetLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLifecyclePolicy", arg0)
@@ -194,13 +195,13 @@ func (m *MockDLMAPI) GetLifecyclePolicy(arg0 *dlm.GetLifecyclePolicyInput) (*dlm
 	return ret0, ret1
 }
 
-// GetLifecyclePolicy indicates an expected call of GetLifecyclePolicy
+// GetLifecyclePolicy indicates an expected call of GetLifecyclePolicy.
 func (mr *MockDLMAPIMockRecorder) GetLifecyclePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLifecyclePolicy", reflect.TypeOf((*MockDLMAPI)(nil).GetLifecyclePolicy), arg0)
 }
 
-// GetLifecyclePolicyRequest mocks base method
+// GetLifecyclePolicyRequest mocks base method.
 func (m *MockDLMAPI) GetLifecyclePolicyRequest(arg0 *dlm.GetLifecyclePolicyInput) (*request.Request, *dlm.GetLifecyclePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLifecyclePolicyRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockDLMAPI) GetLifecyclePolicyRequest(arg0 *dlm.GetLifecyclePolicyInput
 	return ret0, ret1
 }
 
-// GetLifecyclePolicyRequest indicates an expected call of GetLifecyclePolicyRequest
+// GetLifecyclePolicyRequest indicates an expected call of GetLifecyclePolicyRequest.
 func (mr *MockDLMAPIMockRecorder) GetLifecyclePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLifecyclePolicyRequest", reflect.TypeOf((*MockDLMAPI)(nil).GetLifecyclePolicyRequest), arg0)
 }
 
-// GetLifecyclePolicyWithContext mocks base method
+// GetLifecyclePolicyWithContext mocks base method.
 func (m *MockDLMAPI) GetLifecyclePolicyWithContext(arg0 context.Context, arg1 *dlm.GetLifecyclePolicyInput, arg2 ...request.Option) (*dlm.GetLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockDLMAPI) GetLifecyclePolicyWithContext(arg0 context.Context, arg1 *d
 	return ret0, ret1
 }
 
-// GetLifecyclePolicyWithContext indicates an expected call of GetLifecyclePolicyWithContext
+// GetLifecyclePolicyWithContext indicates an expected call of GetLifecyclePolicyWithContext.
 func (mr *MockDLMAPIMockRecorder) GetLifecyclePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLifecyclePolicyWithContext", reflect.TypeOf((*MockDLMAPI)(nil).GetLifecyclePolicyWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockDLMAPI) ListTagsForResource(arg0 *dlm.ListTagsForResourceInput) (*dlm.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -244,13 +245,13 @@ func (m *MockDLMAPI) ListTagsForResource(arg0 *dlm.ListTagsForResourceInput) (*d
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockDLMAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockDLMAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockDLMAPI) ListTagsForResourceRequest(arg0 *dlm.ListTagsForResourceInput) (*request.Request, *dlm.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockDLMAPI) ListTagsForResourceRequest(arg0 *dlm.ListTagsForResourceInp
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockDLMAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockDLMAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockDLMAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *dlm.ListTagsForResourceInput, arg2 ...request.Option) (*dlm.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockDLMAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockDLMAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockDLMAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockDLMAPI) TagResource(arg0 *dlm.TagResourceInput) (*dlm.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -294,13 +295,13 @@ func (m *MockDLMAPI) TagResource(arg0 *dlm.TagResourceInput) (*dlm.TagResourceOu
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockDLMAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockDLMAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockDLMAPI) TagResourceRequest(arg0 *dlm.TagResourceInput) (*request.Request, *dlm.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockDLMAPI) TagResourceRequest(arg0 *dlm.TagResourceInput) (*request.Re
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockDLMAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockDLMAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockDLMAPI) TagResourceWithContext(arg0 context.Context, arg1 *dlm.TagResourceInput, arg2 ...request.Option) (*dlm.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockDLMAPI) TagResourceWithContext(arg0 context.Context, arg1 *dlm.TagR
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockDLMAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockDLMAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockDLMAPI) UntagResource(arg0 *dlm.UntagResourceInput) (*dlm.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -344,13 +345,13 @@ func (m *MockDLMAPI) UntagResource(arg0 *dlm.UntagResourceInput) (*dlm.UntagReso
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockDLMAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockDLMAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockDLMAPI) UntagResourceRequest(arg0 *dlm.UntagResourceInput) (*request.Request, *dlm.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockDLMAPI) UntagResourceRequest(arg0 *dlm.UntagResourceInput) (*reques
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockDLMAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockDLMAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockDLMAPI) UntagResourceWithContext(arg0 context.Context, arg1 *dlm.UntagResourceInput, arg2 ...request.Option) (*dlm.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockDLMAPI) UntagResourceWithContext(arg0 context.Context, arg1 *dlm.Un
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockDLMAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockDLMAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateLifecyclePolicy mocks base method
+// UpdateLifecyclePolicy mocks base method.
 func (m *MockDLMAPI) UpdateLifecyclePolicy(arg0 *dlm.UpdateLifecyclePolicyInput) (*dlm.UpdateLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateLifecyclePolicy", arg0)
@@ -394,13 +395,13 @@ func (m *MockDLMAPI) UpdateLifecyclePolicy(arg0 *dlm.UpdateLifecyclePolicyInput)
 	return ret0, ret1
 }
 
-// UpdateLifecyclePolicy indicates an expected call of UpdateLifecyclePolicy
+// UpdateLifecyclePolicy indicates an expected call of UpdateLifecyclePolicy.
 func (mr *MockDLMAPIMockRecorder) UpdateLifecyclePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLifecyclePolicy", reflect.TypeOf((*MockDLMAPI)(nil).UpdateLifecyclePolicy), arg0)
 }
 
-// UpdateLifecyclePolicyRequest mocks base method
+// UpdateLifecyclePolicyRequest mocks base method.
 func (m *MockDLMAPI) UpdateLifecyclePolicyRequest(arg0 *dlm.UpdateLifecyclePolicyInput) (*request.Request, *dlm.UpdateLifecyclePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateLifecyclePolicyRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockDLMAPI) UpdateLifecyclePolicyRequest(arg0 *dlm.UpdateLifecyclePolic
 	return ret0, ret1
 }
 
-// UpdateLifecyclePolicyRequest indicates an expected call of UpdateLifecyclePolicyRequest
+// UpdateLifecyclePolicyRequest indicates an expected call of UpdateLifecyclePolicyRequest.
 func (mr *MockDLMAPIMockRecorder) UpdateLifecyclePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLifecyclePolicyRequest", reflect.TypeOf((*MockDLMAPI)(nil).UpdateLifecyclePolicyRequest), arg0)
 }
 
-// UpdateLifecyclePolicyWithContext mocks base method
+// UpdateLifecyclePolicyWithContext mocks base method.
 func (m *MockDLMAPI) UpdateLifecyclePolicyWithContext(arg0 context.Context, arg1 *dlm.UpdateLifecyclePolicyInput, arg2 ...request.Option) (*dlm.UpdateLifecyclePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,7 +429,7 @@ func (m *MockDLMAPI) UpdateLifecyclePolicyWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// UpdateLifecyclePolicyWithContext indicates an expected call of UpdateLifecyclePolicyWithContext
+// UpdateLifecyclePolicyWithContext indicates an expected call of UpdateLifecyclePolicyWithContext.
 func (mr *MockDLMAPIMockRecorder) UpdateLifecyclePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

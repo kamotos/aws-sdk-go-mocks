@@ -6,36 +6,37 @@ package augmentedairuntimemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	augmentedairuntime "github.com/aws/aws-sdk-go/service/augmentedairuntime"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockAugmentedAIRuntimeAPI is a mock of AugmentedAIRuntimeAPI interface
+// MockAugmentedAIRuntimeAPI is a mock of AugmentedAIRuntimeAPI interface.
 type MockAugmentedAIRuntimeAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockAugmentedAIRuntimeAPIMockRecorder
 }
 
-// MockAugmentedAIRuntimeAPIMockRecorder is the mock recorder for MockAugmentedAIRuntimeAPI
+// MockAugmentedAIRuntimeAPIMockRecorder is the mock recorder for MockAugmentedAIRuntimeAPI.
 type MockAugmentedAIRuntimeAPIMockRecorder struct {
 	mock *MockAugmentedAIRuntimeAPI
 }
 
-// NewMockAugmentedAIRuntimeAPI creates a new mock instance
+// NewMockAugmentedAIRuntimeAPI creates a new mock instance.
 func NewMockAugmentedAIRuntimeAPI(ctrl *gomock.Controller) *MockAugmentedAIRuntimeAPI {
 	mock := &MockAugmentedAIRuntimeAPI{ctrl: ctrl}
 	mock.recorder = &MockAugmentedAIRuntimeAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockAugmentedAIRuntimeAPI) EXPECT() *MockAugmentedAIRuntimeAPIMockRecorder {
 	return m.recorder
 }
 
-// DeleteHumanLoop mocks base method
+// DeleteHumanLoop mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) DeleteHumanLoop(arg0 *augmentedairuntime.DeleteHumanLoopInput) (*augmentedairuntime.DeleteHumanLoopOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteHumanLoop", arg0)
@@ -44,13 +45,13 @@ func (m *MockAugmentedAIRuntimeAPI) DeleteHumanLoop(arg0 *augmentedairuntime.Del
 	return ret0, ret1
 }
 
-// DeleteHumanLoop indicates an expected call of DeleteHumanLoop
+// DeleteHumanLoop indicates an expected call of DeleteHumanLoop.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) DeleteHumanLoop(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteHumanLoop", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).DeleteHumanLoop), arg0)
 }
 
-// DeleteHumanLoopRequest mocks base method
+// DeleteHumanLoopRequest mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) DeleteHumanLoopRequest(arg0 *augmentedairuntime.DeleteHumanLoopInput) (*request.Request, *augmentedairuntime.DeleteHumanLoopOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteHumanLoopRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockAugmentedAIRuntimeAPI) DeleteHumanLoopRequest(arg0 *augmentedairunt
 	return ret0, ret1
 }
 
-// DeleteHumanLoopRequest indicates an expected call of DeleteHumanLoopRequest
+// DeleteHumanLoopRequest indicates an expected call of DeleteHumanLoopRequest.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) DeleteHumanLoopRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteHumanLoopRequest", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).DeleteHumanLoopRequest), arg0)
 }
 
-// DeleteHumanLoopWithContext mocks base method
+// DeleteHumanLoopWithContext mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) DeleteHumanLoopWithContext(arg0 context.Context, arg1 *augmentedairuntime.DeleteHumanLoopInput, arg2 ...request.Option) (*augmentedairuntime.DeleteHumanLoopOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockAugmentedAIRuntimeAPI) DeleteHumanLoopWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DeleteHumanLoopWithContext indicates an expected call of DeleteHumanLoopWithContext
+// DeleteHumanLoopWithContext indicates an expected call of DeleteHumanLoopWithContext.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) DeleteHumanLoopWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteHumanLoopWithContext", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).DeleteHumanLoopWithContext), varargs...)
 }
 
-// DescribeHumanLoop mocks base method
+// DescribeHumanLoop mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) DescribeHumanLoop(arg0 *augmentedairuntime.DescribeHumanLoopInput) (*augmentedairuntime.DescribeHumanLoopOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeHumanLoop", arg0)
@@ -94,13 +95,13 @@ func (m *MockAugmentedAIRuntimeAPI) DescribeHumanLoop(arg0 *augmentedairuntime.D
 	return ret0, ret1
 }
 
-// DescribeHumanLoop indicates an expected call of DescribeHumanLoop
+// DescribeHumanLoop indicates an expected call of DescribeHumanLoop.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) DescribeHumanLoop(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeHumanLoop", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).DescribeHumanLoop), arg0)
 }
 
-// DescribeHumanLoopRequest mocks base method
+// DescribeHumanLoopRequest mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) DescribeHumanLoopRequest(arg0 *augmentedairuntime.DescribeHumanLoopInput) (*request.Request, *augmentedairuntime.DescribeHumanLoopOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeHumanLoopRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockAugmentedAIRuntimeAPI) DescribeHumanLoopRequest(arg0 *augmentedairu
 	return ret0, ret1
 }
 
-// DescribeHumanLoopRequest indicates an expected call of DescribeHumanLoopRequest
+// DescribeHumanLoopRequest indicates an expected call of DescribeHumanLoopRequest.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) DescribeHumanLoopRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeHumanLoopRequest", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).DescribeHumanLoopRequest), arg0)
 }
 
-// DescribeHumanLoopWithContext mocks base method
+// DescribeHumanLoopWithContext mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) DescribeHumanLoopWithContext(arg0 context.Context, arg1 *augmentedairuntime.DescribeHumanLoopInput, arg2 ...request.Option) (*augmentedairuntime.DescribeHumanLoopOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockAugmentedAIRuntimeAPI) DescribeHumanLoopWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DescribeHumanLoopWithContext indicates an expected call of DescribeHumanLoopWithContext
+// DescribeHumanLoopWithContext indicates an expected call of DescribeHumanLoopWithContext.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) DescribeHumanLoopWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeHumanLoopWithContext", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).DescribeHumanLoopWithContext), varargs...)
 }
 
-// ListHumanLoops mocks base method
+// ListHumanLoops mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) ListHumanLoops(arg0 *augmentedairuntime.ListHumanLoopsInput) (*augmentedairuntime.ListHumanLoopsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHumanLoops", arg0)
@@ -144,13 +145,13 @@ func (m *MockAugmentedAIRuntimeAPI) ListHumanLoops(arg0 *augmentedairuntime.List
 	return ret0, ret1
 }
 
-// ListHumanLoops indicates an expected call of ListHumanLoops
+// ListHumanLoops indicates an expected call of ListHumanLoops.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) ListHumanLoops(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHumanLoops", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).ListHumanLoops), arg0)
 }
 
-// ListHumanLoopsPages mocks base method
+// ListHumanLoopsPages mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) ListHumanLoopsPages(arg0 *augmentedairuntime.ListHumanLoopsInput, arg1 func(*augmentedairuntime.ListHumanLoopsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHumanLoopsPages", arg0, arg1)
@@ -158,13 +159,13 @@ func (m *MockAugmentedAIRuntimeAPI) ListHumanLoopsPages(arg0 *augmentedairuntime
 	return ret0
 }
 
-// ListHumanLoopsPages indicates an expected call of ListHumanLoopsPages
+// ListHumanLoopsPages indicates an expected call of ListHumanLoopsPages.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) ListHumanLoopsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHumanLoopsPages", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).ListHumanLoopsPages), arg0, arg1)
 }
 
-// ListHumanLoopsPagesWithContext mocks base method
+// ListHumanLoopsPagesWithContext mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) ListHumanLoopsPagesWithContext(arg0 context.Context, arg1 *augmentedairuntime.ListHumanLoopsInput, arg2 func(*augmentedairuntime.ListHumanLoopsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -176,14 +177,14 @@ func (m *MockAugmentedAIRuntimeAPI) ListHumanLoopsPagesWithContext(arg0 context.
 	return ret0
 }
 
-// ListHumanLoopsPagesWithContext indicates an expected call of ListHumanLoopsPagesWithContext
+// ListHumanLoopsPagesWithContext indicates an expected call of ListHumanLoopsPagesWithContext.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) ListHumanLoopsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHumanLoopsPagesWithContext", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).ListHumanLoopsPagesWithContext), varargs...)
 }
 
-// ListHumanLoopsRequest mocks base method
+// ListHumanLoopsRequest mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) ListHumanLoopsRequest(arg0 *augmentedairuntime.ListHumanLoopsInput) (*request.Request, *augmentedairuntime.ListHumanLoopsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListHumanLoopsRequest", arg0)
@@ -192,13 +193,13 @@ func (m *MockAugmentedAIRuntimeAPI) ListHumanLoopsRequest(arg0 *augmentedairunti
 	return ret0, ret1
 }
 
-// ListHumanLoopsRequest indicates an expected call of ListHumanLoopsRequest
+// ListHumanLoopsRequest indicates an expected call of ListHumanLoopsRequest.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) ListHumanLoopsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHumanLoopsRequest", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).ListHumanLoopsRequest), arg0)
 }
 
-// ListHumanLoopsWithContext mocks base method
+// ListHumanLoopsWithContext mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) ListHumanLoopsWithContext(arg0 context.Context, arg1 *augmentedairuntime.ListHumanLoopsInput, arg2 ...request.Option) (*augmentedairuntime.ListHumanLoopsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -211,14 +212,14 @@ func (m *MockAugmentedAIRuntimeAPI) ListHumanLoopsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListHumanLoopsWithContext indicates an expected call of ListHumanLoopsWithContext
+// ListHumanLoopsWithContext indicates an expected call of ListHumanLoopsWithContext.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) ListHumanLoopsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListHumanLoopsWithContext", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).ListHumanLoopsWithContext), varargs...)
 }
 
-// StartHumanLoop mocks base method
+// StartHumanLoop mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) StartHumanLoop(arg0 *augmentedairuntime.StartHumanLoopInput) (*augmentedairuntime.StartHumanLoopOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartHumanLoop", arg0)
@@ -227,13 +228,13 @@ func (m *MockAugmentedAIRuntimeAPI) StartHumanLoop(arg0 *augmentedairuntime.Star
 	return ret0, ret1
 }
 
-// StartHumanLoop indicates an expected call of StartHumanLoop
+// StartHumanLoop indicates an expected call of StartHumanLoop.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) StartHumanLoop(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartHumanLoop", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).StartHumanLoop), arg0)
 }
 
-// StartHumanLoopRequest mocks base method
+// StartHumanLoopRequest mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) StartHumanLoopRequest(arg0 *augmentedairuntime.StartHumanLoopInput) (*request.Request, *augmentedairuntime.StartHumanLoopOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartHumanLoopRequest", arg0)
@@ -242,13 +243,13 @@ func (m *MockAugmentedAIRuntimeAPI) StartHumanLoopRequest(arg0 *augmentedairunti
 	return ret0, ret1
 }
 
-// StartHumanLoopRequest indicates an expected call of StartHumanLoopRequest
+// StartHumanLoopRequest indicates an expected call of StartHumanLoopRequest.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) StartHumanLoopRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartHumanLoopRequest", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).StartHumanLoopRequest), arg0)
 }
 
-// StartHumanLoopWithContext mocks base method
+// StartHumanLoopWithContext mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) StartHumanLoopWithContext(arg0 context.Context, arg1 *augmentedairuntime.StartHumanLoopInput, arg2 ...request.Option) (*augmentedairuntime.StartHumanLoopOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -261,14 +262,14 @@ func (m *MockAugmentedAIRuntimeAPI) StartHumanLoopWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// StartHumanLoopWithContext indicates an expected call of StartHumanLoopWithContext
+// StartHumanLoopWithContext indicates an expected call of StartHumanLoopWithContext.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) StartHumanLoopWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartHumanLoopWithContext", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).StartHumanLoopWithContext), varargs...)
 }
 
-// StopHumanLoop mocks base method
+// StopHumanLoop mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) StopHumanLoop(arg0 *augmentedairuntime.StopHumanLoopInput) (*augmentedairuntime.StopHumanLoopOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopHumanLoop", arg0)
@@ -277,13 +278,13 @@ func (m *MockAugmentedAIRuntimeAPI) StopHumanLoop(arg0 *augmentedairuntime.StopH
 	return ret0, ret1
 }
 
-// StopHumanLoop indicates an expected call of StopHumanLoop
+// StopHumanLoop indicates an expected call of StopHumanLoop.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) StopHumanLoop(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopHumanLoop", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).StopHumanLoop), arg0)
 }
 
-// StopHumanLoopRequest mocks base method
+// StopHumanLoopRequest mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) StopHumanLoopRequest(arg0 *augmentedairuntime.StopHumanLoopInput) (*request.Request, *augmentedairuntime.StopHumanLoopOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopHumanLoopRequest", arg0)
@@ -292,13 +293,13 @@ func (m *MockAugmentedAIRuntimeAPI) StopHumanLoopRequest(arg0 *augmentedairuntim
 	return ret0, ret1
 }
 
-// StopHumanLoopRequest indicates an expected call of StopHumanLoopRequest
+// StopHumanLoopRequest indicates an expected call of StopHumanLoopRequest.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) StopHumanLoopRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopHumanLoopRequest", reflect.TypeOf((*MockAugmentedAIRuntimeAPI)(nil).StopHumanLoopRequest), arg0)
 }
 
-// StopHumanLoopWithContext mocks base method
+// StopHumanLoopWithContext mocks base method.
 func (m *MockAugmentedAIRuntimeAPI) StopHumanLoopWithContext(arg0 context.Context, arg1 *augmentedairuntime.StopHumanLoopInput, arg2 ...request.Option) (*augmentedairuntime.StopHumanLoopOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -311,7 +312,7 @@ func (m *MockAugmentedAIRuntimeAPI) StopHumanLoopWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// StopHumanLoopWithContext indicates an expected call of StopHumanLoopWithContext
+// StopHumanLoopWithContext indicates an expected call of StopHumanLoopWithContext.
 func (mr *MockAugmentedAIRuntimeAPIMockRecorder) StopHumanLoopWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

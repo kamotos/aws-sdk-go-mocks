@@ -6,36 +6,37 @@ package budgetsmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	budgets "github.com/aws/aws-sdk-go/service/budgets"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockBudgetsAPI is a mock of BudgetsAPI interface
+// MockBudgetsAPI is a mock of BudgetsAPI interface.
 type MockBudgetsAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockBudgetsAPIMockRecorder
 }
 
-// MockBudgetsAPIMockRecorder is the mock recorder for MockBudgetsAPI
+// MockBudgetsAPIMockRecorder is the mock recorder for MockBudgetsAPI.
 type MockBudgetsAPIMockRecorder struct {
 	mock *MockBudgetsAPI
 }
 
-// NewMockBudgetsAPI creates a new mock instance
+// NewMockBudgetsAPI creates a new mock instance.
 func NewMockBudgetsAPI(ctrl *gomock.Controller) *MockBudgetsAPI {
 	mock := &MockBudgetsAPI{ctrl: ctrl}
 	mock.recorder = &MockBudgetsAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockBudgetsAPI) EXPECT() *MockBudgetsAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateBudget mocks base method
+// CreateBudget mocks base method.
 func (m *MockBudgetsAPI) CreateBudget(arg0 *budgets.CreateBudgetInput) (*budgets.CreateBudgetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBudget", arg0)
@@ -44,13 +45,13 @@ func (m *MockBudgetsAPI) CreateBudget(arg0 *budgets.CreateBudgetInput) (*budgets
 	return ret0, ret1
 }
 
-// CreateBudget indicates an expected call of CreateBudget
+// CreateBudget indicates an expected call of CreateBudget.
 func (mr *MockBudgetsAPIMockRecorder) CreateBudget(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBudget", reflect.TypeOf((*MockBudgetsAPI)(nil).CreateBudget), arg0)
 }
 
-// CreateBudgetAction mocks base method
+// CreateBudgetAction mocks base method.
 func (m *MockBudgetsAPI) CreateBudgetAction(arg0 *budgets.CreateBudgetActionInput) (*budgets.CreateBudgetActionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBudgetAction", arg0)
@@ -59,13 +60,13 @@ func (m *MockBudgetsAPI) CreateBudgetAction(arg0 *budgets.CreateBudgetActionInpu
 	return ret0, ret1
 }
 
-// CreateBudgetAction indicates an expected call of CreateBudgetAction
+// CreateBudgetAction indicates an expected call of CreateBudgetAction.
 func (mr *MockBudgetsAPIMockRecorder) CreateBudgetAction(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBudgetAction", reflect.TypeOf((*MockBudgetsAPI)(nil).CreateBudgetAction), arg0)
 }
 
-// CreateBudgetActionRequest mocks base method
+// CreateBudgetActionRequest mocks base method.
 func (m *MockBudgetsAPI) CreateBudgetActionRequest(arg0 *budgets.CreateBudgetActionInput) (*request.Request, *budgets.CreateBudgetActionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBudgetActionRequest", arg0)
@@ -74,13 +75,13 @@ func (m *MockBudgetsAPI) CreateBudgetActionRequest(arg0 *budgets.CreateBudgetAct
 	return ret0, ret1
 }
 
-// CreateBudgetActionRequest indicates an expected call of CreateBudgetActionRequest
+// CreateBudgetActionRequest indicates an expected call of CreateBudgetActionRequest.
 func (mr *MockBudgetsAPIMockRecorder) CreateBudgetActionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBudgetActionRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).CreateBudgetActionRequest), arg0)
 }
 
-// CreateBudgetActionWithContext mocks base method
+// CreateBudgetActionWithContext mocks base method.
 func (m *MockBudgetsAPI) CreateBudgetActionWithContext(arg0 context.Context, arg1 *budgets.CreateBudgetActionInput, arg2 ...request.Option) (*budgets.CreateBudgetActionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -93,14 +94,14 @@ func (m *MockBudgetsAPI) CreateBudgetActionWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// CreateBudgetActionWithContext indicates an expected call of CreateBudgetActionWithContext
+// CreateBudgetActionWithContext indicates an expected call of CreateBudgetActionWithContext.
 func (mr *MockBudgetsAPIMockRecorder) CreateBudgetActionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBudgetActionWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).CreateBudgetActionWithContext), varargs...)
 }
 
-// CreateBudgetRequest mocks base method
+// CreateBudgetRequest mocks base method.
 func (m *MockBudgetsAPI) CreateBudgetRequest(arg0 *budgets.CreateBudgetInput) (*request.Request, *budgets.CreateBudgetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBudgetRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockBudgetsAPI) CreateBudgetRequest(arg0 *budgets.CreateBudgetInput) (*
 	return ret0, ret1
 }
 
-// CreateBudgetRequest indicates an expected call of CreateBudgetRequest
+// CreateBudgetRequest indicates an expected call of CreateBudgetRequest.
 func (mr *MockBudgetsAPIMockRecorder) CreateBudgetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBudgetRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).CreateBudgetRequest), arg0)
 }
 
-// CreateBudgetWithContext mocks base method
+// CreateBudgetWithContext mocks base method.
 func (m *MockBudgetsAPI) CreateBudgetWithContext(arg0 context.Context, arg1 *budgets.CreateBudgetInput, arg2 ...request.Option) (*budgets.CreateBudgetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockBudgetsAPI) CreateBudgetWithContext(arg0 context.Context, arg1 *bud
 	return ret0, ret1
 }
 
-// CreateBudgetWithContext indicates an expected call of CreateBudgetWithContext
+// CreateBudgetWithContext indicates an expected call of CreateBudgetWithContext.
 func (mr *MockBudgetsAPIMockRecorder) CreateBudgetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBudgetWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).CreateBudgetWithContext), varargs...)
 }
 
-// CreateNotification mocks base method
+// CreateNotification mocks base method.
 func (m *MockBudgetsAPI) CreateNotification(arg0 *budgets.CreateNotificationInput) (*budgets.CreateNotificationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateNotification", arg0)
@@ -144,13 +145,13 @@ func (m *MockBudgetsAPI) CreateNotification(arg0 *budgets.CreateNotificationInpu
 	return ret0, ret1
 }
 
-// CreateNotification indicates an expected call of CreateNotification
+// CreateNotification indicates an expected call of CreateNotification.
 func (mr *MockBudgetsAPIMockRecorder) CreateNotification(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateNotification", reflect.TypeOf((*MockBudgetsAPI)(nil).CreateNotification), arg0)
 }
 
-// CreateNotificationRequest mocks base method
+// CreateNotificationRequest mocks base method.
 func (m *MockBudgetsAPI) CreateNotificationRequest(arg0 *budgets.CreateNotificationInput) (*request.Request, *budgets.CreateNotificationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateNotificationRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockBudgetsAPI) CreateNotificationRequest(arg0 *budgets.CreateNotificat
 	return ret0, ret1
 }
 
-// CreateNotificationRequest indicates an expected call of CreateNotificationRequest
+// CreateNotificationRequest indicates an expected call of CreateNotificationRequest.
 func (mr *MockBudgetsAPIMockRecorder) CreateNotificationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateNotificationRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).CreateNotificationRequest), arg0)
 }
 
-// CreateNotificationWithContext mocks base method
+// CreateNotificationWithContext mocks base method.
 func (m *MockBudgetsAPI) CreateNotificationWithContext(arg0 context.Context, arg1 *budgets.CreateNotificationInput, arg2 ...request.Option) (*budgets.CreateNotificationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockBudgetsAPI) CreateNotificationWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// CreateNotificationWithContext indicates an expected call of CreateNotificationWithContext
+// CreateNotificationWithContext indicates an expected call of CreateNotificationWithContext.
 func (mr *MockBudgetsAPIMockRecorder) CreateNotificationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateNotificationWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).CreateNotificationWithContext), varargs...)
 }
 
-// CreateSubscriber mocks base method
+// CreateSubscriber mocks base method.
 func (m *MockBudgetsAPI) CreateSubscriber(arg0 *budgets.CreateSubscriberInput) (*budgets.CreateSubscriberOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSubscriber", arg0)
@@ -194,13 +195,13 @@ func (m *MockBudgetsAPI) CreateSubscriber(arg0 *budgets.CreateSubscriberInput) (
 	return ret0, ret1
 }
 
-// CreateSubscriber indicates an expected call of CreateSubscriber
+// CreateSubscriber indicates an expected call of CreateSubscriber.
 func (mr *MockBudgetsAPIMockRecorder) CreateSubscriber(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSubscriber", reflect.TypeOf((*MockBudgetsAPI)(nil).CreateSubscriber), arg0)
 }
 
-// CreateSubscriberRequest mocks base method
+// CreateSubscriberRequest mocks base method.
 func (m *MockBudgetsAPI) CreateSubscriberRequest(arg0 *budgets.CreateSubscriberInput) (*request.Request, *budgets.CreateSubscriberOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSubscriberRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockBudgetsAPI) CreateSubscriberRequest(arg0 *budgets.CreateSubscriberI
 	return ret0, ret1
 }
 
-// CreateSubscriberRequest indicates an expected call of CreateSubscriberRequest
+// CreateSubscriberRequest indicates an expected call of CreateSubscriberRequest.
 func (mr *MockBudgetsAPIMockRecorder) CreateSubscriberRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSubscriberRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).CreateSubscriberRequest), arg0)
 }
 
-// CreateSubscriberWithContext mocks base method
+// CreateSubscriberWithContext mocks base method.
 func (m *MockBudgetsAPI) CreateSubscriberWithContext(arg0 context.Context, arg1 *budgets.CreateSubscriberInput, arg2 ...request.Option) (*budgets.CreateSubscriberOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockBudgetsAPI) CreateSubscriberWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// CreateSubscriberWithContext indicates an expected call of CreateSubscriberWithContext
+// CreateSubscriberWithContext indicates an expected call of CreateSubscriberWithContext.
 func (mr *MockBudgetsAPIMockRecorder) CreateSubscriberWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSubscriberWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).CreateSubscriberWithContext), varargs...)
 }
 
-// DeleteBudget mocks base method
+// DeleteBudget mocks base method.
 func (m *MockBudgetsAPI) DeleteBudget(arg0 *budgets.DeleteBudgetInput) (*budgets.DeleteBudgetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBudget", arg0)
@@ -244,13 +245,13 @@ func (m *MockBudgetsAPI) DeleteBudget(arg0 *budgets.DeleteBudgetInput) (*budgets
 	return ret0, ret1
 }
 
-// DeleteBudget indicates an expected call of DeleteBudget
+// DeleteBudget indicates an expected call of DeleteBudget.
 func (mr *MockBudgetsAPIMockRecorder) DeleteBudget(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBudget", reflect.TypeOf((*MockBudgetsAPI)(nil).DeleteBudget), arg0)
 }
 
-// DeleteBudgetAction mocks base method
+// DeleteBudgetAction mocks base method.
 func (m *MockBudgetsAPI) DeleteBudgetAction(arg0 *budgets.DeleteBudgetActionInput) (*budgets.DeleteBudgetActionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBudgetAction", arg0)
@@ -259,13 +260,13 @@ func (m *MockBudgetsAPI) DeleteBudgetAction(arg0 *budgets.DeleteBudgetActionInpu
 	return ret0, ret1
 }
 
-// DeleteBudgetAction indicates an expected call of DeleteBudgetAction
+// DeleteBudgetAction indicates an expected call of DeleteBudgetAction.
 func (mr *MockBudgetsAPIMockRecorder) DeleteBudgetAction(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBudgetAction", reflect.TypeOf((*MockBudgetsAPI)(nil).DeleteBudgetAction), arg0)
 }
 
-// DeleteBudgetActionRequest mocks base method
+// DeleteBudgetActionRequest mocks base method.
 func (m *MockBudgetsAPI) DeleteBudgetActionRequest(arg0 *budgets.DeleteBudgetActionInput) (*request.Request, *budgets.DeleteBudgetActionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBudgetActionRequest", arg0)
@@ -274,13 +275,13 @@ func (m *MockBudgetsAPI) DeleteBudgetActionRequest(arg0 *budgets.DeleteBudgetAct
 	return ret0, ret1
 }
 
-// DeleteBudgetActionRequest indicates an expected call of DeleteBudgetActionRequest
+// DeleteBudgetActionRequest indicates an expected call of DeleteBudgetActionRequest.
 func (mr *MockBudgetsAPIMockRecorder) DeleteBudgetActionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBudgetActionRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DeleteBudgetActionRequest), arg0)
 }
 
-// DeleteBudgetActionWithContext mocks base method
+// DeleteBudgetActionWithContext mocks base method.
 func (m *MockBudgetsAPI) DeleteBudgetActionWithContext(arg0 context.Context, arg1 *budgets.DeleteBudgetActionInput, arg2 ...request.Option) (*budgets.DeleteBudgetActionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -293,14 +294,14 @@ func (m *MockBudgetsAPI) DeleteBudgetActionWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DeleteBudgetActionWithContext indicates an expected call of DeleteBudgetActionWithContext
+// DeleteBudgetActionWithContext indicates an expected call of DeleteBudgetActionWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DeleteBudgetActionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBudgetActionWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DeleteBudgetActionWithContext), varargs...)
 }
 
-// DeleteBudgetRequest mocks base method
+// DeleteBudgetRequest mocks base method.
 func (m *MockBudgetsAPI) DeleteBudgetRequest(arg0 *budgets.DeleteBudgetInput) (*request.Request, *budgets.DeleteBudgetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBudgetRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockBudgetsAPI) DeleteBudgetRequest(arg0 *budgets.DeleteBudgetInput) (*
 	return ret0, ret1
 }
 
-// DeleteBudgetRequest indicates an expected call of DeleteBudgetRequest
+// DeleteBudgetRequest indicates an expected call of DeleteBudgetRequest.
 func (mr *MockBudgetsAPIMockRecorder) DeleteBudgetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBudgetRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DeleteBudgetRequest), arg0)
 }
 
-// DeleteBudgetWithContext mocks base method
+// DeleteBudgetWithContext mocks base method.
 func (m *MockBudgetsAPI) DeleteBudgetWithContext(arg0 context.Context, arg1 *budgets.DeleteBudgetInput, arg2 ...request.Option) (*budgets.DeleteBudgetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockBudgetsAPI) DeleteBudgetWithContext(arg0 context.Context, arg1 *bud
 	return ret0, ret1
 }
 
-// DeleteBudgetWithContext indicates an expected call of DeleteBudgetWithContext
+// DeleteBudgetWithContext indicates an expected call of DeleteBudgetWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DeleteBudgetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBudgetWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DeleteBudgetWithContext), varargs...)
 }
 
-// DeleteNotification mocks base method
+// DeleteNotification mocks base method.
 func (m *MockBudgetsAPI) DeleteNotification(arg0 *budgets.DeleteNotificationInput) (*budgets.DeleteNotificationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteNotification", arg0)
@@ -344,13 +345,13 @@ func (m *MockBudgetsAPI) DeleteNotification(arg0 *budgets.DeleteNotificationInpu
 	return ret0, ret1
 }
 
-// DeleteNotification indicates an expected call of DeleteNotification
+// DeleteNotification indicates an expected call of DeleteNotification.
 func (mr *MockBudgetsAPIMockRecorder) DeleteNotification(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteNotification", reflect.TypeOf((*MockBudgetsAPI)(nil).DeleteNotification), arg0)
 }
 
-// DeleteNotificationRequest mocks base method
+// DeleteNotificationRequest mocks base method.
 func (m *MockBudgetsAPI) DeleteNotificationRequest(arg0 *budgets.DeleteNotificationInput) (*request.Request, *budgets.DeleteNotificationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteNotificationRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockBudgetsAPI) DeleteNotificationRequest(arg0 *budgets.DeleteNotificat
 	return ret0, ret1
 }
 
-// DeleteNotificationRequest indicates an expected call of DeleteNotificationRequest
+// DeleteNotificationRequest indicates an expected call of DeleteNotificationRequest.
 func (mr *MockBudgetsAPIMockRecorder) DeleteNotificationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteNotificationRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DeleteNotificationRequest), arg0)
 }
 
-// DeleteNotificationWithContext mocks base method
+// DeleteNotificationWithContext mocks base method.
 func (m *MockBudgetsAPI) DeleteNotificationWithContext(arg0 context.Context, arg1 *budgets.DeleteNotificationInput, arg2 ...request.Option) (*budgets.DeleteNotificationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockBudgetsAPI) DeleteNotificationWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DeleteNotificationWithContext indicates an expected call of DeleteNotificationWithContext
+// DeleteNotificationWithContext indicates an expected call of DeleteNotificationWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DeleteNotificationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteNotificationWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DeleteNotificationWithContext), varargs...)
 }
 
-// DeleteSubscriber mocks base method
+// DeleteSubscriber mocks base method.
 func (m *MockBudgetsAPI) DeleteSubscriber(arg0 *budgets.DeleteSubscriberInput) (*budgets.DeleteSubscriberOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSubscriber", arg0)
@@ -394,13 +395,13 @@ func (m *MockBudgetsAPI) DeleteSubscriber(arg0 *budgets.DeleteSubscriberInput) (
 	return ret0, ret1
 }
 
-// DeleteSubscriber indicates an expected call of DeleteSubscriber
+// DeleteSubscriber indicates an expected call of DeleteSubscriber.
 func (mr *MockBudgetsAPIMockRecorder) DeleteSubscriber(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSubscriber", reflect.TypeOf((*MockBudgetsAPI)(nil).DeleteSubscriber), arg0)
 }
 
-// DeleteSubscriberRequest mocks base method
+// DeleteSubscriberRequest mocks base method.
 func (m *MockBudgetsAPI) DeleteSubscriberRequest(arg0 *budgets.DeleteSubscriberInput) (*request.Request, *budgets.DeleteSubscriberOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSubscriberRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockBudgetsAPI) DeleteSubscriberRequest(arg0 *budgets.DeleteSubscriberI
 	return ret0, ret1
 }
 
-// DeleteSubscriberRequest indicates an expected call of DeleteSubscriberRequest
+// DeleteSubscriberRequest indicates an expected call of DeleteSubscriberRequest.
 func (mr *MockBudgetsAPIMockRecorder) DeleteSubscriberRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSubscriberRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DeleteSubscriberRequest), arg0)
 }
 
-// DeleteSubscriberWithContext mocks base method
+// DeleteSubscriberWithContext mocks base method.
 func (m *MockBudgetsAPI) DeleteSubscriberWithContext(arg0 context.Context, arg1 *budgets.DeleteSubscriberInput, arg2 ...request.Option) (*budgets.DeleteSubscriberOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockBudgetsAPI) DeleteSubscriberWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DeleteSubscriberWithContext indicates an expected call of DeleteSubscriberWithContext
+// DeleteSubscriberWithContext indicates an expected call of DeleteSubscriberWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DeleteSubscriberWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSubscriberWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DeleteSubscriberWithContext), varargs...)
 }
 
-// DescribeBudget mocks base method
+// DescribeBudget mocks base method.
 func (m *MockBudgetsAPI) DescribeBudget(arg0 *budgets.DescribeBudgetInput) (*budgets.DescribeBudgetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudget", arg0)
@@ -444,13 +445,13 @@ func (m *MockBudgetsAPI) DescribeBudget(arg0 *budgets.DescribeBudgetInput) (*bud
 	return ret0, ret1
 }
 
-// DescribeBudget indicates an expected call of DescribeBudget
+// DescribeBudget indicates an expected call of DescribeBudget.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudget(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudget", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudget), arg0)
 }
 
-// DescribeBudgetAction mocks base method
+// DescribeBudgetAction mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetAction(arg0 *budgets.DescribeBudgetActionInput) (*budgets.DescribeBudgetActionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetAction", arg0)
@@ -459,13 +460,13 @@ func (m *MockBudgetsAPI) DescribeBudgetAction(arg0 *budgets.DescribeBudgetAction
 	return ret0, ret1
 }
 
-// DescribeBudgetAction indicates an expected call of DescribeBudgetAction
+// DescribeBudgetAction indicates an expected call of DescribeBudgetAction.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetAction(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetAction", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetAction), arg0)
 }
 
-// DescribeBudgetActionHistories mocks base method
+// DescribeBudgetActionHistories mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionHistories(arg0 *budgets.DescribeBudgetActionHistoriesInput) (*budgets.DescribeBudgetActionHistoriesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetActionHistories", arg0)
@@ -474,13 +475,13 @@ func (m *MockBudgetsAPI) DescribeBudgetActionHistories(arg0 *budgets.DescribeBud
 	return ret0, ret1
 }
 
-// DescribeBudgetActionHistories indicates an expected call of DescribeBudgetActionHistories
+// DescribeBudgetActionHistories indicates an expected call of DescribeBudgetActionHistories.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionHistories(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionHistories", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionHistories), arg0)
 }
 
-// DescribeBudgetActionHistoriesPages mocks base method
+// DescribeBudgetActionHistoriesPages mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionHistoriesPages(arg0 *budgets.DescribeBudgetActionHistoriesInput, arg1 func(*budgets.DescribeBudgetActionHistoriesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetActionHistoriesPages", arg0, arg1)
@@ -488,13 +489,13 @@ func (m *MockBudgetsAPI) DescribeBudgetActionHistoriesPages(arg0 *budgets.Descri
 	return ret0
 }
 
-// DescribeBudgetActionHistoriesPages indicates an expected call of DescribeBudgetActionHistoriesPages
+// DescribeBudgetActionHistoriesPages indicates an expected call of DescribeBudgetActionHistoriesPages.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionHistoriesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionHistoriesPages", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionHistoriesPages), arg0, arg1)
 }
 
-// DescribeBudgetActionHistoriesPagesWithContext mocks base method
+// DescribeBudgetActionHistoriesPagesWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionHistoriesPagesWithContext(arg0 context.Context, arg1 *budgets.DescribeBudgetActionHistoriesInput, arg2 func(*budgets.DescribeBudgetActionHistoriesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -506,14 +507,14 @@ func (m *MockBudgetsAPI) DescribeBudgetActionHistoriesPagesWithContext(arg0 cont
 	return ret0
 }
 
-// DescribeBudgetActionHistoriesPagesWithContext indicates an expected call of DescribeBudgetActionHistoriesPagesWithContext
+// DescribeBudgetActionHistoriesPagesWithContext indicates an expected call of DescribeBudgetActionHistoriesPagesWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionHistoriesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionHistoriesPagesWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionHistoriesPagesWithContext), varargs...)
 }
 
-// DescribeBudgetActionHistoriesRequest mocks base method
+// DescribeBudgetActionHistoriesRequest mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionHistoriesRequest(arg0 *budgets.DescribeBudgetActionHistoriesInput) (*request.Request, *budgets.DescribeBudgetActionHistoriesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetActionHistoriesRequest", arg0)
@@ -522,13 +523,13 @@ func (m *MockBudgetsAPI) DescribeBudgetActionHistoriesRequest(arg0 *budgets.Desc
 	return ret0, ret1
 }
 
-// DescribeBudgetActionHistoriesRequest indicates an expected call of DescribeBudgetActionHistoriesRequest
+// DescribeBudgetActionHistoriesRequest indicates an expected call of DescribeBudgetActionHistoriesRequest.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionHistoriesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionHistoriesRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionHistoriesRequest), arg0)
 }
 
-// DescribeBudgetActionHistoriesWithContext mocks base method
+// DescribeBudgetActionHistoriesWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionHistoriesWithContext(arg0 context.Context, arg1 *budgets.DescribeBudgetActionHistoriesInput, arg2 ...request.Option) (*budgets.DescribeBudgetActionHistoriesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -541,14 +542,14 @@ func (m *MockBudgetsAPI) DescribeBudgetActionHistoriesWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DescribeBudgetActionHistoriesWithContext indicates an expected call of DescribeBudgetActionHistoriesWithContext
+// DescribeBudgetActionHistoriesWithContext indicates an expected call of DescribeBudgetActionHistoriesWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionHistoriesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionHistoriesWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionHistoriesWithContext), varargs...)
 }
 
-// DescribeBudgetActionRequest mocks base method
+// DescribeBudgetActionRequest mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionRequest(arg0 *budgets.DescribeBudgetActionInput) (*request.Request, *budgets.DescribeBudgetActionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetActionRequest", arg0)
@@ -557,13 +558,13 @@ func (m *MockBudgetsAPI) DescribeBudgetActionRequest(arg0 *budgets.DescribeBudge
 	return ret0, ret1
 }
 
-// DescribeBudgetActionRequest indicates an expected call of DescribeBudgetActionRequest
+// DescribeBudgetActionRequest indicates an expected call of DescribeBudgetActionRequest.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionRequest), arg0)
 }
 
-// DescribeBudgetActionWithContext mocks base method
+// DescribeBudgetActionWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionWithContext(arg0 context.Context, arg1 *budgets.DescribeBudgetActionInput, arg2 ...request.Option) (*budgets.DescribeBudgetActionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -576,14 +577,14 @@ func (m *MockBudgetsAPI) DescribeBudgetActionWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DescribeBudgetActionWithContext indicates an expected call of DescribeBudgetActionWithContext
+// DescribeBudgetActionWithContext indicates an expected call of DescribeBudgetActionWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionWithContext), varargs...)
 }
 
-// DescribeBudgetActionsForAccount mocks base method
+// DescribeBudgetActionsForAccount mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionsForAccount(arg0 *budgets.DescribeBudgetActionsForAccountInput) (*budgets.DescribeBudgetActionsForAccountOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetActionsForAccount", arg0)
@@ -592,13 +593,13 @@ func (m *MockBudgetsAPI) DescribeBudgetActionsForAccount(arg0 *budgets.DescribeB
 	return ret0, ret1
 }
 
-// DescribeBudgetActionsForAccount indicates an expected call of DescribeBudgetActionsForAccount
+// DescribeBudgetActionsForAccount indicates an expected call of DescribeBudgetActionsForAccount.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionsForAccount(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionsForAccount", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionsForAccount), arg0)
 }
 
-// DescribeBudgetActionsForAccountPages mocks base method
+// DescribeBudgetActionsForAccountPages mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionsForAccountPages(arg0 *budgets.DescribeBudgetActionsForAccountInput, arg1 func(*budgets.DescribeBudgetActionsForAccountOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetActionsForAccountPages", arg0, arg1)
@@ -606,13 +607,13 @@ func (m *MockBudgetsAPI) DescribeBudgetActionsForAccountPages(arg0 *budgets.Desc
 	return ret0
 }
 
-// DescribeBudgetActionsForAccountPages indicates an expected call of DescribeBudgetActionsForAccountPages
+// DescribeBudgetActionsForAccountPages indicates an expected call of DescribeBudgetActionsForAccountPages.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionsForAccountPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionsForAccountPages", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionsForAccountPages), arg0, arg1)
 }
 
-// DescribeBudgetActionsForAccountPagesWithContext mocks base method
+// DescribeBudgetActionsForAccountPagesWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionsForAccountPagesWithContext(arg0 context.Context, arg1 *budgets.DescribeBudgetActionsForAccountInput, arg2 func(*budgets.DescribeBudgetActionsForAccountOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -624,14 +625,14 @@ func (m *MockBudgetsAPI) DescribeBudgetActionsForAccountPagesWithContext(arg0 co
 	return ret0
 }
 
-// DescribeBudgetActionsForAccountPagesWithContext indicates an expected call of DescribeBudgetActionsForAccountPagesWithContext
+// DescribeBudgetActionsForAccountPagesWithContext indicates an expected call of DescribeBudgetActionsForAccountPagesWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionsForAccountPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionsForAccountPagesWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionsForAccountPagesWithContext), varargs...)
 }
 
-// DescribeBudgetActionsForAccountRequest mocks base method
+// DescribeBudgetActionsForAccountRequest mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionsForAccountRequest(arg0 *budgets.DescribeBudgetActionsForAccountInput) (*request.Request, *budgets.DescribeBudgetActionsForAccountOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetActionsForAccountRequest", arg0)
@@ -640,13 +641,13 @@ func (m *MockBudgetsAPI) DescribeBudgetActionsForAccountRequest(arg0 *budgets.De
 	return ret0, ret1
 }
 
-// DescribeBudgetActionsForAccountRequest indicates an expected call of DescribeBudgetActionsForAccountRequest
+// DescribeBudgetActionsForAccountRequest indicates an expected call of DescribeBudgetActionsForAccountRequest.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionsForAccountRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionsForAccountRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionsForAccountRequest), arg0)
 }
 
-// DescribeBudgetActionsForAccountWithContext mocks base method
+// DescribeBudgetActionsForAccountWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionsForAccountWithContext(arg0 context.Context, arg1 *budgets.DescribeBudgetActionsForAccountInput, arg2 ...request.Option) (*budgets.DescribeBudgetActionsForAccountOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -659,14 +660,14 @@ func (m *MockBudgetsAPI) DescribeBudgetActionsForAccountWithContext(arg0 context
 	return ret0, ret1
 }
 
-// DescribeBudgetActionsForAccountWithContext indicates an expected call of DescribeBudgetActionsForAccountWithContext
+// DescribeBudgetActionsForAccountWithContext indicates an expected call of DescribeBudgetActionsForAccountWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionsForAccountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionsForAccountWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionsForAccountWithContext), varargs...)
 }
 
-// DescribeBudgetActionsForBudget mocks base method
+// DescribeBudgetActionsForBudget mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionsForBudget(arg0 *budgets.DescribeBudgetActionsForBudgetInput) (*budgets.DescribeBudgetActionsForBudgetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetActionsForBudget", arg0)
@@ -675,13 +676,13 @@ func (m *MockBudgetsAPI) DescribeBudgetActionsForBudget(arg0 *budgets.DescribeBu
 	return ret0, ret1
 }
 
-// DescribeBudgetActionsForBudget indicates an expected call of DescribeBudgetActionsForBudget
+// DescribeBudgetActionsForBudget indicates an expected call of DescribeBudgetActionsForBudget.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionsForBudget(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionsForBudget", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionsForBudget), arg0)
 }
 
-// DescribeBudgetActionsForBudgetPages mocks base method
+// DescribeBudgetActionsForBudgetPages mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionsForBudgetPages(arg0 *budgets.DescribeBudgetActionsForBudgetInput, arg1 func(*budgets.DescribeBudgetActionsForBudgetOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetActionsForBudgetPages", arg0, arg1)
@@ -689,13 +690,13 @@ func (m *MockBudgetsAPI) DescribeBudgetActionsForBudgetPages(arg0 *budgets.Descr
 	return ret0
 }
 
-// DescribeBudgetActionsForBudgetPages indicates an expected call of DescribeBudgetActionsForBudgetPages
+// DescribeBudgetActionsForBudgetPages indicates an expected call of DescribeBudgetActionsForBudgetPages.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionsForBudgetPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionsForBudgetPages", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionsForBudgetPages), arg0, arg1)
 }
 
-// DescribeBudgetActionsForBudgetPagesWithContext mocks base method
+// DescribeBudgetActionsForBudgetPagesWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionsForBudgetPagesWithContext(arg0 context.Context, arg1 *budgets.DescribeBudgetActionsForBudgetInput, arg2 func(*budgets.DescribeBudgetActionsForBudgetOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -707,14 +708,14 @@ func (m *MockBudgetsAPI) DescribeBudgetActionsForBudgetPagesWithContext(arg0 con
 	return ret0
 }
 
-// DescribeBudgetActionsForBudgetPagesWithContext indicates an expected call of DescribeBudgetActionsForBudgetPagesWithContext
+// DescribeBudgetActionsForBudgetPagesWithContext indicates an expected call of DescribeBudgetActionsForBudgetPagesWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionsForBudgetPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionsForBudgetPagesWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionsForBudgetPagesWithContext), varargs...)
 }
 
-// DescribeBudgetActionsForBudgetRequest mocks base method
+// DescribeBudgetActionsForBudgetRequest mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionsForBudgetRequest(arg0 *budgets.DescribeBudgetActionsForBudgetInput) (*request.Request, *budgets.DescribeBudgetActionsForBudgetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetActionsForBudgetRequest", arg0)
@@ -723,13 +724,13 @@ func (m *MockBudgetsAPI) DescribeBudgetActionsForBudgetRequest(arg0 *budgets.Des
 	return ret0, ret1
 }
 
-// DescribeBudgetActionsForBudgetRequest indicates an expected call of DescribeBudgetActionsForBudgetRequest
+// DescribeBudgetActionsForBudgetRequest indicates an expected call of DescribeBudgetActionsForBudgetRequest.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionsForBudgetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionsForBudgetRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionsForBudgetRequest), arg0)
 }
 
-// DescribeBudgetActionsForBudgetWithContext mocks base method
+// DescribeBudgetActionsForBudgetWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetActionsForBudgetWithContext(arg0 context.Context, arg1 *budgets.DescribeBudgetActionsForBudgetInput, arg2 ...request.Option) (*budgets.DescribeBudgetActionsForBudgetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -742,14 +743,14 @@ func (m *MockBudgetsAPI) DescribeBudgetActionsForBudgetWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// DescribeBudgetActionsForBudgetWithContext indicates an expected call of DescribeBudgetActionsForBudgetWithContext
+// DescribeBudgetActionsForBudgetWithContext indicates an expected call of DescribeBudgetActionsForBudgetWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetActionsForBudgetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetActionsForBudgetWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetActionsForBudgetWithContext), varargs...)
 }
 
-// DescribeBudgetPerformanceHistory mocks base method
+// DescribeBudgetPerformanceHistory mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetPerformanceHistory(arg0 *budgets.DescribeBudgetPerformanceHistoryInput) (*budgets.DescribeBudgetPerformanceHistoryOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetPerformanceHistory", arg0)
@@ -758,13 +759,13 @@ func (m *MockBudgetsAPI) DescribeBudgetPerformanceHistory(arg0 *budgets.Describe
 	return ret0, ret1
 }
 
-// DescribeBudgetPerformanceHistory indicates an expected call of DescribeBudgetPerformanceHistory
+// DescribeBudgetPerformanceHistory indicates an expected call of DescribeBudgetPerformanceHistory.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetPerformanceHistory(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetPerformanceHistory", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetPerformanceHistory), arg0)
 }
 
-// DescribeBudgetPerformanceHistoryPages mocks base method
+// DescribeBudgetPerformanceHistoryPages mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetPerformanceHistoryPages(arg0 *budgets.DescribeBudgetPerformanceHistoryInput, arg1 func(*budgets.DescribeBudgetPerformanceHistoryOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetPerformanceHistoryPages", arg0, arg1)
@@ -772,13 +773,13 @@ func (m *MockBudgetsAPI) DescribeBudgetPerformanceHistoryPages(arg0 *budgets.Des
 	return ret0
 }
 
-// DescribeBudgetPerformanceHistoryPages indicates an expected call of DescribeBudgetPerformanceHistoryPages
+// DescribeBudgetPerformanceHistoryPages indicates an expected call of DescribeBudgetPerformanceHistoryPages.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetPerformanceHistoryPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetPerformanceHistoryPages", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetPerformanceHistoryPages), arg0, arg1)
 }
 
-// DescribeBudgetPerformanceHistoryPagesWithContext mocks base method
+// DescribeBudgetPerformanceHistoryPagesWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetPerformanceHistoryPagesWithContext(arg0 context.Context, arg1 *budgets.DescribeBudgetPerformanceHistoryInput, arg2 func(*budgets.DescribeBudgetPerformanceHistoryOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -790,14 +791,14 @@ func (m *MockBudgetsAPI) DescribeBudgetPerformanceHistoryPagesWithContext(arg0 c
 	return ret0
 }
 
-// DescribeBudgetPerformanceHistoryPagesWithContext indicates an expected call of DescribeBudgetPerformanceHistoryPagesWithContext
+// DescribeBudgetPerformanceHistoryPagesWithContext indicates an expected call of DescribeBudgetPerformanceHistoryPagesWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetPerformanceHistoryPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetPerformanceHistoryPagesWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetPerformanceHistoryPagesWithContext), varargs...)
 }
 
-// DescribeBudgetPerformanceHistoryRequest mocks base method
+// DescribeBudgetPerformanceHistoryRequest mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetPerformanceHistoryRequest(arg0 *budgets.DescribeBudgetPerformanceHistoryInput) (*request.Request, *budgets.DescribeBudgetPerformanceHistoryOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetPerformanceHistoryRequest", arg0)
@@ -806,13 +807,13 @@ func (m *MockBudgetsAPI) DescribeBudgetPerformanceHistoryRequest(arg0 *budgets.D
 	return ret0, ret1
 }
 
-// DescribeBudgetPerformanceHistoryRequest indicates an expected call of DescribeBudgetPerformanceHistoryRequest
+// DescribeBudgetPerformanceHistoryRequest indicates an expected call of DescribeBudgetPerformanceHistoryRequest.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetPerformanceHistoryRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetPerformanceHistoryRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetPerformanceHistoryRequest), arg0)
 }
 
-// DescribeBudgetPerformanceHistoryWithContext mocks base method
+// DescribeBudgetPerformanceHistoryWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetPerformanceHistoryWithContext(arg0 context.Context, arg1 *budgets.DescribeBudgetPerformanceHistoryInput, arg2 ...request.Option) (*budgets.DescribeBudgetPerformanceHistoryOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -825,14 +826,14 @@ func (m *MockBudgetsAPI) DescribeBudgetPerformanceHistoryWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// DescribeBudgetPerformanceHistoryWithContext indicates an expected call of DescribeBudgetPerformanceHistoryWithContext
+// DescribeBudgetPerformanceHistoryWithContext indicates an expected call of DescribeBudgetPerformanceHistoryWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetPerformanceHistoryWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetPerformanceHistoryWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetPerformanceHistoryWithContext), varargs...)
 }
 
-// DescribeBudgetRequest mocks base method
+// DescribeBudgetRequest mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetRequest(arg0 *budgets.DescribeBudgetInput) (*request.Request, *budgets.DescribeBudgetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetRequest", arg0)
@@ -841,13 +842,13 @@ func (m *MockBudgetsAPI) DescribeBudgetRequest(arg0 *budgets.DescribeBudgetInput
 	return ret0, ret1
 }
 
-// DescribeBudgetRequest indicates an expected call of DescribeBudgetRequest
+// DescribeBudgetRequest indicates an expected call of DescribeBudgetRequest.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetRequest), arg0)
 }
 
-// DescribeBudgetWithContext mocks base method
+// DescribeBudgetWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetWithContext(arg0 context.Context, arg1 *budgets.DescribeBudgetInput, arg2 ...request.Option) (*budgets.DescribeBudgetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -860,14 +861,14 @@ func (m *MockBudgetsAPI) DescribeBudgetWithContext(arg0 context.Context, arg1 *b
 	return ret0, ret1
 }
 
-// DescribeBudgetWithContext indicates an expected call of DescribeBudgetWithContext
+// DescribeBudgetWithContext indicates an expected call of DescribeBudgetWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetWithContext), varargs...)
 }
 
-// DescribeBudgets mocks base method
+// DescribeBudgets mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgets(arg0 *budgets.DescribeBudgetsInput) (*budgets.DescribeBudgetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgets", arg0)
@@ -876,13 +877,13 @@ func (m *MockBudgetsAPI) DescribeBudgets(arg0 *budgets.DescribeBudgetsInput) (*b
 	return ret0, ret1
 }
 
-// DescribeBudgets indicates an expected call of DescribeBudgets
+// DescribeBudgets indicates an expected call of DescribeBudgets.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgets", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgets), arg0)
 }
 
-// DescribeBudgetsPages mocks base method
+// DescribeBudgetsPages mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetsPages(arg0 *budgets.DescribeBudgetsInput, arg1 func(*budgets.DescribeBudgetsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetsPages", arg0, arg1)
@@ -890,13 +891,13 @@ func (m *MockBudgetsAPI) DescribeBudgetsPages(arg0 *budgets.DescribeBudgetsInput
 	return ret0
 }
 
-// DescribeBudgetsPages indicates an expected call of DescribeBudgetsPages
+// DescribeBudgetsPages indicates an expected call of DescribeBudgetsPages.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetsPages", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetsPages), arg0, arg1)
 }
 
-// DescribeBudgetsPagesWithContext mocks base method
+// DescribeBudgetsPagesWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetsPagesWithContext(arg0 context.Context, arg1 *budgets.DescribeBudgetsInput, arg2 func(*budgets.DescribeBudgetsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -908,14 +909,14 @@ func (m *MockBudgetsAPI) DescribeBudgetsPagesWithContext(arg0 context.Context, a
 	return ret0
 }
 
-// DescribeBudgetsPagesWithContext indicates an expected call of DescribeBudgetsPagesWithContext
+// DescribeBudgetsPagesWithContext indicates an expected call of DescribeBudgetsPagesWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetsPagesWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetsPagesWithContext), varargs...)
 }
 
-// DescribeBudgetsRequest mocks base method
+// DescribeBudgetsRequest mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetsRequest(arg0 *budgets.DescribeBudgetsInput) (*request.Request, *budgets.DescribeBudgetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBudgetsRequest", arg0)
@@ -924,13 +925,13 @@ func (m *MockBudgetsAPI) DescribeBudgetsRequest(arg0 *budgets.DescribeBudgetsInp
 	return ret0, ret1
 }
 
-// DescribeBudgetsRequest indicates an expected call of DescribeBudgetsRequest
+// DescribeBudgetsRequest indicates an expected call of DescribeBudgetsRequest.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetsRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetsRequest), arg0)
 }
 
-// DescribeBudgetsWithContext mocks base method
+// DescribeBudgetsWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeBudgetsWithContext(arg0 context.Context, arg1 *budgets.DescribeBudgetsInput, arg2 ...request.Option) (*budgets.DescribeBudgetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -943,14 +944,14 @@ func (m *MockBudgetsAPI) DescribeBudgetsWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DescribeBudgetsWithContext indicates an expected call of DescribeBudgetsWithContext
+// DescribeBudgetsWithContext indicates an expected call of DescribeBudgetsWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeBudgetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBudgetsWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeBudgetsWithContext), varargs...)
 }
 
-// DescribeNotificationsForBudget mocks base method
+// DescribeNotificationsForBudget mocks base method.
 func (m *MockBudgetsAPI) DescribeNotificationsForBudget(arg0 *budgets.DescribeNotificationsForBudgetInput) (*budgets.DescribeNotificationsForBudgetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeNotificationsForBudget", arg0)
@@ -959,13 +960,13 @@ func (m *MockBudgetsAPI) DescribeNotificationsForBudget(arg0 *budgets.DescribeNo
 	return ret0, ret1
 }
 
-// DescribeNotificationsForBudget indicates an expected call of DescribeNotificationsForBudget
+// DescribeNotificationsForBudget indicates an expected call of DescribeNotificationsForBudget.
 func (mr *MockBudgetsAPIMockRecorder) DescribeNotificationsForBudget(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeNotificationsForBudget", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeNotificationsForBudget), arg0)
 }
 
-// DescribeNotificationsForBudgetPages mocks base method
+// DescribeNotificationsForBudgetPages mocks base method.
 func (m *MockBudgetsAPI) DescribeNotificationsForBudgetPages(arg0 *budgets.DescribeNotificationsForBudgetInput, arg1 func(*budgets.DescribeNotificationsForBudgetOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeNotificationsForBudgetPages", arg0, arg1)
@@ -973,13 +974,13 @@ func (m *MockBudgetsAPI) DescribeNotificationsForBudgetPages(arg0 *budgets.Descr
 	return ret0
 }
 
-// DescribeNotificationsForBudgetPages indicates an expected call of DescribeNotificationsForBudgetPages
+// DescribeNotificationsForBudgetPages indicates an expected call of DescribeNotificationsForBudgetPages.
 func (mr *MockBudgetsAPIMockRecorder) DescribeNotificationsForBudgetPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeNotificationsForBudgetPages", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeNotificationsForBudgetPages), arg0, arg1)
 }
 
-// DescribeNotificationsForBudgetPagesWithContext mocks base method
+// DescribeNotificationsForBudgetPagesWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeNotificationsForBudgetPagesWithContext(arg0 context.Context, arg1 *budgets.DescribeNotificationsForBudgetInput, arg2 func(*budgets.DescribeNotificationsForBudgetOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -991,14 +992,14 @@ func (m *MockBudgetsAPI) DescribeNotificationsForBudgetPagesWithContext(arg0 con
 	return ret0
 }
 
-// DescribeNotificationsForBudgetPagesWithContext indicates an expected call of DescribeNotificationsForBudgetPagesWithContext
+// DescribeNotificationsForBudgetPagesWithContext indicates an expected call of DescribeNotificationsForBudgetPagesWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeNotificationsForBudgetPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeNotificationsForBudgetPagesWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeNotificationsForBudgetPagesWithContext), varargs...)
 }
 
-// DescribeNotificationsForBudgetRequest mocks base method
+// DescribeNotificationsForBudgetRequest mocks base method.
 func (m *MockBudgetsAPI) DescribeNotificationsForBudgetRequest(arg0 *budgets.DescribeNotificationsForBudgetInput) (*request.Request, *budgets.DescribeNotificationsForBudgetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeNotificationsForBudgetRequest", arg0)
@@ -1007,13 +1008,13 @@ func (m *MockBudgetsAPI) DescribeNotificationsForBudgetRequest(arg0 *budgets.Des
 	return ret0, ret1
 }
 
-// DescribeNotificationsForBudgetRequest indicates an expected call of DescribeNotificationsForBudgetRequest
+// DescribeNotificationsForBudgetRequest indicates an expected call of DescribeNotificationsForBudgetRequest.
 func (mr *MockBudgetsAPIMockRecorder) DescribeNotificationsForBudgetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeNotificationsForBudgetRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeNotificationsForBudgetRequest), arg0)
 }
 
-// DescribeNotificationsForBudgetWithContext mocks base method
+// DescribeNotificationsForBudgetWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeNotificationsForBudgetWithContext(arg0 context.Context, arg1 *budgets.DescribeNotificationsForBudgetInput, arg2 ...request.Option) (*budgets.DescribeNotificationsForBudgetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1026,14 +1027,14 @@ func (m *MockBudgetsAPI) DescribeNotificationsForBudgetWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// DescribeNotificationsForBudgetWithContext indicates an expected call of DescribeNotificationsForBudgetWithContext
+// DescribeNotificationsForBudgetWithContext indicates an expected call of DescribeNotificationsForBudgetWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeNotificationsForBudgetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeNotificationsForBudgetWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeNotificationsForBudgetWithContext), varargs...)
 }
 
-// DescribeSubscribersForNotification mocks base method
+// DescribeSubscribersForNotification mocks base method.
 func (m *MockBudgetsAPI) DescribeSubscribersForNotification(arg0 *budgets.DescribeSubscribersForNotificationInput) (*budgets.DescribeSubscribersForNotificationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSubscribersForNotification", arg0)
@@ -1042,13 +1043,13 @@ func (m *MockBudgetsAPI) DescribeSubscribersForNotification(arg0 *budgets.Descri
 	return ret0, ret1
 }
 
-// DescribeSubscribersForNotification indicates an expected call of DescribeSubscribersForNotification
+// DescribeSubscribersForNotification indicates an expected call of DescribeSubscribersForNotification.
 func (mr *MockBudgetsAPIMockRecorder) DescribeSubscribersForNotification(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSubscribersForNotification", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeSubscribersForNotification), arg0)
 }
 
-// DescribeSubscribersForNotificationPages mocks base method
+// DescribeSubscribersForNotificationPages mocks base method.
 func (m *MockBudgetsAPI) DescribeSubscribersForNotificationPages(arg0 *budgets.DescribeSubscribersForNotificationInput, arg1 func(*budgets.DescribeSubscribersForNotificationOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSubscribersForNotificationPages", arg0, arg1)
@@ -1056,13 +1057,13 @@ func (m *MockBudgetsAPI) DescribeSubscribersForNotificationPages(arg0 *budgets.D
 	return ret0
 }
 
-// DescribeSubscribersForNotificationPages indicates an expected call of DescribeSubscribersForNotificationPages
+// DescribeSubscribersForNotificationPages indicates an expected call of DescribeSubscribersForNotificationPages.
 func (mr *MockBudgetsAPIMockRecorder) DescribeSubscribersForNotificationPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSubscribersForNotificationPages", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeSubscribersForNotificationPages), arg0, arg1)
 }
 
-// DescribeSubscribersForNotificationPagesWithContext mocks base method
+// DescribeSubscribersForNotificationPagesWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeSubscribersForNotificationPagesWithContext(arg0 context.Context, arg1 *budgets.DescribeSubscribersForNotificationInput, arg2 func(*budgets.DescribeSubscribersForNotificationOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1074,14 +1075,14 @@ func (m *MockBudgetsAPI) DescribeSubscribersForNotificationPagesWithContext(arg0
 	return ret0
 }
 
-// DescribeSubscribersForNotificationPagesWithContext indicates an expected call of DescribeSubscribersForNotificationPagesWithContext
+// DescribeSubscribersForNotificationPagesWithContext indicates an expected call of DescribeSubscribersForNotificationPagesWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeSubscribersForNotificationPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSubscribersForNotificationPagesWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeSubscribersForNotificationPagesWithContext), varargs...)
 }
 
-// DescribeSubscribersForNotificationRequest mocks base method
+// DescribeSubscribersForNotificationRequest mocks base method.
 func (m *MockBudgetsAPI) DescribeSubscribersForNotificationRequest(arg0 *budgets.DescribeSubscribersForNotificationInput) (*request.Request, *budgets.DescribeSubscribersForNotificationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSubscribersForNotificationRequest", arg0)
@@ -1090,13 +1091,13 @@ func (m *MockBudgetsAPI) DescribeSubscribersForNotificationRequest(arg0 *budgets
 	return ret0, ret1
 }
 
-// DescribeSubscribersForNotificationRequest indicates an expected call of DescribeSubscribersForNotificationRequest
+// DescribeSubscribersForNotificationRequest indicates an expected call of DescribeSubscribersForNotificationRequest.
 func (mr *MockBudgetsAPIMockRecorder) DescribeSubscribersForNotificationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSubscribersForNotificationRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeSubscribersForNotificationRequest), arg0)
 }
 
-// DescribeSubscribersForNotificationWithContext mocks base method
+// DescribeSubscribersForNotificationWithContext mocks base method.
 func (m *MockBudgetsAPI) DescribeSubscribersForNotificationWithContext(arg0 context.Context, arg1 *budgets.DescribeSubscribersForNotificationInput, arg2 ...request.Option) (*budgets.DescribeSubscribersForNotificationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1109,14 +1110,14 @@ func (m *MockBudgetsAPI) DescribeSubscribersForNotificationWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// DescribeSubscribersForNotificationWithContext indicates an expected call of DescribeSubscribersForNotificationWithContext
+// DescribeSubscribersForNotificationWithContext indicates an expected call of DescribeSubscribersForNotificationWithContext.
 func (mr *MockBudgetsAPIMockRecorder) DescribeSubscribersForNotificationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSubscribersForNotificationWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).DescribeSubscribersForNotificationWithContext), varargs...)
 }
 
-// ExecuteBudgetAction mocks base method
+// ExecuteBudgetAction mocks base method.
 func (m *MockBudgetsAPI) ExecuteBudgetAction(arg0 *budgets.ExecuteBudgetActionInput) (*budgets.ExecuteBudgetActionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExecuteBudgetAction", arg0)
@@ -1125,13 +1126,13 @@ func (m *MockBudgetsAPI) ExecuteBudgetAction(arg0 *budgets.ExecuteBudgetActionIn
 	return ret0, ret1
 }
 
-// ExecuteBudgetAction indicates an expected call of ExecuteBudgetAction
+// ExecuteBudgetAction indicates an expected call of ExecuteBudgetAction.
 func (mr *MockBudgetsAPIMockRecorder) ExecuteBudgetAction(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteBudgetAction", reflect.TypeOf((*MockBudgetsAPI)(nil).ExecuteBudgetAction), arg0)
 }
 
-// ExecuteBudgetActionRequest mocks base method
+// ExecuteBudgetActionRequest mocks base method.
 func (m *MockBudgetsAPI) ExecuteBudgetActionRequest(arg0 *budgets.ExecuteBudgetActionInput) (*request.Request, *budgets.ExecuteBudgetActionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExecuteBudgetActionRequest", arg0)
@@ -1140,13 +1141,13 @@ func (m *MockBudgetsAPI) ExecuteBudgetActionRequest(arg0 *budgets.ExecuteBudgetA
 	return ret0, ret1
 }
 
-// ExecuteBudgetActionRequest indicates an expected call of ExecuteBudgetActionRequest
+// ExecuteBudgetActionRequest indicates an expected call of ExecuteBudgetActionRequest.
 func (mr *MockBudgetsAPIMockRecorder) ExecuteBudgetActionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteBudgetActionRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).ExecuteBudgetActionRequest), arg0)
 }
 
-// ExecuteBudgetActionWithContext mocks base method
+// ExecuteBudgetActionWithContext mocks base method.
 func (m *MockBudgetsAPI) ExecuteBudgetActionWithContext(arg0 context.Context, arg1 *budgets.ExecuteBudgetActionInput, arg2 ...request.Option) (*budgets.ExecuteBudgetActionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1159,14 +1160,14 @@ func (m *MockBudgetsAPI) ExecuteBudgetActionWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ExecuteBudgetActionWithContext indicates an expected call of ExecuteBudgetActionWithContext
+// ExecuteBudgetActionWithContext indicates an expected call of ExecuteBudgetActionWithContext.
 func (mr *MockBudgetsAPIMockRecorder) ExecuteBudgetActionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteBudgetActionWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).ExecuteBudgetActionWithContext), varargs...)
 }
 
-// UpdateBudget mocks base method
+// UpdateBudget mocks base method.
 func (m *MockBudgetsAPI) UpdateBudget(arg0 *budgets.UpdateBudgetInput) (*budgets.UpdateBudgetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateBudget", arg0)
@@ -1175,13 +1176,13 @@ func (m *MockBudgetsAPI) UpdateBudget(arg0 *budgets.UpdateBudgetInput) (*budgets
 	return ret0, ret1
 }
 
-// UpdateBudget indicates an expected call of UpdateBudget
+// UpdateBudget indicates an expected call of UpdateBudget.
 func (mr *MockBudgetsAPIMockRecorder) UpdateBudget(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBudget", reflect.TypeOf((*MockBudgetsAPI)(nil).UpdateBudget), arg0)
 }
 
-// UpdateBudgetAction mocks base method
+// UpdateBudgetAction mocks base method.
 func (m *MockBudgetsAPI) UpdateBudgetAction(arg0 *budgets.UpdateBudgetActionInput) (*budgets.UpdateBudgetActionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateBudgetAction", arg0)
@@ -1190,13 +1191,13 @@ func (m *MockBudgetsAPI) UpdateBudgetAction(arg0 *budgets.UpdateBudgetActionInpu
 	return ret0, ret1
 }
 
-// UpdateBudgetAction indicates an expected call of UpdateBudgetAction
+// UpdateBudgetAction indicates an expected call of UpdateBudgetAction.
 func (mr *MockBudgetsAPIMockRecorder) UpdateBudgetAction(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBudgetAction", reflect.TypeOf((*MockBudgetsAPI)(nil).UpdateBudgetAction), arg0)
 }
 
-// UpdateBudgetActionRequest mocks base method
+// UpdateBudgetActionRequest mocks base method.
 func (m *MockBudgetsAPI) UpdateBudgetActionRequest(arg0 *budgets.UpdateBudgetActionInput) (*request.Request, *budgets.UpdateBudgetActionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateBudgetActionRequest", arg0)
@@ -1205,13 +1206,13 @@ func (m *MockBudgetsAPI) UpdateBudgetActionRequest(arg0 *budgets.UpdateBudgetAct
 	return ret0, ret1
 }
 
-// UpdateBudgetActionRequest indicates an expected call of UpdateBudgetActionRequest
+// UpdateBudgetActionRequest indicates an expected call of UpdateBudgetActionRequest.
 func (mr *MockBudgetsAPIMockRecorder) UpdateBudgetActionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBudgetActionRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).UpdateBudgetActionRequest), arg0)
 }
 
-// UpdateBudgetActionWithContext mocks base method
+// UpdateBudgetActionWithContext mocks base method.
 func (m *MockBudgetsAPI) UpdateBudgetActionWithContext(arg0 context.Context, arg1 *budgets.UpdateBudgetActionInput, arg2 ...request.Option) (*budgets.UpdateBudgetActionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1224,14 +1225,14 @@ func (m *MockBudgetsAPI) UpdateBudgetActionWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UpdateBudgetActionWithContext indicates an expected call of UpdateBudgetActionWithContext
+// UpdateBudgetActionWithContext indicates an expected call of UpdateBudgetActionWithContext.
 func (mr *MockBudgetsAPIMockRecorder) UpdateBudgetActionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBudgetActionWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).UpdateBudgetActionWithContext), varargs...)
 }
 
-// UpdateBudgetRequest mocks base method
+// UpdateBudgetRequest mocks base method.
 func (m *MockBudgetsAPI) UpdateBudgetRequest(arg0 *budgets.UpdateBudgetInput) (*request.Request, *budgets.UpdateBudgetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateBudgetRequest", arg0)
@@ -1240,13 +1241,13 @@ func (m *MockBudgetsAPI) UpdateBudgetRequest(arg0 *budgets.UpdateBudgetInput) (*
 	return ret0, ret1
 }
 
-// UpdateBudgetRequest indicates an expected call of UpdateBudgetRequest
+// UpdateBudgetRequest indicates an expected call of UpdateBudgetRequest.
 func (mr *MockBudgetsAPIMockRecorder) UpdateBudgetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBudgetRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).UpdateBudgetRequest), arg0)
 }
 
-// UpdateBudgetWithContext mocks base method
+// UpdateBudgetWithContext mocks base method.
 func (m *MockBudgetsAPI) UpdateBudgetWithContext(arg0 context.Context, arg1 *budgets.UpdateBudgetInput, arg2 ...request.Option) (*budgets.UpdateBudgetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1259,14 +1260,14 @@ func (m *MockBudgetsAPI) UpdateBudgetWithContext(arg0 context.Context, arg1 *bud
 	return ret0, ret1
 }
 
-// UpdateBudgetWithContext indicates an expected call of UpdateBudgetWithContext
+// UpdateBudgetWithContext indicates an expected call of UpdateBudgetWithContext.
 func (mr *MockBudgetsAPIMockRecorder) UpdateBudgetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBudgetWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).UpdateBudgetWithContext), varargs...)
 }
 
-// UpdateNotification mocks base method
+// UpdateNotification mocks base method.
 func (m *MockBudgetsAPI) UpdateNotification(arg0 *budgets.UpdateNotificationInput) (*budgets.UpdateNotificationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateNotification", arg0)
@@ -1275,13 +1276,13 @@ func (m *MockBudgetsAPI) UpdateNotification(arg0 *budgets.UpdateNotificationInpu
 	return ret0, ret1
 }
 
-// UpdateNotification indicates an expected call of UpdateNotification
+// UpdateNotification indicates an expected call of UpdateNotification.
 func (mr *MockBudgetsAPIMockRecorder) UpdateNotification(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateNotification", reflect.TypeOf((*MockBudgetsAPI)(nil).UpdateNotification), arg0)
 }
 
-// UpdateNotificationRequest mocks base method
+// UpdateNotificationRequest mocks base method.
 func (m *MockBudgetsAPI) UpdateNotificationRequest(arg0 *budgets.UpdateNotificationInput) (*request.Request, *budgets.UpdateNotificationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateNotificationRequest", arg0)
@@ -1290,13 +1291,13 @@ func (m *MockBudgetsAPI) UpdateNotificationRequest(arg0 *budgets.UpdateNotificat
 	return ret0, ret1
 }
 
-// UpdateNotificationRequest indicates an expected call of UpdateNotificationRequest
+// UpdateNotificationRequest indicates an expected call of UpdateNotificationRequest.
 func (mr *MockBudgetsAPIMockRecorder) UpdateNotificationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateNotificationRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).UpdateNotificationRequest), arg0)
 }
 
-// UpdateNotificationWithContext mocks base method
+// UpdateNotificationWithContext mocks base method.
 func (m *MockBudgetsAPI) UpdateNotificationWithContext(arg0 context.Context, arg1 *budgets.UpdateNotificationInput, arg2 ...request.Option) (*budgets.UpdateNotificationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1309,14 +1310,14 @@ func (m *MockBudgetsAPI) UpdateNotificationWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UpdateNotificationWithContext indicates an expected call of UpdateNotificationWithContext
+// UpdateNotificationWithContext indicates an expected call of UpdateNotificationWithContext.
 func (mr *MockBudgetsAPIMockRecorder) UpdateNotificationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateNotificationWithContext", reflect.TypeOf((*MockBudgetsAPI)(nil).UpdateNotificationWithContext), varargs...)
 }
 
-// UpdateSubscriber mocks base method
+// UpdateSubscriber mocks base method.
 func (m *MockBudgetsAPI) UpdateSubscriber(arg0 *budgets.UpdateSubscriberInput) (*budgets.UpdateSubscriberOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSubscriber", arg0)
@@ -1325,13 +1326,13 @@ func (m *MockBudgetsAPI) UpdateSubscriber(arg0 *budgets.UpdateSubscriberInput) (
 	return ret0, ret1
 }
 
-// UpdateSubscriber indicates an expected call of UpdateSubscriber
+// UpdateSubscriber indicates an expected call of UpdateSubscriber.
 func (mr *MockBudgetsAPIMockRecorder) UpdateSubscriber(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSubscriber", reflect.TypeOf((*MockBudgetsAPI)(nil).UpdateSubscriber), arg0)
 }
 
-// UpdateSubscriberRequest mocks base method
+// UpdateSubscriberRequest mocks base method.
 func (m *MockBudgetsAPI) UpdateSubscriberRequest(arg0 *budgets.UpdateSubscriberInput) (*request.Request, *budgets.UpdateSubscriberOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSubscriberRequest", arg0)
@@ -1340,13 +1341,13 @@ func (m *MockBudgetsAPI) UpdateSubscriberRequest(arg0 *budgets.UpdateSubscriberI
 	return ret0, ret1
 }
 
-// UpdateSubscriberRequest indicates an expected call of UpdateSubscriberRequest
+// UpdateSubscriberRequest indicates an expected call of UpdateSubscriberRequest.
 func (mr *MockBudgetsAPIMockRecorder) UpdateSubscriberRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSubscriberRequest", reflect.TypeOf((*MockBudgetsAPI)(nil).UpdateSubscriberRequest), arg0)
 }
 
-// UpdateSubscriberWithContext mocks base method
+// UpdateSubscriberWithContext mocks base method.
 func (m *MockBudgetsAPI) UpdateSubscriberWithContext(arg0 context.Context, arg1 *budgets.UpdateSubscriberInput, arg2 ...request.Option) (*budgets.UpdateSubscriberOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1359,7 +1360,7 @@ func (m *MockBudgetsAPI) UpdateSubscriberWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// UpdateSubscriberWithContext indicates an expected call of UpdateSubscriberWithContext
+// UpdateSubscriberWithContext indicates an expected call of UpdateSubscriberWithContext.
 func (mr *MockBudgetsAPIMockRecorder) UpdateSubscriberWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

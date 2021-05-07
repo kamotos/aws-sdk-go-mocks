@@ -6,36 +6,37 @@ package rdsdataservicemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	rdsdataservice "github.com/aws/aws-sdk-go/service/rdsdataservice"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockRDSDataServiceAPI is a mock of RDSDataServiceAPI interface
+// MockRDSDataServiceAPI is a mock of RDSDataServiceAPI interface.
 type MockRDSDataServiceAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockRDSDataServiceAPIMockRecorder
 }
 
-// MockRDSDataServiceAPIMockRecorder is the mock recorder for MockRDSDataServiceAPI
+// MockRDSDataServiceAPIMockRecorder is the mock recorder for MockRDSDataServiceAPI.
 type MockRDSDataServiceAPIMockRecorder struct {
 	mock *MockRDSDataServiceAPI
 }
 
-// NewMockRDSDataServiceAPI creates a new mock instance
+// NewMockRDSDataServiceAPI creates a new mock instance.
 func NewMockRDSDataServiceAPI(ctrl *gomock.Controller) *MockRDSDataServiceAPI {
 	mock := &MockRDSDataServiceAPI{ctrl: ctrl}
 	mock.recorder = &MockRDSDataServiceAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockRDSDataServiceAPI) EXPECT() *MockRDSDataServiceAPIMockRecorder {
 	return m.recorder
 }
 
-// BatchExecuteStatement mocks base method
+// BatchExecuteStatement mocks base method.
 func (m *MockRDSDataServiceAPI) BatchExecuteStatement(arg0 *rdsdataservice.BatchExecuteStatementInput) (*rdsdataservice.BatchExecuteStatementOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchExecuteStatement", arg0)
@@ -44,13 +45,13 @@ func (m *MockRDSDataServiceAPI) BatchExecuteStatement(arg0 *rdsdataservice.Batch
 	return ret0, ret1
 }
 
-// BatchExecuteStatement indicates an expected call of BatchExecuteStatement
+// BatchExecuteStatement indicates an expected call of BatchExecuteStatement.
 func (mr *MockRDSDataServiceAPIMockRecorder) BatchExecuteStatement(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchExecuteStatement", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).BatchExecuteStatement), arg0)
 }
 
-// BatchExecuteStatementRequest mocks base method
+// BatchExecuteStatementRequest mocks base method.
 func (m *MockRDSDataServiceAPI) BatchExecuteStatementRequest(arg0 *rdsdataservice.BatchExecuteStatementInput) (*request.Request, *rdsdataservice.BatchExecuteStatementOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchExecuteStatementRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockRDSDataServiceAPI) BatchExecuteStatementRequest(arg0 *rdsdataservic
 	return ret0, ret1
 }
 
-// BatchExecuteStatementRequest indicates an expected call of BatchExecuteStatementRequest
+// BatchExecuteStatementRequest indicates an expected call of BatchExecuteStatementRequest.
 func (mr *MockRDSDataServiceAPIMockRecorder) BatchExecuteStatementRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchExecuteStatementRequest", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).BatchExecuteStatementRequest), arg0)
 }
 
-// BatchExecuteStatementWithContext mocks base method
+// BatchExecuteStatementWithContext mocks base method.
 func (m *MockRDSDataServiceAPI) BatchExecuteStatementWithContext(arg0 context.Context, arg1 *rdsdataservice.BatchExecuteStatementInput, arg2 ...request.Option) (*rdsdataservice.BatchExecuteStatementOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockRDSDataServiceAPI) BatchExecuteStatementWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// BatchExecuteStatementWithContext indicates an expected call of BatchExecuteStatementWithContext
+// BatchExecuteStatementWithContext indicates an expected call of BatchExecuteStatementWithContext.
 func (mr *MockRDSDataServiceAPIMockRecorder) BatchExecuteStatementWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchExecuteStatementWithContext", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).BatchExecuteStatementWithContext), varargs...)
 }
 
-// BeginTransaction mocks base method
+// BeginTransaction mocks base method.
 func (m *MockRDSDataServiceAPI) BeginTransaction(arg0 *rdsdataservice.BeginTransactionInput) (*rdsdataservice.BeginTransactionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BeginTransaction", arg0)
@@ -94,13 +95,13 @@ func (m *MockRDSDataServiceAPI) BeginTransaction(arg0 *rdsdataservice.BeginTrans
 	return ret0, ret1
 }
 
-// BeginTransaction indicates an expected call of BeginTransaction
+// BeginTransaction indicates an expected call of BeginTransaction.
 func (mr *MockRDSDataServiceAPIMockRecorder) BeginTransaction(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BeginTransaction", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).BeginTransaction), arg0)
 }
 
-// BeginTransactionRequest mocks base method
+// BeginTransactionRequest mocks base method.
 func (m *MockRDSDataServiceAPI) BeginTransactionRequest(arg0 *rdsdataservice.BeginTransactionInput) (*request.Request, *rdsdataservice.BeginTransactionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BeginTransactionRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockRDSDataServiceAPI) BeginTransactionRequest(arg0 *rdsdataservice.Beg
 	return ret0, ret1
 }
 
-// BeginTransactionRequest indicates an expected call of BeginTransactionRequest
+// BeginTransactionRequest indicates an expected call of BeginTransactionRequest.
 func (mr *MockRDSDataServiceAPIMockRecorder) BeginTransactionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BeginTransactionRequest", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).BeginTransactionRequest), arg0)
 }
 
-// BeginTransactionWithContext mocks base method
+// BeginTransactionWithContext mocks base method.
 func (m *MockRDSDataServiceAPI) BeginTransactionWithContext(arg0 context.Context, arg1 *rdsdataservice.BeginTransactionInput, arg2 ...request.Option) (*rdsdataservice.BeginTransactionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockRDSDataServiceAPI) BeginTransactionWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// BeginTransactionWithContext indicates an expected call of BeginTransactionWithContext
+// BeginTransactionWithContext indicates an expected call of BeginTransactionWithContext.
 func (mr *MockRDSDataServiceAPIMockRecorder) BeginTransactionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BeginTransactionWithContext", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).BeginTransactionWithContext), varargs...)
 }
 
-// CommitTransaction mocks base method
+// CommitTransaction mocks base method.
 func (m *MockRDSDataServiceAPI) CommitTransaction(arg0 *rdsdataservice.CommitTransactionInput) (*rdsdataservice.CommitTransactionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CommitTransaction", arg0)
@@ -144,13 +145,13 @@ func (m *MockRDSDataServiceAPI) CommitTransaction(arg0 *rdsdataservice.CommitTra
 	return ret0, ret1
 }
 
-// CommitTransaction indicates an expected call of CommitTransaction
+// CommitTransaction indicates an expected call of CommitTransaction.
 func (mr *MockRDSDataServiceAPIMockRecorder) CommitTransaction(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CommitTransaction", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).CommitTransaction), arg0)
 }
 
-// CommitTransactionRequest mocks base method
+// CommitTransactionRequest mocks base method.
 func (m *MockRDSDataServiceAPI) CommitTransactionRequest(arg0 *rdsdataservice.CommitTransactionInput) (*request.Request, *rdsdataservice.CommitTransactionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CommitTransactionRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockRDSDataServiceAPI) CommitTransactionRequest(arg0 *rdsdataservice.Co
 	return ret0, ret1
 }
 
-// CommitTransactionRequest indicates an expected call of CommitTransactionRequest
+// CommitTransactionRequest indicates an expected call of CommitTransactionRequest.
 func (mr *MockRDSDataServiceAPIMockRecorder) CommitTransactionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CommitTransactionRequest", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).CommitTransactionRequest), arg0)
 }
 
-// CommitTransactionWithContext mocks base method
+// CommitTransactionWithContext mocks base method.
 func (m *MockRDSDataServiceAPI) CommitTransactionWithContext(arg0 context.Context, arg1 *rdsdataservice.CommitTransactionInput, arg2 ...request.Option) (*rdsdataservice.CommitTransactionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockRDSDataServiceAPI) CommitTransactionWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CommitTransactionWithContext indicates an expected call of CommitTransactionWithContext
+// CommitTransactionWithContext indicates an expected call of CommitTransactionWithContext.
 func (mr *MockRDSDataServiceAPIMockRecorder) CommitTransactionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CommitTransactionWithContext", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).CommitTransactionWithContext), varargs...)
 }
 
-// ExecuteSql mocks base method
+// ExecuteSql mocks base method.
 func (m *MockRDSDataServiceAPI) ExecuteSql(arg0 *rdsdataservice.ExecuteSqlInput) (*rdsdataservice.ExecuteSqlOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExecuteSql", arg0)
@@ -194,13 +195,13 @@ func (m *MockRDSDataServiceAPI) ExecuteSql(arg0 *rdsdataservice.ExecuteSqlInput)
 	return ret0, ret1
 }
 
-// ExecuteSql indicates an expected call of ExecuteSql
+// ExecuteSql indicates an expected call of ExecuteSql.
 func (mr *MockRDSDataServiceAPIMockRecorder) ExecuteSql(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteSql", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).ExecuteSql), arg0)
 }
 
-// ExecuteSqlRequest mocks base method
+// ExecuteSqlRequest mocks base method.
 func (m *MockRDSDataServiceAPI) ExecuteSqlRequest(arg0 *rdsdataservice.ExecuteSqlInput) (*request.Request, *rdsdataservice.ExecuteSqlOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExecuteSqlRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockRDSDataServiceAPI) ExecuteSqlRequest(arg0 *rdsdataservice.ExecuteSq
 	return ret0, ret1
 }
 
-// ExecuteSqlRequest indicates an expected call of ExecuteSqlRequest
+// ExecuteSqlRequest indicates an expected call of ExecuteSqlRequest.
 func (mr *MockRDSDataServiceAPIMockRecorder) ExecuteSqlRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteSqlRequest", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).ExecuteSqlRequest), arg0)
 }
 
-// ExecuteSqlWithContext mocks base method
+// ExecuteSqlWithContext mocks base method.
 func (m *MockRDSDataServiceAPI) ExecuteSqlWithContext(arg0 context.Context, arg1 *rdsdataservice.ExecuteSqlInput, arg2 ...request.Option) (*rdsdataservice.ExecuteSqlOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockRDSDataServiceAPI) ExecuteSqlWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ExecuteSqlWithContext indicates an expected call of ExecuteSqlWithContext
+// ExecuteSqlWithContext indicates an expected call of ExecuteSqlWithContext.
 func (mr *MockRDSDataServiceAPIMockRecorder) ExecuteSqlWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteSqlWithContext", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).ExecuteSqlWithContext), varargs...)
 }
 
-// ExecuteStatement mocks base method
+// ExecuteStatement mocks base method.
 func (m *MockRDSDataServiceAPI) ExecuteStatement(arg0 *rdsdataservice.ExecuteStatementInput) (*rdsdataservice.ExecuteStatementOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExecuteStatement", arg0)
@@ -244,13 +245,13 @@ func (m *MockRDSDataServiceAPI) ExecuteStatement(arg0 *rdsdataservice.ExecuteSta
 	return ret0, ret1
 }
 
-// ExecuteStatement indicates an expected call of ExecuteStatement
+// ExecuteStatement indicates an expected call of ExecuteStatement.
 func (mr *MockRDSDataServiceAPIMockRecorder) ExecuteStatement(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteStatement", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).ExecuteStatement), arg0)
 }
 
-// ExecuteStatementRequest mocks base method
+// ExecuteStatementRequest mocks base method.
 func (m *MockRDSDataServiceAPI) ExecuteStatementRequest(arg0 *rdsdataservice.ExecuteStatementInput) (*request.Request, *rdsdataservice.ExecuteStatementOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExecuteStatementRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockRDSDataServiceAPI) ExecuteStatementRequest(arg0 *rdsdataservice.Exe
 	return ret0, ret1
 }
 
-// ExecuteStatementRequest indicates an expected call of ExecuteStatementRequest
+// ExecuteStatementRequest indicates an expected call of ExecuteStatementRequest.
 func (mr *MockRDSDataServiceAPIMockRecorder) ExecuteStatementRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteStatementRequest", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).ExecuteStatementRequest), arg0)
 }
 
-// ExecuteStatementWithContext mocks base method
+// ExecuteStatementWithContext mocks base method.
 func (m *MockRDSDataServiceAPI) ExecuteStatementWithContext(arg0 context.Context, arg1 *rdsdataservice.ExecuteStatementInput, arg2 ...request.Option) (*rdsdataservice.ExecuteStatementOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockRDSDataServiceAPI) ExecuteStatementWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ExecuteStatementWithContext indicates an expected call of ExecuteStatementWithContext
+// ExecuteStatementWithContext indicates an expected call of ExecuteStatementWithContext.
 func (mr *MockRDSDataServiceAPIMockRecorder) ExecuteStatementWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteStatementWithContext", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).ExecuteStatementWithContext), varargs...)
 }
 
-// RollbackTransaction mocks base method
+// RollbackTransaction mocks base method.
 func (m *MockRDSDataServiceAPI) RollbackTransaction(arg0 *rdsdataservice.RollbackTransactionInput) (*rdsdataservice.RollbackTransactionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RollbackTransaction", arg0)
@@ -294,13 +295,13 @@ func (m *MockRDSDataServiceAPI) RollbackTransaction(arg0 *rdsdataservice.Rollbac
 	return ret0, ret1
 }
 
-// RollbackTransaction indicates an expected call of RollbackTransaction
+// RollbackTransaction indicates an expected call of RollbackTransaction.
 func (mr *MockRDSDataServiceAPIMockRecorder) RollbackTransaction(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RollbackTransaction", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).RollbackTransaction), arg0)
 }
 
-// RollbackTransactionRequest mocks base method
+// RollbackTransactionRequest mocks base method.
 func (m *MockRDSDataServiceAPI) RollbackTransactionRequest(arg0 *rdsdataservice.RollbackTransactionInput) (*request.Request, *rdsdataservice.RollbackTransactionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RollbackTransactionRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockRDSDataServiceAPI) RollbackTransactionRequest(arg0 *rdsdataservice.
 	return ret0, ret1
 }
 
-// RollbackTransactionRequest indicates an expected call of RollbackTransactionRequest
+// RollbackTransactionRequest indicates an expected call of RollbackTransactionRequest.
 func (mr *MockRDSDataServiceAPIMockRecorder) RollbackTransactionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RollbackTransactionRequest", reflect.TypeOf((*MockRDSDataServiceAPI)(nil).RollbackTransactionRequest), arg0)
 }
 
-// RollbackTransactionWithContext mocks base method
+// RollbackTransactionWithContext mocks base method.
 func (m *MockRDSDataServiceAPI) RollbackTransactionWithContext(arg0 context.Context, arg1 *rdsdataservice.RollbackTransactionInput, arg2 ...request.Option) (*rdsdataservice.RollbackTransactionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,7 +329,7 @@ func (m *MockRDSDataServiceAPI) RollbackTransactionWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// RollbackTransactionWithContext indicates an expected call of RollbackTransactionWithContext
+// RollbackTransactionWithContext indicates an expected call of RollbackTransactionWithContext.
 func (mr *MockRDSDataServiceAPIMockRecorder) RollbackTransactionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

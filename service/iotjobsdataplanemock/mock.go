@@ -6,36 +6,37 @@ package iotjobsdataplanemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	iotjobsdataplane "github.com/aws/aws-sdk-go/service/iotjobsdataplane"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockIoTJobsDataPlaneAPI is a mock of IoTJobsDataPlaneAPI interface
+// MockIoTJobsDataPlaneAPI is a mock of IoTJobsDataPlaneAPI interface.
 type MockIoTJobsDataPlaneAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockIoTJobsDataPlaneAPIMockRecorder
 }
 
-// MockIoTJobsDataPlaneAPIMockRecorder is the mock recorder for MockIoTJobsDataPlaneAPI
+// MockIoTJobsDataPlaneAPIMockRecorder is the mock recorder for MockIoTJobsDataPlaneAPI.
 type MockIoTJobsDataPlaneAPIMockRecorder struct {
 	mock *MockIoTJobsDataPlaneAPI
 }
 
-// NewMockIoTJobsDataPlaneAPI creates a new mock instance
+// NewMockIoTJobsDataPlaneAPI creates a new mock instance.
 func NewMockIoTJobsDataPlaneAPI(ctrl *gomock.Controller) *MockIoTJobsDataPlaneAPI {
 	mock := &MockIoTJobsDataPlaneAPI{ctrl: ctrl}
 	mock.recorder = &MockIoTJobsDataPlaneAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockIoTJobsDataPlaneAPI) EXPECT() *MockIoTJobsDataPlaneAPIMockRecorder {
 	return m.recorder
 }
 
-// DescribeJobExecution mocks base method
+// DescribeJobExecution mocks base method.
 func (m *MockIoTJobsDataPlaneAPI) DescribeJobExecution(arg0 *iotjobsdataplane.DescribeJobExecutionInput) (*iotjobsdataplane.DescribeJobExecutionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeJobExecution", arg0)
@@ -44,13 +45,13 @@ func (m *MockIoTJobsDataPlaneAPI) DescribeJobExecution(arg0 *iotjobsdataplane.De
 	return ret0, ret1
 }
 
-// DescribeJobExecution indicates an expected call of DescribeJobExecution
+// DescribeJobExecution indicates an expected call of DescribeJobExecution.
 func (mr *MockIoTJobsDataPlaneAPIMockRecorder) DescribeJobExecution(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobExecution", reflect.TypeOf((*MockIoTJobsDataPlaneAPI)(nil).DescribeJobExecution), arg0)
 }
 
-// DescribeJobExecutionRequest mocks base method
+// DescribeJobExecutionRequest mocks base method.
 func (m *MockIoTJobsDataPlaneAPI) DescribeJobExecutionRequest(arg0 *iotjobsdataplane.DescribeJobExecutionInput) (*request.Request, *iotjobsdataplane.DescribeJobExecutionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeJobExecutionRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockIoTJobsDataPlaneAPI) DescribeJobExecutionRequest(arg0 *iotjobsdatap
 	return ret0, ret1
 }
 
-// DescribeJobExecutionRequest indicates an expected call of DescribeJobExecutionRequest
+// DescribeJobExecutionRequest indicates an expected call of DescribeJobExecutionRequest.
 func (mr *MockIoTJobsDataPlaneAPIMockRecorder) DescribeJobExecutionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobExecutionRequest", reflect.TypeOf((*MockIoTJobsDataPlaneAPI)(nil).DescribeJobExecutionRequest), arg0)
 }
 
-// DescribeJobExecutionWithContext mocks base method
+// DescribeJobExecutionWithContext mocks base method.
 func (m *MockIoTJobsDataPlaneAPI) DescribeJobExecutionWithContext(arg0 context.Context, arg1 *iotjobsdataplane.DescribeJobExecutionInput, arg2 ...request.Option) (*iotjobsdataplane.DescribeJobExecutionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockIoTJobsDataPlaneAPI) DescribeJobExecutionWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DescribeJobExecutionWithContext indicates an expected call of DescribeJobExecutionWithContext
+// DescribeJobExecutionWithContext indicates an expected call of DescribeJobExecutionWithContext.
 func (mr *MockIoTJobsDataPlaneAPIMockRecorder) DescribeJobExecutionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobExecutionWithContext", reflect.TypeOf((*MockIoTJobsDataPlaneAPI)(nil).DescribeJobExecutionWithContext), varargs...)
 }
 
-// GetPendingJobExecutions mocks base method
+// GetPendingJobExecutions mocks base method.
 func (m *MockIoTJobsDataPlaneAPI) GetPendingJobExecutions(arg0 *iotjobsdataplane.GetPendingJobExecutionsInput) (*iotjobsdataplane.GetPendingJobExecutionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetPendingJobExecutions", arg0)
@@ -94,13 +95,13 @@ func (m *MockIoTJobsDataPlaneAPI) GetPendingJobExecutions(arg0 *iotjobsdataplane
 	return ret0, ret1
 }
 
-// GetPendingJobExecutions indicates an expected call of GetPendingJobExecutions
+// GetPendingJobExecutions indicates an expected call of GetPendingJobExecutions.
 func (mr *MockIoTJobsDataPlaneAPIMockRecorder) GetPendingJobExecutions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPendingJobExecutions", reflect.TypeOf((*MockIoTJobsDataPlaneAPI)(nil).GetPendingJobExecutions), arg0)
 }
 
-// GetPendingJobExecutionsRequest mocks base method
+// GetPendingJobExecutionsRequest mocks base method.
 func (m *MockIoTJobsDataPlaneAPI) GetPendingJobExecutionsRequest(arg0 *iotjobsdataplane.GetPendingJobExecutionsInput) (*request.Request, *iotjobsdataplane.GetPendingJobExecutionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetPendingJobExecutionsRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockIoTJobsDataPlaneAPI) GetPendingJobExecutionsRequest(arg0 *iotjobsda
 	return ret0, ret1
 }
 
-// GetPendingJobExecutionsRequest indicates an expected call of GetPendingJobExecutionsRequest
+// GetPendingJobExecutionsRequest indicates an expected call of GetPendingJobExecutionsRequest.
 func (mr *MockIoTJobsDataPlaneAPIMockRecorder) GetPendingJobExecutionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPendingJobExecutionsRequest", reflect.TypeOf((*MockIoTJobsDataPlaneAPI)(nil).GetPendingJobExecutionsRequest), arg0)
 }
 
-// GetPendingJobExecutionsWithContext mocks base method
+// GetPendingJobExecutionsWithContext mocks base method.
 func (m *MockIoTJobsDataPlaneAPI) GetPendingJobExecutionsWithContext(arg0 context.Context, arg1 *iotjobsdataplane.GetPendingJobExecutionsInput, arg2 ...request.Option) (*iotjobsdataplane.GetPendingJobExecutionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockIoTJobsDataPlaneAPI) GetPendingJobExecutionsWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// GetPendingJobExecutionsWithContext indicates an expected call of GetPendingJobExecutionsWithContext
+// GetPendingJobExecutionsWithContext indicates an expected call of GetPendingJobExecutionsWithContext.
 func (mr *MockIoTJobsDataPlaneAPIMockRecorder) GetPendingJobExecutionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPendingJobExecutionsWithContext", reflect.TypeOf((*MockIoTJobsDataPlaneAPI)(nil).GetPendingJobExecutionsWithContext), varargs...)
 }
 
-// StartNextPendingJobExecution mocks base method
+// StartNextPendingJobExecution mocks base method.
 func (m *MockIoTJobsDataPlaneAPI) StartNextPendingJobExecution(arg0 *iotjobsdataplane.StartNextPendingJobExecutionInput) (*iotjobsdataplane.StartNextPendingJobExecutionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartNextPendingJobExecution", arg0)
@@ -144,13 +145,13 @@ func (m *MockIoTJobsDataPlaneAPI) StartNextPendingJobExecution(arg0 *iotjobsdata
 	return ret0, ret1
 }
 
-// StartNextPendingJobExecution indicates an expected call of StartNextPendingJobExecution
+// StartNextPendingJobExecution indicates an expected call of StartNextPendingJobExecution.
 func (mr *MockIoTJobsDataPlaneAPIMockRecorder) StartNextPendingJobExecution(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartNextPendingJobExecution", reflect.TypeOf((*MockIoTJobsDataPlaneAPI)(nil).StartNextPendingJobExecution), arg0)
 }
 
-// StartNextPendingJobExecutionRequest mocks base method
+// StartNextPendingJobExecutionRequest mocks base method.
 func (m *MockIoTJobsDataPlaneAPI) StartNextPendingJobExecutionRequest(arg0 *iotjobsdataplane.StartNextPendingJobExecutionInput) (*request.Request, *iotjobsdataplane.StartNextPendingJobExecutionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartNextPendingJobExecutionRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockIoTJobsDataPlaneAPI) StartNextPendingJobExecutionRequest(arg0 *iotj
 	return ret0, ret1
 }
 
-// StartNextPendingJobExecutionRequest indicates an expected call of StartNextPendingJobExecutionRequest
+// StartNextPendingJobExecutionRequest indicates an expected call of StartNextPendingJobExecutionRequest.
 func (mr *MockIoTJobsDataPlaneAPIMockRecorder) StartNextPendingJobExecutionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartNextPendingJobExecutionRequest", reflect.TypeOf((*MockIoTJobsDataPlaneAPI)(nil).StartNextPendingJobExecutionRequest), arg0)
 }
 
-// StartNextPendingJobExecutionWithContext mocks base method
+// StartNextPendingJobExecutionWithContext mocks base method.
 func (m *MockIoTJobsDataPlaneAPI) StartNextPendingJobExecutionWithContext(arg0 context.Context, arg1 *iotjobsdataplane.StartNextPendingJobExecutionInput, arg2 ...request.Option) (*iotjobsdataplane.StartNextPendingJobExecutionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockIoTJobsDataPlaneAPI) StartNextPendingJobExecutionWithContext(arg0 c
 	return ret0, ret1
 }
 
-// StartNextPendingJobExecutionWithContext indicates an expected call of StartNextPendingJobExecutionWithContext
+// StartNextPendingJobExecutionWithContext indicates an expected call of StartNextPendingJobExecutionWithContext.
 func (mr *MockIoTJobsDataPlaneAPIMockRecorder) StartNextPendingJobExecutionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartNextPendingJobExecutionWithContext", reflect.TypeOf((*MockIoTJobsDataPlaneAPI)(nil).StartNextPendingJobExecutionWithContext), varargs...)
 }
 
-// UpdateJobExecution mocks base method
+// UpdateJobExecution mocks base method.
 func (m *MockIoTJobsDataPlaneAPI) UpdateJobExecution(arg0 *iotjobsdataplane.UpdateJobExecutionInput) (*iotjobsdataplane.UpdateJobExecutionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateJobExecution", arg0)
@@ -194,13 +195,13 @@ func (m *MockIoTJobsDataPlaneAPI) UpdateJobExecution(arg0 *iotjobsdataplane.Upda
 	return ret0, ret1
 }
 
-// UpdateJobExecution indicates an expected call of UpdateJobExecution
+// UpdateJobExecution indicates an expected call of UpdateJobExecution.
 func (mr *MockIoTJobsDataPlaneAPIMockRecorder) UpdateJobExecution(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateJobExecution", reflect.TypeOf((*MockIoTJobsDataPlaneAPI)(nil).UpdateJobExecution), arg0)
 }
 
-// UpdateJobExecutionRequest mocks base method
+// UpdateJobExecutionRequest mocks base method.
 func (m *MockIoTJobsDataPlaneAPI) UpdateJobExecutionRequest(arg0 *iotjobsdataplane.UpdateJobExecutionInput) (*request.Request, *iotjobsdataplane.UpdateJobExecutionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateJobExecutionRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockIoTJobsDataPlaneAPI) UpdateJobExecutionRequest(arg0 *iotjobsdatapla
 	return ret0, ret1
 }
 
-// UpdateJobExecutionRequest indicates an expected call of UpdateJobExecutionRequest
+// UpdateJobExecutionRequest indicates an expected call of UpdateJobExecutionRequest.
 func (mr *MockIoTJobsDataPlaneAPIMockRecorder) UpdateJobExecutionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateJobExecutionRequest", reflect.TypeOf((*MockIoTJobsDataPlaneAPI)(nil).UpdateJobExecutionRequest), arg0)
 }
 
-// UpdateJobExecutionWithContext mocks base method
+// UpdateJobExecutionWithContext mocks base method.
 func (m *MockIoTJobsDataPlaneAPI) UpdateJobExecutionWithContext(arg0 context.Context, arg1 *iotjobsdataplane.UpdateJobExecutionInput, arg2 ...request.Option) (*iotjobsdataplane.UpdateJobExecutionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,7 +229,7 @@ func (m *MockIoTJobsDataPlaneAPI) UpdateJobExecutionWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// UpdateJobExecutionWithContext indicates an expected call of UpdateJobExecutionWithContext
+// UpdateJobExecutionWithContext indicates an expected call of UpdateJobExecutionWithContext.
 func (mr *MockIoTJobsDataPlaneAPIMockRecorder) UpdateJobExecutionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

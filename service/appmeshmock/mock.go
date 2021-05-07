@@ -6,36 +6,37 @@ package appmeshmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	appmesh "github.com/aws/aws-sdk-go/service/appmesh"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockAppMeshAPI is a mock of AppMeshAPI interface
+// MockAppMeshAPI is a mock of AppMeshAPI interface.
 type MockAppMeshAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockAppMeshAPIMockRecorder
 }
 
-// MockAppMeshAPIMockRecorder is the mock recorder for MockAppMeshAPI
+// MockAppMeshAPIMockRecorder is the mock recorder for MockAppMeshAPI.
 type MockAppMeshAPIMockRecorder struct {
 	mock *MockAppMeshAPI
 }
 
-// NewMockAppMeshAPI creates a new mock instance
+// NewMockAppMeshAPI creates a new mock instance.
 func NewMockAppMeshAPI(ctrl *gomock.Controller) *MockAppMeshAPI {
 	mock := &MockAppMeshAPI{ctrl: ctrl}
 	mock.recorder = &MockAppMeshAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockAppMeshAPI) EXPECT() *MockAppMeshAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateGatewayRoute mocks base method
+// CreateGatewayRoute mocks base method.
 func (m *MockAppMeshAPI) CreateGatewayRoute(arg0 *appmesh.CreateGatewayRouteInput) (*appmesh.CreateGatewayRouteOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateGatewayRoute", arg0)
@@ -44,13 +45,13 @@ func (m *MockAppMeshAPI) CreateGatewayRoute(arg0 *appmesh.CreateGatewayRouteInpu
 	return ret0, ret1
 }
 
-// CreateGatewayRoute indicates an expected call of CreateGatewayRoute
+// CreateGatewayRoute indicates an expected call of CreateGatewayRoute.
 func (mr *MockAppMeshAPIMockRecorder) CreateGatewayRoute(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateGatewayRoute", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateGatewayRoute), arg0)
 }
 
-// CreateGatewayRouteRequest mocks base method
+// CreateGatewayRouteRequest mocks base method.
 func (m *MockAppMeshAPI) CreateGatewayRouteRequest(arg0 *appmesh.CreateGatewayRouteInput) (*request.Request, *appmesh.CreateGatewayRouteOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateGatewayRouteRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockAppMeshAPI) CreateGatewayRouteRequest(arg0 *appmesh.CreateGatewayRo
 	return ret0, ret1
 }
 
-// CreateGatewayRouteRequest indicates an expected call of CreateGatewayRouteRequest
+// CreateGatewayRouteRequest indicates an expected call of CreateGatewayRouteRequest.
 func (mr *MockAppMeshAPIMockRecorder) CreateGatewayRouteRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateGatewayRouteRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateGatewayRouteRequest), arg0)
 }
 
-// CreateGatewayRouteWithContext mocks base method
+// CreateGatewayRouteWithContext mocks base method.
 func (m *MockAppMeshAPI) CreateGatewayRouteWithContext(arg0 context.Context, arg1 *appmesh.CreateGatewayRouteInput, arg2 ...request.Option) (*appmesh.CreateGatewayRouteOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockAppMeshAPI) CreateGatewayRouteWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// CreateGatewayRouteWithContext indicates an expected call of CreateGatewayRouteWithContext
+// CreateGatewayRouteWithContext indicates an expected call of CreateGatewayRouteWithContext.
 func (mr *MockAppMeshAPIMockRecorder) CreateGatewayRouteWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateGatewayRouteWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateGatewayRouteWithContext), varargs...)
 }
 
-// CreateMesh mocks base method
+// CreateMesh mocks base method.
 func (m *MockAppMeshAPI) CreateMesh(arg0 *appmesh.CreateMeshInput) (*appmesh.CreateMeshOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMesh", arg0)
@@ -94,13 +95,13 @@ func (m *MockAppMeshAPI) CreateMesh(arg0 *appmesh.CreateMeshInput) (*appmesh.Cre
 	return ret0, ret1
 }
 
-// CreateMesh indicates an expected call of CreateMesh
+// CreateMesh indicates an expected call of CreateMesh.
 func (mr *MockAppMeshAPIMockRecorder) CreateMesh(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMesh", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateMesh), arg0)
 }
 
-// CreateMeshRequest mocks base method
+// CreateMeshRequest mocks base method.
 func (m *MockAppMeshAPI) CreateMeshRequest(arg0 *appmesh.CreateMeshInput) (*request.Request, *appmesh.CreateMeshOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMeshRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockAppMeshAPI) CreateMeshRequest(arg0 *appmesh.CreateMeshInput) (*requ
 	return ret0, ret1
 }
 
-// CreateMeshRequest indicates an expected call of CreateMeshRequest
+// CreateMeshRequest indicates an expected call of CreateMeshRequest.
 func (mr *MockAppMeshAPIMockRecorder) CreateMeshRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMeshRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateMeshRequest), arg0)
 }
 
-// CreateMeshWithContext mocks base method
+// CreateMeshWithContext mocks base method.
 func (m *MockAppMeshAPI) CreateMeshWithContext(arg0 context.Context, arg1 *appmesh.CreateMeshInput, arg2 ...request.Option) (*appmesh.CreateMeshOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockAppMeshAPI) CreateMeshWithContext(arg0 context.Context, arg1 *appme
 	return ret0, ret1
 }
 
-// CreateMeshWithContext indicates an expected call of CreateMeshWithContext
+// CreateMeshWithContext indicates an expected call of CreateMeshWithContext.
 func (mr *MockAppMeshAPIMockRecorder) CreateMeshWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMeshWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateMeshWithContext), varargs...)
 }
 
-// CreateRoute mocks base method
+// CreateRoute mocks base method.
 func (m *MockAppMeshAPI) CreateRoute(arg0 *appmesh.CreateRouteInput) (*appmesh.CreateRouteOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRoute", arg0)
@@ -144,13 +145,13 @@ func (m *MockAppMeshAPI) CreateRoute(arg0 *appmesh.CreateRouteInput) (*appmesh.C
 	return ret0, ret1
 }
 
-// CreateRoute indicates an expected call of CreateRoute
+// CreateRoute indicates an expected call of CreateRoute.
 func (mr *MockAppMeshAPIMockRecorder) CreateRoute(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRoute", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateRoute), arg0)
 }
 
-// CreateRouteRequest mocks base method
+// CreateRouteRequest mocks base method.
 func (m *MockAppMeshAPI) CreateRouteRequest(arg0 *appmesh.CreateRouteInput) (*request.Request, *appmesh.CreateRouteOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRouteRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockAppMeshAPI) CreateRouteRequest(arg0 *appmesh.CreateRouteInput) (*re
 	return ret0, ret1
 }
 
-// CreateRouteRequest indicates an expected call of CreateRouteRequest
+// CreateRouteRequest indicates an expected call of CreateRouteRequest.
 func (mr *MockAppMeshAPIMockRecorder) CreateRouteRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRouteRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateRouteRequest), arg0)
 }
 
-// CreateRouteWithContext mocks base method
+// CreateRouteWithContext mocks base method.
 func (m *MockAppMeshAPI) CreateRouteWithContext(arg0 context.Context, arg1 *appmesh.CreateRouteInput, arg2 ...request.Option) (*appmesh.CreateRouteOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockAppMeshAPI) CreateRouteWithContext(arg0 context.Context, arg1 *appm
 	return ret0, ret1
 }
 
-// CreateRouteWithContext indicates an expected call of CreateRouteWithContext
+// CreateRouteWithContext indicates an expected call of CreateRouteWithContext.
 func (mr *MockAppMeshAPIMockRecorder) CreateRouteWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRouteWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateRouteWithContext), varargs...)
 }
 
-// CreateVirtualGateway mocks base method
+// CreateVirtualGateway mocks base method.
 func (m *MockAppMeshAPI) CreateVirtualGateway(arg0 *appmesh.CreateVirtualGatewayInput) (*appmesh.CreateVirtualGatewayOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVirtualGateway", arg0)
@@ -194,13 +195,13 @@ func (m *MockAppMeshAPI) CreateVirtualGateway(arg0 *appmesh.CreateVirtualGateway
 	return ret0, ret1
 }
 
-// CreateVirtualGateway indicates an expected call of CreateVirtualGateway
+// CreateVirtualGateway indicates an expected call of CreateVirtualGateway.
 func (mr *MockAppMeshAPIMockRecorder) CreateVirtualGateway(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualGateway", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateVirtualGateway), arg0)
 }
 
-// CreateVirtualGatewayRequest mocks base method
+// CreateVirtualGatewayRequest mocks base method.
 func (m *MockAppMeshAPI) CreateVirtualGatewayRequest(arg0 *appmesh.CreateVirtualGatewayInput) (*request.Request, *appmesh.CreateVirtualGatewayOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVirtualGatewayRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockAppMeshAPI) CreateVirtualGatewayRequest(arg0 *appmesh.CreateVirtual
 	return ret0, ret1
 }
 
-// CreateVirtualGatewayRequest indicates an expected call of CreateVirtualGatewayRequest
+// CreateVirtualGatewayRequest indicates an expected call of CreateVirtualGatewayRequest.
 func (mr *MockAppMeshAPIMockRecorder) CreateVirtualGatewayRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualGatewayRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateVirtualGatewayRequest), arg0)
 }
 
-// CreateVirtualGatewayWithContext mocks base method
+// CreateVirtualGatewayWithContext mocks base method.
 func (m *MockAppMeshAPI) CreateVirtualGatewayWithContext(arg0 context.Context, arg1 *appmesh.CreateVirtualGatewayInput, arg2 ...request.Option) (*appmesh.CreateVirtualGatewayOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockAppMeshAPI) CreateVirtualGatewayWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// CreateVirtualGatewayWithContext indicates an expected call of CreateVirtualGatewayWithContext
+// CreateVirtualGatewayWithContext indicates an expected call of CreateVirtualGatewayWithContext.
 func (mr *MockAppMeshAPIMockRecorder) CreateVirtualGatewayWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualGatewayWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateVirtualGatewayWithContext), varargs...)
 }
 
-// CreateVirtualNode mocks base method
+// CreateVirtualNode mocks base method.
 func (m *MockAppMeshAPI) CreateVirtualNode(arg0 *appmesh.CreateVirtualNodeInput) (*appmesh.CreateVirtualNodeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVirtualNode", arg0)
@@ -244,13 +245,13 @@ func (m *MockAppMeshAPI) CreateVirtualNode(arg0 *appmesh.CreateVirtualNodeInput)
 	return ret0, ret1
 }
 
-// CreateVirtualNode indicates an expected call of CreateVirtualNode
+// CreateVirtualNode indicates an expected call of CreateVirtualNode.
 func (mr *MockAppMeshAPIMockRecorder) CreateVirtualNode(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualNode", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateVirtualNode), arg0)
 }
 
-// CreateVirtualNodeRequest mocks base method
+// CreateVirtualNodeRequest mocks base method.
 func (m *MockAppMeshAPI) CreateVirtualNodeRequest(arg0 *appmesh.CreateVirtualNodeInput) (*request.Request, *appmesh.CreateVirtualNodeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVirtualNodeRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockAppMeshAPI) CreateVirtualNodeRequest(arg0 *appmesh.CreateVirtualNod
 	return ret0, ret1
 }
 
-// CreateVirtualNodeRequest indicates an expected call of CreateVirtualNodeRequest
+// CreateVirtualNodeRequest indicates an expected call of CreateVirtualNodeRequest.
 func (mr *MockAppMeshAPIMockRecorder) CreateVirtualNodeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualNodeRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateVirtualNodeRequest), arg0)
 }
 
-// CreateVirtualNodeWithContext mocks base method
+// CreateVirtualNodeWithContext mocks base method.
 func (m *MockAppMeshAPI) CreateVirtualNodeWithContext(arg0 context.Context, arg1 *appmesh.CreateVirtualNodeInput, arg2 ...request.Option) (*appmesh.CreateVirtualNodeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockAppMeshAPI) CreateVirtualNodeWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// CreateVirtualNodeWithContext indicates an expected call of CreateVirtualNodeWithContext
+// CreateVirtualNodeWithContext indicates an expected call of CreateVirtualNodeWithContext.
 func (mr *MockAppMeshAPIMockRecorder) CreateVirtualNodeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualNodeWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateVirtualNodeWithContext), varargs...)
 }
 
-// CreateVirtualRouter mocks base method
+// CreateVirtualRouter mocks base method.
 func (m *MockAppMeshAPI) CreateVirtualRouter(arg0 *appmesh.CreateVirtualRouterInput) (*appmesh.CreateVirtualRouterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVirtualRouter", arg0)
@@ -294,13 +295,13 @@ func (m *MockAppMeshAPI) CreateVirtualRouter(arg0 *appmesh.CreateVirtualRouterIn
 	return ret0, ret1
 }
 
-// CreateVirtualRouter indicates an expected call of CreateVirtualRouter
+// CreateVirtualRouter indicates an expected call of CreateVirtualRouter.
 func (mr *MockAppMeshAPIMockRecorder) CreateVirtualRouter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualRouter", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateVirtualRouter), arg0)
 }
 
-// CreateVirtualRouterRequest mocks base method
+// CreateVirtualRouterRequest mocks base method.
 func (m *MockAppMeshAPI) CreateVirtualRouterRequest(arg0 *appmesh.CreateVirtualRouterInput) (*request.Request, *appmesh.CreateVirtualRouterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVirtualRouterRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockAppMeshAPI) CreateVirtualRouterRequest(arg0 *appmesh.CreateVirtualR
 	return ret0, ret1
 }
 
-// CreateVirtualRouterRequest indicates an expected call of CreateVirtualRouterRequest
+// CreateVirtualRouterRequest indicates an expected call of CreateVirtualRouterRequest.
 func (mr *MockAppMeshAPIMockRecorder) CreateVirtualRouterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualRouterRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateVirtualRouterRequest), arg0)
 }
 
-// CreateVirtualRouterWithContext mocks base method
+// CreateVirtualRouterWithContext mocks base method.
 func (m *MockAppMeshAPI) CreateVirtualRouterWithContext(arg0 context.Context, arg1 *appmesh.CreateVirtualRouterInput, arg2 ...request.Option) (*appmesh.CreateVirtualRouterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockAppMeshAPI) CreateVirtualRouterWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateVirtualRouterWithContext indicates an expected call of CreateVirtualRouterWithContext
+// CreateVirtualRouterWithContext indicates an expected call of CreateVirtualRouterWithContext.
 func (mr *MockAppMeshAPIMockRecorder) CreateVirtualRouterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualRouterWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateVirtualRouterWithContext), varargs...)
 }
 
-// CreateVirtualService mocks base method
+// CreateVirtualService mocks base method.
 func (m *MockAppMeshAPI) CreateVirtualService(arg0 *appmesh.CreateVirtualServiceInput) (*appmesh.CreateVirtualServiceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVirtualService", arg0)
@@ -344,13 +345,13 @@ func (m *MockAppMeshAPI) CreateVirtualService(arg0 *appmesh.CreateVirtualService
 	return ret0, ret1
 }
 
-// CreateVirtualService indicates an expected call of CreateVirtualService
+// CreateVirtualService indicates an expected call of CreateVirtualService.
 func (mr *MockAppMeshAPIMockRecorder) CreateVirtualService(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualService", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateVirtualService), arg0)
 }
 
-// CreateVirtualServiceRequest mocks base method
+// CreateVirtualServiceRequest mocks base method.
 func (m *MockAppMeshAPI) CreateVirtualServiceRequest(arg0 *appmesh.CreateVirtualServiceInput) (*request.Request, *appmesh.CreateVirtualServiceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVirtualServiceRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockAppMeshAPI) CreateVirtualServiceRequest(arg0 *appmesh.CreateVirtual
 	return ret0, ret1
 }
 
-// CreateVirtualServiceRequest indicates an expected call of CreateVirtualServiceRequest
+// CreateVirtualServiceRequest indicates an expected call of CreateVirtualServiceRequest.
 func (mr *MockAppMeshAPIMockRecorder) CreateVirtualServiceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualServiceRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateVirtualServiceRequest), arg0)
 }
 
-// CreateVirtualServiceWithContext mocks base method
+// CreateVirtualServiceWithContext mocks base method.
 func (m *MockAppMeshAPI) CreateVirtualServiceWithContext(arg0 context.Context, arg1 *appmesh.CreateVirtualServiceInput, arg2 ...request.Option) (*appmesh.CreateVirtualServiceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockAppMeshAPI) CreateVirtualServiceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// CreateVirtualServiceWithContext indicates an expected call of CreateVirtualServiceWithContext
+// CreateVirtualServiceWithContext indicates an expected call of CreateVirtualServiceWithContext.
 func (mr *MockAppMeshAPIMockRecorder) CreateVirtualServiceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualServiceWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).CreateVirtualServiceWithContext), varargs...)
 }
 
-// DeleteGatewayRoute mocks base method
+// DeleteGatewayRoute mocks base method.
 func (m *MockAppMeshAPI) DeleteGatewayRoute(arg0 *appmesh.DeleteGatewayRouteInput) (*appmesh.DeleteGatewayRouteOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteGatewayRoute", arg0)
@@ -394,13 +395,13 @@ func (m *MockAppMeshAPI) DeleteGatewayRoute(arg0 *appmesh.DeleteGatewayRouteInpu
 	return ret0, ret1
 }
 
-// DeleteGatewayRoute indicates an expected call of DeleteGatewayRoute
+// DeleteGatewayRoute indicates an expected call of DeleteGatewayRoute.
 func (mr *MockAppMeshAPIMockRecorder) DeleteGatewayRoute(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteGatewayRoute", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteGatewayRoute), arg0)
 }
 
-// DeleteGatewayRouteRequest mocks base method
+// DeleteGatewayRouteRequest mocks base method.
 func (m *MockAppMeshAPI) DeleteGatewayRouteRequest(arg0 *appmesh.DeleteGatewayRouteInput) (*request.Request, *appmesh.DeleteGatewayRouteOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteGatewayRouteRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockAppMeshAPI) DeleteGatewayRouteRequest(arg0 *appmesh.DeleteGatewayRo
 	return ret0, ret1
 }
 
-// DeleteGatewayRouteRequest indicates an expected call of DeleteGatewayRouteRequest
+// DeleteGatewayRouteRequest indicates an expected call of DeleteGatewayRouteRequest.
 func (mr *MockAppMeshAPIMockRecorder) DeleteGatewayRouteRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteGatewayRouteRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteGatewayRouteRequest), arg0)
 }
 
-// DeleteGatewayRouteWithContext mocks base method
+// DeleteGatewayRouteWithContext mocks base method.
 func (m *MockAppMeshAPI) DeleteGatewayRouteWithContext(arg0 context.Context, arg1 *appmesh.DeleteGatewayRouteInput, arg2 ...request.Option) (*appmesh.DeleteGatewayRouteOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockAppMeshAPI) DeleteGatewayRouteWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DeleteGatewayRouteWithContext indicates an expected call of DeleteGatewayRouteWithContext
+// DeleteGatewayRouteWithContext indicates an expected call of DeleteGatewayRouteWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DeleteGatewayRouteWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteGatewayRouteWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteGatewayRouteWithContext), varargs...)
 }
 
-// DeleteMesh mocks base method
+// DeleteMesh mocks base method.
 func (m *MockAppMeshAPI) DeleteMesh(arg0 *appmesh.DeleteMeshInput) (*appmesh.DeleteMeshOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMesh", arg0)
@@ -444,13 +445,13 @@ func (m *MockAppMeshAPI) DeleteMesh(arg0 *appmesh.DeleteMeshInput) (*appmesh.Del
 	return ret0, ret1
 }
 
-// DeleteMesh indicates an expected call of DeleteMesh
+// DeleteMesh indicates an expected call of DeleteMesh.
 func (mr *MockAppMeshAPIMockRecorder) DeleteMesh(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMesh", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteMesh), arg0)
 }
 
-// DeleteMeshRequest mocks base method
+// DeleteMeshRequest mocks base method.
 func (m *MockAppMeshAPI) DeleteMeshRequest(arg0 *appmesh.DeleteMeshInput) (*request.Request, *appmesh.DeleteMeshOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMeshRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockAppMeshAPI) DeleteMeshRequest(arg0 *appmesh.DeleteMeshInput) (*requ
 	return ret0, ret1
 }
 
-// DeleteMeshRequest indicates an expected call of DeleteMeshRequest
+// DeleteMeshRequest indicates an expected call of DeleteMeshRequest.
 func (mr *MockAppMeshAPIMockRecorder) DeleteMeshRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMeshRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteMeshRequest), arg0)
 }
 
-// DeleteMeshWithContext mocks base method
+// DeleteMeshWithContext mocks base method.
 func (m *MockAppMeshAPI) DeleteMeshWithContext(arg0 context.Context, arg1 *appmesh.DeleteMeshInput, arg2 ...request.Option) (*appmesh.DeleteMeshOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockAppMeshAPI) DeleteMeshWithContext(arg0 context.Context, arg1 *appme
 	return ret0, ret1
 }
 
-// DeleteMeshWithContext indicates an expected call of DeleteMeshWithContext
+// DeleteMeshWithContext indicates an expected call of DeleteMeshWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DeleteMeshWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMeshWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteMeshWithContext), varargs...)
 }
 
-// DeleteRoute mocks base method
+// DeleteRoute mocks base method.
 func (m *MockAppMeshAPI) DeleteRoute(arg0 *appmesh.DeleteRouteInput) (*appmesh.DeleteRouteOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRoute", arg0)
@@ -494,13 +495,13 @@ func (m *MockAppMeshAPI) DeleteRoute(arg0 *appmesh.DeleteRouteInput) (*appmesh.D
 	return ret0, ret1
 }
 
-// DeleteRoute indicates an expected call of DeleteRoute
+// DeleteRoute indicates an expected call of DeleteRoute.
 func (mr *MockAppMeshAPIMockRecorder) DeleteRoute(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRoute", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteRoute), arg0)
 }
 
-// DeleteRouteRequest mocks base method
+// DeleteRouteRequest mocks base method.
 func (m *MockAppMeshAPI) DeleteRouteRequest(arg0 *appmesh.DeleteRouteInput) (*request.Request, *appmesh.DeleteRouteOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRouteRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockAppMeshAPI) DeleteRouteRequest(arg0 *appmesh.DeleteRouteInput) (*re
 	return ret0, ret1
 }
 
-// DeleteRouteRequest indicates an expected call of DeleteRouteRequest
+// DeleteRouteRequest indicates an expected call of DeleteRouteRequest.
 func (mr *MockAppMeshAPIMockRecorder) DeleteRouteRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRouteRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteRouteRequest), arg0)
 }
 
-// DeleteRouteWithContext mocks base method
+// DeleteRouteWithContext mocks base method.
 func (m *MockAppMeshAPI) DeleteRouteWithContext(arg0 context.Context, arg1 *appmesh.DeleteRouteInput, arg2 ...request.Option) (*appmesh.DeleteRouteOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockAppMeshAPI) DeleteRouteWithContext(arg0 context.Context, arg1 *appm
 	return ret0, ret1
 }
 
-// DeleteRouteWithContext indicates an expected call of DeleteRouteWithContext
+// DeleteRouteWithContext indicates an expected call of DeleteRouteWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DeleteRouteWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRouteWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteRouteWithContext), varargs...)
 }
 
-// DeleteVirtualGateway mocks base method
+// DeleteVirtualGateway mocks base method.
 func (m *MockAppMeshAPI) DeleteVirtualGateway(arg0 *appmesh.DeleteVirtualGatewayInput) (*appmesh.DeleteVirtualGatewayOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVirtualGateway", arg0)
@@ -544,13 +545,13 @@ func (m *MockAppMeshAPI) DeleteVirtualGateway(arg0 *appmesh.DeleteVirtualGateway
 	return ret0, ret1
 }
 
-// DeleteVirtualGateway indicates an expected call of DeleteVirtualGateway
+// DeleteVirtualGateway indicates an expected call of DeleteVirtualGateway.
 func (mr *MockAppMeshAPIMockRecorder) DeleteVirtualGateway(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualGateway", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteVirtualGateway), arg0)
 }
 
-// DeleteVirtualGatewayRequest mocks base method
+// DeleteVirtualGatewayRequest mocks base method.
 func (m *MockAppMeshAPI) DeleteVirtualGatewayRequest(arg0 *appmesh.DeleteVirtualGatewayInput) (*request.Request, *appmesh.DeleteVirtualGatewayOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVirtualGatewayRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockAppMeshAPI) DeleteVirtualGatewayRequest(arg0 *appmesh.DeleteVirtual
 	return ret0, ret1
 }
 
-// DeleteVirtualGatewayRequest indicates an expected call of DeleteVirtualGatewayRequest
+// DeleteVirtualGatewayRequest indicates an expected call of DeleteVirtualGatewayRequest.
 func (mr *MockAppMeshAPIMockRecorder) DeleteVirtualGatewayRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualGatewayRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteVirtualGatewayRequest), arg0)
 }
 
-// DeleteVirtualGatewayWithContext mocks base method
+// DeleteVirtualGatewayWithContext mocks base method.
 func (m *MockAppMeshAPI) DeleteVirtualGatewayWithContext(arg0 context.Context, arg1 *appmesh.DeleteVirtualGatewayInput, arg2 ...request.Option) (*appmesh.DeleteVirtualGatewayOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockAppMeshAPI) DeleteVirtualGatewayWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteVirtualGatewayWithContext indicates an expected call of DeleteVirtualGatewayWithContext
+// DeleteVirtualGatewayWithContext indicates an expected call of DeleteVirtualGatewayWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DeleteVirtualGatewayWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualGatewayWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteVirtualGatewayWithContext), varargs...)
 }
 
-// DeleteVirtualNode mocks base method
+// DeleteVirtualNode mocks base method.
 func (m *MockAppMeshAPI) DeleteVirtualNode(arg0 *appmesh.DeleteVirtualNodeInput) (*appmesh.DeleteVirtualNodeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVirtualNode", arg0)
@@ -594,13 +595,13 @@ func (m *MockAppMeshAPI) DeleteVirtualNode(arg0 *appmesh.DeleteVirtualNodeInput)
 	return ret0, ret1
 }
 
-// DeleteVirtualNode indicates an expected call of DeleteVirtualNode
+// DeleteVirtualNode indicates an expected call of DeleteVirtualNode.
 func (mr *MockAppMeshAPIMockRecorder) DeleteVirtualNode(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualNode", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteVirtualNode), arg0)
 }
 
-// DeleteVirtualNodeRequest mocks base method
+// DeleteVirtualNodeRequest mocks base method.
 func (m *MockAppMeshAPI) DeleteVirtualNodeRequest(arg0 *appmesh.DeleteVirtualNodeInput) (*request.Request, *appmesh.DeleteVirtualNodeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVirtualNodeRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockAppMeshAPI) DeleteVirtualNodeRequest(arg0 *appmesh.DeleteVirtualNod
 	return ret0, ret1
 }
 
-// DeleteVirtualNodeRequest indicates an expected call of DeleteVirtualNodeRequest
+// DeleteVirtualNodeRequest indicates an expected call of DeleteVirtualNodeRequest.
 func (mr *MockAppMeshAPIMockRecorder) DeleteVirtualNodeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualNodeRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteVirtualNodeRequest), arg0)
 }
 
-// DeleteVirtualNodeWithContext mocks base method
+// DeleteVirtualNodeWithContext mocks base method.
 func (m *MockAppMeshAPI) DeleteVirtualNodeWithContext(arg0 context.Context, arg1 *appmesh.DeleteVirtualNodeInput, arg2 ...request.Option) (*appmesh.DeleteVirtualNodeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockAppMeshAPI) DeleteVirtualNodeWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DeleteVirtualNodeWithContext indicates an expected call of DeleteVirtualNodeWithContext
+// DeleteVirtualNodeWithContext indicates an expected call of DeleteVirtualNodeWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DeleteVirtualNodeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualNodeWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteVirtualNodeWithContext), varargs...)
 }
 
-// DeleteVirtualRouter mocks base method
+// DeleteVirtualRouter mocks base method.
 func (m *MockAppMeshAPI) DeleteVirtualRouter(arg0 *appmesh.DeleteVirtualRouterInput) (*appmesh.DeleteVirtualRouterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVirtualRouter", arg0)
@@ -644,13 +645,13 @@ func (m *MockAppMeshAPI) DeleteVirtualRouter(arg0 *appmesh.DeleteVirtualRouterIn
 	return ret0, ret1
 }
 
-// DeleteVirtualRouter indicates an expected call of DeleteVirtualRouter
+// DeleteVirtualRouter indicates an expected call of DeleteVirtualRouter.
 func (mr *MockAppMeshAPIMockRecorder) DeleteVirtualRouter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualRouter", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteVirtualRouter), arg0)
 }
 
-// DeleteVirtualRouterRequest mocks base method
+// DeleteVirtualRouterRequest mocks base method.
 func (m *MockAppMeshAPI) DeleteVirtualRouterRequest(arg0 *appmesh.DeleteVirtualRouterInput) (*request.Request, *appmesh.DeleteVirtualRouterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVirtualRouterRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockAppMeshAPI) DeleteVirtualRouterRequest(arg0 *appmesh.DeleteVirtualR
 	return ret0, ret1
 }
 
-// DeleteVirtualRouterRequest indicates an expected call of DeleteVirtualRouterRequest
+// DeleteVirtualRouterRequest indicates an expected call of DeleteVirtualRouterRequest.
 func (mr *MockAppMeshAPIMockRecorder) DeleteVirtualRouterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualRouterRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteVirtualRouterRequest), arg0)
 }
 
-// DeleteVirtualRouterWithContext mocks base method
+// DeleteVirtualRouterWithContext mocks base method.
 func (m *MockAppMeshAPI) DeleteVirtualRouterWithContext(arg0 context.Context, arg1 *appmesh.DeleteVirtualRouterInput, arg2 ...request.Option) (*appmesh.DeleteVirtualRouterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockAppMeshAPI) DeleteVirtualRouterWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteVirtualRouterWithContext indicates an expected call of DeleteVirtualRouterWithContext
+// DeleteVirtualRouterWithContext indicates an expected call of DeleteVirtualRouterWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DeleteVirtualRouterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualRouterWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteVirtualRouterWithContext), varargs...)
 }
 
-// DeleteVirtualService mocks base method
+// DeleteVirtualService mocks base method.
 func (m *MockAppMeshAPI) DeleteVirtualService(arg0 *appmesh.DeleteVirtualServiceInput) (*appmesh.DeleteVirtualServiceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVirtualService", arg0)
@@ -694,13 +695,13 @@ func (m *MockAppMeshAPI) DeleteVirtualService(arg0 *appmesh.DeleteVirtualService
 	return ret0, ret1
 }
 
-// DeleteVirtualService indicates an expected call of DeleteVirtualService
+// DeleteVirtualService indicates an expected call of DeleteVirtualService.
 func (mr *MockAppMeshAPIMockRecorder) DeleteVirtualService(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualService", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteVirtualService), arg0)
 }
 
-// DeleteVirtualServiceRequest mocks base method
+// DeleteVirtualServiceRequest mocks base method.
 func (m *MockAppMeshAPI) DeleteVirtualServiceRequest(arg0 *appmesh.DeleteVirtualServiceInput) (*request.Request, *appmesh.DeleteVirtualServiceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVirtualServiceRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockAppMeshAPI) DeleteVirtualServiceRequest(arg0 *appmesh.DeleteVirtual
 	return ret0, ret1
 }
 
-// DeleteVirtualServiceRequest indicates an expected call of DeleteVirtualServiceRequest
+// DeleteVirtualServiceRequest indicates an expected call of DeleteVirtualServiceRequest.
 func (mr *MockAppMeshAPIMockRecorder) DeleteVirtualServiceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualServiceRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteVirtualServiceRequest), arg0)
 }
 
-// DeleteVirtualServiceWithContext mocks base method
+// DeleteVirtualServiceWithContext mocks base method.
 func (m *MockAppMeshAPI) DeleteVirtualServiceWithContext(arg0 context.Context, arg1 *appmesh.DeleteVirtualServiceInput, arg2 ...request.Option) (*appmesh.DeleteVirtualServiceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockAppMeshAPI) DeleteVirtualServiceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteVirtualServiceWithContext indicates an expected call of DeleteVirtualServiceWithContext
+// DeleteVirtualServiceWithContext indicates an expected call of DeleteVirtualServiceWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DeleteVirtualServiceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualServiceWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DeleteVirtualServiceWithContext), varargs...)
 }
 
-// DescribeGatewayRoute mocks base method
+// DescribeGatewayRoute mocks base method.
 func (m *MockAppMeshAPI) DescribeGatewayRoute(arg0 *appmesh.DescribeGatewayRouteInput) (*appmesh.DescribeGatewayRouteOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeGatewayRoute", arg0)
@@ -744,13 +745,13 @@ func (m *MockAppMeshAPI) DescribeGatewayRoute(arg0 *appmesh.DescribeGatewayRoute
 	return ret0, ret1
 }
 
-// DescribeGatewayRoute indicates an expected call of DescribeGatewayRoute
+// DescribeGatewayRoute indicates an expected call of DescribeGatewayRoute.
 func (mr *MockAppMeshAPIMockRecorder) DescribeGatewayRoute(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeGatewayRoute", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeGatewayRoute), arg0)
 }
 
-// DescribeGatewayRouteRequest mocks base method
+// DescribeGatewayRouteRequest mocks base method.
 func (m *MockAppMeshAPI) DescribeGatewayRouteRequest(arg0 *appmesh.DescribeGatewayRouteInput) (*request.Request, *appmesh.DescribeGatewayRouteOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeGatewayRouteRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockAppMeshAPI) DescribeGatewayRouteRequest(arg0 *appmesh.DescribeGatew
 	return ret0, ret1
 }
 
-// DescribeGatewayRouteRequest indicates an expected call of DescribeGatewayRouteRequest
+// DescribeGatewayRouteRequest indicates an expected call of DescribeGatewayRouteRequest.
 func (mr *MockAppMeshAPIMockRecorder) DescribeGatewayRouteRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeGatewayRouteRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeGatewayRouteRequest), arg0)
 }
 
-// DescribeGatewayRouteWithContext mocks base method
+// DescribeGatewayRouteWithContext mocks base method.
 func (m *MockAppMeshAPI) DescribeGatewayRouteWithContext(arg0 context.Context, arg1 *appmesh.DescribeGatewayRouteInput, arg2 ...request.Option) (*appmesh.DescribeGatewayRouteOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockAppMeshAPI) DescribeGatewayRouteWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DescribeGatewayRouteWithContext indicates an expected call of DescribeGatewayRouteWithContext
+// DescribeGatewayRouteWithContext indicates an expected call of DescribeGatewayRouteWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DescribeGatewayRouteWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeGatewayRouteWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeGatewayRouteWithContext), varargs...)
 }
 
-// DescribeMesh mocks base method
+// DescribeMesh mocks base method.
 func (m *MockAppMeshAPI) DescribeMesh(arg0 *appmesh.DescribeMeshInput) (*appmesh.DescribeMeshOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeMesh", arg0)
@@ -794,13 +795,13 @@ func (m *MockAppMeshAPI) DescribeMesh(arg0 *appmesh.DescribeMeshInput) (*appmesh
 	return ret0, ret1
 }
 
-// DescribeMesh indicates an expected call of DescribeMesh
+// DescribeMesh indicates an expected call of DescribeMesh.
 func (mr *MockAppMeshAPIMockRecorder) DescribeMesh(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeMesh", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeMesh), arg0)
 }
 
-// DescribeMeshRequest mocks base method
+// DescribeMeshRequest mocks base method.
 func (m *MockAppMeshAPI) DescribeMeshRequest(arg0 *appmesh.DescribeMeshInput) (*request.Request, *appmesh.DescribeMeshOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeMeshRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockAppMeshAPI) DescribeMeshRequest(arg0 *appmesh.DescribeMeshInput) (*
 	return ret0, ret1
 }
 
-// DescribeMeshRequest indicates an expected call of DescribeMeshRequest
+// DescribeMeshRequest indicates an expected call of DescribeMeshRequest.
 func (mr *MockAppMeshAPIMockRecorder) DescribeMeshRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeMeshRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeMeshRequest), arg0)
 }
 
-// DescribeMeshWithContext mocks base method
+// DescribeMeshWithContext mocks base method.
 func (m *MockAppMeshAPI) DescribeMeshWithContext(arg0 context.Context, arg1 *appmesh.DescribeMeshInput, arg2 ...request.Option) (*appmesh.DescribeMeshOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockAppMeshAPI) DescribeMeshWithContext(arg0 context.Context, arg1 *app
 	return ret0, ret1
 }
 
-// DescribeMeshWithContext indicates an expected call of DescribeMeshWithContext
+// DescribeMeshWithContext indicates an expected call of DescribeMeshWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DescribeMeshWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeMeshWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeMeshWithContext), varargs...)
 }
 
-// DescribeRoute mocks base method
+// DescribeRoute mocks base method.
 func (m *MockAppMeshAPI) DescribeRoute(arg0 *appmesh.DescribeRouteInput) (*appmesh.DescribeRouteOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRoute", arg0)
@@ -844,13 +845,13 @@ func (m *MockAppMeshAPI) DescribeRoute(arg0 *appmesh.DescribeRouteInput) (*appme
 	return ret0, ret1
 }
 
-// DescribeRoute indicates an expected call of DescribeRoute
+// DescribeRoute indicates an expected call of DescribeRoute.
 func (mr *MockAppMeshAPIMockRecorder) DescribeRoute(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRoute", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeRoute), arg0)
 }
 
-// DescribeRouteRequest mocks base method
+// DescribeRouteRequest mocks base method.
 func (m *MockAppMeshAPI) DescribeRouteRequest(arg0 *appmesh.DescribeRouteInput) (*request.Request, *appmesh.DescribeRouteOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRouteRequest", arg0)
@@ -859,13 +860,13 @@ func (m *MockAppMeshAPI) DescribeRouteRequest(arg0 *appmesh.DescribeRouteInput) 
 	return ret0, ret1
 }
 
-// DescribeRouteRequest indicates an expected call of DescribeRouteRequest
+// DescribeRouteRequest indicates an expected call of DescribeRouteRequest.
 func (mr *MockAppMeshAPIMockRecorder) DescribeRouteRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRouteRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeRouteRequest), arg0)
 }
 
-// DescribeRouteWithContext mocks base method
+// DescribeRouteWithContext mocks base method.
 func (m *MockAppMeshAPI) DescribeRouteWithContext(arg0 context.Context, arg1 *appmesh.DescribeRouteInput, arg2 ...request.Option) (*appmesh.DescribeRouteOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +879,14 @@ func (m *MockAppMeshAPI) DescribeRouteWithContext(arg0 context.Context, arg1 *ap
 	return ret0, ret1
 }
 
-// DescribeRouteWithContext indicates an expected call of DescribeRouteWithContext
+// DescribeRouteWithContext indicates an expected call of DescribeRouteWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DescribeRouteWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRouteWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeRouteWithContext), varargs...)
 }
 
-// DescribeVirtualGateway mocks base method
+// DescribeVirtualGateway mocks base method.
 func (m *MockAppMeshAPI) DescribeVirtualGateway(arg0 *appmesh.DescribeVirtualGatewayInput) (*appmesh.DescribeVirtualGatewayOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualGateway", arg0)
@@ -894,13 +895,13 @@ func (m *MockAppMeshAPI) DescribeVirtualGateway(arg0 *appmesh.DescribeVirtualGat
 	return ret0, ret1
 }
 
-// DescribeVirtualGateway indicates an expected call of DescribeVirtualGateway
+// DescribeVirtualGateway indicates an expected call of DescribeVirtualGateway.
 func (mr *MockAppMeshAPIMockRecorder) DescribeVirtualGateway(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualGateway", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeVirtualGateway), arg0)
 }
 
-// DescribeVirtualGatewayRequest mocks base method
+// DescribeVirtualGatewayRequest mocks base method.
 func (m *MockAppMeshAPI) DescribeVirtualGatewayRequest(arg0 *appmesh.DescribeVirtualGatewayInput) (*request.Request, *appmesh.DescribeVirtualGatewayOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualGatewayRequest", arg0)
@@ -909,13 +910,13 @@ func (m *MockAppMeshAPI) DescribeVirtualGatewayRequest(arg0 *appmesh.DescribeVir
 	return ret0, ret1
 }
 
-// DescribeVirtualGatewayRequest indicates an expected call of DescribeVirtualGatewayRequest
+// DescribeVirtualGatewayRequest indicates an expected call of DescribeVirtualGatewayRequest.
 func (mr *MockAppMeshAPIMockRecorder) DescribeVirtualGatewayRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualGatewayRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeVirtualGatewayRequest), arg0)
 }
 
-// DescribeVirtualGatewayWithContext mocks base method
+// DescribeVirtualGatewayWithContext mocks base method.
 func (m *MockAppMeshAPI) DescribeVirtualGatewayWithContext(arg0 context.Context, arg1 *appmesh.DescribeVirtualGatewayInput, arg2 ...request.Option) (*appmesh.DescribeVirtualGatewayOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -928,14 +929,14 @@ func (m *MockAppMeshAPI) DescribeVirtualGatewayWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DescribeVirtualGatewayWithContext indicates an expected call of DescribeVirtualGatewayWithContext
+// DescribeVirtualGatewayWithContext indicates an expected call of DescribeVirtualGatewayWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DescribeVirtualGatewayWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualGatewayWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeVirtualGatewayWithContext), varargs...)
 }
 
-// DescribeVirtualNode mocks base method
+// DescribeVirtualNode mocks base method.
 func (m *MockAppMeshAPI) DescribeVirtualNode(arg0 *appmesh.DescribeVirtualNodeInput) (*appmesh.DescribeVirtualNodeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualNode", arg0)
@@ -944,13 +945,13 @@ func (m *MockAppMeshAPI) DescribeVirtualNode(arg0 *appmesh.DescribeVirtualNodeIn
 	return ret0, ret1
 }
 
-// DescribeVirtualNode indicates an expected call of DescribeVirtualNode
+// DescribeVirtualNode indicates an expected call of DescribeVirtualNode.
 func (mr *MockAppMeshAPIMockRecorder) DescribeVirtualNode(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualNode", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeVirtualNode), arg0)
 }
 
-// DescribeVirtualNodeRequest mocks base method
+// DescribeVirtualNodeRequest mocks base method.
 func (m *MockAppMeshAPI) DescribeVirtualNodeRequest(arg0 *appmesh.DescribeVirtualNodeInput) (*request.Request, *appmesh.DescribeVirtualNodeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualNodeRequest", arg0)
@@ -959,13 +960,13 @@ func (m *MockAppMeshAPI) DescribeVirtualNodeRequest(arg0 *appmesh.DescribeVirtua
 	return ret0, ret1
 }
 
-// DescribeVirtualNodeRequest indicates an expected call of DescribeVirtualNodeRequest
+// DescribeVirtualNodeRequest indicates an expected call of DescribeVirtualNodeRequest.
 func (mr *MockAppMeshAPIMockRecorder) DescribeVirtualNodeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualNodeRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeVirtualNodeRequest), arg0)
 }
 
-// DescribeVirtualNodeWithContext mocks base method
+// DescribeVirtualNodeWithContext mocks base method.
 func (m *MockAppMeshAPI) DescribeVirtualNodeWithContext(arg0 context.Context, arg1 *appmesh.DescribeVirtualNodeInput, arg2 ...request.Option) (*appmesh.DescribeVirtualNodeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -978,14 +979,14 @@ func (m *MockAppMeshAPI) DescribeVirtualNodeWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DescribeVirtualNodeWithContext indicates an expected call of DescribeVirtualNodeWithContext
+// DescribeVirtualNodeWithContext indicates an expected call of DescribeVirtualNodeWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DescribeVirtualNodeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualNodeWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeVirtualNodeWithContext), varargs...)
 }
 
-// DescribeVirtualRouter mocks base method
+// DescribeVirtualRouter mocks base method.
 func (m *MockAppMeshAPI) DescribeVirtualRouter(arg0 *appmesh.DescribeVirtualRouterInput) (*appmesh.DescribeVirtualRouterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualRouter", arg0)
@@ -994,13 +995,13 @@ func (m *MockAppMeshAPI) DescribeVirtualRouter(arg0 *appmesh.DescribeVirtualRout
 	return ret0, ret1
 }
 
-// DescribeVirtualRouter indicates an expected call of DescribeVirtualRouter
+// DescribeVirtualRouter indicates an expected call of DescribeVirtualRouter.
 func (mr *MockAppMeshAPIMockRecorder) DescribeVirtualRouter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualRouter", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeVirtualRouter), arg0)
 }
 
-// DescribeVirtualRouterRequest mocks base method
+// DescribeVirtualRouterRequest mocks base method.
 func (m *MockAppMeshAPI) DescribeVirtualRouterRequest(arg0 *appmesh.DescribeVirtualRouterInput) (*request.Request, *appmesh.DescribeVirtualRouterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualRouterRequest", arg0)
@@ -1009,13 +1010,13 @@ func (m *MockAppMeshAPI) DescribeVirtualRouterRequest(arg0 *appmesh.DescribeVirt
 	return ret0, ret1
 }
 
-// DescribeVirtualRouterRequest indicates an expected call of DescribeVirtualRouterRequest
+// DescribeVirtualRouterRequest indicates an expected call of DescribeVirtualRouterRequest.
 func (mr *MockAppMeshAPIMockRecorder) DescribeVirtualRouterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualRouterRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeVirtualRouterRequest), arg0)
 }
 
-// DescribeVirtualRouterWithContext mocks base method
+// DescribeVirtualRouterWithContext mocks base method.
 func (m *MockAppMeshAPI) DescribeVirtualRouterWithContext(arg0 context.Context, arg1 *appmesh.DescribeVirtualRouterInput, arg2 ...request.Option) (*appmesh.DescribeVirtualRouterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1028,14 +1029,14 @@ func (m *MockAppMeshAPI) DescribeVirtualRouterWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DescribeVirtualRouterWithContext indicates an expected call of DescribeVirtualRouterWithContext
+// DescribeVirtualRouterWithContext indicates an expected call of DescribeVirtualRouterWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DescribeVirtualRouterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualRouterWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeVirtualRouterWithContext), varargs...)
 }
 
-// DescribeVirtualService mocks base method
+// DescribeVirtualService mocks base method.
 func (m *MockAppMeshAPI) DescribeVirtualService(arg0 *appmesh.DescribeVirtualServiceInput) (*appmesh.DescribeVirtualServiceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualService", arg0)
@@ -1044,13 +1045,13 @@ func (m *MockAppMeshAPI) DescribeVirtualService(arg0 *appmesh.DescribeVirtualSer
 	return ret0, ret1
 }
 
-// DescribeVirtualService indicates an expected call of DescribeVirtualService
+// DescribeVirtualService indicates an expected call of DescribeVirtualService.
 func (mr *MockAppMeshAPIMockRecorder) DescribeVirtualService(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualService", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeVirtualService), arg0)
 }
 
-// DescribeVirtualServiceRequest mocks base method
+// DescribeVirtualServiceRequest mocks base method.
 func (m *MockAppMeshAPI) DescribeVirtualServiceRequest(arg0 *appmesh.DescribeVirtualServiceInput) (*request.Request, *appmesh.DescribeVirtualServiceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualServiceRequest", arg0)
@@ -1059,13 +1060,13 @@ func (m *MockAppMeshAPI) DescribeVirtualServiceRequest(arg0 *appmesh.DescribeVir
 	return ret0, ret1
 }
 
-// DescribeVirtualServiceRequest indicates an expected call of DescribeVirtualServiceRequest
+// DescribeVirtualServiceRequest indicates an expected call of DescribeVirtualServiceRequest.
 func (mr *MockAppMeshAPIMockRecorder) DescribeVirtualServiceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualServiceRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeVirtualServiceRequest), arg0)
 }
 
-// DescribeVirtualServiceWithContext mocks base method
+// DescribeVirtualServiceWithContext mocks base method.
 func (m *MockAppMeshAPI) DescribeVirtualServiceWithContext(arg0 context.Context, arg1 *appmesh.DescribeVirtualServiceInput, arg2 ...request.Option) (*appmesh.DescribeVirtualServiceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1078,14 +1079,14 @@ func (m *MockAppMeshAPI) DescribeVirtualServiceWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DescribeVirtualServiceWithContext indicates an expected call of DescribeVirtualServiceWithContext
+// DescribeVirtualServiceWithContext indicates an expected call of DescribeVirtualServiceWithContext.
 func (mr *MockAppMeshAPIMockRecorder) DescribeVirtualServiceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualServiceWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).DescribeVirtualServiceWithContext), varargs...)
 }
 
-// ListGatewayRoutes mocks base method
+// ListGatewayRoutes mocks base method.
 func (m *MockAppMeshAPI) ListGatewayRoutes(arg0 *appmesh.ListGatewayRoutesInput) (*appmesh.ListGatewayRoutesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListGatewayRoutes", arg0)
@@ -1094,13 +1095,13 @@ func (m *MockAppMeshAPI) ListGatewayRoutes(arg0 *appmesh.ListGatewayRoutesInput)
 	return ret0, ret1
 }
 
-// ListGatewayRoutes indicates an expected call of ListGatewayRoutes
+// ListGatewayRoutes indicates an expected call of ListGatewayRoutes.
 func (mr *MockAppMeshAPIMockRecorder) ListGatewayRoutes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGatewayRoutes", reflect.TypeOf((*MockAppMeshAPI)(nil).ListGatewayRoutes), arg0)
 }
 
-// ListGatewayRoutesPages mocks base method
+// ListGatewayRoutesPages mocks base method.
 func (m *MockAppMeshAPI) ListGatewayRoutesPages(arg0 *appmesh.ListGatewayRoutesInput, arg1 func(*appmesh.ListGatewayRoutesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListGatewayRoutesPages", arg0, arg1)
@@ -1108,13 +1109,13 @@ func (m *MockAppMeshAPI) ListGatewayRoutesPages(arg0 *appmesh.ListGatewayRoutesI
 	return ret0
 }
 
-// ListGatewayRoutesPages indicates an expected call of ListGatewayRoutesPages
+// ListGatewayRoutesPages indicates an expected call of ListGatewayRoutesPages.
 func (mr *MockAppMeshAPIMockRecorder) ListGatewayRoutesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGatewayRoutesPages", reflect.TypeOf((*MockAppMeshAPI)(nil).ListGatewayRoutesPages), arg0, arg1)
 }
 
-// ListGatewayRoutesPagesWithContext mocks base method
+// ListGatewayRoutesPagesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListGatewayRoutesPagesWithContext(arg0 context.Context, arg1 *appmesh.ListGatewayRoutesInput, arg2 func(*appmesh.ListGatewayRoutesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1126,14 +1127,14 @@ func (m *MockAppMeshAPI) ListGatewayRoutesPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListGatewayRoutesPagesWithContext indicates an expected call of ListGatewayRoutesPagesWithContext
+// ListGatewayRoutesPagesWithContext indicates an expected call of ListGatewayRoutesPagesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListGatewayRoutesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGatewayRoutesPagesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListGatewayRoutesPagesWithContext), varargs...)
 }
 
-// ListGatewayRoutesRequest mocks base method
+// ListGatewayRoutesRequest mocks base method.
 func (m *MockAppMeshAPI) ListGatewayRoutesRequest(arg0 *appmesh.ListGatewayRoutesInput) (*request.Request, *appmesh.ListGatewayRoutesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListGatewayRoutesRequest", arg0)
@@ -1142,13 +1143,13 @@ func (m *MockAppMeshAPI) ListGatewayRoutesRequest(arg0 *appmesh.ListGatewayRoute
 	return ret0, ret1
 }
 
-// ListGatewayRoutesRequest indicates an expected call of ListGatewayRoutesRequest
+// ListGatewayRoutesRequest indicates an expected call of ListGatewayRoutesRequest.
 func (mr *MockAppMeshAPIMockRecorder) ListGatewayRoutesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGatewayRoutesRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).ListGatewayRoutesRequest), arg0)
 }
 
-// ListGatewayRoutesWithContext mocks base method
+// ListGatewayRoutesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListGatewayRoutesWithContext(arg0 context.Context, arg1 *appmesh.ListGatewayRoutesInput, arg2 ...request.Option) (*appmesh.ListGatewayRoutesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1161,14 +1162,14 @@ func (m *MockAppMeshAPI) ListGatewayRoutesWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListGatewayRoutesWithContext indicates an expected call of ListGatewayRoutesWithContext
+// ListGatewayRoutesWithContext indicates an expected call of ListGatewayRoutesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListGatewayRoutesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListGatewayRoutesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListGatewayRoutesWithContext), varargs...)
 }
 
-// ListMeshes mocks base method
+// ListMeshes mocks base method.
 func (m *MockAppMeshAPI) ListMeshes(arg0 *appmesh.ListMeshesInput) (*appmesh.ListMeshesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMeshes", arg0)
@@ -1177,13 +1178,13 @@ func (m *MockAppMeshAPI) ListMeshes(arg0 *appmesh.ListMeshesInput) (*appmesh.Lis
 	return ret0, ret1
 }
 
-// ListMeshes indicates an expected call of ListMeshes
+// ListMeshes indicates an expected call of ListMeshes.
 func (mr *MockAppMeshAPIMockRecorder) ListMeshes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMeshes", reflect.TypeOf((*MockAppMeshAPI)(nil).ListMeshes), arg0)
 }
 
-// ListMeshesPages mocks base method
+// ListMeshesPages mocks base method.
 func (m *MockAppMeshAPI) ListMeshesPages(arg0 *appmesh.ListMeshesInput, arg1 func(*appmesh.ListMeshesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMeshesPages", arg0, arg1)
@@ -1191,13 +1192,13 @@ func (m *MockAppMeshAPI) ListMeshesPages(arg0 *appmesh.ListMeshesInput, arg1 fun
 	return ret0
 }
 
-// ListMeshesPages indicates an expected call of ListMeshesPages
+// ListMeshesPages indicates an expected call of ListMeshesPages.
 func (mr *MockAppMeshAPIMockRecorder) ListMeshesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMeshesPages", reflect.TypeOf((*MockAppMeshAPI)(nil).ListMeshesPages), arg0, arg1)
 }
 
-// ListMeshesPagesWithContext mocks base method
+// ListMeshesPagesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListMeshesPagesWithContext(arg0 context.Context, arg1 *appmesh.ListMeshesInput, arg2 func(*appmesh.ListMeshesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1209,14 +1210,14 @@ func (m *MockAppMeshAPI) ListMeshesPagesWithContext(arg0 context.Context, arg1 *
 	return ret0
 }
 
-// ListMeshesPagesWithContext indicates an expected call of ListMeshesPagesWithContext
+// ListMeshesPagesWithContext indicates an expected call of ListMeshesPagesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListMeshesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMeshesPagesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListMeshesPagesWithContext), varargs...)
 }
 
-// ListMeshesRequest mocks base method
+// ListMeshesRequest mocks base method.
 func (m *MockAppMeshAPI) ListMeshesRequest(arg0 *appmesh.ListMeshesInput) (*request.Request, *appmesh.ListMeshesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMeshesRequest", arg0)
@@ -1225,13 +1226,13 @@ func (m *MockAppMeshAPI) ListMeshesRequest(arg0 *appmesh.ListMeshesInput) (*requ
 	return ret0, ret1
 }
 
-// ListMeshesRequest indicates an expected call of ListMeshesRequest
+// ListMeshesRequest indicates an expected call of ListMeshesRequest.
 func (mr *MockAppMeshAPIMockRecorder) ListMeshesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMeshesRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).ListMeshesRequest), arg0)
 }
 
-// ListMeshesWithContext mocks base method
+// ListMeshesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListMeshesWithContext(arg0 context.Context, arg1 *appmesh.ListMeshesInput, arg2 ...request.Option) (*appmesh.ListMeshesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1244,14 +1245,14 @@ func (m *MockAppMeshAPI) ListMeshesWithContext(arg0 context.Context, arg1 *appme
 	return ret0, ret1
 }
 
-// ListMeshesWithContext indicates an expected call of ListMeshesWithContext
+// ListMeshesWithContext indicates an expected call of ListMeshesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListMeshesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMeshesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListMeshesWithContext), varargs...)
 }
 
-// ListRoutes mocks base method
+// ListRoutes mocks base method.
 func (m *MockAppMeshAPI) ListRoutes(arg0 *appmesh.ListRoutesInput) (*appmesh.ListRoutesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRoutes", arg0)
@@ -1260,13 +1261,13 @@ func (m *MockAppMeshAPI) ListRoutes(arg0 *appmesh.ListRoutesInput) (*appmesh.Lis
 	return ret0, ret1
 }
 
-// ListRoutes indicates an expected call of ListRoutes
+// ListRoutes indicates an expected call of ListRoutes.
 func (mr *MockAppMeshAPIMockRecorder) ListRoutes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRoutes", reflect.TypeOf((*MockAppMeshAPI)(nil).ListRoutes), arg0)
 }
 
-// ListRoutesPages mocks base method
+// ListRoutesPages mocks base method.
 func (m *MockAppMeshAPI) ListRoutesPages(arg0 *appmesh.ListRoutesInput, arg1 func(*appmesh.ListRoutesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRoutesPages", arg0, arg1)
@@ -1274,13 +1275,13 @@ func (m *MockAppMeshAPI) ListRoutesPages(arg0 *appmesh.ListRoutesInput, arg1 fun
 	return ret0
 }
 
-// ListRoutesPages indicates an expected call of ListRoutesPages
+// ListRoutesPages indicates an expected call of ListRoutesPages.
 func (mr *MockAppMeshAPIMockRecorder) ListRoutesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRoutesPages", reflect.TypeOf((*MockAppMeshAPI)(nil).ListRoutesPages), arg0, arg1)
 }
 
-// ListRoutesPagesWithContext mocks base method
+// ListRoutesPagesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListRoutesPagesWithContext(arg0 context.Context, arg1 *appmesh.ListRoutesInput, arg2 func(*appmesh.ListRoutesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1292,14 +1293,14 @@ func (m *MockAppMeshAPI) ListRoutesPagesWithContext(arg0 context.Context, arg1 *
 	return ret0
 }
 
-// ListRoutesPagesWithContext indicates an expected call of ListRoutesPagesWithContext
+// ListRoutesPagesWithContext indicates an expected call of ListRoutesPagesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListRoutesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRoutesPagesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListRoutesPagesWithContext), varargs...)
 }
 
-// ListRoutesRequest mocks base method
+// ListRoutesRequest mocks base method.
 func (m *MockAppMeshAPI) ListRoutesRequest(arg0 *appmesh.ListRoutesInput) (*request.Request, *appmesh.ListRoutesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRoutesRequest", arg0)
@@ -1308,13 +1309,13 @@ func (m *MockAppMeshAPI) ListRoutesRequest(arg0 *appmesh.ListRoutesInput) (*requ
 	return ret0, ret1
 }
 
-// ListRoutesRequest indicates an expected call of ListRoutesRequest
+// ListRoutesRequest indicates an expected call of ListRoutesRequest.
 func (mr *MockAppMeshAPIMockRecorder) ListRoutesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRoutesRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).ListRoutesRequest), arg0)
 }
 
-// ListRoutesWithContext mocks base method
+// ListRoutesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListRoutesWithContext(arg0 context.Context, arg1 *appmesh.ListRoutesInput, arg2 ...request.Option) (*appmesh.ListRoutesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1327,14 +1328,14 @@ func (m *MockAppMeshAPI) ListRoutesWithContext(arg0 context.Context, arg1 *appme
 	return ret0, ret1
 }
 
-// ListRoutesWithContext indicates an expected call of ListRoutesWithContext
+// ListRoutesWithContext indicates an expected call of ListRoutesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListRoutesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRoutesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListRoutesWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockAppMeshAPI) ListTagsForResource(arg0 *appmesh.ListTagsForResourceInput) (*appmesh.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1343,13 +1344,13 @@ func (m *MockAppMeshAPI) ListTagsForResource(arg0 *appmesh.ListTagsForResourceIn
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockAppMeshAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockAppMeshAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourcePages mocks base method
+// ListTagsForResourcePages mocks base method.
 func (m *MockAppMeshAPI) ListTagsForResourcePages(arg0 *appmesh.ListTagsForResourceInput, arg1 func(*appmesh.ListTagsForResourceOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourcePages", arg0, arg1)
@@ -1357,13 +1358,13 @@ func (m *MockAppMeshAPI) ListTagsForResourcePages(arg0 *appmesh.ListTagsForResou
 	return ret0
 }
 
-// ListTagsForResourcePages indicates an expected call of ListTagsForResourcePages
+// ListTagsForResourcePages indicates an expected call of ListTagsForResourcePages.
 func (mr *MockAppMeshAPIMockRecorder) ListTagsForResourcePages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourcePages", reflect.TypeOf((*MockAppMeshAPI)(nil).ListTagsForResourcePages), arg0, arg1)
 }
 
-// ListTagsForResourcePagesWithContext mocks base method
+// ListTagsForResourcePagesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListTagsForResourcePagesWithContext(arg0 context.Context, arg1 *appmesh.ListTagsForResourceInput, arg2 func(*appmesh.ListTagsForResourceOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1375,14 +1376,14 @@ func (m *MockAppMeshAPI) ListTagsForResourcePagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListTagsForResourcePagesWithContext indicates an expected call of ListTagsForResourcePagesWithContext
+// ListTagsForResourcePagesWithContext indicates an expected call of ListTagsForResourcePagesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListTagsForResourcePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourcePagesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListTagsForResourcePagesWithContext), varargs...)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockAppMeshAPI) ListTagsForResourceRequest(arg0 *appmesh.ListTagsForResourceInput) (*request.Request, *appmesh.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1391,13 +1392,13 @@ func (m *MockAppMeshAPI) ListTagsForResourceRequest(arg0 *appmesh.ListTagsForRes
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockAppMeshAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockAppMeshAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *appmesh.ListTagsForResourceInput, arg2 ...request.Option) (*appmesh.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1410,14 +1411,14 @@ func (m *MockAppMeshAPI) ListTagsForResourceWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// ListVirtualGateways mocks base method
+// ListVirtualGateways mocks base method.
 func (m *MockAppMeshAPI) ListVirtualGateways(arg0 *appmesh.ListVirtualGatewaysInput) (*appmesh.ListVirtualGatewaysOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualGateways", arg0)
@@ -1426,13 +1427,13 @@ func (m *MockAppMeshAPI) ListVirtualGateways(arg0 *appmesh.ListVirtualGatewaysIn
 	return ret0, ret1
 }
 
-// ListVirtualGateways indicates an expected call of ListVirtualGateways
+// ListVirtualGateways indicates an expected call of ListVirtualGateways.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualGateways(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualGateways", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualGateways), arg0)
 }
 
-// ListVirtualGatewaysPages mocks base method
+// ListVirtualGatewaysPages mocks base method.
 func (m *MockAppMeshAPI) ListVirtualGatewaysPages(arg0 *appmesh.ListVirtualGatewaysInput, arg1 func(*appmesh.ListVirtualGatewaysOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualGatewaysPages", arg0, arg1)
@@ -1440,13 +1441,13 @@ func (m *MockAppMeshAPI) ListVirtualGatewaysPages(arg0 *appmesh.ListVirtualGatew
 	return ret0
 }
 
-// ListVirtualGatewaysPages indicates an expected call of ListVirtualGatewaysPages
+// ListVirtualGatewaysPages indicates an expected call of ListVirtualGatewaysPages.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualGatewaysPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualGatewaysPages", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualGatewaysPages), arg0, arg1)
 }
 
-// ListVirtualGatewaysPagesWithContext mocks base method
+// ListVirtualGatewaysPagesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListVirtualGatewaysPagesWithContext(arg0 context.Context, arg1 *appmesh.ListVirtualGatewaysInput, arg2 func(*appmesh.ListVirtualGatewaysOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1458,14 +1459,14 @@ func (m *MockAppMeshAPI) ListVirtualGatewaysPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListVirtualGatewaysPagesWithContext indicates an expected call of ListVirtualGatewaysPagesWithContext
+// ListVirtualGatewaysPagesWithContext indicates an expected call of ListVirtualGatewaysPagesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualGatewaysPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualGatewaysPagesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualGatewaysPagesWithContext), varargs...)
 }
 
-// ListVirtualGatewaysRequest mocks base method
+// ListVirtualGatewaysRequest mocks base method.
 func (m *MockAppMeshAPI) ListVirtualGatewaysRequest(arg0 *appmesh.ListVirtualGatewaysInput) (*request.Request, *appmesh.ListVirtualGatewaysOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualGatewaysRequest", arg0)
@@ -1474,13 +1475,13 @@ func (m *MockAppMeshAPI) ListVirtualGatewaysRequest(arg0 *appmesh.ListVirtualGat
 	return ret0, ret1
 }
 
-// ListVirtualGatewaysRequest indicates an expected call of ListVirtualGatewaysRequest
+// ListVirtualGatewaysRequest indicates an expected call of ListVirtualGatewaysRequest.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualGatewaysRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualGatewaysRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualGatewaysRequest), arg0)
 }
 
-// ListVirtualGatewaysWithContext mocks base method
+// ListVirtualGatewaysWithContext mocks base method.
 func (m *MockAppMeshAPI) ListVirtualGatewaysWithContext(arg0 context.Context, arg1 *appmesh.ListVirtualGatewaysInput, arg2 ...request.Option) (*appmesh.ListVirtualGatewaysOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1493,14 +1494,14 @@ func (m *MockAppMeshAPI) ListVirtualGatewaysWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListVirtualGatewaysWithContext indicates an expected call of ListVirtualGatewaysWithContext
+// ListVirtualGatewaysWithContext indicates an expected call of ListVirtualGatewaysWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualGatewaysWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualGatewaysWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualGatewaysWithContext), varargs...)
 }
 
-// ListVirtualNodes mocks base method
+// ListVirtualNodes mocks base method.
 func (m *MockAppMeshAPI) ListVirtualNodes(arg0 *appmesh.ListVirtualNodesInput) (*appmesh.ListVirtualNodesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualNodes", arg0)
@@ -1509,13 +1510,13 @@ func (m *MockAppMeshAPI) ListVirtualNodes(arg0 *appmesh.ListVirtualNodesInput) (
 	return ret0, ret1
 }
 
-// ListVirtualNodes indicates an expected call of ListVirtualNodes
+// ListVirtualNodes indicates an expected call of ListVirtualNodes.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualNodes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualNodes", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualNodes), arg0)
 }
 
-// ListVirtualNodesPages mocks base method
+// ListVirtualNodesPages mocks base method.
 func (m *MockAppMeshAPI) ListVirtualNodesPages(arg0 *appmesh.ListVirtualNodesInput, arg1 func(*appmesh.ListVirtualNodesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualNodesPages", arg0, arg1)
@@ -1523,13 +1524,13 @@ func (m *MockAppMeshAPI) ListVirtualNodesPages(arg0 *appmesh.ListVirtualNodesInp
 	return ret0
 }
 
-// ListVirtualNodesPages indicates an expected call of ListVirtualNodesPages
+// ListVirtualNodesPages indicates an expected call of ListVirtualNodesPages.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualNodesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualNodesPages", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualNodesPages), arg0, arg1)
 }
 
-// ListVirtualNodesPagesWithContext mocks base method
+// ListVirtualNodesPagesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListVirtualNodesPagesWithContext(arg0 context.Context, arg1 *appmesh.ListVirtualNodesInput, arg2 func(*appmesh.ListVirtualNodesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1541,14 +1542,14 @@ func (m *MockAppMeshAPI) ListVirtualNodesPagesWithContext(arg0 context.Context, 
 	return ret0
 }
 
-// ListVirtualNodesPagesWithContext indicates an expected call of ListVirtualNodesPagesWithContext
+// ListVirtualNodesPagesWithContext indicates an expected call of ListVirtualNodesPagesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualNodesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualNodesPagesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualNodesPagesWithContext), varargs...)
 }
 
-// ListVirtualNodesRequest mocks base method
+// ListVirtualNodesRequest mocks base method.
 func (m *MockAppMeshAPI) ListVirtualNodesRequest(arg0 *appmesh.ListVirtualNodesInput) (*request.Request, *appmesh.ListVirtualNodesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualNodesRequest", arg0)
@@ -1557,13 +1558,13 @@ func (m *MockAppMeshAPI) ListVirtualNodesRequest(arg0 *appmesh.ListVirtualNodesI
 	return ret0, ret1
 }
 
-// ListVirtualNodesRequest indicates an expected call of ListVirtualNodesRequest
+// ListVirtualNodesRequest indicates an expected call of ListVirtualNodesRequest.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualNodesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualNodesRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualNodesRequest), arg0)
 }
 
-// ListVirtualNodesWithContext mocks base method
+// ListVirtualNodesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListVirtualNodesWithContext(arg0 context.Context, arg1 *appmesh.ListVirtualNodesInput, arg2 ...request.Option) (*appmesh.ListVirtualNodesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1576,14 +1577,14 @@ func (m *MockAppMeshAPI) ListVirtualNodesWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListVirtualNodesWithContext indicates an expected call of ListVirtualNodesWithContext
+// ListVirtualNodesWithContext indicates an expected call of ListVirtualNodesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualNodesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualNodesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualNodesWithContext), varargs...)
 }
 
-// ListVirtualRouters mocks base method
+// ListVirtualRouters mocks base method.
 func (m *MockAppMeshAPI) ListVirtualRouters(arg0 *appmesh.ListVirtualRoutersInput) (*appmesh.ListVirtualRoutersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualRouters", arg0)
@@ -1592,13 +1593,13 @@ func (m *MockAppMeshAPI) ListVirtualRouters(arg0 *appmesh.ListVirtualRoutersInpu
 	return ret0, ret1
 }
 
-// ListVirtualRouters indicates an expected call of ListVirtualRouters
+// ListVirtualRouters indicates an expected call of ListVirtualRouters.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualRouters(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualRouters", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualRouters), arg0)
 }
 
-// ListVirtualRoutersPages mocks base method
+// ListVirtualRoutersPages mocks base method.
 func (m *MockAppMeshAPI) ListVirtualRoutersPages(arg0 *appmesh.ListVirtualRoutersInput, arg1 func(*appmesh.ListVirtualRoutersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualRoutersPages", arg0, arg1)
@@ -1606,13 +1607,13 @@ func (m *MockAppMeshAPI) ListVirtualRoutersPages(arg0 *appmesh.ListVirtualRouter
 	return ret0
 }
 
-// ListVirtualRoutersPages indicates an expected call of ListVirtualRoutersPages
+// ListVirtualRoutersPages indicates an expected call of ListVirtualRoutersPages.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualRoutersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualRoutersPages", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualRoutersPages), arg0, arg1)
 }
 
-// ListVirtualRoutersPagesWithContext mocks base method
+// ListVirtualRoutersPagesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListVirtualRoutersPagesWithContext(arg0 context.Context, arg1 *appmesh.ListVirtualRoutersInput, arg2 func(*appmesh.ListVirtualRoutersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1624,14 +1625,14 @@ func (m *MockAppMeshAPI) ListVirtualRoutersPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListVirtualRoutersPagesWithContext indicates an expected call of ListVirtualRoutersPagesWithContext
+// ListVirtualRoutersPagesWithContext indicates an expected call of ListVirtualRoutersPagesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualRoutersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualRoutersPagesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualRoutersPagesWithContext), varargs...)
 }
 
-// ListVirtualRoutersRequest mocks base method
+// ListVirtualRoutersRequest mocks base method.
 func (m *MockAppMeshAPI) ListVirtualRoutersRequest(arg0 *appmesh.ListVirtualRoutersInput) (*request.Request, *appmesh.ListVirtualRoutersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualRoutersRequest", arg0)
@@ -1640,13 +1641,13 @@ func (m *MockAppMeshAPI) ListVirtualRoutersRequest(arg0 *appmesh.ListVirtualRout
 	return ret0, ret1
 }
 
-// ListVirtualRoutersRequest indicates an expected call of ListVirtualRoutersRequest
+// ListVirtualRoutersRequest indicates an expected call of ListVirtualRoutersRequest.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualRoutersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualRoutersRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualRoutersRequest), arg0)
 }
 
-// ListVirtualRoutersWithContext mocks base method
+// ListVirtualRoutersWithContext mocks base method.
 func (m *MockAppMeshAPI) ListVirtualRoutersWithContext(arg0 context.Context, arg1 *appmesh.ListVirtualRoutersInput, arg2 ...request.Option) (*appmesh.ListVirtualRoutersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1659,14 +1660,14 @@ func (m *MockAppMeshAPI) ListVirtualRoutersWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListVirtualRoutersWithContext indicates an expected call of ListVirtualRoutersWithContext
+// ListVirtualRoutersWithContext indicates an expected call of ListVirtualRoutersWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualRoutersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualRoutersWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualRoutersWithContext), varargs...)
 }
 
-// ListVirtualServices mocks base method
+// ListVirtualServices mocks base method.
 func (m *MockAppMeshAPI) ListVirtualServices(arg0 *appmesh.ListVirtualServicesInput) (*appmesh.ListVirtualServicesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualServices", arg0)
@@ -1675,13 +1676,13 @@ func (m *MockAppMeshAPI) ListVirtualServices(arg0 *appmesh.ListVirtualServicesIn
 	return ret0, ret1
 }
 
-// ListVirtualServices indicates an expected call of ListVirtualServices
+// ListVirtualServices indicates an expected call of ListVirtualServices.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualServices(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualServices", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualServices), arg0)
 }
 
-// ListVirtualServicesPages mocks base method
+// ListVirtualServicesPages mocks base method.
 func (m *MockAppMeshAPI) ListVirtualServicesPages(arg0 *appmesh.ListVirtualServicesInput, arg1 func(*appmesh.ListVirtualServicesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualServicesPages", arg0, arg1)
@@ -1689,13 +1690,13 @@ func (m *MockAppMeshAPI) ListVirtualServicesPages(arg0 *appmesh.ListVirtualServi
 	return ret0
 }
 
-// ListVirtualServicesPages indicates an expected call of ListVirtualServicesPages
+// ListVirtualServicesPages indicates an expected call of ListVirtualServicesPages.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualServicesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualServicesPages", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualServicesPages), arg0, arg1)
 }
 
-// ListVirtualServicesPagesWithContext mocks base method
+// ListVirtualServicesPagesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListVirtualServicesPagesWithContext(arg0 context.Context, arg1 *appmesh.ListVirtualServicesInput, arg2 func(*appmesh.ListVirtualServicesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1707,14 +1708,14 @@ func (m *MockAppMeshAPI) ListVirtualServicesPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListVirtualServicesPagesWithContext indicates an expected call of ListVirtualServicesPagesWithContext
+// ListVirtualServicesPagesWithContext indicates an expected call of ListVirtualServicesPagesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualServicesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualServicesPagesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualServicesPagesWithContext), varargs...)
 }
 
-// ListVirtualServicesRequest mocks base method
+// ListVirtualServicesRequest mocks base method.
 func (m *MockAppMeshAPI) ListVirtualServicesRequest(arg0 *appmesh.ListVirtualServicesInput) (*request.Request, *appmesh.ListVirtualServicesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualServicesRequest", arg0)
@@ -1723,13 +1724,13 @@ func (m *MockAppMeshAPI) ListVirtualServicesRequest(arg0 *appmesh.ListVirtualSer
 	return ret0, ret1
 }
 
-// ListVirtualServicesRequest indicates an expected call of ListVirtualServicesRequest
+// ListVirtualServicesRequest indicates an expected call of ListVirtualServicesRequest.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualServicesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualServicesRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualServicesRequest), arg0)
 }
 
-// ListVirtualServicesWithContext mocks base method
+// ListVirtualServicesWithContext mocks base method.
 func (m *MockAppMeshAPI) ListVirtualServicesWithContext(arg0 context.Context, arg1 *appmesh.ListVirtualServicesInput, arg2 ...request.Option) (*appmesh.ListVirtualServicesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1742,14 +1743,14 @@ func (m *MockAppMeshAPI) ListVirtualServicesWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListVirtualServicesWithContext indicates an expected call of ListVirtualServicesWithContext
+// ListVirtualServicesWithContext indicates an expected call of ListVirtualServicesWithContext.
 func (mr *MockAppMeshAPIMockRecorder) ListVirtualServicesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualServicesWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).ListVirtualServicesWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockAppMeshAPI) TagResource(arg0 *appmesh.TagResourceInput) (*appmesh.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1758,13 +1759,13 @@ func (m *MockAppMeshAPI) TagResource(arg0 *appmesh.TagResourceInput) (*appmesh.T
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockAppMeshAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockAppMeshAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockAppMeshAPI) TagResourceRequest(arg0 *appmesh.TagResourceInput) (*request.Request, *appmesh.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1773,13 +1774,13 @@ func (m *MockAppMeshAPI) TagResourceRequest(arg0 *appmesh.TagResourceInput) (*re
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockAppMeshAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockAppMeshAPI) TagResourceWithContext(arg0 context.Context, arg1 *appmesh.TagResourceInput, arg2 ...request.Option) (*appmesh.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1792,14 +1793,14 @@ func (m *MockAppMeshAPI) TagResourceWithContext(arg0 context.Context, arg1 *appm
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockAppMeshAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockAppMeshAPI) UntagResource(arg0 *appmesh.UntagResourceInput) (*appmesh.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1808,13 +1809,13 @@ func (m *MockAppMeshAPI) UntagResource(arg0 *appmesh.UntagResourceInput) (*appme
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockAppMeshAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockAppMeshAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockAppMeshAPI) UntagResourceRequest(arg0 *appmesh.UntagResourceInput) (*request.Request, *appmesh.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1823,13 +1824,13 @@ func (m *MockAppMeshAPI) UntagResourceRequest(arg0 *appmesh.UntagResourceInput) 
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockAppMeshAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockAppMeshAPI) UntagResourceWithContext(arg0 context.Context, arg1 *appmesh.UntagResourceInput, arg2 ...request.Option) (*appmesh.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1842,14 +1843,14 @@ func (m *MockAppMeshAPI) UntagResourceWithContext(arg0 context.Context, arg1 *ap
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockAppMeshAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateGatewayRoute mocks base method
+// UpdateGatewayRoute mocks base method.
 func (m *MockAppMeshAPI) UpdateGatewayRoute(arg0 *appmesh.UpdateGatewayRouteInput) (*appmesh.UpdateGatewayRouteOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateGatewayRoute", arg0)
@@ -1858,13 +1859,13 @@ func (m *MockAppMeshAPI) UpdateGatewayRoute(arg0 *appmesh.UpdateGatewayRouteInpu
 	return ret0, ret1
 }
 
-// UpdateGatewayRoute indicates an expected call of UpdateGatewayRoute
+// UpdateGatewayRoute indicates an expected call of UpdateGatewayRoute.
 func (mr *MockAppMeshAPIMockRecorder) UpdateGatewayRoute(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateGatewayRoute", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateGatewayRoute), arg0)
 }
 
-// UpdateGatewayRouteRequest mocks base method
+// UpdateGatewayRouteRequest mocks base method.
 func (m *MockAppMeshAPI) UpdateGatewayRouteRequest(arg0 *appmesh.UpdateGatewayRouteInput) (*request.Request, *appmesh.UpdateGatewayRouteOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateGatewayRouteRequest", arg0)
@@ -1873,13 +1874,13 @@ func (m *MockAppMeshAPI) UpdateGatewayRouteRequest(arg0 *appmesh.UpdateGatewayRo
 	return ret0, ret1
 }
 
-// UpdateGatewayRouteRequest indicates an expected call of UpdateGatewayRouteRequest
+// UpdateGatewayRouteRequest indicates an expected call of UpdateGatewayRouteRequest.
 func (mr *MockAppMeshAPIMockRecorder) UpdateGatewayRouteRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateGatewayRouteRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateGatewayRouteRequest), arg0)
 }
 
-// UpdateGatewayRouteWithContext mocks base method
+// UpdateGatewayRouteWithContext mocks base method.
 func (m *MockAppMeshAPI) UpdateGatewayRouteWithContext(arg0 context.Context, arg1 *appmesh.UpdateGatewayRouteInput, arg2 ...request.Option) (*appmesh.UpdateGatewayRouteOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1892,14 +1893,14 @@ func (m *MockAppMeshAPI) UpdateGatewayRouteWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UpdateGatewayRouteWithContext indicates an expected call of UpdateGatewayRouteWithContext
+// UpdateGatewayRouteWithContext indicates an expected call of UpdateGatewayRouteWithContext.
 func (mr *MockAppMeshAPIMockRecorder) UpdateGatewayRouteWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateGatewayRouteWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateGatewayRouteWithContext), varargs...)
 }
 
-// UpdateMesh mocks base method
+// UpdateMesh mocks base method.
 func (m *MockAppMeshAPI) UpdateMesh(arg0 *appmesh.UpdateMeshInput) (*appmesh.UpdateMeshOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMesh", arg0)
@@ -1908,13 +1909,13 @@ func (m *MockAppMeshAPI) UpdateMesh(arg0 *appmesh.UpdateMeshInput) (*appmesh.Upd
 	return ret0, ret1
 }
 
-// UpdateMesh indicates an expected call of UpdateMesh
+// UpdateMesh indicates an expected call of UpdateMesh.
 func (mr *MockAppMeshAPIMockRecorder) UpdateMesh(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMesh", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateMesh), arg0)
 }
 
-// UpdateMeshRequest mocks base method
+// UpdateMeshRequest mocks base method.
 func (m *MockAppMeshAPI) UpdateMeshRequest(arg0 *appmesh.UpdateMeshInput) (*request.Request, *appmesh.UpdateMeshOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMeshRequest", arg0)
@@ -1923,13 +1924,13 @@ func (m *MockAppMeshAPI) UpdateMeshRequest(arg0 *appmesh.UpdateMeshInput) (*requ
 	return ret0, ret1
 }
 
-// UpdateMeshRequest indicates an expected call of UpdateMeshRequest
+// UpdateMeshRequest indicates an expected call of UpdateMeshRequest.
 func (mr *MockAppMeshAPIMockRecorder) UpdateMeshRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMeshRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateMeshRequest), arg0)
 }
 
-// UpdateMeshWithContext mocks base method
+// UpdateMeshWithContext mocks base method.
 func (m *MockAppMeshAPI) UpdateMeshWithContext(arg0 context.Context, arg1 *appmesh.UpdateMeshInput, arg2 ...request.Option) (*appmesh.UpdateMeshOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1942,14 +1943,14 @@ func (m *MockAppMeshAPI) UpdateMeshWithContext(arg0 context.Context, arg1 *appme
 	return ret0, ret1
 }
 
-// UpdateMeshWithContext indicates an expected call of UpdateMeshWithContext
+// UpdateMeshWithContext indicates an expected call of UpdateMeshWithContext.
 func (mr *MockAppMeshAPIMockRecorder) UpdateMeshWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMeshWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateMeshWithContext), varargs...)
 }
 
-// UpdateRoute mocks base method
+// UpdateRoute mocks base method.
 func (m *MockAppMeshAPI) UpdateRoute(arg0 *appmesh.UpdateRouteInput) (*appmesh.UpdateRouteOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRoute", arg0)
@@ -1958,13 +1959,13 @@ func (m *MockAppMeshAPI) UpdateRoute(arg0 *appmesh.UpdateRouteInput) (*appmesh.U
 	return ret0, ret1
 }
 
-// UpdateRoute indicates an expected call of UpdateRoute
+// UpdateRoute indicates an expected call of UpdateRoute.
 func (mr *MockAppMeshAPIMockRecorder) UpdateRoute(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRoute", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateRoute), arg0)
 }
 
-// UpdateRouteRequest mocks base method
+// UpdateRouteRequest mocks base method.
 func (m *MockAppMeshAPI) UpdateRouteRequest(arg0 *appmesh.UpdateRouteInput) (*request.Request, *appmesh.UpdateRouteOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRouteRequest", arg0)
@@ -1973,13 +1974,13 @@ func (m *MockAppMeshAPI) UpdateRouteRequest(arg0 *appmesh.UpdateRouteInput) (*re
 	return ret0, ret1
 }
 
-// UpdateRouteRequest indicates an expected call of UpdateRouteRequest
+// UpdateRouteRequest indicates an expected call of UpdateRouteRequest.
 func (mr *MockAppMeshAPIMockRecorder) UpdateRouteRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRouteRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateRouteRequest), arg0)
 }
 
-// UpdateRouteWithContext mocks base method
+// UpdateRouteWithContext mocks base method.
 func (m *MockAppMeshAPI) UpdateRouteWithContext(arg0 context.Context, arg1 *appmesh.UpdateRouteInput, arg2 ...request.Option) (*appmesh.UpdateRouteOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1992,14 +1993,14 @@ func (m *MockAppMeshAPI) UpdateRouteWithContext(arg0 context.Context, arg1 *appm
 	return ret0, ret1
 }
 
-// UpdateRouteWithContext indicates an expected call of UpdateRouteWithContext
+// UpdateRouteWithContext indicates an expected call of UpdateRouteWithContext.
 func (mr *MockAppMeshAPIMockRecorder) UpdateRouteWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRouteWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateRouteWithContext), varargs...)
 }
 
-// UpdateVirtualGateway mocks base method
+// UpdateVirtualGateway mocks base method.
 func (m *MockAppMeshAPI) UpdateVirtualGateway(arg0 *appmesh.UpdateVirtualGatewayInput) (*appmesh.UpdateVirtualGatewayOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVirtualGateway", arg0)
@@ -2008,13 +2009,13 @@ func (m *MockAppMeshAPI) UpdateVirtualGateway(arg0 *appmesh.UpdateVirtualGateway
 	return ret0, ret1
 }
 
-// UpdateVirtualGateway indicates an expected call of UpdateVirtualGateway
+// UpdateVirtualGateway indicates an expected call of UpdateVirtualGateway.
 func (mr *MockAppMeshAPIMockRecorder) UpdateVirtualGateway(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualGateway", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateVirtualGateway), arg0)
 }
 
-// UpdateVirtualGatewayRequest mocks base method
+// UpdateVirtualGatewayRequest mocks base method.
 func (m *MockAppMeshAPI) UpdateVirtualGatewayRequest(arg0 *appmesh.UpdateVirtualGatewayInput) (*request.Request, *appmesh.UpdateVirtualGatewayOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVirtualGatewayRequest", arg0)
@@ -2023,13 +2024,13 @@ func (m *MockAppMeshAPI) UpdateVirtualGatewayRequest(arg0 *appmesh.UpdateVirtual
 	return ret0, ret1
 }
 
-// UpdateVirtualGatewayRequest indicates an expected call of UpdateVirtualGatewayRequest
+// UpdateVirtualGatewayRequest indicates an expected call of UpdateVirtualGatewayRequest.
 func (mr *MockAppMeshAPIMockRecorder) UpdateVirtualGatewayRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualGatewayRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateVirtualGatewayRequest), arg0)
 }
 
-// UpdateVirtualGatewayWithContext mocks base method
+// UpdateVirtualGatewayWithContext mocks base method.
 func (m *MockAppMeshAPI) UpdateVirtualGatewayWithContext(arg0 context.Context, arg1 *appmesh.UpdateVirtualGatewayInput, arg2 ...request.Option) (*appmesh.UpdateVirtualGatewayOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2042,14 +2043,14 @@ func (m *MockAppMeshAPI) UpdateVirtualGatewayWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UpdateVirtualGatewayWithContext indicates an expected call of UpdateVirtualGatewayWithContext
+// UpdateVirtualGatewayWithContext indicates an expected call of UpdateVirtualGatewayWithContext.
 func (mr *MockAppMeshAPIMockRecorder) UpdateVirtualGatewayWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualGatewayWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateVirtualGatewayWithContext), varargs...)
 }
 
-// UpdateVirtualNode mocks base method
+// UpdateVirtualNode mocks base method.
 func (m *MockAppMeshAPI) UpdateVirtualNode(arg0 *appmesh.UpdateVirtualNodeInput) (*appmesh.UpdateVirtualNodeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVirtualNode", arg0)
@@ -2058,13 +2059,13 @@ func (m *MockAppMeshAPI) UpdateVirtualNode(arg0 *appmesh.UpdateVirtualNodeInput)
 	return ret0, ret1
 }
 
-// UpdateVirtualNode indicates an expected call of UpdateVirtualNode
+// UpdateVirtualNode indicates an expected call of UpdateVirtualNode.
 func (mr *MockAppMeshAPIMockRecorder) UpdateVirtualNode(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualNode", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateVirtualNode), arg0)
 }
 
-// UpdateVirtualNodeRequest mocks base method
+// UpdateVirtualNodeRequest mocks base method.
 func (m *MockAppMeshAPI) UpdateVirtualNodeRequest(arg0 *appmesh.UpdateVirtualNodeInput) (*request.Request, *appmesh.UpdateVirtualNodeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVirtualNodeRequest", arg0)
@@ -2073,13 +2074,13 @@ func (m *MockAppMeshAPI) UpdateVirtualNodeRequest(arg0 *appmesh.UpdateVirtualNod
 	return ret0, ret1
 }
 
-// UpdateVirtualNodeRequest indicates an expected call of UpdateVirtualNodeRequest
+// UpdateVirtualNodeRequest indicates an expected call of UpdateVirtualNodeRequest.
 func (mr *MockAppMeshAPIMockRecorder) UpdateVirtualNodeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualNodeRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateVirtualNodeRequest), arg0)
 }
 
-// UpdateVirtualNodeWithContext mocks base method
+// UpdateVirtualNodeWithContext mocks base method.
 func (m *MockAppMeshAPI) UpdateVirtualNodeWithContext(arg0 context.Context, arg1 *appmesh.UpdateVirtualNodeInput, arg2 ...request.Option) (*appmesh.UpdateVirtualNodeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2092,14 +2093,14 @@ func (m *MockAppMeshAPI) UpdateVirtualNodeWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// UpdateVirtualNodeWithContext indicates an expected call of UpdateVirtualNodeWithContext
+// UpdateVirtualNodeWithContext indicates an expected call of UpdateVirtualNodeWithContext.
 func (mr *MockAppMeshAPIMockRecorder) UpdateVirtualNodeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualNodeWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateVirtualNodeWithContext), varargs...)
 }
 
-// UpdateVirtualRouter mocks base method
+// UpdateVirtualRouter mocks base method.
 func (m *MockAppMeshAPI) UpdateVirtualRouter(arg0 *appmesh.UpdateVirtualRouterInput) (*appmesh.UpdateVirtualRouterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVirtualRouter", arg0)
@@ -2108,13 +2109,13 @@ func (m *MockAppMeshAPI) UpdateVirtualRouter(arg0 *appmesh.UpdateVirtualRouterIn
 	return ret0, ret1
 }
 
-// UpdateVirtualRouter indicates an expected call of UpdateVirtualRouter
+// UpdateVirtualRouter indicates an expected call of UpdateVirtualRouter.
 func (mr *MockAppMeshAPIMockRecorder) UpdateVirtualRouter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualRouter", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateVirtualRouter), arg0)
 }
 
-// UpdateVirtualRouterRequest mocks base method
+// UpdateVirtualRouterRequest mocks base method.
 func (m *MockAppMeshAPI) UpdateVirtualRouterRequest(arg0 *appmesh.UpdateVirtualRouterInput) (*request.Request, *appmesh.UpdateVirtualRouterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVirtualRouterRequest", arg0)
@@ -2123,13 +2124,13 @@ func (m *MockAppMeshAPI) UpdateVirtualRouterRequest(arg0 *appmesh.UpdateVirtualR
 	return ret0, ret1
 }
 
-// UpdateVirtualRouterRequest indicates an expected call of UpdateVirtualRouterRequest
+// UpdateVirtualRouterRequest indicates an expected call of UpdateVirtualRouterRequest.
 func (mr *MockAppMeshAPIMockRecorder) UpdateVirtualRouterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualRouterRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateVirtualRouterRequest), arg0)
 }
 
-// UpdateVirtualRouterWithContext mocks base method
+// UpdateVirtualRouterWithContext mocks base method.
 func (m *MockAppMeshAPI) UpdateVirtualRouterWithContext(arg0 context.Context, arg1 *appmesh.UpdateVirtualRouterInput, arg2 ...request.Option) (*appmesh.UpdateVirtualRouterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2142,14 +2143,14 @@ func (m *MockAppMeshAPI) UpdateVirtualRouterWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateVirtualRouterWithContext indicates an expected call of UpdateVirtualRouterWithContext
+// UpdateVirtualRouterWithContext indicates an expected call of UpdateVirtualRouterWithContext.
 func (mr *MockAppMeshAPIMockRecorder) UpdateVirtualRouterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualRouterWithContext", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateVirtualRouterWithContext), varargs...)
 }
 
-// UpdateVirtualService mocks base method
+// UpdateVirtualService mocks base method.
 func (m *MockAppMeshAPI) UpdateVirtualService(arg0 *appmesh.UpdateVirtualServiceInput) (*appmesh.UpdateVirtualServiceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVirtualService", arg0)
@@ -2158,13 +2159,13 @@ func (m *MockAppMeshAPI) UpdateVirtualService(arg0 *appmesh.UpdateVirtualService
 	return ret0, ret1
 }
 
-// UpdateVirtualService indicates an expected call of UpdateVirtualService
+// UpdateVirtualService indicates an expected call of UpdateVirtualService.
 func (mr *MockAppMeshAPIMockRecorder) UpdateVirtualService(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualService", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateVirtualService), arg0)
 }
 
-// UpdateVirtualServiceRequest mocks base method
+// UpdateVirtualServiceRequest mocks base method.
 func (m *MockAppMeshAPI) UpdateVirtualServiceRequest(arg0 *appmesh.UpdateVirtualServiceInput) (*request.Request, *appmesh.UpdateVirtualServiceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateVirtualServiceRequest", arg0)
@@ -2173,13 +2174,13 @@ func (m *MockAppMeshAPI) UpdateVirtualServiceRequest(arg0 *appmesh.UpdateVirtual
 	return ret0, ret1
 }
 
-// UpdateVirtualServiceRequest indicates an expected call of UpdateVirtualServiceRequest
+// UpdateVirtualServiceRequest indicates an expected call of UpdateVirtualServiceRequest.
 func (mr *MockAppMeshAPIMockRecorder) UpdateVirtualServiceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVirtualServiceRequest", reflect.TypeOf((*MockAppMeshAPI)(nil).UpdateVirtualServiceRequest), arg0)
 }
 
-// UpdateVirtualServiceWithContext mocks base method
+// UpdateVirtualServiceWithContext mocks base method.
 func (m *MockAppMeshAPI) UpdateVirtualServiceWithContext(arg0 context.Context, arg1 *appmesh.UpdateVirtualServiceInput, arg2 ...request.Option) (*appmesh.UpdateVirtualServiceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2192,7 +2193,7 @@ func (m *MockAppMeshAPI) UpdateVirtualServiceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UpdateVirtualServiceWithContext indicates an expected call of UpdateVirtualServiceWithContext
+// UpdateVirtualServiceWithContext indicates an expected call of UpdateVirtualServiceWithContext.
 func (mr *MockAppMeshAPIMockRecorder) UpdateVirtualServiceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

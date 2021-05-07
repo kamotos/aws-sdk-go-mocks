@@ -6,36 +6,37 @@ package iotdeviceadvisormock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	iotdeviceadvisor "github.com/aws/aws-sdk-go/service/iotdeviceadvisor"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockIoTDeviceAdvisorAPI is a mock of IoTDeviceAdvisorAPI interface
+// MockIoTDeviceAdvisorAPI is a mock of IoTDeviceAdvisorAPI interface.
 type MockIoTDeviceAdvisorAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockIoTDeviceAdvisorAPIMockRecorder
 }
 
-// MockIoTDeviceAdvisorAPIMockRecorder is the mock recorder for MockIoTDeviceAdvisorAPI
+// MockIoTDeviceAdvisorAPIMockRecorder is the mock recorder for MockIoTDeviceAdvisorAPI.
 type MockIoTDeviceAdvisorAPIMockRecorder struct {
 	mock *MockIoTDeviceAdvisorAPI
 }
 
-// NewMockIoTDeviceAdvisorAPI creates a new mock instance
+// NewMockIoTDeviceAdvisorAPI creates a new mock instance.
 func NewMockIoTDeviceAdvisorAPI(ctrl *gomock.Controller) *MockIoTDeviceAdvisorAPI {
 	mock := &MockIoTDeviceAdvisorAPI{ctrl: ctrl}
 	mock.recorder = &MockIoTDeviceAdvisorAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockIoTDeviceAdvisorAPI) EXPECT() *MockIoTDeviceAdvisorAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateSuiteDefinition mocks base method
+// CreateSuiteDefinition mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) CreateSuiteDefinition(arg0 *iotdeviceadvisor.CreateSuiteDefinitionInput) (*iotdeviceadvisor.CreateSuiteDefinitionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSuiteDefinition", arg0)
@@ -44,13 +45,13 @@ func (m *MockIoTDeviceAdvisorAPI) CreateSuiteDefinition(arg0 *iotdeviceadvisor.C
 	return ret0, ret1
 }
 
-// CreateSuiteDefinition indicates an expected call of CreateSuiteDefinition
+// CreateSuiteDefinition indicates an expected call of CreateSuiteDefinition.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) CreateSuiteDefinition(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSuiteDefinition", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).CreateSuiteDefinition), arg0)
 }
 
-// CreateSuiteDefinitionRequest mocks base method
+// CreateSuiteDefinitionRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) CreateSuiteDefinitionRequest(arg0 *iotdeviceadvisor.CreateSuiteDefinitionInput) (*request.Request, *iotdeviceadvisor.CreateSuiteDefinitionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSuiteDefinitionRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockIoTDeviceAdvisorAPI) CreateSuiteDefinitionRequest(arg0 *iotdevicead
 	return ret0, ret1
 }
 
-// CreateSuiteDefinitionRequest indicates an expected call of CreateSuiteDefinitionRequest
+// CreateSuiteDefinitionRequest indicates an expected call of CreateSuiteDefinitionRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) CreateSuiteDefinitionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSuiteDefinitionRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).CreateSuiteDefinitionRequest), arg0)
 }
 
-// CreateSuiteDefinitionWithContext mocks base method
+// CreateSuiteDefinitionWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) CreateSuiteDefinitionWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.CreateSuiteDefinitionInput, arg2 ...request.Option) (*iotdeviceadvisor.CreateSuiteDefinitionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockIoTDeviceAdvisorAPI) CreateSuiteDefinitionWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// CreateSuiteDefinitionWithContext indicates an expected call of CreateSuiteDefinitionWithContext
+// CreateSuiteDefinitionWithContext indicates an expected call of CreateSuiteDefinitionWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) CreateSuiteDefinitionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSuiteDefinitionWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).CreateSuiteDefinitionWithContext), varargs...)
 }
 
-// DeleteSuiteDefinition mocks base method
+// DeleteSuiteDefinition mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) DeleteSuiteDefinition(arg0 *iotdeviceadvisor.DeleteSuiteDefinitionInput) (*iotdeviceadvisor.DeleteSuiteDefinitionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSuiteDefinition", arg0)
@@ -94,13 +95,13 @@ func (m *MockIoTDeviceAdvisorAPI) DeleteSuiteDefinition(arg0 *iotdeviceadvisor.D
 	return ret0, ret1
 }
 
-// DeleteSuiteDefinition indicates an expected call of DeleteSuiteDefinition
+// DeleteSuiteDefinition indicates an expected call of DeleteSuiteDefinition.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) DeleteSuiteDefinition(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSuiteDefinition", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).DeleteSuiteDefinition), arg0)
 }
 
-// DeleteSuiteDefinitionRequest mocks base method
+// DeleteSuiteDefinitionRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) DeleteSuiteDefinitionRequest(arg0 *iotdeviceadvisor.DeleteSuiteDefinitionInput) (*request.Request, *iotdeviceadvisor.DeleteSuiteDefinitionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSuiteDefinitionRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockIoTDeviceAdvisorAPI) DeleteSuiteDefinitionRequest(arg0 *iotdevicead
 	return ret0, ret1
 }
 
-// DeleteSuiteDefinitionRequest indicates an expected call of DeleteSuiteDefinitionRequest
+// DeleteSuiteDefinitionRequest indicates an expected call of DeleteSuiteDefinitionRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) DeleteSuiteDefinitionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSuiteDefinitionRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).DeleteSuiteDefinitionRequest), arg0)
 }
 
-// DeleteSuiteDefinitionWithContext mocks base method
+// DeleteSuiteDefinitionWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) DeleteSuiteDefinitionWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.DeleteSuiteDefinitionInput, arg2 ...request.Option) (*iotdeviceadvisor.DeleteSuiteDefinitionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockIoTDeviceAdvisorAPI) DeleteSuiteDefinitionWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// DeleteSuiteDefinitionWithContext indicates an expected call of DeleteSuiteDefinitionWithContext
+// DeleteSuiteDefinitionWithContext indicates an expected call of DeleteSuiteDefinitionWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) DeleteSuiteDefinitionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSuiteDefinitionWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).DeleteSuiteDefinitionWithContext), varargs...)
 }
 
-// GetSuiteDefinition mocks base method
+// GetSuiteDefinition mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) GetSuiteDefinition(arg0 *iotdeviceadvisor.GetSuiteDefinitionInput) (*iotdeviceadvisor.GetSuiteDefinitionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSuiteDefinition", arg0)
@@ -144,13 +145,13 @@ func (m *MockIoTDeviceAdvisorAPI) GetSuiteDefinition(arg0 *iotdeviceadvisor.GetS
 	return ret0, ret1
 }
 
-// GetSuiteDefinition indicates an expected call of GetSuiteDefinition
+// GetSuiteDefinition indicates an expected call of GetSuiteDefinition.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) GetSuiteDefinition(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSuiteDefinition", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).GetSuiteDefinition), arg0)
 }
 
-// GetSuiteDefinitionRequest mocks base method
+// GetSuiteDefinitionRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) GetSuiteDefinitionRequest(arg0 *iotdeviceadvisor.GetSuiteDefinitionInput) (*request.Request, *iotdeviceadvisor.GetSuiteDefinitionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSuiteDefinitionRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockIoTDeviceAdvisorAPI) GetSuiteDefinitionRequest(arg0 *iotdeviceadvis
 	return ret0, ret1
 }
 
-// GetSuiteDefinitionRequest indicates an expected call of GetSuiteDefinitionRequest
+// GetSuiteDefinitionRequest indicates an expected call of GetSuiteDefinitionRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) GetSuiteDefinitionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSuiteDefinitionRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).GetSuiteDefinitionRequest), arg0)
 }
 
-// GetSuiteDefinitionWithContext mocks base method
+// GetSuiteDefinitionWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) GetSuiteDefinitionWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.GetSuiteDefinitionInput, arg2 ...request.Option) (*iotdeviceadvisor.GetSuiteDefinitionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockIoTDeviceAdvisorAPI) GetSuiteDefinitionWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// GetSuiteDefinitionWithContext indicates an expected call of GetSuiteDefinitionWithContext
+// GetSuiteDefinitionWithContext indicates an expected call of GetSuiteDefinitionWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) GetSuiteDefinitionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSuiteDefinitionWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).GetSuiteDefinitionWithContext), varargs...)
 }
 
-// GetSuiteRun mocks base method
+// GetSuiteRun mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) GetSuiteRun(arg0 *iotdeviceadvisor.GetSuiteRunInput) (*iotdeviceadvisor.GetSuiteRunOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSuiteRun", arg0)
@@ -194,13 +195,13 @@ func (m *MockIoTDeviceAdvisorAPI) GetSuiteRun(arg0 *iotdeviceadvisor.GetSuiteRun
 	return ret0, ret1
 }
 
-// GetSuiteRun indicates an expected call of GetSuiteRun
+// GetSuiteRun indicates an expected call of GetSuiteRun.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) GetSuiteRun(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSuiteRun", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).GetSuiteRun), arg0)
 }
 
-// GetSuiteRunReport mocks base method
+// GetSuiteRunReport mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) GetSuiteRunReport(arg0 *iotdeviceadvisor.GetSuiteRunReportInput) (*iotdeviceadvisor.GetSuiteRunReportOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSuiteRunReport", arg0)
@@ -209,13 +210,13 @@ func (m *MockIoTDeviceAdvisorAPI) GetSuiteRunReport(arg0 *iotdeviceadvisor.GetSu
 	return ret0, ret1
 }
 
-// GetSuiteRunReport indicates an expected call of GetSuiteRunReport
+// GetSuiteRunReport indicates an expected call of GetSuiteRunReport.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) GetSuiteRunReport(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSuiteRunReport", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).GetSuiteRunReport), arg0)
 }
 
-// GetSuiteRunReportRequest mocks base method
+// GetSuiteRunReportRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) GetSuiteRunReportRequest(arg0 *iotdeviceadvisor.GetSuiteRunReportInput) (*request.Request, *iotdeviceadvisor.GetSuiteRunReportOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSuiteRunReportRequest", arg0)
@@ -224,13 +225,13 @@ func (m *MockIoTDeviceAdvisorAPI) GetSuiteRunReportRequest(arg0 *iotdeviceadviso
 	return ret0, ret1
 }
 
-// GetSuiteRunReportRequest indicates an expected call of GetSuiteRunReportRequest
+// GetSuiteRunReportRequest indicates an expected call of GetSuiteRunReportRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) GetSuiteRunReportRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSuiteRunReportRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).GetSuiteRunReportRequest), arg0)
 }
 
-// GetSuiteRunReportWithContext mocks base method
+// GetSuiteRunReportWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) GetSuiteRunReportWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.GetSuiteRunReportInput, arg2 ...request.Option) (*iotdeviceadvisor.GetSuiteRunReportOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -243,14 +244,14 @@ func (m *MockIoTDeviceAdvisorAPI) GetSuiteRunReportWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// GetSuiteRunReportWithContext indicates an expected call of GetSuiteRunReportWithContext
+// GetSuiteRunReportWithContext indicates an expected call of GetSuiteRunReportWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) GetSuiteRunReportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSuiteRunReportWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).GetSuiteRunReportWithContext), varargs...)
 }
 
-// GetSuiteRunRequest mocks base method
+// GetSuiteRunRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) GetSuiteRunRequest(arg0 *iotdeviceadvisor.GetSuiteRunInput) (*request.Request, *iotdeviceadvisor.GetSuiteRunOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSuiteRunRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockIoTDeviceAdvisorAPI) GetSuiteRunRequest(arg0 *iotdeviceadvisor.GetS
 	return ret0, ret1
 }
 
-// GetSuiteRunRequest indicates an expected call of GetSuiteRunRequest
+// GetSuiteRunRequest indicates an expected call of GetSuiteRunRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) GetSuiteRunRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSuiteRunRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).GetSuiteRunRequest), arg0)
 }
 
-// GetSuiteRunWithContext mocks base method
+// GetSuiteRunWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) GetSuiteRunWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.GetSuiteRunInput, arg2 ...request.Option) (*iotdeviceadvisor.GetSuiteRunOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockIoTDeviceAdvisorAPI) GetSuiteRunWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// GetSuiteRunWithContext indicates an expected call of GetSuiteRunWithContext
+// GetSuiteRunWithContext indicates an expected call of GetSuiteRunWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) GetSuiteRunWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSuiteRunWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).GetSuiteRunWithContext), varargs...)
 }
 
-// ListSuiteDefinitions mocks base method
+// ListSuiteDefinitions mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListSuiteDefinitions(arg0 *iotdeviceadvisor.ListSuiteDefinitionsInput) (*iotdeviceadvisor.ListSuiteDefinitionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSuiteDefinitions", arg0)
@@ -294,13 +295,13 @@ func (m *MockIoTDeviceAdvisorAPI) ListSuiteDefinitions(arg0 *iotdeviceadvisor.Li
 	return ret0, ret1
 }
 
-// ListSuiteDefinitions indicates an expected call of ListSuiteDefinitions
+// ListSuiteDefinitions indicates an expected call of ListSuiteDefinitions.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListSuiteDefinitions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuiteDefinitions", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListSuiteDefinitions), arg0)
 }
 
-// ListSuiteDefinitionsPages mocks base method
+// ListSuiteDefinitionsPages mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListSuiteDefinitionsPages(arg0 *iotdeviceadvisor.ListSuiteDefinitionsInput, arg1 func(*iotdeviceadvisor.ListSuiteDefinitionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSuiteDefinitionsPages", arg0, arg1)
@@ -308,13 +309,13 @@ func (m *MockIoTDeviceAdvisorAPI) ListSuiteDefinitionsPages(arg0 *iotdeviceadvis
 	return ret0
 }
 
-// ListSuiteDefinitionsPages indicates an expected call of ListSuiteDefinitionsPages
+// ListSuiteDefinitionsPages indicates an expected call of ListSuiteDefinitionsPages.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListSuiteDefinitionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuiteDefinitionsPages", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListSuiteDefinitionsPages), arg0, arg1)
 }
 
-// ListSuiteDefinitionsPagesWithContext mocks base method
+// ListSuiteDefinitionsPagesWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListSuiteDefinitionsPagesWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.ListSuiteDefinitionsInput, arg2 func(*iotdeviceadvisor.ListSuiteDefinitionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -326,14 +327,14 @@ func (m *MockIoTDeviceAdvisorAPI) ListSuiteDefinitionsPagesWithContext(arg0 cont
 	return ret0
 }
 
-// ListSuiteDefinitionsPagesWithContext indicates an expected call of ListSuiteDefinitionsPagesWithContext
+// ListSuiteDefinitionsPagesWithContext indicates an expected call of ListSuiteDefinitionsPagesWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListSuiteDefinitionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuiteDefinitionsPagesWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListSuiteDefinitionsPagesWithContext), varargs...)
 }
 
-// ListSuiteDefinitionsRequest mocks base method
+// ListSuiteDefinitionsRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListSuiteDefinitionsRequest(arg0 *iotdeviceadvisor.ListSuiteDefinitionsInput) (*request.Request, *iotdeviceadvisor.ListSuiteDefinitionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSuiteDefinitionsRequest", arg0)
@@ -342,13 +343,13 @@ func (m *MockIoTDeviceAdvisorAPI) ListSuiteDefinitionsRequest(arg0 *iotdeviceadv
 	return ret0, ret1
 }
 
-// ListSuiteDefinitionsRequest indicates an expected call of ListSuiteDefinitionsRequest
+// ListSuiteDefinitionsRequest indicates an expected call of ListSuiteDefinitionsRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListSuiteDefinitionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuiteDefinitionsRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListSuiteDefinitionsRequest), arg0)
 }
 
-// ListSuiteDefinitionsWithContext mocks base method
+// ListSuiteDefinitionsWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListSuiteDefinitionsWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.ListSuiteDefinitionsInput, arg2 ...request.Option) (*iotdeviceadvisor.ListSuiteDefinitionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -361,14 +362,14 @@ func (m *MockIoTDeviceAdvisorAPI) ListSuiteDefinitionsWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// ListSuiteDefinitionsWithContext indicates an expected call of ListSuiteDefinitionsWithContext
+// ListSuiteDefinitionsWithContext indicates an expected call of ListSuiteDefinitionsWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListSuiteDefinitionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuiteDefinitionsWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListSuiteDefinitionsWithContext), varargs...)
 }
 
-// ListSuiteRuns mocks base method
+// ListSuiteRuns mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListSuiteRuns(arg0 *iotdeviceadvisor.ListSuiteRunsInput) (*iotdeviceadvisor.ListSuiteRunsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSuiteRuns", arg0)
@@ -377,13 +378,13 @@ func (m *MockIoTDeviceAdvisorAPI) ListSuiteRuns(arg0 *iotdeviceadvisor.ListSuite
 	return ret0, ret1
 }
 
-// ListSuiteRuns indicates an expected call of ListSuiteRuns
+// ListSuiteRuns indicates an expected call of ListSuiteRuns.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListSuiteRuns(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuiteRuns", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListSuiteRuns), arg0)
 }
 
-// ListSuiteRunsPages mocks base method
+// ListSuiteRunsPages mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListSuiteRunsPages(arg0 *iotdeviceadvisor.ListSuiteRunsInput, arg1 func(*iotdeviceadvisor.ListSuiteRunsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSuiteRunsPages", arg0, arg1)
@@ -391,13 +392,13 @@ func (m *MockIoTDeviceAdvisorAPI) ListSuiteRunsPages(arg0 *iotdeviceadvisor.List
 	return ret0
 }
 
-// ListSuiteRunsPages indicates an expected call of ListSuiteRunsPages
+// ListSuiteRunsPages indicates an expected call of ListSuiteRunsPages.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListSuiteRunsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuiteRunsPages", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListSuiteRunsPages), arg0, arg1)
 }
 
-// ListSuiteRunsPagesWithContext mocks base method
+// ListSuiteRunsPagesWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListSuiteRunsPagesWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.ListSuiteRunsInput, arg2 func(*iotdeviceadvisor.ListSuiteRunsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -409,14 +410,14 @@ func (m *MockIoTDeviceAdvisorAPI) ListSuiteRunsPagesWithContext(arg0 context.Con
 	return ret0
 }
 
-// ListSuiteRunsPagesWithContext indicates an expected call of ListSuiteRunsPagesWithContext
+// ListSuiteRunsPagesWithContext indicates an expected call of ListSuiteRunsPagesWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListSuiteRunsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuiteRunsPagesWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListSuiteRunsPagesWithContext), varargs...)
 }
 
-// ListSuiteRunsRequest mocks base method
+// ListSuiteRunsRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListSuiteRunsRequest(arg0 *iotdeviceadvisor.ListSuiteRunsInput) (*request.Request, *iotdeviceadvisor.ListSuiteRunsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSuiteRunsRequest", arg0)
@@ -425,13 +426,13 @@ func (m *MockIoTDeviceAdvisorAPI) ListSuiteRunsRequest(arg0 *iotdeviceadvisor.Li
 	return ret0, ret1
 }
 
-// ListSuiteRunsRequest indicates an expected call of ListSuiteRunsRequest
+// ListSuiteRunsRequest indicates an expected call of ListSuiteRunsRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListSuiteRunsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuiteRunsRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListSuiteRunsRequest), arg0)
 }
 
-// ListSuiteRunsWithContext mocks base method
+// ListSuiteRunsWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListSuiteRunsWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.ListSuiteRunsInput, arg2 ...request.Option) (*iotdeviceadvisor.ListSuiteRunsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -444,14 +445,14 @@ func (m *MockIoTDeviceAdvisorAPI) ListSuiteRunsWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// ListSuiteRunsWithContext indicates an expected call of ListSuiteRunsWithContext
+// ListSuiteRunsWithContext indicates an expected call of ListSuiteRunsWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListSuiteRunsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSuiteRunsWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListSuiteRunsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListTagsForResource(arg0 *iotdeviceadvisor.ListTagsForResourceInput) (*iotdeviceadvisor.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -460,13 +461,13 @@ func (m *MockIoTDeviceAdvisorAPI) ListTagsForResource(arg0 *iotdeviceadvisor.Lis
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListTagsForResourceRequest(arg0 *iotdeviceadvisor.ListTagsForResourceInput) (*request.Request, *iotdeviceadvisor.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -475,13 +476,13 @@ func (m *MockIoTDeviceAdvisorAPI) ListTagsForResourceRequest(arg0 *iotdeviceadvi
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.ListTagsForResourceInput, arg2 ...request.Option) (*iotdeviceadvisor.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -494,14 +495,14 @@ func (m *MockIoTDeviceAdvisorAPI) ListTagsForResourceWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// ListTestCases mocks base method
+// ListTestCases mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListTestCases(arg0 *iotdeviceadvisor.ListTestCasesInput) (*iotdeviceadvisor.ListTestCasesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTestCases", arg0)
@@ -510,13 +511,13 @@ func (m *MockIoTDeviceAdvisorAPI) ListTestCases(arg0 *iotdeviceadvisor.ListTestC
 	return ret0, ret1
 }
 
-// ListTestCases indicates an expected call of ListTestCases
+// ListTestCases indicates an expected call of ListTestCases.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListTestCases(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTestCases", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListTestCases), arg0)
 }
 
-// ListTestCasesPages mocks base method
+// ListTestCasesPages mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListTestCasesPages(arg0 *iotdeviceadvisor.ListTestCasesInput, arg1 func(*iotdeviceadvisor.ListTestCasesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTestCasesPages", arg0, arg1)
@@ -524,13 +525,13 @@ func (m *MockIoTDeviceAdvisorAPI) ListTestCasesPages(arg0 *iotdeviceadvisor.List
 	return ret0
 }
 
-// ListTestCasesPages indicates an expected call of ListTestCasesPages
+// ListTestCasesPages indicates an expected call of ListTestCasesPages.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListTestCasesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTestCasesPages", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListTestCasesPages), arg0, arg1)
 }
 
-// ListTestCasesPagesWithContext mocks base method
+// ListTestCasesPagesWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListTestCasesPagesWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.ListTestCasesInput, arg2 func(*iotdeviceadvisor.ListTestCasesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -542,14 +543,14 @@ func (m *MockIoTDeviceAdvisorAPI) ListTestCasesPagesWithContext(arg0 context.Con
 	return ret0
 }
 
-// ListTestCasesPagesWithContext indicates an expected call of ListTestCasesPagesWithContext
+// ListTestCasesPagesWithContext indicates an expected call of ListTestCasesPagesWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListTestCasesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTestCasesPagesWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListTestCasesPagesWithContext), varargs...)
 }
 
-// ListTestCasesRequest mocks base method
+// ListTestCasesRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListTestCasesRequest(arg0 *iotdeviceadvisor.ListTestCasesInput) (*request.Request, *iotdeviceadvisor.ListTestCasesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTestCasesRequest", arg0)
@@ -558,13 +559,13 @@ func (m *MockIoTDeviceAdvisorAPI) ListTestCasesRequest(arg0 *iotdeviceadvisor.Li
 	return ret0, ret1
 }
 
-// ListTestCasesRequest indicates an expected call of ListTestCasesRequest
+// ListTestCasesRequest indicates an expected call of ListTestCasesRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListTestCasesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTestCasesRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListTestCasesRequest), arg0)
 }
 
-// ListTestCasesWithContext mocks base method
+// ListTestCasesWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) ListTestCasesWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.ListTestCasesInput, arg2 ...request.Option) (*iotdeviceadvisor.ListTestCasesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -577,14 +578,14 @@ func (m *MockIoTDeviceAdvisorAPI) ListTestCasesWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// ListTestCasesWithContext indicates an expected call of ListTestCasesWithContext
+// ListTestCasesWithContext indicates an expected call of ListTestCasesWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) ListTestCasesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTestCasesWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).ListTestCasesWithContext), varargs...)
 }
 
-// StartSuiteRun mocks base method
+// StartSuiteRun mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) StartSuiteRun(arg0 *iotdeviceadvisor.StartSuiteRunInput) (*iotdeviceadvisor.StartSuiteRunOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartSuiteRun", arg0)
@@ -593,13 +594,13 @@ func (m *MockIoTDeviceAdvisorAPI) StartSuiteRun(arg0 *iotdeviceadvisor.StartSuit
 	return ret0, ret1
 }
 
-// StartSuiteRun indicates an expected call of StartSuiteRun
+// StartSuiteRun indicates an expected call of StartSuiteRun.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) StartSuiteRun(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartSuiteRun", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).StartSuiteRun), arg0)
 }
 
-// StartSuiteRunRequest mocks base method
+// StartSuiteRunRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) StartSuiteRunRequest(arg0 *iotdeviceadvisor.StartSuiteRunInput) (*request.Request, *iotdeviceadvisor.StartSuiteRunOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartSuiteRunRequest", arg0)
@@ -608,13 +609,13 @@ func (m *MockIoTDeviceAdvisorAPI) StartSuiteRunRequest(arg0 *iotdeviceadvisor.St
 	return ret0, ret1
 }
 
-// StartSuiteRunRequest indicates an expected call of StartSuiteRunRequest
+// StartSuiteRunRequest indicates an expected call of StartSuiteRunRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) StartSuiteRunRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartSuiteRunRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).StartSuiteRunRequest), arg0)
 }
 
-// StartSuiteRunWithContext mocks base method
+// StartSuiteRunWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) StartSuiteRunWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.StartSuiteRunInput, arg2 ...request.Option) (*iotdeviceadvisor.StartSuiteRunOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -627,14 +628,14 @@ func (m *MockIoTDeviceAdvisorAPI) StartSuiteRunWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// StartSuiteRunWithContext indicates an expected call of StartSuiteRunWithContext
+// StartSuiteRunWithContext indicates an expected call of StartSuiteRunWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) StartSuiteRunWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartSuiteRunWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).StartSuiteRunWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) TagResource(arg0 *iotdeviceadvisor.TagResourceInput) (*iotdeviceadvisor.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -643,13 +644,13 @@ func (m *MockIoTDeviceAdvisorAPI) TagResource(arg0 *iotdeviceadvisor.TagResource
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) TagResourceRequest(arg0 *iotdeviceadvisor.TagResourceInput) (*request.Request, *iotdeviceadvisor.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -658,13 +659,13 @@ func (m *MockIoTDeviceAdvisorAPI) TagResourceRequest(arg0 *iotdeviceadvisor.TagR
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) TagResourceWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.TagResourceInput, arg2 ...request.Option) (*iotdeviceadvisor.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -677,14 +678,14 @@ func (m *MockIoTDeviceAdvisorAPI) TagResourceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) UntagResource(arg0 *iotdeviceadvisor.UntagResourceInput) (*iotdeviceadvisor.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -693,13 +694,13 @@ func (m *MockIoTDeviceAdvisorAPI) UntagResource(arg0 *iotdeviceadvisor.UntagReso
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) UntagResourceRequest(arg0 *iotdeviceadvisor.UntagResourceInput) (*request.Request, *iotdeviceadvisor.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -708,13 +709,13 @@ func (m *MockIoTDeviceAdvisorAPI) UntagResourceRequest(arg0 *iotdeviceadvisor.Un
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) UntagResourceWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.UntagResourceInput, arg2 ...request.Option) (*iotdeviceadvisor.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -727,14 +728,14 @@ func (m *MockIoTDeviceAdvisorAPI) UntagResourceWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateSuiteDefinition mocks base method
+// UpdateSuiteDefinition mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) UpdateSuiteDefinition(arg0 *iotdeviceadvisor.UpdateSuiteDefinitionInput) (*iotdeviceadvisor.UpdateSuiteDefinitionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSuiteDefinition", arg0)
@@ -743,13 +744,13 @@ func (m *MockIoTDeviceAdvisorAPI) UpdateSuiteDefinition(arg0 *iotdeviceadvisor.U
 	return ret0, ret1
 }
 
-// UpdateSuiteDefinition indicates an expected call of UpdateSuiteDefinition
+// UpdateSuiteDefinition indicates an expected call of UpdateSuiteDefinition.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) UpdateSuiteDefinition(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSuiteDefinition", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).UpdateSuiteDefinition), arg0)
 }
 
-// UpdateSuiteDefinitionRequest mocks base method
+// UpdateSuiteDefinitionRequest mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) UpdateSuiteDefinitionRequest(arg0 *iotdeviceadvisor.UpdateSuiteDefinitionInput) (*request.Request, *iotdeviceadvisor.UpdateSuiteDefinitionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSuiteDefinitionRequest", arg0)
@@ -758,13 +759,13 @@ func (m *MockIoTDeviceAdvisorAPI) UpdateSuiteDefinitionRequest(arg0 *iotdevicead
 	return ret0, ret1
 }
 
-// UpdateSuiteDefinitionRequest indicates an expected call of UpdateSuiteDefinitionRequest
+// UpdateSuiteDefinitionRequest indicates an expected call of UpdateSuiteDefinitionRequest.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) UpdateSuiteDefinitionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSuiteDefinitionRequest", reflect.TypeOf((*MockIoTDeviceAdvisorAPI)(nil).UpdateSuiteDefinitionRequest), arg0)
 }
 
-// UpdateSuiteDefinitionWithContext mocks base method
+// UpdateSuiteDefinitionWithContext mocks base method.
 func (m *MockIoTDeviceAdvisorAPI) UpdateSuiteDefinitionWithContext(arg0 context.Context, arg1 *iotdeviceadvisor.UpdateSuiteDefinitionInput, arg2 ...request.Option) (*iotdeviceadvisor.UpdateSuiteDefinitionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -777,7 +778,7 @@ func (m *MockIoTDeviceAdvisorAPI) UpdateSuiteDefinitionWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// UpdateSuiteDefinitionWithContext indicates an expected call of UpdateSuiteDefinitionWithContext
+// UpdateSuiteDefinitionWithContext indicates an expected call of UpdateSuiteDefinitionWithContext.
 func (mr *MockIoTDeviceAdvisorAPIMockRecorder) UpdateSuiteDefinitionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

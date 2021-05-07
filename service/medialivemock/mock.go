@@ -6,36 +6,37 @@ package medialivemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	medialive "github.com/aws/aws-sdk-go/service/medialive"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockMediaLiveAPI is a mock of MediaLiveAPI interface
+// MockMediaLiveAPI is a mock of MediaLiveAPI interface.
 type MockMediaLiveAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockMediaLiveAPIMockRecorder
 }
 
-// MockMediaLiveAPIMockRecorder is the mock recorder for MockMediaLiveAPI
+// MockMediaLiveAPIMockRecorder is the mock recorder for MockMediaLiveAPI.
 type MockMediaLiveAPIMockRecorder struct {
 	mock *MockMediaLiveAPI
 }
 
-// NewMockMediaLiveAPI creates a new mock instance
+// NewMockMediaLiveAPI creates a new mock instance.
 func NewMockMediaLiveAPI(ctrl *gomock.Controller) *MockMediaLiveAPI {
 	mock := &MockMediaLiveAPI{ctrl: ctrl}
 	mock.recorder = &MockMediaLiveAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockMediaLiveAPI) EXPECT() *MockMediaLiveAPIMockRecorder {
 	return m.recorder
 }
 
-// AcceptInputDeviceTransfer mocks base method
+// AcceptInputDeviceTransfer mocks base method.
 func (m *MockMediaLiveAPI) AcceptInputDeviceTransfer(arg0 *medialive.AcceptInputDeviceTransferInput) (*medialive.AcceptInputDeviceTransferOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AcceptInputDeviceTransfer", arg0)
@@ -44,13 +45,13 @@ func (m *MockMediaLiveAPI) AcceptInputDeviceTransfer(arg0 *medialive.AcceptInput
 	return ret0, ret1
 }
 
-// AcceptInputDeviceTransfer indicates an expected call of AcceptInputDeviceTransfer
+// AcceptInputDeviceTransfer indicates an expected call of AcceptInputDeviceTransfer.
 func (mr *MockMediaLiveAPIMockRecorder) AcceptInputDeviceTransfer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptInputDeviceTransfer", reflect.TypeOf((*MockMediaLiveAPI)(nil).AcceptInputDeviceTransfer), arg0)
 }
 
-// AcceptInputDeviceTransferRequest mocks base method
+// AcceptInputDeviceTransferRequest mocks base method.
 func (m *MockMediaLiveAPI) AcceptInputDeviceTransferRequest(arg0 *medialive.AcceptInputDeviceTransferInput) (*request.Request, *medialive.AcceptInputDeviceTransferOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AcceptInputDeviceTransferRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockMediaLiveAPI) AcceptInputDeviceTransferRequest(arg0 *medialive.Acce
 	return ret0, ret1
 }
 
-// AcceptInputDeviceTransferRequest indicates an expected call of AcceptInputDeviceTransferRequest
+// AcceptInputDeviceTransferRequest indicates an expected call of AcceptInputDeviceTransferRequest.
 func (mr *MockMediaLiveAPIMockRecorder) AcceptInputDeviceTransferRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptInputDeviceTransferRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).AcceptInputDeviceTransferRequest), arg0)
 }
 
-// AcceptInputDeviceTransferWithContext mocks base method
+// AcceptInputDeviceTransferWithContext mocks base method.
 func (m *MockMediaLiveAPI) AcceptInputDeviceTransferWithContext(arg0 context.Context, arg1 *medialive.AcceptInputDeviceTransferInput, arg2 ...request.Option) (*medialive.AcceptInputDeviceTransferOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockMediaLiveAPI) AcceptInputDeviceTransferWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// AcceptInputDeviceTransferWithContext indicates an expected call of AcceptInputDeviceTransferWithContext
+// AcceptInputDeviceTransferWithContext indicates an expected call of AcceptInputDeviceTransferWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) AcceptInputDeviceTransferWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptInputDeviceTransferWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).AcceptInputDeviceTransferWithContext), varargs...)
 }
 
-// BatchDelete mocks base method
+// BatchDelete mocks base method.
 func (m *MockMediaLiveAPI) BatchDelete(arg0 *medialive.BatchDeleteInput) (*medialive.BatchDeleteOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchDelete", arg0)
@@ -94,13 +95,13 @@ func (m *MockMediaLiveAPI) BatchDelete(arg0 *medialive.BatchDeleteInput) (*media
 	return ret0, ret1
 }
 
-// BatchDelete indicates an expected call of BatchDelete
+// BatchDelete indicates an expected call of BatchDelete.
 func (mr *MockMediaLiveAPIMockRecorder) BatchDelete(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchDelete", reflect.TypeOf((*MockMediaLiveAPI)(nil).BatchDelete), arg0)
 }
 
-// BatchDeleteRequest mocks base method
+// BatchDeleteRequest mocks base method.
 func (m *MockMediaLiveAPI) BatchDeleteRequest(arg0 *medialive.BatchDeleteInput) (*request.Request, *medialive.BatchDeleteOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchDeleteRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockMediaLiveAPI) BatchDeleteRequest(arg0 *medialive.BatchDeleteInput) 
 	return ret0, ret1
 }
 
-// BatchDeleteRequest indicates an expected call of BatchDeleteRequest
+// BatchDeleteRequest indicates an expected call of BatchDeleteRequest.
 func (mr *MockMediaLiveAPIMockRecorder) BatchDeleteRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchDeleteRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).BatchDeleteRequest), arg0)
 }
 
-// BatchDeleteWithContext mocks base method
+// BatchDeleteWithContext mocks base method.
 func (m *MockMediaLiveAPI) BatchDeleteWithContext(arg0 context.Context, arg1 *medialive.BatchDeleteInput, arg2 ...request.Option) (*medialive.BatchDeleteOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockMediaLiveAPI) BatchDeleteWithContext(arg0 context.Context, arg1 *me
 	return ret0, ret1
 }
 
-// BatchDeleteWithContext indicates an expected call of BatchDeleteWithContext
+// BatchDeleteWithContext indicates an expected call of BatchDeleteWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) BatchDeleteWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchDeleteWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).BatchDeleteWithContext), varargs...)
 }
 
-// BatchStart mocks base method
+// BatchStart mocks base method.
 func (m *MockMediaLiveAPI) BatchStart(arg0 *medialive.BatchStartInput) (*medialive.BatchStartOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchStart", arg0)
@@ -144,13 +145,13 @@ func (m *MockMediaLiveAPI) BatchStart(arg0 *medialive.BatchStartInput) (*mediali
 	return ret0, ret1
 }
 
-// BatchStart indicates an expected call of BatchStart
+// BatchStart indicates an expected call of BatchStart.
 func (mr *MockMediaLiveAPIMockRecorder) BatchStart(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchStart", reflect.TypeOf((*MockMediaLiveAPI)(nil).BatchStart), arg0)
 }
 
-// BatchStartRequest mocks base method
+// BatchStartRequest mocks base method.
 func (m *MockMediaLiveAPI) BatchStartRequest(arg0 *medialive.BatchStartInput) (*request.Request, *medialive.BatchStartOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchStartRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockMediaLiveAPI) BatchStartRequest(arg0 *medialive.BatchStartInput) (*
 	return ret0, ret1
 }
 
-// BatchStartRequest indicates an expected call of BatchStartRequest
+// BatchStartRequest indicates an expected call of BatchStartRequest.
 func (mr *MockMediaLiveAPIMockRecorder) BatchStartRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchStartRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).BatchStartRequest), arg0)
 }
 
-// BatchStartWithContext mocks base method
+// BatchStartWithContext mocks base method.
 func (m *MockMediaLiveAPI) BatchStartWithContext(arg0 context.Context, arg1 *medialive.BatchStartInput, arg2 ...request.Option) (*medialive.BatchStartOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockMediaLiveAPI) BatchStartWithContext(arg0 context.Context, arg1 *med
 	return ret0, ret1
 }
 
-// BatchStartWithContext indicates an expected call of BatchStartWithContext
+// BatchStartWithContext indicates an expected call of BatchStartWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) BatchStartWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchStartWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).BatchStartWithContext), varargs...)
 }
 
-// BatchStop mocks base method
+// BatchStop mocks base method.
 func (m *MockMediaLiveAPI) BatchStop(arg0 *medialive.BatchStopInput) (*medialive.BatchStopOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchStop", arg0)
@@ -194,13 +195,13 @@ func (m *MockMediaLiveAPI) BatchStop(arg0 *medialive.BatchStopInput) (*medialive
 	return ret0, ret1
 }
 
-// BatchStop indicates an expected call of BatchStop
+// BatchStop indicates an expected call of BatchStop.
 func (mr *MockMediaLiveAPIMockRecorder) BatchStop(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchStop", reflect.TypeOf((*MockMediaLiveAPI)(nil).BatchStop), arg0)
 }
 
-// BatchStopRequest mocks base method
+// BatchStopRequest mocks base method.
 func (m *MockMediaLiveAPI) BatchStopRequest(arg0 *medialive.BatchStopInput) (*request.Request, *medialive.BatchStopOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchStopRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockMediaLiveAPI) BatchStopRequest(arg0 *medialive.BatchStopInput) (*re
 	return ret0, ret1
 }
 
-// BatchStopRequest indicates an expected call of BatchStopRequest
+// BatchStopRequest indicates an expected call of BatchStopRequest.
 func (mr *MockMediaLiveAPIMockRecorder) BatchStopRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchStopRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).BatchStopRequest), arg0)
 }
 
-// BatchStopWithContext mocks base method
+// BatchStopWithContext mocks base method.
 func (m *MockMediaLiveAPI) BatchStopWithContext(arg0 context.Context, arg1 *medialive.BatchStopInput, arg2 ...request.Option) (*medialive.BatchStopOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockMediaLiveAPI) BatchStopWithContext(arg0 context.Context, arg1 *medi
 	return ret0, ret1
 }
 
-// BatchStopWithContext indicates an expected call of BatchStopWithContext
+// BatchStopWithContext indicates an expected call of BatchStopWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) BatchStopWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchStopWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).BatchStopWithContext), varargs...)
 }
 
-// BatchUpdateSchedule mocks base method
+// BatchUpdateSchedule mocks base method.
 func (m *MockMediaLiveAPI) BatchUpdateSchedule(arg0 *medialive.BatchUpdateScheduleInput) (*medialive.BatchUpdateScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchUpdateSchedule", arg0)
@@ -244,13 +245,13 @@ func (m *MockMediaLiveAPI) BatchUpdateSchedule(arg0 *medialive.BatchUpdateSchedu
 	return ret0, ret1
 }
 
-// BatchUpdateSchedule indicates an expected call of BatchUpdateSchedule
+// BatchUpdateSchedule indicates an expected call of BatchUpdateSchedule.
 func (mr *MockMediaLiveAPIMockRecorder) BatchUpdateSchedule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchUpdateSchedule", reflect.TypeOf((*MockMediaLiveAPI)(nil).BatchUpdateSchedule), arg0)
 }
 
-// BatchUpdateScheduleRequest mocks base method
+// BatchUpdateScheduleRequest mocks base method.
 func (m *MockMediaLiveAPI) BatchUpdateScheduleRequest(arg0 *medialive.BatchUpdateScheduleInput) (*request.Request, *medialive.BatchUpdateScheduleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchUpdateScheduleRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockMediaLiveAPI) BatchUpdateScheduleRequest(arg0 *medialive.BatchUpdat
 	return ret0, ret1
 }
 
-// BatchUpdateScheduleRequest indicates an expected call of BatchUpdateScheduleRequest
+// BatchUpdateScheduleRequest indicates an expected call of BatchUpdateScheduleRequest.
 func (mr *MockMediaLiveAPIMockRecorder) BatchUpdateScheduleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchUpdateScheduleRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).BatchUpdateScheduleRequest), arg0)
 }
 
-// BatchUpdateScheduleWithContext mocks base method
+// BatchUpdateScheduleWithContext mocks base method.
 func (m *MockMediaLiveAPI) BatchUpdateScheduleWithContext(arg0 context.Context, arg1 *medialive.BatchUpdateScheduleInput, arg2 ...request.Option) (*medialive.BatchUpdateScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockMediaLiveAPI) BatchUpdateScheduleWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// BatchUpdateScheduleWithContext indicates an expected call of BatchUpdateScheduleWithContext
+// BatchUpdateScheduleWithContext indicates an expected call of BatchUpdateScheduleWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) BatchUpdateScheduleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchUpdateScheduleWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).BatchUpdateScheduleWithContext), varargs...)
 }
 
-// CancelInputDeviceTransfer mocks base method
+// CancelInputDeviceTransfer mocks base method.
 func (m *MockMediaLiveAPI) CancelInputDeviceTransfer(arg0 *medialive.CancelInputDeviceTransferInput) (*medialive.CancelInputDeviceTransferOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelInputDeviceTransfer", arg0)
@@ -294,13 +295,13 @@ func (m *MockMediaLiveAPI) CancelInputDeviceTransfer(arg0 *medialive.CancelInput
 	return ret0, ret1
 }
 
-// CancelInputDeviceTransfer indicates an expected call of CancelInputDeviceTransfer
+// CancelInputDeviceTransfer indicates an expected call of CancelInputDeviceTransfer.
 func (mr *MockMediaLiveAPIMockRecorder) CancelInputDeviceTransfer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelInputDeviceTransfer", reflect.TypeOf((*MockMediaLiveAPI)(nil).CancelInputDeviceTransfer), arg0)
 }
 
-// CancelInputDeviceTransferRequest mocks base method
+// CancelInputDeviceTransferRequest mocks base method.
 func (m *MockMediaLiveAPI) CancelInputDeviceTransferRequest(arg0 *medialive.CancelInputDeviceTransferInput) (*request.Request, *medialive.CancelInputDeviceTransferOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelInputDeviceTransferRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockMediaLiveAPI) CancelInputDeviceTransferRequest(arg0 *medialive.Canc
 	return ret0, ret1
 }
 
-// CancelInputDeviceTransferRequest indicates an expected call of CancelInputDeviceTransferRequest
+// CancelInputDeviceTransferRequest indicates an expected call of CancelInputDeviceTransferRequest.
 func (mr *MockMediaLiveAPIMockRecorder) CancelInputDeviceTransferRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelInputDeviceTransferRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).CancelInputDeviceTransferRequest), arg0)
 }
 
-// CancelInputDeviceTransferWithContext mocks base method
+// CancelInputDeviceTransferWithContext mocks base method.
 func (m *MockMediaLiveAPI) CancelInputDeviceTransferWithContext(arg0 context.Context, arg1 *medialive.CancelInputDeviceTransferInput, arg2 ...request.Option) (*medialive.CancelInputDeviceTransferOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockMediaLiveAPI) CancelInputDeviceTransferWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// CancelInputDeviceTransferWithContext indicates an expected call of CancelInputDeviceTransferWithContext
+// CancelInputDeviceTransferWithContext indicates an expected call of CancelInputDeviceTransferWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) CancelInputDeviceTransferWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelInputDeviceTransferWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).CancelInputDeviceTransferWithContext), varargs...)
 }
 
-// CreateChannel mocks base method
+// CreateChannel mocks base method.
 func (m *MockMediaLiveAPI) CreateChannel(arg0 *medialive.CreateChannelInput) (*medialive.CreateChannelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateChannel", arg0)
@@ -344,13 +345,13 @@ func (m *MockMediaLiveAPI) CreateChannel(arg0 *medialive.CreateChannelInput) (*m
 	return ret0, ret1
 }
 
-// CreateChannel indicates an expected call of CreateChannel
+// CreateChannel indicates an expected call of CreateChannel.
 func (mr *MockMediaLiveAPIMockRecorder) CreateChannel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateChannel", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateChannel), arg0)
 }
 
-// CreateChannelRequest mocks base method
+// CreateChannelRequest mocks base method.
 func (m *MockMediaLiveAPI) CreateChannelRequest(arg0 *medialive.CreateChannelInput) (*request.Request, *medialive.CreateChannelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateChannelRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockMediaLiveAPI) CreateChannelRequest(arg0 *medialive.CreateChannelInp
 	return ret0, ret1
 }
 
-// CreateChannelRequest indicates an expected call of CreateChannelRequest
+// CreateChannelRequest indicates an expected call of CreateChannelRequest.
 func (mr *MockMediaLiveAPIMockRecorder) CreateChannelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateChannelRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateChannelRequest), arg0)
 }
 
-// CreateChannelWithContext mocks base method
+// CreateChannelWithContext mocks base method.
 func (m *MockMediaLiveAPI) CreateChannelWithContext(arg0 context.Context, arg1 *medialive.CreateChannelInput, arg2 ...request.Option) (*medialive.CreateChannelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockMediaLiveAPI) CreateChannelWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// CreateChannelWithContext indicates an expected call of CreateChannelWithContext
+// CreateChannelWithContext indicates an expected call of CreateChannelWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) CreateChannelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateChannelWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateChannelWithContext), varargs...)
 }
 
-// CreateInput mocks base method
+// CreateInput mocks base method.
 func (m *MockMediaLiveAPI) CreateInput(arg0 *medialive.CreateInputInput) (*medialive.CreateInputOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInput", arg0)
@@ -394,13 +395,13 @@ func (m *MockMediaLiveAPI) CreateInput(arg0 *medialive.CreateInputInput) (*media
 	return ret0, ret1
 }
 
-// CreateInput indicates an expected call of CreateInput
+// CreateInput indicates an expected call of CreateInput.
 func (mr *MockMediaLiveAPIMockRecorder) CreateInput(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInput", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateInput), arg0)
 }
 
-// CreateInputRequest mocks base method
+// CreateInputRequest mocks base method.
 func (m *MockMediaLiveAPI) CreateInputRequest(arg0 *medialive.CreateInputInput) (*request.Request, *medialive.CreateInputOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInputRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockMediaLiveAPI) CreateInputRequest(arg0 *medialive.CreateInputInput) 
 	return ret0, ret1
 }
 
-// CreateInputRequest indicates an expected call of CreateInputRequest
+// CreateInputRequest indicates an expected call of CreateInputRequest.
 func (mr *MockMediaLiveAPIMockRecorder) CreateInputRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInputRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateInputRequest), arg0)
 }
 
-// CreateInputSecurityGroup mocks base method
+// CreateInputSecurityGroup mocks base method.
 func (m *MockMediaLiveAPI) CreateInputSecurityGroup(arg0 *medialive.CreateInputSecurityGroupInput) (*medialive.CreateInputSecurityGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInputSecurityGroup", arg0)
@@ -424,13 +425,13 @@ func (m *MockMediaLiveAPI) CreateInputSecurityGroup(arg0 *medialive.CreateInputS
 	return ret0, ret1
 }
 
-// CreateInputSecurityGroup indicates an expected call of CreateInputSecurityGroup
+// CreateInputSecurityGroup indicates an expected call of CreateInputSecurityGroup.
 func (mr *MockMediaLiveAPIMockRecorder) CreateInputSecurityGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInputSecurityGroup", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateInputSecurityGroup), arg0)
 }
 
-// CreateInputSecurityGroupRequest mocks base method
+// CreateInputSecurityGroupRequest mocks base method.
 func (m *MockMediaLiveAPI) CreateInputSecurityGroupRequest(arg0 *medialive.CreateInputSecurityGroupInput) (*request.Request, *medialive.CreateInputSecurityGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInputSecurityGroupRequest", arg0)
@@ -439,13 +440,13 @@ func (m *MockMediaLiveAPI) CreateInputSecurityGroupRequest(arg0 *medialive.Creat
 	return ret0, ret1
 }
 
-// CreateInputSecurityGroupRequest indicates an expected call of CreateInputSecurityGroupRequest
+// CreateInputSecurityGroupRequest indicates an expected call of CreateInputSecurityGroupRequest.
 func (mr *MockMediaLiveAPIMockRecorder) CreateInputSecurityGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInputSecurityGroupRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateInputSecurityGroupRequest), arg0)
 }
 
-// CreateInputSecurityGroupWithContext mocks base method
+// CreateInputSecurityGroupWithContext mocks base method.
 func (m *MockMediaLiveAPI) CreateInputSecurityGroupWithContext(arg0 context.Context, arg1 *medialive.CreateInputSecurityGroupInput, arg2 ...request.Option) (*medialive.CreateInputSecurityGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -458,14 +459,14 @@ func (m *MockMediaLiveAPI) CreateInputSecurityGroupWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// CreateInputSecurityGroupWithContext indicates an expected call of CreateInputSecurityGroupWithContext
+// CreateInputSecurityGroupWithContext indicates an expected call of CreateInputSecurityGroupWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) CreateInputSecurityGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInputSecurityGroupWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateInputSecurityGroupWithContext), varargs...)
 }
 
-// CreateInputWithContext mocks base method
+// CreateInputWithContext mocks base method.
 func (m *MockMediaLiveAPI) CreateInputWithContext(arg0 context.Context, arg1 *medialive.CreateInputInput, arg2 ...request.Option) (*medialive.CreateInputOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockMediaLiveAPI) CreateInputWithContext(arg0 context.Context, arg1 *me
 	return ret0, ret1
 }
 
-// CreateInputWithContext indicates an expected call of CreateInputWithContext
+// CreateInputWithContext indicates an expected call of CreateInputWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) CreateInputWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInputWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateInputWithContext), varargs...)
 }
 
-// CreateMultiplex mocks base method
+// CreateMultiplex mocks base method.
 func (m *MockMediaLiveAPI) CreateMultiplex(arg0 *medialive.CreateMultiplexInput) (*medialive.CreateMultiplexOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMultiplex", arg0)
@@ -494,13 +495,13 @@ func (m *MockMediaLiveAPI) CreateMultiplex(arg0 *medialive.CreateMultiplexInput)
 	return ret0, ret1
 }
 
-// CreateMultiplex indicates an expected call of CreateMultiplex
+// CreateMultiplex indicates an expected call of CreateMultiplex.
 func (mr *MockMediaLiveAPIMockRecorder) CreateMultiplex(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMultiplex", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateMultiplex), arg0)
 }
 
-// CreateMultiplexProgram mocks base method
+// CreateMultiplexProgram mocks base method.
 func (m *MockMediaLiveAPI) CreateMultiplexProgram(arg0 *medialive.CreateMultiplexProgramInput) (*medialive.CreateMultiplexProgramOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMultiplexProgram", arg0)
@@ -509,13 +510,13 @@ func (m *MockMediaLiveAPI) CreateMultiplexProgram(arg0 *medialive.CreateMultiple
 	return ret0, ret1
 }
 
-// CreateMultiplexProgram indicates an expected call of CreateMultiplexProgram
+// CreateMultiplexProgram indicates an expected call of CreateMultiplexProgram.
 func (mr *MockMediaLiveAPIMockRecorder) CreateMultiplexProgram(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMultiplexProgram", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateMultiplexProgram), arg0)
 }
 
-// CreateMultiplexProgramRequest mocks base method
+// CreateMultiplexProgramRequest mocks base method.
 func (m *MockMediaLiveAPI) CreateMultiplexProgramRequest(arg0 *medialive.CreateMultiplexProgramInput) (*request.Request, *medialive.CreateMultiplexProgramOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMultiplexProgramRequest", arg0)
@@ -524,13 +525,13 @@ func (m *MockMediaLiveAPI) CreateMultiplexProgramRequest(arg0 *medialive.CreateM
 	return ret0, ret1
 }
 
-// CreateMultiplexProgramRequest indicates an expected call of CreateMultiplexProgramRequest
+// CreateMultiplexProgramRequest indicates an expected call of CreateMultiplexProgramRequest.
 func (mr *MockMediaLiveAPIMockRecorder) CreateMultiplexProgramRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMultiplexProgramRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateMultiplexProgramRequest), arg0)
 }
 
-// CreateMultiplexProgramWithContext mocks base method
+// CreateMultiplexProgramWithContext mocks base method.
 func (m *MockMediaLiveAPI) CreateMultiplexProgramWithContext(arg0 context.Context, arg1 *medialive.CreateMultiplexProgramInput, arg2 ...request.Option) (*medialive.CreateMultiplexProgramOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -543,14 +544,14 @@ func (m *MockMediaLiveAPI) CreateMultiplexProgramWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// CreateMultiplexProgramWithContext indicates an expected call of CreateMultiplexProgramWithContext
+// CreateMultiplexProgramWithContext indicates an expected call of CreateMultiplexProgramWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) CreateMultiplexProgramWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMultiplexProgramWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateMultiplexProgramWithContext), varargs...)
 }
 
-// CreateMultiplexRequest mocks base method
+// CreateMultiplexRequest mocks base method.
 func (m *MockMediaLiveAPI) CreateMultiplexRequest(arg0 *medialive.CreateMultiplexInput) (*request.Request, *medialive.CreateMultiplexOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMultiplexRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockMediaLiveAPI) CreateMultiplexRequest(arg0 *medialive.CreateMultiple
 	return ret0, ret1
 }
 
-// CreateMultiplexRequest indicates an expected call of CreateMultiplexRequest
+// CreateMultiplexRequest indicates an expected call of CreateMultiplexRequest.
 func (mr *MockMediaLiveAPIMockRecorder) CreateMultiplexRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMultiplexRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateMultiplexRequest), arg0)
 }
 
-// CreateMultiplexWithContext mocks base method
+// CreateMultiplexWithContext mocks base method.
 func (m *MockMediaLiveAPI) CreateMultiplexWithContext(arg0 context.Context, arg1 *medialive.CreateMultiplexInput, arg2 ...request.Option) (*medialive.CreateMultiplexOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,64 @@ func (m *MockMediaLiveAPI) CreateMultiplexWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// CreateMultiplexWithContext indicates an expected call of CreateMultiplexWithContext
+// CreateMultiplexWithContext indicates an expected call of CreateMultiplexWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) CreateMultiplexWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMultiplexWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateMultiplexWithContext), varargs...)
 }
 
-// CreateTags mocks base method
+// CreatePartnerInput mocks base method.
+func (m *MockMediaLiveAPI) CreatePartnerInput(arg0 *medialive.CreatePartnerInputInput) (*medialive.CreatePartnerInputOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreatePartnerInput", arg0)
+	ret0, _ := ret[0].(*medialive.CreatePartnerInputOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreatePartnerInput indicates an expected call of CreatePartnerInput.
+func (mr *MockMediaLiveAPIMockRecorder) CreatePartnerInput(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePartnerInput", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreatePartnerInput), arg0)
+}
+
+// CreatePartnerInputRequest mocks base method.
+func (m *MockMediaLiveAPI) CreatePartnerInputRequest(arg0 *medialive.CreatePartnerInputInput) (*request.Request, *medialive.CreatePartnerInputOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreatePartnerInputRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*medialive.CreatePartnerInputOutput)
+	return ret0, ret1
+}
+
+// CreatePartnerInputRequest indicates an expected call of CreatePartnerInputRequest.
+func (mr *MockMediaLiveAPIMockRecorder) CreatePartnerInputRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePartnerInputRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreatePartnerInputRequest), arg0)
+}
+
+// CreatePartnerInputWithContext mocks base method.
+func (m *MockMediaLiveAPI) CreatePartnerInputWithContext(arg0 context.Context, arg1 *medialive.CreatePartnerInputInput, arg2 ...request.Option) (*medialive.CreatePartnerInputOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreatePartnerInputWithContext", varargs...)
+	ret0, _ := ret[0].(*medialive.CreatePartnerInputOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreatePartnerInputWithContext indicates an expected call of CreatePartnerInputWithContext.
+func (mr *MockMediaLiveAPIMockRecorder) CreatePartnerInputWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePartnerInputWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreatePartnerInputWithContext), varargs...)
+}
+
+// CreateTags mocks base method.
 func (m *MockMediaLiveAPI) CreateTags(arg0 *medialive.CreateTagsInput) (*medialive.CreateTagsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateTags", arg0)
@@ -594,13 +645,13 @@ func (m *MockMediaLiveAPI) CreateTags(arg0 *medialive.CreateTagsInput) (*mediali
 	return ret0, ret1
 }
 
-// CreateTags indicates an expected call of CreateTags
+// CreateTags indicates an expected call of CreateTags.
 func (mr *MockMediaLiveAPIMockRecorder) CreateTags(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateTags", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateTags), arg0)
 }
 
-// CreateTagsRequest mocks base method
+// CreateTagsRequest mocks base method.
 func (m *MockMediaLiveAPI) CreateTagsRequest(arg0 *medialive.CreateTagsInput) (*request.Request, *medialive.CreateTagsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateTagsRequest", arg0)
@@ -609,13 +660,13 @@ func (m *MockMediaLiveAPI) CreateTagsRequest(arg0 *medialive.CreateTagsInput) (*
 	return ret0, ret1
 }
 
-// CreateTagsRequest indicates an expected call of CreateTagsRequest
+// CreateTagsRequest indicates an expected call of CreateTagsRequest.
 func (mr *MockMediaLiveAPIMockRecorder) CreateTagsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateTagsRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateTagsRequest), arg0)
 }
 
-// CreateTagsWithContext mocks base method
+// CreateTagsWithContext mocks base method.
 func (m *MockMediaLiveAPI) CreateTagsWithContext(arg0 context.Context, arg1 *medialive.CreateTagsInput, arg2 ...request.Option) (*medialive.CreateTagsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +679,14 @@ func (m *MockMediaLiveAPI) CreateTagsWithContext(arg0 context.Context, arg1 *med
 	return ret0, ret1
 }
 
-// CreateTagsWithContext indicates an expected call of CreateTagsWithContext
+// CreateTagsWithContext indicates an expected call of CreateTagsWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) CreateTagsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateTagsWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).CreateTagsWithContext), varargs...)
 }
 
-// DeleteChannel mocks base method
+// DeleteChannel mocks base method.
 func (m *MockMediaLiveAPI) DeleteChannel(arg0 *medialive.DeleteChannelInput) (*medialive.DeleteChannelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteChannel", arg0)
@@ -644,13 +695,13 @@ func (m *MockMediaLiveAPI) DeleteChannel(arg0 *medialive.DeleteChannelInput) (*m
 	return ret0, ret1
 }
 
-// DeleteChannel indicates an expected call of DeleteChannel
+// DeleteChannel indicates an expected call of DeleteChannel.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteChannel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteChannel", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteChannel), arg0)
 }
 
-// DeleteChannelRequest mocks base method
+// DeleteChannelRequest mocks base method.
 func (m *MockMediaLiveAPI) DeleteChannelRequest(arg0 *medialive.DeleteChannelInput) (*request.Request, *medialive.DeleteChannelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteChannelRequest", arg0)
@@ -659,13 +710,13 @@ func (m *MockMediaLiveAPI) DeleteChannelRequest(arg0 *medialive.DeleteChannelInp
 	return ret0, ret1
 }
 
-// DeleteChannelRequest indicates an expected call of DeleteChannelRequest
+// DeleteChannelRequest indicates an expected call of DeleteChannelRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteChannelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteChannelRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteChannelRequest), arg0)
 }
 
-// DeleteChannelWithContext mocks base method
+// DeleteChannelWithContext mocks base method.
 func (m *MockMediaLiveAPI) DeleteChannelWithContext(arg0 context.Context, arg1 *medialive.DeleteChannelInput, arg2 ...request.Option) (*medialive.DeleteChannelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +729,14 @@ func (m *MockMediaLiveAPI) DeleteChannelWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DeleteChannelWithContext indicates an expected call of DeleteChannelWithContext
+// DeleteChannelWithContext indicates an expected call of DeleteChannelWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteChannelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteChannelWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteChannelWithContext), varargs...)
 }
 
-// DeleteInput mocks base method
+// DeleteInput mocks base method.
 func (m *MockMediaLiveAPI) DeleteInput(arg0 *medialive.DeleteInputInput) (*medialive.DeleteInputOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInput", arg0)
@@ -694,13 +745,13 @@ func (m *MockMediaLiveAPI) DeleteInput(arg0 *medialive.DeleteInputInput) (*media
 	return ret0, ret1
 }
 
-// DeleteInput indicates an expected call of DeleteInput
+// DeleteInput indicates an expected call of DeleteInput.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteInput(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInput", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteInput), arg0)
 }
 
-// DeleteInputRequest mocks base method
+// DeleteInputRequest mocks base method.
 func (m *MockMediaLiveAPI) DeleteInputRequest(arg0 *medialive.DeleteInputInput) (*request.Request, *medialive.DeleteInputOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInputRequest", arg0)
@@ -709,13 +760,13 @@ func (m *MockMediaLiveAPI) DeleteInputRequest(arg0 *medialive.DeleteInputInput) 
 	return ret0, ret1
 }
 
-// DeleteInputRequest indicates an expected call of DeleteInputRequest
+// DeleteInputRequest indicates an expected call of DeleteInputRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteInputRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInputRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteInputRequest), arg0)
 }
 
-// DeleteInputSecurityGroup mocks base method
+// DeleteInputSecurityGroup mocks base method.
 func (m *MockMediaLiveAPI) DeleteInputSecurityGroup(arg0 *medialive.DeleteInputSecurityGroupInput) (*medialive.DeleteInputSecurityGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInputSecurityGroup", arg0)
@@ -724,13 +775,13 @@ func (m *MockMediaLiveAPI) DeleteInputSecurityGroup(arg0 *medialive.DeleteInputS
 	return ret0, ret1
 }
 
-// DeleteInputSecurityGroup indicates an expected call of DeleteInputSecurityGroup
+// DeleteInputSecurityGroup indicates an expected call of DeleteInputSecurityGroup.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteInputSecurityGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInputSecurityGroup", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteInputSecurityGroup), arg0)
 }
 
-// DeleteInputSecurityGroupRequest mocks base method
+// DeleteInputSecurityGroupRequest mocks base method.
 func (m *MockMediaLiveAPI) DeleteInputSecurityGroupRequest(arg0 *medialive.DeleteInputSecurityGroupInput) (*request.Request, *medialive.DeleteInputSecurityGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInputSecurityGroupRequest", arg0)
@@ -739,13 +790,13 @@ func (m *MockMediaLiveAPI) DeleteInputSecurityGroupRequest(arg0 *medialive.Delet
 	return ret0, ret1
 }
 
-// DeleteInputSecurityGroupRequest indicates an expected call of DeleteInputSecurityGroupRequest
+// DeleteInputSecurityGroupRequest indicates an expected call of DeleteInputSecurityGroupRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteInputSecurityGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInputSecurityGroupRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteInputSecurityGroupRequest), arg0)
 }
 
-// DeleteInputSecurityGroupWithContext mocks base method
+// DeleteInputSecurityGroupWithContext mocks base method.
 func (m *MockMediaLiveAPI) DeleteInputSecurityGroupWithContext(arg0 context.Context, arg1 *medialive.DeleteInputSecurityGroupInput, arg2 ...request.Option) (*medialive.DeleteInputSecurityGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -758,14 +809,14 @@ func (m *MockMediaLiveAPI) DeleteInputSecurityGroupWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DeleteInputSecurityGroupWithContext indicates an expected call of DeleteInputSecurityGroupWithContext
+// DeleteInputSecurityGroupWithContext indicates an expected call of DeleteInputSecurityGroupWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteInputSecurityGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInputSecurityGroupWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteInputSecurityGroupWithContext), varargs...)
 }
 
-// DeleteInputWithContext mocks base method
+// DeleteInputWithContext mocks base method.
 func (m *MockMediaLiveAPI) DeleteInputWithContext(arg0 context.Context, arg1 *medialive.DeleteInputInput, arg2 ...request.Option) (*medialive.DeleteInputOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +829,14 @@ func (m *MockMediaLiveAPI) DeleteInputWithContext(arg0 context.Context, arg1 *me
 	return ret0, ret1
 }
 
-// DeleteInputWithContext indicates an expected call of DeleteInputWithContext
+// DeleteInputWithContext indicates an expected call of DeleteInputWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteInputWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInputWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteInputWithContext), varargs...)
 }
 
-// DeleteMultiplex mocks base method
+// DeleteMultiplex mocks base method.
 func (m *MockMediaLiveAPI) DeleteMultiplex(arg0 *medialive.DeleteMultiplexInput) (*medialive.DeleteMultiplexOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMultiplex", arg0)
@@ -794,13 +845,13 @@ func (m *MockMediaLiveAPI) DeleteMultiplex(arg0 *medialive.DeleteMultiplexInput)
 	return ret0, ret1
 }
 
-// DeleteMultiplex indicates an expected call of DeleteMultiplex
+// DeleteMultiplex indicates an expected call of DeleteMultiplex.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteMultiplex(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMultiplex", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteMultiplex), arg0)
 }
 
-// DeleteMultiplexProgram mocks base method
+// DeleteMultiplexProgram mocks base method.
 func (m *MockMediaLiveAPI) DeleteMultiplexProgram(arg0 *medialive.DeleteMultiplexProgramInput) (*medialive.DeleteMultiplexProgramOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMultiplexProgram", arg0)
@@ -809,13 +860,13 @@ func (m *MockMediaLiveAPI) DeleteMultiplexProgram(arg0 *medialive.DeleteMultiple
 	return ret0, ret1
 }
 
-// DeleteMultiplexProgram indicates an expected call of DeleteMultiplexProgram
+// DeleteMultiplexProgram indicates an expected call of DeleteMultiplexProgram.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteMultiplexProgram(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMultiplexProgram", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteMultiplexProgram), arg0)
 }
 
-// DeleteMultiplexProgramRequest mocks base method
+// DeleteMultiplexProgramRequest mocks base method.
 func (m *MockMediaLiveAPI) DeleteMultiplexProgramRequest(arg0 *medialive.DeleteMultiplexProgramInput) (*request.Request, *medialive.DeleteMultiplexProgramOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMultiplexProgramRequest", arg0)
@@ -824,13 +875,13 @@ func (m *MockMediaLiveAPI) DeleteMultiplexProgramRequest(arg0 *medialive.DeleteM
 	return ret0, ret1
 }
 
-// DeleteMultiplexProgramRequest indicates an expected call of DeleteMultiplexProgramRequest
+// DeleteMultiplexProgramRequest indicates an expected call of DeleteMultiplexProgramRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteMultiplexProgramRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMultiplexProgramRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteMultiplexProgramRequest), arg0)
 }
 
-// DeleteMultiplexProgramWithContext mocks base method
+// DeleteMultiplexProgramWithContext mocks base method.
 func (m *MockMediaLiveAPI) DeleteMultiplexProgramWithContext(arg0 context.Context, arg1 *medialive.DeleteMultiplexProgramInput, arg2 ...request.Option) (*medialive.DeleteMultiplexProgramOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -843,14 +894,14 @@ func (m *MockMediaLiveAPI) DeleteMultiplexProgramWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteMultiplexProgramWithContext indicates an expected call of DeleteMultiplexProgramWithContext
+// DeleteMultiplexProgramWithContext indicates an expected call of DeleteMultiplexProgramWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteMultiplexProgramWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMultiplexProgramWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteMultiplexProgramWithContext), varargs...)
 }
 
-// DeleteMultiplexRequest mocks base method
+// DeleteMultiplexRequest mocks base method.
 func (m *MockMediaLiveAPI) DeleteMultiplexRequest(arg0 *medialive.DeleteMultiplexInput) (*request.Request, *medialive.DeleteMultiplexOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMultiplexRequest", arg0)
@@ -859,13 +910,13 @@ func (m *MockMediaLiveAPI) DeleteMultiplexRequest(arg0 *medialive.DeleteMultiple
 	return ret0, ret1
 }
 
-// DeleteMultiplexRequest indicates an expected call of DeleteMultiplexRequest
+// DeleteMultiplexRequest indicates an expected call of DeleteMultiplexRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteMultiplexRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMultiplexRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteMultiplexRequest), arg0)
 }
 
-// DeleteMultiplexWithContext mocks base method
+// DeleteMultiplexWithContext mocks base method.
 func (m *MockMediaLiveAPI) DeleteMultiplexWithContext(arg0 context.Context, arg1 *medialive.DeleteMultiplexInput, arg2 ...request.Option) (*medialive.DeleteMultiplexOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +929,14 @@ func (m *MockMediaLiveAPI) DeleteMultiplexWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DeleteMultiplexWithContext indicates an expected call of DeleteMultiplexWithContext
+// DeleteMultiplexWithContext indicates an expected call of DeleteMultiplexWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteMultiplexWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMultiplexWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteMultiplexWithContext), varargs...)
 }
 
-// DeleteReservation mocks base method
+// DeleteReservation mocks base method.
 func (m *MockMediaLiveAPI) DeleteReservation(arg0 *medialive.DeleteReservationInput) (*medialive.DeleteReservationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteReservation", arg0)
@@ -894,13 +945,13 @@ func (m *MockMediaLiveAPI) DeleteReservation(arg0 *medialive.DeleteReservationIn
 	return ret0, ret1
 }
 
-// DeleteReservation indicates an expected call of DeleteReservation
+// DeleteReservation indicates an expected call of DeleteReservation.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteReservation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteReservation", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteReservation), arg0)
 }
 
-// DeleteReservationRequest mocks base method
+// DeleteReservationRequest mocks base method.
 func (m *MockMediaLiveAPI) DeleteReservationRequest(arg0 *medialive.DeleteReservationInput) (*request.Request, *medialive.DeleteReservationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteReservationRequest", arg0)
@@ -909,13 +960,13 @@ func (m *MockMediaLiveAPI) DeleteReservationRequest(arg0 *medialive.DeleteReserv
 	return ret0, ret1
 }
 
-// DeleteReservationRequest indicates an expected call of DeleteReservationRequest
+// DeleteReservationRequest indicates an expected call of DeleteReservationRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteReservationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteReservationRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteReservationRequest), arg0)
 }
 
-// DeleteReservationWithContext mocks base method
+// DeleteReservationWithContext mocks base method.
 func (m *MockMediaLiveAPI) DeleteReservationWithContext(arg0 context.Context, arg1 *medialive.DeleteReservationInput, arg2 ...request.Option) (*medialive.DeleteReservationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -928,14 +979,14 @@ func (m *MockMediaLiveAPI) DeleteReservationWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteReservationWithContext indicates an expected call of DeleteReservationWithContext
+// DeleteReservationWithContext indicates an expected call of DeleteReservationWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteReservationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteReservationWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteReservationWithContext), varargs...)
 }
 
-// DeleteSchedule mocks base method
+// DeleteSchedule mocks base method.
 func (m *MockMediaLiveAPI) DeleteSchedule(arg0 *medialive.DeleteScheduleInput) (*medialive.DeleteScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSchedule", arg0)
@@ -944,13 +995,13 @@ func (m *MockMediaLiveAPI) DeleteSchedule(arg0 *medialive.DeleteScheduleInput) (
 	return ret0, ret1
 }
 
-// DeleteSchedule indicates an expected call of DeleteSchedule
+// DeleteSchedule indicates an expected call of DeleteSchedule.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteSchedule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSchedule", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteSchedule), arg0)
 }
 
-// DeleteScheduleRequest mocks base method
+// DeleteScheduleRequest mocks base method.
 func (m *MockMediaLiveAPI) DeleteScheduleRequest(arg0 *medialive.DeleteScheduleInput) (*request.Request, *medialive.DeleteScheduleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteScheduleRequest", arg0)
@@ -959,13 +1010,13 @@ func (m *MockMediaLiveAPI) DeleteScheduleRequest(arg0 *medialive.DeleteScheduleI
 	return ret0, ret1
 }
 
-// DeleteScheduleRequest indicates an expected call of DeleteScheduleRequest
+// DeleteScheduleRequest indicates an expected call of DeleteScheduleRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteScheduleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteScheduleRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteScheduleRequest), arg0)
 }
 
-// DeleteScheduleWithContext mocks base method
+// DeleteScheduleWithContext mocks base method.
 func (m *MockMediaLiveAPI) DeleteScheduleWithContext(arg0 context.Context, arg1 *medialive.DeleteScheduleInput, arg2 ...request.Option) (*medialive.DeleteScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -978,14 +1029,14 @@ func (m *MockMediaLiveAPI) DeleteScheduleWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DeleteScheduleWithContext indicates an expected call of DeleteScheduleWithContext
+// DeleteScheduleWithContext indicates an expected call of DeleteScheduleWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteScheduleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteScheduleWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteScheduleWithContext), varargs...)
 }
 
-// DeleteTags mocks base method
+// DeleteTags mocks base method.
 func (m *MockMediaLiveAPI) DeleteTags(arg0 *medialive.DeleteTagsInput) (*medialive.DeleteTagsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteTags", arg0)
@@ -994,13 +1045,13 @@ func (m *MockMediaLiveAPI) DeleteTags(arg0 *medialive.DeleteTagsInput) (*mediali
 	return ret0, ret1
 }
 
-// DeleteTags indicates an expected call of DeleteTags
+// DeleteTags indicates an expected call of DeleteTags.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteTags(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTags", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteTags), arg0)
 }
 
-// DeleteTagsRequest mocks base method
+// DeleteTagsRequest mocks base method.
 func (m *MockMediaLiveAPI) DeleteTagsRequest(arg0 *medialive.DeleteTagsInput) (*request.Request, *medialive.DeleteTagsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteTagsRequest", arg0)
@@ -1009,13 +1060,13 @@ func (m *MockMediaLiveAPI) DeleteTagsRequest(arg0 *medialive.DeleteTagsInput) (*
 	return ret0, ret1
 }
 
-// DeleteTagsRequest indicates an expected call of DeleteTagsRequest
+// DeleteTagsRequest indicates an expected call of DeleteTagsRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteTagsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTagsRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteTagsRequest), arg0)
 }
 
-// DeleteTagsWithContext mocks base method
+// DeleteTagsWithContext mocks base method.
 func (m *MockMediaLiveAPI) DeleteTagsWithContext(arg0 context.Context, arg1 *medialive.DeleteTagsInput, arg2 ...request.Option) (*medialive.DeleteTagsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1028,14 +1079,14 @@ func (m *MockMediaLiveAPI) DeleteTagsWithContext(arg0 context.Context, arg1 *med
 	return ret0, ret1
 }
 
-// DeleteTagsWithContext indicates an expected call of DeleteTagsWithContext
+// DeleteTagsWithContext indicates an expected call of DeleteTagsWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DeleteTagsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteTagsWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DeleteTagsWithContext), varargs...)
 }
 
-// DescribeChannel mocks base method
+// DescribeChannel mocks base method.
 func (m *MockMediaLiveAPI) DescribeChannel(arg0 *medialive.DescribeChannelInput) (*medialive.DescribeChannelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeChannel", arg0)
@@ -1044,13 +1095,13 @@ func (m *MockMediaLiveAPI) DescribeChannel(arg0 *medialive.DescribeChannelInput)
 	return ret0, ret1
 }
 
-// DescribeChannel indicates an expected call of DescribeChannel
+// DescribeChannel indicates an expected call of DescribeChannel.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeChannel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeChannel", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeChannel), arg0)
 }
 
-// DescribeChannelRequest mocks base method
+// DescribeChannelRequest mocks base method.
 func (m *MockMediaLiveAPI) DescribeChannelRequest(arg0 *medialive.DescribeChannelInput) (*request.Request, *medialive.DescribeChannelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeChannelRequest", arg0)
@@ -1059,13 +1110,13 @@ func (m *MockMediaLiveAPI) DescribeChannelRequest(arg0 *medialive.DescribeChanne
 	return ret0, ret1
 }
 
-// DescribeChannelRequest indicates an expected call of DescribeChannelRequest
+// DescribeChannelRequest indicates an expected call of DescribeChannelRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeChannelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeChannelRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeChannelRequest), arg0)
 }
 
-// DescribeChannelWithContext mocks base method
+// DescribeChannelWithContext mocks base method.
 func (m *MockMediaLiveAPI) DescribeChannelWithContext(arg0 context.Context, arg1 *medialive.DescribeChannelInput, arg2 ...request.Option) (*medialive.DescribeChannelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1078,14 +1129,14 @@ func (m *MockMediaLiveAPI) DescribeChannelWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DescribeChannelWithContext indicates an expected call of DescribeChannelWithContext
+// DescribeChannelWithContext indicates an expected call of DescribeChannelWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeChannelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeChannelWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeChannelWithContext), varargs...)
 }
 
-// DescribeInput mocks base method
+// DescribeInput mocks base method.
 func (m *MockMediaLiveAPI) DescribeInput(arg0 *medialive.DescribeInputInput) (*medialive.DescribeInputOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInput", arg0)
@@ -1094,13 +1145,13 @@ func (m *MockMediaLiveAPI) DescribeInput(arg0 *medialive.DescribeInputInput) (*m
 	return ret0, ret1
 }
 
-// DescribeInput indicates an expected call of DescribeInput
+// DescribeInput indicates an expected call of DescribeInput.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeInput(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInput", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeInput), arg0)
 }
 
-// DescribeInputDevice mocks base method
+// DescribeInputDevice mocks base method.
 func (m *MockMediaLiveAPI) DescribeInputDevice(arg0 *medialive.DescribeInputDeviceInput) (*medialive.DescribeInputDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInputDevice", arg0)
@@ -1109,13 +1160,13 @@ func (m *MockMediaLiveAPI) DescribeInputDevice(arg0 *medialive.DescribeInputDevi
 	return ret0, ret1
 }
 
-// DescribeInputDevice indicates an expected call of DescribeInputDevice
+// DescribeInputDevice indicates an expected call of DescribeInputDevice.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeInputDevice(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInputDevice", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeInputDevice), arg0)
 }
 
-// DescribeInputDeviceRequest mocks base method
+// DescribeInputDeviceRequest mocks base method.
 func (m *MockMediaLiveAPI) DescribeInputDeviceRequest(arg0 *medialive.DescribeInputDeviceInput) (*request.Request, *medialive.DescribeInputDeviceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInputDeviceRequest", arg0)
@@ -1124,13 +1175,13 @@ func (m *MockMediaLiveAPI) DescribeInputDeviceRequest(arg0 *medialive.DescribeIn
 	return ret0, ret1
 }
 
-// DescribeInputDeviceRequest indicates an expected call of DescribeInputDeviceRequest
+// DescribeInputDeviceRequest indicates an expected call of DescribeInputDeviceRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeInputDeviceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInputDeviceRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeInputDeviceRequest), arg0)
 }
 
-// DescribeInputDeviceThumbnail mocks base method
+// DescribeInputDeviceThumbnail mocks base method.
 func (m *MockMediaLiveAPI) DescribeInputDeviceThumbnail(arg0 *medialive.DescribeInputDeviceThumbnailInput) (*medialive.DescribeInputDeviceThumbnailOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInputDeviceThumbnail", arg0)
@@ -1139,13 +1190,13 @@ func (m *MockMediaLiveAPI) DescribeInputDeviceThumbnail(arg0 *medialive.Describe
 	return ret0, ret1
 }
 
-// DescribeInputDeviceThumbnail indicates an expected call of DescribeInputDeviceThumbnail
+// DescribeInputDeviceThumbnail indicates an expected call of DescribeInputDeviceThumbnail.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeInputDeviceThumbnail(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInputDeviceThumbnail", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeInputDeviceThumbnail), arg0)
 }
 
-// DescribeInputDeviceThumbnailRequest mocks base method
+// DescribeInputDeviceThumbnailRequest mocks base method.
 func (m *MockMediaLiveAPI) DescribeInputDeviceThumbnailRequest(arg0 *medialive.DescribeInputDeviceThumbnailInput) (*request.Request, *medialive.DescribeInputDeviceThumbnailOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInputDeviceThumbnailRequest", arg0)
@@ -1154,13 +1205,13 @@ func (m *MockMediaLiveAPI) DescribeInputDeviceThumbnailRequest(arg0 *medialive.D
 	return ret0, ret1
 }
 
-// DescribeInputDeviceThumbnailRequest indicates an expected call of DescribeInputDeviceThumbnailRequest
+// DescribeInputDeviceThumbnailRequest indicates an expected call of DescribeInputDeviceThumbnailRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeInputDeviceThumbnailRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInputDeviceThumbnailRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeInputDeviceThumbnailRequest), arg0)
 }
 
-// DescribeInputDeviceThumbnailWithContext mocks base method
+// DescribeInputDeviceThumbnailWithContext mocks base method.
 func (m *MockMediaLiveAPI) DescribeInputDeviceThumbnailWithContext(arg0 context.Context, arg1 *medialive.DescribeInputDeviceThumbnailInput, arg2 ...request.Option) (*medialive.DescribeInputDeviceThumbnailOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1173,14 +1224,14 @@ func (m *MockMediaLiveAPI) DescribeInputDeviceThumbnailWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// DescribeInputDeviceThumbnailWithContext indicates an expected call of DescribeInputDeviceThumbnailWithContext
+// DescribeInputDeviceThumbnailWithContext indicates an expected call of DescribeInputDeviceThumbnailWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeInputDeviceThumbnailWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInputDeviceThumbnailWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeInputDeviceThumbnailWithContext), varargs...)
 }
 
-// DescribeInputDeviceWithContext mocks base method
+// DescribeInputDeviceWithContext mocks base method.
 func (m *MockMediaLiveAPI) DescribeInputDeviceWithContext(arg0 context.Context, arg1 *medialive.DescribeInputDeviceInput, arg2 ...request.Option) (*medialive.DescribeInputDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1193,14 +1244,14 @@ func (m *MockMediaLiveAPI) DescribeInputDeviceWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DescribeInputDeviceWithContext indicates an expected call of DescribeInputDeviceWithContext
+// DescribeInputDeviceWithContext indicates an expected call of DescribeInputDeviceWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeInputDeviceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInputDeviceWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeInputDeviceWithContext), varargs...)
 }
 
-// DescribeInputRequest mocks base method
+// DescribeInputRequest mocks base method.
 func (m *MockMediaLiveAPI) DescribeInputRequest(arg0 *medialive.DescribeInputInput) (*request.Request, *medialive.DescribeInputOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInputRequest", arg0)
@@ -1209,13 +1260,13 @@ func (m *MockMediaLiveAPI) DescribeInputRequest(arg0 *medialive.DescribeInputInp
 	return ret0, ret1
 }
 
-// DescribeInputRequest indicates an expected call of DescribeInputRequest
+// DescribeInputRequest indicates an expected call of DescribeInputRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeInputRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInputRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeInputRequest), arg0)
 }
 
-// DescribeInputSecurityGroup mocks base method
+// DescribeInputSecurityGroup mocks base method.
 func (m *MockMediaLiveAPI) DescribeInputSecurityGroup(arg0 *medialive.DescribeInputSecurityGroupInput) (*medialive.DescribeInputSecurityGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInputSecurityGroup", arg0)
@@ -1224,13 +1275,13 @@ func (m *MockMediaLiveAPI) DescribeInputSecurityGroup(arg0 *medialive.DescribeIn
 	return ret0, ret1
 }
 
-// DescribeInputSecurityGroup indicates an expected call of DescribeInputSecurityGroup
+// DescribeInputSecurityGroup indicates an expected call of DescribeInputSecurityGroup.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeInputSecurityGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInputSecurityGroup", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeInputSecurityGroup), arg0)
 }
 
-// DescribeInputSecurityGroupRequest mocks base method
+// DescribeInputSecurityGroupRequest mocks base method.
 func (m *MockMediaLiveAPI) DescribeInputSecurityGroupRequest(arg0 *medialive.DescribeInputSecurityGroupInput) (*request.Request, *medialive.DescribeInputSecurityGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeInputSecurityGroupRequest", arg0)
@@ -1239,13 +1290,13 @@ func (m *MockMediaLiveAPI) DescribeInputSecurityGroupRequest(arg0 *medialive.Des
 	return ret0, ret1
 }
 
-// DescribeInputSecurityGroupRequest indicates an expected call of DescribeInputSecurityGroupRequest
+// DescribeInputSecurityGroupRequest indicates an expected call of DescribeInputSecurityGroupRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeInputSecurityGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInputSecurityGroupRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeInputSecurityGroupRequest), arg0)
 }
 
-// DescribeInputSecurityGroupWithContext mocks base method
+// DescribeInputSecurityGroupWithContext mocks base method.
 func (m *MockMediaLiveAPI) DescribeInputSecurityGroupWithContext(arg0 context.Context, arg1 *medialive.DescribeInputSecurityGroupInput, arg2 ...request.Option) (*medialive.DescribeInputSecurityGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1258,14 +1309,14 @@ func (m *MockMediaLiveAPI) DescribeInputSecurityGroupWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DescribeInputSecurityGroupWithContext indicates an expected call of DescribeInputSecurityGroupWithContext
+// DescribeInputSecurityGroupWithContext indicates an expected call of DescribeInputSecurityGroupWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeInputSecurityGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInputSecurityGroupWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeInputSecurityGroupWithContext), varargs...)
 }
 
-// DescribeInputWithContext mocks base method
+// DescribeInputWithContext mocks base method.
 func (m *MockMediaLiveAPI) DescribeInputWithContext(arg0 context.Context, arg1 *medialive.DescribeInputInput, arg2 ...request.Option) (*medialive.DescribeInputOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1278,14 +1329,14 @@ func (m *MockMediaLiveAPI) DescribeInputWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DescribeInputWithContext indicates an expected call of DescribeInputWithContext
+// DescribeInputWithContext indicates an expected call of DescribeInputWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeInputWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeInputWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeInputWithContext), varargs...)
 }
 
-// DescribeMultiplex mocks base method
+// DescribeMultiplex mocks base method.
 func (m *MockMediaLiveAPI) DescribeMultiplex(arg0 *medialive.DescribeMultiplexInput) (*medialive.DescribeMultiplexOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeMultiplex", arg0)
@@ -1294,13 +1345,13 @@ func (m *MockMediaLiveAPI) DescribeMultiplex(arg0 *medialive.DescribeMultiplexIn
 	return ret0, ret1
 }
 
-// DescribeMultiplex indicates an expected call of DescribeMultiplex
+// DescribeMultiplex indicates an expected call of DescribeMultiplex.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeMultiplex(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeMultiplex", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeMultiplex), arg0)
 }
 
-// DescribeMultiplexProgram mocks base method
+// DescribeMultiplexProgram mocks base method.
 func (m *MockMediaLiveAPI) DescribeMultiplexProgram(arg0 *medialive.DescribeMultiplexProgramInput) (*medialive.DescribeMultiplexProgramOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeMultiplexProgram", arg0)
@@ -1309,13 +1360,13 @@ func (m *MockMediaLiveAPI) DescribeMultiplexProgram(arg0 *medialive.DescribeMult
 	return ret0, ret1
 }
 
-// DescribeMultiplexProgram indicates an expected call of DescribeMultiplexProgram
+// DescribeMultiplexProgram indicates an expected call of DescribeMultiplexProgram.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeMultiplexProgram(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeMultiplexProgram", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeMultiplexProgram), arg0)
 }
 
-// DescribeMultiplexProgramRequest mocks base method
+// DescribeMultiplexProgramRequest mocks base method.
 func (m *MockMediaLiveAPI) DescribeMultiplexProgramRequest(arg0 *medialive.DescribeMultiplexProgramInput) (*request.Request, *medialive.DescribeMultiplexProgramOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeMultiplexProgramRequest", arg0)
@@ -1324,13 +1375,13 @@ func (m *MockMediaLiveAPI) DescribeMultiplexProgramRequest(arg0 *medialive.Descr
 	return ret0, ret1
 }
 
-// DescribeMultiplexProgramRequest indicates an expected call of DescribeMultiplexProgramRequest
+// DescribeMultiplexProgramRequest indicates an expected call of DescribeMultiplexProgramRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeMultiplexProgramRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeMultiplexProgramRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeMultiplexProgramRequest), arg0)
 }
 
-// DescribeMultiplexProgramWithContext mocks base method
+// DescribeMultiplexProgramWithContext mocks base method.
 func (m *MockMediaLiveAPI) DescribeMultiplexProgramWithContext(arg0 context.Context, arg1 *medialive.DescribeMultiplexProgramInput, arg2 ...request.Option) (*medialive.DescribeMultiplexProgramOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1343,14 +1394,14 @@ func (m *MockMediaLiveAPI) DescribeMultiplexProgramWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DescribeMultiplexProgramWithContext indicates an expected call of DescribeMultiplexProgramWithContext
+// DescribeMultiplexProgramWithContext indicates an expected call of DescribeMultiplexProgramWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeMultiplexProgramWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeMultiplexProgramWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeMultiplexProgramWithContext), varargs...)
 }
 
-// DescribeMultiplexRequest mocks base method
+// DescribeMultiplexRequest mocks base method.
 func (m *MockMediaLiveAPI) DescribeMultiplexRequest(arg0 *medialive.DescribeMultiplexInput) (*request.Request, *medialive.DescribeMultiplexOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeMultiplexRequest", arg0)
@@ -1359,13 +1410,13 @@ func (m *MockMediaLiveAPI) DescribeMultiplexRequest(arg0 *medialive.DescribeMult
 	return ret0, ret1
 }
 
-// DescribeMultiplexRequest indicates an expected call of DescribeMultiplexRequest
+// DescribeMultiplexRequest indicates an expected call of DescribeMultiplexRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeMultiplexRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeMultiplexRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeMultiplexRequest), arg0)
 }
 
-// DescribeMultiplexWithContext mocks base method
+// DescribeMultiplexWithContext mocks base method.
 func (m *MockMediaLiveAPI) DescribeMultiplexWithContext(arg0 context.Context, arg1 *medialive.DescribeMultiplexInput, arg2 ...request.Option) (*medialive.DescribeMultiplexOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1378,14 +1429,14 @@ func (m *MockMediaLiveAPI) DescribeMultiplexWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DescribeMultiplexWithContext indicates an expected call of DescribeMultiplexWithContext
+// DescribeMultiplexWithContext indicates an expected call of DescribeMultiplexWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeMultiplexWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeMultiplexWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeMultiplexWithContext), varargs...)
 }
 
-// DescribeOffering mocks base method
+// DescribeOffering mocks base method.
 func (m *MockMediaLiveAPI) DescribeOffering(arg0 *medialive.DescribeOfferingInput) (*medialive.DescribeOfferingOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeOffering", arg0)
@@ -1394,13 +1445,13 @@ func (m *MockMediaLiveAPI) DescribeOffering(arg0 *medialive.DescribeOfferingInpu
 	return ret0, ret1
 }
 
-// DescribeOffering indicates an expected call of DescribeOffering
+// DescribeOffering indicates an expected call of DescribeOffering.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeOffering(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOffering", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeOffering), arg0)
 }
 
-// DescribeOfferingRequest mocks base method
+// DescribeOfferingRequest mocks base method.
 func (m *MockMediaLiveAPI) DescribeOfferingRequest(arg0 *medialive.DescribeOfferingInput) (*request.Request, *medialive.DescribeOfferingOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeOfferingRequest", arg0)
@@ -1409,13 +1460,13 @@ func (m *MockMediaLiveAPI) DescribeOfferingRequest(arg0 *medialive.DescribeOffer
 	return ret0, ret1
 }
 
-// DescribeOfferingRequest indicates an expected call of DescribeOfferingRequest
+// DescribeOfferingRequest indicates an expected call of DescribeOfferingRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeOfferingRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOfferingRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeOfferingRequest), arg0)
 }
 
-// DescribeOfferingWithContext mocks base method
+// DescribeOfferingWithContext mocks base method.
 func (m *MockMediaLiveAPI) DescribeOfferingWithContext(arg0 context.Context, arg1 *medialive.DescribeOfferingInput, arg2 ...request.Option) (*medialive.DescribeOfferingOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1428,14 +1479,14 @@ func (m *MockMediaLiveAPI) DescribeOfferingWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DescribeOfferingWithContext indicates an expected call of DescribeOfferingWithContext
+// DescribeOfferingWithContext indicates an expected call of DescribeOfferingWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeOfferingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOfferingWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeOfferingWithContext), varargs...)
 }
 
-// DescribeReservation mocks base method
+// DescribeReservation mocks base method.
 func (m *MockMediaLiveAPI) DescribeReservation(arg0 *medialive.DescribeReservationInput) (*medialive.DescribeReservationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeReservation", arg0)
@@ -1444,13 +1495,13 @@ func (m *MockMediaLiveAPI) DescribeReservation(arg0 *medialive.DescribeReservati
 	return ret0, ret1
 }
 
-// DescribeReservation indicates an expected call of DescribeReservation
+// DescribeReservation indicates an expected call of DescribeReservation.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeReservation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeReservation", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeReservation), arg0)
 }
 
-// DescribeReservationRequest mocks base method
+// DescribeReservationRequest mocks base method.
 func (m *MockMediaLiveAPI) DescribeReservationRequest(arg0 *medialive.DescribeReservationInput) (*request.Request, *medialive.DescribeReservationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeReservationRequest", arg0)
@@ -1459,13 +1510,13 @@ func (m *MockMediaLiveAPI) DescribeReservationRequest(arg0 *medialive.DescribeRe
 	return ret0, ret1
 }
 
-// DescribeReservationRequest indicates an expected call of DescribeReservationRequest
+// DescribeReservationRequest indicates an expected call of DescribeReservationRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeReservationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeReservationRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeReservationRequest), arg0)
 }
 
-// DescribeReservationWithContext mocks base method
+// DescribeReservationWithContext mocks base method.
 func (m *MockMediaLiveAPI) DescribeReservationWithContext(arg0 context.Context, arg1 *medialive.DescribeReservationInput, arg2 ...request.Option) (*medialive.DescribeReservationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1478,14 +1529,14 @@ func (m *MockMediaLiveAPI) DescribeReservationWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DescribeReservationWithContext indicates an expected call of DescribeReservationWithContext
+// DescribeReservationWithContext indicates an expected call of DescribeReservationWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeReservationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeReservationWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeReservationWithContext), varargs...)
 }
 
-// DescribeSchedule mocks base method
+// DescribeSchedule mocks base method.
 func (m *MockMediaLiveAPI) DescribeSchedule(arg0 *medialive.DescribeScheduleInput) (*medialive.DescribeScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSchedule", arg0)
@@ -1494,13 +1545,13 @@ func (m *MockMediaLiveAPI) DescribeSchedule(arg0 *medialive.DescribeScheduleInpu
 	return ret0, ret1
 }
 
-// DescribeSchedule indicates an expected call of DescribeSchedule
+// DescribeSchedule indicates an expected call of DescribeSchedule.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeSchedule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSchedule", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeSchedule), arg0)
 }
 
-// DescribeSchedulePages mocks base method
+// DescribeSchedulePages mocks base method.
 func (m *MockMediaLiveAPI) DescribeSchedulePages(arg0 *medialive.DescribeScheduleInput, arg1 func(*medialive.DescribeScheduleOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSchedulePages", arg0, arg1)
@@ -1508,13 +1559,13 @@ func (m *MockMediaLiveAPI) DescribeSchedulePages(arg0 *medialive.DescribeSchedul
 	return ret0
 }
 
-// DescribeSchedulePages indicates an expected call of DescribeSchedulePages
+// DescribeSchedulePages indicates an expected call of DescribeSchedulePages.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeSchedulePages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSchedulePages", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeSchedulePages), arg0, arg1)
 }
 
-// DescribeSchedulePagesWithContext mocks base method
+// DescribeSchedulePagesWithContext mocks base method.
 func (m *MockMediaLiveAPI) DescribeSchedulePagesWithContext(arg0 context.Context, arg1 *medialive.DescribeScheduleInput, arg2 func(*medialive.DescribeScheduleOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1526,14 +1577,14 @@ func (m *MockMediaLiveAPI) DescribeSchedulePagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// DescribeSchedulePagesWithContext indicates an expected call of DescribeSchedulePagesWithContext
+// DescribeSchedulePagesWithContext indicates an expected call of DescribeSchedulePagesWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeSchedulePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSchedulePagesWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeSchedulePagesWithContext), varargs...)
 }
 
-// DescribeScheduleRequest mocks base method
+// DescribeScheduleRequest mocks base method.
 func (m *MockMediaLiveAPI) DescribeScheduleRequest(arg0 *medialive.DescribeScheduleInput) (*request.Request, *medialive.DescribeScheduleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeScheduleRequest", arg0)
@@ -1542,13 +1593,13 @@ func (m *MockMediaLiveAPI) DescribeScheduleRequest(arg0 *medialive.DescribeSched
 	return ret0, ret1
 }
 
-// DescribeScheduleRequest indicates an expected call of DescribeScheduleRequest
+// DescribeScheduleRequest indicates an expected call of DescribeScheduleRequest.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeScheduleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeScheduleRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeScheduleRequest), arg0)
 }
 
-// DescribeScheduleWithContext mocks base method
+// DescribeScheduleWithContext mocks base method.
 func (m *MockMediaLiveAPI) DescribeScheduleWithContext(arg0 context.Context, arg1 *medialive.DescribeScheduleInput, arg2 ...request.Option) (*medialive.DescribeScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1561,14 +1612,14 @@ func (m *MockMediaLiveAPI) DescribeScheduleWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DescribeScheduleWithContext indicates an expected call of DescribeScheduleWithContext
+// DescribeScheduleWithContext indicates an expected call of DescribeScheduleWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) DescribeScheduleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeScheduleWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).DescribeScheduleWithContext), varargs...)
 }
 
-// ListChannels mocks base method
+// ListChannels mocks base method.
 func (m *MockMediaLiveAPI) ListChannels(arg0 *medialive.ListChannelsInput) (*medialive.ListChannelsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListChannels", arg0)
@@ -1577,13 +1628,13 @@ func (m *MockMediaLiveAPI) ListChannels(arg0 *medialive.ListChannelsInput) (*med
 	return ret0, ret1
 }
 
-// ListChannels indicates an expected call of ListChannels
+// ListChannels indicates an expected call of ListChannels.
 func (mr *MockMediaLiveAPIMockRecorder) ListChannels(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListChannels", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListChannels), arg0)
 }
 
-// ListChannelsPages mocks base method
+// ListChannelsPages mocks base method.
 func (m *MockMediaLiveAPI) ListChannelsPages(arg0 *medialive.ListChannelsInput, arg1 func(*medialive.ListChannelsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListChannelsPages", arg0, arg1)
@@ -1591,13 +1642,13 @@ func (m *MockMediaLiveAPI) ListChannelsPages(arg0 *medialive.ListChannelsInput, 
 	return ret0
 }
 
-// ListChannelsPages indicates an expected call of ListChannelsPages
+// ListChannelsPages indicates an expected call of ListChannelsPages.
 func (mr *MockMediaLiveAPIMockRecorder) ListChannelsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListChannelsPages", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListChannelsPages), arg0, arg1)
 }
 
-// ListChannelsPagesWithContext mocks base method
+// ListChannelsPagesWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListChannelsPagesWithContext(arg0 context.Context, arg1 *medialive.ListChannelsInput, arg2 func(*medialive.ListChannelsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1609,14 +1660,14 @@ func (m *MockMediaLiveAPI) ListChannelsPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// ListChannelsPagesWithContext indicates an expected call of ListChannelsPagesWithContext
+// ListChannelsPagesWithContext indicates an expected call of ListChannelsPagesWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListChannelsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListChannelsPagesWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListChannelsPagesWithContext), varargs...)
 }
 
-// ListChannelsRequest mocks base method
+// ListChannelsRequest mocks base method.
 func (m *MockMediaLiveAPI) ListChannelsRequest(arg0 *medialive.ListChannelsInput) (*request.Request, *medialive.ListChannelsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListChannelsRequest", arg0)
@@ -1625,13 +1676,13 @@ func (m *MockMediaLiveAPI) ListChannelsRequest(arg0 *medialive.ListChannelsInput
 	return ret0, ret1
 }
 
-// ListChannelsRequest indicates an expected call of ListChannelsRequest
+// ListChannelsRequest indicates an expected call of ListChannelsRequest.
 func (mr *MockMediaLiveAPIMockRecorder) ListChannelsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListChannelsRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListChannelsRequest), arg0)
 }
 
-// ListChannelsWithContext mocks base method
+// ListChannelsWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListChannelsWithContext(arg0 context.Context, arg1 *medialive.ListChannelsInput, arg2 ...request.Option) (*medialive.ListChannelsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1644,14 +1695,14 @@ func (m *MockMediaLiveAPI) ListChannelsWithContext(arg0 context.Context, arg1 *m
 	return ret0, ret1
 }
 
-// ListChannelsWithContext indicates an expected call of ListChannelsWithContext
+// ListChannelsWithContext indicates an expected call of ListChannelsWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListChannelsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListChannelsWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListChannelsWithContext), varargs...)
 }
 
-// ListInputDeviceTransfers mocks base method
+// ListInputDeviceTransfers mocks base method.
 func (m *MockMediaLiveAPI) ListInputDeviceTransfers(arg0 *medialive.ListInputDeviceTransfersInput) (*medialive.ListInputDeviceTransfersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInputDeviceTransfers", arg0)
@@ -1660,13 +1711,13 @@ func (m *MockMediaLiveAPI) ListInputDeviceTransfers(arg0 *medialive.ListInputDev
 	return ret0, ret1
 }
 
-// ListInputDeviceTransfers indicates an expected call of ListInputDeviceTransfers
+// ListInputDeviceTransfers indicates an expected call of ListInputDeviceTransfers.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputDeviceTransfers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputDeviceTransfers", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputDeviceTransfers), arg0)
 }
 
-// ListInputDeviceTransfersPages mocks base method
+// ListInputDeviceTransfersPages mocks base method.
 func (m *MockMediaLiveAPI) ListInputDeviceTransfersPages(arg0 *medialive.ListInputDeviceTransfersInput, arg1 func(*medialive.ListInputDeviceTransfersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInputDeviceTransfersPages", arg0, arg1)
@@ -1674,13 +1725,13 @@ func (m *MockMediaLiveAPI) ListInputDeviceTransfersPages(arg0 *medialive.ListInp
 	return ret0
 }
 
-// ListInputDeviceTransfersPages indicates an expected call of ListInputDeviceTransfersPages
+// ListInputDeviceTransfersPages indicates an expected call of ListInputDeviceTransfersPages.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputDeviceTransfersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputDeviceTransfersPages", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputDeviceTransfersPages), arg0, arg1)
 }
 
-// ListInputDeviceTransfersPagesWithContext mocks base method
+// ListInputDeviceTransfersPagesWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListInputDeviceTransfersPagesWithContext(arg0 context.Context, arg1 *medialive.ListInputDeviceTransfersInput, arg2 func(*medialive.ListInputDeviceTransfersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1692,14 +1743,14 @@ func (m *MockMediaLiveAPI) ListInputDeviceTransfersPagesWithContext(arg0 context
 	return ret0
 }
 
-// ListInputDeviceTransfersPagesWithContext indicates an expected call of ListInputDeviceTransfersPagesWithContext
+// ListInputDeviceTransfersPagesWithContext indicates an expected call of ListInputDeviceTransfersPagesWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputDeviceTransfersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputDeviceTransfersPagesWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputDeviceTransfersPagesWithContext), varargs...)
 }
 
-// ListInputDeviceTransfersRequest mocks base method
+// ListInputDeviceTransfersRequest mocks base method.
 func (m *MockMediaLiveAPI) ListInputDeviceTransfersRequest(arg0 *medialive.ListInputDeviceTransfersInput) (*request.Request, *medialive.ListInputDeviceTransfersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInputDeviceTransfersRequest", arg0)
@@ -1708,13 +1759,13 @@ func (m *MockMediaLiveAPI) ListInputDeviceTransfersRequest(arg0 *medialive.ListI
 	return ret0, ret1
 }
 
-// ListInputDeviceTransfersRequest indicates an expected call of ListInputDeviceTransfersRequest
+// ListInputDeviceTransfersRequest indicates an expected call of ListInputDeviceTransfersRequest.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputDeviceTransfersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputDeviceTransfersRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputDeviceTransfersRequest), arg0)
 }
 
-// ListInputDeviceTransfersWithContext mocks base method
+// ListInputDeviceTransfersWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListInputDeviceTransfersWithContext(arg0 context.Context, arg1 *medialive.ListInputDeviceTransfersInput, arg2 ...request.Option) (*medialive.ListInputDeviceTransfersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1727,14 +1778,14 @@ func (m *MockMediaLiveAPI) ListInputDeviceTransfersWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListInputDeviceTransfersWithContext indicates an expected call of ListInputDeviceTransfersWithContext
+// ListInputDeviceTransfersWithContext indicates an expected call of ListInputDeviceTransfersWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputDeviceTransfersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputDeviceTransfersWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputDeviceTransfersWithContext), varargs...)
 }
 
-// ListInputDevices mocks base method
+// ListInputDevices mocks base method.
 func (m *MockMediaLiveAPI) ListInputDevices(arg0 *medialive.ListInputDevicesInput) (*medialive.ListInputDevicesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInputDevices", arg0)
@@ -1743,13 +1794,13 @@ func (m *MockMediaLiveAPI) ListInputDevices(arg0 *medialive.ListInputDevicesInpu
 	return ret0, ret1
 }
 
-// ListInputDevices indicates an expected call of ListInputDevices
+// ListInputDevices indicates an expected call of ListInputDevices.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputDevices(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputDevices", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputDevices), arg0)
 }
 
-// ListInputDevicesPages mocks base method
+// ListInputDevicesPages mocks base method.
 func (m *MockMediaLiveAPI) ListInputDevicesPages(arg0 *medialive.ListInputDevicesInput, arg1 func(*medialive.ListInputDevicesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInputDevicesPages", arg0, arg1)
@@ -1757,13 +1808,13 @@ func (m *MockMediaLiveAPI) ListInputDevicesPages(arg0 *medialive.ListInputDevice
 	return ret0
 }
 
-// ListInputDevicesPages indicates an expected call of ListInputDevicesPages
+// ListInputDevicesPages indicates an expected call of ListInputDevicesPages.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputDevicesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputDevicesPages", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputDevicesPages), arg0, arg1)
 }
 
-// ListInputDevicesPagesWithContext mocks base method
+// ListInputDevicesPagesWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListInputDevicesPagesWithContext(arg0 context.Context, arg1 *medialive.ListInputDevicesInput, arg2 func(*medialive.ListInputDevicesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1775,14 +1826,14 @@ func (m *MockMediaLiveAPI) ListInputDevicesPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListInputDevicesPagesWithContext indicates an expected call of ListInputDevicesPagesWithContext
+// ListInputDevicesPagesWithContext indicates an expected call of ListInputDevicesPagesWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputDevicesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputDevicesPagesWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputDevicesPagesWithContext), varargs...)
 }
 
-// ListInputDevicesRequest mocks base method
+// ListInputDevicesRequest mocks base method.
 func (m *MockMediaLiveAPI) ListInputDevicesRequest(arg0 *medialive.ListInputDevicesInput) (*request.Request, *medialive.ListInputDevicesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInputDevicesRequest", arg0)
@@ -1791,13 +1842,13 @@ func (m *MockMediaLiveAPI) ListInputDevicesRequest(arg0 *medialive.ListInputDevi
 	return ret0, ret1
 }
 
-// ListInputDevicesRequest indicates an expected call of ListInputDevicesRequest
+// ListInputDevicesRequest indicates an expected call of ListInputDevicesRequest.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputDevicesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputDevicesRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputDevicesRequest), arg0)
 }
 
-// ListInputDevicesWithContext mocks base method
+// ListInputDevicesWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListInputDevicesWithContext(arg0 context.Context, arg1 *medialive.ListInputDevicesInput, arg2 ...request.Option) (*medialive.ListInputDevicesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1810,14 +1861,14 @@ func (m *MockMediaLiveAPI) ListInputDevicesWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListInputDevicesWithContext indicates an expected call of ListInputDevicesWithContext
+// ListInputDevicesWithContext indicates an expected call of ListInputDevicesWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputDevicesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputDevicesWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputDevicesWithContext), varargs...)
 }
 
-// ListInputSecurityGroups mocks base method
+// ListInputSecurityGroups mocks base method.
 func (m *MockMediaLiveAPI) ListInputSecurityGroups(arg0 *medialive.ListInputSecurityGroupsInput) (*medialive.ListInputSecurityGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInputSecurityGroups", arg0)
@@ -1826,13 +1877,13 @@ func (m *MockMediaLiveAPI) ListInputSecurityGroups(arg0 *medialive.ListInputSecu
 	return ret0, ret1
 }
 
-// ListInputSecurityGroups indicates an expected call of ListInputSecurityGroups
+// ListInputSecurityGroups indicates an expected call of ListInputSecurityGroups.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputSecurityGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputSecurityGroups", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputSecurityGroups), arg0)
 }
 
-// ListInputSecurityGroupsPages mocks base method
+// ListInputSecurityGroupsPages mocks base method.
 func (m *MockMediaLiveAPI) ListInputSecurityGroupsPages(arg0 *medialive.ListInputSecurityGroupsInput, arg1 func(*medialive.ListInputSecurityGroupsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInputSecurityGroupsPages", arg0, arg1)
@@ -1840,13 +1891,13 @@ func (m *MockMediaLiveAPI) ListInputSecurityGroupsPages(arg0 *medialive.ListInpu
 	return ret0
 }
 
-// ListInputSecurityGroupsPages indicates an expected call of ListInputSecurityGroupsPages
+// ListInputSecurityGroupsPages indicates an expected call of ListInputSecurityGroupsPages.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputSecurityGroupsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputSecurityGroupsPages", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputSecurityGroupsPages), arg0, arg1)
 }
 
-// ListInputSecurityGroupsPagesWithContext mocks base method
+// ListInputSecurityGroupsPagesWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListInputSecurityGroupsPagesWithContext(arg0 context.Context, arg1 *medialive.ListInputSecurityGroupsInput, arg2 func(*medialive.ListInputSecurityGroupsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1858,14 +1909,14 @@ func (m *MockMediaLiveAPI) ListInputSecurityGroupsPagesWithContext(arg0 context.
 	return ret0
 }
 
-// ListInputSecurityGroupsPagesWithContext indicates an expected call of ListInputSecurityGroupsPagesWithContext
+// ListInputSecurityGroupsPagesWithContext indicates an expected call of ListInputSecurityGroupsPagesWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputSecurityGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputSecurityGroupsPagesWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputSecurityGroupsPagesWithContext), varargs...)
 }
 
-// ListInputSecurityGroupsRequest mocks base method
+// ListInputSecurityGroupsRequest mocks base method.
 func (m *MockMediaLiveAPI) ListInputSecurityGroupsRequest(arg0 *medialive.ListInputSecurityGroupsInput) (*request.Request, *medialive.ListInputSecurityGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInputSecurityGroupsRequest", arg0)
@@ -1874,13 +1925,13 @@ func (m *MockMediaLiveAPI) ListInputSecurityGroupsRequest(arg0 *medialive.ListIn
 	return ret0, ret1
 }
 
-// ListInputSecurityGroupsRequest indicates an expected call of ListInputSecurityGroupsRequest
+// ListInputSecurityGroupsRequest indicates an expected call of ListInputSecurityGroupsRequest.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputSecurityGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputSecurityGroupsRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputSecurityGroupsRequest), arg0)
 }
 
-// ListInputSecurityGroupsWithContext mocks base method
+// ListInputSecurityGroupsWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListInputSecurityGroupsWithContext(arg0 context.Context, arg1 *medialive.ListInputSecurityGroupsInput, arg2 ...request.Option) (*medialive.ListInputSecurityGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1893,14 +1944,14 @@ func (m *MockMediaLiveAPI) ListInputSecurityGroupsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListInputSecurityGroupsWithContext indicates an expected call of ListInputSecurityGroupsWithContext
+// ListInputSecurityGroupsWithContext indicates an expected call of ListInputSecurityGroupsWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputSecurityGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputSecurityGroupsWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputSecurityGroupsWithContext), varargs...)
 }
 
-// ListInputs mocks base method
+// ListInputs mocks base method.
 func (m *MockMediaLiveAPI) ListInputs(arg0 *medialive.ListInputsInput) (*medialive.ListInputsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInputs", arg0)
@@ -1909,13 +1960,13 @@ func (m *MockMediaLiveAPI) ListInputs(arg0 *medialive.ListInputsInput) (*mediali
 	return ret0, ret1
 }
 
-// ListInputs indicates an expected call of ListInputs
+// ListInputs indicates an expected call of ListInputs.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputs", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputs), arg0)
 }
 
-// ListInputsPages mocks base method
+// ListInputsPages mocks base method.
 func (m *MockMediaLiveAPI) ListInputsPages(arg0 *medialive.ListInputsInput, arg1 func(*medialive.ListInputsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInputsPages", arg0, arg1)
@@ -1923,13 +1974,13 @@ func (m *MockMediaLiveAPI) ListInputsPages(arg0 *medialive.ListInputsInput, arg1
 	return ret0
 }
 
-// ListInputsPages indicates an expected call of ListInputsPages
+// ListInputsPages indicates an expected call of ListInputsPages.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputsPages", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputsPages), arg0, arg1)
 }
 
-// ListInputsPagesWithContext mocks base method
+// ListInputsPagesWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListInputsPagesWithContext(arg0 context.Context, arg1 *medialive.ListInputsInput, arg2 func(*medialive.ListInputsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1941,14 +1992,14 @@ func (m *MockMediaLiveAPI) ListInputsPagesWithContext(arg0 context.Context, arg1
 	return ret0
 }
 
-// ListInputsPagesWithContext indicates an expected call of ListInputsPagesWithContext
+// ListInputsPagesWithContext indicates an expected call of ListInputsPagesWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputsPagesWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputsPagesWithContext), varargs...)
 }
 
-// ListInputsRequest mocks base method
+// ListInputsRequest mocks base method.
 func (m *MockMediaLiveAPI) ListInputsRequest(arg0 *medialive.ListInputsInput) (*request.Request, *medialive.ListInputsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInputsRequest", arg0)
@@ -1957,13 +2008,13 @@ func (m *MockMediaLiveAPI) ListInputsRequest(arg0 *medialive.ListInputsInput) (*
 	return ret0, ret1
 }
 
-// ListInputsRequest indicates an expected call of ListInputsRequest
+// ListInputsRequest indicates an expected call of ListInputsRequest.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputsRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputsRequest), arg0)
 }
 
-// ListInputsWithContext mocks base method
+// ListInputsWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListInputsWithContext(arg0 context.Context, arg1 *medialive.ListInputsInput, arg2 ...request.Option) (*medialive.ListInputsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1976,14 +2027,14 @@ func (m *MockMediaLiveAPI) ListInputsWithContext(arg0 context.Context, arg1 *med
 	return ret0, ret1
 }
 
-// ListInputsWithContext indicates an expected call of ListInputsWithContext
+// ListInputsWithContext indicates an expected call of ListInputsWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListInputsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInputsWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListInputsWithContext), varargs...)
 }
 
-// ListMultiplexPrograms mocks base method
+// ListMultiplexPrograms mocks base method.
 func (m *MockMediaLiveAPI) ListMultiplexPrograms(arg0 *medialive.ListMultiplexProgramsInput) (*medialive.ListMultiplexProgramsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMultiplexPrograms", arg0)
@@ -1992,13 +2043,13 @@ func (m *MockMediaLiveAPI) ListMultiplexPrograms(arg0 *medialive.ListMultiplexPr
 	return ret0, ret1
 }
 
-// ListMultiplexPrograms indicates an expected call of ListMultiplexPrograms
+// ListMultiplexPrograms indicates an expected call of ListMultiplexPrograms.
 func (mr *MockMediaLiveAPIMockRecorder) ListMultiplexPrograms(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMultiplexPrograms", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListMultiplexPrograms), arg0)
 }
 
-// ListMultiplexProgramsPages mocks base method
+// ListMultiplexProgramsPages mocks base method.
 func (m *MockMediaLiveAPI) ListMultiplexProgramsPages(arg0 *medialive.ListMultiplexProgramsInput, arg1 func(*medialive.ListMultiplexProgramsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMultiplexProgramsPages", arg0, arg1)
@@ -2006,13 +2057,13 @@ func (m *MockMediaLiveAPI) ListMultiplexProgramsPages(arg0 *medialive.ListMultip
 	return ret0
 }
 
-// ListMultiplexProgramsPages indicates an expected call of ListMultiplexProgramsPages
+// ListMultiplexProgramsPages indicates an expected call of ListMultiplexProgramsPages.
 func (mr *MockMediaLiveAPIMockRecorder) ListMultiplexProgramsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMultiplexProgramsPages", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListMultiplexProgramsPages), arg0, arg1)
 }
 
-// ListMultiplexProgramsPagesWithContext mocks base method
+// ListMultiplexProgramsPagesWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListMultiplexProgramsPagesWithContext(arg0 context.Context, arg1 *medialive.ListMultiplexProgramsInput, arg2 func(*medialive.ListMultiplexProgramsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2024,14 +2075,14 @@ func (m *MockMediaLiveAPI) ListMultiplexProgramsPagesWithContext(arg0 context.Co
 	return ret0
 }
 
-// ListMultiplexProgramsPagesWithContext indicates an expected call of ListMultiplexProgramsPagesWithContext
+// ListMultiplexProgramsPagesWithContext indicates an expected call of ListMultiplexProgramsPagesWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListMultiplexProgramsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMultiplexProgramsPagesWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListMultiplexProgramsPagesWithContext), varargs...)
 }
 
-// ListMultiplexProgramsRequest mocks base method
+// ListMultiplexProgramsRequest mocks base method.
 func (m *MockMediaLiveAPI) ListMultiplexProgramsRequest(arg0 *medialive.ListMultiplexProgramsInput) (*request.Request, *medialive.ListMultiplexProgramsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMultiplexProgramsRequest", arg0)
@@ -2040,13 +2091,13 @@ func (m *MockMediaLiveAPI) ListMultiplexProgramsRequest(arg0 *medialive.ListMult
 	return ret0, ret1
 }
 
-// ListMultiplexProgramsRequest indicates an expected call of ListMultiplexProgramsRequest
+// ListMultiplexProgramsRequest indicates an expected call of ListMultiplexProgramsRequest.
 func (mr *MockMediaLiveAPIMockRecorder) ListMultiplexProgramsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMultiplexProgramsRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListMultiplexProgramsRequest), arg0)
 }
 
-// ListMultiplexProgramsWithContext mocks base method
+// ListMultiplexProgramsWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListMultiplexProgramsWithContext(arg0 context.Context, arg1 *medialive.ListMultiplexProgramsInput, arg2 ...request.Option) (*medialive.ListMultiplexProgramsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2059,14 +2110,14 @@ func (m *MockMediaLiveAPI) ListMultiplexProgramsWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListMultiplexProgramsWithContext indicates an expected call of ListMultiplexProgramsWithContext
+// ListMultiplexProgramsWithContext indicates an expected call of ListMultiplexProgramsWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListMultiplexProgramsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMultiplexProgramsWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListMultiplexProgramsWithContext), varargs...)
 }
 
-// ListMultiplexes mocks base method
+// ListMultiplexes mocks base method.
 func (m *MockMediaLiveAPI) ListMultiplexes(arg0 *medialive.ListMultiplexesInput) (*medialive.ListMultiplexesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMultiplexes", arg0)
@@ -2075,13 +2126,13 @@ func (m *MockMediaLiveAPI) ListMultiplexes(arg0 *medialive.ListMultiplexesInput)
 	return ret0, ret1
 }
 
-// ListMultiplexes indicates an expected call of ListMultiplexes
+// ListMultiplexes indicates an expected call of ListMultiplexes.
 func (mr *MockMediaLiveAPIMockRecorder) ListMultiplexes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMultiplexes", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListMultiplexes), arg0)
 }
 
-// ListMultiplexesPages mocks base method
+// ListMultiplexesPages mocks base method.
 func (m *MockMediaLiveAPI) ListMultiplexesPages(arg0 *medialive.ListMultiplexesInput, arg1 func(*medialive.ListMultiplexesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMultiplexesPages", arg0, arg1)
@@ -2089,13 +2140,13 @@ func (m *MockMediaLiveAPI) ListMultiplexesPages(arg0 *medialive.ListMultiplexesI
 	return ret0
 }
 
-// ListMultiplexesPages indicates an expected call of ListMultiplexesPages
+// ListMultiplexesPages indicates an expected call of ListMultiplexesPages.
 func (mr *MockMediaLiveAPIMockRecorder) ListMultiplexesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMultiplexesPages", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListMultiplexesPages), arg0, arg1)
 }
 
-// ListMultiplexesPagesWithContext mocks base method
+// ListMultiplexesPagesWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListMultiplexesPagesWithContext(arg0 context.Context, arg1 *medialive.ListMultiplexesInput, arg2 func(*medialive.ListMultiplexesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2107,14 +2158,14 @@ func (m *MockMediaLiveAPI) ListMultiplexesPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListMultiplexesPagesWithContext indicates an expected call of ListMultiplexesPagesWithContext
+// ListMultiplexesPagesWithContext indicates an expected call of ListMultiplexesPagesWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListMultiplexesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMultiplexesPagesWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListMultiplexesPagesWithContext), varargs...)
 }
 
-// ListMultiplexesRequest mocks base method
+// ListMultiplexesRequest mocks base method.
 func (m *MockMediaLiveAPI) ListMultiplexesRequest(arg0 *medialive.ListMultiplexesInput) (*request.Request, *medialive.ListMultiplexesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMultiplexesRequest", arg0)
@@ -2123,13 +2174,13 @@ func (m *MockMediaLiveAPI) ListMultiplexesRequest(arg0 *medialive.ListMultiplexe
 	return ret0, ret1
 }
 
-// ListMultiplexesRequest indicates an expected call of ListMultiplexesRequest
+// ListMultiplexesRequest indicates an expected call of ListMultiplexesRequest.
 func (mr *MockMediaLiveAPIMockRecorder) ListMultiplexesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMultiplexesRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListMultiplexesRequest), arg0)
 }
 
-// ListMultiplexesWithContext mocks base method
+// ListMultiplexesWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListMultiplexesWithContext(arg0 context.Context, arg1 *medialive.ListMultiplexesInput, arg2 ...request.Option) (*medialive.ListMultiplexesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2142,14 +2193,14 @@ func (m *MockMediaLiveAPI) ListMultiplexesWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListMultiplexesWithContext indicates an expected call of ListMultiplexesWithContext
+// ListMultiplexesWithContext indicates an expected call of ListMultiplexesWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListMultiplexesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMultiplexesWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListMultiplexesWithContext), varargs...)
 }
 
-// ListOfferings mocks base method
+// ListOfferings mocks base method.
 func (m *MockMediaLiveAPI) ListOfferings(arg0 *medialive.ListOfferingsInput) (*medialive.ListOfferingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListOfferings", arg0)
@@ -2158,13 +2209,13 @@ func (m *MockMediaLiveAPI) ListOfferings(arg0 *medialive.ListOfferingsInput) (*m
 	return ret0, ret1
 }
 
-// ListOfferings indicates an expected call of ListOfferings
+// ListOfferings indicates an expected call of ListOfferings.
 func (mr *MockMediaLiveAPIMockRecorder) ListOfferings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOfferings", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListOfferings), arg0)
 }
 
-// ListOfferingsPages mocks base method
+// ListOfferingsPages mocks base method.
 func (m *MockMediaLiveAPI) ListOfferingsPages(arg0 *medialive.ListOfferingsInput, arg1 func(*medialive.ListOfferingsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListOfferingsPages", arg0, arg1)
@@ -2172,13 +2223,13 @@ func (m *MockMediaLiveAPI) ListOfferingsPages(arg0 *medialive.ListOfferingsInput
 	return ret0
 }
 
-// ListOfferingsPages indicates an expected call of ListOfferingsPages
+// ListOfferingsPages indicates an expected call of ListOfferingsPages.
 func (mr *MockMediaLiveAPIMockRecorder) ListOfferingsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOfferingsPages", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListOfferingsPages), arg0, arg1)
 }
 
-// ListOfferingsPagesWithContext mocks base method
+// ListOfferingsPagesWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListOfferingsPagesWithContext(arg0 context.Context, arg1 *medialive.ListOfferingsInput, arg2 func(*medialive.ListOfferingsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2190,14 +2241,14 @@ func (m *MockMediaLiveAPI) ListOfferingsPagesWithContext(arg0 context.Context, a
 	return ret0
 }
 
-// ListOfferingsPagesWithContext indicates an expected call of ListOfferingsPagesWithContext
+// ListOfferingsPagesWithContext indicates an expected call of ListOfferingsPagesWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListOfferingsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOfferingsPagesWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListOfferingsPagesWithContext), varargs...)
 }
 
-// ListOfferingsRequest mocks base method
+// ListOfferingsRequest mocks base method.
 func (m *MockMediaLiveAPI) ListOfferingsRequest(arg0 *medialive.ListOfferingsInput) (*request.Request, *medialive.ListOfferingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListOfferingsRequest", arg0)
@@ -2206,13 +2257,13 @@ func (m *MockMediaLiveAPI) ListOfferingsRequest(arg0 *medialive.ListOfferingsInp
 	return ret0, ret1
 }
 
-// ListOfferingsRequest indicates an expected call of ListOfferingsRequest
+// ListOfferingsRequest indicates an expected call of ListOfferingsRequest.
 func (mr *MockMediaLiveAPIMockRecorder) ListOfferingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOfferingsRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListOfferingsRequest), arg0)
 }
 
-// ListOfferingsWithContext mocks base method
+// ListOfferingsWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListOfferingsWithContext(arg0 context.Context, arg1 *medialive.ListOfferingsInput, arg2 ...request.Option) (*medialive.ListOfferingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2225,14 +2276,14 @@ func (m *MockMediaLiveAPI) ListOfferingsWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ListOfferingsWithContext indicates an expected call of ListOfferingsWithContext
+// ListOfferingsWithContext indicates an expected call of ListOfferingsWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListOfferingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOfferingsWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListOfferingsWithContext), varargs...)
 }
 
-// ListReservations mocks base method
+// ListReservations mocks base method.
 func (m *MockMediaLiveAPI) ListReservations(arg0 *medialive.ListReservationsInput) (*medialive.ListReservationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReservations", arg0)
@@ -2241,13 +2292,13 @@ func (m *MockMediaLiveAPI) ListReservations(arg0 *medialive.ListReservationsInpu
 	return ret0, ret1
 }
 
-// ListReservations indicates an expected call of ListReservations
+// ListReservations indicates an expected call of ListReservations.
 func (mr *MockMediaLiveAPIMockRecorder) ListReservations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReservations", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListReservations), arg0)
 }
 
-// ListReservationsPages mocks base method
+// ListReservationsPages mocks base method.
 func (m *MockMediaLiveAPI) ListReservationsPages(arg0 *medialive.ListReservationsInput, arg1 func(*medialive.ListReservationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReservationsPages", arg0, arg1)
@@ -2255,13 +2306,13 @@ func (m *MockMediaLiveAPI) ListReservationsPages(arg0 *medialive.ListReservation
 	return ret0
 }
 
-// ListReservationsPages indicates an expected call of ListReservationsPages
+// ListReservationsPages indicates an expected call of ListReservationsPages.
 func (mr *MockMediaLiveAPIMockRecorder) ListReservationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReservationsPages", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListReservationsPages), arg0, arg1)
 }
 
-// ListReservationsPagesWithContext mocks base method
+// ListReservationsPagesWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListReservationsPagesWithContext(arg0 context.Context, arg1 *medialive.ListReservationsInput, arg2 func(*medialive.ListReservationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2273,14 +2324,14 @@ func (m *MockMediaLiveAPI) ListReservationsPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListReservationsPagesWithContext indicates an expected call of ListReservationsPagesWithContext
+// ListReservationsPagesWithContext indicates an expected call of ListReservationsPagesWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListReservationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReservationsPagesWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListReservationsPagesWithContext), varargs...)
 }
 
-// ListReservationsRequest mocks base method
+// ListReservationsRequest mocks base method.
 func (m *MockMediaLiveAPI) ListReservationsRequest(arg0 *medialive.ListReservationsInput) (*request.Request, *medialive.ListReservationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListReservationsRequest", arg0)
@@ -2289,13 +2340,13 @@ func (m *MockMediaLiveAPI) ListReservationsRequest(arg0 *medialive.ListReservati
 	return ret0, ret1
 }
 
-// ListReservationsRequest indicates an expected call of ListReservationsRequest
+// ListReservationsRequest indicates an expected call of ListReservationsRequest.
 func (mr *MockMediaLiveAPIMockRecorder) ListReservationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReservationsRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListReservationsRequest), arg0)
 }
 
-// ListReservationsWithContext mocks base method
+// ListReservationsWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListReservationsWithContext(arg0 context.Context, arg1 *medialive.ListReservationsInput, arg2 ...request.Option) (*medialive.ListReservationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2308,14 +2359,14 @@ func (m *MockMediaLiveAPI) ListReservationsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListReservationsWithContext indicates an expected call of ListReservationsWithContext
+// ListReservationsWithContext indicates an expected call of ListReservationsWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListReservationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListReservationsWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListReservationsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockMediaLiveAPI) ListTagsForResource(arg0 *medialive.ListTagsForResourceInput) (*medialive.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -2324,13 +2375,13 @@ func (m *MockMediaLiveAPI) ListTagsForResource(arg0 *medialive.ListTagsForResour
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockMediaLiveAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockMediaLiveAPI) ListTagsForResourceRequest(arg0 *medialive.ListTagsForResourceInput) (*request.Request, *medialive.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -2339,13 +2390,13 @@ func (m *MockMediaLiveAPI) ListTagsForResourceRequest(arg0 *medialive.ListTagsFo
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockMediaLiveAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockMediaLiveAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *medialive.ListTagsForResourceInput, arg2 ...request.Option) (*medialive.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2358,14 +2409,14 @@ func (m *MockMediaLiveAPI) ListTagsForResourceWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PurchaseOffering mocks base method
+// PurchaseOffering mocks base method.
 func (m *MockMediaLiveAPI) PurchaseOffering(arg0 *medialive.PurchaseOfferingInput) (*medialive.PurchaseOfferingOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PurchaseOffering", arg0)
@@ -2374,13 +2425,13 @@ func (m *MockMediaLiveAPI) PurchaseOffering(arg0 *medialive.PurchaseOfferingInpu
 	return ret0, ret1
 }
 
-// PurchaseOffering indicates an expected call of PurchaseOffering
+// PurchaseOffering indicates an expected call of PurchaseOffering.
 func (mr *MockMediaLiveAPIMockRecorder) PurchaseOffering(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PurchaseOffering", reflect.TypeOf((*MockMediaLiveAPI)(nil).PurchaseOffering), arg0)
 }
 
-// PurchaseOfferingRequest mocks base method
+// PurchaseOfferingRequest mocks base method.
 func (m *MockMediaLiveAPI) PurchaseOfferingRequest(arg0 *medialive.PurchaseOfferingInput) (*request.Request, *medialive.PurchaseOfferingOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PurchaseOfferingRequest", arg0)
@@ -2389,13 +2440,13 @@ func (m *MockMediaLiveAPI) PurchaseOfferingRequest(arg0 *medialive.PurchaseOffer
 	return ret0, ret1
 }
 
-// PurchaseOfferingRequest indicates an expected call of PurchaseOfferingRequest
+// PurchaseOfferingRequest indicates an expected call of PurchaseOfferingRequest.
 func (mr *MockMediaLiveAPIMockRecorder) PurchaseOfferingRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PurchaseOfferingRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).PurchaseOfferingRequest), arg0)
 }
 
-// PurchaseOfferingWithContext mocks base method
+// PurchaseOfferingWithContext mocks base method.
 func (m *MockMediaLiveAPI) PurchaseOfferingWithContext(arg0 context.Context, arg1 *medialive.PurchaseOfferingInput, arg2 ...request.Option) (*medialive.PurchaseOfferingOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2408,14 +2459,14 @@ func (m *MockMediaLiveAPI) PurchaseOfferingWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// PurchaseOfferingWithContext indicates an expected call of PurchaseOfferingWithContext
+// PurchaseOfferingWithContext indicates an expected call of PurchaseOfferingWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) PurchaseOfferingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PurchaseOfferingWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).PurchaseOfferingWithContext), varargs...)
 }
 
-// RejectInputDeviceTransfer mocks base method
+// RejectInputDeviceTransfer mocks base method.
 func (m *MockMediaLiveAPI) RejectInputDeviceTransfer(arg0 *medialive.RejectInputDeviceTransferInput) (*medialive.RejectInputDeviceTransferOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RejectInputDeviceTransfer", arg0)
@@ -2424,13 +2475,13 @@ func (m *MockMediaLiveAPI) RejectInputDeviceTransfer(arg0 *medialive.RejectInput
 	return ret0, ret1
 }
 
-// RejectInputDeviceTransfer indicates an expected call of RejectInputDeviceTransfer
+// RejectInputDeviceTransfer indicates an expected call of RejectInputDeviceTransfer.
 func (mr *MockMediaLiveAPIMockRecorder) RejectInputDeviceTransfer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RejectInputDeviceTransfer", reflect.TypeOf((*MockMediaLiveAPI)(nil).RejectInputDeviceTransfer), arg0)
 }
 
-// RejectInputDeviceTransferRequest mocks base method
+// RejectInputDeviceTransferRequest mocks base method.
 func (m *MockMediaLiveAPI) RejectInputDeviceTransferRequest(arg0 *medialive.RejectInputDeviceTransferInput) (*request.Request, *medialive.RejectInputDeviceTransferOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RejectInputDeviceTransferRequest", arg0)
@@ -2439,13 +2490,13 @@ func (m *MockMediaLiveAPI) RejectInputDeviceTransferRequest(arg0 *medialive.Reje
 	return ret0, ret1
 }
 
-// RejectInputDeviceTransferRequest indicates an expected call of RejectInputDeviceTransferRequest
+// RejectInputDeviceTransferRequest indicates an expected call of RejectInputDeviceTransferRequest.
 func (mr *MockMediaLiveAPIMockRecorder) RejectInputDeviceTransferRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RejectInputDeviceTransferRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).RejectInputDeviceTransferRequest), arg0)
 }
 
-// RejectInputDeviceTransferWithContext mocks base method
+// RejectInputDeviceTransferWithContext mocks base method.
 func (m *MockMediaLiveAPI) RejectInputDeviceTransferWithContext(arg0 context.Context, arg1 *medialive.RejectInputDeviceTransferInput, arg2 ...request.Option) (*medialive.RejectInputDeviceTransferOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2458,14 +2509,14 @@ func (m *MockMediaLiveAPI) RejectInputDeviceTransferWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// RejectInputDeviceTransferWithContext indicates an expected call of RejectInputDeviceTransferWithContext
+// RejectInputDeviceTransferWithContext indicates an expected call of RejectInputDeviceTransferWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) RejectInputDeviceTransferWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RejectInputDeviceTransferWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).RejectInputDeviceTransferWithContext), varargs...)
 }
 
-// StartChannel mocks base method
+// StartChannel mocks base method.
 func (m *MockMediaLiveAPI) StartChannel(arg0 *medialive.StartChannelInput) (*medialive.StartChannelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartChannel", arg0)
@@ -2474,13 +2525,13 @@ func (m *MockMediaLiveAPI) StartChannel(arg0 *medialive.StartChannelInput) (*med
 	return ret0, ret1
 }
 
-// StartChannel indicates an expected call of StartChannel
+// StartChannel indicates an expected call of StartChannel.
 func (mr *MockMediaLiveAPIMockRecorder) StartChannel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartChannel", reflect.TypeOf((*MockMediaLiveAPI)(nil).StartChannel), arg0)
 }
 
-// StartChannelRequest mocks base method
+// StartChannelRequest mocks base method.
 func (m *MockMediaLiveAPI) StartChannelRequest(arg0 *medialive.StartChannelInput) (*request.Request, *medialive.StartChannelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartChannelRequest", arg0)
@@ -2489,13 +2540,13 @@ func (m *MockMediaLiveAPI) StartChannelRequest(arg0 *medialive.StartChannelInput
 	return ret0, ret1
 }
 
-// StartChannelRequest indicates an expected call of StartChannelRequest
+// StartChannelRequest indicates an expected call of StartChannelRequest.
 func (mr *MockMediaLiveAPIMockRecorder) StartChannelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartChannelRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).StartChannelRequest), arg0)
 }
 
-// StartChannelWithContext mocks base method
+// StartChannelWithContext mocks base method.
 func (m *MockMediaLiveAPI) StartChannelWithContext(arg0 context.Context, arg1 *medialive.StartChannelInput, arg2 ...request.Option) (*medialive.StartChannelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2508,14 +2559,14 @@ func (m *MockMediaLiveAPI) StartChannelWithContext(arg0 context.Context, arg1 *m
 	return ret0, ret1
 }
 
-// StartChannelWithContext indicates an expected call of StartChannelWithContext
+// StartChannelWithContext indicates an expected call of StartChannelWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) StartChannelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartChannelWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).StartChannelWithContext), varargs...)
 }
 
-// StartMultiplex mocks base method
+// StartMultiplex mocks base method.
 func (m *MockMediaLiveAPI) StartMultiplex(arg0 *medialive.StartMultiplexInput) (*medialive.StartMultiplexOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartMultiplex", arg0)
@@ -2524,13 +2575,13 @@ func (m *MockMediaLiveAPI) StartMultiplex(arg0 *medialive.StartMultiplexInput) (
 	return ret0, ret1
 }
 
-// StartMultiplex indicates an expected call of StartMultiplex
+// StartMultiplex indicates an expected call of StartMultiplex.
 func (mr *MockMediaLiveAPIMockRecorder) StartMultiplex(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMultiplex", reflect.TypeOf((*MockMediaLiveAPI)(nil).StartMultiplex), arg0)
 }
 
-// StartMultiplexRequest mocks base method
+// StartMultiplexRequest mocks base method.
 func (m *MockMediaLiveAPI) StartMultiplexRequest(arg0 *medialive.StartMultiplexInput) (*request.Request, *medialive.StartMultiplexOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartMultiplexRequest", arg0)
@@ -2539,13 +2590,13 @@ func (m *MockMediaLiveAPI) StartMultiplexRequest(arg0 *medialive.StartMultiplexI
 	return ret0, ret1
 }
 
-// StartMultiplexRequest indicates an expected call of StartMultiplexRequest
+// StartMultiplexRequest indicates an expected call of StartMultiplexRequest.
 func (mr *MockMediaLiveAPIMockRecorder) StartMultiplexRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMultiplexRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).StartMultiplexRequest), arg0)
 }
 
-// StartMultiplexWithContext mocks base method
+// StartMultiplexWithContext mocks base method.
 func (m *MockMediaLiveAPI) StartMultiplexWithContext(arg0 context.Context, arg1 *medialive.StartMultiplexInput, arg2 ...request.Option) (*medialive.StartMultiplexOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2558,14 +2609,14 @@ func (m *MockMediaLiveAPI) StartMultiplexWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// StartMultiplexWithContext indicates an expected call of StartMultiplexWithContext
+// StartMultiplexWithContext indicates an expected call of StartMultiplexWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) StartMultiplexWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMultiplexWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).StartMultiplexWithContext), varargs...)
 }
 
-// StopChannel mocks base method
+// StopChannel mocks base method.
 func (m *MockMediaLiveAPI) StopChannel(arg0 *medialive.StopChannelInput) (*medialive.StopChannelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopChannel", arg0)
@@ -2574,13 +2625,13 @@ func (m *MockMediaLiveAPI) StopChannel(arg0 *medialive.StopChannelInput) (*media
 	return ret0, ret1
 }
 
-// StopChannel indicates an expected call of StopChannel
+// StopChannel indicates an expected call of StopChannel.
 func (mr *MockMediaLiveAPIMockRecorder) StopChannel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopChannel", reflect.TypeOf((*MockMediaLiveAPI)(nil).StopChannel), arg0)
 }
 
-// StopChannelRequest mocks base method
+// StopChannelRequest mocks base method.
 func (m *MockMediaLiveAPI) StopChannelRequest(arg0 *medialive.StopChannelInput) (*request.Request, *medialive.StopChannelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopChannelRequest", arg0)
@@ -2589,13 +2640,13 @@ func (m *MockMediaLiveAPI) StopChannelRequest(arg0 *medialive.StopChannelInput) 
 	return ret0, ret1
 }
 
-// StopChannelRequest indicates an expected call of StopChannelRequest
+// StopChannelRequest indicates an expected call of StopChannelRequest.
 func (mr *MockMediaLiveAPIMockRecorder) StopChannelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopChannelRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).StopChannelRequest), arg0)
 }
 
-// StopChannelWithContext mocks base method
+// StopChannelWithContext mocks base method.
 func (m *MockMediaLiveAPI) StopChannelWithContext(arg0 context.Context, arg1 *medialive.StopChannelInput, arg2 ...request.Option) (*medialive.StopChannelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2608,14 +2659,14 @@ func (m *MockMediaLiveAPI) StopChannelWithContext(arg0 context.Context, arg1 *me
 	return ret0, ret1
 }
 
-// StopChannelWithContext indicates an expected call of StopChannelWithContext
+// StopChannelWithContext indicates an expected call of StopChannelWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) StopChannelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopChannelWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).StopChannelWithContext), varargs...)
 }
 
-// StopMultiplex mocks base method
+// StopMultiplex mocks base method.
 func (m *MockMediaLiveAPI) StopMultiplex(arg0 *medialive.StopMultiplexInput) (*medialive.StopMultiplexOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopMultiplex", arg0)
@@ -2624,13 +2675,13 @@ func (m *MockMediaLiveAPI) StopMultiplex(arg0 *medialive.StopMultiplexInput) (*m
 	return ret0, ret1
 }
 
-// StopMultiplex indicates an expected call of StopMultiplex
+// StopMultiplex indicates an expected call of StopMultiplex.
 func (mr *MockMediaLiveAPIMockRecorder) StopMultiplex(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopMultiplex", reflect.TypeOf((*MockMediaLiveAPI)(nil).StopMultiplex), arg0)
 }
 
-// StopMultiplexRequest mocks base method
+// StopMultiplexRequest mocks base method.
 func (m *MockMediaLiveAPI) StopMultiplexRequest(arg0 *medialive.StopMultiplexInput) (*request.Request, *medialive.StopMultiplexOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopMultiplexRequest", arg0)
@@ -2639,13 +2690,13 @@ func (m *MockMediaLiveAPI) StopMultiplexRequest(arg0 *medialive.StopMultiplexInp
 	return ret0, ret1
 }
 
-// StopMultiplexRequest indicates an expected call of StopMultiplexRequest
+// StopMultiplexRequest indicates an expected call of StopMultiplexRequest.
 func (mr *MockMediaLiveAPIMockRecorder) StopMultiplexRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopMultiplexRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).StopMultiplexRequest), arg0)
 }
 
-// StopMultiplexWithContext mocks base method
+// StopMultiplexWithContext mocks base method.
 func (m *MockMediaLiveAPI) StopMultiplexWithContext(arg0 context.Context, arg1 *medialive.StopMultiplexInput, arg2 ...request.Option) (*medialive.StopMultiplexOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2658,14 +2709,14 @@ func (m *MockMediaLiveAPI) StopMultiplexWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// StopMultiplexWithContext indicates an expected call of StopMultiplexWithContext
+// StopMultiplexWithContext indicates an expected call of StopMultiplexWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) StopMultiplexWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopMultiplexWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).StopMultiplexWithContext), varargs...)
 }
 
-// TransferInputDevice mocks base method
+// TransferInputDevice mocks base method.
 func (m *MockMediaLiveAPI) TransferInputDevice(arg0 *medialive.TransferInputDeviceInput) (*medialive.TransferInputDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TransferInputDevice", arg0)
@@ -2674,13 +2725,13 @@ func (m *MockMediaLiveAPI) TransferInputDevice(arg0 *medialive.TransferInputDevi
 	return ret0, ret1
 }
 
-// TransferInputDevice indicates an expected call of TransferInputDevice
+// TransferInputDevice indicates an expected call of TransferInputDevice.
 func (mr *MockMediaLiveAPIMockRecorder) TransferInputDevice(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TransferInputDevice", reflect.TypeOf((*MockMediaLiveAPI)(nil).TransferInputDevice), arg0)
 }
 
-// TransferInputDeviceRequest mocks base method
+// TransferInputDeviceRequest mocks base method.
 func (m *MockMediaLiveAPI) TransferInputDeviceRequest(arg0 *medialive.TransferInputDeviceInput) (*request.Request, *medialive.TransferInputDeviceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TransferInputDeviceRequest", arg0)
@@ -2689,13 +2740,13 @@ func (m *MockMediaLiveAPI) TransferInputDeviceRequest(arg0 *medialive.TransferIn
 	return ret0, ret1
 }
 
-// TransferInputDeviceRequest indicates an expected call of TransferInputDeviceRequest
+// TransferInputDeviceRequest indicates an expected call of TransferInputDeviceRequest.
 func (mr *MockMediaLiveAPIMockRecorder) TransferInputDeviceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TransferInputDeviceRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).TransferInputDeviceRequest), arg0)
 }
 
-// TransferInputDeviceWithContext mocks base method
+// TransferInputDeviceWithContext mocks base method.
 func (m *MockMediaLiveAPI) TransferInputDeviceWithContext(arg0 context.Context, arg1 *medialive.TransferInputDeviceInput, arg2 ...request.Option) (*medialive.TransferInputDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2708,14 +2759,14 @@ func (m *MockMediaLiveAPI) TransferInputDeviceWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// TransferInputDeviceWithContext indicates an expected call of TransferInputDeviceWithContext
+// TransferInputDeviceWithContext indicates an expected call of TransferInputDeviceWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) TransferInputDeviceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TransferInputDeviceWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).TransferInputDeviceWithContext), varargs...)
 }
 
-// UpdateChannel mocks base method
+// UpdateChannel mocks base method.
 func (m *MockMediaLiveAPI) UpdateChannel(arg0 *medialive.UpdateChannelInput) (*medialive.UpdateChannelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateChannel", arg0)
@@ -2724,13 +2775,13 @@ func (m *MockMediaLiveAPI) UpdateChannel(arg0 *medialive.UpdateChannelInput) (*m
 	return ret0, ret1
 }
 
-// UpdateChannel indicates an expected call of UpdateChannel
+// UpdateChannel indicates an expected call of UpdateChannel.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateChannel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateChannel", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateChannel), arg0)
 }
 
-// UpdateChannelClass mocks base method
+// UpdateChannelClass mocks base method.
 func (m *MockMediaLiveAPI) UpdateChannelClass(arg0 *medialive.UpdateChannelClassInput) (*medialive.UpdateChannelClassOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateChannelClass", arg0)
@@ -2739,13 +2790,13 @@ func (m *MockMediaLiveAPI) UpdateChannelClass(arg0 *medialive.UpdateChannelClass
 	return ret0, ret1
 }
 
-// UpdateChannelClass indicates an expected call of UpdateChannelClass
+// UpdateChannelClass indicates an expected call of UpdateChannelClass.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateChannelClass(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateChannelClass", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateChannelClass), arg0)
 }
 
-// UpdateChannelClassRequest mocks base method
+// UpdateChannelClassRequest mocks base method.
 func (m *MockMediaLiveAPI) UpdateChannelClassRequest(arg0 *medialive.UpdateChannelClassInput) (*request.Request, *medialive.UpdateChannelClassOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateChannelClassRequest", arg0)
@@ -2754,13 +2805,13 @@ func (m *MockMediaLiveAPI) UpdateChannelClassRequest(arg0 *medialive.UpdateChann
 	return ret0, ret1
 }
 
-// UpdateChannelClassRequest indicates an expected call of UpdateChannelClassRequest
+// UpdateChannelClassRequest indicates an expected call of UpdateChannelClassRequest.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateChannelClassRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateChannelClassRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateChannelClassRequest), arg0)
 }
 
-// UpdateChannelClassWithContext mocks base method
+// UpdateChannelClassWithContext mocks base method.
 func (m *MockMediaLiveAPI) UpdateChannelClassWithContext(arg0 context.Context, arg1 *medialive.UpdateChannelClassInput, arg2 ...request.Option) (*medialive.UpdateChannelClassOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2773,14 +2824,14 @@ func (m *MockMediaLiveAPI) UpdateChannelClassWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UpdateChannelClassWithContext indicates an expected call of UpdateChannelClassWithContext
+// UpdateChannelClassWithContext indicates an expected call of UpdateChannelClassWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateChannelClassWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateChannelClassWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateChannelClassWithContext), varargs...)
 }
 
-// UpdateChannelRequest mocks base method
+// UpdateChannelRequest mocks base method.
 func (m *MockMediaLiveAPI) UpdateChannelRequest(arg0 *medialive.UpdateChannelInput) (*request.Request, *medialive.UpdateChannelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateChannelRequest", arg0)
@@ -2789,13 +2840,13 @@ func (m *MockMediaLiveAPI) UpdateChannelRequest(arg0 *medialive.UpdateChannelInp
 	return ret0, ret1
 }
 
-// UpdateChannelRequest indicates an expected call of UpdateChannelRequest
+// UpdateChannelRequest indicates an expected call of UpdateChannelRequest.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateChannelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateChannelRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateChannelRequest), arg0)
 }
 
-// UpdateChannelWithContext mocks base method
+// UpdateChannelWithContext mocks base method.
 func (m *MockMediaLiveAPI) UpdateChannelWithContext(arg0 context.Context, arg1 *medialive.UpdateChannelInput, arg2 ...request.Option) (*medialive.UpdateChannelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2808,14 +2859,14 @@ func (m *MockMediaLiveAPI) UpdateChannelWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// UpdateChannelWithContext indicates an expected call of UpdateChannelWithContext
+// UpdateChannelWithContext indicates an expected call of UpdateChannelWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateChannelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateChannelWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateChannelWithContext), varargs...)
 }
 
-// UpdateInput mocks base method
+// UpdateInput mocks base method.
 func (m *MockMediaLiveAPI) UpdateInput(arg0 *medialive.UpdateInputInput) (*medialive.UpdateInputOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateInput", arg0)
@@ -2824,13 +2875,13 @@ func (m *MockMediaLiveAPI) UpdateInput(arg0 *medialive.UpdateInputInput) (*media
 	return ret0, ret1
 }
 
-// UpdateInput indicates an expected call of UpdateInput
+// UpdateInput indicates an expected call of UpdateInput.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateInput(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInput", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateInput), arg0)
 }
 
-// UpdateInputDevice mocks base method
+// UpdateInputDevice mocks base method.
 func (m *MockMediaLiveAPI) UpdateInputDevice(arg0 *medialive.UpdateInputDeviceInput) (*medialive.UpdateInputDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateInputDevice", arg0)
@@ -2839,13 +2890,13 @@ func (m *MockMediaLiveAPI) UpdateInputDevice(arg0 *medialive.UpdateInputDeviceIn
 	return ret0, ret1
 }
 
-// UpdateInputDevice indicates an expected call of UpdateInputDevice
+// UpdateInputDevice indicates an expected call of UpdateInputDevice.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateInputDevice(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInputDevice", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateInputDevice), arg0)
 }
 
-// UpdateInputDeviceRequest mocks base method
+// UpdateInputDeviceRequest mocks base method.
 func (m *MockMediaLiveAPI) UpdateInputDeviceRequest(arg0 *medialive.UpdateInputDeviceInput) (*request.Request, *medialive.UpdateInputDeviceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateInputDeviceRequest", arg0)
@@ -2854,13 +2905,13 @@ func (m *MockMediaLiveAPI) UpdateInputDeviceRequest(arg0 *medialive.UpdateInputD
 	return ret0, ret1
 }
 
-// UpdateInputDeviceRequest indicates an expected call of UpdateInputDeviceRequest
+// UpdateInputDeviceRequest indicates an expected call of UpdateInputDeviceRequest.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateInputDeviceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInputDeviceRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateInputDeviceRequest), arg0)
 }
 
-// UpdateInputDeviceWithContext mocks base method
+// UpdateInputDeviceWithContext mocks base method.
 func (m *MockMediaLiveAPI) UpdateInputDeviceWithContext(arg0 context.Context, arg1 *medialive.UpdateInputDeviceInput, arg2 ...request.Option) (*medialive.UpdateInputDeviceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2873,14 +2924,14 @@ func (m *MockMediaLiveAPI) UpdateInputDeviceWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateInputDeviceWithContext indicates an expected call of UpdateInputDeviceWithContext
+// UpdateInputDeviceWithContext indicates an expected call of UpdateInputDeviceWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateInputDeviceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInputDeviceWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateInputDeviceWithContext), varargs...)
 }
 
-// UpdateInputRequest mocks base method
+// UpdateInputRequest mocks base method.
 func (m *MockMediaLiveAPI) UpdateInputRequest(arg0 *medialive.UpdateInputInput) (*request.Request, *medialive.UpdateInputOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateInputRequest", arg0)
@@ -2889,13 +2940,13 @@ func (m *MockMediaLiveAPI) UpdateInputRequest(arg0 *medialive.UpdateInputInput) 
 	return ret0, ret1
 }
 
-// UpdateInputRequest indicates an expected call of UpdateInputRequest
+// UpdateInputRequest indicates an expected call of UpdateInputRequest.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateInputRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInputRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateInputRequest), arg0)
 }
 
-// UpdateInputSecurityGroup mocks base method
+// UpdateInputSecurityGroup mocks base method.
 func (m *MockMediaLiveAPI) UpdateInputSecurityGroup(arg0 *medialive.UpdateInputSecurityGroupInput) (*medialive.UpdateInputSecurityGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateInputSecurityGroup", arg0)
@@ -2904,13 +2955,13 @@ func (m *MockMediaLiveAPI) UpdateInputSecurityGroup(arg0 *medialive.UpdateInputS
 	return ret0, ret1
 }
 
-// UpdateInputSecurityGroup indicates an expected call of UpdateInputSecurityGroup
+// UpdateInputSecurityGroup indicates an expected call of UpdateInputSecurityGroup.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateInputSecurityGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInputSecurityGroup", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateInputSecurityGroup), arg0)
 }
 
-// UpdateInputSecurityGroupRequest mocks base method
+// UpdateInputSecurityGroupRequest mocks base method.
 func (m *MockMediaLiveAPI) UpdateInputSecurityGroupRequest(arg0 *medialive.UpdateInputSecurityGroupInput) (*request.Request, *medialive.UpdateInputSecurityGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateInputSecurityGroupRequest", arg0)
@@ -2919,13 +2970,13 @@ func (m *MockMediaLiveAPI) UpdateInputSecurityGroupRequest(arg0 *medialive.Updat
 	return ret0, ret1
 }
 
-// UpdateInputSecurityGroupRequest indicates an expected call of UpdateInputSecurityGroupRequest
+// UpdateInputSecurityGroupRequest indicates an expected call of UpdateInputSecurityGroupRequest.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateInputSecurityGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInputSecurityGroupRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateInputSecurityGroupRequest), arg0)
 }
 
-// UpdateInputSecurityGroupWithContext mocks base method
+// UpdateInputSecurityGroupWithContext mocks base method.
 func (m *MockMediaLiveAPI) UpdateInputSecurityGroupWithContext(arg0 context.Context, arg1 *medialive.UpdateInputSecurityGroupInput, arg2 ...request.Option) (*medialive.UpdateInputSecurityGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2938,14 +2989,14 @@ func (m *MockMediaLiveAPI) UpdateInputSecurityGroupWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// UpdateInputSecurityGroupWithContext indicates an expected call of UpdateInputSecurityGroupWithContext
+// UpdateInputSecurityGroupWithContext indicates an expected call of UpdateInputSecurityGroupWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateInputSecurityGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInputSecurityGroupWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateInputSecurityGroupWithContext), varargs...)
 }
 
-// UpdateInputWithContext mocks base method
+// UpdateInputWithContext mocks base method.
 func (m *MockMediaLiveAPI) UpdateInputWithContext(arg0 context.Context, arg1 *medialive.UpdateInputInput, arg2 ...request.Option) (*medialive.UpdateInputOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2958,14 +3009,14 @@ func (m *MockMediaLiveAPI) UpdateInputWithContext(arg0 context.Context, arg1 *me
 	return ret0, ret1
 }
 
-// UpdateInputWithContext indicates an expected call of UpdateInputWithContext
+// UpdateInputWithContext indicates an expected call of UpdateInputWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateInputWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInputWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateInputWithContext), varargs...)
 }
 
-// UpdateMultiplex mocks base method
+// UpdateMultiplex mocks base method.
 func (m *MockMediaLiveAPI) UpdateMultiplex(arg0 *medialive.UpdateMultiplexInput) (*medialive.UpdateMultiplexOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMultiplex", arg0)
@@ -2974,13 +3025,13 @@ func (m *MockMediaLiveAPI) UpdateMultiplex(arg0 *medialive.UpdateMultiplexInput)
 	return ret0, ret1
 }
 
-// UpdateMultiplex indicates an expected call of UpdateMultiplex
+// UpdateMultiplex indicates an expected call of UpdateMultiplex.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateMultiplex(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMultiplex", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateMultiplex), arg0)
 }
 
-// UpdateMultiplexProgram mocks base method
+// UpdateMultiplexProgram mocks base method.
 func (m *MockMediaLiveAPI) UpdateMultiplexProgram(arg0 *medialive.UpdateMultiplexProgramInput) (*medialive.UpdateMultiplexProgramOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMultiplexProgram", arg0)
@@ -2989,13 +3040,13 @@ func (m *MockMediaLiveAPI) UpdateMultiplexProgram(arg0 *medialive.UpdateMultiple
 	return ret0, ret1
 }
 
-// UpdateMultiplexProgram indicates an expected call of UpdateMultiplexProgram
+// UpdateMultiplexProgram indicates an expected call of UpdateMultiplexProgram.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateMultiplexProgram(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMultiplexProgram", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateMultiplexProgram), arg0)
 }
 
-// UpdateMultiplexProgramRequest mocks base method
+// UpdateMultiplexProgramRequest mocks base method.
 func (m *MockMediaLiveAPI) UpdateMultiplexProgramRequest(arg0 *medialive.UpdateMultiplexProgramInput) (*request.Request, *medialive.UpdateMultiplexProgramOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMultiplexProgramRequest", arg0)
@@ -3004,13 +3055,13 @@ func (m *MockMediaLiveAPI) UpdateMultiplexProgramRequest(arg0 *medialive.UpdateM
 	return ret0, ret1
 }
 
-// UpdateMultiplexProgramRequest indicates an expected call of UpdateMultiplexProgramRequest
+// UpdateMultiplexProgramRequest indicates an expected call of UpdateMultiplexProgramRequest.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateMultiplexProgramRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMultiplexProgramRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateMultiplexProgramRequest), arg0)
 }
 
-// UpdateMultiplexProgramWithContext mocks base method
+// UpdateMultiplexProgramWithContext mocks base method.
 func (m *MockMediaLiveAPI) UpdateMultiplexProgramWithContext(arg0 context.Context, arg1 *medialive.UpdateMultiplexProgramInput, arg2 ...request.Option) (*medialive.UpdateMultiplexProgramOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3023,14 +3074,14 @@ func (m *MockMediaLiveAPI) UpdateMultiplexProgramWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// UpdateMultiplexProgramWithContext indicates an expected call of UpdateMultiplexProgramWithContext
+// UpdateMultiplexProgramWithContext indicates an expected call of UpdateMultiplexProgramWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateMultiplexProgramWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMultiplexProgramWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateMultiplexProgramWithContext), varargs...)
 }
 
-// UpdateMultiplexRequest mocks base method
+// UpdateMultiplexRequest mocks base method.
 func (m *MockMediaLiveAPI) UpdateMultiplexRequest(arg0 *medialive.UpdateMultiplexInput) (*request.Request, *medialive.UpdateMultiplexOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMultiplexRequest", arg0)
@@ -3039,13 +3090,13 @@ func (m *MockMediaLiveAPI) UpdateMultiplexRequest(arg0 *medialive.UpdateMultiple
 	return ret0, ret1
 }
 
-// UpdateMultiplexRequest indicates an expected call of UpdateMultiplexRequest
+// UpdateMultiplexRequest indicates an expected call of UpdateMultiplexRequest.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateMultiplexRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMultiplexRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateMultiplexRequest), arg0)
 }
 
-// UpdateMultiplexWithContext mocks base method
+// UpdateMultiplexWithContext mocks base method.
 func (m *MockMediaLiveAPI) UpdateMultiplexWithContext(arg0 context.Context, arg1 *medialive.UpdateMultiplexInput, arg2 ...request.Option) (*medialive.UpdateMultiplexOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3058,14 +3109,14 @@ func (m *MockMediaLiveAPI) UpdateMultiplexWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// UpdateMultiplexWithContext indicates an expected call of UpdateMultiplexWithContext
+// UpdateMultiplexWithContext indicates an expected call of UpdateMultiplexWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateMultiplexWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMultiplexWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateMultiplexWithContext), varargs...)
 }
 
-// UpdateReservation mocks base method
+// UpdateReservation mocks base method.
 func (m *MockMediaLiveAPI) UpdateReservation(arg0 *medialive.UpdateReservationInput) (*medialive.UpdateReservationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateReservation", arg0)
@@ -3074,13 +3125,13 @@ func (m *MockMediaLiveAPI) UpdateReservation(arg0 *medialive.UpdateReservationIn
 	return ret0, ret1
 }
 
-// UpdateReservation indicates an expected call of UpdateReservation
+// UpdateReservation indicates an expected call of UpdateReservation.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateReservation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateReservation", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateReservation), arg0)
 }
 
-// UpdateReservationRequest mocks base method
+// UpdateReservationRequest mocks base method.
 func (m *MockMediaLiveAPI) UpdateReservationRequest(arg0 *medialive.UpdateReservationInput) (*request.Request, *medialive.UpdateReservationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateReservationRequest", arg0)
@@ -3089,13 +3140,13 @@ func (m *MockMediaLiveAPI) UpdateReservationRequest(arg0 *medialive.UpdateReserv
 	return ret0, ret1
 }
 
-// UpdateReservationRequest indicates an expected call of UpdateReservationRequest
+// UpdateReservationRequest indicates an expected call of UpdateReservationRequest.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateReservationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateReservationRequest", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateReservationRequest), arg0)
 }
 
-// UpdateReservationWithContext mocks base method
+// UpdateReservationWithContext mocks base method.
 func (m *MockMediaLiveAPI) UpdateReservationWithContext(arg0 context.Context, arg1 *medialive.UpdateReservationInput, arg2 ...request.Option) (*medialive.UpdateReservationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3108,14 +3159,14 @@ func (m *MockMediaLiveAPI) UpdateReservationWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateReservationWithContext indicates an expected call of UpdateReservationWithContext
+// UpdateReservationWithContext indicates an expected call of UpdateReservationWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) UpdateReservationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateReservationWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).UpdateReservationWithContext), varargs...)
 }
 
-// WaitUntilChannelCreated mocks base method
+// WaitUntilChannelCreated mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilChannelCreated(arg0 *medialive.DescribeChannelInput) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WaitUntilChannelCreated", arg0)
@@ -3123,13 +3174,13 @@ func (m *MockMediaLiveAPI) WaitUntilChannelCreated(arg0 *medialive.DescribeChann
 	return ret0
 }
 
-// WaitUntilChannelCreated indicates an expected call of WaitUntilChannelCreated
+// WaitUntilChannelCreated indicates an expected call of WaitUntilChannelCreated.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilChannelCreated(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilChannelCreated", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilChannelCreated), arg0)
 }
 
-// WaitUntilChannelCreatedWithContext mocks base method
+// WaitUntilChannelCreatedWithContext mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilChannelCreatedWithContext(arg0 context.Context, arg1 *medialive.DescribeChannelInput, arg2 ...request.WaiterOption) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3141,14 +3192,14 @@ func (m *MockMediaLiveAPI) WaitUntilChannelCreatedWithContext(arg0 context.Conte
 	return ret0
 }
 
-// WaitUntilChannelCreatedWithContext indicates an expected call of WaitUntilChannelCreatedWithContext
+// WaitUntilChannelCreatedWithContext indicates an expected call of WaitUntilChannelCreatedWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilChannelCreatedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilChannelCreatedWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilChannelCreatedWithContext), varargs...)
 }
 
-// WaitUntilChannelDeleted mocks base method
+// WaitUntilChannelDeleted mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilChannelDeleted(arg0 *medialive.DescribeChannelInput) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WaitUntilChannelDeleted", arg0)
@@ -3156,13 +3207,13 @@ func (m *MockMediaLiveAPI) WaitUntilChannelDeleted(arg0 *medialive.DescribeChann
 	return ret0
 }
 
-// WaitUntilChannelDeleted indicates an expected call of WaitUntilChannelDeleted
+// WaitUntilChannelDeleted indicates an expected call of WaitUntilChannelDeleted.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilChannelDeleted(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilChannelDeleted", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilChannelDeleted), arg0)
 }
 
-// WaitUntilChannelDeletedWithContext mocks base method
+// WaitUntilChannelDeletedWithContext mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilChannelDeletedWithContext(arg0 context.Context, arg1 *medialive.DescribeChannelInput, arg2 ...request.WaiterOption) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3174,14 +3225,14 @@ func (m *MockMediaLiveAPI) WaitUntilChannelDeletedWithContext(arg0 context.Conte
 	return ret0
 }
 
-// WaitUntilChannelDeletedWithContext indicates an expected call of WaitUntilChannelDeletedWithContext
+// WaitUntilChannelDeletedWithContext indicates an expected call of WaitUntilChannelDeletedWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilChannelDeletedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilChannelDeletedWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilChannelDeletedWithContext), varargs...)
 }
 
-// WaitUntilChannelRunning mocks base method
+// WaitUntilChannelRunning mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilChannelRunning(arg0 *medialive.DescribeChannelInput) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WaitUntilChannelRunning", arg0)
@@ -3189,13 +3240,13 @@ func (m *MockMediaLiveAPI) WaitUntilChannelRunning(arg0 *medialive.DescribeChann
 	return ret0
 }
 
-// WaitUntilChannelRunning indicates an expected call of WaitUntilChannelRunning
+// WaitUntilChannelRunning indicates an expected call of WaitUntilChannelRunning.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilChannelRunning(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilChannelRunning", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilChannelRunning), arg0)
 }
 
-// WaitUntilChannelRunningWithContext mocks base method
+// WaitUntilChannelRunningWithContext mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilChannelRunningWithContext(arg0 context.Context, arg1 *medialive.DescribeChannelInput, arg2 ...request.WaiterOption) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3207,14 +3258,14 @@ func (m *MockMediaLiveAPI) WaitUntilChannelRunningWithContext(arg0 context.Conte
 	return ret0
 }
 
-// WaitUntilChannelRunningWithContext indicates an expected call of WaitUntilChannelRunningWithContext
+// WaitUntilChannelRunningWithContext indicates an expected call of WaitUntilChannelRunningWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilChannelRunningWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilChannelRunningWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilChannelRunningWithContext), varargs...)
 }
 
-// WaitUntilChannelStopped mocks base method
+// WaitUntilChannelStopped mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilChannelStopped(arg0 *medialive.DescribeChannelInput) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WaitUntilChannelStopped", arg0)
@@ -3222,13 +3273,13 @@ func (m *MockMediaLiveAPI) WaitUntilChannelStopped(arg0 *medialive.DescribeChann
 	return ret0
 }
 
-// WaitUntilChannelStopped indicates an expected call of WaitUntilChannelStopped
+// WaitUntilChannelStopped indicates an expected call of WaitUntilChannelStopped.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilChannelStopped(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilChannelStopped", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilChannelStopped), arg0)
 }
 
-// WaitUntilChannelStoppedWithContext mocks base method
+// WaitUntilChannelStoppedWithContext mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilChannelStoppedWithContext(arg0 context.Context, arg1 *medialive.DescribeChannelInput, arg2 ...request.WaiterOption) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3240,14 +3291,14 @@ func (m *MockMediaLiveAPI) WaitUntilChannelStoppedWithContext(arg0 context.Conte
 	return ret0
 }
 
-// WaitUntilChannelStoppedWithContext indicates an expected call of WaitUntilChannelStoppedWithContext
+// WaitUntilChannelStoppedWithContext indicates an expected call of WaitUntilChannelStoppedWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilChannelStoppedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilChannelStoppedWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilChannelStoppedWithContext), varargs...)
 }
 
-// WaitUntilInputAttached mocks base method
+// WaitUntilInputAttached mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilInputAttached(arg0 *medialive.DescribeInputInput) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WaitUntilInputAttached", arg0)
@@ -3255,13 +3306,13 @@ func (m *MockMediaLiveAPI) WaitUntilInputAttached(arg0 *medialive.DescribeInputI
 	return ret0
 }
 
-// WaitUntilInputAttached indicates an expected call of WaitUntilInputAttached
+// WaitUntilInputAttached indicates an expected call of WaitUntilInputAttached.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilInputAttached(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilInputAttached", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilInputAttached), arg0)
 }
 
-// WaitUntilInputAttachedWithContext mocks base method
+// WaitUntilInputAttachedWithContext mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilInputAttachedWithContext(arg0 context.Context, arg1 *medialive.DescribeInputInput, arg2 ...request.WaiterOption) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3273,14 +3324,14 @@ func (m *MockMediaLiveAPI) WaitUntilInputAttachedWithContext(arg0 context.Contex
 	return ret0
 }
 
-// WaitUntilInputAttachedWithContext indicates an expected call of WaitUntilInputAttachedWithContext
+// WaitUntilInputAttachedWithContext indicates an expected call of WaitUntilInputAttachedWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilInputAttachedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilInputAttachedWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilInputAttachedWithContext), varargs...)
 }
 
-// WaitUntilInputDeleted mocks base method
+// WaitUntilInputDeleted mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilInputDeleted(arg0 *medialive.DescribeInputInput) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WaitUntilInputDeleted", arg0)
@@ -3288,13 +3339,13 @@ func (m *MockMediaLiveAPI) WaitUntilInputDeleted(arg0 *medialive.DescribeInputIn
 	return ret0
 }
 
-// WaitUntilInputDeleted indicates an expected call of WaitUntilInputDeleted
+// WaitUntilInputDeleted indicates an expected call of WaitUntilInputDeleted.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilInputDeleted(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilInputDeleted", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilInputDeleted), arg0)
 }
 
-// WaitUntilInputDeletedWithContext mocks base method
+// WaitUntilInputDeletedWithContext mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilInputDeletedWithContext(arg0 context.Context, arg1 *medialive.DescribeInputInput, arg2 ...request.WaiterOption) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3306,14 +3357,14 @@ func (m *MockMediaLiveAPI) WaitUntilInputDeletedWithContext(arg0 context.Context
 	return ret0
 }
 
-// WaitUntilInputDeletedWithContext indicates an expected call of WaitUntilInputDeletedWithContext
+// WaitUntilInputDeletedWithContext indicates an expected call of WaitUntilInputDeletedWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilInputDeletedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilInputDeletedWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilInputDeletedWithContext), varargs...)
 }
 
-// WaitUntilInputDetached mocks base method
+// WaitUntilInputDetached mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilInputDetached(arg0 *medialive.DescribeInputInput) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WaitUntilInputDetached", arg0)
@@ -3321,13 +3372,13 @@ func (m *MockMediaLiveAPI) WaitUntilInputDetached(arg0 *medialive.DescribeInputI
 	return ret0
 }
 
-// WaitUntilInputDetached indicates an expected call of WaitUntilInputDetached
+// WaitUntilInputDetached indicates an expected call of WaitUntilInputDetached.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilInputDetached(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilInputDetached", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilInputDetached), arg0)
 }
 
-// WaitUntilInputDetachedWithContext mocks base method
+// WaitUntilInputDetachedWithContext mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilInputDetachedWithContext(arg0 context.Context, arg1 *medialive.DescribeInputInput, arg2 ...request.WaiterOption) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3339,14 +3390,14 @@ func (m *MockMediaLiveAPI) WaitUntilInputDetachedWithContext(arg0 context.Contex
 	return ret0
 }
 
-// WaitUntilInputDetachedWithContext indicates an expected call of WaitUntilInputDetachedWithContext
+// WaitUntilInputDetachedWithContext indicates an expected call of WaitUntilInputDetachedWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilInputDetachedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilInputDetachedWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilInputDetachedWithContext), varargs...)
 }
 
-// WaitUntilMultiplexCreated mocks base method
+// WaitUntilMultiplexCreated mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilMultiplexCreated(arg0 *medialive.DescribeMultiplexInput) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WaitUntilMultiplexCreated", arg0)
@@ -3354,13 +3405,13 @@ func (m *MockMediaLiveAPI) WaitUntilMultiplexCreated(arg0 *medialive.DescribeMul
 	return ret0
 }
 
-// WaitUntilMultiplexCreated indicates an expected call of WaitUntilMultiplexCreated
+// WaitUntilMultiplexCreated indicates an expected call of WaitUntilMultiplexCreated.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilMultiplexCreated(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilMultiplexCreated", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilMultiplexCreated), arg0)
 }
 
-// WaitUntilMultiplexCreatedWithContext mocks base method
+// WaitUntilMultiplexCreatedWithContext mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilMultiplexCreatedWithContext(arg0 context.Context, arg1 *medialive.DescribeMultiplexInput, arg2 ...request.WaiterOption) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3372,14 +3423,14 @@ func (m *MockMediaLiveAPI) WaitUntilMultiplexCreatedWithContext(arg0 context.Con
 	return ret0
 }
 
-// WaitUntilMultiplexCreatedWithContext indicates an expected call of WaitUntilMultiplexCreatedWithContext
+// WaitUntilMultiplexCreatedWithContext indicates an expected call of WaitUntilMultiplexCreatedWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilMultiplexCreatedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilMultiplexCreatedWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilMultiplexCreatedWithContext), varargs...)
 }
 
-// WaitUntilMultiplexDeleted mocks base method
+// WaitUntilMultiplexDeleted mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilMultiplexDeleted(arg0 *medialive.DescribeMultiplexInput) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WaitUntilMultiplexDeleted", arg0)
@@ -3387,13 +3438,13 @@ func (m *MockMediaLiveAPI) WaitUntilMultiplexDeleted(arg0 *medialive.DescribeMul
 	return ret0
 }
 
-// WaitUntilMultiplexDeleted indicates an expected call of WaitUntilMultiplexDeleted
+// WaitUntilMultiplexDeleted indicates an expected call of WaitUntilMultiplexDeleted.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilMultiplexDeleted(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilMultiplexDeleted", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilMultiplexDeleted), arg0)
 }
 
-// WaitUntilMultiplexDeletedWithContext mocks base method
+// WaitUntilMultiplexDeletedWithContext mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilMultiplexDeletedWithContext(arg0 context.Context, arg1 *medialive.DescribeMultiplexInput, arg2 ...request.WaiterOption) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3405,14 +3456,14 @@ func (m *MockMediaLiveAPI) WaitUntilMultiplexDeletedWithContext(arg0 context.Con
 	return ret0
 }
 
-// WaitUntilMultiplexDeletedWithContext indicates an expected call of WaitUntilMultiplexDeletedWithContext
+// WaitUntilMultiplexDeletedWithContext indicates an expected call of WaitUntilMultiplexDeletedWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilMultiplexDeletedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilMultiplexDeletedWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilMultiplexDeletedWithContext), varargs...)
 }
 
-// WaitUntilMultiplexRunning mocks base method
+// WaitUntilMultiplexRunning mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilMultiplexRunning(arg0 *medialive.DescribeMultiplexInput) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WaitUntilMultiplexRunning", arg0)
@@ -3420,13 +3471,13 @@ func (m *MockMediaLiveAPI) WaitUntilMultiplexRunning(arg0 *medialive.DescribeMul
 	return ret0
 }
 
-// WaitUntilMultiplexRunning indicates an expected call of WaitUntilMultiplexRunning
+// WaitUntilMultiplexRunning indicates an expected call of WaitUntilMultiplexRunning.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilMultiplexRunning(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilMultiplexRunning", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilMultiplexRunning), arg0)
 }
 
-// WaitUntilMultiplexRunningWithContext mocks base method
+// WaitUntilMultiplexRunningWithContext mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilMultiplexRunningWithContext(arg0 context.Context, arg1 *medialive.DescribeMultiplexInput, arg2 ...request.WaiterOption) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3438,14 +3489,14 @@ func (m *MockMediaLiveAPI) WaitUntilMultiplexRunningWithContext(arg0 context.Con
 	return ret0
 }
 
-// WaitUntilMultiplexRunningWithContext indicates an expected call of WaitUntilMultiplexRunningWithContext
+// WaitUntilMultiplexRunningWithContext indicates an expected call of WaitUntilMultiplexRunningWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilMultiplexRunningWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilMultiplexRunningWithContext", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilMultiplexRunningWithContext), varargs...)
 }
 
-// WaitUntilMultiplexStopped mocks base method
+// WaitUntilMultiplexStopped mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilMultiplexStopped(arg0 *medialive.DescribeMultiplexInput) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "WaitUntilMultiplexStopped", arg0)
@@ -3453,13 +3504,13 @@ func (m *MockMediaLiveAPI) WaitUntilMultiplexStopped(arg0 *medialive.DescribeMul
 	return ret0
 }
 
-// WaitUntilMultiplexStopped indicates an expected call of WaitUntilMultiplexStopped
+// WaitUntilMultiplexStopped indicates an expected call of WaitUntilMultiplexStopped.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilMultiplexStopped(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilMultiplexStopped", reflect.TypeOf((*MockMediaLiveAPI)(nil).WaitUntilMultiplexStopped), arg0)
 }
 
-// WaitUntilMultiplexStoppedWithContext mocks base method
+// WaitUntilMultiplexStoppedWithContext mocks base method.
 func (m *MockMediaLiveAPI) WaitUntilMultiplexStoppedWithContext(arg0 context.Context, arg1 *medialive.DescribeMultiplexInput, arg2 ...request.WaiterOption) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -3471,7 +3522,7 @@ func (m *MockMediaLiveAPI) WaitUntilMultiplexStoppedWithContext(arg0 context.Con
 	return ret0
 }
 
-// WaitUntilMultiplexStoppedWithContext indicates an expected call of WaitUntilMultiplexStoppedWithContext
+// WaitUntilMultiplexStoppedWithContext indicates an expected call of WaitUntilMultiplexStoppedWithContext.
 func (mr *MockMediaLiveAPIMockRecorder) WaitUntilMultiplexStoppedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

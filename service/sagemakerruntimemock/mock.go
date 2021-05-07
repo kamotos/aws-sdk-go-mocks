@@ -6,36 +6,37 @@ package sagemakerruntimemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	sagemakerruntime "github.com/aws/aws-sdk-go/service/sagemakerruntime"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockSageMakerRuntimeAPI is a mock of SageMakerRuntimeAPI interface
+// MockSageMakerRuntimeAPI is a mock of SageMakerRuntimeAPI interface.
 type MockSageMakerRuntimeAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockSageMakerRuntimeAPIMockRecorder
 }
 
-// MockSageMakerRuntimeAPIMockRecorder is the mock recorder for MockSageMakerRuntimeAPI
+// MockSageMakerRuntimeAPIMockRecorder is the mock recorder for MockSageMakerRuntimeAPI.
 type MockSageMakerRuntimeAPIMockRecorder struct {
 	mock *MockSageMakerRuntimeAPI
 }
 
-// NewMockSageMakerRuntimeAPI creates a new mock instance
+// NewMockSageMakerRuntimeAPI creates a new mock instance.
 func NewMockSageMakerRuntimeAPI(ctrl *gomock.Controller) *MockSageMakerRuntimeAPI {
 	mock := &MockSageMakerRuntimeAPI{ctrl: ctrl}
 	mock.recorder = &MockSageMakerRuntimeAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockSageMakerRuntimeAPI) EXPECT() *MockSageMakerRuntimeAPIMockRecorder {
 	return m.recorder
 }
 
-// InvokeEndpoint mocks base method
+// InvokeEndpoint mocks base method.
 func (m *MockSageMakerRuntimeAPI) InvokeEndpoint(arg0 *sagemakerruntime.InvokeEndpointInput) (*sagemakerruntime.InvokeEndpointOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "InvokeEndpoint", arg0)
@@ -44,13 +45,13 @@ func (m *MockSageMakerRuntimeAPI) InvokeEndpoint(arg0 *sagemakerruntime.InvokeEn
 	return ret0, ret1
 }
 
-// InvokeEndpoint indicates an expected call of InvokeEndpoint
+// InvokeEndpoint indicates an expected call of InvokeEndpoint.
 func (mr *MockSageMakerRuntimeAPIMockRecorder) InvokeEndpoint(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InvokeEndpoint", reflect.TypeOf((*MockSageMakerRuntimeAPI)(nil).InvokeEndpoint), arg0)
 }
 
-// InvokeEndpointRequest mocks base method
+// InvokeEndpointRequest mocks base method.
 func (m *MockSageMakerRuntimeAPI) InvokeEndpointRequest(arg0 *sagemakerruntime.InvokeEndpointInput) (*request.Request, *sagemakerruntime.InvokeEndpointOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "InvokeEndpointRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockSageMakerRuntimeAPI) InvokeEndpointRequest(arg0 *sagemakerruntime.I
 	return ret0, ret1
 }
 
-// InvokeEndpointRequest indicates an expected call of InvokeEndpointRequest
+// InvokeEndpointRequest indicates an expected call of InvokeEndpointRequest.
 func (mr *MockSageMakerRuntimeAPIMockRecorder) InvokeEndpointRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InvokeEndpointRequest", reflect.TypeOf((*MockSageMakerRuntimeAPI)(nil).InvokeEndpointRequest), arg0)
 }
 
-// InvokeEndpointWithContext mocks base method
+// InvokeEndpointWithContext mocks base method.
 func (m *MockSageMakerRuntimeAPI) InvokeEndpointWithContext(arg0 context.Context, arg1 *sagemakerruntime.InvokeEndpointInput, arg2 ...request.Option) (*sagemakerruntime.InvokeEndpointOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,7 +79,7 @@ func (m *MockSageMakerRuntimeAPI) InvokeEndpointWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// InvokeEndpointWithContext indicates an expected call of InvokeEndpointWithContext
+// InvokeEndpointWithContext indicates an expected call of InvokeEndpointWithContext.
 func (mr *MockSageMakerRuntimeAPIMockRecorder) InvokeEndpointWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

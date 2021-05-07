@@ -6,36 +6,37 @@ package outpostsmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	outposts "github.com/aws/aws-sdk-go/service/outposts"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockOutpostsAPI is a mock of OutpostsAPI interface
+// MockOutpostsAPI is a mock of OutpostsAPI interface.
 type MockOutpostsAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockOutpostsAPIMockRecorder
 }
 
-// MockOutpostsAPIMockRecorder is the mock recorder for MockOutpostsAPI
+// MockOutpostsAPIMockRecorder is the mock recorder for MockOutpostsAPI.
 type MockOutpostsAPIMockRecorder struct {
 	mock *MockOutpostsAPI
 }
 
-// NewMockOutpostsAPI creates a new mock instance
+// NewMockOutpostsAPI creates a new mock instance.
 func NewMockOutpostsAPI(ctrl *gomock.Controller) *MockOutpostsAPI {
 	mock := &MockOutpostsAPI{ctrl: ctrl}
 	mock.recorder = &MockOutpostsAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockOutpostsAPI) EXPECT() *MockOutpostsAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateOutpost mocks base method
+// CreateOutpost mocks base method.
 func (m *MockOutpostsAPI) CreateOutpost(arg0 *outposts.CreateOutpostInput) (*outposts.CreateOutpostOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateOutpost", arg0)
@@ -44,13 +45,13 @@ func (m *MockOutpostsAPI) CreateOutpost(arg0 *outposts.CreateOutpostInput) (*out
 	return ret0, ret1
 }
 
-// CreateOutpost indicates an expected call of CreateOutpost
+// CreateOutpost indicates an expected call of CreateOutpost.
 func (mr *MockOutpostsAPIMockRecorder) CreateOutpost(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateOutpost", reflect.TypeOf((*MockOutpostsAPI)(nil).CreateOutpost), arg0)
 }
 
-// CreateOutpostRequest mocks base method
+// CreateOutpostRequest mocks base method.
 func (m *MockOutpostsAPI) CreateOutpostRequest(arg0 *outposts.CreateOutpostInput) (*request.Request, *outposts.CreateOutpostOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateOutpostRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockOutpostsAPI) CreateOutpostRequest(arg0 *outposts.CreateOutpostInput
 	return ret0, ret1
 }
 
-// CreateOutpostRequest indicates an expected call of CreateOutpostRequest
+// CreateOutpostRequest indicates an expected call of CreateOutpostRequest.
 func (mr *MockOutpostsAPIMockRecorder) CreateOutpostRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateOutpostRequest", reflect.TypeOf((*MockOutpostsAPI)(nil).CreateOutpostRequest), arg0)
 }
 
-// CreateOutpostWithContext mocks base method
+// CreateOutpostWithContext mocks base method.
 func (m *MockOutpostsAPI) CreateOutpostWithContext(arg0 context.Context, arg1 *outposts.CreateOutpostInput, arg2 ...request.Option) (*outposts.CreateOutpostOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockOutpostsAPI) CreateOutpostWithContext(arg0 context.Context, arg1 *o
 	return ret0, ret1
 }
 
-// CreateOutpostWithContext indicates an expected call of CreateOutpostWithContext
+// CreateOutpostWithContext indicates an expected call of CreateOutpostWithContext.
 func (mr *MockOutpostsAPIMockRecorder) CreateOutpostWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateOutpostWithContext", reflect.TypeOf((*MockOutpostsAPI)(nil).CreateOutpostWithContext), varargs...)
 }
 
-// DeleteOutpost mocks base method
+// DeleteOutpost mocks base method.
 func (m *MockOutpostsAPI) DeleteOutpost(arg0 *outposts.DeleteOutpostInput) (*outposts.DeleteOutpostOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteOutpost", arg0)
@@ -94,13 +95,13 @@ func (m *MockOutpostsAPI) DeleteOutpost(arg0 *outposts.DeleteOutpostInput) (*out
 	return ret0, ret1
 }
 
-// DeleteOutpost indicates an expected call of DeleteOutpost
+// DeleteOutpost indicates an expected call of DeleteOutpost.
 func (mr *MockOutpostsAPIMockRecorder) DeleteOutpost(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteOutpost", reflect.TypeOf((*MockOutpostsAPI)(nil).DeleteOutpost), arg0)
 }
 
-// DeleteOutpostRequest mocks base method
+// DeleteOutpostRequest mocks base method.
 func (m *MockOutpostsAPI) DeleteOutpostRequest(arg0 *outposts.DeleteOutpostInput) (*request.Request, *outposts.DeleteOutpostOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteOutpostRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockOutpostsAPI) DeleteOutpostRequest(arg0 *outposts.DeleteOutpostInput
 	return ret0, ret1
 }
 
-// DeleteOutpostRequest indicates an expected call of DeleteOutpostRequest
+// DeleteOutpostRequest indicates an expected call of DeleteOutpostRequest.
 func (mr *MockOutpostsAPIMockRecorder) DeleteOutpostRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteOutpostRequest", reflect.TypeOf((*MockOutpostsAPI)(nil).DeleteOutpostRequest), arg0)
 }
 
-// DeleteOutpostWithContext mocks base method
+// DeleteOutpostWithContext mocks base method.
 func (m *MockOutpostsAPI) DeleteOutpostWithContext(arg0 context.Context, arg1 *outposts.DeleteOutpostInput, arg2 ...request.Option) (*outposts.DeleteOutpostOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockOutpostsAPI) DeleteOutpostWithContext(arg0 context.Context, arg1 *o
 	return ret0, ret1
 }
 
-// DeleteOutpostWithContext indicates an expected call of DeleteOutpostWithContext
+// DeleteOutpostWithContext indicates an expected call of DeleteOutpostWithContext.
 func (mr *MockOutpostsAPIMockRecorder) DeleteOutpostWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteOutpostWithContext", reflect.TypeOf((*MockOutpostsAPI)(nil).DeleteOutpostWithContext), varargs...)
 }
 
-// DeleteSite mocks base method
+// DeleteSite mocks base method.
 func (m *MockOutpostsAPI) DeleteSite(arg0 *outposts.DeleteSiteInput) (*outposts.DeleteSiteOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSite", arg0)
@@ -144,13 +145,13 @@ func (m *MockOutpostsAPI) DeleteSite(arg0 *outposts.DeleteSiteInput) (*outposts.
 	return ret0, ret1
 }
 
-// DeleteSite indicates an expected call of DeleteSite
+// DeleteSite indicates an expected call of DeleteSite.
 func (mr *MockOutpostsAPIMockRecorder) DeleteSite(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSite", reflect.TypeOf((*MockOutpostsAPI)(nil).DeleteSite), arg0)
 }
 
-// DeleteSiteRequest mocks base method
+// DeleteSiteRequest mocks base method.
 func (m *MockOutpostsAPI) DeleteSiteRequest(arg0 *outposts.DeleteSiteInput) (*request.Request, *outposts.DeleteSiteOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSiteRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockOutpostsAPI) DeleteSiteRequest(arg0 *outposts.DeleteSiteInput) (*re
 	return ret0, ret1
 }
 
-// DeleteSiteRequest indicates an expected call of DeleteSiteRequest
+// DeleteSiteRequest indicates an expected call of DeleteSiteRequest.
 func (mr *MockOutpostsAPIMockRecorder) DeleteSiteRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSiteRequest", reflect.TypeOf((*MockOutpostsAPI)(nil).DeleteSiteRequest), arg0)
 }
 
-// DeleteSiteWithContext mocks base method
+// DeleteSiteWithContext mocks base method.
 func (m *MockOutpostsAPI) DeleteSiteWithContext(arg0 context.Context, arg1 *outposts.DeleteSiteInput, arg2 ...request.Option) (*outposts.DeleteSiteOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockOutpostsAPI) DeleteSiteWithContext(arg0 context.Context, arg1 *outp
 	return ret0, ret1
 }
 
-// DeleteSiteWithContext indicates an expected call of DeleteSiteWithContext
+// DeleteSiteWithContext indicates an expected call of DeleteSiteWithContext.
 func (mr *MockOutpostsAPIMockRecorder) DeleteSiteWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSiteWithContext", reflect.TypeOf((*MockOutpostsAPI)(nil).DeleteSiteWithContext), varargs...)
 }
 
-// GetOutpost mocks base method
+// GetOutpost mocks base method.
 func (m *MockOutpostsAPI) GetOutpost(arg0 *outposts.GetOutpostInput) (*outposts.GetOutpostOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetOutpost", arg0)
@@ -194,13 +195,13 @@ func (m *MockOutpostsAPI) GetOutpost(arg0 *outposts.GetOutpostInput) (*outposts.
 	return ret0, ret1
 }
 
-// GetOutpost indicates an expected call of GetOutpost
+// GetOutpost indicates an expected call of GetOutpost.
 func (mr *MockOutpostsAPIMockRecorder) GetOutpost(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOutpost", reflect.TypeOf((*MockOutpostsAPI)(nil).GetOutpost), arg0)
 }
 
-// GetOutpostInstanceTypes mocks base method
+// GetOutpostInstanceTypes mocks base method.
 func (m *MockOutpostsAPI) GetOutpostInstanceTypes(arg0 *outposts.GetOutpostInstanceTypesInput) (*outposts.GetOutpostInstanceTypesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetOutpostInstanceTypes", arg0)
@@ -209,13 +210,13 @@ func (m *MockOutpostsAPI) GetOutpostInstanceTypes(arg0 *outposts.GetOutpostInsta
 	return ret0, ret1
 }
 
-// GetOutpostInstanceTypes indicates an expected call of GetOutpostInstanceTypes
+// GetOutpostInstanceTypes indicates an expected call of GetOutpostInstanceTypes.
 func (mr *MockOutpostsAPIMockRecorder) GetOutpostInstanceTypes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOutpostInstanceTypes", reflect.TypeOf((*MockOutpostsAPI)(nil).GetOutpostInstanceTypes), arg0)
 }
 
-// GetOutpostInstanceTypesRequest mocks base method
+// GetOutpostInstanceTypesRequest mocks base method.
 func (m *MockOutpostsAPI) GetOutpostInstanceTypesRequest(arg0 *outposts.GetOutpostInstanceTypesInput) (*request.Request, *outposts.GetOutpostInstanceTypesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetOutpostInstanceTypesRequest", arg0)
@@ -224,13 +225,13 @@ func (m *MockOutpostsAPI) GetOutpostInstanceTypesRequest(arg0 *outposts.GetOutpo
 	return ret0, ret1
 }
 
-// GetOutpostInstanceTypesRequest indicates an expected call of GetOutpostInstanceTypesRequest
+// GetOutpostInstanceTypesRequest indicates an expected call of GetOutpostInstanceTypesRequest.
 func (mr *MockOutpostsAPIMockRecorder) GetOutpostInstanceTypesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOutpostInstanceTypesRequest", reflect.TypeOf((*MockOutpostsAPI)(nil).GetOutpostInstanceTypesRequest), arg0)
 }
 
-// GetOutpostInstanceTypesWithContext mocks base method
+// GetOutpostInstanceTypesWithContext mocks base method.
 func (m *MockOutpostsAPI) GetOutpostInstanceTypesWithContext(arg0 context.Context, arg1 *outposts.GetOutpostInstanceTypesInput, arg2 ...request.Option) (*outposts.GetOutpostInstanceTypesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -243,14 +244,14 @@ func (m *MockOutpostsAPI) GetOutpostInstanceTypesWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// GetOutpostInstanceTypesWithContext indicates an expected call of GetOutpostInstanceTypesWithContext
+// GetOutpostInstanceTypesWithContext indicates an expected call of GetOutpostInstanceTypesWithContext.
 func (mr *MockOutpostsAPIMockRecorder) GetOutpostInstanceTypesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOutpostInstanceTypesWithContext", reflect.TypeOf((*MockOutpostsAPI)(nil).GetOutpostInstanceTypesWithContext), varargs...)
 }
 
-// GetOutpostRequest mocks base method
+// GetOutpostRequest mocks base method.
 func (m *MockOutpostsAPI) GetOutpostRequest(arg0 *outposts.GetOutpostInput) (*request.Request, *outposts.GetOutpostOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetOutpostRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockOutpostsAPI) GetOutpostRequest(arg0 *outposts.GetOutpostInput) (*re
 	return ret0, ret1
 }
 
-// GetOutpostRequest indicates an expected call of GetOutpostRequest
+// GetOutpostRequest indicates an expected call of GetOutpostRequest.
 func (mr *MockOutpostsAPIMockRecorder) GetOutpostRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOutpostRequest", reflect.TypeOf((*MockOutpostsAPI)(nil).GetOutpostRequest), arg0)
 }
 
-// GetOutpostWithContext mocks base method
+// GetOutpostWithContext mocks base method.
 func (m *MockOutpostsAPI) GetOutpostWithContext(arg0 context.Context, arg1 *outposts.GetOutpostInput, arg2 ...request.Option) (*outposts.GetOutpostOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockOutpostsAPI) GetOutpostWithContext(arg0 context.Context, arg1 *outp
 	return ret0, ret1
 }
 
-// GetOutpostWithContext indicates an expected call of GetOutpostWithContext
+// GetOutpostWithContext indicates an expected call of GetOutpostWithContext.
 func (mr *MockOutpostsAPIMockRecorder) GetOutpostWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOutpostWithContext", reflect.TypeOf((*MockOutpostsAPI)(nil).GetOutpostWithContext), varargs...)
 }
 
-// ListOutposts mocks base method
+// ListOutposts mocks base method.
 func (m *MockOutpostsAPI) ListOutposts(arg0 *outposts.ListOutpostsInput) (*outposts.ListOutpostsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListOutposts", arg0)
@@ -294,13 +295,13 @@ func (m *MockOutpostsAPI) ListOutposts(arg0 *outposts.ListOutpostsInput) (*outpo
 	return ret0, ret1
 }
 
-// ListOutposts indicates an expected call of ListOutposts
+// ListOutposts indicates an expected call of ListOutposts.
 func (mr *MockOutpostsAPIMockRecorder) ListOutposts(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOutposts", reflect.TypeOf((*MockOutpostsAPI)(nil).ListOutposts), arg0)
 }
 
-// ListOutpostsPages mocks base method
+// ListOutpostsPages mocks base method.
 func (m *MockOutpostsAPI) ListOutpostsPages(arg0 *outposts.ListOutpostsInput, arg1 func(*outposts.ListOutpostsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListOutpostsPages", arg0, arg1)
@@ -308,13 +309,13 @@ func (m *MockOutpostsAPI) ListOutpostsPages(arg0 *outposts.ListOutpostsInput, ar
 	return ret0
 }
 
-// ListOutpostsPages indicates an expected call of ListOutpostsPages
+// ListOutpostsPages indicates an expected call of ListOutpostsPages.
 func (mr *MockOutpostsAPIMockRecorder) ListOutpostsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOutpostsPages", reflect.TypeOf((*MockOutpostsAPI)(nil).ListOutpostsPages), arg0, arg1)
 }
 
-// ListOutpostsPagesWithContext mocks base method
+// ListOutpostsPagesWithContext mocks base method.
 func (m *MockOutpostsAPI) ListOutpostsPagesWithContext(arg0 context.Context, arg1 *outposts.ListOutpostsInput, arg2 func(*outposts.ListOutpostsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -326,14 +327,14 @@ func (m *MockOutpostsAPI) ListOutpostsPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// ListOutpostsPagesWithContext indicates an expected call of ListOutpostsPagesWithContext
+// ListOutpostsPagesWithContext indicates an expected call of ListOutpostsPagesWithContext.
 func (mr *MockOutpostsAPIMockRecorder) ListOutpostsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOutpostsPagesWithContext", reflect.TypeOf((*MockOutpostsAPI)(nil).ListOutpostsPagesWithContext), varargs...)
 }
 
-// ListOutpostsRequest mocks base method
+// ListOutpostsRequest mocks base method.
 func (m *MockOutpostsAPI) ListOutpostsRequest(arg0 *outposts.ListOutpostsInput) (*request.Request, *outposts.ListOutpostsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListOutpostsRequest", arg0)
@@ -342,13 +343,13 @@ func (m *MockOutpostsAPI) ListOutpostsRequest(arg0 *outposts.ListOutpostsInput) 
 	return ret0, ret1
 }
 
-// ListOutpostsRequest indicates an expected call of ListOutpostsRequest
+// ListOutpostsRequest indicates an expected call of ListOutpostsRequest.
 func (mr *MockOutpostsAPIMockRecorder) ListOutpostsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOutpostsRequest", reflect.TypeOf((*MockOutpostsAPI)(nil).ListOutpostsRequest), arg0)
 }
 
-// ListOutpostsWithContext mocks base method
+// ListOutpostsWithContext mocks base method.
 func (m *MockOutpostsAPI) ListOutpostsWithContext(arg0 context.Context, arg1 *outposts.ListOutpostsInput, arg2 ...request.Option) (*outposts.ListOutpostsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -361,14 +362,14 @@ func (m *MockOutpostsAPI) ListOutpostsWithContext(arg0 context.Context, arg1 *ou
 	return ret0, ret1
 }
 
-// ListOutpostsWithContext indicates an expected call of ListOutpostsWithContext
+// ListOutpostsWithContext indicates an expected call of ListOutpostsWithContext.
 func (mr *MockOutpostsAPIMockRecorder) ListOutpostsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOutpostsWithContext", reflect.TypeOf((*MockOutpostsAPI)(nil).ListOutpostsWithContext), varargs...)
 }
 
-// ListSites mocks base method
+// ListSites mocks base method.
 func (m *MockOutpostsAPI) ListSites(arg0 *outposts.ListSitesInput) (*outposts.ListSitesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSites", arg0)
@@ -377,13 +378,13 @@ func (m *MockOutpostsAPI) ListSites(arg0 *outposts.ListSitesInput) (*outposts.Li
 	return ret0, ret1
 }
 
-// ListSites indicates an expected call of ListSites
+// ListSites indicates an expected call of ListSites.
 func (mr *MockOutpostsAPIMockRecorder) ListSites(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSites", reflect.TypeOf((*MockOutpostsAPI)(nil).ListSites), arg0)
 }
 
-// ListSitesPages mocks base method
+// ListSitesPages mocks base method.
 func (m *MockOutpostsAPI) ListSitesPages(arg0 *outposts.ListSitesInput, arg1 func(*outposts.ListSitesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSitesPages", arg0, arg1)
@@ -391,13 +392,13 @@ func (m *MockOutpostsAPI) ListSitesPages(arg0 *outposts.ListSitesInput, arg1 fun
 	return ret0
 }
 
-// ListSitesPages indicates an expected call of ListSitesPages
+// ListSitesPages indicates an expected call of ListSitesPages.
 func (mr *MockOutpostsAPIMockRecorder) ListSitesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSitesPages", reflect.TypeOf((*MockOutpostsAPI)(nil).ListSitesPages), arg0, arg1)
 }
 
-// ListSitesPagesWithContext mocks base method
+// ListSitesPagesWithContext mocks base method.
 func (m *MockOutpostsAPI) ListSitesPagesWithContext(arg0 context.Context, arg1 *outposts.ListSitesInput, arg2 func(*outposts.ListSitesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -409,14 +410,14 @@ func (m *MockOutpostsAPI) ListSitesPagesWithContext(arg0 context.Context, arg1 *
 	return ret0
 }
 
-// ListSitesPagesWithContext indicates an expected call of ListSitesPagesWithContext
+// ListSitesPagesWithContext indicates an expected call of ListSitesPagesWithContext.
 func (mr *MockOutpostsAPIMockRecorder) ListSitesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSitesPagesWithContext", reflect.TypeOf((*MockOutpostsAPI)(nil).ListSitesPagesWithContext), varargs...)
 }
 
-// ListSitesRequest mocks base method
+// ListSitesRequest mocks base method.
 func (m *MockOutpostsAPI) ListSitesRequest(arg0 *outposts.ListSitesInput) (*request.Request, *outposts.ListSitesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSitesRequest", arg0)
@@ -425,13 +426,13 @@ func (m *MockOutpostsAPI) ListSitesRequest(arg0 *outposts.ListSitesInput) (*requ
 	return ret0, ret1
 }
 
-// ListSitesRequest indicates an expected call of ListSitesRequest
+// ListSitesRequest indicates an expected call of ListSitesRequest.
 func (mr *MockOutpostsAPIMockRecorder) ListSitesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSitesRequest", reflect.TypeOf((*MockOutpostsAPI)(nil).ListSitesRequest), arg0)
 }
 
-// ListSitesWithContext mocks base method
+// ListSitesWithContext mocks base method.
 func (m *MockOutpostsAPI) ListSitesWithContext(arg0 context.Context, arg1 *outposts.ListSitesInput, arg2 ...request.Option) (*outposts.ListSitesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -444,14 +445,14 @@ func (m *MockOutpostsAPI) ListSitesWithContext(arg0 context.Context, arg1 *outpo
 	return ret0, ret1
 }
 
-// ListSitesWithContext indicates an expected call of ListSitesWithContext
+// ListSitesWithContext indicates an expected call of ListSitesWithContext.
 func (mr *MockOutpostsAPIMockRecorder) ListSitesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSitesWithContext", reflect.TypeOf((*MockOutpostsAPI)(nil).ListSitesWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockOutpostsAPI) ListTagsForResource(arg0 *outposts.ListTagsForResourceInput) (*outposts.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -460,13 +461,13 @@ func (m *MockOutpostsAPI) ListTagsForResource(arg0 *outposts.ListTagsForResource
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockOutpostsAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockOutpostsAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockOutpostsAPI) ListTagsForResourceRequest(arg0 *outposts.ListTagsForResourceInput) (*request.Request, *outposts.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -475,13 +476,13 @@ func (m *MockOutpostsAPI) ListTagsForResourceRequest(arg0 *outposts.ListTagsForR
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockOutpostsAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockOutpostsAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockOutpostsAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *outposts.ListTagsForResourceInput, arg2 ...request.Option) (*outposts.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -494,14 +495,14 @@ func (m *MockOutpostsAPI) ListTagsForResourceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockOutpostsAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockOutpostsAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockOutpostsAPI) TagResource(arg0 *outposts.TagResourceInput) (*outposts.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -510,13 +511,13 @@ func (m *MockOutpostsAPI) TagResource(arg0 *outposts.TagResourceInput) (*outpost
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockOutpostsAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockOutpostsAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockOutpostsAPI) TagResourceRequest(arg0 *outposts.TagResourceInput) (*request.Request, *outposts.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -525,13 +526,13 @@ func (m *MockOutpostsAPI) TagResourceRequest(arg0 *outposts.TagResourceInput) (*
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockOutpostsAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockOutpostsAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockOutpostsAPI) TagResourceWithContext(arg0 context.Context, arg1 *outposts.TagResourceInput, arg2 ...request.Option) (*outposts.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -544,14 +545,14 @@ func (m *MockOutpostsAPI) TagResourceWithContext(arg0 context.Context, arg1 *out
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockOutpostsAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockOutpostsAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockOutpostsAPI) UntagResource(arg0 *outposts.UntagResourceInput) (*outposts.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -560,13 +561,13 @@ func (m *MockOutpostsAPI) UntagResource(arg0 *outposts.UntagResourceInput) (*out
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockOutpostsAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockOutpostsAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockOutpostsAPI) UntagResourceRequest(arg0 *outposts.UntagResourceInput) (*request.Request, *outposts.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -575,13 +576,13 @@ func (m *MockOutpostsAPI) UntagResourceRequest(arg0 *outposts.UntagResourceInput
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockOutpostsAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockOutpostsAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockOutpostsAPI) UntagResourceWithContext(arg0 context.Context, arg1 *outposts.UntagResourceInput, arg2 ...request.Option) (*outposts.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -594,7 +595,7 @@ func (m *MockOutpostsAPI) UntagResourceWithContext(arg0 context.Context, arg1 *o
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockOutpostsAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

@@ -6,36 +6,37 @@ package backupmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	backup "github.com/aws/aws-sdk-go/service/backup"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockBackupAPI is a mock of BackupAPI interface
+// MockBackupAPI is a mock of BackupAPI interface.
 type MockBackupAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockBackupAPIMockRecorder
 }
 
-// MockBackupAPIMockRecorder is the mock recorder for MockBackupAPI
+// MockBackupAPIMockRecorder is the mock recorder for MockBackupAPI.
 type MockBackupAPIMockRecorder struct {
 	mock *MockBackupAPI
 }
 
-// NewMockBackupAPI creates a new mock instance
+// NewMockBackupAPI creates a new mock instance.
 func NewMockBackupAPI(ctrl *gomock.Controller) *MockBackupAPI {
 	mock := &MockBackupAPI{ctrl: ctrl}
 	mock.recorder = &MockBackupAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockBackupAPI) EXPECT() *MockBackupAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateBackupPlan mocks base method
+// CreateBackupPlan mocks base method.
 func (m *MockBackupAPI) CreateBackupPlan(arg0 *backup.CreateBackupPlanInput) (*backup.CreateBackupPlanOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBackupPlan", arg0)
@@ -44,13 +45,13 @@ func (m *MockBackupAPI) CreateBackupPlan(arg0 *backup.CreateBackupPlanInput) (*b
 	return ret0, ret1
 }
 
-// CreateBackupPlan indicates an expected call of CreateBackupPlan
+// CreateBackupPlan indicates an expected call of CreateBackupPlan.
 func (mr *MockBackupAPIMockRecorder) CreateBackupPlan(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBackupPlan", reflect.TypeOf((*MockBackupAPI)(nil).CreateBackupPlan), arg0)
 }
 
-// CreateBackupPlanRequest mocks base method
+// CreateBackupPlanRequest mocks base method.
 func (m *MockBackupAPI) CreateBackupPlanRequest(arg0 *backup.CreateBackupPlanInput) (*request.Request, *backup.CreateBackupPlanOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBackupPlanRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockBackupAPI) CreateBackupPlanRequest(arg0 *backup.CreateBackupPlanInp
 	return ret0, ret1
 }
 
-// CreateBackupPlanRequest indicates an expected call of CreateBackupPlanRequest
+// CreateBackupPlanRequest indicates an expected call of CreateBackupPlanRequest.
 func (mr *MockBackupAPIMockRecorder) CreateBackupPlanRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBackupPlanRequest", reflect.TypeOf((*MockBackupAPI)(nil).CreateBackupPlanRequest), arg0)
 }
 
-// CreateBackupPlanWithContext mocks base method
+// CreateBackupPlanWithContext mocks base method.
 func (m *MockBackupAPI) CreateBackupPlanWithContext(arg0 context.Context, arg1 *backup.CreateBackupPlanInput, arg2 ...request.Option) (*backup.CreateBackupPlanOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockBackupAPI) CreateBackupPlanWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// CreateBackupPlanWithContext indicates an expected call of CreateBackupPlanWithContext
+// CreateBackupPlanWithContext indicates an expected call of CreateBackupPlanWithContext.
 func (mr *MockBackupAPIMockRecorder) CreateBackupPlanWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBackupPlanWithContext", reflect.TypeOf((*MockBackupAPI)(nil).CreateBackupPlanWithContext), varargs...)
 }
 
-// CreateBackupSelection mocks base method
+// CreateBackupSelection mocks base method.
 func (m *MockBackupAPI) CreateBackupSelection(arg0 *backup.CreateBackupSelectionInput) (*backup.CreateBackupSelectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBackupSelection", arg0)
@@ -94,13 +95,13 @@ func (m *MockBackupAPI) CreateBackupSelection(arg0 *backup.CreateBackupSelection
 	return ret0, ret1
 }
 
-// CreateBackupSelection indicates an expected call of CreateBackupSelection
+// CreateBackupSelection indicates an expected call of CreateBackupSelection.
 func (mr *MockBackupAPIMockRecorder) CreateBackupSelection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBackupSelection", reflect.TypeOf((*MockBackupAPI)(nil).CreateBackupSelection), arg0)
 }
 
-// CreateBackupSelectionRequest mocks base method
+// CreateBackupSelectionRequest mocks base method.
 func (m *MockBackupAPI) CreateBackupSelectionRequest(arg0 *backup.CreateBackupSelectionInput) (*request.Request, *backup.CreateBackupSelectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBackupSelectionRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockBackupAPI) CreateBackupSelectionRequest(arg0 *backup.CreateBackupSe
 	return ret0, ret1
 }
 
-// CreateBackupSelectionRequest indicates an expected call of CreateBackupSelectionRequest
+// CreateBackupSelectionRequest indicates an expected call of CreateBackupSelectionRequest.
 func (mr *MockBackupAPIMockRecorder) CreateBackupSelectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBackupSelectionRequest", reflect.TypeOf((*MockBackupAPI)(nil).CreateBackupSelectionRequest), arg0)
 }
 
-// CreateBackupSelectionWithContext mocks base method
+// CreateBackupSelectionWithContext mocks base method.
 func (m *MockBackupAPI) CreateBackupSelectionWithContext(arg0 context.Context, arg1 *backup.CreateBackupSelectionInput, arg2 ...request.Option) (*backup.CreateBackupSelectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockBackupAPI) CreateBackupSelectionWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// CreateBackupSelectionWithContext indicates an expected call of CreateBackupSelectionWithContext
+// CreateBackupSelectionWithContext indicates an expected call of CreateBackupSelectionWithContext.
 func (mr *MockBackupAPIMockRecorder) CreateBackupSelectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBackupSelectionWithContext", reflect.TypeOf((*MockBackupAPI)(nil).CreateBackupSelectionWithContext), varargs...)
 }
 
-// CreateBackupVault mocks base method
+// CreateBackupVault mocks base method.
 func (m *MockBackupAPI) CreateBackupVault(arg0 *backup.CreateBackupVaultInput) (*backup.CreateBackupVaultOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBackupVault", arg0)
@@ -144,13 +145,13 @@ func (m *MockBackupAPI) CreateBackupVault(arg0 *backup.CreateBackupVaultInput) (
 	return ret0, ret1
 }
 
-// CreateBackupVault indicates an expected call of CreateBackupVault
+// CreateBackupVault indicates an expected call of CreateBackupVault.
 func (mr *MockBackupAPIMockRecorder) CreateBackupVault(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBackupVault", reflect.TypeOf((*MockBackupAPI)(nil).CreateBackupVault), arg0)
 }
 
-// CreateBackupVaultRequest mocks base method
+// CreateBackupVaultRequest mocks base method.
 func (m *MockBackupAPI) CreateBackupVaultRequest(arg0 *backup.CreateBackupVaultInput) (*request.Request, *backup.CreateBackupVaultOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBackupVaultRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockBackupAPI) CreateBackupVaultRequest(arg0 *backup.CreateBackupVaultI
 	return ret0, ret1
 }
 
-// CreateBackupVaultRequest indicates an expected call of CreateBackupVaultRequest
+// CreateBackupVaultRequest indicates an expected call of CreateBackupVaultRequest.
 func (mr *MockBackupAPIMockRecorder) CreateBackupVaultRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBackupVaultRequest", reflect.TypeOf((*MockBackupAPI)(nil).CreateBackupVaultRequest), arg0)
 }
 
-// CreateBackupVaultWithContext mocks base method
+// CreateBackupVaultWithContext mocks base method.
 func (m *MockBackupAPI) CreateBackupVaultWithContext(arg0 context.Context, arg1 *backup.CreateBackupVaultInput, arg2 ...request.Option) (*backup.CreateBackupVaultOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockBackupAPI) CreateBackupVaultWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// CreateBackupVaultWithContext indicates an expected call of CreateBackupVaultWithContext
+// CreateBackupVaultWithContext indicates an expected call of CreateBackupVaultWithContext.
 func (mr *MockBackupAPIMockRecorder) CreateBackupVaultWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBackupVaultWithContext", reflect.TypeOf((*MockBackupAPI)(nil).CreateBackupVaultWithContext), varargs...)
 }
 
-// DeleteBackupPlan mocks base method
+// DeleteBackupPlan mocks base method.
 func (m *MockBackupAPI) DeleteBackupPlan(arg0 *backup.DeleteBackupPlanInput) (*backup.DeleteBackupPlanOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBackupPlan", arg0)
@@ -194,13 +195,13 @@ func (m *MockBackupAPI) DeleteBackupPlan(arg0 *backup.DeleteBackupPlanInput) (*b
 	return ret0, ret1
 }
 
-// DeleteBackupPlan indicates an expected call of DeleteBackupPlan
+// DeleteBackupPlan indicates an expected call of DeleteBackupPlan.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupPlan(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupPlan", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupPlan), arg0)
 }
 
-// DeleteBackupPlanRequest mocks base method
+// DeleteBackupPlanRequest mocks base method.
 func (m *MockBackupAPI) DeleteBackupPlanRequest(arg0 *backup.DeleteBackupPlanInput) (*request.Request, *backup.DeleteBackupPlanOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBackupPlanRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockBackupAPI) DeleteBackupPlanRequest(arg0 *backup.DeleteBackupPlanInp
 	return ret0, ret1
 }
 
-// DeleteBackupPlanRequest indicates an expected call of DeleteBackupPlanRequest
+// DeleteBackupPlanRequest indicates an expected call of DeleteBackupPlanRequest.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupPlanRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupPlanRequest", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupPlanRequest), arg0)
 }
 
-// DeleteBackupPlanWithContext mocks base method
+// DeleteBackupPlanWithContext mocks base method.
 func (m *MockBackupAPI) DeleteBackupPlanWithContext(arg0 context.Context, arg1 *backup.DeleteBackupPlanInput, arg2 ...request.Option) (*backup.DeleteBackupPlanOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockBackupAPI) DeleteBackupPlanWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DeleteBackupPlanWithContext indicates an expected call of DeleteBackupPlanWithContext
+// DeleteBackupPlanWithContext indicates an expected call of DeleteBackupPlanWithContext.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupPlanWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupPlanWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupPlanWithContext), varargs...)
 }
 
-// DeleteBackupSelection mocks base method
+// DeleteBackupSelection mocks base method.
 func (m *MockBackupAPI) DeleteBackupSelection(arg0 *backup.DeleteBackupSelectionInput) (*backup.DeleteBackupSelectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBackupSelection", arg0)
@@ -244,13 +245,13 @@ func (m *MockBackupAPI) DeleteBackupSelection(arg0 *backup.DeleteBackupSelection
 	return ret0, ret1
 }
 
-// DeleteBackupSelection indicates an expected call of DeleteBackupSelection
+// DeleteBackupSelection indicates an expected call of DeleteBackupSelection.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupSelection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupSelection", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupSelection), arg0)
 }
 
-// DeleteBackupSelectionRequest mocks base method
+// DeleteBackupSelectionRequest mocks base method.
 func (m *MockBackupAPI) DeleteBackupSelectionRequest(arg0 *backup.DeleteBackupSelectionInput) (*request.Request, *backup.DeleteBackupSelectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBackupSelectionRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockBackupAPI) DeleteBackupSelectionRequest(arg0 *backup.DeleteBackupSe
 	return ret0, ret1
 }
 
-// DeleteBackupSelectionRequest indicates an expected call of DeleteBackupSelectionRequest
+// DeleteBackupSelectionRequest indicates an expected call of DeleteBackupSelectionRequest.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupSelectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupSelectionRequest", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupSelectionRequest), arg0)
 }
 
-// DeleteBackupSelectionWithContext mocks base method
+// DeleteBackupSelectionWithContext mocks base method.
 func (m *MockBackupAPI) DeleteBackupSelectionWithContext(arg0 context.Context, arg1 *backup.DeleteBackupSelectionInput, arg2 ...request.Option) (*backup.DeleteBackupSelectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockBackupAPI) DeleteBackupSelectionWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DeleteBackupSelectionWithContext indicates an expected call of DeleteBackupSelectionWithContext
+// DeleteBackupSelectionWithContext indicates an expected call of DeleteBackupSelectionWithContext.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupSelectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupSelectionWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupSelectionWithContext), varargs...)
 }
 
-// DeleteBackupVault mocks base method
+// DeleteBackupVault mocks base method.
 func (m *MockBackupAPI) DeleteBackupVault(arg0 *backup.DeleteBackupVaultInput) (*backup.DeleteBackupVaultOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBackupVault", arg0)
@@ -294,13 +295,13 @@ func (m *MockBackupAPI) DeleteBackupVault(arg0 *backup.DeleteBackupVaultInput) (
 	return ret0, ret1
 }
 
-// DeleteBackupVault indicates an expected call of DeleteBackupVault
+// DeleteBackupVault indicates an expected call of DeleteBackupVault.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupVault(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupVault", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupVault), arg0)
 }
 
-// DeleteBackupVaultAccessPolicy mocks base method
+// DeleteBackupVaultAccessPolicy mocks base method.
 func (m *MockBackupAPI) DeleteBackupVaultAccessPolicy(arg0 *backup.DeleteBackupVaultAccessPolicyInput) (*backup.DeleteBackupVaultAccessPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBackupVaultAccessPolicy", arg0)
@@ -309,13 +310,13 @@ func (m *MockBackupAPI) DeleteBackupVaultAccessPolicy(arg0 *backup.DeleteBackupV
 	return ret0, ret1
 }
 
-// DeleteBackupVaultAccessPolicy indicates an expected call of DeleteBackupVaultAccessPolicy
+// DeleteBackupVaultAccessPolicy indicates an expected call of DeleteBackupVaultAccessPolicy.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupVaultAccessPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupVaultAccessPolicy", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupVaultAccessPolicy), arg0)
 }
 
-// DeleteBackupVaultAccessPolicyRequest mocks base method
+// DeleteBackupVaultAccessPolicyRequest mocks base method.
 func (m *MockBackupAPI) DeleteBackupVaultAccessPolicyRequest(arg0 *backup.DeleteBackupVaultAccessPolicyInput) (*request.Request, *backup.DeleteBackupVaultAccessPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBackupVaultAccessPolicyRequest", arg0)
@@ -324,13 +325,13 @@ func (m *MockBackupAPI) DeleteBackupVaultAccessPolicyRequest(arg0 *backup.Delete
 	return ret0, ret1
 }
 
-// DeleteBackupVaultAccessPolicyRequest indicates an expected call of DeleteBackupVaultAccessPolicyRequest
+// DeleteBackupVaultAccessPolicyRequest indicates an expected call of DeleteBackupVaultAccessPolicyRequest.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupVaultAccessPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupVaultAccessPolicyRequest", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupVaultAccessPolicyRequest), arg0)
 }
 
-// DeleteBackupVaultAccessPolicyWithContext mocks base method
+// DeleteBackupVaultAccessPolicyWithContext mocks base method.
 func (m *MockBackupAPI) DeleteBackupVaultAccessPolicyWithContext(arg0 context.Context, arg1 *backup.DeleteBackupVaultAccessPolicyInput, arg2 ...request.Option) (*backup.DeleteBackupVaultAccessPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -343,14 +344,14 @@ func (m *MockBackupAPI) DeleteBackupVaultAccessPolicyWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DeleteBackupVaultAccessPolicyWithContext indicates an expected call of DeleteBackupVaultAccessPolicyWithContext
+// DeleteBackupVaultAccessPolicyWithContext indicates an expected call of DeleteBackupVaultAccessPolicyWithContext.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupVaultAccessPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupVaultAccessPolicyWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupVaultAccessPolicyWithContext), varargs...)
 }
 
-// DeleteBackupVaultNotifications mocks base method
+// DeleteBackupVaultNotifications mocks base method.
 func (m *MockBackupAPI) DeleteBackupVaultNotifications(arg0 *backup.DeleteBackupVaultNotificationsInput) (*backup.DeleteBackupVaultNotificationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBackupVaultNotifications", arg0)
@@ -359,13 +360,13 @@ func (m *MockBackupAPI) DeleteBackupVaultNotifications(arg0 *backup.DeleteBackup
 	return ret0, ret1
 }
 
-// DeleteBackupVaultNotifications indicates an expected call of DeleteBackupVaultNotifications
+// DeleteBackupVaultNotifications indicates an expected call of DeleteBackupVaultNotifications.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupVaultNotifications(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupVaultNotifications", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupVaultNotifications), arg0)
 }
 
-// DeleteBackupVaultNotificationsRequest mocks base method
+// DeleteBackupVaultNotificationsRequest mocks base method.
 func (m *MockBackupAPI) DeleteBackupVaultNotificationsRequest(arg0 *backup.DeleteBackupVaultNotificationsInput) (*request.Request, *backup.DeleteBackupVaultNotificationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBackupVaultNotificationsRequest", arg0)
@@ -374,13 +375,13 @@ func (m *MockBackupAPI) DeleteBackupVaultNotificationsRequest(arg0 *backup.Delet
 	return ret0, ret1
 }
 
-// DeleteBackupVaultNotificationsRequest indicates an expected call of DeleteBackupVaultNotificationsRequest
+// DeleteBackupVaultNotificationsRequest indicates an expected call of DeleteBackupVaultNotificationsRequest.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupVaultNotificationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupVaultNotificationsRequest", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupVaultNotificationsRequest), arg0)
 }
 
-// DeleteBackupVaultNotificationsWithContext mocks base method
+// DeleteBackupVaultNotificationsWithContext mocks base method.
 func (m *MockBackupAPI) DeleteBackupVaultNotificationsWithContext(arg0 context.Context, arg1 *backup.DeleteBackupVaultNotificationsInput, arg2 ...request.Option) (*backup.DeleteBackupVaultNotificationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -393,14 +394,14 @@ func (m *MockBackupAPI) DeleteBackupVaultNotificationsWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DeleteBackupVaultNotificationsWithContext indicates an expected call of DeleteBackupVaultNotificationsWithContext
+// DeleteBackupVaultNotificationsWithContext indicates an expected call of DeleteBackupVaultNotificationsWithContext.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupVaultNotificationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupVaultNotificationsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupVaultNotificationsWithContext), varargs...)
 }
 
-// DeleteBackupVaultRequest mocks base method
+// DeleteBackupVaultRequest mocks base method.
 func (m *MockBackupAPI) DeleteBackupVaultRequest(arg0 *backup.DeleteBackupVaultInput) (*request.Request, *backup.DeleteBackupVaultOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteBackupVaultRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockBackupAPI) DeleteBackupVaultRequest(arg0 *backup.DeleteBackupVaultI
 	return ret0, ret1
 }
 
-// DeleteBackupVaultRequest indicates an expected call of DeleteBackupVaultRequest
+// DeleteBackupVaultRequest indicates an expected call of DeleteBackupVaultRequest.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupVaultRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupVaultRequest", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupVaultRequest), arg0)
 }
 
-// DeleteBackupVaultWithContext mocks base method
+// DeleteBackupVaultWithContext mocks base method.
 func (m *MockBackupAPI) DeleteBackupVaultWithContext(arg0 context.Context, arg1 *backup.DeleteBackupVaultInput, arg2 ...request.Option) (*backup.DeleteBackupVaultOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockBackupAPI) DeleteBackupVaultWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DeleteBackupVaultWithContext indicates an expected call of DeleteBackupVaultWithContext
+// DeleteBackupVaultWithContext indicates an expected call of DeleteBackupVaultWithContext.
 func (mr *MockBackupAPIMockRecorder) DeleteBackupVaultWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBackupVaultWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DeleteBackupVaultWithContext), varargs...)
 }
 
-// DeleteRecoveryPoint mocks base method
+// DeleteRecoveryPoint mocks base method.
 func (m *MockBackupAPI) DeleteRecoveryPoint(arg0 *backup.DeleteRecoveryPointInput) (*backup.DeleteRecoveryPointOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRecoveryPoint", arg0)
@@ -444,13 +445,13 @@ func (m *MockBackupAPI) DeleteRecoveryPoint(arg0 *backup.DeleteRecoveryPointInpu
 	return ret0, ret1
 }
 
-// DeleteRecoveryPoint indicates an expected call of DeleteRecoveryPoint
+// DeleteRecoveryPoint indicates an expected call of DeleteRecoveryPoint.
 func (mr *MockBackupAPIMockRecorder) DeleteRecoveryPoint(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRecoveryPoint", reflect.TypeOf((*MockBackupAPI)(nil).DeleteRecoveryPoint), arg0)
 }
 
-// DeleteRecoveryPointRequest mocks base method
+// DeleteRecoveryPointRequest mocks base method.
 func (m *MockBackupAPI) DeleteRecoveryPointRequest(arg0 *backup.DeleteRecoveryPointInput) (*request.Request, *backup.DeleteRecoveryPointOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRecoveryPointRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockBackupAPI) DeleteRecoveryPointRequest(arg0 *backup.DeleteRecoveryPo
 	return ret0, ret1
 }
 
-// DeleteRecoveryPointRequest indicates an expected call of DeleteRecoveryPointRequest
+// DeleteRecoveryPointRequest indicates an expected call of DeleteRecoveryPointRequest.
 func (mr *MockBackupAPIMockRecorder) DeleteRecoveryPointRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRecoveryPointRequest", reflect.TypeOf((*MockBackupAPI)(nil).DeleteRecoveryPointRequest), arg0)
 }
 
-// DeleteRecoveryPointWithContext mocks base method
+// DeleteRecoveryPointWithContext mocks base method.
 func (m *MockBackupAPI) DeleteRecoveryPointWithContext(arg0 context.Context, arg1 *backup.DeleteRecoveryPointInput, arg2 ...request.Option) (*backup.DeleteRecoveryPointOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockBackupAPI) DeleteRecoveryPointWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DeleteRecoveryPointWithContext indicates an expected call of DeleteRecoveryPointWithContext
+// DeleteRecoveryPointWithContext indicates an expected call of DeleteRecoveryPointWithContext.
 func (mr *MockBackupAPIMockRecorder) DeleteRecoveryPointWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRecoveryPointWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DeleteRecoveryPointWithContext), varargs...)
 }
 
-// DescribeBackupJob mocks base method
+// DescribeBackupJob mocks base method.
 func (m *MockBackupAPI) DescribeBackupJob(arg0 *backup.DescribeBackupJobInput) (*backup.DescribeBackupJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBackupJob", arg0)
@@ -494,13 +495,13 @@ func (m *MockBackupAPI) DescribeBackupJob(arg0 *backup.DescribeBackupJobInput) (
 	return ret0, ret1
 }
 
-// DescribeBackupJob indicates an expected call of DescribeBackupJob
+// DescribeBackupJob indicates an expected call of DescribeBackupJob.
 func (mr *MockBackupAPIMockRecorder) DescribeBackupJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBackupJob", reflect.TypeOf((*MockBackupAPI)(nil).DescribeBackupJob), arg0)
 }
 
-// DescribeBackupJobRequest mocks base method
+// DescribeBackupJobRequest mocks base method.
 func (m *MockBackupAPI) DescribeBackupJobRequest(arg0 *backup.DescribeBackupJobInput) (*request.Request, *backup.DescribeBackupJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBackupJobRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockBackupAPI) DescribeBackupJobRequest(arg0 *backup.DescribeBackupJobI
 	return ret0, ret1
 }
 
-// DescribeBackupJobRequest indicates an expected call of DescribeBackupJobRequest
+// DescribeBackupJobRequest indicates an expected call of DescribeBackupJobRequest.
 func (mr *MockBackupAPIMockRecorder) DescribeBackupJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBackupJobRequest", reflect.TypeOf((*MockBackupAPI)(nil).DescribeBackupJobRequest), arg0)
 }
 
-// DescribeBackupJobWithContext mocks base method
+// DescribeBackupJobWithContext mocks base method.
 func (m *MockBackupAPI) DescribeBackupJobWithContext(arg0 context.Context, arg1 *backup.DescribeBackupJobInput, arg2 ...request.Option) (*backup.DescribeBackupJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockBackupAPI) DescribeBackupJobWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DescribeBackupJobWithContext indicates an expected call of DescribeBackupJobWithContext
+// DescribeBackupJobWithContext indicates an expected call of DescribeBackupJobWithContext.
 func (mr *MockBackupAPIMockRecorder) DescribeBackupJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBackupJobWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DescribeBackupJobWithContext), varargs...)
 }
 
-// DescribeBackupVault mocks base method
+// DescribeBackupVault mocks base method.
 func (m *MockBackupAPI) DescribeBackupVault(arg0 *backup.DescribeBackupVaultInput) (*backup.DescribeBackupVaultOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBackupVault", arg0)
@@ -544,13 +545,13 @@ func (m *MockBackupAPI) DescribeBackupVault(arg0 *backup.DescribeBackupVaultInpu
 	return ret0, ret1
 }
 
-// DescribeBackupVault indicates an expected call of DescribeBackupVault
+// DescribeBackupVault indicates an expected call of DescribeBackupVault.
 func (mr *MockBackupAPIMockRecorder) DescribeBackupVault(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBackupVault", reflect.TypeOf((*MockBackupAPI)(nil).DescribeBackupVault), arg0)
 }
 
-// DescribeBackupVaultRequest mocks base method
+// DescribeBackupVaultRequest mocks base method.
 func (m *MockBackupAPI) DescribeBackupVaultRequest(arg0 *backup.DescribeBackupVaultInput) (*request.Request, *backup.DescribeBackupVaultOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBackupVaultRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockBackupAPI) DescribeBackupVaultRequest(arg0 *backup.DescribeBackupVa
 	return ret0, ret1
 }
 
-// DescribeBackupVaultRequest indicates an expected call of DescribeBackupVaultRequest
+// DescribeBackupVaultRequest indicates an expected call of DescribeBackupVaultRequest.
 func (mr *MockBackupAPIMockRecorder) DescribeBackupVaultRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBackupVaultRequest", reflect.TypeOf((*MockBackupAPI)(nil).DescribeBackupVaultRequest), arg0)
 }
 
-// DescribeBackupVaultWithContext mocks base method
+// DescribeBackupVaultWithContext mocks base method.
 func (m *MockBackupAPI) DescribeBackupVaultWithContext(arg0 context.Context, arg1 *backup.DescribeBackupVaultInput, arg2 ...request.Option) (*backup.DescribeBackupVaultOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockBackupAPI) DescribeBackupVaultWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DescribeBackupVaultWithContext indicates an expected call of DescribeBackupVaultWithContext
+// DescribeBackupVaultWithContext indicates an expected call of DescribeBackupVaultWithContext.
 func (mr *MockBackupAPIMockRecorder) DescribeBackupVaultWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBackupVaultWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DescribeBackupVaultWithContext), varargs...)
 }
 
-// DescribeCopyJob mocks base method
+// DescribeCopyJob mocks base method.
 func (m *MockBackupAPI) DescribeCopyJob(arg0 *backup.DescribeCopyJobInput) (*backup.DescribeCopyJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCopyJob", arg0)
@@ -594,13 +595,13 @@ func (m *MockBackupAPI) DescribeCopyJob(arg0 *backup.DescribeCopyJobInput) (*bac
 	return ret0, ret1
 }
 
-// DescribeCopyJob indicates an expected call of DescribeCopyJob
+// DescribeCopyJob indicates an expected call of DescribeCopyJob.
 func (mr *MockBackupAPIMockRecorder) DescribeCopyJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCopyJob", reflect.TypeOf((*MockBackupAPI)(nil).DescribeCopyJob), arg0)
 }
 
-// DescribeCopyJobRequest mocks base method
+// DescribeCopyJobRequest mocks base method.
 func (m *MockBackupAPI) DescribeCopyJobRequest(arg0 *backup.DescribeCopyJobInput) (*request.Request, *backup.DescribeCopyJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeCopyJobRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockBackupAPI) DescribeCopyJobRequest(arg0 *backup.DescribeCopyJobInput
 	return ret0, ret1
 }
 
-// DescribeCopyJobRequest indicates an expected call of DescribeCopyJobRequest
+// DescribeCopyJobRequest indicates an expected call of DescribeCopyJobRequest.
 func (mr *MockBackupAPIMockRecorder) DescribeCopyJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCopyJobRequest", reflect.TypeOf((*MockBackupAPI)(nil).DescribeCopyJobRequest), arg0)
 }
 
-// DescribeCopyJobWithContext mocks base method
+// DescribeCopyJobWithContext mocks base method.
 func (m *MockBackupAPI) DescribeCopyJobWithContext(arg0 context.Context, arg1 *backup.DescribeCopyJobInput, arg2 ...request.Option) (*backup.DescribeCopyJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockBackupAPI) DescribeCopyJobWithContext(arg0 context.Context, arg1 *b
 	return ret0, ret1
 }
 
-// DescribeCopyJobWithContext indicates an expected call of DescribeCopyJobWithContext
+// DescribeCopyJobWithContext indicates an expected call of DescribeCopyJobWithContext.
 func (mr *MockBackupAPIMockRecorder) DescribeCopyJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCopyJobWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DescribeCopyJobWithContext), varargs...)
 }
 
-// DescribeGlobalSettings mocks base method
+// DescribeGlobalSettings mocks base method.
 func (m *MockBackupAPI) DescribeGlobalSettings(arg0 *backup.DescribeGlobalSettingsInput) (*backup.DescribeGlobalSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeGlobalSettings", arg0)
@@ -644,13 +645,13 @@ func (m *MockBackupAPI) DescribeGlobalSettings(arg0 *backup.DescribeGlobalSettin
 	return ret0, ret1
 }
 
-// DescribeGlobalSettings indicates an expected call of DescribeGlobalSettings
+// DescribeGlobalSettings indicates an expected call of DescribeGlobalSettings.
 func (mr *MockBackupAPIMockRecorder) DescribeGlobalSettings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeGlobalSettings", reflect.TypeOf((*MockBackupAPI)(nil).DescribeGlobalSettings), arg0)
 }
 
-// DescribeGlobalSettingsRequest mocks base method
+// DescribeGlobalSettingsRequest mocks base method.
 func (m *MockBackupAPI) DescribeGlobalSettingsRequest(arg0 *backup.DescribeGlobalSettingsInput) (*request.Request, *backup.DescribeGlobalSettingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeGlobalSettingsRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockBackupAPI) DescribeGlobalSettingsRequest(arg0 *backup.DescribeGloba
 	return ret0, ret1
 }
 
-// DescribeGlobalSettingsRequest indicates an expected call of DescribeGlobalSettingsRequest
+// DescribeGlobalSettingsRequest indicates an expected call of DescribeGlobalSettingsRequest.
 func (mr *MockBackupAPIMockRecorder) DescribeGlobalSettingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeGlobalSettingsRequest", reflect.TypeOf((*MockBackupAPI)(nil).DescribeGlobalSettingsRequest), arg0)
 }
 
-// DescribeGlobalSettingsWithContext mocks base method
+// DescribeGlobalSettingsWithContext mocks base method.
 func (m *MockBackupAPI) DescribeGlobalSettingsWithContext(arg0 context.Context, arg1 *backup.DescribeGlobalSettingsInput, arg2 ...request.Option) (*backup.DescribeGlobalSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockBackupAPI) DescribeGlobalSettingsWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DescribeGlobalSettingsWithContext indicates an expected call of DescribeGlobalSettingsWithContext
+// DescribeGlobalSettingsWithContext indicates an expected call of DescribeGlobalSettingsWithContext.
 func (mr *MockBackupAPIMockRecorder) DescribeGlobalSettingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeGlobalSettingsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DescribeGlobalSettingsWithContext), varargs...)
 }
 
-// DescribeProtectedResource mocks base method
+// DescribeProtectedResource mocks base method.
 func (m *MockBackupAPI) DescribeProtectedResource(arg0 *backup.DescribeProtectedResourceInput) (*backup.DescribeProtectedResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeProtectedResource", arg0)
@@ -694,13 +695,13 @@ func (m *MockBackupAPI) DescribeProtectedResource(arg0 *backup.DescribeProtected
 	return ret0, ret1
 }
 
-// DescribeProtectedResource indicates an expected call of DescribeProtectedResource
+// DescribeProtectedResource indicates an expected call of DescribeProtectedResource.
 func (mr *MockBackupAPIMockRecorder) DescribeProtectedResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeProtectedResource", reflect.TypeOf((*MockBackupAPI)(nil).DescribeProtectedResource), arg0)
 }
 
-// DescribeProtectedResourceRequest mocks base method
+// DescribeProtectedResourceRequest mocks base method.
 func (m *MockBackupAPI) DescribeProtectedResourceRequest(arg0 *backup.DescribeProtectedResourceInput) (*request.Request, *backup.DescribeProtectedResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeProtectedResourceRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockBackupAPI) DescribeProtectedResourceRequest(arg0 *backup.DescribePr
 	return ret0, ret1
 }
 
-// DescribeProtectedResourceRequest indicates an expected call of DescribeProtectedResourceRequest
+// DescribeProtectedResourceRequest indicates an expected call of DescribeProtectedResourceRequest.
 func (mr *MockBackupAPIMockRecorder) DescribeProtectedResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeProtectedResourceRequest", reflect.TypeOf((*MockBackupAPI)(nil).DescribeProtectedResourceRequest), arg0)
 }
 
-// DescribeProtectedResourceWithContext mocks base method
+// DescribeProtectedResourceWithContext mocks base method.
 func (m *MockBackupAPI) DescribeProtectedResourceWithContext(arg0 context.Context, arg1 *backup.DescribeProtectedResourceInput, arg2 ...request.Option) (*backup.DescribeProtectedResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockBackupAPI) DescribeProtectedResourceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DescribeProtectedResourceWithContext indicates an expected call of DescribeProtectedResourceWithContext
+// DescribeProtectedResourceWithContext indicates an expected call of DescribeProtectedResourceWithContext.
 func (mr *MockBackupAPIMockRecorder) DescribeProtectedResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeProtectedResourceWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DescribeProtectedResourceWithContext), varargs...)
 }
 
-// DescribeRecoveryPoint mocks base method
+// DescribeRecoveryPoint mocks base method.
 func (m *MockBackupAPI) DescribeRecoveryPoint(arg0 *backup.DescribeRecoveryPointInput) (*backup.DescribeRecoveryPointOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRecoveryPoint", arg0)
@@ -744,13 +745,13 @@ func (m *MockBackupAPI) DescribeRecoveryPoint(arg0 *backup.DescribeRecoveryPoint
 	return ret0, ret1
 }
 
-// DescribeRecoveryPoint indicates an expected call of DescribeRecoveryPoint
+// DescribeRecoveryPoint indicates an expected call of DescribeRecoveryPoint.
 func (mr *MockBackupAPIMockRecorder) DescribeRecoveryPoint(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecoveryPoint", reflect.TypeOf((*MockBackupAPI)(nil).DescribeRecoveryPoint), arg0)
 }
 
-// DescribeRecoveryPointRequest mocks base method
+// DescribeRecoveryPointRequest mocks base method.
 func (m *MockBackupAPI) DescribeRecoveryPointRequest(arg0 *backup.DescribeRecoveryPointInput) (*request.Request, *backup.DescribeRecoveryPointOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRecoveryPointRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockBackupAPI) DescribeRecoveryPointRequest(arg0 *backup.DescribeRecove
 	return ret0, ret1
 }
 
-// DescribeRecoveryPointRequest indicates an expected call of DescribeRecoveryPointRequest
+// DescribeRecoveryPointRequest indicates an expected call of DescribeRecoveryPointRequest.
 func (mr *MockBackupAPIMockRecorder) DescribeRecoveryPointRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecoveryPointRequest", reflect.TypeOf((*MockBackupAPI)(nil).DescribeRecoveryPointRequest), arg0)
 }
 
-// DescribeRecoveryPointWithContext mocks base method
+// DescribeRecoveryPointWithContext mocks base method.
 func (m *MockBackupAPI) DescribeRecoveryPointWithContext(arg0 context.Context, arg1 *backup.DescribeRecoveryPointInput, arg2 ...request.Option) (*backup.DescribeRecoveryPointOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockBackupAPI) DescribeRecoveryPointWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DescribeRecoveryPointWithContext indicates an expected call of DescribeRecoveryPointWithContext
+// DescribeRecoveryPointWithContext indicates an expected call of DescribeRecoveryPointWithContext.
 func (mr *MockBackupAPIMockRecorder) DescribeRecoveryPointWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecoveryPointWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DescribeRecoveryPointWithContext), varargs...)
 }
 
-// DescribeRegionSettings mocks base method
+// DescribeRegionSettings mocks base method.
 func (m *MockBackupAPI) DescribeRegionSettings(arg0 *backup.DescribeRegionSettingsInput) (*backup.DescribeRegionSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRegionSettings", arg0)
@@ -794,13 +795,13 @@ func (m *MockBackupAPI) DescribeRegionSettings(arg0 *backup.DescribeRegionSettin
 	return ret0, ret1
 }
 
-// DescribeRegionSettings indicates an expected call of DescribeRegionSettings
+// DescribeRegionSettings indicates an expected call of DescribeRegionSettings.
 func (mr *MockBackupAPIMockRecorder) DescribeRegionSettings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRegionSettings", reflect.TypeOf((*MockBackupAPI)(nil).DescribeRegionSettings), arg0)
 }
 
-// DescribeRegionSettingsRequest mocks base method
+// DescribeRegionSettingsRequest mocks base method.
 func (m *MockBackupAPI) DescribeRegionSettingsRequest(arg0 *backup.DescribeRegionSettingsInput) (*request.Request, *backup.DescribeRegionSettingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRegionSettingsRequest", arg0)
@@ -809,13 +810,13 @@ func (m *MockBackupAPI) DescribeRegionSettingsRequest(arg0 *backup.DescribeRegio
 	return ret0, ret1
 }
 
-// DescribeRegionSettingsRequest indicates an expected call of DescribeRegionSettingsRequest
+// DescribeRegionSettingsRequest indicates an expected call of DescribeRegionSettingsRequest.
 func (mr *MockBackupAPIMockRecorder) DescribeRegionSettingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRegionSettingsRequest", reflect.TypeOf((*MockBackupAPI)(nil).DescribeRegionSettingsRequest), arg0)
 }
 
-// DescribeRegionSettingsWithContext mocks base method
+// DescribeRegionSettingsWithContext mocks base method.
 func (m *MockBackupAPI) DescribeRegionSettingsWithContext(arg0 context.Context, arg1 *backup.DescribeRegionSettingsInput, arg2 ...request.Option) (*backup.DescribeRegionSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +829,14 @@ func (m *MockBackupAPI) DescribeRegionSettingsWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DescribeRegionSettingsWithContext indicates an expected call of DescribeRegionSettingsWithContext
+// DescribeRegionSettingsWithContext indicates an expected call of DescribeRegionSettingsWithContext.
 func (mr *MockBackupAPIMockRecorder) DescribeRegionSettingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRegionSettingsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DescribeRegionSettingsWithContext), varargs...)
 }
 
-// DescribeRestoreJob mocks base method
+// DescribeRestoreJob mocks base method.
 func (m *MockBackupAPI) DescribeRestoreJob(arg0 *backup.DescribeRestoreJobInput) (*backup.DescribeRestoreJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRestoreJob", arg0)
@@ -844,13 +845,13 @@ func (m *MockBackupAPI) DescribeRestoreJob(arg0 *backup.DescribeRestoreJobInput)
 	return ret0, ret1
 }
 
-// DescribeRestoreJob indicates an expected call of DescribeRestoreJob
+// DescribeRestoreJob indicates an expected call of DescribeRestoreJob.
 func (mr *MockBackupAPIMockRecorder) DescribeRestoreJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRestoreJob", reflect.TypeOf((*MockBackupAPI)(nil).DescribeRestoreJob), arg0)
 }
 
-// DescribeRestoreJobRequest mocks base method
+// DescribeRestoreJobRequest mocks base method.
 func (m *MockBackupAPI) DescribeRestoreJobRequest(arg0 *backup.DescribeRestoreJobInput) (*request.Request, *backup.DescribeRestoreJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRestoreJobRequest", arg0)
@@ -859,13 +860,13 @@ func (m *MockBackupAPI) DescribeRestoreJobRequest(arg0 *backup.DescribeRestoreJo
 	return ret0, ret1
 }
 
-// DescribeRestoreJobRequest indicates an expected call of DescribeRestoreJobRequest
+// DescribeRestoreJobRequest indicates an expected call of DescribeRestoreJobRequest.
 func (mr *MockBackupAPIMockRecorder) DescribeRestoreJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRestoreJobRequest", reflect.TypeOf((*MockBackupAPI)(nil).DescribeRestoreJobRequest), arg0)
 }
 
-// DescribeRestoreJobWithContext mocks base method
+// DescribeRestoreJobWithContext mocks base method.
 func (m *MockBackupAPI) DescribeRestoreJobWithContext(arg0 context.Context, arg1 *backup.DescribeRestoreJobInput, arg2 ...request.Option) (*backup.DescribeRestoreJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +879,64 @@ func (m *MockBackupAPI) DescribeRestoreJobWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DescribeRestoreJobWithContext indicates an expected call of DescribeRestoreJobWithContext
+// DescribeRestoreJobWithContext indicates an expected call of DescribeRestoreJobWithContext.
 func (mr *MockBackupAPIMockRecorder) DescribeRestoreJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRestoreJobWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DescribeRestoreJobWithContext), varargs...)
 }
 
-// ExportBackupPlanTemplate mocks base method
+// DisassociateRecoveryPoint mocks base method.
+func (m *MockBackupAPI) DisassociateRecoveryPoint(arg0 *backup.DisassociateRecoveryPointInput) (*backup.DisassociateRecoveryPointOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DisassociateRecoveryPoint", arg0)
+	ret0, _ := ret[0].(*backup.DisassociateRecoveryPointOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DisassociateRecoveryPoint indicates an expected call of DisassociateRecoveryPoint.
+func (mr *MockBackupAPIMockRecorder) DisassociateRecoveryPoint(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateRecoveryPoint", reflect.TypeOf((*MockBackupAPI)(nil).DisassociateRecoveryPoint), arg0)
+}
+
+// DisassociateRecoveryPointRequest mocks base method.
+func (m *MockBackupAPI) DisassociateRecoveryPointRequest(arg0 *backup.DisassociateRecoveryPointInput) (*request.Request, *backup.DisassociateRecoveryPointOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DisassociateRecoveryPointRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*backup.DisassociateRecoveryPointOutput)
+	return ret0, ret1
+}
+
+// DisassociateRecoveryPointRequest indicates an expected call of DisassociateRecoveryPointRequest.
+func (mr *MockBackupAPIMockRecorder) DisassociateRecoveryPointRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateRecoveryPointRequest", reflect.TypeOf((*MockBackupAPI)(nil).DisassociateRecoveryPointRequest), arg0)
+}
+
+// DisassociateRecoveryPointWithContext mocks base method.
+func (m *MockBackupAPI) DisassociateRecoveryPointWithContext(arg0 context.Context, arg1 *backup.DisassociateRecoveryPointInput, arg2 ...request.Option) (*backup.DisassociateRecoveryPointOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DisassociateRecoveryPointWithContext", varargs...)
+	ret0, _ := ret[0].(*backup.DisassociateRecoveryPointOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DisassociateRecoveryPointWithContext indicates an expected call of DisassociateRecoveryPointWithContext.
+func (mr *MockBackupAPIMockRecorder) DisassociateRecoveryPointWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateRecoveryPointWithContext", reflect.TypeOf((*MockBackupAPI)(nil).DisassociateRecoveryPointWithContext), varargs...)
+}
+
+// ExportBackupPlanTemplate mocks base method.
 func (m *MockBackupAPI) ExportBackupPlanTemplate(arg0 *backup.ExportBackupPlanTemplateInput) (*backup.ExportBackupPlanTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExportBackupPlanTemplate", arg0)
@@ -894,13 +945,13 @@ func (m *MockBackupAPI) ExportBackupPlanTemplate(arg0 *backup.ExportBackupPlanTe
 	return ret0, ret1
 }
 
-// ExportBackupPlanTemplate indicates an expected call of ExportBackupPlanTemplate
+// ExportBackupPlanTemplate indicates an expected call of ExportBackupPlanTemplate.
 func (mr *MockBackupAPIMockRecorder) ExportBackupPlanTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportBackupPlanTemplate", reflect.TypeOf((*MockBackupAPI)(nil).ExportBackupPlanTemplate), arg0)
 }
 
-// ExportBackupPlanTemplateRequest mocks base method
+// ExportBackupPlanTemplateRequest mocks base method.
 func (m *MockBackupAPI) ExportBackupPlanTemplateRequest(arg0 *backup.ExportBackupPlanTemplateInput) (*request.Request, *backup.ExportBackupPlanTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExportBackupPlanTemplateRequest", arg0)
@@ -909,13 +960,13 @@ func (m *MockBackupAPI) ExportBackupPlanTemplateRequest(arg0 *backup.ExportBacku
 	return ret0, ret1
 }
 
-// ExportBackupPlanTemplateRequest indicates an expected call of ExportBackupPlanTemplateRequest
+// ExportBackupPlanTemplateRequest indicates an expected call of ExportBackupPlanTemplateRequest.
 func (mr *MockBackupAPIMockRecorder) ExportBackupPlanTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportBackupPlanTemplateRequest", reflect.TypeOf((*MockBackupAPI)(nil).ExportBackupPlanTemplateRequest), arg0)
 }
 
-// ExportBackupPlanTemplateWithContext mocks base method
+// ExportBackupPlanTemplateWithContext mocks base method.
 func (m *MockBackupAPI) ExportBackupPlanTemplateWithContext(arg0 context.Context, arg1 *backup.ExportBackupPlanTemplateInput, arg2 ...request.Option) (*backup.ExportBackupPlanTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -928,14 +979,14 @@ func (m *MockBackupAPI) ExportBackupPlanTemplateWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ExportBackupPlanTemplateWithContext indicates an expected call of ExportBackupPlanTemplateWithContext
+// ExportBackupPlanTemplateWithContext indicates an expected call of ExportBackupPlanTemplateWithContext.
 func (mr *MockBackupAPIMockRecorder) ExportBackupPlanTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportBackupPlanTemplateWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ExportBackupPlanTemplateWithContext), varargs...)
 }
 
-// GetBackupPlan mocks base method
+// GetBackupPlan mocks base method.
 func (m *MockBackupAPI) GetBackupPlan(arg0 *backup.GetBackupPlanInput) (*backup.GetBackupPlanOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackupPlan", arg0)
@@ -944,13 +995,13 @@ func (m *MockBackupAPI) GetBackupPlan(arg0 *backup.GetBackupPlanInput) (*backup.
 	return ret0, ret1
 }
 
-// GetBackupPlan indicates an expected call of GetBackupPlan
+// GetBackupPlan indicates an expected call of GetBackupPlan.
 func (mr *MockBackupAPIMockRecorder) GetBackupPlan(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupPlan", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupPlan), arg0)
 }
 
-// GetBackupPlanFromJSON mocks base method
+// GetBackupPlanFromJSON mocks base method.
 func (m *MockBackupAPI) GetBackupPlanFromJSON(arg0 *backup.GetBackupPlanFromJSONInput) (*backup.GetBackupPlanFromJSONOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackupPlanFromJSON", arg0)
@@ -959,13 +1010,13 @@ func (m *MockBackupAPI) GetBackupPlanFromJSON(arg0 *backup.GetBackupPlanFromJSON
 	return ret0, ret1
 }
 
-// GetBackupPlanFromJSON indicates an expected call of GetBackupPlanFromJSON
+// GetBackupPlanFromJSON indicates an expected call of GetBackupPlanFromJSON.
 func (mr *MockBackupAPIMockRecorder) GetBackupPlanFromJSON(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupPlanFromJSON", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupPlanFromJSON), arg0)
 }
 
-// GetBackupPlanFromJSONRequest mocks base method
+// GetBackupPlanFromJSONRequest mocks base method.
 func (m *MockBackupAPI) GetBackupPlanFromJSONRequest(arg0 *backup.GetBackupPlanFromJSONInput) (*request.Request, *backup.GetBackupPlanFromJSONOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackupPlanFromJSONRequest", arg0)
@@ -974,13 +1025,13 @@ func (m *MockBackupAPI) GetBackupPlanFromJSONRequest(arg0 *backup.GetBackupPlanF
 	return ret0, ret1
 }
 
-// GetBackupPlanFromJSONRequest indicates an expected call of GetBackupPlanFromJSONRequest
+// GetBackupPlanFromJSONRequest indicates an expected call of GetBackupPlanFromJSONRequest.
 func (mr *MockBackupAPIMockRecorder) GetBackupPlanFromJSONRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupPlanFromJSONRequest", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupPlanFromJSONRequest), arg0)
 }
 
-// GetBackupPlanFromJSONWithContext mocks base method
+// GetBackupPlanFromJSONWithContext mocks base method.
 func (m *MockBackupAPI) GetBackupPlanFromJSONWithContext(arg0 context.Context, arg1 *backup.GetBackupPlanFromJSONInput, arg2 ...request.Option) (*backup.GetBackupPlanFromJSONOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -993,14 +1044,14 @@ func (m *MockBackupAPI) GetBackupPlanFromJSONWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// GetBackupPlanFromJSONWithContext indicates an expected call of GetBackupPlanFromJSONWithContext
+// GetBackupPlanFromJSONWithContext indicates an expected call of GetBackupPlanFromJSONWithContext.
 func (mr *MockBackupAPIMockRecorder) GetBackupPlanFromJSONWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupPlanFromJSONWithContext", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupPlanFromJSONWithContext), varargs...)
 }
 
-// GetBackupPlanFromTemplate mocks base method
+// GetBackupPlanFromTemplate mocks base method.
 func (m *MockBackupAPI) GetBackupPlanFromTemplate(arg0 *backup.GetBackupPlanFromTemplateInput) (*backup.GetBackupPlanFromTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackupPlanFromTemplate", arg0)
@@ -1009,13 +1060,13 @@ func (m *MockBackupAPI) GetBackupPlanFromTemplate(arg0 *backup.GetBackupPlanFrom
 	return ret0, ret1
 }
 
-// GetBackupPlanFromTemplate indicates an expected call of GetBackupPlanFromTemplate
+// GetBackupPlanFromTemplate indicates an expected call of GetBackupPlanFromTemplate.
 func (mr *MockBackupAPIMockRecorder) GetBackupPlanFromTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupPlanFromTemplate", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupPlanFromTemplate), arg0)
 }
 
-// GetBackupPlanFromTemplateRequest mocks base method
+// GetBackupPlanFromTemplateRequest mocks base method.
 func (m *MockBackupAPI) GetBackupPlanFromTemplateRequest(arg0 *backup.GetBackupPlanFromTemplateInput) (*request.Request, *backup.GetBackupPlanFromTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackupPlanFromTemplateRequest", arg0)
@@ -1024,13 +1075,13 @@ func (m *MockBackupAPI) GetBackupPlanFromTemplateRequest(arg0 *backup.GetBackupP
 	return ret0, ret1
 }
 
-// GetBackupPlanFromTemplateRequest indicates an expected call of GetBackupPlanFromTemplateRequest
+// GetBackupPlanFromTemplateRequest indicates an expected call of GetBackupPlanFromTemplateRequest.
 func (mr *MockBackupAPIMockRecorder) GetBackupPlanFromTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupPlanFromTemplateRequest", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupPlanFromTemplateRequest), arg0)
 }
 
-// GetBackupPlanFromTemplateWithContext mocks base method
+// GetBackupPlanFromTemplateWithContext mocks base method.
 func (m *MockBackupAPI) GetBackupPlanFromTemplateWithContext(arg0 context.Context, arg1 *backup.GetBackupPlanFromTemplateInput, arg2 ...request.Option) (*backup.GetBackupPlanFromTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1043,14 +1094,14 @@ func (m *MockBackupAPI) GetBackupPlanFromTemplateWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// GetBackupPlanFromTemplateWithContext indicates an expected call of GetBackupPlanFromTemplateWithContext
+// GetBackupPlanFromTemplateWithContext indicates an expected call of GetBackupPlanFromTemplateWithContext.
 func (mr *MockBackupAPIMockRecorder) GetBackupPlanFromTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupPlanFromTemplateWithContext", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupPlanFromTemplateWithContext), varargs...)
 }
 
-// GetBackupPlanRequest mocks base method
+// GetBackupPlanRequest mocks base method.
 func (m *MockBackupAPI) GetBackupPlanRequest(arg0 *backup.GetBackupPlanInput) (*request.Request, *backup.GetBackupPlanOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackupPlanRequest", arg0)
@@ -1059,13 +1110,13 @@ func (m *MockBackupAPI) GetBackupPlanRequest(arg0 *backup.GetBackupPlanInput) (*
 	return ret0, ret1
 }
 
-// GetBackupPlanRequest indicates an expected call of GetBackupPlanRequest
+// GetBackupPlanRequest indicates an expected call of GetBackupPlanRequest.
 func (mr *MockBackupAPIMockRecorder) GetBackupPlanRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupPlanRequest", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupPlanRequest), arg0)
 }
 
-// GetBackupPlanWithContext mocks base method
+// GetBackupPlanWithContext mocks base method.
 func (m *MockBackupAPI) GetBackupPlanWithContext(arg0 context.Context, arg1 *backup.GetBackupPlanInput, arg2 ...request.Option) (*backup.GetBackupPlanOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1078,14 +1129,14 @@ func (m *MockBackupAPI) GetBackupPlanWithContext(arg0 context.Context, arg1 *bac
 	return ret0, ret1
 }
 
-// GetBackupPlanWithContext indicates an expected call of GetBackupPlanWithContext
+// GetBackupPlanWithContext indicates an expected call of GetBackupPlanWithContext.
 func (mr *MockBackupAPIMockRecorder) GetBackupPlanWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupPlanWithContext", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupPlanWithContext), varargs...)
 }
 
-// GetBackupSelection mocks base method
+// GetBackupSelection mocks base method.
 func (m *MockBackupAPI) GetBackupSelection(arg0 *backup.GetBackupSelectionInput) (*backup.GetBackupSelectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackupSelection", arg0)
@@ -1094,13 +1145,13 @@ func (m *MockBackupAPI) GetBackupSelection(arg0 *backup.GetBackupSelectionInput)
 	return ret0, ret1
 }
 
-// GetBackupSelection indicates an expected call of GetBackupSelection
+// GetBackupSelection indicates an expected call of GetBackupSelection.
 func (mr *MockBackupAPIMockRecorder) GetBackupSelection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupSelection", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupSelection), arg0)
 }
 
-// GetBackupSelectionRequest mocks base method
+// GetBackupSelectionRequest mocks base method.
 func (m *MockBackupAPI) GetBackupSelectionRequest(arg0 *backup.GetBackupSelectionInput) (*request.Request, *backup.GetBackupSelectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackupSelectionRequest", arg0)
@@ -1109,13 +1160,13 @@ func (m *MockBackupAPI) GetBackupSelectionRequest(arg0 *backup.GetBackupSelectio
 	return ret0, ret1
 }
 
-// GetBackupSelectionRequest indicates an expected call of GetBackupSelectionRequest
+// GetBackupSelectionRequest indicates an expected call of GetBackupSelectionRequest.
 func (mr *MockBackupAPIMockRecorder) GetBackupSelectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupSelectionRequest", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupSelectionRequest), arg0)
 }
 
-// GetBackupSelectionWithContext mocks base method
+// GetBackupSelectionWithContext mocks base method.
 func (m *MockBackupAPI) GetBackupSelectionWithContext(arg0 context.Context, arg1 *backup.GetBackupSelectionInput, arg2 ...request.Option) (*backup.GetBackupSelectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1128,14 +1179,14 @@ func (m *MockBackupAPI) GetBackupSelectionWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetBackupSelectionWithContext indicates an expected call of GetBackupSelectionWithContext
+// GetBackupSelectionWithContext indicates an expected call of GetBackupSelectionWithContext.
 func (mr *MockBackupAPIMockRecorder) GetBackupSelectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupSelectionWithContext", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupSelectionWithContext), varargs...)
 }
 
-// GetBackupVaultAccessPolicy mocks base method
+// GetBackupVaultAccessPolicy mocks base method.
 func (m *MockBackupAPI) GetBackupVaultAccessPolicy(arg0 *backup.GetBackupVaultAccessPolicyInput) (*backup.GetBackupVaultAccessPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackupVaultAccessPolicy", arg0)
@@ -1144,13 +1195,13 @@ func (m *MockBackupAPI) GetBackupVaultAccessPolicy(arg0 *backup.GetBackupVaultAc
 	return ret0, ret1
 }
 
-// GetBackupVaultAccessPolicy indicates an expected call of GetBackupVaultAccessPolicy
+// GetBackupVaultAccessPolicy indicates an expected call of GetBackupVaultAccessPolicy.
 func (mr *MockBackupAPIMockRecorder) GetBackupVaultAccessPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupVaultAccessPolicy", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupVaultAccessPolicy), arg0)
 }
 
-// GetBackupVaultAccessPolicyRequest mocks base method
+// GetBackupVaultAccessPolicyRequest mocks base method.
 func (m *MockBackupAPI) GetBackupVaultAccessPolicyRequest(arg0 *backup.GetBackupVaultAccessPolicyInput) (*request.Request, *backup.GetBackupVaultAccessPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackupVaultAccessPolicyRequest", arg0)
@@ -1159,13 +1210,13 @@ func (m *MockBackupAPI) GetBackupVaultAccessPolicyRequest(arg0 *backup.GetBackup
 	return ret0, ret1
 }
 
-// GetBackupVaultAccessPolicyRequest indicates an expected call of GetBackupVaultAccessPolicyRequest
+// GetBackupVaultAccessPolicyRequest indicates an expected call of GetBackupVaultAccessPolicyRequest.
 func (mr *MockBackupAPIMockRecorder) GetBackupVaultAccessPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupVaultAccessPolicyRequest", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupVaultAccessPolicyRequest), arg0)
 }
 
-// GetBackupVaultAccessPolicyWithContext mocks base method
+// GetBackupVaultAccessPolicyWithContext mocks base method.
 func (m *MockBackupAPI) GetBackupVaultAccessPolicyWithContext(arg0 context.Context, arg1 *backup.GetBackupVaultAccessPolicyInput, arg2 ...request.Option) (*backup.GetBackupVaultAccessPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1178,14 +1229,14 @@ func (m *MockBackupAPI) GetBackupVaultAccessPolicyWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// GetBackupVaultAccessPolicyWithContext indicates an expected call of GetBackupVaultAccessPolicyWithContext
+// GetBackupVaultAccessPolicyWithContext indicates an expected call of GetBackupVaultAccessPolicyWithContext.
 func (mr *MockBackupAPIMockRecorder) GetBackupVaultAccessPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupVaultAccessPolicyWithContext", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupVaultAccessPolicyWithContext), varargs...)
 }
 
-// GetBackupVaultNotifications mocks base method
+// GetBackupVaultNotifications mocks base method.
 func (m *MockBackupAPI) GetBackupVaultNotifications(arg0 *backup.GetBackupVaultNotificationsInput) (*backup.GetBackupVaultNotificationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackupVaultNotifications", arg0)
@@ -1194,13 +1245,13 @@ func (m *MockBackupAPI) GetBackupVaultNotifications(arg0 *backup.GetBackupVaultN
 	return ret0, ret1
 }
 
-// GetBackupVaultNotifications indicates an expected call of GetBackupVaultNotifications
+// GetBackupVaultNotifications indicates an expected call of GetBackupVaultNotifications.
 func (mr *MockBackupAPIMockRecorder) GetBackupVaultNotifications(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupVaultNotifications", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupVaultNotifications), arg0)
 }
 
-// GetBackupVaultNotificationsRequest mocks base method
+// GetBackupVaultNotificationsRequest mocks base method.
 func (m *MockBackupAPI) GetBackupVaultNotificationsRequest(arg0 *backup.GetBackupVaultNotificationsInput) (*request.Request, *backup.GetBackupVaultNotificationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBackupVaultNotificationsRequest", arg0)
@@ -1209,13 +1260,13 @@ func (m *MockBackupAPI) GetBackupVaultNotificationsRequest(arg0 *backup.GetBacku
 	return ret0, ret1
 }
 
-// GetBackupVaultNotificationsRequest indicates an expected call of GetBackupVaultNotificationsRequest
+// GetBackupVaultNotificationsRequest indicates an expected call of GetBackupVaultNotificationsRequest.
 func (mr *MockBackupAPIMockRecorder) GetBackupVaultNotificationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupVaultNotificationsRequest", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupVaultNotificationsRequest), arg0)
 }
 
-// GetBackupVaultNotificationsWithContext mocks base method
+// GetBackupVaultNotificationsWithContext mocks base method.
 func (m *MockBackupAPI) GetBackupVaultNotificationsWithContext(arg0 context.Context, arg1 *backup.GetBackupVaultNotificationsInput, arg2 ...request.Option) (*backup.GetBackupVaultNotificationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1228,14 +1279,14 @@ func (m *MockBackupAPI) GetBackupVaultNotificationsWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// GetBackupVaultNotificationsWithContext indicates an expected call of GetBackupVaultNotificationsWithContext
+// GetBackupVaultNotificationsWithContext indicates an expected call of GetBackupVaultNotificationsWithContext.
 func (mr *MockBackupAPIMockRecorder) GetBackupVaultNotificationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackupVaultNotificationsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).GetBackupVaultNotificationsWithContext), varargs...)
 }
 
-// GetRecoveryPointRestoreMetadata mocks base method
+// GetRecoveryPointRestoreMetadata mocks base method.
 func (m *MockBackupAPI) GetRecoveryPointRestoreMetadata(arg0 *backup.GetRecoveryPointRestoreMetadataInput) (*backup.GetRecoveryPointRestoreMetadataOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRecoveryPointRestoreMetadata", arg0)
@@ -1244,13 +1295,13 @@ func (m *MockBackupAPI) GetRecoveryPointRestoreMetadata(arg0 *backup.GetRecovery
 	return ret0, ret1
 }
 
-// GetRecoveryPointRestoreMetadata indicates an expected call of GetRecoveryPointRestoreMetadata
+// GetRecoveryPointRestoreMetadata indicates an expected call of GetRecoveryPointRestoreMetadata.
 func (mr *MockBackupAPIMockRecorder) GetRecoveryPointRestoreMetadata(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecoveryPointRestoreMetadata", reflect.TypeOf((*MockBackupAPI)(nil).GetRecoveryPointRestoreMetadata), arg0)
 }
 
-// GetRecoveryPointRestoreMetadataRequest mocks base method
+// GetRecoveryPointRestoreMetadataRequest mocks base method.
 func (m *MockBackupAPI) GetRecoveryPointRestoreMetadataRequest(arg0 *backup.GetRecoveryPointRestoreMetadataInput) (*request.Request, *backup.GetRecoveryPointRestoreMetadataOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRecoveryPointRestoreMetadataRequest", arg0)
@@ -1259,13 +1310,13 @@ func (m *MockBackupAPI) GetRecoveryPointRestoreMetadataRequest(arg0 *backup.GetR
 	return ret0, ret1
 }
 
-// GetRecoveryPointRestoreMetadataRequest indicates an expected call of GetRecoveryPointRestoreMetadataRequest
+// GetRecoveryPointRestoreMetadataRequest indicates an expected call of GetRecoveryPointRestoreMetadataRequest.
 func (mr *MockBackupAPIMockRecorder) GetRecoveryPointRestoreMetadataRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecoveryPointRestoreMetadataRequest", reflect.TypeOf((*MockBackupAPI)(nil).GetRecoveryPointRestoreMetadataRequest), arg0)
 }
 
-// GetRecoveryPointRestoreMetadataWithContext mocks base method
+// GetRecoveryPointRestoreMetadataWithContext mocks base method.
 func (m *MockBackupAPI) GetRecoveryPointRestoreMetadataWithContext(arg0 context.Context, arg1 *backup.GetRecoveryPointRestoreMetadataInput, arg2 ...request.Option) (*backup.GetRecoveryPointRestoreMetadataOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1278,14 +1329,14 @@ func (m *MockBackupAPI) GetRecoveryPointRestoreMetadataWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// GetRecoveryPointRestoreMetadataWithContext indicates an expected call of GetRecoveryPointRestoreMetadataWithContext
+// GetRecoveryPointRestoreMetadataWithContext indicates an expected call of GetRecoveryPointRestoreMetadataWithContext.
 func (mr *MockBackupAPIMockRecorder) GetRecoveryPointRestoreMetadataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecoveryPointRestoreMetadataWithContext", reflect.TypeOf((*MockBackupAPI)(nil).GetRecoveryPointRestoreMetadataWithContext), varargs...)
 }
 
-// GetSupportedResourceTypes mocks base method
+// GetSupportedResourceTypes mocks base method.
 func (m *MockBackupAPI) GetSupportedResourceTypes(arg0 *backup.GetSupportedResourceTypesInput) (*backup.GetSupportedResourceTypesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSupportedResourceTypes", arg0)
@@ -1294,13 +1345,13 @@ func (m *MockBackupAPI) GetSupportedResourceTypes(arg0 *backup.GetSupportedResou
 	return ret0, ret1
 }
 
-// GetSupportedResourceTypes indicates an expected call of GetSupportedResourceTypes
+// GetSupportedResourceTypes indicates an expected call of GetSupportedResourceTypes.
 func (mr *MockBackupAPIMockRecorder) GetSupportedResourceTypes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSupportedResourceTypes", reflect.TypeOf((*MockBackupAPI)(nil).GetSupportedResourceTypes), arg0)
 }
 
-// GetSupportedResourceTypesRequest mocks base method
+// GetSupportedResourceTypesRequest mocks base method.
 func (m *MockBackupAPI) GetSupportedResourceTypesRequest(arg0 *backup.GetSupportedResourceTypesInput) (*request.Request, *backup.GetSupportedResourceTypesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSupportedResourceTypesRequest", arg0)
@@ -1309,13 +1360,13 @@ func (m *MockBackupAPI) GetSupportedResourceTypesRequest(arg0 *backup.GetSupport
 	return ret0, ret1
 }
 
-// GetSupportedResourceTypesRequest indicates an expected call of GetSupportedResourceTypesRequest
+// GetSupportedResourceTypesRequest indicates an expected call of GetSupportedResourceTypesRequest.
 func (mr *MockBackupAPIMockRecorder) GetSupportedResourceTypesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSupportedResourceTypesRequest", reflect.TypeOf((*MockBackupAPI)(nil).GetSupportedResourceTypesRequest), arg0)
 }
 
-// GetSupportedResourceTypesWithContext mocks base method
+// GetSupportedResourceTypesWithContext mocks base method.
 func (m *MockBackupAPI) GetSupportedResourceTypesWithContext(arg0 context.Context, arg1 *backup.GetSupportedResourceTypesInput, arg2 ...request.Option) (*backup.GetSupportedResourceTypesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1328,14 +1379,14 @@ func (m *MockBackupAPI) GetSupportedResourceTypesWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// GetSupportedResourceTypesWithContext indicates an expected call of GetSupportedResourceTypesWithContext
+// GetSupportedResourceTypesWithContext indicates an expected call of GetSupportedResourceTypesWithContext.
 func (mr *MockBackupAPIMockRecorder) GetSupportedResourceTypesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSupportedResourceTypesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).GetSupportedResourceTypesWithContext), varargs...)
 }
 
-// ListBackupJobs mocks base method
+// ListBackupJobs mocks base method.
 func (m *MockBackupAPI) ListBackupJobs(arg0 *backup.ListBackupJobsInput) (*backup.ListBackupJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupJobs", arg0)
@@ -1344,13 +1395,13 @@ func (m *MockBackupAPI) ListBackupJobs(arg0 *backup.ListBackupJobsInput) (*backu
 	return ret0, ret1
 }
 
-// ListBackupJobs indicates an expected call of ListBackupJobs
+// ListBackupJobs indicates an expected call of ListBackupJobs.
 func (mr *MockBackupAPIMockRecorder) ListBackupJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupJobs", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupJobs), arg0)
 }
 
-// ListBackupJobsPages mocks base method
+// ListBackupJobsPages mocks base method.
 func (m *MockBackupAPI) ListBackupJobsPages(arg0 *backup.ListBackupJobsInput, arg1 func(*backup.ListBackupJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupJobsPages", arg0, arg1)
@@ -1358,13 +1409,13 @@ func (m *MockBackupAPI) ListBackupJobsPages(arg0 *backup.ListBackupJobsInput, ar
 	return ret0
 }
 
-// ListBackupJobsPages indicates an expected call of ListBackupJobsPages
+// ListBackupJobsPages indicates an expected call of ListBackupJobsPages.
 func (mr *MockBackupAPIMockRecorder) ListBackupJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupJobsPages", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupJobsPages), arg0, arg1)
 }
 
-// ListBackupJobsPagesWithContext mocks base method
+// ListBackupJobsPagesWithContext mocks base method.
 func (m *MockBackupAPI) ListBackupJobsPagesWithContext(arg0 context.Context, arg1 *backup.ListBackupJobsInput, arg2 func(*backup.ListBackupJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1376,14 +1427,14 @@ func (m *MockBackupAPI) ListBackupJobsPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// ListBackupJobsPagesWithContext indicates an expected call of ListBackupJobsPagesWithContext
+// ListBackupJobsPagesWithContext indicates an expected call of ListBackupJobsPagesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListBackupJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupJobsPagesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupJobsPagesWithContext), varargs...)
 }
 
-// ListBackupJobsRequest mocks base method
+// ListBackupJobsRequest mocks base method.
 func (m *MockBackupAPI) ListBackupJobsRequest(arg0 *backup.ListBackupJobsInput) (*request.Request, *backup.ListBackupJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupJobsRequest", arg0)
@@ -1392,13 +1443,13 @@ func (m *MockBackupAPI) ListBackupJobsRequest(arg0 *backup.ListBackupJobsInput) 
 	return ret0, ret1
 }
 
-// ListBackupJobsRequest indicates an expected call of ListBackupJobsRequest
+// ListBackupJobsRequest indicates an expected call of ListBackupJobsRequest.
 func (mr *MockBackupAPIMockRecorder) ListBackupJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupJobsRequest", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupJobsRequest), arg0)
 }
 
-// ListBackupJobsWithContext mocks base method
+// ListBackupJobsWithContext mocks base method.
 func (m *MockBackupAPI) ListBackupJobsWithContext(arg0 context.Context, arg1 *backup.ListBackupJobsInput, arg2 ...request.Option) (*backup.ListBackupJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1411,14 +1462,14 @@ func (m *MockBackupAPI) ListBackupJobsWithContext(arg0 context.Context, arg1 *ba
 	return ret0, ret1
 }
 
-// ListBackupJobsWithContext indicates an expected call of ListBackupJobsWithContext
+// ListBackupJobsWithContext indicates an expected call of ListBackupJobsWithContext.
 func (mr *MockBackupAPIMockRecorder) ListBackupJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupJobsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupJobsWithContext), varargs...)
 }
 
-// ListBackupPlanTemplates mocks base method
+// ListBackupPlanTemplates mocks base method.
 func (m *MockBackupAPI) ListBackupPlanTemplates(arg0 *backup.ListBackupPlanTemplatesInput) (*backup.ListBackupPlanTemplatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupPlanTemplates", arg0)
@@ -1427,13 +1478,13 @@ func (m *MockBackupAPI) ListBackupPlanTemplates(arg0 *backup.ListBackupPlanTempl
 	return ret0, ret1
 }
 
-// ListBackupPlanTemplates indicates an expected call of ListBackupPlanTemplates
+// ListBackupPlanTemplates indicates an expected call of ListBackupPlanTemplates.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlanTemplates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlanTemplates", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlanTemplates), arg0)
 }
 
-// ListBackupPlanTemplatesPages mocks base method
+// ListBackupPlanTemplatesPages mocks base method.
 func (m *MockBackupAPI) ListBackupPlanTemplatesPages(arg0 *backup.ListBackupPlanTemplatesInput, arg1 func(*backup.ListBackupPlanTemplatesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupPlanTemplatesPages", arg0, arg1)
@@ -1441,13 +1492,13 @@ func (m *MockBackupAPI) ListBackupPlanTemplatesPages(arg0 *backup.ListBackupPlan
 	return ret0
 }
 
-// ListBackupPlanTemplatesPages indicates an expected call of ListBackupPlanTemplatesPages
+// ListBackupPlanTemplatesPages indicates an expected call of ListBackupPlanTemplatesPages.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlanTemplatesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlanTemplatesPages", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlanTemplatesPages), arg0, arg1)
 }
 
-// ListBackupPlanTemplatesPagesWithContext mocks base method
+// ListBackupPlanTemplatesPagesWithContext mocks base method.
 func (m *MockBackupAPI) ListBackupPlanTemplatesPagesWithContext(arg0 context.Context, arg1 *backup.ListBackupPlanTemplatesInput, arg2 func(*backup.ListBackupPlanTemplatesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1459,14 +1510,14 @@ func (m *MockBackupAPI) ListBackupPlanTemplatesPagesWithContext(arg0 context.Con
 	return ret0
 }
 
-// ListBackupPlanTemplatesPagesWithContext indicates an expected call of ListBackupPlanTemplatesPagesWithContext
+// ListBackupPlanTemplatesPagesWithContext indicates an expected call of ListBackupPlanTemplatesPagesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlanTemplatesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlanTemplatesPagesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlanTemplatesPagesWithContext), varargs...)
 }
 
-// ListBackupPlanTemplatesRequest mocks base method
+// ListBackupPlanTemplatesRequest mocks base method.
 func (m *MockBackupAPI) ListBackupPlanTemplatesRequest(arg0 *backup.ListBackupPlanTemplatesInput) (*request.Request, *backup.ListBackupPlanTemplatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupPlanTemplatesRequest", arg0)
@@ -1475,13 +1526,13 @@ func (m *MockBackupAPI) ListBackupPlanTemplatesRequest(arg0 *backup.ListBackupPl
 	return ret0, ret1
 }
 
-// ListBackupPlanTemplatesRequest indicates an expected call of ListBackupPlanTemplatesRequest
+// ListBackupPlanTemplatesRequest indicates an expected call of ListBackupPlanTemplatesRequest.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlanTemplatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlanTemplatesRequest", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlanTemplatesRequest), arg0)
 }
 
-// ListBackupPlanTemplatesWithContext mocks base method
+// ListBackupPlanTemplatesWithContext mocks base method.
 func (m *MockBackupAPI) ListBackupPlanTemplatesWithContext(arg0 context.Context, arg1 *backup.ListBackupPlanTemplatesInput, arg2 ...request.Option) (*backup.ListBackupPlanTemplatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1494,14 +1545,14 @@ func (m *MockBackupAPI) ListBackupPlanTemplatesWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// ListBackupPlanTemplatesWithContext indicates an expected call of ListBackupPlanTemplatesWithContext
+// ListBackupPlanTemplatesWithContext indicates an expected call of ListBackupPlanTemplatesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlanTemplatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlanTemplatesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlanTemplatesWithContext), varargs...)
 }
 
-// ListBackupPlanVersions mocks base method
+// ListBackupPlanVersions mocks base method.
 func (m *MockBackupAPI) ListBackupPlanVersions(arg0 *backup.ListBackupPlanVersionsInput) (*backup.ListBackupPlanVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupPlanVersions", arg0)
@@ -1510,13 +1561,13 @@ func (m *MockBackupAPI) ListBackupPlanVersions(arg0 *backup.ListBackupPlanVersio
 	return ret0, ret1
 }
 
-// ListBackupPlanVersions indicates an expected call of ListBackupPlanVersions
+// ListBackupPlanVersions indicates an expected call of ListBackupPlanVersions.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlanVersions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlanVersions", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlanVersions), arg0)
 }
 
-// ListBackupPlanVersionsPages mocks base method
+// ListBackupPlanVersionsPages mocks base method.
 func (m *MockBackupAPI) ListBackupPlanVersionsPages(arg0 *backup.ListBackupPlanVersionsInput, arg1 func(*backup.ListBackupPlanVersionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupPlanVersionsPages", arg0, arg1)
@@ -1524,13 +1575,13 @@ func (m *MockBackupAPI) ListBackupPlanVersionsPages(arg0 *backup.ListBackupPlanV
 	return ret0
 }
 
-// ListBackupPlanVersionsPages indicates an expected call of ListBackupPlanVersionsPages
+// ListBackupPlanVersionsPages indicates an expected call of ListBackupPlanVersionsPages.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlanVersionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlanVersionsPages", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlanVersionsPages), arg0, arg1)
 }
 
-// ListBackupPlanVersionsPagesWithContext mocks base method
+// ListBackupPlanVersionsPagesWithContext mocks base method.
 func (m *MockBackupAPI) ListBackupPlanVersionsPagesWithContext(arg0 context.Context, arg1 *backup.ListBackupPlanVersionsInput, arg2 func(*backup.ListBackupPlanVersionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1542,14 +1593,14 @@ func (m *MockBackupAPI) ListBackupPlanVersionsPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListBackupPlanVersionsPagesWithContext indicates an expected call of ListBackupPlanVersionsPagesWithContext
+// ListBackupPlanVersionsPagesWithContext indicates an expected call of ListBackupPlanVersionsPagesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlanVersionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlanVersionsPagesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlanVersionsPagesWithContext), varargs...)
 }
 
-// ListBackupPlanVersionsRequest mocks base method
+// ListBackupPlanVersionsRequest mocks base method.
 func (m *MockBackupAPI) ListBackupPlanVersionsRequest(arg0 *backup.ListBackupPlanVersionsInput) (*request.Request, *backup.ListBackupPlanVersionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupPlanVersionsRequest", arg0)
@@ -1558,13 +1609,13 @@ func (m *MockBackupAPI) ListBackupPlanVersionsRequest(arg0 *backup.ListBackupPla
 	return ret0, ret1
 }
 
-// ListBackupPlanVersionsRequest indicates an expected call of ListBackupPlanVersionsRequest
+// ListBackupPlanVersionsRequest indicates an expected call of ListBackupPlanVersionsRequest.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlanVersionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlanVersionsRequest", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlanVersionsRequest), arg0)
 }
 
-// ListBackupPlanVersionsWithContext mocks base method
+// ListBackupPlanVersionsWithContext mocks base method.
 func (m *MockBackupAPI) ListBackupPlanVersionsWithContext(arg0 context.Context, arg1 *backup.ListBackupPlanVersionsInput, arg2 ...request.Option) (*backup.ListBackupPlanVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1577,14 +1628,14 @@ func (m *MockBackupAPI) ListBackupPlanVersionsWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListBackupPlanVersionsWithContext indicates an expected call of ListBackupPlanVersionsWithContext
+// ListBackupPlanVersionsWithContext indicates an expected call of ListBackupPlanVersionsWithContext.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlanVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlanVersionsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlanVersionsWithContext), varargs...)
 }
 
-// ListBackupPlans mocks base method
+// ListBackupPlans mocks base method.
 func (m *MockBackupAPI) ListBackupPlans(arg0 *backup.ListBackupPlansInput) (*backup.ListBackupPlansOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupPlans", arg0)
@@ -1593,13 +1644,13 @@ func (m *MockBackupAPI) ListBackupPlans(arg0 *backup.ListBackupPlansInput) (*bac
 	return ret0, ret1
 }
 
-// ListBackupPlans indicates an expected call of ListBackupPlans
+// ListBackupPlans indicates an expected call of ListBackupPlans.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlans(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlans", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlans), arg0)
 }
 
-// ListBackupPlansPages mocks base method
+// ListBackupPlansPages mocks base method.
 func (m *MockBackupAPI) ListBackupPlansPages(arg0 *backup.ListBackupPlansInput, arg1 func(*backup.ListBackupPlansOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupPlansPages", arg0, arg1)
@@ -1607,13 +1658,13 @@ func (m *MockBackupAPI) ListBackupPlansPages(arg0 *backup.ListBackupPlansInput, 
 	return ret0
 }
 
-// ListBackupPlansPages indicates an expected call of ListBackupPlansPages
+// ListBackupPlansPages indicates an expected call of ListBackupPlansPages.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlansPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlansPages", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlansPages), arg0, arg1)
 }
 
-// ListBackupPlansPagesWithContext mocks base method
+// ListBackupPlansPagesWithContext mocks base method.
 func (m *MockBackupAPI) ListBackupPlansPagesWithContext(arg0 context.Context, arg1 *backup.ListBackupPlansInput, arg2 func(*backup.ListBackupPlansOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1625,14 +1676,14 @@ func (m *MockBackupAPI) ListBackupPlansPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// ListBackupPlansPagesWithContext indicates an expected call of ListBackupPlansPagesWithContext
+// ListBackupPlansPagesWithContext indicates an expected call of ListBackupPlansPagesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlansPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlansPagesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlansPagesWithContext), varargs...)
 }
 
-// ListBackupPlansRequest mocks base method
+// ListBackupPlansRequest mocks base method.
 func (m *MockBackupAPI) ListBackupPlansRequest(arg0 *backup.ListBackupPlansInput) (*request.Request, *backup.ListBackupPlansOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupPlansRequest", arg0)
@@ -1641,13 +1692,13 @@ func (m *MockBackupAPI) ListBackupPlansRequest(arg0 *backup.ListBackupPlansInput
 	return ret0, ret1
 }
 
-// ListBackupPlansRequest indicates an expected call of ListBackupPlansRequest
+// ListBackupPlansRequest indicates an expected call of ListBackupPlansRequest.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlansRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlansRequest", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlansRequest), arg0)
 }
 
-// ListBackupPlansWithContext mocks base method
+// ListBackupPlansWithContext mocks base method.
 func (m *MockBackupAPI) ListBackupPlansWithContext(arg0 context.Context, arg1 *backup.ListBackupPlansInput, arg2 ...request.Option) (*backup.ListBackupPlansOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1660,14 +1711,14 @@ func (m *MockBackupAPI) ListBackupPlansWithContext(arg0 context.Context, arg1 *b
 	return ret0, ret1
 }
 
-// ListBackupPlansWithContext indicates an expected call of ListBackupPlansWithContext
+// ListBackupPlansWithContext indicates an expected call of ListBackupPlansWithContext.
 func (mr *MockBackupAPIMockRecorder) ListBackupPlansWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupPlansWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupPlansWithContext), varargs...)
 }
 
-// ListBackupSelections mocks base method
+// ListBackupSelections mocks base method.
 func (m *MockBackupAPI) ListBackupSelections(arg0 *backup.ListBackupSelectionsInput) (*backup.ListBackupSelectionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupSelections", arg0)
@@ -1676,13 +1727,13 @@ func (m *MockBackupAPI) ListBackupSelections(arg0 *backup.ListBackupSelectionsIn
 	return ret0, ret1
 }
 
-// ListBackupSelections indicates an expected call of ListBackupSelections
+// ListBackupSelections indicates an expected call of ListBackupSelections.
 func (mr *MockBackupAPIMockRecorder) ListBackupSelections(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupSelections", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupSelections), arg0)
 }
 
-// ListBackupSelectionsPages mocks base method
+// ListBackupSelectionsPages mocks base method.
 func (m *MockBackupAPI) ListBackupSelectionsPages(arg0 *backup.ListBackupSelectionsInput, arg1 func(*backup.ListBackupSelectionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupSelectionsPages", arg0, arg1)
@@ -1690,13 +1741,13 @@ func (m *MockBackupAPI) ListBackupSelectionsPages(arg0 *backup.ListBackupSelecti
 	return ret0
 }
 
-// ListBackupSelectionsPages indicates an expected call of ListBackupSelectionsPages
+// ListBackupSelectionsPages indicates an expected call of ListBackupSelectionsPages.
 func (mr *MockBackupAPIMockRecorder) ListBackupSelectionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupSelectionsPages", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupSelectionsPages), arg0, arg1)
 }
 
-// ListBackupSelectionsPagesWithContext mocks base method
+// ListBackupSelectionsPagesWithContext mocks base method.
 func (m *MockBackupAPI) ListBackupSelectionsPagesWithContext(arg0 context.Context, arg1 *backup.ListBackupSelectionsInput, arg2 func(*backup.ListBackupSelectionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1708,14 +1759,14 @@ func (m *MockBackupAPI) ListBackupSelectionsPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListBackupSelectionsPagesWithContext indicates an expected call of ListBackupSelectionsPagesWithContext
+// ListBackupSelectionsPagesWithContext indicates an expected call of ListBackupSelectionsPagesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListBackupSelectionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupSelectionsPagesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupSelectionsPagesWithContext), varargs...)
 }
 
-// ListBackupSelectionsRequest mocks base method
+// ListBackupSelectionsRequest mocks base method.
 func (m *MockBackupAPI) ListBackupSelectionsRequest(arg0 *backup.ListBackupSelectionsInput) (*request.Request, *backup.ListBackupSelectionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupSelectionsRequest", arg0)
@@ -1724,13 +1775,13 @@ func (m *MockBackupAPI) ListBackupSelectionsRequest(arg0 *backup.ListBackupSelec
 	return ret0, ret1
 }
 
-// ListBackupSelectionsRequest indicates an expected call of ListBackupSelectionsRequest
+// ListBackupSelectionsRequest indicates an expected call of ListBackupSelectionsRequest.
 func (mr *MockBackupAPIMockRecorder) ListBackupSelectionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupSelectionsRequest", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupSelectionsRequest), arg0)
 }
 
-// ListBackupSelectionsWithContext mocks base method
+// ListBackupSelectionsWithContext mocks base method.
 func (m *MockBackupAPI) ListBackupSelectionsWithContext(arg0 context.Context, arg1 *backup.ListBackupSelectionsInput, arg2 ...request.Option) (*backup.ListBackupSelectionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1743,14 +1794,14 @@ func (m *MockBackupAPI) ListBackupSelectionsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListBackupSelectionsWithContext indicates an expected call of ListBackupSelectionsWithContext
+// ListBackupSelectionsWithContext indicates an expected call of ListBackupSelectionsWithContext.
 func (mr *MockBackupAPIMockRecorder) ListBackupSelectionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupSelectionsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupSelectionsWithContext), varargs...)
 }
 
-// ListBackupVaults mocks base method
+// ListBackupVaults mocks base method.
 func (m *MockBackupAPI) ListBackupVaults(arg0 *backup.ListBackupVaultsInput) (*backup.ListBackupVaultsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupVaults", arg0)
@@ -1759,13 +1810,13 @@ func (m *MockBackupAPI) ListBackupVaults(arg0 *backup.ListBackupVaultsInput) (*b
 	return ret0, ret1
 }
 
-// ListBackupVaults indicates an expected call of ListBackupVaults
+// ListBackupVaults indicates an expected call of ListBackupVaults.
 func (mr *MockBackupAPIMockRecorder) ListBackupVaults(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupVaults", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupVaults), arg0)
 }
 
-// ListBackupVaultsPages mocks base method
+// ListBackupVaultsPages mocks base method.
 func (m *MockBackupAPI) ListBackupVaultsPages(arg0 *backup.ListBackupVaultsInput, arg1 func(*backup.ListBackupVaultsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupVaultsPages", arg0, arg1)
@@ -1773,13 +1824,13 @@ func (m *MockBackupAPI) ListBackupVaultsPages(arg0 *backup.ListBackupVaultsInput
 	return ret0
 }
 
-// ListBackupVaultsPages indicates an expected call of ListBackupVaultsPages
+// ListBackupVaultsPages indicates an expected call of ListBackupVaultsPages.
 func (mr *MockBackupAPIMockRecorder) ListBackupVaultsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupVaultsPages", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupVaultsPages), arg0, arg1)
 }
 
-// ListBackupVaultsPagesWithContext mocks base method
+// ListBackupVaultsPagesWithContext mocks base method.
 func (m *MockBackupAPI) ListBackupVaultsPagesWithContext(arg0 context.Context, arg1 *backup.ListBackupVaultsInput, arg2 func(*backup.ListBackupVaultsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1791,14 +1842,14 @@ func (m *MockBackupAPI) ListBackupVaultsPagesWithContext(arg0 context.Context, a
 	return ret0
 }
 
-// ListBackupVaultsPagesWithContext indicates an expected call of ListBackupVaultsPagesWithContext
+// ListBackupVaultsPagesWithContext indicates an expected call of ListBackupVaultsPagesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListBackupVaultsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupVaultsPagesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupVaultsPagesWithContext), varargs...)
 }
 
-// ListBackupVaultsRequest mocks base method
+// ListBackupVaultsRequest mocks base method.
 func (m *MockBackupAPI) ListBackupVaultsRequest(arg0 *backup.ListBackupVaultsInput) (*request.Request, *backup.ListBackupVaultsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListBackupVaultsRequest", arg0)
@@ -1807,13 +1858,13 @@ func (m *MockBackupAPI) ListBackupVaultsRequest(arg0 *backup.ListBackupVaultsInp
 	return ret0, ret1
 }
 
-// ListBackupVaultsRequest indicates an expected call of ListBackupVaultsRequest
+// ListBackupVaultsRequest indicates an expected call of ListBackupVaultsRequest.
 func (mr *MockBackupAPIMockRecorder) ListBackupVaultsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupVaultsRequest", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupVaultsRequest), arg0)
 }
 
-// ListBackupVaultsWithContext mocks base method
+// ListBackupVaultsWithContext mocks base method.
 func (m *MockBackupAPI) ListBackupVaultsWithContext(arg0 context.Context, arg1 *backup.ListBackupVaultsInput, arg2 ...request.Option) (*backup.ListBackupVaultsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1826,14 +1877,14 @@ func (m *MockBackupAPI) ListBackupVaultsWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ListBackupVaultsWithContext indicates an expected call of ListBackupVaultsWithContext
+// ListBackupVaultsWithContext indicates an expected call of ListBackupVaultsWithContext.
 func (mr *MockBackupAPIMockRecorder) ListBackupVaultsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBackupVaultsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListBackupVaultsWithContext), varargs...)
 }
 
-// ListCopyJobs mocks base method
+// ListCopyJobs mocks base method.
 func (m *MockBackupAPI) ListCopyJobs(arg0 *backup.ListCopyJobsInput) (*backup.ListCopyJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCopyJobs", arg0)
@@ -1842,13 +1893,13 @@ func (m *MockBackupAPI) ListCopyJobs(arg0 *backup.ListCopyJobsInput) (*backup.Li
 	return ret0, ret1
 }
 
-// ListCopyJobs indicates an expected call of ListCopyJobs
+// ListCopyJobs indicates an expected call of ListCopyJobs.
 func (mr *MockBackupAPIMockRecorder) ListCopyJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCopyJobs", reflect.TypeOf((*MockBackupAPI)(nil).ListCopyJobs), arg0)
 }
 
-// ListCopyJobsPages mocks base method
+// ListCopyJobsPages mocks base method.
 func (m *MockBackupAPI) ListCopyJobsPages(arg0 *backup.ListCopyJobsInput, arg1 func(*backup.ListCopyJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCopyJobsPages", arg0, arg1)
@@ -1856,13 +1907,13 @@ func (m *MockBackupAPI) ListCopyJobsPages(arg0 *backup.ListCopyJobsInput, arg1 f
 	return ret0
 }
 
-// ListCopyJobsPages indicates an expected call of ListCopyJobsPages
+// ListCopyJobsPages indicates an expected call of ListCopyJobsPages.
 func (mr *MockBackupAPIMockRecorder) ListCopyJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCopyJobsPages", reflect.TypeOf((*MockBackupAPI)(nil).ListCopyJobsPages), arg0, arg1)
 }
 
-// ListCopyJobsPagesWithContext mocks base method
+// ListCopyJobsPagesWithContext mocks base method.
 func (m *MockBackupAPI) ListCopyJobsPagesWithContext(arg0 context.Context, arg1 *backup.ListCopyJobsInput, arg2 func(*backup.ListCopyJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1874,14 +1925,14 @@ func (m *MockBackupAPI) ListCopyJobsPagesWithContext(arg0 context.Context, arg1 
 	return ret0
 }
 
-// ListCopyJobsPagesWithContext indicates an expected call of ListCopyJobsPagesWithContext
+// ListCopyJobsPagesWithContext indicates an expected call of ListCopyJobsPagesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListCopyJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCopyJobsPagesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListCopyJobsPagesWithContext), varargs...)
 }
 
-// ListCopyJobsRequest mocks base method
+// ListCopyJobsRequest mocks base method.
 func (m *MockBackupAPI) ListCopyJobsRequest(arg0 *backup.ListCopyJobsInput) (*request.Request, *backup.ListCopyJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCopyJobsRequest", arg0)
@@ -1890,13 +1941,13 @@ func (m *MockBackupAPI) ListCopyJobsRequest(arg0 *backup.ListCopyJobsInput) (*re
 	return ret0, ret1
 }
 
-// ListCopyJobsRequest indicates an expected call of ListCopyJobsRequest
+// ListCopyJobsRequest indicates an expected call of ListCopyJobsRequest.
 func (mr *MockBackupAPIMockRecorder) ListCopyJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCopyJobsRequest", reflect.TypeOf((*MockBackupAPI)(nil).ListCopyJobsRequest), arg0)
 }
 
-// ListCopyJobsWithContext mocks base method
+// ListCopyJobsWithContext mocks base method.
 func (m *MockBackupAPI) ListCopyJobsWithContext(arg0 context.Context, arg1 *backup.ListCopyJobsInput, arg2 ...request.Option) (*backup.ListCopyJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1909,14 +1960,14 @@ func (m *MockBackupAPI) ListCopyJobsWithContext(arg0 context.Context, arg1 *back
 	return ret0, ret1
 }
 
-// ListCopyJobsWithContext indicates an expected call of ListCopyJobsWithContext
+// ListCopyJobsWithContext indicates an expected call of ListCopyJobsWithContext.
 func (mr *MockBackupAPIMockRecorder) ListCopyJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCopyJobsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListCopyJobsWithContext), varargs...)
 }
 
-// ListProtectedResources mocks base method
+// ListProtectedResources mocks base method.
 func (m *MockBackupAPI) ListProtectedResources(arg0 *backup.ListProtectedResourcesInput) (*backup.ListProtectedResourcesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProtectedResources", arg0)
@@ -1925,13 +1976,13 @@ func (m *MockBackupAPI) ListProtectedResources(arg0 *backup.ListProtectedResourc
 	return ret0, ret1
 }
 
-// ListProtectedResources indicates an expected call of ListProtectedResources
+// ListProtectedResources indicates an expected call of ListProtectedResources.
 func (mr *MockBackupAPIMockRecorder) ListProtectedResources(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProtectedResources", reflect.TypeOf((*MockBackupAPI)(nil).ListProtectedResources), arg0)
 }
 
-// ListProtectedResourcesPages mocks base method
+// ListProtectedResourcesPages mocks base method.
 func (m *MockBackupAPI) ListProtectedResourcesPages(arg0 *backup.ListProtectedResourcesInput, arg1 func(*backup.ListProtectedResourcesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProtectedResourcesPages", arg0, arg1)
@@ -1939,13 +1990,13 @@ func (m *MockBackupAPI) ListProtectedResourcesPages(arg0 *backup.ListProtectedRe
 	return ret0
 }
 
-// ListProtectedResourcesPages indicates an expected call of ListProtectedResourcesPages
+// ListProtectedResourcesPages indicates an expected call of ListProtectedResourcesPages.
 func (mr *MockBackupAPIMockRecorder) ListProtectedResourcesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProtectedResourcesPages", reflect.TypeOf((*MockBackupAPI)(nil).ListProtectedResourcesPages), arg0, arg1)
 }
 
-// ListProtectedResourcesPagesWithContext mocks base method
+// ListProtectedResourcesPagesWithContext mocks base method.
 func (m *MockBackupAPI) ListProtectedResourcesPagesWithContext(arg0 context.Context, arg1 *backup.ListProtectedResourcesInput, arg2 func(*backup.ListProtectedResourcesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1957,14 +2008,14 @@ func (m *MockBackupAPI) ListProtectedResourcesPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListProtectedResourcesPagesWithContext indicates an expected call of ListProtectedResourcesPagesWithContext
+// ListProtectedResourcesPagesWithContext indicates an expected call of ListProtectedResourcesPagesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListProtectedResourcesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProtectedResourcesPagesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListProtectedResourcesPagesWithContext), varargs...)
 }
 
-// ListProtectedResourcesRequest mocks base method
+// ListProtectedResourcesRequest mocks base method.
 func (m *MockBackupAPI) ListProtectedResourcesRequest(arg0 *backup.ListProtectedResourcesInput) (*request.Request, *backup.ListProtectedResourcesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProtectedResourcesRequest", arg0)
@@ -1973,13 +2024,13 @@ func (m *MockBackupAPI) ListProtectedResourcesRequest(arg0 *backup.ListProtected
 	return ret0, ret1
 }
 
-// ListProtectedResourcesRequest indicates an expected call of ListProtectedResourcesRequest
+// ListProtectedResourcesRequest indicates an expected call of ListProtectedResourcesRequest.
 func (mr *MockBackupAPIMockRecorder) ListProtectedResourcesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProtectedResourcesRequest", reflect.TypeOf((*MockBackupAPI)(nil).ListProtectedResourcesRequest), arg0)
 }
 
-// ListProtectedResourcesWithContext mocks base method
+// ListProtectedResourcesWithContext mocks base method.
 func (m *MockBackupAPI) ListProtectedResourcesWithContext(arg0 context.Context, arg1 *backup.ListProtectedResourcesInput, arg2 ...request.Option) (*backup.ListProtectedResourcesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1992,14 +2043,14 @@ func (m *MockBackupAPI) ListProtectedResourcesWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListProtectedResourcesWithContext indicates an expected call of ListProtectedResourcesWithContext
+// ListProtectedResourcesWithContext indicates an expected call of ListProtectedResourcesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListProtectedResourcesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProtectedResourcesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListProtectedResourcesWithContext), varargs...)
 }
 
-// ListRecoveryPointsByBackupVault mocks base method
+// ListRecoveryPointsByBackupVault mocks base method.
 func (m *MockBackupAPI) ListRecoveryPointsByBackupVault(arg0 *backup.ListRecoveryPointsByBackupVaultInput) (*backup.ListRecoveryPointsByBackupVaultOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecoveryPointsByBackupVault", arg0)
@@ -2008,13 +2059,13 @@ func (m *MockBackupAPI) ListRecoveryPointsByBackupVault(arg0 *backup.ListRecover
 	return ret0, ret1
 }
 
-// ListRecoveryPointsByBackupVault indicates an expected call of ListRecoveryPointsByBackupVault
+// ListRecoveryPointsByBackupVault indicates an expected call of ListRecoveryPointsByBackupVault.
 func (mr *MockBackupAPIMockRecorder) ListRecoveryPointsByBackupVault(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecoveryPointsByBackupVault", reflect.TypeOf((*MockBackupAPI)(nil).ListRecoveryPointsByBackupVault), arg0)
 }
 
-// ListRecoveryPointsByBackupVaultPages mocks base method
+// ListRecoveryPointsByBackupVaultPages mocks base method.
 func (m *MockBackupAPI) ListRecoveryPointsByBackupVaultPages(arg0 *backup.ListRecoveryPointsByBackupVaultInput, arg1 func(*backup.ListRecoveryPointsByBackupVaultOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecoveryPointsByBackupVaultPages", arg0, arg1)
@@ -2022,13 +2073,13 @@ func (m *MockBackupAPI) ListRecoveryPointsByBackupVaultPages(arg0 *backup.ListRe
 	return ret0
 }
 
-// ListRecoveryPointsByBackupVaultPages indicates an expected call of ListRecoveryPointsByBackupVaultPages
+// ListRecoveryPointsByBackupVaultPages indicates an expected call of ListRecoveryPointsByBackupVaultPages.
 func (mr *MockBackupAPIMockRecorder) ListRecoveryPointsByBackupVaultPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecoveryPointsByBackupVaultPages", reflect.TypeOf((*MockBackupAPI)(nil).ListRecoveryPointsByBackupVaultPages), arg0, arg1)
 }
 
-// ListRecoveryPointsByBackupVaultPagesWithContext mocks base method
+// ListRecoveryPointsByBackupVaultPagesWithContext mocks base method.
 func (m *MockBackupAPI) ListRecoveryPointsByBackupVaultPagesWithContext(arg0 context.Context, arg1 *backup.ListRecoveryPointsByBackupVaultInput, arg2 func(*backup.ListRecoveryPointsByBackupVaultOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2040,14 +2091,14 @@ func (m *MockBackupAPI) ListRecoveryPointsByBackupVaultPagesWithContext(arg0 con
 	return ret0
 }
 
-// ListRecoveryPointsByBackupVaultPagesWithContext indicates an expected call of ListRecoveryPointsByBackupVaultPagesWithContext
+// ListRecoveryPointsByBackupVaultPagesWithContext indicates an expected call of ListRecoveryPointsByBackupVaultPagesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListRecoveryPointsByBackupVaultPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecoveryPointsByBackupVaultPagesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListRecoveryPointsByBackupVaultPagesWithContext), varargs...)
 }
 
-// ListRecoveryPointsByBackupVaultRequest mocks base method
+// ListRecoveryPointsByBackupVaultRequest mocks base method.
 func (m *MockBackupAPI) ListRecoveryPointsByBackupVaultRequest(arg0 *backup.ListRecoveryPointsByBackupVaultInput) (*request.Request, *backup.ListRecoveryPointsByBackupVaultOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecoveryPointsByBackupVaultRequest", arg0)
@@ -2056,13 +2107,13 @@ func (m *MockBackupAPI) ListRecoveryPointsByBackupVaultRequest(arg0 *backup.List
 	return ret0, ret1
 }
 
-// ListRecoveryPointsByBackupVaultRequest indicates an expected call of ListRecoveryPointsByBackupVaultRequest
+// ListRecoveryPointsByBackupVaultRequest indicates an expected call of ListRecoveryPointsByBackupVaultRequest.
 func (mr *MockBackupAPIMockRecorder) ListRecoveryPointsByBackupVaultRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecoveryPointsByBackupVaultRequest", reflect.TypeOf((*MockBackupAPI)(nil).ListRecoveryPointsByBackupVaultRequest), arg0)
 }
 
-// ListRecoveryPointsByBackupVaultWithContext mocks base method
+// ListRecoveryPointsByBackupVaultWithContext mocks base method.
 func (m *MockBackupAPI) ListRecoveryPointsByBackupVaultWithContext(arg0 context.Context, arg1 *backup.ListRecoveryPointsByBackupVaultInput, arg2 ...request.Option) (*backup.ListRecoveryPointsByBackupVaultOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2075,14 +2126,14 @@ func (m *MockBackupAPI) ListRecoveryPointsByBackupVaultWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// ListRecoveryPointsByBackupVaultWithContext indicates an expected call of ListRecoveryPointsByBackupVaultWithContext
+// ListRecoveryPointsByBackupVaultWithContext indicates an expected call of ListRecoveryPointsByBackupVaultWithContext.
 func (mr *MockBackupAPIMockRecorder) ListRecoveryPointsByBackupVaultWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecoveryPointsByBackupVaultWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListRecoveryPointsByBackupVaultWithContext), varargs...)
 }
 
-// ListRecoveryPointsByResource mocks base method
+// ListRecoveryPointsByResource mocks base method.
 func (m *MockBackupAPI) ListRecoveryPointsByResource(arg0 *backup.ListRecoveryPointsByResourceInput) (*backup.ListRecoveryPointsByResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecoveryPointsByResource", arg0)
@@ -2091,13 +2142,13 @@ func (m *MockBackupAPI) ListRecoveryPointsByResource(arg0 *backup.ListRecoveryPo
 	return ret0, ret1
 }
 
-// ListRecoveryPointsByResource indicates an expected call of ListRecoveryPointsByResource
+// ListRecoveryPointsByResource indicates an expected call of ListRecoveryPointsByResource.
 func (mr *MockBackupAPIMockRecorder) ListRecoveryPointsByResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecoveryPointsByResource", reflect.TypeOf((*MockBackupAPI)(nil).ListRecoveryPointsByResource), arg0)
 }
 
-// ListRecoveryPointsByResourcePages mocks base method
+// ListRecoveryPointsByResourcePages mocks base method.
 func (m *MockBackupAPI) ListRecoveryPointsByResourcePages(arg0 *backup.ListRecoveryPointsByResourceInput, arg1 func(*backup.ListRecoveryPointsByResourceOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecoveryPointsByResourcePages", arg0, arg1)
@@ -2105,13 +2156,13 @@ func (m *MockBackupAPI) ListRecoveryPointsByResourcePages(arg0 *backup.ListRecov
 	return ret0
 }
 
-// ListRecoveryPointsByResourcePages indicates an expected call of ListRecoveryPointsByResourcePages
+// ListRecoveryPointsByResourcePages indicates an expected call of ListRecoveryPointsByResourcePages.
 func (mr *MockBackupAPIMockRecorder) ListRecoveryPointsByResourcePages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecoveryPointsByResourcePages", reflect.TypeOf((*MockBackupAPI)(nil).ListRecoveryPointsByResourcePages), arg0, arg1)
 }
 
-// ListRecoveryPointsByResourcePagesWithContext mocks base method
+// ListRecoveryPointsByResourcePagesWithContext mocks base method.
 func (m *MockBackupAPI) ListRecoveryPointsByResourcePagesWithContext(arg0 context.Context, arg1 *backup.ListRecoveryPointsByResourceInput, arg2 func(*backup.ListRecoveryPointsByResourceOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2123,14 +2174,14 @@ func (m *MockBackupAPI) ListRecoveryPointsByResourcePagesWithContext(arg0 contex
 	return ret0
 }
 
-// ListRecoveryPointsByResourcePagesWithContext indicates an expected call of ListRecoveryPointsByResourcePagesWithContext
+// ListRecoveryPointsByResourcePagesWithContext indicates an expected call of ListRecoveryPointsByResourcePagesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListRecoveryPointsByResourcePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecoveryPointsByResourcePagesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListRecoveryPointsByResourcePagesWithContext), varargs...)
 }
 
-// ListRecoveryPointsByResourceRequest mocks base method
+// ListRecoveryPointsByResourceRequest mocks base method.
 func (m *MockBackupAPI) ListRecoveryPointsByResourceRequest(arg0 *backup.ListRecoveryPointsByResourceInput) (*request.Request, *backup.ListRecoveryPointsByResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecoveryPointsByResourceRequest", arg0)
@@ -2139,13 +2190,13 @@ func (m *MockBackupAPI) ListRecoveryPointsByResourceRequest(arg0 *backup.ListRec
 	return ret0, ret1
 }
 
-// ListRecoveryPointsByResourceRequest indicates an expected call of ListRecoveryPointsByResourceRequest
+// ListRecoveryPointsByResourceRequest indicates an expected call of ListRecoveryPointsByResourceRequest.
 func (mr *MockBackupAPIMockRecorder) ListRecoveryPointsByResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecoveryPointsByResourceRequest", reflect.TypeOf((*MockBackupAPI)(nil).ListRecoveryPointsByResourceRequest), arg0)
 }
 
-// ListRecoveryPointsByResourceWithContext mocks base method
+// ListRecoveryPointsByResourceWithContext mocks base method.
 func (m *MockBackupAPI) ListRecoveryPointsByResourceWithContext(arg0 context.Context, arg1 *backup.ListRecoveryPointsByResourceInput, arg2 ...request.Option) (*backup.ListRecoveryPointsByResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2158,14 +2209,14 @@ func (m *MockBackupAPI) ListRecoveryPointsByResourceWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListRecoveryPointsByResourceWithContext indicates an expected call of ListRecoveryPointsByResourceWithContext
+// ListRecoveryPointsByResourceWithContext indicates an expected call of ListRecoveryPointsByResourceWithContext.
 func (mr *MockBackupAPIMockRecorder) ListRecoveryPointsByResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecoveryPointsByResourceWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListRecoveryPointsByResourceWithContext), varargs...)
 }
 
-// ListRestoreJobs mocks base method
+// ListRestoreJobs mocks base method.
 func (m *MockBackupAPI) ListRestoreJobs(arg0 *backup.ListRestoreJobsInput) (*backup.ListRestoreJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRestoreJobs", arg0)
@@ -2174,13 +2225,13 @@ func (m *MockBackupAPI) ListRestoreJobs(arg0 *backup.ListRestoreJobsInput) (*bac
 	return ret0, ret1
 }
 
-// ListRestoreJobs indicates an expected call of ListRestoreJobs
+// ListRestoreJobs indicates an expected call of ListRestoreJobs.
 func (mr *MockBackupAPIMockRecorder) ListRestoreJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRestoreJobs", reflect.TypeOf((*MockBackupAPI)(nil).ListRestoreJobs), arg0)
 }
 
-// ListRestoreJobsPages mocks base method
+// ListRestoreJobsPages mocks base method.
 func (m *MockBackupAPI) ListRestoreJobsPages(arg0 *backup.ListRestoreJobsInput, arg1 func(*backup.ListRestoreJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRestoreJobsPages", arg0, arg1)
@@ -2188,13 +2239,13 @@ func (m *MockBackupAPI) ListRestoreJobsPages(arg0 *backup.ListRestoreJobsInput, 
 	return ret0
 }
 
-// ListRestoreJobsPages indicates an expected call of ListRestoreJobsPages
+// ListRestoreJobsPages indicates an expected call of ListRestoreJobsPages.
 func (mr *MockBackupAPIMockRecorder) ListRestoreJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRestoreJobsPages", reflect.TypeOf((*MockBackupAPI)(nil).ListRestoreJobsPages), arg0, arg1)
 }
 
-// ListRestoreJobsPagesWithContext mocks base method
+// ListRestoreJobsPagesWithContext mocks base method.
 func (m *MockBackupAPI) ListRestoreJobsPagesWithContext(arg0 context.Context, arg1 *backup.ListRestoreJobsInput, arg2 func(*backup.ListRestoreJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2206,14 +2257,14 @@ func (m *MockBackupAPI) ListRestoreJobsPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// ListRestoreJobsPagesWithContext indicates an expected call of ListRestoreJobsPagesWithContext
+// ListRestoreJobsPagesWithContext indicates an expected call of ListRestoreJobsPagesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListRestoreJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRestoreJobsPagesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListRestoreJobsPagesWithContext), varargs...)
 }
 
-// ListRestoreJobsRequest mocks base method
+// ListRestoreJobsRequest mocks base method.
 func (m *MockBackupAPI) ListRestoreJobsRequest(arg0 *backup.ListRestoreJobsInput) (*request.Request, *backup.ListRestoreJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRestoreJobsRequest", arg0)
@@ -2222,13 +2273,13 @@ func (m *MockBackupAPI) ListRestoreJobsRequest(arg0 *backup.ListRestoreJobsInput
 	return ret0, ret1
 }
 
-// ListRestoreJobsRequest indicates an expected call of ListRestoreJobsRequest
+// ListRestoreJobsRequest indicates an expected call of ListRestoreJobsRequest.
 func (mr *MockBackupAPIMockRecorder) ListRestoreJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRestoreJobsRequest", reflect.TypeOf((*MockBackupAPI)(nil).ListRestoreJobsRequest), arg0)
 }
 
-// ListRestoreJobsWithContext mocks base method
+// ListRestoreJobsWithContext mocks base method.
 func (m *MockBackupAPI) ListRestoreJobsWithContext(arg0 context.Context, arg1 *backup.ListRestoreJobsInput, arg2 ...request.Option) (*backup.ListRestoreJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2241,14 +2292,14 @@ func (m *MockBackupAPI) ListRestoreJobsWithContext(arg0 context.Context, arg1 *b
 	return ret0, ret1
 }
 
-// ListRestoreJobsWithContext indicates an expected call of ListRestoreJobsWithContext
+// ListRestoreJobsWithContext indicates an expected call of ListRestoreJobsWithContext.
 func (mr *MockBackupAPIMockRecorder) ListRestoreJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRestoreJobsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListRestoreJobsWithContext), varargs...)
 }
 
-// ListTags mocks base method
+// ListTags mocks base method.
 func (m *MockBackupAPI) ListTags(arg0 *backup.ListTagsInput) (*backup.ListTagsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTags", arg0)
@@ -2257,13 +2308,13 @@ func (m *MockBackupAPI) ListTags(arg0 *backup.ListTagsInput) (*backup.ListTagsOu
 	return ret0, ret1
 }
 
-// ListTags indicates an expected call of ListTags
+// ListTags indicates an expected call of ListTags.
 func (mr *MockBackupAPIMockRecorder) ListTags(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTags", reflect.TypeOf((*MockBackupAPI)(nil).ListTags), arg0)
 }
 
-// ListTagsPages mocks base method
+// ListTagsPages mocks base method.
 func (m *MockBackupAPI) ListTagsPages(arg0 *backup.ListTagsInput, arg1 func(*backup.ListTagsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsPages", arg0, arg1)
@@ -2271,13 +2322,13 @@ func (m *MockBackupAPI) ListTagsPages(arg0 *backup.ListTagsInput, arg1 func(*bac
 	return ret0
 }
 
-// ListTagsPages indicates an expected call of ListTagsPages
+// ListTagsPages indicates an expected call of ListTagsPages.
 func (mr *MockBackupAPIMockRecorder) ListTagsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsPages", reflect.TypeOf((*MockBackupAPI)(nil).ListTagsPages), arg0, arg1)
 }
 
-// ListTagsPagesWithContext mocks base method
+// ListTagsPagesWithContext mocks base method.
 func (m *MockBackupAPI) ListTagsPagesWithContext(arg0 context.Context, arg1 *backup.ListTagsInput, arg2 func(*backup.ListTagsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2289,14 +2340,14 @@ func (m *MockBackupAPI) ListTagsPagesWithContext(arg0 context.Context, arg1 *bac
 	return ret0
 }
 
-// ListTagsPagesWithContext indicates an expected call of ListTagsPagesWithContext
+// ListTagsPagesWithContext indicates an expected call of ListTagsPagesWithContext.
 func (mr *MockBackupAPIMockRecorder) ListTagsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsPagesWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListTagsPagesWithContext), varargs...)
 }
 
-// ListTagsRequest mocks base method
+// ListTagsRequest mocks base method.
 func (m *MockBackupAPI) ListTagsRequest(arg0 *backup.ListTagsInput) (*request.Request, *backup.ListTagsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsRequest", arg0)
@@ -2305,13 +2356,13 @@ func (m *MockBackupAPI) ListTagsRequest(arg0 *backup.ListTagsInput) (*request.Re
 	return ret0, ret1
 }
 
-// ListTagsRequest indicates an expected call of ListTagsRequest
+// ListTagsRequest indicates an expected call of ListTagsRequest.
 func (mr *MockBackupAPIMockRecorder) ListTagsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsRequest", reflect.TypeOf((*MockBackupAPI)(nil).ListTagsRequest), arg0)
 }
 
-// ListTagsWithContext mocks base method
+// ListTagsWithContext mocks base method.
 func (m *MockBackupAPI) ListTagsWithContext(arg0 context.Context, arg1 *backup.ListTagsInput, arg2 ...request.Option) (*backup.ListTagsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2324,14 +2375,14 @@ func (m *MockBackupAPI) ListTagsWithContext(arg0 context.Context, arg1 *backup.L
 	return ret0, ret1
 }
 
-// ListTagsWithContext indicates an expected call of ListTagsWithContext
+// ListTagsWithContext indicates an expected call of ListTagsWithContext.
 func (mr *MockBackupAPIMockRecorder) ListTagsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).ListTagsWithContext), varargs...)
 }
 
-// PutBackupVaultAccessPolicy mocks base method
+// PutBackupVaultAccessPolicy mocks base method.
 func (m *MockBackupAPI) PutBackupVaultAccessPolicy(arg0 *backup.PutBackupVaultAccessPolicyInput) (*backup.PutBackupVaultAccessPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutBackupVaultAccessPolicy", arg0)
@@ -2340,13 +2391,13 @@ func (m *MockBackupAPI) PutBackupVaultAccessPolicy(arg0 *backup.PutBackupVaultAc
 	return ret0, ret1
 }
 
-// PutBackupVaultAccessPolicy indicates an expected call of PutBackupVaultAccessPolicy
+// PutBackupVaultAccessPolicy indicates an expected call of PutBackupVaultAccessPolicy.
 func (mr *MockBackupAPIMockRecorder) PutBackupVaultAccessPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutBackupVaultAccessPolicy", reflect.TypeOf((*MockBackupAPI)(nil).PutBackupVaultAccessPolicy), arg0)
 }
 
-// PutBackupVaultAccessPolicyRequest mocks base method
+// PutBackupVaultAccessPolicyRequest mocks base method.
 func (m *MockBackupAPI) PutBackupVaultAccessPolicyRequest(arg0 *backup.PutBackupVaultAccessPolicyInput) (*request.Request, *backup.PutBackupVaultAccessPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutBackupVaultAccessPolicyRequest", arg0)
@@ -2355,13 +2406,13 @@ func (m *MockBackupAPI) PutBackupVaultAccessPolicyRequest(arg0 *backup.PutBackup
 	return ret0, ret1
 }
 
-// PutBackupVaultAccessPolicyRequest indicates an expected call of PutBackupVaultAccessPolicyRequest
+// PutBackupVaultAccessPolicyRequest indicates an expected call of PutBackupVaultAccessPolicyRequest.
 func (mr *MockBackupAPIMockRecorder) PutBackupVaultAccessPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutBackupVaultAccessPolicyRequest", reflect.TypeOf((*MockBackupAPI)(nil).PutBackupVaultAccessPolicyRequest), arg0)
 }
 
-// PutBackupVaultAccessPolicyWithContext mocks base method
+// PutBackupVaultAccessPolicyWithContext mocks base method.
 func (m *MockBackupAPI) PutBackupVaultAccessPolicyWithContext(arg0 context.Context, arg1 *backup.PutBackupVaultAccessPolicyInput, arg2 ...request.Option) (*backup.PutBackupVaultAccessPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2374,14 +2425,14 @@ func (m *MockBackupAPI) PutBackupVaultAccessPolicyWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// PutBackupVaultAccessPolicyWithContext indicates an expected call of PutBackupVaultAccessPolicyWithContext
+// PutBackupVaultAccessPolicyWithContext indicates an expected call of PutBackupVaultAccessPolicyWithContext.
 func (mr *MockBackupAPIMockRecorder) PutBackupVaultAccessPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutBackupVaultAccessPolicyWithContext", reflect.TypeOf((*MockBackupAPI)(nil).PutBackupVaultAccessPolicyWithContext), varargs...)
 }
 
-// PutBackupVaultNotifications mocks base method
+// PutBackupVaultNotifications mocks base method.
 func (m *MockBackupAPI) PutBackupVaultNotifications(arg0 *backup.PutBackupVaultNotificationsInput) (*backup.PutBackupVaultNotificationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutBackupVaultNotifications", arg0)
@@ -2390,13 +2441,13 @@ func (m *MockBackupAPI) PutBackupVaultNotifications(arg0 *backup.PutBackupVaultN
 	return ret0, ret1
 }
 
-// PutBackupVaultNotifications indicates an expected call of PutBackupVaultNotifications
+// PutBackupVaultNotifications indicates an expected call of PutBackupVaultNotifications.
 func (mr *MockBackupAPIMockRecorder) PutBackupVaultNotifications(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutBackupVaultNotifications", reflect.TypeOf((*MockBackupAPI)(nil).PutBackupVaultNotifications), arg0)
 }
 
-// PutBackupVaultNotificationsRequest mocks base method
+// PutBackupVaultNotificationsRequest mocks base method.
 func (m *MockBackupAPI) PutBackupVaultNotificationsRequest(arg0 *backup.PutBackupVaultNotificationsInput) (*request.Request, *backup.PutBackupVaultNotificationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutBackupVaultNotificationsRequest", arg0)
@@ -2405,13 +2456,13 @@ func (m *MockBackupAPI) PutBackupVaultNotificationsRequest(arg0 *backup.PutBacku
 	return ret0, ret1
 }
 
-// PutBackupVaultNotificationsRequest indicates an expected call of PutBackupVaultNotificationsRequest
+// PutBackupVaultNotificationsRequest indicates an expected call of PutBackupVaultNotificationsRequest.
 func (mr *MockBackupAPIMockRecorder) PutBackupVaultNotificationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutBackupVaultNotificationsRequest", reflect.TypeOf((*MockBackupAPI)(nil).PutBackupVaultNotificationsRequest), arg0)
 }
 
-// PutBackupVaultNotificationsWithContext mocks base method
+// PutBackupVaultNotificationsWithContext mocks base method.
 func (m *MockBackupAPI) PutBackupVaultNotificationsWithContext(arg0 context.Context, arg1 *backup.PutBackupVaultNotificationsInput, arg2 ...request.Option) (*backup.PutBackupVaultNotificationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2424,14 +2475,14 @@ func (m *MockBackupAPI) PutBackupVaultNotificationsWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// PutBackupVaultNotificationsWithContext indicates an expected call of PutBackupVaultNotificationsWithContext
+// PutBackupVaultNotificationsWithContext indicates an expected call of PutBackupVaultNotificationsWithContext.
 func (mr *MockBackupAPIMockRecorder) PutBackupVaultNotificationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutBackupVaultNotificationsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).PutBackupVaultNotificationsWithContext), varargs...)
 }
 
-// StartBackupJob mocks base method
+// StartBackupJob mocks base method.
 func (m *MockBackupAPI) StartBackupJob(arg0 *backup.StartBackupJobInput) (*backup.StartBackupJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartBackupJob", arg0)
@@ -2440,13 +2491,13 @@ func (m *MockBackupAPI) StartBackupJob(arg0 *backup.StartBackupJobInput) (*backu
 	return ret0, ret1
 }
 
-// StartBackupJob indicates an expected call of StartBackupJob
+// StartBackupJob indicates an expected call of StartBackupJob.
 func (mr *MockBackupAPIMockRecorder) StartBackupJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBackupJob", reflect.TypeOf((*MockBackupAPI)(nil).StartBackupJob), arg0)
 }
 
-// StartBackupJobRequest mocks base method
+// StartBackupJobRequest mocks base method.
 func (m *MockBackupAPI) StartBackupJobRequest(arg0 *backup.StartBackupJobInput) (*request.Request, *backup.StartBackupJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartBackupJobRequest", arg0)
@@ -2455,13 +2506,13 @@ func (m *MockBackupAPI) StartBackupJobRequest(arg0 *backup.StartBackupJobInput) 
 	return ret0, ret1
 }
 
-// StartBackupJobRequest indicates an expected call of StartBackupJobRequest
+// StartBackupJobRequest indicates an expected call of StartBackupJobRequest.
 func (mr *MockBackupAPIMockRecorder) StartBackupJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBackupJobRequest", reflect.TypeOf((*MockBackupAPI)(nil).StartBackupJobRequest), arg0)
 }
 
-// StartBackupJobWithContext mocks base method
+// StartBackupJobWithContext mocks base method.
 func (m *MockBackupAPI) StartBackupJobWithContext(arg0 context.Context, arg1 *backup.StartBackupJobInput, arg2 ...request.Option) (*backup.StartBackupJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2474,14 +2525,14 @@ func (m *MockBackupAPI) StartBackupJobWithContext(arg0 context.Context, arg1 *ba
 	return ret0, ret1
 }
 
-// StartBackupJobWithContext indicates an expected call of StartBackupJobWithContext
+// StartBackupJobWithContext indicates an expected call of StartBackupJobWithContext.
 func (mr *MockBackupAPIMockRecorder) StartBackupJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBackupJobWithContext", reflect.TypeOf((*MockBackupAPI)(nil).StartBackupJobWithContext), varargs...)
 }
 
-// StartCopyJob mocks base method
+// StartCopyJob mocks base method.
 func (m *MockBackupAPI) StartCopyJob(arg0 *backup.StartCopyJobInput) (*backup.StartCopyJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartCopyJob", arg0)
@@ -2490,13 +2541,13 @@ func (m *MockBackupAPI) StartCopyJob(arg0 *backup.StartCopyJobInput) (*backup.St
 	return ret0, ret1
 }
 
-// StartCopyJob indicates an expected call of StartCopyJob
+// StartCopyJob indicates an expected call of StartCopyJob.
 func (mr *MockBackupAPIMockRecorder) StartCopyJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartCopyJob", reflect.TypeOf((*MockBackupAPI)(nil).StartCopyJob), arg0)
 }
 
-// StartCopyJobRequest mocks base method
+// StartCopyJobRequest mocks base method.
 func (m *MockBackupAPI) StartCopyJobRequest(arg0 *backup.StartCopyJobInput) (*request.Request, *backup.StartCopyJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartCopyJobRequest", arg0)
@@ -2505,13 +2556,13 @@ func (m *MockBackupAPI) StartCopyJobRequest(arg0 *backup.StartCopyJobInput) (*re
 	return ret0, ret1
 }
 
-// StartCopyJobRequest indicates an expected call of StartCopyJobRequest
+// StartCopyJobRequest indicates an expected call of StartCopyJobRequest.
 func (mr *MockBackupAPIMockRecorder) StartCopyJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartCopyJobRequest", reflect.TypeOf((*MockBackupAPI)(nil).StartCopyJobRequest), arg0)
 }
 
-// StartCopyJobWithContext mocks base method
+// StartCopyJobWithContext mocks base method.
 func (m *MockBackupAPI) StartCopyJobWithContext(arg0 context.Context, arg1 *backup.StartCopyJobInput, arg2 ...request.Option) (*backup.StartCopyJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2524,14 +2575,14 @@ func (m *MockBackupAPI) StartCopyJobWithContext(arg0 context.Context, arg1 *back
 	return ret0, ret1
 }
 
-// StartCopyJobWithContext indicates an expected call of StartCopyJobWithContext
+// StartCopyJobWithContext indicates an expected call of StartCopyJobWithContext.
 func (mr *MockBackupAPIMockRecorder) StartCopyJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartCopyJobWithContext", reflect.TypeOf((*MockBackupAPI)(nil).StartCopyJobWithContext), varargs...)
 }
 
-// StartRestoreJob mocks base method
+// StartRestoreJob mocks base method.
 func (m *MockBackupAPI) StartRestoreJob(arg0 *backup.StartRestoreJobInput) (*backup.StartRestoreJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartRestoreJob", arg0)
@@ -2540,13 +2591,13 @@ func (m *MockBackupAPI) StartRestoreJob(arg0 *backup.StartRestoreJobInput) (*bac
 	return ret0, ret1
 }
 
-// StartRestoreJob indicates an expected call of StartRestoreJob
+// StartRestoreJob indicates an expected call of StartRestoreJob.
 func (mr *MockBackupAPIMockRecorder) StartRestoreJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartRestoreJob", reflect.TypeOf((*MockBackupAPI)(nil).StartRestoreJob), arg0)
 }
 
-// StartRestoreJobRequest mocks base method
+// StartRestoreJobRequest mocks base method.
 func (m *MockBackupAPI) StartRestoreJobRequest(arg0 *backup.StartRestoreJobInput) (*request.Request, *backup.StartRestoreJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartRestoreJobRequest", arg0)
@@ -2555,13 +2606,13 @@ func (m *MockBackupAPI) StartRestoreJobRequest(arg0 *backup.StartRestoreJobInput
 	return ret0, ret1
 }
 
-// StartRestoreJobRequest indicates an expected call of StartRestoreJobRequest
+// StartRestoreJobRequest indicates an expected call of StartRestoreJobRequest.
 func (mr *MockBackupAPIMockRecorder) StartRestoreJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartRestoreJobRequest", reflect.TypeOf((*MockBackupAPI)(nil).StartRestoreJobRequest), arg0)
 }
 
-// StartRestoreJobWithContext mocks base method
+// StartRestoreJobWithContext mocks base method.
 func (m *MockBackupAPI) StartRestoreJobWithContext(arg0 context.Context, arg1 *backup.StartRestoreJobInput, arg2 ...request.Option) (*backup.StartRestoreJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2574,14 +2625,14 @@ func (m *MockBackupAPI) StartRestoreJobWithContext(arg0 context.Context, arg1 *b
 	return ret0, ret1
 }
 
-// StartRestoreJobWithContext indicates an expected call of StartRestoreJobWithContext
+// StartRestoreJobWithContext indicates an expected call of StartRestoreJobWithContext.
 func (mr *MockBackupAPIMockRecorder) StartRestoreJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartRestoreJobWithContext", reflect.TypeOf((*MockBackupAPI)(nil).StartRestoreJobWithContext), varargs...)
 }
 
-// StopBackupJob mocks base method
+// StopBackupJob mocks base method.
 func (m *MockBackupAPI) StopBackupJob(arg0 *backup.StopBackupJobInput) (*backup.StopBackupJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopBackupJob", arg0)
@@ -2590,13 +2641,13 @@ func (m *MockBackupAPI) StopBackupJob(arg0 *backup.StopBackupJobInput) (*backup.
 	return ret0, ret1
 }
 
-// StopBackupJob indicates an expected call of StopBackupJob
+// StopBackupJob indicates an expected call of StopBackupJob.
 func (mr *MockBackupAPIMockRecorder) StopBackupJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopBackupJob", reflect.TypeOf((*MockBackupAPI)(nil).StopBackupJob), arg0)
 }
 
-// StopBackupJobRequest mocks base method
+// StopBackupJobRequest mocks base method.
 func (m *MockBackupAPI) StopBackupJobRequest(arg0 *backup.StopBackupJobInput) (*request.Request, *backup.StopBackupJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopBackupJobRequest", arg0)
@@ -2605,13 +2656,13 @@ func (m *MockBackupAPI) StopBackupJobRequest(arg0 *backup.StopBackupJobInput) (*
 	return ret0, ret1
 }
 
-// StopBackupJobRequest indicates an expected call of StopBackupJobRequest
+// StopBackupJobRequest indicates an expected call of StopBackupJobRequest.
 func (mr *MockBackupAPIMockRecorder) StopBackupJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopBackupJobRequest", reflect.TypeOf((*MockBackupAPI)(nil).StopBackupJobRequest), arg0)
 }
 
-// StopBackupJobWithContext mocks base method
+// StopBackupJobWithContext mocks base method.
 func (m *MockBackupAPI) StopBackupJobWithContext(arg0 context.Context, arg1 *backup.StopBackupJobInput, arg2 ...request.Option) (*backup.StopBackupJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2624,14 +2675,14 @@ func (m *MockBackupAPI) StopBackupJobWithContext(arg0 context.Context, arg1 *bac
 	return ret0, ret1
 }
 
-// StopBackupJobWithContext indicates an expected call of StopBackupJobWithContext
+// StopBackupJobWithContext indicates an expected call of StopBackupJobWithContext.
 func (mr *MockBackupAPIMockRecorder) StopBackupJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopBackupJobWithContext", reflect.TypeOf((*MockBackupAPI)(nil).StopBackupJobWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockBackupAPI) TagResource(arg0 *backup.TagResourceInput) (*backup.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -2640,13 +2691,13 @@ func (m *MockBackupAPI) TagResource(arg0 *backup.TagResourceInput) (*backup.TagR
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockBackupAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockBackupAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockBackupAPI) TagResourceRequest(arg0 *backup.TagResourceInput) (*request.Request, *backup.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -2655,13 +2706,13 @@ func (m *MockBackupAPI) TagResourceRequest(arg0 *backup.TagResourceInput) (*requ
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockBackupAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockBackupAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockBackupAPI) TagResourceWithContext(arg0 context.Context, arg1 *backup.TagResourceInput, arg2 ...request.Option) (*backup.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2674,14 +2725,14 @@ func (m *MockBackupAPI) TagResourceWithContext(arg0 context.Context, arg1 *backu
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockBackupAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockBackupAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockBackupAPI) UntagResource(arg0 *backup.UntagResourceInput) (*backup.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -2690,13 +2741,13 @@ func (m *MockBackupAPI) UntagResource(arg0 *backup.UntagResourceInput) (*backup.
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockBackupAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockBackupAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockBackupAPI) UntagResourceRequest(arg0 *backup.UntagResourceInput) (*request.Request, *backup.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -2705,13 +2756,13 @@ func (m *MockBackupAPI) UntagResourceRequest(arg0 *backup.UntagResourceInput) (*
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockBackupAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockBackupAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockBackupAPI) UntagResourceWithContext(arg0 context.Context, arg1 *backup.UntagResourceInput, arg2 ...request.Option) (*backup.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2724,14 +2775,14 @@ func (m *MockBackupAPI) UntagResourceWithContext(arg0 context.Context, arg1 *bac
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockBackupAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockBackupAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateBackupPlan mocks base method
+// UpdateBackupPlan mocks base method.
 func (m *MockBackupAPI) UpdateBackupPlan(arg0 *backup.UpdateBackupPlanInput) (*backup.UpdateBackupPlanOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateBackupPlan", arg0)
@@ -2740,13 +2791,13 @@ func (m *MockBackupAPI) UpdateBackupPlan(arg0 *backup.UpdateBackupPlanInput) (*b
 	return ret0, ret1
 }
 
-// UpdateBackupPlan indicates an expected call of UpdateBackupPlan
+// UpdateBackupPlan indicates an expected call of UpdateBackupPlan.
 func (mr *MockBackupAPIMockRecorder) UpdateBackupPlan(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBackupPlan", reflect.TypeOf((*MockBackupAPI)(nil).UpdateBackupPlan), arg0)
 }
 
-// UpdateBackupPlanRequest mocks base method
+// UpdateBackupPlanRequest mocks base method.
 func (m *MockBackupAPI) UpdateBackupPlanRequest(arg0 *backup.UpdateBackupPlanInput) (*request.Request, *backup.UpdateBackupPlanOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateBackupPlanRequest", arg0)
@@ -2755,13 +2806,13 @@ func (m *MockBackupAPI) UpdateBackupPlanRequest(arg0 *backup.UpdateBackupPlanInp
 	return ret0, ret1
 }
 
-// UpdateBackupPlanRequest indicates an expected call of UpdateBackupPlanRequest
+// UpdateBackupPlanRequest indicates an expected call of UpdateBackupPlanRequest.
 func (mr *MockBackupAPIMockRecorder) UpdateBackupPlanRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBackupPlanRequest", reflect.TypeOf((*MockBackupAPI)(nil).UpdateBackupPlanRequest), arg0)
 }
 
-// UpdateBackupPlanWithContext mocks base method
+// UpdateBackupPlanWithContext mocks base method.
 func (m *MockBackupAPI) UpdateBackupPlanWithContext(arg0 context.Context, arg1 *backup.UpdateBackupPlanInput, arg2 ...request.Option) (*backup.UpdateBackupPlanOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2774,14 +2825,14 @@ func (m *MockBackupAPI) UpdateBackupPlanWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// UpdateBackupPlanWithContext indicates an expected call of UpdateBackupPlanWithContext
+// UpdateBackupPlanWithContext indicates an expected call of UpdateBackupPlanWithContext.
 func (mr *MockBackupAPIMockRecorder) UpdateBackupPlanWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBackupPlanWithContext", reflect.TypeOf((*MockBackupAPI)(nil).UpdateBackupPlanWithContext), varargs...)
 }
 
-// UpdateGlobalSettings mocks base method
+// UpdateGlobalSettings mocks base method.
 func (m *MockBackupAPI) UpdateGlobalSettings(arg0 *backup.UpdateGlobalSettingsInput) (*backup.UpdateGlobalSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateGlobalSettings", arg0)
@@ -2790,13 +2841,13 @@ func (m *MockBackupAPI) UpdateGlobalSettings(arg0 *backup.UpdateGlobalSettingsIn
 	return ret0, ret1
 }
 
-// UpdateGlobalSettings indicates an expected call of UpdateGlobalSettings
+// UpdateGlobalSettings indicates an expected call of UpdateGlobalSettings.
 func (mr *MockBackupAPIMockRecorder) UpdateGlobalSettings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateGlobalSettings", reflect.TypeOf((*MockBackupAPI)(nil).UpdateGlobalSettings), arg0)
 }
 
-// UpdateGlobalSettingsRequest mocks base method
+// UpdateGlobalSettingsRequest mocks base method.
 func (m *MockBackupAPI) UpdateGlobalSettingsRequest(arg0 *backup.UpdateGlobalSettingsInput) (*request.Request, *backup.UpdateGlobalSettingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateGlobalSettingsRequest", arg0)
@@ -2805,13 +2856,13 @@ func (m *MockBackupAPI) UpdateGlobalSettingsRequest(arg0 *backup.UpdateGlobalSet
 	return ret0, ret1
 }
 
-// UpdateGlobalSettingsRequest indicates an expected call of UpdateGlobalSettingsRequest
+// UpdateGlobalSettingsRequest indicates an expected call of UpdateGlobalSettingsRequest.
 func (mr *MockBackupAPIMockRecorder) UpdateGlobalSettingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateGlobalSettingsRequest", reflect.TypeOf((*MockBackupAPI)(nil).UpdateGlobalSettingsRequest), arg0)
 }
 
-// UpdateGlobalSettingsWithContext mocks base method
+// UpdateGlobalSettingsWithContext mocks base method.
 func (m *MockBackupAPI) UpdateGlobalSettingsWithContext(arg0 context.Context, arg1 *backup.UpdateGlobalSettingsInput, arg2 ...request.Option) (*backup.UpdateGlobalSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2824,14 +2875,14 @@ func (m *MockBackupAPI) UpdateGlobalSettingsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateGlobalSettingsWithContext indicates an expected call of UpdateGlobalSettingsWithContext
+// UpdateGlobalSettingsWithContext indicates an expected call of UpdateGlobalSettingsWithContext.
 func (mr *MockBackupAPIMockRecorder) UpdateGlobalSettingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateGlobalSettingsWithContext", reflect.TypeOf((*MockBackupAPI)(nil).UpdateGlobalSettingsWithContext), varargs...)
 }
 
-// UpdateRecoveryPointLifecycle mocks base method
+// UpdateRecoveryPointLifecycle mocks base method.
 func (m *MockBackupAPI) UpdateRecoveryPointLifecycle(arg0 *backup.UpdateRecoveryPointLifecycleInput) (*backup.UpdateRecoveryPointLifecycleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRecoveryPointLifecycle", arg0)
@@ -2840,13 +2891,13 @@ func (m *MockBackupAPI) UpdateRecoveryPointLifecycle(arg0 *backup.UpdateRecovery
 	return ret0, ret1
 }
 
-// UpdateRecoveryPointLifecycle indicates an expected call of UpdateRecoveryPointLifecycle
+// UpdateRecoveryPointLifecycle indicates an expected call of UpdateRecoveryPointLifecycle.
 func (mr *MockBackupAPIMockRecorder) UpdateRecoveryPointLifecycle(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRecoveryPointLifecycle", reflect.TypeOf((*MockBackupAPI)(nil).UpdateRecoveryPointLifecycle), arg0)
 }
 
-// UpdateRecoveryPointLifecycleRequest mocks base method
+// UpdateRecoveryPointLifecycleRequest mocks base method.
 func (m *MockBackupAPI) UpdateRecoveryPointLifecycleRequest(arg0 *backup.UpdateRecoveryPointLifecycleInput) (*request.Request, *backup.UpdateRecoveryPointLifecycleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRecoveryPointLifecycleRequest", arg0)
@@ -2855,13 +2906,13 @@ func (m *MockBackupAPI) UpdateRecoveryPointLifecycleRequest(arg0 *backup.UpdateR
 	return ret0, ret1
 }
 
-// UpdateRecoveryPointLifecycleRequest indicates an expected call of UpdateRecoveryPointLifecycleRequest
+// UpdateRecoveryPointLifecycleRequest indicates an expected call of UpdateRecoveryPointLifecycleRequest.
 func (mr *MockBackupAPIMockRecorder) UpdateRecoveryPointLifecycleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRecoveryPointLifecycleRequest", reflect.TypeOf((*MockBackupAPI)(nil).UpdateRecoveryPointLifecycleRequest), arg0)
 }
 
-// UpdateRecoveryPointLifecycleWithContext mocks base method
+// UpdateRecoveryPointLifecycleWithContext mocks base method.
 func (m *MockBackupAPI) UpdateRecoveryPointLifecycleWithContext(arg0 context.Context, arg1 *backup.UpdateRecoveryPointLifecycleInput, arg2 ...request.Option) (*backup.UpdateRecoveryPointLifecycleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2874,14 +2925,14 @@ func (m *MockBackupAPI) UpdateRecoveryPointLifecycleWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// UpdateRecoveryPointLifecycleWithContext indicates an expected call of UpdateRecoveryPointLifecycleWithContext
+// UpdateRecoveryPointLifecycleWithContext indicates an expected call of UpdateRecoveryPointLifecycleWithContext.
 func (mr *MockBackupAPIMockRecorder) UpdateRecoveryPointLifecycleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRecoveryPointLifecycleWithContext", reflect.TypeOf((*MockBackupAPI)(nil).UpdateRecoveryPointLifecycleWithContext), varargs...)
 }
 
-// UpdateRegionSettings mocks base method
+// UpdateRegionSettings mocks base method.
 func (m *MockBackupAPI) UpdateRegionSettings(arg0 *backup.UpdateRegionSettingsInput) (*backup.UpdateRegionSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRegionSettings", arg0)
@@ -2890,13 +2941,13 @@ func (m *MockBackupAPI) UpdateRegionSettings(arg0 *backup.UpdateRegionSettingsIn
 	return ret0, ret1
 }
 
-// UpdateRegionSettings indicates an expected call of UpdateRegionSettings
+// UpdateRegionSettings indicates an expected call of UpdateRegionSettings.
 func (mr *MockBackupAPIMockRecorder) UpdateRegionSettings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRegionSettings", reflect.TypeOf((*MockBackupAPI)(nil).UpdateRegionSettings), arg0)
 }
 
-// UpdateRegionSettingsRequest mocks base method
+// UpdateRegionSettingsRequest mocks base method.
 func (m *MockBackupAPI) UpdateRegionSettingsRequest(arg0 *backup.UpdateRegionSettingsInput) (*request.Request, *backup.UpdateRegionSettingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRegionSettingsRequest", arg0)
@@ -2905,13 +2956,13 @@ func (m *MockBackupAPI) UpdateRegionSettingsRequest(arg0 *backup.UpdateRegionSet
 	return ret0, ret1
 }
 
-// UpdateRegionSettingsRequest indicates an expected call of UpdateRegionSettingsRequest
+// UpdateRegionSettingsRequest indicates an expected call of UpdateRegionSettingsRequest.
 func (mr *MockBackupAPIMockRecorder) UpdateRegionSettingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRegionSettingsRequest", reflect.TypeOf((*MockBackupAPI)(nil).UpdateRegionSettingsRequest), arg0)
 }
 
-// UpdateRegionSettingsWithContext mocks base method
+// UpdateRegionSettingsWithContext mocks base method.
 func (m *MockBackupAPI) UpdateRegionSettingsWithContext(arg0 context.Context, arg1 *backup.UpdateRegionSettingsInput, arg2 ...request.Option) (*backup.UpdateRegionSettingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2924,7 +2975,7 @@ func (m *MockBackupAPI) UpdateRegionSettingsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateRegionSettingsWithContext indicates an expected call of UpdateRegionSettingsWithContext
+// UpdateRegionSettingsWithContext indicates an expected call of UpdateRegionSettingsWithContext.
 func (mr *MockBackupAPIMockRecorder) UpdateRegionSettingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

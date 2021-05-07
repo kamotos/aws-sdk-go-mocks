@@ -6,36 +6,37 @@ package gluedatabrewmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	gluedatabrew "github.com/aws/aws-sdk-go/service/gluedatabrew"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockGlueDataBrewAPI is a mock of GlueDataBrewAPI interface
+// MockGlueDataBrewAPI is a mock of GlueDataBrewAPI interface.
 type MockGlueDataBrewAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockGlueDataBrewAPIMockRecorder
 }
 
-// MockGlueDataBrewAPIMockRecorder is the mock recorder for MockGlueDataBrewAPI
+// MockGlueDataBrewAPIMockRecorder is the mock recorder for MockGlueDataBrewAPI.
 type MockGlueDataBrewAPIMockRecorder struct {
 	mock *MockGlueDataBrewAPI
 }
 
-// NewMockGlueDataBrewAPI creates a new mock instance
+// NewMockGlueDataBrewAPI creates a new mock instance.
 func NewMockGlueDataBrewAPI(ctrl *gomock.Controller) *MockGlueDataBrewAPI {
 	mock := &MockGlueDataBrewAPI{ctrl: ctrl}
 	mock.recorder = &MockGlueDataBrewAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockGlueDataBrewAPI) EXPECT() *MockGlueDataBrewAPIMockRecorder {
 	return m.recorder
 }
 
-// BatchDeleteRecipeVersion mocks base method
+// BatchDeleteRecipeVersion mocks base method.
 func (m *MockGlueDataBrewAPI) BatchDeleteRecipeVersion(arg0 *gluedatabrew.BatchDeleteRecipeVersionInput) (*gluedatabrew.BatchDeleteRecipeVersionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchDeleteRecipeVersion", arg0)
@@ -44,13 +45,13 @@ func (m *MockGlueDataBrewAPI) BatchDeleteRecipeVersion(arg0 *gluedatabrew.BatchD
 	return ret0, ret1
 }
 
-// BatchDeleteRecipeVersion indicates an expected call of BatchDeleteRecipeVersion
+// BatchDeleteRecipeVersion indicates an expected call of BatchDeleteRecipeVersion.
 func (mr *MockGlueDataBrewAPIMockRecorder) BatchDeleteRecipeVersion(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchDeleteRecipeVersion", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).BatchDeleteRecipeVersion), arg0)
 }
 
-// BatchDeleteRecipeVersionRequest mocks base method
+// BatchDeleteRecipeVersionRequest mocks base method.
 func (m *MockGlueDataBrewAPI) BatchDeleteRecipeVersionRequest(arg0 *gluedatabrew.BatchDeleteRecipeVersionInput) (*request.Request, *gluedatabrew.BatchDeleteRecipeVersionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchDeleteRecipeVersionRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockGlueDataBrewAPI) BatchDeleteRecipeVersionRequest(arg0 *gluedatabrew
 	return ret0, ret1
 }
 
-// BatchDeleteRecipeVersionRequest indicates an expected call of BatchDeleteRecipeVersionRequest
+// BatchDeleteRecipeVersionRequest indicates an expected call of BatchDeleteRecipeVersionRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) BatchDeleteRecipeVersionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchDeleteRecipeVersionRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).BatchDeleteRecipeVersionRequest), arg0)
 }
 
-// BatchDeleteRecipeVersionWithContext mocks base method
+// BatchDeleteRecipeVersionWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) BatchDeleteRecipeVersionWithContext(arg0 context.Context, arg1 *gluedatabrew.BatchDeleteRecipeVersionInput, arg2 ...request.Option) (*gluedatabrew.BatchDeleteRecipeVersionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockGlueDataBrewAPI) BatchDeleteRecipeVersionWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// BatchDeleteRecipeVersionWithContext indicates an expected call of BatchDeleteRecipeVersionWithContext
+// BatchDeleteRecipeVersionWithContext indicates an expected call of BatchDeleteRecipeVersionWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) BatchDeleteRecipeVersionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchDeleteRecipeVersionWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).BatchDeleteRecipeVersionWithContext), varargs...)
 }
 
-// CreateDataset mocks base method
+// CreateDataset mocks base method.
 func (m *MockGlueDataBrewAPI) CreateDataset(arg0 *gluedatabrew.CreateDatasetInput) (*gluedatabrew.CreateDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDataset", arg0)
@@ -94,13 +95,13 @@ func (m *MockGlueDataBrewAPI) CreateDataset(arg0 *gluedatabrew.CreateDatasetInpu
 	return ret0, ret1
 }
 
-// CreateDataset indicates an expected call of CreateDataset
+// CreateDataset indicates an expected call of CreateDataset.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataset", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateDataset), arg0)
 }
 
-// CreateDatasetRequest mocks base method
+// CreateDatasetRequest mocks base method.
 func (m *MockGlueDataBrewAPI) CreateDatasetRequest(arg0 *gluedatabrew.CreateDatasetInput) (*request.Request, *gluedatabrew.CreateDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateDatasetRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockGlueDataBrewAPI) CreateDatasetRequest(arg0 *gluedatabrew.CreateData
 	return ret0, ret1
 }
 
-// CreateDatasetRequest indicates an expected call of CreateDatasetRequest
+// CreateDatasetRequest indicates an expected call of CreateDatasetRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateDatasetRequest), arg0)
 }
 
-// CreateDatasetWithContext mocks base method
+// CreateDatasetWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) CreateDatasetWithContext(arg0 context.Context, arg1 *gluedatabrew.CreateDatasetInput, arg2 ...request.Option) (*gluedatabrew.CreateDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockGlueDataBrewAPI) CreateDatasetWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// CreateDatasetWithContext indicates an expected call of CreateDatasetWithContext
+// CreateDatasetWithContext indicates an expected call of CreateDatasetWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDatasetWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateDatasetWithContext), varargs...)
 }
 
-// CreateProfileJob mocks base method
+// CreateProfileJob mocks base method.
 func (m *MockGlueDataBrewAPI) CreateProfileJob(arg0 *gluedatabrew.CreateProfileJobInput) (*gluedatabrew.CreateProfileJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateProfileJob", arg0)
@@ -144,13 +145,13 @@ func (m *MockGlueDataBrewAPI) CreateProfileJob(arg0 *gluedatabrew.CreateProfileJ
 	return ret0, ret1
 }
 
-// CreateProfileJob indicates an expected call of CreateProfileJob
+// CreateProfileJob indicates an expected call of CreateProfileJob.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateProfileJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProfileJob", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateProfileJob), arg0)
 }
 
-// CreateProfileJobRequest mocks base method
+// CreateProfileJobRequest mocks base method.
 func (m *MockGlueDataBrewAPI) CreateProfileJobRequest(arg0 *gluedatabrew.CreateProfileJobInput) (*request.Request, *gluedatabrew.CreateProfileJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateProfileJobRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockGlueDataBrewAPI) CreateProfileJobRequest(arg0 *gluedatabrew.CreateP
 	return ret0, ret1
 }
 
-// CreateProfileJobRequest indicates an expected call of CreateProfileJobRequest
+// CreateProfileJobRequest indicates an expected call of CreateProfileJobRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateProfileJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProfileJobRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateProfileJobRequest), arg0)
 }
 
-// CreateProfileJobWithContext mocks base method
+// CreateProfileJobWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) CreateProfileJobWithContext(arg0 context.Context, arg1 *gluedatabrew.CreateProfileJobInput, arg2 ...request.Option) (*gluedatabrew.CreateProfileJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockGlueDataBrewAPI) CreateProfileJobWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// CreateProfileJobWithContext indicates an expected call of CreateProfileJobWithContext
+// CreateProfileJobWithContext indicates an expected call of CreateProfileJobWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateProfileJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProfileJobWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateProfileJobWithContext), varargs...)
 }
 
-// CreateProject mocks base method
+// CreateProject mocks base method.
 func (m *MockGlueDataBrewAPI) CreateProject(arg0 *gluedatabrew.CreateProjectInput) (*gluedatabrew.CreateProjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateProject", arg0)
@@ -194,13 +195,13 @@ func (m *MockGlueDataBrewAPI) CreateProject(arg0 *gluedatabrew.CreateProjectInpu
 	return ret0, ret1
 }
 
-// CreateProject indicates an expected call of CreateProject
+// CreateProject indicates an expected call of CreateProject.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateProject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProject", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateProject), arg0)
 }
 
-// CreateProjectRequest mocks base method
+// CreateProjectRequest mocks base method.
 func (m *MockGlueDataBrewAPI) CreateProjectRequest(arg0 *gluedatabrew.CreateProjectInput) (*request.Request, *gluedatabrew.CreateProjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateProjectRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockGlueDataBrewAPI) CreateProjectRequest(arg0 *gluedatabrew.CreateProj
 	return ret0, ret1
 }
 
-// CreateProjectRequest indicates an expected call of CreateProjectRequest
+// CreateProjectRequest indicates an expected call of CreateProjectRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateProjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProjectRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateProjectRequest), arg0)
 }
 
-// CreateProjectWithContext mocks base method
+// CreateProjectWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) CreateProjectWithContext(arg0 context.Context, arg1 *gluedatabrew.CreateProjectInput, arg2 ...request.Option) (*gluedatabrew.CreateProjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockGlueDataBrewAPI) CreateProjectWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// CreateProjectWithContext indicates an expected call of CreateProjectWithContext
+// CreateProjectWithContext indicates an expected call of CreateProjectWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateProjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateProjectWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateProjectWithContext), varargs...)
 }
 
-// CreateRecipe mocks base method
+// CreateRecipe mocks base method.
 func (m *MockGlueDataBrewAPI) CreateRecipe(arg0 *gluedatabrew.CreateRecipeInput) (*gluedatabrew.CreateRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRecipe", arg0)
@@ -244,13 +245,13 @@ func (m *MockGlueDataBrewAPI) CreateRecipe(arg0 *gluedatabrew.CreateRecipeInput)
 	return ret0, ret1
 }
 
-// CreateRecipe indicates an expected call of CreateRecipe
+// CreateRecipe indicates an expected call of CreateRecipe.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateRecipe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRecipe", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateRecipe), arg0)
 }
 
-// CreateRecipeJob mocks base method
+// CreateRecipeJob mocks base method.
 func (m *MockGlueDataBrewAPI) CreateRecipeJob(arg0 *gluedatabrew.CreateRecipeJobInput) (*gluedatabrew.CreateRecipeJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRecipeJob", arg0)
@@ -259,13 +260,13 @@ func (m *MockGlueDataBrewAPI) CreateRecipeJob(arg0 *gluedatabrew.CreateRecipeJob
 	return ret0, ret1
 }
 
-// CreateRecipeJob indicates an expected call of CreateRecipeJob
+// CreateRecipeJob indicates an expected call of CreateRecipeJob.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateRecipeJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRecipeJob", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateRecipeJob), arg0)
 }
 
-// CreateRecipeJobRequest mocks base method
+// CreateRecipeJobRequest mocks base method.
 func (m *MockGlueDataBrewAPI) CreateRecipeJobRequest(arg0 *gluedatabrew.CreateRecipeJobInput) (*request.Request, *gluedatabrew.CreateRecipeJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRecipeJobRequest", arg0)
@@ -274,13 +275,13 @@ func (m *MockGlueDataBrewAPI) CreateRecipeJobRequest(arg0 *gluedatabrew.CreateRe
 	return ret0, ret1
 }
 
-// CreateRecipeJobRequest indicates an expected call of CreateRecipeJobRequest
+// CreateRecipeJobRequest indicates an expected call of CreateRecipeJobRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateRecipeJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRecipeJobRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateRecipeJobRequest), arg0)
 }
 
-// CreateRecipeJobWithContext mocks base method
+// CreateRecipeJobWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) CreateRecipeJobWithContext(arg0 context.Context, arg1 *gluedatabrew.CreateRecipeJobInput, arg2 ...request.Option) (*gluedatabrew.CreateRecipeJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -293,14 +294,14 @@ func (m *MockGlueDataBrewAPI) CreateRecipeJobWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// CreateRecipeJobWithContext indicates an expected call of CreateRecipeJobWithContext
+// CreateRecipeJobWithContext indicates an expected call of CreateRecipeJobWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateRecipeJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRecipeJobWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateRecipeJobWithContext), varargs...)
 }
 
-// CreateRecipeRequest mocks base method
+// CreateRecipeRequest mocks base method.
 func (m *MockGlueDataBrewAPI) CreateRecipeRequest(arg0 *gluedatabrew.CreateRecipeInput) (*request.Request, *gluedatabrew.CreateRecipeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRecipeRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockGlueDataBrewAPI) CreateRecipeRequest(arg0 *gluedatabrew.CreateRecip
 	return ret0, ret1
 }
 
-// CreateRecipeRequest indicates an expected call of CreateRecipeRequest
+// CreateRecipeRequest indicates an expected call of CreateRecipeRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateRecipeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRecipeRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateRecipeRequest), arg0)
 }
 
-// CreateRecipeWithContext mocks base method
+// CreateRecipeWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) CreateRecipeWithContext(arg0 context.Context, arg1 *gluedatabrew.CreateRecipeInput, arg2 ...request.Option) (*gluedatabrew.CreateRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockGlueDataBrewAPI) CreateRecipeWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// CreateRecipeWithContext indicates an expected call of CreateRecipeWithContext
+// CreateRecipeWithContext indicates an expected call of CreateRecipeWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateRecipeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRecipeWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateRecipeWithContext), varargs...)
 }
 
-// CreateSchedule mocks base method
+// CreateSchedule mocks base method.
 func (m *MockGlueDataBrewAPI) CreateSchedule(arg0 *gluedatabrew.CreateScheduleInput) (*gluedatabrew.CreateScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSchedule", arg0)
@@ -344,13 +345,13 @@ func (m *MockGlueDataBrewAPI) CreateSchedule(arg0 *gluedatabrew.CreateScheduleIn
 	return ret0, ret1
 }
 
-// CreateSchedule indicates an expected call of CreateSchedule
+// CreateSchedule indicates an expected call of CreateSchedule.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateSchedule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSchedule", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateSchedule), arg0)
 }
 
-// CreateScheduleRequest mocks base method
+// CreateScheduleRequest mocks base method.
 func (m *MockGlueDataBrewAPI) CreateScheduleRequest(arg0 *gluedatabrew.CreateScheduleInput) (*request.Request, *gluedatabrew.CreateScheduleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateScheduleRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockGlueDataBrewAPI) CreateScheduleRequest(arg0 *gluedatabrew.CreateSch
 	return ret0, ret1
 }
 
-// CreateScheduleRequest indicates an expected call of CreateScheduleRequest
+// CreateScheduleRequest indicates an expected call of CreateScheduleRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateScheduleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateScheduleRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateScheduleRequest), arg0)
 }
 
-// CreateScheduleWithContext mocks base method
+// CreateScheduleWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) CreateScheduleWithContext(arg0 context.Context, arg1 *gluedatabrew.CreateScheduleInput, arg2 ...request.Option) (*gluedatabrew.CreateScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockGlueDataBrewAPI) CreateScheduleWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateScheduleWithContext indicates an expected call of CreateScheduleWithContext
+// CreateScheduleWithContext indicates an expected call of CreateScheduleWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) CreateScheduleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateScheduleWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).CreateScheduleWithContext), varargs...)
 }
 
-// DeleteDataset mocks base method
+// DeleteDataset mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteDataset(arg0 *gluedatabrew.DeleteDatasetInput) (*gluedatabrew.DeleteDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDataset", arg0)
@@ -394,13 +395,13 @@ func (m *MockGlueDataBrewAPI) DeleteDataset(arg0 *gluedatabrew.DeleteDatasetInpu
 	return ret0, ret1
 }
 
-// DeleteDataset indicates an expected call of DeleteDataset
+// DeleteDataset indicates an expected call of DeleteDataset.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataset", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteDataset), arg0)
 }
 
-// DeleteDatasetRequest mocks base method
+// DeleteDatasetRequest mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteDatasetRequest(arg0 *gluedatabrew.DeleteDatasetInput) (*request.Request, *gluedatabrew.DeleteDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteDatasetRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockGlueDataBrewAPI) DeleteDatasetRequest(arg0 *gluedatabrew.DeleteData
 	return ret0, ret1
 }
 
-// DeleteDatasetRequest indicates an expected call of DeleteDatasetRequest
+// DeleteDatasetRequest indicates an expected call of DeleteDatasetRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatasetRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteDatasetRequest), arg0)
 }
 
-// DeleteDatasetWithContext mocks base method
+// DeleteDatasetWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteDatasetWithContext(arg0 context.Context, arg1 *gluedatabrew.DeleteDatasetInput, arg2 ...request.Option) (*gluedatabrew.DeleteDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockGlueDataBrewAPI) DeleteDatasetWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DeleteDatasetWithContext indicates an expected call of DeleteDatasetWithContext
+// DeleteDatasetWithContext indicates an expected call of DeleteDatasetWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDatasetWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteDatasetWithContext), varargs...)
 }
 
-// DeleteJob mocks base method
+// DeleteJob mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteJob(arg0 *gluedatabrew.DeleteJobInput) (*gluedatabrew.DeleteJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteJob", arg0)
@@ -444,13 +445,13 @@ func (m *MockGlueDataBrewAPI) DeleteJob(arg0 *gluedatabrew.DeleteJobInput) (*glu
 	return ret0, ret1
 }
 
-// DeleteJob indicates an expected call of DeleteJob
+// DeleteJob indicates an expected call of DeleteJob.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteJob", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteJob), arg0)
 }
 
-// DeleteJobRequest mocks base method
+// DeleteJobRequest mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteJobRequest(arg0 *gluedatabrew.DeleteJobInput) (*request.Request, *gluedatabrew.DeleteJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteJobRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockGlueDataBrewAPI) DeleteJobRequest(arg0 *gluedatabrew.DeleteJobInput
 	return ret0, ret1
 }
 
-// DeleteJobRequest indicates an expected call of DeleteJobRequest
+// DeleteJobRequest indicates an expected call of DeleteJobRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteJobRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteJobRequest), arg0)
 }
 
-// DeleteJobWithContext mocks base method
+// DeleteJobWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteJobWithContext(arg0 context.Context, arg1 *gluedatabrew.DeleteJobInput, arg2 ...request.Option) (*gluedatabrew.DeleteJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockGlueDataBrewAPI) DeleteJobWithContext(arg0 context.Context, arg1 *g
 	return ret0, ret1
 }
 
-// DeleteJobWithContext indicates an expected call of DeleteJobWithContext
+// DeleteJobWithContext indicates an expected call of DeleteJobWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteJobWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteJobWithContext), varargs...)
 }
 
-// DeleteProject mocks base method
+// DeleteProject mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteProject(arg0 *gluedatabrew.DeleteProjectInput) (*gluedatabrew.DeleteProjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProject", arg0)
@@ -494,13 +495,13 @@ func (m *MockGlueDataBrewAPI) DeleteProject(arg0 *gluedatabrew.DeleteProjectInpu
 	return ret0, ret1
 }
 
-// DeleteProject indicates an expected call of DeleteProject
+// DeleteProject indicates an expected call of DeleteProject.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteProject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProject", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteProject), arg0)
 }
 
-// DeleteProjectRequest mocks base method
+// DeleteProjectRequest mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteProjectRequest(arg0 *gluedatabrew.DeleteProjectInput) (*request.Request, *gluedatabrew.DeleteProjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProjectRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockGlueDataBrewAPI) DeleteProjectRequest(arg0 *gluedatabrew.DeleteProj
 	return ret0, ret1
 }
 
-// DeleteProjectRequest indicates an expected call of DeleteProjectRequest
+// DeleteProjectRequest indicates an expected call of DeleteProjectRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteProjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProjectRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteProjectRequest), arg0)
 }
 
-// DeleteProjectWithContext mocks base method
+// DeleteProjectWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteProjectWithContext(arg0 context.Context, arg1 *gluedatabrew.DeleteProjectInput, arg2 ...request.Option) (*gluedatabrew.DeleteProjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockGlueDataBrewAPI) DeleteProjectWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// DeleteProjectWithContext indicates an expected call of DeleteProjectWithContext
+// DeleteProjectWithContext indicates an expected call of DeleteProjectWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteProjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProjectWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteProjectWithContext), varargs...)
 }
 
-// DeleteRecipeVersion mocks base method
+// DeleteRecipeVersion mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteRecipeVersion(arg0 *gluedatabrew.DeleteRecipeVersionInput) (*gluedatabrew.DeleteRecipeVersionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRecipeVersion", arg0)
@@ -544,13 +545,13 @@ func (m *MockGlueDataBrewAPI) DeleteRecipeVersion(arg0 *gluedatabrew.DeleteRecip
 	return ret0, ret1
 }
 
-// DeleteRecipeVersion indicates an expected call of DeleteRecipeVersion
+// DeleteRecipeVersion indicates an expected call of DeleteRecipeVersion.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteRecipeVersion(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRecipeVersion", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteRecipeVersion), arg0)
 }
 
-// DeleteRecipeVersionRequest mocks base method
+// DeleteRecipeVersionRequest mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteRecipeVersionRequest(arg0 *gluedatabrew.DeleteRecipeVersionInput) (*request.Request, *gluedatabrew.DeleteRecipeVersionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRecipeVersionRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockGlueDataBrewAPI) DeleteRecipeVersionRequest(arg0 *gluedatabrew.Dele
 	return ret0, ret1
 }
 
-// DeleteRecipeVersionRequest indicates an expected call of DeleteRecipeVersionRequest
+// DeleteRecipeVersionRequest indicates an expected call of DeleteRecipeVersionRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteRecipeVersionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRecipeVersionRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteRecipeVersionRequest), arg0)
 }
 
-// DeleteRecipeVersionWithContext mocks base method
+// DeleteRecipeVersionWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteRecipeVersionWithContext(arg0 context.Context, arg1 *gluedatabrew.DeleteRecipeVersionInput, arg2 ...request.Option) (*gluedatabrew.DeleteRecipeVersionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockGlueDataBrewAPI) DeleteRecipeVersionWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DeleteRecipeVersionWithContext indicates an expected call of DeleteRecipeVersionWithContext
+// DeleteRecipeVersionWithContext indicates an expected call of DeleteRecipeVersionWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteRecipeVersionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRecipeVersionWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteRecipeVersionWithContext), varargs...)
 }
 
-// DeleteSchedule mocks base method
+// DeleteSchedule mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteSchedule(arg0 *gluedatabrew.DeleteScheduleInput) (*gluedatabrew.DeleteScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSchedule", arg0)
@@ -594,13 +595,13 @@ func (m *MockGlueDataBrewAPI) DeleteSchedule(arg0 *gluedatabrew.DeleteScheduleIn
 	return ret0, ret1
 }
 
-// DeleteSchedule indicates an expected call of DeleteSchedule
+// DeleteSchedule indicates an expected call of DeleteSchedule.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteSchedule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSchedule", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteSchedule), arg0)
 }
 
-// DeleteScheduleRequest mocks base method
+// DeleteScheduleRequest mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteScheduleRequest(arg0 *gluedatabrew.DeleteScheduleInput) (*request.Request, *gluedatabrew.DeleteScheduleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteScheduleRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockGlueDataBrewAPI) DeleteScheduleRequest(arg0 *gluedatabrew.DeleteSch
 	return ret0, ret1
 }
 
-// DeleteScheduleRequest indicates an expected call of DeleteScheduleRequest
+// DeleteScheduleRequest indicates an expected call of DeleteScheduleRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteScheduleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteScheduleRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteScheduleRequest), arg0)
 }
 
-// DeleteScheduleWithContext mocks base method
+// DeleteScheduleWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) DeleteScheduleWithContext(arg0 context.Context, arg1 *gluedatabrew.DeleteScheduleInput, arg2 ...request.Option) (*gluedatabrew.DeleteScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockGlueDataBrewAPI) DeleteScheduleWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteScheduleWithContext indicates an expected call of DeleteScheduleWithContext
+// DeleteScheduleWithContext indicates an expected call of DeleteScheduleWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) DeleteScheduleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteScheduleWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DeleteScheduleWithContext), varargs...)
 }
 
-// DescribeDataset mocks base method
+// DescribeDataset mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeDataset(arg0 *gluedatabrew.DescribeDatasetInput) (*gluedatabrew.DescribeDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDataset", arg0)
@@ -644,13 +645,13 @@ func (m *MockGlueDataBrewAPI) DescribeDataset(arg0 *gluedatabrew.DescribeDataset
 	return ret0, ret1
 }
 
-// DescribeDataset indicates an expected call of DescribeDataset
+// DescribeDataset indicates an expected call of DescribeDataset.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDataset", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeDataset), arg0)
 }
 
-// DescribeDatasetRequest mocks base method
+// DescribeDatasetRequest mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeDatasetRequest(arg0 *gluedatabrew.DescribeDatasetInput) (*request.Request, *gluedatabrew.DescribeDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeDatasetRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockGlueDataBrewAPI) DescribeDatasetRequest(arg0 *gluedatabrew.Describe
 	return ret0, ret1
 }
 
-// DescribeDatasetRequest indicates an expected call of DescribeDatasetRequest
+// DescribeDatasetRequest indicates an expected call of DescribeDatasetRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeDatasetRequest), arg0)
 }
 
-// DescribeDatasetWithContext mocks base method
+// DescribeDatasetWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeDatasetWithContext(arg0 context.Context, arg1 *gluedatabrew.DescribeDatasetInput, arg2 ...request.Option) (*gluedatabrew.DescribeDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockGlueDataBrewAPI) DescribeDatasetWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DescribeDatasetWithContext indicates an expected call of DescribeDatasetWithContext
+// DescribeDatasetWithContext indicates an expected call of DescribeDatasetWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDatasetWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeDatasetWithContext), varargs...)
 }
 
-// DescribeJob mocks base method
+// DescribeJob mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeJob(arg0 *gluedatabrew.DescribeJobInput) (*gluedatabrew.DescribeJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeJob", arg0)
@@ -694,13 +695,13 @@ func (m *MockGlueDataBrewAPI) DescribeJob(arg0 *gluedatabrew.DescribeJobInput) (
 	return ret0, ret1
 }
 
-// DescribeJob indicates an expected call of DescribeJob
+// DescribeJob indicates an expected call of DescribeJob.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJob", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeJob), arg0)
 }
 
-// DescribeJobRequest mocks base method
+// DescribeJobRequest mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeJobRequest(arg0 *gluedatabrew.DescribeJobInput) (*request.Request, *gluedatabrew.DescribeJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeJobRequest", arg0)
@@ -709,13 +710,63 @@ func (m *MockGlueDataBrewAPI) DescribeJobRequest(arg0 *gluedatabrew.DescribeJobI
 	return ret0, ret1
 }
 
-// DescribeJobRequest indicates an expected call of DescribeJobRequest
+// DescribeJobRequest indicates an expected call of DescribeJobRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeJobRequest), arg0)
 }
 
-// DescribeJobWithContext mocks base method
+// DescribeJobRun mocks base method.
+func (m *MockGlueDataBrewAPI) DescribeJobRun(arg0 *gluedatabrew.DescribeJobRunInput) (*gluedatabrew.DescribeJobRunOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeJobRun", arg0)
+	ret0, _ := ret[0].(*gluedatabrew.DescribeJobRunOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeJobRun indicates an expected call of DescribeJobRun.
+func (mr *MockGlueDataBrewAPIMockRecorder) DescribeJobRun(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobRun", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeJobRun), arg0)
+}
+
+// DescribeJobRunRequest mocks base method.
+func (m *MockGlueDataBrewAPI) DescribeJobRunRequest(arg0 *gluedatabrew.DescribeJobRunInput) (*request.Request, *gluedatabrew.DescribeJobRunOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeJobRunRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*gluedatabrew.DescribeJobRunOutput)
+	return ret0, ret1
+}
+
+// DescribeJobRunRequest indicates an expected call of DescribeJobRunRequest.
+func (mr *MockGlueDataBrewAPIMockRecorder) DescribeJobRunRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobRunRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeJobRunRequest), arg0)
+}
+
+// DescribeJobRunWithContext mocks base method.
+func (m *MockGlueDataBrewAPI) DescribeJobRunWithContext(arg0 context.Context, arg1 *gluedatabrew.DescribeJobRunInput, arg2 ...request.Option) (*gluedatabrew.DescribeJobRunOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeJobRunWithContext", varargs...)
+	ret0, _ := ret[0].(*gluedatabrew.DescribeJobRunOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeJobRunWithContext indicates an expected call of DescribeJobRunWithContext.
+func (mr *MockGlueDataBrewAPIMockRecorder) DescribeJobRunWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobRunWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeJobRunWithContext), varargs...)
+}
+
+// DescribeJobWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeJobWithContext(arg0 context.Context, arg1 *gluedatabrew.DescribeJobInput, arg2 ...request.Option) (*gluedatabrew.DescribeJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +779,14 @@ func (m *MockGlueDataBrewAPI) DescribeJobWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DescribeJobWithContext indicates an expected call of DescribeJobWithContext
+// DescribeJobWithContext indicates an expected call of DescribeJobWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeJobWithContext), varargs...)
 }
 
-// DescribeProject mocks base method
+// DescribeProject mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeProject(arg0 *gluedatabrew.DescribeProjectInput) (*gluedatabrew.DescribeProjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeProject", arg0)
@@ -744,13 +795,13 @@ func (m *MockGlueDataBrewAPI) DescribeProject(arg0 *gluedatabrew.DescribeProject
 	return ret0, ret1
 }
 
-// DescribeProject indicates an expected call of DescribeProject
+// DescribeProject indicates an expected call of DescribeProject.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeProject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeProject", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeProject), arg0)
 }
 
-// DescribeProjectRequest mocks base method
+// DescribeProjectRequest mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeProjectRequest(arg0 *gluedatabrew.DescribeProjectInput) (*request.Request, *gluedatabrew.DescribeProjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeProjectRequest", arg0)
@@ -759,13 +810,13 @@ func (m *MockGlueDataBrewAPI) DescribeProjectRequest(arg0 *gluedatabrew.Describe
 	return ret0, ret1
 }
 
-// DescribeProjectRequest indicates an expected call of DescribeProjectRequest
+// DescribeProjectRequest indicates an expected call of DescribeProjectRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeProjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeProjectRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeProjectRequest), arg0)
 }
 
-// DescribeProjectWithContext mocks base method
+// DescribeProjectWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeProjectWithContext(arg0 context.Context, arg1 *gluedatabrew.DescribeProjectInput, arg2 ...request.Option) (*gluedatabrew.DescribeProjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +829,14 @@ func (m *MockGlueDataBrewAPI) DescribeProjectWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DescribeProjectWithContext indicates an expected call of DescribeProjectWithContext
+// DescribeProjectWithContext indicates an expected call of DescribeProjectWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeProjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeProjectWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeProjectWithContext), varargs...)
 }
 
-// DescribeRecipe mocks base method
+// DescribeRecipe mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeRecipe(arg0 *gluedatabrew.DescribeRecipeInput) (*gluedatabrew.DescribeRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRecipe", arg0)
@@ -794,13 +845,13 @@ func (m *MockGlueDataBrewAPI) DescribeRecipe(arg0 *gluedatabrew.DescribeRecipeIn
 	return ret0, ret1
 }
 
-// DescribeRecipe indicates an expected call of DescribeRecipe
+// DescribeRecipe indicates an expected call of DescribeRecipe.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeRecipe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecipe", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeRecipe), arg0)
 }
 
-// DescribeRecipeRequest mocks base method
+// DescribeRecipeRequest mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeRecipeRequest(arg0 *gluedatabrew.DescribeRecipeInput) (*request.Request, *gluedatabrew.DescribeRecipeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRecipeRequest", arg0)
@@ -809,13 +860,13 @@ func (m *MockGlueDataBrewAPI) DescribeRecipeRequest(arg0 *gluedatabrew.DescribeR
 	return ret0, ret1
 }
 
-// DescribeRecipeRequest indicates an expected call of DescribeRecipeRequest
+// DescribeRecipeRequest indicates an expected call of DescribeRecipeRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeRecipeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecipeRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeRecipeRequest), arg0)
 }
 
-// DescribeRecipeWithContext mocks base method
+// DescribeRecipeWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeRecipeWithContext(arg0 context.Context, arg1 *gluedatabrew.DescribeRecipeInput, arg2 ...request.Option) (*gluedatabrew.DescribeRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -828,14 +879,14 @@ func (m *MockGlueDataBrewAPI) DescribeRecipeWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DescribeRecipeWithContext indicates an expected call of DescribeRecipeWithContext
+// DescribeRecipeWithContext indicates an expected call of DescribeRecipeWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeRecipeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRecipeWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeRecipeWithContext), varargs...)
 }
 
-// DescribeSchedule mocks base method
+// DescribeSchedule mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeSchedule(arg0 *gluedatabrew.DescribeScheduleInput) (*gluedatabrew.DescribeScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeSchedule", arg0)
@@ -844,13 +895,13 @@ func (m *MockGlueDataBrewAPI) DescribeSchedule(arg0 *gluedatabrew.DescribeSchedu
 	return ret0, ret1
 }
 
-// DescribeSchedule indicates an expected call of DescribeSchedule
+// DescribeSchedule indicates an expected call of DescribeSchedule.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeSchedule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSchedule", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeSchedule), arg0)
 }
 
-// DescribeScheduleRequest mocks base method
+// DescribeScheduleRequest mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeScheduleRequest(arg0 *gluedatabrew.DescribeScheduleInput) (*request.Request, *gluedatabrew.DescribeScheduleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeScheduleRequest", arg0)
@@ -859,13 +910,13 @@ func (m *MockGlueDataBrewAPI) DescribeScheduleRequest(arg0 *gluedatabrew.Describ
 	return ret0, ret1
 }
 
-// DescribeScheduleRequest indicates an expected call of DescribeScheduleRequest
+// DescribeScheduleRequest indicates an expected call of DescribeScheduleRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeScheduleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeScheduleRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeScheduleRequest), arg0)
 }
 
-// DescribeScheduleWithContext mocks base method
+// DescribeScheduleWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) DescribeScheduleWithContext(arg0 context.Context, arg1 *gluedatabrew.DescribeScheduleInput, arg2 ...request.Option) (*gluedatabrew.DescribeScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -878,14 +929,14 @@ func (m *MockGlueDataBrewAPI) DescribeScheduleWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DescribeScheduleWithContext indicates an expected call of DescribeScheduleWithContext
+// DescribeScheduleWithContext indicates an expected call of DescribeScheduleWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) DescribeScheduleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeScheduleWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).DescribeScheduleWithContext), varargs...)
 }
 
-// ListDatasets mocks base method
+// ListDatasets mocks base method.
 func (m *MockGlueDataBrewAPI) ListDatasets(arg0 *gluedatabrew.ListDatasetsInput) (*gluedatabrew.ListDatasetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasets", arg0)
@@ -894,13 +945,13 @@ func (m *MockGlueDataBrewAPI) ListDatasets(arg0 *gluedatabrew.ListDatasetsInput)
 	return ret0, ret1
 }
 
-// ListDatasets indicates an expected call of ListDatasets
+// ListDatasets indicates an expected call of ListDatasets.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListDatasets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasets", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListDatasets), arg0)
 }
 
-// ListDatasetsPages mocks base method
+// ListDatasetsPages mocks base method.
 func (m *MockGlueDataBrewAPI) ListDatasetsPages(arg0 *gluedatabrew.ListDatasetsInput, arg1 func(*gluedatabrew.ListDatasetsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetsPages", arg0, arg1)
@@ -908,13 +959,13 @@ func (m *MockGlueDataBrewAPI) ListDatasetsPages(arg0 *gluedatabrew.ListDatasetsI
 	return ret0
 }
 
-// ListDatasetsPages indicates an expected call of ListDatasetsPages
+// ListDatasetsPages indicates an expected call of ListDatasetsPages.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListDatasetsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetsPages", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListDatasetsPages), arg0, arg1)
 }
 
-// ListDatasetsPagesWithContext mocks base method
+// ListDatasetsPagesWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListDatasetsPagesWithContext(arg0 context.Context, arg1 *gluedatabrew.ListDatasetsInput, arg2 func(*gluedatabrew.ListDatasetsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -926,14 +977,14 @@ func (m *MockGlueDataBrewAPI) ListDatasetsPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListDatasetsPagesWithContext indicates an expected call of ListDatasetsPagesWithContext
+// ListDatasetsPagesWithContext indicates an expected call of ListDatasetsPagesWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListDatasetsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetsPagesWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListDatasetsPagesWithContext), varargs...)
 }
 
-// ListDatasetsRequest mocks base method
+// ListDatasetsRequest mocks base method.
 func (m *MockGlueDataBrewAPI) ListDatasetsRequest(arg0 *gluedatabrew.ListDatasetsInput) (*request.Request, *gluedatabrew.ListDatasetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListDatasetsRequest", arg0)
@@ -942,13 +993,13 @@ func (m *MockGlueDataBrewAPI) ListDatasetsRequest(arg0 *gluedatabrew.ListDataset
 	return ret0, ret1
 }
 
-// ListDatasetsRequest indicates an expected call of ListDatasetsRequest
+// ListDatasetsRequest indicates an expected call of ListDatasetsRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListDatasetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetsRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListDatasetsRequest), arg0)
 }
 
-// ListDatasetsWithContext mocks base method
+// ListDatasetsWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListDatasetsWithContext(arg0 context.Context, arg1 *gluedatabrew.ListDatasetsInput, arg2 ...request.Option) (*gluedatabrew.ListDatasetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -961,14 +1012,14 @@ func (m *MockGlueDataBrewAPI) ListDatasetsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListDatasetsWithContext indicates an expected call of ListDatasetsWithContext
+// ListDatasetsWithContext indicates an expected call of ListDatasetsWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListDatasetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDatasetsWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListDatasetsWithContext), varargs...)
 }
 
-// ListJobRuns mocks base method
+// ListJobRuns mocks base method.
 func (m *MockGlueDataBrewAPI) ListJobRuns(arg0 *gluedatabrew.ListJobRunsInput) (*gluedatabrew.ListJobRunsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobRuns", arg0)
@@ -977,13 +1028,13 @@ func (m *MockGlueDataBrewAPI) ListJobRuns(arg0 *gluedatabrew.ListJobRunsInput) (
 	return ret0, ret1
 }
 
-// ListJobRuns indicates an expected call of ListJobRuns
+// ListJobRuns indicates an expected call of ListJobRuns.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListJobRuns(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobRuns", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListJobRuns), arg0)
 }
 
-// ListJobRunsPages mocks base method
+// ListJobRunsPages mocks base method.
 func (m *MockGlueDataBrewAPI) ListJobRunsPages(arg0 *gluedatabrew.ListJobRunsInput, arg1 func(*gluedatabrew.ListJobRunsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobRunsPages", arg0, arg1)
@@ -991,13 +1042,13 @@ func (m *MockGlueDataBrewAPI) ListJobRunsPages(arg0 *gluedatabrew.ListJobRunsInp
 	return ret0
 }
 
-// ListJobRunsPages indicates an expected call of ListJobRunsPages
+// ListJobRunsPages indicates an expected call of ListJobRunsPages.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListJobRunsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobRunsPages", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListJobRunsPages), arg0, arg1)
 }
 
-// ListJobRunsPagesWithContext mocks base method
+// ListJobRunsPagesWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListJobRunsPagesWithContext(arg0 context.Context, arg1 *gluedatabrew.ListJobRunsInput, arg2 func(*gluedatabrew.ListJobRunsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1009,14 +1060,14 @@ func (m *MockGlueDataBrewAPI) ListJobRunsPagesWithContext(arg0 context.Context, 
 	return ret0
 }
 
-// ListJobRunsPagesWithContext indicates an expected call of ListJobRunsPagesWithContext
+// ListJobRunsPagesWithContext indicates an expected call of ListJobRunsPagesWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListJobRunsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobRunsPagesWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListJobRunsPagesWithContext), varargs...)
 }
 
-// ListJobRunsRequest mocks base method
+// ListJobRunsRequest mocks base method.
 func (m *MockGlueDataBrewAPI) ListJobRunsRequest(arg0 *gluedatabrew.ListJobRunsInput) (*request.Request, *gluedatabrew.ListJobRunsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobRunsRequest", arg0)
@@ -1025,13 +1076,13 @@ func (m *MockGlueDataBrewAPI) ListJobRunsRequest(arg0 *gluedatabrew.ListJobRunsI
 	return ret0, ret1
 }
 
-// ListJobRunsRequest indicates an expected call of ListJobRunsRequest
+// ListJobRunsRequest indicates an expected call of ListJobRunsRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListJobRunsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobRunsRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListJobRunsRequest), arg0)
 }
 
-// ListJobRunsWithContext mocks base method
+// ListJobRunsWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListJobRunsWithContext(arg0 context.Context, arg1 *gluedatabrew.ListJobRunsInput, arg2 ...request.Option) (*gluedatabrew.ListJobRunsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1044,14 +1095,14 @@ func (m *MockGlueDataBrewAPI) ListJobRunsWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListJobRunsWithContext indicates an expected call of ListJobRunsWithContext
+// ListJobRunsWithContext indicates an expected call of ListJobRunsWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListJobRunsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobRunsWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListJobRunsWithContext), varargs...)
 }
 
-// ListJobs mocks base method
+// ListJobs mocks base method.
 func (m *MockGlueDataBrewAPI) ListJobs(arg0 *gluedatabrew.ListJobsInput) (*gluedatabrew.ListJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobs", arg0)
@@ -1060,13 +1111,13 @@ func (m *MockGlueDataBrewAPI) ListJobs(arg0 *gluedatabrew.ListJobsInput) (*glued
 	return ret0, ret1
 }
 
-// ListJobs indicates an expected call of ListJobs
+// ListJobs indicates an expected call of ListJobs.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobs", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListJobs), arg0)
 }
 
-// ListJobsPages mocks base method
+// ListJobsPages mocks base method.
 func (m *MockGlueDataBrewAPI) ListJobsPages(arg0 *gluedatabrew.ListJobsInput, arg1 func(*gluedatabrew.ListJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobsPages", arg0, arg1)
@@ -1074,13 +1125,13 @@ func (m *MockGlueDataBrewAPI) ListJobsPages(arg0 *gluedatabrew.ListJobsInput, ar
 	return ret0
 }
 
-// ListJobsPages indicates an expected call of ListJobsPages
+// ListJobsPages indicates an expected call of ListJobsPages.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsPages", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListJobsPages), arg0, arg1)
 }
 
-// ListJobsPagesWithContext mocks base method
+// ListJobsPagesWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListJobsPagesWithContext(arg0 context.Context, arg1 *gluedatabrew.ListJobsInput, arg2 func(*gluedatabrew.ListJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1092,14 +1143,14 @@ func (m *MockGlueDataBrewAPI) ListJobsPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// ListJobsPagesWithContext indicates an expected call of ListJobsPagesWithContext
+// ListJobsPagesWithContext indicates an expected call of ListJobsPagesWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsPagesWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListJobsPagesWithContext), varargs...)
 }
 
-// ListJobsRequest mocks base method
+// ListJobsRequest mocks base method.
 func (m *MockGlueDataBrewAPI) ListJobsRequest(arg0 *gluedatabrew.ListJobsInput) (*request.Request, *gluedatabrew.ListJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobsRequest", arg0)
@@ -1108,13 +1159,13 @@ func (m *MockGlueDataBrewAPI) ListJobsRequest(arg0 *gluedatabrew.ListJobsInput) 
 	return ret0, ret1
 }
 
-// ListJobsRequest indicates an expected call of ListJobsRequest
+// ListJobsRequest indicates an expected call of ListJobsRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListJobsRequest), arg0)
 }
 
-// ListJobsWithContext mocks base method
+// ListJobsWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListJobsWithContext(arg0 context.Context, arg1 *gluedatabrew.ListJobsInput, arg2 ...request.Option) (*gluedatabrew.ListJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1127,14 +1178,14 @@ func (m *MockGlueDataBrewAPI) ListJobsWithContext(arg0 context.Context, arg1 *gl
 	return ret0, ret1
 }
 
-// ListJobsWithContext indicates an expected call of ListJobsWithContext
+// ListJobsWithContext indicates an expected call of ListJobsWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobsWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListJobsWithContext), varargs...)
 }
 
-// ListProjects mocks base method
+// ListProjects mocks base method.
 func (m *MockGlueDataBrewAPI) ListProjects(arg0 *gluedatabrew.ListProjectsInput) (*gluedatabrew.ListProjectsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProjects", arg0)
@@ -1143,13 +1194,13 @@ func (m *MockGlueDataBrewAPI) ListProjects(arg0 *gluedatabrew.ListProjectsInput)
 	return ret0, ret1
 }
 
-// ListProjects indicates an expected call of ListProjects
+// ListProjects indicates an expected call of ListProjects.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListProjects(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjects", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListProjects), arg0)
 }
 
-// ListProjectsPages mocks base method
+// ListProjectsPages mocks base method.
 func (m *MockGlueDataBrewAPI) ListProjectsPages(arg0 *gluedatabrew.ListProjectsInput, arg1 func(*gluedatabrew.ListProjectsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProjectsPages", arg0, arg1)
@@ -1157,13 +1208,13 @@ func (m *MockGlueDataBrewAPI) ListProjectsPages(arg0 *gluedatabrew.ListProjectsI
 	return ret0
 }
 
-// ListProjectsPages indicates an expected call of ListProjectsPages
+// ListProjectsPages indicates an expected call of ListProjectsPages.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListProjectsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjectsPages", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListProjectsPages), arg0, arg1)
 }
 
-// ListProjectsPagesWithContext mocks base method
+// ListProjectsPagesWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListProjectsPagesWithContext(arg0 context.Context, arg1 *gluedatabrew.ListProjectsInput, arg2 func(*gluedatabrew.ListProjectsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1175,14 +1226,14 @@ func (m *MockGlueDataBrewAPI) ListProjectsPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListProjectsPagesWithContext indicates an expected call of ListProjectsPagesWithContext
+// ListProjectsPagesWithContext indicates an expected call of ListProjectsPagesWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListProjectsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjectsPagesWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListProjectsPagesWithContext), varargs...)
 }
 
-// ListProjectsRequest mocks base method
+// ListProjectsRequest mocks base method.
 func (m *MockGlueDataBrewAPI) ListProjectsRequest(arg0 *gluedatabrew.ListProjectsInput) (*request.Request, *gluedatabrew.ListProjectsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProjectsRequest", arg0)
@@ -1191,13 +1242,13 @@ func (m *MockGlueDataBrewAPI) ListProjectsRequest(arg0 *gluedatabrew.ListProject
 	return ret0, ret1
 }
 
-// ListProjectsRequest indicates an expected call of ListProjectsRequest
+// ListProjectsRequest indicates an expected call of ListProjectsRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListProjectsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjectsRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListProjectsRequest), arg0)
 }
 
-// ListProjectsWithContext mocks base method
+// ListProjectsWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListProjectsWithContext(arg0 context.Context, arg1 *gluedatabrew.ListProjectsInput, arg2 ...request.Option) (*gluedatabrew.ListProjectsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1210,14 +1261,14 @@ func (m *MockGlueDataBrewAPI) ListProjectsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListProjectsWithContext indicates an expected call of ListProjectsWithContext
+// ListProjectsWithContext indicates an expected call of ListProjectsWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListProjectsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProjectsWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListProjectsWithContext), varargs...)
 }
 
-// ListRecipeVersions mocks base method
+// ListRecipeVersions mocks base method.
 func (m *MockGlueDataBrewAPI) ListRecipeVersions(arg0 *gluedatabrew.ListRecipeVersionsInput) (*gluedatabrew.ListRecipeVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecipeVersions", arg0)
@@ -1226,13 +1277,13 @@ func (m *MockGlueDataBrewAPI) ListRecipeVersions(arg0 *gluedatabrew.ListRecipeVe
 	return ret0, ret1
 }
 
-// ListRecipeVersions indicates an expected call of ListRecipeVersions
+// ListRecipeVersions indicates an expected call of ListRecipeVersions.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListRecipeVersions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipeVersions", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListRecipeVersions), arg0)
 }
 
-// ListRecipeVersionsPages mocks base method
+// ListRecipeVersionsPages mocks base method.
 func (m *MockGlueDataBrewAPI) ListRecipeVersionsPages(arg0 *gluedatabrew.ListRecipeVersionsInput, arg1 func(*gluedatabrew.ListRecipeVersionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecipeVersionsPages", arg0, arg1)
@@ -1240,13 +1291,13 @@ func (m *MockGlueDataBrewAPI) ListRecipeVersionsPages(arg0 *gluedatabrew.ListRec
 	return ret0
 }
 
-// ListRecipeVersionsPages indicates an expected call of ListRecipeVersionsPages
+// ListRecipeVersionsPages indicates an expected call of ListRecipeVersionsPages.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListRecipeVersionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipeVersionsPages", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListRecipeVersionsPages), arg0, arg1)
 }
 
-// ListRecipeVersionsPagesWithContext mocks base method
+// ListRecipeVersionsPagesWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListRecipeVersionsPagesWithContext(arg0 context.Context, arg1 *gluedatabrew.ListRecipeVersionsInput, arg2 func(*gluedatabrew.ListRecipeVersionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1258,14 +1309,14 @@ func (m *MockGlueDataBrewAPI) ListRecipeVersionsPagesWithContext(arg0 context.Co
 	return ret0
 }
 
-// ListRecipeVersionsPagesWithContext indicates an expected call of ListRecipeVersionsPagesWithContext
+// ListRecipeVersionsPagesWithContext indicates an expected call of ListRecipeVersionsPagesWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListRecipeVersionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipeVersionsPagesWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListRecipeVersionsPagesWithContext), varargs...)
 }
 
-// ListRecipeVersionsRequest mocks base method
+// ListRecipeVersionsRequest mocks base method.
 func (m *MockGlueDataBrewAPI) ListRecipeVersionsRequest(arg0 *gluedatabrew.ListRecipeVersionsInput) (*request.Request, *gluedatabrew.ListRecipeVersionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecipeVersionsRequest", arg0)
@@ -1274,13 +1325,13 @@ func (m *MockGlueDataBrewAPI) ListRecipeVersionsRequest(arg0 *gluedatabrew.ListR
 	return ret0, ret1
 }
 
-// ListRecipeVersionsRequest indicates an expected call of ListRecipeVersionsRequest
+// ListRecipeVersionsRequest indicates an expected call of ListRecipeVersionsRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListRecipeVersionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipeVersionsRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListRecipeVersionsRequest), arg0)
 }
 
-// ListRecipeVersionsWithContext mocks base method
+// ListRecipeVersionsWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListRecipeVersionsWithContext(arg0 context.Context, arg1 *gluedatabrew.ListRecipeVersionsInput, arg2 ...request.Option) (*gluedatabrew.ListRecipeVersionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1293,14 +1344,14 @@ func (m *MockGlueDataBrewAPI) ListRecipeVersionsWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListRecipeVersionsWithContext indicates an expected call of ListRecipeVersionsWithContext
+// ListRecipeVersionsWithContext indicates an expected call of ListRecipeVersionsWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListRecipeVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipeVersionsWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListRecipeVersionsWithContext), varargs...)
 }
 
-// ListRecipes mocks base method
+// ListRecipes mocks base method.
 func (m *MockGlueDataBrewAPI) ListRecipes(arg0 *gluedatabrew.ListRecipesInput) (*gluedatabrew.ListRecipesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecipes", arg0)
@@ -1309,13 +1360,13 @@ func (m *MockGlueDataBrewAPI) ListRecipes(arg0 *gluedatabrew.ListRecipesInput) (
 	return ret0, ret1
 }
 
-// ListRecipes indicates an expected call of ListRecipes
+// ListRecipes indicates an expected call of ListRecipes.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListRecipes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipes", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListRecipes), arg0)
 }
 
-// ListRecipesPages mocks base method
+// ListRecipesPages mocks base method.
 func (m *MockGlueDataBrewAPI) ListRecipesPages(arg0 *gluedatabrew.ListRecipesInput, arg1 func(*gluedatabrew.ListRecipesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecipesPages", arg0, arg1)
@@ -1323,13 +1374,13 @@ func (m *MockGlueDataBrewAPI) ListRecipesPages(arg0 *gluedatabrew.ListRecipesInp
 	return ret0
 }
 
-// ListRecipesPages indicates an expected call of ListRecipesPages
+// ListRecipesPages indicates an expected call of ListRecipesPages.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListRecipesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipesPages", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListRecipesPages), arg0, arg1)
 }
 
-// ListRecipesPagesWithContext mocks base method
+// ListRecipesPagesWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListRecipesPagesWithContext(arg0 context.Context, arg1 *gluedatabrew.ListRecipesInput, arg2 func(*gluedatabrew.ListRecipesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1341,14 +1392,14 @@ func (m *MockGlueDataBrewAPI) ListRecipesPagesWithContext(arg0 context.Context, 
 	return ret0
 }
 
-// ListRecipesPagesWithContext indicates an expected call of ListRecipesPagesWithContext
+// ListRecipesPagesWithContext indicates an expected call of ListRecipesPagesWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListRecipesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipesPagesWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListRecipesPagesWithContext), varargs...)
 }
 
-// ListRecipesRequest mocks base method
+// ListRecipesRequest mocks base method.
 func (m *MockGlueDataBrewAPI) ListRecipesRequest(arg0 *gluedatabrew.ListRecipesInput) (*request.Request, *gluedatabrew.ListRecipesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecipesRequest", arg0)
@@ -1357,13 +1408,13 @@ func (m *MockGlueDataBrewAPI) ListRecipesRequest(arg0 *gluedatabrew.ListRecipesI
 	return ret0, ret1
 }
 
-// ListRecipesRequest indicates an expected call of ListRecipesRequest
+// ListRecipesRequest indicates an expected call of ListRecipesRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListRecipesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipesRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListRecipesRequest), arg0)
 }
 
-// ListRecipesWithContext mocks base method
+// ListRecipesWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListRecipesWithContext(arg0 context.Context, arg1 *gluedatabrew.ListRecipesInput, arg2 ...request.Option) (*gluedatabrew.ListRecipesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1376,14 +1427,14 @@ func (m *MockGlueDataBrewAPI) ListRecipesWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListRecipesWithContext indicates an expected call of ListRecipesWithContext
+// ListRecipesWithContext indicates an expected call of ListRecipesWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListRecipesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecipesWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListRecipesWithContext), varargs...)
 }
 
-// ListSchedules mocks base method
+// ListSchedules mocks base method.
 func (m *MockGlueDataBrewAPI) ListSchedules(arg0 *gluedatabrew.ListSchedulesInput) (*gluedatabrew.ListSchedulesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchedules", arg0)
@@ -1392,13 +1443,13 @@ func (m *MockGlueDataBrewAPI) ListSchedules(arg0 *gluedatabrew.ListSchedulesInpu
 	return ret0, ret1
 }
 
-// ListSchedules indicates an expected call of ListSchedules
+// ListSchedules indicates an expected call of ListSchedules.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListSchedules(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchedules", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListSchedules), arg0)
 }
 
-// ListSchedulesPages mocks base method
+// ListSchedulesPages mocks base method.
 func (m *MockGlueDataBrewAPI) ListSchedulesPages(arg0 *gluedatabrew.ListSchedulesInput, arg1 func(*gluedatabrew.ListSchedulesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchedulesPages", arg0, arg1)
@@ -1406,13 +1457,13 @@ func (m *MockGlueDataBrewAPI) ListSchedulesPages(arg0 *gluedatabrew.ListSchedule
 	return ret0
 }
 
-// ListSchedulesPages indicates an expected call of ListSchedulesPages
+// ListSchedulesPages indicates an expected call of ListSchedulesPages.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListSchedulesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchedulesPages", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListSchedulesPages), arg0, arg1)
 }
 
-// ListSchedulesPagesWithContext mocks base method
+// ListSchedulesPagesWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListSchedulesPagesWithContext(arg0 context.Context, arg1 *gluedatabrew.ListSchedulesInput, arg2 func(*gluedatabrew.ListSchedulesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1424,14 +1475,14 @@ func (m *MockGlueDataBrewAPI) ListSchedulesPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListSchedulesPagesWithContext indicates an expected call of ListSchedulesPagesWithContext
+// ListSchedulesPagesWithContext indicates an expected call of ListSchedulesPagesWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListSchedulesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchedulesPagesWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListSchedulesPagesWithContext), varargs...)
 }
 
-// ListSchedulesRequest mocks base method
+// ListSchedulesRequest mocks base method.
 func (m *MockGlueDataBrewAPI) ListSchedulesRequest(arg0 *gluedatabrew.ListSchedulesInput) (*request.Request, *gluedatabrew.ListSchedulesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListSchedulesRequest", arg0)
@@ -1440,13 +1491,13 @@ func (m *MockGlueDataBrewAPI) ListSchedulesRequest(arg0 *gluedatabrew.ListSchedu
 	return ret0, ret1
 }
 
-// ListSchedulesRequest indicates an expected call of ListSchedulesRequest
+// ListSchedulesRequest indicates an expected call of ListSchedulesRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListSchedulesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchedulesRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListSchedulesRequest), arg0)
 }
 
-// ListSchedulesWithContext mocks base method
+// ListSchedulesWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListSchedulesWithContext(arg0 context.Context, arg1 *gluedatabrew.ListSchedulesInput, arg2 ...request.Option) (*gluedatabrew.ListSchedulesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1459,14 +1510,14 @@ func (m *MockGlueDataBrewAPI) ListSchedulesWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListSchedulesWithContext indicates an expected call of ListSchedulesWithContext
+// ListSchedulesWithContext indicates an expected call of ListSchedulesWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListSchedulesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListSchedulesWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListSchedulesWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockGlueDataBrewAPI) ListTagsForResource(arg0 *gluedatabrew.ListTagsForResourceInput) (*gluedatabrew.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1475,13 +1526,13 @@ func (m *MockGlueDataBrewAPI) ListTagsForResource(arg0 *gluedatabrew.ListTagsFor
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockGlueDataBrewAPI) ListTagsForResourceRequest(arg0 *gluedatabrew.ListTagsForResourceInput) (*request.Request, *gluedatabrew.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1490,13 +1541,13 @@ func (m *MockGlueDataBrewAPI) ListTagsForResourceRequest(arg0 *gluedatabrew.List
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *gluedatabrew.ListTagsForResourceInput, arg2 ...request.Option) (*gluedatabrew.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1509,14 +1560,14 @@ func (m *MockGlueDataBrewAPI) ListTagsForResourceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PublishRecipe mocks base method
+// PublishRecipe mocks base method.
 func (m *MockGlueDataBrewAPI) PublishRecipe(arg0 *gluedatabrew.PublishRecipeInput) (*gluedatabrew.PublishRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PublishRecipe", arg0)
@@ -1525,13 +1576,13 @@ func (m *MockGlueDataBrewAPI) PublishRecipe(arg0 *gluedatabrew.PublishRecipeInpu
 	return ret0, ret1
 }
 
-// PublishRecipe indicates an expected call of PublishRecipe
+// PublishRecipe indicates an expected call of PublishRecipe.
 func (mr *MockGlueDataBrewAPIMockRecorder) PublishRecipe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PublishRecipe", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).PublishRecipe), arg0)
 }
 
-// PublishRecipeRequest mocks base method
+// PublishRecipeRequest mocks base method.
 func (m *MockGlueDataBrewAPI) PublishRecipeRequest(arg0 *gluedatabrew.PublishRecipeInput) (*request.Request, *gluedatabrew.PublishRecipeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PublishRecipeRequest", arg0)
@@ -1540,13 +1591,13 @@ func (m *MockGlueDataBrewAPI) PublishRecipeRequest(arg0 *gluedatabrew.PublishRec
 	return ret0, ret1
 }
 
-// PublishRecipeRequest indicates an expected call of PublishRecipeRequest
+// PublishRecipeRequest indicates an expected call of PublishRecipeRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) PublishRecipeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PublishRecipeRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).PublishRecipeRequest), arg0)
 }
 
-// PublishRecipeWithContext mocks base method
+// PublishRecipeWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) PublishRecipeWithContext(arg0 context.Context, arg1 *gluedatabrew.PublishRecipeInput, arg2 ...request.Option) (*gluedatabrew.PublishRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1559,14 +1610,14 @@ func (m *MockGlueDataBrewAPI) PublishRecipeWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// PublishRecipeWithContext indicates an expected call of PublishRecipeWithContext
+// PublishRecipeWithContext indicates an expected call of PublishRecipeWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) PublishRecipeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PublishRecipeWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).PublishRecipeWithContext), varargs...)
 }
 
-// SendProjectSessionAction mocks base method
+// SendProjectSessionAction mocks base method.
 func (m *MockGlueDataBrewAPI) SendProjectSessionAction(arg0 *gluedatabrew.SendProjectSessionActionInput) (*gluedatabrew.SendProjectSessionActionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendProjectSessionAction", arg0)
@@ -1575,13 +1626,13 @@ func (m *MockGlueDataBrewAPI) SendProjectSessionAction(arg0 *gluedatabrew.SendPr
 	return ret0, ret1
 }
 
-// SendProjectSessionAction indicates an expected call of SendProjectSessionAction
+// SendProjectSessionAction indicates an expected call of SendProjectSessionAction.
 func (mr *MockGlueDataBrewAPIMockRecorder) SendProjectSessionAction(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendProjectSessionAction", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).SendProjectSessionAction), arg0)
 }
 
-// SendProjectSessionActionRequest mocks base method
+// SendProjectSessionActionRequest mocks base method.
 func (m *MockGlueDataBrewAPI) SendProjectSessionActionRequest(arg0 *gluedatabrew.SendProjectSessionActionInput) (*request.Request, *gluedatabrew.SendProjectSessionActionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendProjectSessionActionRequest", arg0)
@@ -1590,13 +1641,13 @@ func (m *MockGlueDataBrewAPI) SendProjectSessionActionRequest(arg0 *gluedatabrew
 	return ret0, ret1
 }
 
-// SendProjectSessionActionRequest indicates an expected call of SendProjectSessionActionRequest
+// SendProjectSessionActionRequest indicates an expected call of SendProjectSessionActionRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) SendProjectSessionActionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendProjectSessionActionRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).SendProjectSessionActionRequest), arg0)
 }
 
-// SendProjectSessionActionWithContext mocks base method
+// SendProjectSessionActionWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) SendProjectSessionActionWithContext(arg0 context.Context, arg1 *gluedatabrew.SendProjectSessionActionInput, arg2 ...request.Option) (*gluedatabrew.SendProjectSessionActionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1609,14 +1660,14 @@ func (m *MockGlueDataBrewAPI) SendProjectSessionActionWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// SendProjectSessionActionWithContext indicates an expected call of SendProjectSessionActionWithContext
+// SendProjectSessionActionWithContext indicates an expected call of SendProjectSessionActionWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) SendProjectSessionActionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendProjectSessionActionWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).SendProjectSessionActionWithContext), varargs...)
 }
 
-// StartJobRun mocks base method
+// StartJobRun mocks base method.
 func (m *MockGlueDataBrewAPI) StartJobRun(arg0 *gluedatabrew.StartJobRunInput) (*gluedatabrew.StartJobRunOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartJobRun", arg0)
@@ -1625,13 +1676,13 @@ func (m *MockGlueDataBrewAPI) StartJobRun(arg0 *gluedatabrew.StartJobRunInput) (
 	return ret0, ret1
 }
 
-// StartJobRun indicates an expected call of StartJobRun
+// StartJobRun indicates an expected call of StartJobRun.
 func (mr *MockGlueDataBrewAPIMockRecorder) StartJobRun(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartJobRun", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).StartJobRun), arg0)
 }
 
-// StartJobRunRequest mocks base method
+// StartJobRunRequest mocks base method.
 func (m *MockGlueDataBrewAPI) StartJobRunRequest(arg0 *gluedatabrew.StartJobRunInput) (*request.Request, *gluedatabrew.StartJobRunOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartJobRunRequest", arg0)
@@ -1640,13 +1691,13 @@ func (m *MockGlueDataBrewAPI) StartJobRunRequest(arg0 *gluedatabrew.StartJobRunI
 	return ret0, ret1
 }
 
-// StartJobRunRequest indicates an expected call of StartJobRunRequest
+// StartJobRunRequest indicates an expected call of StartJobRunRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) StartJobRunRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartJobRunRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).StartJobRunRequest), arg0)
 }
 
-// StartJobRunWithContext mocks base method
+// StartJobRunWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) StartJobRunWithContext(arg0 context.Context, arg1 *gluedatabrew.StartJobRunInput, arg2 ...request.Option) (*gluedatabrew.StartJobRunOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1659,14 +1710,14 @@ func (m *MockGlueDataBrewAPI) StartJobRunWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// StartJobRunWithContext indicates an expected call of StartJobRunWithContext
+// StartJobRunWithContext indicates an expected call of StartJobRunWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) StartJobRunWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartJobRunWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).StartJobRunWithContext), varargs...)
 }
 
-// StartProjectSession mocks base method
+// StartProjectSession mocks base method.
 func (m *MockGlueDataBrewAPI) StartProjectSession(arg0 *gluedatabrew.StartProjectSessionInput) (*gluedatabrew.StartProjectSessionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartProjectSession", arg0)
@@ -1675,13 +1726,13 @@ func (m *MockGlueDataBrewAPI) StartProjectSession(arg0 *gluedatabrew.StartProjec
 	return ret0, ret1
 }
 
-// StartProjectSession indicates an expected call of StartProjectSession
+// StartProjectSession indicates an expected call of StartProjectSession.
 func (mr *MockGlueDataBrewAPIMockRecorder) StartProjectSession(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartProjectSession", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).StartProjectSession), arg0)
 }
 
-// StartProjectSessionRequest mocks base method
+// StartProjectSessionRequest mocks base method.
 func (m *MockGlueDataBrewAPI) StartProjectSessionRequest(arg0 *gluedatabrew.StartProjectSessionInput) (*request.Request, *gluedatabrew.StartProjectSessionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartProjectSessionRequest", arg0)
@@ -1690,13 +1741,13 @@ func (m *MockGlueDataBrewAPI) StartProjectSessionRequest(arg0 *gluedatabrew.Star
 	return ret0, ret1
 }
 
-// StartProjectSessionRequest indicates an expected call of StartProjectSessionRequest
+// StartProjectSessionRequest indicates an expected call of StartProjectSessionRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) StartProjectSessionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartProjectSessionRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).StartProjectSessionRequest), arg0)
 }
 
-// StartProjectSessionWithContext mocks base method
+// StartProjectSessionWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) StartProjectSessionWithContext(arg0 context.Context, arg1 *gluedatabrew.StartProjectSessionInput, arg2 ...request.Option) (*gluedatabrew.StartProjectSessionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1709,14 +1760,14 @@ func (m *MockGlueDataBrewAPI) StartProjectSessionWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// StartProjectSessionWithContext indicates an expected call of StartProjectSessionWithContext
+// StartProjectSessionWithContext indicates an expected call of StartProjectSessionWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) StartProjectSessionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartProjectSessionWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).StartProjectSessionWithContext), varargs...)
 }
 
-// StopJobRun mocks base method
+// StopJobRun mocks base method.
 func (m *MockGlueDataBrewAPI) StopJobRun(arg0 *gluedatabrew.StopJobRunInput) (*gluedatabrew.StopJobRunOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopJobRun", arg0)
@@ -1725,13 +1776,13 @@ func (m *MockGlueDataBrewAPI) StopJobRun(arg0 *gluedatabrew.StopJobRunInput) (*g
 	return ret0, ret1
 }
 
-// StopJobRun indicates an expected call of StopJobRun
+// StopJobRun indicates an expected call of StopJobRun.
 func (mr *MockGlueDataBrewAPIMockRecorder) StopJobRun(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopJobRun", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).StopJobRun), arg0)
 }
 
-// StopJobRunRequest mocks base method
+// StopJobRunRequest mocks base method.
 func (m *MockGlueDataBrewAPI) StopJobRunRequest(arg0 *gluedatabrew.StopJobRunInput) (*request.Request, *gluedatabrew.StopJobRunOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StopJobRunRequest", arg0)
@@ -1740,13 +1791,13 @@ func (m *MockGlueDataBrewAPI) StopJobRunRequest(arg0 *gluedatabrew.StopJobRunInp
 	return ret0, ret1
 }
 
-// StopJobRunRequest indicates an expected call of StopJobRunRequest
+// StopJobRunRequest indicates an expected call of StopJobRunRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) StopJobRunRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopJobRunRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).StopJobRunRequest), arg0)
 }
 
-// StopJobRunWithContext mocks base method
+// StopJobRunWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) StopJobRunWithContext(arg0 context.Context, arg1 *gluedatabrew.StopJobRunInput, arg2 ...request.Option) (*gluedatabrew.StopJobRunOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1759,14 +1810,14 @@ func (m *MockGlueDataBrewAPI) StopJobRunWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// StopJobRunWithContext indicates an expected call of StopJobRunWithContext
+// StopJobRunWithContext indicates an expected call of StopJobRunWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) StopJobRunWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopJobRunWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).StopJobRunWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockGlueDataBrewAPI) TagResource(arg0 *gluedatabrew.TagResourceInput) (*gluedatabrew.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1775,13 +1826,13 @@ func (m *MockGlueDataBrewAPI) TagResource(arg0 *gluedatabrew.TagResourceInput) (
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockGlueDataBrewAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockGlueDataBrewAPI) TagResourceRequest(arg0 *gluedatabrew.TagResourceInput) (*request.Request, *gluedatabrew.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1790,13 +1841,13 @@ func (m *MockGlueDataBrewAPI) TagResourceRequest(arg0 *gluedatabrew.TagResourceI
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) TagResourceWithContext(arg0 context.Context, arg1 *gluedatabrew.TagResourceInput, arg2 ...request.Option) (*gluedatabrew.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1809,14 +1860,14 @@ func (m *MockGlueDataBrewAPI) TagResourceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockGlueDataBrewAPI) UntagResource(arg0 *gluedatabrew.UntagResourceInput) (*gluedatabrew.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1825,13 +1876,13 @@ func (m *MockGlueDataBrewAPI) UntagResource(arg0 *gluedatabrew.UntagResourceInpu
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockGlueDataBrewAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockGlueDataBrewAPI) UntagResourceRequest(arg0 *gluedatabrew.UntagResourceInput) (*request.Request, *gluedatabrew.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1840,13 +1891,13 @@ func (m *MockGlueDataBrewAPI) UntagResourceRequest(arg0 *gluedatabrew.UntagResou
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) UntagResourceWithContext(arg0 context.Context, arg1 *gluedatabrew.UntagResourceInput, arg2 ...request.Option) (*gluedatabrew.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1859,14 +1910,14 @@ func (m *MockGlueDataBrewAPI) UntagResourceWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateDataset mocks base method
+// UpdateDataset mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateDataset(arg0 *gluedatabrew.UpdateDatasetInput) (*gluedatabrew.UpdateDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDataset", arg0)
@@ -1875,13 +1926,13 @@ func (m *MockGlueDataBrewAPI) UpdateDataset(arg0 *gluedatabrew.UpdateDatasetInpu
 	return ret0, ret1
 }
 
-// UpdateDataset indicates an expected call of UpdateDataset
+// UpdateDataset indicates an expected call of UpdateDataset.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateDataset(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDataset", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateDataset), arg0)
 }
 
-// UpdateDatasetRequest mocks base method
+// UpdateDatasetRequest mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateDatasetRequest(arg0 *gluedatabrew.UpdateDatasetInput) (*request.Request, *gluedatabrew.UpdateDatasetOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateDatasetRequest", arg0)
@@ -1890,13 +1941,13 @@ func (m *MockGlueDataBrewAPI) UpdateDatasetRequest(arg0 *gluedatabrew.UpdateData
 	return ret0, ret1
 }
 
-// UpdateDatasetRequest indicates an expected call of UpdateDatasetRequest
+// UpdateDatasetRequest indicates an expected call of UpdateDatasetRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateDatasetRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDatasetRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateDatasetRequest), arg0)
 }
 
-// UpdateDatasetWithContext mocks base method
+// UpdateDatasetWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateDatasetWithContext(arg0 context.Context, arg1 *gluedatabrew.UpdateDatasetInput, arg2 ...request.Option) (*gluedatabrew.UpdateDatasetOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1909,14 +1960,14 @@ func (m *MockGlueDataBrewAPI) UpdateDatasetWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UpdateDatasetWithContext indicates an expected call of UpdateDatasetWithContext
+// UpdateDatasetWithContext indicates an expected call of UpdateDatasetWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateDatasetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDatasetWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateDatasetWithContext), varargs...)
 }
 
-// UpdateProfileJob mocks base method
+// UpdateProfileJob mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateProfileJob(arg0 *gluedatabrew.UpdateProfileJobInput) (*gluedatabrew.UpdateProfileJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateProfileJob", arg0)
@@ -1925,13 +1976,13 @@ func (m *MockGlueDataBrewAPI) UpdateProfileJob(arg0 *gluedatabrew.UpdateProfileJ
 	return ret0, ret1
 }
 
-// UpdateProfileJob indicates an expected call of UpdateProfileJob
+// UpdateProfileJob indicates an expected call of UpdateProfileJob.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateProfileJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateProfileJob", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateProfileJob), arg0)
 }
 
-// UpdateProfileJobRequest mocks base method
+// UpdateProfileJobRequest mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateProfileJobRequest(arg0 *gluedatabrew.UpdateProfileJobInput) (*request.Request, *gluedatabrew.UpdateProfileJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateProfileJobRequest", arg0)
@@ -1940,13 +1991,13 @@ func (m *MockGlueDataBrewAPI) UpdateProfileJobRequest(arg0 *gluedatabrew.UpdateP
 	return ret0, ret1
 }
 
-// UpdateProfileJobRequest indicates an expected call of UpdateProfileJobRequest
+// UpdateProfileJobRequest indicates an expected call of UpdateProfileJobRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateProfileJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateProfileJobRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateProfileJobRequest), arg0)
 }
 
-// UpdateProfileJobWithContext mocks base method
+// UpdateProfileJobWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateProfileJobWithContext(arg0 context.Context, arg1 *gluedatabrew.UpdateProfileJobInput, arg2 ...request.Option) (*gluedatabrew.UpdateProfileJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1959,14 +2010,14 @@ func (m *MockGlueDataBrewAPI) UpdateProfileJobWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// UpdateProfileJobWithContext indicates an expected call of UpdateProfileJobWithContext
+// UpdateProfileJobWithContext indicates an expected call of UpdateProfileJobWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateProfileJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateProfileJobWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateProfileJobWithContext), varargs...)
 }
 
-// UpdateProject mocks base method
+// UpdateProject mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateProject(arg0 *gluedatabrew.UpdateProjectInput) (*gluedatabrew.UpdateProjectOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateProject", arg0)
@@ -1975,13 +2026,13 @@ func (m *MockGlueDataBrewAPI) UpdateProject(arg0 *gluedatabrew.UpdateProjectInpu
 	return ret0, ret1
 }
 
-// UpdateProject indicates an expected call of UpdateProject
+// UpdateProject indicates an expected call of UpdateProject.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateProject(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateProject", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateProject), arg0)
 }
 
-// UpdateProjectRequest mocks base method
+// UpdateProjectRequest mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateProjectRequest(arg0 *gluedatabrew.UpdateProjectInput) (*request.Request, *gluedatabrew.UpdateProjectOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateProjectRequest", arg0)
@@ -1990,13 +2041,13 @@ func (m *MockGlueDataBrewAPI) UpdateProjectRequest(arg0 *gluedatabrew.UpdateProj
 	return ret0, ret1
 }
 
-// UpdateProjectRequest indicates an expected call of UpdateProjectRequest
+// UpdateProjectRequest indicates an expected call of UpdateProjectRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateProjectRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateProjectRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateProjectRequest), arg0)
 }
 
-// UpdateProjectWithContext mocks base method
+// UpdateProjectWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateProjectWithContext(arg0 context.Context, arg1 *gluedatabrew.UpdateProjectInput, arg2 ...request.Option) (*gluedatabrew.UpdateProjectOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2009,14 +2060,14 @@ func (m *MockGlueDataBrewAPI) UpdateProjectWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UpdateProjectWithContext indicates an expected call of UpdateProjectWithContext
+// UpdateProjectWithContext indicates an expected call of UpdateProjectWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateProjectWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateProjectWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateProjectWithContext), varargs...)
 }
 
-// UpdateRecipe mocks base method
+// UpdateRecipe mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateRecipe(arg0 *gluedatabrew.UpdateRecipeInput) (*gluedatabrew.UpdateRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRecipe", arg0)
@@ -2025,13 +2076,13 @@ func (m *MockGlueDataBrewAPI) UpdateRecipe(arg0 *gluedatabrew.UpdateRecipeInput)
 	return ret0, ret1
 }
 
-// UpdateRecipe indicates an expected call of UpdateRecipe
+// UpdateRecipe indicates an expected call of UpdateRecipe.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateRecipe(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRecipe", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateRecipe), arg0)
 }
 
-// UpdateRecipeJob mocks base method
+// UpdateRecipeJob mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateRecipeJob(arg0 *gluedatabrew.UpdateRecipeJobInput) (*gluedatabrew.UpdateRecipeJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRecipeJob", arg0)
@@ -2040,13 +2091,13 @@ func (m *MockGlueDataBrewAPI) UpdateRecipeJob(arg0 *gluedatabrew.UpdateRecipeJob
 	return ret0, ret1
 }
 
-// UpdateRecipeJob indicates an expected call of UpdateRecipeJob
+// UpdateRecipeJob indicates an expected call of UpdateRecipeJob.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateRecipeJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRecipeJob", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateRecipeJob), arg0)
 }
 
-// UpdateRecipeJobRequest mocks base method
+// UpdateRecipeJobRequest mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateRecipeJobRequest(arg0 *gluedatabrew.UpdateRecipeJobInput) (*request.Request, *gluedatabrew.UpdateRecipeJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRecipeJobRequest", arg0)
@@ -2055,13 +2106,13 @@ func (m *MockGlueDataBrewAPI) UpdateRecipeJobRequest(arg0 *gluedatabrew.UpdateRe
 	return ret0, ret1
 }
 
-// UpdateRecipeJobRequest indicates an expected call of UpdateRecipeJobRequest
+// UpdateRecipeJobRequest indicates an expected call of UpdateRecipeJobRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateRecipeJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRecipeJobRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateRecipeJobRequest), arg0)
 }
 
-// UpdateRecipeJobWithContext mocks base method
+// UpdateRecipeJobWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateRecipeJobWithContext(arg0 context.Context, arg1 *gluedatabrew.UpdateRecipeJobInput, arg2 ...request.Option) (*gluedatabrew.UpdateRecipeJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2074,14 +2125,14 @@ func (m *MockGlueDataBrewAPI) UpdateRecipeJobWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UpdateRecipeJobWithContext indicates an expected call of UpdateRecipeJobWithContext
+// UpdateRecipeJobWithContext indicates an expected call of UpdateRecipeJobWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateRecipeJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRecipeJobWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateRecipeJobWithContext), varargs...)
 }
 
-// UpdateRecipeRequest mocks base method
+// UpdateRecipeRequest mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateRecipeRequest(arg0 *gluedatabrew.UpdateRecipeInput) (*request.Request, *gluedatabrew.UpdateRecipeOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRecipeRequest", arg0)
@@ -2090,13 +2141,13 @@ func (m *MockGlueDataBrewAPI) UpdateRecipeRequest(arg0 *gluedatabrew.UpdateRecip
 	return ret0, ret1
 }
 
-// UpdateRecipeRequest indicates an expected call of UpdateRecipeRequest
+// UpdateRecipeRequest indicates an expected call of UpdateRecipeRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateRecipeRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRecipeRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateRecipeRequest), arg0)
 }
 
-// UpdateRecipeWithContext mocks base method
+// UpdateRecipeWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateRecipeWithContext(arg0 context.Context, arg1 *gluedatabrew.UpdateRecipeInput, arg2 ...request.Option) (*gluedatabrew.UpdateRecipeOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2109,14 +2160,14 @@ func (m *MockGlueDataBrewAPI) UpdateRecipeWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// UpdateRecipeWithContext indicates an expected call of UpdateRecipeWithContext
+// UpdateRecipeWithContext indicates an expected call of UpdateRecipeWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateRecipeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRecipeWithContext", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateRecipeWithContext), varargs...)
 }
 
-// UpdateSchedule mocks base method
+// UpdateSchedule mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateSchedule(arg0 *gluedatabrew.UpdateScheduleInput) (*gluedatabrew.UpdateScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSchedule", arg0)
@@ -2125,13 +2176,13 @@ func (m *MockGlueDataBrewAPI) UpdateSchedule(arg0 *gluedatabrew.UpdateScheduleIn
 	return ret0, ret1
 }
 
-// UpdateSchedule indicates an expected call of UpdateSchedule
+// UpdateSchedule indicates an expected call of UpdateSchedule.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateSchedule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSchedule", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateSchedule), arg0)
 }
 
-// UpdateScheduleRequest mocks base method
+// UpdateScheduleRequest mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateScheduleRequest(arg0 *gluedatabrew.UpdateScheduleInput) (*request.Request, *gluedatabrew.UpdateScheduleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateScheduleRequest", arg0)
@@ -2140,13 +2191,13 @@ func (m *MockGlueDataBrewAPI) UpdateScheduleRequest(arg0 *gluedatabrew.UpdateSch
 	return ret0, ret1
 }
 
-// UpdateScheduleRequest indicates an expected call of UpdateScheduleRequest
+// UpdateScheduleRequest indicates an expected call of UpdateScheduleRequest.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateScheduleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateScheduleRequest", reflect.TypeOf((*MockGlueDataBrewAPI)(nil).UpdateScheduleRequest), arg0)
 }
 
-// UpdateScheduleWithContext mocks base method
+// UpdateScheduleWithContext mocks base method.
 func (m *MockGlueDataBrewAPI) UpdateScheduleWithContext(arg0 context.Context, arg1 *gluedatabrew.UpdateScheduleInput, arg2 ...request.Option) (*gluedatabrew.UpdateScheduleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2159,7 +2210,7 @@ func (m *MockGlueDataBrewAPI) UpdateScheduleWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateScheduleWithContext indicates an expected call of UpdateScheduleWithContext
+// UpdateScheduleWithContext indicates an expected call of UpdateScheduleWithContext.
 func (mr *MockGlueDataBrewAPIMockRecorder) UpdateScheduleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

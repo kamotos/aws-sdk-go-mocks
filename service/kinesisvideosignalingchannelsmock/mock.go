@@ -6,36 +6,37 @@ package kinesisvideosignalingchannelsmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	kinesisvideosignalingchannels "github.com/aws/aws-sdk-go/service/kinesisvideosignalingchannels"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockKinesisVideoSignalingChannelsAPI is a mock of KinesisVideoSignalingChannelsAPI interface
+// MockKinesisVideoSignalingChannelsAPI is a mock of KinesisVideoSignalingChannelsAPI interface.
 type MockKinesisVideoSignalingChannelsAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockKinesisVideoSignalingChannelsAPIMockRecorder
 }
 
-// MockKinesisVideoSignalingChannelsAPIMockRecorder is the mock recorder for MockKinesisVideoSignalingChannelsAPI
+// MockKinesisVideoSignalingChannelsAPIMockRecorder is the mock recorder for MockKinesisVideoSignalingChannelsAPI.
 type MockKinesisVideoSignalingChannelsAPIMockRecorder struct {
 	mock *MockKinesisVideoSignalingChannelsAPI
 }
 
-// NewMockKinesisVideoSignalingChannelsAPI creates a new mock instance
+// NewMockKinesisVideoSignalingChannelsAPI creates a new mock instance.
 func NewMockKinesisVideoSignalingChannelsAPI(ctrl *gomock.Controller) *MockKinesisVideoSignalingChannelsAPI {
 	mock := &MockKinesisVideoSignalingChannelsAPI{ctrl: ctrl}
 	mock.recorder = &MockKinesisVideoSignalingChannelsAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockKinesisVideoSignalingChannelsAPI) EXPECT() *MockKinesisVideoSignalingChannelsAPIMockRecorder {
 	return m.recorder
 }
 
-// GetIceServerConfig mocks base method
+// GetIceServerConfig mocks base method.
 func (m *MockKinesisVideoSignalingChannelsAPI) GetIceServerConfig(arg0 *kinesisvideosignalingchannels.GetIceServerConfigInput) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetIceServerConfig", arg0)
@@ -44,13 +45,13 @@ func (m *MockKinesisVideoSignalingChannelsAPI) GetIceServerConfig(arg0 *kinesisv
 	return ret0, ret1
 }
 
-// GetIceServerConfig indicates an expected call of GetIceServerConfig
+// GetIceServerConfig indicates an expected call of GetIceServerConfig.
 func (mr *MockKinesisVideoSignalingChannelsAPIMockRecorder) GetIceServerConfig(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIceServerConfig", reflect.TypeOf((*MockKinesisVideoSignalingChannelsAPI)(nil).GetIceServerConfig), arg0)
 }
 
-// GetIceServerConfigRequest mocks base method
+// GetIceServerConfigRequest mocks base method.
 func (m *MockKinesisVideoSignalingChannelsAPI) GetIceServerConfigRequest(arg0 *kinesisvideosignalingchannels.GetIceServerConfigInput) (*request.Request, *kinesisvideosignalingchannels.GetIceServerConfigOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetIceServerConfigRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockKinesisVideoSignalingChannelsAPI) GetIceServerConfigRequest(arg0 *k
 	return ret0, ret1
 }
 
-// GetIceServerConfigRequest indicates an expected call of GetIceServerConfigRequest
+// GetIceServerConfigRequest indicates an expected call of GetIceServerConfigRequest.
 func (mr *MockKinesisVideoSignalingChannelsAPIMockRecorder) GetIceServerConfigRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIceServerConfigRequest", reflect.TypeOf((*MockKinesisVideoSignalingChannelsAPI)(nil).GetIceServerConfigRequest), arg0)
 }
 
-// GetIceServerConfigWithContext mocks base method
+// GetIceServerConfigWithContext mocks base method.
 func (m *MockKinesisVideoSignalingChannelsAPI) GetIceServerConfigWithContext(arg0 context.Context, arg1 *kinesisvideosignalingchannels.GetIceServerConfigInput, arg2 ...request.Option) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockKinesisVideoSignalingChannelsAPI) GetIceServerConfigWithContext(arg
 	return ret0, ret1
 }
 
-// GetIceServerConfigWithContext indicates an expected call of GetIceServerConfigWithContext
+// GetIceServerConfigWithContext indicates an expected call of GetIceServerConfigWithContext.
 func (mr *MockKinesisVideoSignalingChannelsAPIMockRecorder) GetIceServerConfigWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIceServerConfigWithContext", reflect.TypeOf((*MockKinesisVideoSignalingChannelsAPI)(nil).GetIceServerConfigWithContext), varargs...)
 }
 
-// SendAlexaOfferToMaster mocks base method
+// SendAlexaOfferToMaster mocks base method.
 func (m *MockKinesisVideoSignalingChannelsAPI) SendAlexaOfferToMaster(arg0 *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendAlexaOfferToMaster", arg0)
@@ -94,13 +95,13 @@ func (m *MockKinesisVideoSignalingChannelsAPI) SendAlexaOfferToMaster(arg0 *kine
 	return ret0, ret1
 }
 
-// SendAlexaOfferToMaster indicates an expected call of SendAlexaOfferToMaster
+// SendAlexaOfferToMaster indicates an expected call of SendAlexaOfferToMaster.
 func (mr *MockKinesisVideoSignalingChannelsAPIMockRecorder) SendAlexaOfferToMaster(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendAlexaOfferToMaster", reflect.TypeOf((*MockKinesisVideoSignalingChannelsAPI)(nil).SendAlexaOfferToMaster), arg0)
 }
 
-// SendAlexaOfferToMasterRequest mocks base method
+// SendAlexaOfferToMasterRequest mocks base method.
 func (m *MockKinesisVideoSignalingChannelsAPI) SendAlexaOfferToMasterRequest(arg0 *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) (*request.Request, *kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SendAlexaOfferToMasterRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockKinesisVideoSignalingChannelsAPI) SendAlexaOfferToMasterRequest(arg
 	return ret0, ret1
 }
 
-// SendAlexaOfferToMasterRequest indicates an expected call of SendAlexaOfferToMasterRequest
+// SendAlexaOfferToMasterRequest indicates an expected call of SendAlexaOfferToMasterRequest.
 func (mr *MockKinesisVideoSignalingChannelsAPIMockRecorder) SendAlexaOfferToMasterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendAlexaOfferToMasterRequest", reflect.TypeOf((*MockKinesisVideoSignalingChannelsAPI)(nil).SendAlexaOfferToMasterRequest), arg0)
 }
 
-// SendAlexaOfferToMasterWithContext mocks base method
+// SendAlexaOfferToMasterWithContext mocks base method.
 func (m *MockKinesisVideoSignalingChannelsAPI) SendAlexaOfferToMasterWithContext(arg0 context.Context, arg1 *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput, arg2 ...request.Option) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,7 +129,7 @@ func (m *MockKinesisVideoSignalingChannelsAPI) SendAlexaOfferToMasterWithContext
 	return ret0, ret1
 }
 
-// SendAlexaOfferToMasterWithContext indicates an expected call of SendAlexaOfferToMasterWithContext
+// SendAlexaOfferToMasterWithContext indicates an expected call of SendAlexaOfferToMasterWithContext.
 func (mr *MockKinesisVideoSignalingChannelsAPIMockRecorder) SendAlexaOfferToMasterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

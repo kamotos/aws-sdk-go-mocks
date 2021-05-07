@@ -6,36 +6,37 @@ package networkfirewallmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	networkfirewall "github.com/aws/aws-sdk-go/service/networkfirewall"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockNetworkFirewallAPI is a mock of NetworkFirewallAPI interface
+// MockNetworkFirewallAPI is a mock of NetworkFirewallAPI interface.
 type MockNetworkFirewallAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockNetworkFirewallAPIMockRecorder
 }
 
-// MockNetworkFirewallAPIMockRecorder is the mock recorder for MockNetworkFirewallAPI
+// MockNetworkFirewallAPIMockRecorder is the mock recorder for MockNetworkFirewallAPI.
 type MockNetworkFirewallAPIMockRecorder struct {
 	mock *MockNetworkFirewallAPI
 }
 
-// NewMockNetworkFirewallAPI creates a new mock instance
+// NewMockNetworkFirewallAPI creates a new mock instance.
 func NewMockNetworkFirewallAPI(ctrl *gomock.Controller) *MockNetworkFirewallAPI {
 	mock := &MockNetworkFirewallAPI{ctrl: ctrl}
 	mock.recorder = &MockNetworkFirewallAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockNetworkFirewallAPI) EXPECT() *MockNetworkFirewallAPIMockRecorder {
 	return m.recorder
 }
 
-// AssociateFirewallPolicy mocks base method
+// AssociateFirewallPolicy mocks base method.
 func (m *MockNetworkFirewallAPI) AssociateFirewallPolicy(arg0 *networkfirewall.AssociateFirewallPolicyInput) (*networkfirewall.AssociateFirewallPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateFirewallPolicy", arg0)
@@ -44,13 +45,13 @@ func (m *MockNetworkFirewallAPI) AssociateFirewallPolicy(arg0 *networkfirewall.A
 	return ret0, ret1
 }
 
-// AssociateFirewallPolicy indicates an expected call of AssociateFirewallPolicy
+// AssociateFirewallPolicy indicates an expected call of AssociateFirewallPolicy.
 func (mr *MockNetworkFirewallAPIMockRecorder) AssociateFirewallPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateFirewallPolicy", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).AssociateFirewallPolicy), arg0)
 }
 
-// AssociateFirewallPolicyRequest mocks base method
+// AssociateFirewallPolicyRequest mocks base method.
 func (m *MockNetworkFirewallAPI) AssociateFirewallPolicyRequest(arg0 *networkfirewall.AssociateFirewallPolicyInput) (*request.Request, *networkfirewall.AssociateFirewallPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateFirewallPolicyRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockNetworkFirewallAPI) AssociateFirewallPolicyRequest(arg0 *networkfir
 	return ret0, ret1
 }
 
-// AssociateFirewallPolicyRequest indicates an expected call of AssociateFirewallPolicyRequest
+// AssociateFirewallPolicyRequest indicates an expected call of AssociateFirewallPolicyRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) AssociateFirewallPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateFirewallPolicyRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).AssociateFirewallPolicyRequest), arg0)
 }
 
-// AssociateFirewallPolicyWithContext mocks base method
+// AssociateFirewallPolicyWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) AssociateFirewallPolicyWithContext(arg0 context.Context, arg1 *networkfirewall.AssociateFirewallPolicyInput, arg2 ...request.Option) (*networkfirewall.AssociateFirewallPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockNetworkFirewallAPI) AssociateFirewallPolicyWithContext(arg0 context
 	return ret0, ret1
 }
 
-// AssociateFirewallPolicyWithContext indicates an expected call of AssociateFirewallPolicyWithContext
+// AssociateFirewallPolicyWithContext indicates an expected call of AssociateFirewallPolicyWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) AssociateFirewallPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateFirewallPolicyWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).AssociateFirewallPolicyWithContext), varargs...)
 }
 
-// AssociateSubnets mocks base method
+// AssociateSubnets mocks base method.
 func (m *MockNetworkFirewallAPI) AssociateSubnets(arg0 *networkfirewall.AssociateSubnetsInput) (*networkfirewall.AssociateSubnetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateSubnets", arg0)
@@ -94,13 +95,13 @@ func (m *MockNetworkFirewallAPI) AssociateSubnets(arg0 *networkfirewall.Associat
 	return ret0, ret1
 }
 
-// AssociateSubnets indicates an expected call of AssociateSubnets
+// AssociateSubnets indicates an expected call of AssociateSubnets.
 func (mr *MockNetworkFirewallAPIMockRecorder) AssociateSubnets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateSubnets", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).AssociateSubnets), arg0)
 }
 
-// AssociateSubnetsRequest mocks base method
+// AssociateSubnetsRequest mocks base method.
 func (m *MockNetworkFirewallAPI) AssociateSubnetsRequest(arg0 *networkfirewall.AssociateSubnetsInput) (*request.Request, *networkfirewall.AssociateSubnetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateSubnetsRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockNetworkFirewallAPI) AssociateSubnetsRequest(arg0 *networkfirewall.A
 	return ret0, ret1
 }
 
-// AssociateSubnetsRequest indicates an expected call of AssociateSubnetsRequest
+// AssociateSubnetsRequest indicates an expected call of AssociateSubnetsRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) AssociateSubnetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateSubnetsRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).AssociateSubnetsRequest), arg0)
 }
 
-// AssociateSubnetsWithContext mocks base method
+// AssociateSubnetsWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) AssociateSubnetsWithContext(arg0 context.Context, arg1 *networkfirewall.AssociateSubnetsInput, arg2 ...request.Option) (*networkfirewall.AssociateSubnetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockNetworkFirewallAPI) AssociateSubnetsWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// AssociateSubnetsWithContext indicates an expected call of AssociateSubnetsWithContext
+// AssociateSubnetsWithContext indicates an expected call of AssociateSubnetsWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) AssociateSubnetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateSubnetsWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).AssociateSubnetsWithContext), varargs...)
 }
 
-// CreateFirewall mocks base method
+// CreateFirewall mocks base method.
 func (m *MockNetworkFirewallAPI) CreateFirewall(arg0 *networkfirewall.CreateFirewallInput) (*networkfirewall.CreateFirewallOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFirewall", arg0)
@@ -144,13 +145,13 @@ func (m *MockNetworkFirewallAPI) CreateFirewall(arg0 *networkfirewall.CreateFire
 	return ret0, ret1
 }
 
-// CreateFirewall indicates an expected call of CreateFirewall
+// CreateFirewall indicates an expected call of CreateFirewall.
 func (mr *MockNetworkFirewallAPIMockRecorder) CreateFirewall(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFirewall", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).CreateFirewall), arg0)
 }
 
-// CreateFirewallPolicy mocks base method
+// CreateFirewallPolicy mocks base method.
 func (m *MockNetworkFirewallAPI) CreateFirewallPolicy(arg0 *networkfirewall.CreateFirewallPolicyInput) (*networkfirewall.CreateFirewallPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFirewallPolicy", arg0)
@@ -159,13 +160,13 @@ func (m *MockNetworkFirewallAPI) CreateFirewallPolicy(arg0 *networkfirewall.Crea
 	return ret0, ret1
 }
 
-// CreateFirewallPolicy indicates an expected call of CreateFirewallPolicy
+// CreateFirewallPolicy indicates an expected call of CreateFirewallPolicy.
 func (mr *MockNetworkFirewallAPIMockRecorder) CreateFirewallPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFirewallPolicy", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).CreateFirewallPolicy), arg0)
 }
 
-// CreateFirewallPolicyRequest mocks base method
+// CreateFirewallPolicyRequest mocks base method.
 func (m *MockNetworkFirewallAPI) CreateFirewallPolicyRequest(arg0 *networkfirewall.CreateFirewallPolicyInput) (*request.Request, *networkfirewall.CreateFirewallPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFirewallPolicyRequest", arg0)
@@ -174,13 +175,13 @@ func (m *MockNetworkFirewallAPI) CreateFirewallPolicyRequest(arg0 *networkfirewa
 	return ret0, ret1
 }
 
-// CreateFirewallPolicyRequest indicates an expected call of CreateFirewallPolicyRequest
+// CreateFirewallPolicyRequest indicates an expected call of CreateFirewallPolicyRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) CreateFirewallPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFirewallPolicyRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).CreateFirewallPolicyRequest), arg0)
 }
 
-// CreateFirewallPolicyWithContext mocks base method
+// CreateFirewallPolicyWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) CreateFirewallPolicyWithContext(arg0 context.Context, arg1 *networkfirewall.CreateFirewallPolicyInput, arg2 ...request.Option) (*networkfirewall.CreateFirewallPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -193,14 +194,14 @@ func (m *MockNetworkFirewallAPI) CreateFirewallPolicyWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// CreateFirewallPolicyWithContext indicates an expected call of CreateFirewallPolicyWithContext
+// CreateFirewallPolicyWithContext indicates an expected call of CreateFirewallPolicyWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) CreateFirewallPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFirewallPolicyWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).CreateFirewallPolicyWithContext), varargs...)
 }
 
-// CreateFirewallRequest mocks base method
+// CreateFirewallRequest mocks base method.
 func (m *MockNetworkFirewallAPI) CreateFirewallRequest(arg0 *networkfirewall.CreateFirewallInput) (*request.Request, *networkfirewall.CreateFirewallOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFirewallRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockNetworkFirewallAPI) CreateFirewallRequest(arg0 *networkfirewall.Cre
 	return ret0, ret1
 }
 
-// CreateFirewallRequest indicates an expected call of CreateFirewallRequest
+// CreateFirewallRequest indicates an expected call of CreateFirewallRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) CreateFirewallRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFirewallRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).CreateFirewallRequest), arg0)
 }
 
-// CreateFirewallWithContext mocks base method
+// CreateFirewallWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) CreateFirewallWithContext(arg0 context.Context, arg1 *networkfirewall.CreateFirewallInput, arg2 ...request.Option) (*networkfirewall.CreateFirewallOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockNetworkFirewallAPI) CreateFirewallWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateFirewallWithContext indicates an expected call of CreateFirewallWithContext
+// CreateFirewallWithContext indicates an expected call of CreateFirewallWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) CreateFirewallWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFirewallWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).CreateFirewallWithContext), varargs...)
 }
 
-// CreateRuleGroup mocks base method
+// CreateRuleGroup mocks base method.
 func (m *MockNetworkFirewallAPI) CreateRuleGroup(arg0 *networkfirewall.CreateRuleGroupInput) (*networkfirewall.CreateRuleGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRuleGroup", arg0)
@@ -244,13 +245,13 @@ func (m *MockNetworkFirewallAPI) CreateRuleGroup(arg0 *networkfirewall.CreateRul
 	return ret0, ret1
 }
 
-// CreateRuleGroup indicates an expected call of CreateRuleGroup
+// CreateRuleGroup indicates an expected call of CreateRuleGroup.
 func (mr *MockNetworkFirewallAPIMockRecorder) CreateRuleGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRuleGroup", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).CreateRuleGroup), arg0)
 }
 
-// CreateRuleGroupRequest mocks base method
+// CreateRuleGroupRequest mocks base method.
 func (m *MockNetworkFirewallAPI) CreateRuleGroupRequest(arg0 *networkfirewall.CreateRuleGroupInput) (*request.Request, *networkfirewall.CreateRuleGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRuleGroupRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockNetworkFirewallAPI) CreateRuleGroupRequest(arg0 *networkfirewall.Cr
 	return ret0, ret1
 }
 
-// CreateRuleGroupRequest indicates an expected call of CreateRuleGroupRequest
+// CreateRuleGroupRequest indicates an expected call of CreateRuleGroupRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) CreateRuleGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRuleGroupRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).CreateRuleGroupRequest), arg0)
 }
 
-// CreateRuleGroupWithContext mocks base method
+// CreateRuleGroupWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) CreateRuleGroupWithContext(arg0 context.Context, arg1 *networkfirewall.CreateRuleGroupInput, arg2 ...request.Option) (*networkfirewall.CreateRuleGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockNetworkFirewallAPI) CreateRuleGroupWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// CreateRuleGroupWithContext indicates an expected call of CreateRuleGroupWithContext
+// CreateRuleGroupWithContext indicates an expected call of CreateRuleGroupWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) CreateRuleGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRuleGroupWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).CreateRuleGroupWithContext), varargs...)
 }
 
-// DeleteFirewall mocks base method
+// DeleteFirewall mocks base method.
 func (m *MockNetworkFirewallAPI) DeleteFirewall(arg0 *networkfirewall.DeleteFirewallInput) (*networkfirewall.DeleteFirewallOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFirewall", arg0)
@@ -294,13 +295,13 @@ func (m *MockNetworkFirewallAPI) DeleteFirewall(arg0 *networkfirewall.DeleteFire
 	return ret0, ret1
 }
 
-// DeleteFirewall indicates an expected call of DeleteFirewall
+// DeleteFirewall indicates an expected call of DeleteFirewall.
 func (mr *MockNetworkFirewallAPIMockRecorder) DeleteFirewall(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFirewall", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DeleteFirewall), arg0)
 }
 
-// DeleteFirewallPolicy mocks base method
+// DeleteFirewallPolicy mocks base method.
 func (m *MockNetworkFirewallAPI) DeleteFirewallPolicy(arg0 *networkfirewall.DeleteFirewallPolicyInput) (*networkfirewall.DeleteFirewallPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFirewallPolicy", arg0)
@@ -309,13 +310,13 @@ func (m *MockNetworkFirewallAPI) DeleteFirewallPolicy(arg0 *networkfirewall.Dele
 	return ret0, ret1
 }
 
-// DeleteFirewallPolicy indicates an expected call of DeleteFirewallPolicy
+// DeleteFirewallPolicy indicates an expected call of DeleteFirewallPolicy.
 func (mr *MockNetworkFirewallAPIMockRecorder) DeleteFirewallPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFirewallPolicy", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DeleteFirewallPolicy), arg0)
 }
 
-// DeleteFirewallPolicyRequest mocks base method
+// DeleteFirewallPolicyRequest mocks base method.
 func (m *MockNetworkFirewallAPI) DeleteFirewallPolicyRequest(arg0 *networkfirewall.DeleteFirewallPolicyInput) (*request.Request, *networkfirewall.DeleteFirewallPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFirewallPolicyRequest", arg0)
@@ -324,13 +325,13 @@ func (m *MockNetworkFirewallAPI) DeleteFirewallPolicyRequest(arg0 *networkfirewa
 	return ret0, ret1
 }
 
-// DeleteFirewallPolicyRequest indicates an expected call of DeleteFirewallPolicyRequest
+// DeleteFirewallPolicyRequest indicates an expected call of DeleteFirewallPolicyRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) DeleteFirewallPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFirewallPolicyRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DeleteFirewallPolicyRequest), arg0)
 }
 
-// DeleteFirewallPolicyWithContext mocks base method
+// DeleteFirewallPolicyWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) DeleteFirewallPolicyWithContext(arg0 context.Context, arg1 *networkfirewall.DeleteFirewallPolicyInput, arg2 ...request.Option) (*networkfirewall.DeleteFirewallPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -343,14 +344,14 @@ func (m *MockNetworkFirewallAPI) DeleteFirewallPolicyWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DeleteFirewallPolicyWithContext indicates an expected call of DeleteFirewallPolicyWithContext
+// DeleteFirewallPolicyWithContext indicates an expected call of DeleteFirewallPolicyWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) DeleteFirewallPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFirewallPolicyWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DeleteFirewallPolicyWithContext), varargs...)
 }
 
-// DeleteFirewallRequest mocks base method
+// DeleteFirewallRequest mocks base method.
 func (m *MockNetworkFirewallAPI) DeleteFirewallRequest(arg0 *networkfirewall.DeleteFirewallInput) (*request.Request, *networkfirewall.DeleteFirewallOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFirewallRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockNetworkFirewallAPI) DeleteFirewallRequest(arg0 *networkfirewall.Del
 	return ret0, ret1
 }
 
-// DeleteFirewallRequest indicates an expected call of DeleteFirewallRequest
+// DeleteFirewallRequest indicates an expected call of DeleteFirewallRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) DeleteFirewallRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFirewallRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DeleteFirewallRequest), arg0)
 }
 
-// DeleteFirewallWithContext mocks base method
+// DeleteFirewallWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) DeleteFirewallWithContext(arg0 context.Context, arg1 *networkfirewall.DeleteFirewallInput, arg2 ...request.Option) (*networkfirewall.DeleteFirewallOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockNetworkFirewallAPI) DeleteFirewallWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteFirewallWithContext indicates an expected call of DeleteFirewallWithContext
+// DeleteFirewallWithContext indicates an expected call of DeleteFirewallWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) DeleteFirewallWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFirewallWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DeleteFirewallWithContext), varargs...)
 }
 
-// DeleteResourcePolicy mocks base method
+// DeleteResourcePolicy mocks base method.
 func (m *MockNetworkFirewallAPI) DeleteResourcePolicy(arg0 *networkfirewall.DeleteResourcePolicyInput) (*networkfirewall.DeleteResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteResourcePolicy", arg0)
@@ -394,13 +395,13 @@ func (m *MockNetworkFirewallAPI) DeleteResourcePolicy(arg0 *networkfirewall.Dele
 	return ret0, ret1
 }
 
-// DeleteResourcePolicy indicates an expected call of DeleteResourcePolicy
+// DeleteResourcePolicy indicates an expected call of DeleteResourcePolicy.
 func (mr *MockNetworkFirewallAPIMockRecorder) DeleteResourcePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicy", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DeleteResourcePolicy), arg0)
 }
 
-// DeleteResourcePolicyRequest mocks base method
+// DeleteResourcePolicyRequest mocks base method.
 func (m *MockNetworkFirewallAPI) DeleteResourcePolicyRequest(arg0 *networkfirewall.DeleteResourcePolicyInput) (*request.Request, *networkfirewall.DeleteResourcePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteResourcePolicyRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockNetworkFirewallAPI) DeleteResourcePolicyRequest(arg0 *networkfirewa
 	return ret0, ret1
 }
 
-// DeleteResourcePolicyRequest indicates an expected call of DeleteResourcePolicyRequest
+// DeleteResourcePolicyRequest indicates an expected call of DeleteResourcePolicyRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) DeleteResourcePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DeleteResourcePolicyRequest), arg0)
 }
 
-// DeleteResourcePolicyWithContext mocks base method
+// DeleteResourcePolicyWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) DeleteResourcePolicyWithContext(arg0 context.Context, arg1 *networkfirewall.DeleteResourcePolicyInput, arg2 ...request.Option) (*networkfirewall.DeleteResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockNetworkFirewallAPI) DeleteResourcePolicyWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DeleteResourcePolicyWithContext indicates an expected call of DeleteResourcePolicyWithContext
+// DeleteResourcePolicyWithContext indicates an expected call of DeleteResourcePolicyWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) DeleteResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DeleteResourcePolicyWithContext), varargs...)
 }
 
-// DeleteRuleGroup mocks base method
+// DeleteRuleGroup mocks base method.
 func (m *MockNetworkFirewallAPI) DeleteRuleGroup(arg0 *networkfirewall.DeleteRuleGroupInput) (*networkfirewall.DeleteRuleGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRuleGroup", arg0)
@@ -444,13 +445,13 @@ func (m *MockNetworkFirewallAPI) DeleteRuleGroup(arg0 *networkfirewall.DeleteRul
 	return ret0, ret1
 }
 
-// DeleteRuleGroup indicates an expected call of DeleteRuleGroup
+// DeleteRuleGroup indicates an expected call of DeleteRuleGroup.
 func (mr *MockNetworkFirewallAPIMockRecorder) DeleteRuleGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRuleGroup", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DeleteRuleGroup), arg0)
 }
 
-// DeleteRuleGroupRequest mocks base method
+// DeleteRuleGroupRequest mocks base method.
 func (m *MockNetworkFirewallAPI) DeleteRuleGroupRequest(arg0 *networkfirewall.DeleteRuleGroupInput) (*request.Request, *networkfirewall.DeleteRuleGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRuleGroupRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockNetworkFirewallAPI) DeleteRuleGroupRequest(arg0 *networkfirewall.De
 	return ret0, ret1
 }
 
-// DeleteRuleGroupRequest indicates an expected call of DeleteRuleGroupRequest
+// DeleteRuleGroupRequest indicates an expected call of DeleteRuleGroupRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) DeleteRuleGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRuleGroupRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DeleteRuleGroupRequest), arg0)
 }
 
-// DeleteRuleGroupWithContext mocks base method
+// DeleteRuleGroupWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) DeleteRuleGroupWithContext(arg0 context.Context, arg1 *networkfirewall.DeleteRuleGroupInput, arg2 ...request.Option) (*networkfirewall.DeleteRuleGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockNetworkFirewallAPI) DeleteRuleGroupWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// DeleteRuleGroupWithContext indicates an expected call of DeleteRuleGroupWithContext
+// DeleteRuleGroupWithContext indicates an expected call of DeleteRuleGroupWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) DeleteRuleGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRuleGroupWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DeleteRuleGroupWithContext), varargs...)
 }
 
-// DescribeFirewall mocks base method
+// DescribeFirewall mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeFirewall(arg0 *networkfirewall.DescribeFirewallInput) (*networkfirewall.DescribeFirewallOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFirewall", arg0)
@@ -494,13 +495,13 @@ func (m *MockNetworkFirewallAPI) DescribeFirewall(arg0 *networkfirewall.Describe
 	return ret0, ret1
 }
 
-// DescribeFirewall indicates an expected call of DescribeFirewall
+// DescribeFirewall indicates an expected call of DescribeFirewall.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeFirewall(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFirewall", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeFirewall), arg0)
 }
 
-// DescribeFirewallPolicy mocks base method
+// DescribeFirewallPolicy mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeFirewallPolicy(arg0 *networkfirewall.DescribeFirewallPolicyInput) (*networkfirewall.DescribeFirewallPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFirewallPolicy", arg0)
@@ -509,13 +510,13 @@ func (m *MockNetworkFirewallAPI) DescribeFirewallPolicy(arg0 *networkfirewall.De
 	return ret0, ret1
 }
 
-// DescribeFirewallPolicy indicates an expected call of DescribeFirewallPolicy
+// DescribeFirewallPolicy indicates an expected call of DescribeFirewallPolicy.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeFirewallPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFirewallPolicy", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeFirewallPolicy), arg0)
 }
 
-// DescribeFirewallPolicyRequest mocks base method
+// DescribeFirewallPolicyRequest mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeFirewallPolicyRequest(arg0 *networkfirewall.DescribeFirewallPolicyInput) (*request.Request, *networkfirewall.DescribeFirewallPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFirewallPolicyRequest", arg0)
@@ -524,13 +525,13 @@ func (m *MockNetworkFirewallAPI) DescribeFirewallPolicyRequest(arg0 *networkfire
 	return ret0, ret1
 }
 
-// DescribeFirewallPolicyRequest indicates an expected call of DescribeFirewallPolicyRequest
+// DescribeFirewallPolicyRequest indicates an expected call of DescribeFirewallPolicyRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeFirewallPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFirewallPolicyRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeFirewallPolicyRequest), arg0)
 }
 
-// DescribeFirewallPolicyWithContext mocks base method
+// DescribeFirewallPolicyWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeFirewallPolicyWithContext(arg0 context.Context, arg1 *networkfirewall.DescribeFirewallPolicyInput, arg2 ...request.Option) (*networkfirewall.DescribeFirewallPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -543,14 +544,14 @@ func (m *MockNetworkFirewallAPI) DescribeFirewallPolicyWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// DescribeFirewallPolicyWithContext indicates an expected call of DescribeFirewallPolicyWithContext
+// DescribeFirewallPolicyWithContext indicates an expected call of DescribeFirewallPolicyWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeFirewallPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFirewallPolicyWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeFirewallPolicyWithContext), varargs...)
 }
 
-// DescribeFirewallRequest mocks base method
+// DescribeFirewallRequest mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeFirewallRequest(arg0 *networkfirewall.DescribeFirewallInput) (*request.Request, *networkfirewall.DescribeFirewallOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeFirewallRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockNetworkFirewallAPI) DescribeFirewallRequest(arg0 *networkfirewall.D
 	return ret0, ret1
 }
 
-// DescribeFirewallRequest indicates an expected call of DescribeFirewallRequest
+// DescribeFirewallRequest indicates an expected call of DescribeFirewallRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeFirewallRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFirewallRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeFirewallRequest), arg0)
 }
 
-// DescribeFirewallWithContext mocks base method
+// DescribeFirewallWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeFirewallWithContext(arg0 context.Context, arg1 *networkfirewall.DescribeFirewallInput, arg2 ...request.Option) (*networkfirewall.DescribeFirewallOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockNetworkFirewallAPI) DescribeFirewallWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DescribeFirewallWithContext indicates an expected call of DescribeFirewallWithContext
+// DescribeFirewallWithContext indicates an expected call of DescribeFirewallWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeFirewallWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeFirewallWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeFirewallWithContext), varargs...)
 }
 
-// DescribeLoggingConfiguration mocks base method
+// DescribeLoggingConfiguration mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeLoggingConfiguration(arg0 *networkfirewall.DescribeLoggingConfigurationInput) (*networkfirewall.DescribeLoggingConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeLoggingConfiguration", arg0)
@@ -594,13 +595,13 @@ func (m *MockNetworkFirewallAPI) DescribeLoggingConfiguration(arg0 *networkfirew
 	return ret0, ret1
 }
 
-// DescribeLoggingConfiguration indicates an expected call of DescribeLoggingConfiguration
+// DescribeLoggingConfiguration indicates an expected call of DescribeLoggingConfiguration.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeLoggingConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLoggingConfiguration", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeLoggingConfiguration), arg0)
 }
 
-// DescribeLoggingConfigurationRequest mocks base method
+// DescribeLoggingConfigurationRequest mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeLoggingConfigurationRequest(arg0 *networkfirewall.DescribeLoggingConfigurationInput) (*request.Request, *networkfirewall.DescribeLoggingConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeLoggingConfigurationRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockNetworkFirewallAPI) DescribeLoggingConfigurationRequest(arg0 *netwo
 	return ret0, ret1
 }
 
-// DescribeLoggingConfigurationRequest indicates an expected call of DescribeLoggingConfigurationRequest
+// DescribeLoggingConfigurationRequest indicates an expected call of DescribeLoggingConfigurationRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeLoggingConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLoggingConfigurationRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeLoggingConfigurationRequest), arg0)
 }
 
-// DescribeLoggingConfigurationWithContext mocks base method
+// DescribeLoggingConfigurationWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeLoggingConfigurationWithContext(arg0 context.Context, arg1 *networkfirewall.DescribeLoggingConfigurationInput, arg2 ...request.Option) (*networkfirewall.DescribeLoggingConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockNetworkFirewallAPI) DescribeLoggingConfigurationWithContext(arg0 co
 	return ret0, ret1
 }
 
-// DescribeLoggingConfigurationWithContext indicates an expected call of DescribeLoggingConfigurationWithContext
+// DescribeLoggingConfigurationWithContext indicates an expected call of DescribeLoggingConfigurationWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeLoggingConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLoggingConfigurationWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeLoggingConfigurationWithContext), varargs...)
 }
 
-// DescribeResourcePolicy mocks base method
+// DescribeResourcePolicy mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeResourcePolicy(arg0 *networkfirewall.DescribeResourcePolicyInput) (*networkfirewall.DescribeResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeResourcePolicy", arg0)
@@ -644,13 +645,13 @@ func (m *MockNetworkFirewallAPI) DescribeResourcePolicy(arg0 *networkfirewall.De
 	return ret0, ret1
 }
 
-// DescribeResourcePolicy indicates an expected call of DescribeResourcePolicy
+// DescribeResourcePolicy indicates an expected call of DescribeResourcePolicy.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeResourcePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeResourcePolicy", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeResourcePolicy), arg0)
 }
 
-// DescribeResourcePolicyRequest mocks base method
+// DescribeResourcePolicyRequest mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeResourcePolicyRequest(arg0 *networkfirewall.DescribeResourcePolicyInput) (*request.Request, *networkfirewall.DescribeResourcePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeResourcePolicyRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockNetworkFirewallAPI) DescribeResourcePolicyRequest(arg0 *networkfire
 	return ret0, ret1
 }
 
-// DescribeResourcePolicyRequest indicates an expected call of DescribeResourcePolicyRequest
+// DescribeResourcePolicyRequest indicates an expected call of DescribeResourcePolicyRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeResourcePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeResourcePolicyRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeResourcePolicyRequest), arg0)
 }
 
-// DescribeResourcePolicyWithContext mocks base method
+// DescribeResourcePolicyWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeResourcePolicyWithContext(arg0 context.Context, arg1 *networkfirewall.DescribeResourcePolicyInput, arg2 ...request.Option) (*networkfirewall.DescribeResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockNetworkFirewallAPI) DescribeResourcePolicyWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// DescribeResourcePolicyWithContext indicates an expected call of DescribeResourcePolicyWithContext
+// DescribeResourcePolicyWithContext indicates an expected call of DescribeResourcePolicyWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeResourcePolicyWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeResourcePolicyWithContext), varargs...)
 }
 
-// DescribeRuleGroup mocks base method
+// DescribeRuleGroup mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeRuleGroup(arg0 *networkfirewall.DescribeRuleGroupInput) (*networkfirewall.DescribeRuleGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRuleGroup", arg0)
@@ -694,13 +695,13 @@ func (m *MockNetworkFirewallAPI) DescribeRuleGroup(arg0 *networkfirewall.Describ
 	return ret0, ret1
 }
 
-// DescribeRuleGroup indicates an expected call of DescribeRuleGroup
+// DescribeRuleGroup indicates an expected call of DescribeRuleGroup.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeRuleGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRuleGroup", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeRuleGroup), arg0)
 }
 
-// DescribeRuleGroupRequest mocks base method
+// DescribeRuleGroupRequest mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeRuleGroupRequest(arg0 *networkfirewall.DescribeRuleGroupInput) (*request.Request, *networkfirewall.DescribeRuleGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeRuleGroupRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockNetworkFirewallAPI) DescribeRuleGroupRequest(arg0 *networkfirewall.
 	return ret0, ret1
 }
 
-// DescribeRuleGroupRequest indicates an expected call of DescribeRuleGroupRequest
+// DescribeRuleGroupRequest indicates an expected call of DescribeRuleGroupRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeRuleGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRuleGroupRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeRuleGroupRequest), arg0)
 }
 
-// DescribeRuleGroupWithContext mocks base method
+// DescribeRuleGroupWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) DescribeRuleGroupWithContext(arg0 context.Context, arg1 *networkfirewall.DescribeRuleGroupInput, arg2 ...request.Option) (*networkfirewall.DescribeRuleGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockNetworkFirewallAPI) DescribeRuleGroupWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DescribeRuleGroupWithContext indicates an expected call of DescribeRuleGroupWithContext
+// DescribeRuleGroupWithContext indicates an expected call of DescribeRuleGroupWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) DescribeRuleGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRuleGroupWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DescribeRuleGroupWithContext), varargs...)
 }
 
-// DisassociateSubnets mocks base method
+// DisassociateSubnets mocks base method.
 func (m *MockNetworkFirewallAPI) DisassociateSubnets(arg0 *networkfirewall.DisassociateSubnetsInput) (*networkfirewall.DisassociateSubnetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateSubnets", arg0)
@@ -744,13 +745,13 @@ func (m *MockNetworkFirewallAPI) DisassociateSubnets(arg0 *networkfirewall.Disas
 	return ret0, ret1
 }
 
-// DisassociateSubnets indicates an expected call of DisassociateSubnets
+// DisassociateSubnets indicates an expected call of DisassociateSubnets.
 func (mr *MockNetworkFirewallAPIMockRecorder) DisassociateSubnets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateSubnets", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DisassociateSubnets), arg0)
 }
 
-// DisassociateSubnetsRequest mocks base method
+// DisassociateSubnetsRequest mocks base method.
 func (m *MockNetworkFirewallAPI) DisassociateSubnetsRequest(arg0 *networkfirewall.DisassociateSubnetsInput) (*request.Request, *networkfirewall.DisassociateSubnetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateSubnetsRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockNetworkFirewallAPI) DisassociateSubnetsRequest(arg0 *networkfirewal
 	return ret0, ret1
 }
 
-// DisassociateSubnetsRequest indicates an expected call of DisassociateSubnetsRequest
+// DisassociateSubnetsRequest indicates an expected call of DisassociateSubnetsRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) DisassociateSubnetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateSubnetsRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DisassociateSubnetsRequest), arg0)
 }
 
-// DisassociateSubnetsWithContext mocks base method
+// DisassociateSubnetsWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) DisassociateSubnetsWithContext(arg0 context.Context, arg1 *networkfirewall.DisassociateSubnetsInput, arg2 ...request.Option) (*networkfirewall.DisassociateSubnetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockNetworkFirewallAPI) DisassociateSubnetsWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DisassociateSubnetsWithContext indicates an expected call of DisassociateSubnetsWithContext
+// DisassociateSubnetsWithContext indicates an expected call of DisassociateSubnetsWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) DisassociateSubnetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateSubnetsWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).DisassociateSubnetsWithContext), varargs...)
 }
 
-// ListFirewallPolicies mocks base method
+// ListFirewallPolicies mocks base method.
 func (m *MockNetworkFirewallAPI) ListFirewallPolicies(arg0 *networkfirewall.ListFirewallPoliciesInput) (*networkfirewall.ListFirewallPoliciesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFirewallPolicies", arg0)
@@ -794,13 +795,13 @@ func (m *MockNetworkFirewallAPI) ListFirewallPolicies(arg0 *networkfirewall.List
 	return ret0, ret1
 }
 
-// ListFirewallPolicies indicates an expected call of ListFirewallPolicies
+// ListFirewallPolicies indicates an expected call of ListFirewallPolicies.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListFirewallPolicies(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFirewallPolicies", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListFirewallPolicies), arg0)
 }
 
-// ListFirewallPoliciesPages mocks base method
+// ListFirewallPoliciesPages mocks base method.
 func (m *MockNetworkFirewallAPI) ListFirewallPoliciesPages(arg0 *networkfirewall.ListFirewallPoliciesInput, arg1 func(*networkfirewall.ListFirewallPoliciesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFirewallPoliciesPages", arg0, arg1)
@@ -808,13 +809,13 @@ func (m *MockNetworkFirewallAPI) ListFirewallPoliciesPages(arg0 *networkfirewall
 	return ret0
 }
 
-// ListFirewallPoliciesPages indicates an expected call of ListFirewallPoliciesPages
+// ListFirewallPoliciesPages indicates an expected call of ListFirewallPoliciesPages.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListFirewallPoliciesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFirewallPoliciesPages", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListFirewallPoliciesPages), arg0, arg1)
 }
 
-// ListFirewallPoliciesPagesWithContext mocks base method
+// ListFirewallPoliciesPagesWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) ListFirewallPoliciesPagesWithContext(arg0 context.Context, arg1 *networkfirewall.ListFirewallPoliciesInput, arg2 func(*networkfirewall.ListFirewallPoliciesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -826,14 +827,14 @@ func (m *MockNetworkFirewallAPI) ListFirewallPoliciesPagesWithContext(arg0 conte
 	return ret0
 }
 
-// ListFirewallPoliciesPagesWithContext indicates an expected call of ListFirewallPoliciesPagesWithContext
+// ListFirewallPoliciesPagesWithContext indicates an expected call of ListFirewallPoliciesPagesWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListFirewallPoliciesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFirewallPoliciesPagesWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListFirewallPoliciesPagesWithContext), varargs...)
 }
 
-// ListFirewallPoliciesRequest mocks base method
+// ListFirewallPoliciesRequest mocks base method.
 func (m *MockNetworkFirewallAPI) ListFirewallPoliciesRequest(arg0 *networkfirewall.ListFirewallPoliciesInput) (*request.Request, *networkfirewall.ListFirewallPoliciesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFirewallPoliciesRequest", arg0)
@@ -842,13 +843,13 @@ func (m *MockNetworkFirewallAPI) ListFirewallPoliciesRequest(arg0 *networkfirewa
 	return ret0, ret1
 }
 
-// ListFirewallPoliciesRequest indicates an expected call of ListFirewallPoliciesRequest
+// ListFirewallPoliciesRequest indicates an expected call of ListFirewallPoliciesRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListFirewallPoliciesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFirewallPoliciesRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListFirewallPoliciesRequest), arg0)
 }
 
-// ListFirewallPoliciesWithContext mocks base method
+// ListFirewallPoliciesWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) ListFirewallPoliciesWithContext(arg0 context.Context, arg1 *networkfirewall.ListFirewallPoliciesInput, arg2 ...request.Option) (*networkfirewall.ListFirewallPoliciesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -861,14 +862,14 @@ func (m *MockNetworkFirewallAPI) ListFirewallPoliciesWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListFirewallPoliciesWithContext indicates an expected call of ListFirewallPoliciesWithContext
+// ListFirewallPoliciesWithContext indicates an expected call of ListFirewallPoliciesWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListFirewallPoliciesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFirewallPoliciesWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListFirewallPoliciesWithContext), varargs...)
 }
 
-// ListFirewalls mocks base method
+// ListFirewalls mocks base method.
 func (m *MockNetworkFirewallAPI) ListFirewalls(arg0 *networkfirewall.ListFirewallsInput) (*networkfirewall.ListFirewallsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFirewalls", arg0)
@@ -877,13 +878,13 @@ func (m *MockNetworkFirewallAPI) ListFirewalls(arg0 *networkfirewall.ListFirewal
 	return ret0, ret1
 }
 
-// ListFirewalls indicates an expected call of ListFirewalls
+// ListFirewalls indicates an expected call of ListFirewalls.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListFirewalls(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFirewalls", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListFirewalls), arg0)
 }
 
-// ListFirewallsPages mocks base method
+// ListFirewallsPages mocks base method.
 func (m *MockNetworkFirewallAPI) ListFirewallsPages(arg0 *networkfirewall.ListFirewallsInput, arg1 func(*networkfirewall.ListFirewallsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFirewallsPages", arg0, arg1)
@@ -891,13 +892,13 @@ func (m *MockNetworkFirewallAPI) ListFirewallsPages(arg0 *networkfirewall.ListFi
 	return ret0
 }
 
-// ListFirewallsPages indicates an expected call of ListFirewallsPages
+// ListFirewallsPages indicates an expected call of ListFirewallsPages.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListFirewallsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFirewallsPages", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListFirewallsPages), arg0, arg1)
 }
 
-// ListFirewallsPagesWithContext mocks base method
+// ListFirewallsPagesWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) ListFirewallsPagesWithContext(arg0 context.Context, arg1 *networkfirewall.ListFirewallsInput, arg2 func(*networkfirewall.ListFirewallsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -909,14 +910,14 @@ func (m *MockNetworkFirewallAPI) ListFirewallsPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListFirewallsPagesWithContext indicates an expected call of ListFirewallsPagesWithContext
+// ListFirewallsPagesWithContext indicates an expected call of ListFirewallsPagesWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListFirewallsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFirewallsPagesWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListFirewallsPagesWithContext), varargs...)
 }
 
-// ListFirewallsRequest mocks base method
+// ListFirewallsRequest mocks base method.
 func (m *MockNetworkFirewallAPI) ListFirewallsRequest(arg0 *networkfirewall.ListFirewallsInput) (*request.Request, *networkfirewall.ListFirewallsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFirewallsRequest", arg0)
@@ -925,13 +926,13 @@ func (m *MockNetworkFirewallAPI) ListFirewallsRequest(arg0 *networkfirewall.List
 	return ret0, ret1
 }
 
-// ListFirewallsRequest indicates an expected call of ListFirewallsRequest
+// ListFirewallsRequest indicates an expected call of ListFirewallsRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListFirewallsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFirewallsRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListFirewallsRequest), arg0)
 }
 
-// ListFirewallsWithContext mocks base method
+// ListFirewallsWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) ListFirewallsWithContext(arg0 context.Context, arg1 *networkfirewall.ListFirewallsInput, arg2 ...request.Option) (*networkfirewall.ListFirewallsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -944,14 +945,14 @@ func (m *MockNetworkFirewallAPI) ListFirewallsWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListFirewallsWithContext indicates an expected call of ListFirewallsWithContext
+// ListFirewallsWithContext indicates an expected call of ListFirewallsWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListFirewallsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFirewallsWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListFirewallsWithContext), varargs...)
 }
 
-// ListRuleGroups mocks base method
+// ListRuleGroups mocks base method.
 func (m *MockNetworkFirewallAPI) ListRuleGroups(arg0 *networkfirewall.ListRuleGroupsInput) (*networkfirewall.ListRuleGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRuleGroups", arg0)
@@ -960,13 +961,13 @@ func (m *MockNetworkFirewallAPI) ListRuleGroups(arg0 *networkfirewall.ListRuleGr
 	return ret0, ret1
 }
 
-// ListRuleGroups indicates an expected call of ListRuleGroups
+// ListRuleGroups indicates an expected call of ListRuleGroups.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListRuleGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRuleGroups", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListRuleGroups), arg0)
 }
 
-// ListRuleGroupsPages mocks base method
+// ListRuleGroupsPages mocks base method.
 func (m *MockNetworkFirewallAPI) ListRuleGroupsPages(arg0 *networkfirewall.ListRuleGroupsInput, arg1 func(*networkfirewall.ListRuleGroupsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRuleGroupsPages", arg0, arg1)
@@ -974,13 +975,13 @@ func (m *MockNetworkFirewallAPI) ListRuleGroupsPages(arg0 *networkfirewall.ListR
 	return ret0
 }
 
-// ListRuleGroupsPages indicates an expected call of ListRuleGroupsPages
+// ListRuleGroupsPages indicates an expected call of ListRuleGroupsPages.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListRuleGroupsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRuleGroupsPages", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListRuleGroupsPages), arg0, arg1)
 }
 
-// ListRuleGroupsPagesWithContext mocks base method
+// ListRuleGroupsPagesWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) ListRuleGroupsPagesWithContext(arg0 context.Context, arg1 *networkfirewall.ListRuleGroupsInput, arg2 func(*networkfirewall.ListRuleGroupsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -992,14 +993,14 @@ func (m *MockNetworkFirewallAPI) ListRuleGroupsPagesWithContext(arg0 context.Con
 	return ret0
 }
 
-// ListRuleGroupsPagesWithContext indicates an expected call of ListRuleGroupsPagesWithContext
+// ListRuleGroupsPagesWithContext indicates an expected call of ListRuleGroupsPagesWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListRuleGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRuleGroupsPagesWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListRuleGroupsPagesWithContext), varargs...)
 }
 
-// ListRuleGroupsRequest mocks base method
+// ListRuleGroupsRequest mocks base method.
 func (m *MockNetworkFirewallAPI) ListRuleGroupsRequest(arg0 *networkfirewall.ListRuleGroupsInput) (*request.Request, *networkfirewall.ListRuleGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRuleGroupsRequest", arg0)
@@ -1008,13 +1009,13 @@ func (m *MockNetworkFirewallAPI) ListRuleGroupsRequest(arg0 *networkfirewall.Lis
 	return ret0, ret1
 }
 
-// ListRuleGroupsRequest indicates an expected call of ListRuleGroupsRequest
+// ListRuleGroupsRequest indicates an expected call of ListRuleGroupsRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListRuleGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRuleGroupsRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListRuleGroupsRequest), arg0)
 }
 
-// ListRuleGroupsWithContext mocks base method
+// ListRuleGroupsWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) ListRuleGroupsWithContext(arg0 context.Context, arg1 *networkfirewall.ListRuleGroupsInput, arg2 ...request.Option) (*networkfirewall.ListRuleGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1027,14 +1028,14 @@ func (m *MockNetworkFirewallAPI) ListRuleGroupsWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// ListRuleGroupsWithContext indicates an expected call of ListRuleGroupsWithContext
+// ListRuleGroupsWithContext indicates an expected call of ListRuleGroupsWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListRuleGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRuleGroupsWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListRuleGroupsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockNetworkFirewallAPI) ListTagsForResource(arg0 *networkfirewall.ListTagsForResourceInput) (*networkfirewall.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1043,13 +1044,13 @@ func (m *MockNetworkFirewallAPI) ListTagsForResource(arg0 *networkfirewall.ListT
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourcePages mocks base method
+// ListTagsForResourcePages mocks base method.
 func (m *MockNetworkFirewallAPI) ListTagsForResourcePages(arg0 *networkfirewall.ListTagsForResourceInput, arg1 func(*networkfirewall.ListTagsForResourceOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourcePages", arg0, arg1)
@@ -1057,13 +1058,13 @@ func (m *MockNetworkFirewallAPI) ListTagsForResourcePages(arg0 *networkfirewall.
 	return ret0
 }
 
-// ListTagsForResourcePages indicates an expected call of ListTagsForResourcePages
+// ListTagsForResourcePages indicates an expected call of ListTagsForResourcePages.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListTagsForResourcePages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourcePages", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListTagsForResourcePages), arg0, arg1)
 }
 
-// ListTagsForResourcePagesWithContext mocks base method
+// ListTagsForResourcePagesWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) ListTagsForResourcePagesWithContext(arg0 context.Context, arg1 *networkfirewall.ListTagsForResourceInput, arg2 func(*networkfirewall.ListTagsForResourceOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1075,14 +1076,14 @@ func (m *MockNetworkFirewallAPI) ListTagsForResourcePagesWithContext(arg0 contex
 	return ret0
 }
 
-// ListTagsForResourcePagesWithContext indicates an expected call of ListTagsForResourcePagesWithContext
+// ListTagsForResourcePagesWithContext indicates an expected call of ListTagsForResourcePagesWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListTagsForResourcePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourcePagesWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListTagsForResourcePagesWithContext), varargs...)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockNetworkFirewallAPI) ListTagsForResourceRequest(arg0 *networkfirewall.ListTagsForResourceInput) (*request.Request, *networkfirewall.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1091,13 +1092,13 @@ func (m *MockNetworkFirewallAPI) ListTagsForResourceRequest(arg0 *networkfirewal
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *networkfirewall.ListTagsForResourceInput, arg2 ...request.Option) (*networkfirewall.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1110,14 +1111,14 @@ func (m *MockNetworkFirewallAPI) ListTagsForResourceWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PutResourcePolicy mocks base method
+// PutResourcePolicy mocks base method.
 func (m *MockNetworkFirewallAPI) PutResourcePolicy(arg0 *networkfirewall.PutResourcePolicyInput) (*networkfirewall.PutResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutResourcePolicy", arg0)
@@ -1126,13 +1127,13 @@ func (m *MockNetworkFirewallAPI) PutResourcePolicy(arg0 *networkfirewall.PutReso
 	return ret0, ret1
 }
 
-// PutResourcePolicy indicates an expected call of PutResourcePolicy
+// PutResourcePolicy indicates an expected call of PutResourcePolicy.
 func (mr *MockNetworkFirewallAPIMockRecorder) PutResourcePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutResourcePolicy", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).PutResourcePolicy), arg0)
 }
 
-// PutResourcePolicyRequest mocks base method
+// PutResourcePolicyRequest mocks base method.
 func (m *MockNetworkFirewallAPI) PutResourcePolicyRequest(arg0 *networkfirewall.PutResourcePolicyInput) (*request.Request, *networkfirewall.PutResourcePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutResourcePolicyRequest", arg0)
@@ -1141,13 +1142,13 @@ func (m *MockNetworkFirewallAPI) PutResourcePolicyRequest(arg0 *networkfirewall.
 	return ret0, ret1
 }
 
-// PutResourcePolicyRequest indicates an expected call of PutResourcePolicyRequest
+// PutResourcePolicyRequest indicates an expected call of PutResourcePolicyRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) PutResourcePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutResourcePolicyRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).PutResourcePolicyRequest), arg0)
 }
 
-// PutResourcePolicyWithContext mocks base method
+// PutResourcePolicyWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) PutResourcePolicyWithContext(arg0 context.Context, arg1 *networkfirewall.PutResourcePolicyInput, arg2 ...request.Option) (*networkfirewall.PutResourcePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1160,14 +1161,14 @@ func (m *MockNetworkFirewallAPI) PutResourcePolicyWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// PutResourcePolicyWithContext indicates an expected call of PutResourcePolicyWithContext
+// PutResourcePolicyWithContext indicates an expected call of PutResourcePolicyWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) PutResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutResourcePolicyWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).PutResourcePolicyWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockNetworkFirewallAPI) TagResource(arg0 *networkfirewall.TagResourceInput) (*networkfirewall.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1176,13 +1177,13 @@ func (m *MockNetworkFirewallAPI) TagResource(arg0 *networkfirewall.TagResourceIn
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockNetworkFirewallAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockNetworkFirewallAPI) TagResourceRequest(arg0 *networkfirewall.TagResourceInput) (*request.Request, *networkfirewall.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1191,13 +1192,13 @@ func (m *MockNetworkFirewallAPI) TagResourceRequest(arg0 *networkfirewall.TagRes
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) TagResourceWithContext(arg0 context.Context, arg1 *networkfirewall.TagResourceInput, arg2 ...request.Option) (*networkfirewall.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1210,14 +1211,14 @@ func (m *MockNetworkFirewallAPI) TagResourceWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockNetworkFirewallAPI) UntagResource(arg0 *networkfirewall.UntagResourceInput) (*networkfirewall.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1226,13 +1227,13 @@ func (m *MockNetworkFirewallAPI) UntagResource(arg0 *networkfirewall.UntagResour
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockNetworkFirewallAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockNetworkFirewallAPI) UntagResourceRequest(arg0 *networkfirewall.UntagResourceInput) (*request.Request, *networkfirewall.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1241,13 +1242,13 @@ func (m *MockNetworkFirewallAPI) UntagResourceRequest(arg0 *networkfirewall.Unta
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) UntagResourceWithContext(arg0 context.Context, arg1 *networkfirewall.UntagResourceInput, arg2 ...request.Option) (*networkfirewall.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1260,14 +1261,14 @@ func (m *MockNetworkFirewallAPI) UntagResourceWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateFirewallDeleteProtection mocks base method
+// UpdateFirewallDeleteProtection mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateFirewallDeleteProtection(arg0 *networkfirewall.UpdateFirewallDeleteProtectionInput) (*networkfirewall.UpdateFirewallDeleteProtectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFirewallDeleteProtection", arg0)
@@ -1276,13 +1277,13 @@ func (m *MockNetworkFirewallAPI) UpdateFirewallDeleteProtection(arg0 *networkfir
 	return ret0, ret1
 }
 
-// UpdateFirewallDeleteProtection indicates an expected call of UpdateFirewallDeleteProtection
+// UpdateFirewallDeleteProtection indicates an expected call of UpdateFirewallDeleteProtection.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateFirewallDeleteProtection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFirewallDeleteProtection", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateFirewallDeleteProtection), arg0)
 }
 
-// UpdateFirewallDeleteProtectionRequest mocks base method
+// UpdateFirewallDeleteProtectionRequest mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateFirewallDeleteProtectionRequest(arg0 *networkfirewall.UpdateFirewallDeleteProtectionInput) (*request.Request, *networkfirewall.UpdateFirewallDeleteProtectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFirewallDeleteProtectionRequest", arg0)
@@ -1291,13 +1292,13 @@ func (m *MockNetworkFirewallAPI) UpdateFirewallDeleteProtectionRequest(arg0 *net
 	return ret0, ret1
 }
 
-// UpdateFirewallDeleteProtectionRequest indicates an expected call of UpdateFirewallDeleteProtectionRequest
+// UpdateFirewallDeleteProtectionRequest indicates an expected call of UpdateFirewallDeleteProtectionRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateFirewallDeleteProtectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFirewallDeleteProtectionRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateFirewallDeleteProtectionRequest), arg0)
 }
 
-// UpdateFirewallDeleteProtectionWithContext mocks base method
+// UpdateFirewallDeleteProtectionWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateFirewallDeleteProtectionWithContext(arg0 context.Context, arg1 *networkfirewall.UpdateFirewallDeleteProtectionInput, arg2 ...request.Option) (*networkfirewall.UpdateFirewallDeleteProtectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1310,14 +1311,14 @@ func (m *MockNetworkFirewallAPI) UpdateFirewallDeleteProtectionWithContext(arg0 
 	return ret0, ret1
 }
 
-// UpdateFirewallDeleteProtectionWithContext indicates an expected call of UpdateFirewallDeleteProtectionWithContext
+// UpdateFirewallDeleteProtectionWithContext indicates an expected call of UpdateFirewallDeleteProtectionWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateFirewallDeleteProtectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFirewallDeleteProtectionWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateFirewallDeleteProtectionWithContext), varargs...)
 }
 
-// UpdateFirewallDescription mocks base method
+// UpdateFirewallDescription mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateFirewallDescription(arg0 *networkfirewall.UpdateFirewallDescriptionInput) (*networkfirewall.UpdateFirewallDescriptionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFirewallDescription", arg0)
@@ -1326,13 +1327,13 @@ func (m *MockNetworkFirewallAPI) UpdateFirewallDescription(arg0 *networkfirewall
 	return ret0, ret1
 }
 
-// UpdateFirewallDescription indicates an expected call of UpdateFirewallDescription
+// UpdateFirewallDescription indicates an expected call of UpdateFirewallDescription.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateFirewallDescription(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFirewallDescription", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateFirewallDescription), arg0)
 }
 
-// UpdateFirewallDescriptionRequest mocks base method
+// UpdateFirewallDescriptionRequest mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateFirewallDescriptionRequest(arg0 *networkfirewall.UpdateFirewallDescriptionInput) (*request.Request, *networkfirewall.UpdateFirewallDescriptionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFirewallDescriptionRequest", arg0)
@@ -1341,13 +1342,13 @@ func (m *MockNetworkFirewallAPI) UpdateFirewallDescriptionRequest(arg0 *networkf
 	return ret0, ret1
 }
 
-// UpdateFirewallDescriptionRequest indicates an expected call of UpdateFirewallDescriptionRequest
+// UpdateFirewallDescriptionRequest indicates an expected call of UpdateFirewallDescriptionRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateFirewallDescriptionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFirewallDescriptionRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateFirewallDescriptionRequest), arg0)
 }
 
-// UpdateFirewallDescriptionWithContext mocks base method
+// UpdateFirewallDescriptionWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateFirewallDescriptionWithContext(arg0 context.Context, arg1 *networkfirewall.UpdateFirewallDescriptionInput, arg2 ...request.Option) (*networkfirewall.UpdateFirewallDescriptionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1360,14 +1361,14 @@ func (m *MockNetworkFirewallAPI) UpdateFirewallDescriptionWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// UpdateFirewallDescriptionWithContext indicates an expected call of UpdateFirewallDescriptionWithContext
+// UpdateFirewallDescriptionWithContext indicates an expected call of UpdateFirewallDescriptionWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateFirewallDescriptionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFirewallDescriptionWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateFirewallDescriptionWithContext), varargs...)
 }
 
-// UpdateFirewallPolicy mocks base method
+// UpdateFirewallPolicy mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateFirewallPolicy(arg0 *networkfirewall.UpdateFirewallPolicyInput) (*networkfirewall.UpdateFirewallPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFirewallPolicy", arg0)
@@ -1376,13 +1377,13 @@ func (m *MockNetworkFirewallAPI) UpdateFirewallPolicy(arg0 *networkfirewall.Upda
 	return ret0, ret1
 }
 
-// UpdateFirewallPolicy indicates an expected call of UpdateFirewallPolicy
+// UpdateFirewallPolicy indicates an expected call of UpdateFirewallPolicy.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateFirewallPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFirewallPolicy", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateFirewallPolicy), arg0)
 }
 
-// UpdateFirewallPolicyChangeProtection mocks base method
+// UpdateFirewallPolicyChangeProtection mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateFirewallPolicyChangeProtection(arg0 *networkfirewall.UpdateFirewallPolicyChangeProtectionInput) (*networkfirewall.UpdateFirewallPolicyChangeProtectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFirewallPolicyChangeProtection", arg0)
@@ -1391,13 +1392,13 @@ func (m *MockNetworkFirewallAPI) UpdateFirewallPolicyChangeProtection(arg0 *netw
 	return ret0, ret1
 }
 
-// UpdateFirewallPolicyChangeProtection indicates an expected call of UpdateFirewallPolicyChangeProtection
+// UpdateFirewallPolicyChangeProtection indicates an expected call of UpdateFirewallPolicyChangeProtection.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateFirewallPolicyChangeProtection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFirewallPolicyChangeProtection", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateFirewallPolicyChangeProtection), arg0)
 }
 
-// UpdateFirewallPolicyChangeProtectionRequest mocks base method
+// UpdateFirewallPolicyChangeProtectionRequest mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateFirewallPolicyChangeProtectionRequest(arg0 *networkfirewall.UpdateFirewallPolicyChangeProtectionInput) (*request.Request, *networkfirewall.UpdateFirewallPolicyChangeProtectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFirewallPolicyChangeProtectionRequest", arg0)
@@ -1406,13 +1407,13 @@ func (m *MockNetworkFirewallAPI) UpdateFirewallPolicyChangeProtectionRequest(arg
 	return ret0, ret1
 }
 
-// UpdateFirewallPolicyChangeProtectionRequest indicates an expected call of UpdateFirewallPolicyChangeProtectionRequest
+// UpdateFirewallPolicyChangeProtectionRequest indicates an expected call of UpdateFirewallPolicyChangeProtectionRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateFirewallPolicyChangeProtectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFirewallPolicyChangeProtectionRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateFirewallPolicyChangeProtectionRequest), arg0)
 }
 
-// UpdateFirewallPolicyChangeProtectionWithContext mocks base method
+// UpdateFirewallPolicyChangeProtectionWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateFirewallPolicyChangeProtectionWithContext(arg0 context.Context, arg1 *networkfirewall.UpdateFirewallPolicyChangeProtectionInput, arg2 ...request.Option) (*networkfirewall.UpdateFirewallPolicyChangeProtectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1425,14 +1426,14 @@ func (m *MockNetworkFirewallAPI) UpdateFirewallPolicyChangeProtectionWithContext
 	return ret0, ret1
 }
 
-// UpdateFirewallPolicyChangeProtectionWithContext indicates an expected call of UpdateFirewallPolicyChangeProtectionWithContext
+// UpdateFirewallPolicyChangeProtectionWithContext indicates an expected call of UpdateFirewallPolicyChangeProtectionWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateFirewallPolicyChangeProtectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFirewallPolicyChangeProtectionWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateFirewallPolicyChangeProtectionWithContext), varargs...)
 }
 
-// UpdateFirewallPolicyRequest mocks base method
+// UpdateFirewallPolicyRequest mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateFirewallPolicyRequest(arg0 *networkfirewall.UpdateFirewallPolicyInput) (*request.Request, *networkfirewall.UpdateFirewallPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFirewallPolicyRequest", arg0)
@@ -1441,13 +1442,13 @@ func (m *MockNetworkFirewallAPI) UpdateFirewallPolicyRequest(arg0 *networkfirewa
 	return ret0, ret1
 }
 
-// UpdateFirewallPolicyRequest indicates an expected call of UpdateFirewallPolicyRequest
+// UpdateFirewallPolicyRequest indicates an expected call of UpdateFirewallPolicyRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateFirewallPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFirewallPolicyRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateFirewallPolicyRequest), arg0)
 }
 
-// UpdateFirewallPolicyWithContext mocks base method
+// UpdateFirewallPolicyWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateFirewallPolicyWithContext(arg0 context.Context, arg1 *networkfirewall.UpdateFirewallPolicyInput, arg2 ...request.Option) (*networkfirewall.UpdateFirewallPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1460,14 +1461,14 @@ func (m *MockNetworkFirewallAPI) UpdateFirewallPolicyWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// UpdateFirewallPolicyWithContext indicates an expected call of UpdateFirewallPolicyWithContext
+// UpdateFirewallPolicyWithContext indicates an expected call of UpdateFirewallPolicyWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateFirewallPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFirewallPolicyWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateFirewallPolicyWithContext), varargs...)
 }
 
-// UpdateLoggingConfiguration mocks base method
+// UpdateLoggingConfiguration mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateLoggingConfiguration(arg0 *networkfirewall.UpdateLoggingConfigurationInput) (*networkfirewall.UpdateLoggingConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateLoggingConfiguration", arg0)
@@ -1476,13 +1477,13 @@ func (m *MockNetworkFirewallAPI) UpdateLoggingConfiguration(arg0 *networkfirewal
 	return ret0, ret1
 }
 
-// UpdateLoggingConfiguration indicates an expected call of UpdateLoggingConfiguration
+// UpdateLoggingConfiguration indicates an expected call of UpdateLoggingConfiguration.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateLoggingConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLoggingConfiguration", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateLoggingConfiguration), arg0)
 }
 
-// UpdateLoggingConfigurationRequest mocks base method
+// UpdateLoggingConfigurationRequest mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateLoggingConfigurationRequest(arg0 *networkfirewall.UpdateLoggingConfigurationInput) (*request.Request, *networkfirewall.UpdateLoggingConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateLoggingConfigurationRequest", arg0)
@@ -1491,13 +1492,13 @@ func (m *MockNetworkFirewallAPI) UpdateLoggingConfigurationRequest(arg0 *network
 	return ret0, ret1
 }
 
-// UpdateLoggingConfigurationRequest indicates an expected call of UpdateLoggingConfigurationRequest
+// UpdateLoggingConfigurationRequest indicates an expected call of UpdateLoggingConfigurationRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateLoggingConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLoggingConfigurationRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateLoggingConfigurationRequest), arg0)
 }
 
-// UpdateLoggingConfigurationWithContext mocks base method
+// UpdateLoggingConfigurationWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateLoggingConfigurationWithContext(arg0 context.Context, arg1 *networkfirewall.UpdateLoggingConfigurationInput, arg2 ...request.Option) (*networkfirewall.UpdateLoggingConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1510,14 +1511,14 @@ func (m *MockNetworkFirewallAPI) UpdateLoggingConfigurationWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// UpdateLoggingConfigurationWithContext indicates an expected call of UpdateLoggingConfigurationWithContext
+// UpdateLoggingConfigurationWithContext indicates an expected call of UpdateLoggingConfigurationWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateLoggingConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLoggingConfigurationWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateLoggingConfigurationWithContext), varargs...)
 }
 
-// UpdateRuleGroup mocks base method
+// UpdateRuleGroup mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateRuleGroup(arg0 *networkfirewall.UpdateRuleGroupInput) (*networkfirewall.UpdateRuleGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRuleGroup", arg0)
@@ -1526,13 +1527,13 @@ func (m *MockNetworkFirewallAPI) UpdateRuleGroup(arg0 *networkfirewall.UpdateRul
 	return ret0, ret1
 }
 
-// UpdateRuleGroup indicates an expected call of UpdateRuleGroup
+// UpdateRuleGroup indicates an expected call of UpdateRuleGroup.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateRuleGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRuleGroup", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateRuleGroup), arg0)
 }
 
-// UpdateRuleGroupRequest mocks base method
+// UpdateRuleGroupRequest mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateRuleGroupRequest(arg0 *networkfirewall.UpdateRuleGroupInput) (*request.Request, *networkfirewall.UpdateRuleGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRuleGroupRequest", arg0)
@@ -1541,13 +1542,13 @@ func (m *MockNetworkFirewallAPI) UpdateRuleGroupRequest(arg0 *networkfirewall.Up
 	return ret0, ret1
 }
 
-// UpdateRuleGroupRequest indicates an expected call of UpdateRuleGroupRequest
+// UpdateRuleGroupRequest indicates an expected call of UpdateRuleGroupRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateRuleGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRuleGroupRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateRuleGroupRequest), arg0)
 }
 
-// UpdateRuleGroupWithContext mocks base method
+// UpdateRuleGroupWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateRuleGroupWithContext(arg0 context.Context, arg1 *networkfirewall.UpdateRuleGroupInput, arg2 ...request.Option) (*networkfirewall.UpdateRuleGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1560,14 +1561,14 @@ func (m *MockNetworkFirewallAPI) UpdateRuleGroupWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// UpdateRuleGroupWithContext indicates an expected call of UpdateRuleGroupWithContext
+// UpdateRuleGroupWithContext indicates an expected call of UpdateRuleGroupWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateRuleGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRuleGroupWithContext", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateRuleGroupWithContext), varargs...)
 }
 
-// UpdateSubnetChangeProtection mocks base method
+// UpdateSubnetChangeProtection mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateSubnetChangeProtection(arg0 *networkfirewall.UpdateSubnetChangeProtectionInput) (*networkfirewall.UpdateSubnetChangeProtectionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSubnetChangeProtection", arg0)
@@ -1576,13 +1577,13 @@ func (m *MockNetworkFirewallAPI) UpdateSubnetChangeProtection(arg0 *networkfirew
 	return ret0, ret1
 }
 
-// UpdateSubnetChangeProtection indicates an expected call of UpdateSubnetChangeProtection
+// UpdateSubnetChangeProtection indicates an expected call of UpdateSubnetChangeProtection.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateSubnetChangeProtection(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSubnetChangeProtection", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateSubnetChangeProtection), arg0)
 }
 
-// UpdateSubnetChangeProtectionRequest mocks base method
+// UpdateSubnetChangeProtectionRequest mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateSubnetChangeProtectionRequest(arg0 *networkfirewall.UpdateSubnetChangeProtectionInput) (*request.Request, *networkfirewall.UpdateSubnetChangeProtectionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSubnetChangeProtectionRequest", arg0)
@@ -1591,13 +1592,13 @@ func (m *MockNetworkFirewallAPI) UpdateSubnetChangeProtectionRequest(arg0 *netwo
 	return ret0, ret1
 }
 
-// UpdateSubnetChangeProtectionRequest indicates an expected call of UpdateSubnetChangeProtectionRequest
+// UpdateSubnetChangeProtectionRequest indicates an expected call of UpdateSubnetChangeProtectionRequest.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateSubnetChangeProtectionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSubnetChangeProtectionRequest", reflect.TypeOf((*MockNetworkFirewallAPI)(nil).UpdateSubnetChangeProtectionRequest), arg0)
 }
 
-// UpdateSubnetChangeProtectionWithContext mocks base method
+// UpdateSubnetChangeProtectionWithContext mocks base method.
 func (m *MockNetworkFirewallAPI) UpdateSubnetChangeProtectionWithContext(arg0 context.Context, arg1 *networkfirewall.UpdateSubnetChangeProtectionInput, arg2 ...request.Option) (*networkfirewall.UpdateSubnetChangeProtectionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1610,7 +1611,7 @@ func (m *MockNetworkFirewallAPI) UpdateSubnetChangeProtectionWithContext(arg0 co
 	return ret0, ret1
 }
 
-// UpdateSubnetChangeProtectionWithContext indicates an expected call of UpdateSubnetChangeProtectionWithContext
+// UpdateSubnetChangeProtectionWithContext indicates an expected call of UpdateSubnetChangeProtectionWithContext.
 func (mr *MockNetworkFirewallAPIMockRecorder) UpdateSubnetChangeProtectionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

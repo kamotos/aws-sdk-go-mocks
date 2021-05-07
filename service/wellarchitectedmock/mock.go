@@ -6,36 +6,37 @@ package wellarchitectedmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	wellarchitected "github.com/aws/aws-sdk-go/service/wellarchitected"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockWellArchitectedAPI is a mock of WellArchitectedAPI interface
+// MockWellArchitectedAPI is a mock of WellArchitectedAPI interface.
 type MockWellArchitectedAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockWellArchitectedAPIMockRecorder
 }
 
-// MockWellArchitectedAPIMockRecorder is the mock recorder for MockWellArchitectedAPI
+// MockWellArchitectedAPIMockRecorder is the mock recorder for MockWellArchitectedAPI.
 type MockWellArchitectedAPIMockRecorder struct {
 	mock *MockWellArchitectedAPI
 }
 
-// NewMockWellArchitectedAPI creates a new mock instance
+// NewMockWellArchitectedAPI creates a new mock instance.
 func NewMockWellArchitectedAPI(ctrl *gomock.Controller) *MockWellArchitectedAPI {
 	mock := &MockWellArchitectedAPI{ctrl: ctrl}
 	mock.recorder = &MockWellArchitectedAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockWellArchitectedAPI) EXPECT() *MockWellArchitectedAPIMockRecorder {
 	return m.recorder
 }
 
-// AssociateLenses mocks base method
+// AssociateLenses mocks base method.
 func (m *MockWellArchitectedAPI) AssociateLenses(arg0 *wellarchitected.AssociateLensesInput) (*wellarchitected.AssociateLensesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateLenses", arg0)
@@ -44,13 +45,13 @@ func (m *MockWellArchitectedAPI) AssociateLenses(arg0 *wellarchitected.Associate
 	return ret0, ret1
 }
 
-// AssociateLenses indicates an expected call of AssociateLenses
+// AssociateLenses indicates an expected call of AssociateLenses.
 func (mr *MockWellArchitectedAPIMockRecorder) AssociateLenses(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateLenses", reflect.TypeOf((*MockWellArchitectedAPI)(nil).AssociateLenses), arg0)
 }
 
-// AssociateLensesRequest mocks base method
+// AssociateLensesRequest mocks base method.
 func (m *MockWellArchitectedAPI) AssociateLensesRequest(arg0 *wellarchitected.AssociateLensesInput) (*request.Request, *wellarchitected.AssociateLensesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateLensesRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockWellArchitectedAPI) AssociateLensesRequest(arg0 *wellarchitected.As
 	return ret0, ret1
 }
 
-// AssociateLensesRequest indicates an expected call of AssociateLensesRequest
+// AssociateLensesRequest indicates an expected call of AssociateLensesRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) AssociateLensesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateLensesRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).AssociateLensesRequest), arg0)
 }
 
-// AssociateLensesWithContext mocks base method
+// AssociateLensesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) AssociateLensesWithContext(arg0 context.Context, arg1 *wellarchitected.AssociateLensesInput, arg2 ...request.Option) (*wellarchitected.AssociateLensesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockWellArchitectedAPI) AssociateLensesWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// AssociateLensesWithContext indicates an expected call of AssociateLensesWithContext
+// AssociateLensesWithContext indicates an expected call of AssociateLensesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) AssociateLensesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateLensesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).AssociateLensesWithContext), varargs...)
 }
 
-// CreateMilestone mocks base method
+// CreateMilestone mocks base method.
 func (m *MockWellArchitectedAPI) CreateMilestone(arg0 *wellarchitected.CreateMilestoneInput) (*wellarchitected.CreateMilestoneOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMilestone", arg0)
@@ -94,13 +95,13 @@ func (m *MockWellArchitectedAPI) CreateMilestone(arg0 *wellarchitected.CreateMil
 	return ret0, ret1
 }
 
-// CreateMilestone indicates an expected call of CreateMilestone
+// CreateMilestone indicates an expected call of CreateMilestone.
 func (mr *MockWellArchitectedAPIMockRecorder) CreateMilestone(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMilestone", reflect.TypeOf((*MockWellArchitectedAPI)(nil).CreateMilestone), arg0)
 }
 
-// CreateMilestoneRequest mocks base method
+// CreateMilestoneRequest mocks base method.
 func (m *MockWellArchitectedAPI) CreateMilestoneRequest(arg0 *wellarchitected.CreateMilestoneInput) (*request.Request, *wellarchitected.CreateMilestoneOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMilestoneRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockWellArchitectedAPI) CreateMilestoneRequest(arg0 *wellarchitected.Cr
 	return ret0, ret1
 }
 
-// CreateMilestoneRequest indicates an expected call of CreateMilestoneRequest
+// CreateMilestoneRequest indicates an expected call of CreateMilestoneRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) CreateMilestoneRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMilestoneRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).CreateMilestoneRequest), arg0)
 }
 
-// CreateMilestoneWithContext mocks base method
+// CreateMilestoneWithContext mocks base method.
 func (m *MockWellArchitectedAPI) CreateMilestoneWithContext(arg0 context.Context, arg1 *wellarchitected.CreateMilestoneInput, arg2 ...request.Option) (*wellarchitected.CreateMilestoneOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockWellArchitectedAPI) CreateMilestoneWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// CreateMilestoneWithContext indicates an expected call of CreateMilestoneWithContext
+// CreateMilestoneWithContext indicates an expected call of CreateMilestoneWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) CreateMilestoneWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMilestoneWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).CreateMilestoneWithContext), varargs...)
 }
 
-// CreateWorkload mocks base method
+// CreateWorkload mocks base method.
 func (m *MockWellArchitectedAPI) CreateWorkload(arg0 *wellarchitected.CreateWorkloadInput) (*wellarchitected.CreateWorkloadOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWorkload", arg0)
@@ -144,13 +145,13 @@ func (m *MockWellArchitectedAPI) CreateWorkload(arg0 *wellarchitected.CreateWork
 	return ret0, ret1
 }
 
-// CreateWorkload indicates an expected call of CreateWorkload
+// CreateWorkload indicates an expected call of CreateWorkload.
 func (mr *MockWellArchitectedAPIMockRecorder) CreateWorkload(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkload", reflect.TypeOf((*MockWellArchitectedAPI)(nil).CreateWorkload), arg0)
 }
 
-// CreateWorkloadRequest mocks base method
+// CreateWorkloadRequest mocks base method.
 func (m *MockWellArchitectedAPI) CreateWorkloadRequest(arg0 *wellarchitected.CreateWorkloadInput) (*request.Request, *wellarchitected.CreateWorkloadOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWorkloadRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockWellArchitectedAPI) CreateWorkloadRequest(arg0 *wellarchitected.Cre
 	return ret0, ret1
 }
 
-// CreateWorkloadRequest indicates an expected call of CreateWorkloadRequest
+// CreateWorkloadRequest indicates an expected call of CreateWorkloadRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) CreateWorkloadRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkloadRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).CreateWorkloadRequest), arg0)
 }
 
-// CreateWorkloadShare mocks base method
+// CreateWorkloadShare mocks base method.
 func (m *MockWellArchitectedAPI) CreateWorkloadShare(arg0 *wellarchitected.CreateWorkloadShareInput) (*wellarchitected.CreateWorkloadShareOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWorkloadShare", arg0)
@@ -174,13 +175,13 @@ func (m *MockWellArchitectedAPI) CreateWorkloadShare(arg0 *wellarchitected.Creat
 	return ret0, ret1
 }
 
-// CreateWorkloadShare indicates an expected call of CreateWorkloadShare
+// CreateWorkloadShare indicates an expected call of CreateWorkloadShare.
 func (mr *MockWellArchitectedAPIMockRecorder) CreateWorkloadShare(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkloadShare", reflect.TypeOf((*MockWellArchitectedAPI)(nil).CreateWorkloadShare), arg0)
 }
 
-// CreateWorkloadShareRequest mocks base method
+// CreateWorkloadShareRequest mocks base method.
 func (m *MockWellArchitectedAPI) CreateWorkloadShareRequest(arg0 *wellarchitected.CreateWorkloadShareInput) (*request.Request, *wellarchitected.CreateWorkloadShareOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWorkloadShareRequest", arg0)
@@ -189,13 +190,13 @@ func (m *MockWellArchitectedAPI) CreateWorkloadShareRequest(arg0 *wellarchitecte
 	return ret0, ret1
 }
 
-// CreateWorkloadShareRequest indicates an expected call of CreateWorkloadShareRequest
+// CreateWorkloadShareRequest indicates an expected call of CreateWorkloadShareRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) CreateWorkloadShareRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkloadShareRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).CreateWorkloadShareRequest), arg0)
 }
 
-// CreateWorkloadShareWithContext mocks base method
+// CreateWorkloadShareWithContext mocks base method.
 func (m *MockWellArchitectedAPI) CreateWorkloadShareWithContext(arg0 context.Context, arg1 *wellarchitected.CreateWorkloadShareInput, arg2 ...request.Option) (*wellarchitected.CreateWorkloadShareOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -208,14 +209,14 @@ func (m *MockWellArchitectedAPI) CreateWorkloadShareWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// CreateWorkloadShareWithContext indicates an expected call of CreateWorkloadShareWithContext
+// CreateWorkloadShareWithContext indicates an expected call of CreateWorkloadShareWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) CreateWorkloadShareWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkloadShareWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).CreateWorkloadShareWithContext), varargs...)
 }
 
-// CreateWorkloadWithContext mocks base method
+// CreateWorkloadWithContext mocks base method.
 func (m *MockWellArchitectedAPI) CreateWorkloadWithContext(arg0 context.Context, arg1 *wellarchitected.CreateWorkloadInput, arg2 ...request.Option) (*wellarchitected.CreateWorkloadOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockWellArchitectedAPI) CreateWorkloadWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateWorkloadWithContext indicates an expected call of CreateWorkloadWithContext
+// CreateWorkloadWithContext indicates an expected call of CreateWorkloadWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) CreateWorkloadWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkloadWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).CreateWorkloadWithContext), varargs...)
 }
 
-// DeleteWorkload mocks base method
+// DeleteWorkload mocks base method.
 func (m *MockWellArchitectedAPI) DeleteWorkload(arg0 *wellarchitected.DeleteWorkloadInput) (*wellarchitected.DeleteWorkloadOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteWorkload", arg0)
@@ -244,13 +245,13 @@ func (m *MockWellArchitectedAPI) DeleteWorkload(arg0 *wellarchitected.DeleteWork
 	return ret0, ret1
 }
 
-// DeleteWorkload indicates an expected call of DeleteWorkload
+// DeleteWorkload indicates an expected call of DeleteWorkload.
 func (mr *MockWellArchitectedAPIMockRecorder) DeleteWorkload(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkload", reflect.TypeOf((*MockWellArchitectedAPI)(nil).DeleteWorkload), arg0)
 }
 
-// DeleteWorkloadRequest mocks base method
+// DeleteWorkloadRequest mocks base method.
 func (m *MockWellArchitectedAPI) DeleteWorkloadRequest(arg0 *wellarchitected.DeleteWorkloadInput) (*request.Request, *wellarchitected.DeleteWorkloadOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteWorkloadRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockWellArchitectedAPI) DeleteWorkloadRequest(arg0 *wellarchitected.Del
 	return ret0, ret1
 }
 
-// DeleteWorkloadRequest indicates an expected call of DeleteWorkloadRequest
+// DeleteWorkloadRequest indicates an expected call of DeleteWorkloadRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) DeleteWorkloadRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkloadRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).DeleteWorkloadRequest), arg0)
 }
 
-// DeleteWorkloadShare mocks base method
+// DeleteWorkloadShare mocks base method.
 func (m *MockWellArchitectedAPI) DeleteWorkloadShare(arg0 *wellarchitected.DeleteWorkloadShareInput) (*wellarchitected.DeleteWorkloadShareOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteWorkloadShare", arg0)
@@ -274,13 +275,13 @@ func (m *MockWellArchitectedAPI) DeleteWorkloadShare(arg0 *wellarchitected.Delet
 	return ret0, ret1
 }
 
-// DeleteWorkloadShare indicates an expected call of DeleteWorkloadShare
+// DeleteWorkloadShare indicates an expected call of DeleteWorkloadShare.
 func (mr *MockWellArchitectedAPIMockRecorder) DeleteWorkloadShare(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkloadShare", reflect.TypeOf((*MockWellArchitectedAPI)(nil).DeleteWorkloadShare), arg0)
 }
 
-// DeleteWorkloadShareRequest mocks base method
+// DeleteWorkloadShareRequest mocks base method.
 func (m *MockWellArchitectedAPI) DeleteWorkloadShareRequest(arg0 *wellarchitected.DeleteWorkloadShareInput) (*request.Request, *wellarchitected.DeleteWorkloadShareOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteWorkloadShareRequest", arg0)
@@ -289,13 +290,13 @@ func (m *MockWellArchitectedAPI) DeleteWorkloadShareRequest(arg0 *wellarchitecte
 	return ret0, ret1
 }
 
-// DeleteWorkloadShareRequest indicates an expected call of DeleteWorkloadShareRequest
+// DeleteWorkloadShareRequest indicates an expected call of DeleteWorkloadShareRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) DeleteWorkloadShareRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkloadShareRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).DeleteWorkloadShareRequest), arg0)
 }
 
-// DeleteWorkloadShareWithContext mocks base method
+// DeleteWorkloadShareWithContext mocks base method.
 func (m *MockWellArchitectedAPI) DeleteWorkloadShareWithContext(arg0 context.Context, arg1 *wellarchitected.DeleteWorkloadShareInput, arg2 ...request.Option) (*wellarchitected.DeleteWorkloadShareOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -308,14 +309,14 @@ func (m *MockWellArchitectedAPI) DeleteWorkloadShareWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DeleteWorkloadShareWithContext indicates an expected call of DeleteWorkloadShareWithContext
+// DeleteWorkloadShareWithContext indicates an expected call of DeleteWorkloadShareWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) DeleteWorkloadShareWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkloadShareWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).DeleteWorkloadShareWithContext), varargs...)
 }
 
-// DeleteWorkloadWithContext mocks base method
+// DeleteWorkloadWithContext mocks base method.
 func (m *MockWellArchitectedAPI) DeleteWorkloadWithContext(arg0 context.Context, arg1 *wellarchitected.DeleteWorkloadInput, arg2 ...request.Option) (*wellarchitected.DeleteWorkloadOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockWellArchitectedAPI) DeleteWorkloadWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteWorkloadWithContext indicates an expected call of DeleteWorkloadWithContext
+// DeleteWorkloadWithContext indicates an expected call of DeleteWorkloadWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) DeleteWorkloadWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkloadWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).DeleteWorkloadWithContext), varargs...)
 }
 
-// DisassociateLenses mocks base method
+// DisassociateLenses mocks base method.
 func (m *MockWellArchitectedAPI) DisassociateLenses(arg0 *wellarchitected.DisassociateLensesInput) (*wellarchitected.DisassociateLensesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateLenses", arg0)
@@ -344,13 +345,13 @@ func (m *MockWellArchitectedAPI) DisassociateLenses(arg0 *wellarchitected.Disass
 	return ret0, ret1
 }
 
-// DisassociateLenses indicates an expected call of DisassociateLenses
+// DisassociateLenses indicates an expected call of DisassociateLenses.
 func (mr *MockWellArchitectedAPIMockRecorder) DisassociateLenses(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateLenses", reflect.TypeOf((*MockWellArchitectedAPI)(nil).DisassociateLenses), arg0)
 }
 
-// DisassociateLensesRequest mocks base method
+// DisassociateLensesRequest mocks base method.
 func (m *MockWellArchitectedAPI) DisassociateLensesRequest(arg0 *wellarchitected.DisassociateLensesInput) (*request.Request, *wellarchitected.DisassociateLensesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateLensesRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockWellArchitectedAPI) DisassociateLensesRequest(arg0 *wellarchitected
 	return ret0, ret1
 }
 
-// DisassociateLensesRequest indicates an expected call of DisassociateLensesRequest
+// DisassociateLensesRequest indicates an expected call of DisassociateLensesRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) DisassociateLensesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateLensesRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).DisassociateLensesRequest), arg0)
 }
 
-// DisassociateLensesWithContext mocks base method
+// DisassociateLensesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) DisassociateLensesWithContext(arg0 context.Context, arg1 *wellarchitected.DisassociateLensesInput, arg2 ...request.Option) (*wellarchitected.DisassociateLensesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockWellArchitectedAPI) DisassociateLensesWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DisassociateLensesWithContext indicates an expected call of DisassociateLensesWithContext
+// DisassociateLensesWithContext indicates an expected call of DisassociateLensesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) DisassociateLensesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateLensesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).DisassociateLensesWithContext), varargs...)
 }
 
-// GetAnswer mocks base method
+// GetAnswer mocks base method.
 func (m *MockWellArchitectedAPI) GetAnswer(arg0 *wellarchitected.GetAnswerInput) (*wellarchitected.GetAnswerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAnswer", arg0)
@@ -394,13 +395,13 @@ func (m *MockWellArchitectedAPI) GetAnswer(arg0 *wellarchitected.GetAnswerInput)
 	return ret0, ret1
 }
 
-// GetAnswer indicates an expected call of GetAnswer
+// GetAnswer indicates an expected call of GetAnswer.
 func (mr *MockWellArchitectedAPIMockRecorder) GetAnswer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAnswer", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetAnswer), arg0)
 }
 
-// GetAnswerRequest mocks base method
+// GetAnswerRequest mocks base method.
 func (m *MockWellArchitectedAPI) GetAnswerRequest(arg0 *wellarchitected.GetAnswerInput) (*request.Request, *wellarchitected.GetAnswerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAnswerRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockWellArchitectedAPI) GetAnswerRequest(arg0 *wellarchitected.GetAnswe
 	return ret0, ret1
 }
 
-// GetAnswerRequest indicates an expected call of GetAnswerRequest
+// GetAnswerRequest indicates an expected call of GetAnswerRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) GetAnswerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAnswerRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetAnswerRequest), arg0)
 }
 
-// GetAnswerWithContext mocks base method
+// GetAnswerWithContext mocks base method.
 func (m *MockWellArchitectedAPI) GetAnswerWithContext(arg0 context.Context, arg1 *wellarchitected.GetAnswerInput, arg2 ...request.Option) (*wellarchitected.GetAnswerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockWellArchitectedAPI) GetAnswerWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetAnswerWithContext indicates an expected call of GetAnswerWithContext
+// GetAnswerWithContext indicates an expected call of GetAnswerWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) GetAnswerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAnswerWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetAnswerWithContext), varargs...)
 }
 
-// GetLensReview mocks base method
+// GetLensReview mocks base method.
 func (m *MockWellArchitectedAPI) GetLensReview(arg0 *wellarchitected.GetLensReviewInput) (*wellarchitected.GetLensReviewOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLensReview", arg0)
@@ -444,13 +445,13 @@ func (m *MockWellArchitectedAPI) GetLensReview(arg0 *wellarchitected.GetLensRevi
 	return ret0, ret1
 }
 
-// GetLensReview indicates an expected call of GetLensReview
+// GetLensReview indicates an expected call of GetLensReview.
 func (mr *MockWellArchitectedAPIMockRecorder) GetLensReview(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLensReview", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetLensReview), arg0)
 }
 
-// GetLensReviewReport mocks base method
+// GetLensReviewReport mocks base method.
 func (m *MockWellArchitectedAPI) GetLensReviewReport(arg0 *wellarchitected.GetLensReviewReportInput) (*wellarchitected.GetLensReviewReportOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLensReviewReport", arg0)
@@ -459,13 +460,13 @@ func (m *MockWellArchitectedAPI) GetLensReviewReport(arg0 *wellarchitected.GetLe
 	return ret0, ret1
 }
 
-// GetLensReviewReport indicates an expected call of GetLensReviewReport
+// GetLensReviewReport indicates an expected call of GetLensReviewReport.
 func (mr *MockWellArchitectedAPIMockRecorder) GetLensReviewReport(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLensReviewReport", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetLensReviewReport), arg0)
 }
 
-// GetLensReviewReportRequest mocks base method
+// GetLensReviewReportRequest mocks base method.
 func (m *MockWellArchitectedAPI) GetLensReviewReportRequest(arg0 *wellarchitected.GetLensReviewReportInput) (*request.Request, *wellarchitected.GetLensReviewReportOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLensReviewReportRequest", arg0)
@@ -474,13 +475,13 @@ func (m *MockWellArchitectedAPI) GetLensReviewReportRequest(arg0 *wellarchitecte
 	return ret0, ret1
 }
 
-// GetLensReviewReportRequest indicates an expected call of GetLensReviewReportRequest
+// GetLensReviewReportRequest indicates an expected call of GetLensReviewReportRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) GetLensReviewReportRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLensReviewReportRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetLensReviewReportRequest), arg0)
 }
 
-// GetLensReviewReportWithContext mocks base method
+// GetLensReviewReportWithContext mocks base method.
 func (m *MockWellArchitectedAPI) GetLensReviewReportWithContext(arg0 context.Context, arg1 *wellarchitected.GetLensReviewReportInput, arg2 ...request.Option) (*wellarchitected.GetLensReviewReportOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -493,14 +494,14 @@ func (m *MockWellArchitectedAPI) GetLensReviewReportWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// GetLensReviewReportWithContext indicates an expected call of GetLensReviewReportWithContext
+// GetLensReviewReportWithContext indicates an expected call of GetLensReviewReportWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) GetLensReviewReportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLensReviewReportWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetLensReviewReportWithContext), varargs...)
 }
 
-// GetLensReviewRequest mocks base method
+// GetLensReviewRequest mocks base method.
 func (m *MockWellArchitectedAPI) GetLensReviewRequest(arg0 *wellarchitected.GetLensReviewInput) (*request.Request, *wellarchitected.GetLensReviewOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLensReviewRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockWellArchitectedAPI) GetLensReviewRequest(arg0 *wellarchitected.GetL
 	return ret0, ret1
 }
 
-// GetLensReviewRequest indicates an expected call of GetLensReviewRequest
+// GetLensReviewRequest indicates an expected call of GetLensReviewRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) GetLensReviewRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLensReviewRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetLensReviewRequest), arg0)
 }
 
-// GetLensReviewWithContext mocks base method
+// GetLensReviewWithContext mocks base method.
 func (m *MockWellArchitectedAPI) GetLensReviewWithContext(arg0 context.Context, arg1 *wellarchitected.GetLensReviewInput, arg2 ...request.Option) (*wellarchitected.GetLensReviewOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockWellArchitectedAPI) GetLensReviewWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// GetLensReviewWithContext indicates an expected call of GetLensReviewWithContext
+// GetLensReviewWithContext indicates an expected call of GetLensReviewWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) GetLensReviewWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLensReviewWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetLensReviewWithContext), varargs...)
 }
 
-// GetLensVersionDifference mocks base method
+// GetLensVersionDifference mocks base method.
 func (m *MockWellArchitectedAPI) GetLensVersionDifference(arg0 *wellarchitected.GetLensVersionDifferenceInput) (*wellarchitected.GetLensVersionDifferenceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLensVersionDifference", arg0)
@@ -544,13 +545,13 @@ func (m *MockWellArchitectedAPI) GetLensVersionDifference(arg0 *wellarchitected.
 	return ret0, ret1
 }
 
-// GetLensVersionDifference indicates an expected call of GetLensVersionDifference
+// GetLensVersionDifference indicates an expected call of GetLensVersionDifference.
 func (mr *MockWellArchitectedAPIMockRecorder) GetLensVersionDifference(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLensVersionDifference", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetLensVersionDifference), arg0)
 }
 
-// GetLensVersionDifferenceRequest mocks base method
+// GetLensVersionDifferenceRequest mocks base method.
 func (m *MockWellArchitectedAPI) GetLensVersionDifferenceRequest(arg0 *wellarchitected.GetLensVersionDifferenceInput) (*request.Request, *wellarchitected.GetLensVersionDifferenceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetLensVersionDifferenceRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockWellArchitectedAPI) GetLensVersionDifferenceRequest(arg0 *wellarchi
 	return ret0, ret1
 }
 
-// GetLensVersionDifferenceRequest indicates an expected call of GetLensVersionDifferenceRequest
+// GetLensVersionDifferenceRequest indicates an expected call of GetLensVersionDifferenceRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) GetLensVersionDifferenceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLensVersionDifferenceRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetLensVersionDifferenceRequest), arg0)
 }
 
-// GetLensVersionDifferenceWithContext mocks base method
+// GetLensVersionDifferenceWithContext mocks base method.
 func (m *MockWellArchitectedAPI) GetLensVersionDifferenceWithContext(arg0 context.Context, arg1 *wellarchitected.GetLensVersionDifferenceInput, arg2 ...request.Option) (*wellarchitected.GetLensVersionDifferenceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockWellArchitectedAPI) GetLensVersionDifferenceWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// GetLensVersionDifferenceWithContext indicates an expected call of GetLensVersionDifferenceWithContext
+// GetLensVersionDifferenceWithContext indicates an expected call of GetLensVersionDifferenceWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) GetLensVersionDifferenceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLensVersionDifferenceWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetLensVersionDifferenceWithContext), varargs...)
 }
 
-// GetMilestone mocks base method
+// GetMilestone mocks base method.
 func (m *MockWellArchitectedAPI) GetMilestone(arg0 *wellarchitected.GetMilestoneInput) (*wellarchitected.GetMilestoneOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMilestone", arg0)
@@ -594,13 +595,13 @@ func (m *MockWellArchitectedAPI) GetMilestone(arg0 *wellarchitected.GetMilestone
 	return ret0, ret1
 }
 
-// GetMilestone indicates an expected call of GetMilestone
+// GetMilestone indicates an expected call of GetMilestone.
 func (mr *MockWellArchitectedAPIMockRecorder) GetMilestone(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMilestone", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetMilestone), arg0)
 }
 
-// GetMilestoneRequest mocks base method
+// GetMilestoneRequest mocks base method.
 func (m *MockWellArchitectedAPI) GetMilestoneRequest(arg0 *wellarchitected.GetMilestoneInput) (*request.Request, *wellarchitected.GetMilestoneOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMilestoneRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockWellArchitectedAPI) GetMilestoneRequest(arg0 *wellarchitected.GetMi
 	return ret0, ret1
 }
 
-// GetMilestoneRequest indicates an expected call of GetMilestoneRequest
+// GetMilestoneRequest indicates an expected call of GetMilestoneRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) GetMilestoneRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMilestoneRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetMilestoneRequest), arg0)
 }
 
-// GetMilestoneWithContext mocks base method
+// GetMilestoneWithContext mocks base method.
 func (m *MockWellArchitectedAPI) GetMilestoneWithContext(arg0 context.Context, arg1 *wellarchitected.GetMilestoneInput, arg2 ...request.Option) (*wellarchitected.GetMilestoneOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockWellArchitectedAPI) GetMilestoneWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// GetMilestoneWithContext indicates an expected call of GetMilestoneWithContext
+// GetMilestoneWithContext indicates an expected call of GetMilestoneWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) GetMilestoneWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMilestoneWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetMilestoneWithContext), varargs...)
 }
 
-// GetWorkload mocks base method
+// GetWorkload mocks base method.
 func (m *MockWellArchitectedAPI) GetWorkload(arg0 *wellarchitected.GetWorkloadInput) (*wellarchitected.GetWorkloadOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetWorkload", arg0)
@@ -644,13 +645,13 @@ func (m *MockWellArchitectedAPI) GetWorkload(arg0 *wellarchitected.GetWorkloadIn
 	return ret0, ret1
 }
 
-// GetWorkload indicates an expected call of GetWorkload
+// GetWorkload indicates an expected call of GetWorkload.
 func (mr *MockWellArchitectedAPIMockRecorder) GetWorkload(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkload", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetWorkload), arg0)
 }
 
-// GetWorkloadRequest mocks base method
+// GetWorkloadRequest mocks base method.
 func (m *MockWellArchitectedAPI) GetWorkloadRequest(arg0 *wellarchitected.GetWorkloadInput) (*request.Request, *wellarchitected.GetWorkloadOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetWorkloadRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockWellArchitectedAPI) GetWorkloadRequest(arg0 *wellarchitected.GetWor
 	return ret0, ret1
 }
 
-// GetWorkloadRequest indicates an expected call of GetWorkloadRequest
+// GetWorkloadRequest indicates an expected call of GetWorkloadRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) GetWorkloadRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkloadRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetWorkloadRequest), arg0)
 }
 
-// GetWorkloadWithContext mocks base method
+// GetWorkloadWithContext mocks base method.
 func (m *MockWellArchitectedAPI) GetWorkloadWithContext(arg0 context.Context, arg1 *wellarchitected.GetWorkloadInput, arg2 ...request.Option) (*wellarchitected.GetWorkloadOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockWellArchitectedAPI) GetWorkloadWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// GetWorkloadWithContext indicates an expected call of GetWorkloadWithContext
+// GetWorkloadWithContext indicates an expected call of GetWorkloadWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) GetWorkloadWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkloadWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).GetWorkloadWithContext), varargs...)
 }
 
-// ListAnswers mocks base method
+// ListAnswers mocks base method.
 func (m *MockWellArchitectedAPI) ListAnswers(arg0 *wellarchitected.ListAnswersInput) (*wellarchitected.ListAnswersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAnswers", arg0)
@@ -694,13 +695,13 @@ func (m *MockWellArchitectedAPI) ListAnswers(arg0 *wellarchitected.ListAnswersIn
 	return ret0, ret1
 }
 
-// ListAnswers indicates an expected call of ListAnswers
+// ListAnswers indicates an expected call of ListAnswers.
 func (mr *MockWellArchitectedAPIMockRecorder) ListAnswers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnswers", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListAnswers), arg0)
 }
 
-// ListAnswersPages mocks base method
+// ListAnswersPages mocks base method.
 func (m *MockWellArchitectedAPI) ListAnswersPages(arg0 *wellarchitected.ListAnswersInput, arg1 func(*wellarchitected.ListAnswersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAnswersPages", arg0, arg1)
@@ -708,13 +709,13 @@ func (m *MockWellArchitectedAPI) ListAnswersPages(arg0 *wellarchitected.ListAnsw
 	return ret0
 }
 
-// ListAnswersPages indicates an expected call of ListAnswersPages
+// ListAnswersPages indicates an expected call of ListAnswersPages.
 func (mr *MockWellArchitectedAPIMockRecorder) ListAnswersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnswersPages", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListAnswersPages), arg0, arg1)
 }
 
-// ListAnswersPagesWithContext mocks base method
+// ListAnswersPagesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListAnswersPagesWithContext(arg0 context.Context, arg1 *wellarchitected.ListAnswersInput, arg2 func(*wellarchitected.ListAnswersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -726,14 +727,14 @@ func (m *MockWellArchitectedAPI) ListAnswersPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// ListAnswersPagesWithContext indicates an expected call of ListAnswersPagesWithContext
+// ListAnswersPagesWithContext indicates an expected call of ListAnswersPagesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListAnswersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnswersPagesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListAnswersPagesWithContext), varargs...)
 }
 
-// ListAnswersRequest mocks base method
+// ListAnswersRequest mocks base method.
 func (m *MockWellArchitectedAPI) ListAnswersRequest(arg0 *wellarchitected.ListAnswersInput) (*request.Request, *wellarchitected.ListAnswersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAnswersRequest", arg0)
@@ -742,13 +743,13 @@ func (m *MockWellArchitectedAPI) ListAnswersRequest(arg0 *wellarchitected.ListAn
 	return ret0, ret1
 }
 
-// ListAnswersRequest indicates an expected call of ListAnswersRequest
+// ListAnswersRequest indicates an expected call of ListAnswersRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) ListAnswersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnswersRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListAnswersRequest), arg0)
 }
 
-// ListAnswersWithContext mocks base method
+// ListAnswersWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListAnswersWithContext(arg0 context.Context, arg1 *wellarchitected.ListAnswersInput, arg2 ...request.Option) (*wellarchitected.ListAnswersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -761,14 +762,14 @@ func (m *MockWellArchitectedAPI) ListAnswersWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// ListAnswersWithContext indicates an expected call of ListAnswersWithContext
+// ListAnswersWithContext indicates an expected call of ListAnswersWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListAnswersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAnswersWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListAnswersWithContext), varargs...)
 }
 
-// ListLensReviewImprovements mocks base method
+// ListLensReviewImprovements mocks base method.
 func (m *MockWellArchitectedAPI) ListLensReviewImprovements(arg0 *wellarchitected.ListLensReviewImprovementsInput) (*wellarchitected.ListLensReviewImprovementsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLensReviewImprovements", arg0)
@@ -777,13 +778,13 @@ func (m *MockWellArchitectedAPI) ListLensReviewImprovements(arg0 *wellarchitecte
 	return ret0, ret1
 }
 
-// ListLensReviewImprovements indicates an expected call of ListLensReviewImprovements
+// ListLensReviewImprovements indicates an expected call of ListLensReviewImprovements.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensReviewImprovements(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensReviewImprovements", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensReviewImprovements), arg0)
 }
 
-// ListLensReviewImprovementsPages mocks base method
+// ListLensReviewImprovementsPages mocks base method.
 func (m *MockWellArchitectedAPI) ListLensReviewImprovementsPages(arg0 *wellarchitected.ListLensReviewImprovementsInput, arg1 func(*wellarchitected.ListLensReviewImprovementsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLensReviewImprovementsPages", arg0, arg1)
@@ -791,13 +792,13 @@ func (m *MockWellArchitectedAPI) ListLensReviewImprovementsPages(arg0 *wellarchi
 	return ret0
 }
 
-// ListLensReviewImprovementsPages indicates an expected call of ListLensReviewImprovementsPages
+// ListLensReviewImprovementsPages indicates an expected call of ListLensReviewImprovementsPages.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensReviewImprovementsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensReviewImprovementsPages", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensReviewImprovementsPages), arg0, arg1)
 }
 
-// ListLensReviewImprovementsPagesWithContext mocks base method
+// ListLensReviewImprovementsPagesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListLensReviewImprovementsPagesWithContext(arg0 context.Context, arg1 *wellarchitected.ListLensReviewImprovementsInput, arg2 func(*wellarchitected.ListLensReviewImprovementsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -809,14 +810,14 @@ func (m *MockWellArchitectedAPI) ListLensReviewImprovementsPagesWithContext(arg0
 	return ret0
 }
 
-// ListLensReviewImprovementsPagesWithContext indicates an expected call of ListLensReviewImprovementsPagesWithContext
+// ListLensReviewImprovementsPagesWithContext indicates an expected call of ListLensReviewImprovementsPagesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensReviewImprovementsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensReviewImprovementsPagesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensReviewImprovementsPagesWithContext), varargs...)
 }
 
-// ListLensReviewImprovementsRequest mocks base method
+// ListLensReviewImprovementsRequest mocks base method.
 func (m *MockWellArchitectedAPI) ListLensReviewImprovementsRequest(arg0 *wellarchitected.ListLensReviewImprovementsInput) (*request.Request, *wellarchitected.ListLensReviewImprovementsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLensReviewImprovementsRequest", arg0)
@@ -825,13 +826,13 @@ func (m *MockWellArchitectedAPI) ListLensReviewImprovementsRequest(arg0 *wellarc
 	return ret0, ret1
 }
 
-// ListLensReviewImprovementsRequest indicates an expected call of ListLensReviewImprovementsRequest
+// ListLensReviewImprovementsRequest indicates an expected call of ListLensReviewImprovementsRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensReviewImprovementsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensReviewImprovementsRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensReviewImprovementsRequest), arg0)
 }
 
-// ListLensReviewImprovementsWithContext mocks base method
+// ListLensReviewImprovementsWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListLensReviewImprovementsWithContext(arg0 context.Context, arg1 *wellarchitected.ListLensReviewImprovementsInput, arg2 ...request.Option) (*wellarchitected.ListLensReviewImprovementsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -844,14 +845,14 @@ func (m *MockWellArchitectedAPI) ListLensReviewImprovementsWithContext(arg0 cont
 	return ret0, ret1
 }
 
-// ListLensReviewImprovementsWithContext indicates an expected call of ListLensReviewImprovementsWithContext
+// ListLensReviewImprovementsWithContext indicates an expected call of ListLensReviewImprovementsWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensReviewImprovementsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensReviewImprovementsWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensReviewImprovementsWithContext), varargs...)
 }
 
-// ListLensReviews mocks base method
+// ListLensReviews mocks base method.
 func (m *MockWellArchitectedAPI) ListLensReviews(arg0 *wellarchitected.ListLensReviewsInput) (*wellarchitected.ListLensReviewsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLensReviews", arg0)
@@ -860,13 +861,13 @@ func (m *MockWellArchitectedAPI) ListLensReviews(arg0 *wellarchitected.ListLensR
 	return ret0, ret1
 }
 
-// ListLensReviews indicates an expected call of ListLensReviews
+// ListLensReviews indicates an expected call of ListLensReviews.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensReviews(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensReviews", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensReviews), arg0)
 }
 
-// ListLensReviewsPages mocks base method
+// ListLensReviewsPages mocks base method.
 func (m *MockWellArchitectedAPI) ListLensReviewsPages(arg0 *wellarchitected.ListLensReviewsInput, arg1 func(*wellarchitected.ListLensReviewsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLensReviewsPages", arg0, arg1)
@@ -874,13 +875,13 @@ func (m *MockWellArchitectedAPI) ListLensReviewsPages(arg0 *wellarchitected.List
 	return ret0
 }
 
-// ListLensReviewsPages indicates an expected call of ListLensReviewsPages
+// ListLensReviewsPages indicates an expected call of ListLensReviewsPages.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensReviewsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensReviewsPages", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensReviewsPages), arg0, arg1)
 }
 
-// ListLensReviewsPagesWithContext mocks base method
+// ListLensReviewsPagesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListLensReviewsPagesWithContext(arg0 context.Context, arg1 *wellarchitected.ListLensReviewsInput, arg2 func(*wellarchitected.ListLensReviewsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -892,14 +893,14 @@ func (m *MockWellArchitectedAPI) ListLensReviewsPagesWithContext(arg0 context.Co
 	return ret0
 }
 
-// ListLensReviewsPagesWithContext indicates an expected call of ListLensReviewsPagesWithContext
+// ListLensReviewsPagesWithContext indicates an expected call of ListLensReviewsPagesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensReviewsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensReviewsPagesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensReviewsPagesWithContext), varargs...)
 }
 
-// ListLensReviewsRequest mocks base method
+// ListLensReviewsRequest mocks base method.
 func (m *MockWellArchitectedAPI) ListLensReviewsRequest(arg0 *wellarchitected.ListLensReviewsInput) (*request.Request, *wellarchitected.ListLensReviewsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLensReviewsRequest", arg0)
@@ -908,13 +909,13 @@ func (m *MockWellArchitectedAPI) ListLensReviewsRequest(arg0 *wellarchitected.Li
 	return ret0, ret1
 }
 
-// ListLensReviewsRequest indicates an expected call of ListLensReviewsRequest
+// ListLensReviewsRequest indicates an expected call of ListLensReviewsRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensReviewsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensReviewsRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensReviewsRequest), arg0)
 }
 
-// ListLensReviewsWithContext mocks base method
+// ListLensReviewsWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListLensReviewsWithContext(arg0 context.Context, arg1 *wellarchitected.ListLensReviewsInput, arg2 ...request.Option) (*wellarchitected.ListLensReviewsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -927,14 +928,14 @@ func (m *MockWellArchitectedAPI) ListLensReviewsWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// ListLensReviewsWithContext indicates an expected call of ListLensReviewsWithContext
+// ListLensReviewsWithContext indicates an expected call of ListLensReviewsWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensReviewsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensReviewsWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensReviewsWithContext), varargs...)
 }
 
-// ListLenses mocks base method
+// ListLenses mocks base method.
 func (m *MockWellArchitectedAPI) ListLenses(arg0 *wellarchitected.ListLensesInput) (*wellarchitected.ListLensesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLenses", arg0)
@@ -943,13 +944,13 @@ func (m *MockWellArchitectedAPI) ListLenses(arg0 *wellarchitected.ListLensesInpu
 	return ret0, ret1
 }
 
-// ListLenses indicates an expected call of ListLenses
+// ListLenses indicates an expected call of ListLenses.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLenses(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLenses", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLenses), arg0)
 }
 
-// ListLensesPages mocks base method
+// ListLensesPages mocks base method.
 func (m *MockWellArchitectedAPI) ListLensesPages(arg0 *wellarchitected.ListLensesInput, arg1 func(*wellarchitected.ListLensesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLensesPages", arg0, arg1)
@@ -957,13 +958,13 @@ func (m *MockWellArchitectedAPI) ListLensesPages(arg0 *wellarchitected.ListLense
 	return ret0
 }
 
-// ListLensesPages indicates an expected call of ListLensesPages
+// ListLensesPages indicates an expected call of ListLensesPages.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensesPages", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensesPages), arg0, arg1)
 }
 
-// ListLensesPagesWithContext mocks base method
+// ListLensesPagesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListLensesPagesWithContext(arg0 context.Context, arg1 *wellarchitected.ListLensesInput, arg2 func(*wellarchitected.ListLensesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -975,14 +976,14 @@ func (m *MockWellArchitectedAPI) ListLensesPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListLensesPagesWithContext indicates an expected call of ListLensesPagesWithContext
+// ListLensesPagesWithContext indicates an expected call of ListLensesPagesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensesPagesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensesPagesWithContext), varargs...)
 }
 
-// ListLensesRequest mocks base method
+// ListLensesRequest mocks base method.
 func (m *MockWellArchitectedAPI) ListLensesRequest(arg0 *wellarchitected.ListLensesInput) (*request.Request, *wellarchitected.ListLensesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLensesRequest", arg0)
@@ -991,13 +992,13 @@ func (m *MockWellArchitectedAPI) ListLensesRequest(arg0 *wellarchitected.ListLen
 	return ret0, ret1
 }
 
-// ListLensesRequest indicates an expected call of ListLensesRequest
+// ListLensesRequest indicates an expected call of ListLensesRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensesRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensesRequest), arg0)
 }
 
-// ListLensesWithContext mocks base method
+// ListLensesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListLensesWithContext(arg0 context.Context, arg1 *wellarchitected.ListLensesInput, arg2 ...request.Option) (*wellarchitected.ListLensesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1010,14 +1011,14 @@ func (m *MockWellArchitectedAPI) ListLensesWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListLensesWithContext indicates an expected call of ListLensesWithContext
+// ListLensesWithContext indicates an expected call of ListLensesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListLensesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLensesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListLensesWithContext), varargs...)
 }
 
-// ListMilestones mocks base method
+// ListMilestones mocks base method.
 func (m *MockWellArchitectedAPI) ListMilestones(arg0 *wellarchitected.ListMilestonesInput) (*wellarchitected.ListMilestonesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMilestones", arg0)
@@ -1026,13 +1027,13 @@ func (m *MockWellArchitectedAPI) ListMilestones(arg0 *wellarchitected.ListMilest
 	return ret0, ret1
 }
 
-// ListMilestones indicates an expected call of ListMilestones
+// ListMilestones indicates an expected call of ListMilestones.
 func (mr *MockWellArchitectedAPIMockRecorder) ListMilestones(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMilestones", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListMilestones), arg0)
 }
 
-// ListMilestonesPages mocks base method
+// ListMilestonesPages mocks base method.
 func (m *MockWellArchitectedAPI) ListMilestonesPages(arg0 *wellarchitected.ListMilestonesInput, arg1 func(*wellarchitected.ListMilestonesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMilestonesPages", arg0, arg1)
@@ -1040,13 +1041,13 @@ func (m *MockWellArchitectedAPI) ListMilestonesPages(arg0 *wellarchitected.ListM
 	return ret0
 }
 
-// ListMilestonesPages indicates an expected call of ListMilestonesPages
+// ListMilestonesPages indicates an expected call of ListMilestonesPages.
 func (mr *MockWellArchitectedAPIMockRecorder) ListMilestonesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMilestonesPages", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListMilestonesPages), arg0, arg1)
 }
 
-// ListMilestonesPagesWithContext mocks base method
+// ListMilestonesPagesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListMilestonesPagesWithContext(arg0 context.Context, arg1 *wellarchitected.ListMilestonesInput, arg2 func(*wellarchitected.ListMilestonesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1058,14 +1059,14 @@ func (m *MockWellArchitectedAPI) ListMilestonesPagesWithContext(arg0 context.Con
 	return ret0
 }
 
-// ListMilestonesPagesWithContext indicates an expected call of ListMilestonesPagesWithContext
+// ListMilestonesPagesWithContext indicates an expected call of ListMilestonesPagesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListMilestonesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMilestonesPagesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListMilestonesPagesWithContext), varargs...)
 }
 
-// ListMilestonesRequest mocks base method
+// ListMilestonesRequest mocks base method.
 func (m *MockWellArchitectedAPI) ListMilestonesRequest(arg0 *wellarchitected.ListMilestonesInput) (*request.Request, *wellarchitected.ListMilestonesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMilestonesRequest", arg0)
@@ -1074,13 +1075,13 @@ func (m *MockWellArchitectedAPI) ListMilestonesRequest(arg0 *wellarchitected.Lis
 	return ret0, ret1
 }
 
-// ListMilestonesRequest indicates an expected call of ListMilestonesRequest
+// ListMilestonesRequest indicates an expected call of ListMilestonesRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) ListMilestonesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMilestonesRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListMilestonesRequest), arg0)
 }
 
-// ListMilestonesWithContext mocks base method
+// ListMilestonesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListMilestonesWithContext(arg0 context.Context, arg1 *wellarchitected.ListMilestonesInput, arg2 ...request.Option) (*wellarchitected.ListMilestonesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1093,14 +1094,14 @@ func (m *MockWellArchitectedAPI) ListMilestonesWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// ListMilestonesWithContext indicates an expected call of ListMilestonesWithContext
+// ListMilestonesWithContext indicates an expected call of ListMilestonesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListMilestonesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMilestonesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListMilestonesWithContext), varargs...)
 }
 
-// ListNotifications mocks base method
+// ListNotifications mocks base method.
 func (m *MockWellArchitectedAPI) ListNotifications(arg0 *wellarchitected.ListNotificationsInput) (*wellarchitected.ListNotificationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListNotifications", arg0)
@@ -1109,13 +1110,13 @@ func (m *MockWellArchitectedAPI) ListNotifications(arg0 *wellarchitected.ListNot
 	return ret0, ret1
 }
 
-// ListNotifications indicates an expected call of ListNotifications
+// ListNotifications indicates an expected call of ListNotifications.
 func (mr *MockWellArchitectedAPIMockRecorder) ListNotifications(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNotifications", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListNotifications), arg0)
 }
 
-// ListNotificationsPages mocks base method
+// ListNotificationsPages mocks base method.
 func (m *MockWellArchitectedAPI) ListNotificationsPages(arg0 *wellarchitected.ListNotificationsInput, arg1 func(*wellarchitected.ListNotificationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListNotificationsPages", arg0, arg1)
@@ -1123,13 +1124,13 @@ func (m *MockWellArchitectedAPI) ListNotificationsPages(arg0 *wellarchitected.Li
 	return ret0
 }
 
-// ListNotificationsPages indicates an expected call of ListNotificationsPages
+// ListNotificationsPages indicates an expected call of ListNotificationsPages.
 func (mr *MockWellArchitectedAPIMockRecorder) ListNotificationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNotificationsPages", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListNotificationsPages), arg0, arg1)
 }
 
-// ListNotificationsPagesWithContext mocks base method
+// ListNotificationsPagesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListNotificationsPagesWithContext(arg0 context.Context, arg1 *wellarchitected.ListNotificationsInput, arg2 func(*wellarchitected.ListNotificationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1141,14 +1142,14 @@ func (m *MockWellArchitectedAPI) ListNotificationsPagesWithContext(arg0 context.
 	return ret0
 }
 
-// ListNotificationsPagesWithContext indicates an expected call of ListNotificationsPagesWithContext
+// ListNotificationsPagesWithContext indicates an expected call of ListNotificationsPagesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListNotificationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNotificationsPagesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListNotificationsPagesWithContext), varargs...)
 }
 
-// ListNotificationsRequest mocks base method
+// ListNotificationsRequest mocks base method.
 func (m *MockWellArchitectedAPI) ListNotificationsRequest(arg0 *wellarchitected.ListNotificationsInput) (*request.Request, *wellarchitected.ListNotificationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListNotificationsRequest", arg0)
@@ -1157,13 +1158,13 @@ func (m *MockWellArchitectedAPI) ListNotificationsRequest(arg0 *wellarchitected.
 	return ret0, ret1
 }
 
-// ListNotificationsRequest indicates an expected call of ListNotificationsRequest
+// ListNotificationsRequest indicates an expected call of ListNotificationsRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) ListNotificationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNotificationsRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListNotificationsRequest), arg0)
 }
 
-// ListNotificationsWithContext mocks base method
+// ListNotificationsWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListNotificationsWithContext(arg0 context.Context, arg1 *wellarchitected.ListNotificationsInput, arg2 ...request.Option) (*wellarchitected.ListNotificationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1176,14 +1177,14 @@ func (m *MockWellArchitectedAPI) ListNotificationsWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListNotificationsWithContext indicates an expected call of ListNotificationsWithContext
+// ListNotificationsWithContext indicates an expected call of ListNotificationsWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListNotificationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListNotificationsWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListNotificationsWithContext), varargs...)
 }
 
-// ListShareInvitations mocks base method
+// ListShareInvitations mocks base method.
 func (m *MockWellArchitectedAPI) ListShareInvitations(arg0 *wellarchitected.ListShareInvitationsInput) (*wellarchitected.ListShareInvitationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListShareInvitations", arg0)
@@ -1192,13 +1193,13 @@ func (m *MockWellArchitectedAPI) ListShareInvitations(arg0 *wellarchitected.List
 	return ret0, ret1
 }
 
-// ListShareInvitations indicates an expected call of ListShareInvitations
+// ListShareInvitations indicates an expected call of ListShareInvitations.
 func (mr *MockWellArchitectedAPIMockRecorder) ListShareInvitations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListShareInvitations", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListShareInvitations), arg0)
 }
 
-// ListShareInvitationsPages mocks base method
+// ListShareInvitationsPages mocks base method.
 func (m *MockWellArchitectedAPI) ListShareInvitationsPages(arg0 *wellarchitected.ListShareInvitationsInput, arg1 func(*wellarchitected.ListShareInvitationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListShareInvitationsPages", arg0, arg1)
@@ -1206,13 +1207,13 @@ func (m *MockWellArchitectedAPI) ListShareInvitationsPages(arg0 *wellarchitected
 	return ret0
 }
 
-// ListShareInvitationsPages indicates an expected call of ListShareInvitationsPages
+// ListShareInvitationsPages indicates an expected call of ListShareInvitationsPages.
 func (mr *MockWellArchitectedAPIMockRecorder) ListShareInvitationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListShareInvitationsPages", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListShareInvitationsPages), arg0, arg1)
 }
 
-// ListShareInvitationsPagesWithContext mocks base method
+// ListShareInvitationsPagesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListShareInvitationsPagesWithContext(arg0 context.Context, arg1 *wellarchitected.ListShareInvitationsInput, arg2 func(*wellarchitected.ListShareInvitationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1224,14 +1225,14 @@ func (m *MockWellArchitectedAPI) ListShareInvitationsPagesWithContext(arg0 conte
 	return ret0
 }
 
-// ListShareInvitationsPagesWithContext indicates an expected call of ListShareInvitationsPagesWithContext
+// ListShareInvitationsPagesWithContext indicates an expected call of ListShareInvitationsPagesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListShareInvitationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListShareInvitationsPagesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListShareInvitationsPagesWithContext), varargs...)
 }
 
-// ListShareInvitationsRequest mocks base method
+// ListShareInvitationsRequest mocks base method.
 func (m *MockWellArchitectedAPI) ListShareInvitationsRequest(arg0 *wellarchitected.ListShareInvitationsInput) (*request.Request, *wellarchitected.ListShareInvitationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListShareInvitationsRequest", arg0)
@@ -1240,13 +1241,13 @@ func (m *MockWellArchitectedAPI) ListShareInvitationsRequest(arg0 *wellarchitect
 	return ret0, ret1
 }
 
-// ListShareInvitationsRequest indicates an expected call of ListShareInvitationsRequest
+// ListShareInvitationsRequest indicates an expected call of ListShareInvitationsRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) ListShareInvitationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListShareInvitationsRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListShareInvitationsRequest), arg0)
 }
 
-// ListShareInvitationsWithContext mocks base method
+// ListShareInvitationsWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListShareInvitationsWithContext(arg0 context.Context, arg1 *wellarchitected.ListShareInvitationsInput, arg2 ...request.Option) (*wellarchitected.ListShareInvitationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1259,14 +1260,64 @@ func (m *MockWellArchitectedAPI) ListShareInvitationsWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListShareInvitationsWithContext indicates an expected call of ListShareInvitationsWithContext
+// ListShareInvitationsWithContext indicates an expected call of ListShareInvitationsWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListShareInvitationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListShareInvitationsWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListShareInvitationsWithContext), varargs...)
 }
 
-// ListWorkloadShares mocks base method
+// ListTagsForResource mocks base method.
+func (m *MockWellArchitectedAPI) ListTagsForResource(arg0 *wellarchitected.ListTagsForResourceInput) (*wellarchitected.ListTagsForResourceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
+	ret0, _ := ret[0].(*wellarchitected.ListTagsForResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListTagsForResource indicates an expected call of ListTagsForResource.
+func (mr *MockWellArchitectedAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListTagsForResource), arg0)
+}
+
+// ListTagsForResourceRequest mocks base method.
+func (m *MockWellArchitectedAPI) ListTagsForResourceRequest(arg0 *wellarchitected.ListTagsForResourceInput) (*request.Request, *wellarchitected.ListTagsForResourceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*wellarchitected.ListTagsForResourceOutput)
+	return ret0, ret1
+}
+
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
+func (mr *MockWellArchitectedAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListTagsForResourceRequest), arg0)
+}
+
+// ListTagsForResourceWithContext mocks base method.
+func (m *MockWellArchitectedAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *wellarchitected.ListTagsForResourceInput, arg2 ...request.Option) (*wellarchitected.ListTagsForResourceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListTagsForResourceWithContext", varargs...)
+	ret0, _ := ret[0].(*wellarchitected.ListTagsForResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
+func (mr *MockWellArchitectedAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListTagsForResourceWithContext), varargs...)
+}
+
+// ListWorkloadShares mocks base method.
 func (m *MockWellArchitectedAPI) ListWorkloadShares(arg0 *wellarchitected.ListWorkloadSharesInput) (*wellarchitected.ListWorkloadSharesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkloadShares", arg0)
@@ -1275,13 +1326,13 @@ func (m *MockWellArchitectedAPI) ListWorkloadShares(arg0 *wellarchitected.ListWo
 	return ret0, ret1
 }
 
-// ListWorkloadShares indicates an expected call of ListWorkloadShares
+// ListWorkloadShares indicates an expected call of ListWorkloadShares.
 func (mr *MockWellArchitectedAPIMockRecorder) ListWorkloadShares(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkloadShares", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListWorkloadShares), arg0)
 }
 
-// ListWorkloadSharesPages mocks base method
+// ListWorkloadSharesPages mocks base method.
 func (m *MockWellArchitectedAPI) ListWorkloadSharesPages(arg0 *wellarchitected.ListWorkloadSharesInput, arg1 func(*wellarchitected.ListWorkloadSharesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkloadSharesPages", arg0, arg1)
@@ -1289,13 +1340,13 @@ func (m *MockWellArchitectedAPI) ListWorkloadSharesPages(arg0 *wellarchitected.L
 	return ret0
 }
 
-// ListWorkloadSharesPages indicates an expected call of ListWorkloadSharesPages
+// ListWorkloadSharesPages indicates an expected call of ListWorkloadSharesPages.
 func (mr *MockWellArchitectedAPIMockRecorder) ListWorkloadSharesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkloadSharesPages", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListWorkloadSharesPages), arg0, arg1)
 }
 
-// ListWorkloadSharesPagesWithContext mocks base method
+// ListWorkloadSharesPagesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListWorkloadSharesPagesWithContext(arg0 context.Context, arg1 *wellarchitected.ListWorkloadSharesInput, arg2 func(*wellarchitected.ListWorkloadSharesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1307,14 +1358,14 @@ func (m *MockWellArchitectedAPI) ListWorkloadSharesPagesWithContext(arg0 context
 	return ret0
 }
 
-// ListWorkloadSharesPagesWithContext indicates an expected call of ListWorkloadSharesPagesWithContext
+// ListWorkloadSharesPagesWithContext indicates an expected call of ListWorkloadSharesPagesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListWorkloadSharesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkloadSharesPagesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListWorkloadSharesPagesWithContext), varargs...)
 }
 
-// ListWorkloadSharesRequest mocks base method
+// ListWorkloadSharesRequest mocks base method.
 func (m *MockWellArchitectedAPI) ListWorkloadSharesRequest(arg0 *wellarchitected.ListWorkloadSharesInput) (*request.Request, *wellarchitected.ListWorkloadSharesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkloadSharesRequest", arg0)
@@ -1323,13 +1374,13 @@ func (m *MockWellArchitectedAPI) ListWorkloadSharesRequest(arg0 *wellarchitected
 	return ret0, ret1
 }
 
-// ListWorkloadSharesRequest indicates an expected call of ListWorkloadSharesRequest
+// ListWorkloadSharesRequest indicates an expected call of ListWorkloadSharesRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) ListWorkloadSharesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkloadSharesRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListWorkloadSharesRequest), arg0)
 }
 
-// ListWorkloadSharesWithContext mocks base method
+// ListWorkloadSharesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListWorkloadSharesWithContext(arg0 context.Context, arg1 *wellarchitected.ListWorkloadSharesInput, arg2 ...request.Option) (*wellarchitected.ListWorkloadSharesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1342,14 +1393,14 @@ func (m *MockWellArchitectedAPI) ListWorkloadSharesWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListWorkloadSharesWithContext indicates an expected call of ListWorkloadSharesWithContext
+// ListWorkloadSharesWithContext indicates an expected call of ListWorkloadSharesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListWorkloadSharesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkloadSharesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListWorkloadSharesWithContext), varargs...)
 }
 
-// ListWorkloads mocks base method
+// ListWorkloads mocks base method.
 func (m *MockWellArchitectedAPI) ListWorkloads(arg0 *wellarchitected.ListWorkloadsInput) (*wellarchitected.ListWorkloadsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkloads", arg0)
@@ -1358,13 +1409,13 @@ func (m *MockWellArchitectedAPI) ListWorkloads(arg0 *wellarchitected.ListWorkloa
 	return ret0, ret1
 }
 
-// ListWorkloads indicates an expected call of ListWorkloads
+// ListWorkloads indicates an expected call of ListWorkloads.
 func (mr *MockWellArchitectedAPIMockRecorder) ListWorkloads(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkloads", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListWorkloads), arg0)
 }
 
-// ListWorkloadsPages mocks base method
+// ListWorkloadsPages mocks base method.
 func (m *MockWellArchitectedAPI) ListWorkloadsPages(arg0 *wellarchitected.ListWorkloadsInput, arg1 func(*wellarchitected.ListWorkloadsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkloadsPages", arg0, arg1)
@@ -1372,13 +1423,13 @@ func (m *MockWellArchitectedAPI) ListWorkloadsPages(arg0 *wellarchitected.ListWo
 	return ret0
 }
 
-// ListWorkloadsPages indicates an expected call of ListWorkloadsPages
+// ListWorkloadsPages indicates an expected call of ListWorkloadsPages.
 func (mr *MockWellArchitectedAPIMockRecorder) ListWorkloadsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkloadsPages", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListWorkloadsPages), arg0, arg1)
 }
 
-// ListWorkloadsPagesWithContext mocks base method
+// ListWorkloadsPagesWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListWorkloadsPagesWithContext(arg0 context.Context, arg1 *wellarchitected.ListWorkloadsInput, arg2 func(*wellarchitected.ListWorkloadsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1390,14 +1441,14 @@ func (m *MockWellArchitectedAPI) ListWorkloadsPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListWorkloadsPagesWithContext indicates an expected call of ListWorkloadsPagesWithContext
+// ListWorkloadsPagesWithContext indicates an expected call of ListWorkloadsPagesWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListWorkloadsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkloadsPagesWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListWorkloadsPagesWithContext), varargs...)
 }
 
-// ListWorkloadsRequest mocks base method
+// ListWorkloadsRequest mocks base method.
 func (m *MockWellArchitectedAPI) ListWorkloadsRequest(arg0 *wellarchitected.ListWorkloadsInput) (*request.Request, *wellarchitected.ListWorkloadsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkloadsRequest", arg0)
@@ -1406,13 +1457,13 @@ func (m *MockWellArchitectedAPI) ListWorkloadsRequest(arg0 *wellarchitected.List
 	return ret0, ret1
 }
 
-// ListWorkloadsRequest indicates an expected call of ListWorkloadsRequest
+// ListWorkloadsRequest indicates an expected call of ListWorkloadsRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) ListWorkloadsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkloadsRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListWorkloadsRequest), arg0)
 }
 
-// ListWorkloadsWithContext mocks base method
+// ListWorkloadsWithContext mocks base method.
 func (m *MockWellArchitectedAPI) ListWorkloadsWithContext(arg0 context.Context, arg1 *wellarchitected.ListWorkloadsInput, arg2 ...request.Option) (*wellarchitected.ListWorkloadsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1425,14 +1476,114 @@ func (m *MockWellArchitectedAPI) ListWorkloadsWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListWorkloadsWithContext indicates an expected call of ListWorkloadsWithContext
+// ListWorkloadsWithContext indicates an expected call of ListWorkloadsWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) ListWorkloadsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkloadsWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).ListWorkloadsWithContext), varargs...)
 }
 
-// UpdateAnswer mocks base method
+// TagResource mocks base method.
+func (m *MockWellArchitectedAPI) TagResource(arg0 *wellarchitected.TagResourceInput) (*wellarchitected.TagResourceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "TagResource", arg0)
+	ret0, _ := ret[0].(*wellarchitected.TagResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// TagResource indicates an expected call of TagResource.
+func (mr *MockWellArchitectedAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockWellArchitectedAPI)(nil).TagResource), arg0)
+}
+
+// TagResourceRequest mocks base method.
+func (m *MockWellArchitectedAPI) TagResourceRequest(arg0 *wellarchitected.TagResourceInput) (*request.Request, *wellarchitected.TagResourceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*wellarchitected.TagResourceOutput)
+	return ret0, ret1
+}
+
+// TagResourceRequest indicates an expected call of TagResourceRequest.
+func (mr *MockWellArchitectedAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).TagResourceRequest), arg0)
+}
+
+// TagResourceWithContext mocks base method.
+func (m *MockWellArchitectedAPI) TagResourceWithContext(arg0 context.Context, arg1 *wellarchitected.TagResourceInput, arg2 ...request.Option) (*wellarchitected.TagResourceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "TagResourceWithContext", varargs...)
+	ret0, _ := ret[0].(*wellarchitected.TagResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
+func (mr *MockWellArchitectedAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).TagResourceWithContext), varargs...)
+}
+
+// UntagResource mocks base method.
+func (m *MockWellArchitectedAPI) UntagResource(arg0 *wellarchitected.UntagResourceInput) (*wellarchitected.UntagResourceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UntagResource", arg0)
+	ret0, _ := ret[0].(*wellarchitected.UntagResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UntagResource indicates an expected call of UntagResource.
+func (mr *MockWellArchitectedAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UntagResource), arg0)
+}
+
+// UntagResourceRequest mocks base method.
+func (m *MockWellArchitectedAPI) UntagResourceRequest(arg0 *wellarchitected.UntagResourceInput) (*request.Request, *wellarchitected.UntagResourceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*wellarchitected.UntagResourceOutput)
+	return ret0, ret1
+}
+
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
+func (mr *MockWellArchitectedAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UntagResourceRequest), arg0)
+}
+
+// UntagResourceWithContext mocks base method.
+func (m *MockWellArchitectedAPI) UntagResourceWithContext(arg0 context.Context, arg1 *wellarchitected.UntagResourceInput, arg2 ...request.Option) (*wellarchitected.UntagResourceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UntagResourceWithContext", varargs...)
+	ret0, _ := ret[0].(*wellarchitected.UntagResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
+func (mr *MockWellArchitectedAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UntagResourceWithContext), varargs...)
+}
+
+// UpdateAnswer mocks base method.
 func (m *MockWellArchitectedAPI) UpdateAnswer(arg0 *wellarchitected.UpdateAnswerInput) (*wellarchitected.UpdateAnswerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAnswer", arg0)
@@ -1441,13 +1592,13 @@ func (m *MockWellArchitectedAPI) UpdateAnswer(arg0 *wellarchitected.UpdateAnswer
 	return ret0, ret1
 }
 
-// UpdateAnswer indicates an expected call of UpdateAnswer
+// UpdateAnswer indicates an expected call of UpdateAnswer.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateAnswer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAnswer", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateAnswer), arg0)
 }
 
-// UpdateAnswerRequest mocks base method
+// UpdateAnswerRequest mocks base method.
 func (m *MockWellArchitectedAPI) UpdateAnswerRequest(arg0 *wellarchitected.UpdateAnswerInput) (*request.Request, *wellarchitected.UpdateAnswerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateAnswerRequest", arg0)
@@ -1456,13 +1607,13 @@ func (m *MockWellArchitectedAPI) UpdateAnswerRequest(arg0 *wellarchitected.Updat
 	return ret0, ret1
 }
 
-// UpdateAnswerRequest indicates an expected call of UpdateAnswerRequest
+// UpdateAnswerRequest indicates an expected call of UpdateAnswerRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateAnswerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAnswerRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateAnswerRequest), arg0)
 }
 
-// UpdateAnswerWithContext mocks base method
+// UpdateAnswerWithContext mocks base method.
 func (m *MockWellArchitectedAPI) UpdateAnswerWithContext(arg0 context.Context, arg1 *wellarchitected.UpdateAnswerInput, arg2 ...request.Option) (*wellarchitected.UpdateAnswerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1475,14 +1626,14 @@ func (m *MockWellArchitectedAPI) UpdateAnswerWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UpdateAnswerWithContext indicates an expected call of UpdateAnswerWithContext
+// UpdateAnswerWithContext indicates an expected call of UpdateAnswerWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateAnswerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAnswerWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateAnswerWithContext), varargs...)
 }
 
-// UpdateLensReview mocks base method
+// UpdateLensReview mocks base method.
 func (m *MockWellArchitectedAPI) UpdateLensReview(arg0 *wellarchitected.UpdateLensReviewInput) (*wellarchitected.UpdateLensReviewOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateLensReview", arg0)
@@ -1491,13 +1642,13 @@ func (m *MockWellArchitectedAPI) UpdateLensReview(arg0 *wellarchitected.UpdateLe
 	return ret0, ret1
 }
 
-// UpdateLensReview indicates an expected call of UpdateLensReview
+// UpdateLensReview indicates an expected call of UpdateLensReview.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateLensReview(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLensReview", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateLensReview), arg0)
 }
 
-// UpdateLensReviewRequest mocks base method
+// UpdateLensReviewRequest mocks base method.
 func (m *MockWellArchitectedAPI) UpdateLensReviewRequest(arg0 *wellarchitected.UpdateLensReviewInput) (*request.Request, *wellarchitected.UpdateLensReviewOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateLensReviewRequest", arg0)
@@ -1506,13 +1657,13 @@ func (m *MockWellArchitectedAPI) UpdateLensReviewRequest(arg0 *wellarchitected.U
 	return ret0, ret1
 }
 
-// UpdateLensReviewRequest indicates an expected call of UpdateLensReviewRequest
+// UpdateLensReviewRequest indicates an expected call of UpdateLensReviewRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateLensReviewRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLensReviewRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateLensReviewRequest), arg0)
 }
 
-// UpdateLensReviewWithContext mocks base method
+// UpdateLensReviewWithContext mocks base method.
 func (m *MockWellArchitectedAPI) UpdateLensReviewWithContext(arg0 context.Context, arg1 *wellarchitected.UpdateLensReviewInput, arg2 ...request.Option) (*wellarchitected.UpdateLensReviewOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1525,14 +1676,14 @@ func (m *MockWellArchitectedAPI) UpdateLensReviewWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// UpdateLensReviewWithContext indicates an expected call of UpdateLensReviewWithContext
+// UpdateLensReviewWithContext indicates an expected call of UpdateLensReviewWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateLensReviewWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLensReviewWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateLensReviewWithContext), varargs...)
 }
 
-// UpdateShareInvitation mocks base method
+// UpdateShareInvitation mocks base method.
 func (m *MockWellArchitectedAPI) UpdateShareInvitation(arg0 *wellarchitected.UpdateShareInvitationInput) (*wellarchitected.UpdateShareInvitationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateShareInvitation", arg0)
@@ -1541,13 +1692,13 @@ func (m *MockWellArchitectedAPI) UpdateShareInvitation(arg0 *wellarchitected.Upd
 	return ret0, ret1
 }
 
-// UpdateShareInvitation indicates an expected call of UpdateShareInvitation
+// UpdateShareInvitation indicates an expected call of UpdateShareInvitation.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateShareInvitation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateShareInvitation", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateShareInvitation), arg0)
 }
 
-// UpdateShareInvitationRequest mocks base method
+// UpdateShareInvitationRequest mocks base method.
 func (m *MockWellArchitectedAPI) UpdateShareInvitationRequest(arg0 *wellarchitected.UpdateShareInvitationInput) (*request.Request, *wellarchitected.UpdateShareInvitationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateShareInvitationRequest", arg0)
@@ -1556,13 +1707,13 @@ func (m *MockWellArchitectedAPI) UpdateShareInvitationRequest(arg0 *wellarchitec
 	return ret0, ret1
 }
 
-// UpdateShareInvitationRequest indicates an expected call of UpdateShareInvitationRequest
+// UpdateShareInvitationRequest indicates an expected call of UpdateShareInvitationRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateShareInvitationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateShareInvitationRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateShareInvitationRequest), arg0)
 }
 
-// UpdateShareInvitationWithContext mocks base method
+// UpdateShareInvitationWithContext mocks base method.
 func (m *MockWellArchitectedAPI) UpdateShareInvitationWithContext(arg0 context.Context, arg1 *wellarchitected.UpdateShareInvitationInput, arg2 ...request.Option) (*wellarchitected.UpdateShareInvitationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1575,14 +1726,14 @@ func (m *MockWellArchitectedAPI) UpdateShareInvitationWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// UpdateShareInvitationWithContext indicates an expected call of UpdateShareInvitationWithContext
+// UpdateShareInvitationWithContext indicates an expected call of UpdateShareInvitationWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateShareInvitationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateShareInvitationWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateShareInvitationWithContext), varargs...)
 }
 
-// UpdateWorkload mocks base method
+// UpdateWorkload mocks base method.
 func (m *MockWellArchitectedAPI) UpdateWorkload(arg0 *wellarchitected.UpdateWorkloadInput) (*wellarchitected.UpdateWorkloadOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateWorkload", arg0)
@@ -1591,13 +1742,13 @@ func (m *MockWellArchitectedAPI) UpdateWorkload(arg0 *wellarchitected.UpdateWork
 	return ret0, ret1
 }
 
-// UpdateWorkload indicates an expected call of UpdateWorkload
+// UpdateWorkload indicates an expected call of UpdateWorkload.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateWorkload(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWorkload", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateWorkload), arg0)
 }
 
-// UpdateWorkloadRequest mocks base method
+// UpdateWorkloadRequest mocks base method.
 func (m *MockWellArchitectedAPI) UpdateWorkloadRequest(arg0 *wellarchitected.UpdateWorkloadInput) (*request.Request, *wellarchitected.UpdateWorkloadOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateWorkloadRequest", arg0)
@@ -1606,13 +1757,13 @@ func (m *MockWellArchitectedAPI) UpdateWorkloadRequest(arg0 *wellarchitected.Upd
 	return ret0, ret1
 }
 
-// UpdateWorkloadRequest indicates an expected call of UpdateWorkloadRequest
+// UpdateWorkloadRequest indicates an expected call of UpdateWorkloadRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateWorkloadRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWorkloadRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateWorkloadRequest), arg0)
 }
 
-// UpdateWorkloadShare mocks base method
+// UpdateWorkloadShare mocks base method.
 func (m *MockWellArchitectedAPI) UpdateWorkloadShare(arg0 *wellarchitected.UpdateWorkloadShareInput) (*wellarchitected.UpdateWorkloadShareOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateWorkloadShare", arg0)
@@ -1621,13 +1772,13 @@ func (m *MockWellArchitectedAPI) UpdateWorkloadShare(arg0 *wellarchitected.Updat
 	return ret0, ret1
 }
 
-// UpdateWorkloadShare indicates an expected call of UpdateWorkloadShare
+// UpdateWorkloadShare indicates an expected call of UpdateWorkloadShare.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateWorkloadShare(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWorkloadShare", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateWorkloadShare), arg0)
 }
 
-// UpdateWorkloadShareRequest mocks base method
+// UpdateWorkloadShareRequest mocks base method.
 func (m *MockWellArchitectedAPI) UpdateWorkloadShareRequest(arg0 *wellarchitected.UpdateWorkloadShareInput) (*request.Request, *wellarchitected.UpdateWorkloadShareOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateWorkloadShareRequest", arg0)
@@ -1636,13 +1787,13 @@ func (m *MockWellArchitectedAPI) UpdateWorkloadShareRequest(arg0 *wellarchitecte
 	return ret0, ret1
 }
 
-// UpdateWorkloadShareRequest indicates an expected call of UpdateWorkloadShareRequest
+// UpdateWorkloadShareRequest indicates an expected call of UpdateWorkloadShareRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateWorkloadShareRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWorkloadShareRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateWorkloadShareRequest), arg0)
 }
 
-// UpdateWorkloadShareWithContext mocks base method
+// UpdateWorkloadShareWithContext mocks base method.
 func (m *MockWellArchitectedAPI) UpdateWorkloadShareWithContext(arg0 context.Context, arg1 *wellarchitected.UpdateWorkloadShareInput, arg2 ...request.Option) (*wellarchitected.UpdateWorkloadShareOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1655,14 +1806,14 @@ func (m *MockWellArchitectedAPI) UpdateWorkloadShareWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// UpdateWorkloadShareWithContext indicates an expected call of UpdateWorkloadShareWithContext
+// UpdateWorkloadShareWithContext indicates an expected call of UpdateWorkloadShareWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateWorkloadShareWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWorkloadShareWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateWorkloadShareWithContext), varargs...)
 }
 
-// UpdateWorkloadWithContext mocks base method
+// UpdateWorkloadWithContext mocks base method.
 func (m *MockWellArchitectedAPI) UpdateWorkloadWithContext(arg0 context.Context, arg1 *wellarchitected.UpdateWorkloadInput, arg2 ...request.Option) (*wellarchitected.UpdateWorkloadOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1675,14 +1826,14 @@ func (m *MockWellArchitectedAPI) UpdateWorkloadWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// UpdateWorkloadWithContext indicates an expected call of UpdateWorkloadWithContext
+// UpdateWorkloadWithContext indicates an expected call of UpdateWorkloadWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) UpdateWorkloadWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWorkloadWithContext", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpdateWorkloadWithContext), varargs...)
 }
 
-// UpgradeLensReview mocks base method
+// UpgradeLensReview mocks base method.
 func (m *MockWellArchitectedAPI) UpgradeLensReview(arg0 *wellarchitected.UpgradeLensReviewInput) (*wellarchitected.UpgradeLensReviewOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpgradeLensReview", arg0)
@@ -1691,13 +1842,13 @@ func (m *MockWellArchitectedAPI) UpgradeLensReview(arg0 *wellarchitected.Upgrade
 	return ret0, ret1
 }
 
-// UpgradeLensReview indicates an expected call of UpgradeLensReview
+// UpgradeLensReview indicates an expected call of UpgradeLensReview.
 func (mr *MockWellArchitectedAPIMockRecorder) UpgradeLensReview(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpgradeLensReview", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpgradeLensReview), arg0)
 }
 
-// UpgradeLensReviewRequest mocks base method
+// UpgradeLensReviewRequest mocks base method.
 func (m *MockWellArchitectedAPI) UpgradeLensReviewRequest(arg0 *wellarchitected.UpgradeLensReviewInput) (*request.Request, *wellarchitected.UpgradeLensReviewOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpgradeLensReviewRequest", arg0)
@@ -1706,13 +1857,13 @@ func (m *MockWellArchitectedAPI) UpgradeLensReviewRequest(arg0 *wellarchitected.
 	return ret0, ret1
 }
 
-// UpgradeLensReviewRequest indicates an expected call of UpgradeLensReviewRequest
+// UpgradeLensReviewRequest indicates an expected call of UpgradeLensReviewRequest.
 func (mr *MockWellArchitectedAPIMockRecorder) UpgradeLensReviewRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpgradeLensReviewRequest", reflect.TypeOf((*MockWellArchitectedAPI)(nil).UpgradeLensReviewRequest), arg0)
 }
 
-// UpgradeLensReviewWithContext mocks base method
+// UpgradeLensReviewWithContext mocks base method.
 func (m *MockWellArchitectedAPI) UpgradeLensReviewWithContext(arg0 context.Context, arg1 *wellarchitected.UpgradeLensReviewInput, arg2 ...request.Option) (*wellarchitected.UpgradeLensReviewOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1725,7 +1876,7 @@ func (m *MockWellArchitectedAPI) UpgradeLensReviewWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// UpgradeLensReviewWithContext indicates an expected call of UpgradeLensReviewWithContext
+// UpgradeLensReviewWithContext indicates an expected call of UpgradeLensReviewWithContext.
 func (mr *MockWellArchitectedAPIMockRecorder) UpgradeLensReviewWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

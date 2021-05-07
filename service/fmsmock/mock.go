@@ -6,36 +6,37 @@ package fmsmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	fms "github.com/aws/aws-sdk-go/service/fms"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockFMSAPI is a mock of FMSAPI interface
+// MockFMSAPI is a mock of FMSAPI interface.
 type MockFMSAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockFMSAPIMockRecorder
 }
 
-// MockFMSAPIMockRecorder is the mock recorder for MockFMSAPI
+// MockFMSAPIMockRecorder is the mock recorder for MockFMSAPI.
 type MockFMSAPIMockRecorder struct {
 	mock *MockFMSAPI
 }
 
-// NewMockFMSAPI creates a new mock instance
+// NewMockFMSAPI creates a new mock instance.
 func NewMockFMSAPI(ctrl *gomock.Controller) *MockFMSAPI {
 	mock := &MockFMSAPI{ctrl: ctrl}
 	mock.recorder = &MockFMSAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockFMSAPI) EXPECT() *MockFMSAPIMockRecorder {
 	return m.recorder
 }
 
-// AssociateAdminAccount mocks base method
+// AssociateAdminAccount mocks base method.
 func (m *MockFMSAPI) AssociateAdminAccount(arg0 *fms.AssociateAdminAccountInput) (*fms.AssociateAdminAccountOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateAdminAccount", arg0)
@@ -44,13 +45,13 @@ func (m *MockFMSAPI) AssociateAdminAccount(arg0 *fms.AssociateAdminAccountInput)
 	return ret0, ret1
 }
 
-// AssociateAdminAccount indicates an expected call of AssociateAdminAccount
+// AssociateAdminAccount indicates an expected call of AssociateAdminAccount.
 func (mr *MockFMSAPIMockRecorder) AssociateAdminAccount(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateAdminAccount", reflect.TypeOf((*MockFMSAPI)(nil).AssociateAdminAccount), arg0)
 }
 
-// AssociateAdminAccountRequest mocks base method
+// AssociateAdminAccountRequest mocks base method.
 func (m *MockFMSAPI) AssociateAdminAccountRequest(arg0 *fms.AssociateAdminAccountInput) (*request.Request, *fms.AssociateAdminAccountOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateAdminAccountRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockFMSAPI) AssociateAdminAccountRequest(arg0 *fms.AssociateAdminAccoun
 	return ret0, ret1
 }
 
-// AssociateAdminAccountRequest indicates an expected call of AssociateAdminAccountRequest
+// AssociateAdminAccountRequest indicates an expected call of AssociateAdminAccountRequest.
 func (mr *MockFMSAPIMockRecorder) AssociateAdminAccountRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateAdminAccountRequest", reflect.TypeOf((*MockFMSAPI)(nil).AssociateAdminAccountRequest), arg0)
 }
 
-// AssociateAdminAccountWithContext mocks base method
+// AssociateAdminAccountWithContext mocks base method.
 func (m *MockFMSAPI) AssociateAdminAccountWithContext(arg0 context.Context, arg1 *fms.AssociateAdminAccountInput, arg2 ...request.Option) (*fms.AssociateAdminAccountOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockFMSAPI) AssociateAdminAccountWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// AssociateAdminAccountWithContext indicates an expected call of AssociateAdminAccountWithContext
+// AssociateAdminAccountWithContext indicates an expected call of AssociateAdminAccountWithContext.
 func (mr *MockFMSAPIMockRecorder) AssociateAdminAccountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateAdminAccountWithContext", reflect.TypeOf((*MockFMSAPI)(nil).AssociateAdminAccountWithContext), varargs...)
 }
 
-// DeleteAppsList mocks base method
+// DeleteAppsList mocks base method.
 func (m *MockFMSAPI) DeleteAppsList(arg0 *fms.DeleteAppsListInput) (*fms.DeleteAppsListOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAppsList", arg0)
@@ -94,13 +95,13 @@ func (m *MockFMSAPI) DeleteAppsList(arg0 *fms.DeleteAppsListInput) (*fms.DeleteA
 	return ret0, ret1
 }
 
-// DeleteAppsList indicates an expected call of DeleteAppsList
+// DeleteAppsList indicates an expected call of DeleteAppsList.
 func (mr *MockFMSAPIMockRecorder) DeleteAppsList(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAppsList", reflect.TypeOf((*MockFMSAPI)(nil).DeleteAppsList), arg0)
 }
 
-// DeleteAppsListRequest mocks base method
+// DeleteAppsListRequest mocks base method.
 func (m *MockFMSAPI) DeleteAppsListRequest(arg0 *fms.DeleteAppsListInput) (*request.Request, *fms.DeleteAppsListOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteAppsListRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockFMSAPI) DeleteAppsListRequest(arg0 *fms.DeleteAppsListInput) (*requ
 	return ret0, ret1
 }
 
-// DeleteAppsListRequest indicates an expected call of DeleteAppsListRequest
+// DeleteAppsListRequest indicates an expected call of DeleteAppsListRequest.
 func (mr *MockFMSAPIMockRecorder) DeleteAppsListRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAppsListRequest", reflect.TypeOf((*MockFMSAPI)(nil).DeleteAppsListRequest), arg0)
 }
 
-// DeleteAppsListWithContext mocks base method
+// DeleteAppsListWithContext mocks base method.
 func (m *MockFMSAPI) DeleteAppsListWithContext(arg0 context.Context, arg1 *fms.DeleteAppsListInput, arg2 ...request.Option) (*fms.DeleteAppsListOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockFMSAPI) DeleteAppsListWithContext(arg0 context.Context, arg1 *fms.D
 	return ret0, ret1
 }
 
-// DeleteAppsListWithContext indicates an expected call of DeleteAppsListWithContext
+// DeleteAppsListWithContext indicates an expected call of DeleteAppsListWithContext.
 func (mr *MockFMSAPIMockRecorder) DeleteAppsListWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAppsListWithContext", reflect.TypeOf((*MockFMSAPI)(nil).DeleteAppsListWithContext), varargs...)
 }
 
-// DeleteNotificationChannel mocks base method
+// DeleteNotificationChannel mocks base method.
 func (m *MockFMSAPI) DeleteNotificationChannel(arg0 *fms.DeleteNotificationChannelInput) (*fms.DeleteNotificationChannelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteNotificationChannel", arg0)
@@ -144,13 +145,13 @@ func (m *MockFMSAPI) DeleteNotificationChannel(arg0 *fms.DeleteNotificationChann
 	return ret0, ret1
 }
 
-// DeleteNotificationChannel indicates an expected call of DeleteNotificationChannel
+// DeleteNotificationChannel indicates an expected call of DeleteNotificationChannel.
 func (mr *MockFMSAPIMockRecorder) DeleteNotificationChannel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteNotificationChannel", reflect.TypeOf((*MockFMSAPI)(nil).DeleteNotificationChannel), arg0)
 }
 
-// DeleteNotificationChannelRequest mocks base method
+// DeleteNotificationChannelRequest mocks base method.
 func (m *MockFMSAPI) DeleteNotificationChannelRequest(arg0 *fms.DeleteNotificationChannelInput) (*request.Request, *fms.DeleteNotificationChannelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteNotificationChannelRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockFMSAPI) DeleteNotificationChannelRequest(arg0 *fms.DeleteNotificati
 	return ret0, ret1
 }
 
-// DeleteNotificationChannelRequest indicates an expected call of DeleteNotificationChannelRequest
+// DeleteNotificationChannelRequest indicates an expected call of DeleteNotificationChannelRequest.
 func (mr *MockFMSAPIMockRecorder) DeleteNotificationChannelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteNotificationChannelRequest", reflect.TypeOf((*MockFMSAPI)(nil).DeleteNotificationChannelRequest), arg0)
 }
 
-// DeleteNotificationChannelWithContext mocks base method
+// DeleteNotificationChannelWithContext mocks base method.
 func (m *MockFMSAPI) DeleteNotificationChannelWithContext(arg0 context.Context, arg1 *fms.DeleteNotificationChannelInput, arg2 ...request.Option) (*fms.DeleteNotificationChannelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockFMSAPI) DeleteNotificationChannelWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// DeleteNotificationChannelWithContext indicates an expected call of DeleteNotificationChannelWithContext
+// DeleteNotificationChannelWithContext indicates an expected call of DeleteNotificationChannelWithContext.
 func (mr *MockFMSAPIMockRecorder) DeleteNotificationChannelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteNotificationChannelWithContext", reflect.TypeOf((*MockFMSAPI)(nil).DeleteNotificationChannelWithContext), varargs...)
 }
 
-// DeletePolicy mocks base method
+// DeletePolicy mocks base method.
 func (m *MockFMSAPI) DeletePolicy(arg0 *fms.DeletePolicyInput) (*fms.DeletePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeletePolicy", arg0)
@@ -194,13 +195,13 @@ func (m *MockFMSAPI) DeletePolicy(arg0 *fms.DeletePolicyInput) (*fms.DeletePolic
 	return ret0, ret1
 }
 
-// DeletePolicy indicates an expected call of DeletePolicy
+// DeletePolicy indicates an expected call of DeletePolicy.
 func (mr *MockFMSAPIMockRecorder) DeletePolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePolicy", reflect.TypeOf((*MockFMSAPI)(nil).DeletePolicy), arg0)
 }
 
-// DeletePolicyRequest mocks base method
+// DeletePolicyRequest mocks base method.
 func (m *MockFMSAPI) DeletePolicyRequest(arg0 *fms.DeletePolicyInput) (*request.Request, *fms.DeletePolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeletePolicyRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockFMSAPI) DeletePolicyRequest(arg0 *fms.DeletePolicyInput) (*request.
 	return ret0, ret1
 }
 
-// DeletePolicyRequest indicates an expected call of DeletePolicyRequest
+// DeletePolicyRequest indicates an expected call of DeletePolicyRequest.
 func (mr *MockFMSAPIMockRecorder) DeletePolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePolicyRequest", reflect.TypeOf((*MockFMSAPI)(nil).DeletePolicyRequest), arg0)
 }
 
-// DeletePolicyWithContext mocks base method
+// DeletePolicyWithContext mocks base method.
 func (m *MockFMSAPI) DeletePolicyWithContext(arg0 context.Context, arg1 *fms.DeletePolicyInput, arg2 ...request.Option) (*fms.DeletePolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockFMSAPI) DeletePolicyWithContext(arg0 context.Context, arg1 *fms.Del
 	return ret0, ret1
 }
 
-// DeletePolicyWithContext indicates an expected call of DeletePolicyWithContext
+// DeletePolicyWithContext indicates an expected call of DeletePolicyWithContext.
 func (mr *MockFMSAPIMockRecorder) DeletePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeletePolicyWithContext", reflect.TypeOf((*MockFMSAPI)(nil).DeletePolicyWithContext), varargs...)
 }
 
-// DeleteProtocolsList mocks base method
+// DeleteProtocolsList mocks base method.
 func (m *MockFMSAPI) DeleteProtocolsList(arg0 *fms.DeleteProtocolsListInput) (*fms.DeleteProtocolsListOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProtocolsList", arg0)
@@ -244,13 +245,13 @@ func (m *MockFMSAPI) DeleteProtocolsList(arg0 *fms.DeleteProtocolsListInput) (*f
 	return ret0, ret1
 }
 
-// DeleteProtocolsList indicates an expected call of DeleteProtocolsList
+// DeleteProtocolsList indicates an expected call of DeleteProtocolsList.
 func (mr *MockFMSAPIMockRecorder) DeleteProtocolsList(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProtocolsList", reflect.TypeOf((*MockFMSAPI)(nil).DeleteProtocolsList), arg0)
 }
 
-// DeleteProtocolsListRequest mocks base method
+// DeleteProtocolsListRequest mocks base method.
 func (m *MockFMSAPI) DeleteProtocolsListRequest(arg0 *fms.DeleteProtocolsListInput) (*request.Request, *fms.DeleteProtocolsListOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteProtocolsListRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockFMSAPI) DeleteProtocolsListRequest(arg0 *fms.DeleteProtocolsListInp
 	return ret0, ret1
 }
 
-// DeleteProtocolsListRequest indicates an expected call of DeleteProtocolsListRequest
+// DeleteProtocolsListRequest indicates an expected call of DeleteProtocolsListRequest.
 func (mr *MockFMSAPIMockRecorder) DeleteProtocolsListRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProtocolsListRequest", reflect.TypeOf((*MockFMSAPI)(nil).DeleteProtocolsListRequest), arg0)
 }
 
-// DeleteProtocolsListWithContext mocks base method
+// DeleteProtocolsListWithContext mocks base method.
 func (m *MockFMSAPI) DeleteProtocolsListWithContext(arg0 context.Context, arg1 *fms.DeleteProtocolsListInput, arg2 ...request.Option) (*fms.DeleteProtocolsListOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockFMSAPI) DeleteProtocolsListWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DeleteProtocolsListWithContext indicates an expected call of DeleteProtocolsListWithContext
+// DeleteProtocolsListWithContext indicates an expected call of DeleteProtocolsListWithContext.
 func (mr *MockFMSAPIMockRecorder) DeleteProtocolsListWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProtocolsListWithContext", reflect.TypeOf((*MockFMSAPI)(nil).DeleteProtocolsListWithContext), varargs...)
 }
 
-// DisassociateAdminAccount mocks base method
+// DisassociateAdminAccount mocks base method.
 func (m *MockFMSAPI) DisassociateAdminAccount(arg0 *fms.DisassociateAdminAccountInput) (*fms.DisassociateAdminAccountOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateAdminAccount", arg0)
@@ -294,13 +295,13 @@ func (m *MockFMSAPI) DisassociateAdminAccount(arg0 *fms.DisassociateAdminAccount
 	return ret0, ret1
 }
 
-// DisassociateAdminAccount indicates an expected call of DisassociateAdminAccount
+// DisassociateAdminAccount indicates an expected call of DisassociateAdminAccount.
 func (mr *MockFMSAPIMockRecorder) DisassociateAdminAccount(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateAdminAccount", reflect.TypeOf((*MockFMSAPI)(nil).DisassociateAdminAccount), arg0)
 }
 
-// DisassociateAdminAccountRequest mocks base method
+// DisassociateAdminAccountRequest mocks base method.
 func (m *MockFMSAPI) DisassociateAdminAccountRequest(arg0 *fms.DisassociateAdminAccountInput) (*request.Request, *fms.DisassociateAdminAccountOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateAdminAccountRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockFMSAPI) DisassociateAdminAccountRequest(arg0 *fms.DisassociateAdmin
 	return ret0, ret1
 }
 
-// DisassociateAdminAccountRequest indicates an expected call of DisassociateAdminAccountRequest
+// DisassociateAdminAccountRequest indicates an expected call of DisassociateAdminAccountRequest.
 func (mr *MockFMSAPIMockRecorder) DisassociateAdminAccountRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateAdminAccountRequest", reflect.TypeOf((*MockFMSAPI)(nil).DisassociateAdminAccountRequest), arg0)
 }
 
-// DisassociateAdminAccountWithContext mocks base method
+// DisassociateAdminAccountWithContext mocks base method.
 func (m *MockFMSAPI) DisassociateAdminAccountWithContext(arg0 context.Context, arg1 *fms.DisassociateAdminAccountInput, arg2 ...request.Option) (*fms.DisassociateAdminAccountOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockFMSAPI) DisassociateAdminAccountWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DisassociateAdminAccountWithContext indicates an expected call of DisassociateAdminAccountWithContext
+// DisassociateAdminAccountWithContext indicates an expected call of DisassociateAdminAccountWithContext.
 func (mr *MockFMSAPIMockRecorder) DisassociateAdminAccountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateAdminAccountWithContext", reflect.TypeOf((*MockFMSAPI)(nil).DisassociateAdminAccountWithContext), varargs...)
 }
 
-// GetAdminAccount mocks base method
+// GetAdminAccount mocks base method.
 func (m *MockFMSAPI) GetAdminAccount(arg0 *fms.GetAdminAccountInput) (*fms.GetAdminAccountOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAdminAccount", arg0)
@@ -344,13 +345,13 @@ func (m *MockFMSAPI) GetAdminAccount(arg0 *fms.GetAdminAccountInput) (*fms.GetAd
 	return ret0, ret1
 }
 
-// GetAdminAccount indicates an expected call of GetAdminAccount
+// GetAdminAccount indicates an expected call of GetAdminAccount.
 func (mr *MockFMSAPIMockRecorder) GetAdminAccount(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAdminAccount", reflect.TypeOf((*MockFMSAPI)(nil).GetAdminAccount), arg0)
 }
 
-// GetAdminAccountRequest mocks base method
+// GetAdminAccountRequest mocks base method.
 func (m *MockFMSAPI) GetAdminAccountRequest(arg0 *fms.GetAdminAccountInput) (*request.Request, *fms.GetAdminAccountOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAdminAccountRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockFMSAPI) GetAdminAccountRequest(arg0 *fms.GetAdminAccountInput) (*re
 	return ret0, ret1
 }
 
-// GetAdminAccountRequest indicates an expected call of GetAdminAccountRequest
+// GetAdminAccountRequest indicates an expected call of GetAdminAccountRequest.
 func (mr *MockFMSAPIMockRecorder) GetAdminAccountRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAdminAccountRequest", reflect.TypeOf((*MockFMSAPI)(nil).GetAdminAccountRequest), arg0)
 }
 
-// GetAdminAccountWithContext mocks base method
+// GetAdminAccountWithContext mocks base method.
 func (m *MockFMSAPI) GetAdminAccountWithContext(arg0 context.Context, arg1 *fms.GetAdminAccountInput, arg2 ...request.Option) (*fms.GetAdminAccountOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockFMSAPI) GetAdminAccountWithContext(arg0 context.Context, arg1 *fms.
 	return ret0, ret1
 }
 
-// GetAdminAccountWithContext indicates an expected call of GetAdminAccountWithContext
+// GetAdminAccountWithContext indicates an expected call of GetAdminAccountWithContext.
 func (mr *MockFMSAPIMockRecorder) GetAdminAccountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAdminAccountWithContext", reflect.TypeOf((*MockFMSAPI)(nil).GetAdminAccountWithContext), varargs...)
 }
 
-// GetAppsList mocks base method
+// GetAppsList mocks base method.
 func (m *MockFMSAPI) GetAppsList(arg0 *fms.GetAppsListInput) (*fms.GetAppsListOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAppsList", arg0)
@@ -394,13 +395,13 @@ func (m *MockFMSAPI) GetAppsList(arg0 *fms.GetAppsListInput) (*fms.GetAppsListOu
 	return ret0, ret1
 }
 
-// GetAppsList indicates an expected call of GetAppsList
+// GetAppsList indicates an expected call of GetAppsList.
 func (mr *MockFMSAPIMockRecorder) GetAppsList(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAppsList", reflect.TypeOf((*MockFMSAPI)(nil).GetAppsList), arg0)
 }
 
-// GetAppsListRequest mocks base method
+// GetAppsListRequest mocks base method.
 func (m *MockFMSAPI) GetAppsListRequest(arg0 *fms.GetAppsListInput) (*request.Request, *fms.GetAppsListOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetAppsListRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockFMSAPI) GetAppsListRequest(arg0 *fms.GetAppsListInput) (*request.Re
 	return ret0, ret1
 }
 
-// GetAppsListRequest indicates an expected call of GetAppsListRequest
+// GetAppsListRequest indicates an expected call of GetAppsListRequest.
 func (mr *MockFMSAPIMockRecorder) GetAppsListRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAppsListRequest", reflect.TypeOf((*MockFMSAPI)(nil).GetAppsListRequest), arg0)
 }
 
-// GetAppsListWithContext mocks base method
+// GetAppsListWithContext mocks base method.
 func (m *MockFMSAPI) GetAppsListWithContext(arg0 context.Context, arg1 *fms.GetAppsListInput, arg2 ...request.Option) (*fms.GetAppsListOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockFMSAPI) GetAppsListWithContext(arg0 context.Context, arg1 *fms.GetA
 	return ret0, ret1
 }
 
-// GetAppsListWithContext indicates an expected call of GetAppsListWithContext
+// GetAppsListWithContext indicates an expected call of GetAppsListWithContext.
 func (mr *MockFMSAPIMockRecorder) GetAppsListWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAppsListWithContext", reflect.TypeOf((*MockFMSAPI)(nil).GetAppsListWithContext), varargs...)
 }
 
-// GetComplianceDetail mocks base method
+// GetComplianceDetail mocks base method.
 func (m *MockFMSAPI) GetComplianceDetail(arg0 *fms.GetComplianceDetailInput) (*fms.GetComplianceDetailOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetComplianceDetail", arg0)
@@ -444,13 +445,13 @@ func (m *MockFMSAPI) GetComplianceDetail(arg0 *fms.GetComplianceDetailInput) (*f
 	return ret0, ret1
 }
 
-// GetComplianceDetail indicates an expected call of GetComplianceDetail
+// GetComplianceDetail indicates an expected call of GetComplianceDetail.
 func (mr *MockFMSAPIMockRecorder) GetComplianceDetail(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComplianceDetail", reflect.TypeOf((*MockFMSAPI)(nil).GetComplianceDetail), arg0)
 }
 
-// GetComplianceDetailRequest mocks base method
+// GetComplianceDetailRequest mocks base method.
 func (m *MockFMSAPI) GetComplianceDetailRequest(arg0 *fms.GetComplianceDetailInput) (*request.Request, *fms.GetComplianceDetailOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetComplianceDetailRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockFMSAPI) GetComplianceDetailRequest(arg0 *fms.GetComplianceDetailInp
 	return ret0, ret1
 }
 
-// GetComplianceDetailRequest indicates an expected call of GetComplianceDetailRequest
+// GetComplianceDetailRequest indicates an expected call of GetComplianceDetailRequest.
 func (mr *MockFMSAPIMockRecorder) GetComplianceDetailRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComplianceDetailRequest", reflect.TypeOf((*MockFMSAPI)(nil).GetComplianceDetailRequest), arg0)
 }
 
-// GetComplianceDetailWithContext mocks base method
+// GetComplianceDetailWithContext mocks base method.
 func (m *MockFMSAPI) GetComplianceDetailWithContext(arg0 context.Context, arg1 *fms.GetComplianceDetailInput, arg2 ...request.Option) (*fms.GetComplianceDetailOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockFMSAPI) GetComplianceDetailWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// GetComplianceDetailWithContext indicates an expected call of GetComplianceDetailWithContext
+// GetComplianceDetailWithContext indicates an expected call of GetComplianceDetailWithContext.
 func (mr *MockFMSAPIMockRecorder) GetComplianceDetailWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComplianceDetailWithContext", reflect.TypeOf((*MockFMSAPI)(nil).GetComplianceDetailWithContext), varargs...)
 }
 
-// GetNotificationChannel mocks base method
+// GetNotificationChannel mocks base method.
 func (m *MockFMSAPI) GetNotificationChannel(arg0 *fms.GetNotificationChannelInput) (*fms.GetNotificationChannelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetNotificationChannel", arg0)
@@ -494,13 +495,13 @@ func (m *MockFMSAPI) GetNotificationChannel(arg0 *fms.GetNotificationChannelInpu
 	return ret0, ret1
 }
 
-// GetNotificationChannel indicates an expected call of GetNotificationChannel
+// GetNotificationChannel indicates an expected call of GetNotificationChannel.
 func (mr *MockFMSAPIMockRecorder) GetNotificationChannel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetNotificationChannel", reflect.TypeOf((*MockFMSAPI)(nil).GetNotificationChannel), arg0)
 }
 
-// GetNotificationChannelRequest mocks base method
+// GetNotificationChannelRequest mocks base method.
 func (m *MockFMSAPI) GetNotificationChannelRequest(arg0 *fms.GetNotificationChannelInput) (*request.Request, *fms.GetNotificationChannelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetNotificationChannelRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockFMSAPI) GetNotificationChannelRequest(arg0 *fms.GetNotificationChan
 	return ret0, ret1
 }
 
-// GetNotificationChannelRequest indicates an expected call of GetNotificationChannelRequest
+// GetNotificationChannelRequest indicates an expected call of GetNotificationChannelRequest.
 func (mr *MockFMSAPIMockRecorder) GetNotificationChannelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetNotificationChannelRequest", reflect.TypeOf((*MockFMSAPI)(nil).GetNotificationChannelRequest), arg0)
 }
 
-// GetNotificationChannelWithContext mocks base method
+// GetNotificationChannelWithContext mocks base method.
 func (m *MockFMSAPI) GetNotificationChannelWithContext(arg0 context.Context, arg1 *fms.GetNotificationChannelInput, arg2 ...request.Option) (*fms.GetNotificationChannelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockFMSAPI) GetNotificationChannelWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetNotificationChannelWithContext indicates an expected call of GetNotificationChannelWithContext
+// GetNotificationChannelWithContext indicates an expected call of GetNotificationChannelWithContext.
 func (mr *MockFMSAPIMockRecorder) GetNotificationChannelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetNotificationChannelWithContext", reflect.TypeOf((*MockFMSAPI)(nil).GetNotificationChannelWithContext), varargs...)
 }
 
-// GetPolicy mocks base method
+// GetPolicy mocks base method.
 func (m *MockFMSAPI) GetPolicy(arg0 *fms.GetPolicyInput) (*fms.GetPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetPolicy", arg0)
@@ -544,13 +545,13 @@ func (m *MockFMSAPI) GetPolicy(arg0 *fms.GetPolicyInput) (*fms.GetPolicyOutput, 
 	return ret0, ret1
 }
 
-// GetPolicy indicates an expected call of GetPolicy
+// GetPolicy indicates an expected call of GetPolicy.
 func (mr *MockFMSAPIMockRecorder) GetPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPolicy", reflect.TypeOf((*MockFMSAPI)(nil).GetPolicy), arg0)
 }
 
-// GetPolicyRequest mocks base method
+// GetPolicyRequest mocks base method.
 func (m *MockFMSAPI) GetPolicyRequest(arg0 *fms.GetPolicyInput) (*request.Request, *fms.GetPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetPolicyRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockFMSAPI) GetPolicyRequest(arg0 *fms.GetPolicyInput) (*request.Reques
 	return ret0, ret1
 }
 
-// GetPolicyRequest indicates an expected call of GetPolicyRequest
+// GetPolicyRequest indicates an expected call of GetPolicyRequest.
 func (mr *MockFMSAPIMockRecorder) GetPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPolicyRequest", reflect.TypeOf((*MockFMSAPI)(nil).GetPolicyRequest), arg0)
 }
 
-// GetPolicyWithContext mocks base method
+// GetPolicyWithContext mocks base method.
 func (m *MockFMSAPI) GetPolicyWithContext(arg0 context.Context, arg1 *fms.GetPolicyInput, arg2 ...request.Option) (*fms.GetPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockFMSAPI) GetPolicyWithContext(arg0 context.Context, arg1 *fms.GetPol
 	return ret0, ret1
 }
 
-// GetPolicyWithContext indicates an expected call of GetPolicyWithContext
+// GetPolicyWithContext indicates an expected call of GetPolicyWithContext.
 func (mr *MockFMSAPIMockRecorder) GetPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPolicyWithContext", reflect.TypeOf((*MockFMSAPI)(nil).GetPolicyWithContext), varargs...)
 }
 
-// GetProtectionStatus mocks base method
+// GetProtectionStatus mocks base method.
 func (m *MockFMSAPI) GetProtectionStatus(arg0 *fms.GetProtectionStatusInput) (*fms.GetProtectionStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetProtectionStatus", arg0)
@@ -594,13 +595,13 @@ func (m *MockFMSAPI) GetProtectionStatus(arg0 *fms.GetProtectionStatusInput) (*f
 	return ret0, ret1
 }
 
-// GetProtectionStatus indicates an expected call of GetProtectionStatus
+// GetProtectionStatus indicates an expected call of GetProtectionStatus.
 func (mr *MockFMSAPIMockRecorder) GetProtectionStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProtectionStatus", reflect.TypeOf((*MockFMSAPI)(nil).GetProtectionStatus), arg0)
 }
 
-// GetProtectionStatusRequest mocks base method
+// GetProtectionStatusRequest mocks base method.
 func (m *MockFMSAPI) GetProtectionStatusRequest(arg0 *fms.GetProtectionStatusInput) (*request.Request, *fms.GetProtectionStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetProtectionStatusRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockFMSAPI) GetProtectionStatusRequest(arg0 *fms.GetProtectionStatusInp
 	return ret0, ret1
 }
 
-// GetProtectionStatusRequest indicates an expected call of GetProtectionStatusRequest
+// GetProtectionStatusRequest indicates an expected call of GetProtectionStatusRequest.
 func (mr *MockFMSAPIMockRecorder) GetProtectionStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProtectionStatusRequest", reflect.TypeOf((*MockFMSAPI)(nil).GetProtectionStatusRequest), arg0)
 }
 
-// GetProtectionStatusWithContext mocks base method
+// GetProtectionStatusWithContext mocks base method.
 func (m *MockFMSAPI) GetProtectionStatusWithContext(arg0 context.Context, arg1 *fms.GetProtectionStatusInput, arg2 ...request.Option) (*fms.GetProtectionStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockFMSAPI) GetProtectionStatusWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// GetProtectionStatusWithContext indicates an expected call of GetProtectionStatusWithContext
+// GetProtectionStatusWithContext indicates an expected call of GetProtectionStatusWithContext.
 func (mr *MockFMSAPIMockRecorder) GetProtectionStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProtectionStatusWithContext", reflect.TypeOf((*MockFMSAPI)(nil).GetProtectionStatusWithContext), varargs...)
 }
 
-// GetProtocolsList mocks base method
+// GetProtocolsList mocks base method.
 func (m *MockFMSAPI) GetProtocolsList(arg0 *fms.GetProtocolsListInput) (*fms.GetProtocolsListOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetProtocolsList", arg0)
@@ -644,13 +645,13 @@ func (m *MockFMSAPI) GetProtocolsList(arg0 *fms.GetProtocolsListInput) (*fms.Get
 	return ret0, ret1
 }
 
-// GetProtocolsList indicates an expected call of GetProtocolsList
+// GetProtocolsList indicates an expected call of GetProtocolsList.
 func (mr *MockFMSAPIMockRecorder) GetProtocolsList(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProtocolsList", reflect.TypeOf((*MockFMSAPI)(nil).GetProtocolsList), arg0)
 }
 
-// GetProtocolsListRequest mocks base method
+// GetProtocolsListRequest mocks base method.
 func (m *MockFMSAPI) GetProtocolsListRequest(arg0 *fms.GetProtocolsListInput) (*request.Request, *fms.GetProtocolsListOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetProtocolsListRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockFMSAPI) GetProtocolsListRequest(arg0 *fms.GetProtocolsListInput) (*
 	return ret0, ret1
 }
 
-// GetProtocolsListRequest indicates an expected call of GetProtocolsListRequest
+// GetProtocolsListRequest indicates an expected call of GetProtocolsListRequest.
 func (mr *MockFMSAPIMockRecorder) GetProtocolsListRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProtocolsListRequest", reflect.TypeOf((*MockFMSAPI)(nil).GetProtocolsListRequest), arg0)
 }
 
-// GetProtocolsListWithContext mocks base method
+// GetProtocolsListWithContext mocks base method.
 func (m *MockFMSAPI) GetProtocolsListWithContext(arg0 context.Context, arg1 *fms.GetProtocolsListInput, arg2 ...request.Option) (*fms.GetProtocolsListOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockFMSAPI) GetProtocolsListWithContext(arg0 context.Context, arg1 *fms
 	return ret0, ret1
 }
 
-// GetProtocolsListWithContext indicates an expected call of GetProtocolsListWithContext
+// GetProtocolsListWithContext indicates an expected call of GetProtocolsListWithContext.
 func (mr *MockFMSAPIMockRecorder) GetProtocolsListWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProtocolsListWithContext", reflect.TypeOf((*MockFMSAPI)(nil).GetProtocolsListWithContext), varargs...)
 }
 
-// GetViolationDetails mocks base method
+// GetViolationDetails mocks base method.
 func (m *MockFMSAPI) GetViolationDetails(arg0 *fms.GetViolationDetailsInput) (*fms.GetViolationDetailsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetViolationDetails", arg0)
@@ -694,13 +695,13 @@ func (m *MockFMSAPI) GetViolationDetails(arg0 *fms.GetViolationDetailsInput) (*f
 	return ret0, ret1
 }
 
-// GetViolationDetails indicates an expected call of GetViolationDetails
+// GetViolationDetails indicates an expected call of GetViolationDetails.
 func (mr *MockFMSAPIMockRecorder) GetViolationDetails(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetViolationDetails", reflect.TypeOf((*MockFMSAPI)(nil).GetViolationDetails), arg0)
 }
 
-// GetViolationDetailsRequest mocks base method
+// GetViolationDetailsRequest mocks base method.
 func (m *MockFMSAPI) GetViolationDetailsRequest(arg0 *fms.GetViolationDetailsInput) (*request.Request, *fms.GetViolationDetailsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetViolationDetailsRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockFMSAPI) GetViolationDetailsRequest(arg0 *fms.GetViolationDetailsInp
 	return ret0, ret1
 }
 
-// GetViolationDetailsRequest indicates an expected call of GetViolationDetailsRequest
+// GetViolationDetailsRequest indicates an expected call of GetViolationDetailsRequest.
 func (mr *MockFMSAPIMockRecorder) GetViolationDetailsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetViolationDetailsRequest", reflect.TypeOf((*MockFMSAPI)(nil).GetViolationDetailsRequest), arg0)
 }
 
-// GetViolationDetailsWithContext mocks base method
+// GetViolationDetailsWithContext mocks base method.
 func (m *MockFMSAPI) GetViolationDetailsWithContext(arg0 context.Context, arg1 *fms.GetViolationDetailsInput, arg2 ...request.Option) (*fms.GetViolationDetailsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockFMSAPI) GetViolationDetailsWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// GetViolationDetailsWithContext indicates an expected call of GetViolationDetailsWithContext
+// GetViolationDetailsWithContext indicates an expected call of GetViolationDetailsWithContext.
 func (mr *MockFMSAPIMockRecorder) GetViolationDetailsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetViolationDetailsWithContext", reflect.TypeOf((*MockFMSAPI)(nil).GetViolationDetailsWithContext), varargs...)
 }
 
-// ListAppsLists mocks base method
+// ListAppsLists mocks base method.
 func (m *MockFMSAPI) ListAppsLists(arg0 *fms.ListAppsListsInput) (*fms.ListAppsListsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAppsLists", arg0)
@@ -744,13 +745,13 @@ func (m *MockFMSAPI) ListAppsLists(arg0 *fms.ListAppsListsInput) (*fms.ListAppsL
 	return ret0, ret1
 }
 
-// ListAppsLists indicates an expected call of ListAppsLists
+// ListAppsLists indicates an expected call of ListAppsLists.
 func (mr *MockFMSAPIMockRecorder) ListAppsLists(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAppsLists", reflect.TypeOf((*MockFMSAPI)(nil).ListAppsLists), arg0)
 }
 
-// ListAppsListsRequest mocks base method
+// ListAppsListsRequest mocks base method.
 func (m *MockFMSAPI) ListAppsListsRequest(arg0 *fms.ListAppsListsInput) (*request.Request, *fms.ListAppsListsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListAppsListsRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockFMSAPI) ListAppsListsRequest(arg0 *fms.ListAppsListsInput) (*reques
 	return ret0, ret1
 }
 
-// ListAppsListsRequest indicates an expected call of ListAppsListsRequest
+// ListAppsListsRequest indicates an expected call of ListAppsListsRequest.
 func (mr *MockFMSAPIMockRecorder) ListAppsListsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAppsListsRequest", reflect.TypeOf((*MockFMSAPI)(nil).ListAppsListsRequest), arg0)
 }
 
-// ListAppsListsWithContext mocks base method
+// ListAppsListsWithContext mocks base method.
 func (m *MockFMSAPI) ListAppsListsWithContext(arg0 context.Context, arg1 *fms.ListAppsListsInput, arg2 ...request.Option) (*fms.ListAppsListsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -778,14 +779,14 @@ func (m *MockFMSAPI) ListAppsListsWithContext(arg0 context.Context, arg1 *fms.Li
 	return ret0, ret1
 }
 
-// ListAppsListsWithContext indicates an expected call of ListAppsListsWithContext
+// ListAppsListsWithContext indicates an expected call of ListAppsListsWithContext.
 func (mr *MockFMSAPIMockRecorder) ListAppsListsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAppsListsWithContext", reflect.TypeOf((*MockFMSAPI)(nil).ListAppsListsWithContext), varargs...)
 }
 
-// ListComplianceStatus mocks base method
+// ListComplianceStatus mocks base method.
 func (m *MockFMSAPI) ListComplianceStatus(arg0 *fms.ListComplianceStatusInput) (*fms.ListComplianceStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComplianceStatus", arg0)
@@ -794,13 +795,13 @@ func (m *MockFMSAPI) ListComplianceStatus(arg0 *fms.ListComplianceStatusInput) (
 	return ret0, ret1
 }
 
-// ListComplianceStatus indicates an expected call of ListComplianceStatus
+// ListComplianceStatus indicates an expected call of ListComplianceStatus.
 func (mr *MockFMSAPIMockRecorder) ListComplianceStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComplianceStatus", reflect.TypeOf((*MockFMSAPI)(nil).ListComplianceStatus), arg0)
 }
 
-// ListComplianceStatusPages mocks base method
+// ListComplianceStatusPages mocks base method.
 func (m *MockFMSAPI) ListComplianceStatusPages(arg0 *fms.ListComplianceStatusInput, arg1 func(*fms.ListComplianceStatusOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComplianceStatusPages", arg0, arg1)
@@ -808,13 +809,13 @@ func (m *MockFMSAPI) ListComplianceStatusPages(arg0 *fms.ListComplianceStatusInp
 	return ret0
 }
 
-// ListComplianceStatusPages indicates an expected call of ListComplianceStatusPages
+// ListComplianceStatusPages indicates an expected call of ListComplianceStatusPages.
 func (mr *MockFMSAPIMockRecorder) ListComplianceStatusPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComplianceStatusPages", reflect.TypeOf((*MockFMSAPI)(nil).ListComplianceStatusPages), arg0, arg1)
 }
 
-// ListComplianceStatusPagesWithContext mocks base method
+// ListComplianceStatusPagesWithContext mocks base method.
 func (m *MockFMSAPI) ListComplianceStatusPagesWithContext(arg0 context.Context, arg1 *fms.ListComplianceStatusInput, arg2 func(*fms.ListComplianceStatusOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -826,14 +827,14 @@ func (m *MockFMSAPI) ListComplianceStatusPagesWithContext(arg0 context.Context, 
 	return ret0
 }
 
-// ListComplianceStatusPagesWithContext indicates an expected call of ListComplianceStatusPagesWithContext
+// ListComplianceStatusPagesWithContext indicates an expected call of ListComplianceStatusPagesWithContext.
 func (mr *MockFMSAPIMockRecorder) ListComplianceStatusPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComplianceStatusPagesWithContext", reflect.TypeOf((*MockFMSAPI)(nil).ListComplianceStatusPagesWithContext), varargs...)
 }
 
-// ListComplianceStatusRequest mocks base method
+// ListComplianceStatusRequest mocks base method.
 func (m *MockFMSAPI) ListComplianceStatusRequest(arg0 *fms.ListComplianceStatusInput) (*request.Request, *fms.ListComplianceStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListComplianceStatusRequest", arg0)
@@ -842,13 +843,13 @@ func (m *MockFMSAPI) ListComplianceStatusRequest(arg0 *fms.ListComplianceStatusI
 	return ret0, ret1
 }
 
-// ListComplianceStatusRequest indicates an expected call of ListComplianceStatusRequest
+// ListComplianceStatusRequest indicates an expected call of ListComplianceStatusRequest.
 func (mr *MockFMSAPIMockRecorder) ListComplianceStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComplianceStatusRequest", reflect.TypeOf((*MockFMSAPI)(nil).ListComplianceStatusRequest), arg0)
 }
 
-// ListComplianceStatusWithContext mocks base method
+// ListComplianceStatusWithContext mocks base method.
 func (m *MockFMSAPI) ListComplianceStatusWithContext(arg0 context.Context, arg1 *fms.ListComplianceStatusInput, arg2 ...request.Option) (*fms.ListComplianceStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -861,14 +862,14 @@ func (m *MockFMSAPI) ListComplianceStatusWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListComplianceStatusWithContext indicates an expected call of ListComplianceStatusWithContext
+// ListComplianceStatusWithContext indicates an expected call of ListComplianceStatusWithContext.
 func (mr *MockFMSAPIMockRecorder) ListComplianceStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListComplianceStatusWithContext", reflect.TypeOf((*MockFMSAPI)(nil).ListComplianceStatusWithContext), varargs...)
 }
 
-// ListMemberAccounts mocks base method
+// ListMemberAccounts mocks base method.
 func (m *MockFMSAPI) ListMemberAccounts(arg0 *fms.ListMemberAccountsInput) (*fms.ListMemberAccountsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMemberAccounts", arg0)
@@ -877,13 +878,13 @@ func (m *MockFMSAPI) ListMemberAccounts(arg0 *fms.ListMemberAccountsInput) (*fms
 	return ret0, ret1
 }
 
-// ListMemberAccounts indicates an expected call of ListMemberAccounts
+// ListMemberAccounts indicates an expected call of ListMemberAccounts.
 func (mr *MockFMSAPIMockRecorder) ListMemberAccounts(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMemberAccounts", reflect.TypeOf((*MockFMSAPI)(nil).ListMemberAccounts), arg0)
 }
 
-// ListMemberAccountsPages mocks base method
+// ListMemberAccountsPages mocks base method.
 func (m *MockFMSAPI) ListMemberAccountsPages(arg0 *fms.ListMemberAccountsInput, arg1 func(*fms.ListMemberAccountsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMemberAccountsPages", arg0, arg1)
@@ -891,13 +892,13 @@ func (m *MockFMSAPI) ListMemberAccountsPages(arg0 *fms.ListMemberAccountsInput, 
 	return ret0
 }
 
-// ListMemberAccountsPages indicates an expected call of ListMemberAccountsPages
+// ListMemberAccountsPages indicates an expected call of ListMemberAccountsPages.
 func (mr *MockFMSAPIMockRecorder) ListMemberAccountsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMemberAccountsPages", reflect.TypeOf((*MockFMSAPI)(nil).ListMemberAccountsPages), arg0, arg1)
 }
 
-// ListMemberAccountsPagesWithContext mocks base method
+// ListMemberAccountsPagesWithContext mocks base method.
 func (m *MockFMSAPI) ListMemberAccountsPagesWithContext(arg0 context.Context, arg1 *fms.ListMemberAccountsInput, arg2 func(*fms.ListMemberAccountsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -909,14 +910,14 @@ func (m *MockFMSAPI) ListMemberAccountsPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// ListMemberAccountsPagesWithContext indicates an expected call of ListMemberAccountsPagesWithContext
+// ListMemberAccountsPagesWithContext indicates an expected call of ListMemberAccountsPagesWithContext.
 func (mr *MockFMSAPIMockRecorder) ListMemberAccountsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMemberAccountsPagesWithContext", reflect.TypeOf((*MockFMSAPI)(nil).ListMemberAccountsPagesWithContext), varargs...)
 }
 
-// ListMemberAccountsRequest mocks base method
+// ListMemberAccountsRequest mocks base method.
 func (m *MockFMSAPI) ListMemberAccountsRequest(arg0 *fms.ListMemberAccountsInput) (*request.Request, *fms.ListMemberAccountsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMemberAccountsRequest", arg0)
@@ -925,13 +926,13 @@ func (m *MockFMSAPI) ListMemberAccountsRequest(arg0 *fms.ListMemberAccountsInput
 	return ret0, ret1
 }
 
-// ListMemberAccountsRequest indicates an expected call of ListMemberAccountsRequest
+// ListMemberAccountsRequest indicates an expected call of ListMemberAccountsRequest.
 func (mr *MockFMSAPIMockRecorder) ListMemberAccountsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMemberAccountsRequest", reflect.TypeOf((*MockFMSAPI)(nil).ListMemberAccountsRequest), arg0)
 }
 
-// ListMemberAccountsWithContext mocks base method
+// ListMemberAccountsWithContext mocks base method.
 func (m *MockFMSAPI) ListMemberAccountsWithContext(arg0 context.Context, arg1 *fms.ListMemberAccountsInput, arg2 ...request.Option) (*fms.ListMemberAccountsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -944,14 +945,14 @@ func (m *MockFMSAPI) ListMemberAccountsWithContext(arg0 context.Context, arg1 *f
 	return ret0, ret1
 }
 
-// ListMemberAccountsWithContext indicates an expected call of ListMemberAccountsWithContext
+// ListMemberAccountsWithContext indicates an expected call of ListMemberAccountsWithContext.
 func (mr *MockFMSAPIMockRecorder) ListMemberAccountsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMemberAccountsWithContext", reflect.TypeOf((*MockFMSAPI)(nil).ListMemberAccountsWithContext), varargs...)
 }
 
-// ListPolicies mocks base method
+// ListPolicies mocks base method.
 func (m *MockFMSAPI) ListPolicies(arg0 *fms.ListPoliciesInput) (*fms.ListPoliciesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPolicies", arg0)
@@ -960,13 +961,13 @@ func (m *MockFMSAPI) ListPolicies(arg0 *fms.ListPoliciesInput) (*fms.ListPolicie
 	return ret0, ret1
 }
 
-// ListPolicies indicates an expected call of ListPolicies
+// ListPolicies indicates an expected call of ListPolicies.
 func (mr *MockFMSAPIMockRecorder) ListPolicies(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPolicies", reflect.TypeOf((*MockFMSAPI)(nil).ListPolicies), arg0)
 }
 
-// ListPoliciesPages mocks base method
+// ListPoliciesPages mocks base method.
 func (m *MockFMSAPI) ListPoliciesPages(arg0 *fms.ListPoliciesInput, arg1 func(*fms.ListPoliciesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPoliciesPages", arg0, arg1)
@@ -974,13 +975,13 @@ func (m *MockFMSAPI) ListPoliciesPages(arg0 *fms.ListPoliciesInput, arg1 func(*f
 	return ret0
 }
 
-// ListPoliciesPages indicates an expected call of ListPoliciesPages
+// ListPoliciesPages indicates an expected call of ListPoliciesPages.
 func (mr *MockFMSAPIMockRecorder) ListPoliciesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPoliciesPages", reflect.TypeOf((*MockFMSAPI)(nil).ListPoliciesPages), arg0, arg1)
 }
 
-// ListPoliciesPagesWithContext mocks base method
+// ListPoliciesPagesWithContext mocks base method.
 func (m *MockFMSAPI) ListPoliciesPagesWithContext(arg0 context.Context, arg1 *fms.ListPoliciesInput, arg2 func(*fms.ListPoliciesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -992,14 +993,14 @@ func (m *MockFMSAPI) ListPoliciesPagesWithContext(arg0 context.Context, arg1 *fm
 	return ret0
 }
 
-// ListPoliciesPagesWithContext indicates an expected call of ListPoliciesPagesWithContext
+// ListPoliciesPagesWithContext indicates an expected call of ListPoliciesPagesWithContext.
 func (mr *MockFMSAPIMockRecorder) ListPoliciesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPoliciesPagesWithContext", reflect.TypeOf((*MockFMSAPI)(nil).ListPoliciesPagesWithContext), varargs...)
 }
 
-// ListPoliciesRequest mocks base method
+// ListPoliciesRequest mocks base method.
 func (m *MockFMSAPI) ListPoliciesRequest(arg0 *fms.ListPoliciesInput) (*request.Request, *fms.ListPoliciesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListPoliciesRequest", arg0)
@@ -1008,13 +1009,13 @@ func (m *MockFMSAPI) ListPoliciesRequest(arg0 *fms.ListPoliciesInput) (*request.
 	return ret0, ret1
 }
 
-// ListPoliciesRequest indicates an expected call of ListPoliciesRequest
+// ListPoliciesRequest indicates an expected call of ListPoliciesRequest.
 func (mr *MockFMSAPIMockRecorder) ListPoliciesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPoliciesRequest", reflect.TypeOf((*MockFMSAPI)(nil).ListPoliciesRequest), arg0)
 }
 
-// ListPoliciesWithContext mocks base method
+// ListPoliciesWithContext mocks base method.
 func (m *MockFMSAPI) ListPoliciesWithContext(arg0 context.Context, arg1 *fms.ListPoliciesInput, arg2 ...request.Option) (*fms.ListPoliciesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1027,14 +1028,14 @@ func (m *MockFMSAPI) ListPoliciesWithContext(arg0 context.Context, arg1 *fms.Lis
 	return ret0, ret1
 }
 
-// ListPoliciesWithContext indicates an expected call of ListPoliciesWithContext
+// ListPoliciesWithContext indicates an expected call of ListPoliciesWithContext.
 func (mr *MockFMSAPIMockRecorder) ListPoliciesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPoliciesWithContext", reflect.TypeOf((*MockFMSAPI)(nil).ListPoliciesWithContext), varargs...)
 }
 
-// ListProtocolsLists mocks base method
+// ListProtocolsLists mocks base method.
 func (m *MockFMSAPI) ListProtocolsLists(arg0 *fms.ListProtocolsListsInput) (*fms.ListProtocolsListsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProtocolsLists", arg0)
@@ -1043,13 +1044,13 @@ func (m *MockFMSAPI) ListProtocolsLists(arg0 *fms.ListProtocolsListsInput) (*fms
 	return ret0, ret1
 }
 
-// ListProtocolsLists indicates an expected call of ListProtocolsLists
+// ListProtocolsLists indicates an expected call of ListProtocolsLists.
 func (mr *MockFMSAPIMockRecorder) ListProtocolsLists(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProtocolsLists", reflect.TypeOf((*MockFMSAPI)(nil).ListProtocolsLists), arg0)
 }
 
-// ListProtocolsListsRequest mocks base method
+// ListProtocolsListsRequest mocks base method.
 func (m *MockFMSAPI) ListProtocolsListsRequest(arg0 *fms.ListProtocolsListsInput) (*request.Request, *fms.ListProtocolsListsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListProtocolsListsRequest", arg0)
@@ -1058,13 +1059,13 @@ func (m *MockFMSAPI) ListProtocolsListsRequest(arg0 *fms.ListProtocolsListsInput
 	return ret0, ret1
 }
 
-// ListProtocolsListsRequest indicates an expected call of ListProtocolsListsRequest
+// ListProtocolsListsRequest indicates an expected call of ListProtocolsListsRequest.
 func (mr *MockFMSAPIMockRecorder) ListProtocolsListsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProtocolsListsRequest", reflect.TypeOf((*MockFMSAPI)(nil).ListProtocolsListsRequest), arg0)
 }
 
-// ListProtocolsListsWithContext mocks base method
+// ListProtocolsListsWithContext mocks base method.
 func (m *MockFMSAPI) ListProtocolsListsWithContext(arg0 context.Context, arg1 *fms.ListProtocolsListsInput, arg2 ...request.Option) (*fms.ListProtocolsListsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1077,14 +1078,14 @@ func (m *MockFMSAPI) ListProtocolsListsWithContext(arg0 context.Context, arg1 *f
 	return ret0, ret1
 }
 
-// ListProtocolsListsWithContext indicates an expected call of ListProtocolsListsWithContext
+// ListProtocolsListsWithContext indicates an expected call of ListProtocolsListsWithContext.
 func (mr *MockFMSAPIMockRecorder) ListProtocolsListsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProtocolsListsWithContext", reflect.TypeOf((*MockFMSAPI)(nil).ListProtocolsListsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockFMSAPI) ListTagsForResource(arg0 *fms.ListTagsForResourceInput) (*fms.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1093,13 +1094,13 @@ func (m *MockFMSAPI) ListTagsForResource(arg0 *fms.ListTagsForResourceInput) (*f
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockFMSAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockFMSAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockFMSAPI) ListTagsForResourceRequest(arg0 *fms.ListTagsForResourceInput) (*request.Request, *fms.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1108,13 +1109,13 @@ func (m *MockFMSAPI) ListTagsForResourceRequest(arg0 *fms.ListTagsForResourceInp
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockFMSAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockFMSAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockFMSAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *fms.ListTagsForResourceInput, arg2 ...request.Option) (*fms.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1127,14 +1128,14 @@ func (m *MockFMSAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockFMSAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockFMSAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PutAppsList mocks base method
+// PutAppsList mocks base method.
 func (m *MockFMSAPI) PutAppsList(arg0 *fms.PutAppsListInput) (*fms.PutAppsListOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutAppsList", arg0)
@@ -1143,13 +1144,13 @@ func (m *MockFMSAPI) PutAppsList(arg0 *fms.PutAppsListInput) (*fms.PutAppsListOu
 	return ret0, ret1
 }
 
-// PutAppsList indicates an expected call of PutAppsList
+// PutAppsList indicates an expected call of PutAppsList.
 func (mr *MockFMSAPIMockRecorder) PutAppsList(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAppsList", reflect.TypeOf((*MockFMSAPI)(nil).PutAppsList), arg0)
 }
 
-// PutAppsListRequest mocks base method
+// PutAppsListRequest mocks base method.
 func (m *MockFMSAPI) PutAppsListRequest(arg0 *fms.PutAppsListInput) (*request.Request, *fms.PutAppsListOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutAppsListRequest", arg0)
@@ -1158,13 +1159,13 @@ func (m *MockFMSAPI) PutAppsListRequest(arg0 *fms.PutAppsListInput) (*request.Re
 	return ret0, ret1
 }
 
-// PutAppsListRequest indicates an expected call of PutAppsListRequest
+// PutAppsListRequest indicates an expected call of PutAppsListRequest.
 func (mr *MockFMSAPIMockRecorder) PutAppsListRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAppsListRequest", reflect.TypeOf((*MockFMSAPI)(nil).PutAppsListRequest), arg0)
 }
 
-// PutAppsListWithContext mocks base method
+// PutAppsListWithContext mocks base method.
 func (m *MockFMSAPI) PutAppsListWithContext(arg0 context.Context, arg1 *fms.PutAppsListInput, arg2 ...request.Option) (*fms.PutAppsListOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1177,14 +1178,14 @@ func (m *MockFMSAPI) PutAppsListWithContext(arg0 context.Context, arg1 *fms.PutA
 	return ret0, ret1
 }
 
-// PutAppsListWithContext indicates an expected call of PutAppsListWithContext
+// PutAppsListWithContext indicates an expected call of PutAppsListWithContext.
 func (mr *MockFMSAPIMockRecorder) PutAppsListWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutAppsListWithContext", reflect.TypeOf((*MockFMSAPI)(nil).PutAppsListWithContext), varargs...)
 }
 
-// PutNotificationChannel mocks base method
+// PutNotificationChannel mocks base method.
 func (m *MockFMSAPI) PutNotificationChannel(arg0 *fms.PutNotificationChannelInput) (*fms.PutNotificationChannelOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutNotificationChannel", arg0)
@@ -1193,13 +1194,13 @@ func (m *MockFMSAPI) PutNotificationChannel(arg0 *fms.PutNotificationChannelInpu
 	return ret0, ret1
 }
 
-// PutNotificationChannel indicates an expected call of PutNotificationChannel
+// PutNotificationChannel indicates an expected call of PutNotificationChannel.
 func (mr *MockFMSAPIMockRecorder) PutNotificationChannel(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutNotificationChannel", reflect.TypeOf((*MockFMSAPI)(nil).PutNotificationChannel), arg0)
 }
 
-// PutNotificationChannelRequest mocks base method
+// PutNotificationChannelRequest mocks base method.
 func (m *MockFMSAPI) PutNotificationChannelRequest(arg0 *fms.PutNotificationChannelInput) (*request.Request, *fms.PutNotificationChannelOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutNotificationChannelRequest", arg0)
@@ -1208,13 +1209,13 @@ func (m *MockFMSAPI) PutNotificationChannelRequest(arg0 *fms.PutNotificationChan
 	return ret0, ret1
 }
 
-// PutNotificationChannelRequest indicates an expected call of PutNotificationChannelRequest
+// PutNotificationChannelRequest indicates an expected call of PutNotificationChannelRequest.
 func (mr *MockFMSAPIMockRecorder) PutNotificationChannelRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutNotificationChannelRequest", reflect.TypeOf((*MockFMSAPI)(nil).PutNotificationChannelRequest), arg0)
 }
 
-// PutNotificationChannelWithContext mocks base method
+// PutNotificationChannelWithContext mocks base method.
 func (m *MockFMSAPI) PutNotificationChannelWithContext(arg0 context.Context, arg1 *fms.PutNotificationChannelInput, arg2 ...request.Option) (*fms.PutNotificationChannelOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1227,14 +1228,14 @@ func (m *MockFMSAPI) PutNotificationChannelWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// PutNotificationChannelWithContext indicates an expected call of PutNotificationChannelWithContext
+// PutNotificationChannelWithContext indicates an expected call of PutNotificationChannelWithContext.
 func (mr *MockFMSAPIMockRecorder) PutNotificationChannelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutNotificationChannelWithContext", reflect.TypeOf((*MockFMSAPI)(nil).PutNotificationChannelWithContext), varargs...)
 }
 
-// PutPolicy mocks base method
+// PutPolicy mocks base method.
 func (m *MockFMSAPI) PutPolicy(arg0 *fms.PutPolicyInput) (*fms.PutPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutPolicy", arg0)
@@ -1243,13 +1244,13 @@ func (m *MockFMSAPI) PutPolicy(arg0 *fms.PutPolicyInput) (*fms.PutPolicyOutput, 
 	return ret0, ret1
 }
 
-// PutPolicy indicates an expected call of PutPolicy
+// PutPolicy indicates an expected call of PutPolicy.
 func (mr *MockFMSAPIMockRecorder) PutPolicy(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutPolicy", reflect.TypeOf((*MockFMSAPI)(nil).PutPolicy), arg0)
 }
 
-// PutPolicyRequest mocks base method
+// PutPolicyRequest mocks base method.
 func (m *MockFMSAPI) PutPolicyRequest(arg0 *fms.PutPolicyInput) (*request.Request, *fms.PutPolicyOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutPolicyRequest", arg0)
@@ -1258,13 +1259,13 @@ func (m *MockFMSAPI) PutPolicyRequest(arg0 *fms.PutPolicyInput) (*request.Reques
 	return ret0, ret1
 }
 
-// PutPolicyRequest indicates an expected call of PutPolicyRequest
+// PutPolicyRequest indicates an expected call of PutPolicyRequest.
 func (mr *MockFMSAPIMockRecorder) PutPolicyRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutPolicyRequest", reflect.TypeOf((*MockFMSAPI)(nil).PutPolicyRequest), arg0)
 }
 
-// PutPolicyWithContext mocks base method
+// PutPolicyWithContext mocks base method.
 func (m *MockFMSAPI) PutPolicyWithContext(arg0 context.Context, arg1 *fms.PutPolicyInput, arg2 ...request.Option) (*fms.PutPolicyOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1277,14 +1278,14 @@ func (m *MockFMSAPI) PutPolicyWithContext(arg0 context.Context, arg1 *fms.PutPol
 	return ret0, ret1
 }
 
-// PutPolicyWithContext indicates an expected call of PutPolicyWithContext
+// PutPolicyWithContext indicates an expected call of PutPolicyWithContext.
 func (mr *MockFMSAPIMockRecorder) PutPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutPolicyWithContext", reflect.TypeOf((*MockFMSAPI)(nil).PutPolicyWithContext), varargs...)
 }
 
-// PutProtocolsList mocks base method
+// PutProtocolsList mocks base method.
 func (m *MockFMSAPI) PutProtocolsList(arg0 *fms.PutProtocolsListInput) (*fms.PutProtocolsListOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutProtocolsList", arg0)
@@ -1293,13 +1294,13 @@ func (m *MockFMSAPI) PutProtocolsList(arg0 *fms.PutProtocolsListInput) (*fms.Put
 	return ret0, ret1
 }
 
-// PutProtocolsList indicates an expected call of PutProtocolsList
+// PutProtocolsList indicates an expected call of PutProtocolsList.
 func (mr *MockFMSAPIMockRecorder) PutProtocolsList(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutProtocolsList", reflect.TypeOf((*MockFMSAPI)(nil).PutProtocolsList), arg0)
 }
 
-// PutProtocolsListRequest mocks base method
+// PutProtocolsListRequest mocks base method.
 func (m *MockFMSAPI) PutProtocolsListRequest(arg0 *fms.PutProtocolsListInput) (*request.Request, *fms.PutProtocolsListOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutProtocolsListRequest", arg0)
@@ -1308,13 +1309,13 @@ func (m *MockFMSAPI) PutProtocolsListRequest(arg0 *fms.PutProtocolsListInput) (*
 	return ret0, ret1
 }
 
-// PutProtocolsListRequest indicates an expected call of PutProtocolsListRequest
+// PutProtocolsListRequest indicates an expected call of PutProtocolsListRequest.
 func (mr *MockFMSAPIMockRecorder) PutProtocolsListRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutProtocolsListRequest", reflect.TypeOf((*MockFMSAPI)(nil).PutProtocolsListRequest), arg0)
 }
 
-// PutProtocolsListWithContext mocks base method
+// PutProtocolsListWithContext mocks base method.
 func (m *MockFMSAPI) PutProtocolsListWithContext(arg0 context.Context, arg1 *fms.PutProtocolsListInput, arg2 ...request.Option) (*fms.PutProtocolsListOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1327,14 +1328,14 @@ func (m *MockFMSAPI) PutProtocolsListWithContext(arg0 context.Context, arg1 *fms
 	return ret0, ret1
 }
 
-// PutProtocolsListWithContext indicates an expected call of PutProtocolsListWithContext
+// PutProtocolsListWithContext indicates an expected call of PutProtocolsListWithContext.
 func (mr *MockFMSAPIMockRecorder) PutProtocolsListWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutProtocolsListWithContext", reflect.TypeOf((*MockFMSAPI)(nil).PutProtocolsListWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockFMSAPI) TagResource(arg0 *fms.TagResourceInput) (*fms.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1343,13 +1344,13 @@ func (m *MockFMSAPI) TagResource(arg0 *fms.TagResourceInput) (*fms.TagResourceOu
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockFMSAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockFMSAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockFMSAPI) TagResourceRequest(arg0 *fms.TagResourceInput) (*request.Request, *fms.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1358,13 +1359,13 @@ func (m *MockFMSAPI) TagResourceRequest(arg0 *fms.TagResourceInput) (*request.Re
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockFMSAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockFMSAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockFMSAPI) TagResourceWithContext(arg0 context.Context, arg1 *fms.TagResourceInput, arg2 ...request.Option) (*fms.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1377,14 +1378,14 @@ func (m *MockFMSAPI) TagResourceWithContext(arg0 context.Context, arg1 *fms.TagR
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockFMSAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockFMSAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockFMSAPI) UntagResource(arg0 *fms.UntagResourceInput) (*fms.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1393,13 +1394,13 @@ func (m *MockFMSAPI) UntagResource(arg0 *fms.UntagResourceInput) (*fms.UntagReso
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockFMSAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockFMSAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockFMSAPI) UntagResourceRequest(arg0 *fms.UntagResourceInput) (*request.Request, *fms.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1408,13 +1409,13 @@ func (m *MockFMSAPI) UntagResourceRequest(arg0 *fms.UntagResourceInput) (*reques
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockFMSAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockFMSAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockFMSAPI) UntagResourceWithContext(arg0 context.Context, arg1 *fms.UntagResourceInput, arg2 ...request.Option) (*fms.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1427,7 +1428,7 @@ func (m *MockFMSAPI) UntagResourceWithContext(arg0 context.Context, arg1 *fms.Un
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockFMSAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

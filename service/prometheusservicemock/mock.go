@@ -6,36 +6,37 @@ package prometheusservicemock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	prometheusservice "github.com/aws/aws-sdk-go/service/prometheusservice"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockPrometheusServiceAPI is a mock of PrometheusServiceAPI interface
+// MockPrometheusServiceAPI is a mock of PrometheusServiceAPI interface.
 type MockPrometheusServiceAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockPrometheusServiceAPIMockRecorder
 }
 
-// MockPrometheusServiceAPIMockRecorder is the mock recorder for MockPrometheusServiceAPI
+// MockPrometheusServiceAPIMockRecorder is the mock recorder for MockPrometheusServiceAPI.
 type MockPrometheusServiceAPIMockRecorder struct {
 	mock *MockPrometheusServiceAPI
 }
 
-// NewMockPrometheusServiceAPI creates a new mock instance
+// NewMockPrometheusServiceAPI creates a new mock instance.
 func NewMockPrometheusServiceAPI(ctrl *gomock.Controller) *MockPrometheusServiceAPI {
 	mock := &MockPrometheusServiceAPI{ctrl: ctrl}
 	mock.recorder = &MockPrometheusServiceAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockPrometheusServiceAPI) EXPECT() *MockPrometheusServiceAPIMockRecorder {
 	return m.recorder
 }
 
-// CreateWorkspace mocks base method
+// CreateWorkspace mocks base method.
 func (m *MockPrometheusServiceAPI) CreateWorkspace(arg0 *prometheusservice.CreateWorkspaceInput) (*prometheusservice.CreateWorkspaceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWorkspace", arg0)
@@ -44,13 +45,13 @@ func (m *MockPrometheusServiceAPI) CreateWorkspace(arg0 *prometheusservice.Creat
 	return ret0, ret1
 }
 
-// CreateWorkspace indicates an expected call of CreateWorkspace
+// CreateWorkspace indicates an expected call of CreateWorkspace.
 func (mr *MockPrometheusServiceAPIMockRecorder) CreateWorkspace(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkspace", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).CreateWorkspace), arg0)
 }
 
-// CreateWorkspaceRequest mocks base method
+// CreateWorkspaceRequest mocks base method.
 func (m *MockPrometheusServiceAPI) CreateWorkspaceRequest(arg0 *prometheusservice.CreateWorkspaceInput) (*request.Request, *prometheusservice.CreateWorkspaceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateWorkspaceRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockPrometheusServiceAPI) CreateWorkspaceRequest(arg0 *prometheusservic
 	return ret0, ret1
 }
 
-// CreateWorkspaceRequest indicates an expected call of CreateWorkspaceRequest
+// CreateWorkspaceRequest indicates an expected call of CreateWorkspaceRequest.
 func (mr *MockPrometheusServiceAPIMockRecorder) CreateWorkspaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkspaceRequest", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).CreateWorkspaceRequest), arg0)
 }
 
-// CreateWorkspaceWithContext mocks base method
+// CreateWorkspaceWithContext mocks base method.
 func (m *MockPrometheusServiceAPI) CreateWorkspaceWithContext(arg0 context.Context, arg1 *prometheusservice.CreateWorkspaceInput, arg2 ...request.Option) (*prometheusservice.CreateWorkspaceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockPrometheusServiceAPI) CreateWorkspaceWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// CreateWorkspaceWithContext indicates an expected call of CreateWorkspaceWithContext
+// CreateWorkspaceWithContext indicates an expected call of CreateWorkspaceWithContext.
 func (mr *MockPrometheusServiceAPIMockRecorder) CreateWorkspaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkspaceWithContext", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).CreateWorkspaceWithContext), varargs...)
 }
 
-// DeleteWorkspace mocks base method
+// DeleteWorkspace mocks base method.
 func (m *MockPrometheusServiceAPI) DeleteWorkspace(arg0 *prometheusservice.DeleteWorkspaceInput) (*prometheusservice.DeleteWorkspaceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteWorkspace", arg0)
@@ -94,13 +95,13 @@ func (m *MockPrometheusServiceAPI) DeleteWorkspace(arg0 *prometheusservice.Delet
 	return ret0, ret1
 }
 
-// DeleteWorkspace indicates an expected call of DeleteWorkspace
+// DeleteWorkspace indicates an expected call of DeleteWorkspace.
 func (mr *MockPrometheusServiceAPIMockRecorder) DeleteWorkspace(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkspace", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).DeleteWorkspace), arg0)
 }
 
-// DeleteWorkspaceRequest mocks base method
+// DeleteWorkspaceRequest mocks base method.
 func (m *MockPrometheusServiceAPI) DeleteWorkspaceRequest(arg0 *prometheusservice.DeleteWorkspaceInput) (*request.Request, *prometheusservice.DeleteWorkspaceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteWorkspaceRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockPrometheusServiceAPI) DeleteWorkspaceRequest(arg0 *prometheusservic
 	return ret0, ret1
 }
 
-// DeleteWorkspaceRequest indicates an expected call of DeleteWorkspaceRequest
+// DeleteWorkspaceRequest indicates an expected call of DeleteWorkspaceRequest.
 func (mr *MockPrometheusServiceAPIMockRecorder) DeleteWorkspaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkspaceRequest", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).DeleteWorkspaceRequest), arg0)
 }
 
-// DeleteWorkspaceWithContext mocks base method
+// DeleteWorkspaceWithContext mocks base method.
 func (m *MockPrometheusServiceAPI) DeleteWorkspaceWithContext(arg0 context.Context, arg1 *prometheusservice.DeleteWorkspaceInput, arg2 ...request.Option) (*prometheusservice.DeleteWorkspaceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockPrometheusServiceAPI) DeleteWorkspaceWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DeleteWorkspaceWithContext indicates an expected call of DeleteWorkspaceWithContext
+// DeleteWorkspaceWithContext indicates an expected call of DeleteWorkspaceWithContext.
 func (mr *MockPrometheusServiceAPIMockRecorder) DeleteWorkspaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkspaceWithContext", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).DeleteWorkspaceWithContext), varargs...)
 }
 
-// DescribeWorkspace mocks base method
+// DescribeWorkspace mocks base method.
 func (m *MockPrometheusServiceAPI) DescribeWorkspace(arg0 *prometheusservice.DescribeWorkspaceInput) (*prometheusservice.DescribeWorkspaceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeWorkspace", arg0)
@@ -144,13 +145,13 @@ func (m *MockPrometheusServiceAPI) DescribeWorkspace(arg0 *prometheusservice.Des
 	return ret0, ret1
 }
 
-// DescribeWorkspace indicates an expected call of DescribeWorkspace
+// DescribeWorkspace indicates an expected call of DescribeWorkspace.
 func (mr *MockPrometheusServiceAPIMockRecorder) DescribeWorkspace(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeWorkspace", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).DescribeWorkspace), arg0)
 }
 
-// DescribeWorkspaceRequest mocks base method
+// DescribeWorkspaceRequest mocks base method.
 func (m *MockPrometheusServiceAPI) DescribeWorkspaceRequest(arg0 *prometheusservice.DescribeWorkspaceInput) (*request.Request, *prometheusservice.DescribeWorkspaceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeWorkspaceRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockPrometheusServiceAPI) DescribeWorkspaceRequest(arg0 *prometheusserv
 	return ret0, ret1
 }
 
-// DescribeWorkspaceRequest indicates an expected call of DescribeWorkspaceRequest
+// DescribeWorkspaceRequest indicates an expected call of DescribeWorkspaceRequest.
 func (mr *MockPrometheusServiceAPIMockRecorder) DescribeWorkspaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeWorkspaceRequest", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).DescribeWorkspaceRequest), arg0)
 }
 
-// DescribeWorkspaceWithContext mocks base method
+// DescribeWorkspaceWithContext mocks base method.
 func (m *MockPrometheusServiceAPI) DescribeWorkspaceWithContext(arg0 context.Context, arg1 *prometheusservice.DescribeWorkspaceInput, arg2 ...request.Option) (*prometheusservice.DescribeWorkspaceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockPrometheusServiceAPI) DescribeWorkspaceWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DescribeWorkspaceWithContext indicates an expected call of DescribeWorkspaceWithContext
+// DescribeWorkspaceWithContext indicates an expected call of DescribeWorkspaceWithContext.
 func (mr *MockPrometheusServiceAPIMockRecorder) DescribeWorkspaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeWorkspaceWithContext", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).DescribeWorkspaceWithContext), varargs...)
 }
 
-// ListWorkspaces mocks base method
+// ListWorkspaces mocks base method.
 func (m *MockPrometheusServiceAPI) ListWorkspaces(arg0 *prometheusservice.ListWorkspacesInput) (*prometheusservice.ListWorkspacesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkspaces", arg0)
@@ -194,13 +195,13 @@ func (m *MockPrometheusServiceAPI) ListWorkspaces(arg0 *prometheusservice.ListWo
 	return ret0, ret1
 }
 
-// ListWorkspaces indicates an expected call of ListWorkspaces
+// ListWorkspaces indicates an expected call of ListWorkspaces.
 func (mr *MockPrometheusServiceAPIMockRecorder) ListWorkspaces(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkspaces", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).ListWorkspaces), arg0)
 }
 
-// ListWorkspacesPages mocks base method
+// ListWorkspacesPages mocks base method.
 func (m *MockPrometheusServiceAPI) ListWorkspacesPages(arg0 *prometheusservice.ListWorkspacesInput, arg1 func(*prometheusservice.ListWorkspacesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkspacesPages", arg0, arg1)
@@ -208,13 +209,13 @@ func (m *MockPrometheusServiceAPI) ListWorkspacesPages(arg0 *prometheusservice.L
 	return ret0
 }
 
-// ListWorkspacesPages indicates an expected call of ListWorkspacesPages
+// ListWorkspacesPages indicates an expected call of ListWorkspacesPages.
 func (mr *MockPrometheusServiceAPIMockRecorder) ListWorkspacesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkspacesPages", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).ListWorkspacesPages), arg0, arg1)
 }
 
-// ListWorkspacesPagesWithContext mocks base method
+// ListWorkspacesPagesWithContext mocks base method.
 func (m *MockPrometheusServiceAPI) ListWorkspacesPagesWithContext(arg0 context.Context, arg1 *prometheusservice.ListWorkspacesInput, arg2 func(*prometheusservice.ListWorkspacesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -226,14 +227,14 @@ func (m *MockPrometheusServiceAPI) ListWorkspacesPagesWithContext(arg0 context.C
 	return ret0
 }
 
-// ListWorkspacesPagesWithContext indicates an expected call of ListWorkspacesPagesWithContext
+// ListWorkspacesPagesWithContext indicates an expected call of ListWorkspacesPagesWithContext.
 func (mr *MockPrometheusServiceAPIMockRecorder) ListWorkspacesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkspacesPagesWithContext", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).ListWorkspacesPagesWithContext), varargs...)
 }
 
-// ListWorkspacesRequest mocks base method
+// ListWorkspacesRequest mocks base method.
 func (m *MockPrometheusServiceAPI) ListWorkspacesRequest(arg0 *prometheusservice.ListWorkspacesInput) (*request.Request, *prometheusservice.ListWorkspacesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListWorkspacesRequest", arg0)
@@ -242,13 +243,13 @@ func (m *MockPrometheusServiceAPI) ListWorkspacesRequest(arg0 *prometheusservice
 	return ret0, ret1
 }
 
-// ListWorkspacesRequest indicates an expected call of ListWorkspacesRequest
+// ListWorkspacesRequest indicates an expected call of ListWorkspacesRequest.
 func (mr *MockPrometheusServiceAPIMockRecorder) ListWorkspacesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkspacesRequest", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).ListWorkspacesRequest), arg0)
 }
 
-// ListWorkspacesWithContext mocks base method
+// ListWorkspacesWithContext mocks base method.
 func (m *MockPrometheusServiceAPI) ListWorkspacesWithContext(arg0 context.Context, arg1 *prometheusservice.ListWorkspacesInput, arg2 ...request.Option) (*prometheusservice.ListWorkspacesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -261,14 +262,14 @@ func (m *MockPrometheusServiceAPI) ListWorkspacesWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListWorkspacesWithContext indicates an expected call of ListWorkspacesWithContext
+// ListWorkspacesWithContext indicates an expected call of ListWorkspacesWithContext.
 func (mr *MockPrometheusServiceAPIMockRecorder) ListWorkspacesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkspacesWithContext", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).ListWorkspacesWithContext), varargs...)
 }
 
-// UpdateWorkspaceAlias mocks base method
+// UpdateWorkspaceAlias mocks base method.
 func (m *MockPrometheusServiceAPI) UpdateWorkspaceAlias(arg0 *prometheusservice.UpdateWorkspaceAliasInput) (*prometheusservice.UpdateWorkspaceAliasOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateWorkspaceAlias", arg0)
@@ -277,13 +278,13 @@ func (m *MockPrometheusServiceAPI) UpdateWorkspaceAlias(arg0 *prometheusservice.
 	return ret0, ret1
 }
 
-// UpdateWorkspaceAlias indicates an expected call of UpdateWorkspaceAlias
+// UpdateWorkspaceAlias indicates an expected call of UpdateWorkspaceAlias.
 func (mr *MockPrometheusServiceAPIMockRecorder) UpdateWorkspaceAlias(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWorkspaceAlias", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).UpdateWorkspaceAlias), arg0)
 }
 
-// UpdateWorkspaceAliasRequest mocks base method
+// UpdateWorkspaceAliasRequest mocks base method.
 func (m *MockPrometheusServiceAPI) UpdateWorkspaceAliasRequest(arg0 *prometheusservice.UpdateWorkspaceAliasInput) (*request.Request, *prometheusservice.UpdateWorkspaceAliasOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateWorkspaceAliasRequest", arg0)
@@ -292,13 +293,13 @@ func (m *MockPrometheusServiceAPI) UpdateWorkspaceAliasRequest(arg0 *prometheuss
 	return ret0, ret1
 }
 
-// UpdateWorkspaceAliasRequest indicates an expected call of UpdateWorkspaceAliasRequest
+// UpdateWorkspaceAliasRequest indicates an expected call of UpdateWorkspaceAliasRequest.
 func (mr *MockPrometheusServiceAPIMockRecorder) UpdateWorkspaceAliasRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWorkspaceAliasRequest", reflect.TypeOf((*MockPrometheusServiceAPI)(nil).UpdateWorkspaceAliasRequest), arg0)
 }
 
-// UpdateWorkspaceAliasWithContext mocks base method
+// UpdateWorkspaceAliasWithContext mocks base method.
 func (m *MockPrometheusServiceAPI) UpdateWorkspaceAliasWithContext(arg0 context.Context, arg1 *prometheusservice.UpdateWorkspaceAliasInput, arg2 ...request.Option) (*prometheusservice.UpdateWorkspaceAliasOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -311,7 +312,7 @@ func (m *MockPrometheusServiceAPI) UpdateWorkspaceAliasWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// UpdateWorkspaceAliasWithContext indicates an expected call of UpdateWorkspaceAliasWithContext
+// UpdateWorkspaceAliasWithContext indicates an expected call of UpdateWorkspaceAliasWithContext.
 func (mr *MockPrometheusServiceAPIMockRecorder) UpdateWorkspaceAliasWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

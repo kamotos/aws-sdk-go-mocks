@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euxo pipefail
 
-sdk_version=1.36.23
+sdk_version=1.38.15
 
 IFS=$'
 '
@@ -19,5 +19,5 @@ for t in ${interfaces[@]}; do
     -package ${destination_service} \
     -destination service/${destination_service}/mock.go \
     github.com/aws/aws-sdk-go/service/$service_name/${service_name}iface \
-    $interface_name &
+    $interface_name 
 done

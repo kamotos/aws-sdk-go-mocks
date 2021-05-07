@@ -6,36 +6,37 @@ package iotthingsgraphmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	iotthingsgraph "github.com/aws/aws-sdk-go/service/iotthingsgraph"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockIoTThingsGraphAPI is a mock of IoTThingsGraphAPI interface
+// MockIoTThingsGraphAPI is a mock of IoTThingsGraphAPI interface.
 type MockIoTThingsGraphAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockIoTThingsGraphAPIMockRecorder
 }
 
-// MockIoTThingsGraphAPIMockRecorder is the mock recorder for MockIoTThingsGraphAPI
+// MockIoTThingsGraphAPIMockRecorder is the mock recorder for MockIoTThingsGraphAPI.
 type MockIoTThingsGraphAPIMockRecorder struct {
 	mock *MockIoTThingsGraphAPI
 }
 
-// NewMockIoTThingsGraphAPI creates a new mock instance
+// NewMockIoTThingsGraphAPI creates a new mock instance.
 func NewMockIoTThingsGraphAPI(ctrl *gomock.Controller) *MockIoTThingsGraphAPI {
 	mock := &MockIoTThingsGraphAPI{ctrl: ctrl}
 	mock.recorder = &MockIoTThingsGraphAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockIoTThingsGraphAPI) EXPECT() *MockIoTThingsGraphAPIMockRecorder {
 	return m.recorder
 }
 
-// AssociateEntityToThing mocks base method
+// AssociateEntityToThing mocks base method.
 func (m *MockIoTThingsGraphAPI) AssociateEntityToThing(arg0 *iotthingsgraph.AssociateEntityToThingInput) (*iotthingsgraph.AssociateEntityToThingOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateEntityToThing", arg0)
@@ -44,13 +45,13 @@ func (m *MockIoTThingsGraphAPI) AssociateEntityToThing(arg0 *iotthingsgraph.Asso
 	return ret0, ret1
 }
 
-// AssociateEntityToThing indicates an expected call of AssociateEntityToThing
+// AssociateEntityToThing indicates an expected call of AssociateEntityToThing.
 func (mr *MockIoTThingsGraphAPIMockRecorder) AssociateEntityToThing(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateEntityToThing", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).AssociateEntityToThing), arg0)
 }
 
-// AssociateEntityToThingRequest mocks base method
+// AssociateEntityToThingRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) AssociateEntityToThingRequest(arg0 *iotthingsgraph.AssociateEntityToThingInput) (*request.Request, *iotthingsgraph.AssociateEntityToThingOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AssociateEntityToThingRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockIoTThingsGraphAPI) AssociateEntityToThingRequest(arg0 *iotthingsgra
 	return ret0, ret1
 }
 
-// AssociateEntityToThingRequest indicates an expected call of AssociateEntityToThingRequest
+// AssociateEntityToThingRequest indicates an expected call of AssociateEntityToThingRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) AssociateEntityToThingRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateEntityToThingRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).AssociateEntityToThingRequest), arg0)
 }
 
-// AssociateEntityToThingWithContext mocks base method
+// AssociateEntityToThingWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) AssociateEntityToThingWithContext(arg0 context.Context, arg1 *iotthingsgraph.AssociateEntityToThingInput, arg2 ...request.Option) (*iotthingsgraph.AssociateEntityToThingOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockIoTThingsGraphAPI) AssociateEntityToThingWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// AssociateEntityToThingWithContext indicates an expected call of AssociateEntityToThingWithContext
+// AssociateEntityToThingWithContext indicates an expected call of AssociateEntityToThingWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) AssociateEntityToThingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateEntityToThingWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).AssociateEntityToThingWithContext), varargs...)
 }
 
-// CreateFlowTemplate mocks base method
+// CreateFlowTemplate mocks base method.
 func (m *MockIoTThingsGraphAPI) CreateFlowTemplate(arg0 *iotthingsgraph.CreateFlowTemplateInput) (*iotthingsgraph.CreateFlowTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFlowTemplate", arg0)
@@ -94,13 +95,13 @@ func (m *MockIoTThingsGraphAPI) CreateFlowTemplate(arg0 *iotthingsgraph.CreateFl
 	return ret0, ret1
 }
 
-// CreateFlowTemplate indicates an expected call of CreateFlowTemplate
+// CreateFlowTemplate indicates an expected call of CreateFlowTemplate.
 func (mr *MockIoTThingsGraphAPIMockRecorder) CreateFlowTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFlowTemplate", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).CreateFlowTemplate), arg0)
 }
 
-// CreateFlowTemplateRequest mocks base method
+// CreateFlowTemplateRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) CreateFlowTemplateRequest(arg0 *iotthingsgraph.CreateFlowTemplateInput) (*request.Request, *iotthingsgraph.CreateFlowTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFlowTemplateRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockIoTThingsGraphAPI) CreateFlowTemplateRequest(arg0 *iotthingsgraph.C
 	return ret0, ret1
 }
 
-// CreateFlowTemplateRequest indicates an expected call of CreateFlowTemplateRequest
+// CreateFlowTemplateRequest indicates an expected call of CreateFlowTemplateRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) CreateFlowTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFlowTemplateRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).CreateFlowTemplateRequest), arg0)
 }
 
-// CreateFlowTemplateWithContext mocks base method
+// CreateFlowTemplateWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) CreateFlowTemplateWithContext(arg0 context.Context, arg1 *iotthingsgraph.CreateFlowTemplateInput, arg2 ...request.Option) (*iotthingsgraph.CreateFlowTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockIoTThingsGraphAPI) CreateFlowTemplateWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// CreateFlowTemplateWithContext indicates an expected call of CreateFlowTemplateWithContext
+// CreateFlowTemplateWithContext indicates an expected call of CreateFlowTemplateWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) CreateFlowTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFlowTemplateWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).CreateFlowTemplateWithContext), varargs...)
 }
 
-// CreateSystemInstance mocks base method
+// CreateSystemInstance mocks base method.
 func (m *MockIoTThingsGraphAPI) CreateSystemInstance(arg0 *iotthingsgraph.CreateSystemInstanceInput) (*iotthingsgraph.CreateSystemInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSystemInstance", arg0)
@@ -144,13 +145,13 @@ func (m *MockIoTThingsGraphAPI) CreateSystemInstance(arg0 *iotthingsgraph.Create
 	return ret0, ret1
 }
 
-// CreateSystemInstance indicates an expected call of CreateSystemInstance
+// CreateSystemInstance indicates an expected call of CreateSystemInstance.
 func (mr *MockIoTThingsGraphAPIMockRecorder) CreateSystemInstance(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSystemInstance", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).CreateSystemInstance), arg0)
 }
 
-// CreateSystemInstanceRequest mocks base method
+// CreateSystemInstanceRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) CreateSystemInstanceRequest(arg0 *iotthingsgraph.CreateSystemInstanceInput) (*request.Request, *iotthingsgraph.CreateSystemInstanceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSystemInstanceRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockIoTThingsGraphAPI) CreateSystemInstanceRequest(arg0 *iotthingsgraph
 	return ret0, ret1
 }
 
-// CreateSystemInstanceRequest indicates an expected call of CreateSystemInstanceRequest
+// CreateSystemInstanceRequest indicates an expected call of CreateSystemInstanceRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) CreateSystemInstanceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSystemInstanceRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).CreateSystemInstanceRequest), arg0)
 }
 
-// CreateSystemInstanceWithContext mocks base method
+// CreateSystemInstanceWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) CreateSystemInstanceWithContext(arg0 context.Context, arg1 *iotthingsgraph.CreateSystemInstanceInput, arg2 ...request.Option) (*iotthingsgraph.CreateSystemInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockIoTThingsGraphAPI) CreateSystemInstanceWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// CreateSystemInstanceWithContext indicates an expected call of CreateSystemInstanceWithContext
+// CreateSystemInstanceWithContext indicates an expected call of CreateSystemInstanceWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) CreateSystemInstanceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSystemInstanceWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).CreateSystemInstanceWithContext), varargs...)
 }
 
-// CreateSystemTemplate mocks base method
+// CreateSystemTemplate mocks base method.
 func (m *MockIoTThingsGraphAPI) CreateSystemTemplate(arg0 *iotthingsgraph.CreateSystemTemplateInput) (*iotthingsgraph.CreateSystemTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSystemTemplate", arg0)
@@ -194,13 +195,13 @@ func (m *MockIoTThingsGraphAPI) CreateSystemTemplate(arg0 *iotthingsgraph.Create
 	return ret0, ret1
 }
 
-// CreateSystemTemplate indicates an expected call of CreateSystemTemplate
+// CreateSystemTemplate indicates an expected call of CreateSystemTemplate.
 func (mr *MockIoTThingsGraphAPIMockRecorder) CreateSystemTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSystemTemplate", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).CreateSystemTemplate), arg0)
 }
 
-// CreateSystemTemplateRequest mocks base method
+// CreateSystemTemplateRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) CreateSystemTemplateRequest(arg0 *iotthingsgraph.CreateSystemTemplateInput) (*request.Request, *iotthingsgraph.CreateSystemTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSystemTemplateRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockIoTThingsGraphAPI) CreateSystemTemplateRequest(arg0 *iotthingsgraph
 	return ret0, ret1
 }
 
-// CreateSystemTemplateRequest indicates an expected call of CreateSystemTemplateRequest
+// CreateSystemTemplateRequest indicates an expected call of CreateSystemTemplateRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) CreateSystemTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSystemTemplateRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).CreateSystemTemplateRequest), arg0)
 }
 
-// CreateSystemTemplateWithContext mocks base method
+// CreateSystemTemplateWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) CreateSystemTemplateWithContext(arg0 context.Context, arg1 *iotthingsgraph.CreateSystemTemplateInput, arg2 ...request.Option) (*iotthingsgraph.CreateSystemTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockIoTThingsGraphAPI) CreateSystemTemplateWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// CreateSystemTemplateWithContext indicates an expected call of CreateSystemTemplateWithContext
+// CreateSystemTemplateWithContext indicates an expected call of CreateSystemTemplateWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) CreateSystemTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSystemTemplateWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).CreateSystemTemplateWithContext), varargs...)
 }
 
-// DeleteFlowTemplate mocks base method
+// DeleteFlowTemplate mocks base method.
 func (m *MockIoTThingsGraphAPI) DeleteFlowTemplate(arg0 *iotthingsgraph.DeleteFlowTemplateInput) (*iotthingsgraph.DeleteFlowTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFlowTemplate", arg0)
@@ -244,13 +245,13 @@ func (m *MockIoTThingsGraphAPI) DeleteFlowTemplate(arg0 *iotthingsgraph.DeleteFl
 	return ret0, ret1
 }
 
-// DeleteFlowTemplate indicates an expected call of DeleteFlowTemplate
+// DeleteFlowTemplate indicates an expected call of DeleteFlowTemplate.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeleteFlowTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFlowTemplate", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeleteFlowTemplate), arg0)
 }
 
-// DeleteFlowTemplateRequest mocks base method
+// DeleteFlowTemplateRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) DeleteFlowTemplateRequest(arg0 *iotthingsgraph.DeleteFlowTemplateInput) (*request.Request, *iotthingsgraph.DeleteFlowTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFlowTemplateRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockIoTThingsGraphAPI) DeleteFlowTemplateRequest(arg0 *iotthingsgraph.D
 	return ret0, ret1
 }
 
-// DeleteFlowTemplateRequest indicates an expected call of DeleteFlowTemplateRequest
+// DeleteFlowTemplateRequest indicates an expected call of DeleteFlowTemplateRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeleteFlowTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFlowTemplateRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeleteFlowTemplateRequest), arg0)
 }
 
-// DeleteFlowTemplateWithContext mocks base method
+// DeleteFlowTemplateWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) DeleteFlowTemplateWithContext(arg0 context.Context, arg1 *iotthingsgraph.DeleteFlowTemplateInput, arg2 ...request.Option) (*iotthingsgraph.DeleteFlowTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockIoTThingsGraphAPI) DeleteFlowTemplateWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DeleteFlowTemplateWithContext indicates an expected call of DeleteFlowTemplateWithContext
+// DeleteFlowTemplateWithContext indicates an expected call of DeleteFlowTemplateWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeleteFlowTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFlowTemplateWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeleteFlowTemplateWithContext), varargs...)
 }
 
-// DeleteNamespace mocks base method
+// DeleteNamespace mocks base method.
 func (m *MockIoTThingsGraphAPI) DeleteNamespace(arg0 *iotthingsgraph.DeleteNamespaceInput) (*iotthingsgraph.DeleteNamespaceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteNamespace", arg0)
@@ -294,13 +295,13 @@ func (m *MockIoTThingsGraphAPI) DeleteNamespace(arg0 *iotthingsgraph.DeleteNames
 	return ret0, ret1
 }
 
-// DeleteNamespace indicates an expected call of DeleteNamespace
+// DeleteNamespace indicates an expected call of DeleteNamespace.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeleteNamespace(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteNamespace", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeleteNamespace), arg0)
 }
 
-// DeleteNamespaceRequest mocks base method
+// DeleteNamespaceRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) DeleteNamespaceRequest(arg0 *iotthingsgraph.DeleteNamespaceInput) (*request.Request, *iotthingsgraph.DeleteNamespaceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteNamespaceRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockIoTThingsGraphAPI) DeleteNamespaceRequest(arg0 *iotthingsgraph.Dele
 	return ret0, ret1
 }
 
-// DeleteNamespaceRequest indicates an expected call of DeleteNamespaceRequest
+// DeleteNamespaceRequest indicates an expected call of DeleteNamespaceRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeleteNamespaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteNamespaceRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeleteNamespaceRequest), arg0)
 }
 
-// DeleteNamespaceWithContext mocks base method
+// DeleteNamespaceWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) DeleteNamespaceWithContext(arg0 context.Context, arg1 *iotthingsgraph.DeleteNamespaceInput, arg2 ...request.Option) (*iotthingsgraph.DeleteNamespaceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockIoTThingsGraphAPI) DeleteNamespaceWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// DeleteNamespaceWithContext indicates an expected call of DeleteNamespaceWithContext
+// DeleteNamespaceWithContext indicates an expected call of DeleteNamespaceWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeleteNamespaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteNamespaceWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeleteNamespaceWithContext), varargs...)
 }
 
-// DeleteSystemInstance mocks base method
+// DeleteSystemInstance mocks base method.
 func (m *MockIoTThingsGraphAPI) DeleteSystemInstance(arg0 *iotthingsgraph.DeleteSystemInstanceInput) (*iotthingsgraph.DeleteSystemInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSystemInstance", arg0)
@@ -344,13 +345,13 @@ func (m *MockIoTThingsGraphAPI) DeleteSystemInstance(arg0 *iotthingsgraph.Delete
 	return ret0, ret1
 }
 
-// DeleteSystemInstance indicates an expected call of DeleteSystemInstance
+// DeleteSystemInstance indicates an expected call of DeleteSystemInstance.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeleteSystemInstance(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSystemInstance", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeleteSystemInstance), arg0)
 }
 
-// DeleteSystemInstanceRequest mocks base method
+// DeleteSystemInstanceRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) DeleteSystemInstanceRequest(arg0 *iotthingsgraph.DeleteSystemInstanceInput) (*request.Request, *iotthingsgraph.DeleteSystemInstanceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSystemInstanceRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockIoTThingsGraphAPI) DeleteSystemInstanceRequest(arg0 *iotthingsgraph
 	return ret0, ret1
 }
 
-// DeleteSystemInstanceRequest indicates an expected call of DeleteSystemInstanceRequest
+// DeleteSystemInstanceRequest indicates an expected call of DeleteSystemInstanceRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeleteSystemInstanceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSystemInstanceRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeleteSystemInstanceRequest), arg0)
 }
 
-// DeleteSystemInstanceWithContext mocks base method
+// DeleteSystemInstanceWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) DeleteSystemInstanceWithContext(arg0 context.Context, arg1 *iotthingsgraph.DeleteSystemInstanceInput, arg2 ...request.Option) (*iotthingsgraph.DeleteSystemInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockIoTThingsGraphAPI) DeleteSystemInstanceWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DeleteSystemInstanceWithContext indicates an expected call of DeleteSystemInstanceWithContext
+// DeleteSystemInstanceWithContext indicates an expected call of DeleteSystemInstanceWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeleteSystemInstanceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSystemInstanceWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeleteSystemInstanceWithContext), varargs...)
 }
 
-// DeleteSystemTemplate mocks base method
+// DeleteSystemTemplate mocks base method.
 func (m *MockIoTThingsGraphAPI) DeleteSystemTemplate(arg0 *iotthingsgraph.DeleteSystemTemplateInput) (*iotthingsgraph.DeleteSystemTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSystemTemplate", arg0)
@@ -394,13 +395,13 @@ func (m *MockIoTThingsGraphAPI) DeleteSystemTemplate(arg0 *iotthingsgraph.Delete
 	return ret0, ret1
 }
 
-// DeleteSystemTemplate indicates an expected call of DeleteSystemTemplate
+// DeleteSystemTemplate indicates an expected call of DeleteSystemTemplate.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeleteSystemTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSystemTemplate", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeleteSystemTemplate), arg0)
 }
 
-// DeleteSystemTemplateRequest mocks base method
+// DeleteSystemTemplateRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) DeleteSystemTemplateRequest(arg0 *iotthingsgraph.DeleteSystemTemplateInput) (*request.Request, *iotthingsgraph.DeleteSystemTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSystemTemplateRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockIoTThingsGraphAPI) DeleteSystemTemplateRequest(arg0 *iotthingsgraph
 	return ret0, ret1
 }
 
-// DeleteSystemTemplateRequest indicates an expected call of DeleteSystemTemplateRequest
+// DeleteSystemTemplateRequest indicates an expected call of DeleteSystemTemplateRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeleteSystemTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSystemTemplateRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeleteSystemTemplateRequest), arg0)
 }
 
-// DeleteSystemTemplateWithContext mocks base method
+// DeleteSystemTemplateWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) DeleteSystemTemplateWithContext(arg0 context.Context, arg1 *iotthingsgraph.DeleteSystemTemplateInput, arg2 ...request.Option) (*iotthingsgraph.DeleteSystemTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockIoTThingsGraphAPI) DeleteSystemTemplateWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DeleteSystemTemplateWithContext indicates an expected call of DeleteSystemTemplateWithContext
+// DeleteSystemTemplateWithContext indicates an expected call of DeleteSystemTemplateWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeleteSystemTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSystemTemplateWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeleteSystemTemplateWithContext), varargs...)
 }
 
-// DeploySystemInstance mocks base method
+// DeploySystemInstance mocks base method.
 func (m *MockIoTThingsGraphAPI) DeploySystemInstance(arg0 *iotthingsgraph.DeploySystemInstanceInput) (*iotthingsgraph.DeploySystemInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeploySystemInstance", arg0)
@@ -444,13 +445,13 @@ func (m *MockIoTThingsGraphAPI) DeploySystemInstance(arg0 *iotthingsgraph.Deploy
 	return ret0, ret1
 }
 
-// DeploySystemInstance indicates an expected call of DeploySystemInstance
+// DeploySystemInstance indicates an expected call of DeploySystemInstance.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeploySystemInstance(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeploySystemInstance", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeploySystemInstance), arg0)
 }
 
-// DeploySystemInstanceRequest mocks base method
+// DeploySystemInstanceRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) DeploySystemInstanceRequest(arg0 *iotthingsgraph.DeploySystemInstanceInput) (*request.Request, *iotthingsgraph.DeploySystemInstanceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeploySystemInstanceRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockIoTThingsGraphAPI) DeploySystemInstanceRequest(arg0 *iotthingsgraph
 	return ret0, ret1
 }
 
-// DeploySystemInstanceRequest indicates an expected call of DeploySystemInstanceRequest
+// DeploySystemInstanceRequest indicates an expected call of DeploySystemInstanceRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeploySystemInstanceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeploySystemInstanceRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeploySystemInstanceRequest), arg0)
 }
 
-// DeploySystemInstanceWithContext mocks base method
+// DeploySystemInstanceWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) DeploySystemInstanceWithContext(arg0 context.Context, arg1 *iotthingsgraph.DeploySystemInstanceInput, arg2 ...request.Option) (*iotthingsgraph.DeploySystemInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockIoTThingsGraphAPI) DeploySystemInstanceWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DeploySystemInstanceWithContext indicates an expected call of DeploySystemInstanceWithContext
+// DeploySystemInstanceWithContext indicates an expected call of DeploySystemInstanceWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeploySystemInstanceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeploySystemInstanceWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeploySystemInstanceWithContext), varargs...)
 }
 
-// DeprecateFlowTemplate mocks base method
+// DeprecateFlowTemplate mocks base method.
 func (m *MockIoTThingsGraphAPI) DeprecateFlowTemplate(arg0 *iotthingsgraph.DeprecateFlowTemplateInput) (*iotthingsgraph.DeprecateFlowTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeprecateFlowTemplate", arg0)
@@ -494,13 +495,13 @@ func (m *MockIoTThingsGraphAPI) DeprecateFlowTemplate(arg0 *iotthingsgraph.Depre
 	return ret0, ret1
 }
 
-// DeprecateFlowTemplate indicates an expected call of DeprecateFlowTemplate
+// DeprecateFlowTemplate indicates an expected call of DeprecateFlowTemplate.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeprecateFlowTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeprecateFlowTemplate", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeprecateFlowTemplate), arg0)
 }
 
-// DeprecateFlowTemplateRequest mocks base method
+// DeprecateFlowTemplateRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) DeprecateFlowTemplateRequest(arg0 *iotthingsgraph.DeprecateFlowTemplateInput) (*request.Request, *iotthingsgraph.DeprecateFlowTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeprecateFlowTemplateRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockIoTThingsGraphAPI) DeprecateFlowTemplateRequest(arg0 *iotthingsgrap
 	return ret0, ret1
 }
 
-// DeprecateFlowTemplateRequest indicates an expected call of DeprecateFlowTemplateRequest
+// DeprecateFlowTemplateRequest indicates an expected call of DeprecateFlowTemplateRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeprecateFlowTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeprecateFlowTemplateRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeprecateFlowTemplateRequest), arg0)
 }
 
-// DeprecateFlowTemplateWithContext mocks base method
+// DeprecateFlowTemplateWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) DeprecateFlowTemplateWithContext(arg0 context.Context, arg1 *iotthingsgraph.DeprecateFlowTemplateInput, arg2 ...request.Option) (*iotthingsgraph.DeprecateFlowTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockIoTThingsGraphAPI) DeprecateFlowTemplateWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DeprecateFlowTemplateWithContext indicates an expected call of DeprecateFlowTemplateWithContext
+// DeprecateFlowTemplateWithContext indicates an expected call of DeprecateFlowTemplateWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeprecateFlowTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeprecateFlowTemplateWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeprecateFlowTemplateWithContext), varargs...)
 }
 
-// DeprecateSystemTemplate mocks base method
+// DeprecateSystemTemplate mocks base method.
 func (m *MockIoTThingsGraphAPI) DeprecateSystemTemplate(arg0 *iotthingsgraph.DeprecateSystemTemplateInput) (*iotthingsgraph.DeprecateSystemTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeprecateSystemTemplate", arg0)
@@ -544,13 +545,13 @@ func (m *MockIoTThingsGraphAPI) DeprecateSystemTemplate(arg0 *iotthingsgraph.Dep
 	return ret0, ret1
 }
 
-// DeprecateSystemTemplate indicates an expected call of DeprecateSystemTemplate
+// DeprecateSystemTemplate indicates an expected call of DeprecateSystemTemplate.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeprecateSystemTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeprecateSystemTemplate", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeprecateSystemTemplate), arg0)
 }
 
-// DeprecateSystemTemplateRequest mocks base method
+// DeprecateSystemTemplateRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) DeprecateSystemTemplateRequest(arg0 *iotthingsgraph.DeprecateSystemTemplateInput) (*request.Request, *iotthingsgraph.DeprecateSystemTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeprecateSystemTemplateRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockIoTThingsGraphAPI) DeprecateSystemTemplateRequest(arg0 *iotthingsgr
 	return ret0, ret1
 }
 
-// DeprecateSystemTemplateRequest indicates an expected call of DeprecateSystemTemplateRequest
+// DeprecateSystemTemplateRequest indicates an expected call of DeprecateSystemTemplateRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeprecateSystemTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeprecateSystemTemplateRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeprecateSystemTemplateRequest), arg0)
 }
 
-// DeprecateSystemTemplateWithContext mocks base method
+// DeprecateSystemTemplateWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) DeprecateSystemTemplateWithContext(arg0 context.Context, arg1 *iotthingsgraph.DeprecateSystemTemplateInput, arg2 ...request.Option) (*iotthingsgraph.DeprecateSystemTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockIoTThingsGraphAPI) DeprecateSystemTemplateWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// DeprecateSystemTemplateWithContext indicates an expected call of DeprecateSystemTemplateWithContext
+// DeprecateSystemTemplateWithContext indicates an expected call of DeprecateSystemTemplateWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DeprecateSystemTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeprecateSystemTemplateWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DeprecateSystemTemplateWithContext), varargs...)
 }
 
-// DescribeNamespace mocks base method
+// DescribeNamespace mocks base method.
 func (m *MockIoTThingsGraphAPI) DescribeNamespace(arg0 *iotthingsgraph.DescribeNamespaceInput) (*iotthingsgraph.DescribeNamespaceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeNamespace", arg0)
@@ -594,13 +595,13 @@ func (m *MockIoTThingsGraphAPI) DescribeNamespace(arg0 *iotthingsgraph.DescribeN
 	return ret0, ret1
 }
 
-// DescribeNamespace indicates an expected call of DescribeNamespace
+// DescribeNamespace indicates an expected call of DescribeNamespace.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DescribeNamespace(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeNamespace", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DescribeNamespace), arg0)
 }
 
-// DescribeNamespaceRequest mocks base method
+// DescribeNamespaceRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) DescribeNamespaceRequest(arg0 *iotthingsgraph.DescribeNamespaceInput) (*request.Request, *iotthingsgraph.DescribeNamespaceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeNamespaceRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockIoTThingsGraphAPI) DescribeNamespaceRequest(arg0 *iotthingsgraph.De
 	return ret0, ret1
 }
 
-// DescribeNamespaceRequest indicates an expected call of DescribeNamespaceRequest
+// DescribeNamespaceRequest indicates an expected call of DescribeNamespaceRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DescribeNamespaceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeNamespaceRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DescribeNamespaceRequest), arg0)
 }
 
-// DescribeNamespaceWithContext mocks base method
+// DescribeNamespaceWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) DescribeNamespaceWithContext(arg0 context.Context, arg1 *iotthingsgraph.DescribeNamespaceInput, arg2 ...request.Option) (*iotthingsgraph.DescribeNamespaceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockIoTThingsGraphAPI) DescribeNamespaceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DescribeNamespaceWithContext indicates an expected call of DescribeNamespaceWithContext
+// DescribeNamespaceWithContext indicates an expected call of DescribeNamespaceWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DescribeNamespaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeNamespaceWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DescribeNamespaceWithContext), varargs...)
 }
 
-// DissociateEntityFromThing mocks base method
+// DissociateEntityFromThing mocks base method.
 func (m *MockIoTThingsGraphAPI) DissociateEntityFromThing(arg0 *iotthingsgraph.DissociateEntityFromThingInput) (*iotthingsgraph.DissociateEntityFromThingOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DissociateEntityFromThing", arg0)
@@ -644,13 +645,13 @@ func (m *MockIoTThingsGraphAPI) DissociateEntityFromThing(arg0 *iotthingsgraph.D
 	return ret0, ret1
 }
 
-// DissociateEntityFromThing indicates an expected call of DissociateEntityFromThing
+// DissociateEntityFromThing indicates an expected call of DissociateEntityFromThing.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DissociateEntityFromThing(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DissociateEntityFromThing", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DissociateEntityFromThing), arg0)
 }
 
-// DissociateEntityFromThingRequest mocks base method
+// DissociateEntityFromThingRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) DissociateEntityFromThingRequest(arg0 *iotthingsgraph.DissociateEntityFromThingInput) (*request.Request, *iotthingsgraph.DissociateEntityFromThingOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DissociateEntityFromThingRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockIoTThingsGraphAPI) DissociateEntityFromThingRequest(arg0 *iotthings
 	return ret0, ret1
 }
 
-// DissociateEntityFromThingRequest indicates an expected call of DissociateEntityFromThingRequest
+// DissociateEntityFromThingRequest indicates an expected call of DissociateEntityFromThingRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DissociateEntityFromThingRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DissociateEntityFromThingRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DissociateEntityFromThingRequest), arg0)
 }
 
-// DissociateEntityFromThingWithContext mocks base method
+// DissociateEntityFromThingWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) DissociateEntityFromThingWithContext(arg0 context.Context, arg1 *iotthingsgraph.DissociateEntityFromThingInput, arg2 ...request.Option) (*iotthingsgraph.DissociateEntityFromThingOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockIoTThingsGraphAPI) DissociateEntityFromThingWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// DissociateEntityFromThingWithContext indicates an expected call of DissociateEntityFromThingWithContext
+// DissociateEntityFromThingWithContext indicates an expected call of DissociateEntityFromThingWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) DissociateEntityFromThingWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DissociateEntityFromThingWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).DissociateEntityFromThingWithContext), varargs...)
 }
 
-// GetEntities mocks base method
+// GetEntities mocks base method.
 func (m *MockIoTThingsGraphAPI) GetEntities(arg0 *iotthingsgraph.GetEntitiesInput) (*iotthingsgraph.GetEntitiesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEntities", arg0)
@@ -694,13 +695,13 @@ func (m *MockIoTThingsGraphAPI) GetEntities(arg0 *iotthingsgraph.GetEntitiesInpu
 	return ret0, ret1
 }
 
-// GetEntities indicates an expected call of GetEntities
+// GetEntities indicates an expected call of GetEntities.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetEntities(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEntities", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetEntities), arg0)
 }
 
-// GetEntitiesRequest mocks base method
+// GetEntitiesRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) GetEntitiesRequest(arg0 *iotthingsgraph.GetEntitiesInput) (*request.Request, *iotthingsgraph.GetEntitiesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEntitiesRequest", arg0)
@@ -709,13 +710,13 @@ func (m *MockIoTThingsGraphAPI) GetEntitiesRequest(arg0 *iotthingsgraph.GetEntit
 	return ret0, ret1
 }
 
-// GetEntitiesRequest indicates an expected call of GetEntitiesRequest
+// GetEntitiesRequest indicates an expected call of GetEntitiesRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetEntitiesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEntitiesRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetEntitiesRequest), arg0)
 }
 
-// GetEntitiesWithContext mocks base method
+// GetEntitiesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) GetEntitiesWithContext(arg0 context.Context, arg1 *iotthingsgraph.GetEntitiesInput, arg2 ...request.Option) (*iotthingsgraph.GetEntitiesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -728,14 +729,14 @@ func (m *MockIoTThingsGraphAPI) GetEntitiesWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetEntitiesWithContext indicates an expected call of GetEntitiesWithContext
+// GetEntitiesWithContext indicates an expected call of GetEntitiesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetEntitiesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEntitiesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetEntitiesWithContext), varargs...)
 }
 
-// GetFlowTemplate mocks base method
+// GetFlowTemplate mocks base method.
 func (m *MockIoTThingsGraphAPI) GetFlowTemplate(arg0 *iotthingsgraph.GetFlowTemplateInput) (*iotthingsgraph.GetFlowTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFlowTemplate", arg0)
@@ -744,13 +745,13 @@ func (m *MockIoTThingsGraphAPI) GetFlowTemplate(arg0 *iotthingsgraph.GetFlowTemp
 	return ret0, ret1
 }
 
-// GetFlowTemplate indicates an expected call of GetFlowTemplate
+// GetFlowTemplate indicates an expected call of GetFlowTemplate.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetFlowTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFlowTemplate", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetFlowTemplate), arg0)
 }
 
-// GetFlowTemplateRequest mocks base method
+// GetFlowTemplateRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) GetFlowTemplateRequest(arg0 *iotthingsgraph.GetFlowTemplateInput) (*request.Request, *iotthingsgraph.GetFlowTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFlowTemplateRequest", arg0)
@@ -759,13 +760,13 @@ func (m *MockIoTThingsGraphAPI) GetFlowTemplateRequest(arg0 *iotthingsgraph.GetF
 	return ret0, ret1
 }
 
-// GetFlowTemplateRequest indicates an expected call of GetFlowTemplateRequest
+// GetFlowTemplateRequest indicates an expected call of GetFlowTemplateRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetFlowTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFlowTemplateRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetFlowTemplateRequest), arg0)
 }
 
-// GetFlowTemplateRevisions mocks base method
+// GetFlowTemplateRevisions mocks base method.
 func (m *MockIoTThingsGraphAPI) GetFlowTemplateRevisions(arg0 *iotthingsgraph.GetFlowTemplateRevisionsInput) (*iotthingsgraph.GetFlowTemplateRevisionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFlowTemplateRevisions", arg0)
@@ -774,13 +775,13 @@ func (m *MockIoTThingsGraphAPI) GetFlowTemplateRevisions(arg0 *iotthingsgraph.Ge
 	return ret0, ret1
 }
 
-// GetFlowTemplateRevisions indicates an expected call of GetFlowTemplateRevisions
+// GetFlowTemplateRevisions indicates an expected call of GetFlowTemplateRevisions.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetFlowTemplateRevisions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFlowTemplateRevisions", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetFlowTemplateRevisions), arg0)
 }
 
-// GetFlowTemplateRevisionsPages mocks base method
+// GetFlowTemplateRevisionsPages mocks base method.
 func (m *MockIoTThingsGraphAPI) GetFlowTemplateRevisionsPages(arg0 *iotthingsgraph.GetFlowTemplateRevisionsInput, arg1 func(*iotthingsgraph.GetFlowTemplateRevisionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFlowTemplateRevisionsPages", arg0, arg1)
@@ -788,13 +789,13 @@ func (m *MockIoTThingsGraphAPI) GetFlowTemplateRevisionsPages(arg0 *iotthingsgra
 	return ret0
 }
 
-// GetFlowTemplateRevisionsPages indicates an expected call of GetFlowTemplateRevisionsPages
+// GetFlowTemplateRevisionsPages indicates an expected call of GetFlowTemplateRevisionsPages.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetFlowTemplateRevisionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFlowTemplateRevisionsPages", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetFlowTemplateRevisionsPages), arg0, arg1)
 }
 
-// GetFlowTemplateRevisionsPagesWithContext mocks base method
+// GetFlowTemplateRevisionsPagesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) GetFlowTemplateRevisionsPagesWithContext(arg0 context.Context, arg1 *iotthingsgraph.GetFlowTemplateRevisionsInput, arg2 func(*iotthingsgraph.GetFlowTemplateRevisionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -806,14 +807,14 @@ func (m *MockIoTThingsGraphAPI) GetFlowTemplateRevisionsPagesWithContext(arg0 co
 	return ret0
 }
 
-// GetFlowTemplateRevisionsPagesWithContext indicates an expected call of GetFlowTemplateRevisionsPagesWithContext
+// GetFlowTemplateRevisionsPagesWithContext indicates an expected call of GetFlowTemplateRevisionsPagesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetFlowTemplateRevisionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFlowTemplateRevisionsPagesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetFlowTemplateRevisionsPagesWithContext), varargs...)
 }
 
-// GetFlowTemplateRevisionsRequest mocks base method
+// GetFlowTemplateRevisionsRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) GetFlowTemplateRevisionsRequest(arg0 *iotthingsgraph.GetFlowTemplateRevisionsInput) (*request.Request, *iotthingsgraph.GetFlowTemplateRevisionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFlowTemplateRevisionsRequest", arg0)
@@ -822,13 +823,13 @@ func (m *MockIoTThingsGraphAPI) GetFlowTemplateRevisionsRequest(arg0 *iotthingsg
 	return ret0, ret1
 }
 
-// GetFlowTemplateRevisionsRequest indicates an expected call of GetFlowTemplateRevisionsRequest
+// GetFlowTemplateRevisionsRequest indicates an expected call of GetFlowTemplateRevisionsRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetFlowTemplateRevisionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFlowTemplateRevisionsRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetFlowTemplateRevisionsRequest), arg0)
 }
 
-// GetFlowTemplateRevisionsWithContext mocks base method
+// GetFlowTemplateRevisionsWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) GetFlowTemplateRevisionsWithContext(arg0 context.Context, arg1 *iotthingsgraph.GetFlowTemplateRevisionsInput, arg2 ...request.Option) (*iotthingsgraph.GetFlowTemplateRevisionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -841,14 +842,14 @@ func (m *MockIoTThingsGraphAPI) GetFlowTemplateRevisionsWithContext(arg0 context
 	return ret0, ret1
 }
 
-// GetFlowTemplateRevisionsWithContext indicates an expected call of GetFlowTemplateRevisionsWithContext
+// GetFlowTemplateRevisionsWithContext indicates an expected call of GetFlowTemplateRevisionsWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetFlowTemplateRevisionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFlowTemplateRevisionsWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetFlowTemplateRevisionsWithContext), varargs...)
 }
 
-// GetFlowTemplateWithContext mocks base method
+// GetFlowTemplateWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) GetFlowTemplateWithContext(arg0 context.Context, arg1 *iotthingsgraph.GetFlowTemplateInput, arg2 ...request.Option) (*iotthingsgraph.GetFlowTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -861,14 +862,14 @@ func (m *MockIoTThingsGraphAPI) GetFlowTemplateWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// GetFlowTemplateWithContext indicates an expected call of GetFlowTemplateWithContext
+// GetFlowTemplateWithContext indicates an expected call of GetFlowTemplateWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetFlowTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFlowTemplateWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetFlowTemplateWithContext), varargs...)
 }
 
-// GetNamespaceDeletionStatus mocks base method
+// GetNamespaceDeletionStatus mocks base method.
 func (m *MockIoTThingsGraphAPI) GetNamespaceDeletionStatus(arg0 *iotthingsgraph.GetNamespaceDeletionStatusInput) (*iotthingsgraph.GetNamespaceDeletionStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetNamespaceDeletionStatus", arg0)
@@ -877,13 +878,13 @@ func (m *MockIoTThingsGraphAPI) GetNamespaceDeletionStatus(arg0 *iotthingsgraph.
 	return ret0, ret1
 }
 
-// GetNamespaceDeletionStatus indicates an expected call of GetNamespaceDeletionStatus
+// GetNamespaceDeletionStatus indicates an expected call of GetNamespaceDeletionStatus.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetNamespaceDeletionStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetNamespaceDeletionStatus", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetNamespaceDeletionStatus), arg0)
 }
 
-// GetNamespaceDeletionStatusRequest mocks base method
+// GetNamespaceDeletionStatusRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) GetNamespaceDeletionStatusRequest(arg0 *iotthingsgraph.GetNamespaceDeletionStatusInput) (*request.Request, *iotthingsgraph.GetNamespaceDeletionStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetNamespaceDeletionStatusRequest", arg0)
@@ -892,13 +893,13 @@ func (m *MockIoTThingsGraphAPI) GetNamespaceDeletionStatusRequest(arg0 *iotthing
 	return ret0, ret1
 }
 
-// GetNamespaceDeletionStatusRequest indicates an expected call of GetNamespaceDeletionStatusRequest
+// GetNamespaceDeletionStatusRequest indicates an expected call of GetNamespaceDeletionStatusRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetNamespaceDeletionStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetNamespaceDeletionStatusRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetNamespaceDeletionStatusRequest), arg0)
 }
 
-// GetNamespaceDeletionStatusWithContext mocks base method
+// GetNamespaceDeletionStatusWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) GetNamespaceDeletionStatusWithContext(arg0 context.Context, arg1 *iotthingsgraph.GetNamespaceDeletionStatusInput, arg2 ...request.Option) (*iotthingsgraph.GetNamespaceDeletionStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -911,14 +912,14 @@ func (m *MockIoTThingsGraphAPI) GetNamespaceDeletionStatusWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// GetNamespaceDeletionStatusWithContext indicates an expected call of GetNamespaceDeletionStatusWithContext
+// GetNamespaceDeletionStatusWithContext indicates an expected call of GetNamespaceDeletionStatusWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetNamespaceDeletionStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetNamespaceDeletionStatusWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetNamespaceDeletionStatusWithContext), varargs...)
 }
 
-// GetSystemInstance mocks base method
+// GetSystemInstance mocks base method.
 func (m *MockIoTThingsGraphAPI) GetSystemInstance(arg0 *iotthingsgraph.GetSystemInstanceInput) (*iotthingsgraph.GetSystemInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSystemInstance", arg0)
@@ -927,13 +928,13 @@ func (m *MockIoTThingsGraphAPI) GetSystemInstance(arg0 *iotthingsgraph.GetSystem
 	return ret0, ret1
 }
 
-// GetSystemInstance indicates an expected call of GetSystemInstance
+// GetSystemInstance indicates an expected call of GetSystemInstance.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetSystemInstance(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSystemInstance", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetSystemInstance), arg0)
 }
 
-// GetSystemInstanceRequest mocks base method
+// GetSystemInstanceRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) GetSystemInstanceRequest(arg0 *iotthingsgraph.GetSystemInstanceInput) (*request.Request, *iotthingsgraph.GetSystemInstanceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSystemInstanceRequest", arg0)
@@ -942,13 +943,13 @@ func (m *MockIoTThingsGraphAPI) GetSystemInstanceRequest(arg0 *iotthingsgraph.Ge
 	return ret0, ret1
 }
 
-// GetSystemInstanceRequest indicates an expected call of GetSystemInstanceRequest
+// GetSystemInstanceRequest indicates an expected call of GetSystemInstanceRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetSystemInstanceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSystemInstanceRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetSystemInstanceRequest), arg0)
 }
 
-// GetSystemInstanceWithContext mocks base method
+// GetSystemInstanceWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) GetSystemInstanceWithContext(arg0 context.Context, arg1 *iotthingsgraph.GetSystemInstanceInput, arg2 ...request.Option) (*iotthingsgraph.GetSystemInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -961,14 +962,14 @@ func (m *MockIoTThingsGraphAPI) GetSystemInstanceWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// GetSystemInstanceWithContext indicates an expected call of GetSystemInstanceWithContext
+// GetSystemInstanceWithContext indicates an expected call of GetSystemInstanceWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetSystemInstanceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSystemInstanceWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetSystemInstanceWithContext), varargs...)
 }
 
-// GetSystemTemplate mocks base method
+// GetSystemTemplate mocks base method.
 func (m *MockIoTThingsGraphAPI) GetSystemTemplate(arg0 *iotthingsgraph.GetSystemTemplateInput) (*iotthingsgraph.GetSystemTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSystemTemplate", arg0)
@@ -977,13 +978,13 @@ func (m *MockIoTThingsGraphAPI) GetSystemTemplate(arg0 *iotthingsgraph.GetSystem
 	return ret0, ret1
 }
 
-// GetSystemTemplate indicates an expected call of GetSystemTemplate
+// GetSystemTemplate indicates an expected call of GetSystemTemplate.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetSystemTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSystemTemplate", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetSystemTemplate), arg0)
 }
 
-// GetSystemTemplateRequest mocks base method
+// GetSystemTemplateRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) GetSystemTemplateRequest(arg0 *iotthingsgraph.GetSystemTemplateInput) (*request.Request, *iotthingsgraph.GetSystemTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSystemTemplateRequest", arg0)
@@ -992,13 +993,13 @@ func (m *MockIoTThingsGraphAPI) GetSystemTemplateRequest(arg0 *iotthingsgraph.Ge
 	return ret0, ret1
 }
 
-// GetSystemTemplateRequest indicates an expected call of GetSystemTemplateRequest
+// GetSystemTemplateRequest indicates an expected call of GetSystemTemplateRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetSystemTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSystemTemplateRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetSystemTemplateRequest), arg0)
 }
 
-// GetSystemTemplateRevisions mocks base method
+// GetSystemTemplateRevisions mocks base method.
 func (m *MockIoTThingsGraphAPI) GetSystemTemplateRevisions(arg0 *iotthingsgraph.GetSystemTemplateRevisionsInput) (*iotthingsgraph.GetSystemTemplateRevisionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSystemTemplateRevisions", arg0)
@@ -1007,13 +1008,13 @@ func (m *MockIoTThingsGraphAPI) GetSystemTemplateRevisions(arg0 *iotthingsgraph.
 	return ret0, ret1
 }
 
-// GetSystemTemplateRevisions indicates an expected call of GetSystemTemplateRevisions
+// GetSystemTemplateRevisions indicates an expected call of GetSystemTemplateRevisions.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetSystemTemplateRevisions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSystemTemplateRevisions", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetSystemTemplateRevisions), arg0)
 }
 
-// GetSystemTemplateRevisionsPages mocks base method
+// GetSystemTemplateRevisionsPages mocks base method.
 func (m *MockIoTThingsGraphAPI) GetSystemTemplateRevisionsPages(arg0 *iotthingsgraph.GetSystemTemplateRevisionsInput, arg1 func(*iotthingsgraph.GetSystemTemplateRevisionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSystemTemplateRevisionsPages", arg0, arg1)
@@ -1021,13 +1022,13 @@ func (m *MockIoTThingsGraphAPI) GetSystemTemplateRevisionsPages(arg0 *iotthingsg
 	return ret0
 }
 
-// GetSystemTemplateRevisionsPages indicates an expected call of GetSystemTemplateRevisionsPages
+// GetSystemTemplateRevisionsPages indicates an expected call of GetSystemTemplateRevisionsPages.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetSystemTemplateRevisionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSystemTemplateRevisionsPages", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetSystemTemplateRevisionsPages), arg0, arg1)
 }
 
-// GetSystemTemplateRevisionsPagesWithContext mocks base method
+// GetSystemTemplateRevisionsPagesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) GetSystemTemplateRevisionsPagesWithContext(arg0 context.Context, arg1 *iotthingsgraph.GetSystemTemplateRevisionsInput, arg2 func(*iotthingsgraph.GetSystemTemplateRevisionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1039,14 +1040,14 @@ func (m *MockIoTThingsGraphAPI) GetSystemTemplateRevisionsPagesWithContext(arg0 
 	return ret0
 }
 
-// GetSystemTemplateRevisionsPagesWithContext indicates an expected call of GetSystemTemplateRevisionsPagesWithContext
+// GetSystemTemplateRevisionsPagesWithContext indicates an expected call of GetSystemTemplateRevisionsPagesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetSystemTemplateRevisionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSystemTemplateRevisionsPagesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetSystemTemplateRevisionsPagesWithContext), varargs...)
 }
 
-// GetSystemTemplateRevisionsRequest mocks base method
+// GetSystemTemplateRevisionsRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) GetSystemTemplateRevisionsRequest(arg0 *iotthingsgraph.GetSystemTemplateRevisionsInput) (*request.Request, *iotthingsgraph.GetSystemTemplateRevisionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSystemTemplateRevisionsRequest", arg0)
@@ -1055,13 +1056,13 @@ func (m *MockIoTThingsGraphAPI) GetSystemTemplateRevisionsRequest(arg0 *iotthing
 	return ret0, ret1
 }
 
-// GetSystemTemplateRevisionsRequest indicates an expected call of GetSystemTemplateRevisionsRequest
+// GetSystemTemplateRevisionsRequest indicates an expected call of GetSystemTemplateRevisionsRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetSystemTemplateRevisionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSystemTemplateRevisionsRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetSystemTemplateRevisionsRequest), arg0)
 }
 
-// GetSystemTemplateRevisionsWithContext mocks base method
+// GetSystemTemplateRevisionsWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) GetSystemTemplateRevisionsWithContext(arg0 context.Context, arg1 *iotthingsgraph.GetSystemTemplateRevisionsInput, arg2 ...request.Option) (*iotthingsgraph.GetSystemTemplateRevisionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1074,14 +1075,14 @@ func (m *MockIoTThingsGraphAPI) GetSystemTemplateRevisionsWithContext(arg0 conte
 	return ret0, ret1
 }
 
-// GetSystemTemplateRevisionsWithContext indicates an expected call of GetSystemTemplateRevisionsWithContext
+// GetSystemTemplateRevisionsWithContext indicates an expected call of GetSystemTemplateRevisionsWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetSystemTemplateRevisionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSystemTemplateRevisionsWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetSystemTemplateRevisionsWithContext), varargs...)
 }
 
-// GetSystemTemplateWithContext mocks base method
+// GetSystemTemplateWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) GetSystemTemplateWithContext(arg0 context.Context, arg1 *iotthingsgraph.GetSystemTemplateInput, arg2 ...request.Option) (*iotthingsgraph.GetSystemTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1094,14 +1095,14 @@ func (m *MockIoTThingsGraphAPI) GetSystemTemplateWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// GetSystemTemplateWithContext indicates an expected call of GetSystemTemplateWithContext
+// GetSystemTemplateWithContext indicates an expected call of GetSystemTemplateWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetSystemTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSystemTemplateWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetSystemTemplateWithContext), varargs...)
 }
 
-// GetUploadStatus mocks base method
+// GetUploadStatus mocks base method.
 func (m *MockIoTThingsGraphAPI) GetUploadStatus(arg0 *iotthingsgraph.GetUploadStatusInput) (*iotthingsgraph.GetUploadStatusOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetUploadStatus", arg0)
@@ -1110,13 +1111,13 @@ func (m *MockIoTThingsGraphAPI) GetUploadStatus(arg0 *iotthingsgraph.GetUploadSt
 	return ret0, ret1
 }
 
-// GetUploadStatus indicates an expected call of GetUploadStatus
+// GetUploadStatus indicates an expected call of GetUploadStatus.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetUploadStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUploadStatus", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetUploadStatus), arg0)
 }
 
-// GetUploadStatusRequest mocks base method
+// GetUploadStatusRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) GetUploadStatusRequest(arg0 *iotthingsgraph.GetUploadStatusInput) (*request.Request, *iotthingsgraph.GetUploadStatusOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetUploadStatusRequest", arg0)
@@ -1125,13 +1126,13 @@ func (m *MockIoTThingsGraphAPI) GetUploadStatusRequest(arg0 *iotthingsgraph.GetU
 	return ret0, ret1
 }
 
-// GetUploadStatusRequest indicates an expected call of GetUploadStatusRequest
+// GetUploadStatusRequest indicates an expected call of GetUploadStatusRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetUploadStatusRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUploadStatusRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetUploadStatusRequest), arg0)
 }
 
-// GetUploadStatusWithContext mocks base method
+// GetUploadStatusWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) GetUploadStatusWithContext(arg0 context.Context, arg1 *iotthingsgraph.GetUploadStatusInput, arg2 ...request.Option) (*iotthingsgraph.GetUploadStatusOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1144,14 +1145,14 @@ func (m *MockIoTThingsGraphAPI) GetUploadStatusWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// GetUploadStatusWithContext indicates an expected call of GetUploadStatusWithContext
+// GetUploadStatusWithContext indicates an expected call of GetUploadStatusWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) GetUploadStatusWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUploadStatusWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).GetUploadStatusWithContext), varargs...)
 }
 
-// ListFlowExecutionMessages mocks base method
+// ListFlowExecutionMessages mocks base method.
 func (m *MockIoTThingsGraphAPI) ListFlowExecutionMessages(arg0 *iotthingsgraph.ListFlowExecutionMessagesInput) (*iotthingsgraph.ListFlowExecutionMessagesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFlowExecutionMessages", arg0)
@@ -1160,13 +1161,13 @@ func (m *MockIoTThingsGraphAPI) ListFlowExecutionMessages(arg0 *iotthingsgraph.L
 	return ret0, ret1
 }
 
-// ListFlowExecutionMessages indicates an expected call of ListFlowExecutionMessages
+// ListFlowExecutionMessages indicates an expected call of ListFlowExecutionMessages.
 func (mr *MockIoTThingsGraphAPIMockRecorder) ListFlowExecutionMessages(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFlowExecutionMessages", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).ListFlowExecutionMessages), arg0)
 }
 
-// ListFlowExecutionMessagesPages mocks base method
+// ListFlowExecutionMessagesPages mocks base method.
 func (m *MockIoTThingsGraphAPI) ListFlowExecutionMessagesPages(arg0 *iotthingsgraph.ListFlowExecutionMessagesInput, arg1 func(*iotthingsgraph.ListFlowExecutionMessagesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFlowExecutionMessagesPages", arg0, arg1)
@@ -1174,13 +1175,13 @@ func (m *MockIoTThingsGraphAPI) ListFlowExecutionMessagesPages(arg0 *iotthingsgr
 	return ret0
 }
 
-// ListFlowExecutionMessagesPages indicates an expected call of ListFlowExecutionMessagesPages
+// ListFlowExecutionMessagesPages indicates an expected call of ListFlowExecutionMessagesPages.
 func (mr *MockIoTThingsGraphAPIMockRecorder) ListFlowExecutionMessagesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFlowExecutionMessagesPages", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).ListFlowExecutionMessagesPages), arg0, arg1)
 }
 
-// ListFlowExecutionMessagesPagesWithContext mocks base method
+// ListFlowExecutionMessagesPagesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) ListFlowExecutionMessagesPagesWithContext(arg0 context.Context, arg1 *iotthingsgraph.ListFlowExecutionMessagesInput, arg2 func(*iotthingsgraph.ListFlowExecutionMessagesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1192,14 +1193,14 @@ func (m *MockIoTThingsGraphAPI) ListFlowExecutionMessagesPagesWithContext(arg0 c
 	return ret0
 }
 
-// ListFlowExecutionMessagesPagesWithContext indicates an expected call of ListFlowExecutionMessagesPagesWithContext
+// ListFlowExecutionMessagesPagesWithContext indicates an expected call of ListFlowExecutionMessagesPagesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) ListFlowExecutionMessagesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFlowExecutionMessagesPagesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).ListFlowExecutionMessagesPagesWithContext), varargs...)
 }
 
-// ListFlowExecutionMessagesRequest mocks base method
+// ListFlowExecutionMessagesRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) ListFlowExecutionMessagesRequest(arg0 *iotthingsgraph.ListFlowExecutionMessagesInput) (*request.Request, *iotthingsgraph.ListFlowExecutionMessagesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFlowExecutionMessagesRequest", arg0)
@@ -1208,13 +1209,13 @@ func (m *MockIoTThingsGraphAPI) ListFlowExecutionMessagesRequest(arg0 *iotthings
 	return ret0, ret1
 }
 
-// ListFlowExecutionMessagesRequest indicates an expected call of ListFlowExecutionMessagesRequest
+// ListFlowExecutionMessagesRequest indicates an expected call of ListFlowExecutionMessagesRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) ListFlowExecutionMessagesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFlowExecutionMessagesRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).ListFlowExecutionMessagesRequest), arg0)
 }
 
-// ListFlowExecutionMessagesWithContext mocks base method
+// ListFlowExecutionMessagesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) ListFlowExecutionMessagesWithContext(arg0 context.Context, arg1 *iotthingsgraph.ListFlowExecutionMessagesInput, arg2 ...request.Option) (*iotthingsgraph.ListFlowExecutionMessagesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1227,14 +1228,14 @@ func (m *MockIoTThingsGraphAPI) ListFlowExecutionMessagesWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// ListFlowExecutionMessagesWithContext indicates an expected call of ListFlowExecutionMessagesWithContext
+// ListFlowExecutionMessagesWithContext indicates an expected call of ListFlowExecutionMessagesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) ListFlowExecutionMessagesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFlowExecutionMessagesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).ListFlowExecutionMessagesWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockIoTThingsGraphAPI) ListTagsForResource(arg0 *iotthingsgraph.ListTagsForResourceInput) (*iotthingsgraph.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1243,13 +1244,13 @@ func (m *MockIoTThingsGraphAPI) ListTagsForResource(arg0 *iotthingsgraph.ListTag
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockIoTThingsGraphAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourcePages mocks base method
+// ListTagsForResourcePages mocks base method.
 func (m *MockIoTThingsGraphAPI) ListTagsForResourcePages(arg0 *iotthingsgraph.ListTagsForResourceInput, arg1 func(*iotthingsgraph.ListTagsForResourceOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourcePages", arg0, arg1)
@@ -1257,13 +1258,13 @@ func (m *MockIoTThingsGraphAPI) ListTagsForResourcePages(arg0 *iotthingsgraph.Li
 	return ret0
 }
 
-// ListTagsForResourcePages indicates an expected call of ListTagsForResourcePages
+// ListTagsForResourcePages indicates an expected call of ListTagsForResourcePages.
 func (mr *MockIoTThingsGraphAPIMockRecorder) ListTagsForResourcePages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourcePages", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).ListTagsForResourcePages), arg0, arg1)
 }
 
-// ListTagsForResourcePagesWithContext mocks base method
+// ListTagsForResourcePagesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) ListTagsForResourcePagesWithContext(arg0 context.Context, arg1 *iotthingsgraph.ListTagsForResourceInput, arg2 func(*iotthingsgraph.ListTagsForResourceOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1275,14 +1276,14 @@ func (m *MockIoTThingsGraphAPI) ListTagsForResourcePagesWithContext(arg0 context
 	return ret0
 }
 
-// ListTagsForResourcePagesWithContext indicates an expected call of ListTagsForResourcePagesWithContext
+// ListTagsForResourcePagesWithContext indicates an expected call of ListTagsForResourcePagesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) ListTagsForResourcePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourcePagesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).ListTagsForResourcePagesWithContext), varargs...)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) ListTagsForResourceRequest(arg0 *iotthingsgraph.ListTagsForResourceInput) (*request.Request, *iotthingsgraph.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1291,13 +1292,13 @@ func (m *MockIoTThingsGraphAPI) ListTagsForResourceRequest(arg0 *iotthingsgraph.
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *iotthingsgraph.ListTagsForResourceInput, arg2 ...request.Option) (*iotthingsgraph.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1310,14 +1311,14 @@ func (m *MockIoTThingsGraphAPI) ListTagsForResourceWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// SearchEntities mocks base method
+// SearchEntities mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchEntities(arg0 *iotthingsgraph.SearchEntitiesInput) (*iotthingsgraph.SearchEntitiesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchEntities", arg0)
@@ -1326,13 +1327,13 @@ func (m *MockIoTThingsGraphAPI) SearchEntities(arg0 *iotthingsgraph.SearchEntiti
 	return ret0, ret1
 }
 
-// SearchEntities indicates an expected call of SearchEntities
+// SearchEntities indicates an expected call of SearchEntities.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchEntities(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchEntities", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchEntities), arg0)
 }
 
-// SearchEntitiesPages mocks base method
+// SearchEntitiesPages mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchEntitiesPages(arg0 *iotthingsgraph.SearchEntitiesInput, arg1 func(*iotthingsgraph.SearchEntitiesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchEntitiesPages", arg0, arg1)
@@ -1340,13 +1341,13 @@ func (m *MockIoTThingsGraphAPI) SearchEntitiesPages(arg0 *iotthingsgraph.SearchE
 	return ret0
 }
 
-// SearchEntitiesPages indicates an expected call of SearchEntitiesPages
+// SearchEntitiesPages indicates an expected call of SearchEntitiesPages.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchEntitiesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchEntitiesPages", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchEntitiesPages), arg0, arg1)
 }
 
-// SearchEntitiesPagesWithContext mocks base method
+// SearchEntitiesPagesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchEntitiesPagesWithContext(arg0 context.Context, arg1 *iotthingsgraph.SearchEntitiesInput, arg2 func(*iotthingsgraph.SearchEntitiesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1358,14 +1359,14 @@ func (m *MockIoTThingsGraphAPI) SearchEntitiesPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// SearchEntitiesPagesWithContext indicates an expected call of SearchEntitiesPagesWithContext
+// SearchEntitiesPagesWithContext indicates an expected call of SearchEntitiesPagesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchEntitiesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchEntitiesPagesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchEntitiesPagesWithContext), varargs...)
 }
 
-// SearchEntitiesRequest mocks base method
+// SearchEntitiesRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchEntitiesRequest(arg0 *iotthingsgraph.SearchEntitiesInput) (*request.Request, *iotthingsgraph.SearchEntitiesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchEntitiesRequest", arg0)
@@ -1374,13 +1375,13 @@ func (m *MockIoTThingsGraphAPI) SearchEntitiesRequest(arg0 *iotthingsgraph.Searc
 	return ret0, ret1
 }
 
-// SearchEntitiesRequest indicates an expected call of SearchEntitiesRequest
+// SearchEntitiesRequest indicates an expected call of SearchEntitiesRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchEntitiesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchEntitiesRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchEntitiesRequest), arg0)
 }
 
-// SearchEntitiesWithContext mocks base method
+// SearchEntitiesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchEntitiesWithContext(arg0 context.Context, arg1 *iotthingsgraph.SearchEntitiesInput, arg2 ...request.Option) (*iotthingsgraph.SearchEntitiesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1393,14 +1394,14 @@ func (m *MockIoTThingsGraphAPI) SearchEntitiesWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// SearchEntitiesWithContext indicates an expected call of SearchEntitiesWithContext
+// SearchEntitiesWithContext indicates an expected call of SearchEntitiesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchEntitiesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchEntitiesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchEntitiesWithContext), varargs...)
 }
 
-// SearchFlowExecutions mocks base method
+// SearchFlowExecutions mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchFlowExecutions(arg0 *iotthingsgraph.SearchFlowExecutionsInput) (*iotthingsgraph.SearchFlowExecutionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchFlowExecutions", arg0)
@@ -1409,13 +1410,13 @@ func (m *MockIoTThingsGraphAPI) SearchFlowExecutions(arg0 *iotthingsgraph.Search
 	return ret0, ret1
 }
 
-// SearchFlowExecutions indicates an expected call of SearchFlowExecutions
+// SearchFlowExecutions indicates an expected call of SearchFlowExecutions.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchFlowExecutions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchFlowExecutions", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchFlowExecutions), arg0)
 }
 
-// SearchFlowExecutionsPages mocks base method
+// SearchFlowExecutionsPages mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchFlowExecutionsPages(arg0 *iotthingsgraph.SearchFlowExecutionsInput, arg1 func(*iotthingsgraph.SearchFlowExecutionsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchFlowExecutionsPages", arg0, arg1)
@@ -1423,13 +1424,13 @@ func (m *MockIoTThingsGraphAPI) SearchFlowExecutionsPages(arg0 *iotthingsgraph.S
 	return ret0
 }
 
-// SearchFlowExecutionsPages indicates an expected call of SearchFlowExecutionsPages
+// SearchFlowExecutionsPages indicates an expected call of SearchFlowExecutionsPages.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchFlowExecutionsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchFlowExecutionsPages", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchFlowExecutionsPages), arg0, arg1)
 }
 
-// SearchFlowExecutionsPagesWithContext mocks base method
+// SearchFlowExecutionsPagesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchFlowExecutionsPagesWithContext(arg0 context.Context, arg1 *iotthingsgraph.SearchFlowExecutionsInput, arg2 func(*iotthingsgraph.SearchFlowExecutionsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1441,14 +1442,14 @@ func (m *MockIoTThingsGraphAPI) SearchFlowExecutionsPagesWithContext(arg0 contex
 	return ret0
 }
 
-// SearchFlowExecutionsPagesWithContext indicates an expected call of SearchFlowExecutionsPagesWithContext
+// SearchFlowExecutionsPagesWithContext indicates an expected call of SearchFlowExecutionsPagesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchFlowExecutionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchFlowExecutionsPagesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchFlowExecutionsPagesWithContext), varargs...)
 }
 
-// SearchFlowExecutionsRequest mocks base method
+// SearchFlowExecutionsRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchFlowExecutionsRequest(arg0 *iotthingsgraph.SearchFlowExecutionsInput) (*request.Request, *iotthingsgraph.SearchFlowExecutionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchFlowExecutionsRequest", arg0)
@@ -1457,13 +1458,13 @@ func (m *MockIoTThingsGraphAPI) SearchFlowExecutionsRequest(arg0 *iotthingsgraph
 	return ret0, ret1
 }
 
-// SearchFlowExecutionsRequest indicates an expected call of SearchFlowExecutionsRequest
+// SearchFlowExecutionsRequest indicates an expected call of SearchFlowExecutionsRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchFlowExecutionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchFlowExecutionsRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchFlowExecutionsRequest), arg0)
 }
 
-// SearchFlowExecutionsWithContext mocks base method
+// SearchFlowExecutionsWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchFlowExecutionsWithContext(arg0 context.Context, arg1 *iotthingsgraph.SearchFlowExecutionsInput, arg2 ...request.Option) (*iotthingsgraph.SearchFlowExecutionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1476,14 +1477,14 @@ func (m *MockIoTThingsGraphAPI) SearchFlowExecutionsWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// SearchFlowExecutionsWithContext indicates an expected call of SearchFlowExecutionsWithContext
+// SearchFlowExecutionsWithContext indicates an expected call of SearchFlowExecutionsWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchFlowExecutionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchFlowExecutionsWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchFlowExecutionsWithContext), varargs...)
 }
 
-// SearchFlowTemplates mocks base method
+// SearchFlowTemplates mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchFlowTemplates(arg0 *iotthingsgraph.SearchFlowTemplatesInput) (*iotthingsgraph.SearchFlowTemplatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchFlowTemplates", arg0)
@@ -1492,13 +1493,13 @@ func (m *MockIoTThingsGraphAPI) SearchFlowTemplates(arg0 *iotthingsgraph.SearchF
 	return ret0, ret1
 }
 
-// SearchFlowTemplates indicates an expected call of SearchFlowTemplates
+// SearchFlowTemplates indicates an expected call of SearchFlowTemplates.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchFlowTemplates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchFlowTemplates", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchFlowTemplates), arg0)
 }
 
-// SearchFlowTemplatesPages mocks base method
+// SearchFlowTemplatesPages mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchFlowTemplatesPages(arg0 *iotthingsgraph.SearchFlowTemplatesInput, arg1 func(*iotthingsgraph.SearchFlowTemplatesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchFlowTemplatesPages", arg0, arg1)
@@ -1506,13 +1507,13 @@ func (m *MockIoTThingsGraphAPI) SearchFlowTemplatesPages(arg0 *iotthingsgraph.Se
 	return ret0
 }
 
-// SearchFlowTemplatesPages indicates an expected call of SearchFlowTemplatesPages
+// SearchFlowTemplatesPages indicates an expected call of SearchFlowTemplatesPages.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchFlowTemplatesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchFlowTemplatesPages", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchFlowTemplatesPages), arg0, arg1)
 }
 
-// SearchFlowTemplatesPagesWithContext mocks base method
+// SearchFlowTemplatesPagesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchFlowTemplatesPagesWithContext(arg0 context.Context, arg1 *iotthingsgraph.SearchFlowTemplatesInput, arg2 func(*iotthingsgraph.SearchFlowTemplatesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1524,14 +1525,14 @@ func (m *MockIoTThingsGraphAPI) SearchFlowTemplatesPagesWithContext(arg0 context
 	return ret0
 }
 
-// SearchFlowTemplatesPagesWithContext indicates an expected call of SearchFlowTemplatesPagesWithContext
+// SearchFlowTemplatesPagesWithContext indicates an expected call of SearchFlowTemplatesPagesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchFlowTemplatesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchFlowTemplatesPagesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchFlowTemplatesPagesWithContext), varargs...)
 }
 
-// SearchFlowTemplatesRequest mocks base method
+// SearchFlowTemplatesRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchFlowTemplatesRequest(arg0 *iotthingsgraph.SearchFlowTemplatesInput) (*request.Request, *iotthingsgraph.SearchFlowTemplatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchFlowTemplatesRequest", arg0)
@@ -1540,13 +1541,13 @@ func (m *MockIoTThingsGraphAPI) SearchFlowTemplatesRequest(arg0 *iotthingsgraph.
 	return ret0, ret1
 }
 
-// SearchFlowTemplatesRequest indicates an expected call of SearchFlowTemplatesRequest
+// SearchFlowTemplatesRequest indicates an expected call of SearchFlowTemplatesRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchFlowTemplatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchFlowTemplatesRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchFlowTemplatesRequest), arg0)
 }
 
-// SearchFlowTemplatesWithContext mocks base method
+// SearchFlowTemplatesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchFlowTemplatesWithContext(arg0 context.Context, arg1 *iotthingsgraph.SearchFlowTemplatesInput, arg2 ...request.Option) (*iotthingsgraph.SearchFlowTemplatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1559,14 +1560,14 @@ func (m *MockIoTThingsGraphAPI) SearchFlowTemplatesWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// SearchFlowTemplatesWithContext indicates an expected call of SearchFlowTemplatesWithContext
+// SearchFlowTemplatesWithContext indicates an expected call of SearchFlowTemplatesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchFlowTemplatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchFlowTemplatesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchFlowTemplatesWithContext), varargs...)
 }
 
-// SearchSystemInstances mocks base method
+// SearchSystemInstances mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchSystemInstances(arg0 *iotthingsgraph.SearchSystemInstancesInput) (*iotthingsgraph.SearchSystemInstancesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchSystemInstances", arg0)
@@ -1575,13 +1576,13 @@ func (m *MockIoTThingsGraphAPI) SearchSystemInstances(arg0 *iotthingsgraph.Searc
 	return ret0, ret1
 }
 
-// SearchSystemInstances indicates an expected call of SearchSystemInstances
+// SearchSystemInstances indicates an expected call of SearchSystemInstances.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchSystemInstances(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSystemInstances", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchSystemInstances), arg0)
 }
 
-// SearchSystemInstancesPages mocks base method
+// SearchSystemInstancesPages mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchSystemInstancesPages(arg0 *iotthingsgraph.SearchSystemInstancesInput, arg1 func(*iotthingsgraph.SearchSystemInstancesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchSystemInstancesPages", arg0, arg1)
@@ -1589,13 +1590,13 @@ func (m *MockIoTThingsGraphAPI) SearchSystemInstancesPages(arg0 *iotthingsgraph.
 	return ret0
 }
 
-// SearchSystemInstancesPages indicates an expected call of SearchSystemInstancesPages
+// SearchSystemInstancesPages indicates an expected call of SearchSystemInstancesPages.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchSystemInstancesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSystemInstancesPages", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchSystemInstancesPages), arg0, arg1)
 }
 
-// SearchSystemInstancesPagesWithContext mocks base method
+// SearchSystemInstancesPagesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchSystemInstancesPagesWithContext(arg0 context.Context, arg1 *iotthingsgraph.SearchSystemInstancesInput, arg2 func(*iotthingsgraph.SearchSystemInstancesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1607,14 +1608,14 @@ func (m *MockIoTThingsGraphAPI) SearchSystemInstancesPagesWithContext(arg0 conte
 	return ret0
 }
 
-// SearchSystemInstancesPagesWithContext indicates an expected call of SearchSystemInstancesPagesWithContext
+// SearchSystemInstancesPagesWithContext indicates an expected call of SearchSystemInstancesPagesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchSystemInstancesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSystemInstancesPagesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchSystemInstancesPagesWithContext), varargs...)
 }
 
-// SearchSystemInstancesRequest mocks base method
+// SearchSystemInstancesRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchSystemInstancesRequest(arg0 *iotthingsgraph.SearchSystemInstancesInput) (*request.Request, *iotthingsgraph.SearchSystemInstancesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchSystemInstancesRequest", arg0)
@@ -1623,13 +1624,13 @@ func (m *MockIoTThingsGraphAPI) SearchSystemInstancesRequest(arg0 *iotthingsgrap
 	return ret0, ret1
 }
 
-// SearchSystemInstancesRequest indicates an expected call of SearchSystemInstancesRequest
+// SearchSystemInstancesRequest indicates an expected call of SearchSystemInstancesRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchSystemInstancesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSystemInstancesRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchSystemInstancesRequest), arg0)
 }
 
-// SearchSystemInstancesWithContext mocks base method
+// SearchSystemInstancesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchSystemInstancesWithContext(arg0 context.Context, arg1 *iotthingsgraph.SearchSystemInstancesInput, arg2 ...request.Option) (*iotthingsgraph.SearchSystemInstancesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1642,14 +1643,14 @@ func (m *MockIoTThingsGraphAPI) SearchSystemInstancesWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// SearchSystemInstancesWithContext indicates an expected call of SearchSystemInstancesWithContext
+// SearchSystemInstancesWithContext indicates an expected call of SearchSystemInstancesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchSystemInstancesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSystemInstancesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchSystemInstancesWithContext), varargs...)
 }
 
-// SearchSystemTemplates mocks base method
+// SearchSystemTemplates mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchSystemTemplates(arg0 *iotthingsgraph.SearchSystemTemplatesInput) (*iotthingsgraph.SearchSystemTemplatesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchSystemTemplates", arg0)
@@ -1658,13 +1659,13 @@ func (m *MockIoTThingsGraphAPI) SearchSystemTemplates(arg0 *iotthingsgraph.Searc
 	return ret0, ret1
 }
 
-// SearchSystemTemplates indicates an expected call of SearchSystemTemplates
+// SearchSystemTemplates indicates an expected call of SearchSystemTemplates.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchSystemTemplates(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSystemTemplates", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchSystemTemplates), arg0)
 }
 
-// SearchSystemTemplatesPages mocks base method
+// SearchSystemTemplatesPages mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchSystemTemplatesPages(arg0 *iotthingsgraph.SearchSystemTemplatesInput, arg1 func(*iotthingsgraph.SearchSystemTemplatesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchSystemTemplatesPages", arg0, arg1)
@@ -1672,13 +1673,13 @@ func (m *MockIoTThingsGraphAPI) SearchSystemTemplatesPages(arg0 *iotthingsgraph.
 	return ret0
 }
 
-// SearchSystemTemplatesPages indicates an expected call of SearchSystemTemplatesPages
+// SearchSystemTemplatesPages indicates an expected call of SearchSystemTemplatesPages.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchSystemTemplatesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSystemTemplatesPages", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchSystemTemplatesPages), arg0, arg1)
 }
 
-// SearchSystemTemplatesPagesWithContext mocks base method
+// SearchSystemTemplatesPagesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchSystemTemplatesPagesWithContext(arg0 context.Context, arg1 *iotthingsgraph.SearchSystemTemplatesInput, arg2 func(*iotthingsgraph.SearchSystemTemplatesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1690,14 +1691,14 @@ func (m *MockIoTThingsGraphAPI) SearchSystemTemplatesPagesWithContext(arg0 conte
 	return ret0
 }
 
-// SearchSystemTemplatesPagesWithContext indicates an expected call of SearchSystemTemplatesPagesWithContext
+// SearchSystemTemplatesPagesWithContext indicates an expected call of SearchSystemTemplatesPagesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchSystemTemplatesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSystemTemplatesPagesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchSystemTemplatesPagesWithContext), varargs...)
 }
 
-// SearchSystemTemplatesRequest mocks base method
+// SearchSystemTemplatesRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchSystemTemplatesRequest(arg0 *iotthingsgraph.SearchSystemTemplatesInput) (*request.Request, *iotthingsgraph.SearchSystemTemplatesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchSystemTemplatesRequest", arg0)
@@ -1706,13 +1707,13 @@ func (m *MockIoTThingsGraphAPI) SearchSystemTemplatesRequest(arg0 *iotthingsgrap
 	return ret0, ret1
 }
 
-// SearchSystemTemplatesRequest indicates an expected call of SearchSystemTemplatesRequest
+// SearchSystemTemplatesRequest indicates an expected call of SearchSystemTemplatesRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchSystemTemplatesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSystemTemplatesRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchSystemTemplatesRequest), arg0)
 }
 
-// SearchSystemTemplatesWithContext mocks base method
+// SearchSystemTemplatesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchSystemTemplatesWithContext(arg0 context.Context, arg1 *iotthingsgraph.SearchSystemTemplatesInput, arg2 ...request.Option) (*iotthingsgraph.SearchSystemTemplatesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1725,14 +1726,14 @@ func (m *MockIoTThingsGraphAPI) SearchSystemTemplatesWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// SearchSystemTemplatesWithContext indicates an expected call of SearchSystemTemplatesWithContext
+// SearchSystemTemplatesWithContext indicates an expected call of SearchSystemTemplatesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchSystemTemplatesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchSystemTemplatesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchSystemTemplatesWithContext), varargs...)
 }
 
-// SearchThings mocks base method
+// SearchThings mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchThings(arg0 *iotthingsgraph.SearchThingsInput) (*iotthingsgraph.SearchThingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchThings", arg0)
@@ -1741,13 +1742,13 @@ func (m *MockIoTThingsGraphAPI) SearchThings(arg0 *iotthingsgraph.SearchThingsIn
 	return ret0, ret1
 }
 
-// SearchThings indicates an expected call of SearchThings
+// SearchThings indicates an expected call of SearchThings.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchThings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchThings", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchThings), arg0)
 }
 
-// SearchThingsPages mocks base method
+// SearchThingsPages mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchThingsPages(arg0 *iotthingsgraph.SearchThingsInput, arg1 func(*iotthingsgraph.SearchThingsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchThingsPages", arg0, arg1)
@@ -1755,13 +1756,13 @@ func (m *MockIoTThingsGraphAPI) SearchThingsPages(arg0 *iotthingsgraph.SearchThi
 	return ret0
 }
 
-// SearchThingsPages indicates an expected call of SearchThingsPages
+// SearchThingsPages indicates an expected call of SearchThingsPages.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchThingsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchThingsPages", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchThingsPages), arg0, arg1)
 }
 
-// SearchThingsPagesWithContext mocks base method
+// SearchThingsPagesWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchThingsPagesWithContext(arg0 context.Context, arg1 *iotthingsgraph.SearchThingsInput, arg2 func(*iotthingsgraph.SearchThingsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1773,14 +1774,14 @@ func (m *MockIoTThingsGraphAPI) SearchThingsPagesWithContext(arg0 context.Contex
 	return ret0
 }
 
-// SearchThingsPagesWithContext indicates an expected call of SearchThingsPagesWithContext
+// SearchThingsPagesWithContext indicates an expected call of SearchThingsPagesWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchThingsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchThingsPagesWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchThingsPagesWithContext), varargs...)
 }
 
-// SearchThingsRequest mocks base method
+// SearchThingsRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchThingsRequest(arg0 *iotthingsgraph.SearchThingsInput) (*request.Request, *iotthingsgraph.SearchThingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SearchThingsRequest", arg0)
@@ -1789,13 +1790,13 @@ func (m *MockIoTThingsGraphAPI) SearchThingsRequest(arg0 *iotthingsgraph.SearchT
 	return ret0, ret1
 }
 
-// SearchThingsRequest indicates an expected call of SearchThingsRequest
+// SearchThingsRequest indicates an expected call of SearchThingsRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchThingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchThingsRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchThingsRequest), arg0)
 }
 
-// SearchThingsWithContext mocks base method
+// SearchThingsWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) SearchThingsWithContext(arg0 context.Context, arg1 *iotthingsgraph.SearchThingsInput, arg2 ...request.Option) (*iotthingsgraph.SearchThingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1808,14 +1809,14 @@ func (m *MockIoTThingsGraphAPI) SearchThingsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// SearchThingsWithContext indicates an expected call of SearchThingsWithContext
+// SearchThingsWithContext indicates an expected call of SearchThingsWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) SearchThingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchThingsWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).SearchThingsWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockIoTThingsGraphAPI) TagResource(arg0 *iotthingsgraph.TagResourceInput) (*iotthingsgraph.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1824,13 +1825,13 @@ func (m *MockIoTThingsGraphAPI) TagResource(arg0 *iotthingsgraph.TagResourceInpu
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockIoTThingsGraphAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) TagResourceRequest(arg0 *iotthingsgraph.TagResourceInput) (*request.Request, *iotthingsgraph.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1839,13 +1840,13 @@ func (m *MockIoTThingsGraphAPI) TagResourceRequest(arg0 *iotthingsgraph.TagResou
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) TagResourceWithContext(arg0 context.Context, arg1 *iotthingsgraph.TagResourceInput, arg2 ...request.Option) (*iotthingsgraph.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1858,14 +1859,14 @@ func (m *MockIoTThingsGraphAPI) TagResourceWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UndeploySystemInstance mocks base method
+// UndeploySystemInstance mocks base method.
 func (m *MockIoTThingsGraphAPI) UndeploySystemInstance(arg0 *iotthingsgraph.UndeploySystemInstanceInput) (*iotthingsgraph.UndeploySystemInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UndeploySystemInstance", arg0)
@@ -1874,13 +1875,13 @@ func (m *MockIoTThingsGraphAPI) UndeploySystemInstance(arg0 *iotthingsgraph.Unde
 	return ret0, ret1
 }
 
-// UndeploySystemInstance indicates an expected call of UndeploySystemInstance
+// UndeploySystemInstance indicates an expected call of UndeploySystemInstance.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UndeploySystemInstance(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UndeploySystemInstance", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UndeploySystemInstance), arg0)
 }
 
-// UndeploySystemInstanceRequest mocks base method
+// UndeploySystemInstanceRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) UndeploySystemInstanceRequest(arg0 *iotthingsgraph.UndeploySystemInstanceInput) (*request.Request, *iotthingsgraph.UndeploySystemInstanceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UndeploySystemInstanceRequest", arg0)
@@ -1889,13 +1890,13 @@ func (m *MockIoTThingsGraphAPI) UndeploySystemInstanceRequest(arg0 *iotthingsgra
 	return ret0, ret1
 }
 
-// UndeploySystemInstanceRequest indicates an expected call of UndeploySystemInstanceRequest
+// UndeploySystemInstanceRequest indicates an expected call of UndeploySystemInstanceRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UndeploySystemInstanceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UndeploySystemInstanceRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UndeploySystemInstanceRequest), arg0)
 }
 
-// UndeploySystemInstanceWithContext mocks base method
+// UndeploySystemInstanceWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) UndeploySystemInstanceWithContext(arg0 context.Context, arg1 *iotthingsgraph.UndeploySystemInstanceInput, arg2 ...request.Option) (*iotthingsgraph.UndeploySystemInstanceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1908,14 +1909,14 @@ func (m *MockIoTThingsGraphAPI) UndeploySystemInstanceWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// UndeploySystemInstanceWithContext indicates an expected call of UndeploySystemInstanceWithContext
+// UndeploySystemInstanceWithContext indicates an expected call of UndeploySystemInstanceWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UndeploySystemInstanceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UndeploySystemInstanceWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UndeploySystemInstanceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockIoTThingsGraphAPI) UntagResource(arg0 *iotthingsgraph.UntagResourceInput) (*iotthingsgraph.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1924,13 +1925,13 @@ func (m *MockIoTThingsGraphAPI) UntagResource(arg0 *iotthingsgraph.UntagResource
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) UntagResourceRequest(arg0 *iotthingsgraph.UntagResourceInput) (*request.Request, *iotthingsgraph.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1939,13 +1940,13 @@ func (m *MockIoTThingsGraphAPI) UntagResourceRequest(arg0 *iotthingsgraph.UntagR
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) UntagResourceWithContext(arg0 context.Context, arg1 *iotthingsgraph.UntagResourceInput, arg2 ...request.Option) (*iotthingsgraph.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1958,14 +1959,14 @@ func (m *MockIoTThingsGraphAPI) UntagResourceWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateFlowTemplate mocks base method
+// UpdateFlowTemplate mocks base method.
 func (m *MockIoTThingsGraphAPI) UpdateFlowTemplate(arg0 *iotthingsgraph.UpdateFlowTemplateInput) (*iotthingsgraph.UpdateFlowTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFlowTemplate", arg0)
@@ -1974,13 +1975,13 @@ func (m *MockIoTThingsGraphAPI) UpdateFlowTemplate(arg0 *iotthingsgraph.UpdateFl
 	return ret0, ret1
 }
 
-// UpdateFlowTemplate indicates an expected call of UpdateFlowTemplate
+// UpdateFlowTemplate indicates an expected call of UpdateFlowTemplate.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UpdateFlowTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFlowTemplate", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UpdateFlowTemplate), arg0)
 }
 
-// UpdateFlowTemplateRequest mocks base method
+// UpdateFlowTemplateRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) UpdateFlowTemplateRequest(arg0 *iotthingsgraph.UpdateFlowTemplateInput) (*request.Request, *iotthingsgraph.UpdateFlowTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFlowTemplateRequest", arg0)
@@ -1989,13 +1990,13 @@ func (m *MockIoTThingsGraphAPI) UpdateFlowTemplateRequest(arg0 *iotthingsgraph.U
 	return ret0, ret1
 }
 
-// UpdateFlowTemplateRequest indicates an expected call of UpdateFlowTemplateRequest
+// UpdateFlowTemplateRequest indicates an expected call of UpdateFlowTemplateRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UpdateFlowTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFlowTemplateRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UpdateFlowTemplateRequest), arg0)
 }
 
-// UpdateFlowTemplateWithContext mocks base method
+// UpdateFlowTemplateWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) UpdateFlowTemplateWithContext(arg0 context.Context, arg1 *iotthingsgraph.UpdateFlowTemplateInput, arg2 ...request.Option) (*iotthingsgraph.UpdateFlowTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2008,14 +2009,14 @@ func (m *MockIoTThingsGraphAPI) UpdateFlowTemplateWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// UpdateFlowTemplateWithContext indicates an expected call of UpdateFlowTemplateWithContext
+// UpdateFlowTemplateWithContext indicates an expected call of UpdateFlowTemplateWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UpdateFlowTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFlowTemplateWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UpdateFlowTemplateWithContext), varargs...)
 }
 
-// UpdateSystemTemplate mocks base method
+// UpdateSystemTemplate mocks base method.
 func (m *MockIoTThingsGraphAPI) UpdateSystemTemplate(arg0 *iotthingsgraph.UpdateSystemTemplateInput) (*iotthingsgraph.UpdateSystemTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSystemTemplate", arg0)
@@ -2024,13 +2025,13 @@ func (m *MockIoTThingsGraphAPI) UpdateSystemTemplate(arg0 *iotthingsgraph.Update
 	return ret0, ret1
 }
 
-// UpdateSystemTemplate indicates an expected call of UpdateSystemTemplate
+// UpdateSystemTemplate indicates an expected call of UpdateSystemTemplate.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UpdateSystemTemplate(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSystemTemplate", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UpdateSystemTemplate), arg0)
 }
 
-// UpdateSystemTemplateRequest mocks base method
+// UpdateSystemTemplateRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) UpdateSystemTemplateRequest(arg0 *iotthingsgraph.UpdateSystemTemplateInput) (*request.Request, *iotthingsgraph.UpdateSystemTemplateOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSystemTemplateRequest", arg0)
@@ -2039,13 +2040,13 @@ func (m *MockIoTThingsGraphAPI) UpdateSystemTemplateRequest(arg0 *iotthingsgraph
 	return ret0, ret1
 }
 
-// UpdateSystemTemplateRequest indicates an expected call of UpdateSystemTemplateRequest
+// UpdateSystemTemplateRequest indicates an expected call of UpdateSystemTemplateRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UpdateSystemTemplateRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSystemTemplateRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UpdateSystemTemplateRequest), arg0)
 }
 
-// UpdateSystemTemplateWithContext mocks base method
+// UpdateSystemTemplateWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) UpdateSystemTemplateWithContext(arg0 context.Context, arg1 *iotthingsgraph.UpdateSystemTemplateInput, arg2 ...request.Option) (*iotthingsgraph.UpdateSystemTemplateOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2058,14 +2059,14 @@ func (m *MockIoTThingsGraphAPI) UpdateSystemTemplateWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// UpdateSystemTemplateWithContext indicates an expected call of UpdateSystemTemplateWithContext
+// UpdateSystemTemplateWithContext indicates an expected call of UpdateSystemTemplateWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UpdateSystemTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSystemTemplateWithContext", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UpdateSystemTemplateWithContext), varargs...)
 }
 
-// UploadEntityDefinitions mocks base method
+// UploadEntityDefinitions mocks base method.
 func (m *MockIoTThingsGraphAPI) UploadEntityDefinitions(arg0 *iotthingsgraph.UploadEntityDefinitionsInput) (*iotthingsgraph.UploadEntityDefinitionsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UploadEntityDefinitions", arg0)
@@ -2074,13 +2075,13 @@ func (m *MockIoTThingsGraphAPI) UploadEntityDefinitions(arg0 *iotthingsgraph.Upl
 	return ret0, ret1
 }
 
-// UploadEntityDefinitions indicates an expected call of UploadEntityDefinitions
+// UploadEntityDefinitions indicates an expected call of UploadEntityDefinitions.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UploadEntityDefinitions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UploadEntityDefinitions", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UploadEntityDefinitions), arg0)
 }
 
-// UploadEntityDefinitionsRequest mocks base method
+// UploadEntityDefinitionsRequest mocks base method.
 func (m *MockIoTThingsGraphAPI) UploadEntityDefinitionsRequest(arg0 *iotthingsgraph.UploadEntityDefinitionsInput) (*request.Request, *iotthingsgraph.UploadEntityDefinitionsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UploadEntityDefinitionsRequest", arg0)
@@ -2089,13 +2090,13 @@ func (m *MockIoTThingsGraphAPI) UploadEntityDefinitionsRequest(arg0 *iotthingsgr
 	return ret0, ret1
 }
 
-// UploadEntityDefinitionsRequest indicates an expected call of UploadEntityDefinitionsRequest
+// UploadEntityDefinitionsRequest indicates an expected call of UploadEntityDefinitionsRequest.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UploadEntityDefinitionsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UploadEntityDefinitionsRequest", reflect.TypeOf((*MockIoTThingsGraphAPI)(nil).UploadEntityDefinitionsRequest), arg0)
 }
 
-// UploadEntityDefinitionsWithContext mocks base method
+// UploadEntityDefinitionsWithContext mocks base method.
 func (m *MockIoTThingsGraphAPI) UploadEntityDefinitionsWithContext(arg0 context.Context, arg1 *iotthingsgraph.UploadEntityDefinitionsInput, arg2 ...request.Option) (*iotthingsgraph.UploadEntityDefinitionsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2108,7 +2109,7 @@ func (m *MockIoTThingsGraphAPI) UploadEntityDefinitionsWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// UploadEntityDefinitionsWithContext indicates an expected call of UploadEntityDefinitionsWithContext
+// UploadEntityDefinitionsWithContext indicates an expected call of UploadEntityDefinitionsWithContext.
 func (mr *MockIoTThingsGraphAPIMockRecorder) UploadEntityDefinitionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

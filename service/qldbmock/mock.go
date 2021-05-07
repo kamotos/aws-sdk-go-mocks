@@ -6,36 +6,37 @@ package qldbmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	qldb "github.com/aws/aws-sdk-go/service/qldb"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockQLDBAPI is a mock of QLDBAPI interface
+// MockQLDBAPI is a mock of QLDBAPI interface.
 type MockQLDBAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockQLDBAPIMockRecorder
 }
 
-// MockQLDBAPIMockRecorder is the mock recorder for MockQLDBAPI
+// MockQLDBAPIMockRecorder is the mock recorder for MockQLDBAPI.
 type MockQLDBAPIMockRecorder struct {
 	mock *MockQLDBAPI
 }
 
-// NewMockQLDBAPI creates a new mock instance
+// NewMockQLDBAPI creates a new mock instance.
 func NewMockQLDBAPI(ctrl *gomock.Controller) *MockQLDBAPI {
 	mock := &MockQLDBAPI{ctrl: ctrl}
 	mock.recorder = &MockQLDBAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockQLDBAPI) EXPECT() *MockQLDBAPIMockRecorder {
 	return m.recorder
 }
 
-// CancelJournalKinesisStream mocks base method
+// CancelJournalKinesisStream mocks base method.
 func (m *MockQLDBAPI) CancelJournalKinesisStream(arg0 *qldb.CancelJournalKinesisStreamInput) (*qldb.CancelJournalKinesisStreamOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelJournalKinesisStream", arg0)
@@ -44,13 +45,13 @@ func (m *MockQLDBAPI) CancelJournalKinesisStream(arg0 *qldb.CancelJournalKinesis
 	return ret0, ret1
 }
 
-// CancelJournalKinesisStream indicates an expected call of CancelJournalKinesisStream
+// CancelJournalKinesisStream indicates an expected call of CancelJournalKinesisStream.
 func (mr *MockQLDBAPIMockRecorder) CancelJournalKinesisStream(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelJournalKinesisStream", reflect.TypeOf((*MockQLDBAPI)(nil).CancelJournalKinesisStream), arg0)
 }
 
-// CancelJournalKinesisStreamRequest mocks base method
+// CancelJournalKinesisStreamRequest mocks base method.
 func (m *MockQLDBAPI) CancelJournalKinesisStreamRequest(arg0 *qldb.CancelJournalKinesisStreamInput) (*request.Request, *qldb.CancelJournalKinesisStreamOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelJournalKinesisStreamRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockQLDBAPI) CancelJournalKinesisStreamRequest(arg0 *qldb.CancelJournal
 	return ret0, ret1
 }
 
-// CancelJournalKinesisStreamRequest indicates an expected call of CancelJournalKinesisStreamRequest
+// CancelJournalKinesisStreamRequest indicates an expected call of CancelJournalKinesisStreamRequest.
 func (mr *MockQLDBAPIMockRecorder) CancelJournalKinesisStreamRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelJournalKinesisStreamRequest", reflect.TypeOf((*MockQLDBAPI)(nil).CancelJournalKinesisStreamRequest), arg0)
 }
 
-// CancelJournalKinesisStreamWithContext mocks base method
+// CancelJournalKinesisStreamWithContext mocks base method.
 func (m *MockQLDBAPI) CancelJournalKinesisStreamWithContext(arg0 context.Context, arg1 *qldb.CancelJournalKinesisStreamInput, arg2 ...request.Option) (*qldb.CancelJournalKinesisStreamOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockQLDBAPI) CancelJournalKinesisStreamWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// CancelJournalKinesisStreamWithContext indicates an expected call of CancelJournalKinesisStreamWithContext
+// CancelJournalKinesisStreamWithContext indicates an expected call of CancelJournalKinesisStreamWithContext.
 func (mr *MockQLDBAPIMockRecorder) CancelJournalKinesisStreamWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelJournalKinesisStreamWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).CancelJournalKinesisStreamWithContext), varargs...)
 }
 
-// CreateLedger mocks base method
+// CreateLedger mocks base method.
 func (m *MockQLDBAPI) CreateLedger(arg0 *qldb.CreateLedgerInput) (*qldb.CreateLedgerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateLedger", arg0)
@@ -94,13 +95,13 @@ func (m *MockQLDBAPI) CreateLedger(arg0 *qldb.CreateLedgerInput) (*qldb.CreateLe
 	return ret0, ret1
 }
 
-// CreateLedger indicates an expected call of CreateLedger
+// CreateLedger indicates an expected call of CreateLedger.
 func (mr *MockQLDBAPIMockRecorder) CreateLedger(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLedger", reflect.TypeOf((*MockQLDBAPI)(nil).CreateLedger), arg0)
 }
 
-// CreateLedgerRequest mocks base method
+// CreateLedgerRequest mocks base method.
 func (m *MockQLDBAPI) CreateLedgerRequest(arg0 *qldb.CreateLedgerInput) (*request.Request, *qldb.CreateLedgerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateLedgerRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockQLDBAPI) CreateLedgerRequest(arg0 *qldb.CreateLedgerInput) (*reques
 	return ret0, ret1
 }
 
-// CreateLedgerRequest indicates an expected call of CreateLedgerRequest
+// CreateLedgerRequest indicates an expected call of CreateLedgerRequest.
 func (mr *MockQLDBAPIMockRecorder) CreateLedgerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLedgerRequest", reflect.TypeOf((*MockQLDBAPI)(nil).CreateLedgerRequest), arg0)
 }
 
-// CreateLedgerWithContext mocks base method
+// CreateLedgerWithContext mocks base method.
 func (m *MockQLDBAPI) CreateLedgerWithContext(arg0 context.Context, arg1 *qldb.CreateLedgerInput, arg2 ...request.Option) (*qldb.CreateLedgerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockQLDBAPI) CreateLedgerWithContext(arg0 context.Context, arg1 *qldb.C
 	return ret0, ret1
 }
 
-// CreateLedgerWithContext indicates an expected call of CreateLedgerWithContext
+// CreateLedgerWithContext indicates an expected call of CreateLedgerWithContext.
 func (mr *MockQLDBAPIMockRecorder) CreateLedgerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLedgerWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).CreateLedgerWithContext), varargs...)
 }
 
-// DeleteLedger mocks base method
+// DeleteLedger mocks base method.
 func (m *MockQLDBAPI) DeleteLedger(arg0 *qldb.DeleteLedgerInput) (*qldb.DeleteLedgerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLedger", arg0)
@@ -144,13 +145,13 @@ func (m *MockQLDBAPI) DeleteLedger(arg0 *qldb.DeleteLedgerInput) (*qldb.DeleteLe
 	return ret0, ret1
 }
 
-// DeleteLedger indicates an expected call of DeleteLedger
+// DeleteLedger indicates an expected call of DeleteLedger.
 func (mr *MockQLDBAPIMockRecorder) DeleteLedger(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLedger", reflect.TypeOf((*MockQLDBAPI)(nil).DeleteLedger), arg0)
 }
 
-// DeleteLedgerRequest mocks base method
+// DeleteLedgerRequest mocks base method.
 func (m *MockQLDBAPI) DeleteLedgerRequest(arg0 *qldb.DeleteLedgerInput) (*request.Request, *qldb.DeleteLedgerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteLedgerRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockQLDBAPI) DeleteLedgerRequest(arg0 *qldb.DeleteLedgerInput) (*reques
 	return ret0, ret1
 }
 
-// DeleteLedgerRequest indicates an expected call of DeleteLedgerRequest
+// DeleteLedgerRequest indicates an expected call of DeleteLedgerRequest.
 func (mr *MockQLDBAPIMockRecorder) DeleteLedgerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLedgerRequest", reflect.TypeOf((*MockQLDBAPI)(nil).DeleteLedgerRequest), arg0)
 }
 
-// DeleteLedgerWithContext mocks base method
+// DeleteLedgerWithContext mocks base method.
 func (m *MockQLDBAPI) DeleteLedgerWithContext(arg0 context.Context, arg1 *qldb.DeleteLedgerInput, arg2 ...request.Option) (*qldb.DeleteLedgerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockQLDBAPI) DeleteLedgerWithContext(arg0 context.Context, arg1 *qldb.D
 	return ret0, ret1
 }
 
-// DeleteLedgerWithContext indicates an expected call of DeleteLedgerWithContext
+// DeleteLedgerWithContext indicates an expected call of DeleteLedgerWithContext.
 func (mr *MockQLDBAPIMockRecorder) DeleteLedgerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLedgerWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).DeleteLedgerWithContext), varargs...)
 }
 
-// DescribeJournalKinesisStream mocks base method
+// DescribeJournalKinesisStream mocks base method.
 func (m *MockQLDBAPI) DescribeJournalKinesisStream(arg0 *qldb.DescribeJournalKinesisStreamInput) (*qldb.DescribeJournalKinesisStreamOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeJournalKinesisStream", arg0)
@@ -194,13 +195,13 @@ func (m *MockQLDBAPI) DescribeJournalKinesisStream(arg0 *qldb.DescribeJournalKin
 	return ret0, ret1
 }
 
-// DescribeJournalKinesisStream indicates an expected call of DescribeJournalKinesisStream
+// DescribeJournalKinesisStream indicates an expected call of DescribeJournalKinesisStream.
 func (mr *MockQLDBAPIMockRecorder) DescribeJournalKinesisStream(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJournalKinesisStream", reflect.TypeOf((*MockQLDBAPI)(nil).DescribeJournalKinesisStream), arg0)
 }
 
-// DescribeJournalKinesisStreamRequest mocks base method
+// DescribeJournalKinesisStreamRequest mocks base method.
 func (m *MockQLDBAPI) DescribeJournalKinesisStreamRequest(arg0 *qldb.DescribeJournalKinesisStreamInput) (*request.Request, *qldb.DescribeJournalKinesisStreamOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeJournalKinesisStreamRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockQLDBAPI) DescribeJournalKinesisStreamRequest(arg0 *qldb.DescribeJou
 	return ret0, ret1
 }
 
-// DescribeJournalKinesisStreamRequest indicates an expected call of DescribeJournalKinesisStreamRequest
+// DescribeJournalKinesisStreamRequest indicates an expected call of DescribeJournalKinesisStreamRequest.
 func (mr *MockQLDBAPIMockRecorder) DescribeJournalKinesisStreamRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJournalKinesisStreamRequest", reflect.TypeOf((*MockQLDBAPI)(nil).DescribeJournalKinesisStreamRequest), arg0)
 }
 
-// DescribeJournalKinesisStreamWithContext mocks base method
+// DescribeJournalKinesisStreamWithContext mocks base method.
 func (m *MockQLDBAPI) DescribeJournalKinesisStreamWithContext(arg0 context.Context, arg1 *qldb.DescribeJournalKinesisStreamInput, arg2 ...request.Option) (*qldb.DescribeJournalKinesisStreamOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockQLDBAPI) DescribeJournalKinesisStreamWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DescribeJournalKinesisStreamWithContext indicates an expected call of DescribeJournalKinesisStreamWithContext
+// DescribeJournalKinesisStreamWithContext indicates an expected call of DescribeJournalKinesisStreamWithContext.
 func (mr *MockQLDBAPIMockRecorder) DescribeJournalKinesisStreamWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJournalKinesisStreamWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).DescribeJournalKinesisStreamWithContext), varargs...)
 }
 
-// DescribeJournalS3Export mocks base method
+// DescribeJournalS3Export mocks base method.
 func (m *MockQLDBAPI) DescribeJournalS3Export(arg0 *qldb.DescribeJournalS3ExportInput) (*qldb.DescribeJournalS3ExportOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeJournalS3Export", arg0)
@@ -244,13 +245,13 @@ func (m *MockQLDBAPI) DescribeJournalS3Export(arg0 *qldb.DescribeJournalS3Export
 	return ret0, ret1
 }
 
-// DescribeJournalS3Export indicates an expected call of DescribeJournalS3Export
+// DescribeJournalS3Export indicates an expected call of DescribeJournalS3Export.
 func (mr *MockQLDBAPIMockRecorder) DescribeJournalS3Export(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJournalS3Export", reflect.TypeOf((*MockQLDBAPI)(nil).DescribeJournalS3Export), arg0)
 }
 
-// DescribeJournalS3ExportRequest mocks base method
+// DescribeJournalS3ExportRequest mocks base method.
 func (m *MockQLDBAPI) DescribeJournalS3ExportRequest(arg0 *qldb.DescribeJournalS3ExportInput) (*request.Request, *qldb.DescribeJournalS3ExportOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeJournalS3ExportRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockQLDBAPI) DescribeJournalS3ExportRequest(arg0 *qldb.DescribeJournalS
 	return ret0, ret1
 }
 
-// DescribeJournalS3ExportRequest indicates an expected call of DescribeJournalS3ExportRequest
+// DescribeJournalS3ExportRequest indicates an expected call of DescribeJournalS3ExportRequest.
 func (mr *MockQLDBAPIMockRecorder) DescribeJournalS3ExportRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJournalS3ExportRequest", reflect.TypeOf((*MockQLDBAPI)(nil).DescribeJournalS3ExportRequest), arg0)
 }
 
-// DescribeJournalS3ExportWithContext mocks base method
+// DescribeJournalS3ExportWithContext mocks base method.
 func (m *MockQLDBAPI) DescribeJournalS3ExportWithContext(arg0 context.Context, arg1 *qldb.DescribeJournalS3ExportInput, arg2 ...request.Option) (*qldb.DescribeJournalS3ExportOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockQLDBAPI) DescribeJournalS3ExportWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DescribeJournalS3ExportWithContext indicates an expected call of DescribeJournalS3ExportWithContext
+// DescribeJournalS3ExportWithContext indicates an expected call of DescribeJournalS3ExportWithContext.
 func (mr *MockQLDBAPIMockRecorder) DescribeJournalS3ExportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJournalS3ExportWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).DescribeJournalS3ExportWithContext), varargs...)
 }
 
-// DescribeLedger mocks base method
+// DescribeLedger mocks base method.
 func (m *MockQLDBAPI) DescribeLedger(arg0 *qldb.DescribeLedgerInput) (*qldb.DescribeLedgerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeLedger", arg0)
@@ -294,13 +295,13 @@ func (m *MockQLDBAPI) DescribeLedger(arg0 *qldb.DescribeLedgerInput) (*qldb.Desc
 	return ret0, ret1
 }
 
-// DescribeLedger indicates an expected call of DescribeLedger
+// DescribeLedger indicates an expected call of DescribeLedger.
 func (mr *MockQLDBAPIMockRecorder) DescribeLedger(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLedger", reflect.TypeOf((*MockQLDBAPI)(nil).DescribeLedger), arg0)
 }
 
-// DescribeLedgerRequest mocks base method
+// DescribeLedgerRequest mocks base method.
 func (m *MockQLDBAPI) DescribeLedgerRequest(arg0 *qldb.DescribeLedgerInput) (*request.Request, *qldb.DescribeLedgerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeLedgerRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockQLDBAPI) DescribeLedgerRequest(arg0 *qldb.DescribeLedgerInput) (*re
 	return ret0, ret1
 }
 
-// DescribeLedgerRequest indicates an expected call of DescribeLedgerRequest
+// DescribeLedgerRequest indicates an expected call of DescribeLedgerRequest.
 func (mr *MockQLDBAPIMockRecorder) DescribeLedgerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLedgerRequest", reflect.TypeOf((*MockQLDBAPI)(nil).DescribeLedgerRequest), arg0)
 }
 
-// DescribeLedgerWithContext mocks base method
+// DescribeLedgerWithContext mocks base method.
 func (m *MockQLDBAPI) DescribeLedgerWithContext(arg0 context.Context, arg1 *qldb.DescribeLedgerInput, arg2 ...request.Option) (*qldb.DescribeLedgerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockQLDBAPI) DescribeLedgerWithContext(arg0 context.Context, arg1 *qldb
 	return ret0, ret1
 }
 
-// DescribeLedgerWithContext indicates an expected call of DescribeLedgerWithContext
+// DescribeLedgerWithContext indicates an expected call of DescribeLedgerWithContext.
 func (mr *MockQLDBAPIMockRecorder) DescribeLedgerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeLedgerWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).DescribeLedgerWithContext), varargs...)
 }
 
-// ExportJournalToS3 mocks base method
+// ExportJournalToS3 mocks base method.
 func (m *MockQLDBAPI) ExportJournalToS3(arg0 *qldb.ExportJournalToS3Input) (*qldb.ExportJournalToS3Output, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExportJournalToS3", arg0)
@@ -344,13 +345,13 @@ func (m *MockQLDBAPI) ExportJournalToS3(arg0 *qldb.ExportJournalToS3Input) (*qld
 	return ret0, ret1
 }
 
-// ExportJournalToS3 indicates an expected call of ExportJournalToS3
+// ExportJournalToS3 indicates an expected call of ExportJournalToS3.
 func (mr *MockQLDBAPIMockRecorder) ExportJournalToS3(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportJournalToS3", reflect.TypeOf((*MockQLDBAPI)(nil).ExportJournalToS3), arg0)
 }
 
-// ExportJournalToS3Request mocks base method
+// ExportJournalToS3Request mocks base method.
 func (m *MockQLDBAPI) ExportJournalToS3Request(arg0 *qldb.ExportJournalToS3Input) (*request.Request, *qldb.ExportJournalToS3Output) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ExportJournalToS3Request", arg0)
@@ -359,13 +360,13 @@ func (m *MockQLDBAPI) ExportJournalToS3Request(arg0 *qldb.ExportJournalToS3Input
 	return ret0, ret1
 }
 
-// ExportJournalToS3Request indicates an expected call of ExportJournalToS3Request
+// ExportJournalToS3Request indicates an expected call of ExportJournalToS3Request.
 func (mr *MockQLDBAPIMockRecorder) ExportJournalToS3Request(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportJournalToS3Request", reflect.TypeOf((*MockQLDBAPI)(nil).ExportJournalToS3Request), arg0)
 }
 
-// ExportJournalToS3WithContext mocks base method
+// ExportJournalToS3WithContext mocks base method.
 func (m *MockQLDBAPI) ExportJournalToS3WithContext(arg0 context.Context, arg1 *qldb.ExportJournalToS3Input, arg2 ...request.Option) (*qldb.ExportJournalToS3Output, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockQLDBAPI) ExportJournalToS3WithContext(arg0 context.Context, arg1 *q
 	return ret0, ret1
 }
 
-// ExportJournalToS3WithContext indicates an expected call of ExportJournalToS3WithContext
+// ExportJournalToS3WithContext indicates an expected call of ExportJournalToS3WithContext.
 func (mr *MockQLDBAPIMockRecorder) ExportJournalToS3WithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExportJournalToS3WithContext", reflect.TypeOf((*MockQLDBAPI)(nil).ExportJournalToS3WithContext), varargs...)
 }
 
-// GetBlock mocks base method
+// GetBlock mocks base method.
 func (m *MockQLDBAPI) GetBlock(arg0 *qldb.GetBlockInput) (*qldb.GetBlockOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBlock", arg0)
@@ -394,13 +395,13 @@ func (m *MockQLDBAPI) GetBlock(arg0 *qldb.GetBlockInput) (*qldb.GetBlockOutput, 
 	return ret0, ret1
 }
 
-// GetBlock indicates an expected call of GetBlock
+// GetBlock indicates an expected call of GetBlock.
 func (mr *MockQLDBAPIMockRecorder) GetBlock(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlock", reflect.TypeOf((*MockQLDBAPI)(nil).GetBlock), arg0)
 }
 
-// GetBlockRequest mocks base method
+// GetBlockRequest mocks base method.
 func (m *MockQLDBAPI) GetBlockRequest(arg0 *qldb.GetBlockInput) (*request.Request, *qldb.GetBlockOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBlockRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockQLDBAPI) GetBlockRequest(arg0 *qldb.GetBlockInput) (*request.Reques
 	return ret0, ret1
 }
 
-// GetBlockRequest indicates an expected call of GetBlockRequest
+// GetBlockRequest indicates an expected call of GetBlockRequest.
 func (mr *MockQLDBAPIMockRecorder) GetBlockRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlockRequest", reflect.TypeOf((*MockQLDBAPI)(nil).GetBlockRequest), arg0)
 }
 
-// GetBlockWithContext mocks base method
+// GetBlockWithContext mocks base method.
 func (m *MockQLDBAPI) GetBlockWithContext(arg0 context.Context, arg1 *qldb.GetBlockInput, arg2 ...request.Option) (*qldb.GetBlockOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockQLDBAPI) GetBlockWithContext(arg0 context.Context, arg1 *qldb.GetBl
 	return ret0, ret1
 }
 
-// GetBlockWithContext indicates an expected call of GetBlockWithContext
+// GetBlockWithContext indicates an expected call of GetBlockWithContext.
 func (mr *MockQLDBAPIMockRecorder) GetBlockWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlockWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).GetBlockWithContext), varargs...)
 }
 
-// GetDigest mocks base method
+// GetDigest mocks base method.
 func (m *MockQLDBAPI) GetDigest(arg0 *qldb.GetDigestInput) (*qldb.GetDigestOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDigest", arg0)
@@ -444,13 +445,13 @@ func (m *MockQLDBAPI) GetDigest(arg0 *qldb.GetDigestInput) (*qldb.GetDigestOutpu
 	return ret0, ret1
 }
 
-// GetDigest indicates an expected call of GetDigest
+// GetDigest indicates an expected call of GetDigest.
 func (mr *MockQLDBAPIMockRecorder) GetDigest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDigest", reflect.TypeOf((*MockQLDBAPI)(nil).GetDigest), arg0)
 }
 
-// GetDigestRequest mocks base method
+// GetDigestRequest mocks base method.
 func (m *MockQLDBAPI) GetDigestRequest(arg0 *qldb.GetDigestInput) (*request.Request, *qldb.GetDigestOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetDigestRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockQLDBAPI) GetDigestRequest(arg0 *qldb.GetDigestInput) (*request.Requ
 	return ret0, ret1
 }
 
-// GetDigestRequest indicates an expected call of GetDigestRequest
+// GetDigestRequest indicates an expected call of GetDigestRequest.
 func (mr *MockQLDBAPIMockRecorder) GetDigestRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDigestRequest", reflect.TypeOf((*MockQLDBAPI)(nil).GetDigestRequest), arg0)
 }
 
-// GetDigestWithContext mocks base method
+// GetDigestWithContext mocks base method.
 func (m *MockQLDBAPI) GetDigestWithContext(arg0 context.Context, arg1 *qldb.GetDigestInput, arg2 ...request.Option) (*qldb.GetDigestOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockQLDBAPI) GetDigestWithContext(arg0 context.Context, arg1 *qldb.GetD
 	return ret0, ret1
 }
 
-// GetDigestWithContext indicates an expected call of GetDigestWithContext
+// GetDigestWithContext indicates an expected call of GetDigestWithContext.
 func (mr *MockQLDBAPIMockRecorder) GetDigestWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDigestWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).GetDigestWithContext), varargs...)
 }
 
-// GetRevision mocks base method
+// GetRevision mocks base method.
 func (m *MockQLDBAPI) GetRevision(arg0 *qldb.GetRevisionInput) (*qldb.GetRevisionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRevision", arg0)
@@ -494,13 +495,13 @@ func (m *MockQLDBAPI) GetRevision(arg0 *qldb.GetRevisionInput) (*qldb.GetRevisio
 	return ret0, ret1
 }
 
-// GetRevision indicates an expected call of GetRevision
+// GetRevision indicates an expected call of GetRevision.
 func (mr *MockQLDBAPIMockRecorder) GetRevision(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRevision", reflect.TypeOf((*MockQLDBAPI)(nil).GetRevision), arg0)
 }
 
-// GetRevisionRequest mocks base method
+// GetRevisionRequest mocks base method.
 func (m *MockQLDBAPI) GetRevisionRequest(arg0 *qldb.GetRevisionInput) (*request.Request, *qldb.GetRevisionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRevisionRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockQLDBAPI) GetRevisionRequest(arg0 *qldb.GetRevisionInput) (*request.
 	return ret0, ret1
 }
 
-// GetRevisionRequest indicates an expected call of GetRevisionRequest
+// GetRevisionRequest indicates an expected call of GetRevisionRequest.
 func (mr *MockQLDBAPIMockRecorder) GetRevisionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRevisionRequest", reflect.TypeOf((*MockQLDBAPI)(nil).GetRevisionRequest), arg0)
 }
 
-// GetRevisionWithContext mocks base method
+// GetRevisionWithContext mocks base method.
 func (m *MockQLDBAPI) GetRevisionWithContext(arg0 context.Context, arg1 *qldb.GetRevisionInput, arg2 ...request.Option) (*qldb.GetRevisionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockQLDBAPI) GetRevisionWithContext(arg0 context.Context, arg1 *qldb.Ge
 	return ret0, ret1
 }
 
-// GetRevisionWithContext indicates an expected call of GetRevisionWithContext
+// GetRevisionWithContext indicates an expected call of GetRevisionWithContext.
 func (mr *MockQLDBAPIMockRecorder) GetRevisionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRevisionWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).GetRevisionWithContext), varargs...)
 }
 
-// ListJournalKinesisStreamsForLedger mocks base method
+// ListJournalKinesisStreamsForLedger mocks base method.
 func (m *MockQLDBAPI) ListJournalKinesisStreamsForLedger(arg0 *qldb.ListJournalKinesisStreamsForLedgerInput) (*qldb.ListJournalKinesisStreamsForLedgerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJournalKinesisStreamsForLedger", arg0)
@@ -544,13 +545,13 @@ func (m *MockQLDBAPI) ListJournalKinesisStreamsForLedger(arg0 *qldb.ListJournalK
 	return ret0, ret1
 }
 
-// ListJournalKinesisStreamsForLedger indicates an expected call of ListJournalKinesisStreamsForLedger
+// ListJournalKinesisStreamsForLedger indicates an expected call of ListJournalKinesisStreamsForLedger.
 func (mr *MockQLDBAPIMockRecorder) ListJournalKinesisStreamsForLedger(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalKinesisStreamsForLedger", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalKinesisStreamsForLedger), arg0)
 }
 
-// ListJournalKinesisStreamsForLedgerPages mocks base method
+// ListJournalKinesisStreamsForLedgerPages mocks base method.
 func (m *MockQLDBAPI) ListJournalKinesisStreamsForLedgerPages(arg0 *qldb.ListJournalKinesisStreamsForLedgerInput, arg1 func(*qldb.ListJournalKinesisStreamsForLedgerOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJournalKinesisStreamsForLedgerPages", arg0, arg1)
@@ -558,13 +559,13 @@ func (m *MockQLDBAPI) ListJournalKinesisStreamsForLedgerPages(arg0 *qldb.ListJou
 	return ret0
 }
 
-// ListJournalKinesisStreamsForLedgerPages indicates an expected call of ListJournalKinesisStreamsForLedgerPages
+// ListJournalKinesisStreamsForLedgerPages indicates an expected call of ListJournalKinesisStreamsForLedgerPages.
 func (mr *MockQLDBAPIMockRecorder) ListJournalKinesisStreamsForLedgerPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalKinesisStreamsForLedgerPages", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalKinesisStreamsForLedgerPages), arg0, arg1)
 }
 
-// ListJournalKinesisStreamsForLedgerPagesWithContext mocks base method
+// ListJournalKinesisStreamsForLedgerPagesWithContext mocks base method.
 func (m *MockQLDBAPI) ListJournalKinesisStreamsForLedgerPagesWithContext(arg0 context.Context, arg1 *qldb.ListJournalKinesisStreamsForLedgerInput, arg2 func(*qldb.ListJournalKinesisStreamsForLedgerOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -576,14 +577,14 @@ func (m *MockQLDBAPI) ListJournalKinesisStreamsForLedgerPagesWithContext(arg0 co
 	return ret0
 }
 
-// ListJournalKinesisStreamsForLedgerPagesWithContext indicates an expected call of ListJournalKinesisStreamsForLedgerPagesWithContext
+// ListJournalKinesisStreamsForLedgerPagesWithContext indicates an expected call of ListJournalKinesisStreamsForLedgerPagesWithContext.
 func (mr *MockQLDBAPIMockRecorder) ListJournalKinesisStreamsForLedgerPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalKinesisStreamsForLedgerPagesWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalKinesisStreamsForLedgerPagesWithContext), varargs...)
 }
 
-// ListJournalKinesisStreamsForLedgerRequest mocks base method
+// ListJournalKinesisStreamsForLedgerRequest mocks base method.
 func (m *MockQLDBAPI) ListJournalKinesisStreamsForLedgerRequest(arg0 *qldb.ListJournalKinesisStreamsForLedgerInput) (*request.Request, *qldb.ListJournalKinesisStreamsForLedgerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJournalKinesisStreamsForLedgerRequest", arg0)
@@ -592,13 +593,13 @@ func (m *MockQLDBAPI) ListJournalKinesisStreamsForLedgerRequest(arg0 *qldb.ListJ
 	return ret0, ret1
 }
 
-// ListJournalKinesisStreamsForLedgerRequest indicates an expected call of ListJournalKinesisStreamsForLedgerRequest
+// ListJournalKinesisStreamsForLedgerRequest indicates an expected call of ListJournalKinesisStreamsForLedgerRequest.
 func (mr *MockQLDBAPIMockRecorder) ListJournalKinesisStreamsForLedgerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalKinesisStreamsForLedgerRequest", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalKinesisStreamsForLedgerRequest), arg0)
 }
 
-// ListJournalKinesisStreamsForLedgerWithContext mocks base method
+// ListJournalKinesisStreamsForLedgerWithContext mocks base method.
 func (m *MockQLDBAPI) ListJournalKinesisStreamsForLedgerWithContext(arg0 context.Context, arg1 *qldb.ListJournalKinesisStreamsForLedgerInput, arg2 ...request.Option) (*qldb.ListJournalKinesisStreamsForLedgerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -611,14 +612,14 @@ func (m *MockQLDBAPI) ListJournalKinesisStreamsForLedgerWithContext(arg0 context
 	return ret0, ret1
 }
 
-// ListJournalKinesisStreamsForLedgerWithContext indicates an expected call of ListJournalKinesisStreamsForLedgerWithContext
+// ListJournalKinesisStreamsForLedgerWithContext indicates an expected call of ListJournalKinesisStreamsForLedgerWithContext.
 func (mr *MockQLDBAPIMockRecorder) ListJournalKinesisStreamsForLedgerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalKinesisStreamsForLedgerWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalKinesisStreamsForLedgerWithContext), varargs...)
 }
 
-// ListJournalS3Exports mocks base method
+// ListJournalS3Exports mocks base method.
 func (m *MockQLDBAPI) ListJournalS3Exports(arg0 *qldb.ListJournalS3ExportsInput) (*qldb.ListJournalS3ExportsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJournalS3Exports", arg0)
@@ -627,13 +628,13 @@ func (m *MockQLDBAPI) ListJournalS3Exports(arg0 *qldb.ListJournalS3ExportsInput)
 	return ret0, ret1
 }
 
-// ListJournalS3Exports indicates an expected call of ListJournalS3Exports
+// ListJournalS3Exports indicates an expected call of ListJournalS3Exports.
 func (mr *MockQLDBAPIMockRecorder) ListJournalS3Exports(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalS3Exports", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalS3Exports), arg0)
 }
 
-// ListJournalS3ExportsForLedger mocks base method
+// ListJournalS3ExportsForLedger mocks base method.
 func (m *MockQLDBAPI) ListJournalS3ExportsForLedger(arg0 *qldb.ListJournalS3ExportsForLedgerInput) (*qldb.ListJournalS3ExportsForLedgerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJournalS3ExportsForLedger", arg0)
@@ -642,13 +643,13 @@ func (m *MockQLDBAPI) ListJournalS3ExportsForLedger(arg0 *qldb.ListJournalS3Expo
 	return ret0, ret1
 }
 
-// ListJournalS3ExportsForLedger indicates an expected call of ListJournalS3ExportsForLedger
+// ListJournalS3ExportsForLedger indicates an expected call of ListJournalS3ExportsForLedger.
 func (mr *MockQLDBAPIMockRecorder) ListJournalS3ExportsForLedger(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalS3ExportsForLedger", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalS3ExportsForLedger), arg0)
 }
 
-// ListJournalS3ExportsForLedgerPages mocks base method
+// ListJournalS3ExportsForLedgerPages mocks base method.
 func (m *MockQLDBAPI) ListJournalS3ExportsForLedgerPages(arg0 *qldb.ListJournalS3ExportsForLedgerInput, arg1 func(*qldb.ListJournalS3ExportsForLedgerOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJournalS3ExportsForLedgerPages", arg0, arg1)
@@ -656,13 +657,13 @@ func (m *MockQLDBAPI) ListJournalS3ExportsForLedgerPages(arg0 *qldb.ListJournalS
 	return ret0
 }
 
-// ListJournalS3ExportsForLedgerPages indicates an expected call of ListJournalS3ExportsForLedgerPages
+// ListJournalS3ExportsForLedgerPages indicates an expected call of ListJournalS3ExportsForLedgerPages.
 func (mr *MockQLDBAPIMockRecorder) ListJournalS3ExportsForLedgerPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalS3ExportsForLedgerPages", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalS3ExportsForLedgerPages), arg0, arg1)
 }
 
-// ListJournalS3ExportsForLedgerPagesWithContext mocks base method
+// ListJournalS3ExportsForLedgerPagesWithContext mocks base method.
 func (m *MockQLDBAPI) ListJournalS3ExportsForLedgerPagesWithContext(arg0 context.Context, arg1 *qldb.ListJournalS3ExportsForLedgerInput, arg2 func(*qldb.ListJournalS3ExportsForLedgerOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -674,14 +675,14 @@ func (m *MockQLDBAPI) ListJournalS3ExportsForLedgerPagesWithContext(arg0 context
 	return ret0
 }
 
-// ListJournalS3ExportsForLedgerPagesWithContext indicates an expected call of ListJournalS3ExportsForLedgerPagesWithContext
+// ListJournalS3ExportsForLedgerPagesWithContext indicates an expected call of ListJournalS3ExportsForLedgerPagesWithContext.
 func (mr *MockQLDBAPIMockRecorder) ListJournalS3ExportsForLedgerPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalS3ExportsForLedgerPagesWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalS3ExportsForLedgerPagesWithContext), varargs...)
 }
 
-// ListJournalS3ExportsForLedgerRequest mocks base method
+// ListJournalS3ExportsForLedgerRequest mocks base method.
 func (m *MockQLDBAPI) ListJournalS3ExportsForLedgerRequest(arg0 *qldb.ListJournalS3ExportsForLedgerInput) (*request.Request, *qldb.ListJournalS3ExportsForLedgerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJournalS3ExportsForLedgerRequest", arg0)
@@ -690,13 +691,13 @@ func (m *MockQLDBAPI) ListJournalS3ExportsForLedgerRequest(arg0 *qldb.ListJourna
 	return ret0, ret1
 }
 
-// ListJournalS3ExportsForLedgerRequest indicates an expected call of ListJournalS3ExportsForLedgerRequest
+// ListJournalS3ExportsForLedgerRequest indicates an expected call of ListJournalS3ExportsForLedgerRequest.
 func (mr *MockQLDBAPIMockRecorder) ListJournalS3ExportsForLedgerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalS3ExportsForLedgerRequest", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalS3ExportsForLedgerRequest), arg0)
 }
 
-// ListJournalS3ExportsForLedgerWithContext mocks base method
+// ListJournalS3ExportsForLedgerWithContext mocks base method.
 func (m *MockQLDBAPI) ListJournalS3ExportsForLedgerWithContext(arg0 context.Context, arg1 *qldb.ListJournalS3ExportsForLedgerInput, arg2 ...request.Option) (*qldb.ListJournalS3ExportsForLedgerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -709,14 +710,14 @@ func (m *MockQLDBAPI) ListJournalS3ExportsForLedgerWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListJournalS3ExportsForLedgerWithContext indicates an expected call of ListJournalS3ExportsForLedgerWithContext
+// ListJournalS3ExportsForLedgerWithContext indicates an expected call of ListJournalS3ExportsForLedgerWithContext.
 func (mr *MockQLDBAPIMockRecorder) ListJournalS3ExportsForLedgerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalS3ExportsForLedgerWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalS3ExportsForLedgerWithContext), varargs...)
 }
 
-// ListJournalS3ExportsPages mocks base method
+// ListJournalS3ExportsPages mocks base method.
 func (m *MockQLDBAPI) ListJournalS3ExportsPages(arg0 *qldb.ListJournalS3ExportsInput, arg1 func(*qldb.ListJournalS3ExportsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJournalS3ExportsPages", arg0, arg1)
@@ -724,13 +725,13 @@ func (m *MockQLDBAPI) ListJournalS3ExportsPages(arg0 *qldb.ListJournalS3ExportsI
 	return ret0
 }
 
-// ListJournalS3ExportsPages indicates an expected call of ListJournalS3ExportsPages
+// ListJournalS3ExportsPages indicates an expected call of ListJournalS3ExportsPages.
 func (mr *MockQLDBAPIMockRecorder) ListJournalS3ExportsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalS3ExportsPages", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalS3ExportsPages), arg0, arg1)
 }
 
-// ListJournalS3ExportsPagesWithContext mocks base method
+// ListJournalS3ExportsPagesWithContext mocks base method.
 func (m *MockQLDBAPI) ListJournalS3ExportsPagesWithContext(arg0 context.Context, arg1 *qldb.ListJournalS3ExportsInput, arg2 func(*qldb.ListJournalS3ExportsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -742,14 +743,14 @@ func (m *MockQLDBAPI) ListJournalS3ExportsPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListJournalS3ExportsPagesWithContext indicates an expected call of ListJournalS3ExportsPagesWithContext
+// ListJournalS3ExportsPagesWithContext indicates an expected call of ListJournalS3ExportsPagesWithContext.
 func (mr *MockQLDBAPIMockRecorder) ListJournalS3ExportsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalS3ExportsPagesWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalS3ExportsPagesWithContext), varargs...)
 }
 
-// ListJournalS3ExportsRequest mocks base method
+// ListJournalS3ExportsRequest mocks base method.
 func (m *MockQLDBAPI) ListJournalS3ExportsRequest(arg0 *qldb.ListJournalS3ExportsInput) (*request.Request, *qldb.ListJournalS3ExportsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJournalS3ExportsRequest", arg0)
@@ -758,13 +759,13 @@ func (m *MockQLDBAPI) ListJournalS3ExportsRequest(arg0 *qldb.ListJournalS3Export
 	return ret0, ret1
 }
 
-// ListJournalS3ExportsRequest indicates an expected call of ListJournalS3ExportsRequest
+// ListJournalS3ExportsRequest indicates an expected call of ListJournalS3ExportsRequest.
 func (mr *MockQLDBAPIMockRecorder) ListJournalS3ExportsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalS3ExportsRequest", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalS3ExportsRequest), arg0)
 }
 
-// ListJournalS3ExportsWithContext mocks base method
+// ListJournalS3ExportsWithContext mocks base method.
 func (m *MockQLDBAPI) ListJournalS3ExportsWithContext(arg0 context.Context, arg1 *qldb.ListJournalS3ExportsInput, arg2 ...request.Option) (*qldb.ListJournalS3ExportsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -777,14 +778,14 @@ func (m *MockQLDBAPI) ListJournalS3ExportsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListJournalS3ExportsWithContext indicates an expected call of ListJournalS3ExportsWithContext
+// ListJournalS3ExportsWithContext indicates an expected call of ListJournalS3ExportsWithContext.
 func (mr *MockQLDBAPIMockRecorder) ListJournalS3ExportsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJournalS3ExportsWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).ListJournalS3ExportsWithContext), varargs...)
 }
 
-// ListLedgers mocks base method
+// ListLedgers mocks base method.
 func (m *MockQLDBAPI) ListLedgers(arg0 *qldb.ListLedgersInput) (*qldb.ListLedgersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLedgers", arg0)
@@ -793,13 +794,13 @@ func (m *MockQLDBAPI) ListLedgers(arg0 *qldb.ListLedgersInput) (*qldb.ListLedger
 	return ret0, ret1
 }
 
-// ListLedgers indicates an expected call of ListLedgers
+// ListLedgers indicates an expected call of ListLedgers.
 func (mr *MockQLDBAPIMockRecorder) ListLedgers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLedgers", reflect.TypeOf((*MockQLDBAPI)(nil).ListLedgers), arg0)
 }
 
-// ListLedgersPages mocks base method
+// ListLedgersPages mocks base method.
 func (m *MockQLDBAPI) ListLedgersPages(arg0 *qldb.ListLedgersInput, arg1 func(*qldb.ListLedgersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLedgersPages", arg0, arg1)
@@ -807,13 +808,13 @@ func (m *MockQLDBAPI) ListLedgersPages(arg0 *qldb.ListLedgersInput, arg1 func(*q
 	return ret0
 }
 
-// ListLedgersPages indicates an expected call of ListLedgersPages
+// ListLedgersPages indicates an expected call of ListLedgersPages.
 func (mr *MockQLDBAPIMockRecorder) ListLedgersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLedgersPages", reflect.TypeOf((*MockQLDBAPI)(nil).ListLedgersPages), arg0, arg1)
 }
 
-// ListLedgersPagesWithContext mocks base method
+// ListLedgersPagesWithContext mocks base method.
 func (m *MockQLDBAPI) ListLedgersPagesWithContext(arg0 context.Context, arg1 *qldb.ListLedgersInput, arg2 func(*qldb.ListLedgersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -825,14 +826,14 @@ func (m *MockQLDBAPI) ListLedgersPagesWithContext(arg0 context.Context, arg1 *ql
 	return ret0
 }
 
-// ListLedgersPagesWithContext indicates an expected call of ListLedgersPagesWithContext
+// ListLedgersPagesWithContext indicates an expected call of ListLedgersPagesWithContext.
 func (mr *MockQLDBAPIMockRecorder) ListLedgersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLedgersPagesWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).ListLedgersPagesWithContext), varargs...)
 }
 
-// ListLedgersRequest mocks base method
+// ListLedgersRequest mocks base method.
 func (m *MockQLDBAPI) ListLedgersRequest(arg0 *qldb.ListLedgersInput) (*request.Request, *qldb.ListLedgersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListLedgersRequest", arg0)
@@ -841,13 +842,13 @@ func (m *MockQLDBAPI) ListLedgersRequest(arg0 *qldb.ListLedgersInput) (*request.
 	return ret0, ret1
 }
 
-// ListLedgersRequest indicates an expected call of ListLedgersRequest
+// ListLedgersRequest indicates an expected call of ListLedgersRequest.
 func (mr *MockQLDBAPIMockRecorder) ListLedgersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLedgersRequest", reflect.TypeOf((*MockQLDBAPI)(nil).ListLedgersRequest), arg0)
 }
 
-// ListLedgersWithContext mocks base method
+// ListLedgersWithContext mocks base method.
 func (m *MockQLDBAPI) ListLedgersWithContext(arg0 context.Context, arg1 *qldb.ListLedgersInput, arg2 ...request.Option) (*qldb.ListLedgersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -860,14 +861,14 @@ func (m *MockQLDBAPI) ListLedgersWithContext(arg0 context.Context, arg1 *qldb.Li
 	return ret0, ret1
 }
 
-// ListLedgersWithContext indicates an expected call of ListLedgersWithContext
+// ListLedgersWithContext indicates an expected call of ListLedgersWithContext.
 func (mr *MockQLDBAPIMockRecorder) ListLedgersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLedgersWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).ListLedgersWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockQLDBAPI) ListTagsForResource(arg0 *qldb.ListTagsForResourceInput) (*qldb.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -876,13 +877,13 @@ func (m *MockQLDBAPI) ListTagsForResource(arg0 *qldb.ListTagsForResourceInput) (
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockQLDBAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockQLDBAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockQLDBAPI) ListTagsForResourceRequest(arg0 *qldb.ListTagsForResourceInput) (*request.Request, *qldb.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -891,13 +892,13 @@ func (m *MockQLDBAPI) ListTagsForResourceRequest(arg0 *qldb.ListTagsForResourceI
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockQLDBAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockQLDBAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockQLDBAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *qldb.ListTagsForResourceInput, arg2 ...request.Option) (*qldb.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -910,14 +911,14 @@ func (m *MockQLDBAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockQLDBAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// StreamJournalToKinesis mocks base method
+// StreamJournalToKinesis mocks base method.
 func (m *MockQLDBAPI) StreamJournalToKinesis(arg0 *qldb.StreamJournalToKinesisInput) (*qldb.StreamJournalToKinesisOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StreamJournalToKinesis", arg0)
@@ -926,13 +927,13 @@ func (m *MockQLDBAPI) StreamJournalToKinesis(arg0 *qldb.StreamJournalToKinesisIn
 	return ret0, ret1
 }
 
-// StreamJournalToKinesis indicates an expected call of StreamJournalToKinesis
+// StreamJournalToKinesis indicates an expected call of StreamJournalToKinesis.
 func (mr *MockQLDBAPIMockRecorder) StreamJournalToKinesis(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StreamJournalToKinesis", reflect.TypeOf((*MockQLDBAPI)(nil).StreamJournalToKinesis), arg0)
 }
 
-// StreamJournalToKinesisRequest mocks base method
+// StreamJournalToKinesisRequest mocks base method.
 func (m *MockQLDBAPI) StreamJournalToKinesisRequest(arg0 *qldb.StreamJournalToKinesisInput) (*request.Request, *qldb.StreamJournalToKinesisOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StreamJournalToKinesisRequest", arg0)
@@ -941,13 +942,13 @@ func (m *MockQLDBAPI) StreamJournalToKinesisRequest(arg0 *qldb.StreamJournalToKi
 	return ret0, ret1
 }
 
-// StreamJournalToKinesisRequest indicates an expected call of StreamJournalToKinesisRequest
+// StreamJournalToKinesisRequest indicates an expected call of StreamJournalToKinesisRequest.
 func (mr *MockQLDBAPIMockRecorder) StreamJournalToKinesisRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StreamJournalToKinesisRequest", reflect.TypeOf((*MockQLDBAPI)(nil).StreamJournalToKinesisRequest), arg0)
 }
 
-// StreamJournalToKinesisWithContext mocks base method
+// StreamJournalToKinesisWithContext mocks base method.
 func (m *MockQLDBAPI) StreamJournalToKinesisWithContext(arg0 context.Context, arg1 *qldb.StreamJournalToKinesisInput, arg2 ...request.Option) (*qldb.StreamJournalToKinesisOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -960,14 +961,14 @@ func (m *MockQLDBAPI) StreamJournalToKinesisWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// StreamJournalToKinesisWithContext indicates an expected call of StreamJournalToKinesisWithContext
+// StreamJournalToKinesisWithContext indicates an expected call of StreamJournalToKinesisWithContext.
 func (mr *MockQLDBAPIMockRecorder) StreamJournalToKinesisWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StreamJournalToKinesisWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).StreamJournalToKinesisWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockQLDBAPI) TagResource(arg0 *qldb.TagResourceInput) (*qldb.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -976,13 +977,13 @@ func (m *MockQLDBAPI) TagResource(arg0 *qldb.TagResourceInput) (*qldb.TagResourc
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockQLDBAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockQLDBAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockQLDBAPI) TagResourceRequest(arg0 *qldb.TagResourceInput) (*request.Request, *qldb.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -991,13 +992,13 @@ func (m *MockQLDBAPI) TagResourceRequest(arg0 *qldb.TagResourceInput) (*request.
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockQLDBAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockQLDBAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockQLDBAPI) TagResourceWithContext(arg0 context.Context, arg1 *qldb.TagResourceInput, arg2 ...request.Option) (*qldb.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1010,14 +1011,14 @@ func (m *MockQLDBAPI) TagResourceWithContext(arg0 context.Context, arg1 *qldb.Ta
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockQLDBAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockQLDBAPI) UntagResource(arg0 *qldb.UntagResourceInput) (*qldb.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1026,13 +1027,13 @@ func (m *MockQLDBAPI) UntagResource(arg0 *qldb.UntagResourceInput) (*qldb.UntagR
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockQLDBAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockQLDBAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockQLDBAPI) UntagResourceRequest(arg0 *qldb.UntagResourceInput) (*request.Request, *qldb.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1041,13 +1042,13 @@ func (m *MockQLDBAPI) UntagResourceRequest(arg0 *qldb.UntagResourceInput) (*requ
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockQLDBAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockQLDBAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockQLDBAPI) UntagResourceWithContext(arg0 context.Context, arg1 *qldb.UntagResourceInput, arg2 ...request.Option) (*qldb.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1060,14 +1061,14 @@ func (m *MockQLDBAPI) UntagResourceWithContext(arg0 context.Context, arg1 *qldb.
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockQLDBAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateLedger mocks base method
+// UpdateLedger mocks base method.
 func (m *MockQLDBAPI) UpdateLedger(arg0 *qldb.UpdateLedgerInput) (*qldb.UpdateLedgerOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateLedger", arg0)
@@ -1076,13 +1077,13 @@ func (m *MockQLDBAPI) UpdateLedger(arg0 *qldb.UpdateLedgerInput) (*qldb.UpdateLe
 	return ret0, ret1
 }
 
-// UpdateLedger indicates an expected call of UpdateLedger
+// UpdateLedger indicates an expected call of UpdateLedger.
 func (mr *MockQLDBAPIMockRecorder) UpdateLedger(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLedger", reflect.TypeOf((*MockQLDBAPI)(nil).UpdateLedger), arg0)
 }
 
-// UpdateLedgerRequest mocks base method
+// UpdateLedgerRequest mocks base method.
 func (m *MockQLDBAPI) UpdateLedgerRequest(arg0 *qldb.UpdateLedgerInput) (*request.Request, *qldb.UpdateLedgerOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateLedgerRequest", arg0)
@@ -1091,13 +1092,13 @@ func (m *MockQLDBAPI) UpdateLedgerRequest(arg0 *qldb.UpdateLedgerInput) (*reques
 	return ret0, ret1
 }
 
-// UpdateLedgerRequest indicates an expected call of UpdateLedgerRequest
+// UpdateLedgerRequest indicates an expected call of UpdateLedgerRequest.
 func (mr *MockQLDBAPIMockRecorder) UpdateLedgerRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLedgerRequest", reflect.TypeOf((*MockQLDBAPI)(nil).UpdateLedgerRequest), arg0)
 }
 
-// UpdateLedgerWithContext mocks base method
+// UpdateLedgerWithContext mocks base method.
 func (m *MockQLDBAPI) UpdateLedgerWithContext(arg0 context.Context, arg1 *qldb.UpdateLedgerInput, arg2 ...request.Option) (*qldb.UpdateLedgerOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1110,7 +1111,7 @@ func (m *MockQLDBAPI) UpdateLedgerWithContext(arg0 context.Context, arg1 *qldb.U
 	return ret0, ret1
 }
 
-// UpdateLedgerWithContext indicates an expected call of UpdateLedgerWithContext
+// UpdateLedgerWithContext indicates an expected call of UpdateLedgerWithContext.
 func (mr *MockQLDBAPIMockRecorder) UpdateLedgerWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

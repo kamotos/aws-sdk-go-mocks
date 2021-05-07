@@ -6,36 +6,37 @@ package xraymock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	xray "github.com/aws/aws-sdk-go/service/xray"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockXRayAPI is a mock of XRayAPI interface
+// MockXRayAPI is a mock of XRayAPI interface.
 type MockXRayAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockXRayAPIMockRecorder
 }
 
-// MockXRayAPIMockRecorder is the mock recorder for MockXRayAPI
+// MockXRayAPIMockRecorder is the mock recorder for MockXRayAPI.
 type MockXRayAPIMockRecorder struct {
 	mock *MockXRayAPI
 }
 
-// NewMockXRayAPI creates a new mock instance
+// NewMockXRayAPI creates a new mock instance.
 func NewMockXRayAPI(ctrl *gomock.Controller) *MockXRayAPI {
 	mock := &MockXRayAPI{ctrl: ctrl}
 	mock.recorder = &MockXRayAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockXRayAPI) EXPECT() *MockXRayAPIMockRecorder {
 	return m.recorder
 }
 
-// BatchGetTraces mocks base method
+// BatchGetTraces mocks base method.
 func (m *MockXRayAPI) BatchGetTraces(arg0 *xray.BatchGetTracesInput) (*xray.BatchGetTracesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetTraces", arg0)
@@ -44,13 +45,13 @@ func (m *MockXRayAPI) BatchGetTraces(arg0 *xray.BatchGetTracesInput) (*xray.Batc
 	return ret0, ret1
 }
 
-// BatchGetTraces indicates an expected call of BatchGetTraces
+// BatchGetTraces indicates an expected call of BatchGetTraces.
 func (mr *MockXRayAPIMockRecorder) BatchGetTraces(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetTraces", reflect.TypeOf((*MockXRayAPI)(nil).BatchGetTraces), arg0)
 }
 
-// BatchGetTracesPages mocks base method
+// BatchGetTracesPages mocks base method.
 func (m *MockXRayAPI) BatchGetTracesPages(arg0 *xray.BatchGetTracesInput, arg1 func(*xray.BatchGetTracesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetTracesPages", arg0, arg1)
@@ -58,13 +59,13 @@ func (m *MockXRayAPI) BatchGetTracesPages(arg0 *xray.BatchGetTracesInput, arg1 f
 	return ret0
 }
 
-// BatchGetTracesPages indicates an expected call of BatchGetTracesPages
+// BatchGetTracesPages indicates an expected call of BatchGetTracesPages.
 func (mr *MockXRayAPIMockRecorder) BatchGetTracesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetTracesPages", reflect.TypeOf((*MockXRayAPI)(nil).BatchGetTracesPages), arg0, arg1)
 }
 
-// BatchGetTracesPagesWithContext mocks base method
+// BatchGetTracesPagesWithContext mocks base method.
 func (m *MockXRayAPI) BatchGetTracesPagesWithContext(arg0 context.Context, arg1 *xray.BatchGetTracesInput, arg2 func(*xray.BatchGetTracesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -76,14 +77,14 @@ func (m *MockXRayAPI) BatchGetTracesPagesWithContext(arg0 context.Context, arg1 
 	return ret0
 }
 
-// BatchGetTracesPagesWithContext indicates an expected call of BatchGetTracesPagesWithContext
+// BatchGetTracesPagesWithContext indicates an expected call of BatchGetTracesPagesWithContext.
 func (mr *MockXRayAPIMockRecorder) BatchGetTracesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetTracesPagesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).BatchGetTracesPagesWithContext), varargs...)
 }
 
-// BatchGetTracesRequest mocks base method
+// BatchGetTracesRequest mocks base method.
 func (m *MockXRayAPI) BatchGetTracesRequest(arg0 *xray.BatchGetTracesInput) (*request.Request, *xray.BatchGetTracesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetTracesRequest", arg0)
@@ -92,13 +93,13 @@ func (m *MockXRayAPI) BatchGetTracesRequest(arg0 *xray.BatchGetTracesInput) (*re
 	return ret0, ret1
 }
 
-// BatchGetTracesRequest indicates an expected call of BatchGetTracesRequest
+// BatchGetTracesRequest indicates an expected call of BatchGetTracesRequest.
 func (mr *MockXRayAPIMockRecorder) BatchGetTracesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetTracesRequest", reflect.TypeOf((*MockXRayAPI)(nil).BatchGetTracesRequest), arg0)
 }
 
-// BatchGetTracesWithContext mocks base method
+// BatchGetTracesWithContext mocks base method.
 func (m *MockXRayAPI) BatchGetTracesWithContext(arg0 context.Context, arg1 *xray.BatchGetTracesInput, arg2 ...request.Option) (*xray.BatchGetTracesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -111,14 +112,14 @@ func (m *MockXRayAPI) BatchGetTracesWithContext(arg0 context.Context, arg1 *xray
 	return ret0, ret1
 }
 
-// BatchGetTracesWithContext indicates an expected call of BatchGetTracesWithContext
+// BatchGetTracesWithContext indicates an expected call of BatchGetTracesWithContext.
 func (mr *MockXRayAPIMockRecorder) BatchGetTracesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetTracesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).BatchGetTracesWithContext), varargs...)
 }
 
-// CreateGroup mocks base method
+// CreateGroup mocks base method.
 func (m *MockXRayAPI) CreateGroup(arg0 *xray.CreateGroupInput) (*xray.CreateGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateGroup", arg0)
@@ -127,13 +128,13 @@ func (m *MockXRayAPI) CreateGroup(arg0 *xray.CreateGroupInput) (*xray.CreateGrou
 	return ret0, ret1
 }
 
-// CreateGroup indicates an expected call of CreateGroup
+// CreateGroup indicates an expected call of CreateGroup.
 func (mr *MockXRayAPIMockRecorder) CreateGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateGroup", reflect.TypeOf((*MockXRayAPI)(nil).CreateGroup), arg0)
 }
 
-// CreateGroupRequest mocks base method
+// CreateGroupRequest mocks base method.
 func (m *MockXRayAPI) CreateGroupRequest(arg0 *xray.CreateGroupInput) (*request.Request, *xray.CreateGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateGroupRequest", arg0)
@@ -142,13 +143,13 @@ func (m *MockXRayAPI) CreateGroupRequest(arg0 *xray.CreateGroupInput) (*request.
 	return ret0, ret1
 }
 
-// CreateGroupRequest indicates an expected call of CreateGroupRequest
+// CreateGroupRequest indicates an expected call of CreateGroupRequest.
 func (mr *MockXRayAPIMockRecorder) CreateGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateGroupRequest", reflect.TypeOf((*MockXRayAPI)(nil).CreateGroupRequest), arg0)
 }
 
-// CreateGroupWithContext mocks base method
+// CreateGroupWithContext mocks base method.
 func (m *MockXRayAPI) CreateGroupWithContext(arg0 context.Context, arg1 *xray.CreateGroupInput, arg2 ...request.Option) (*xray.CreateGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -161,14 +162,14 @@ func (m *MockXRayAPI) CreateGroupWithContext(arg0 context.Context, arg1 *xray.Cr
 	return ret0, ret1
 }
 
-// CreateGroupWithContext indicates an expected call of CreateGroupWithContext
+// CreateGroupWithContext indicates an expected call of CreateGroupWithContext.
 func (mr *MockXRayAPIMockRecorder) CreateGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateGroupWithContext", reflect.TypeOf((*MockXRayAPI)(nil).CreateGroupWithContext), varargs...)
 }
 
-// CreateSamplingRule mocks base method
+// CreateSamplingRule mocks base method.
 func (m *MockXRayAPI) CreateSamplingRule(arg0 *xray.CreateSamplingRuleInput) (*xray.CreateSamplingRuleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSamplingRule", arg0)
@@ -177,13 +178,13 @@ func (m *MockXRayAPI) CreateSamplingRule(arg0 *xray.CreateSamplingRuleInput) (*x
 	return ret0, ret1
 }
 
-// CreateSamplingRule indicates an expected call of CreateSamplingRule
+// CreateSamplingRule indicates an expected call of CreateSamplingRule.
 func (mr *MockXRayAPIMockRecorder) CreateSamplingRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSamplingRule", reflect.TypeOf((*MockXRayAPI)(nil).CreateSamplingRule), arg0)
 }
 
-// CreateSamplingRuleRequest mocks base method
+// CreateSamplingRuleRequest mocks base method.
 func (m *MockXRayAPI) CreateSamplingRuleRequest(arg0 *xray.CreateSamplingRuleInput) (*request.Request, *xray.CreateSamplingRuleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSamplingRuleRequest", arg0)
@@ -192,13 +193,13 @@ func (m *MockXRayAPI) CreateSamplingRuleRequest(arg0 *xray.CreateSamplingRuleInp
 	return ret0, ret1
 }
 
-// CreateSamplingRuleRequest indicates an expected call of CreateSamplingRuleRequest
+// CreateSamplingRuleRequest indicates an expected call of CreateSamplingRuleRequest.
 func (mr *MockXRayAPIMockRecorder) CreateSamplingRuleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSamplingRuleRequest", reflect.TypeOf((*MockXRayAPI)(nil).CreateSamplingRuleRequest), arg0)
 }
 
-// CreateSamplingRuleWithContext mocks base method
+// CreateSamplingRuleWithContext mocks base method.
 func (m *MockXRayAPI) CreateSamplingRuleWithContext(arg0 context.Context, arg1 *xray.CreateSamplingRuleInput, arg2 ...request.Option) (*xray.CreateSamplingRuleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -211,14 +212,14 @@ func (m *MockXRayAPI) CreateSamplingRuleWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// CreateSamplingRuleWithContext indicates an expected call of CreateSamplingRuleWithContext
+// CreateSamplingRuleWithContext indicates an expected call of CreateSamplingRuleWithContext.
 func (mr *MockXRayAPIMockRecorder) CreateSamplingRuleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSamplingRuleWithContext", reflect.TypeOf((*MockXRayAPI)(nil).CreateSamplingRuleWithContext), varargs...)
 }
 
-// DeleteGroup mocks base method
+// DeleteGroup mocks base method.
 func (m *MockXRayAPI) DeleteGroup(arg0 *xray.DeleteGroupInput) (*xray.DeleteGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteGroup", arg0)
@@ -227,13 +228,13 @@ func (m *MockXRayAPI) DeleteGroup(arg0 *xray.DeleteGroupInput) (*xray.DeleteGrou
 	return ret0, ret1
 }
 
-// DeleteGroup indicates an expected call of DeleteGroup
+// DeleteGroup indicates an expected call of DeleteGroup.
 func (mr *MockXRayAPIMockRecorder) DeleteGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteGroup", reflect.TypeOf((*MockXRayAPI)(nil).DeleteGroup), arg0)
 }
 
-// DeleteGroupRequest mocks base method
+// DeleteGroupRequest mocks base method.
 func (m *MockXRayAPI) DeleteGroupRequest(arg0 *xray.DeleteGroupInput) (*request.Request, *xray.DeleteGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteGroupRequest", arg0)
@@ -242,13 +243,13 @@ func (m *MockXRayAPI) DeleteGroupRequest(arg0 *xray.DeleteGroupInput) (*request.
 	return ret0, ret1
 }
 
-// DeleteGroupRequest indicates an expected call of DeleteGroupRequest
+// DeleteGroupRequest indicates an expected call of DeleteGroupRequest.
 func (mr *MockXRayAPIMockRecorder) DeleteGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteGroupRequest", reflect.TypeOf((*MockXRayAPI)(nil).DeleteGroupRequest), arg0)
 }
 
-// DeleteGroupWithContext mocks base method
+// DeleteGroupWithContext mocks base method.
 func (m *MockXRayAPI) DeleteGroupWithContext(arg0 context.Context, arg1 *xray.DeleteGroupInput, arg2 ...request.Option) (*xray.DeleteGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -261,14 +262,14 @@ func (m *MockXRayAPI) DeleteGroupWithContext(arg0 context.Context, arg1 *xray.De
 	return ret0, ret1
 }
 
-// DeleteGroupWithContext indicates an expected call of DeleteGroupWithContext
+// DeleteGroupWithContext indicates an expected call of DeleteGroupWithContext.
 func (mr *MockXRayAPIMockRecorder) DeleteGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteGroupWithContext", reflect.TypeOf((*MockXRayAPI)(nil).DeleteGroupWithContext), varargs...)
 }
 
-// DeleteSamplingRule mocks base method
+// DeleteSamplingRule mocks base method.
 func (m *MockXRayAPI) DeleteSamplingRule(arg0 *xray.DeleteSamplingRuleInput) (*xray.DeleteSamplingRuleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSamplingRule", arg0)
@@ -277,13 +278,13 @@ func (m *MockXRayAPI) DeleteSamplingRule(arg0 *xray.DeleteSamplingRuleInput) (*x
 	return ret0, ret1
 }
 
-// DeleteSamplingRule indicates an expected call of DeleteSamplingRule
+// DeleteSamplingRule indicates an expected call of DeleteSamplingRule.
 func (mr *MockXRayAPIMockRecorder) DeleteSamplingRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSamplingRule", reflect.TypeOf((*MockXRayAPI)(nil).DeleteSamplingRule), arg0)
 }
 
-// DeleteSamplingRuleRequest mocks base method
+// DeleteSamplingRuleRequest mocks base method.
 func (m *MockXRayAPI) DeleteSamplingRuleRequest(arg0 *xray.DeleteSamplingRuleInput) (*request.Request, *xray.DeleteSamplingRuleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteSamplingRuleRequest", arg0)
@@ -292,13 +293,13 @@ func (m *MockXRayAPI) DeleteSamplingRuleRequest(arg0 *xray.DeleteSamplingRuleInp
 	return ret0, ret1
 }
 
-// DeleteSamplingRuleRequest indicates an expected call of DeleteSamplingRuleRequest
+// DeleteSamplingRuleRequest indicates an expected call of DeleteSamplingRuleRequest.
 func (mr *MockXRayAPIMockRecorder) DeleteSamplingRuleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSamplingRuleRequest", reflect.TypeOf((*MockXRayAPI)(nil).DeleteSamplingRuleRequest), arg0)
 }
 
-// DeleteSamplingRuleWithContext mocks base method
+// DeleteSamplingRuleWithContext mocks base method.
 func (m *MockXRayAPI) DeleteSamplingRuleWithContext(arg0 context.Context, arg1 *xray.DeleteSamplingRuleInput, arg2 ...request.Option) (*xray.DeleteSamplingRuleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -311,14 +312,14 @@ func (m *MockXRayAPI) DeleteSamplingRuleWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// DeleteSamplingRuleWithContext indicates an expected call of DeleteSamplingRuleWithContext
+// DeleteSamplingRuleWithContext indicates an expected call of DeleteSamplingRuleWithContext.
 func (mr *MockXRayAPIMockRecorder) DeleteSamplingRuleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSamplingRuleWithContext", reflect.TypeOf((*MockXRayAPI)(nil).DeleteSamplingRuleWithContext), varargs...)
 }
 
-// GetEncryptionConfig mocks base method
+// GetEncryptionConfig mocks base method.
 func (m *MockXRayAPI) GetEncryptionConfig(arg0 *xray.GetEncryptionConfigInput) (*xray.GetEncryptionConfigOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEncryptionConfig", arg0)
@@ -327,13 +328,13 @@ func (m *MockXRayAPI) GetEncryptionConfig(arg0 *xray.GetEncryptionConfigInput) (
 	return ret0, ret1
 }
 
-// GetEncryptionConfig indicates an expected call of GetEncryptionConfig
+// GetEncryptionConfig indicates an expected call of GetEncryptionConfig.
 func (mr *MockXRayAPIMockRecorder) GetEncryptionConfig(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEncryptionConfig", reflect.TypeOf((*MockXRayAPI)(nil).GetEncryptionConfig), arg0)
 }
 
-// GetEncryptionConfigRequest mocks base method
+// GetEncryptionConfigRequest mocks base method.
 func (m *MockXRayAPI) GetEncryptionConfigRequest(arg0 *xray.GetEncryptionConfigInput) (*request.Request, *xray.GetEncryptionConfigOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetEncryptionConfigRequest", arg0)
@@ -342,13 +343,13 @@ func (m *MockXRayAPI) GetEncryptionConfigRequest(arg0 *xray.GetEncryptionConfigI
 	return ret0, ret1
 }
 
-// GetEncryptionConfigRequest indicates an expected call of GetEncryptionConfigRequest
+// GetEncryptionConfigRequest indicates an expected call of GetEncryptionConfigRequest.
 func (mr *MockXRayAPIMockRecorder) GetEncryptionConfigRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEncryptionConfigRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetEncryptionConfigRequest), arg0)
 }
 
-// GetEncryptionConfigWithContext mocks base method
+// GetEncryptionConfigWithContext mocks base method.
 func (m *MockXRayAPI) GetEncryptionConfigWithContext(arg0 context.Context, arg1 *xray.GetEncryptionConfigInput, arg2 ...request.Option) (*xray.GetEncryptionConfigOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -361,14 +362,14 @@ func (m *MockXRayAPI) GetEncryptionConfigWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// GetEncryptionConfigWithContext indicates an expected call of GetEncryptionConfigWithContext
+// GetEncryptionConfigWithContext indicates an expected call of GetEncryptionConfigWithContext.
 func (mr *MockXRayAPIMockRecorder) GetEncryptionConfigWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEncryptionConfigWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetEncryptionConfigWithContext), varargs...)
 }
 
-// GetGroup mocks base method
+// GetGroup mocks base method.
 func (m *MockXRayAPI) GetGroup(arg0 *xray.GetGroupInput) (*xray.GetGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetGroup", arg0)
@@ -377,13 +378,13 @@ func (m *MockXRayAPI) GetGroup(arg0 *xray.GetGroupInput) (*xray.GetGroupOutput, 
 	return ret0, ret1
 }
 
-// GetGroup indicates an expected call of GetGroup
+// GetGroup indicates an expected call of GetGroup.
 func (mr *MockXRayAPIMockRecorder) GetGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGroup", reflect.TypeOf((*MockXRayAPI)(nil).GetGroup), arg0)
 }
 
-// GetGroupRequest mocks base method
+// GetGroupRequest mocks base method.
 func (m *MockXRayAPI) GetGroupRequest(arg0 *xray.GetGroupInput) (*request.Request, *xray.GetGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetGroupRequest", arg0)
@@ -392,13 +393,13 @@ func (m *MockXRayAPI) GetGroupRequest(arg0 *xray.GetGroupInput) (*request.Reques
 	return ret0, ret1
 }
 
-// GetGroupRequest indicates an expected call of GetGroupRequest
+// GetGroupRequest indicates an expected call of GetGroupRequest.
 func (mr *MockXRayAPIMockRecorder) GetGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGroupRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetGroupRequest), arg0)
 }
 
-// GetGroupWithContext mocks base method
+// GetGroupWithContext mocks base method.
 func (m *MockXRayAPI) GetGroupWithContext(arg0 context.Context, arg1 *xray.GetGroupInput, arg2 ...request.Option) (*xray.GetGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -411,14 +412,14 @@ func (m *MockXRayAPI) GetGroupWithContext(arg0 context.Context, arg1 *xray.GetGr
 	return ret0, ret1
 }
 
-// GetGroupWithContext indicates an expected call of GetGroupWithContext
+// GetGroupWithContext indicates an expected call of GetGroupWithContext.
 func (mr *MockXRayAPIMockRecorder) GetGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGroupWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetGroupWithContext), varargs...)
 }
 
-// GetGroups mocks base method
+// GetGroups mocks base method.
 func (m *MockXRayAPI) GetGroups(arg0 *xray.GetGroupsInput) (*xray.GetGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetGroups", arg0)
@@ -427,13 +428,13 @@ func (m *MockXRayAPI) GetGroups(arg0 *xray.GetGroupsInput) (*xray.GetGroupsOutpu
 	return ret0, ret1
 }
 
-// GetGroups indicates an expected call of GetGroups
+// GetGroups indicates an expected call of GetGroups.
 func (mr *MockXRayAPIMockRecorder) GetGroups(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGroups", reflect.TypeOf((*MockXRayAPI)(nil).GetGroups), arg0)
 }
 
-// GetGroupsPages mocks base method
+// GetGroupsPages mocks base method.
 func (m *MockXRayAPI) GetGroupsPages(arg0 *xray.GetGroupsInput, arg1 func(*xray.GetGroupsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetGroupsPages", arg0, arg1)
@@ -441,13 +442,13 @@ func (m *MockXRayAPI) GetGroupsPages(arg0 *xray.GetGroupsInput, arg1 func(*xray.
 	return ret0
 }
 
-// GetGroupsPages indicates an expected call of GetGroupsPages
+// GetGroupsPages indicates an expected call of GetGroupsPages.
 func (mr *MockXRayAPIMockRecorder) GetGroupsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGroupsPages", reflect.TypeOf((*MockXRayAPI)(nil).GetGroupsPages), arg0, arg1)
 }
 
-// GetGroupsPagesWithContext mocks base method
+// GetGroupsPagesWithContext mocks base method.
 func (m *MockXRayAPI) GetGroupsPagesWithContext(arg0 context.Context, arg1 *xray.GetGroupsInput, arg2 func(*xray.GetGroupsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -459,14 +460,14 @@ func (m *MockXRayAPI) GetGroupsPagesWithContext(arg0 context.Context, arg1 *xray
 	return ret0
 }
 
-// GetGroupsPagesWithContext indicates an expected call of GetGroupsPagesWithContext
+// GetGroupsPagesWithContext indicates an expected call of GetGroupsPagesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGroupsPagesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetGroupsPagesWithContext), varargs...)
 }
 
-// GetGroupsRequest mocks base method
+// GetGroupsRequest mocks base method.
 func (m *MockXRayAPI) GetGroupsRequest(arg0 *xray.GetGroupsInput) (*request.Request, *xray.GetGroupsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetGroupsRequest", arg0)
@@ -475,13 +476,13 @@ func (m *MockXRayAPI) GetGroupsRequest(arg0 *xray.GetGroupsInput) (*request.Requ
 	return ret0, ret1
 }
 
-// GetGroupsRequest indicates an expected call of GetGroupsRequest
+// GetGroupsRequest indicates an expected call of GetGroupsRequest.
 func (mr *MockXRayAPIMockRecorder) GetGroupsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGroupsRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetGroupsRequest), arg0)
 }
 
-// GetGroupsWithContext mocks base method
+// GetGroupsWithContext mocks base method.
 func (m *MockXRayAPI) GetGroupsWithContext(arg0 context.Context, arg1 *xray.GetGroupsInput, arg2 ...request.Option) (*xray.GetGroupsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -494,14 +495,14 @@ func (m *MockXRayAPI) GetGroupsWithContext(arg0 context.Context, arg1 *xray.GetG
 	return ret0, ret1
 }
 
-// GetGroupsWithContext indicates an expected call of GetGroupsWithContext
+// GetGroupsWithContext indicates an expected call of GetGroupsWithContext.
 func (mr *MockXRayAPIMockRecorder) GetGroupsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGroupsWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetGroupsWithContext), varargs...)
 }
 
-// GetInsight mocks base method
+// GetInsight mocks base method.
 func (m *MockXRayAPI) GetInsight(arg0 *xray.GetInsightInput) (*xray.GetInsightOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInsight", arg0)
@@ -510,13 +511,13 @@ func (m *MockXRayAPI) GetInsight(arg0 *xray.GetInsightInput) (*xray.GetInsightOu
 	return ret0, ret1
 }
 
-// GetInsight indicates an expected call of GetInsight
+// GetInsight indicates an expected call of GetInsight.
 func (mr *MockXRayAPIMockRecorder) GetInsight(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsight", reflect.TypeOf((*MockXRayAPI)(nil).GetInsight), arg0)
 }
 
-// GetInsightEvents mocks base method
+// GetInsightEvents mocks base method.
 func (m *MockXRayAPI) GetInsightEvents(arg0 *xray.GetInsightEventsInput) (*xray.GetInsightEventsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInsightEvents", arg0)
@@ -525,13 +526,13 @@ func (m *MockXRayAPI) GetInsightEvents(arg0 *xray.GetInsightEventsInput) (*xray.
 	return ret0, ret1
 }
 
-// GetInsightEvents indicates an expected call of GetInsightEvents
+// GetInsightEvents indicates an expected call of GetInsightEvents.
 func (mr *MockXRayAPIMockRecorder) GetInsightEvents(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightEvents", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightEvents), arg0)
 }
 
-// GetInsightEventsPages mocks base method
+// GetInsightEventsPages mocks base method.
 func (m *MockXRayAPI) GetInsightEventsPages(arg0 *xray.GetInsightEventsInput, arg1 func(*xray.GetInsightEventsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInsightEventsPages", arg0, arg1)
@@ -539,13 +540,13 @@ func (m *MockXRayAPI) GetInsightEventsPages(arg0 *xray.GetInsightEventsInput, ar
 	return ret0
 }
 
-// GetInsightEventsPages indicates an expected call of GetInsightEventsPages
+// GetInsightEventsPages indicates an expected call of GetInsightEventsPages.
 func (mr *MockXRayAPIMockRecorder) GetInsightEventsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightEventsPages", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightEventsPages), arg0, arg1)
 }
 
-// GetInsightEventsPagesWithContext mocks base method
+// GetInsightEventsPagesWithContext mocks base method.
 func (m *MockXRayAPI) GetInsightEventsPagesWithContext(arg0 context.Context, arg1 *xray.GetInsightEventsInput, arg2 func(*xray.GetInsightEventsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -557,14 +558,14 @@ func (m *MockXRayAPI) GetInsightEventsPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// GetInsightEventsPagesWithContext indicates an expected call of GetInsightEventsPagesWithContext
+// GetInsightEventsPagesWithContext indicates an expected call of GetInsightEventsPagesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetInsightEventsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightEventsPagesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightEventsPagesWithContext), varargs...)
 }
 
-// GetInsightEventsRequest mocks base method
+// GetInsightEventsRequest mocks base method.
 func (m *MockXRayAPI) GetInsightEventsRequest(arg0 *xray.GetInsightEventsInput) (*request.Request, *xray.GetInsightEventsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInsightEventsRequest", arg0)
@@ -573,13 +574,13 @@ func (m *MockXRayAPI) GetInsightEventsRequest(arg0 *xray.GetInsightEventsInput) 
 	return ret0, ret1
 }
 
-// GetInsightEventsRequest indicates an expected call of GetInsightEventsRequest
+// GetInsightEventsRequest indicates an expected call of GetInsightEventsRequest.
 func (mr *MockXRayAPIMockRecorder) GetInsightEventsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightEventsRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightEventsRequest), arg0)
 }
 
-// GetInsightEventsWithContext mocks base method
+// GetInsightEventsWithContext mocks base method.
 func (m *MockXRayAPI) GetInsightEventsWithContext(arg0 context.Context, arg1 *xray.GetInsightEventsInput, arg2 ...request.Option) (*xray.GetInsightEventsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -592,14 +593,14 @@ func (m *MockXRayAPI) GetInsightEventsWithContext(arg0 context.Context, arg1 *xr
 	return ret0, ret1
 }
 
-// GetInsightEventsWithContext indicates an expected call of GetInsightEventsWithContext
+// GetInsightEventsWithContext indicates an expected call of GetInsightEventsWithContext.
 func (mr *MockXRayAPIMockRecorder) GetInsightEventsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightEventsWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightEventsWithContext), varargs...)
 }
 
-// GetInsightImpactGraph mocks base method
+// GetInsightImpactGraph mocks base method.
 func (m *MockXRayAPI) GetInsightImpactGraph(arg0 *xray.GetInsightImpactGraphInput) (*xray.GetInsightImpactGraphOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInsightImpactGraph", arg0)
@@ -608,13 +609,13 @@ func (m *MockXRayAPI) GetInsightImpactGraph(arg0 *xray.GetInsightImpactGraphInpu
 	return ret0, ret1
 }
 
-// GetInsightImpactGraph indicates an expected call of GetInsightImpactGraph
+// GetInsightImpactGraph indicates an expected call of GetInsightImpactGraph.
 func (mr *MockXRayAPIMockRecorder) GetInsightImpactGraph(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightImpactGraph", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightImpactGraph), arg0)
 }
 
-// GetInsightImpactGraphRequest mocks base method
+// GetInsightImpactGraphRequest mocks base method.
 func (m *MockXRayAPI) GetInsightImpactGraphRequest(arg0 *xray.GetInsightImpactGraphInput) (*request.Request, *xray.GetInsightImpactGraphOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInsightImpactGraphRequest", arg0)
@@ -623,13 +624,13 @@ func (m *MockXRayAPI) GetInsightImpactGraphRequest(arg0 *xray.GetInsightImpactGr
 	return ret0, ret1
 }
 
-// GetInsightImpactGraphRequest indicates an expected call of GetInsightImpactGraphRequest
+// GetInsightImpactGraphRequest indicates an expected call of GetInsightImpactGraphRequest.
 func (mr *MockXRayAPIMockRecorder) GetInsightImpactGraphRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightImpactGraphRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightImpactGraphRequest), arg0)
 }
 
-// GetInsightImpactGraphWithContext mocks base method
+// GetInsightImpactGraphWithContext mocks base method.
 func (m *MockXRayAPI) GetInsightImpactGraphWithContext(arg0 context.Context, arg1 *xray.GetInsightImpactGraphInput, arg2 ...request.Option) (*xray.GetInsightImpactGraphOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -642,14 +643,14 @@ func (m *MockXRayAPI) GetInsightImpactGraphWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetInsightImpactGraphWithContext indicates an expected call of GetInsightImpactGraphWithContext
+// GetInsightImpactGraphWithContext indicates an expected call of GetInsightImpactGraphWithContext.
 func (mr *MockXRayAPIMockRecorder) GetInsightImpactGraphWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightImpactGraphWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightImpactGraphWithContext), varargs...)
 }
 
-// GetInsightRequest mocks base method
+// GetInsightRequest mocks base method.
 func (m *MockXRayAPI) GetInsightRequest(arg0 *xray.GetInsightInput) (*request.Request, *xray.GetInsightOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInsightRequest", arg0)
@@ -658,13 +659,13 @@ func (m *MockXRayAPI) GetInsightRequest(arg0 *xray.GetInsightInput) (*request.Re
 	return ret0, ret1
 }
 
-// GetInsightRequest indicates an expected call of GetInsightRequest
+// GetInsightRequest indicates an expected call of GetInsightRequest.
 func (mr *MockXRayAPIMockRecorder) GetInsightRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightRequest), arg0)
 }
 
-// GetInsightSummaries mocks base method
+// GetInsightSummaries mocks base method.
 func (m *MockXRayAPI) GetInsightSummaries(arg0 *xray.GetInsightSummariesInput) (*xray.GetInsightSummariesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInsightSummaries", arg0)
@@ -673,13 +674,13 @@ func (m *MockXRayAPI) GetInsightSummaries(arg0 *xray.GetInsightSummariesInput) (
 	return ret0, ret1
 }
 
-// GetInsightSummaries indicates an expected call of GetInsightSummaries
+// GetInsightSummaries indicates an expected call of GetInsightSummaries.
 func (mr *MockXRayAPIMockRecorder) GetInsightSummaries(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightSummaries", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightSummaries), arg0)
 }
 
-// GetInsightSummariesPages mocks base method
+// GetInsightSummariesPages mocks base method.
 func (m *MockXRayAPI) GetInsightSummariesPages(arg0 *xray.GetInsightSummariesInput, arg1 func(*xray.GetInsightSummariesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInsightSummariesPages", arg0, arg1)
@@ -687,13 +688,13 @@ func (m *MockXRayAPI) GetInsightSummariesPages(arg0 *xray.GetInsightSummariesInp
 	return ret0
 }
 
-// GetInsightSummariesPages indicates an expected call of GetInsightSummariesPages
+// GetInsightSummariesPages indicates an expected call of GetInsightSummariesPages.
 func (mr *MockXRayAPIMockRecorder) GetInsightSummariesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightSummariesPages", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightSummariesPages), arg0, arg1)
 }
 
-// GetInsightSummariesPagesWithContext mocks base method
+// GetInsightSummariesPagesWithContext mocks base method.
 func (m *MockXRayAPI) GetInsightSummariesPagesWithContext(arg0 context.Context, arg1 *xray.GetInsightSummariesInput, arg2 func(*xray.GetInsightSummariesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -705,14 +706,14 @@ func (m *MockXRayAPI) GetInsightSummariesPagesWithContext(arg0 context.Context, 
 	return ret0
 }
 
-// GetInsightSummariesPagesWithContext indicates an expected call of GetInsightSummariesPagesWithContext
+// GetInsightSummariesPagesWithContext indicates an expected call of GetInsightSummariesPagesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetInsightSummariesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightSummariesPagesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightSummariesPagesWithContext), varargs...)
 }
 
-// GetInsightSummariesRequest mocks base method
+// GetInsightSummariesRequest mocks base method.
 func (m *MockXRayAPI) GetInsightSummariesRequest(arg0 *xray.GetInsightSummariesInput) (*request.Request, *xray.GetInsightSummariesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInsightSummariesRequest", arg0)
@@ -721,13 +722,13 @@ func (m *MockXRayAPI) GetInsightSummariesRequest(arg0 *xray.GetInsightSummariesI
 	return ret0, ret1
 }
 
-// GetInsightSummariesRequest indicates an expected call of GetInsightSummariesRequest
+// GetInsightSummariesRequest indicates an expected call of GetInsightSummariesRequest.
 func (mr *MockXRayAPIMockRecorder) GetInsightSummariesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightSummariesRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightSummariesRequest), arg0)
 }
 
-// GetInsightSummariesWithContext mocks base method
+// GetInsightSummariesWithContext mocks base method.
 func (m *MockXRayAPI) GetInsightSummariesWithContext(arg0 context.Context, arg1 *xray.GetInsightSummariesInput, arg2 ...request.Option) (*xray.GetInsightSummariesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -740,14 +741,14 @@ func (m *MockXRayAPI) GetInsightSummariesWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// GetInsightSummariesWithContext indicates an expected call of GetInsightSummariesWithContext
+// GetInsightSummariesWithContext indicates an expected call of GetInsightSummariesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetInsightSummariesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightSummariesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightSummariesWithContext), varargs...)
 }
 
-// GetInsightWithContext mocks base method
+// GetInsightWithContext mocks base method.
 func (m *MockXRayAPI) GetInsightWithContext(arg0 context.Context, arg1 *xray.GetInsightInput, arg2 ...request.Option) (*xray.GetInsightOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -760,14 +761,14 @@ func (m *MockXRayAPI) GetInsightWithContext(arg0 context.Context, arg1 *xray.Get
 	return ret0, ret1
 }
 
-// GetInsightWithContext indicates an expected call of GetInsightWithContext
+// GetInsightWithContext indicates an expected call of GetInsightWithContext.
 func (mr *MockXRayAPIMockRecorder) GetInsightWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetInsightWithContext), varargs...)
 }
 
-// GetSamplingRules mocks base method
+// GetSamplingRules mocks base method.
 func (m *MockXRayAPI) GetSamplingRules(arg0 *xray.GetSamplingRulesInput) (*xray.GetSamplingRulesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSamplingRules", arg0)
@@ -776,13 +777,13 @@ func (m *MockXRayAPI) GetSamplingRules(arg0 *xray.GetSamplingRulesInput) (*xray.
 	return ret0, ret1
 }
 
-// GetSamplingRules indicates an expected call of GetSamplingRules
+// GetSamplingRules indicates an expected call of GetSamplingRules.
 func (mr *MockXRayAPIMockRecorder) GetSamplingRules(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingRules", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingRules), arg0)
 }
 
-// GetSamplingRulesPages mocks base method
+// GetSamplingRulesPages mocks base method.
 func (m *MockXRayAPI) GetSamplingRulesPages(arg0 *xray.GetSamplingRulesInput, arg1 func(*xray.GetSamplingRulesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSamplingRulesPages", arg0, arg1)
@@ -790,13 +791,13 @@ func (m *MockXRayAPI) GetSamplingRulesPages(arg0 *xray.GetSamplingRulesInput, ar
 	return ret0
 }
 
-// GetSamplingRulesPages indicates an expected call of GetSamplingRulesPages
+// GetSamplingRulesPages indicates an expected call of GetSamplingRulesPages.
 func (mr *MockXRayAPIMockRecorder) GetSamplingRulesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingRulesPages", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingRulesPages), arg0, arg1)
 }
 
-// GetSamplingRulesPagesWithContext mocks base method
+// GetSamplingRulesPagesWithContext mocks base method.
 func (m *MockXRayAPI) GetSamplingRulesPagesWithContext(arg0 context.Context, arg1 *xray.GetSamplingRulesInput, arg2 func(*xray.GetSamplingRulesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -808,14 +809,14 @@ func (m *MockXRayAPI) GetSamplingRulesPagesWithContext(arg0 context.Context, arg
 	return ret0
 }
 
-// GetSamplingRulesPagesWithContext indicates an expected call of GetSamplingRulesPagesWithContext
+// GetSamplingRulesPagesWithContext indicates an expected call of GetSamplingRulesPagesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetSamplingRulesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingRulesPagesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingRulesPagesWithContext), varargs...)
 }
 
-// GetSamplingRulesRequest mocks base method
+// GetSamplingRulesRequest mocks base method.
 func (m *MockXRayAPI) GetSamplingRulesRequest(arg0 *xray.GetSamplingRulesInput) (*request.Request, *xray.GetSamplingRulesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSamplingRulesRequest", arg0)
@@ -824,13 +825,13 @@ func (m *MockXRayAPI) GetSamplingRulesRequest(arg0 *xray.GetSamplingRulesInput) 
 	return ret0, ret1
 }
 
-// GetSamplingRulesRequest indicates an expected call of GetSamplingRulesRequest
+// GetSamplingRulesRequest indicates an expected call of GetSamplingRulesRequest.
 func (mr *MockXRayAPIMockRecorder) GetSamplingRulesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingRulesRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingRulesRequest), arg0)
 }
 
-// GetSamplingRulesWithContext mocks base method
+// GetSamplingRulesWithContext mocks base method.
 func (m *MockXRayAPI) GetSamplingRulesWithContext(arg0 context.Context, arg1 *xray.GetSamplingRulesInput, arg2 ...request.Option) (*xray.GetSamplingRulesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -843,14 +844,14 @@ func (m *MockXRayAPI) GetSamplingRulesWithContext(arg0 context.Context, arg1 *xr
 	return ret0, ret1
 }
 
-// GetSamplingRulesWithContext indicates an expected call of GetSamplingRulesWithContext
+// GetSamplingRulesWithContext indicates an expected call of GetSamplingRulesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetSamplingRulesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingRulesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingRulesWithContext), varargs...)
 }
 
-// GetSamplingStatisticSummaries mocks base method
+// GetSamplingStatisticSummaries mocks base method.
 func (m *MockXRayAPI) GetSamplingStatisticSummaries(arg0 *xray.GetSamplingStatisticSummariesInput) (*xray.GetSamplingStatisticSummariesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSamplingStatisticSummaries", arg0)
@@ -859,13 +860,13 @@ func (m *MockXRayAPI) GetSamplingStatisticSummaries(arg0 *xray.GetSamplingStatis
 	return ret0, ret1
 }
 
-// GetSamplingStatisticSummaries indicates an expected call of GetSamplingStatisticSummaries
+// GetSamplingStatisticSummaries indicates an expected call of GetSamplingStatisticSummaries.
 func (mr *MockXRayAPIMockRecorder) GetSamplingStatisticSummaries(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingStatisticSummaries", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingStatisticSummaries), arg0)
 }
 
-// GetSamplingStatisticSummariesPages mocks base method
+// GetSamplingStatisticSummariesPages mocks base method.
 func (m *MockXRayAPI) GetSamplingStatisticSummariesPages(arg0 *xray.GetSamplingStatisticSummariesInput, arg1 func(*xray.GetSamplingStatisticSummariesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSamplingStatisticSummariesPages", arg0, arg1)
@@ -873,13 +874,13 @@ func (m *MockXRayAPI) GetSamplingStatisticSummariesPages(arg0 *xray.GetSamplingS
 	return ret0
 }
 
-// GetSamplingStatisticSummariesPages indicates an expected call of GetSamplingStatisticSummariesPages
+// GetSamplingStatisticSummariesPages indicates an expected call of GetSamplingStatisticSummariesPages.
 func (mr *MockXRayAPIMockRecorder) GetSamplingStatisticSummariesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingStatisticSummariesPages", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingStatisticSummariesPages), arg0, arg1)
 }
 
-// GetSamplingStatisticSummariesPagesWithContext mocks base method
+// GetSamplingStatisticSummariesPagesWithContext mocks base method.
 func (m *MockXRayAPI) GetSamplingStatisticSummariesPagesWithContext(arg0 context.Context, arg1 *xray.GetSamplingStatisticSummariesInput, arg2 func(*xray.GetSamplingStatisticSummariesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -891,14 +892,14 @@ func (m *MockXRayAPI) GetSamplingStatisticSummariesPagesWithContext(arg0 context
 	return ret0
 }
 
-// GetSamplingStatisticSummariesPagesWithContext indicates an expected call of GetSamplingStatisticSummariesPagesWithContext
+// GetSamplingStatisticSummariesPagesWithContext indicates an expected call of GetSamplingStatisticSummariesPagesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetSamplingStatisticSummariesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingStatisticSummariesPagesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingStatisticSummariesPagesWithContext), varargs...)
 }
 
-// GetSamplingStatisticSummariesRequest mocks base method
+// GetSamplingStatisticSummariesRequest mocks base method.
 func (m *MockXRayAPI) GetSamplingStatisticSummariesRequest(arg0 *xray.GetSamplingStatisticSummariesInput) (*request.Request, *xray.GetSamplingStatisticSummariesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSamplingStatisticSummariesRequest", arg0)
@@ -907,13 +908,13 @@ func (m *MockXRayAPI) GetSamplingStatisticSummariesRequest(arg0 *xray.GetSamplin
 	return ret0, ret1
 }
 
-// GetSamplingStatisticSummariesRequest indicates an expected call of GetSamplingStatisticSummariesRequest
+// GetSamplingStatisticSummariesRequest indicates an expected call of GetSamplingStatisticSummariesRequest.
 func (mr *MockXRayAPIMockRecorder) GetSamplingStatisticSummariesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingStatisticSummariesRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingStatisticSummariesRequest), arg0)
 }
 
-// GetSamplingStatisticSummariesWithContext mocks base method
+// GetSamplingStatisticSummariesWithContext mocks base method.
 func (m *MockXRayAPI) GetSamplingStatisticSummariesWithContext(arg0 context.Context, arg1 *xray.GetSamplingStatisticSummariesInput, arg2 ...request.Option) (*xray.GetSamplingStatisticSummariesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -926,14 +927,14 @@ func (m *MockXRayAPI) GetSamplingStatisticSummariesWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// GetSamplingStatisticSummariesWithContext indicates an expected call of GetSamplingStatisticSummariesWithContext
+// GetSamplingStatisticSummariesWithContext indicates an expected call of GetSamplingStatisticSummariesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetSamplingStatisticSummariesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingStatisticSummariesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingStatisticSummariesWithContext), varargs...)
 }
 
-// GetSamplingTargets mocks base method
+// GetSamplingTargets mocks base method.
 func (m *MockXRayAPI) GetSamplingTargets(arg0 *xray.GetSamplingTargetsInput) (*xray.GetSamplingTargetsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSamplingTargets", arg0)
@@ -942,13 +943,13 @@ func (m *MockXRayAPI) GetSamplingTargets(arg0 *xray.GetSamplingTargetsInput) (*x
 	return ret0, ret1
 }
 
-// GetSamplingTargets indicates an expected call of GetSamplingTargets
+// GetSamplingTargets indicates an expected call of GetSamplingTargets.
 func (mr *MockXRayAPIMockRecorder) GetSamplingTargets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingTargets", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingTargets), arg0)
 }
 
-// GetSamplingTargetsRequest mocks base method
+// GetSamplingTargetsRequest mocks base method.
 func (m *MockXRayAPI) GetSamplingTargetsRequest(arg0 *xray.GetSamplingTargetsInput) (*request.Request, *xray.GetSamplingTargetsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetSamplingTargetsRequest", arg0)
@@ -957,13 +958,13 @@ func (m *MockXRayAPI) GetSamplingTargetsRequest(arg0 *xray.GetSamplingTargetsInp
 	return ret0, ret1
 }
 
-// GetSamplingTargetsRequest indicates an expected call of GetSamplingTargetsRequest
+// GetSamplingTargetsRequest indicates an expected call of GetSamplingTargetsRequest.
 func (mr *MockXRayAPIMockRecorder) GetSamplingTargetsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingTargetsRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingTargetsRequest), arg0)
 }
 
-// GetSamplingTargetsWithContext mocks base method
+// GetSamplingTargetsWithContext mocks base method.
 func (m *MockXRayAPI) GetSamplingTargetsWithContext(arg0 context.Context, arg1 *xray.GetSamplingTargetsInput, arg2 ...request.Option) (*xray.GetSamplingTargetsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -976,14 +977,14 @@ func (m *MockXRayAPI) GetSamplingTargetsWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// GetSamplingTargetsWithContext indicates an expected call of GetSamplingTargetsWithContext
+// GetSamplingTargetsWithContext indicates an expected call of GetSamplingTargetsWithContext.
 func (mr *MockXRayAPIMockRecorder) GetSamplingTargetsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSamplingTargetsWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetSamplingTargetsWithContext), varargs...)
 }
 
-// GetServiceGraph mocks base method
+// GetServiceGraph mocks base method.
 func (m *MockXRayAPI) GetServiceGraph(arg0 *xray.GetServiceGraphInput) (*xray.GetServiceGraphOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetServiceGraph", arg0)
@@ -992,13 +993,13 @@ func (m *MockXRayAPI) GetServiceGraph(arg0 *xray.GetServiceGraphInput) (*xray.Ge
 	return ret0, ret1
 }
 
-// GetServiceGraph indicates an expected call of GetServiceGraph
+// GetServiceGraph indicates an expected call of GetServiceGraph.
 func (mr *MockXRayAPIMockRecorder) GetServiceGraph(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetServiceGraph", reflect.TypeOf((*MockXRayAPI)(nil).GetServiceGraph), arg0)
 }
 
-// GetServiceGraphPages mocks base method
+// GetServiceGraphPages mocks base method.
 func (m *MockXRayAPI) GetServiceGraphPages(arg0 *xray.GetServiceGraphInput, arg1 func(*xray.GetServiceGraphOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetServiceGraphPages", arg0, arg1)
@@ -1006,13 +1007,13 @@ func (m *MockXRayAPI) GetServiceGraphPages(arg0 *xray.GetServiceGraphInput, arg1
 	return ret0
 }
 
-// GetServiceGraphPages indicates an expected call of GetServiceGraphPages
+// GetServiceGraphPages indicates an expected call of GetServiceGraphPages.
 func (mr *MockXRayAPIMockRecorder) GetServiceGraphPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetServiceGraphPages", reflect.TypeOf((*MockXRayAPI)(nil).GetServiceGraphPages), arg0, arg1)
 }
 
-// GetServiceGraphPagesWithContext mocks base method
+// GetServiceGraphPagesWithContext mocks base method.
 func (m *MockXRayAPI) GetServiceGraphPagesWithContext(arg0 context.Context, arg1 *xray.GetServiceGraphInput, arg2 func(*xray.GetServiceGraphOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1024,14 +1025,14 @@ func (m *MockXRayAPI) GetServiceGraphPagesWithContext(arg0 context.Context, arg1
 	return ret0
 }
 
-// GetServiceGraphPagesWithContext indicates an expected call of GetServiceGraphPagesWithContext
+// GetServiceGraphPagesWithContext indicates an expected call of GetServiceGraphPagesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetServiceGraphPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetServiceGraphPagesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetServiceGraphPagesWithContext), varargs...)
 }
 
-// GetServiceGraphRequest mocks base method
+// GetServiceGraphRequest mocks base method.
 func (m *MockXRayAPI) GetServiceGraphRequest(arg0 *xray.GetServiceGraphInput) (*request.Request, *xray.GetServiceGraphOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetServiceGraphRequest", arg0)
@@ -1040,13 +1041,13 @@ func (m *MockXRayAPI) GetServiceGraphRequest(arg0 *xray.GetServiceGraphInput) (*
 	return ret0, ret1
 }
 
-// GetServiceGraphRequest indicates an expected call of GetServiceGraphRequest
+// GetServiceGraphRequest indicates an expected call of GetServiceGraphRequest.
 func (mr *MockXRayAPIMockRecorder) GetServiceGraphRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetServiceGraphRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetServiceGraphRequest), arg0)
 }
 
-// GetServiceGraphWithContext mocks base method
+// GetServiceGraphWithContext mocks base method.
 func (m *MockXRayAPI) GetServiceGraphWithContext(arg0 context.Context, arg1 *xray.GetServiceGraphInput, arg2 ...request.Option) (*xray.GetServiceGraphOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1059,14 +1060,14 @@ func (m *MockXRayAPI) GetServiceGraphWithContext(arg0 context.Context, arg1 *xra
 	return ret0, ret1
 }
 
-// GetServiceGraphWithContext indicates an expected call of GetServiceGraphWithContext
+// GetServiceGraphWithContext indicates an expected call of GetServiceGraphWithContext.
 func (mr *MockXRayAPIMockRecorder) GetServiceGraphWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetServiceGraphWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetServiceGraphWithContext), varargs...)
 }
 
-// GetTimeSeriesServiceStatistics mocks base method
+// GetTimeSeriesServiceStatistics mocks base method.
 func (m *MockXRayAPI) GetTimeSeriesServiceStatistics(arg0 *xray.GetTimeSeriesServiceStatisticsInput) (*xray.GetTimeSeriesServiceStatisticsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTimeSeriesServiceStatistics", arg0)
@@ -1075,13 +1076,13 @@ func (m *MockXRayAPI) GetTimeSeriesServiceStatistics(arg0 *xray.GetTimeSeriesSer
 	return ret0, ret1
 }
 
-// GetTimeSeriesServiceStatistics indicates an expected call of GetTimeSeriesServiceStatistics
+// GetTimeSeriesServiceStatistics indicates an expected call of GetTimeSeriesServiceStatistics.
 func (mr *MockXRayAPIMockRecorder) GetTimeSeriesServiceStatistics(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTimeSeriesServiceStatistics", reflect.TypeOf((*MockXRayAPI)(nil).GetTimeSeriesServiceStatistics), arg0)
 }
 
-// GetTimeSeriesServiceStatisticsPages mocks base method
+// GetTimeSeriesServiceStatisticsPages mocks base method.
 func (m *MockXRayAPI) GetTimeSeriesServiceStatisticsPages(arg0 *xray.GetTimeSeriesServiceStatisticsInput, arg1 func(*xray.GetTimeSeriesServiceStatisticsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTimeSeriesServiceStatisticsPages", arg0, arg1)
@@ -1089,13 +1090,13 @@ func (m *MockXRayAPI) GetTimeSeriesServiceStatisticsPages(arg0 *xray.GetTimeSeri
 	return ret0
 }
 
-// GetTimeSeriesServiceStatisticsPages indicates an expected call of GetTimeSeriesServiceStatisticsPages
+// GetTimeSeriesServiceStatisticsPages indicates an expected call of GetTimeSeriesServiceStatisticsPages.
 func (mr *MockXRayAPIMockRecorder) GetTimeSeriesServiceStatisticsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTimeSeriesServiceStatisticsPages", reflect.TypeOf((*MockXRayAPI)(nil).GetTimeSeriesServiceStatisticsPages), arg0, arg1)
 }
 
-// GetTimeSeriesServiceStatisticsPagesWithContext mocks base method
+// GetTimeSeriesServiceStatisticsPagesWithContext mocks base method.
 func (m *MockXRayAPI) GetTimeSeriesServiceStatisticsPagesWithContext(arg0 context.Context, arg1 *xray.GetTimeSeriesServiceStatisticsInput, arg2 func(*xray.GetTimeSeriesServiceStatisticsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1107,14 +1108,14 @@ func (m *MockXRayAPI) GetTimeSeriesServiceStatisticsPagesWithContext(arg0 contex
 	return ret0
 }
 
-// GetTimeSeriesServiceStatisticsPagesWithContext indicates an expected call of GetTimeSeriesServiceStatisticsPagesWithContext
+// GetTimeSeriesServiceStatisticsPagesWithContext indicates an expected call of GetTimeSeriesServiceStatisticsPagesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetTimeSeriesServiceStatisticsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTimeSeriesServiceStatisticsPagesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetTimeSeriesServiceStatisticsPagesWithContext), varargs...)
 }
 
-// GetTimeSeriesServiceStatisticsRequest mocks base method
+// GetTimeSeriesServiceStatisticsRequest mocks base method.
 func (m *MockXRayAPI) GetTimeSeriesServiceStatisticsRequest(arg0 *xray.GetTimeSeriesServiceStatisticsInput) (*request.Request, *xray.GetTimeSeriesServiceStatisticsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTimeSeriesServiceStatisticsRequest", arg0)
@@ -1123,13 +1124,13 @@ func (m *MockXRayAPI) GetTimeSeriesServiceStatisticsRequest(arg0 *xray.GetTimeSe
 	return ret0, ret1
 }
 
-// GetTimeSeriesServiceStatisticsRequest indicates an expected call of GetTimeSeriesServiceStatisticsRequest
+// GetTimeSeriesServiceStatisticsRequest indicates an expected call of GetTimeSeriesServiceStatisticsRequest.
 func (mr *MockXRayAPIMockRecorder) GetTimeSeriesServiceStatisticsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTimeSeriesServiceStatisticsRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetTimeSeriesServiceStatisticsRequest), arg0)
 }
 
-// GetTimeSeriesServiceStatisticsWithContext mocks base method
+// GetTimeSeriesServiceStatisticsWithContext mocks base method.
 func (m *MockXRayAPI) GetTimeSeriesServiceStatisticsWithContext(arg0 context.Context, arg1 *xray.GetTimeSeriesServiceStatisticsInput, arg2 ...request.Option) (*xray.GetTimeSeriesServiceStatisticsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1142,14 +1143,14 @@ func (m *MockXRayAPI) GetTimeSeriesServiceStatisticsWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// GetTimeSeriesServiceStatisticsWithContext indicates an expected call of GetTimeSeriesServiceStatisticsWithContext
+// GetTimeSeriesServiceStatisticsWithContext indicates an expected call of GetTimeSeriesServiceStatisticsWithContext.
 func (mr *MockXRayAPIMockRecorder) GetTimeSeriesServiceStatisticsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTimeSeriesServiceStatisticsWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetTimeSeriesServiceStatisticsWithContext), varargs...)
 }
 
-// GetTraceGraph mocks base method
+// GetTraceGraph mocks base method.
 func (m *MockXRayAPI) GetTraceGraph(arg0 *xray.GetTraceGraphInput) (*xray.GetTraceGraphOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTraceGraph", arg0)
@@ -1158,13 +1159,13 @@ func (m *MockXRayAPI) GetTraceGraph(arg0 *xray.GetTraceGraphInput) (*xray.GetTra
 	return ret0, ret1
 }
 
-// GetTraceGraph indicates an expected call of GetTraceGraph
+// GetTraceGraph indicates an expected call of GetTraceGraph.
 func (mr *MockXRayAPIMockRecorder) GetTraceGraph(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTraceGraph", reflect.TypeOf((*MockXRayAPI)(nil).GetTraceGraph), arg0)
 }
 
-// GetTraceGraphPages mocks base method
+// GetTraceGraphPages mocks base method.
 func (m *MockXRayAPI) GetTraceGraphPages(arg0 *xray.GetTraceGraphInput, arg1 func(*xray.GetTraceGraphOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTraceGraphPages", arg0, arg1)
@@ -1172,13 +1173,13 @@ func (m *MockXRayAPI) GetTraceGraphPages(arg0 *xray.GetTraceGraphInput, arg1 fun
 	return ret0
 }
 
-// GetTraceGraphPages indicates an expected call of GetTraceGraphPages
+// GetTraceGraphPages indicates an expected call of GetTraceGraphPages.
 func (mr *MockXRayAPIMockRecorder) GetTraceGraphPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTraceGraphPages", reflect.TypeOf((*MockXRayAPI)(nil).GetTraceGraphPages), arg0, arg1)
 }
 
-// GetTraceGraphPagesWithContext mocks base method
+// GetTraceGraphPagesWithContext mocks base method.
 func (m *MockXRayAPI) GetTraceGraphPagesWithContext(arg0 context.Context, arg1 *xray.GetTraceGraphInput, arg2 func(*xray.GetTraceGraphOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1190,14 +1191,14 @@ func (m *MockXRayAPI) GetTraceGraphPagesWithContext(arg0 context.Context, arg1 *
 	return ret0
 }
 
-// GetTraceGraphPagesWithContext indicates an expected call of GetTraceGraphPagesWithContext
+// GetTraceGraphPagesWithContext indicates an expected call of GetTraceGraphPagesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetTraceGraphPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTraceGraphPagesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetTraceGraphPagesWithContext), varargs...)
 }
 
-// GetTraceGraphRequest mocks base method
+// GetTraceGraphRequest mocks base method.
 func (m *MockXRayAPI) GetTraceGraphRequest(arg0 *xray.GetTraceGraphInput) (*request.Request, *xray.GetTraceGraphOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTraceGraphRequest", arg0)
@@ -1206,13 +1207,13 @@ func (m *MockXRayAPI) GetTraceGraphRequest(arg0 *xray.GetTraceGraphInput) (*requ
 	return ret0, ret1
 }
 
-// GetTraceGraphRequest indicates an expected call of GetTraceGraphRequest
+// GetTraceGraphRequest indicates an expected call of GetTraceGraphRequest.
 func (mr *MockXRayAPIMockRecorder) GetTraceGraphRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTraceGraphRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetTraceGraphRequest), arg0)
 }
 
-// GetTraceGraphWithContext mocks base method
+// GetTraceGraphWithContext mocks base method.
 func (m *MockXRayAPI) GetTraceGraphWithContext(arg0 context.Context, arg1 *xray.GetTraceGraphInput, arg2 ...request.Option) (*xray.GetTraceGraphOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1225,14 +1226,14 @@ func (m *MockXRayAPI) GetTraceGraphWithContext(arg0 context.Context, arg1 *xray.
 	return ret0, ret1
 }
 
-// GetTraceGraphWithContext indicates an expected call of GetTraceGraphWithContext
+// GetTraceGraphWithContext indicates an expected call of GetTraceGraphWithContext.
 func (mr *MockXRayAPIMockRecorder) GetTraceGraphWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTraceGraphWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetTraceGraphWithContext), varargs...)
 }
 
-// GetTraceSummaries mocks base method
+// GetTraceSummaries mocks base method.
 func (m *MockXRayAPI) GetTraceSummaries(arg0 *xray.GetTraceSummariesInput) (*xray.GetTraceSummariesOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTraceSummaries", arg0)
@@ -1241,13 +1242,13 @@ func (m *MockXRayAPI) GetTraceSummaries(arg0 *xray.GetTraceSummariesInput) (*xra
 	return ret0, ret1
 }
 
-// GetTraceSummaries indicates an expected call of GetTraceSummaries
+// GetTraceSummaries indicates an expected call of GetTraceSummaries.
 func (mr *MockXRayAPIMockRecorder) GetTraceSummaries(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTraceSummaries", reflect.TypeOf((*MockXRayAPI)(nil).GetTraceSummaries), arg0)
 }
 
-// GetTraceSummariesPages mocks base method
+// GetTraceSummariesPages mocks base method.
 func (m *MockXRayAPI) GetTraceSummariesPages(arg0 *xray.GetTraceSummariesInput, arg1 func(*xray.GetTraceSummariesOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTraceSummariesPages", arg0, arg1)
@@ -1255,13 +1256,13 @@ func (m *MockXRayAPI) GetTraceSummariesPages(arg0 *xray.GetTraceSummariesInput, 
 	return ret0
 }
 
-// GetTraceSummariesPages indicates an expected call of GetTraceSummariesPages
+// GetTraceSummariesPages indicates an expected call of GetTraceSummariesPages.
 func (mr *MockXRayAPIMockRecorder) GetTraceSummariesPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTraceSummariesPages", reflect.TypeOf((*MockXRayAPI)(nil).GetTraceSummariesPages), arg0, arg1)
 }
 
-// GetTraceSummariesPagesWithContext mocks base method
+// GetTraceSummariesPagesWithContext mocks base method.
 func (m *MockXRayAPI) GetTraceSummariesPagesWithContext(arg0 context.Context, arg1 *xray.GetTraceSummariesInput, arg2 func(*xray.GetTraceSummariesOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1273,14 +1274,14 @@ func (m *MockXRayAPI) GetTraceSummariesPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// GetTraceSummariesPagesWithContext indicates an expected call of GetTraceSummariesPagesWithContext
+// GetTraceSummariesPagesWithContext indicates an expected call of GetTraceSummariesPagesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetTraceSummariesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTraceSummariesPagesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetTraceSummariesPagesWithContext), varargs...)
 }
 
-// GetTraceSummariesRequest mocks base method
+// GetTraceSummariesRequest mocks base method.
 func (m *MockXRayAPI) GetTraceSummariesRequest(arg0 *xray.GetTraceSummariesInput) (*request.Request, *xray.GetTraceSummariesOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTraceSummariesRequest", arg0)
@@ -1289,13 +1290,13 @@ func (m *MockXRayAPI) GetTraceSummariesRequest(arg0 *xray.GetTraceSummariesInput
 	return ret0, ret1
 }
 
-// GetTraceSummariesRequest indicates an expected call of GetTraceSummariesRequest
+// GetTraceSummariesRequest indicates an expected call of GetTraceSummariesRequest.
 func (mr *MockXRayAPIMockRecorder) GetTraceSummariesRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTraceSummariesRequest", reflect.TypeOf((*MockXRayAPI)(nil).GetTraceSummariesRequest), arg0)
 }
 
-// GetTraceSummariesWithContext mocks base method
+// GetTraceSummariesWithContext mocks base method.
 func (m *MockXRayAPI) GetTraceSummariesWithContext(arg0 context.Context, arg1 *xray.GetTraceSummariesInput, arg2 ...request.Option) (*xray.GetTraceSummariesOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1308,14 +1309,14 @@ func (m *MockXRayAPI) GetTraceSummariesWithContext(arg0 context.Context, arg1 *x
 	return ret0, ret1
 }
 
-// GetTraceSummariesWithContext indicates an expected call of GetTraceSummariesWithContext
+// GetTraceSummariesWithContext indicates an expected call of GetTraceSummariesWithContext.
 func (mr *MockXRayAPIMockRecorder) GetTraceSummariesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTraceSummariesWithContext", reflect.TypeOf((*MockXRayAPI)(nil).GetTraceSummariesWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockXRayAPI) ListTagsForResource(arg0 *xray.ListTagsForResourceInput) (*xray.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -1324,13 +1325,13 @@ func (m *MockXRayAPI) ListTagsForResource(arg0 *xray.ListTagsForResourceInput) (
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockXRayAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockXRayAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockXRayAPI) ListTagsForResourceRequest(arg0 *xray.ListTagsForResourceInput) (*request.Request, *xray.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -1339,13 +1340,13 @@ func (m *MockXRayAPI) ListTagsForResourceRequest(arg0 *xray.ListTagsForResourceI
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockXRayAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockXRayAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockXRayAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *xray.ListTagsForResourceInput, arg2 ...request.Option) (*xray.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1358,14 +1359,14 @@ func (m *MockXRayAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockXRayAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockXRayAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PutEncryptionConfig mocks base method
+// PutEncryptionConfig mocks base method.
 func (m *MockXRayAPI) PutEncryptionConfig(arg0 *xray.PutEncryptionConfigInput) (*xray.PutEncryptionConfigOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutEncryptionConfig", arg0)
@@ -1374,13 +1375,13 @@ func (m *MockXRayAPI) PutEncryptionConfig(arg0 *xray.PutEncryptionConfigInput) (
 	return ret0, ret1
 }
 
-// PutEncryptionConfig indicates an expected call of PutEncryptionConfig
+// PutEncryptionConfig indicates an expected call of PutEncryptionConfig.
 func (mr *MockXRayAPIMockRecorder) PutEncryptionConfig(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEncryptionConfig", reflect.TypeOf((*MockXRayAPI)(nil).PutEncryptionConfig), arg0)
 }
 
-// PutEncryptionConfigRequest mocks base method
+// PutEncryptionConfigRequest mocks base method.
 func (m *MockXRayAPI) PutEncryptionConfigRequest(arg0 *xray.PutEncryptionConfigInput) (*request.Request, *xray.PutEncryptionConfigOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutEncryptionConfigRequest", arg0)
@@ -1389,13 +1390,13 @@ func (m *MockXRayAPI) PutEncryptionConfigRequest(arg0 *xray.PutEncryptionConfigI
 	return ret0, ret1
 }
 
-// PutEncryptionConfigRequest indicates an expected call of PutEncryptionConfigRequest
+// PutEncryptionConfigRequest indicates an expected call of PutEncryptionConfigRequest.
 func (mr *MockXRayAPIMockRecorder) PutEncryptionConfigRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEncryptionConfigRequest", reflect.TypeOf((*MockXRayAPI)(nil).PutEncryptionConfigRequest), arg0)
 }
 
-// PutEncryptionConfigWithContext mocks base method
+// PutEncryptionConfigWithContext mocks base method.
 func (m *MockXRayAPI) PutEncryptionConfigWithContext(arg0 context.Context, arg1 *xray.PutEncryptionConfigInput, arg2 ...request.Option) (*xray.PutEncryptionConfigOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1408,14 +1409,14 @@ func (m *MockXRayAPI) PutEncryptionConfigWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// PutEncryptionConfigWithContext indicates an expected call of PutEncryptionConfigWithContext
+// PutEncryptionConfigWithContext indicates an expected call of PutEncryptionConfigWithContext.
 func (mr *MockXRayAPIMockRecorder) PutEncryptionConfigWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutEncryptionConfigWithContext", reflect.TypeOf((*MockXRayAPI)(nil).PutEncryptionConfigWithContext), varargs...)
 }
 
-// PutTelemetryRecords mocks base method
+// PutTelemetryRecords mocks base method.
 func (m *MockXRayAPI) PutTelemetryRecords(arg0 *xray.PutTelemetryRecordsInput) (*xray.PutTelemetryRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutTelemetryRecords", arg0)
@@ -1424,13 +1425,13 @@ func (m *MockXRayAPI) PutTelemetryRecords(arg0 *xray.PutTelemetryRecordsInput) (
 	return ret0, ret1
 }
 
-// PutTelemetryRecords indicates an expected call of PutTelemetryRecords
+// PutTelemetryRecords indicates an expected call of PutTelemetryRecords.
 func (mr *MockXRayAPIMockRecorder) PutTelemetryRecords(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutTelemetryRecords", reflect.TypeOf((*MockXRayAPI)(nil).PutTelemetryRecords), arg0)
 }
 
-// PutTelemetryRecordsRequest mocks base method
+// PutTelemetryRecordsRequest mocks base method.
 func (m *MockXRayAPI) PutTelemetryRecordsRequest(arg0 *xray.PutTelemetryRecordsInput) (*request.Request, *xray.PutTelemetryRecordsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutTelemetryRecordsRequest", arg0)
@@ -1439,13 +1440,13 @@ func (m *MockXRayAPI) PutTelemetryRecordsRequest(arg0 *xray.PutTelemetryRecordsI
 	return ret0, ret1
 }
 
-// PutTelemetryRecordsRequest indicates an expected call of PutTelemetryRecordsRequest
+// PutTelemetryRecordsRequest indicates an expected call of PutTelemetryRecordsRequest.
 func (mr *MockXRayAPIMockRecorder) PutTelemetryRecordsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutTelemetryRecordsRequest", reflect.TypeOf((*MockXRayAPI)(nil).PutTelemetryRecordsRequest), arg0)
 }
 
-// PutTelemetryRecordsWithContext mocks base method
+// PutTelemetryRecordsWithContext mocks base method.
 func (m *MockXRayAPI) PutTelemetryRecordsWithContext(arg0 context.Context, arg1 *xray.PutTelemetryRecordsInput, arg2 ...request.Option) (*xray.PutTelemetryRecordsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1458,14 +1459,14 @@ func (m *MockXRayAPI) PutTelemetryRecordsWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// PutTelemetryRecordsWithContext indicates an expected call of PutTelemetryRecordsWithContext
+// PutTelemetryRecordsWithContext indicates an expected call of PutTelemetryRecordsWithContext.
 func (mr *MockXRayAPIMockRecorder) PutTelemetryRecordsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutTelemetryRecordsWithContext", reflect.TypeOf((*MockXRayAPI)(nil).PutTelemetryRecordsWithContext), varargs...)
 }
 
-// PutTraceSegments mocks base method
+// PutTraceSegments mocks base method.
 func (m *MockXRayAPI) PutTraceSegments(arg0 *xray.PutTraceSegmentsInput) (*xray.PutTraceSegmentsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutTraceSegments", arg0)
@@ -1474,13 +1475,13 @@ func (m *MockXRayAPI) PutTraceSegments(arg0 *xray.PutTraceSegmentsInput) (*xray.
 	return ret0, ret1
 }
 
-// PutTraceSegments indicates an expected call of PutTraceSegments
+// PutTraceSegments indicates an expected call of PutTraceSegments.
 func (mr *MockXRayAPIMockRecorder) PutTraceSegments(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutTraceSegments", reflect.TypeOf((*MockXRayAPI)(nil).PutTraceSegments), arg0)
 }
 
-// PutTraceSegmentsRequest mocks base method
+// PutTraceSegmentsRequest mocks base method.
 func (m *MockXRayAPI) PutTraceSegmentsRequest(arg0 *xray.PutTraceSegmentsInput) (*request.Request, *xray.PutTraceSegmentsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutTraceSegmentsRequest", arg0)
@@ -1489,13 +1490,13 @@ func (m *MockXRayAPI) PutTraceSegmentsRequest(arg0 *xray.PutTraceSegmentsInput) 
 	return ret0, ret1
 }
 
-// PutTraceSegmentsRequest indicates an expected call of PutTraceSegmentsRequest
+// PutTraceSegmentsRequest indicates an expected call of PutTraceSegmentsRequest.
 func (mr *MockXRayAPIMockRecorder) PutTraceSegmentsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutTraceSegmentsRequest", reflect.TypeOf((*MockXRayAPI)(nil).PutTraceSegmentsRequest), arg0)
 }
 
-// PutTraceSegmentsWithContext mocks base method
+// PutTraceSegmentsWithContext mocks base method.
 func (m *MockXRayAPI) PutTraceSegmentsWithContext(arg0 context.Context, arg1 *xray.PutTraceSegmentsInput, arg2 ...request.Option) (*xray.PutTraceSegmentsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1508,14 +1509,14 @@ func (m *MockXRayAPI) PutTraceSegmentsWithContext(arg0 context.Context, arg1 *xr
 	return ret0, ret1
 }
 
-// PutTraceSegmentsWithContext indicates an expected call of PutTraceSegmentsWithContext
+// PutTraceSegmentsWithContext indicates an expected call of PutTraceSegmentsWithContext.
 func (mr *MockXRayAPIMockRecorder) PutTraceSegmentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutTraceSegmentsWithContext", reflect.TypeOf((*MockXRayAPI)(nil).PutTraceSegmentsWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockXRayAPI) TagResource(arg0 *xray.TagResourceInput) (*xray.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -1524,13 +1525,13 @@ func (m *MockXRayAPI) TagResource(arg0 *xray.TagResourceInput) (*xray.TagResourc
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockXRayAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockXRayAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockXRayAPI) TagResourceRequest(arg0 *xray.TagResourceInput) (*request.Request, *xray.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -1539,13 +1540,13 @@ func (m *MockXRayAPI) TagResourceRequest(arg0 *xray.TagResourceInput) (*request.
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockXRayAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockXRayAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockXRayAPI) TagResourceWithContext(arg0 context.Context, arg1 *xray.TagResourceInput, arg2 ...request.Option) (*xray.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1558,14 +1559,14 @@ func (m *MockXRayAPI) TagResourceWithContext(arg0 context.Context, arg1 *xray.Ta
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockXRayAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockXRayAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockXRayAPI) UntagResource(arg0 *xray.UntagResourceInput) (*xray.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -1574,13 +1575,13 @@ func (m *MockXRayAPI) UntagResource(arg0 *xray.UntagResourceInput) (*xray.UntagR
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockXRayAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockXRayAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockXRayAPI) UntagResourceRequest(arg0 *xray.UntagResourceInput) (*request.Request, *xray.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -1589,13 +1590,13 @@ func (m *MockXRayAPI) UntagResourceRequest(arg0 *xray.UntagResourceInput) (*requ
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockXRayAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockXRayAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockXRayAPI) UntagResourceWithContext(arg0 context.Context, arg1 *xray.UntagResourceInput, arg2 ...request.Option) (*xray.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1608,14 +1609,14 @@ func (m *MockXRayAPI) UntagResourceWithContext(arg0 context.Context, arg1 *xray.
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockXRayAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockXRayAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateGroup mocks base method
+// UpdateGroup mocks base method.
 func (m *MockXRayAPI) UpdateGroup(arg0 *xray.UpdateGroupInput) (*xray.UpdateGroupOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateGroup", arg0)
@@ -1624,13 +1625,13 @@ func (m *MockXRayAPI) UpdateGroup(arg0 *xray.UpdateGroupInput) (*xray.UpdateGrou
 	return ret0, ret1
 }
 
-// UpdateGroup indicates an expected call of UpdateGroup
+// UpdateGroup indicates an expected call of UpdateGroup.
 func (mr *MockXRayAPIMockRecorder) UpdateGroup(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateGroup", reflect.TypeOf((*MockXRayAPI)(nil).UpdateGroup), arg0)
 }
 
-// UpdateGroupRequest mocks base method
+// UpdateGroupRequest mocks base method.
 func (m *MockXRayAPI) UpdateGroupRequest(arg0 *xray.UpdateGroupInput) (*request.Request, *xray.UpdateGroupOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateGroupRequest", arg0)
@@ -1639,13 +1640,13 @@ func (m *MockXRayAPI) UpdateGroupRequest(arg0 *xray.UpdateGroupInput) (*request.
 	return ret0, ret1
 }
 
-// UpdateGroupRequest indicates an expected call of UpdateGroupRequest
+// UpdateGroupRequest indicates an expected call of UpdateGroupRequest.
 func (mr *MockXRayAPIMockRecorder) UpdateGroupRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateGroupRequest", reflect.TypeOf((*MockXRayAPI)(nil).UpdateGroupRequest), arg0)
 }
 
-// UpdateGroupWithContext mocks base method
+// UpdateGroupWithContext mocks base method.
 func (m *MockXRayAPI) UpdateGroupWithContext(arg0 context.Context, arg1 *xray.UpdateGroupInput, arg2 ...request.Option) (*xray.UpdateGroupOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1658,14 +1659,14 @@ func (m *MockXRayAPI) UpdateGroupWithContext(arg0 context.Context, arg1 *xray.Up
 	return ret0, ret1
 }
 
-// UpdateGroupWithContext indicates an expected call of UpdateGroupWithContext
+// UpdateGroupWithContext indicates an expected call of UpdateGroupWithContext.
 func (mr *MockXRayAPIMockRecorder) UpdateGroupWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateGroupWithContext", reflect.TypeOf((*MockXRayAPI)(nil).UpdateGroupWithContext), varargs...)
 }
 
-// UpdateSamplingRule mocks base method
+// UpdateSamplingRule mocks base method.
 func (m *MockXRayAPI) UpdateSamplingRule(arg0 *xray.UpdateSamplingRuleInput) (*xray.UpdateSamplingRuleOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSamplingRule", arg0)
@@ -1674,13 +1675,13 @@ func (m *MockXRayAPI) UpdateSamplingRule(arg0 *xray.UpdateSamplingRuleInput) (*x
 	return ret0, ret1
 }
 
-// UpdateSamplingRule indicates an expected call of UpdateSamplingRule
+// UpdateSamplingRule indicates an expected call of UpdateSamplingRule.
 func (mr *MockXRayAPIMockRecorder) UpdateSamplingRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSamplingRule", reflect.TypeOf((*MockXRayAPI)(nil).UpdateSamplingRule), arg0)
 }
 
-// UpdateSamplingRuleRequest mocks base method
+// UpdateSamplingRuleRequest mocks base method.
 func (m *MockXRayAPI) UpdateSamplingRuleRequest(arg0 *xray.UpdateSamplingRuleInput) (*request.Request, *xray.UpdateSamplingRuleOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateSamplingRuleRequest", arg0)
@@ -1689,13 +1690,13 @@ func (m *MockXRayAPI) UpdateSamplingRuleRequest(arg0 *xray.UpdateSamplingRuleInp
 	return ret0, ret1
 }
 
-// UpdateSamplingRuleRequest indicates an expected call of UpdateSamplingRuleRequest
+// UpdateSamplingRuleRequest indicates an expected call of UpdateSamplingRuleRequest.
 func (mr *MockXRayAPIMockRecorder) UpdateSamplingRuleRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSamplingRuleRequest", reflect.TypeOf((*MockXRayAPI)(nil).UpdateSamplingRuleRequest), arg0)
 }
 
-// UpdateSamplingRuleWithContext mocks base method
+// UpdateSamplingRuleWithContext mocks base method.
 func (m *MockXRayAPI) UpdateSamplingRuleWithContext(arg0 context.Context, arg1 *xray.UpdateSamplingRuleInput, arg2 ...request.Option) (*xray.UpdateSamplingRuleOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1708,7 +1709,7 @@ func (m *MockXRayAPI) UpdateSamplingRuleWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// UpdateSamplingRuleWithContext indicates an expected call of UpdateSamplingRuleWithContext
+// UpdateSamplingRuleWithContext indicates an expected call of UpdateSamplingRuleWithContext.
 func (mr *MockXRayAPIMockRecorder) UpdateSamplingRuleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

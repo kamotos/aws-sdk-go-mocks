@@ -6,36 +6,37 @@ package macie2mock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	macie2 "github.com/aws/aws-sdk-go/service/macie2"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockMacie2API is a mock of Macie2API interface
+// MockMacie2API is a mock of Macie2API interface.
 type MockMacie2API struct {
 	ctrl     *gomock.Controller
 	recorder *MockMacie2APIMockRecorder
 }
 
-// MockMacie2APIMockRecorder is the mock recorder for MockMacie2API
+// MockMacie2APIMockRecorder is the mock recorder for MockMacie2API.
 type MockMacie2APIMockRecorder struct {
 	mock *MockMacie2API
 }
 
-// NewMockMacie2API creates a new mock instance
+// NewMockMacie2API creates a new mock instance.
 func NewMockMacie2API(ctrl *gomock.Controller) *MockMacie2API {
 	mock := &MockMacie2API{ctrl: ctrl}
 	mock.recorder = &MockMacie2APIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockMacie2API) EXPECT() *MockMacie2APIMockRecorder {
 	return m.recorder
 }
 
-// AcceptInvitation mocks base method
+// AcceptInvitation mocks base method.
 func (m *MockMacie2API) AcceptInvitation(arg0 *macie2.AcceptInvitationInput) (*macie2.AcceptInvitationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AcceptInvitation", arg0)
@@ -44,13 +45,13 @@ func (m *MockMacie2API) AcceptInvitation(arg0 *macie2.AcceptInvitationInput) (*m
 	return ret0, ret1
 }
 
-// AcceptInvitation indicates an expected call of AcceptInvitation
+// AcceptInvitation indicates an expected call of AcceptInvitation.
 func (mr *MockMacie2APIMockRecorder) AcceptInvitation(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptInvitation", reflect.TypeOf((*MockMacie2API)(nil).AcceptInvitation), arg0)
 }
 
-// AcceptInvitationRequest mocks base method
+// AcceptInvitationRequest mocks base method.
 func (m *MockMacie2API) AcceptInvitationRequest(arg0 *macie2.AcceptInvitationInput) (*request.Request, *macie2.AcceptInvitationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AcceptInvitationRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockMacie2API) AcceptInvitationRequest(arg0 *macie2.AcceptInvitationInp
 	return ret0, ret1
 }
 
-// AcceptInvitationRequest indicates an expected call of AcceptInvitationRequest
+// AcceptInvitationRequest indicates an expected call of AcceptInvitationRequest.
 func (mr *MockMacie2APIMockRecorder) AcceptInvitationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptInvitationRequest", reflect.TypeOf((*MockMacie2API)(nil).AcceptInvitationRequest), arg0)
 }
 
-// AcceptInvitationWithContext mocks base method
+// AcceptInvitationWithContext mocks base method.
 func (m *MockMacie2API) AcceptInvitationWithContext(arg0 context.Context, arg1 *macie2.AcceptInvitationInput, arg2 ...request.Option) (*macie2.AcceptInvitationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockMacie2API) AcceptInvitationWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// AcceptInvitationWithContext indicates an expected call of AcceptInvitationWithContext
+// AcceptInvitationWithContext indicates an expected call of AcceptInvitationWithContext.
 func (mr *MockMacie2APIMockRecorder) AcceptInvitationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AcceptInvitationWithContext", reflect.TypeOf((*MockMacie2API)(nil).AcceptInvitationWithContext), varargs...)
 }
 
-// BatchGetCustomDataIdentifiers mocks base method
+// BatchGetCustomDataIdentifiers mocks base method.
 func (m *MockMacie2API) BatchGetCustomDataIdentifiers(arg0 *macie2.BatchGetCustomDataIdentifiersInput) (*macie2.BatchGetCustomDataIdentifiersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetCustomDataIdentifiers", arg0)
@@ -94,13 +95,13 @@ func (m *MockMacie2API) BatchGetCustomDataIdentifiers(arg0 *macie2.BatchGetCusto
 	return ret0, ret1
 }
 
-// BatchGetCustomDataIdentifiers indicates an expected call of BatchGetCustomDataIdentifiers
+// BatchGetCustomDataIdentifiers indicates an expected call of BatchGetCustomDataIdentifiers.
 func (mr *MockMacie2APIMockRecorder) BatchGetCustomDataIdentifiers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetCustomDataIdentifiers", reflect.TypeOf((*MockMacie2API)(nil).BatchGetCustomDataIdentifiers), arg0)
 }
 
-// BatchGetCustomDataIdentifiersRequest mocks base method
+// BatchGetCustomDataIdentifiersRequest mocks base method.
 func (m *MockMacie2API) BatchGetCustomDataIdentifiersRequest(arg0 *macie2.BatchGetCustomDataIdentifiersInput) (*request.Request, *macie2.BatchGetCustomDataIdentifiersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "BatchGetCustomDataIdentifiersRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockMacie2API) BatchGetCustomDataIdentifiersRequest(arg0 *macie2.BatchG
 	return ret0, ret1
 }
 
-// BatchGetCustomDataIdentifiersRequest indicates an expected call of BatchGetCustomDataIdentifiersRequest
+// BatchGetCustomDataIdentifiersRequest indicates an expected call of BatchGetCustomDataIdentifiersRequest.
 func (mr *MockMacie2APIMockRecorder) BatchGetCustomDataIdentifiersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetCustomDataIdentifiersRequest", reflect.TypeOf((*MockMacie2API)(nil).BatchGetCustomDataIdentifiersRequest), arg0)
 }
 
-// BatchGetCustomDataIdentifiersWithContext mocks base method
+// BatchGetCustomDataIdentifiersWithContext mocks base method.
 func (m *MockMacie2API) BatchGetCustomDataIdentifiersWithContext(arg0 context.Context, arg1 *macie2.BatchGetCustomDataIdentifiersInput, arg2 ...request.Option) (*macie2.BatchGetCustomDataIdentifiersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockMacie2API) BatchGetCustomDataIdentifiersWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// BatchGetCustomDataIdentifiersWithContext indicates an expected call of BatchGetCustomDataIdentifiersWithContext
+// BatchGetCustomDataIdentifiersWithContext indicates an expected call of BatchGetCustomDataIdentifiersWithContext.
 func (mr *MockMacie2APIMockRecorder) BatchGetCustomDataIdentifiersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetCustomDataIdentifiersWithContext", reflect.TypeOf((*MockMacie2API)(nil).BatchGetCustomDataIdentifiersWithContext), varargs...)
 }
 
-// CreateClassificationJob mocks base method
+// CreateClassificationJob mocks base method.
 func (m *MockMacie2API) CreateClassificationJob(arg0 *macie2.CreateClassificationJobInput) (*macie2.CreateClassificationJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateClassificationJob", arg0)
@@ -144,13 +145,13 @@ func (m *MockMacie2API) CreateClassificationJob(arg0 *macie2.CreateClassificatio
 	return ret0, ret1
 }
 
-// CreateClassificationJob indicates an expected call of CreateClassificationJob
+// CreateClassificationJob indicates an expected call of CreateClassificationJob.
 func (mr *MockMacie2APIMockRecorder) CreateClassificationJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateClassificationJob", reflect.TypeOf((*MockMacie2API)(nil).CreateClassificationJob), arg0)
 }
 
-// CreateClassificationJobRequest mocks base method
+// CreateClassificationJobRequest mocks base method.
 func (m *MockMacie2API) CreateClassificationJobRequest(arg0 *macie2.CreateClassificationJobInput) (*request.Request, *macie2.CreateClassificationJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateClassificationJobRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockMacie2API) CreateClassificationJobRequest(arg0 *macie2.CreateClassi
 	return ret0, ret1
 }
 
-// CreateClassificationJobRequest indicates an expected call of CreateClassificationJobRequest
+// CreateClassificationJobRequest indicates an expected call of CreateClassificationJobRequest.
 func (mr *MockMacie2APIMockRecorder) CreateClassificationJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateClassificationJobRequest", reflect.TypeOf((*MockMacie2API)(nil).CreateClassificationJobRequest), arg0)
 }
 
-// CreateClassificationJobWithContext mocks base method
+// CreateClassificationJobWithContext mocks base method.
 func (m *MockMacie2API) CreateClassificationJobWithContext(arg0 context.Context, arg1 *macie2.CreateClassificationJobInput, arg2 ...request.Option) (*macie2.CreateClassificationJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockMacie2API) CreateClassificationJobWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// CreateClassificationJobWithContext indicates an expected call of CreateClassificationJobWithContext
+// CreateClassificationJobWithContext indicates an expected call of CreateClassificationJobWithContext.
 func (mr *MockMacie2APIMockRecorder) CreateClassificationJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateClassificationJobWithContext", reflect.TypeOf((*MockMacie2API)(nil).CreateClassificationJobWithContext), varargs...)
 }
 
-// CreateCustomDataIdentifier mocks base method
+// CreateCustomDataIdentifier mocks base method.
 func (m *MockMacie2API) CreateCustomDataIdentifier(arg0 *macie2.CreateCustomDataIdentifierInput) (*macie2.CreateCustomDataIdentifierOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCustomDataIdentifier", arg0)
@@ -194,13 +195,13 @@ func (m *MockMacie2API) CreateCustomDataIdentifier(arg0 *macie2.CreateCustomData
 	return ret0, ret1
 }
 
-// CreateCustomDataIdentifier indicates an expected call of CreateCustomDataIdentifier
+// CreateCustomDataIdentifier indicates an expected call of CreateCustomDataIdentifier.
 func (mr *MockMacie2APIMockRecorder) CreateCustomDataIdentifier(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomDataIdentifier", reflect.TypeOf((*MockMacie2API)(nil).CreateCustomDataIdentifier), arg0)
 }
 
-// CreateCustomDataIdentifierRequest mocks base method
+// CreateCustomDataIdentifierRequest mocks base method.
 func (m *MockMacie2API) CreateCustomDataIdentifierRequest(arg0 *macie2.CreateCustomDataIdentifierInput) (*request.Request, *macie2.CreateCustomDataIdentifierOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCustomDataIdentifierRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockMacie2API) CreateCustomDataIdentifierRequest(arg0 *macie2.CreateCus
 	return ret0, ret1
 }
 
-// CreateCustomDataIdentifierRequest indicates an expected call of CreateCustomDataIdentifierRequest
+// CreateCustomDataIdentifierRequest indicates an expected call of CreateCustomDataIdentifierRequest.
 func (mr *MockMacie2APIMockRecorder) CreateCustomDataIdentifierRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomDataIdentifierRequest", reflect.TypeOf((*MockMacie2API)(nil).CreateCustomDataIdentifierRequest), arg0)
 }
 
-// CreateCustomDataIdentifierWithContext mocks base method
+// CreateCustomDataIdentifierWithContext mocks base method.
 func (m *MockMacie2API) CreateCustomDataIdentifierWithContext(arg0 context.Context, arg1 *macie2.CreateCustomDataIdentifierInput, arg2 ...request.Option) (*macie2.CreateCustomDataIdentifierOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockMacie2API) CreateCustomDataIdentifierWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// CreateCustomDataIdentifierWithContext indicates an expected call of CreateCustomDataIdentifierWithContext
+// CreateCustomDataIdentifierWithContext indicates an expected call of CreateCustomDataIdentifierWithContext.
 func (mr *MockMacie2APIMockRecorder) CreateCustomDataIdentifierWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCustomDataIdentifierWithContext", reflect.TypeOf((*MockMacie2API)(nil).CreateCustomDataIdentifierWithContext), varargs...)
 }
 
-// CreateFindingsFilter mocks base method
+// CreateFindingsFilter mocks base method.
 func (m *MockMacie2API) CreateFindingsFilter(arg0 *macie2.CreateFindingsFilterInput) (*macie2.CreateFindingsFilterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFindingsFilter", arg0)
@@ -244,13 +245,13 @@ func (m *MockMacie2API) CreateFindingsFilter(arg0 *macie2.CreateFindingsFilterIn
 	return ret0, ret1
 }
 
-// CreateFindingsFilter indicates an expected call of CreateFindingsFilter
+// CreateFindingsFilter indicates an expected call of CreateFindingsFilter.
 func (mr *MockMacie2APIMockRecorder) CreateFindingsFilter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFindingsFilter", reflect.TypeOf((*MockMacie2API)(nil).CreateFindingsFilter), arg0)
 }
 
-// CreateFindingsFilterRequest mocks base method
+// CreateFindingsFilterRequest mocks base method.
 func (m *MockMacie2API) CreateFindingsFilterRequest(arg0 *macie2.CreateFindingsFilterInput) (*request.Request, *macie2.CreateFindingsFilterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateFindingsFilterRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockMacie2API) CreateFindingsFilterRequest(arg0 *macie2.CreateFindingsF
 	return ret0, ret1
 }
 
-// CreateFindingsFilterRequest indicates an expected call of CreateFindingsFilterRequest
+// CreateFindingsFilterRequest indicates an expected call of CreateFindingsFilterRequest.
 func (mr *MockMacie2APIMockRecorder) CreateFindingsFilterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFindingsFilterRequest", reflect.TypeOf((*MockMacie2API)(nil).CreateFindingsFilterRequest), arg0)
 }
 
-// CreateFindingsFilterWithContext mocks base method
+// CreateFindingsFilterWithContext mocks base method.
 func (m *MockMacie2API) CreateFindingsFilterWithContext(arg0 context.Context, arg1 *macie2.CreateFindingsFilterInput, arg2 ...request.Option) (*macie2.CreateFindingsFilterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockMacie2API) CreateFindingsFilterWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateFindingsFilterWithContext indicates an expected call of CreateFindingsFilterWithContext
+// CreateFindingsFilterWithContext indicates an expected call of CreateFindingsFilterWithContext.
 func (mr *MockMacie2APIMockRecorder) CreateFindingsFilterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateFindingsFilterWithContext", reflect.TypeOf((*MockMacie2API)(nil).CreateFindingsFilterWithContext), varargs...)
 }
 
-// CreateInvitations mocks base method
+// CreateInvitations mocks base method.
 func (m *MockMacie2API) CreateInvitations(arg0 *macie2.CreateInvitationsInput) (*macie2.CreateInvitationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInvitations", arg0)
@@ -294,13 +295,13 @@ func (m *MockMacie2API) CreateInvitations(arg0 *macie2.CreateInvitationsInput) (
 	return ret0, ret1
 }
 
-// CreateInvitations indicates an expected call of CreateInvitations
+// CreateInvitations indicates an expected call of CreateInvitations.
 func (mr *MockMacie2APIMockRecorder) CreateInvitations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInvitations", reflect.TypeOf((*MockMacie2API)(nil).CreateInvitations), arg0)
 }
 
-// CreateInvitationsRequest mocks base method
+// CreateInvitationsRequest mocks base method.
 func (m *MockMacie2API) CreateInvitationsRequest(arg0 *macie2.CreateInvitationsInput) (*request.Request, *macie2.CreateInvitationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateInvitationsRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockMacie2API) CreateInvitationsRequest(arg0 *macie2.CreateInvitationsI
 	return ret0, ret1
 }
 
-// CreateInvitationsRequest indicates an expected call of CreateInvitationsRequest
+// CreateInvitationsRequest indicates an expected call of CreateInvitationsRequest.
 func (mr *MockMacie2APIMockRecorder) CreateInvitationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInvitationsRequest", reflect.TypeOf((*MockMacie2API)(nil).CreateInvitationsRequest), arg0)
 }
 
-// CreateInvitationsWithContext mocks base method
+// CreateInvitationsWithContext mocks base method.
 func (m *MockMacie2API) CreateInvitationsWithContext(arg0 context.Context, arg1 *macie2.CreateInvitationsInput, arg2 ...request.Option) (*macie2.CreateInvitationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockMacie2API) CreateInvitationsWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// CreateInvitationsWithContext indicates an expected call of CreateInvitationsWithContext
+// CreateInvitationsWithContext indicates an expected call of CreateInvitationsWithContext.
 func (mr *MockMacie2APIMockRecorder) CreateInvitationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInvitationsWithContext", reflect.TypeOf((*MockMacie2API)(nil).CreateInvitationsWithContext), varargs...)
 }
 
-// CreateMember mocks base method
+// CreateMember mocks base method.
 func (m *MockMacie2API) CreateMember(arg0 *macie2.CreateMemberInput) (*macie2.CreateMemberOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMember", arg0)
@@ -344,13 +345,13 @@ func (m *MockMacie2API) CreateMember(arg0 *macie2.CreateMemberInput) (*macie2.Cr
 	return ret0, ret1
 }
 
-// CreateMember indicates an expected call of CreateMember
+// CreateMember indicates an expected call of CreateMember.
 func (mr *MockMacie2APIMockRecorder) CreateMember(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMember", reflect.TypeOf((*MockMacie2API)(nil).CreateMember), arg0)
 }
 
-// CreateMemberRequest mocks base method
+// CreateMemberRequest mocks base method.
 func (m *MockMacie2API) CreateMemberRequest(arg0 *macie2.CreateMemberInput) (*request.Request, *macie2.CreateMemberOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateMemberRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockMacie2API) CreateMemberRequest(arg0 *macie2.CreateMemberInput) (*re
 	return ret0, ret1
 }
 
-// CreateMemberRequest indicates an expected call of CreateMemberRequest
+// CreateMemberRequest indicates an expected call of CreateMemberRequest.
 func (mr *MockMacie2APIMockRecorder) CreateMemberRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMemberRequest", reflect.TypeOf((*MockMacie2API)(nil).CreateMemberRequest), arg0)
 }
 
-// CreateMemberWithContext mocks base method
+// CreateMemberWithContext mocks base method.
 func (m *MockMacie2API) CreateMemberWithContext(arg0 context.Context, arg1 *macie2.CreateMemberInput, arg2 ...request.Option) (*macie2.CreateMemberOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockMacie2API) CreateMemberWithContext(arg0 context.Context, arg1 *maci
 	return ret0, ret1
 }
 
-// CreateMemberWithContext indicates an expected call of CreateMemberWithContext
+// CreateMemberWithContext indicates an expected call of CreateMemberWithContext.
 func (mr *MockMacie2APIMockRecorder) CreateMemberWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMemberWithContext", reflect.TypeOf((*MockMacie2API)(nil).CreateMemberWithContext), varargs...)
 }
 
-// CreateSampleFindings mocks base method
+// CreateSampleFindings mocks base method.
 func (m *MockMacie2API) CreateSampleFindings(arg0 *macie2.CreateSampleFindingsInput) (*macie2.CreateSampleFindingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSampleFindings", arg0)
@@ -394,13 +395,13 @@ func (m *MockMacie2API) CreateSampleFindings(arg0 *macie2.CreateSampleFindingsIn
 	return ret0, ret1
 }
 
-// CreateSampleFindings indicates an expected call of CreateSampleFindings
+// CreateSampleFindings indicates an expected call of CreateSampleFindings.
 func (mr *MockMacie2APIMockRecorder) CreateSampleFindings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSampleFindings", reflect.TypeOf((*MockMacie2API)(nil).CreateSampleFindings), arg0)
 }
 
-// CreateSampleFindingsRequest mocks base method
+// CreateSampleFindingsRequest mocks base method.
 func (m *MockMacie2API) CreateSampleFindingsRequest(arg0 *macie2.CreateSampleFindingsInput) (*request.Request, *macie2.CreateSampleFindingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateSampleFindingsRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockMacie2API) CreateSampleFindingsRequest(arg0 *macie2.CreateSampleFin
 	return ret0, ret1
 }
 
-// CreateSampleFindingsRequest indicates an expected call of CreateSampleFindingsRequest
+// CreateSampleFindingsRequest indicates an expected call of CreateSampleFindingsRequest.
 func (mr *MockMacie2APIMockRecorder) CreateSampleFindingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSampleFindingsRequest", reflect.TypeOf((*MockMacie2API)(nil).CreateSampleFindingsRequest), arg0)
 }
 
-// CreateSampleFindingsWithContext mocks base method
+// CreateSampleFindingsWithContext mocks base method.
 func (m *MockMacie2API) CreateSampleFindingsWithContext(arg0 context.Context, arg1 *macie2.CreateSampleFindingsInput, arg2 ...request.Option) (*macie2.CreateSampleFindingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockMacie2API) CreateSampleFindingsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// CreateSampleFindingsWithContext indicates an expected call of CreateSampleFindingsWithContext
+// CreateSampleFindingsWithContext indicates an expected call of CreateSampleFindingsWithContext.
 func (mr *MockMacie2APIMockRecorder) CreateSampleFindingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSampleFindingsWithContext", reflect.TypeOf((*MockMacie2API)(nil).CreateSampleFindingsWithContext), varargs...)
 }
 
-// DeclineInvitations mocks base method
+// DeclineInvitations mocks base method.
 func (m *MockMacie2API) DeclineInvitations(arg0 *macie2.DeclineInvitationsInput) (*macie2.DeclineInvitationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeclineInvitations", arg0)
@@ -444,13 +445,13 @@ func (m *MockMacie2API) DeclineInvitations(arg0 *macie2.DeclineInvitationsInput)
 	return ret0, ret1
 }
 
-// DeclineInvitations indicates an expected call of DeclineInvitations
+// DeclineInvitations indicates an expected call of DeclineInvitations.
 func (mr *MockMacie2APIMockRecorder) DeclineInvitations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeclineInvitations", reflect.TypeOf((*MockMacie2API)(nil).DeclineInvitations), arg0)
 }
 
-// DeclineInvitationsRequest mocks base method
+// DeclineInvitationsRequest mocks base method.
 func (m *MockMacie2API) DeclineInvitationsRequest(arg0 *macie2.DeclineInvitationsInput) (*request.Request, *macie2.DeclineInvitationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeclineInvitationsRequest", arg0)
@@ -459,13 +460,13 @@ func (m *MockMacie2API) DeclineInvitationsRequest(arg0 *macie2.DeclineInvitation
 	return ret0, ret1
 }
 
-// DeclineInvitationsRequest indicates an expected call of DeclineInvitationsRequest
+// DeclineInvitationsRequest indicates an expected call of DeclineInvitationsRequest.
 func (mr *MockMacie2APIMockRecorder) DeclineInvitationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeclineInvitationsRequest", reflect.TypeOf((*MockMacie2API)(nil).DeclineInvitationsRequest), arg0)
 }
 
-// DeclineInvitationsWithContext mocks base method
+// DeclineInvitationsWithContext mocks base method.
 func (m *MockMacie2API) DeclineInvitationsWithContext(arg0 context.Context, arg1 *macie2.DeclineInvitationsInput, arg2 ...request.Option) (*macie2.DeclineInvitationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -478,14 +479,14 @@ func (m *MockMacie2API) DeclineInvitationsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DeclineInvitationsWithContext indicates an expected call of DeclineInvitationsWithContext
+// DeclineInvitationsWithContext indicates an expected call of DeclineInvitationsWithContext.
 func (mr *MockMacie2APIMockRecorder) DeclineInvitationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeclineInvitationsWithContext", reflect.TypeOf((*MockMacie2API)(nil).DeclineInvitationsWithContext), varargs...)
 }
 
-// DeleteCustomDataIdentifier mocks base method
+// DeleteCustomDataIdentifier mocks base method.
 func (m *MockMacie2API) DeleteCustomDataIdentifier(arg0 *macie2.DeleteCustomDataIdentifierInput) (*macie2.DeleteCustomDataIdentifierOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCustomDataIdentifier", arg0)
@@ -494,13 +495,13 @@ func (m *MockMacie2API) DeleteCustomDataIdentifier(arg0 *macie2.DeleteCustomData
 	return ret0, ret1
 }
 
-// DeleteCustomDataIdentifier indicates an expected call of DeleteCustomDataIdentifier
+// DeleteCustomDataIdentifier indicates an expected call of DeleteCustomDataIdentifier.
 func (mr *MockMacie2APIMockRecorder) DeleteCustomDataIdentifier(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomDataIdentifier", reflect.TypeOf((*MockMacie2API)(nil).DeleteCustomDataIdentifier), arg0)
 }
 
-// DeleteCustomDataIdentifierRequest mocks base method
+// DeleteCustomDataIdentifierRequest mocks base method.
 func (m *MockMacie2API) DeleteCustomDataIdentifierRequest(arg0 *macie2.DeleteCustomDataIdentifierInput) (*request.Request, *macie2.DeleteCustomDataIdentifierOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteCustomDataIdentifierRequest", arg0)
@@ -509,13 +510,13 @@ func (m *MockMacie2API) DeleteCustomDataIdentifierRequest(arg0 *macie2.DeleteCus
 	return ret0, ret1
 }
 
-// DeleteCustomDataIdentifierRequest indicates an expected call of DeleteCustomDataIdentifierRequest
+// DeleteCustomDataIdentifierRequest indicates an expected call of DeleteCustomDataIdentifierRequest.
 func (mr *MockMacie2APIMockRecorder) DeleteCustomDataIdentifierRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomDataIdentifierRequest", reflect.TypeOf((*MockMacie2API)(nil).DeleteCustomDataIdentifierRequest), arg0)
 }
 
-// DeleteCustomDataIdentifierWithContext mocks base method
+// DeleteCustomDataIdentifierWithContext mocks base method.
 func (m *MockMacie2API) DeleteCustomDataIdentifierWithContext(arg0 context.Context, arg1 *macie2.DeleteCustomDataIdentifierInput, arg2 ...request.Option) (*macie2.DeleteCustomDataIdentifierOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -528,14 +529,14 @@ func (m *MockMacie2API) DeleteCustomDataIdentifierWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// DeleteCustomDataIdentifierWithContext indicates an expected call of DeleteCustomDataIdentifierWithContext
+// DeleteCustomDataIdentifierWithContext indicates an expected call of DeleteCustomDataIdentifierWithContext.
 func (mr *MockMacie2APIMockRecorder) DeleteCustomDataIdentifierWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomDataIdentifierWithContext", reflect.TypeOf((*MockMacie2API)(nil).DeleteCustomDataIdentifierWithContext), varargs...)
 }
 
-// DeleteFindingsFilter mocks base method
+// DeleteFindingsFilter mocks base method.
 func (m *MockMacie2API) DeleteFindingsFilter(arg0 *macie2.DeleteFindingsFilterInput) (*macie2.DeleteFindingsFilterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFindingsFilter", arg0)
@@ -544,13 +545,13 @@ func (m *MockMacie2API) DeleteFindingsFilter(arg0 *macie2.DeleteFindingsFilterIn
 	return ret0, ret1
 }
 
-// DeleteFindingsFilter indicates an expected call of DeleteFindingsFilter
+// DeleteFindingsFilter indicates an expected call of DeleteFindingsFilter.
 func (mr *MockMacie2APIMockRecorder) DeleteFindingsFilter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFindingsFilter", reflect.TypeOf((*MockMacie2API)(nil).DeleteFindingsFilter), arg0)
 }
 
-// DeleteFindingsFilterRequest mocks base method
+// DeleteFindingsFilterRequest mocks base method.
 func (m *MockMacie2API) DeleteFindingsFilterRequest(arg0 *macie2.DeleteFindingsFilterInput) (*request.Request, *macie2.DeleteFindingsFilterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteFindingsFilterRequest", arg0)
@@ -559,13 +560,13 @@ func (m *MockMacie2API) DeleteFindingsFilterRequest(arg0 *macie2.DeleteFindingsF
 	return ret0, ret1
 }
 
-// DeleteFindingsFilterRequest indicates an expected call of DeleteFindingsFilterRequest
+// DeleteFindingsFilterRequest indicates an expected call of DeleteFindingsFilterRequest.
 func (mr *MockMacie2APIMockRecorder) DeleteFindingsFilterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFindingsFilterRequest", reflect.TypeOf((*MockMacie2API)(nil).DeleteFindingsFilterRequest), arg0)
 }
 
-// DeleteFindingsFilterWithContext mocks base method
+// DeleteFindingsFilterWithContext mocks base method.
 func (m *MockMacie2API) DeleteFindingsFilterWithContext(arg0 context.Context, arg1 *macie2.DeleteFindingsFilterInput, arg2 ...request.Option) (*macie2.DeleteFindingsFilterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -578,14 +579,14 @@ func (m *MockMacie2API) DeleteFindingsFilterWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// DeleteFindingsFilterWithContext indicates an expected call of DeleteFindingsFilterWithContext
+// DeleteFindingsFilterWithContext indicates an expected call of DeleteFindingsFilterWithContext.
 func (mr *MockMacie2APIMockRecorder) DeleteFindingsFilterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteFindingsFilterWithContext", reflect.TypeOf((*MockMacie2API)(nil).DeleteFindingsFilterWithContext), varargs...)
 }
 
-// DeleteInvitations mocks base method
+// DeleteInvitations mocks base method.
 func (m *MockMacie2API) DeleteInvitations(arg0 *macie2.DeleteInvitationsInput) (*macie2.DeleteInvitationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInvitations", arg0)
@@ -594,13 +595,13 @@ func (m *MockMacie2API) DeleteInvitations(arg0 *macie2.DeleteInvitationsInput) (
 	return ret0, ret1
 }
 
-// DeleteInvitations indicates an expected call of DeleteInvitations
+// DeleteInvitations indicates an expected call of DeleteInvitations.
 func (mr *MockMacie2APIMockRecorder) DeleteInvitations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInvitations", reflect.TypeOf((*MockMacie2API)(nil).DeleteInvitations), arg0)
 }
 
-// DeleteInvitationsRequest mocks base method
+// DeleteInvitationsRequest mocks base method.
 func (m *MockMacie2API) DeleteInvitationsRequest(arg0 *macie2.DeleteInvitationsInput) (*request.Request, *macie2.DeleteInvitationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteInvitationsRequest", arg0)
@@ -609,13 +610,13 @@ func (m *MockMacie2API) DeleteInvitationsRequest(arg0 *macie2.DeleteInvitationsI
 	return ret0, ret1
 }
 
-// DeleteInvitationsRequest indicates an expected call of DeleteInvitationsRequest
+// DeleteInvitationsRequest indicates an expected call of DeleteInvitationsRequest.
 func (mr *MockMacie2APIMockRecorder) DeleteInvitationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInvitationsRequest", reflect.TypeOf((*MockMacie2API)(nil).DeleteInvitationsRequest), arg0)
 }
 
-// DeleteInvitationsWithContext mocks base method
+// DeleteInvitationsWithContext mocks base method.
 func (m *MockMacie2API) DeleteInvitationsWithContext(arg0 context.Context, arg1 *macie2.DeleteInvitationsInput, arg2 ...request.Option) (*macie2.DeleteInvitationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -628,14 +629,14 @@ func (m *MockMacie2API) DeleteInvitationsWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// DeleteInvitationsWithContext indicates an expected call of DeleteInvitationsWithContext
+// DeleteInvitationsWithContext indicates an expected call of DeleteInvitationsWithContext.
 func (mr *MockMacie2APIMockRecorder) DeleteInvitationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInvitationsWithContext", reflect.TypeOf((*MockMacie2API)(nil).DeleteInvitationsWithContext), varargs...)
 }
 
-// DeleteMember mocks base method
+// DeleteMember mocks base method.
 func (m *MockMacie2API) DeleteMember(arg0 *macie2.DeleteMemberInput) (*macie2.DeleteMemberOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMember", arg0)
@@ -644,13 +645,13 @@ func (m *MockMacie2API) DeleteMember(arg0 *macie2.DeleteMemberInput) (*macie2.De
 	return ret0, ret1
 }
 
-// DeleteMember indicates an expected call of DeleteMember
+// DeleteMember indicates an expected call of DeleteMember.
 func (mr *MockMacie2APIMockRecorder) DeleteMember(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMember", reflect.TypeOf((*MockMacie2API)(nil).DeleteMember), arg0)
 }
 
-// DeleteMemberRequest mocks base method
+// DeleteMemberRequest mocks base method.
 func (m *MockMacie2API) DeleteMemberRequest(arg0 *macie2.DeleteMemberInput) (*request.Request, *macie2.DeleteMemberOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteMemberRequest", arg0)
@@ -659,13 +660,13 @@ func (m *MockMacie2API) DeleteMemberRequest(arg0 *macie2.DeleteMemberInput) (*re
 	return ret0, ret1
 }
 
-// DeleteMemberRequest indicates an expected call of DeleteMemberRequest
+// DeleteMemberRequest indicates an expected call of DeleteMemberRequest.
 func (mr *MockMacie2APIMockRecorder) DeleteMemberRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMemberRequest", reflect.TypeOf((*MockMacie2API)(nil).DeleteMemberRequest), arg0)
 }
 
-// DeleteMemberWithContext mocks base method
+// DeleteMemberWithContext mocks base method.
 func (m *MockMacie2API) DeleteMemberWithContext(arg0 context.Context, arg1 *macie2.DeleteMemberInput, arg2 ...request.Option) (*macie2.DeleteMemberOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -678,14 +679,14 @@ func (m *MockMacie2API) DeleteMemberWithContext(arg0 context.Context, arg1 *maci
 	return ret0, ret1
 }
 
-// DeleteMemberWithContext indicates an expected call of DeleteMemberWithContext
+// DeleteMemberWithContext indicates an expected call of DeleteMemberWithContext.
 func (mr *MockMacie2APIMockRecorder) DeleteMemberWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMemberWithContext", reflect.TypeOf((*MockMacie2API)(nil).DeleteMemberWithContext), varargs...)
 }
 
-// DescribeBuckets mocks base method
+// DescribeBuckets mocks base method.
 func (m *MockMacie2API) DescribeBuckets(arg0 *macie2.DescribeBucketsInput) (*macie2.DescribeBucketsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBuckets", arg0)
@@ -694,13 +695,13 @@ func (m *MockMacie2API) DescribeBuckets(arg0 *macie2.DescribeBucketsInput) (*mac
 	return ret0, ret1
 }
 
-// DescribeBuckets indicates an expected call of DescribeBuckets
+// DescribeBuckets indicates an expected call of DescribeBuckets.
 func (mr *MockMacie2APIMockRecorder) DescribeBuckets(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBuckets", reflect.TypeOf((*MockMacie2API)(nil).DescribeBuckets), arg0)
 }
 
-// DescribeBucketsPages mocks base method
+// DescribeBucketsPages mocks base method.
 func (m *MockMacie2API) DescribeBucketsPages(arg0 *macie2.DescribeBucketsInput, arg1 func(*macie2.DescribeBucketsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBucketsPages", arg0, arg1)
@@ -708,13 +709,13 @@ func (m *MockMacie2API) DescribeBucketsPages(arg0 *macie2.DescribeBucketsInput, 
 	return ret0
 }
 
-// DescribeBucketsPages indicates an expected call of DescribeBucketsPages
+// DescribeBucketsPages indicates an expected call of DescribeBucketsPages.
 func (mr *MockMacie2APIMockRecorder) DescribeBucketsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBucketsPages", reflect.TypeOf((*MockMacie2API)(nil).DescribeBucketsPages), arg0, arg1)
 }
 
-// DescribeBucketsPagesWithContext mocks base method
+// DescribeBucketsPagesWithContext mocks base method.
 func (m *MockMacie2API) DescribeBucketsPagesWithContext(arg0 context.Context, arg1 *macie2.DescribeBucketsInput, arg2 func(*macie2.DescribeBucketsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -726,14 +727,14 @@ func (m *MockMacie2API) DescribeBucketsPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// DescribeBucketsPagesWithContext indicates an expected call of DescribeBucketsPagesWithContext
+// DescribeBucketsPagesWithContext indicates an expected call of DescribeBucketsPagesWithContext.
 func (mr *MockMacie2APIMockRecorder) DescribeBucketsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBucketsPagesWithContext", reflect.TypeOf((*MockMacie2API)(nil).DescribeBucketsPagesWithContext), varargs...)
 }
 
-// DescribeBucketsRequest mocks base method
+// DescribeBucketsRequest mocks base method.
 func (m *MockMacie2API) DescribeBucketsRequest(arg0 *macie2.DescribeBucketsInput) (*request.Request, *macie2.DescribeBucketsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeBucketsRequest", arg0)
@@ -742,13 +743,13 @@ func (m *MockMacie2API) DescribeBucketsRequest(arg0 *macie2.DescribeBucketsInput
 	return ret0, ret1
 }
 
-// DescribeBucketsRequest indicates an expected call of DescribeBucketsRequest
+// DescribeBucketsRequest indicates an expected call of DescribeBucketsRequest.
 func (mr *MockMacie2APIMockRecorder) DescribeBucketsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBucketsRequest", reflect.TypeOf((*MockMacie2API)(nil).DescribeBucketsRequest), arg0)
 }
 
-// DescribeBucketsWithContext mocks base method
+// DescribeBucketsWithContext mocks base method.
 func (m *MockMacie2API) DescribeBucketsWithContext(arg0 context.Context, arg1 *macie2.DescribeBucketsInput, arg2 ...request.Option) (*macie2.DescribeBucketsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -761,14 +762,14 @@ func (m *MockMacie2API) DescribeBucketsWithContext(arg0 context.Context, arg1 *m
 	return ret0, ret1
 }
 
-// DescribeBucketsWithContext indicates an expected call of DescribeBucketsWithContext
+// DescribeBucketsWithContext indicates an expected call of DescribeBucketsWithContext.
 func (mr *MockMacie2APIMockRecorder) DescribeBucketsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBucketsWithContext", reflect.TypeOf((*MockMacie2API)(nil).DescribeBucketsWithContext), varargs...)
 }
 
-// DescribeClassificationJob mocks base method
+// DescribeClassificationJob mocks base method.
 func (m *MockMacie2API) DescribeClassificationJob(arg0 *macie2.DescribeClassificationJobInput) (*macie2.DescribeClassificationJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeClassificationJob", arg0)
@@ -777,13 +778,13 @@ func (m *MockMacie2API) DescribeClassificationJob(arg0 *macie2.DescribeClassific
 	return ret0, ret1
 }
 
-// DescribeClassificationJob indicates an expected call of DescribeClassificationJob
+// DescribeClassificationJob indicates an expected call of DescribeClassificationJob.
 func (mr *MockMacie2APIMockRecorder) DescribeClassificationJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeClassificationJob", reflect.TypeOf((*MockMacie2API)(nil).DescribeClassificationJob), arg0)
 }
 
-// DescribeClassificationJobRequest mocks base method
+// DescribeClassificationJobRequest mocks base method.
 func (m *MockMacie2API) DescribeClassificationJobRequest(arg0 *macie2.DescribeClassificationJobInput) (*request.Request, *macie2.DescribeClassificationJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeClassificationJobRequest", arg0)
@@ -792,13 +793,13 @@ func (m *MockMacie2API) DescribeClassificationJobRequest(arg0 *macie2.DescribeCl
 	return ret0, ret1
 }
 
-// DescribeClassificationJobRequest indicates an expected call of DescribeClassificationJobRequest
+// DescribeClassificationJobRequest indicates an expected call of DescribeClassificationJobRequest.
 func (mr *MockMacie2APIMockRecorder) DescribeClassificationJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeClassificationJobRequest", reflect.TypeOf((*MockMacie2API)(nil).DescribeClassificationJobRequest), arg0)
 }
 
-// DescribeClassificationJobWithContext mocks base method
+// DescribeClassificationJobWithContext mocks base method.
 func (m *MockMacie2API) DescribeClassificationJobWithContext(arg0 context.Context, arg1 *macie2.DescribeClassificationJobInput, arg2 ...request.Option) (*macie2.DescribeClassificationJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -811,14 +812,14 @@ func (m *MockMacie2API) DescribeClassificationJobWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// DescribeClassificationJobWithContext indicates an expected call of DescribeClassificationJobWithContext
+// DescribeClassificationJobWithContext indicates an expected call of DescribeClassificationJobWithContext.
 func (mr *MockMacie2APIMockRecorder) DescribeClassificationJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeClassificationJobWithContext", reflect.TypeOf((*MockMacie2API)(nil).DescribeClassificationJobWithContext), varargs...)
 }
 
-// DescribeOrganizationConfiguration mocks base method
+// DescribeOrganizationConfiguration mocks base method.
 func (m *MockMacie2API) DescribeOrganizationConfiguration(arg0 *macie2.DescribeOrganizationConfigurationInput) (*macie2.DescribeOrganizationConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeOrganizationConfiguration", arg0)
@@ -827,13 +828,13 @@ func (m *MockMacie2API) DescribeOrganizationConfiguration(arg0 *macie2.DescribeO
 	return ret0, ret1
 }
 
-// DescribeOrganizationConfiguration indicates an expected call of DescribeOrganizationConfiguration
+// DescribeOrganizationConfiguration indicates an expected call of DescribeOrganizationConfiguration.
 func (mr *MockMacie2APIMockRecorder) DescribeOrganizationConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConfiguration", reflect.TypeOf((*MockMacie2API)(nil).DescribeOrganizationConfiguration), arg0)
 }
 
-// DescribeOrganizationConfigurationRequest mocks base method
+// DescribeOrganizationConfigurationRequest mocks base method.
 func (m *MockMacie2API) DescribeOrganizationConfigurationRequest(arg0 *macie2.DescribeOrganizationConfigurationInput) (*request.Request, *macie2.DescribeOrganizationConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeOrganizationConfigurationRequest", arg0)
@@ -842,13 +843,13 @@ func (m *MockMacie2API) DescribeOrganizationConfigurationRequest(arg0 *macie2.De
 	return ret0, ret1
 }
 
-// DescribeOrganizationConfigurationRequest indicates an expected call of DescribeOrganizationConfigurationRequest
+// DescribeOrganizationConfigurationRequest indicates an expected call of DescribeOrganizationConfigurationRequest.
 func (mr *MockMacie2APIMockRecorder) DescribeOrganizationConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConfigurationRequest", reflect.TypeOf((*MockMacie2API)(nil).DescribeOrganizationConfigurationRequest), arg0)
 }
 
-// DescribeOrganizationConfigurationWithContext mocks base method
+// DescribeOrganizationConfigurationWithContext mocks base method.
 func (m *MockMacie2API) DescribeOrganizationConfigurationWithContext(arg0 context.Context, arg1 *macie2.DescribeOrganizationConfigurationInput, arg2 ...request.Option) (*macie2.DescribeOrganizationConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -861,14 +862,14 @@ func (m *MockMacie2API) DescribeOrganizationConfigurationWithContext(arg0 contex
 	return ret0, ret1
 }
 
-// DescribeOrganizationConfigurationWithContext indicates an expected call of DescribeOrganizationConfigurationWithContext
+// DescribeOrganizationConfigurationWithContext indicates an expected call of DescribeOrganizationConfigurationWithContext.
 func (mr *MockMacie2APIMockRecorder) DescribeOrganizationConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConfigurationWithContext", reflect.TypeOf((*MockMacie2API)(nil).DescribeOrganizationConfigurationWithContext), varargs...)
 }
 
-// DisableMacie mocks base method
+// DisableMacie mocks base method.
 func (m *MockMacie2API) DisableMacie(arg0 *macie2.DisableMacieInput) (*macie2.DisableMacieOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisableMacie", arg0)
@@ -877,13 +878,13 @@ func (m *MockMacie2API) DisableMacie(arg0 *macie2.DisableMacieInput) (*macie2.Di
 	return ret0, ret1
 }
 
-// DisableMacie indicates an expected call of DisableMacie
+// DisableMacie indicates an expected call of DisableMacie.
 func (mr *MockMacie2APIMockRecorder) DisableMacie(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisableMacie", reflect.TypeOf((*MockMacie2API)(nil).DisableMacie), arg0)
 }
 
-// DisableMacieRequest mocks base method
+// DisableMacieRequest mocks base method.
 func (m *MockMacie2API) DisableMacieRequest(arg0 *macie2.DisableMacieInput) (*request.Request, *macie2.DisableMacieOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisableMacieRequest", arg0)
@@ -892,13 +893,13 @@ func (m *MockMacie2API) DisableMacieRequest(arg0 *macie2.DisableMacieInput) (*re
 	return ret0, ret1
 }
 
-// DisableMacieRequest indicates an expected call of DisableMacieRequest
+// DisableMacieRequest indicates an expected call of DisableMacieRequest.
 func (mr *MockMacie2APIMockRecorder) DisableMacieRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisableMacieRequest", reflect.TypeOf((*MockMacie2API)(nil).DisableMacieRequest), arg0)
 }
 
-// DisableMacieWithContext mocks base method
+// DisableMacieWithContext mocks base method.
 func (m *MockMacie2API) DisableMacieWithContext(arg0 context.Context, arg1 *macie2.DisableMacieInput, arg2 ...request.Option) (*macie2.DisableMacieOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -911,14 +912,14 @@ func (m *MockMacie2API) DisableMacieWithContext(arg0 context.Context, arg1 *maci
 	return ret0, ret1
 }
 
-// DisableMacieWithContext indicates an expected call of DisableMacieWithContext
+// DisableMacieWithContext indicates an expected call of DisableMacieWithContext.
 func (mr *MockMacie2APIMockRecorder) DisableMacieWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisableMacieWithContext", reflect.TypeOf((*MockMacie2API)(nil).DisableMacieWithContext), varargs...)
 }
 
-// DisableOrganizationAdminAccount mocks base method
+// DisableOrganizationAdminAccount mocks base method.
 func (m *MockMacie2API) DisableOrganizationAdminAccount(arg0 *macie2.DisableOrganizationAdminAccountInput) (*macie2.DisableOrganizationAdminAccountOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisableOrganizationAdminAccount", arg0)
@@ -927,13 +928,13 @@ func (m *MockMacie2API) DisableOrganizationAdminAccount(arg0 *macie2.DisableOrga
 	return ret0, ret1
 }
 
-// DisableOrganizationAdminAccount indicates an expected call of DisableOrganizationAdminAccount
+// DisableOrganizationAdminAccount indicates an expected call of DisableOrganizationAdminAccount.
 func (mr *MockMacie2APIMockRecorder) DisableOrganizationAdminAccount(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisableOrganizationAdminAccount", reflect.TypeOf((*MockMacie2API)(nil).DisableOrganizationAdminAccount), arg0)
 }
 
-// DisableOrganizationAdminAccountRequest mocks base method
+// DisableOrganizationAdminAccountRequest mocks base method.
 func (m *MockMacie2API) DisableOrganizationAdminAccountRequest(arg0 *macie2.DisableOrganizationAdminAccountInput) (*request.Request, *macie2.DisableOrganizationAdminAccountOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisableOrganizationAdminAccountRequest", arg0)
@@ -942,13 +943,13 @@ func (m *MockMacie2API) DisableOrganizationAdminAccountRequest(arg0 *macie2.Disa
 	return ret0, ret1
 }
 
-// DisableOrganizationAdminAccountRequest indicates an expected call of DisableOrganizationAdminAccountRequest
+// DisableOrganizationAdminAccountRequest indicates an expected call of DisableOrganizationAdminAccountRequest.
 func (mr *MockMacie2APIMockRecorder) DisableOrganizationAdminAccountRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisableOrganizationAdminAccountRequest", reflect.TypeOf((*MockMacie2API)(nil).DisableOrganizationAdminAccountRequest), arg0)
 }
 
-// DisableOrganizationAdminAccountWithContext mocks base method
+// DisableOrganizationAdminAccountWithContext mocks base method.
 func (m *MockMacie2API) DisableOrganizationAdminAccountWithContext(arg0 context.Context, arg1 *macie2.DisableOrganizationAdminAccountInput, arg2 ...request.Option) (*macie2.DisableOrganizationAdminAccountOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -961,14 +962,64 @@ func (m *MockMacie2API) DisableOrganizationAdminAccountWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// DisableOrganizationAdminAccountWithContext indicates an expected call of DisableOrganizationAdminAccountWithContext
+// DisableOrganizationAdminAccountWithContext indicates an expected call of DisableOrganizationAdminAccountWithContext.
 func (mr *MockMacie2APIMockRecorder) DisableOrganizationAdminAccountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisableOrganizationAdminAccountWithContext", reflect.TypeOf((*MockMacie2API)(nil).DisableOrganizationAdminAccountWithContext), varargs...)
 }
 
-// DisassociateFromMasterAccount mocks base method
+// DisassociateFromAdministratorAccount mocks base method.
+func (m *MockMacie2API) DisassociateFromAdministratorAccount(arg0 *macie2.DisassociateFromAdministratorAccountInput) (*macie2.DisassociateFromAdministratorAccountOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DisassociateFromAdministratorAccount", arg0)
+	ret0, _ := ret[0].(*macie2.DisassociateFromAdministratorAccountOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DisassociateFromAdministratorAccount indicates an expected call of DisassociateFromAdministratorAccount.
+func (mr *MockMacie2APIMockRecorder) DisassociateFromAdministratorAccount(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateFromAdministratorAccount", reflect.TypeOf((*MockMacie2API)(nil).DisassociateFromAdministratorAccount), arg0)
+}
+
+// DisassociateFromAdministratorAccountRequest mocks base method.
+func (m *MockMacie2API) DisassociateFromAdministratorAccountRequest(arg0 *macie2.DisassociateFromAdministratorAccountInput) (*request.Request, *macie2.DisassociateFromAdministratorAccountOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DisassociateFromAdministratorAccountRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*macie2.DisassociateFromAdministratorAccountOutput)
+	return ret0, ret1
+}
+
+// DisassociateFromAdministratorAccountRequest indicates an expected call of DisassociateFromAdministratorAccountRequest.
+func (mr *MockMacie2APIMockRecorder) DisassociateFromAdministratorAccountRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateFromAdministratorAccountRequest", reflect.TypeOf((*MockMacie2API)(nil).DisassociateFromAdministratorAccountRequest), arg0)
+}
+
+// DisassociateFromAdministratorAccountWithContext mocks base method.
+func (m *MockMacie2API) DisassociateFromAdministratorAccountWithContext(arg0 context.Context, arg1 *macie2.DisassociateFromAdministratorAccountInput, arg2 ...request.Option) (*macie2.DisassociateFromAdministratorAccountOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DisassociateFromAdministratorAccountWithContext", varargs...)
+	ret0, _ := ret[0].(*macie2.DisassociateFromAdministratorAccountOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DisassociateFromAdministratorAccountWithContext indicates an expected call of DisassociateFromAdministratorAccountWithContext.
+func (mr *MockMacie2APIMockRecorder) DisassociateFromAdministratorAccountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateFromAdministratorAccountWithContext", reflect.TypeOf((*MockMacie2API)(nil).DisassociateFromAdministratorAccountWithContext), varargs...)
+}
+
+// DisassociateFromMasterAccount mocks base method.
 func (m *MockMacie2API) DisassociateFromMasterAccount(arg0 *macie2.DisassociateFromMasterAccountInput) (*macie2.DisassociateFromMasterAccountOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateFromMasterAccount", arg0)
@@ -977,13 +1028,13 @@ func (m *MockMacie2API) DisassociateFromMasterAccount(arg0 *macie2.DisassociateF
 	return ret0, ret1
 }
 
-// DisassociateFromMasterAccount indicates an expected call of DisassociateFromMasterAccount
+// DisassociateFromMasterAccount indicates an expected call of DisassociateFromMasterAccount.
 func (mr *MockMacie2APIMockRecorder) DisassociateFromMasterAccount(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateFromMasterAccount", reflect.TypeOf((*MockMacie2API)(nil).DisassociateFromMasterAccount), arg0)
 }
 
-// DisassociateFromMasterAccountRequest mocks base method
+// DisassociateFromMasterAccountRequest mocks base method.
 func (m *MockMacie2API) DisassociateFromMasterAccountRequest(arg0 *macie2.DisassociateFromMasterAccountInput) (*request.Request, *macie2.DisassociateFromMasterAccountOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateFromMasterAccountRequest", arg0)
@@ -992,13 +1043,13 @@ func (m *MockMacie2API) DisassociateFromMasterAccountRequest(arg0 *macie2.Disass
 	return ret0, ret1
 }
 
-// DisassociateFromMasterAccountRequest indicates an expected call of DisassociateFromMasterAccountRequest
+// DisassociateFromMasterAccountRequest indicates an expected call of DisassociateFromMasterAccountRequest.
 func (mr *MockMacie2APIMockRecorder) DisassociateFromMasterAccountRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateFromMasterAccountRequest", reflect.TypeOf((*MockMacie2API)(nil).DisassociateFromMasterAccountRequest), arg0)
 }
 
-// DisassociateFromMasterAccountWithContext mocks base method
+// DisassociateFromMasterAccountWithContext mocks base method.
 func (m *MockMacie2API) DisassociateFromMasterAccountWithContext(arg0 context.Context, arg1 *macie2.DisassociateFromMasterAccountInput, arg2 ...request.Option) (*macie2.DisassociateFromMasterAccountOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1011,14 +1062,14 @@ func (m *MockMacie2API) DisassociateFromMasterAccountWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DisassociateFromMasterAccountWithContext indicates an expected call of DisassociateFromMasterAccountWithContext
+// DisassociateFromMasterAccountWithContext indicates an expected call of DisassociateFromMasterAccountWithContext.
 func (mr *MockMacie2APIMockRecorder) DisassociateFromMasterAccountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateFromMasterAccountWithContext", reflect.TypeOf((*MockMacie2API)(nil).DisassociateFromMasterAccountWithContext), varargs...)
 }
 
-// DisassociateMember mocks base method
+// DisassociateMember mocks base method.
 func (m *MockMacie2API) DisassociateMember(arg0 *macie2.DisassociateMemberInput) (*macie2.DisassociateMemberOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateMember", arg0)
@@ -1027,13 +1078,13 @@ func (m *MockMacie2API) DisassociateMember(arg0 *macie2.DisassociateMemberInput)
 	return ret0, ret1
 }
 
-// DisassociateMember indicates an expected call of DisassociateMember
+// DisassociateMember indicates an expected call of DisassociateMember.
 func (mr *MockMacie2APIMockRecorder) DisassociateMember(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateMember", reflect.TypeOf((*MockMacie2API)(nil).DisassociateMember), arg0)
 }
 
-// DisassociateMemberRequest mocks base method
+// DisassociateMemberRequest mocks base method.
 func (m *MockMacie2API) DisassociateMemberRequest(arg0 *macie2.DisassociateMemberInput) (*request.Request, *macie2.DisassociateMemberOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DisassociateMemberRequest", arg0)
@@ -1042,13 +1093,13 @@ func (m *MockMacie2API) DisassociateMemberRequest(arg0 *macie2.DisassociateMembe
 	return ret0, ret1
 }
 
-// DisassociateMemberRequest indicates an expected call of DisassociateMemberRequest
+// DisassociateMemberRequest indicates an expected call of DisassociateMemberRequest.
 func (mr *MockMacie2APIMockRecorder) DisassociateMemberRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateMemberRequest", reflect.TypeOf((*MockMacie2API)(nil).DisassociateMemberRequest), arg0)
 }
 
-// DisassociateMemberWithContext mocks base method
+// DisassociateMemberWithContext mocks base method.
 func (m *MockMacie2API) DisassociateMemberWithContext(arg0 context.Context, arg1 *macie2.DisassociateMemberInput, arg2 ...request.Option) (*macie2.DisassociateMemberOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1061,14 +1112,14 @@ func (m *MockMacie2API) DisassociateMemberWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// DisassociateMemberWithContext indicates an expected call of DisassociateMemberWithContext
+// DisassociateMemberWithContext indicates an expected call of DisassociateMemberWithContext.
 func (mr *MockMacie2APIMockRecorder) DisassociateMemberWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisassociateMemberWithContext", reflect.TypeOf((*MockMacie2API)(nil).DisassociateMemberWithContext), varargs...)
 }
 
-// EnableMacie mocks base method
+// EnableMacie mocks base method.
 func (m *MockMacie2API) EnableMacie(arg0 *macie2.EnableMacieInput) (*macie2.EnableMacieOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "EnableMacie", arg0)
@@ -1077,13 +1128,13 @@ func (m *MockMacie2API) EnableMacie(arg0 *macie2.EnableMacieInput) (*macie2.Enab
 	return ret0, ret1
 }
 
-// EnableMacie indicates an expected call of EnableMacie
+// EnableMacie indicates an expected call of EnableMacie.
 func (mr *MockMacie2APIMockRecorder) EnableMacie(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "EnableMacie", reflect.TypeOf((*MockMacie2API)(nil).EnableMacie), arg0)
 }
 
-// EnableMacieRequest mocks base method
+// EnableMacieRequest mocks base method.
 func (m *MockMacie2API) EnableMacieRequest(arg0 *macie2.EnableMacieInput) (*request.Request, *macie2.EnableMacieOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "EnableMacieRequest", arg0)
@@ -1092,13 +1143,13 @@ func (m *MockMacie2API) EnableMacieRequest(arg0 *macie2.EnableMacieInput) (*requ
 	return ret0, ret1
 }
 
-// EnableMacieRequest indicates an expected call of EnableMacieRequest
+// EnableMacieRequest indicates an expected call of EnableMacieRequest.
 func (mr *MockMacie2APIMockRecorder) EnableMacieRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "EnableMacieRequest", reflect.TypeOf((*MockMacie2API)(nil).EnableMacieRequest), arg0)
 }
 
-// EnableMacieWithContext mocks base method
+// EnableMacieWithContext mocks base method.
 func (m *MockMacie2API) EnableMacieWithContext(arg0 context.Context, arg1 *macie2.EnableMacieInput, arg2 ...request.Option) (*macie2.EnableMacieOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1111,14 +1162,14 @@ func (m *MockMacie2API) EnableMacieWithContext(arg0 context.Context, arg1 *macie
 	return ret0, ret1
 }
 
-// EnableMacieWithContext indicates an expected call of EnableMacieWithContext
+// EnableMacieWithContext indicates an expected call of EnableMacieWithContext.
 func (mr *MockMacie2APIMockRecorder) EnableMacieWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "EnableMacieWithContext", reflect.TypeOf((*MockMacie2API)(nil).EnableMacieWithContext), varargs...)
 }
 
-// EnableOrganizationAdminAccount mocks base method
+// EnableOrganizationAdminAccount mocks base method.
 func (m *MockMacie2API) EnableOrganizationAdminAccount(arg0 *macie2.EnableOrganizationAdminAccountInput) (*macie2.EnableOrganizationAdminAccountOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "EnableOrganizationAdminAccount", arg0)
@@ -1127,13 +1178,13 @@ func (m *MockMacie2API) EnableOrganizationAdminAccount(arg0 *macie2.EnableOrgani
 	return ret0, ret1
 }
 
-// EnableOrganizationAdminAccount indicates an expected call of EnableOrganizationAdminAccount
+// EnableOrganizationAdminAccount indicates an expected call of EnableOrganizationAdminAccount.
 func (mr *MockMacie2APIMockRecorder) EnableOrganizationAdminAccount(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "EnableOrganizationAdminAccount", reflect.TypeOf((*MockMacie2API)(nil).EnableOrganizationAdminAccount), arg0)
 }
 
-// EnableOrganizationAdminAccountRequest mocks base method
+// EnableOrganizationAdminAccountRequest mocks base method.
 func (m *MockMacie2API) EnableOrganizationAdminAccountRequest(arg0 *macie2.EnableOrganizationAdminAccountInput) (*request.Request, *macie2.EnableOrganizationAdminAccountOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "EnableOrganizationAdminAccountRequest", arg0)
@@ -1142,13 +1193,13 @@ func (m *MockMacie2API) EnableOrganizationAdminAccountRequest(arg0 *macie2.Enabl
 	return ret0, ret1
 }
 
-// EnableOrganizationAdminAccountRequest indicates an expected call of EnableOrganizationAdminAccountRequest
+// EnableOrganizationAdminAccountRequest indicates an expected call of EnableOrganizationAdminAccountRequest.
 func (mr *MockMacie2APIMockRecorder) EnableOrganizationAdminAccountRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "EnableOrganizationAdminAccountRequest", reflect.TypeOf((*MockMacie2API)(nil).EnableOrganizationAdminAccountRequest), arg0)
 }
 
-// EnableOrganizationAdminAccountWithContext mocks base method
+// EnableOrganizationAdminAccountWithContext mocks base method.
 func (m *MockMacie2API) EnableOrganizationAdminAccountWithContext(arg0 context.Context, arg1 *macie2.EnableOrganizationAdminAccountInput, arg2 ...request.Option) (*macie2.EnableOrganizationAdminAccountOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1161,14 +1212,64 @@ func (m *MockMacie2API) EnableOrganizationAdminAccountWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// EnableOrganizationAdminAccountWithContext indicates an expected call of EnableOrganizationAdminAccountWithContext
+// EnableOrganizationAdminAccountWithContext indicates an expected call of EnableOrganizationAdminAccountWithContext.
 func (mr *MockMacie2APIMockRecorder) EnableOrganizationAdminAccountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "EnableOrganizationAdminAccountWithContext", reflect.TypeOf((*MockMacie2API)(nil).EnableOrganizationAdminAccountWithContext), varargs...)
 }
 
-// GetBucketStatistics mocks base method
+// GetAdministratorAccount mocks base method.
+func (m *MockMacie2API) GetAdministratorAccount(arg0 *macie2.GetAdministratorAccountInput) (*macie2.GetAdministratorAccountOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetAdministratorAccount", arg0)
+	ret0, _ := ret[0].(*macie2.GetAdministratorAccountOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetAdministratorAccount indicates an expected call of GetAdministratorAccount.
+func (mr *MockMacie2APIMockRecorder) GetAdministratorAccount(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAdministratorAccount", reflect.TypeOf((*MockMacie2API)(nil).GetAdministratorAccount), arg0)
+}
+
+// GetAdministratorAccountRequest mocks base method.
+func (m *MockMacie2API) GetAdministratorAccountRequest(arg0 *macie2.GetAdministratorAccountInput) (*request.Request, *macie2.GetAdministratorAccountOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetAdministratorAccountRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*macie2.GetAdministratorAccountOutput)
+	return ret0, ret1
+}
+
+// GetAdministratorAccountRequest indicates an expected call of GetAdministratorAccountRequest.
+func (mr *MockMacie2APIMockRecorder) GetAdministratorAccountRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAdministratorAccountRequest", reflect.TypeOf((*MockMacie2API)(nil).GetAdministratorAccountRequest), arg0)
+}
+
+// GetAdministratorAccountWithContext mocks base method.
+func (m *MockMacie2API) GetAdministratorAccountWithContext(arg0 context.Context, arg1 *macie2.GetAdministratorAccountInput, arg2 ...request.Option) (*macie2.GetAdministratorAccountOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetAdministratorAccountWithContext", varargs...)
+	ret0, _ := ret[0].(*macie2.GetAdministratorAccountOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetAdministratorAccountWithContext indicates an expected call of GetAdministratorAccountWithContext.
+func (mr *MockMacie2APIMockRecorder) GetAdministratorAccountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAdministratorAccountWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetAdministratorAccountWithContext), varargs...)
+}
+
+// GetBucketStatistics mocks base method.
 func (m *MockMacie2API) GetBucketStatistics(arg0 *macie2.GetBucketStatisticsInput) (*macie2.GetBucketStatisticsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBucketStatistics", arg0)
@@ -1177,13 +1278,13 @@ func (m *MockMacie2API) GetBucketStatistics(arg0 *macie2.GetBucketStatisticsInpu
 	return ret0, ret1
 }
 
-// GetBucketStatistics indicates an expected call of GetBucketStatistics
+// GetBucketStatistics indicates an expected call of GetBucketStatistics.
 func (mr *MockMacie2APIMockRecorder) GetBucketStatistics(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketStatistics", reflect.TypeOf((*MockMacie2API)(nil).GetBucketStatistics), arg0)
 }
 
-// GetBucketStatisticsRequest mocks base method
+// GetBucketStatisticsRequest mocks base method.
 func (m *MockMacie2API) GetBucketStatisticsRequest(arg0 *macie2.GetBucketStatisticsInput) (*request.Request, *macie2.GetBucketStatisticsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBucketStatisticsRequest", arg0)
@@ -1192,13 +1293,13 @@ func (m *MockMacie2API) GetBucketStatisticsRequest(arg0 *macie2.GetBucketStatist
 	return ret0, ret1
 }
 
-// GetBucketStatisticsRequest indicates an expected call of GetBucketStatisticsRequest
+// GetBucketStatisticsRequest indicates an expected call of GetBucketStatisticsRequest.
 func (mr *MockMacie2APIMockRecorder) GetBucketStatisticsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketStatisticsRequest", reflect.TypeOf((*MockMacie2API)(nil).GetBucketStatisticsRequest), arg0)
 }
 
-// GetBucketStatisticsWithContext mocks base method
+// GetBucketStatisticsWithContext mocks base method.
 func (m *MockMacie2API) GetBucketStatisticsWithContext(arg0 context.Context, arg1 *macie2.GetBucketStatisticsInput, arg2 ...request.Option) (*macie2.GetBucketStatisticsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1211,14 +1312,14 @@ func (m *MockMacie2API) GetBucketStatisticsWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetBucketStatisticsWithContext indicates an expected call of GetBucketStatisticsWithContext
+// GetBucketStatisticsWithContext indicates an expected call of GetBucketStatisticsWithContext.
 func (mr *MockMacie2APIMockRecorder) GetBucketStatisticsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketStatisticsWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetBucketStatisticsWithContext), varargs...)
 }
 
-// GetClassificationExportConfiguration mocks base method
+// GetClassificationExportConfiguration mocks base method.
 func (m *MockMacie2API) GetClassificationExportConfiguration(arg0 *macie2.GetClassificationExportConfigurationInput) (*macie2.GetClassificationExportConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetClassificationExportConfiguration", arg0)
@@ -1227,13 +1328,13 @@ func (m *MockMacie2API) GetClassificationExportConfiguration(arg0 *macie2.GetCla
 	return ret0, ret1
 }
 
-// GetClassificationExportConfiguration indicates an expected call of GetClassificationExportConfiguration
+// GetClassificationExportConfiguration indicates an expected call of GetClassificationExportConfiguration.
 func (mr *MockMacie2APIMockRecorder) GetClassificationExportConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetClassificationExportConfiguration", reflect.TypeOf((*MockMacie2API)(nil).GetClassificationExportConfiguration), arg0)
 }
 
-// GetClassificationExportConfigurationRequest mocks base method
+// GetClassificationExportConfigurationRequest mocks base method.
 func (m *MockMacie2API) GetClassificationExportConfigurationRequest(arg0 *macie2.GetClassificationExportConfigurationInput) (*request.Request, *macie2.GetClassificationExportConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetClassificationExportConfigurationRequest", arg0)
@@ -1242,13 +1343,13 @@ func (m *MockMacie2API) GetClassificationExportConfigurationRequest(arg0 *macie2
 	return ret0, ret1
 }
 
-// GetClassificationExportConfigurationRequest indicates an expected call of GetClassificationExportConfigurationRequest
+// GetClassificationExportConfigurationRequest indicates an expected call of GetClassificationExportConfigurationRequest.
 func (mr *MockMacie2APIMockRecorder) GetClassificationExportConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetClassificationExportConfigurationRequest", reflect.TypeOf((*MockMacie2API)(nil).GetClassificationExportConfigurationRequest), arg0)
 }
 
-// GetClassificationExportConfigurationWithContext mocks base method
+// GetClassificationExportConfigurationWithContext mocks base method.
 func (m *MockMacie2API) GetClassificationExportConfigurationWithContext(arg0 context.Context, arg1 *macie2.GetClassificationExportConfigurationInput, arg2 ...request.Option) (*macie2.GetClassificationExportConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1261,14 +1362,14 @@ func (m *MockMacie2API) GetClassificationExportConfigurationWithContext(arg0 con
 	return ret0, ret1
 }
 
-// GetClassificationExportConfigurationWithContext indicates an expected call of GetClassificationExportConfigurationWithContext
+// GetClassificationExportConfigurationWithContext indicates an expected call of GetClassificationExportConfigurationWithContext.
 func (mr *MockMacie2APIMockRecorder) GetClassificationExportConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetClassificationExportConfigurationWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetClassificationExportConfigurationWithContext), varargs...)
 }
 
-// GetCustomDataIdentifier mocks base method
+// GetCustomDataIdentifier mocks base method.
 func (m *MockMacie2API) GetCustomDataIdentifier(arg0 *macie2.GetCustomDataIdentifierInput) (*macie2.GetCustomDataIdentifierOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCustomDataIdentifier", arg0)
@@ -1277,13 +1378,13 @@ func (m *MockMacie2API) GetCustomDataIdentifier(arg0 *macie2.GetCustomDataIdenti
 	return ret0, ret1
 }
 
-// GetCustomDataIdentifier indicates an expected call of GetCustomDataIdentifier
+// GetCustomDataIdentifier indicates an expected call of GetCustomDataIdentifier.
 func (mr *MockMacie2APIMockRecorder) GetCustomDataIdentifier(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCustomDataIdentifier", reflect.TypeOf((*MockMacie2API)(nil).GetCustomDataIdentifier), arg0)
 }
 
-// GetCustomDataIdentifierRequest mocks base method
+// GetCustomDataIdentifierRequest mocks base method.
 func (m *MockMacie2API) GetCustomDataIdentifierRequest(arg0 *macie2.GetCustomDataIdentifierInput) (*request.Request, *macie2.GetCustomDataIdentifierOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCustomDataIdentifierRequest", arg0)
@@ -1292,13 +1393,13 @@ func (m *MockMacie2API) GetCustomDataIdentifierRequest(arg0 *macie2.GetCustomDat
 	return ret0, ret1
 }
 
-// GetCustomDataIdentifierRequest indicates an expected call of GetCustomDataIdentifierRequest
+// GetCustomDataIdentifierRequest indicates an expected call of GetCustomDataIdentifierRequest.
 func (mr *MockMacie2APIMockRecorder) GetCustomDataIdentifierRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCustomDataIdentifierRequest", reflect.TypeOf((*MockMacie2API)(nil).GetCustomDataIdentifierRequest), arg0)
 }
 
-// GetCustomDataIdentifierWithContext mocks base method
+// GetCustomDataIdentifierWithContext mocks base method.
 func (m *MockMacie2API) GetCustomDataIdentifierWithContext(arg0 context.Context, arg1 *macie2.GetCustomDataIdentifierInput, arg2 ...request.Option) (*macie2.GetCustomDataIdentifierOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1311,14 +1412,14 @@ func (m *MockMacie2API) GetCustomDataIdentifierWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// GetCustomDataIdentifierWithContext indicates an expected call of GetCustomDataIdentifierWithContext
+// GetCustomDataIdentifierWithContext indicates an expected call of GetCustomDataIdentifierWithContext.
 func (mr *MockMacie2APIMockRecorder) GetCustomDataIdentifierWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCustomDataIdentifierWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetCustomDataIdentifierWithContext), varargs...)
 }
 
-// GetFindingStatistics mocks base method
+// GetFindingStatistics mocks base method.
 func (m *MockMacie2API) GetFindingStatistics(arg0 *macie2.GetFindingStatisticsInput) (*macie2.GetFindingStatisticsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFindingStatistics", arg0)
@@ -1327,13 +1428,13 @@ func (m *MockMacie2API) GetFindingStatistics(arg0 *macie2.GetFindingStatisticsIn
 	return ret0, ret1
 }
 
-// GetFindingStatistics indicates an expected call of GetFindingStatistics
+// GetFindingStatistics indicates an expected call of GetFindingStatistics.
 func (mr *MockMacie2APIMockRecorder) GetFindingStatistics(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingStatistics", reflect.TypeOf((*MockMacie2API)(nil).GetFindingStatistics), arg0)
 }
 
-// GetFindingStatisticsRequest mocks base method
+// GetFindingStatisticsRequest mocks base method.
 func (m *MockMacie2API) GetFindingStatisticsRequest(arg0 *macie2.GetFindingStatisticsInput) (*request.Request, *macie2.GetFindingStatisticsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFindingStatisticsRequest", arg0)
@@ -1342,13 +1443,13 @@ func (m *MockMacie2API) GetFindingStatisticsRequest(arg0 *macie2.GetFindingStati
 	return ret0, ret1
 }
 
-// GetFindingStatisticsRequest indicates an expected call of GetFindingStatisticsRequest
+// GetFindingStatisticsRequest indicates an expected call of GetFindingStatisticsRequest.
 func (mr *MockMacie2APIMockRecorder) GetFindingStatisticsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingStatisticsRequest", reflect.TypeOf((*MockMacie2API)(nil).GetFindingStatisticsRequest), arg0)
 }
 
-// GetFindingStatisticsWithContext mocks base method
+// GetFindingStatisticsWithContext mocks base method.
 func (m *MockMacie2API) GetFindingStatisticsWithContext(arg0 context.Context, arg1 *macie2.GetFindingStatisticsInput, arg2 ...request.Option) (*macie2.GetFindingStatisticsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1361,14 +1462,14 @@ func (m *MockMacie2API) GetFindingStatisticsWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// GetFindingStatisticsWithContext indicates an expected call of GetFindingStatisticsWithContext
+// GetFindingStatisticsWithContext indicates an expected call of GetFindingStatisticsWithContext.
 func (mr *MockMacie2APIMockRecorder) GetFindingStatisticsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingStatisticsWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetFindingStatisticsWithContext), varargs...)
 }
 
-// GetFindings mocks base method
+// GetFindings mocks base method.
 func (m *MockMacie2API) GetFindings(arg0 *macie2.GetFindingsInput) (*macie2.GetFindingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFindings", arg0)
@@ -1377,13 +1478,13 @@ func (m *MockMacie2API) GetFindings(arg0 *macie2.GetFindingsInput) (*macie2.GetF
 	return ret0, ret1
 }
 
-// GetFindings indicates an expected call of GetFindings
+// GetFindings indicates an expected call of GetFindings.
 func (mr *MockMacie2APIMockRecorder) GetFindings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindings", reflect.TypeOf((*MockMacie2API)(nil).GetFindings), arg0)
 }
 
-// GetFindingsFilter mocks base method
+// GetFindingsFilter mocks base method.
 func (m *MockMacie2API) GetFindingsFilter(arg0 *macie2.GetFindingsFilterInput) (*macie2.GetFindingsFilterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFindingsFilter", arg0)
@@ -1392,13 +1493,13 @@ func (m *MockMacie2API) GetFindingsFilter(arg0 *macie2.GetFindingsFilterInput) (
 	return ret0, ret1
 }
 
-// GetFindingsFilter indicates an expected call of GetFindingsFilter
+// GetFindingsFilter indicates an expected call of GetFindingsFilter.
 func (mr *MockMacie2APIMockRecorder) GetFindingsFilter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingsFilter", reflect.TypeOf((*MockMacie2API)(nil).GetFindingsFilter), arg0)
 }
 
-// GetFindingsFilterRequest mocks base method
+// GetFindingsFilterRequest mocks base method.
 func (m *MockMacie2API) GetFindingsFilterRequest(arg0 *macie2.GetFindingsFilterInput) (*request.Request, *macie2.GetFindingsFilterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFindingsFilterRequest", arg0)
@@ -1407,13 +1508,13 @@ func (m *MockMacie2API) GetFindingsFilterRequest(arg0 *macie2.GetFindingsFilterI
 	return ret0, ret1
 }
 
-// GetFindingsFilterRequest indicates an expected call of GetFindingsFilterRequest
+// GetFindingsFilterRequest indicates an expected call of GetFindingsFilterRequest.
 func (mr *MockMacie2APIMockRecorder) GetFindingsFilterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingsFilterRequest", reflect.TypeOf((*MockMacie2API)(nil).GetFindingsFilterRequest), arg0)
 }
 
-// GetFindingsFilterWithContext mocks base method
+// GetFindingsFilterWithContext mocks base method.
 func (m *MockMacie2API) GetFindingsFilterWithContext(arg0 context.Context, arg1 *macie2.GetFindingsFilterInput, arg2 ...request.Option) (*macie2.GetFindingsFilterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1426,14 +1527,64 @@ func (m *MockMacie2API) GetFindingsFilterWithContext(arg0 context.Context, arg1 
 	return ret0, ret1
 }
 
-// GetFindingsFilterWithContext indicates an expected call of GetFindingsFilterWithContext
+// GetFindingsFilterWithContext indicates an expected call of GetFindingsFilterWithContext.
 func (mr *MockMacie2APIMockRecorder) GetFindingsFilterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingsFilterWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetFindingsFilterWithContext), varargs...)
 }
 
-// GetFindingsRequest mocks base method
+// GetFindingsPublicationConfiguration mocks base method.
+func (m *MockMacie2API) GetFindingsPublicationConfiguration(arg0 *macie2.GetFindingsPublicationConfigurationInput) (*macie2.GetFindingsPublicationConfigurationOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetFindingsPublicationConfiguration", arg0)
+	ret0, _ := ret[0].(*macie2.GetFindingsPublicationConfigurationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetFindingsPublicationConfiguration indicates an expected call of GetFindingsPublicationConfiguration.
+func (mr *MockMacie2APIMockRecorder) GetFindingsPublicationConfiguration(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingsPublicationConfiguration", reflect.TypeOf((*MockMacie2API)(nil).GetFindingsPublicationConfiguration), arg0)
+}
+
+// GetFindingsPublicationConfigurationRequest mocks base method.
+func (m *MockMacie2API) GetFindingsPublicationConfigurationRequest(arg0 *macie2.GetFindingsPublicationConfigurationInput) (*request.Request, *macie2.GetFindingsPublicationConfigurationOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetFindingsPublicationConfigurationRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*macie2.GetFindingsPublicationConfigurationOutput)
+	return ret0, ret1
+}
+
+// GetFindingsPublicationConfigurationRequest indicates an expected call of GetFindingsPublicationConfigurationRequest.
+func (mr *MockMacie2APIMockRecorder) GetFindingsPublicationConfigurationRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingsPublicationConfigurationRequest", reflect.TypeOf((*MockMacie2API)(nil).GetFindingsPublicationConfigurationRequest), arg0)
+}
+
+// GetFindingsPublicationConfigurationWithContext mocks base method.
+func (m *MockMacie2API) GetFindingsPublicationConfigurationWithContext(arg0 context.Context, arg1 *macie2.GetFindingsPublicationConfigurationInput, arg2 ...request.Option) (*macie2.GetFindingsPublicationConfigurationOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetFindingsPublicationConfigurationWithContext", varargs...)
+	ret0, _ := ret[0].(*macie2.GetFindingsPublicationConfigurationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetFindingsPublicationConfigurationWithContext indicates an expected call of GetFindingsPublicationConfigurationWithContext.
+func (mr *MockMacie2APIMockRecorder) GetFindingsPublicationConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingsPublicationConfigurationWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetFindingsPublicationConfigurationWithContext), varargs...)
+}
+
+// GetFindingsRequest mocks base method.
 func (m *MockMacie2API) GetFindingsRequest(arg0 *macie2.GetFindingsInput) (*request.Request, *macie2.GetFindingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetFindingsRequest", arg0)
@@ -1442,13 +1593,13 @@ func (m *MockMacie2API) GetFindingsRequest(arg0 *macie2.GetFindingsInput) (*requ
 	return ret0, ret1
 }
 
-// GetFindingsRequest indicates an expected call of GetFindingsRequest
+// GetFindingsRequest indicates an expected call of GetFindingsRequest.
 func (mr *MockMacie2APIMockRecorder) GetFindingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingsRequest", reflect.TypeOf((*MockMacie2API)(nil).GetFindingsRequest), arg0)
 }
 
-// GetFindingsWithContext mocks base method
+// GetFindingsWithContext mocks base method.
 func (m *MockMacie2API) GetFindingsWithContext(arg0 context.Context, arg1 *macie2.GetFindingsInput, arg2 ...request.Option) (*macie2.GetFindingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1461,14 +1612,14 @@ func (m *MockMacie2API) GetFindingsWithContext(arg0 context.Context, arg1 *macie
 	return ret0, ret1
 }
 
-// GetFindingsWithContext indicates an expected call of GetFindingsWithContext
+// GetFindingsWithContext indicates an expected call of GetFindingsWithContext.
 func (mr *MockMacie2APIMockRecorder) GetFindingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFindingsWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetFindingsWithContext), varargs...)
 }
 
-// GetInvitationsCount mocks base method
+// GetInvitationsCount mocks base method.
 func (m *MockMacie2API) GetInvitationsCount(arg0 *macie2.GetInvitationsCountInput) (*macie2.GetInvitationsCountOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInvitationsCount", arg0)
@@ -1477,13 +1628,13 @@ func (m *MockMacie2API) GetInvitationsCount(arg0 *macie2.GetInvitationsCountInpu
 	return ret0, ret1
 }
 
-// GetInvitationsCount indicates an expected call of GetInvitationsCount
+// GetInvitationsCount indicates an expected call of GetInvitationsCount.
 func (mr *MockMacie2APIMockRecorder) GetInvitationsCount(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInvitationsCount", reflect.TypeOf((*MockMacie2API)(nil).GetInvitationsCount), arg0)
 }
 
-// GetInvitationsCountRequest mocks base method
+// GetInvitationsCountRequest mocks base method.
 func (m *MockMacie2API) GetInvitationsCountRequest(arg0 *macie2.GetInvitationsCountInput) (*request.Request, *macie2.GetInvitationsCountOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetInvitationsCountRequest", arg0)
@@ -1492,13 +1643,13 @@ func (m *MockMacie2API) GetInvitationsCountRequest(arg0 *macie2.GetInvitationsCo
 	return ret0, ret1
 }
 
-// GetInvitationsCountRequest indicates an expected call of GetInvitationsCountRequest
+// GetInvitationsCountRequest indicates an expected call of GetInvitationsCountRequest.
 func (mr *MockMacie2APIMockRecorder) GetInvitationsCountRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInvitationsCountRequest", reflect.TypeOf((*MockMacie2API)(nil).GetInvitationsCountRequest), arg0)
 }
 
-// GetInvitationsCountWithContext mocks base method
+// GetInvitationsCountWithContext mocks base method.
 func (m *MockMacie2API) GetInvitationsCountWithContext(arg0 context.Context, arg1 *macie2.GetInvitationsCountInput, arg2 ...request.Option) (*macie2.GetInvitationsCountOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1511,14 +1662,14 @@ func (m *MockMacie2API) GetInvitationsCountWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// GetInvitationsCountWithContext indicates an expected call of GetInvitationsCountWithContext
+// GetInvitationsCountWithContext indicates an expected call of GetInvitationsCountWithContext.
 func (mr *MockMacie2APIMockRecorder) GetInvitationsCountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInvitationsCountWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetInvitationsCountWithContext), varargs...)
 }
 
-// GetMacieSession mocks base method
+// GetMacieSession mocks base method.
 func (m *MockMacie2API) GetMacieSession(arg0 *macie2.GetMacieSessionInput) (*macie2.GetMacieSessionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMacieSession", arg0)
@@ -1527,13 +1678,13 @@ func (m *MockMacie2API) GetMacieSession(arg0 *macie2.GetMacieSessionInput) (*mac
 	return ret0, ret1
 }
 
-// GetMacieSession indicates an expected call of GetMacieSession
+// GetMacieSession indicates an expected call of GetMacieSession.
 func (mr *MockMacie2APIMockRecorder) GetMacieSession(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMacieSession", reflect.TypeOf((*MockMacie2API)(nil).GetMacieSession), arg0)
 }
 
-// GetMacieSessionRequest mocks base method
+// GetMacieSessionRequest mocks base method.
 func (m *MockMacie2API) GetMacieSessionRequest(arg0 *macie2.GetMacieSessionInput) (*request.Request, *macie2.GetMacieSessionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMacieSessionRequest", arg0)
@@ -1542,13 +1693,13 @@ func (m *MockMacie2API) GetMacieSessionRequest(arg0 *macie2.GetMacieSessionInput
 	return ret0, ret1
 }
 
-// GetMacieSessionRequest indicates an expected call of GetMacieSessionRequest
+// GetMacieSessionRequest indicates an expected call of GetMacieSessionRequest.
 func (mr *MockMacie2APIMockRecorder) GetMacieSessionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMacieSessionRequest", reflect.TypeOf((*MockMacie2API)(nil).GetMacieSessionRequest), arg0)
 }
 
-// GetMacieSessionWithContext mocks base method
+// GetMacieSessionWithContext mocks base method.
 func (m *MockMacie2API) GetMacieSessionWithContext(arg0 context.Context, arg1 *macie2.GetMacieSessionInput, arg2 ...request.Option) (*macie2.GetMacieSessionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1561,14 +1712,14 @@ func (m *MockMacie2API) GetMacieSessionWithContext(arg0 context.Context, arg1 *m
 	return ret0, ret1
 }
 
-// GetMacieSessionWithContext indicates an expected call of GetMacieSessionWithContext
+// GetMacieSessionWithContext indicates an expected call of GetMacieSessionWithContext.
 func (mr *MockMacie2APIMockRecorder) GetMacieSessionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMacieSessionWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetMacieSessionWithContext), varargs...)
 }
 
-// GetMasterAccount mocks base method
+// GetMasterAccount mocks base method.
 func (m *MockMacie2API) GetMasterAccount(arg0 *macie2.GetMasterAccountInput) (*macie2.GetMasterAccountOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMasterAccount", arg0)
@@ -1577,13 +1728,13 @@ func (m *MockMacie2API) GetMasterAccount(arg0 *macie2.GetMasterAccountInput) (*m
 	return ret0, ret1
 }
 
-// GetMasterAccount indicates an expected call of GetMasterAccount
+// GetMasterAccount indicates an expected call of GetMasterAccount.
 func (mr *MockMacie2APIMockRecorder) GetMasterAccount(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMasterAccount", reflect.TypeOf((*MockMacie2API)(nil).GetMasterAccount), arg0)
 }
 
-// GetMasterAccountRequest mocks base method
+// GetMasterAccountRequest mocks base method.
 func (m *MockMacie2API) GetMasterAccountRequest(arg0 *macie2.GetMasterAccountInput) (*request.Request, *macie2.GetMasterAccountOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMasterAccountRequest", arg0)
@@ -1592,13 +1743,13 @@ func (m *MockMacie2API) GetMasterAccountRequest(arg0 *macie2.GetMasterAccountInp
 	return ret0, ret1
 }
 
-// GetMasterAccountRequest indicates an expected call of GetMasterAccountRequest
+// GetMasterAccountRequest indicates an expected call of GetMasterAccountRequest.
 func (mr *MockMacie2APIMockRecorder) GetMasterAccountRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMasterAccountRequest", reflect.TypeOf((*MockMacie2API)(nil).GetMasterAccountRequest), arg0)
 }
 
-// GetMasterAccountWithContext mocks base method
+// GetMasterAccountWithContext mocks base method.
 func (m *MockMacie2API) GetMasterAccountWithContext(arg0 context.Context, arg1 *macie2.GetMasterAccountInput, arg2 ...request.Option) (*macie2.GetMasterAccountOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1611,14 +1762,14 @@ func (m *MockMacie2API) GetMasterAccountWithContext(arg0 context.Context, arg1 *
 	return ret0, ret1
 }
 
-// GetMasterAccountWithContext indicates an expected call of GetMasterAccountWithContext
+// GetMasterAccountWithContext indicates an expected call of GetMasterAccountWithContext.
 func (mr *MockMacie2APIMockRecorder) GetMasterAccountWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMasterAccountWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetMasterAccountWithContext), varargs...)
 }
 
-// GetMember mocks base method
+// GetMember mocks base method.
 func (m *MockMacie2API) GetMember(arg0 *macie2.GetMemberInput) (*macie2.GetMemberOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMember", arg0)
@@ -1627,13 +1778,13 @@ func (m *MockMacie2API) GetMember(arg0 *macie2.GetMemberInput) (*macie2.GetMembe
 	return ret0, ret1
 }
 
-// GetMember indicates an expected call of GetMember
+// GetMember indicates an expected call of GetMember.
 func (mr *MockMacie2APIMockRecorder) GetMember(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMember", reflect.TypeOf((*MockMacie2API)(nil).GetMember), arg0)
 }
 
-// GetMemberRequest mocks base method
+// GetMemberRequest mocks base method.
 func (m *MockMacie2API) GetMemberRequest(arg0 *macie2.GetMemberInput) (*request.Request, *macie2.GetMemberOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetMemberRequest", arg0)
@@ -1642,13 +1793,13 @@ func (m *MockMacie2API) GetMemberRequest(arg0 *macie2.GetMemberInput) (*request.
 	return ret0, ret1
 }
 
-// GetMemberRequest indicates an expected call of GetMemberRequest
+// GetMemberRequest indicates an expected call of GetMemberRequest.
 func (mr *MockMacie2APIMockRecorder) GetMemberRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMemberRequest", reflect.TypeOf((*MockMacie2API)(nil).GetMemberRequest), arg0)
 }
 
-// GetMemberWithContext mocks base method
+// GetMemberWithContext mocks base method.
 func (m *MockMacie2API) GetMemberWithContext(arg0 context.Context, arg1 *macie2.GetMemberInput, arg2 ...request.Option) (*macie2.GetMemberOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1661,14 +1812,14 @@ func (m *MockMacie2API) GetMemberWithContext(arg0 context.Context, arg1 *macie2.
 	return ret0, ret1
 }
 
-// GetMemberWithContext indicates an expected call of GetMemberWithContext
+// GetMemberWithContext indicates an expected call of GetMemberWithContext.
 func (mr *MockMacie2APIMockRecorder) GetMemberWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMemberWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetMemberWithContext), varargs...)
 }
 
-// GetUsageStatistics mocks base method
+// GetUsageStatistics mocks base method.
 func (m *MockMacie2API) GetUsageStatistics(arg0 *macie2.GetUsageStatisticsInput) (*macie2.GetUsageStatisticsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetUsageStatistics", arg0)
@@ -1677,13 +1828,13 @@ func (m *MockMacie2API) GetUsageStatistics(arg0 *macie2.GetUsageStatisticsInput)
 	return ret0, ret1
 }
 
-// GetUsageStatistics indicates an expected call of GetUsageStatistics
+// GetUsageStatistics indicates an expected call of GetUsageStatistics.
 func (mr *MockMacie2APIMockRecorder) GetUsageStatistics(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUsageStatistics", reflect.TypeOf((*MockMacie2API)(nil).GetUsageStatistics), arg0)
 }
 
-// GetUsageStatisticsPages mocks base method
+// GetUsageStatisticsPages mocks base method.
 func (m *MockMacie2API) GetUsageStatisticsPages(arg0 *macie2.GetUsageStatisticsInput, arg1 func(*macie2.GetUsageStatisticsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetUsageStatisticsPages", arg0, arg1)
@@ -1691,13 +1842,13 @@ func (m *MockMacie2API) GetUsageStatisticsPages(arg0 *macie2.GetUsageStatisticsI
 	return ret0
 }
 
-// GetUsageStatisticsPages indicates an expected call of GetUsageStatisticsPages
+// GetUsageStatisticsPages indicates an expected call of GetUsageStatisticsPages.
 func (mr *MockMacie2APIMockRecorder) GetUsageStatisticsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUsageStatisticsPages", reflect.TypeOf((*MockMacie2API)(nil).GetUsageStatisticsPages), arg0, arg1)
 }
 
-// GetUsageStatisticsPagesWithContext mocks base method
+// GetUsageStatisticsPagesWithContext mocks base method.
 func (m *MockMacie2API) GetUsageStatisticsPagesWithContext(arg0 context.Context, arg1 *macie2.GetUsageStatisticsInput, arg2 func(*macie2.GetUsageStatisticsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1709,14 +1860,14 @@ func (m *MockMacie2API) GetUsageStatisticsPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// GetUsageStatisticsPagesWithContext indicates an expected call of GetUsageStatisticsPagesWithContext
+// GetUsageStatisticsPagesWithContext indicates an expected call of GetUsageStatisticsPagesWithContext.
 func (mr *MockMacie2APIMockRecorder) GetUsageStatisticsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUsageStatisticsPagesWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetUsageStatisticsPagesWithContext), varargs...)
 }
 
-// GetUsageStatisticsRequest mocks base method
+// GetUsageStatisticsRequest mocks base method.
 func (m *MockMacie2API) GetUsageStatisticsRequest(arg0 *macie2.GetUsageStatisticsInput) (*request.Request, *macie2.GetUsageStatisticsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetUsageStatisticsRequest", arg0)
@@ -1725,13 +1876,13 @@ func (m *MockMacie2API) GetUsageStatisticsRequest(arg0 *macie2.GetUsageStatistic
 	return ret0, ret1
 }
 
-// GetUsageStatisticsRequest indicates an expected call of GetUsageStatisticsRequest
+// GetUsageStatisticsRequest indicates an expected call of GetUsageStatisticsRequest.
 func (mr *MockMacie2APIMockRecorder) GetUsageStatisticsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUsageStatisticsRequest", reflect.TypeOf((*MockMacie2API)(nil).GetUsageStatisticsRequest), arg0)
 }
 
-// GetUsageStatisticsWithContext mocks base method
+// GetUsageStatisticsWithContext mocks base method.
 func (m *MockMacie2API) GetUsageStatisticsWithContext(arg0 context.Context, arg1 *macie2.GetUsageStatisticsInput, arg2 ...request.Option) (*macie2.GetUsageStatisticsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1744,14 +1895,14 @@ func (m *MockMacie2API) GetUsageStatisticsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// GetUsageStatisticsWithContext indicates an expected call of GetUsageStatisticsWithContext
+// GetUsageStatisticsWithContext indicates an expected call of GetUsageStatisticsWithContext.
 func (mr *MockMacie2APIMockRecorder) GetUsageStatisticsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUsageStatisticsWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetUsageStatisticsWithContext), varargs...)
 }
 
-// GetUsageTotals mocks base method
+// GetUsageTotals mocks base method.
 func (m *MockMacie2API) GetUsageTotals(arg0 *macie2.GetUsageTotalsInput) (*macie2.GetUsageTotalsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetUsageTotals", arg0)
@@ -1760,13 +1911,13 @@ func (m *MockMacie2API) GetUsageTotals(arg0 *macie2.GetUsageTotalsInput) (*macie
 	return ret0, ret1
 }
 
-// GetUsageTotals indicates an expected call of GetUsageTotals
+// GetUsageTotals indicates an expected call of GetUsageTotals.
 func (mr *MockMacie2APIMockRecorder) GetUsageTotals(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUsageTotals", reflect.TypeOf((*MockMacie2API)(nil).GetUsageTotals), arg0)
 }
 
-// GetUsageTotalsRequest mocks base method
+// GetUsageTotalsRequest mocks base method.
 func (m *MockMacie2API) GetUsageTotalsRequest(arg0 *macie2.GetUsageTotalsInput) (*request.Request, *macie2.GetUsageTotalsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetUsageTotalsRequest", arg0)
@@ -1775,13 +1926,13 @@ func (m *MockMacie2API) GetUsageTotalsRequest(arg0 *macie2.GetUsageTotalsInput) 
 	return ret0, ret1
 }
 
-// GetUsageTotalsRequest indicates an expected call of GetUsageTotalsRequest
+// GetUsageTotalsRequest indicates an expected call of GetUsageTotalsRequest.
 func (mr *MockMacie2APIMockRecorder) GetUsageTotalsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUsageTotalsRequest", reflect.TypeOf((*MockMacie2API)(nil).GetUsageTotalsRequest), arg0)
 }
 
-// GetUsageTotalsWithContext mocks base method
+// GetUsageTotalsWithContext mocks base method.
 func (m *MockMacie2API) GetUsageTotalsWithContext(arg0 context.Context, arg1 *macie2.GetUsageTotalsInput, arg2 ...request.Option) (*macie2.GetUsageTotalsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1794,14 +1945,14 @@ func (m *MockMacie2API) GetUsageTotalsWithContext(arg0 context.Context, arg1 *ma
 	return ret0, ret1
 }
 
-// GetUsageTotalsWithContext indicates an expected call of GetUsageTotalsWithContext
+// GetUsageTotalsWithContext indicates an expected call of GetUsageTotalsWithContext.
 func (mr *MockMacie2APIMockRecorder) GetUsageTotalsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUsageTotalsWithContext", reflect.TypeOf((*MockMacie2API)(nil).GetUsageTotalsWithContext), varargs...)
 }
 
-// ListClassificationJobs mocks base method
+// ListClassificationJobs mocks base method.
 func (m *MockMacie2API) ListClassificationJobs(arg0 *macie2.ListClassificationJobsInput) (*macie2.ListClassificationJobsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListClassificationJobs", arg0)
@@ -1810,13 +1961,13 @@ func (m *MockMacie2API) ListClassificationJobs(arg0 *macie2.ListClassificationJo
 	return ret0, ret1
 }
 
-// ListClassificationJobs indicates an expected call of ListClassificationJobs
+// ListClassificationJobs indicates an expected call of ListClassificationJobs.
 func (mr *MockMacie2APIMockRecorder) ListClassificationJobs(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClassificationJobs", reflect.TypeOf((*MockMacie2API)(nil).ListClassificationJobs), arg0)
 }
 
-// ListClassificationJobsPages mocks base method
+// ListClassificationJobsPages mocks base method.
 func (m *MockMacie2API) ListClassificationJobsPages(arg0 *macie2.ListClassificationJobsInput, arg1 func(*macie2.ListClassificationJobsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListClassificationJobsPages", arg0, arg1)
@@ -1824,13 +1975,13 @@ func (m *MockMacie2API) ListClassificationJobsPages(arg0 *macie2.ListClassificat
 	return ret0
 }
 
-// ListClassificationJobsPages indicates an expected call of ListClassificationJobsPages
+// ListClassificationJobsPages indicates an expected call of ListClassificationJobsPages.
 func (mr *MockMacie2APIMockRecorder) ListClassificationJobsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClassificationJobsPages", reflect.TypeOf((*MockMacie2API)(nil).ListClassificationJobsPages), arg0, arg1)
 }
 
-// ListClassificationJobsPagesWithContext mocks base method
+// ListClassificationJobsPagesWithContext mocks base method.
 func (m *MockMacie2API) ListClassificationJobsPagesWithContext(arg0 context.Context, arg1 *macie2.ListClassificationJobsInput, arg2 func(*macie2.ListClassificationJobsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1842,14 +1993,14 @@ func (m *MockMacie2API) ListClassificationJobsPagesWithContext(arg0 context.Cont
 	return ret0
 }
 
-// ListClassificationJobsPagesWithContext indicates an expected call of ListClassificationJobsPagesWithContext
+// ListClassificationJobsPagesWithContext indicates an expected call of ListClassificationJobsPagesWithContext.
 func (mr *MockMacie2APIMockRecorder) ListClassificationJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClassificationJobsPagesWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListClassificationJobsPagesWithContext), varargs...)
 }
 
-// ListClassificationJobsRequest mocks base method
+// ListClassificationJobsRequest mocks base method.
 func (m *MockMacie2API) ListClassificationJobsRequest(arg0 *macie2.ListClassificationJobsInput) (*request.Request, *macie2.ListClassificationJobsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListClassificationJobsRequest", arg0)
@@ -1858,13 +2009,13 @@ func (m *MockMacie2API) ListClassificationJobsRequest(arg0 *macie2.ListClassific
 	return ret0, ret1
 }
 
-// ListClassificationJobsRequest indicates an expected call of ListClassificationJobsRequest
+// ListClassificationJobsRequest indicates an expected call of ListClassificationJobsRequest.
 func (mr *MockMacie2APIMockRecorder) ListClassificationJobsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClassificationJobsRequest", reflect.TypeOf((*MockMacie2API)(nil).ListClassificationJobsRequest), arg0)
 }
 
-// ListClassificationJobsWithContext mocks base method
+// ListClassificationJobsWithContext mocks base method.
 func (m *MockMacie2API) ListClassificationJobsWithContext(arg0 context.Context, arg1 *macie2.ListClassificationJobsInput, arg2 ...request.Option) (*macie2.ListClassificationJobsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1877,14 +2028,14 @@ func (m *MockMacie2API) ListClassificationJobsWithContext(arg0 context.Context, 
 	return ret0, ret1
 }
 
-// ListClassificationJobsWithContext indicates an expected call of ListClassificationJobsWithContext
+// ListClassificationJobsWithContext indicates an expected call of ListClassificationJobsWithContext.
 func (mr *MockMacie2APIMockRecorder) ListClassificationJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClassificationJobsWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListClassificationJobsWithContext), varargs...)
 }
 
-// ListCustomDataIdentifiers mocks base method
+// ListCustomDataIdentifiers mocks base method.
 func (m *MockMacie2API) ListCustomDataIdentifiers(arg0 *macie2.ListCustomDataIdentifiersInput) (*macie2.ListCustomDataIdentifiersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomDataIdentifiers", arg0)
@@ -1893,13 +2044,13 @@ func (m *MockMacie2API) ListCustomDataIdentifiers(arg0 *macie2.ListCustomDataIde
 	return ret0, ret1
 }
 
-// ListCustomDataIdentifiers indicates an expected call of ListCustomDataIdentifiers
+// ListCustomDataIdentifiers indicates an expected call of ListCustomDataIdentifiers.
 func (mr *MockMacie2APIMockRecorder) ListCustomDataIdentifiers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomDataIdentifiers", reflect.TypeOf((*MockMacie2API)(nil).ListCustomDataIdentifiers), arg0)
 }
 
-// ListCustomDataIdentifiersPages mocks base method
+// ListCustomDataIdentifiersPages mocks base method.
 func (m *MockMacie2API) ListCustomDataIdentifiersPages(arg0 *macie2.ListCustomDataIdentifiersInput, arg1 func(*macie2.ListCustomDataIdentifiersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomDataIdentifiersPages", arg0, arg1)
@@ -1907,13 +2058,13 @@ func (m *MockMacie2API) ListCustomDataIdentifiersPages(arg0 *macie2.ListCustomDa
 	return ret0
 }
 
-// ListCustomDataIdentifiersPages indicates an expected call of ListCustomDataIdentifiersPages
+// ListCustomDataIdentifiersPages indicates an expected call of ListCustomDataIdentifiersPages.
 func (mr *MockMacie2APIMockRecorder) ListCustomDataIdentifiersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomDataIdentifiersPages", reflect.TypeOf((*MockMacie2API)(nil).ListCustomDataIdentifiersPages), arg0, arg1)
 }
 
-// ListCustomDataIdentifiersPagesWithContext mocks base method
+// ListCustomDataIdentifiersPagesWithContext mocks base method.
 func (m *MockMacie2API) ListCustomDataIdentifiersPagesWithContext(arg0 context.Context, arg1 *macie2.ListCustomDataIdentifiersInput, arg2 func(*macie2.ListCustomDataIdentifiersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -1925,14 +2076,14 @@ func (m *MockMacie2API) ListCustomDataIdentifiersPagesWithContext(arg0 context.C
 	return ret0
 }
 
-// ListCustomDataIdentifiersPagesWithContext indicates an expected call of ListCustomDataIdentifiersPagesWithContext
+// ListCustomDataIdentifiersPagesWithContext indicates an expected call of ListCustomDataIdentifiersPagesWithContext.
 func (mr *MockMacie2APIMockRecorder) ListCustomDataIdentifiersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomDataIdentifiersPagesWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListCustomDataIdentifiersPagesWithContext), varargs...)
 }
 
-// ListCustomDataIdentifiersRequest mocks base method
+// ListCustomDataIdentifiersRequest mocks base method.
 func (m *MockMacie2API) ListCustomDataIdentifiersRequest(arg0 *macie2.ListCustomDataIdentifiersInput) (*request.Request, *macie2.ListCustomDataIdentifiersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListCustomDataIdentifiersRequest", arg0)
@@ -1941,13 +2092,13 @@ func (m *MockMacie2API) ListCustomDataIdentifiersRequest(arg0 *macie2.ListCustom
 	return ret0, ret1
 }
 
-// ListCustomDataIdentifiersRequest indicates an expected call of ListCustomDataIdentifiersRequest
+// ListCustomDataIdentifiersRequest indicates an expected call of ListCustomDataIdentifiersRequest.
 func (mr *MockMacie2APIMockRecorder) ListCustomDataIdentifiersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomDataIdentifiersRequest", reflect.TypeOf((*MockMacie2API)(nil).ListCustomDataIdentifiersRequest), arg0)
 }
 
-// ListCustomDataIdentifiersWithContext mocks base method
+// ListCustomDataIdentifiersWithContext mocks base method.
 func (m *MockMacie2API) ListCustomDataIdentifiersWithContext(arg0 context.Context, arg1 *macie2.ListCustomDataIdentifiersInput, arg2 ...request.Option) (*macie2.ListCustomDataIdentifiersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -1960,14 +2111,14 @@ func (m *MockMacie2API) ListCustomDataIdentifiersWithContext(arg0 context.Contex
 	return ret0, ret1
 }
 
-// ListCustomDataIdentifiersWithContext indicates an expected call of ListCustomDataIdentifiersWithContext
+// ListCustomDataIdentifiersWithContext indicates an expected call of ListCustomDataIdentifiersWithContext.
 func (mr *MockMacie2APIMockRecorder) ListCustomDataIdentifiersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCustomDataIdentifiersWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListCustomDataIdentifiersWithContext), varargs...)
 }
 
-// ListFindings mocks base method
+// ListFindings mocks base method.
 func (m *MockMacie2API) ListFindings(arg0 *macie2.ListFindingsInput) (*macie2.ListFindingsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFindings", arg0)
@@ -1976,13 +2127,13 @@ func (m *MockMacie2API) ListFindings(arg0 *macie2.ListFindingsInput) (*macie2.Li
 	return ret0, ret1
 }
 
-// ListFindings indicates an expected call of ListFindings
+// ListFindings indicates an expected call of ListFindings.
 func (mr *MockMacie2APIMockRecorder) ListFindings(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindings", reflect.TypeOf((*MockMacie2API)(nil).ListFindings), arg0)
 }
 
-// ListFindingsFilters mocks base method
+// ListFindingsFilters mocks base method.
 func (m *MockMacie2API) ListFindingsFilters(arg0 *macie2.ListFindingsFiltersInput) (*macie2.ListFindingsFiltersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFindingsFilters", arg0)
@@ -1991,13 +2142,13 @@ func (m *MockMacie2API) ListFindingsFilters(arg0 *macie2.ListFindingsFiltersInpu
 	return ret0, ret1
 }
 
-// ListFindingsFilters indicates an expected call of ListFindingsFilters
+// ListFindingsFilters indicates an expected call of ListFindingsFilters.
 func (mr *MockMacie2APIMockRecorder) ListFindingsFilters(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsFilters", reflect.TypeOf((*MockMacie2API)(nil).ListFindingsFilters), arg0)
 }
 
-// ListFindingsFiltersPages mocks base method
+// ListFindingsFiltersPages mocks base method.
 func (m *MockMacie2API) ListFindingsFiltersPages(arg0 *macie2.ListFindingsFiltersInput, arg1 func(*macie2.ListFindingsFiltersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFindingsFiltersPages", arg0, arg1)
@@ -2005,13 +2156,13 @@ func (m *MockMacie2API) ListFindingsFiltersPages(arg0 *macie2.ListFindingsFilter
 	return ret0
 }
 
-// ListFindingsFiltersPages indicates an expected call of ListFindingsFiltersPages
+// ListFindingsFiltersPages indicates an expected call of ListFindingsFiltersPages.
 func (mr *MockMacie2APIMockRecorder) ListFindingsFiltersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsFiltersPages", reflect.TypeOf((*MockMacie2API)(nil).ListFindingsFiltersPages), arg0, arg1)
 }
 
-// ListFindingsFiltersPagesWithContext mocks base method
+// ListFindingsFiltersPagesWithContext mocks base method.
 func (m *MockMacie2API) ListFindingsFiltersPagesWithContext(arg0 context.Context, arg1 *macie2.ListFindingsFiltersInput, arg2 func(*macie2.ListFindingsFiltersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2023,14 +2174,14 @@ func (m *MockMacie2API) ListFindingsFiltersPagesWithContext(arg0 context.Context
 	return ret0
 }
 
-// ListFindingsFiltersPagesWithContext indicates an expected call of ListFindingsFiltersPagesWithContext
+// ListFindingsFiltersPagesWithContext indicates an expected call of ListFindingsFiltersPagesWithContext.
 func (mr *MockMacie2APIMockRecorder) ListFindingsFiltersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsFiltersPagesWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListFindingsFiltersPagesWithContext), varargs...)
 }
 
-// ListFindingsFiltersRequest mocks base method
+// ListFindingsFiltersRequest mocks base method.
 func (m *MockMacie2API) ListFindingsFiltersRequest(arg0 *macie2.ListFindingsFiltersInput) (*request.Request, *macie2.ListFindingsFiltersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFindingsFiltersRequest", arg0)
@@ -2039,13 +2190,13 @@ func (m *MockMacie2API) ListFindingsFiltersRequest(arg0 *macie2.ListFindingsFilt
 	return ret0, ret1
 }
 
-// ListFindingsFiltersRequest indicates an expected call of ListFindingsFiltersRequest
+// ListFindingsFiltersRequest indicates an expected call of ListFindingsFiltersRequest.
 func (mr *MockMacie2APIMockRecorder) ListFindingsFiltersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsFiltersRequest", reflect.TypeOf((*MockMacie2API)(nil).ListFindingsFiltersRequest), arg0)
 }
 
-// ListFindingsFiltersWithContext mocks base method
+// ListFindingsFiltersWithContext mocks base method.
 func (m *MockMacie2API) ListFindingsFiltersWithContext(arg0 context.Context, arg1 *macie2.ListFindingsFiltersInput, arg2 ...request.Option) (*macie2.ListFindingsFiltersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2058,14 +2209,14 @@ func (m *MockMacie2API) ListFindingsFiltersWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListFindingsFiltersWithContext indicates an expected call of ListFindingsFiltersWithContext
+// ListFindingsFiltersWithContext indicates an expected call of ListFindingsFiltersWithContext.
 func (mr *MockMacie2APIMockRecorder) ListFindingsFiltersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsFiltersWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListFindingsFiltersWithContext), varargs...)
 }
 
-// ListFindingsPages mocks base method
+// ListFindingsPages mocks base method.
 func (m *MockMacie2API) ListFindingsPages(arg0 *macie2.ListFindingsInput, arg1 func(*macie2.ListFindingsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFindingsPages", arg0, arg1)
@@ -2073,13 +2224,13 @@ func (m *MockMacie2API) ListFindingsPages(arg0 *macie2.ListFindingsInput, arg1 f
 	return ret0
 }
 
-// ListFindingsPages indicates an expected call of ListFindingsPages
+// ListFindingsPages indicates an expected call of ListFindingsPages.
 func (mr *MockMacie2APIMockRecorder) ListFindingsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsPages", reflect.TypeOf((*MockMacie2API)(nil).ListFindingsPages), arg0, arg1)
 }
 
-// ListFindingsPagesWithContext mocks base method
+// ListFindingsPagesWithContext mocks base method.
 func (m *MockMacie2API) ListFindingsPagesWithContext(arg0 context.Context, arg1 *macie2.ListFindingsInput, arg2 func(*macie2.ListFindingsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2091,14 +2242,14 @@ func (m *MockMacie2API) ListFindingsPagesWithContext(arg0 context.Context, arg1 
 	return ret0
 }
 
-// ListFindingsPagesWithContext indicates an expected call of ListFindingsPagesWithContext
+// ListFindingsPagesWithContext indicates an expected call of ListFindingsPagesWithContext.
 func (mr *MockMacie2APIMockRecorder) ListFindingsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsPagesWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListFindingsPagesWithContext), varargs...)
 }
 
-// ListFindingsRequest mocks base method
+// ListFindingsRequest mocks base method.
 func (m *MockMacie2API) ListFindingsRequest(arg0 *macie2.ListFindingsInput) (*request.Request, *macie2.ListFindingsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListFindingsRequest", arg0)
@@ -2107,13 +2258,13 @@ func (m *MockMacie2API) ListFindingsRequest(arg0 *macie2.ListFindingsInput) (*re
 	return ret0, ret1
 }
 
-// ListFindingsRequest indicates an expected call of ListFindingsRequest
+// ListFindingsRequest indicates an expected call of ListFindingsRequest.
 func (mr *MockMacie2APIMockRecorder) ListFindingsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsRequest", reflect.TypeOf((*MockMacie2API)(nil).ListFindingsRequest), arg0)
 }
 
-// ListFindingsWithContext mocks base method
+// ListFindingsWithContext mocks base method.
 func (m *MockMacie2API) ListFindingsWithContext(arg0 context.Context, arg1 *macie2.ListFindingsInput, arg2 ...request.Option) (*macie2.ListFindingsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2126,14 +2277,14 @@ func (m *MockMacie2API) ListFindingsWithContext(arg0 context.Context, arg1 *maci
 	return ret0, ret1
 }
 
-// ListFindingsWithContext indicates an expected call of ListFindingsWithContext
+// ListFindingsWithContext indicates an expected call of ListFindingsWithContext.
 func (mr *MockMacie2APIMockRecorder) ListFindingsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListFindingsWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListFindingsWithContext), varargs...)
 }
 
-// ListInvitations mocks base method
+// ListInvitations mocks base method.
 func (m *MockMacie2API) ListInvitations(arg0 *macie2.ListInvitationsInput) (*macie2.ListInvitationsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInvitations", arg0)
@@ -2142,13 +2293,13 @@ func (m *MockMacie2API) ListInvitations(arg0 *macie2.ListInvitationsInput) (*mac
 	return ret0, ret1
 }
 
-// ListInvitations indicates an expected call of ListInvitations
+// ListInvitations indicates an expected call of ListInvitations.
 func (mr *MockMacie2APIMockRecorder) ListInvitations(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInvitations", reflect.TypeOf((*MockMacie2API)(nil).ListInvitations), arg0)
 }
 
-// ListInvitationsPages mocks base method
+// ListInvitationsPages mocks base method.
 func (m *MockMacie2API) ListInvitationsPages(arg0 *macie2.ListInvitationsInput, arg1 func(*macie2.ListInvitationsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInvitationsPages", arg0, arg1)
@@ -2156,13 +2307,13 @@ func (m *MockMacie2API) ListInvitationsPages(arg0 *macie2.ListInvitationsInput, 
 	return ret0
 }
 
-// ListInvitationsPages indicates an expected call of ListInvitationsPages
+// ListInvitationsPages indicates an expected call of ListInvitationsPages.
 func (mr *MockMacie2APIMockRecorder) ListInvitationsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInvitationsPages", reflect.TypeOf((*MockMacie2API)(nil).ListInvitationsPages), arg0, arg1)
 }
 
-// ListInvitationsPagesWithContext mocks base method
+// ListInvitationsPagesWithContext mocks base method.
 func (m *MockMacie2API) ListInvitationsPagesWithContext(arg0 context.Context, arg1 *macie2.ListInvitationsInput, arg2 func(*macie2.ListInvitationsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2174,14 +2325,14 @@ func (m *MockMacie2API) ListInvitationsPagesWithContext(arg0 context.Context, ar
 	return ret0
 }
 
-// ListInvitationsPagesWithContext indicates an expected call of ListInvitationsPagesWithContext
+// ListInvitationsPagesWithContext indicates an expected call of ListInvitationsPagesWithContext.
 func (mr *MockMacie2APIMockRecorder) ListInvitationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInvitationsPagesWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListInvitationsPagesWithContext), varargs...)
 }
 
-// ListInvitationsRequest mocks base method
+// ListInvitationsRequest mocks base method.
 func (m *MockMacie2API) ListInvitationsRequest(arg0 *macie2.ListInvitationsInput) (*request.Request, *macie2.ListInvitationsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListInvitationsRequest", arg0)
@@ -2190,13 +2341,13 @@ func (m *MockMacie2API) ListInvitationsRequest(arg0 *macie2.ListInvitationsInput
 	return ret0, ret1
 }
 
-// ListInvitationsRequest indicates an expected call of ListInvitationsRequest
+// ListInvitationsRequest indicates an expected call of ListInvitationsRequest.
 func (mr *MockMacie2APIMockRecorder) ListInvitationsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInvitationsRequest", reflect.TypeOf((*MockMacie2API)(nil).ListInvitationsRequest), arg0)
 }
 
-// ListInvitationsWithContext mocks base method
+// ListInvitationsWithContext mocks base method.
 func (m *MockMacie2API) ListInvitationsWithContext(arg0 context.Context, arg1 *macie2.ListInvitationsInput, arg2 ...request.Option) (*macie2.ListInvitationsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2209,14 +2360,14 @@ func (m *MockMacie2API) ListInvitationsWithContext(arg0 context.Context, arg1 *m
 	return ret0, ret1
 }
 
-// ListInvitationsWithContext indicates an expected call of ListInvitationsWithContext
+// ListInvitationsWithContext indicates an expected call of ListInvitationsWithContext.
 func (mr *MockMacie2APIMockRecorder) ListInvitationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListInvitationsWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListInvitationsWithContext), varargs...)
 }
 
-// ListMembers mocks base method
+// ListMembers mocks base method.
 func (m *MockMacie2API) ListMembers(arg0 *macie2.ListMembersInput) (*macie2.ListMembersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMembers", arg0)
@@ -2225,13 +2376,13 @@ func (m *MockMacie2API) ListMembers(arg0 *macie2.ListMembersInput) (*macie2.List
 	return ret0, ret1
 }
 
-// ListMembers indicates an expected call of ListMembers
+// ListMembers indicates an expected call of ListMembers.
 func (mr *MockMacie2APIMockRecorder) ListMembers(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMembers", reflect.TypeOf((*MockMacie2API)(nil).ListMembers), arg0)
 }
 
-// ListMembersPages mocks base method
+// ListMembersPages mocks base method.
 func (m *MockMacie2API) ListMembersPages(arg0 *macie2.ListMembersInput, arg1 func(*macie2.ListMembersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMembersPages", arg0, arg1)
@@ -2239,13 +2390,13 @@ func (m *MockMacie2API) ListMembersPages(arg0 *macie2.ListMembersInput, arg1 fun
 	return ret0
 }
 
-// ListMembersPages indicates an expected call of ListMembersPages
+// ListMembersPages indicates an expected call of ListMembersPages.
 func (mr *MockMacie2APIMockRecorder) ListMembersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMembersPages", reflect.TypeOf((*MockMacie2API)(nil).ListMembersPages), arg0, arg1)
 }
 
-// ListMembersPagesWithContext mocks base method
+// ListMembersPagesWithContext mocks base method.
 func (m *MockMacie2API) ListMembersPagesWithContext(arg0 context.Context, arg1 *macie2.ListMembersInput, arg2 func(*macie2.ListMembersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2257,14 +2408,14 @@ func (m *MockMacie2API) ListMembersPagesWithContext(arg0 context.Context, arg1 *
 	return ret0
 }
 
-// ListMembersPagesWithContext indicates an expected call of ListMembersPagesWithContext
+// ListMembersPagesWithContext indicates an expected call of ListMembersPagesWithContext.
 func (mr *MockMacie2APIMockRecorder) ListMembersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMembersPagesWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListMembersPagesWithContext), varargs...)
 }
 
-// ListMembersRequest mocks base method
+// ListMembersRequest mocks base method.
 func (m *MockMacie2API) ListMembersRequest(arg0 *macie2.ListMembersInput) (*request.Request, *macie2.ListMembersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListMembersRequest", arg0)
@@ -2273,13 +2424,13 @@ func (m *MockMacie2API) ListMembersRequest(arg0 *macie2.ListMembersInput) (*requ
 	return ret0, ret1
 }
 
-// ListMembersRequest indicates an expected call of ListMembersRequest
+// ListMembersRequest indicates an expected call of ListMembersRequest.
 func (mr *MockMacie2APIMockRecorder) ListMembersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMembersRequest", reflect.TypeOf((*MockMacie2API)(nil).ListMembersRequest), arg0)
 }
 
-// ListMembersWithContext mocks base method
+// ListMembersWithContext mocks base method.
 func (m *MockMacie2API) ListMembersWithContext(arg0 context.Context, arg1 *macie2.ListMembersInput, arg2 ...request.Option) (*macie2.ListMembersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2292,14 +2443,14 @@ func (m *MockMacie2API) ListMembersWithContext(arg0 context.Context, arg1 *macie
 	return ret0, ret1
 }
 
-// ListMembersWithContext indicates an expected call of ListMembersWithContext
+// ListMembersWithContext indicates an expected call of ListMembersWithContext.
 func (mr *MockMacie2APIMockRecorder) ListMembersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMembersWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListMembersWithContext), varargs...)
 }
 
-// ListOrganizationAdminAccounts mocks base method
+// ListOrganizationAdminAccounts mocks base method.
 func (m *MockMacie2API) ListOrganizationAdminAccounts(arg0 *macie2.ListOrganizationAdminAccountsInput) (*macie2.ListOrganizationAdminAccountsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListOrganizationAdminAccounts", arg0)
@@ -2308,13 +2459,13 @@ func (m *MockMacie2API) ListOrganizationAdminAccounts(arg0 *macie2.ListOrganizat
 	return ret0, ret1
 }
 
-// ListOrganizationAdminAccounts indicates an expected call of ListOrganizationAdminAccounts
+// ListOrganizationAdminAccounts indicates an expected call of ListOrganizationAdminAccounts.
 func (mr *MockMacie2APIMockRecorder) ListOrganizationAdminAccounts(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOrganizationAdminAccounts", reflect.TypeOf((*MockMacie2API)(nil).ListOrganizationAdminAccounts), arg0)
 }
 
-// ListOrganizationAdminAccountsPages mocks base method
+// ListOrganizationAdminAccountsPages mocks base method.
 func (m *MockMacie2API) ListOrganizationAdminAccountsPages(arg0 *macie2.ListOrganizationAdminAccountsInput, arg1 func(*macie2.ListOrganizationAdminAccountsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListOrganizationAdminAccountsPages", arg0, arg1)
@@ -2322,13 +2473,13 @@ func (m *MockMacie2API) ListOrganizationAdminAccountsPages(arg0 *macie2.ListOrga
 	return ret0
 }
 
-// ListOrganizationAdminAccountsPages indicates an expected call of ListOrganizationAdminAccountsPages
+// ListOrganizationAdminAccountsPages indicates an expected call of ListOrganizationAdminAccountsPages.
 func (mr *MockMacie2APIMockRecorder) ListOrganizationAdminAccountsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOrganizationAdminAccountsPages", reflect.TypeOf((*MockMacie2API)(nil).ListOrganizationAdminAccountsPages), arg0, arg1)
 }
 
-// ListOrganizationAdminAccountsPagesWithContext mocks base method
+// ListOrganizationAdminAccountsPagesWithContext mocks base method.
 func (m *MockMacie2API) ListOrganizationAdminAccountsPagesWithContext(arg0 context.Context, arg1 *macie2.ListOrganizationAdminAccountsInput, arg2 func(*macie2.ListOrganizationAdminAccountsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -2340,14 +2491,14 @@ func (m *MockMacie2API) ListOrganizationAdminAccountsPagesWithContext(arg0 conte
 	return ret0
 }
 
-// ListOrganizationAdminAccountsPagesWithContext indicates an expected call of ListOrganizationAdminAccountsPagesWithContext
+// ListOrganizationAdminAccountsPagesWithContext indicates an expected call of ListOrganizationAdminAccountsPagesWithContext.
 func (mr *MockMacie2APIMockRecorder) ListOrganizationAdminAccountsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOrganizationAdminAccountsPagesWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListOrganizationAdminAccountsPagesWithContext), varargs...)
 }
 
-// ListOrganizationAdminAccountsRequest mocks base method
+// ListOrganizationAdminAccountsRequest mocks base method.
 func (m *MockMacie2API) ListOrganizationAdminAccountsRequest(arg0 *macie2.ListOrganizationAdminAccountsInput) (*request.Request, *macie2.ListOrganizationAdminAccountsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListOrganizationAdminAccountsRequest", arg0)
@@ -2356,13 +2507,13 @@ func (m *MockMacie2API) ListOrganizationAdminAccountsRequest(arg0 *macie2.ListOr
 	return ret0, ret1
 }
 
-// ListOrganizationAdminAccountsRequest indicates an expected call of ListOrganizationAdminAccountsRequest
+// ListOrganizationAdminAccountsRequest indicates an expected call of ListOrganizationAdminAccountsRequest.
 func (mr *MockMacie2APIMockRecorder) ListOrganizationAdminAccountsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOrganizationAdminAccountsRequest", reflect.TypeOf((*MockMacie2API)(nil).ListOrganizationAdminAccountsRequest), arg0)
 }
 
-// ListOrganizationAdminAccountsWithContext mocks base method
+// ListOrganizationAdminAccountsWithContext mocks base method.
 func (m *MockMacie2API) ListOrganizationAdminAccountsWithContext(arg0 context.Context, arg1 *macie2.ListOrganizationAdminAccountsInput, arg2 ...request.Option) (*macie2.ListOrganizationAdminAccountsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2375,14 +2526,14 @@ func (m *MockMacie2API) ListOrganizationAdminAccountsWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// ListOrganizationAdminAccountsWithContext indicates an expected call of ListOrganizationAdminAccountsWithContext
+// ListOrganizationAdminAccountsWithContext indicates an expected call of ListOrganizationAdminAccountsWithContext.
 func (mr *MockMacie2APIMockRecorder) ListOrganizationAdminAccountsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOrganizationAdminAccountsWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListOrganizationAdminAccountsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockMacie2API) ListTagsForResource(arg0 *macie2.ListTagsForResourceInput) (*macie2.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -2391,13 +2542,13 @@ func (m *MockMacie2API) ListTagsForResource(arg0 *macie2.ListTagsForResourceInpu
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockMacie2APIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockMacie2API)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockMacie2API) ListTagsForResourceRequest(arg0 *macie2.ListTagsForResourceInput) (*request.Request, *macie2.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -2406,13 +2557,13 @@ func (m *MockMacie2API) ListTagsForResourceRequest(arg0 *macie2.ListTagsForResou
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockMacie2APIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockMacie2API)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockMacie2API) ListTagsForResourceWithContext(arg0 context.Context, arg1 *macie2.ListTagsForResourceInput, arg2 ...request.Option) (*macie2.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2425,14 +2576,14 @@ func (m *MockMacie2API) ListTagsForResourceWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockMacie2APIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockMacie2API)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// PutClassificationExportConfiguration mocks base method
+// PutClassificationExportConfiguration mocks base method.
 func (m *MockMacie2API) PutClassificationExportConfiguration(arg0 *macie2.PutClassificationExportConfigurationInput) (*macie2.PutClassificationExportConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutClassificationExportConfiguration", arg0)
@@ -2441,13 +2592,13 @@ func (m *MockMacie2API) PutClassificationExportConfiguration(arg0 *macie2.PutCla
 	return ret0, ret1
 }
 
-// PutClassificationExportConfiguration indicates an expected call of PutClassificationExportConfiguration
+// PutClassificationExportConfiguration indicates an expected call of PutClassificationExportConfiguration.
 func (mr *MockMacie2APIMockRecorder) PutClassificationExportConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutClassificationExportConfiguration", reflect.TypeOf((*MockMacie2API)(nil).PutClassificationExportConfiguration), arg0)
 }
 
-// PutClassificationExportConfigurationRequest mocks base method
+// PutClassificationExportConfigurationRequest mocks base method.
 func (m *MockMacie2API) PutClassificationExportConfigurationRequest(arg0 *macie2.PutClassificationExportConfigurationInput) (*request.Request, *macie2.PutClassificationExportConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "PutClassificationExportConfigurationRequest", arg0)
@@ -2456,13 +2607,13 @@ func (m *MockMacie2API) PutClassificationExportConfigurationRequest(arg0 *macie2
 	return ret0, ret1
 }
 
-// PutClassificationExportConfigurationRequest indicates an expected call of PutClassificationExportConfigurationRequest
+// PutClassificationExportConfigurationRequest indicates an expected call of PutClassificationExportConfigurationRequest.
 func (mr *MockMacie2APIMockRecorder) PutClassificationExportConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutClassificationExportConfigurationRequest", reflect.TypeOf((*MockMacie2API)(nil).PutClassificationExportConfigurationRequest), arg0)
 }
 
-// PutClassificationExportConfigurationWithContext mocks base method
+// PutClassificationExportConfigurationWithContext mocks base method.
 func (m *MockMacie2API) PutClassificationExportConfigurationWithContext(arg0 context.Context, arg1 *macie2.PutClassificationExportConfigurationInput, arg2 ...request.Option) (*macie2.PutClassificationExportConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2475,14 +2626,64 @@ func (m *MockMacie2API) PutClassificationExportConfigurationWithContext(arg0 con
 	return ret0, ret1
 }
 
-// PutClassificationExportConfigurationWithContext indicates an expected call of PutClassificationExportConfigurationWithContext
+// PutClassificationExportConfigurationWithContext indicates an expected call of PutClassificationExportConfigurationWithContext.
 func (mr *MockMacie2APIMockRecorder) PutClassificationExportConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutClassificationExportConfigurationWithContext", reflect.TypeOf((*MockMacie2API)(nil).PutClassificationExportConfigurationWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// PutFindingsPublicationConfiguration mocks base method.
+func (m *MockMacie2API) PutFindingsPublicationConfiguration(arg0 *macie2.PutFindingsPublicationConfigurationInput) (*macie2.PutFindingsPublicationConfigurationOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "PutFindingsPublicationConfiguration", arg0)
+	ret0, _ := ret[0].(*macie2.PutFindingsPublicationConfigurationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// PutFindingsPublicationConfiguration indicates an expected call of PutFindingsPublicationConfiguration.
+func (mr *MockMacie2APIMockRecorder) PutFindingsPublicationConfiguration(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutFindingsPublicationConfiguration", reflect.TypeOf((*MockMacie2API)(nil).PutFindingsPublicationConfiguration), arg0)
+}
+
+// PutFindingsPublicationConfigurationRequest mocks base method.
+func (m *MockMacie2API) PutFindingsPublicationConfigurationRequest(arg0 *macie2.PutFindingsPublicationConfigurationInput) (*request.Request, *macie2.PutFindingsPublicationConfigurationOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "PutFindingsPublicationConfigurationRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*macie2.PutFindingsPublicationConfigurationOutput)
+	return ret0, ret1
+}
+
+// PutFindingsPublicationConfigurationRequest indicates an expected call of PutFindingsPublicationConfigurationRequest.
+func (mr *MockMacie2APIMockRecorder) PutFindingsPublicationConfigurationRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutFindingsPublicationConfigurationRequest", reflect.TypeOf((*MockMacie2API)(nil).PutFindingsPublicationConfigurationRequest), arg0)
+}
+
+// PutFindingsPublicationConfigurationWithContext mocks base method.
+func (m *MockMacie2API) PutFindingsPublicationConfigurationWithContext(arg0 context.Context, arg1 *macie2.PutFindingsPublicationConfigurationInput, arg2 ...request.Option) (*macie2.PutFindingsPublicationConfigurationOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "PutFindingsPublicationConfigurationWithContext", varargs...)
+	ret0, _ := ret[0].(*macie2.PutFindingsPublicationConfigurationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// PutFindingsPublicationConfigurationWithContext indicates an expected call of PutFindingsPublicationConfigurationWithContext.
+func (mr *MockMacie2APIMockRecorder) PutFindingsPublicationConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutFindingsPublicationConfigurationWithContext", reflect.TypeOf((*MockMacie2API)(nil).PutFindingsPublicationConfigurationWithContext), varargs...)
+}
+
+// TagResource mocks base method.
 func (m *MockMacie2API) TagResource(arg0 *macie2.TagResourceInput) (*macie2.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -2491,13 +2692,13 @@ func (m *MockMacie2API) TagResource(arg0 *macie2.TagResourceInput) (*macie2.TagR
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockMacie2APIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockMacie2API)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockMacie2API) TagResourceRequest(arg0 *macie2.TagResourceInput) (*request.Request, *macie2.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -2506,13 +2707,13 @@ func (m *MockMacie2API) TagResourceRequest(arg0 *macie2.TagResourceInput) (*requ
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockMacie2APIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockMacie2API)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockMacie2API) TagResourceWithContext(arg0 context.Context, arg1 *macie2.TagResourceInput, arg2 ...request.Option) (*macie2.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2525,14 +2726,14 @@ func (m *MockMacie2API) TagResourceWithContext(arg0 context.Context, arg1 *macie
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockMacie2APIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockMacie2API)(nil).TagResourceWithContext), varargs...)
 }
 
-// TestCustomDataIdentifier mocks base method
+// TestCustomDataIdentifier mocks base method.
 func (m *MockMacie2API) TestCustomDataIdentifier(arg0 *macie2.TestCustomDataIdentifierInput) (*macie2.TestCustomDataIdentifierOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TestCustomDataIdentifier", arg0)
@@ -2541,13 +2742,13 @@ func (m *MockMacie2API) TestCustomDataIdentifier(arg0 *macie2.TestCustomDataIden
 	return ret0, ret1
 }
 
-// TestCustomDataIdentifier indicates an expected call of TestCustomDataIdentifier
+// TestCustomDataIdentifier indicates an expected call of TestCustomDataIdentifier.
 func (mr *MockMacie2APIMockRecorder) TestCustomDataIdentifier(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TestCustomDataIdentifier", reflect.TypeOf((*MockMacie2API)(nil).TestCustomDataIdentifier), arg0)
 }
 
-// TestCustomDataIdentifierRequest mocks base method
+// TestCustomDataIdentifierRequest mocks base method.
 func (m *MockMacie2API) TestCustomDataIdentifierRequest(arg0 *macie2.TestCustomDataIdentifierInput) (*request.Request, *macie2.TestCustomDataIdentifierOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TestCustomDataIdentifierRequest", arg0)
@@ -2556,13 +2757,13 @@ func (m *MockMacie2API) TestCustomDataIdentifierRequest(arg0 *macie2.TestCustomD
 	return ret0, ret1
 }
 
-// TestCustomDataIdentifierRequest indicates an expected call of TestCustomDataIdentifierRequest
+// TestCustomDataIdentifierRequest indicates an expected call of TestCustomDataIdentifierRequest.
 func (mr *MockMacie2APIMockRecorder) TestCustomDataIdentifierRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TestCustomDataIdentifierRequest", reflect.TypeOf((*MockMacie2API)(nil).TestCustomDataIdentifierRequest), arg0)
 }
 
-// TestCustomDataIdentifierWithContext mocks base method
+// TestCustomDataIdentifierWithContext mocks base method.
 func (m *MockMacie2API) TestCustomDataIdentifierWithContext(arg0 context.Context, arg1 *macie2.TestCustomDataIdentifierInput, arg2 ...request.Option) (*macie2.TestCustomDataIdentifierOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2575,14 +2776,14 @@ func (m *MockMacie2API) TestCustomDataIdentifierWithContext(arg0 context.Context
 	return ret0, ret1
 }
 
-// TestCustomDataIdentifierWithContext indicates an expected call of TestCustomDataIdentifierWithContext
+// TestCustomDataIdentifierWithContext indicates an expected call of TestCustomDataIdentifierWithContext.
 func (mr *MockMacie2APIMockRecorder) TestCustomDataIdentifierWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TestCustomDataIdentifierWithContext", reflect.TypeOf((*MockMacie2API)(nil).TestCustomDataIdentifierWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockMacie2API) UntagResource(arg0 *macie2.UntagResourceInput) (*macie2.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -2591,13 +2792,13 @@ func (m *MockMacie2API) UntagResource(arg0 *macie2.UntagResourceInput) (*macie2.
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockMacie2APIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockMacie2API)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockMacie2API) UntagResourceRequest(arg0 *macie2.UntagResourceInput) (*request.Request, *macie2.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -2606,13 +2807,13 @@ func (m *MockMacie2API) UntagResourceRequest(arg0 *macie2.UntagResourceInput) (*
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockMacie2APIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockMacie2API)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockMacie2API) UntagResourceWithContext(arg0 context.Context, arg1 *macie2.UntagResourceInput, arg2 ...request.Option) (*macie2.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2625,14 +2826,14 @@ func (m *MockMacie2API) UntagResourceWithContext(arg0 context.Context, arg1 *mac
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockMacie2APIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockMacie2API)(nil).UntagResourceWithContext), varargs...)
 }
 
-// UpdateClassificationJob mocks base method
+// UpdateClassificationJob mocks base method.
 func (m *MockMacie2API) UpdateClassificationJob(arg0 *macie2.UpdateClassificationJobInput) (*macie2.UpdateClassificationJobOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateClassificationJob", arg0)
@@ -2641,13 +2842,13 @@ func (m *MockMacie2API) UpdateClassificationJob(arg0 *macie2.UpdateClassificatio
 	return ret0, ret1
 }
 
-// UpdateClassificationJob indicates an expected call of UpdateClassificationJob
+// UpdateClassificationJob indicates an expected call of UpdateClassificationJob.
 func (mr *MockMacie2APIMockRecorder) UpdateClassificationJob(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateClassificationJob", reflect.TypeOf((*MockMacie2API)(nil).UpdateClassificationJob), arg0)
 }
 
-// UpdateClassificationJobRequest mocks base method
+// UpdateClassificationJobRequest mocks base method.
 func (m *MockMacie2API) UpdateClassificationJobRequest(arg0 *macie2.UpdateClassificationJobInput) (*request.Request, *macie2.UpdateClassificationJobOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateClassificationJobRequest", arg0)
@@ -2656,13 +2857,13 @@ func (m *MockMacie2API) UpdateClassificationJobRequest(arg0 *macie2.UpdateClassi
 	return ret0, ret1
 }
 
-// UpdateClassificationJobRequest indicates an expected call of UpdateClassificationJobRequest
+// UpdateClassificationJobRequest indicates an expected call of UpdateClassificationJobRequest.
 func (mr *MockMacie2APIMockRecorder) UpdateClassificationJobRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateClassificationJobRequest", reflect.TypeOf((*MockMacie2API)(nil).UpdateClassificationJobRequest), arg0)
 }
 
-// UpdateClassificationJobWithContext mocks base method
+// UpdateClassificationJobWithContext mocks base method.
 func (m *MockMacie2API) UpdateClassificationJobWithContext(arg0 context.Context, arg1 *macie2.UpdateClassificationJobInput, arg2 ...request.Option) (*macie2.UpdateClassificationJobOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2675,14 +2876,14 @@ func (m *MockMacie2API) UpdateClassificationJobWithContext(arg0 context.Context,
 	return ret0, ret1
 }
 
-// UpdateClassificationJobWithContext indicates an expected call of UpdateClassificationJobWithContext
+// UpdateClassificationJobWithContext indicates an expected call of UpdateClassificationJobWithContext.
 func (mr *MockMacie2APIMockRecorder) UpdateClassificationJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateClassificationJobWithContext", reflect.TypeOf((*MockMacie2API)(nil).UpdateClassificationJobWithContext), varargs...)
 }
 
-// UpdateFindingsFilter mocks base method
+// UpdateFindingsFilter mocks base method.
 func (m *MockMacie2API) UpdateFindingsFilter(arg0 *macie2.UpdateFindingsFilterInput) (*macie2.UpdateFindingsFilterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFindingsFilter", arg0)
@@ -2691,13 +2892,13 @@ func (m *MockMacie2API) UpdateFindingsFilter(arg0 *macie2.UpdateFindingsFilterIn
 	return ret0, ret1
 }
 
-// UpdateFindingsFilter indicates an expected call of UpdateFindingsFilter
+// UpdateFindingsFilter indicates an expected call of UpdateFindingsFilter.
 func (mr *MockMacie2APIMockRecorder) UpdateFindingsFilter(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFindingsFilter", reflect.TypeOf((*MockMacie2API)(nil).UpdateFindingsFilter), arg0)
 }
 
-// UpdateFindingsFilterRequest mocks base method
+// UpdateFindingsFilterRequest mocks base method.
 func (m *MockMacie2API) UpdateFindingsFilterRequest(arg0 *macie2.UpdateFindingsFilterInput) (*request.Request, *macie2.UpdateFindingsFilterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateFindingsFilterRequest", arg0)
@@ -2706,13 +2907,13 @@ func (m *MockMacie2API) UpdateFindingsFilterRequest(arg0 *macie2.UpdateFindingsF
 	return ret0, ret1
 }
 
-// UpdateFindingsFilterRequest indicates an expected call of UpdateFindingsFilterRequest
+// UpdateFindingsFilterRequest indicates an expected call of UpdateFindingsFilterRequest.
 func (mr *MockMacie2APIMockRecorder) UpdateFindingsFilterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFindingsFilterRequest", reflect.TypeOf((*MockMacie2API)(nil).UpdateFindingsFilterRequest), arg0)
 }
 
-// UpdateFindingsFilterWithContext mocks base method
+// UpdateFindingsFilterWithContext mocks base method.
 func (m *MockMacie2API) UpdateFindingsFilterWithContext(arg0 context.Context, arg1 *macie2.UpdateFindingsFilterInput, arg2 ...request.Option) (*macie2.UpdateFindingsFilterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2725,14 +2926,14 @@ func (m *MockMacie2API) UpdateFindingsFilterWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UpdateFindingsFilterWithContext indicates an expected call of UpdateFindingsFilterWithContext
+// UpdateFindingsFilterWithContext indicates an expected call of UpdateFindingsFilterWithContext.
 func (mr *MockMacie2APIMockRecorder) UpdateFindingsFilterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFindingsFilterWithContext", reflect.TypeOf((*MockMacie2API)(nil).UpdateFindingsFilterWithContext), varargs...)
 }
 
-// UpdateMacieSession mocks base method
+// UpdateMacieSession mocks base method.
 func (m *MockMacie2API) UpdateMacieSession(arg0 *macie2.UpdateMacieSessionInput) (*macie2.UpdateMacieSessionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMacieSession", arg0)
@@ -2741,13 +2942,13 @@ func (m *MockMacie2API) UpdateMacieSession(arg0 *macie2.UpdateMacieSessionInput)
 	return ret0, ret1
 }
 
-// UpdateMacieSession indicates an expected call of UpdateMacieSession
+// UpdateMacieSession indicates an expected call of UpdateMacieSession.
 func (mr *MockMacie2APIMockRecorder) UpdateMacieSession(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMacieSession", reflect.TypeOf((*MockMacie2API)(nil).UpdateMacieSession), arg0)
 }
 
-// UpdateMacieSessionRequest mocks base method
+// UpdateMacieSessionRequest mocks base method.
 func (m *MockMacie2API) UpdateMacieSessionRequest(arg0 *macie2.UpdateMacieSessionInput) (*request.Request, *macie2.UpdateMacieSessionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMacieSessionRequest", arg0)
@@ -2756,13 +2957,13 @@ func (m *MockMacie2API) UpdateMacieSessionRequest(arg0 *macie2.UpdateMacieSessio
 	return ret0, ret1
 }
 
-// UpdateMacieSessionRequest indicates an expected call of UpdateMacieSessionRequest
+// UpdateMacieSessionRequest indicates an expected call of UpdateMacieSessionRequest.
 func (mr *MockMacie2APIMockRecorder) UpdateMacieSessionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMacieSessionRequest", reflect.TypeOf((*MockMacie2API)(nil).UpdateMacieSessionRequest), arg0)
 }
 
-// UpdateMacieSessionWithContext mocks base method
+// UpdateMacieSessionWithContext mocks base method.
 func (m *MockMacie2API) UpdateMacieSessionWithContext(arg0 context.Context, arg1 *macie2.UpdateMacieSessionInput, arg2 ...request.Option) (*macie2.UpdateMacieSessionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2775,14 +2976,14 @@ func (m *MockMacie2API) UpdateMacieSessionWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// UpdateMacieSessionWithContext indicates an expected call of UpdateMacieSessionWithContext
+// UpdateMacieSessionWithContext indicates an expected call of UpdateMacieSessionWithContext.
 func (mr *MockMacie2APIMockRecorder) UpdateMacieSessionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMacieSessionWithContext", reflect.TypeOf((*MockMacie2API)(nil).UpdateMacieSessionWithContext), varargs...)
 }
 
-// UpdateMemberSession mocks base method
+// UpdateMemberSession mocks base method.
 func (m *MockMacie2API) UpdateMemberSession(arg0 *macie2.UpdateMemberSessionInput) (*macie2.UpdateMemberSessionOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMemberSession", arg0)
@@ -2791,13 +2992,13 @@ func (m *MockMacie2API) UpdateMemberSession(arg0 *macie2.UpdateMemberSessionInpu
 	return ret0, ret1
 }
 
-// UpdateMemberSession indicates an expected call of UpdateMemberSession
+// UpdateMemberSession indicates an expected call of UpdateMemberSession.
 func (mr *MockMacie2APIMockRecorder) UpdateMemberSession(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMemberSession", reflect.TypeOf((*MockMacie2API)(nil).UpdateMemberSession), arg0)
 }
 
-// UpdateMemberSessionRequest mocks base method
+// UpdateMemberSessionRequest mocks base method.
 func (m *MockMacie2API) UpdateMemberSessionRequest(arg0 *macie2.UpdateMemberSessionInput) (*request.Request, *macie2.UpdateMemberSessionOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateMemberSessionRequest", arg0)
@@ -2806,13 +3007,13 @@ func (m *MockMacie2API) UpdateMemberSessionRequest(arg0 *macie2.UpdateMemberSess
 	return ret0, ret1
 }
 
-// UpdateMemberSessionRequest indicates an expected call of UpdateMemberSessionRequest
+// UpdateMemberSessionRequest indicates an expected call of UpdateMemberSessionRequest.
 func (mr *MockMacie2APIMockRecorder) UpdateMemberSessionRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMemberSessionRequest", reflect.TypeOf((*MockMacie2API)(nil).UpdateMemberSessionRequest), arg0)
 }
 
-// UpdateMemberSessionWithContext mocks base method
+// UpdateMemberSessionWithContext mocks base method.
 func (m *MockMacie2API) UpdateMemberSessionWithContext(arg0 context.Context, arg1 *macie2.UpdateMemberSessionInput, arg2 ...request.Option) (*macie2.UpdateMemberSessionOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2825,14 +3026,14 @@ func (m *MockMacie2API) UpdateMemberSessionWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// UpdateMemberSessionWithContext indicates an expected call of UpdateMemberSessionWithContext
+// UpdateMemberSessionWithContext indicates an expected call of UpdateMemberSessionWithContext.
 func (mr *MockMacie2APIMockRecorder) UpdateMemberSessionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMemberSessionWithContext", reflect.TypeOf((*MockMacie2API)(nil).UpdateMemberSessionWithContext), varargs...)
 }
 
-// UpdateOrganizationConfiguration mocks base method
+// UpdateOrganizationConfiguration mocks base method.
 func (m *MockMacie2API) UpdateOrganizationConfiguration(arg0 *macie2.UpdateOrganizationConfigurationInput) (*macie2.UpdateOrganizationConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateOrganizationConfiguration", arg0)
@@ -2841,13 +3042,13 @@ func (m *MockMacie2API) UpdateOrganizationConfiguration(arg0 *macie2.UpdateOrgan
 	return ret0, ret1
 }
 
-// UpdateOrganizationConfiguration indicates an expected call of UpdateOrganizationConfiguration
+// UpdateOrganizationConfiguration indicates an expected call of UpdateOrganizationConfiguration.
 func (mr *MockMacie2APIMockRecorder) UpdateOrganizationConfiguration(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateOrganizationConfiguration", reflect.TypeOf((*MockMacie2API)(nil).UpdateOrganizationConfiguration), arg0)
 }
 
-// UpdateOrganizationConfigurationRequest mocks base method
+// UpdateOrganizationConfigurationRequest mocks base method.
 func (m *MockMacie2API) UpdateOrganizationConfigurationRequest(arg0 *macie2.UpdateOrganizationConfigurationInput) (*request.Request, *macie2.UpdateOrganizationConfigurationOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateOrganizationConfigurationRequest", arg0)
@@ -2856,13 +3057,13 @@ func (m *MockMacie2API) UpdateOrganizationConfigurationRequest(arg0 *macie2.Upda
 	return ret0, ret1
 }
 
-// UpdateOrganizationConfigurationRequest indicates an expected call of UpdateOrganizationConfigurationRequest
+// UpdateOrganizationConfigurationRequest indicates an expected call of UpdateOrganizationConfigurationRequest.
 func (mr *MockMacie2APIMockRecorder) UpdateOrganizationConfigurationRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateOrganizationConfigurationRequest", reflect.TypeOf((*MockMacie2API)(nil).UpdateOrganizationConfigurationRequest), arg0)
 }
 
-// UpdateOrganizationConfigurationWithContext mocks base method
+// UpdateOrganizationConfigurationWithContext mocks base method.
 func (m *MockMacie2API) UpdateOrganizationConfigurationWithContext(arg0 context.Context, arg1 *macie2.UpdateOrganizationConfigurationInput, arg2 ...request.Option) (*macie2.UpdateOrganizationConfigurationOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -2875,7 +3076,7 @@ func (m *MockMacie2API) UpdateOrganizationConfigurationWithContext(arg0 context.
 	return ret0, ret1
 }
 
-// UpdateOrganizationConfigurationWithContext indicates an expected call of UpdateOrganizationConfigurationWithContext
+// UpdateOrganizationConfigurationWithContext indicates an expected call of UpdateOrganizationConfigurationWithContext.
 func (mr *MockMacie2APIMockRecorder) UpdateOrganizationConfigurationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)

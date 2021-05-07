@@ -6,36 +6,37 @@ package emrcontainersmock
 
 import (
 	context "context"
+	reflect "reflect"
+
 	request "github.com/aws/aws-sdk-go/aws/request"
 	emrcontainers "github.com/aws/aws-sdk-go/service/emrcontainers"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
-// MockEMRContainersAPI is a mock of EMRContainersAPI interface
+// MockEMRContainersAPI is a mock of EMRContainersAPI interface.
 type MockEMRContainersAPI struct {
 	ctrl     *gomock.Controller
 	recorder *MockEMRContainersAPIMockRecorder
 }
 
-// MockEMRContainersAPIMockRecorder is the mock recorder for MockEMRContainersAPI
+// MockEMRContainersAPIMockRecorder is the mock recorder for MockEMRContainersAPI.
 type MockEMRContainersAPIMockRecorder struct {
 	mock *MockEMRContainersAPI
 }
 
-// NewMockEMRContainersAPI creates a new mock instance
+// NewMockEMRContainersAPI creates a new mock instance.
 func NewMockEMRContainersAPI(ctrl *gomock.Controller) *MockEMRContainersAPI {
 	mock := &MockEMRContainersAPI{ctrl: ctrl}
 	mock.recorder = &MockEMRContainersAPIMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use
+// EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockEMRContainersAPI) EXPECT() *MockEMRContainersAPIMockRecorder {
 	return m.recorder
 }
 
-// CancelJobRun mocks base method
+// CancelJobRun mocks base method.
 func (m *MockEMRContainersAPI) CancelJobRun(arg0 *emrcontainers.CancelJobRunInput) (*emrcontainers.CancelJobRunOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelJobRun", arg0)
@@ -44,13 +45,13 @@ func (m *MockEMRContainersAPI) CancelJobRun(arg0 *emrcontainers.CancelJobRunInpu
 	return ret0, ret1
 }
 
-// CancelJobRun indicates an expected call of CancelJobRun
+// CancelJobRun indicates an expected call of CancelJobRun.
 func (mr *MockEMRContainersAPIMockRecorder) CancelJobRun(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelJobRun", reflect.TypeOf((*MockEMRContainersAPI)(nil).CancelJobRun), arg0)
 }
 
-// CancelJobRunRequest mocks base method
+// CancelJobRunRequest mocks base method.
 func (m *MockEMRContainersAPI) CancelJobRunRequest(arg0 *emrcontainers.CancelJobRunInput) (*request.Request, *emrcontainers.CancelJobRunOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CancelJobRunRequest", arg0)
@@ -59,13 +60,13 @@ func (m *MockEMRContainersAPI) CancelJobRunRequest(arg0 *emrcontainers.CancelJob
 	return ret0, ret1
 }
 
-// CancelJobRunRequest indicates an expected call of CancelJobRunRequest
+// CancelJobRunRequest indicates an expected call of CancelJobRunRequest.
 func (mr *MockEMRContainersAPIMockRecorder) CancelJobRunRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelJobRunRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).CancelJobRunRequest), arg0)
 }
 
-// CancelJobRunWithContext mocks base method
+// CancelJobRunWithContext mocks base method.
 func (m *MockEMRContainersAPI) CancelJobRunWithContext(arg0 context.Context, arg1 *emrcontainers.CancelJobRunInput, arg2 ...request.Option) (*emrcontainers.CancelJobRunOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -78,14 +79,14 @@ func (m *MockEMRContainersAPI) CancelJobRunWithContext(arg0 context.Context, arg
 	return ret0, ret1
 }
 
-// CancelJobRunWithContext indicates an expected call of CancelJobRunWithContext
+// CancelJobRunWithContext indicates an expected call of CancelJobRunWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) CancelJobRunWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelJobRunWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).CancelJobRunWithContext), varargs...)
 }
 
-// CreateManagedEndpoint mocks base method
+// CreateManagedEndpoint mocks base method.
 func (m *MockEMRContainersAPI) CreateManagedEndpoint(arg0 *emrcontainers.CreateManagedEndpointInput) (*emrcontainers.CreateManagedEndpointOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateManagedEndpoint", arg0)
@@ -94,13 +95,13 @@ func (m *MockEMRContainersAPI) CreateManagedEndpoint(arg0 *emrcontainers.CreateM
 	return ret0, ret1
 }
 
-// CreateManagedEndpoint indicates an expected call of CreateManagedEndpoint
+// CreateManagedEndpoint indicates an expected call of CreateManagedEndpoint.
 func (mr *MockEMRContainersAPIMockRecorder) CreateManagedEndpoint(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateManagedEndpoint", reflect.TypeOf((*MockEMRContainersAPI)(nil).CreateManagedEndpoint), arg0)
 }
 
-// CreateManagedEndpointRequest mocks base method
+// CreateManagedEndpointRequest mocks base method.
 func (m *MockEMRContainersAPI) CreateManagedEndpointRequest(arg0 *emrcontainers.CreateManagedEndpointInput) (*request.Request, *emrcontainers.CreateManagedEndpointOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateManagedEndpointRequest", arg0)
@@ -109,13 +110,13 @@ func (m *MockEMRContainersAPI) CreateManagedEndpointRequest(arg0 *emrcontainers.
 	return ret0, ret1
 }
 
-// CreateManagedEndpointRequest indicates an expected call of CreateManagedEndpointRequest
+// CreateManagedEndpointRequest indicates an expected call of CreateManagedEndpointRequest.
 func (mr *MockEMRContainersAPIMockRecorder) CreateManagedEndpointRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateManagedEndpointRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).CreateManagedEndpointRequest), arg0)
 }
 
-// CreateManagedEndpointWithContext mocks base method
+// CreateManagedEndpointWithContext mocks base method.
 func (m *MockEMRContainersAPI) CreateManagedEndpointWithContext(arg0 context.Context, arg1 *emrcontainers.CreateManagedEndpointInput, arg2 ...request.Option) (*emrcontainers.CreateManagedEndpointOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -128,14 +129,14 @@ func (m *MockEMRContainersAPI) CreateManagedEndpointWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// CreateManagedEndpointWithContext indicates an expected call of CreateManagedEndpointWithContext
+// CreateManagedEndpointWithContext indicates an expected call of CreateManagedEndpointWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) CreateManagedEndpointWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateManagedEndpointWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).CreateManagedEndpointWithContext), varargs...)
 }
 
-// CreateVirtualCluster mocks base method
+// CreateVirtualCluster mocks base method.
 func (m *MockEMRContainersAPI) CreateVirtualCluster(arg0 *emrcontainers.CreateVirtualClusterInput) (*emrcontainers.CreateVirtualClusterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVirtualCluster", arg0)
@@ -144,13 +145,13 @@ func (m *MockEMRContainersAPI) CreateVirtualCluster(arg0 *emrcontainers.CreateVi
 	return ret0, ret1
 }
 
-// CreateVirtualCluster indicates an expected call of CreateVirtualCluster
+// CreateVirtualCluster indicates an expected call of CreateVirtualCluster.
 func (mr *MockEMRContainersAPIMockRecorder) CreateVirtualCluster(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualCluster", reflect.TypeOf((*MockEMRContainersAPI)(nil).CreateVirtualCluster), arg0)
 }
 
-// CreateVirtualClusterRequest mocks base method
+// CreateVirtualClusterRequest mocks base method.
 func (m *MockEMRContainersAPI) CreateVirtualClusterRequest(arg0 *emrcontainers.CreateVirtualClusterInput) (*request.Request, *emrcontainers.CreateVirtualClusterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateVirtualClusterRequest", arg0)
@@ -159,13 +160,13 @@ func (m *MockEMRContainersAPI) CreateVirtualClusterRequest(arg0 *emrcontainers.C
 	return ret0, ret1
 }
 
-// CreateVirtualClusterRequest indicates an expected call of CreateVirtualClusterRequest
+// CreateVirtualClusterRequest indicates an expected call of CreateVirtualClusterRequest.
 func (mr *MockEMRContainersAPIMockRecorder) CreateVirtualClusterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualClusterRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).CreateVirtualClusterRequest), arg0)
 }
 
-// CreateVirtualClusterWithContext mocks base method
+// CreateVirtualClusterWithContext mocks base method.
 func (m *MockEMRContainersAPI) CreateVirtualClusterWithContext(arg0 context.Context, arg1 *emrcontainers.CreateVirtualClusterInput, arg2 ...request.Option) (*emrcontainers.CreateVirtualClusterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -178,14 +179,14 @@ func (m *MockEMRContainersAPI) CreateVirtualClusterWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// CreateVirtualClusterWithContext indicates an expected call of CreateVirtualClusterWithContext
+// CreateVirtualClusterWithContext indicates an expected call of CreateVirtualClusterWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) CreateVirtualClusterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateVirtualClusterWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).CreateVirtualClusterWithContext), varargs...)
 }
 
-// DeleteManagedEndpoint mocks base method
+// DeleteManagedEndpoint mocks base method.
 func (m *MockEMRContainersAPI) DeleteManagedEndpoint(arg0 *emrcontainers.DeleteManagedEndpointInput) (*emrcontainers.DeleteManagedEndpointOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteManagedEndpoint", arg0)
@@ -194,13 +195,13 @@ func (m *MockEMRContainersAPI) DeleteManagedEndpoint(arg0 *emrcontainers.DeleteM
 	return ret0, ret1
 }
 
-// DeleteManagedEndpoint indicates an expected call of DeleteManagedEndpoint
+// DeleteManagedEndpoint indicates an expected call of DeleteManagedEndpoint.
 func (mr *MockEMRContainersAPIMockRecorder) DeleteManagedEndpoint(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteManagedEndpoint", reflect.TypeOf((*MockEMRContainersAPI)(nil).DeleteManagedEndpoint), arg0)
 }
 
-// DeleteManagedEndpointRequest mocks base method
+// DeleteManagedEndpointRequest mocks base method.
 func (m *MockEMRContainersAPI) DeleteManagedEndpointRequest(arg0 *emrcontainers.DeleteManagedEndpointInput) (*request.Request, *emrcontainers.DeleteManagedEndpointOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteManagedEndpointRequest", arg0)
@@ -209,13 +210,13 @@ func (m *MockEMRContainersAPI) DeleteManagedEndpointRequest(arg0 *emrcontainers.
 	return ret0, ret1
 }
 
-// DeleteManagedEndpointRequest indicates an expected call of DeleteManagedEndpointRequest
+// DeleteManagedEndpointRequest indicates an expected call of DeleteManagedEndpointRequest.
 func (mr *MockEMRContainersAPIMockRecorder) DeleteManagedEndpointRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteManagedEndpointRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).DeleteManagedEndpointRequest), arg0)
 }
 
-// DeleteManagedEndpointWithContext mocks base method
+// DeleteManagedEndpointWithContext mocks base method.
 func (m *MockEMRContainersAPI) DeleteManagedEndpointWithContext(arg0 context.Context, arg1 *emrcontainers.DeleteManagedEndpointInput, arg2 ...request.Option) (*emrcontainers.DeleteManagedEndpointOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -228,14 +229,14 @@ func (m *MockEMRContainersAPI) DeleteManagedEndpointWithContext(arg0 context.Con
 	return ret0, ret1
 }
 
-// DeleteManagedEndpointWithContext indicates an expected call of DeleteManagedEndpointWithContext
+// DeleteManagedEndpointWithContext indicates an expected call of DeleteManagedEndpointWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) DeleteManagedEndpointWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteManagedEndpointWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).DeleteManagedEndpointWithContext), varargs...)
 }
 
-// DeleteVirtualCluster mocks base method
+// DeleteVirtualCluster mocks base method.
 func (m *MockEMRContainersAPI) DeleteVirtualCluster(arg0 *emrcontainers.DeleteVirtualClusterInput) (*emrcontainers.DeleteVirtualClusterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVirtualCluster", arg0)
@@ -244,13 +245,13 @@ func (m *MockEMRContainersAPI) DeleteVirtualCluster(arg0 *emrcontainers.DeleteVi
 	return ret0, ret1
 }
 
-// DeleteVirtualCluster indicates an expected call of DeleteVirtualCluster
+// DeleteVirtualCluster indicates an expected call of DeleteVirtualCluster.
 func (mr *MockEMRContainersAPIMockRecorder) DeleteVirtualCluster(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualCluster", reflect.TypeOf((*MockEMRContainersAPI)(nil).DeleteVirtualCluster), arg0)
 }
 
-// DeleteVirtualClusterRequest mocks base method
+// DeleteVirtualClusterRequest mocks base method.
 func (m *MockEMRContainersAPI) DeleteVirtualClusterRequest(arg0 *emrcontainers.DeleteVirtualClusterInput) (*request.Request, *emrcontainers.DeleteVirtualClusterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteVirtualClusterRequest", arg0)
@@ -259,13 +260,13 @@ func (m *MockEMRContainersAPI) DeleteVirtualClusterRequest(arg0 *emrcontainers.D
 	return ret0, ret1
 }
 
-// DeleteVirtualClusterRequest indicates an expected call of DeleteVirtualClusterRequest
+// DeleteVirtualClusterRequest indicates an expected call of DeleteVirtualClusterRequest.
 func (mr *MockEMRContainersAPIMockRecorder) DeleteVirtualClusterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualClusterRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).DeleteVirtualClusterRequest), arg0)
 }
 
-// DeleteVirtualClusterWithContext mocks base method
+// DeleteVirtualClusterWithContext mocks base method.
 func (m *MockEMRContainersAPI) DeleteVirtualClusterWithContext(arg0 context.Context, arg1 *emrcontainers.DeleteVirtualClusterInput, arg2 ...request.Option) (*emrcontainers.DeleteVirtualClusterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -278,14 +279,14 @@ func (m *MockEMRContainersAPI) DeleteVirtualClusterWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// DeleteVirtualClusterWithContext indicates an expected call of DeleteVirtualClusterWithContext
+// DeleteVirtualClusterWithContext indicates an expected call of DeleteVirtualClusterWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) DeleteVirtualClusterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteVirtualClusterWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).DeleteVirtualClusterWithContext), varargs...)
 }
 
-// DescribeJobRun mocks base method
+// DescribeJobRun mocks base method.
 func (m *MockEMRContainersAPI) DescribeJobRun(arg0 *emrcontainers.DescribeJobRunInput) (*emrcontainers.DescribeJobRunOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeJobRun", arg0)
@@ -294,13 +295,13 @@ func (m *MockEMRContainersAPI) DescribeJobRun(arg0 *emrcontainers.DescribeJobRun
 	return ret0, ret1
 }
 
-// DescribeJobRun indicates an expected call of DescribeJobRun
+// DescribeJobRun indicates an expected call of DescribeJobRun.
 func (mr *MockEMRContainersAPIMockRecorder) DescribeJobRun(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobRun", reflect.TypeOf((*MockEMRContainersAPI)(nil).DescribeJobRun), arg0)
 }
 
-// DescribeJobRunRequest mocks base method
+// DescribeJobRunRequest mocks base method.
 func (m *MockEMRContainersAPI) DescribeJobRunRequest(arg0 *emrcontainers.DescribeJobRunInput) (*request.Request, *emrcontainers.DescribeJobRunOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeJobRunRequest", arg0)
@@ -309,13 +310,13 @@ func (m *MockEMRContainersAPI) DescribeJobRunRequest(arg0 *emrcontainers.Describ
 	return ret0, ret1
 }
 
-// DescribeJobRunRequest indicates an expected call of DescribeJobRunRequest
+// DescribeJobRunRequest indicates an expected call of DescribeJobRunRequest.
 func (mr *MockEMRContainersAPIMockRecorder) DescribeJobRunRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobRunRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).DescribeJobRunRequest), arg0)
 }
 
-// DescribeJobRunWithContext mocks base method
+// DescribeJobRunWithContext mocks base method.
 func (m *MockEMRContainersAPI) DescribeJobRunWithContext(arg0 context.Context, arg1 *emrcontainers.DescribeJobRunInput, arg2 ...request.Option) (*emrcontainers.DescribeJobRunOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -328,14 +329,14 @@ func (m *MockEMRContainersAPI) DescribeJobRunWithContext(arg0 context.Context, a
 	return ret0, ret1
 }
 
-// DescribeJobRunWithContext indicates an expected call of DescribeJobRunWithContext
+// DescribeJobRunWithContext indicates an expected call of DescribeJobRunWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) DescribeJobRunWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeJobRunWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).DescribeJobRunWithContext), varargs...)
 }
 
-// DescribeManagedEndpoint mocks base method
+// DescribeManagedEndpoint mocks base method.
 func (m *MockEMRContainersAPI) DescribeManagedEndpoint(arg0 *emrcontainers.DescribeManagedEndpointInput) (*emrcontainers.DescribeManagedEndpointOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeManagedEndpoint", arg0)
@@ -344,13 +345,13 @@ func (m *MockEMRContainersAPI) DescribeManagedEndpoint(arg0 *emrcontainers.Descr
 	return ret0, ret1
 }
 
-// DescribeManagedEndpoint indicates an expected call of DescribeManagedEndpoint
+// DescribeManagedEndpoint indicates an expected call of DescribeManagedEndpoint.
 func (mr *MockEMRContainersAPIMockRecorder) DescribeManagedEndpoint(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeManagedEndpoint", reflect.TypeOf((*MockEMRContainersAPI)(nil).DescribeManagedEndpoint), arg0)
 }
 
-// DescribeManagedEndpointRequest mocks base method
+// DescribeManagedEndpointRequest mocks base method.
 func (m *MockEMRContainersAPI) DescribeManagedEndpointRequest(arg0 *emrcontainers.DescribeManagedEndpointInput) (*request.Request, *emrcontainers.DescribeManagedEndpointOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeManagedEndpointRequest", arg0)
@@ -359,13 +360,13 @@ func (m *MockEMRContainersAPI) DescribeManagedEndpointRequest(arg0 *emrcontainer
 	return ret0, ret1
 }
 
-// DescribeManagedEndpointRequest indicates an expected call of DescribeManagedEndpointRequest
+// DescribeManagedEndpointRequest indicates an expected call of DescribeManagedEndpointRequest.
 func (mr *MockEMRContainersAPIMockRecorder) DescribeManagedEndpointRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeManagedEndpointRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).DescribeManagedEndpointRequest), arg0)
 }
 
-// DescribeManagedEndpointWithContext mocks base method
+// DescribeManagedEndpointWithContext mocks base method.
 func (m *MockEMRContainersAPI) DescribeManagedEndpointWithContext(arg0 context.Context, arg1 *emrcontainers.DescribeManagedEndpointInput, arg2 ...request.Option) (*emrcontainers.DescribeManagedEndpointOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -378,14 +379,14 @@ func (m *MockEMRContainersAPI) DescribeManagedEndpointWithContext(arg0 context.C
 	return ret0, ret1
 }
 
-// DescribeManagedEndpointWithContext indicates an expected call of DescribeManagedEndpointWithContext
+// DescribeManagedEndpointWithContext indicates an expected call of DescribeManagedEndpointWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) DescribeManagedEndpointWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeManagedEndpointWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).DescribeManagedEndpointWithContext), varargs...)
 }
 
-// DescribeVirtualCluster mocks base method
+// DescribeVirtualCluster mocks base method.
 func (m *MockEMRContainersAPI) DescribeVirtualCluster(arg0 *emrcontainers.DescribeVirtualClusterInput) (*emrcontainers.DescribeVirtualClusterOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualCluster", arg0)
@@ -394,13 +395,13 @@ func (m *MockEMRContainersAPI) DescribeVirtualCluster(arg0 *emrcontainers.Descri
 	return ret0, ret1
 }
 
-// DescribeVirtualCluster indicates an expected call of DescribeVirtualCluster
+// DescribeVirtualCluster indicates an expected call of DescribeVirtualCluster.
 func (mr *MockEMRContainersAPIMockRecorder) DescribeVirtualCluster(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualCluster", reflect.TypeOf((*MockEMRContainersAPI)(nil).DescribeVirtualCluster), arg0)
 }
 
-// DescribeVirtualClusterRequest mocks base method
+// DescribeVirtualClusterRequest mocks base method.
 func (m *MockEMRContainersAPI) DescribeVirtualClusterRequest(arg0 *emrcontainers.DescribeVirtualClusterInput) (*request.Request, *emrcontainers.DescribeVirtualClusterOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DescribeVirtualClusterRequest", arg0)
@@ -409,13 +410,13 @@ func (m *MockEMRContainersAPI) DescribeVirtualClusterRequest(arg0 *emrcontainers
 	return ret0, ret1
 }
 
-// DescribeVirtualClusterRequest indicates an expected call of DescribeVirtualClusterRequest
+// DescribeVirtualClusterRequest indicates an expected call of DescribeVirtualClusterRequest.
 func (mr *MockEMRContainersAPIMockRecorder) DescribeVirtualClusterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualClusterRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).DescribeVirtualClusterRequest), arg0)
 }
 
-// DescribeVirtualClusterWithContext mocks base method
+// DescribeVirtualClusterWithContext mocks base method.
 func (m *MockEMRContainersAPI) DescribeVirtualClusterWithContext(arg0 context.Context, arg1 *emrcontainers.DescribeVirtualClusterInput, arg2 ...request.Option) (*emrcontainers.DescribeVirtualClusterOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -428,14 +429,14 @@ func (m *MockEMRContainersAPI) DescribeVirtualClusterWithContext(arg0 context.Co
 	return ret0, ret1
 }
 
-// DescribeVirtualClusterWithContext indicates an expected call of DescribeVirtualClusterWithContext
+// DescribeVirtualClusterWithContext indicates an expected call of DescribeVirtualClusterWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) DescribeVirtualClusterWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeVirtualClusterWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).DescribeVirtualClusterWithContext), varargs...)
 }
 
-// ListJobRuns mocks base method
+// ListJobRuns mocks base method.
 func (m *MockEMRContainersAPI) ListJobRuns(arg0 *emrcontainers.ListJobRunsInput) (*emrcontainers.ListJobRunsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobRuns", arg0)
@@ -444,13 +445,13 @@ func (m *MockEMRContainersAPI) ListJobRuns(arg0 *emrcontainers.ListJobRunsInput)
 	return ret0, ret1
 }
 
-// ListJobRuns indicates an expected call of ListJobRuns
+// ListJobRuns indicates an expected call of ListJobRuns.
 func (mr *MockEMRContainersAPIMockRecorder) ListJobRuns(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobRuns", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListJobRuns), arg0)
 }
 
-// ListJobRunsPages mocks base method
+// ListJobRunsPages mocks base method.
 func (m *MockEMRContainersAPI) ListJobRunsPages(arg0 *emrcontainers.ListJobRunsInput, arg1 func(*emrcontainers.ListJobRunsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobRunsPages", arg0, arg1)
@@ -458,13 +459,13 @@ func (m *MockEMRContainersAPI) ListJobRunsPages(arg0 *emrcontainers.ListJobRunsI
 	return ret0
 }
 
-// ListJobRunsPages indicates an expected call of ListJobRunsPages
+// ListJobRunsPages indicates an expected call of ListJobRunsPages.
 func (mr *MockEMRContainersAPIMockRecorder) ListJobRunsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobRunsPages", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListJobRunsPages), arg0, arg1)
 }
 
-// ListJobRunsPagesWithContext mocks base method
+// ListJobRunsPagesWithContext mocks base method.
 func (m *MockEMRContainersAPI) ListJobRunsPagesWithContext(arg0 context.Context, arg1 *emrcontainers.ListJobRunsInput, arg2 func(*emrcontainers.ListJobRunsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -476,14 +477,14 @@ func (m *MockEMRContainersAPI) ListJobRunsPagesWithContext(arg0 context.Context,
 	return ret0
 }
 
-// ListJobRunsPagesWithContext indicates an expected call of ListJobRunsPagesWithContext
+// ListJobRunsPagesWithContext indicates an expected call of ListJobRunsPagesWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) ListJobRunsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobRunsPagesWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListJobRunsPagesWithContext), varargs...)
 }
 
-// ListJobRunsRequest mocks base method
+// ListJobRunsRequest mocks base method.
 func (m *MockEMRContainersAPI) ListJobRunsRequest(arg0 *emrcontainers.ListJobRunsInput) (*request.Request, *emrcontainers.ListJobRunsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListJobRunsRequest", arg0)
@@ -492,13 +493,13 @@ func (m *MockEMRContainersAPI) ListJobRunsRequest(arg0 *emrcontainers.ListJobRun
 	return ret0, ret1
 }
 
-// ListJobRunsRequest indicates an expected call of ListJobRunsRequest
+// ListJobRunsRequest indicates an expected call of ListJobRunsRequest.
 func (mr *MockEMRContainersAPIMockRecorder) ListJobRunsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobRunsRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListJobRunsRequest), arg0)
 }
 
-// ListJobRunsWithContext mocks base method
+// ListJobRunsWithContext mocks base method.
 func (m *MockEMRContainersAPI) ListJobRunsWithContext(arg0 context.Context, arg1 *emrcontainers.ListJobRunsInput, arg2 ...request.Option) (*emrcontainers.ListJobRunsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -511,14 +512,14 @@ func (m *MockEMRContainersAPI) ListJobRunsWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// ListJobRunsWithContext indicates an expected call of ListJobRunsWithContext
+// ListJobRunsWithContext indicates an expected call of ListJobRunsWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) ListJobRunsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListJobRunsWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListJobRunsWithContext), varargs...)
 }
 
-// ListManagedEndpoints mocks base method
+// ListManagedEndpoints mocks base method.
 func (m *MockEMRContainersAPI) ListManagedEndpoints(arg0 *emrcontainers.ListManagedEndpointsInput) (*emrcontainers.ListManagedEndpointsOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListManagedEndpoints", arg0)
@@ -527,13 +528,13 @@ func (m *MockEMRContainersAPI) ListManagedEndpoints(arg0 *emrcontainers.ListMana
 	return ret0, ret1
 }
 
-// ListManagedEndpoints indicates an expected call of ListManagedEndpoints
+// ListManagedEndpoints indicates an expected call of ListManagedEndpoints.
 func (mr *MockEMRContainersAPIMockRecorder) ListManagedEndpoints(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListManagedEndpoints", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListManagedEndpoints), arg0)
 }
 
-// ListManagedEndpointsPages mocks base method
+// ListManagedEndpointsPages mocks base method.
 func (m *MockEMRContainersAPI) ListManagedEndpointsPages(arg0 *emrcontainers.ListManagedEndpointsInput, arg1 func(*emrcontainers.ListManagedEndpointsOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListManagedEndpointsPages", arg0, arg1)
@@ -541,13 +542,13 @@ func (m *MockEMRContainersAPI) ListManagedEndpointsPages(arg0 *emrcontainers.Lis
 	return ret0
 }
 
-// ListManagedEndpointsPages indicates an expected call of ListManagedEndpointsPages
+// ListManagedEndpointsPages indicates an expected call of ListManagedEndpointsPages.
 func (mr *MockEMRContainersAPIMockRecorder) ListManagedEndpointsPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListManagedEndpointsPages", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListManagedEndpointsPages), arg0, arg1)
 }
 
-// ListManagedEndpointsPagesWithContext mocks base method
+// ListManagedEndpointsPagesWithContext mocks base method.
 func (m *MockEMRContainersAPI) ListManagedEndpointsPagesWithContext(arg0 context.Context, arg1 *emrcontainers.ListManagedEndpointsInput, arg2 func(*emrcontainers.ListManagedEndpointsOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -559,14 +560,14 @@ func (m *MockEMRContainersAPI) ListManagedEndpointsPagesWithContext(arg0 context
 	return ret0
 }
 
-// ListManagedEndpointsPagesWithContext indicates an expected call of ListManagedEndpointsPagesWithContext
+// ListManagedEndpointsPagesWithContext indicates an expected call of ListManagedEndpointsPagesWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) ListManagedEndpointsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListManagedEndpointsPagesWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListManagedEndpointsPagesWithContext), varargs...)
 }
 
-// ListManagedEndpointsRequest mocks base method
+// ListManagedEndpointsRequest mocks base method.
 func (m *MockEMRContainersAPI) ListManagedEndpointsRequest(arg0 *emrcontainers.ListManagedEndpointsInput) (*request.Request, *emrcontainers.ListManagedEndpointsOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListManagedEndpointsRequest", arg0)
@@ -575,13 +576,13 @@ func (m *MockEMRContainersAPI) ListManagedEndpointsRequest(arg0 *emrcontainers.L
 	return ret0, ret1
 }
 
-// ListManagedEndpointsRequest indicates an expected call of ListManagedEndpointsRequest
+// ListManagedEndpointsRequest indicates an expected call of ListManagedEndpointsRequest.
 func (mr *MockEMRContainersAPIMockRecorder) ListManagedEndpointsRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListManagedEndpointsRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListManagedEndpointsRequest), arg0)
 }
 
-// ListManagedEndpointsWithContext mocks base method
+// ListManagedEndpointsWithContext mocks base method.
 func (m *MockEMRContainersAPI) ListManagedEndpointsWithContext(arg0 context.Context, arg1 *emrcontainers.ListManagedEndpointsInput, arg2 ...request.Option) (*emrcontainers.ListManagedEndpointsOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -594,14 +595,14 @@ func (m *MockEMRContainersAPI) ListManagedEndpointsWithContext(arg0 context.Cont
 	return ret0, ret1
 }
 
-// ListManagedEndpointsWithContext indicates an expected call of ListManagedEndpointsWithContext
+// ListManagedEndpointsWithContext indicates an expected call of ListManagedEndpointsWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) ListManagedEndpointsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListManagedEndpointsWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListManagedEndpointsWithContext), varargs...)
 }
 
-// ListTagsForResource mocks base method
+// ListTagsForResource mocks base method.
 func (m *MockEMRContainersAPI) ListTagsForResource(arg0 *emrcontainers.ListTagsForResourceInput) (*emrcontainers.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResource", arg0)
@@ -610,13 +611,13 @@ func (m *MockEMRContainersAPI) ListTagsForResource(arg0 *emrcontainers.ListTagsF
 	return ret0, ret1
 }
 
-// ListTagsForResource indicates an expected call of ListTagsForResource
+// ListTagsForResource indicates an expected call of ListTagsForResource.
 func (mr *MockEMRContainersAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListTagsForResource), arg0)
 }
 
-// ListTagsForResourceRequest mocks base method
+// ListTagsForResourceRequest mocks base method.
 func (m *MockEMRContainersAPI) ListTagsForResourceRequest(arg0 *emrcontainers.ListTagsForResourceInput) (*request.Request, *emrcontainers.ListTagsForResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListTagsForResourceRequest", arg0)
@@ -625,13 +626,13 @@ func (m *MockEMRContainersAPI) ListTagsForResourceRequest(arg0 *emrcontainers.Li
 	return ret0, ret1
 }
 
-// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest
+// ListTagsForResourceRequest indicates an expected call of ListTagsForResourceRequest.
 func (mr *MockEMRContainersAPIMockRecorder) ListTagsForResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListTagsForResourceRequest), arg0)
 }
 
-// ListTagsForResourceWithContext mocks base method
+// ListTagsForResourceWithContext mocks base method.
 func (m *MockEMRContainersAPI) ListTagsForResourceWithContext(arg0 context.Context, arg1 *emrcontainers.ListTagsForResourceInput, arg2 ...request.Option) (*emrcontainers.ListTagsForResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -644,14 +645,14 @@ func (m *MockEMRContainersAPI) ListTagsForResourceWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext
+// ListTagsForResourceWithContext indicates an expected call of ListTagsForResourceWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
-// ListVirtualClusters mocks base method
+// ListVirtualClusters mocks base method.
 func (m *MockEMRContainersAPI) ListVirtualClusters(arg0 *emrcontainers.ListVirtualClustersInput) (*emrcontainers.ListVirtualClustersOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualClusters", arg0)
@@ -660,13 +661,13 @@ func (m *MockEMRContainersAPI) ListVirtualClusters(arg0 *emrcontainers.ListVirtu
 	return ret0, ret1
 }
 
-// ListVirtualClusters indicates an expected call of ListVirtualClusters
+// ListVirtualClusters indicates an expected call of ListVirtualClusters.
 func (mr *MockEMRContainersAPIMockRecorder) ListVirtualClusters(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualClusters", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListVirtualClusters), arg0)
 }
 
-// ListVirtualClustersPages mocks base method
+// ListVirtualClustersPages mocks base method.
 func (m *MockEMRContainersAPI) ListVirtualClustersPages(arg0 *emrcontainers.ListVirtualClustersInput, arg1 func(*emrcontainers.ListVirtualClustersOutput, bool) bool) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualClustersPages", arg0, arg1)
@@ -674,13 +675,13 @@ func (m *MockEMRContainersAPI) ListVirtualClustersPages(arg0 *emrcontainers.List
 	return ret0
 }
 
-// ListVirtualClustersPages indicates an expected call of ListVirtualClustersPages
+// ListVirtualClustersPages indicates an expected call of ListVirtualClustersPages.
 func (mr *MockEMRContainersAPIMockRecorder) ListVirtualClustersPages(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualClustersPages", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListVirtualClustersPages), arg0, arg1)
 }
 
-// ListVirtualClustersPagesWithContext mocks base method
+// ListVirtualClustersPagesWithContext mocks base method.
 func (m *MockEMRContainersAPI) ListVirtualClustersPagesWithContext(arg0 context.Context, arg1 *emrcontainers.ListVirtualClustersInput, arg2 func(*emrcontainers.ListVirtualClustersOutput, bool) bool, arg3 ...request.Option) error {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1, arg2}
@@ -692,14 +693,14 @@ func (m *MockEMRContainersAPI) ListVirtualClustersPagesWithContext(arg0 context.
 	return ret0
 }
 
-// ListVirtualClustersPagesWithContext indicates an expected call of ListVirtualClustersPagesWithContext
+// ListVirtualClustersPagesWithContext indicates an expected call of ListVirtualClustersPagesWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) ListVirtualClustersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualClustersPagesWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListVirtualClustersPagesWithContext), varargs...)
 }
 
-// ListVirtualClustersRequest mocks base method
+// ListVirtualClustersRequest mocks base method.
 func (m *MockEMRContainersAPI) ListVirtualClustersRequest(arg0 *emrcontainers.ListVirtualClustersInput) (*request.Request, *emrcontainers.ListVirtualClustersOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListVirtualClustersRequest", arg0)
@@ -708,13 +709,13 @@ func (m *MockEMRContainersAPI) ListVirtualClustersRequest(arg0 *emrcontainers.Li
 	return ret0, ret1
 }
 
-// ListVirtualClustersRequest indicates an expected call of ListVirtualClustersRequest
+// ListVirtualClustersRequest indicates an expected call of ListVirtualClustersRequest.
 func (mr *MockEMRContainersAPIMockRecorder) ListVirtualClustersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualClustersRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListVirtualClustersRequest), arg0)
 }
 
-// ListVirtualClustersWithContext mocks base method
+// ListVirtualClustersWithContext mocks base method.
 func (m *MockEMRContainersAPI) ListVirtualClustersWithContext(arg0 context.Context, arg1 *emrcontainers.ListVirtualClustersInput, arg2 ...request.Option) (*emrcontainers.ListVirtualClustersOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -727,14 +728,14 @@ func (m *MockEMRContainersAPI) ListVirtualClustersWithContext(arg0 context.Conte
 	return ret0, ret1
 }
 
-// ListVirtualClustersWithContext indicates an expected call of ListVirtualClustersWithContext
+// ListVirtualClustersWithContext indicates an expected call of ListVirtualClustersWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) ListVirtualClustersWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListVirtualClustersWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).ListVirtualClustersWithContext), varargs...)
 }
 
-// StartJobRun mocks base method
+// StartJobRun mocks base method.
 func (m *MockEMRContainersAPI) StartJobRun(arg0 *emrcontainers.StartJobRunInput) (*emrcontainers.StartJobRunOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartJobRun", arg0)
@@ -743,13 +744,13 @@ func (m *MockEMRContainersAPI) StartJobRun(arg0 *emrcontainers.StartJobRunInput)
 	return ret0, ret1
 }
 
-// StartJobRun indicates an expected call of StartJobRun
+// StartJobRun indicates an expected call of StartJobRun.
 func (mr *MockEMRContainersAPIMockRecorder) StartJobRun(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartJobRun", reflect.TypeOf((*MockEMRContainersAPI)(nil).StartJobRun), arg0)
 }
 
-// StartJobRunRequest mocks base method
+// StartJobRunRequest mocks base method.
 func (m *MockEMRContainersAPI) StartJobRunRequest(arg0 *emrcontainers.StartJobRunInput) (*request.Request, *emrcontainers.StartJobRunOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "StartJobRunRequest", arg0)
@@ -758,13 +759,13 @@ func (m *MockEMRContainersAPI) StartJobRunRequest(arg0 *emrcontainers.StartJobRu
 	return ret0, ret1
 }
 
-// StartJobRunRequest indicates an expected call of StartJobRunRequest
+// StartJobRunRequest indicates an expected call of StartJobRunRequest.
 func (mr *MockEMRContainersAPIMockRecorder) StartJobRunRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartJobRunRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).StartJobRunRequest), arg0)
 }
 
-// StartJobRunWithContext mocks base method
+// StartJobRunWithContext mocks base method.
 func (m *MockEMRContainersAPI) StartJobRunWithContext(arg0 context.Context, arg1 *emrcontainers.StartJobRunInput, arg2 ...request.Option) (*emrcontainers.StartJobRunOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -777,14 +778,14 @@ func (m *MockEMRContainersAPI) StartJobRunWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// StartJobRunWithContext indicates an expected call of StartJobRunWithContext
+// StartJobRunWithContext indicates an expected call of StartJobRunWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) StartJobRunWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartJobRunWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).StartJobRunWithContext), varargs...)
 }
 
-// TagResource mocks base method
+// TagResource mocks base method.
 func (m *MockEMRContainersAPI) TagResource(arg0 *emrcontainers.TagResourceInput) (*emrcontainers.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResource", arg0)
@@ -793,13 +794,13 @@ func (m *MockEMRContainersAPI) TagResource(arg0 *emrcontainers.TagResourceInput)
 	return ret0, ret1
 }
 
-// TagResource indicates an expected call of TagResource
+// TagResource indicates an expected call of TagResource.
 func (mr *MockEMRContainersAPIMockRecorder) TagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResource", reflect.TypeOf((*MockEMRContainersAPI)(nil).TagResource), arg0)
 }
 
-// TagResourceRequest mocks base method
+// TagResourceRequest mocks base method.
 func (m *MockEMRContainersAPI) TagResourceRequest(arg0 *emrcontainers.TagResourceInput) (*request.Request, *emrcontainers.TagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "TagResourceRequest", arg0)
@@ -808,13 +809,13 @@ func (m *MockEMRContainersAPI) TagResourceRequest(arg0 *emrcontainers.TagResourc
 	return ret0, ret1
 }
 
-// TagResourceRequest indicates an expected call of TagResourceRequest
+// TagResourceRequest indicates an expected call of TagResourceRequest.
 func (mr *MockEMRContainersAPIMockRecorder) TagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).TagResourceRequest), arg0)
 }
 
-// TagResourceWithContext mocks base method
+// TagResourceWithContext mocks base method.
 func (m *MockEMRContainersAPI) TagResourceWithContext(arg0 context.Context, arg1 *emrcontainers.TagResourceInput, arg2 ...request.Option) (*emrcontainers.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -827,14 +828,14 @@ func (m *MockEMRContainersAPI) TagResourceWithContext(arg0 context.Context, arg1
 	return ret0, ret1
 }
 
-// TagResourceWithContext indicates an expected call of TagResourceWithContext
+// TagResourceWithContext indicates an expected call of TagResourceWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) TagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TagResourceWithContext", reflect.TypeOf((*MockEMRContainersAPI)(nil).TagResourceWithContext), varargs...)
 }
 
-// UntagResource mocks base method
+// UntagResource mocks base method.
 func (m *MockEMRContainersAPI) UntagResource(arg0 *emrcontainers.UntagResourceInput) (*emrcontainers.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResource", arg0)
@@ -843,13 +844,13 @@ func (m *MockEMRContainersAPI) UntagResource(arg0 *emrcontainers.UntagResourceIn
 	return ret0, ret1
 }
 
-// UntagResource indicates an expected call of UntagResource
+// UntagResource indicates an expected call of UntagResource.
 func (mr *MockEMRContainersAPIMockRecorder) UntagResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResource", reflect.TypeOf((*MockEMRContainersAPI)(nil).UntagResource), arg0)
 }
 
-// UntagResourceRequest mocks base method
+// UntagResourceRequest mocks base method.
 func (m *MockEMRContainersAPI) UntagResourceRequest(arg0 *emrcontainers.UntagResourceInput) (*request.Request, *emrcontainers.UntagResourceOutput) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UntagResourceRequest", arg0)
@@ -858,13 +859,13 @@ func (m *MockEMRContainersAPI) UntagResourceRequest(arg0 *emrcontainers.UntagRes
 	return ret0, ret1
 }
 
-// UntagResourceRequest indicates an expected call of UntagResourceRequest
+// UntagResourceRequest indicates an expected call of UntagResourceRequest.
 func (mr *MockEMRContainersAPIMockRecorder) UntagResourceRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceRequest", reflect.TypeOf((*MockEMRContainersAPI)(nil).UntagResourceRequest), arg0)
 }
 
-// UntagResourceWithContext mocks base method
+// UntagResourceWithContext mocks base method.
 func (m *MockEMRContainersAPI) UntagResourceWithContext(arg0 context.Context, arg1 *emrcontainers.UntagResourceInput, arg2 ...request.Option) (*emrcontainers.UntagResourceOutput, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{arg0, arg1}
@@ -877,7 +878,7 @@ func (m *MockEMRContainersAPI) UntagResourceWithContext(arg0 context.Context, ar
 	return ret0, ret1
 }
 
-// UntagResourceWithContext indicates an expected call of UntagResourceWithContext
+// UntagResourceWithContext indicates an expected call of UntagResourceWithContext.
 func (mr *MockEMRContainersAPIMockRecorder) UntagResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
