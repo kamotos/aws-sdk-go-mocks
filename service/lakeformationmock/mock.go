@@ -36,6 +36,56 @@ func (m *MockLakeFormationAPI) EXPECT() *MockLakeFormationAPIMockRecorder {
 	return m.recorder
 }
 
+// AddLFTagsToResource mocks base method.
+func (m *MockLakeFormationAPI) AddLFTagsToResource(arg0 *lakeformation.AddLFTagsToResourceInput) (*lakeformation.AddLFTagsToResourceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AddLFTagsToResource", arg0)
+	ret0, _ := ret[0].(*lakeformation.AddLFTagsToResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AddLFTagsToResource indicates an expected call of AddLFTagsToResource.
+func (mr *MockLakeFormationAPIMockRecorder) AddLFTagsToResource(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddLFTagsToResource", reflect.TypeOf((*MockLakeFormationAPI)(nil).AddLFTagsToResource), arg0)
+}
+
+// AddLFTagsToResourceRequest mocks base method.
+func (m *MockLakeFormationAPI) AddLFTagsToResourceRequest(arg0 *lakeformation.AddLFTagsToResourceInput) (*request.Request, *lakeformation.AddLFTagsToResourceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AddLFTagsToResourceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lakeformation.AddLFTagsToResourceOutput)
+	return ret0, ret1
+}
+
+// AddLFTagsToResourceRequest indicates an expected call of AddLFTagsToResourceRequest.
+func (mr *MockLakeFormationAPIMockRecorder) AddLFTagsToResourceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddLFTagsToResourceRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).AddLFTagsToResourceRequest), arg0)
+}
+
+// AddLFTagsToResourceWithContext mocks base method.
+func (m *MockLakeFormationAPI) AddLFTagsToResourceWithContext(arg0 context.Context, arg1 *lakeformation.AddLFTagsToResourceInput, arg2 ...request.Option) (*lakeformation.AddLFTagsToResourceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "AddLFTagsToResourceWithContext", varargs...)
+	ret0, _ := ret[0].(*lakeformation.AddLFTagsToResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AddLFTagsToResourceWithContext indicates an expected call of AddLFTagsToResourceWithContext.
+func (mr *MockLakeFormationAPIMockRecorder) AddLFTagsToResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddLFTagsToResourceWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).AddLFTagsToResourceWithContext), varargs...)
+}
+
 // BatchGrantPermissions mocks base method.
 func (m *MockLakeFormationAPI) BatchGrantPermissions(arg0 *lakeformation.BatchGrantPermissionsInput) (*lakeformation.BatchGrantPermissionsOutput, error) {
 	m.ctrl.T.Helper()
@@ -134,6 +184,106 @@ func (mr *MockLakeFormationAPIMockRecorder) BatchRevokePermissionsWithContext(ar
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchRevokePermissionsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).BatchRevokePermissionsWithContext), varargs...)
+}
+
+// CreateLFTag mocks base method.
+func (m *MockLakeFormationAPI) CreateLFTag(arg0 *lakeformation.CreateLFTagInput) (*lakeformation.CreateLFTagOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateLFTag", arg0)
+	ret0, _ := ret[0].(*lakeformation.CreateLFTagOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateLFTag indicates an expected call of CreateLFTag.
+func (mr *MockLakeFormationAPIMockRecorder) CreateLFTag(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLFTag", reflect.TypeOf((*MockLakeFormationAPI)(nil).CreateLFTag), arg0)
+}
+
+// CreateLFTagRequest mocks base method.
+func (m *MockLakeFormationAPI) CreateLFTagRequest(arg0 *lakeformation.CreateLFTagInput) (*request.Request, *lakeformation.CreateLFTagOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateLFTagRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lakeformation.CreateLFTagOutput)
+	return ret0, ret1
+}
+
+// CreateLFTagRequest indicates an expected call of CreateLFTagRequest.
+func (mr *MockLakeFormationAPIMockRecorder) CreateLFTagRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLFTagRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).CreateLFTagRequest), arg0)
+}
+
+// CreateLFTagWithContext mocks base method.
+func (m *MockLakeFormationAPI) CreateLFTagWithContext(arg0 context.Context, arg1 *lakeformation.CreateLFTagInput, arg2 ...request.Option) (*lakeformation.CreateLFTagOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateLFTagWithContext", varargs...)
+	ret0, _ := ret[0].(*lakeformation.CreateLFTagOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateLFTagWithContext indicates an expected call of CreateLFTagWithContext.
+func (mr *MockLakeFormationAPIMockRecorder) CreateLFTagWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLFTagWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).CreateLFTagWithContext), varargs...)
+}
+
+// DeleteLFTag mocks base method.
+func (m *MockLakeFormationAPI) DeleteLFTag(arg0 *lakeformation.DeleteLFTagInput) (*lakeformation.DeleteLFTagOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteLFTag", arg0)
+	ret0, _ := ret[0].(*lakeformation.DeleteLFTagOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteLFTag indicates an expected call of DeleteLFTag.
+func (mr *MockLakeFormationAPIMockRecorder) DeleteLFTag(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLFTag", reflect.TypeOf((*MockLakeFormationAPI)(nil).DeleteLFTag), arg0)
+}
+
+// DeleteLFTagRequest mocks base method.
+func (m *MockLakeFormationAPI) DeleteLFTagRequest(arg0 *lakeformation.DeleteLFTagInput) (*request.Request, *lakeformation.DeleteLFTagOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteLFTagRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lakeformation.DeleteLFTagOutput)
+	return ret0, ret1
+}
+
+// DeleteLFTagRequest indicates an expected call of DeleteLFTagRequest.
+func (mr *MockLakeFormationAPIMockRecorder) DeleteLFTagRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLFTagRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).DeleteLFTagRequest), arg0)
+}
+
+// DeleteLFTagWithContext mocks base method.
+func (m *MockLakeFormationAPI) DeleteLFTagWithContext(arg0 context.Context, arg1 *lakeformation.DeleteLFTagInput, arg2 ...request.Option) (*lakeformation.DeleteLFTagOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteLFTagWithContext", varargs...)
+	ret0, _ := ret[0].(*lakeformation.DeleteLFTagOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteLFTagWithContext indicates an expected call of DeleteLFTagWithContext.
+func (mr *MockLakeFormationAPIMockRecorder) DeleteLFTagWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLFTagWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).DeleteLFTagWithContext), varargs...)
 }
 
 // DeregisterResource mocks base method.
@@ -369,6 +519,106 @@ func (mr *MockLakeFormationAPIMockRecorder) GetEffectivePermissionsForPathWithCo
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEffectivePermissionsForPathWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetEffectivePermissionsForPathWithContext), varargs...)
 }
 
+// GetLFTag mocks base method.
+func (m *MockLakeFormationAPI) GetLFTag(arg0 *lakeformation.GetLFTagInput) (*lakeformation.GetLFTagOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetLFTag", arg0)
+	ret0, _ := ret[0].(*lakeformation.GetLFTagOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetLFTag indicates an expected call of GetLFTag.
+func (mr *MockLakeFormationAPIMockRecorder) GetLFTag(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLFTag", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetLFTag), arg0)
+}
+
+// GetLFTagRequest mocks base method.
+func (m *MockLakeFormationAPI) GetLFTagRequest(arg0 *lakeformation.GetLFTagInput) (*request.Request, *lakeformation.GetLFTagOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetLFTagRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lakeformation.GetLFTagOutput)
+	return ret0, ret1
+}
+
+// GetLFTagRequest indicates an expected call of GetLFTagRequest.
+func (mr *MockLakeFormationAPIMockRecorder) GetLFTagRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLFTagRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetLFTagRequest), arg0)
+}
+
+// GetLFTagWithContext mocks base method.
+func (m *MockLakeFormationAPI) GetLFTagWithContext(arg0 context.Context, arg1 *lakeformation.GetLFTagInput, arg2 ...request.Option) (*lakeformation.GetLFTagOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetLFTagWithContext", varargs...)
+	ret0, _ := ret[0].(*lakeformation.GetLFTagOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetLFTagWithContext indicates an expected call of GetLFTagWithContext.
+func (mr *MockLakeFormationAPIMockRecorder) GetLFTagWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLFTagWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetLFTagWithContext), varargs...)
+}
+
+// GetResourceLFTags mocks base method.
+func (m *MockLakeFormationAPI) GetResourceLFTags(arg0 *lakeformation.GetResourceLFTagsInput) (*lakeformation.GetResourceLFTagsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetResourceLFTags", arg0)
+	ret0, _ := ret[0].(*lakeformation.GetResourceLFTagsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetResourceLFTags indicates an expected call of GetResourceLFTags.
+func (mr *MockLakeFormationAPIMockRecorder) GetResourceLFTags(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourceLFTags", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetResourceLFTags), arg0)
+}
+
+// GetResourceLFTagsRequest mocks base method.
+func (m *MockLakeFormationAPI) GetResourceLFTagsRequest(arg0 *lakeformation.GetResourceLFTagsInput) (*request.Request, *lakeformation.GetResourceLFTagsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetResourceLFTagsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lakeformation.GetResourceLFTagsOutput)
+	return ret0, ret1
+}
+
+// GetResourceLFTagsRequest indicates an expected call of GetResourceLFTagsRequest.
+func (mr *MockLakeFormationAPIMockRecorder) GetResourceLFTagsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourceLFTagsRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetResourceLFTagsRequest), arg0)
+}
+
+// GetResourceLFTagsWithContext mocks base method.
+func (m *MockLakeFormationAPI) GetResourceLFTagsWithContext(arg0 context.Context, arg1 *lakeformation.GetResourceLFTagsInput, arg2 ...request.Option) (*lakeformation.GetResourceLFTagsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetResourceLFTagsWithContext", varargs...)
+	ret0, _ := ret[0].(*lakeformation.GetResourceLFTagsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetResourceLFTagsWithContext indicates an expected call of GetResourceLFTagsWithContext.
+func (mr *MockLakeFormationAPIMockRecorder) GetResourceLFTagsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResourceLFTagsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).GetResourceLFTagsWithContext), varargs...)
+}
+
 // GrantPermissions mocks base method.
 func (m *MockLakeFormationAPI) GrantPermissions(arg0 *lakeformation.GrantPermissionsInput) (*lakeformation.GrantPermissionsOutput, error) {
 	m.ctrl.T.Helper()
@@ -417,6 +667,56 @@ func (mr *MockLakeFormationAPIMockRecorder) GrantPermissionsWithContext(arg0, ar
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GrantPermissionsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).GrantPermissionsWithContext), varargs...)
+}
+
+// ListLFTags mocks base method.
+func (m *MockLakeFormationAPI) ListLFTags(arg0 *lakeformation.ListLFTagsInput) (*lakeformation.ListLFTagsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListLFTags", arg0)
+	ret0, _ := ret[0].(*lakeformation.ListLFTagsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListLFTags indicates an expected call of ListLFTags.
+func (mr *MockLakeFormationAPIMockRecorder) ListLFTags(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLFTags", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListLFTags), arg0)
+}
+
+// ListLFTagsRequest mocks base method.
+func (m *MockLakeFormationAPI) ListLFTagsRequest(arg0 *lakeformation.ListLFTagsInput) (*request.Request, *lakeformation.ListLFTagsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListLFTagsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lakeformation.ListLFTagsOutput)
+	return ret0, ret1
+}
+
+// ListLFTagsRequest indicates an expected call of ListLFTagsRequest.
+func (mr *MockLakeFormationAPIMockRecorder) ListLFTagsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLFTagsRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListLFTagsRequest), arg0)
+}
+
+// ListLFTagsWithContext mocks base method.
+func (m *MockLakeFormationAPI) ListLFTagsWithContext(arg0 context.Context, arg1 *lakeformation.ListLFTagsInput, arg2 ...request.Option) (*lakeformation.ListLFTagsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListLFTagsWithContext", varargs...)
+	ret0, _ := ret[0].(*lakeformation.ListLFTagsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListLFTagsWithContext indicates an expected call of ListLFTagsWithContext.
+func (mr *MockLakeFormationAPIMockRecorder) ListLFTagsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLFTagsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).ListLFTagsWithContext), varargs...)
 }
 
 // ListPermissions mocks base method.
@@ -685,6 +985,56 @@ func (mr *MockLakeFormationAPIMockRecorder) RegisterResourceWithContext(arg0, ar
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RegisterResourceWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).RegisterResourceWithContext), varargs...)
 }
 
+// RemoveLFTagsFromResource mocks base method.
+func (m *MockLakeFormationAPI) RemoveLFTagsFromResource(arg0 *lakeformation.RemoveLFTagsFromResourceInput) (*lakeformation.RemoveLFTagsFromResourceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "RemoveLFTagsFromResource", arg0)
+	ret0, _ := ret[0].(*lakeformation.RemoveLFTagsFromResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// RemoveLFTagsFromResource indicates an expected call of RemoveLFTagsFromResource.
+func (mr *MockLakeFormationAPIMockRecorder) RemoveLFTagsFromResource(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RemoveLFTagsFromResource", reflect.TypeOf((*MockLakeFormationAPI)(nil).RemoveLFTagsFromResource), arg0)
+}
+
+// RemoveLFTagsFromResourceRequest mocks base method.
+func (m *MockLakeFormationAPI) RemoveLFTagsFromResourceRequest(arg0 *lakeformation.RemoveLFTagsFromResourceInput) (*request.Request, *lakeformation.RemoveLFTagsFromResourceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "RemoveLFTagsFromResourceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lakeformation.RemoveLFTagsFromResourceOutput)
+	return ret0, ret1
+}
+
+// RemoveLFTagsFromResourceRequest indicates an expected call of RemoveLFTagsFromResourceRequest.
+func (mr *MockLakeFormationAPIMockRecorder) RemoveLFTagsFromResourceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RemoveLFTagsFromResourceRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).RemoveLFTagsFromResourceRequest), arg0)
+}
+
+// RemoveLFTagsFromResourceWithContext mocks base method.
+func (m *MockLakeFormationAPI) RemoveLFTagsFromResourceWithContext(arg0 context.Context, arg1 *lakeformation.RemoveLFTagsFromResourceInput, arg2 ...request.Option) (*lakeformation.RemoveLFTagsFromResourceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "RemoveLFTagsFromResourceWithContext", varargs...)
+	ret0, _ := ret[0].(*lakeformation.RemoveLFTagsFromResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// RemoveLFTagsFromResourceWithContext indicates an expected call of RemoveLFTagsFromResourceWithContext.
+func (mr *MockLakeFormationAPIMockRecorder) RemoveLFTagsFromResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RemoveLFTagsFromResourceWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).RemoveLFTagsFromResourceWithContext), varargs...)
+}
+
 // RevokePermissions mocks base method.
 func (m *MockLakeFormationAPI) RevokePermissions(arg0 *lakeformation.RevokePermissionsInput) (*lakeformation.RevokePermissionsOutput, error) {
 	m.ctrl.T.Helper()
@@ -733,6 +1083,156 @@ func (mr *MockLakeFormationAPIMockRecorder) RevokePermissionsWithContext(arg0, a
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokePermissionsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).RevokePermissionsWithContext), varargs...)
+}
+
+// SearchDatabasesByLFTags mocks base method.
+func (m *MockLakeFormationAPI) SearchDatabasesByLFTags(arg0 *lakeformation.SearchDatabasesByLFTagsInput) (*lakeformation.SearchDatabasesByLFTagsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SearchDatabasesByLFTags", arg0)
+	ret0, _ := ret[0].(*lakeformation.SearchDatabasesByLFTagsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SearchDatabasesByLFTags indicates an expected call of SearchDatabasesByLFTags.
+func (mr *MockLakeFormationAPIMockRecorder) SearchDatabasesByLFTags(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchDatabasesByLFTags", reflect.TypeOf((*MockLakeFormationAPI)(nil).SearchDatabasesByLFTags), arg0)
+}
+
+// SearchDatabasesByLFTagsRequest mocks base method.
+func (m *MockLakeFormationAPI) SearchDatabasesByLFTagsRequest(arg0 *lakeformation.SearchDatabasesByLFTagsInput) (*request.Request, *lakeformation.SearchDatabasesByLFTagsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SearchDatabasesByLFTagsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lakeformation.SearchDatabasesByLFTagsOutput)
+	return ret0, ret1
+}
+
+// SearchDatabasesByLFTagsRequest indicates an expected call of SearchDatabasesByLFTagsRequest.
+func (mr *MockLakeFormationAPIMockRecorder) SearchDatabasesByLFTagsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchDatabasesByLFTagsRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).SearchDatabasesByLFTagsRequest), arg0)
+}
+
+// SearchDatabasesByLFTagsWithContext mocks base method.
+func (m *MockLakeFormationAPI) SearchDatabasesByLFTagsWithContext(arg0 context.Context, arg1 *lakeformation.SearchDatabasesByLFTagsInput, arg2 ...request.Option) (*lakeformation.SearchDatabasesByLFTagsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "SearchDatabasesByLFTagsWithContext", varargs...)
+	ret0, _ := ret[0].(*lakeformation.SearchDatabasesByLFTagsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SearchDatabasesByLFTagsWithContext indicates an expected call of SearchDatabasesByLFTagsWithContext.
+func (mr *MockLakeFormationAPIMockRecorder) SearchDatabasesByLFTagsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchDatabasesByLFTagsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).SearchDatabasesByLFTagsWithContext), varargs...)
+}
+
+// SearchTablesByLFTags mocks base method.
+func (m *MockLakeFormationAPI) SearchTablesByLFTags(arg0 *lakeformation.SearchTablesByLFTagsInput) (*lakeformation.SearchTablesByLFTagsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SearchTablesByLFTags", arg0)
+	ret0, _ := ret[0].(*lakeformation.SearchTablesByLFTagsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SearchTablesByLFTags indicates an expected call of SearchTablesByLFTags.
+func (mr *MockLakeFormationAPIMockRecorder) SearchTablesByLFTags(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchTablesByLFTags", reflect.TypeOf((*MockLakeFormationAPI)(nil).SearchTablesByLFTags), arg0)
+}
+
+// SearchTablesByLFTagsRequest mocks base method.
+func (m *MockLakeFormationAPI) SearchTablesByLFTagsRequest(arg0 *lakeformation.SearchTablesByLFTagsInput) (*request.Request, *lakeformation.SearchTablesByLFTagsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SearchTablesByLFTagsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lakeformation.SearchTablesByLFTagsOutput)
+	return ret0, ret1
+}
+
+// SearchTablesByLFTagsRequest indicates an expected call of SearchTablesByLFTagsRequest.
+func (mr *MockLakeFormationAPIMockRecorder) SearchTablesByLFTagsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchTablesByLFTagsRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).SearchTablesByLFTagsRequest), arg0)
+}
+
+// SearchTablesByLFTagsWithContext mocks base method.
+func (m *MockLakeFormationAPI) SearchTablesByLFTagsWithContext(arg0 context.Context, arg1 *lakeformation.SearchTablesByLFTagsInput, arg2 ...request.Option) (*lakeformation.SearchTablesByLFTagsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "SearchTablesByLFTagsWithContext", varargs...)
+	ret0, _ := ret[0].(*lakeformation.SearchTablesByLFTagsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SearchTablesByLFTagsWithContext indicates an expected call of SearchTablesByLFTagsWithContext.
+func (mr *MockLakeFormationAPIMockRecorder) SearchTablesByLFTagsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchTablesByLFTagsWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).SearchTablesByLFTagsWithContext), varargs...)
+}
+
+// UpdateLFTag mocks base method.
+func (m *MockLakeFormationAPI) UpdateLFTag(arg0 *lakeformation.UpdateLFTagInput) (*lakeformation.UpdateLFTagOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateLFTag", arg0)
+	ret0, _ := ret[0].(*lakeformation.UpdateLFTagOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateLFTag indicates an expected call of UpdateLFTag.
+func (mr *MockLakeFormationAPIMockRecorder) UpdateLFTag(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLFTag", reflect.TypeOf((*MockLakeFormationAPI)(nil).UpdateLFTag), arg0)
+}
+
+// UpdateLFTagRequest mocks base method.
+func (m *MockLakeFormationAPI) UpdateLFTagRequest(arg0 *lakeformation.UpdateLFTagInput) (*request.Request, *lakeformation.UpdateLFTagOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateLFTagRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lakeformation.UpdateLFTagOutput)
+	return ret0, ret1
+}
+
+// UpdateLFTagRequest indicates an expected call of UpdateLFTagRequest.
+func (mr *MockLakeFormationAPIMockRecorder) UpdateLFTagRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLFTagRequest", reflect.TypeOf((*MockLakeFormationAPI)(nil).UpdateLFTagRequest), arg0)
+}
+
+// UpdateLFTagWithContext mocks base method.
+func (m *MockLakeFormationAPI) UpdateLFTagWithContext(arg0 context.Context, arg1 *lakeformation.UpdateLFTagInput, arg2 ...request.Option) (*lakeformation.UpdateLFTagOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateLFTagWithContext", varargs...)
+	ret0, _ := ret[0].(*lakeformation.UpdateLFTagOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateLFTagWithContext indicates an expected call of UpdateLFTagWithContext.
+func (mr *MockLakeFormationAPIMockRecorder) UpdateLFTagWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLFTagWithContext", reflect.TypeOf((*MockLakeFormationAPI)(nil).UpdateLFTagWithContext), varargs...)
 }
 
 // UpdateResource mocks base method.

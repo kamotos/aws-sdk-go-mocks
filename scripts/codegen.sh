@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euxo pipefail
 
-sdk_version=1.38.15
+sdk_version=1.38.36
 
 IFS=$'
 '
