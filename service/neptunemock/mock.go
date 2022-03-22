@@ -1284,6 +1284,39 @@ func (mr *MockNeptuneAPIMockRecorder) DescribeDBClusterParameterGroups(arg0 inte
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDBClusterParameterGroups", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribeDBClusterParameterGroups), arg0)
 }
 
+// DescribeDBClusterParameterGroupsPages mocks base method.
+func (m *MockNeptuneAPI) DescribeDBClusterParameterGroupsPages(arg0 *neptune.DescribeDBClusterParameterGroupsInput, arg1 func(*neptune.DescribeDBClusterParameterGroupsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeDBClusterParameterGroupsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeDBClusterParameterGroupsPages indicates an expected call of DescribeDBClusterParameterGroupsPages.
+func (mr *MockNeptuneAPIMockRecorder) DescribeDBClusterParameterGroupsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDBClusterParameterGroupsPages", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribeDBClusterParameterGroupsPages), arg0, arg1)
+}
+
+// DescribeDBClusterParameterGroupsPagesWithContext mocks base method.
+func (m *MockNeptuneAPI) DescribeDBClusterParameterGroupsPagesWithContext(arg0 context.Context, arg1 *neptune.DescribeDBClusterParameterGroupsInput, arg2 func(*neptune.DescribeDBClusterParameterGroupsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeDBClusterParameterGroupsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeDBClusterParameterGroupsPagesWithContext indicates an expected call of DescribeDBClusterParameterGroupsPagesWithContext.
+func (mr *MockNeptuneAPIMockRecorder) DescribeDBClusterParameterGroupsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDBClusterParameterGroupsPagesWithContext", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribeDBClusterParameterGroupsPagesWithContext), varargs...)
+}
+
 // DescribeDBClusterParameterGroupsRequest mocks base method.
 func (m *MockNeptuneAPI) DescribeDBClusterParameterGroupsRequest(arg0 *neptune.DescribeDBClusterParameterGroupsInput) (*request.Request, *neptune.DescribeDBClusterParameterGroupsOutput) {
 	m.ctrl.T.Helper()
@@ -1332,6 +1365,39 @@ func (m *MockNeptuneAPI) DescribeDBClusterParameters(arg0 *neptune.DescribeDBClu
 func (mr *MockNeptuneAPIMockRecorder) DescribeDBClusterParameters(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDBClusterParameters", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribeDBClusterParameters), arg0)
+}
+
+// DescribeDBClusterParametersPages mocks base method.
+func (m *MockNeptuneAPI) DescribeDBClusterParametersPages(arg0 *neptune.DescribeDBClusterParametersInput, arg1 func(*neptune.DescribeDBClusterParametersOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeDBClusterParametersPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeDBClusterParametersPages indicates an expected call of DescribeDBClusterParametersPages.
+func (mr *MockNeptuneAPIMockRecorder) DescribeDBClusterParametersPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDBClusterParametersPages", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribeDBClusterParametersPages), arg0, arg1)
+}
+
+// DescribeDBClusterParametersPagesWithContext mocks base method.
+func (m *MockNeptuneAPI) DescribeDBClusterParametersPagesWithContext(arg0 context.Context, arg1 *neptune.DescribeDBClusterParametersInput, arg2 func(*neptune.DescribeDBClusterParametersOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeDBClusterParametersPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeDBClusterParametersPagesWithContext indicates an expected call of DescribeDBClusterParametersPagesWithContext.
+func (mr *MockNeptuneAPIMockRecorder) DescribeDBClusterParametersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDBClusterParametersPagesWithContext", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribeDBClusterParametersPagesWithContext), varargs...)
 }
 
 // DescribeDBClusterParametersRequest mocks base method.
@@ -1434,6 +1500,39 @@ func (mr *MockNeptuneAPIMockRecorder) DescribeDBClusterSnapshots(arg0 interface{
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDBClusterSnapshots", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribeDBClusterSnapshots), arg0)
 }
 
+// DescribeDBClusterSnapshotsPages mocks base method.
+func (m *MockNeptuneAPI) DescribeDBClusterSnapshotsPages(arg0 *neptune.DescribeDBClusterSnapshotsInput, arg1 func(*neptune.DescribeDBClusterSnapshotsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeDBClusterSnapshotsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeDBClusterSnapshotsPages indicates an expected call of DescribeDBClusterSnapshotsPages.
+func (mr *MockNeptuneAPIMockRecorder) DescribeDBClusterSnapshotsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDBClusterSnapshotsPages", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribeDBClusterSnapshotsPages), arg0, arg1)
+}
+
+// DescribeDBClusterSnapshotsPagesWithContext mocks base method.
+func (m *MockNeptuneAPI) DescribeDBClusterSnapshotsPagesWithContext(arg0 context.Context, arg1 *neptune.DescribeDBClusterSnapshotsInput, arg2 func(*neptune.DescribeDBClusterSnapshotsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeDBClusterSnapshotsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeDBClusterSnapshotsPagesWithContext indicates an expected call of DescribeDBClusterSnapshotsPagesWithContext.
+func (mr *MockNeptuneAPIMockRecorder) DescribeDBClusterSnapshotsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDBClusterSnapshotsPagesWithContext", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribeDBClusterSnapshotsPagesWithContext), varargs...)
+}
+
 // DescribeDBClusterSnapshotsRequest mocks base method.
 func (m *MockNeptuneAPI) DescribeDBClusterSnapshotsRequest(arg0 *neptune.DescribeDBClusterSnapshotsInput) (*request.Request, *neptune.DescribeDBClusterSnapshotsOutput) {
 	m.ctrl.T.Helper()
@@ -1482,6 +1581,39 @@ func (m *MockNeptuneAPI) DescribeDBClusters(arg0 *neptune.DescribeDBClustersInpu
 func (mr *MockNeptuneAPIMockRecorder) DescribeDBClusters(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDBClusters", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribeDBClusters), arg0)
+}
+
+// DescribeDBClustersPages mocks base method.
+func (m *MockNeptuneAPI) DescribeDBClustersPages(arg0 *neptune.DescribeDBClustersInput, arg1 func(*neptune.DescribeDBClustersOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeDBClustersPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeDBClustersPages indicates an expected call of DescribeDBClustersPages.
+func (mr *MockNeptuneAPIMockRecorder) DescribeDBClustersPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDBClustersPages", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribeDBClustersPages), arg0, arg1)
+}
+
+// DescribeDBClustersPagesWithContext mocks base method.
+func (m *MockNeptuneAPI) DescribeDBClustersPagesWithContext(arg0 context.Context, arg1 *neptune.DescribeDBClustersInput, arg2 func(*neptune.DescribeDBClustersOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeDBClustersPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeDBClustersPagesWithContext indicates an expected call of DescribeDBClustersPagesWithContext.
+func (mr *MockNeptuneAPIMockRecorder) DescribeDBClustersPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDBClustersPagesWithContext", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribeDBClustersPagesWithContext), varargs...)
 }
 
 // DescribeDBClustersRequest mocks base method.
@@ -2379,6 +2511,39 @@ func (m *MockNeptuneAPI) DescribePendingMaintenanceActions(arg0 *neptune.Describ
 func (mr *MockNeptuneAPIMockRecorder) DescribePendingMaintenanceActions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePendingMaintenanceActions", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribePendingMaintenanceActions), arg0)
+}
+
+// DescribePendingMaintenanceActionsPages mocks base method.
+func (m *MockNeptuneAPI) DescribePendingMaintenanceActionsPages(arg0 *neptune.DescribePendingMaintenanceActionsInput, arg1 func(*neptune.DescribePendingMaintenanceActionsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribePendingMaintenanceActionsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribePendingMaintenanceActionsPages indicates an expected call of DescribePendingMaintenanceActionsPages.
+func (mr *MockNeptuneAPIMockRecorder) DescribePendingMaintenanceActionsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePendingMaintenanceActionsPages", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribePendingMaintenanceActionsPages), arg0, arg1)
+}
+
+// DescribePendingMaintenanceActionsPagesWithContext mocks base method.
+func (m *MockNeptuneAPI) DescribePendingMaintenanceActionsPagesWithContext(arg0 context.Context, arg1 *neptune.DescribePendingMaintenanceActionsInput, arg2 func(*neptune.DescribePendingMaintenanceActionsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribePendingMaintenanceActionsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribePendingMaintenanceActionsPagesWithContext indicates an expected call of DescribePendingMaintenanceActionsPagesWithContext.
+func (mr *MockNeptuneAPIMockRecorder) DescribePendingMaintenanceActionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePendingMaintenanceActionsPagesWithContext", reflect.TypeOf((*MockNeptuneAPI)(nil).DescribePendingMaintenanceActionsPagesWithContext), varargs...)
 }
 
 // DescribePendingMaintenanceActionsRequest mocks base method.

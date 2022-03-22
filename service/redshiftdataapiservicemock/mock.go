@@ -36,6 +36,56 @@ func (m *MockRedshiftDataAPIServiceAPI) EXPECT() *MockRedshiftDataAPIServiceAPIM
 	return m.recorder
 }
 
+// BatchExecuteStatement mocks base method.
+func (m *MockRedshiftDataAPIServiceAPI) BatchExecuteStatement(arg0 *redshiftdataapiservice.BatchExecuteStatementInput) (*redshiftdataapiservice.BatchExecuteStatementOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "BatchExecuteStatement", arg0)
+	ret0, _ := ret[0].(*redshiftdataapiservice.BatchExecuteStatementOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// BatchExecuteStatement indicates an expected call of BatchExecuteStatement.
+func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) BatchExecuteStatement(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchExecuteStatement", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).BatchExecuteStatement), arg0)
+}
+
+// BatchExecuteStatementRequest mocks base method.
+func (m *MockRedshiftDataAPIServiceAPI) BatchExecuteStatementRequest(arg0 *redshiftdataapiservice.BatchExecuteStatementInput) (*request.Request, *redshiftdataapiservice.BatchExecuteStatementOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "BatchExecuteStatementRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*redshiftdataapiservice.BatchExecuteStatementOutput)
+	return ret0, ret1
+}
+
+// BatchExecuteStatementRequest indicates an expected call of BatchExecuteStatementRequest.
+func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) BatchExecuteStatementRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchExecuteStatementRequest", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).BatchExecuteStatementRequest), arg0)
+}
+
+// BatchExecuteStatementWithContext mocks base method.
+func (m *MockRedshiftDataAPIServiceAPI) BatchExecuteStatementWithContext(arg0 context.Context, arg1 *redshiftdataapiservice.BatchExecuteStatementInput, arg2 ...request.Option) (*redshiftdataapiservice.BatchExecuteStatementOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "BatchExecuteStatementWithContext", varargs...)
+	ret0, _ := ret[0].(*redshiftdataapiservice.BatchExecuteStatementOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// BatchExecuteStatementWithContext indicates an expected call of BatchExecuteStatementWithContext.
+func (mr *MockRedshiftDataAPIServiceAPIMockRecorder) BatchExecuteStatementWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchExecuteStatementWithContext", reflect.TypeOf((*MockRedshiftDataAPIServiceAPI)(nil).BatchExecuteStatementWithContext), varargs...)
+}
+
 // CancelStatement mocks base method.
 func (m *MockRedshiftDataAPIServiceAPI) CancelStatement(arg0 *redshiftdataapiservice.CancelStatementInput) (*redshiftdataapiservice.CancelStatementOutput, error) {
 	m.ctrl.T.Helper()

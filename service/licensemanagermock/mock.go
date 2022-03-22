@@ -401,6 +401,106 @@ func (mr *MockLicenseManagerAPIMockRecorder) CreateLicenseConfigurationWithConte
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLicenseConfigurationWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).CreateLicenseConfigurationWithContext), varargs...)
 }
 
+// CreateLicenseConversionTaskForResource mocks base method.
+func (m *MockLicenseManagerAPI) CreateLicenseConversionTaskForResource(arg0 *licensemanager.CreateLicenseConversionTaskForResourceInput) (*licensemanager.CreateLicenseConversionTaskForResourceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateLicenseConversionTaskForResource", arg0)
+	ret0, _ := ret[0].(*licensemanager.CreateLicenseConversionTaskForResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateLicenseConversionTaskForResource indicates an expected call of CreateLicenseConversionTaskForResource.
+func (mr *MockLicenseManagerAPIMockRecorder) CreateLicenseConversionTaskForResource(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLicenseConversionTaskForResource", reflect.TypeOf((*MockLicenseManagerAPI)(nil).CreateLicenseConversionTaskForResource), arg0)
+}
+
+// CreateLicenseConversionTaskForResourceRequest mocks base method.
+func (m *MockLicenseManagerAPI) CreateLicenseConversionTaskForResourceRequest(arg0 *licensemanager.CreateLicenseConversionTaskForResourceInput) (*request.Request, *licensemanager.CreateLicenseConversionTaskForResourceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateLicenseConversionTaskForResourceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*licensemanager.CreateLicenseConversionTaskForResourceOutput)
+	return ret0, ret1
+}
+
+// CreateLicenseConversionTaskForResourceRequest indicates an expected call of CreateLicenseConversionTaskForResourceRequest.
+func (mr *MockLicenseManagerAPIMockRecorder) CreateLicenseConversionTaskForResourceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLicenseConversionTaskForResourceRequest", reflect.TypeOf((*MockLicenseManagerAPI)(nil).CreateLicenseConversionTaskForResourceRequest), arg0)
+}
+
+// CreateLicenseConversionTaskForResourceWithContext mocks base method.
+func (m *MockLicenseManagerAPI) CreateLicenseConversionTaskForResourceWithContext(arg0 context.Context, arg1 *licensemanager.CreateLicenseConversionTaskForResourceInput, arg2 ...request.Option) (*licensemanager.CreateLicenseConversionTaskForResourceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateLicenseConversionTaskForResourceWithContext", varargs...)
+	ret0, _ := ret[0].(*licensemanager.CreateLicenseConversionTaskForResourceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateLicenseConversionTaskForResourceWithContext indicates an expected call of CreateLicenseConversionTaskForResourceWithContext.
+func (mr *MockLicenseManagerAPIMockRecorder) CreateLicenseConversionTaskForResourceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLicenseConversionTaskForResourceWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).CreateLicenseConversionTaskForResourceWithContext), varargs...)
+}
+
+// CreateLicenseManagerReportGenerator mocks base method.
+func (m *MockLicenseManagerAPI) CreateLicenseManagerReportGenerator(arg0 *licensemanager.CreateLicenseManagerReportGeneratorInput) (*licensemanager.CreateLicenseManagerReportGeneratorOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateLicenseManagerReportGenerator", arg0)
+	ret0, _ := ret[0].(*licensemanager.CreateLicenseManagerReportGeneratorOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateLicenseManagerReportGenerator indicates an expected call of CreateLicenseManagerReportGenerator.
+func (mr *MockLicenseManagerAPIMockRecorder) CreateLicenseManagerReportGenerator(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLicenseManagerReportGenerator", reflect.TypeOf((*MockLicenseManagerAPI)(nil).CreateLicenseManagerReportGenerator), arg0)
+}
+
+// CreateLicenseManagerReportGeneratorRequest mocks base method.
+func (m *MockLicenseManagerAPI) CreateLicenseManagerReportGeneratorRequest(arg0 *licensemanager.CreateLicenseManagerReportGeneratorInput) (*request.Request, *licensemanager.CreateLicenseManagerReportGeneratorOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateLicenseManagerReportGeneratorRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*licensemanager.CreateLicenseManagerReportGeneratorOutput)
+	return ret0, ret1
+}
+
+// CreateLicenseManagerReportGeneratorRequest indicates an expected call of CreateLicenseManagerReportGeneratorRequest.
+func (mr *MockLicenseManagerAPIMockRecorder) CreateLicenseManagerReportGeneratorRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLicenseManagerReportGeneratorRequest", reflect.TypeOf((*MockLicenseManagerAPI)(nil).CreateLicenseManagerReportGeneratorRequest), arg0)
+}
+
+// CreateLicenseManagerReportGeneratorWithContext mocks base method.
+func (m *MockLicenseManagerAPI) CreateLicenseManagerReportGeneratorWithContext(arg0 context.Context, arg1 *licensemanager.CreateLicenseManagerReportGeneratorInput, arg2 ...request.Option) (*licensemanager.CreateLicenseManagerReportGeneratorOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateLicenseManagerReportGeneratorWithContext", varargs...)
+	ret0, _ := ret[0].(*licensemanager.CreateLicenseManagerReportGeneratorOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateLicenseManagerReportGeneratorWithContext indicates an expected call of CreateLicenseManagerReportGeneratorWithContext.
+func (mr *MockLicenseManagerAPIMockRecorder) CreateLicenseManagerReportGeneratorWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateLicenseManagerReportGeneratorWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).CreateLicenseManagerReportGeneratorWithContext), varargs...)
+}
+
 // CreateLicenseRequest mocks base method.
 func (m *MockLicenseManagerAPI) CreateLicenseRequest(arg0 *licensemanager.CreateLicenseInput) (*request.Request, *licensemanager.CreateLicenseOutput) {
 	m.ctrl.T.Helper()
@@ -649,6 +749,56 @@ func (mr *MockLicenseManagerAPIMockRecorder) DeleteLicenseConfigurationWithConte
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLicenseConfigurationWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).DeleteLicenseConfigurationWithContext), varargs...)
+}
+
+// DeleteLicenseManagerReportGenerator mocks base method.
+func (m *MockLicenseManagerAPI) DeleteLicenseManagerReportGenerator(arg0 *licensemanager.DeleteLicenseManagerReportGeneratorInput) (*licensemanager.DeleteLicenseManagerReportGeneratorOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteLicenseManagerReportGenerator", arg0)
+	ret0, _ := ret[0].(*licensemanager.DeleteLicenseManagerReportGeneratorOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteLicenseManagerReportGenerator indicates an expected call of DeleteLicenseManagerReportGenerator.
+func (mr *MockLicenseManagerAPIMockRecorder) DeleteLicenseManagerReportGenerator(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLicenseManagerReportGenerator", reflect.TypeOf((*MockLicenseManagerAPI)(nil).DeleteLicenseManagerReportGenerator), arg0)
+}
+
+// DeleteLicenseManagerReportGeneratorRequest mocks base method.
+func (m *MockLicenseManagerAPI) DeleteLicenseManagerReportGeneratorRequest(arg0 *licensemanager.DeleteLicenseManagerReportGeneratorInput) (*request.Request, *licensemanager.DeleteLicenseManagerReportGeneratorOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteLicenseManagerReportGeneratorRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*licensemanager.DeleteLicenseManagerReportGeneratorOutput)
+	return ret0, ret1
+}
+
+// DeleteLicenseManagerReportGeneratorRequest indicates an expected call of DeleteLicenseManagerReportGeneratorRequest.
+func (mr *MockLicenseManagerAPIMockRecorder) DeleteLicenseManagerReportGeneratorRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLicenseManagerReportGeneratorRequest", reflect.TypeOf((*MockLicenseManagerAPI)(nil).DeleteLicenseManagerReportGeneratorRequest), arg0)
+}
+
+// DeleteLicenseManagerReportGeneratorWithContext mocks base method.
+func (m *MockLicenseManagerAPI) DeleteLicenseManagerReportGeneratorWithContext(arg0 context.Context, arg1 *licensemanager.DeleteLicenseManagerReportGeneratorInput, arg2 ...request.Option) (*licensemanager.DeleteLicenseManagerReportGeneratorOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteLicenseManagerReportGeneratorWithContext", varargs...)
+	ret0, _ := ret[0].(*licensemanager.DeleteLicenseManagerReportGeneratorOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteLicenseManagerReportGeneratorWithContext indicates an expected call of DeleteLicenseManagerReportGeneratorWithContext.
+func (mr *MockLicenseManagerAPIMockRecorder) DeleteLicenseManagerReportGeneratorWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteLicenseManagerReportGeneratorWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).DeleteLicenseManagerReportGeneratorWithContext), varargs...)
 }
 
 // DeleteLicenseRequest mocks base method.
@@ -949,6 +1099,106 @@ func (mr *MockLicenseManagerAPIMockRecorder) GetLicenseConfigurationWithContext(
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLicenseConfigurationWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).GetLicenseConfigurationWithContext), varargs...)
+}
+
+// GetLicenseConversionTask mocks base method.
+func (m *MockLicenseManagerAPI) GetLicenseConversionTask(arg0 *licensemanager.GetLicenseConversionTaskInput) (*licensemanager.GetLicenseConversionTaskOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetLicenseConversionTask", arg0)
+	ret0, _ := ret[0].(*licensemanager.GetLicenseConversionTaskOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetLicenseConversionTask indicates an expected call of GetLicenseConversionTask.
+func (mr *MockLicenseManagerAPIMockRecorder) GetLicenseConversionTask(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLicenseConversionTask", reflect.TypeOf((*MockLicenseManagerAPI)(nil).GetLicenseConversionTask), arg0)
+}
+
+// GetLicenseConversionTaskRequest mocks base method.
+func (m *MockLicenseManagerAPI) GetLicenseConversionTaskRequest(arg0 *licensemanager.GetLicenseConversionTaskInput) (*request.Request, *licensemanager.GetLicenseConversionTaskOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetLicenseConversionTaskRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*licensemanager.GetLicenseConversionTaskOutput)
+	return ret0, ret1
+}
+
+// GetLicenseConversionTaskRequest indicates an expected call of GetLicenseConversionTaskRequest.
+func (mr *MockLicenseManagerAPIMockRecorder) GetLicenseConversionTaskRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLicenseConversionTaskRequest", reflect.TypeOf((*MockLicenseManagerAPI)(nil).GetLicenseConversionTaskRequest), arg0)
+}
+
+// GetLicenseConversionTaskWithContext mocks base method.
+func (m *MockLicenseManagerAPI) GetLicenseConversionTaskWithContext(arg0 context.Context, arg1 *licensemanager.GetLicenseConversionTaskInput, arg2 ...request.Option) (*licensemanager.GetLicenseConversionTaskOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetLicenseConversionTaskWithContext", varargs...)
+	ret0, _ := ret[0].(*licensemanager.GetLicenseConversionTaskOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetLicenseConversionTaskWithContext indicates an expected call of GetLicenseConversionTaskWithContext.
+func (mr *MockLicenseManagerAPIMockRecorder) GetLicenseConversionTaskWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLicenseConversionTaskWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).GetLicenseConversionTaskWithContext), varargs...)
+}
+
+// GetLicenseManagerReportGenerator mocks base method.
+func (m *MockLicenseManagerAPI) GetLicenseManagerReportGenerator(arg0 *licensemanager.GetLicenseManagerReportGeneratorInput) (*licensemanager.GetLicenseManagerReportGeneratorOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetLicenseManagerReportGenerator", arg0)
+	ret0, _ := ret[0].(*licensemanager.GetLicenseManagerReportGeneratorOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetLicenseManagerReportGenerator indicates an expected call of GetLicenseManagerReportGenerator.
+func (mr *MockLicenseManagerAPIMockRecorder) GetLicenseManagerReportGenerator(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLicenseManagerReportGenerator", reflect.TypeOf((*MockLicenseManagerAPI)(nil).GetLicenseManagerReportGenerator), arg0)
+}
+
+// GetLicenseManagerReportGeneratorRequest mocks base method.
+func (m *MockLicenseManagerAPI) GetLicenseManagerReportGeneratorRequest(arg0 *licensemanager.GetLicenseManagerReportGeneratorInput) (*request.Request, *licensemanager.GetLicenseManagerReportGeneratorOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetLicenseManagerReportGeneratorRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*licensemanager.GetLicenseManagerReportGeneratorOutput)
+	return ret0, ret1
+}
+
+// GetLicenseManagerReportGeneratorRequest indicates an expected call of GetLicenseManagerReportGeneratorRequest.
+func (mr *MockLicenseManagerAPIMockRecorder) GetLicenseManagerReportGeneratorRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLicenseManagerReportGeneratorRequest", reflect.TypeOf((*MockLicenseManagerAPI)(nil).GetLicenseManagerReportGeneratorRequest), arg0)
+}
+
+// GetLicenseManagerReportGeneratorWithContext mocks base method.
+func (m *MockLicenseManagerAPI) GetLicenseManagerReportGeneratorWithContext(arg0 context.Context, arg1 *licensemanager.GetLicenseManagerReportGeneratorInput, arg2 ...request.Option) (*licensemanager.GetLicenseManagerReportGeneratorOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetLicenseManagerReportGeneratorWithContext", varargs...)
+	ret0, _ := ret[0].(*licensemanager.GetLicenseManagerReportGeneratorOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetLicenseManagerReportGeneratorWithContext indicates an expected call of GetLicenseManagerReportGeneratorWithContext.
+func (mr *MockLicenseManagerAPIMockRecorder) GetLicenseManagerReportGeneratorWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLicenseManagerReportGeneratorWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).GetLicenseManagerReportGeneratorWithContext), varargs...)
 }
 
 // GetLicenseRequest mocks base method.
@@ -1284,6 +1534,106 @@ func (mr *MockLicenseManagerAPIMockRecorder) ListLicenseConfigurationsWithContex
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLicenseConfigurationsWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).ListLicenseConfigurationsWithContext), varargs...)
+}
+
+// ListLicenseConversionTasks mocks base method.
+func (m *MockLicenseManagerAPI) ListLicenseConversionTasks(arg0 *licensemanager.ListLicenseConversionTasksInput) (*licensemanager.ListLicenseConversionTasksOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListLicenseConversionTasks", arg0)
+	ret0, _ := ret[0].(*licensemanager.ListLicenseConversionTasksOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListLicenseConversionTasks indicates an expected call of ListLicenseConversionTasks.
+func (mr *MockLicenseManagerAPIMockRecorder) ListLicenseConversionTasks(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLicenseConversionTasks", reflect.TypeOf((*MockLicenseManagerAPI)(nil).ListLicenseConversionTasks), arg0)
+}
+
+// ListLicenseConversionTasksRequest mocks base method.
+func (m *MockLicenseManagerAPI) ListLicenseConversionTasksRequest(arg0 *licensemanager.ListLicenseConversionTasksInput) (*request.Request, *licensemanager.ListLicenseConversionTasksOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListLicenseConversionTasksRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*licensemanager.ListLicenseConversionTasksOutput)
+	return ret0, ret1
+}
+
+// ListLicenseConversionTasksRequest indicates an expected call of ListLicenseConversionTasksRequest.
+func (mr *MockLicenseManagerAPIMockRecorder) ListLicenseConversionTasksRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLicenseConversionTasksRequest", reflect.TypeOf((*MockLicenseManagerAPI)(nil).ListLicenseConversionTasksRequest), arg0)
+}
+
+// ListLicenseConversionTasksWithContext mocks base method.
+func (m *MockLicenseManagerAPI) ListLicenseConversionTasksWithContext(arg0 context.Context, arg1 *licensemanager.ListLicenseConversionTasksInput, arg2 ...request.Option) (*licensemanager.ListLicenseConversionTasksOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListLicenseConversionTasksWithContext", varargs...)
+	ret0, _ := ret[0].(*licensemanager.ListLicenseConversionTasksOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListLicenseConversionTasksWithContext indicates an expected call of ListLicenseConversionTasksWithContext.
+func (mr *MockLicenseManagerAPIMockRecorder) ListLicenseConversionTasksWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLicenseConversionTasksWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).ListLicenseConversionTasksWithContext), varargs...)
+}
+
+// ListLicenseManagerReportGenerators mocks base method.
+func (m *MockLicenseManagerAPI) ListLicenseManagerReportGenerators(arg0 *licensemanager.ListLicenseManagerReportGeneratorsInput) (*licensemanager.ListLicenseManagerReportGeneratorsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListLicenseManagerReportGenerators", arg0)
+	ret0, _ := ret[0].(*licensemanager.ListLicenseManagerReportGeneratorsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListLicenseManagerReportGenerators indicates an expected call of ListLicenseManagerReportGenerators.
+func (mr *MockLicenseManagerAPIMockRecorder) ListLicenseManagerReportGenerators(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLicenseManagerReportGenerators", reflect.TypeOf((*MockLicenseManagerAPI)(nil).ListLicenseManagerReportGenerators), arg0)
+}
+
+// ListLicenseManagerReportGeneratorsRequest mocks base method.
+func (m *MockLicenseManagerAPI) ListLicenseManagerReportGeneratorsRequest(arg0 *licensemanager.ListLicenseManagerReportGeneratorsInput) (*request.Request, *licensemanager.ListLicenseManagerReportGeneratorsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListLicenseManagerReportGeneratorsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*licensemanager.ListLicenseManagerReportGeneratorsOutput)
+	return ret0, ret1
+}
+
+// ListLicenseManagerReportGeneratorsRequest indicates an expected call of ListLicenseManagerReportGeneratorsRequest.
+func (mr *MockLicenseManagerAPIMockRecorder) ListLicenseManagerReportGeneratorsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLicenseManagerReportGeneratorsRequest", reflect.TypeOf((*MockLicenseManagerAPI)(nil).ListLicenseManagerReportGeneratorsRequest), arg0)
+}
+
+// ListLicenseManagerReportGeneratorsWithContext mocks base method.
+func (m *MockLicenseManagerAPI) ListLicenseManagerReportGeneratorsWithContext(arg0 context.Context, arg1 *licensemanager.ListLicenseManagerReportGeneratorsInput, arg2 ...request.Option) (*licensemanager.ListLicenseManagerReportGeneratorsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListLicenseManagerReportGeneratorsWithContext", varargs...)
+	ret0, _ := ret[0].(*licensemanager.ListLicenseManagerReportGeneratorsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListLicenseManagerReportGeneratorsWithContext indicates an expected call of ListLicenseManagerReportGeneratorsWithContext.
+func (mr *MockLicenseManagerAPIMockRecorder) ListLicenseManagerReportGeneratorsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListLicenseManagerReportGeneratorsWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).ListLicenseManagerReportGeneratorsWithContext), varargs...)
 }
 
 // ListLicenseSpecificationsForResource mocks base method.
@@ -1934,6 +2284,56 @@ func (mr *MockLicenseManagerAPIMockRecorder) UpdateLicenseConfigurationWithConte
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLicenseConfigurationWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).UpdateLicenseConfigurationWithContext), varargs...)
+}
+
+// UpdateLicenseManagerReportGenerator mocks base method.
+func (m *MockLicenseManagerAPI) UpdateLicenseManagerReportGenerator(arg0 *licensemanager.UpdateLicenseManagerReportGeneratorInput) (*licensemanager.UpdateLicenseManagerReportGeneratorOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateLicenseManagerReportGenerator", arg0)
+	ret0, _ := ret[0].(*licensemanager.UpdateLicenseManagerReportGeneratorOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateLicenseManagerReportGenerator indicates an expected call of UpdateLicenseManagerReportGenerator.
+func (mr *MockLicenseManagerAPIMockRecorder) UpdateLicenseManagerReportGenerator(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLicenseManagerReportGenerator", reflect.TypeOf((*MockLicenseManagerAPI)(nil).UpdateLicenseManagerReportGenerator), arg0)
+}
+
+// UpdateLicenseManagerReportGeneratorRequest mocks base method.
+func (m *MockLicenseManagerAPI) UpdateLicenseManagerReportGeneratorRequest(arg0 *licensemanager.UpdateLicenseManagerReportGeneratorInput) (*request.Request, *licensemanager.UpdateLicenseManagerReportGeneratorOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateLicenseManagerReportGeneratorRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*licensemanager.UpdateLicenseManagerReportGeneratorOutput)
+	return ret0, ret1
+}
+
+// UpdateLicenseManagerReportGeneratorRequest indicates an expected call of UpdateLicenseManagerReportGeneratorRequest.
+func (mr *MockLicenseManagerAPIMockRecorder) UpdateLicenseManagerReportGeneratorRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLicenseManagerReportGeneratorRequest", reflect.TypeOf((*MockLicenseManagerAPI)(nil).UpdateLicenseManagerReportGeneratorRequest), arg0)
+}
+
+// UpdateLicenseManagerReportGeneratorWithContext mocks base method.
+func (m *MockLicenseManagerAPI) UpdateLicenseManagerReportGeneratorWithContext(arg0 context.Context, arg1 *licensemanager.UpdateLicenseManagerReportGeneratorInput, arg2 ...request.Option) (*licensemanager.UpdateLicenseManagerReportGeneratorOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateLicenseManagerReportGeneratorWithContext", varargs...)
+	ret0, _ := ret[0].(*licensemanager.UpdateLicenseManagerReportGeneratorOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateLicenseManagerReportGeneratorWithContext indicates an expected call of UpdateLicenseManagerReportGeneratorWithContext.
+func (mr *MockLicenseManagerAPIMockRecorder) UpdateLicenseManagerReportGeneratorWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLicenseManagerReportGeneratorWithContext", reflect.TypeOf((*MockLicenseManagerAPI)(nil).UpdateLicenseManagerReportGeneratorWithContext), varargs...)
 }
 
 // UpdateLicenseSpecificationsForResource mocks base method.

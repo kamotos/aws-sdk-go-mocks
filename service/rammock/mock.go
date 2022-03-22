@@ -901,6 +901,89 @@ func (mr *MockRAMAPIMockRecorder) ListPendingInvitationResourcesWithContext(arg0
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPendingInvitationResourcesWithContext", reflect.TypeOf((*MockRAMAPI)(nil).ListPendingInvitationResourcesWithContext), varargs...)
 }
 
+// ListPermissionVersions mocks base method.
+func (m *MockRAMAPI) ListPermissionVersions(arg0 *ram.ListPermissionVersionsInput) (*ram.ListPermissionVersionsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListPermissionVersions", arg0)
+	ret0, _ := ret[0].(*ram.ListPermissionVersionsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListPermissionVersions indicates an expected call of ListPermissionVersions.
+func (mr *MockRAMAPIMockRecorder) ListPermissionVersions(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionVersions", reflect.TypeOf((*MockRAMAPI)(nil).ListPermissionVersions), arg0)
+}
+
+// ListPermissionVersionsPages mocks base method.
+func (m *MockRAMAPI) ListPermissionVersionsPages(arg0 *ram.ListPermissionVersionsInput, arg1 func(*ram.ListPermissionVersionsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListPermissionVersionsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListPermissionVersionsPages indicates an expected call of ListPermissionVersionsPages.
+func (mr *MockRAMAPIMockRecorder) ListPermissionVersionsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionVersionsPages", reflect.TypeOf((*MockRAMAPI)(nil).ListPermissionVersionsPages), arg0, arg1)
+}
+
+// ListPermissionVersionsPagesWithContext mocks base method.
+func (m *MockRAMAPI) ListPermissionVersionsPagesWithContext(arg0 context.Context, arg1 *ram.ListPermissionVersionsInput, arg2 func(*ram.ListPermissionVersionsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListPermissionVersionsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListPermissionVersionsPagesWithContext indicates an expected call of ListPermissionVersionsPagesWithContext.
+func (mr *MockRAMAPIMockRecorder) ListPermissionVersionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionVersionsPagesWithContext", reflect.TypeOf((*MockRAMAPI)(nil).ListPermissionVersionsPagesWithContext), varargs...)
+}
+
+// ListPermissionVersionsRequest mocks base method.
+func (m *MockRAMAPI) ListPermissionVersionsRequest(arg0 *ram.ListPermissionVersionsInput) (*request.Request, *ram.ListPermissionVersionsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListPermissionVersionsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*ram.ListPermissionVersionsOutput)
+	return ret0, ret1
+}
+
+// ListPermissionVersionsRequest indicates an expected call of ListPermissionVersionsRequest.
+func (mr *MockRAMAPIMockRecorder) ListPermissionVersionsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionVersionsRequest", reflect.TypeOf((*MockRAMAPI)(nil).ListPermissionVersionsRequest), arg0)
+}
+
+// ListPermissionVersionsWithContext mocks base method.
+func (m *MockRAMAPI) ListPermissionVersionsWithContext(arg0 context.Context, arg1 *ram.ListPermissionVersionsInput, arg2 ...request.Option) (*ram.ListPermissionVersionsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListPermissionVersionsWithContext", varargs...)
+	ret0, _ := ret[0].(*ram.ListPermissionVersionsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListPermissionVersionsWithContext indicates an expected call of ListPermissionVersionsWithContext.
+func (mr *MockRAMAPIMockRecorder) ListPermissionVersionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionVersionsWithContext", reflect.TypeOf((*MockRAMAPI)(nil).ListPermissionVersionsWithContext), varargs...)
+}
+
 // ListPermissions mocks base method.
 func (m *MockRAMAPI) ListPermissions(arg0 *ram.ListPermissionsInput) (*ram.ListPermissionsOutput, error) {
 	m.ctrl.T.Helper()
@@ -914,6 +997,39 @@ func (m *MockRAMAPI) ListPermissions(arg0 *ram.ListPermissionsInput) (*ram.ListP
 func (mr *MockRAMAPIMockRecorder) ListPermissions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissions", reflect.TypeOf((*MockRAMAPI)(nil).ListPermissions), arg0)
+}
+
+// ListPermissionsPages mocks base method.
+func (m *MockRAMAPI) ListPermissionsPages(arg0 *ram.ListPermissionsInput, arg1 func(*ram.ListPermissionsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListPermissionsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListPermissionsPages indicates an expected call of ListPermissionsPages.
+func (mr *MockRAMAPIMockRecorder) ListPermissionsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionsPages", reflect.TypeOf((*MockRAMAPI)(nil).ListPermissionsPages), arg0, arg1)
+}
+
+// ListPermissionsPagesWithContext mocks base method.
+func (m *MockRAMAPI) ListPermissionsPagesWithContext(arg0 context.Context, arg1 *ram.ListPermissionsInput, arg2 func(*ram.ListPermissionsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListPermissionsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListPermissionsPagesWithContext indicates an expected call of ListPermissionsPagesWithContext.
+func (mr *MockRAMAPIMockRecorder) ListPermissionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListPermissionsPagesWithContext", reflect.TypeOf((*MockRAMAPI)(nil).ListPermissionsPagesWithContext), varargs...)
 }
 
 // ListPermissionsRequest mocks base method.
@@ -1049,6 +1165,39 @@ func (mr *MockRAMAPIMockRecorder) ListResourceSharePermissions(arg0 interface{})
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResourceSharePermissions", reflect.TypeOf((*MockRAMAPI)(nil).ListResourceSharePermissions), arg0)
 }
 
+// ListResourceSharePermissionsPages mocks base method.
+func (m *MockRAMAPI) ListResourceSharePermissionsPages(arg0 *ram.ListResourceSharePermissionsInput, arg1 func(*ram.ListResourceSharePermissionsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListResourceSharePermissionsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListResourceSharePermissionsPages indicates an expected call of ListResourceSharePermissionsPages.
+func (mr *MockRAMAPIMockRecorder) ListResourceSharePermissionsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResourceSharePermissionsPages", reflect.TypeOf((*MockRAMAPI)(nil).ListResourceSharePermissionsPages), arg0, arg1)
+}
+
+// ListResourceSharePermissionsPagesWithContext mocks base method.
+func (m *MockRAMAPI) ListResourceSharePermissionsPagesWithContext(arg0 context.Context, arg1 *ram.ListResourceSharePermissionsInput, arg2 func(*ram.ListResourceSharePermissionsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListResourceSharePermissionsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListResourceSharePermissionsPagesWithContext indicates an expected call of ListResourceSharePermissionsPagesWithContext.
+func (mr *MockRAMAPIMockRecorder) ListResourceSharePermissionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResourceSharePermissionsPagesWithContext", reflect.TypeOf((*MockRAMAPI)(nil).ListResourceSharePermissionsPagesWithContext), varargs...)
+}
+
 // ListResourceSharePermissionsRequest mocks base method.
 func (m *MockRAMAPI) ListResourceSharePermissionsRequest(arg0 *ram.ListResourceSharePermissionsInput) (*request.Request, *ram.ListResourceSharePermissionsOutput) {
 	m.ctrl.T.Helper()
@@ -1097,6 +1246,39 @@ func (m *MockRAMAPI) ListResourceTypes(arg0 *ram.ListResourceTypesInput) (*ram.L
 func (mr *MockRAMAPIMockRecorder) ListResourceTypes(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResourceTypes", reflect.TypeOf((*MockRAMAPI)(nil).ListResourceTypes), arg0)
+}
+
+// ListResourceTypesPages mocks base method.
+func (m *MockRAMAPI) ListResourceTypesPages(arg0 *ram.ListResourceTypesInput, arg1 func(*ram.ListResourceTypesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListResourceTypesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListResourceTypesPages indicates an expected call of ListResourceTypesPages.
+func (mr *MockRAMAPIMockRecorder) ListResourceTypesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResourceTypesPages", reflect.TypeOf((*MockRAMAPI)(nil).ListResourceTypesPages), arg0, arg1)
+}
+
+// ListResourceTypesPagesWithContext mocks base method.
+func (m *MockRAMAPI) ListResourceTypesPagesWithContext(arg0 context.Context, arg1 *ram.ListResourceTypesInput, arg2 func(*ram.ListResourceTypesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListResourceTypesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListResourceTypesPagesWithContext indicates an expected call of ListResourceTypesPagesWithContext.
+func (mr *MockRAMAPIMockRecorder) ListResourceTypesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResourceTypesPagesWithContext", reflect.TypeOf((*MockRAMAPI)(nil).ListResourceTypesPagesWithContext), varargs...)
 }
 
 // ListResourceTypesRequest mocks base method.

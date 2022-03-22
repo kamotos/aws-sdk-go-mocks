@@ -1136,6 +1136,56 @@ func (mr *MockChimeAPIMockRecorder) CreateChannelWithContext(arg0, arg1 interfac
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateChannelWithContext", reflect.TypeOf((*MockChimeAPI)(nil).CreateChannelWithContext), varargs...)
 }
 
+// CreateMediaCapturePipeline mocks base method.
+func (m *MockChimeAPI) CreateMediaCapturePipeline(arg0 *chime.CreateMediaCapturePipelineInput) (*chime.CreateMediaCapturePipelineOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateMediaCapturePipeline", arg0)
+	ret0, _ := ret[0].(*chime.CreateMediaCapturePipelineOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateMediaCapturePipeline indicates an expected call of CreateMediaCapturePipeline.
+func (mr *MockChimeAPIMockRecorder) CreateMediaCapturePipeline(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMediaCapturePipeline", reflect.TypeOf((*MockChimeAPI)(nil).CreateMediaCapturePipeline), arg0)
+}
+
+// CreateMediaCapturePipelineRequest mocks base method.
+func (m *MockChimeAPI) CreateMediaCapturePipelineRequest(arg0 *chime.CreateMediaCapturePipelineInput) (*request.Request, *chime.CreateMediaCapturePipelineOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateMediaCapturePipelineRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*chime.CreateMediaCapturePipelineOutput)
+	return ret0, ret1
+}
+
+// CreateMediaCapturePipelineRequest indicates an expected call of CreateMediaCapturePipelineRequest.
+func (mr *MockChimeAPIMockRecorder) CreateMediaCapturePipelineRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMediaCapturePipelineRequest", reflect.TypeOf((*MockChimeAPI)(nil).CreateMediaCapturePipelineRequest), arg0)
+}
+
+// CreateMediaCapturePipelineWithContext mocks base method.
+func (m *MockChimeAPI) CreateMediaCapturePipelineWithContext(arg0 context.Context, arg1 *chime.CreateMediaCapturePipelineInput, arg2 ...request.Option) (*chime.CreateMediaCapturePipelineOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateMediaCapturePipelineWithContext", varargs...)
+	ret0, _ := ret[0].(*chime.CreateMediaCapturePipelineOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateMediaCapturePipelineWithContext indicates an expected call of CreateMediaCapturePipelineWithContext.
+func (mr *MockChimeAPIMockRecorder) CreateMediaCapturePipelineWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateMediaCapturePipelineWithContext", reflect.TypeOf((*MockChimeAPI)(nil).CreateMediaCapturePipelineWithContext), varargs...)
+}
+
 // CreateMeeting mocks base method.
 func (m *MockChimeAPI) CreateMeeting(arg0 *chime.CreateMeetingInput) (*chime.CreateMeetingOutput, error) {
 	m.ctrl.T.Helper()
@@ -2384,6 +2434,56 @@ func (mr *MockChimeAPIMockRecorder) DeleteEventsConfigurationWithContext(arg0, a
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEventsConfigurationWithContext", reflect.TypeOf((*MockChimeAPI)(nil).DeleteEventsConfigurationWithContext), varargs...)
+}
+
+// DeleteMediaCapturePipeline mocks base method.
+func (m *MockChimeAPI) DeleteMediaCapturePipeline(arg0 *chime.DeleteMediaCapturePipelineInput) (*chime.DeleteMediaCapturePipelineOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteMediaCapturePipeline", arg0)
+	ret0, _ := ret[0].(*chime.DeleteMediaCapturePipelineOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteMediaCapturePipeline indicates an expected call of DeleteMediaCapturePipeline.
+func (mr *MockChimeAPIMockRecorder) DeleteMediaCapturePipeline(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMediaCapturePipeline", reflect.TypeOf((*MockChimeAPI)(nil).DeleteMediaCapturePipeline), arg0)
+}
+
+// DeleteMediaCapturePipelineRequest mocks base method.
+func (m *MockChimeAPI) DeleteMediaCapturePipelineRequest(arg0 *chime.DeleteMediaCapturePipelineInput) (*request.Request, *chime.DeleteMediaCapturePipelineOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteMediaCapturePipelineRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*chime.DeleteMediaCapturePipelineOutput)
+	return ret0, ret1
+}
+
+// DeleteMediaCapturePipelineRequest indicates an expected call of DeleteMediaCapturePipelineRequest.
+func (mr *MockChimeAPIMockRecorder) DeleteMediaCapturePipelineRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMediaCapturePipelineRequest", reflect.TypeOf((*MockChimeAPI)(nil).DeleteMediaCapturePipelineRequest), arg0)
+}
+
+// DeleteMediaCapturePipelineWithContext mocks base method.
+func (m *MockChimeAPI) DeleteMediaCapturePipelineWithContext(arg0 context.Context, arg1 *chime.DeleteMediaCapturePipelineInput, arg2 ...request.Option) (*chime.DeleteMediaCapturePipelineOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteMediaCapturePipelineWithContext", varargs...)
+	ret0, _ := ret[0].(*chime.DeleteMediaCapturePipelineOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteMediaCapturePipelineWithContext indicates an expected call of DeleteMediaCapturePipelineWithContext.
+func (mr *MockChimeAPIMockRecorder) DeleteMediaCapturePipelineWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMediaCapturePipelineWithContext", reflect.TypeOf((*MockChimeAPI)(nil).DeleteMediaCapturePipelineWithContext), varargs...)
 }
 
 // DeleteMeeting mocks base method.
@@ -4234,6 +4334,56 @@ func (mr *MockChimeAPIMockRecorder) GetGlobalSettingsWithContext(arg0, arg1 inte
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGlobalSettingsWithContext", reflect.TypeOf((*MockChimeAPI)(nil).GetGlobalSettingsWithContext), varargs...)
+}
+
+// GetMediaCapturePipeline mocks base method.
+func (m *MockChimeAPI) GetMediaCapturePipeline(arg0 *chime.GetMediaCapturePipelineInput) (*chime.GetMediaCapturePipelineOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetMediaCapturePipeline", arg0)
+	ret0, _ := ret[0].(*chime.GetMediaCapturePipelineOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetMediaCapturePipeline indicates an expected call of GetMediaCapturePipeline.
+func (mr *MockChimeAPIMockRecorder) GetMediaCapturePipeline(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMediaCapturePipeline", reflect.TypeOf((*MockChimeAPI)(nil).GetMediaCapturePipeline), arg0)
+}
+
+// GetMediaCapturePipelineRequest mocks base method.
+func (m *MockChimeAPI) GetMediaCapturePipelineRequest(arg0 *chime.GetMediaCapturePipelineInput) (*request.Request, *chime.GetMediaCapturePipelineOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetMediaCapturePipelineRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*chime.GetMediaCapturePipelineOutput)
+	return ret0, ret1
+}
+
+// GetMediaCapturePipelineRequest indicates an expected call of GetMediaCapturePipelineRequest.
+func (mr *MockChimeAPIMockRecorder) GetMediaCapturePipelineRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMediaCapturePipelineRequest", reflect.TypeOf((*MockChimeAPI)(nil).GetMediaCapturePipelineRequest), arg0)
+}
+
+// GetMediaCapturePipelineWithContext mocks base method.
+func (m *MockChimeAPI) GetMediaCapturePipelineWithContext(arg0 context.Context, arg1 *chime.GetMediaCapturePipelineInput, arg2 ...request.Option) (*chime.GetMediaCapturePipelineOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetMediaCapturePipelineWithContext", varargs...)
+	ret0, _ := ret[0].(*chime.GetMediaCapturePipelineOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetMediaCapturePipelineWithContext indicates an expected call of GetMediaCapturePipelineWithContext.
+func (mr *MockChimeAPIMockRecorder) GetMediaCapturePipelineWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMediaCapturePipelineWithContext", reflect.TypeOf((*MockChimeAPI)(nil).GetMediaCapturePipelineWithContext), varargs...)
 }
 
 // GetMeeting mocks base method.
@@ -6515,6 +6665,89 @@ func (mr *MockChimeAPIMockRecorder) ListChannelsWithContext(arg0, arg1 interface
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListChannelsWithContext", reflect.TypeOf((*MockChimeAPI)(nil).ListChannelsWithContext), varargs...)
 }
 
+// ListMediaCapturePipelines mocks base method.
+func (m *MockChimeAPI) ListMediaCapturePipelines(arg0 *chime.ListMediaCapturePipelinesInput) (*chime.ListMediaCapturePipelinesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListMediaCapturePipelines", arg0)
+	ret0, _ := ret[0].(*chime.ListMediaCapturePipelinesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListMediaCapturePipelines indicates an expected call of ListMediaCapturePipelines.
+func (mr *MockChimeAPIMockRecorder) ListMediaCapturePipelines(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMediaCapturePipelines", reflect.TypeOf((*MockChimeAPI)(nil).ListMediaCapturePipelines), arg0)
+}
+
+// ListMediaCapturePipelinesPages mocks base method.
+func (m *MockChimeAPI) ListMediaCapturePipelinesPages(arg0 *chime.ListMediaCapturePipelinesInput, arg1 func(*chime.ListMediaCapturePipelinesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListMediaCapturePipelinesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListMediaCapturePipelinesPages indicates an expected call of ListMediaCapturePipelinesPages.
+func (mr *MockChimeAPIMockRecorder) ListMediaCapturePipelinesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMediaCapturePipelinesPages", reflect.TypeOf((*MockChimeAPI)(nil).ListMediaCapturePipelinesPages), arg0, arg1)
+}
+
+// ListMediaCapturePipelinesPagesWithContext mocks base method.
+func (m *MockChimeAPI) ListMediaCapturePipelinesPagesWithContext(arg0 context.Context, arg1 *chime.ListMediaCapturePipelinesInput, arg2 func(*chime.ListMediaCapturePipelinesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListMediaCapturePipelinesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListMediaCapturePipelinesPagesWithContext indicates an expected call of ListMediaCapturePipelinesPagesWithContext.
+func (mr *MockChimeAPIMockRecorder) ListMediaCapturePipelinesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMediaCapturePipelinesPagesWithContext", reflect.TypeOf((*MockChimeAPI)(nil).ListMediaCapturePipelinesPagesWithContext), varargs...)
+}
+
+// ListMediaCapturePipelinesRequest mocks base method.
+func (m *MockChimeAPI) ListMediaCapturePipelinesRequest(arg0 *chime.ListMediaCapturePipelinesInput) (*request.Request, *chime.ListMediaCapturePipelinesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListMediaCapturePipelinesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*chime.ListMediaCapturePipelinesOutput)
+	return ret0, ret1
+}
+
+// ListMediaCapturePipelinesRequest indicates an expected call of ListMediaCapturePipelinesRequest.
+func (mr *MockChimeAPIMockRecorder) ListMediaCapturePipelinesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMediaCapturePipelinesRequest", reflect.TypeOf((*MockChimeAPI)(nil).ListMediaCapturePipelinesRequest), arg0)
+}
+
+// ListMediaCapturePipelinesWithContext mocks base method.
+func (m *MockChimeAPI) ListMediaCapturePipelinesWithContext(arg0 context.Context, arg1 *chime.ListMediaCapturePipelinesInput, arg2 ...request.Option) (*chime.ListMediaCapturePipelinesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListMediaCapturePipelinesWithContext", varargs...)
+	ret0, _ := ret[0].(*chime.ListMediaCapturePipelinesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListMediaCapturePipelinesWithContext indicates an expected call of ListMediaCapturePipelinesWithContext.
+func (mr *MockChimeAPIMockRecorder) ListMediaCapturePipelinesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListMediaCapturePipelinesWithContext", reflect.TypeOf((*MockChimeAPI)(nil).ListMediaCapturePipelinesWithContext), varargs...)
+}
+
 // ListMeetingTags mocks base method.
 func (m *MockChimeAPI) ListMeetingTags(arg0 *chime.ListMeetingTagsInput) (*chime.ListMeetingTagsOutput, error) {
 	m.ctrl.T.Helper()
@@ -8711,6 +8944,106 @@ func (mr *MockChimeAPIMockRecorder) SendChannelMessageWithContext(arg0, arg1 int
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendChannelMessageWithContext", reflect.TypeOf((*MockChimeAPI)(nil).SendChannelMessageWithContext), varargs...)
 }
 
+// StartMeetingTranscription mocks base method.
+func (m *MockChimeAPI) StartMeetingTranscription(arg0 *chime.StartMeetingTranscriptionInput) (*chime.StartMeetingTranscriptionOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartMeetingTranscription", arg0)
+	ret0, _ := ret[0].(*chime.StartMeetingTranscriptionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartMeetingTranscription indicates an expected call of StartMeetingTranscription.
+func (mr *MockChimeAPIMockRecorder) StartMeetingTranscription(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMeetingTranscription", reflect.TypeOf((*MockChimeAPI)(nil).StartMeetingTranscription), arg0)
+}
+
+// StartMeetingTranscriptionRequest mocks base method.
+func (m *MockChimeAPI) StartMeetingTranscriptionRequest(arg0 *chime.StartMeetingTranscriptionInput) (*request.Request, *chime.StartMeetingTranscriptionOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartMeetingTranscriptionRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*chime.StartMeetingTranscriptionOutput)
+	return ret0, ret1
+}
+
+// StartMeetingTranscriptionRequest indicates an expected call of StartMeetingTranscriptionRequest.
+func (mr *MockChimeAPIMockRecorder) StartMeetingTranscriptionRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMeetingTranscriptionRequest", reflect.TypeOf((*MockChimeAPI)(nil).StartMeetingTranscriptionRequest), arg0)
+}
+
+// StartMeetingTranscriptionWithContext mocks base method.
+func (m *MockChimeAPI) StartMeetingTranscriptionWithContext(arg0 context.Context, arg1 *chime.StartMeetingTranscriptionInput, arg2 ...request.Option) (*chime.StartMeetingTranscriptionOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "StartMeetingTranscriptionWithContext", varargs...)
+	ret0, _ := ret[0].(*chime.StartMeetingTranscriptionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartMeetingTranscriptionWithContext indicates an expected call of StartMeetingTranscriptionWithContext.
+func (mr *MockChimeAPIMockRecorder) StartMeetingTranscriptionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMeetingTranscriptionWithContext", reflect.TypeOf((*MockChimeAPI)(nil).StartMeetingTranscriptionWithContext), varargs...)
+}
+
+// StopMeetingTranscription mocks base method.
+func (m *MockChimeAPI) StopMeetingTranscription(arg0 *chime.StopMeetingTranscriptionInput) (*chime.StopMeetingTranscriptionOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StopMeetingTranscription", arg0)
+	ret0, _ := ret[0].(*chime.StopMeetingTranscriptionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StopMeetingTranscription indicates an expected call of StopMeetingTranscription.
+func (mr *MockChimeAPIMockRecorder) StopMeetingTranscription(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopMeetingTranscription", reflect.TypeOf((*MockChimeAPI)(nil).StopMeetingTranscription), arg0)
+}
+
+// StopMeetingTranscriptionRequest mocks base method.
+func (m *MockChimeAPI) StopMeetingTranscriptionRequest(arg0 *chime.StopMeetingTranscriptionInput) (*request.Request, *chime.StopMeetingTranscriptionOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StopMeetingTranscriptionRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*chime.StopMeetingTranscriptionOutput)
+	return ret0, ret1
+}
+
+// StopMeetingTranscriptionRequest indicates an expected call of StopMeetingTranscriptionRequest.
+func (mr *MockChimeAPIMockRecorder) StopMeetingTranscriptionRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopMeetingTranscriptionRequest", reflect.TypeOf((*MockChimeAPI)(nil).StopMeetingTranscriptionRequest), arg0)
+}
+
+// StopMeetingTranscriptionWithContext mocks base method.
+func (m *MockChimeAPI) StopMeetingTranscriptionWithContext(arg0 context.Context, arg1 *chime.StopMeetingTranscriptionInput, arg2 ...request.Option) (*chime.StopMeetingTranscriptionOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "StopMeetingTranscriptionWithContext", varargs...)
+	ret0, _ := ret[0].(*chime.StopMeetingTranscriptionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StopMeetingTranscriptionWithContext indicates an expected call of StopMeetingTranscriptionWithContext.
+func (mr *MockChimeAPIMockRecorder) StopMeetingTranscriptionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopMeetingTranscriptionWithContext", reflect.TypeOf((*MockChimeAPI)(nil).StopMeetingTranscriptionWithContext), varargs...)
+}
+
 // TagAttendee mocks base method.
 func (m *MockChimeAPI) TagAttendee(arg0 *chime.TagAttendeeInput) (*chime.TagAttendeeOutput, error) {
 	m.ctrl.T.Helper()
@@ -9724,6 +10057,56 @@ func (m *MockChimeAPI) UpdateSipMediaApplication(arg0 *chime.UpdateSipMediaAppli
 func (mr *MockChimeAPIMockRecorder) UpdateSipMediaApplication(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSipMediaApplication", reflect.TypeOf((*MockChimeAPI)(nil).UpdateSipMediaApplication), arg0)
+}
+
+// UpdateSipMediaApplicationCall mocks base method.
+func (m *MockChimeAPI) UpdateSipMediaApplicationCall(arg0 *chime.UpdateSipMediaApplicationCallInput) (*chime.UpdateSipMediaApplicationCallOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateSipMediaApplicationCall", arg0)
+	ret0, _ := ret[0].(*chime.UpdateSipMediaApplicationCallOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateSipMediaApplicationCall indicates an expected call of UpdateSipMediaApplicationCall.
+func (mr *MockChimeAPIMockRecorder) UpdateSipMediaApplicationCall(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSipMediaApplicationCall", reflect.TypeOf((*MockChimeAPI)(nil).UpdateSipMediaApplicationCall), arg0)
+}
+
+// UpdateSipMediaApplicationCallRequest mocks base method.
+func (m *MockChimeAPI) UpdateSipMediaApplicationCallRequest(arg0 *chime.UpdateSipMediaApplicationCallInput) (*request.Request, *chime.UpdateSipMediaApplicationCallOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateSipMediaApplicationCallRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*chime.UpdateSipMediaApplicationCallOutput)
+	return ret0, ret1
+}
+
+// UpdateSipMediaApplicationCallRequest indicates an expected call of UpdateSipMediaApplicationCallRequest.
+func (mr *MockChimeAPIMockRecorder) UpdateSipMediaApplicationCallRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSipMediaApplicationCallRequest", reflect.TypeOf((*MockChimeAPI)(nil).UpdateSipMediaApplicationCallRequest), arg0)
+}
+
+// UpdateSipMediaApplicationCallWithContext mocks base method.
+func (m *MockChimeAPI) UpdateSipMediaApplicationCallWithContext(arg0 context.Context, arg1 *chime.UpdateSipMediaApplicationCallInput, arg2 ...request.Option) (*chime.UpdateSipMediaApplicationCallOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateSipMediaApplicationCallWithContext", varargs...)
+	ret0, _ := ret[0].(*chime.UpdateSipMediaApplicationCallOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateSipMediaApplicationCallWithContext indicates an expected call of UpdateSipMediaApplicationCallWithContext.
+func (mr *MockChimeAPIMockRecorder) UpdateSipMediaApplicationCallWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSipMediaApplicationCallWithContext", reflect.TypeOf((*MockChimeAPI)(nil).UpdateSipMediaApplicationCallWithContext), varargs...)
 }
 
 // UpdateSipMediaApplicationRequest mocks base method.

@@ -751,6 +751,39 @@ func (mr *MockFMSAPIMockRecorder) ListAppsLists(arg0 interface{}) *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAppsLists", reflect.TypeOf((*MockFMSAPI)(nil).ListAppsLists), arg0)
 }
 
+// ListAppsListsPages mocks base method.
+func (m *MockFMSAPI) ListAppsListsPages(arg0 *fms.ListAppsListsInput, arg1 func(*fms.ListAppsListsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAppsListsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAppsListsPages indicates an expected call of ListAppsListsPages.
+func (mr *MockFMSAPIMockRecorder) ListAppsListsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAppsListsPages", reflect.TypeOf((*MockFMSAPI)(nil).ListAppsListsPages), arg0, arg1)
+}
+
+// ListAppsListsPagesWithContext mocks base method.
+func (m *MockFMSAPI) ListAppsListsPagesWithContext(arg0 context.Context, arg1 *fms.ListAppsListsInput, arg2 func(*fms.ListAppsListsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListAppsListsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAppsListsPagesWithContext indicates an expected call of ListAppsListsPagesWithContext.
+func (mr *MockFMSAPIMockRecorder) ListAppsListsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAppsListsPagesWithContext", reflect.TypeOf((*MockFMSAPI)(nil).ListAppsListsPagesWithContext), varargs...)
+}
+
 // ListAppsListsRequest mocks base method.
 func (m *MockFMSAPI) ListAppsListsRequest(arg0 *fms.ListAppsListsInput) (*request.Request, *fms.ListAppsListsOutput) {
 	m.ctrl.T.Helper()
@@ -1048,6 +1081,39 @@ func (m *MockFMSAPI) ListProtocolsLists(arg0 *fms.ListProtocolsListsInput) (*fms
 func (mr *MockFMSAPIMockRecorder) ListProtocolsLists(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProtocolsLists", reflect.TypeOf((*MockFMSAPI)(nil).ListProtocolsLists), arg0)
+}
+
+// ListProtocolsListsPages mocks base method.
+func (m *MockFMSAPI) ListProtocolsListsPages(arg0 *fms.ListProtocolsListsInput, arg1 func(*fms.ListProtocolsListsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListProtocolsListsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListProtocolsListsPages indicates an expected call of ListProtocolsListsPages.
+func (mr *MockFMSAPIMockRecorder) ListProtocolsListsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProtocolsListsPages", reflect.TypeOf((*MockFMSAPI)(nil).ListProtocolsListsPages), arg0, arg1)
+}
+
+// ListProtocolsListsPagesWithContext mocks base method.
+func (m *MockFMSAPI) ListProtocolsListsPagesWithContext(arg0 context.Context, arg1 *fms.ListProtocolsListsInput, arg2 func(*fms.ListProtocolsListsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListProtocolsListsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListProtocolsListsPagesWithContext indicates an expected call of ListProtocolsListsPagesWithContext.
+func (mr *MockFMSAPIMockRecorder) ListProtocolsListsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListProtocolsListsPagesWithContext", reflect.TypeOf((*MockFMSAPI)(nil).ListProtocolsListsPagesWithContext), varargs...)
 }
 
 // ListProtocolsListsRequest mocks base method.

@@ -136,6 +136,56 @@ func (mr *MockDataExchangeAPIMockRecorder) CreateDataSetWithContext(arg0, arg1 i
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDataSetWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateDataSetWithContext), varargs...)
 }
 
+// CreateEventAction mocks base method.
+func (m *MockDataExchangeAPI) CreateEventAction(arg0 *dataexchange.CreateEventActionInput) (*dataexchange.CreateEventActionOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateEventAction", arg0)
+	ret0, _ := ret[0].(*dataexchange.CreateEventActionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateEventAction indicates an expected call of CreateEventAction.
+func (mr *MockDataExchangeAPIMockRecorder) CreateEventAction(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEventAction", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateEventAction), arg0)
+}
+
+// CreateEventActionRequest mocks base method.
+func (m *MockDataExchangeAPI) CreateEventActionRequest(arg0 *dataexchange.CreateEventActionInput) (*request.Request, *dataexchange.CreateEventActionOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateEventActionRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*dataexchange.CreateEventActionOutput)
+	return ret0, ret1
+}
+
+// CreateEventActionRequest indicates an expected call of CreateEventActionRequest.
+func (mr *MockDataExchangeAPIMockRecorder) CreateEventActionRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEventActionRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateEventActionRequest), arg0)
+}
+
+// CreateEventActionWithContext mocks base method.
+func (m *MockDataExchangeAPI) CreateEventActionWithContext(arg0 context.Context, arg1 *dataexchange.CreateEventActionInput, arg2 ...request.Option) (*dataexchange.CreateEventActionOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateEventActionWithContext", varargs...)
+	ret0, _ := ret[0].(*dataexchange.CreateEventActionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateEventActionWithContext indicates an expected call of CreateEventActionWithContext.
+func (mr *MockDataExchangeAPIMockRecorder) CreateEventActionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateEventActionWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).CreateEventActionWithContext), varargs...)
+}
+
 // CreateJob mocks base method.
 func (m *MockDataExchangeAPI) CreateJob(arg0 *dataexchange.CreateJobInput) (*dataexchange.CreateJobOutput, error) {
 	m.ctrl.T.Helper()
@@ -336,6 +386,56 @@ func (mr *MockDataExchangeAPIMockRecorder) DeleteDataSetWithContext(arg0, arg1 i
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteDataSetWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteDataSetWithContext), varargs...)
 }
 
+// DeleteEventAction mocks base method.
+func (m *MockDataExchangeAPI) DeleteEventAction(arg0 *dataexchange.DeleteEventActionInput) (*dataexchange.DeleteEventActionOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteEventAction", arg0)
+	ret0, _ := ret[0].(*dataexchange.DeleteEventActionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteEventAction indicates an expected call of DeleteEventAction.
+func (mr *MockDataExchangeAPIMockRecorder) DeleteEventAction(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEventAction", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteEventAction), arg0)
+}
+
+// DeleteEventActionRequest mocks base method.
+func (m *MockDataExchangeAPI) DeleteEventActionRequest(arg0 *dataexchange.DeleteEventActionInput) (*request.Request, *dataexchange.DeleteEventActionOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteEventActionRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*dataexchange.DeleteEventActionOutput)
+	return ret0, ret1
+}
+
+// DeleteEventActionRequest indicates an expected call of DeleteEventActionRequest.
+func (mr *MockDataExchangeAPIMockRecorder) DeleteEventActionRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEventActionRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteEventActionRequest), arg0)
+}
+
+// DeleteEventActionWithContext mocks base method.
+func (m *MockDataExchangeAPI) DeleteEventActionWithContext(arg0 context.Context, arg1 *dataexchange.DeleteEventActionInput, arg2 ...request.Option) (*dataexchange.DeleteEventActionOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteEventActionWithContext", varargs...)
+	ret0, _ := ret[0].(*dataexchange.DeleteEventActionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteEventActionWithContext indicates an expected call of DeleteEventActionWithContext.
+func (mr *MockDataExchangeAPIMockRecorder) DeleteEventActionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEventActionWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).DeleteEventActionWithContext), varargs...)
+}
+
 // DeleteRevision mocks base method.
 func (m *MockDataExchangeAPI) DeleteRevision(arg0 *dataexchange.DeleteRevisionInput) (*dataexchange.DeleteRevisionOutput, error) {
 	m.ctrl.T.Helper()
@@ -484,6 +584,56 @@ func (mr *MockDataExchangeAPIMockRecorder) GetDataSetWithContext(arg0, arg1 inte
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDataSetWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetDataSetWithContext), varargs...)
+}
+
+// GetEventAction mocks base method.
+func (m *MockDataExchangeAPI) GetEventAction(arg0 *dataexchange.GetEventActionInput) (*dataexchange.GetEventActionOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetEventAction", arg0)
+	ret0, _ := ret[0].(*dataexchange.GetEventActionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetEventAction indicates an expected call of GetEventAction.
+func (mr *MockDataExchangeAPIMockRecorder) GetEventAction(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEventAction", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetEventAction), arg0)
+}
+
+// GetEventActionRequest mocks base method.
+func (m *MockDataExchangeAPI) GetEventActionRequest(arg0 *dataexchange.GetEventActionInput) (*request.Request, *dataexchange.GetEventActionOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetEventActionRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*dataexchange.GetEventActionOutput)
+	return ret0, ret1
+}
+
+// GetEventActionRequest indicates an expected call of GetEventActionRequest.
+func (mr *MockDataExchangeAPIMockRecorder) GetEventActionRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEventActionRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetEventActionRequest), arg0)
+}
+
+// GetEventActionWithContext mocks base method.
+func (m *MockDataExchangeAPI) GetEventActionWithContext(arg0 context.Context, arg1 *dataexchange.GetEventActionInput, arg2 ...request.Option) (*dataexchange.GetEventActionOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetEventActionWithContext", varargs...)
+	ret0, _ := ret[0].(*dataexchange.GetEventActionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetEventActionWithContext indicates an expected call of GetEventActionWithContext.
+func (mr *MockDataExchangeAPIMockRecorder) GetEventActionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEventActionWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).GetEventActionWithContext), varargs...)
 }
 
 // GetJob mocks base method.
@@ -752,6 +902,89 @@ func (mr *MockDataExchangeAPIMockRecorder) ListDataSetsWithContext(arg0, arg1 in
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDataSetsWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListDataSetsWithContext), varargs...)
 }
 
+// ListEventActions mocks base method.
+func (m *MockDataExchangeAPI) ListEventActions(arg0 *dataexchange.ListEventActionsInput) (*dataexchange.ListEventActionsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListEventActions", arg0)
+	ret0, _ := ret[0].(*dataexchange.ListEventActionsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListEventActions indicates an expected call of ListEventActions.
+func (mr *MockDataExchangeAPIMockRecorder) ListEventActions(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventActions", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListEventActions), arg0)
+}
+
+// ListEventActionsPages mocks base method.
+func (m *MockDataExchangeAPI) ListEventActionsPages(arg0 *dataexchange.ListEventActionsInput, arg1 func(*dataexchange.ListEventActionsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListEventActionsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListEventActionsPages indicates an expected call of ListEventActionsPages.
+func (mr *MockDataExchangeAPIMockRecorder) ListEventActionsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventActionsPages", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListEventActionsPages), arg0, arg1)
+}
+
+// ListEventActionsPagesWithContext mocks base method.
+func (m *MockDataExchangeAPI) ListEventActionsPagesWithContext(arg0 context.Context, arg1 *dataexchange.ListEventActionsInput, arg2 func(*dataexchange.ListEventActionsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListEventActionsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListEventActionsPagesWithContext indicates an expected call of ListEventActionsPagesWithContext.
+func (mr *MockDataExchangeAPIMockRecorder) ListEventActionsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventActionsPagesWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListEventActionsPagesWithContext), varargs...)
+}
+
+// ListEventActionsRequest mocks base method.
+func (m *MockDataExchangeAPI) ListEventActionsRequest(arg0 *dataexchange.ListEventActionsInput) (*request.Request, *dataexchange.ListEventActionsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListEventActionsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*dataexchange.ListEventActionsOutput)
+	return ret0, ret1
+}
+
+// ListEventActionsRequest indicates an expected call of ListEventActionsRequest.
+func (mr *MockDataExchangeAPIMockRecorder) ListEventActionsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventActionsRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListEventActionsRequest), arg0)
+}
+
+// ListEventActionsWithContext mocks base method.
+func (m *MockDataExchangeAPI) ListEventActionsWithContext(arg0 context.Context, arg1 *dataexchange.ListEventActionsInput, arg2 ...request.Option) (*dataexchange.ListEventActionsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListEventActionsWithContext", varargs...)
+	ret0, _ := ret[0].(*dataexchange.ListEventActionsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListEventActionsWithContext indicates an expected call of ListEventActionsWithContext.
+func (mr *MockDataExchangeAPIMockRecorder) ListEventActionsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEventActionsWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListEventActionsWithContext), varargs...)
+}
+
 // ListJobs mocks base method.
 func (m *MockDataExchangeAPI) ListJobs(arg0 *dataexchange.ListJobsInput) (*dataexchange.ListJobsOutput, error) {
 	m.ctrl.T.Helper()
@@ -966,6 +1199,106 @@ func (mr *MockDataExchangeAPIMockRecorder) ListTagsForResourceWithContext(arg0, 
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).ListTagsForResourceWithContext), varargs...)
+}
+
+// RevokeRevision mocks base method.
+func (m *MockDataExchangeAPI) RevokeRevision(arg0 *dataexchange.RevokeRevisionInput) (*dataexchange.RevokeRevisionOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "RevokeRevision", arg0)
+	ret0, _ := ret[0].(*dataexchange.RevokeRevisionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// RevokeRevision indicates an expected call of RevokeRevision.
+func (mr *MockDataExchangeAPIMockRecorder) RevokeRevision(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokeRevision", reflect.TypeOf((*MockDataExchangeAPI)(nil).RevokeRevision), arg0)
+}
+
+// RevokeRevisionRequest mocks base method.
+func (m *MockDataExchangeAPI) RevokeRevisionRequest(arg0 *dataexchange.RevokeRevisionInput) (*request.Request, *dataexchange.RevokeRevisionOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "RevokeRevisionRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*dataexchange.RevokeRevisionOutput)
+	return ret0, ret1
+}
+
+// RevokeRevisionRequest indicates an expected call of RevokeRevisionRequest.
+func (mr *MockDataExchangeAPIMockRecorder) RevokeRevisionRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokeRevisionRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).RevokeRevisionRequest), arg0)
+}
+
+// RevokeRevisionWithContext mocks base method.
+func (m *MockDataExchangeAPI) RevokeRevisionWithContext(arg0 context.Context, arg1 *dataexchange.RevokeRevisionInput, arg2 ...request.Option) (*dataexchange.RevokeRevisionOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "RevokeRevisionWithContext", varargs...)
+	ret0, _ := ret[0].(*dataexchange.RevokeRevisionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// RevokeRevisionWithContext indicates an expected call of RevokeRevisionWithContext.
+func (mr *MockDataExchangeAPIMockRecorder) RevokeRevisionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokeRevisionWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).RevokeRevisionWithContext), varargs...)
+}
+
+// SendApiAsset mocks base method.
+func (m *MockDataExchangeAPI) SendApiAsset(arg0 *dataexchange.SendApiAssetInput) (*dataexchange.SendApiAssetOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SendApiAsset", arg0)
+	ret0, _ := ret[0].(*dataexchange.SendApiAssetOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SendApiAsset indicates an expected call of SendApiAsset.
+func (mr *MockDataExchangeAPIMockRecorder) SendApiAsset(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendApiAsset", reflect.TypeOf((*MockDataExchangeAPI)(nil).SendApiAsset), arg0)
+}
+
+// SendApiAssetRequest mocks base method.
+func (m *MockDataExchangeAPI) SendApiAssetRequest(arg0 *dataexchange.SendApiAssetInput) (*request.Request, *dataexchange.SendApiAssetOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SendApiAssetRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*dataexchange.SendApiAssetOutput)
+	return ret0, ret1
+}
+
+// SendApiAssetRequest indicates an expected call of SendApiAssetRequest.
+func (mr *MockDataExchangeAPIMockRecorder) SendApiAssetRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendApiAssetRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).SendApiAssetRequest), arg0)
+}
+
+// SendApiAssetWithContext mocks base method.
+func (m *MockDataExchangeAPI) SendApiAssetWithContext(arg0 context.Context, arg1 *dataexchange.SendApiAssetInput, arg2 ...request.Option) (*dataexchange.SendApiAssetOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "SendApiAssetWithContext", varargs...)
+	ret0, _ := ret[0].(*dataexchange.SendApiAssetOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SendApiAssetWithContext indicates an expected call of SendApiAssetWithContext.
+func (mr *MockDataExchangeAPIMockRecorder) SendApiAssetWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendApiAssetWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).SendApiAssetWithContext), varargs...)
 }
 
 // StartJob mocks base method.
@@ -1216,6 +1549,56 @@ func (mr *MockDataExchangeAPIMockRecorder) UpdateDataSetWithContext(arg0, arg1 i
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateDataSetWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).UpdateDataSetWithContext), varargs...)
+}
+
+// UpdateEventAction mocks base method.
+func (m *MockDataExchangeAPI) UpdateEventAction(arg0 *dataexchange.UpdateEventActionInput) (*dataexchange.UpdateEventActionOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateEventAction", arg0)
+	ret0, _ := ret[0].(*dataexchange.UpdateEventActionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateEventAction indicates an expected call of UpdateEventAction.
+func (mr *MockDataExchangeAPIMockRecorder) UpdateEventAction(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEventAction", reflect.TypeOf((*MockDataExchangeAPI)(nil).UpdateEventAction), arg0)
+}
+
+// UpdateEventActionRequest mocks base method.
+func (m *MockDataExchangeAPI) UpdateEventActionRequest(arg0 *dataexchange.UpdateEventActionInput) (*request.Request, *dataexchange.UpdateEventActionOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateEventActionRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*dataexchange.UpdateEventActionOutput)
+	return ret0, ret1
+}
+
+// UpdateEventActionRequest indicates an expected call of UpdateEventActionRequest.
+func (mr *MockDataExchangeAPIMockRecorder) UpdateEventActionRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEventActionRequest", reflect.TypeOf((*MockDataExchangeAPI)(nil).UpdateEventActionRequest), arg0)
+}
+
+// UpdateEventActionWithContext mocks base method.
+func (m *MockDataExchangeAPI) UpdateEventActionWithContext(arg0 context.Context, arg1 *dataexchange.UpdateEventActionInput, arg2 ...request.Option) (*dataexchange.UpdateEventActionOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateEventActionWithContext", varargs...)
+	ret0, _ := ret[0].(*dataexchange.UpdateEventActionOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateEventActionWithContext indicates an expected call of UpdateEventActionWithContext.
+func (mr *MockDataExchangeAPIMockRecorder) UpdateEventActionWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateEventActionWithContext", reflect.TypeOf((*MockDataExchangeAPI)(nil).UpdateEventActionWithContext), varargs...)
 }
 
 // UpdateRevision mocks base method.

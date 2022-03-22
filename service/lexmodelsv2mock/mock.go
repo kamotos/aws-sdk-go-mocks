@@ -286,6 +286,56 @@ func (mr *MockLexModelsV2APIMockRecorder) CreateBotWithContext(arg0, arg1 interf
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBotWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateBotWithContext), varargs...)
 }
 
+// CreateExport mocks base method.
+func (m *MockLexModelsV2API) CreateExport(arg0 *lexmodelsv2.CreateExportInput) (*lexmodelsv2.CreateExportOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateExport", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.CreateExportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateExport indicates an expected call of CreateExport.
+func (mr *MockLexModelsV2APIMockRecorder) CreateExport(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateExport", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateExport), arg0)
+}
+
+// CreateExportRequest mocks base method.
+func (m *MockLexModelsV2API) CreateExportRequest(arg0 *lexmodelsv2.CreateExportInput) (*request.Request, *lexmodelsv2.CreateExportOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateExportRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.CreateExportOutput)
+	return ret0, ret1
+}
+
+// CreateExportRequest indicates an expected call of CreateExportRequest.
+func (mr *MockLexModelsV2APIMockRecorder) CreateExportRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateExportRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateExportRequest), arg0)
+}
+
+// CreateExportWithContext mocks base method.
+func (m *MockLexModelsV2API) CreateExportWithContext(arg0 context.Context, arg1 *lexmodelsv2.CreateExportInput, arg2 ...request.Option) (*lexmodelsv2.CreateExportOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateExportWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.CreateExportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateExportWithContext indicates an expected call of CreateExportWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) CreateExportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateExportWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateExportWithContext), varargs...)
+}
+
 // CreateIntent mocks base method.
 func (m *MockLexModelsV2API) CreateIntent(arg0 *lexmodelsv2.CreateIntentInput) (*lexmodelsv2.CreateIntentOutput, error) {
 	m.ctrl.T.Helper()
@@ -334,6 +384,106 @@ func (mr *MockLexModelsV2APIMockRecorder) CreateIntentWithContext(arg0, arg1 int
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateIntentWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateIntentWithContext), varargs...)
+}
+
+// CreateResourcePolicy mocks base method.
+func (m *MockLexModelsV2API) CreateResourcePolicy(arg0 *lexmodelsv2.CreateResourcePolicyInput) (*lexmodelsv2.CreateResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateResourcePolicy", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.CreateResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateResourcePolicy indicates an expected call of CreateResourcePolicy.
+func (mr *MockLexModelsV2APIMockRecorder) CreateResourcePolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateResourcePolicy", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateResourcePolicy), arg0)
+}
+
+// CreateResourcePolicyRequest mocks base method.
+func (m *MockLexModelsV2API) CreateResourcePolicyRequest(arg0 *lexmodelsv2.CreateResourcePolicyInput) (*request.Request, *lexmodelsv2.CreateResourcePolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateResourcePolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.CreateResourcePolicyOutput)
+	return ret0, ret1
+}
+
+// CreateResourcePolicyRequest indicates an expected call of CreateResourcePolicyRequest.
+func (mr *MockLexModelsV2APIMockRecorder) CreateResourcePolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateResourcePolicyRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateResourcePolicyRequest), arg0)
+}
+
+// CreateResourcePolicyStatement mocks base method.
+func (m *MockLexModelsV2API) CreateResourcePolicyStatement(arg0 *lexmodelsv2.CreateResourcePolicyStatementInput) (*lexmodelsv2.CreateResourcePolicyStatementOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateResourcePolicyStatement", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.CreateResourcePolicyStatementOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateResourcePolicyStatement indicates an expected call of CreateResourcePolicyStatement.
+func (mr *MockLexModelsV2APIMockRecorder) CreateResourcePolicyStatement(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateResourcePolicyStatement", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateResourcePolicyStatement), arg0)
+}
+
+// CreateResourcePolicyStatementRequest mocks base method.
+func (m *MockLexModelsV2API) CreateResourcePolicyStatementRequest(arg0 *lexmodelsv2.CreateResourcePolicyStatementInput) (*request.Request, *lexmodelsv2.CreateResourcePolicyStatementOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateResourcePolicyStatementRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.CreateResourcePolicyStatementOutput)
+	return ret0, ret1
+}
+
+// CreateResourcePolicyStatementRequest indicates an expected call of CreateResourcePolicyStatementRequest.
+func (mr *MockLexModelsV2APIMockRecorder) CreateResourcePolicyStatementRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateResourcePolicyStatementRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateResourcePolicyStatementRequest), arg0)
+}
+
+// CreateResourcePolicyStatementWithContext mocks base method.
+func (m *MockLexModelsV2API) CreateResourcePolicyStatementWithContext(arg0 context.Context, arg1 *lexmodelsv2.CreateResourcePolicyStatementInput, arg2 ...request.Option) (*lexmodelsv2.CreateResourcePolicyStatementOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateResourcePolicyStatementWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.CreateResourcePolicyStatementOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateResourcePolicyStatementWithContext indicates an expected call of CreateResourcePolicyStatementWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) CreateResourcePolicyStatementWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateResourcePolicyStatementWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateResourcePolicyStatementWithContext), varargs...)
+}
+
+// CreateResourcePolicyWithContext mocks base method.
+func (m *MockLexModelsV2API) CreateResourcePolicyWithContext(arg0 context.Context, arg1 *lexmodelsv2.CreateResourcePolicyInput, arg2 ...request.Option) (*lexmodelsv2.CreateResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateResourcePolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.CreateResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateResourcePolicyWithContext indicates an expected call of CreateResourcePolicyWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) CreateResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateResourcePolicyWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateResourcePolicyWithContext), varargs...)
 }
 
 // CreateSlot mocks base method.
@@ -434,6 +584,56 @@ func (mr *MockLexModelsV2APIMockRecorder) CreateSlotWithContext(arg0, arg1 inter
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateSlotWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateSlotWithContext), varargs...)
+}
+
+// CreateUploadUrl mocks base method.
+func (m *MockLexModelsV2API) CreateUploadUrl(arg0 *lexmodelsv2.CreateUploadUrlInput) (*lexmodelsv2.CreateUploadUrlOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateUploadUrl", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.CreateUploadUrlOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateUploadUrl indicates an expected call of CreateUploadUrl.
+func (mr *MockLexModelsV2APIMockRecorder) CreateUploadUrl(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateUploadUrl", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateUploadUrl), arg0)
+}
+
+// CreateUploadUrlRequest mocks base method.
+func (m *MockLexModelsV2API) CreateUploadUrlRequest(arg0 *lexmodelsv2.CreateUploadUrlInput) (*request.Request, *lexmodelsv2.CreateUploadUrlOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateUploadUrlRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.CreateUploadUrlOutput)
+	return ret0, ret1
+}
+
+// CreateUploadUrlRequest indicates an expected call of CreateUploadUrlRequest.
+func (mr *MockLexModelsV2APIMockRecorder) CreateUploadUrlRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateUploadUrlRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateUploadUrlRequest), arg0)
+}
+
+// CreateUploadUrlWithContext mocks base method.
+func (m *MockLexModelsV2API) CreateUploadUrlWithContext(arg0 context.Context, arg1 *lexmodelsv2.CreateUploadUrlInput, arg2 ...request.Option) (*lexmodelsv2.CreateUploadUrlOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateUploadUrlWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.CreateUploadUrlOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateUploadUrlWithContext indicates an expected call of CreateUploadUrlWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) CreateUploadUrlWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateUploadUrlWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).CreateUploadUrlWithContext), varargs...)
 }
 
 // DeleteBot mocks base method.
@@ -636,6 +836,156 @@ func (mr *MockLexModelsV2APIMockRecorder) DeleteBotWithContext(arg0, arg1 interf
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBotWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteBotWithContext), varargs...)
 }
 
+// DeleteCustomVocabulary mocks base method.
+func (m *MockLexModelsV2API) DeleteCustomVocabulary(arg0 *lexmodelsv2.DeleteCustomVocabularyInput) (*lexmodelsv2.DeleteCustomVocabularyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteCustomVocabulary", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.DeleteCustomVocabularyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteCustomVocabulary indicates an expected call of DeleteCustomVocabulary.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteCustomVocabulary(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomVocabulary", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteCustomVocabulary), arg0)
+}
+
+// DeleteCustomVocabularyRequest mocks base method.
+func (m *MockLexModelsV2API) DeleteCustomVocabularyRequest(arg0 *lexmodelsv2.DeleteCustomVocabularyInput) (*request.Request, *lexmodelsv2.DeleteCustomVocabularyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteCustomVocabularyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.DeleteCustomVocabularyOutput)
+	return ret0, ret1
+}
+
+// DeleteCustomVocabularyRequest indicates an expected call of DeleteCustomVocabularyRequest.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteCustomVocabularyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomVocabularyRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteCustomVocabularyRequest), arg0)
+}
+
+// DeleteCustomVocabularyWithContext mocks base method.
+func (m *MockLexModelsV2API) DeleteCustomVocabularyWithContext(arg0 context.Context, arg1 *lexmodelsv2.DeleteCustomVocabularyInput, arg2 ...request.Option) (*lexmodelsv2.DeleteCustomVocabularyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteCustomVocabularyWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.DeleteCustomVocabularyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteCustomVocabularyWithContext indicates an expected call of DeleteCustomVocabularyWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteCustomVocabularyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteCustomVocabularyWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteCustomVocabularyWithContext), varargs...)
+}
+
+// DeleteExport mocks base method.
+func (m *MockLexModelsV2API) DeleteExport(arg0 *lexmodelsv2.DeleteExportInput) (*lexmodelsv2.DeleteExportOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteExport", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.DeleteExportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteExport indicates an expected call of DeleteExport.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteExport(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteExport", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteExport), arg0)
+}
+
+// DeleteExportRequest mocks base method.
+func (m *MockLexModelsV2API) DeleteExportRequest(arg0 *lexmodelsv2.DeleteExportInput) (*request.Request, *lexmodelsv2.DeleteExportOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteExportRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.DeleteExportOutput)
+	return ret0, ret1
+}
+
+// DeleteExportRequest indicates an expected call of DeleteExportRequest.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteExportRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteExportRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteExportRequest), arg0)
+}
+
+// DeleteExportWithContext mocks base method.
+func (m *MockLexModelsV2API) DeleteExportWithContext(arg0 context.Context, arg1 *lexmodelsv2.DeleteExportInput, arg2 ...request.Option) (*lexmodelsv2.DeleteExportOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteExportWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.DeleteExportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteExportWithContext indicates an expected call of DeleteExportWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteExportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteExportWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteExportWithContext), varargs...)
+}
+
+// DeleteImport mocks base method.
+func (m *MockLexModelsV2API) DeleteImport(arg0 *lexmodelsv2.DeleteImportInput) (*lexmodelsv2.DeleteImportOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteImport", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.DeleteImportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteImport indicates an expected call of DeleteImport.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteImport(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteImport", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteImport), arg0)
+}
+
+// DeleteImportRequest mocks base method.
+func (m *MockLexModelsV2API) DeleteImportRequest(arg0 *lexmodelsv2.DeleteImportInput) (*request.Request, *lexmodelsv2.DeleteImportOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteImportRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.DeleteImportOutput)
+	return ret0, ret1
+}
+
+// DeleteImportRequest indicates an expected call of DeleteImportRequest.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteImportRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteImportRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteImportRequest), arg0)
+}
+
+// DeleteImportWithContext mocks base method.
+func (m *MockLexModelsV2API) DeleteImportWithContext(arg0 context.Context, arg1 *lexmodelsv2.DeleteImportInput, arg2 ...request.Option) (*lexmodelsv2.DeleteImportOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteImportWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.DeleteImportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteImportWithContext indicates an expected call of DeleteImportWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteImportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteImportWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteImportWithContext), varargs...)
+}
+
 // DeleteIntent mocks base method.
 func (m *MockLexModelsV2API) DeleteIntent(arg0 *lexmodelsv2.DeleteIntentInput) (*lexmodelsv2.DeleteIntentOutput, error) {
 	m.ctrl.T.Helper()
@@ -684,6 +1034,106 @@ func (mr *MockLexModelsV2APIMockRecorder) DeleteIntentWithContext(arg0, arg1 int
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteIntentWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteIntentWithContext), varargs...)
+}
+
+// DeleteResourcePolicy mocks base method.
+func (m *MockLexModelsV2API) DeleteResourcePolicy(arg0 *lexmodelsv2.DeleteResourcePolicyInput) (*lexmodelsv2.DeleteResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteResourcePolicy", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.DeleteResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteResourcePolicy indicates an expected call of DeleteResourcePolicy.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteResourcePolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicy", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteResourcePolicy), arg0)
+}
+
+// DeleteResourcePolicyRequest mocks base method.
+func (m *MockLexModelsV2API) DeleteResourcePolicyRequest(arg0 *lexmodelsv2.DeleteResourcePolicyInput) (*request.Request, *lexmodelsv2.DeleteResourcePolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteResourcePolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.DeleteResourcePolicyOutput)
+	return ret0, ret1
+}
+
+// DeleteResourcePolicyRequest indicates an expected call of DeleteResourcePolicyRequest.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteResourcePolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteResourcePolicyRequest), arg0)
+}
+
+// DeleteResourcePolicyStatement mocks base method.
+func (m *MockLexModelsV2API) DeleteResourcePolicyStatement(arg0 *lexmodelsv2.DeleteResourcePolicyStatementInput) (*lexmodelsv2.DeleteResourcePolicyStatementOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteResourcePolicyStatement", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.DeleteResourcePolicyStatementOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteResourcePolicyStatement indicates an expected call of DeleteResourcePolicyStatement.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteResourcePolicyStatement(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyStatement", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteResourcePolicyStatement), arg0)
+}
+
+// DeleteResourcePolicyStatementRequest mocks base method.
+func (m *MockLexModelsV2API) DeleteResourcePolicyStatementRequest(arg0 *lexmodelsv2.DeleteResourcePolicyStatementInput) (*request.Request, *lexmodelsv2.DeleteResourcePolicyStatementOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteResourcePolicyStatementRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.DeleteResourcePolicyStatementOutput)
+	return ret0, ret1
+}
+
+// DeleteResourcePolicyStatementRequest indicates an expected call of DeleteResourcePolicyStatementRequest.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteResourcePolicyStatementRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyStatementRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteResourcePolicyStatementRequest), arg0)
+}
+
+// DeleteResourcePolicyStatementWithContext mocks base method.
+func (m *MockLexModelsV2API) DeleteResourcePolicyStatementWithContext(arg0 context.Context, arg1 *lexmodelsv2.DeleteResourcePolicyStatementInput, arg2 ...request.Option) (*lexmodelsv2.DeleteResourcePolicyStatementOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteResourcePolicyStatementWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.DeleteResourcePolicyStatementOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteResourcePolicyStatementWithContext indicates an expected call of DeleteResourcePolicyStatementWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteResourcePolicyStatementWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyStatementWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteResourcePolicyStatementWithContext), varargs...)
+}
+
+// DeleteResourcePolicyWithContext mocks base method.
+func (m *MockLexModelsV2API) DeleteResourcePolicyWithContext(arg0 context.Context, arg1 *lexmodelsv2.DeleteResourcePolicyInput, arg2 ...request.Option) (*lexmodelsv2.DeleteResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteResourcePolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.DeleteResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteResourcePolicyWithContext indicates an expected call of DeleteResourcePolicyWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteResourcePolicyWithContext), varargs...)
 }
 
 // DeleteSlot mocks base method.
@@ -784,6 +1234,56 @@ func (mr *MockLexModelsV2APIMockRecorder) DeleteSlotWithContext(arg0, arg1 inter
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSlotWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteSlotWithContext), varargs...)
+}
+
+// DeleteUtterances mocks base method.
+func (m *MockLexModelsV2API) DeleteUtterances(arg0 *lexmodelsv2.DeleteUtterancesInput) (*lexmodelsv2.DeleteUtterancesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteUtterances", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.DeleteUtterancesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteUtterances indicates an expected call of DeleteUtterances.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteUtterances(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteUtterances", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteUtterances), arg0)
+}
+
+// DeleteUtterancesRequest mocks base method.
+func (m *MockLexModelsV2API) DeleteUtterancesRequest(arg0 *lexmodelsv2.DeleteUtterancesInput) (*request.Request, *lexmodelsv2.DeleteUtterancesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteUtterancesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.DeleteUtterancesOutput)
+	return ret0, ret1
+}
+
+// DeleteUtterancesRequest indicates an expected call of DeleteUtterancesRequest.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteUtterancesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteUtterancesRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteUtterancesRequest), arg0)
+}
+
+// DeleteUtterancesWithContext mocks base method.
+func (m *MockLexModelsV2API) DeleteUtterancesWithContext(arg0 context.Context, arg1 *lexmodelsv2.DeleteUtterancesInput, arg2 ...request.Option) (*lexmodelsv2.DeleteUtterancesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteUtterancesWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.DeleteUtterancesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteUtterancesWithContext indicates an expected call of DeleteUtterancesWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) DeleteUtterancesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteUtterancesWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DeleteUtterancesWithContext), varargs...)
 }
 
 // DescribeBot mocks base method.
@@ -901,6 +1401,56 @@ func (mr *MockLexModelsV2APIMockRecorder) DescribeBotLocaleWithContext(arg0, arg
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBotLocaleWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeBotLocaleWithContext), varargs...)
 }
 
+// DescribeBotRecommendation mocks base method.
+func (m *MockLexModelsV2API) DescribeBotRecommendation(arg0 *lexmodelsv2.DescribeBotRecommendationInput) (*lexmodelsv2.DescribeBotRecommendationOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeBotRecommendation", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.DescribeBotRecommendationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeBotRecommendation indicates an expected call of DescribeBotRecommendation.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeBotRecommendation(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBotRecommendation", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeBotRecommendation), arg0)
+}
+
+// DescribeBotRecommendationRequest mocks base method.
+func (m *MockLexModelsV2API) DescribeBotRecommendationRequest(arg0 *lexmodelsv2.DescribeBotRecommendationInput) (*request.Request, *lexmodelsv2.DescribeBotRecommendationOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeBotRecommendationRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.DescribeBotRecommendationOutput)
+	return ret0, ret1
+}
+
+// DescribeBotRecommendationRequest indicates an expected call of DescribeBotRecommendationRequest.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeBotRecommendationRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBotRecommendationRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeBotRecommendationRequest), arg0)
+}
+
+// DescribeBotRecommendationWithContext mocks base method.
+func (m *MockLexModelsV2API) DescribeBotRecommendationWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeBotRecommendationInput, arg2 ...request.Option) (*lexmodelsv2.DescribeBotRecommendationOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeBotRecommendationWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.DescribeBotRecommendationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeBotRecommendationWithContext indicates an expected call of DescribeBotRecommendationWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeBotRecommendationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBotRecommendationWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeBotRecommendationWithContext), varargs...)
+}
+
 // DescribeBotRequest mocks base method.
 func (m *MockLexModelsV2API) DescribeBotRequest(arg0 *lexmodelsv2.DescribeBotInput) (*request.Request, *lexmodelsv2.DescribeBotOutput) {
 	m.ctrl.T.Helper()
@@ -986,6 +1536,156 @@ func (mr *MockLexModelsV2APIMockRecorder) DescribeBotWithContext(arg0, arg1 inte
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeBotWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeBotWithContext), varargs...)
 }
 
+// DescribeCustomVocabularyMetadata mocks base method.
+func (m *MockLexModelsV2API) DescribeCustomVocabularyMetadata(arg0 *lexmodelsv2.DescribeCustomVocabularyMetadataInput) (*lexmodelsv2.DescribeCustomVocabularyMetadataOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeCustomVocabularyMetadata", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.DescribeCustomVocabularyMetadataOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeCustomVocabularyMetadata indicates an expected call of DescribeCustomVocabularyMetadata.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeCustomVocabularyMetadata(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomVocabularyMetadata", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeCustomVocabularyMetadata), arg0)
+}
+
+// DescribeCustomVocabularyMetadataRequest mocks base method.
+func (m *MockLexModelsV2API) DescribeCustomVocabularyMetadataRequest(arg0 *lexmodelsv2.DescribeCustomVocabularyMetadataInput) (*request.Request, *lexmodelsv2.DescribeCustomVocabularyMetadataOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeCustomVocabularyMetadataRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.DescribeCustomVocabularyMetadataOutput)
+	return ret0, ret1
+}
+
+// DescribeCustomVocabularyMetadataRequest indicates an expected call of DescribeCustomVocabularyMetadataRequest.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeCustomVocabularyMetadataRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomVocabularyMetadataRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeCustomVocabularyMetadataRequest), arg0)
+}
+
+// DescribeCustomVocabularyMetadataWithContext mocks base method.
+func (m *MockLexModelsV2API) DescribeCustomVocabularyMetadataWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeCustomVocabularyMetadataInput, arg2 ...request.Option) (*lexmodelsv2.DescribeCustomVocabularyMetadataOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeCustomVocabularyMetadataWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.DescribeCustomVocabularyMetadataOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeCustomVocabularyMetadataWithContext indicates an expected call of DescribeCustomVocabularyMetadataWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeCustomVocabularyMetadataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeCustomVocabularyMetadataWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeCustomVocabularyMetadataWithContext), varargs...)
+}
+
+// DescribeExport mocks base method.
+func (m *MockLexModelsV2API) DescribeExport(arg0 *lexmodelsv2.DescribeExportInput) (*lexmodelsv2.DescribeExportOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeExport", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.DescribeExportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeExport indicates an expected call of DescribeExport.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeExport(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeExport", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeExport), arg0)
+}
+
+// DescribeExportRequest mocks base method.
+func (m *MockLexModelsV2API) DescribeExportRequest(arg0 *lexmodelsv2.DescribeExportInput) (*request.Request, *lexmodelsv2.DescribeExportOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeExportRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.DescribeExportOutput)
+	return ret0, ret1
+}
+
+// DescribeExportRequest indicates an expected call of DescribeExportRequest.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeExportRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeExportRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeExportRequest), arg0)
+}
+
+// DescribeExportWithContext mocks base method.
+func (m *MockLexModelsV2API) DescribeExportWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeExportInput, arg2 ...request.Option) (*lexmodelsv2.DescribeExportOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeExportWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.DescribeExportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeExportWithContext indicates an expected call of DescribeExportWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeExportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeExportWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeExportWithContext), varargs...)
+}
+
+// DescribeImport mocks base method.
+func (m *MockLexModelsV2API) DescribeImport(arg0 *lexmodelsv2.DescribeImportInput) (*lexmodelsv2.DescribeImportOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeImport", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.DescribeImportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeImport indicates an expected call of DescribeImport.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeImport(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeImport", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeImport), arg0)
+}
+
+// DescribeImportRequest mocks base method.
+func (m *MockLexModelsV2API) DescribeImportRequest(arg0 *lexmodelsv2.DescribeImportInput) (*request.Request, *lexmodelsv2.DescribeImportOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeImportRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.DescribeImportOutput)
+	return ret0, ret1
+}
+
+// DescribeImportRequest indicates an expected call of DescribeImportRequest.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeImportRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeImportRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeImportRequest), arg0)
+}
+
+// DescribeImportWithContext mocks base method.
+func (m *MockLexModelsV2API) DescribeImportWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeImportInput, arg2 ...request.Option) (*lexmodelsv2.DescribeImportOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeImportWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.DescribeImportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeImportWithContext indicates an expected call of DescribeImportWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeImportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeImportWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeImportWithContext), varargs...)
+}
+
 // DescribeIntent mocks base method.
 func (m *MockLexModelsV2API) DescribeIntent(arg0 *lexmodelsv2.DescribeIntentInput) (*lexmodelsv2.DescribeIntentOutput, error) {
 	m.ctrl.T.Helper()
@@ -1034,6 +1734,56 @@ func (mr *MockLexModelsV2APIMockRecorder) DescribeIntentWithContext(arg0, arg1 i
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeIntentWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeIntentWithContext), varargs...)
+}
+
+// DescribeResourcePolicy mocks base method.
+func (m *MockLexModelsV2API) DescribeResourcePolicy(arg0 *lexmodelsv2.DescribeResourcePolicyInput) (*lexmodelsv2.DescribeResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeResourcePolicy", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.DescribeResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeResourcePolicy indicates an expected call of DescribeResourcePolicy.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeResourcePolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeResourcePolicy", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeResourcePolicy), arg0)
+}
+
+// DescribeResourcePolicyRequest mocks base method.
+func (m *MockLexModelsV2API) DescribeResourcePolicyRequest(arg0 *lexmodelsv2.DescribeResourcePolicyInput) (*request.Request, *lexmodelsv2.DescribeResourcePolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeResourcePolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.DescribeResourcePolicyOutput)
+	return ret0, ret1
+}
+
+// DescribeResourcePolicyRequest indicates an expected call of DescribeResourcePolicyRequest.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeResourcePolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeResourcePolicyRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeResourcePolicyRequest), arg0)
+}
+
+// DescribeResourcePolicyWithContext mocks base method.
+func (m *MockLexModelsV2API) DescribeResourcePolicyWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeResourcePolicyInput, arg2 ...request.Option) (*lexmodelsv2.DescribeResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeResourcePolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.DescribeResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeResourcePolicyWithContext indicates an expected call of DescribeResourcePolicyWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) DescribeResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeResourcePolicyWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeResourcePolicyWithContext), varargs...)
 }
 
 // DescribeSlot mocks base method.
@@ -1134,6 +1884,89 @@ func (mr *MockLexModelsV2APIMockRecorder) DescribeSlotWithContext(arg0, arg1 int
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSlotWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).DescribeSlotWithContext), varargs...)
+}
+
+// ListAggregatedUtterances mocks base method.
+func (m *MockLexModelsV2API) ListAggregatedUtterances(arg0 *lexmodelsv2.ListAggregatedUtterancesInput) (*lexmodelsv2.ListAggregatedUtterancesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAggregatedUtterances", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.ListAggregatedUtterancesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListAggregatedUtterances indicates an expected call of ListAggregatedUtterances.
+func (mr *MockLexModelsV2APIMockRecorder) ListAggregatedUtterances(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAggregatedUtterances", reflect.TypeOf((*MockLexModelsV2API)(nil).ListAggregatedUtterances), arg0)
+}
+
+// ListAggregatedUtterancesPages mocks base method.
+func (m *MockLexModelsV2API) ListAggregatedUtterancesPages(arg0 *lexmodelsv2.ListAggregatedUtterancesInput, arg1 func(*lexmodelsv2.ListAggregatedUtterancesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAggregatedUtterancesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAggregatedUtterancesPages indicates an expected call of ListAggregatedUtterancesPages.
+func (mr *MockLexModelsV2APIMockRecorder) ListAggregatedUtterancesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAggregatedUtterancesPages", reflect.TypeOf((*MockLexModelsV2API)(nil).ListAggregatedUtterancesPages), arg0, arg1)
+}
+
+// ListAggregatedUtterancesPagesWithContext mocks base method.
+func (m *MockLexModelsV2API) ListAggregatedUtterancesPagesWithContext(arg0 context.Context, arg1 *lexmodelsv2.ListAggregatedUtterancesInput, arg2 func(*lexmodelsv2.ListAggregatedUtterancesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListAggregatedUtterancesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAggregatedUtterancesPagesWithContext indicates an expected call of ListAggregatedUtterancesPagesWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) ListAggregatedUtterancesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAggregatedUtterancesPagesWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListAggregatedUtterancesPagesWithContext), varargs...)
+}
+
+// ListAggregatedUtterancesRequest mocks base method.
+func (m *MockLexModelsV2API) ListAggregatedUtterancesRequest(arg0 *lexmodelsv2.ListAggregatedUtterancesInput) (*request.Request, *lexmodelsv2.ListAggregatedUtterancesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAggregatedUtterancesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.ListAggregatedUtterancesOutput)
+	return ret0, ret1
+}
+
+// ListAggregatedUtterancesRequest indicates an expected call of ListAggregatedUtterancesRequest.
+func (mr *MockLexModelsV2APIMockRecorder) ListAggregatedUtterancesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAggregatedUtterancesRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).ListAggregatedUtterancesRequest), arg0)
+}
+
+// ListAggregatedUtterancesWithContext mocks base method.
+func (m *MockLexModelsV2API) ListAggregatedUtterancesWithContext(arg0 context.Context, arg1 *lexmodelsv2.ListAggregatedUtterancesInput, arg2 ...request.Option) (*lexmodelsv2.ListAggregatedUtterancesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListAggregatedUtterancesWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.ListAggregatedUtterancesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListAggregatedUtterancesWithContext indicates an expected call of ListAggregatedUtterancesWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) ListAggregatedUtterancesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAggregatedUtterancesWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListAggregatedUtterancesWithContext), varargs...)
 }
 
 // ListBotAliases mocks base method.
@@ -1300,6 +2133,89 @@ func (mr *MockLexModelsV2APIMockRecorder) ListBotLocalesWithContext(arg0, arg1 i
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBotLocalesWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListBotLocalesWithContext), varargs...)
+}
+
+// ListBotRecommendations mocks base method.
+func (m *MockLexModelsV2API) ListBotRecommendations(arg0 *lexmodelsv2.ListBotRecommendationsInput) (*lexmodelsv2.ListBotRecommendationsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListBotRecommendations", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.ListBotRecommendationsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListBotRecommendations indicates an expected call of ListBotRecommendations.
+func (mr *MockLexModelsV2APIMockRecorder) ListBotRecommendations(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBotRecommendations", reflect.TypeOf((*MockLexModelsV2API)(nil).ListBotRecommendations), arg0)
+}
+
+// ListBotRecommendationsPages mocks base method.
+func (m *MockLexModelsV2API) ListBotRecommendationsPages(arg0 *lexmodelsv2.ListBotRecommendationsInput, arg1 func(*lexmodelsv2.ListBotRecommendationsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListBotRecommendationsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListBotRecommendationsPages indicates an expected call of ListBotRecommendationsPages.
+func (mr *MockLexModelsV2APIMockRecorder) ListBotRecommendationsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBotRecommendationsPages", reflect.TypeOf((*MockLexModelsV2API)(nil).ListBotRecommendationsPages), arg0, arg1)
+}
+
+// ListBotRecommendationsPagesWithContext mocks base method.
+func (m *MockLexModelsV2API) ListBotRecommendationsPagesWithContext(arg0 context.Context, arg1 *lexmodelsv2.ListBotRecommendationsInput, arg2 func(*lexmodelsv2.ListBotRecommendationsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListBotRecommendationsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListBotRecommendationsPagesWithContext indicates an expected call of ListBotRecommendationsPagesWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) ListBotRecommendationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBotRecommendationsPagesWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListBotRecommendationsPagesWithContext), varargs...)
+}
+
+// ListBotRecommendationsRequest mocks base method.
+func (m *MockLexModelsV2API) ListBotRecommendationsRequest(arg0 *lexmodelsv2.ListBotRecommendationsInput) (*request.Request, *lexmodelsv2.ListBotRecommendationsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListBotRecommendationsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.ListBotRecommendationsOutput)
+	return ret0, ret1
+}
+
+// ListBotRecommendationsRequest indicates an expected call of ListBotRecommendationsRequest.
+func (mr *MockLexModelsV2APIMockRecorder) ListBotRecommendationsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBotRecommendationsRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).ListBotRecommendationsRequest), arg0)
+}
+
+// ListBotRecommendationsWithContext mocks base method.
+func (m *MockLexModelsV2API) ListBotRecommendationsWithContext(arg0 context.Context, arg1 *lexmodelsv2.ListBotRecommendationsInput, arg2 ...request.Option) (*lexmodelsv2.ListBotRecommendationsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListBotRecommendationsWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.ListBotRecommendationsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListBotRecommendationsWithContext indicates an expected call of ListBotRecommendationsWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) ListBotRecommendationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBotRecommendationsWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListBotRecommendationsWithContext), varargs...)
 }
 
 // ListBotVersions mocks base method.
@@ -1634,6 +2550,172 @@ func (mr *MockLexModelsV2APIMockRecorder) ListBuiltInSlotTypesWithContext(arg0, 
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListBuiltInSlotTypesWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListBuiltInSlotTypesWithContext), varargs...)
 }
 
+// ListExports mocks base method.
+func (m *MockLexModelsV2API) ListExports(arg0 *lexmodelsv2.ListExportsInput) (*lexmodelsv2.ListExportsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListExports", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.ListExportsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListExports indicates an expected call of ListExports.
+func (mr *MockLexModelsV2APIMockRecorder) ListExports(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListExports", reflect.TypeOf((*MockLexModelsV2API)(nil).ListExports), arg0)
+}
+
+// ListExportsPages mocks base method.
+func (m *MockLexModelsV2API) ListExportsPages(arg0 *lexmodelsv2.ListExportsInput, arg1 func(*lexmodelsv2.ListExportsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListExportsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListExportsPages indicates an expected call of ListExportsPages.
+func (mr *MockLexModelsV2APIMockRecorder) ListExportsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListExportsPages", reflect.TypeOf((*MockLexModelsV2API)(nil).ListExportsPages), arg0, arg1)
+}
+
+// ListExportsPagesWithContext mocks base method.
+func (m *MockLexModelsV2API) ListExportsPagesWithContext(arg0 context.Context, arg1 *lexmodelsv2.ListExportsInput, arg2 func(*lexmodelsv2.ListExportsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListExportsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListExportsPagesWithContext indicates an expected call of ListExportsPagesWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) ListExportsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListExportsPagesWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListExportsPagesWithContext), varargs...)
+}
+
+// ListExportsRequest mocks base method.
+func (m *MockLexModelsV2API) ListExportsRequest(arg0 *lexmodelsv2.ListExportsInput) (*request.Request, *lexmodelsv2.ListExportsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListExportsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.ListExportsOutput)
+	return ret0, ret1
+}
+
+// ListExportsRequest indicates an expected call of ListExportsRequest.
+func (mr *MockLexModelsV2APIMockRecorder) ListExportsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListExportsRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).ListExportsRequest), arg0)
+}
+
+// ListExportsWithContext mocks base method.
+func (m *MockLexModelsV2API) ListExportsWithContext(arg0 context.Context, arg1 *lexmodelsv2.ListExportsInput, arg2 ...request.Option) (*lexmodelsv2.ListExportsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListExportsWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.ListExportsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListExportsWithContext indicates an expected call of ListExportsWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) ListExportsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListExportsWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListExportsWithContext), varargs...)
+}
+
+// ListImports mocks base method.
+func (m *MockLexModelsV2API) ListImports(arg0 *lexmodelsv2.ListImportsInput) (*lexmodelsv2.ListImportsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListImports", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.ListImportsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListImports indicates an expected call of ListImports.
+func (mr *MockLexModelsV2APIMockRecorder) ListImports(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImports", reflect.TypeOf((*MockLexModelsV2API)(nil).ListImports), arg0)
+}
+
+// ListImportsPages mocks base method.
+func (m *MockLexModelsV2API) ListImportsPages(arg0 *lexmodelsv2.ListImportsInput, arg1 func(*lexmodelsv2.ListImportsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListImportsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListImportsPages indicates an expected call of ListImportsPages.
+func (mr *MockLexModelsV2APIMockRecorder) ListImportsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImportsPages", reflect.TypeOf((*MockLexModelsV2API)(nil).ListImportsPages), arg0, arg1)
+}
+
+// ListImportsPagesWithContext mocks base method.
+func (m *MockLexModelsV2API) ListImportsPagesWithContext(arg0 context.Context, arg1 *lexmodelsv2.ListImportsInput, arg2 func(*lexmodelsv2.ListImportsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListImportsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListImportsPagesWithContext indicates an expected call of ListImportsPagesWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) ListImportsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImportsPagesWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListImportsPagesWithContext), varargs...)
+}
+
+// ListImportsRequest mocks base method.
+func (m *MockLexModelsV2API) ListImportsRequest(arg0 *lexmodelsv2.ListImportsInput) (*request.Request, *lexmodelsv2.ListImportsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListImportsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.ListImportsOutput)
+	return ret0, ret1
+}
+
+// ListImportsRequest indicates an expected call of ListImportsRequest.
+func (mr *MockLexModelsV2APIMockRecorder) ListImportsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImportsRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).ListImportsRequest), arg0)
+}
+
+// ListImportsWithContext mocks base method.
+func (m *MockLexModelsV2API) ListImportsWithContext(arg0 context.Context, arg1 *lexmodelsv2.ListImportsInput, arg2 ...request.Option) (*lexmodelsv2.ListImportsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListImportsWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.ListImportsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListImportsWithContext indicates an expected call of ListImportsWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) ListImportsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListImportsWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListImportsWithContext), varargs...)
+}
+
 // ListIntents mocks base method.
 func (m *MockLexModelsV2API) ListIntents(arg0 *lexmodelsv2.ListIntentsInput) (*lexmodelsv2.ListIntentsOutput, error) {
 	m.ctrl.T.Helper()
@@ -1715,6 +2797,89 @@ func (mr *MockLexModelsV2APIMockRecorder) ListIntentsWithContext(arg0, arg1 inte
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIntentsWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListIntentsWithContext), varargs...)
+}
+
+// ListRecommendedIntents mocks base method.
+func (m *MockLexModelsV2API) ListRecommendedIntents(arg0 *lexmodelsv2.ListRecommendedIntentsInput) (*lexmodelsv2.ListRecommendedIntentsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListRecommendedIntents", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.ListRecommendedIntentsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListRecommendedIntents indicates an expected call of ListRecommendedIntents.
+func (mr *MockLexModelsV2APIMockRecorder) ListRecommendedIntents(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendedIntents", reflect.TypeOf((*MockLexModelsV2API)(nil).ListRecommendedIntents), arg0)
+}
+
+// ListRecommendedIntentsPages mocks base method.
+func (m *MockLexModelsV2API) ListRecommendedIntentsPages(arg0 *lexmodelsv2.ListRecommendedIntentsInput, arg1 func(*lexmodelsv2.ListRecommendedIntentsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListRecommendedIntentsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListRecommendedIntentsPages indicates an expected call of ListRecommendedIntentsPages.
+func (mr *MockLexModelsV2APIMockRecorder) ListRecommendedIntentsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendedIntentsPages", reflect.TypeOf((*MockLexModelsV2API)(nil).ListRecommendedIntentsPages), arg0, arg1)
+}
+
+// ListRecommendedIntentsPagesWithContext mocks base method.
+func (m *MockLexModelsV2API) ListRecommendedIntentsPagesWithContext(arg0 context.Context, arg1 *lexmodelsv2.ListRecommendedIntentsInput, arg2 func(*lexmodelsv2.ListRecommendedIntentsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListRecommendedIntentsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListRecommendedIntentsPagesWithContext indicates an expected call of ListRecommendedIntentsPagesWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) ListRecommendedIntentsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendedIntentsPagesWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListRecommendedIntentsPagesWithContext), varargs...)
+}
+
+// ListRecommendedIntentsRequest mocks base method.
+func (m *MockLexModelsV2API) ListRecommendedIntentsRequest(arg0 *lexmodelsv2.ListRecommendedIntentsInput) (*request.Request, *lexmodelsv2.ListRecommendedIntentsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListRecommendedIntentsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.ListRecommendedIntentsOutput)
+	return ret0, ret1
+}
+
+// ListRecommendedIntentsRequest indicates an expected call of ListRecommendedIntentsRequest.
+func (mr *MockLexModelsV2APIMockRecorder) ListRecommendedIntentsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendedIntentsRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).ListRecommendedIntentsRequest), arg0)
+}
+
+// ListRecommendedIntentsWithContext mocks base method.
+func (m *MockLexModelsV2API) ListRecommendedIntentsWithContext(arg0 context.Context, arg1 *lexmodelsv2.ListRecommendedIntentsInput, arg2 ...request.Option) (*lexmodelsv2.ListRecommendedIntentsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListRecommendedIntentsWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.ListRecommendedIntentsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListRecommendedIntentsWithContext indicates an expected call of ListRecommendedIntentsWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) ListRecommendedIntentsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRecommendedIntentsWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListRecommendedIntentsWithContext), varargs...)
 }
 
 // ListSlotTypes mocks base method.
@@ -1933,6 +3098,156 @@ func (mr *MockLexModelsV2APIMockRecorder) ListTagsForResourceWithContext(arg0, a
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
+// SearchAssociatedTranscripts mocks base method.
+func (m *MockLexModelsV2API) SearchAssociatedTranscripts(arg0 *lexmodelsv2.SearchAssociatedTranscriptsInput) (*lexmodelsv2.SearchAssociatedTranscriptsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SearchAssociatedTranscripts", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.SearchAssociatedTranscriptsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SearchAssociatedTranscripts indicates an expected call of SearchAssociatedTranscripts.
+func (mr *MockLexModelsV2APIMockRecorder) SearchAssociatedTranscripts(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchAssociatedTranscripts", reflect.TypeOf((*MockLexModelsV2API)(nil).SearchAssociatedTranscripts), arg0)
+}
+
+// SearchAssociatedTranscriptsRequest mocks base method.
+func (m *MockLexModelsV2API) SearchAssociatedTranscriptsRequest(arg0 *lexmodelsv2.SearchAssociatedTranscriptsInput) (*request.Request, *lexmodelsv2.SearchAssociatedTranscriptsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SearchAssociatedTranscriptsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.SearchAssociatedTranscriptsOutput)
+	return ret0, ret1
+}
+
+// SearchAssociatedTranscriptsRequest indicates an expected call of SearchAssociatedTranscriptsRequest.
+func (mr *MockLexModelsV2APIMockRecorder) SearchAssociatedTranscriptsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchAssociatedTranscriptsRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).SearchAssociatedTranscriptsRequest), arg0)
+}
+
+// SearchAssociatedTranscriptsWithContext mocks base method.
+func (m *MockLexModelsV2API) SearchAssociatedTranscriptsWithContext(arg0 context.Context, arg1 *lexmodelsv2.SearchAssociatedTranscriptsInput, arg2 ...request.Option) (*lexmodelsv2.SearchAssociatedTranscriptsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "SearchAssociatedTranscriptsWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.SearchAssociatedTranscriptsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SearchAssociatedTranscriptsWithContext indicates an expected call of SearchAssociatedTranscriptsWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) SearchAssociatedTranscriptsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SearchAssociatedTranscriptsWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).SearchAssociatedTranscriptsWithContext), varargs...)
+}
+
+// StartBotRecommendation mocks base method.
+func (m *MockLexModelsV2API) StartBotRecommendation(arg0 *lexmodelsv2.StartBotRecommendationInput) (*lexmodelsv2.StartBotRecommendationOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartBotRecommendation", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.StartBotRecommendationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartBotRecommendation indicates an expected call of StartBotRecommendation.
+func (mr *MockLexModelsV2APIMockRecorder) StartBotRecommendation(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBotRecommendation", reflect.TypeOf((*MockLexModelsV2API)(nil).StartBotRecommendation), arg0)
+}
+
+// StartBotRecommendationRequest mocks base method.
+func (m *MockLexModelsV2API) StartBotRecommendationRequest(arg0 *lexmodelsv2.StartBotRecommendationInput) (*request.Request, *lexmodelsv2.StartBotRecommendationOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartBotRecommendationRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.StartBotRecommendationOutput)
+	return ret0, ret1
+}
+
+// StartBotRecommendationRequest indicates an expected call of StartBotRecommendationRequest.
+func (mr *MockLexModelsV2APIMockRecorder) StartBotRecommendationRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBotRecommendationRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).StartBotRecommendationRequest), arg0)
+}
+
+// StartBotRecommendationWithContext mocks base method.
+func (m *MockLexModelsV2API) StartBotRecommendationWithContext(arg0 context.Context, arg1 *lexmodelsv2.StartBotRecommendationInput, arg2 ...request.Option) (*lexmodelsv2.StartBotRecommendationOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "StartBotRecommendationWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.StartBotRecommendationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartBotRecommendationWithContext indicates an expected call of StartBotRecommendationWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) StartBotRecommendationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartBotRecommendationWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).StartBotRecommendationWithContext), varargs...)
+}
+
+// StartImport mocks base method.
+func (m *MockLexModelsV2API) StartImport(arg0 *lexmodelsv2.StartImportInput) (*lexmodelsv2.StartImportOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartImport", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.StartImportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartImport indicates an expected call of StartImport.
+func (mr *MockLexModelsV2APIMockRecorder) StartImport(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartImport", reflect.TypeOf((*MockLexModelsV2API)(nil).StartImport), arg0)
+}
+
+// StartImportRequest mocks base method.
+func (m *MockLexModelsV2API) StartImportRequest(arg0 *lexmodelsv2.StartImportInput) (*request.Request, *lexmodelsv2.StartImportOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartImportRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.StartImportOutput)
+	return ret0, ret1
+}
+
+// StartImportRequest indicates an expected call of StartImportRequest.
+func (mr *MockLexModelsV2APIMockRecorder) StartImportRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartImportRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).StartImportRequest), arg0)
+}
+
+// StartImportWithContext mocks base method.
+func (m *MockLexModelsV2API) StartImportWithContext(arg0 context.Context, arg1 *lexmodelsv2.StartImportInput, arg2 ...request.Option) (*lexmodelsv2.StartImportOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "StartImportWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.StartImportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartImportWithContext indicates an expected call of StartImportWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) StartImportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartImportWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).StartImportWithContext), varargs...)
+}
+
 // TagResource mocks base method.
 func (m *MockLexModelsV2API) TagResource(arg0 *lexmodelsv2.TagResourceInput) (*lexmodelsv2.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
@@ -2148,6 +3463,56 @@ func (mr *MockLexModelsV2APIMockRecorder) UpdateBotLocaleWithContext(arg0, arg1 
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBotLocaleWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateBotLocaleWithContext), varargs...)
 }
 
+// UpdateBotRecommendation mocks base method.
+func (m *MockLexModelsV2API) UpdateBotRecommendation(arg0 *lexmodelsv2.UpdateBotRecommendationInput) (*lexmodelsv2.UpdateBotRecommendationOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateBotRecommendation", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.UpdateBotRecommendationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateBotRecommendation indicates an expected call of UpdateBotRecommendation.
+func (mr *MockLexModelsV2APIMockRecorder) UpdateBotRecommendation(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBotRecommendation", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateBotRecommendation), arg0)
+}
+
+// UpdateBotRecommendationRequest mocks base method.
+func (m *MockLexModelsV2API) UpdateBotRecommendationRequest(arg0 *lexmodelsv2.UpdateBotRecommendationInput) (*request.Request, *lexmodelsv2.UpdateBotRecommendationOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateBotRecommendationRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.UpdateBotRecommendationOutput)
+	return ret0, ret1
+}
+
+// UpdateBotRecommendationRequest indicates an expected call of UpdateBotRecommendationRequest.
+func (mr *MockLexModelsV2APIMockRecorder) UpdateBotRecommendationRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBotRecommendationRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateBotRecommendationRequest), arg0)
+}
+
+// UpdateBotRecommendationWithContext mocks base method.
+func (m *MockLexModelsV2API) UpdateBotRecommendationWithContext(arg0 context.Context, arg1 *lexmodelsv2.UpdateBotRecommendationInput, arg2 ...request.Option) (*lexmodelsv2.UpdateBotRecommendationOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateBotRecommendationWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.UpdateBotRecommendationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateBotRecommendationWithContext indicates an expected call of UpdateBotRecommendationWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) UpdateBotRecommendationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBotRecommendationWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateBotRecommendationWithContext), varargs...)
+}
+
 // UpdateBotRequest mocks base method.
 func (m *MockLexModelsV2API) UpdateBotRequest(arg0 *lexmodelsv2.UpdateBotInput) (*request.Request, *lexmodelsv2.UpdateBotOutput) {
 	m.ctrl.T.Helper()
@@ -2181,6 +3546,56 @@ func (mr *MockLexModelsV2APIMockRecorder) UpdateBotWithContext(arg0, arg1 interf
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBotWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateBotWithContext), varargs...)
+}
+
+// UpdateExport mocks base method.
+func (m *MockLexModelsV2API) UpdateExport(arg0 *lexmodelsv2.UpdateExportInput) (*lexmodelsv2.UpdateExportOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateExport", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.UpdateExportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateExport indicates an expected call of UpdateExport.
+func (mr *MockLexModelsV2APIMockRecorder) UpdateExport(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateExport", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateExport), arg0)
+}
+
+// UpdateExportRequest mocks base method.
+func (m *MockLexModelsV2API) UpdateExportRequest(arg0 *lexmodelsv2.UpdateExportInput) (*request.Request, *lexmodelsv2.UpdateExportOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateExportRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.UpdateExportOutput)
+	return ret0, ret1
+}
+
+// UpdateExportRequest indicates an expected call of UpdateExportRequest.
+func (mr *MockLexModelsV2APIMockRecorder) UpdateExportRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateExportRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateExportRequest), arg0)
+}
+
+// UpdateExportWithContext mocks base method.
+func (m *MockLexModelsV2API) UpdateExportWithContext(arg0 context.Context, arg1 *lexmodelsv2.UpdateExportInput, arg2 ...request.Option) (*lexmodelsv2.UpdateExportOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateExportWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.UpdateExportOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateExportWithContext indicates an expected call of UpdateExportWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) UpdateExportWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateExportWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateExportWithContext), varargs...)
 }
 
 // UpdateIntent mocks base method.
@@ -2231,6 +3646,56 @@ func (mr *MockLexModelsV2APIMockRecorder) UpdateIntentWithContext(arg0, arg1 int
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateIntentWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateIntentWithContext), varargs...)
+}
+
+// UpdateResourcePolicy mocks base method.
+func (m *MockLexModelsV2API) UpdateResourcePolicy(arg0 *lexmodelsv2.UpdateResourcePolicyInput) (*lexmodelsv2.UpdateResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateResourcePolicy", arg0)
+	ret0, _ := ret[0].(*lexmodelsv2.UpdateResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateResourcePolicy indicates an expected call of UpdateResourcePolicy.
+func (mr *MockLexModelsV2APIMockRecorder) UpdateResourcePolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateResourcePolicy", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateResourcePolicy), arg0)
+}
+
+// UpdateResourcePolicyRequest mocks base method.
+func (m *MockLexModelsV2API) UpdateResourcePolicyRequest(arg0 *lexmodelsv2.UpdateResourcePolicyInput) (*request.Request, *lexmodelsv2.UpdateResourcePolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateResourcePolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelsv2.UpdateResourcePolicyOutput)
+	return ret0, ret1
+}
+
+// UpdateResourcePolicyRequest indicates an expected call of UpdateResourcePolicyRequest.
+func (mr *MockLexModelsV2APIMockRecorder) UpdateResourcePolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateResourcePolicyRequest", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateResourcePolicyRequest), arg0)
+}
+
+// UpdateResourcePolicyWithContext mocks base method.
+func (m *MockLexModelsV2API) UpdateResourcePolicyWithContext(arg0 context.Context, arg1 *lexmodelsv2.UpdateResourcePolicyInput, arg2 ...request.Option) (*lexmodelsv2.UpdateResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateResourcePolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelsv2.UpdateResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateResourcePolicyWithContext indicates an expected call of UpdateResourcePolicyWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) UpdateResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateResourcePolicyWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateResourcePolicyWithContext), varargs...)
 }
 
 // UpdateSlot mocks base method.
@@ -2331,4 +3796,268 @@ func (mr *MockLexModelsV2APIMockRecorder) UpdateSlotWithContext(arg0, arg1 inter
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSlotWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).UpdateSlotWithContext), varargs...)
+}
+
+// WaitUntilBotAliasAvailable mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotAliasAvailable(arg0 *lexmodelsv2.DescribeBotAliasInput) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "WaitUntilBotAliasAvailable", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotAliasAvailable indicates an expected call of WaitUntilBotAliasAvailable.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotAliasAvailable(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotAliasAvailable", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotAliasAvailable), arg0)
+}
+
+// WaitUntilBotAliasAvailableWithContext mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotAliasAvailableWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeBotAliasInput, arg2 ...request.WaiterOption) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "WaitUntilBotAliasAvailableWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotAliasAvailableWithContext indicates an expected call of WaitUntilBotAliasAvailableWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotAliasAvailableWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotAliasAvailableWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotAliasAvailableWithContext), varargs...)
+}
+
+// WaitUntilBotAvailable mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotAvailable(arg0 *lexmodelsv2.DescribeBotInput) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "WaitUntilBotAvailable", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotAvailable indicates an expected call of WaitUntilBotAvailable.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotAvailable(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotAvailable", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotAvailable), arg0)
+}
+
+// WaitUntilBotAvailableWithContext mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotAvailableWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeBotInput, arg2 ...request.WaiterOption) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "WaitUntilBotAvailableWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotAvailableWithContext indicates an expected call of WaitUntilBotAvailableWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotAvailableWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotAvailableWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotAvailableWithContext), varargs...)
+}
+
+// WaitUntilBotExportCompleted mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotExportCompleted(arg0 *lexmodelsv2.DescribeExportInput) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "WaitUntilBotExportCompleted", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotExportCompleted indicates an expected call of WaitUntilBotExportCompleted.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotExportCompleted(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotExportCompleted", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotExportCompleted), arg0)
+}
+
+// WaitUntilBotExportCompletedWithContext mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotExportCompletedWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeExportInput, arg2 ...request.WaiterOption) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "WaitUntilBotExportCompletedWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotExportCompletedWithContext indicates an expected call of WaitUntilBotExportCompletedWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotExportCompletedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotExportCompletedWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotExportCompletedWithContext), varargs...)
+}
+
+// WaitUntilBotImportCompleted mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotImportCompleted(arg0 *lexmodelsv2.DescribeImportInput) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "WaitUntilBotImportCompleted", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotImportCompleted indicates an expected call of WaitUntilBotImportCompleted.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotImportCompleted(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotImportCompleted", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotImportCompleted), arg0)
+}
+
+// WaitUntilBotImportCompletedWithContext mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotImportCompletedWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeImportInput, arg2 ...request.WaiterOption) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "WaitUntilBotImportCompletedWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotImportCompletedWithContext indicates an expected call of WaitUntilBotImportCompletedWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotImportCompletedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotImportCompletedWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotImportCompletedWithContext), varargs...)
+}
+
+// WaitUntilBotLocaleBuilt mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotLocaleBuilt(arg0 *lexmodelsv2.DescribeBotLocaleInput) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "WaitUntilBotLocaleBuilt", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotLocaleBuilt indicates an expected call of WaitUntilBotLocaleBuilt.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotLocaleBuilt(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotLocaleBuilt", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotLocaleBuilt), arg0)
+}
+
+// WaitUntilBotLocaleBuiltWithContext mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotLocaleBuiltWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeBotLocaleInput, arg2 ...request.WaiterOption) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "WaitUntilBotLocaleBuiltWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotLocaleBuiltWithContext indicates an expected call of WaitUntilBotLocaleBuiltWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotLocaleBuiltWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotLocaleBuiltWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotLocaleBuiltWithContext), varargs...)
+}
+
+// WaitUntilBotLocaleCreated mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotLocaleCreated(arg0 *lexmodelsv2.DescribeBotLocaleInput) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "WaitUntilBotLocaleCreated", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotLocaleCreated indicates an expected call of WaitUntilBotLocaleCreated.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotLocaleCreated(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotLocaleCreated", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotLocaleCreated), arg0)
+}
+
+// WaitUntilBotLocaleCreatedWithContext mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotLocaleCreatedWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeBotLocaleInput, arg2 ...request.WaiterOption) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "WaitUntilBotLocaleCreatedWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotLocaleCreatedWithContext indicates an expected call of WaitUntilBotLocaleCreatedWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotLocaleCreatedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotLocaleCreatedWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotLocaleCreatedWithContext), varargs...)
+}
+
+// WaitUntilBotLocaleExpressTestingAvailable mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotLocaleExpressTestingAvailable(arg0 *lexmodelsv2.DescribeBotLocaleInput) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "WaitUntilBotLocaleExpressTestingAvailable", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotLocaleExpressTestingAvailable indicates an expected call of WaitUntilBotLocaleExpressTestingAvailable.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotLocaleExpressTestingAvailable(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotLocaleExpressTestingAvailable", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotLocaleExpressTestingAvailable), arg0)
+}
+
+// WaitUntilBotLocaleExpressTestingAvailableWithContext mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotLocaleExpressTestingAvailableWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeBotLocaleInput, arg2 ...request.WaiterOption) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "WaitUntilBotLocaleExpressTestingAvailableWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotLocaleExpressTestingAvailableWithContext indicates an expected call of WaitUntilBotLocaleExpressTestingAvailableWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotLocaleExpressTestingAvailableWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotLocaleExpressTestingAvailableWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotLocaleExpressTestingAvailableWithContext), varargs...)
+}
+
+// WaitUntilBotVersionAvailable mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotVersionAvailable(arg0 *lexmodelsv2.DescribeBotVersionInput) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "WaitUntilBotVersionAvailable", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotVersionAvailable indicates an expected call of WaitUntilBotVersionAvailable.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotVersionAvailable(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotVersionAvailable", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotVersionAvailable), arg0)
+}
+
+// WaitUntilBotVersionAvailableWithContext mocks base method.
+func (m *MockLexModelsV2API) WaitUntilBotVersionAvailableWithContext(arg0 context.Context, arg1 *lexmodelsv2.DescribeBotVersionInput, arg2 ...request.WaiterOption) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "WaitUntilBotVersionAvailableWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilBotVersionAvailableWithContext indicates an expected call of WaitUntilBotVersionAvailableWithContext.
+func (mr *MockLexModelsV2APIMockRecorder) WaitUntilBotVersionAvailableWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilBotVersionAvailableWithContext", reflect.TypeOf((*MockLexModelsV2API)(nil).WaitUntilBotVersionAvailableWithContext), varargs...)
 }

@@ -36,6 +36,56 @@ func (m *MockSageMakerFeatureStoreRuntimeAPI) EXPECT() *MockSageMakerFeatureStor
 	return m.recorder
 }
 
+// BatchGetRecord mocks base method.
+func (m *MockSageMakerFeatureStoreRuntimeAPI) BatchGetRecord(arg0 *sagemakerfeaturestoreruntime.BatchGetRecordInput) (*sagemakerfeaturestoreruntime.BatchGetRecordOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "BatchGetRecord", arg0)
+	ret0, _ := ret[0].(*sagemakerfeaturestoreruntime.BatchGetRecordOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// BatchGetRecord indicates an expected call of BatchGetRecord.
+func (mr *MockSageMakerFeatureStoreRuntimeAPIMockRecorder) BatchGetRecord(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetRecord", reflect.TypeOf((*MockSageMakerFeatureStoreRuntimeAPI)(nil).BatchGetRecord), arg0)
+}
+
+// BatchGetRecordRequest mocks base method.
+func (m *MockSageMakerFeatureStoreRuntimeAPI) BatchGetRecordRequest(arg0 *sagemakerfeaturestoreruntime.BatchGetRecordInput) (*request.Request, *sagemakerfeaturestoreruntime.BatchGetRecordOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "BatchGetRecordRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*sagemakerfeaturestoreruntime.BatchGetRecordOutput)
+	return ret0, ret1
+}
+
+// BatchGetRecordRequest indicates an expected call of BatchGetRecordRequest.
+func (mr *MockSageMakerFeatureStoreRuntimeAPIMockRecorder) BatchGetRecordRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetRecordRequest", reflect.TypeOf((*MockSageMakerFeatureStoreRuntimeAPI)(nil).BatchGetRecordRequest), arg0)
+}
+
+// BatchGetRecordWithContext mocks base method.
+func (m *MockSageMakerFeatureStoreRuntimeAPI) BatchGetRecordWithContext(arg0 context.Context, arg1 *sagemakerfeaturestoreruntime.BatchGetRecordInput, arg2 ...request.Option) (*sagemakerfeaturestoreruntime.BatchGetRecordOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "BatchGetRecordWithContext", varargs...)
+	ret0, _ := ret[0].(*sagemakerfeaturestoreruntime.BatchGetRecordOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// BatchGetRecordWithContext indicates an expected call of BatchGetRecordWithContext.
+func (mr *MockSageMakerFeatureStoreRuntimeAPIMockRecorder) BatchGetRecordWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BatchGetRecordWithContext", reflect.TypeOf((*MockSageMakerFeatureStoreRuntimeAPI)(nil).BatchGetRecordWithContext), varargs...)
+}
+
 // DeleteRecord mocks base method.
 func (m *MockSageMakerFeatureStoreRuntimeAPI) DeleteRecord(arg0 *sagemakerfeaturestoreruntime.DeleteRecordInput) (*sagemakerfeaturestoreruntime.DeleteRecordOutput, error) {
 	m.ctrl.T.Helper()

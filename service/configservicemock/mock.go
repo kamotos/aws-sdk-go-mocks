@@ -951,6 +951,39 @@ func (mr *MockConfigServiceAPIMockRecorder) DescribeAggregateComplianceByConfigR
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAggregateComplianceByConfigRules", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeAggregateComplianceByConfigRules), arg0)
 }
 
+// DescribeAggregateComplianceByConfigRulesPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeAggregateComplianceByConfigRulesPages(arg0 *configservice.DescribeAggregateComplianceByConfigRulesInput, arg1 func(*configservice.DescribeAggregateComplianceByConfigRulesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeAggregateComplianceByConfigRulesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeAggregateComplianceByConfigRulesPages indicates an expected call of DescribeAggregateComplianceByConfigRulesPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeAggregateComplianceByConfigRulesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAggregateComplianceByConfigRulesPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeAggregateComplianceByConfigRulesPages), arg0, arg1)
+}
+
+// DescribeAggregateComplianceByConfigRulesPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeAggregateComplianceByConfigRulesPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeAggregateComplianceByConfigRulesInput, arg2 func(*configservice.DescribeAggregateComplianceByConfigRulesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeAggregateComplianceByConfigRulesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeAggregateComplianceByConfigRulesPagesWithContext indicates an expected call of DescribeAggregateComplianceByConfigRulesPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeAggregateComplianceByConfigRulesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAggregateComplianceByConfigRulesPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeAggregateComplianceByConfigRulesPagesWithContext), varargs...)
+}
+
 // DescribeAggregateComplianceByConfigRulesRequest mocks base method.
 func (m *MockConfigServiceAPI) DescribeAggregateComplianceByConfigRulesRequest(arg0 *configservice.DescribeAggregateComplianceByConfigRulesInput) (*request.Request, *configservice.DescribeAggregateComplianceByConfigRulesOutput) {
 	m.ctrl.T.Helper()
@@ -999,6 +1032,39 @@ func (m *MockConfigServiceAPI) DescribeAggregateComplianceByConformancePacks(arg
 func (mr *MockConfigServiceAPIMockRecorder) DescribeAggregateComplianceByConformancePacks(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAggregateComplianceByConformancePacks", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeAggregateComplianceByConformancePacks), arg0)
+}
+
+// DescribeAggregateComplianceByConformancePacksPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeAggregateComplianceByConformancePacksPages(arg0 *configservice.DescribeAggregateComplianceByConformancePacksInput, arg1 func(*configservice.DescribeAggregateComplianceByConformancePacksOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeAggregateComplianceByConformancePacksPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeAggregateComplianceByConformancePacksPages indicates an expected call of DescribeAggregateComplianceByConformancePacksPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeAggregateComplianceByConformancePacksPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAggregateComplianceByConformancePacksPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeAggregateComplianceByConformancePacksPages), arg0, arg1)
+}
+
+// DescribeAggregateComplianceByConformancePacksPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeAggregateComplianceByConformancePacksPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeAggregateComplianceByConformancePacksInput, arg2 func(*configservice.DescribeAggregateComplianceByConformancePacksOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeAggregateComplianceByConformancePacksPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeAggregateComplianceByConformancePacksPagesWithContext indicates an expected call of DescribeAggregateComplianceByConformancePacksPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeAggregateComplianceByConformancePacksPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAggregateComplianceByConformancePacksPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeAggregateComplianceByConformancePacksPagesWithContext), varargs...)
 }
 
 // DescribeAggregateComplianceByConformancePacksRequest mocks base method.
@@ -1051,6 +1117,39 @@ func (mr *MockConfigServiceAPIMockRecorder) DescribeAggregationAuthorizations(ar
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAggregationAuthorizations", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeAggregationAuthorizations), arg0)
 }
 
+// DescribeAggregationAuthorizationsPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeAggregationAuthorizationsPages(arg0 *configservice.DescribeAggregationAuthorizationsInput, arg1 func(*configservice.DescribeAggregationAuthorizationsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeAggregationAuthorizationsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeAggregationAuthorizationsPages indicates an expected call of DescribeAggregationAuthorizationsPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeAggregationAuthorizationsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAggregationAuthorizationsPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeAggregationAuthorizationsPages), arg0, arg1)
+}
+
+// DescribeAggregationAuthorizationsPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeAggregationAuthorizationsPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeAggregationAuthorizationsInput, arg2 func(*configservice.DescribeAggregationAuthorizationsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeAggregationAuthorizationsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeAggregationAuthorizationsPagesWithContext indicates an expected call of DescribeAggregationAuthorizationsPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeAggregationAuthorizationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeAggregationAuthorizationsPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeAggregationAuthorizationsPagesWithContext), varargs...)
+}
+
 // DescribeAggregationAuthorizationsRequest mocks base method.
 func (m *MockConfigServiceAPI) DescribeAggregationAuthorizationsRequest(arg0 *configservice.DescribeAggregationAuthorizationsInput) (*request.Request, *configservice.DescribeAggregationAuthorizationsOutput) {
 	m.ctrl.T.Helper()
@@ -1099,6 +1198,39 @@ func (m *MockConfigServiceAPI) DescribeComplianceByConfigRule(arg0 *configservic
 func (mr *MockConfigServiceAPIMockRecorder) DescribeComplianceByConfigRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeComplianceByConfigRule", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeComplianceByConfigRule), arg0)
+}
+
+// DescribeComplianceByConfigRulePages mocks base method.
+func (m *MockConfigServiceAPI) DescribeComplianceByConfigRulePages(arg0 *configservice.DescribeComplianceByConfigRuleInput, arg1 func(*configservice.DescribeComplianceByConfigRuleOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeComplianceByConfigRulePages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeComplianceByConfigRulePages indicates an expected call of DescribeComplianceByConfigRulePages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeComplianceByConfigRulePages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeComplianceByConfigRulePages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeComplianceByConfigRulePages), arg0, arg1)
+}
+
+// DescribeComplianceByConfigRulePagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeComplianceByConfigRulePagesWithContext(arg0 context.Context, arg1 *configservice.DescribeComplianceByConfigRuleInput, arg2 func(*configservice.DescribeComplianceByConfigRuleOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeComplianceByConfigRulePagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeComplianceByConfigRulePagesWithContext indicates an expected call of DescribeComplianceByConfigRulePagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeComplianceByConfigRulePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeComplianceByConfigRulePagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeComplianceByConfigRulePagesWithContext), varargs...)
 }
 
 // DescribeComplianceByConfigRuleRequest mocks base method.
@@ -1151,6 +1283,39 @@ func (mr *MockConfigServiceAPIMockRecorder) DescribeComplianceByResource(arg0 in
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeComplianceByResource", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeComplianceByResource), arg0)
 }
 
+// DescribeComplianceByResourcePages mocks base method.
+func (m *MockConfigServiceAPI) DescribeComplianceByResourcePages(arg0 *configservice.DescribeComplianceByResourceInput, arg1 func(*configservice.DescribeComplianceByResourceOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeComplianceByResourcePages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeComplianceByResourcePages indicates an expected call of DescribeComplianceByResourcePages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeComplianceByResourcePages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeComplianceByResourcePages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeComplianceByResourcePages), arg0, arg1)
+}
+
+// DescribeComplianceByResourcePagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeComplianceByResourcePagesWithContext(arg0 context.Context, arg1 *configservice.DescribeComplianceByResourceInput, arg2 func(*configservice.DescribeComplianceByResourceOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeComplianceByResourcePagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeComplianceByResourcePagesWithContext indicates an expected call of DescribeComplianceByResourcePagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeComplianceByResourcePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeComplianceByResourcePagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeComplianceByResourcePagesWithContext), varargs...)
+}
+
 // DescribeComplianceByResourceRequest mocks base method.
 func (m *MockConfigServiceAPI) DescribeComplianceByResourceRequest(arg0 *configservice.DescribeComplianceByResourceInput) (*request.Request, *configservice.DescribeComplianceByResourceOutput) {
 	m.ctrl.T.Helper()
@@ -1199,6 +1364,39 @@ func (m *MockConfigServiceAPI) DescribeConfigRuleEvaluationStatus(arg0 *configse
 func (mr *MockConfigServiceAPIMockRecorder) DescribeConfigRuleEvaluationStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConfigRuleEvaluationStatus", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConfigRuleEvaluationStatus), arg0)
+}
+
+// DescribeConfigRuleEvaluationStatusPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeConfigRuleEvaluationStatusPages(arg0 *configservice.DescribeConfigRuleEvaluationStatusInput, arg1 func(*configservice.DescribeConfigRuleEvaluationStatusOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeConfigRuleEvaluationStatusPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConfigRuleEvaluationStatusPages indicates an expected call of DescribeConfigRuleEvaluationStatusPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConfigRuleEvaluationStatusPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConfigRuleEvaluationStatusPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConfigRuleEvaluationStatusPages), arg0, arg1)
+}
+
+// DescribeConfigRuleEvaluationStatusPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeConfigRuleEvaluationStatusPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeConfigRuleEvaluationStatusInput, arg2 func(*configservice.DescribeConfigRuleEvaluationStatusOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeConfigRuleEvaluationStatusPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConfigRuleEvaluationStatusPagesWithContext indicates an expected call of DescribeConfigRuleEvaluationStatusPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConfigRuleEvaluationStatusPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConfigRuleEvaluationStatusPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConfigRuleEvaluationStatusPagesWithContext), varargs...)
 }
 
 // DescribeConfigRuleEvaluationStatusRequest mocks base method.
@@ -1251,6 +1449,39 @@ func (mr *MockConfigServiceAPIMockRecorder) DescribeConfigRules(arg0 interface{}
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConfigRules", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConfigRules), arg0)
 }
 
+// DescribeConfigRulesPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeConfigRulesPages(arg0 *configservice.DescribeConfigRulesInput, arg1 func(*configservice.DescribeConfigRulesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeConfigRulesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConfigRulesPages indicates an expected call of DescribeConfigRulesPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConfigRulesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConfigRulesPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConfigRulesPages), arg0, arg1)
+}
+
+// DescribeConfigRulesPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeConfigRulesPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeConfigRulesInput, arg2 func(*configservice.DescribeConfigRulesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeConfigRulesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConfigRulesPagesWithContext indicates an expected call of DescribeConfigRulesPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConfigRulesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConfigRulesPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConfigRulesPagesWithContext), varargs...)
+}
+
 // DescribeConfigRulesRequest mocks base method.
 func (m *MockConfigServiceAPI) DescribeConfigRulesRequest(arg0 *configservice.DescribeConfigRulesInput) (*request.Request, *configservice.DescribeConfigRulesOutput) {
 	m.ctrl.T.Helper()
@@ -1301,6 +1532,39 @@ func (mr *MockConfigServiceAPIMockRecorder) DescribeConfigurationAggregatorSourc
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConfigurationAggregatorSourcesStatus", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConfigurationAggregatorSourcesStatus), arg0)
 }
 
+// DescribeConfigurationAggregatorSourcesStatusPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeConfigurationAggregatorSourcesStatusPages(arg0 *configservice.DescribeConfigurationAggregatorSourcesStatusInput, arg1 func(*configservice.DescribeConfigurationAggregatorSourcesStatusOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeConfigurationAggregatorSourcesStatusPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConfigurationAggregatorSourcesStatusPages indicates an expected call of DescribeConfigurationAggregatorSourcesStatusPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConfigurationAggregatorSourcesStatusPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConfigurationAggregatorSourcesStatusPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConfigurationAggregatorSourcesStatusPages), arg0, arg1)
+}
+
+// DescribeConfigurationAggregatorSourcesStatusPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeConfigurationAggregatorSourcesStatusPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeConfigurationAggregatorSourcesStatusInput, arg2 func(*configservice.DescribeConfigurationAggregatorSourcesStatusOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeConfigurationAggregatorSourcesStatusPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConfigurationAggregatorSourcesStatusPagesWithContext indicates an expected call of DescribeConfigurationAggregatorSourcesStatusPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConfigurationAggregatorSourcesStatusPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConfigurationAggregatorSourcesStatusPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConfigurationAggregatorSourcesStatusPagesWithContext), varargs...)
+}
+
 // DescribeConfigurationAggregatorSourcesStatusRequest mocks base method.
 func (m *MockConfigServiceAPI) DescribeConfigurationAggregatorSourcesStatusRequest(arg0 *configservice.DescribeConfigurationAggregatorSourcesStatusInput) (*request.Request, *configservice.DescribeConfigurationAggregatorSourcesStatusOutput) {
 	m.ctrl.T.Helper()
@@ -1349,6 +1613,39 @@ func (m *MockConfigServiceAPI) DescribeConfigurationAggregators(arg0 *configserv
 func (mr *MockConfigServiceAPIMockRecorder) DescribeConfigurationAggregators(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConfigurationAggregators", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConfigurationAggregators), arg0)
+}
+
+// DescribeConfigurationAggregatorsPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeConfigurationAggregatorsPages(arg0 *configservice.DescribeConfigurationAggregatorsInput, arg1 func(*configservice.DescribeConfigurationAggregatorsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeConfigurationAggregatorsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConfigurationAggregatorsPages indicates an expected call of DescribeConfigurationAggregatorsPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConfigurationAggregatorsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConfigurationAggregatorsPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConfigurationAggregatorsPages), arg0, arg1)
+}
+
+// DescribeConfigurationAggregatorsPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeConfigurationAggregatorsPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeConfigurationAggregatorsInput, arg2 func(*configservice.DescribeConfigurationAggregatorsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeConfigurationAggregatorsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConfigurationAggregatorsPagesWithContext indicates an expected call of DescribeConfigurationAggregatorsPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConfigurationAggregatorsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConfigurationAggregatorsPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConfigurationAggregatorsPagesWithContext), varargs...)
 }
 
 // DescribeConfigurationAggregatorsRequest mocks base method.
@@ -1501,6 +1798,39 @@ func (mr *MockConfigServiceAPIMockRecorder) DescribeConformancePackCompliance(ar
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConformancePackCompliance", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConformancePackCompliance), arg0)
 }
 
+// DescribeConformancePackCompliancePages mocks base method.
+func (m *MockConfigServiceAPI) DescribeConformancePackCompliancePages(arg0 *configservice.DescribeConformancePackComplianceInput, arg1 func(*configservice.DescribeConformancePackComplianceOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeConformancePackCompliancePages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConformancePackCompliancePages indicates an expected call of DescribeConformancePackCompliancePages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConformancePackCompliancePages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConformancePackCompliancePages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConformancePackCompliancePages), arg0, arg1)
+}
+
+// DescribeConformancePackCompliancePagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeConformancePackCompliancePagesWithContext(arg0 context.Context, arg1 *configservice.DescribeConformancePackComplianceInput, arg2 func(*configservice.DescribeConformancePackComplianceOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeConformancePackCompliancePagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConformancePackCompliancePagesWithContext indicates an expected call of DescribeConformancePackCompliancePagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConformancePackCompliancePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConformancePackCompliancePagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConformancePackCompliancePagesWithContext), varargs...)
+}
+
 // DescribeConformancePackComplianceRequest mocks base method.
 func (m *MockConfigServiceAPI) DescribeConformancePackComplianceRequest(arg0 *configservice.DescribeConformancePackComplianceInput) (*request.Request, *configservice.DescribeConformancePackComplianceOutput) {
 	m.ctrl.T.Helper()
@@ -1551,6 +1881,39 @@ func (mr *MockConfigServiceAPIMockRecorder) DescribeConformancePackStatus(arg0 i
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConformancePackStatus", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConformancePackStatus), arg0)
 }
 
+// DescribeConformancePackStatusPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeConformancePackStatusPages(arg0 *configservice.DescribeConformancePackStatusInput, arg1 func(*configservice.DescribeConformancePackStatusOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeConformancePackStatusPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConformancePackStatusPages indicates an expected call of DescribeConformancePackStatusPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConformancePackStatusPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConformancePackStatusPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConformancePackStatusPages), arg0, arg1)
+}
+
+// DescribeConformancePackStatusPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeConformancePackStatusPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeConformancePackStatusInput, arg2 func(*configservice.DescribeConformancePackStatusOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeConformancePackStatusPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConformancePackStatusPagesWithContext indicates an expected call of DescribeConformancePackStatusPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConformancePackStatusPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConformancePackStatusPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConformancePackStatusPagesWithContext), varargs...)
+}
+
 // DescribeConformancePackStatusRequest mocks base method.
 func (m *MockConfigServiceAPI) DescribeConformancePackStatusRequest(arg0 *configservice.DescribeConformancePackStatusInput) (*request.Request, *configservice.DescribeConformancePackStatusOutput) {
 	m.ctrl.T.Helper()
@@ -1599,6 +1962,39 @@ func (m *MockConfigServiceAPI) DescribeConformancePacks(arg0 *configservice.Desc
 func (mr *MockConfigServiceAPIMockRecorder) DescribeConformancePacks(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConformancePacks", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConformancePacks), arg0)
+}
+
+// DescribeConformancePacksPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeConformancePacksPages(arg0 *configservice.DescribeConformancePacksInput, arg1 func(*configservice.DescribeConformancePacksOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeConformancePacksPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConformancePacksPages indicates an expected call of DescribeConformancePacksPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConformancePacksPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConformancePacksPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConformancePacksPages), arg0, arg1)
+}
+
+// DescribeConformancePacksPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeConformancePacksPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeConformancePacksInput, arg2 func(*configservice.DescribeConformancePacksOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeConformancePacksPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeConformancePacksPagesWithContext indicates an expected call of DescribeConformancePacksPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeConformancePacksPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeConformancePacksPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeConformancePacksPagesWithContext), varargs...)
 }
 
 // DescribeConformancePacksRequest mocks base method.
@@ -1751,6 +2147,39 @@ func (mr *MockConfigServiceAPIMockRecorder) DescribeOrganizationConfigRuleStatus
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConfigRuleStatuses", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeOrganizationConfigRuleStatuses), arg0)
 }
 
+// DescribeOrganizationConfigRuleStatusesPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeOrganizationConfigRuleStatusesPages(arg0 *configservice.DescribeOrganizationConfigRuleStatusesInput, arg1 func(*configservice.DescribeOrganizationConfigRuleStatusesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeOrganizationConfigRuleStatusesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeOrganizationConfigRuleStatusesPages indicates an expected call of DescribeOrganizationConfigRuleStatusesPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeOrganizationConfigRuleStatusesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConfigRuleStatusesPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeOrganizationConfigRuleStatusesPages), arg0, arg1)
+}
+
+// DescribeOrganizationConfigRuleStatusesPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeOrganizationConfigRuleStatusesPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeOrganizationConfigRuleStatusesInput, arg2 func(*configservice.DescribeOrganizationConfigRuleStatusesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeOrganizationConfigRuleStatusesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeOrganizationConfigRuleStatusesPagesWithContext indicates an expected call of DescribeOrganizationConfigRuleStatusesPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeOrganizationConfigRuleStatusesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConfigRuleStatusesPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeOrganizationConfigRuleStatusesPagesWithContext), varargs...)
+}
+
 // DescribeOrganizationConfigRuleStatusesRequest mocks base method.
 func (m *MockConfigServiceAPI) DescribeOrganizationConfigRuleStatusesRequest(arg0 *configservice.DescribeOrganizationConfigRuleStatusesInput) (*request.Request, *configservice.DescribeOrganizationConfigRuleStatusesOutput) {
 	m.ctrl.T.Helper()
@@ -1799,6 +2228,39 @@ func (m *MockConfigServiceAPI) DescribeOrganizationConfigRules(arg0 *configservi
 func (mr *MockConfigServiceAPIMockRecorder) DescribeOrganizationConfigRules(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConfigRules", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeOrganizationConfigRules), arg0)
+}
+
+// DescribeOrganizationConfigRulesPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeOrganizationConfigRulesPages(arg0 *configservice.DescribeOrganizationConfigRulesInput, arg1 func(*configservice.DescribeOrganizationConfigRulesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeOrganizationConfigRulesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeOrganizationConfigRulesPages indicates an expected call of DescribeOrganizationConfigRulesPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeOrganizationConfigRulesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConfigRulesPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeOrganizationConfigRulesPages), arg0, arg1)
+}
+
+// DescribeOrganizationConfigRulesPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeOrganizationConfigRulesPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeOrganizationConfigRulesInput, arg2 func(*configservice.DescribeOrganizationConfigRulesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeOrganizationConfigRulesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeOrganizationConfigRulesPagesWithContext indicates an expected call of DescribeOrganizationConfigRulesPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeOrganizationConfigRulesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConfigRulesPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeOrganizationConfigRulesPagesWithContext), varargs...)
 }
 
 // DescribeOrganizationConfigRulesRequest mocks base method.
@@ -1851,6 +2313,39 @@ func (mr *MockConfigServiceAPIMockRecorder) DescribeOrganizationConformancePackS
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConformancePackStatuses", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeOrganizationConformancePackStatuses), arg0)
 }
 
+// DescribeOrganizationConformancePackStatusesPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeOrganizationConformancePackStatusesPages(arg0 *configservice.DescribeOrganizationConformancePackStatusesInput, arg1 func(*configservice.DescribeOrganizationConformancePackStatusesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeOrganizationConformancePackStatusesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeOrganizationConformancePackStatusesPages indicates an expected call of DescribeOrganizationConformancePackStatusesPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeOrganizationConformancePackStatusesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConformancePackStatusesPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeOrganizationConformancePackStatusesPages), arg0, arg1)
+}
+
+// DescribeOrganizationConformancePackStatusesPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeOrganizationConformancePackStatusesPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeOrganizationConformancePackStatusesInput, arg2 func(*configservice.DescribeOrganizationConformancePackStatusesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeOrganizationConformancePackStatusesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeOrganizationConformancePackStatusesPagesWithContext indicates an expected call of DescribeOrganizationConformancePackStatusesPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeOrganizationConformancePackStatusesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConformancePackStatusesPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeOrganizationConformancePackStatusesPagesWithContext), varargs...)
+}
+
 // DescribeOrganizationConformancePackStatusesRequest mocks base method.
 func (m *MockConfigServiceAPI) DescribeOrganizationConformancePackStatusesRequest(arg0 *configservice.DescribeOrganizationConformancePackStatusesInput) (*request.Request, *configservice.DescribeOrganizationConformancePackStatusesOutput) {
 	m.ctrl.T.Helper()
@@ -1901,6 +2396,39 @@ func (mr *MockConfigServiceAPIMockRecorder) DescribeOrganizationConformancePacks
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConformancePacks", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeOrganizationConformancePacks), arg0)
 }
 
+// DescribeOrganizationConformancePacksPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeOrganizationConformancePacksPages(arg0 *configservice.DescribeOrganizationConformancePacksInput, arg1 func(*configservice.DescribeOrganizationConformancePacksOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeOrganizationConformancePacksPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeOrganizationConformancePacksPages indicates an expected call of DescribeOrganizationConformancePacksPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeOrganizationConformancePacksPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConformancePacksPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeOrganizationConformancePacksPages), arg0, arg1)
+}
+
+// DescribeOrganizationConformancePacksPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeOrganizationConformancePacksPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeOrganizationConformancePacksInput, arg2 func(*configservice.DescribeOrganizationConformancePacksOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeOrganizationConformancePacksPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeOrganizationConformancePacksPagesWithContext indicates an expected call of DescribeOrganizationConformancePacksPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeOrganizationConformancePacksPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeOrganizationConformancePacksPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeOrganizationConformancePacksPagesWithContext), varargs...)
+}
+
 // DescribeOrganizationConformancePacksRequest mocks base method.
 func (m *MockConfigServiceAPI) DescribeOrganizationConformancePacksRequest(arg0 *configservice.DescribeOrganizationConformancePacksInput) (*request.Request, *configservice.DescribeOrganizationConformancePacksOutput) {
 	m.ctrl.T.Helper()
@@ -1949,6 +2477,39 @@ func (m *MockConfigServiceAPI) DescribePendingAggregationRequests(arg0 *configse
 func (mr *MockConfigServiceAPIMockRecorder) DescribePendingAggregationRequests(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePendingAggregationRequests", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribePendingAggregationRequests), arg0)
+}
+
+// DescribePendingAggregationRequestsPages mocks base method.
+func (m *MockConfigServiceAPI) DescribePendingAggregationRequestsPages(arg0 *configservice.DescribePendingAggregationRequestsInput, arg1 func(*configservice.DescribePendingAggregationRequestsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribePendingAggregationRequestsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribePendingAggregationRequestsPages indicates an expected call of DescribePendingAggregationRequestsPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribePendingAggregationRequestsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePendingAggregationRequestsPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribePendingAggregationRequestsPages), arg0, arg1)
+}
+
+// DescribePendingAggregationRequestsPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribePendingAggregationRequestsPagesWithContext(arg0 context.Context, arg1 *configservice.DescribePendingAggregationRequestsInput, arg2 func(*configservice.DescribePendingAggregationRequestsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribePendingAggregationRequestsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribePendingAggregationRequestsPagesWithContext indicates an expected call of DescribePendingAggregationRequestsPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribePendingAggregationRequestsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePendingAggregationRequestsPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribePendingAggregationRequestsPagesWithContext), varargs...)
 }
 
 // DescribePendingAggregationRequestsRequest mocks base method.
@@ -2217,6 +2778,39 @@ func (mr *MockConfigServiceAPIMockRecorder) DescribeRetentionConfigurations(arg0
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRetentionConfigurations", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeRetentionConfigurations), arg0)
 }
 
+// DescribeRetentionConfigurationsPages mocks base method.
+func (m *MockConfigServiceAPI) DescribeRetentionConfigurationsPages(arg0 *configservice.DescribeRetentionConfigurationsInput, arg1 func(*configservice.DescribeRetentionConfigurationsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeRetentionConfigurationsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeRetentionConfigurationsPages indicates an expected call of DescribeRetentionConfigurationsPages.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeRetentionConfigurationsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRetentionConfigurationsPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeRetentionConfigurationsPages), arg0, arg1)
+}
+
+// DescribeRetentionConfigurationsPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) DescribeRetentionConfigurationsPagesWithContext(arg0 context.Context, arg1 *configservice.DescribeRetentionConfigurationsInput, arg2 func(*configservice.DescribeRetentionConfigurationsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeRetentionConfigurationsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DescribeRetentionConfigurationsPagesWithContext indicates an expected call of DescribeRetentionConfigurationsPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) DescribeRetentionConfigurationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeRetentionConfigurationsPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).DescribeRetentionConfigurationsPagesWithContext), varargs...)
+}
+
 // DescribeRetentionConfigurationsRequest mocks base method.
 func (m *MockConfigServiceAPI) DescribeRetentionConfigurationsRequest(arg0 *configservice.DescribeRetentionConfigurationsInput) (*request.Request, *configservice.DescribeRetentionConfigurationsOutput) {
 	m.ctrl.T.Helper()
@@ -2265,6 +2859,39 @@ func (m *MockConfigServiceAPI) GetAggregateComplianceDetailsByConfigRule(arg0 *c
 func (mr *MockConfigServiceAPIMockRecorder) GetAggregateComplianceDetailsByConfigRule(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAggregateComplianceDetailsByConfigRule", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetAggregateComplianceDetailsByConfigRule), arg0)
+}
+
+// GetAggregateComplianceDetailsByConfigRulePages mocks base method.
+func (m *MockConfigServiceAPI) GetAggregateComplianceDetailsByConfigRulePages(arg0 *configservice.GetAggregateComplianceDetailsByConfigRuleInput, arg1 func(*configservice.GetAggregateComplianceDetailsByConfigRuleOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetAggregateComplianceDetailsByConfigRulePages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetAggregateComplianceDetailsByConfigRulePages indicates an expected call of GetAggregateComplianceDetailsByConfigRulePages.
+func (mr *MockConfigServiceAPIMockRecorder) GetAggregateComplianceDetailsByConfigRulePages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAggregateComplianceDetailsByConfigRulePages", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetAggregateComplianceDetailsByConfigRulePages), arg0, arg1)
+}
+
+// GetAggregateComplianceDetailsByConfigRulePagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) GetAggregateComplianceDetailsByConfigRulePagesWithContext(arg0 context.Context, arg1 *configservice.GetAggregateComplianceDetailsByConfigRuleInput, arg2 func(*configservice.GetAggregateComplianceDetailsByConfigRuleOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetAggregateComplianceDetailsByConfigRulePagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetAggregateComplianceDetailsByConfigRulePagesWithContext indicates an expected call of GetAggregateComplianceDetailsByConfigRulePagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) GetAggregateComplianceDetailsByConfigRulePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAggregateComplianceDetailsByConfigRulePagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetAggregateComplianceDetailsByConfigRulePagesWithContext), varargs...)
 }
 
 // GetAggregateComplianceDetailsByConfigRuleRequest mocks base method.
@@ -2317,6 +2944,39 @@ func (mr *MockConfigServiceAPIMockRecorder) GetAggregateConfigRuleComplianceSumm
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAggregateConfigRuleComplianceSummary", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetAggregateConfigRuleComplianceSummary), arg0)
 }
 
+// GetAggregateConfigRuleComplianceSummaryPages mocks base method.
+func (m *MockConfigServiceAPI) GetAggregateConfigRuleComplianceSummaryPages(arg0 *configservice.GetAggregateConfigRuleComplianceSummaryInput, arg1 func(*configservice.GetAggregateConfigRuleComplianceSummaryOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetAggregateConfigRuleComplianceSummaryPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetAggregateConfigRuleComplianceSummaryPages indicates an expected call of GetAggregateConfigRuleComplianceSummaryPages.
+func (mr *MockConfigServiceAPIMockRecorder) GetAggregateConfigRuleComplianceSummaryPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAggregateConfigRuleComplianceSummaryPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetAggregateConfigRuleComplianceSummaryPages), arg0, arg1)
+}
+
+// GetAggregateConfigRuleComplianceSummaryPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) GetAggregateConfigRuleComplianceSummaryPagesWithContext(arg0 context.Context, arg1 *configservice.GetAggregateConfigRuleComplianceSummaryInput, arg2 func(*configservice.GetAggregateConfigRuleComplianceSummaryOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetAggregateConfigRuleComplianceSummaryPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetAggregateConfigRuleComplianceSummaryPagesWithContext indicates an expected call of GetAggregateConfigRuleComplianceSummaryPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) GetAggregateConfigRuleComplianceSummaryPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAggregateConfigRuleComplianceSummaryPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetAggregateConfigRuleComplianceSummaryPagesWithContext), varargs...)
+}
+
 // GetAggregateConfigRuleComplianceSummaryRequest mocks base method.
 func (m *MockConfigServiceAPI) GetAggregateConfigRuleComplianceSummaryRequest(arg0 *configservice.GetAggregateConfigRuleComplianceSummaryInput) (*request.Request, *configservice.GetAggregateConfigRuleComplianceSummaryOutput) {
 	m.ctrl.T.Helper()
@@ -2367,6 +3027,39 @@ func (mr *MockConfigServiceAPIMockRecorder) GetAggregateConformancePackComplianc
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAggregateConformancePackComplianceSummary", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetAggregateConformancePackComplianceSummary), arg0)
 }
 
+// GetAggregateConformancePackComplianceSummaryPages mocks base method.
+func (m *MockConfigServiceAPI) GetAggregateConformancePackComplianceSummaryPages(arg0 *configservice.GetAggregateConformancePackComplianceSummaryInput, arg1 func(*configservice.GetAggregateConformancePackComplianceSummaryOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetAggregateConformancePackComplianceSummaryPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetAggregateConformancePackComplianceSummaryPages indicates an expected call of GetAggregateConformancePackComplianceSummaryPages.
+func (mr *MockConfigServiceAPIMockRecorder) GetAggregateConformancePackComplianceSummaryPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAggregateConformancePackComplianceSummaryPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetAggregateConformancePackComplianceSummaryPages), arg0, arg1)
+}
+
+// GetAggregateConformancePackComplianceSummaryPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) GetAggregateConformancePackComplianceSummaryPagesWithContext(arg0 context.Context, arg1 *configservice.GetAggregateConformancePackComplianceSummaryInput, arg2 func(*configservice.GetAggregateConformancePackComplianceSummaryOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetAggregateConformancePackComplianceSummaryPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetAggregateConformancePackComplianceSummaryPagesWithContext indicates an expected call of GetAggregateConformancePackComplianceSummaryPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) GetAggregateConformancePackComplianceSummaryPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAggregateConformancePackComplianceSummaryPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetAggregateConformancePackComplianceSummaryPagesWithContext), varargs...)
+}
+
 // GetAggregateConformancePackComplianceSummaryRequest mocks base method.
 func (m *MockConfigServiceAPI) GetAggregateConformancePackComplianceSummaryRequest(arg0 *configservice.GetAggregateConformancePackComplianceSummaryInput) (*request.Request, *configservice.GetAggregateConformancePackComplianceSummaryOutput) {
 	m.ctrl.T.Helper()
@@ -2415,6 +3108,39 @@ func (m *MockConfigServiceAPI) GetAggregateDiscoveredResourceCounts(arg0 *config
 func (mr *MockConfigServiceAPIMockRecorder) GetAggregateDiscoveredResourceCounts(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAggregateDiscoveredResourceCounts", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetAggregateDiscoveredResourceCounts), arg0)
+}
+
+// GetAggregateDiscoveredResourceCountsPages mocks base method.
+func (m *MockConfigServiceAPI) GetAggregateDiscoveredResourceCountsPages(arg0 *configservice.GetAggregateDiscoveredResourceCountsInput, arg1 func(*configservice.GetAggregateDiscoveredResourceCountsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetAggregateDiscoveredResourceCountsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetAggregateDiscoveredResourceCountsPages indicates an expected call of GetAggregateDiscoveredResourceCountsPages.
+func (mr *MockConfigServiceAPIMockRecorder) GetAggregateDiscoveredResourceCountsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAggregateDiscoveredResourceCountsPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetAggregateDiscoveredResourceCountsPages), arg0, arg1)
+}
+
+// GetAggregateDiscoveredResourceCountsPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) GetAggregateDiscoveredResourceCountsPagesWithContext(arg0 context.Context, arg1 *configservice.GetAggregateDiscoveredResourceCountsInput, arg2 func(*configservice.GetAggregateDiscoveredResourceCountsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetAggregateDiscoveredResourceCountsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetAggregateDiscoveredResourceCountsPagesWithContext indicates an expected call of GetAggregateDiscoveredResourceCountsPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) GetAggregateDiscoveredResourceCountsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAggregateDiscoveredResourceCountsPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetAggregateDiscoveredResourceCountsPagesWithContext), varargs...)
 }
 
 // GetAggregateDiscoveredResourceCountsRequest mocks base method.
@@ -2517,6 +3243,39 @@ func (mr *MockConfigServiceAPIMockRecorder) GetComplianceDetailsByConfigRule(arg
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComplianceDetailsByConfigRule", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetComplianceDetailsByConfigRule), arg0)
 }
 
+// GetComplianceDetailsByConfigRulePages mocks base method.
+func (m *MockConfigServiceAPI) GetComplianceDetailsByConfigRulePages(arg0 *configservice.GetComplianceDetailsByConfigRuleInput, arg1 func(*configservice.GetComplianceDetailsByConfigRuleOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetComplianceDetailsByConfigRulePages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetComplianceDetailsByConfigRulePages indicates an expected call of GetComplianceDetailsByConfigRulePages.
+func (mr *MockConfigServiceAPIMockRecorder) GetComplianceDetailsByConfigRulePages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComplianceDetailsByConfigRulePages", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetComplianceDetailsByConfigRulePages), arg0, arg1)
+}
+
+// GetComplianceDetailsByConfigRulePagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) GetComplianceDetailsByConfigRulePagesWithContext(arg0 context.Context, arg1 *configservice.GetComplianceDetailsByConfigRuleInput, arg2 func(*configservice.GetComplianceDetailsByConfigRuleOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetComplianceDetailsByConfigRulePagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetComplianceDetailsByConfigRulePagesWithContext indicates an expected call of GetComplianceDetailsByConfigRulePagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) GetComplianceDetailsByConfigRulePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComplianceDetailsByConfigRulePagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetComplianceDetailsByConfigRulePagesWithContext), varargs...)
+}
+
 // GetComplianceDetailsByConfigRuleRequest mocks base method.
 func (m *MockConfigServiceAPI) GetComplianceDetailsByConfigRuleRequest(arg0 *configservice.GetComplianceDetailsByConfigRuleInput) (*request.Request, *configservice.GetComplianceDetailsByConfigRuleOutput) {
 	m.ctrl.T.Helper()
@@ -2565,6 +3324,39 @@ func (m *MockConfigServiceAPI) GetComplianceDetailsByResource(arg0 *configservic
 func (mr *MockConfigServiceAPIMockRecorder) GetComplianceDetailsByResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComplianceDetailsByResource", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetComplianceDetailsByResource), arg0)
+}
+
+// GetComplianceDetailsByResourcePages mocks base method.
+func (m *MockConfigServiceAPI) GetComplianceDetailsByResourcePages(arg0 *configservice.GetComplianceDetailsByResourceInput, arg1 func(*configservice.GetComplianceDetailsByResourceOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetComplianceDetailsByResourcePages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetComplianceDetailsByResourcePages indicates an expected call of GetComplianceDetailsByResourcePages.
+func (mr *MockConfigServiceAPIMockRecorder) GetComplianceDetailsByResourcePages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComplianceDetailsByResourcePages", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetComplianceDetailsByResourcePages), arg0, arg1)
+}
+
+// GetComplianceDetailsByResourcePagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) GetComplianceDetailsByResourcePagesWithContext(arg0 context.Context, arg1 *configservice.GetComplianceDetailsByResourceInput, arg2 func(*configservice.GetComplianceDetailsByResourceOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetComplianceDetailsByResourcePagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetComplianceDetailsByResourcePagesWithContext indicates an expected call of GetComplianceDetailsByResourcePagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) GetComplianceDetailsByResourcePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetComplianceDetailsByResourcePagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetComplianceDetailsByResourcePagesWithContext), varargs...)
 }
 
 // GetComplianceDetailsByResourceRequest mocks base method.
@@ -2717,6 +3509,39 @@ func (mr *MockConfigServiceAPIMockRecorder) GetConformancePackComplianceDetails(
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConformancePackComplianceDetails", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetConformancePackComplianceDetails), arg0)
 }
 
+// GetConformancePackComplianceDetailsPages mocks base method.
+func (m *MockConfigServiceAPI) GetConformancePackComplianceDetailsPages(arg0 *configservice.GetConformancePackComplianceDetailsInput, arg1 func(*configservice.GetConformancePackComplianceDetailsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetConformancePackComplianceDetailsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetConformancePackComplianceDetailsPages indicates an expected call of GetConformancePackComplianceDetailsPages.
+func (mr *MockConfigServiceAPIMockRecorder) GetConformancePackComplianceDetailsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConformancePackComplianceDetailsPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetConformancePackComplianceDetailsPages), arg0, arg1)
+}
+
+// GetConformancePackComplianceDetailsPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) GetConformancePackComplianceDetailsPagesWithContext(arg0 context.Context, arg1 *configservice.GetConformancePackComplianceDetailsInput, arg2 func(*configservice.GetConformancePackComplianceDetailsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetConformancePackComplianceDetailsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetConformancePackComplianceDetailsPagesWithContext indicates an expected call of GetConformancePackComplianceDetailsPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) GetConformancePackComplianceDetailsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConformancePackComplianceDetailsPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetConformancePackComplianceDetailsPagesWithContext), varargs...)
+}
+
 // GetConformancePackComplianceDetailsRequest mocks base method.
 func (m *MockConfigServiceAPI) GetConformancePackComplianceDetailsRequest(arg0 *configservice.GetConformancePackComplianceDetailsInput) (*request.Request, *configservice.GetConformancePackComplianceDetailsOutput) {
 	m.ctrl.T.Helper()
@@ -2765,6 +3590,39 @@ func (m *MockConfigServiceAPI) GetConformancePackComplianceSummary(arg0 *configs
 func (mr *MockConfigServiceAPIMockRecorder) GetConformancePackComplianceSummary(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConformancePackComplianceSummary", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetConformancePackComplianceSummary), arg0)
+}
+
+// GetConformancePackComplianceSummaryPages mocks base method.
+func (m *MockConfigServiceAPI) GetConformancePackComplianceSummaryPages(arg0 *configservice.GetConformancePackComplianceSummaryInput, arg1 func(*configservice.GetConformancePackComplianceSummaryOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetConformancePackComplianceSummaryPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetConformancePackComplianceSummaryPages indicates an expected call of GetConformancePackComplianceSummaryPages.
+func (mr *MockConfigServiceAPIMockRecorder) GetConformancePackComplianceSummaryPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConformancePackComplianceSummaryPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetConformancePackComplianceSummaryPages), arg0, arg1)
+}
+
+// GetConformancePackComplianceSummaryPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) GetConformancePackComplianceSummaryPagesWithContext(arg0 context.Context, arg1 *configservice.GetConformancePackComplianceSummaryInput, arg2 func(*configservice.GetConformancePackComplianceSummaryOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetConformancePackComplianceSummaryPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetConformancePackComplianceSummaryPagesWithContext indicates an expected call of GetConformancePackComplianceSummaryPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) GetConformancePackComplianceSummaryPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConformancePackComplianceSummaryPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetConformancePackComplianceSummaryPagesWithContext), varargs...)
 }
 
 // GetConformancePackComplianceSummaryRequest mocks base method.
@@ -2817,6 +3675,39 @@ func (mr *MockConfigServiceAPIMockRecorder) GetDiscoveredResourceCounts(arg0 int
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiscoveredResourceCounts", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetDiscoveredResourceCounts), arg0)
 }
 
+// GetDiscoveredResourceCountsPages mocks base method.
+func (m *MockConfigServiceAPI) GetDiscoveredResourceCountsPages(arg0 *configservice.GetDiscoveredResourceCountsInput, arg1 func(*configservice.GetDiscoveredResourceCountsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetDiscoveredResourceCountsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetDiscoveredResourceCountsPages indicates an expected call of GetDiscoveredResourceCountsPages.
+func (mr *MockConfigServiceAPIMockRecorder) GetDiscoveredResourceCountsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiscoveredResourceCountsPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetDiscoveredResourceCountsPages), arg0, arg1)
+}
+
+// GetDiscoveredResourceCountsPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) GetDiscoveredResourceCountsPagesWithContext(arg0 context.Context, arg1 *configservice.GetDiscoveredResourceCountsInput, arg2 func(*configservice.GetDiscoveredResourceCountsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetDiscoveredResourceCountsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetDiscoveredResourceCountsPagesWithContext indicates an expected call of GetDiscoveredResourceCountsPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) GetDiscoveredResourceCountsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDiscoveredResourceCountsPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetDiscoveredResourceCountsPagesWithContext), varargs...)
+}
+
 // GetDiscoveredResourceCountsRequest mocks base method.
 func (m *MockConfigServiceAPI) GetDiscoveredResourceCountsRequest(arg0 *configservice.GetDiscoveredResourceCountsInput) (*request.Request, *configservice.GetDiscoveredResourceCountsOutput) {
 	m.ctrl.T.Helper()
@@ -2867,6 +3758,39 @@ func (mr *MockConfigServiceAPIMockRecorder) GetOrganizationConfigRuleDetailedSta
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOrganizationConfigRuleDetailedStatus", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetOrganizationConfigRuleDetailedStatus), arg0)
 }
 
+// GetOrganizationConfigRuleDetailedStatusPages mocks base method.
+func (m *MockConfigServiceAPI) GetOrganizationConfigRuleDetailedStatusPages(arg0 *configservice.GetOrganizationConfigRuleDetailedStatusInput, arg1 func(*configservice.GetOrganizationConfigRuleDetailedStatusOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetOrganizationConfigRuleDetailedStatusPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetOrganizationConfigRuleDetailedStatusPages indicates an expected call of GetOrganizationConfigRuleDetailedStatusPages.
+func (mr *MockConfigServiceAPIMockRecorder) GetOrganizationConfigRuleDetailedStatusPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOrganizationConfigRuleDetailedStatusPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetOrganizationConfigRuleDetailedStatusPages), arg0, arg1)
+}
+
+// GetOrganizationConfigRuleDetailedStatusPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) GetOrganizationConfigRuleDetailedStatusPagesWithContext(arg0 context.Context, arg1 *configservice.GetOrganizationConfigRuleDetailedStatusInput, arg2 func(*configservice.GetOrganizationConfigRuleDetailedStatusOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetOrganizationConfigRuleDetailedStatusPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetOrganizationConfigRuleDetailedStatusPagesWithContext indicates an expected call of GetOrganizationConfigRuleDetailedStatusPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) GetOrganizationConfigRuleDetailedStatusPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOrganizationConfigRuleDetailedStatusPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetOrganizationConfigRuleDetailedStatusPagesWithContext), varargs...)
+}
+
 // GetOrganizationConfigRuleDetailedStatusRequest mocks base method.
 func (m *MockConfigServiceAPI) GetOrganizationConfigRuleDetailedStatusRequest(arg0 *configservice.GetOrganizationConfigRuleDetailedStatusInput) (*request.Request, *configservice.GetOrganizationConfigRuleDetailedStatusOutput) {
 	m.ctrl.T.Helper()
@@ -2915,6 +3839,39 @@ func (m *MockConfigServiceAPI) GetOrganizationConformancePackDetailedStatus(arg0
 func (mr *MockConfigServiceAPIMockRecorder) GetOrganizationConformancePackDetailedStatus(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOrganizationConformancePackDetailedStatus", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetOrganizationConformancePackDetailedStatus), arg0)
+}
+
+// GetOrganizationConformancePackDetailedStatusPages mocks base method.
+func (m *MockConfigServiceAPI) GetOrganizationConformancePackDetailedStatusPages(arg0 *configservice.GetOrganizationConformancePackDetailedStatusInput, arg1 func(*configservice.GetOrganizationConformancePackDetailedStatusOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetOrganizationConformancePackDetailedStatusPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetOrganizationConformancePackDetailedStatusPages indicates an expected call of GetOrganizationConformancePackDetailedStatusPages.
+func (mr *MockConfigServiceAPIMockRecorder) GetOrganizationConformancePackDetailedStatusPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOrganizationConformancePackDetailedStatusPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetOrganizationConformancePackDetailedStatusPages), arg0, arg1)
+}
+
+// GetOrganizationConformancePackDetailedStatusPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) GetOrganizationConformancePackDetailedStatusPagesWithContext(arg0 context.Context, arg1 *configservice.GetOrganizationConformancePackDetailedStatusInput, arg2 func(*configservice.GetOrganizationConformancePackDetailedStatusOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetOrganizationConformancePackDetailedStatusPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetOrganizationConformancePackDetailedStatusPagesWithContext indicates an expected call of GetOrganizationConformancePackDetailedStatusPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) GetOrganizationConformancePackDetailedStatusPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOrganizationConformancePackDetailedStatusPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).GetOrganizationConformancePackDetailedStatusPagesWithContext), varargs...)
 }
 
 // GetOrganizationConformancePackDetailedStatusRequest mocks base method.
@@ -3100,6 +4057,39 @@ func (mr *MockConfigServiceAPIMockRecorder) ListAggregateDiscoveredResources(arg
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAggregateDiscoveredResources", reflect.TypeOf((*MockConfigServiceAPI)(nil).ListAggregateDiscoveredResources), arg0)
 }
 
+// ListAggregateDiscoveredResourcesPages mocks base method.
+func (m *MockConfigServiceAPI) ListAggregateDiscoveredResourcesPages(arg0 *configservice.ListAggregateDiscoveredResourcesInput, arg1 func(*configservice.ListAggregateDiscoveredResourcesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAggregateDiscoveredResourcesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAggregateDiscoveredResourcesPages indicates an expected call of ListAggregateDiscoveredResourcesPages.
+func (mr *MockConfigServiceAPIMockRecorder) ListAggregateDiscoveredResourcesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAggregateDiscoveredResourcesPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).ListAggregateDiscoveredResourcesPages), arg0, arg1)
+}
+
+// ListAggregateDiscoveredResourcesPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) ListAggregateDiscoveredResourcesPagesWithContext(arg0 context.Context, arg1 *configservice.ListAggregateDiscoveredResourcesInput, arg2 func(*configservice.ListAggregateDiscoveredResourcesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListAggregateDiscoveredResourcesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAggregateDiscoveredResourcesPagesWithContext indicates an expected call of ListAggregateDiscoveredResourcesPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) ListAggregateDiscoveredResourcesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAggregateDiscoveredResourcesPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).ListAggregateDiscoveredResourcesPagesWithContext), varargs...)
+}
+
 // ListAggregateDiscoveredResourcesRequest mocks base method.
 func (m *MockConfigServiceAPI) ListAggregateDiscoveredResourcesRequest(arg0 *configservice.ListAggregateDiscoveredResourcesInput) (*request.Request, *configservice.ListAggregateDiscoveredResourcesOutput) {
 	m.ctrl.T.Helper()
@@ -3148,6 +4138,39 @@ func (m *MockConfigServiceAPI) ListDiscoveredResources(arg0 *configservice.ListD
 func (mr *MockConfigServiceAPIMockRecorder) ListDiscoveredResources(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDiscoveredResources", reflect.TypeOf((*MockConfigServiceAPI)(nil).ListDiscoveredResources), arg0)
+}
+
+// ListDiscoveredResourcesPages mocks base method.
+func (m *MockConfigServiceAPI) ListDiscoveredResourcesPages(arg0 *configservice.ListDiscoveredResourcesInput, arg1 func(*configservice.ListDiscoveredResourcesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListDiscoveredResourcesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListDiscoveredResourcesPages indicates an expected call of ListDiscoveredResourcesPages.
+func (mr *MockConfigServiceAPIMockRecorder) ListDiscoveredResourcesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDiscoveredResourcesPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).ListDiscoveredResourcesPages), arg0, arg1)
+}
+
+// ListDiscoveredResourcesPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) ListDiscoveredResourcesPagesWithContext(arg0 context.Context, arg1 *configservice.ListDiscoveredResourcesInput, arg2 func(*configservice.ListDiscoveredResourcesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListDiscoveredResourcesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListDiscoveredResourcesPagesWithContext indicates an expected call of ListDiscoveredResourcesPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) ListDiscoveredResourcesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDiscoveredResourcesPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).ListDiscoveredResourcesPagesWithContext), varargs...)
 }
 
 // ListDiscoveredResourcesRequest mocks base method.
@@ -3281,6 +4304,39 @@ func (m *MockConfigServiceAPI) ListTagsForResource(arg0 *configservice.ListTagsF
 func (mr *MockConfigServiceAPIMockRecorder) ListTagsForResource(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResource", reflect.TypeOf((*MockConfigServiceAPI)(nil).ListTagsForResource), arg0)
+}
+
+// ListTagsForResourcePages mocks base method.
+func (m *MockConfigServiceAPI) ListTagsForResourcePages(arg0 *configservice.ListTagsForResourceInput, arg1 func(*configservice.ListTagsForResourceOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTagsForResourcePages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListTagsForResourcePages indicates an expected call of ListTagsForResourcePages.
+func (mr *MockConfigServiceAPIMockRecorder) ListTagsForResourcePages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourcePages", reflect.TypeOf((*MockConfigServiceAPI)(nil).ListTagsForResourcePages), arg0, arg1)
+}
+
+// ListTagsForResourcePagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) ListTagsForResourcePagesWithContext(arg0 context.Context, arg1 *configservice.ListTagsForResourceInput, arg2 func(*configservice.ListTagsForResourceOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListTagsForResourcePagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListTagsForResourcePagesWithContext indicates an expected call of ListTagsForResourcePagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) ListTagsForResourcePagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourcePagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).ListTagsForResourcePagesWithContext), varargs...)
 }
 
 // ListTagsForResourceRequest mocks base method.
@@ -4164,6 +5220,39 @@ func (m *MockConfigServiceAPI) SelectResourceConfig(arg0 *configservice.SelectRe
 func (mr *MockConfigServiceAPIMockRecorder) SelectResourceConfig(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SelectResourceConfig", reflect.TypeOf((*MockConfigServiceAPI)(nil).SelectResourceConfig), arg0)
+}
+
+// SelectResourceConfigPages mocks base method.
+func (m *MockConfigServiceAPI) SelectResourceConfigPages(arg0 *configservice.SelectResourceConfigInput, arg1 func(*configservice.SelectResourceConfigOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SelectResourceConfigPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// SelectResourceConfigPages indicates an expected call of SelectResourceConfigPages.
+func (mr *MockConfigServiceAPIMockRecorder) SelectResourceConfigPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SelectResourceConfigPages", reflect.TypeOf((*MockConfigServiceAPI)(nil).SelectResourceConfigPages), arg0, arg1)
+}
+
+// SelectResourceConfigPagesWithContext mocks base method.
+func (m *MockConfigServiceAPI) SelectResourceConfigPagesWithContext(arg0 context.Context, arg1 *configservice.SelectResourceConfigInput, arg2 func(*configservice.SelectResourceConfigOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "SelectResourceConfigPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// SelectResourceConfigPagesWithContext indicates an expected call of SelectResourceConfigPagesWithContext.
+func (mr *MockConfigServiceAPIMockRecorder) SelectResourceConfigPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SelectResourceConfigPagesWithContext", reflect.TypeOf((*MockConfigServiceAPI)(nil).SelectResourceConfigPagesWithContext), varargs...)
 }
 
 // SelectResourceConfigRequest mocks base method.

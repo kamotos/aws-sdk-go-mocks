@@ -136,6 +136,56 @@ func (mr *MockCustomerProfilesAPIMockRecorder) CreateDomainWithContext(arg0, arg
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateDomainWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).CreateDomainWithContext), varargs...)
 }
 
+// CreateIntegrationWorkflow mocks base method.
+func (m *MockCustomerProfilesAPI) CreateIntegrationWorkflow(arg0 *customerprofiles.CreateIntegrationWorkflowInput) (*customerprofiles.CreateIntegrationWorkflowOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateIntegrationWorkflow", arg0)
+	ret0, _ := ret[0].(*customerprofiles.CreateIntegrationWorkflowOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateIntegrationWorkflow indicates an expected call of CreateIntegrationWorkflow.
+func (mr *MockCustomerProfilesAPIMockRecorder) CreateIntegrationWorkflow(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateIntegrationWorkflow", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).CreateIntegrationWorkflow), arg0)
+}
+
+// CreateIntegrationWorkflowRequest mocks base method.
+func (m *MockCustomerProfilesAPI) CreateIntegrationWorkflowRequest(arg0 *customerprofiles.CreateIntegrationWorkflowInput) (*request.Request, *customerprofiles.CreateIntegrationWorkflowOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateIntegrationWorkflowRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*customerprofiles.CreateIntegrationWorkflowOutput)
+	return ret0, ret1
+}
+
+// CreateIntegrationWorkflowRequest indicates an expected call of CreateIntegrationWorkflowRequest.
+func (mr *MockCustomerProfilesAPIMockRecorder) CreateIntegrationWorkflowRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateIntegrationWorkflowRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).CreateIntegrationWorkflowRequest), arg0)
+}
+
+// CreateIntegrationWorkflowWithContext mocks base method.
+func (m *MockCustomerProfilesAPI) CreateIntegrationWorkflowWithContext(arg0 context.Context, arg1 *customerprofiles.CreateIntegrationWorkflowInput, arg2 ...request.Option) (*customerprofiles.CreateIntegrationWorkflowOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateIntegrationWorkflowWithContext", varargs...)
+	ret0, _ := ret[0].(*customerprofiles.CreateIntegrationWorkflowOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateIntegrationWorkflowWithContext indicates an expected call of CreateIntegrationWorkflowWithContext.
+func (mr *MockCustomerProfilesAPIMockRecorder) CreateIntegrationWorkflowWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateIntegrationWorkflowWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).CreateIntegrationWorkflowWithContext), varargs...)
+}
+
 // CreateProfile mocks base method.
 func (m *MockCustomerProfilesAPI) CreateProfile(arg0 *customerprofiles.CreateProfileInput) (*customerprofiles.CreateProfileOutput, error) {
 	m.ctrl.T.Helper()
@@ -486,6 +536,106 @@ func (mr *MockCustomerProfilesAPIMockRecorder) DeleteProfileWithContext(arg0, ar
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProfileWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteProfileWithContext), varargs...)
 }
 
+// DeleteWorkflow mocks base method.
+func (m *MockCustomerProfilesAPI) DeleteWorkflow(arg0 *customerprofiles.DeleteWorkflowInput) (*customerprofiles.DeleteWorkflowOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteWorkflow", arg0)
+	ret0, _ := ret[0].(*customerprofiles.DeleteWorkflowOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteWorkflow indicates an expected call of DeleteWorkflow.
+func (mr *MockCustomerProfilesAPIMockRecorder) DeleteWorkflow(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkflow", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteWorkflow), arg0)
+}
+
+// DeleteWorkflowRequest mocks base method.
+func (m *MockCustomerProfilesAPI) DeleteWorkflowRequest(arg0 *customerprofiles.DeleteWorkflowInput) (*request.Request, *customerprofiles.DeleteWorkflowOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteWorkflowRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*customerprofiles.DeleteWorkflowOutput)
+	return ret0, ret1
+}
+
+// DeleteWorkflowRequest indicates an expected call of DeleteWorkflowRequest.
+func (mr *MockCustomerProfilesAPIMockRecorder) DeleteWorkflowRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkflowRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteWorkflowRequest), arg0)
+}
+
+// DeleteWorkflowWithContext mocks base method.
+func (m *MockCustomerProfilesAPI) DeleteWorkflowWithContext(arg0 context.Context, arg1 *customerprofiles.DeleteWorkflowInput, arg2 ...request.Option) (*customerprofiles.DeleteWorkflowOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteWorkflowWithContext", varargs...)
+	ret0, _ := ret[0].(*customerprofiles.DeleteWorkflowOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteWorkflowWithContext indicates an expected call of DeleteWorkflowWithContext.
+func (mr *MockCustomerProfilesAPIMockRecorder) DeleteWorkflowWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkflowWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).DeleteWorkflowWithContext), varargs...)
+}
+
+// GetAutoMergingPreview mocks base method.
+func (m *MockCustomerProfilesAPI) GetAutoMergingPreview(arg0 *customerprofiles.GetAutoMergingPreviewInput) (*customerprofiles.GetAutoMergingPreviewOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetAutoMergingPreview", arg0)
+	ret0, _ := ret[0].(*customerprofiles.GetAutoMergingPreviewOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetAutoMergingPreview indicates an expected call of GetAutoMergingPreview.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetAutoMergingPreview(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAutoMergingPreview", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetAutoMergingPreview), arg0)
+}
+
+// GetAutoMergingPreviewRequest mocks base method.
+func (m *MockCustomerProfilesAPI) GetAutoMergingPreviewRequest(arg0 *customerprofiles.GetAutoMergingPreviewInput) (*request.Request, *customerprofiles.GetAutoMergingPreviewOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetAutoMergingPreviewRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*customerprofiles.GetAutoMergingPreviewOutput)
+	return ret0, ret1
+}
+
+// GetAutoMergingPreviewRequest indicates an expected call of GetAutoMergingPreviewRequest.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetAutoMergingPreviewRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAutoMergingPreviewRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetAutoMergingPreviewRequest), arg0)
+}
+
+// GetAutoMergingPreviewWithContext mocks base method.
+func (m *MockCustomerProfilesAPI) GetAutoMergingPreviewWithContext(arg0 context.Context, arg1 *customerprofiles.GetAutoMergingPreviewInput, arg2 ...request.Option) (*customerprofiles.GetAutoMergingPreviewOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetAutoMergingPreviewWithContext", varargs...)
+	ret0, _ := ret[0].(*customerprofiles.GetAutoMergingPreviewOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetAutoMergingPreviewWithContext indicates an expected call of GetAutoMergingPreviewWithContext.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetAutoMergingPreviewWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAutoMergingPreviewWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetAutoMergingPreviewWithContext), varargs...)
+}
+
 // GetDomain mocks base method.
 func (m *MockCustomerProfilesAPI) GetDomain(arg0 *customerprofiles.GetDomainInput) (*customerprofiles.GetDomainOutput, error) {
 	m.ctrl.T.Helper()
@@ -534,6 +684,56 @@ func (mr *MockCustomerProfilesAPIMockRecorder) GetDomainWithContext(arg0, arg1 i
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDomainWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetDomainWithContext), varargs...)
+}
+
+// GetIdentityResolutionJob mocks base method.
+func (m *MockCustomerProfilesAPI) GetIdentityResolutionJob(arg0 *customerprofiles.GetIdentityResolutionJobInput) (*customerprofiles.GetIdentityResolutionJobOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetIdentityResolutionJob", arg0)
+	ret0, _ := ret[0].(*customerprofiles.GetIdentityResolutionJobOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetIdentityResolutionJob indicates an expected call of GetIdentityResolutionJob.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetIdentityResolutionJob(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIdentityResolutionJob", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetIdentityResolutionJob), arg0)
+}
+
+// GetIdentityResolutionJobRequest mocks base method.
+func (m *MockCustomerProfilesAPI) GetIdentityResolutionJobRequest(arg0 *customerprofiles.GetIdentityResolutionJobInput) (*request.Request, *customerprofiles.GetIdentityResolutionJobOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetIdentityResolutionJobRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*customerprofiles.GetIdentityResolutionJobOutput)
+	return ret0, ret1
+}
+
+// GetIdentityResolutionJobRequest indicates an expected call of GetIdentityResolutionJobRequest.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetIdentityResolutionJobRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIdentityResolutionJobRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetIdentityResolutionJobRequest), arg0)
+}
+
+// GetIdentityResolutionJobWithContext mocks base method.
+func (m *MockCustomerProfilesAPI) GetIdentityResolutionJobWithContext(arg0 context.Context, arg1 *customerprofiles.GetIdentityResolutionJobInput, arg2 ...request.Option) (*customerprofiles.GetIdentityResolutionJobOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetIdentityResolutionJobWithContext", varargs...)
+	ret0, _ := ret[0].(*customerprofiles.GetIdentityResolutionJobOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetIdentityResolutionJobWithContext indicates an expected call of GetIdentityResolutionJobWithContext.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetIdentityResolutionJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIdentityResolutionJobWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetIdentityResolutionJobWithContext), varargs...)
 }
 
 // GetIntegration mocks base method.
@@ -736,6 +936,106 @@ func (mr *MockCustomerProfilesAPIMockRecorder) GetProfileObjectTypeWithContext(a
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProfileObjectTypeWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetProfileObjectTypeWithContext), varargs...)
 }
 
+// GetWorkflow mocks base method.
+func (m *MockCustomerProfilesAPI) GetWorkflow(arg0 *customerprofiles.GetWorkflowInput) (*customerprofiles.GetWorkflowOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetWorkflow", arg0)
+	ret0, _ := ret[0].(*customerprofiles.GetWorkflowOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetWorkflow indicates an expected call of GetWorkflow.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetWorkflow(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkflow", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetWorkflow), arg0)
+}
+
+// GetWorkflowRequest mocks base method.
+func (m *MockCustomerProfilesAPI) GetWorkflowRequest(arg0 *customerprofiles.GetWorkflowInput) (*request.Request, *customerprofiles.GetWorkflowOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetWorkflowRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*customerprofiles.GetWorkflowOutput)
+	return ret0, ret1
+}
+
+// GetWorkflowRequest indicates an expected call of GetWorkflowRequest.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetWorkflowRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkflowRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetWorkflowRequest), arg0)
+}
+
+// GetWorkflowSteps mocks base method.
+func (m *MockCustomerProfilesAPI) GetWorkflowSteps(arg0 *customerprofiles.GetWorkflowStepsInput) (*customerprofiles.GetWorkflowStepsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetWorkflowSteps", arg0)
+	ret0, _ := ret[0].(*customerprofiles.GetWorkflowStepsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetWorkflowSteps indicates an expected call of GetWorkflowSteps.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetWorkflowSteps(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkflowSteps", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetWorkflowSteps), arg0)
+}
+
+// GetWorkflowStepsRequest mocks base method.
+func (m *MockCustomerProfilesAPI) GetWorkflowStepsRequest(arg0 *customerprofiles.GetWorkflowStepsInput) (*request.Request, *customerprofiles.GetWorkflowStepsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetWorkflowStepsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*customerprofiles.GetWorkflowStepsOutput)
+	return ret0, ret1
+}
+
+// GetWorkflowStepsRequest indicates an expected call of GetWorkflowStepsRequest.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetWorkflowStepsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkflowStepsRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetWorkflowStepsRequest), arg0)
+}
+
+// GetWorkflowStepsWithContext mocks base method.
+func (m *MockCustomerProfilesAPI) GetWorkflowStepsWithContext(arg0 context.Context, arg1 *customerprofiles.GetWorkflowStepsInput, arg2 ...request.Option) (*customerprofiles.GetWorkflowStepsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetWorkflowStepsWithContext", varargs...)
+	ret0, _ := ret[0].(*customerprofiles.GetWorkflowStepsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetWorkflowStepsWithContext indicates an expected call of GetWorkflowStepsWithContext.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetWorkflowStepsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkflowStepsWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetWorkflowStepsWithContext), varargs...)
+}
+
+// GetWorkflowWithContext mocks base method.
+func (m *MockCustomerProfilesAPI) GetWorkflowWithContext(arg0 context.Context, arg1 *customerprofiles.GetWorkflowInput, arg2 ...request.Option) (*customerprofiles.GetWorkflowOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetWorkflowWithContext", varargs...)
+	ret0, _ := ret[0].(*customerprofiles.GetWorkflowOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetWorkflowWithContext indicates an expected call of GetWorkflowWithContext.
+func (mr *MockCustomerProfilesAPIMockRecorder) GetWorkflowWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkflowWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).GetWorkflowWithContext), varargs...)
+}
+
 // ListAccountIntegrations mocks base method.
 func (m *MockCustomerProfilesAPI) ListAccountIntegrations(arg0 *customerprofiles.ListAccountIntegrationsInput) (*customerprofiles.ListAccountIntegrationsOutput, error) {
 	m.ctrl.T.Helper()
@@ -834,6 +1134,56 @@ func (mr *MockCustomerProfilesAPIMockRecorder) ListDomainsWithContext(arg0, arg1
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDomainsWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListDomainsWithContext), varargs...)
+}
+
+// ListIdentityResolutionJobs mocks base method.
+func (m *MockCustomerProfilesAPI) ListIdentityResolutionJobs(arg0 *customerprofiles.ListIdentityResolutionJobsInput) (*customerprofiles.ListIdentityResolutionJobsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListIdentityResolutionJobs", arg0)
+	ret0, _ := ret[0].(*customerprofiles.ListIdentityResolutionJobsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListIdentityResolutionJobs indicates an expected call of ListIdentityResolutionJobs.
+func (mr *MockCustomerProfilesAPIMockRecorder) ListIdentityResolutionJobs(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIdentityResolutionJobs", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListIdentityResolutionJobs), arg0)
+}
+
+// ListIdentityResolutionJobsRequest mocks base method.
+func (m *MockCustomerProfilesAPI) ListIdentityResolutionJobsRequest(arg0 *customerprofiles.ListIdentityResolutionJobsInput) (*request.Request, *customerprofiles.ListIdentityResolutionJobsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListIdentityResolutionJobsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*customerprofiles.ListIdentityResolutionJobsOutput)
+	return ret0, ret1
+}
+
+// ListIdentityResolutionJobsRequest indicates an expected call of ListIdentityResolutionJobsRequest.
+func (mr *MockCustomerProfilesAPIMockRecorder) ListIdentityResolutionJobsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIdentityResolutionJobsRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListIdentityResolutionJobsRequest), arg0)
+}
+
+// ListIdentityResolutionJobsWithContext mocks base method.
+func (m *MockCustomerProfilesAPI) ListIdentityResolutionJobsWithContext(arg0 context.Context, arg1 *customerprofiles.ListIdentityResolutionJobsInput, arg2 ...request.Option) (*customerprofiles.ListIdentityResolutionJobsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListIdentityResolutionJobsWithContext", varargs...)
+	ret0, _ := ret[0].(*customerprofiles.ListIdentityResolutionJobsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListIdentityResolutionJobsWithContext indicates an expected call of ListIdentityResolutionJobsWithContext.
+func (mr *MockCustomerProfilesAPIMockRecorder) ListIdentityResolutionJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListIdentityResolutionJobsWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListIdentityResolutionJobsWithContext), varargs...)
 }
 
 // ListIntegrations mocks base method.
@@ -1084,6 +1434,56 @@ func (mr *MockCustomerProfilesAPIMockRecorder) ListTagsForResourceWithContext(ar
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListTagsForResourceWithContext), varargs...)
+}
+
+// ListWorkflows mocks base method.
+func (m *MockCustomerProfilesAPI) ListWorkflows(arg0 *customerprofiles.ListWorkflowsInput) (*customerprofiles.ListWorkflowsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListWorkflows", arg0)
+	ret0, _ := ret[0].(*customerprofiles.ListWorkflowsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListWorkflows indicates an expected call of ListWorkflows.
+func (mr *MockCustomerProfilesAPIMockRecorder) ListWorkflows(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkflows", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListWorkflows), arg0)
+}
+
+// ListWorkflowsRequest mocks base method.
+func (m *MockCustomerProfilesAPI) ListWorkflowsRequest(arg0 *customerprofiles.ListWorkflowsInput) (*request.Request, *customerprofiles.ListWorkflowsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListWorkflowsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*customerprofiles.ListWorkflowsOutput)
+	return ret0, ret1
+}
+
+// ListWorkflowsRequest indicates an expected call of ListWorkflowsRequest.
+func (mr *MockCustomerProfilesAPIMockRecorder) ListWorkflowsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkflowsRequest", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListWorkflowsRequest), arg0)
+}
+
+// ListWorkflowsWithContext mocks base method.
+func (m *MockCustomerProfilesAPI) ListWorkflowsWithContext(arg0 context.Context, arg1 *customerprofiles.ListWorkflowsInput, arg2 ...request.Option) (*customerprofiles.ListWorkflowsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListWorkflowsWithContext", varargs...)
+	ret0, _ := ret[0].(*customerprofiles.ListWorkflowsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListWorkflowsWithContext indicates an expected call of ListWorkflowsWithContext.
+func (mr *MockCustomerProfilesAPIMockRecorder) ListWorkflowsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkflowsWithContext", reflect.TypeOf((*MockCustomerProfilesAPI)(nil).ListWorkflowsWithContext), varargs...)
 }
 
 // MergeProfiles mocks base method.

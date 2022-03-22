@@ -4283,6 +4283,56 @@ func (mr *MockCognitoIdentityProviderAPIMockRecorder) RespondToAuthChallengeWith
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RespondToAuthChallengeWithContext", reflect.TypeOf((*MockCognitoIdentityProviderAPI)(nil).RespondToAuthChallengeWithContext), varargs...)
 }
 
+// RevokeToken mocks base method.
+func (m *MockCognitoIdentityProviderAPI) RevokeToken(arg0 *cognitoidentityprovider.RevokeTokenInput) (*cognitoidentityprovider.RevokeTokenOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "RevokeToken", arg0)
+	ret0, _ := ret[0].(*cognitoidentityprovider.RevokeTokenOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// RevokeToken indicates an expected call of RevokeToken.
+func (mr *MockCognitoIdentityProviderAPIMockRecorder) RevokeToken(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokeToken", reflect.TypeOf((*MockCognitoIdentityProviderAPI)(nil).RevokeToken), arg0)
+}
+
+// RevokeTokenRequest mocks base method.
+func (m *MockCognitoIdentityProviderAPI) RevokeTokenRequest(arg0 *cognitoidentityprovider.RevokeTokenInput) (*request.Request, *cognitoidentityprovider.RevokeTokenOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "RevokeTokenRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*cognitoidentityprovider.RevokeTokenOutput)
+	return ret0, ret1
+}
+
+// RevokeTokenRequest indicates an expected call of RevokeTokenRequest.
+func (mr *MockCognitoIdentityProviderAPIMockRecorder) RevokeTokenRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokeTokenRequest", reflect.TypeOf((*MockCognitoIdentityProviderAPI)(nil).RevokeTokenRequest), arg0)
+}
+
+// RevokeTokenWithContext mocks base method.
+func (m *MockCognitoIdentityProviderAPI) RevokeTokenWithContext(arg0 context.Context, arg1 *cognitoidentityprovider.RevokeTokenInput, arg2 ...request.Option) (*cognitoidentityprovider.RevokeTokenOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "RevokeTokenWithContext", varargs...)
+	ret0, _ := ret[0].(*cognitoidentityprovider.RevokeTokenOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// RevokeTokenWithContext indicates an expected call of RevokeTokenWithContext.
+func (mr *MockCognitoIdentityProviderAPIMockRecorder) RevokeTokenWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RevokeTokenWithContext", reflect.TypeOf((*MockCognitoIdentityProviderAPI)(nil).RevokeTokenWithContext), varargs...)
+}
+
 // SetRiskConfiguration mocks base method.
 func (m *MockCognitoIdentityProviderAPI) SetRiskConfiguration(arg0 *cognitoidentityprovider.SetRiskConfigurationInput) (*cognitoidentityprovider.SetRiskConfigurationOutput, error) {
 	m.ctrl.T.Helper()

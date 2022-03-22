@@ -867,3 +867,69 @@ func (mr *MockCodeGuruReviewerAPIMockRecorder) UntagResourceWithContext(arg0, ar
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).UntagResourceWithContext), varargs...)
 }
+
+// WaitUntilCodeReviewCompleted mocks base method.
+func (m *MockCodeGuruReviewerAPI) WaitUntilCodeReviewCompleted(arg0 *codegurureviewer.DescribeCodeReviewInput) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "WaitUntilCodeReviewCompleted", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilCodeReviewCompleted indicates an expected call of WaitUntilCodeReviewCompleted.
+func (mr *MockCodeGuruReviewerAPIMockRecorder) WaitUntilCodeReviewCompleted(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilCodeReviewCompleted", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).WaitUntilCodeReviewCompleted), arg0)
+}
+
+// WaitUntilCodeReviewCompletedWithContext mocks base method.
+func (m *MockCodeGuruReviewerAPI) WaitUntilCodeReviewCompletedWithContext(arg0 context.Context, arg1 *codegurureviewer.DescribeCodeReviewInput, arg2 ...request.WaiterOption) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "WaitUntilCodeReviewCompletedWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilCodeReviewCompletedWithContext indicates an expected call of WaitUntilCodeReviewCompletedWithContext.
+func (mr *MockCodeGuruReviewerAPIMockRecorder) WaitUntilCodeReviewCompletedWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilCodeReviewCompletedWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).WaitUntilCodeReviewCompletedWithContext), varargs...)
+}
+
+// WaitUntilRepositoryAssociationSucceeded mocks base method.
+func (m *MockCodeGuruReviewerAPI) WaitUntilRepositoryAssociationSucceeded(arg0 *codegurureviewer.DescribeRepositoryAssociationInput) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "WaitUntilRepositoryAssociationSucceeded", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilRepositoryAssociationSucceeded indicates an expected call of WaitUntilRepositoryAssociationSucceeded.
+func (mr *MockCodeGuruReviewerAPIMockRecorder) WaitUntilRepositoryAssociationSucceeded(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilRepositoryAssociationSucceeded", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).WaitUntilRepositoryAssociationSucceeded), arg0)
+}
+
+// WaitUntilRepositoryAssociationSucceededWithContext mocks base method.
+func (m *MockCodeGuruReviewerAPI) WaitUntilRepositoryAssociationSucceededWithContext(arg0 context.Context, arg1 *codegurureviewer.DescribeRepositoryAssociationInput, arg2 ...request.WaiterOption) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "WaitUntilRepositoryAssociationSucceededWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// WaitUntilRepositoryAssociationSucceededWithContext indicates an expected call of WaitUntilRepositoryAssociationSucceededWithContext.
+func (mr *MockCodeGuruReviewerAPIMockRecorder) WaitUntilRepositoryAssociationSucceededWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitUntilRepositoryAssociationSucceededWithContext", reflect.TypeOf((*MockCodeGuruReviewerAPI)(nil).WaitUntilRepositoryAssociationSucceededWithContext), varargs...)
+}

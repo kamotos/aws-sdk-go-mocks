@@ -1,10 +1,12 @@
 #!/bin/bash
 set -euxo pipefail
 
-sdk_version=1.38.36
+sdk_version=1.43.22
 
 IFS=$'
 '
+
+go get github.com/aws/aws-sdk-go@v${sdk_version}
 
 pushd "$(go env GOPATH)/pkg/mod/github.com/aws/aws-sdk-go@v${sdk_version}/service"
 interfaces=("$(grep '^type .* interface {$' */*/interface.go)")

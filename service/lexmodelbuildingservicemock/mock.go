@@ -1650,6 +1650,139 @@ func (mr *MockLexModelBuildingServiceAPIMockRecorder) GetIntentsWithContext(arg0
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetIntentsWithContext", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).GetIntentsWithContext), varargs...)
 }
 
+// GetMigration mocks base method.
+func (m *MockLexModelBuildingServiceAPI) GetMigration(arg0 *lexmodelbuildingservice.GetMigrationInput) (*lexmodelbuildingservice.GetMigrationOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetMigration", arg0)
+	ret0, _ := ret[0].(*lexmodelbuildingservice.GetMigrationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetMigration indicates an expected call of GetMigration.
+func (mr *MockLexModelBuildingServiceAPIMockRecorder) GetMigration(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMigration", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).GetMigration), arg0)
+}
+
+// GetMigrationRequest mocks base method.
+func (m *MockLexModelBuildingServiceAPI) GetMigrationRequest(arg0 *lexmodelbuildingservice.GetMigrationInput) (*request.Request, *lexmodelbuildingservice.GetMigrationOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetMigrationRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelbuildingservice.GetMigrationOutput)
+	return ret0, ret1
+}
+
+// GetMigrationRequest indicates an expected call of GetMigrationRequest.
+func (mr *MockLexModelBuildingServiceAPIMockRecorder) GetMigrationRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMigrationRequest", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).GetMigrationRequest), arg0)
+}
+
+// GetMigrationWithContext mocks base method.
+func (m *MockLexModelBuildingServiceAPI) GetMigrationWithContext(arg0 context.Context, arg1 *lexmodelbuildingservice.GetMigrationInput, arg2 ...request.Option) (*lexmodelbuildingservice.GetMigrationOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetMigrationWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelbuildingservice.GetMigrationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetMigrationWithContext indicates an expected call of GetMigrationWithContext.
+func (mr *MockLexModelBuildingServiceAPIMockRecorder) GetMigrationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMigrationWithContext", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).GetMigrationWithContext), varargs...)
+}
+
+// GetMigrations mocks base method.
+func (m *MockLexModelBuildingServiceAPI) GetMigrations(arg0 *lexmodelbuildingservice.GetMigrationsInput) (*lexmodelbuildingservice.GetMigrationsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetMigrations", arg0)
+	ret0, _ := ret[0].(*lexmodelbuildingservice.GetMigrationsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetMigrations indicates an expected call of GetMigrations.
+func (mr *MockLexModelBuildingServiceAPIMockRecorder) GetMigrations(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMigrations", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).GetMigrations), arg0)
+}
+
+// GetMigrationsPages mocks base method.
+func (m *MockLexModelBuildingServiceAPI) GetMigrationsPages(arg0 *lexmodelbuildingservice.GetMigrationsInput, arg1 func(*lexmodelbuildingservice.GetMigrationsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetMigrationsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetMigrationsPages indicates an expected call of GetMigrationsPages.
+func (mr *MockLexModelBuildingServiceAPIMockRecorder) GetMigrationsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMigrationsPages", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).GetMigrationsPages), arg0, arg1)
+}
+
+// GetMigrationsPagesWithContext mocks base method.
+func (m *MockLexModelBuildingServiceAPI) GetMigrationsPagesWithContext(arg0 context.Context, arg1 *lexmodelbuildingservice.GetMigrationsInput, arg2 func(*lexmodelbuildingservice.GetMigrationsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetMigrationsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// GetMigrationsPagesWithContext indicates an expected call of GetMigrationsPagesWithContext.
+func (mr *MockLexModelBuildingServiceAPIMockRecorder) GetMigrationsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMigrationsPagesWithContext", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).GetMigrationsPagesWithContext), varargs...)
+}
+
+// GetMigrationsRequest mocks base method.
+func (m *MockLexModelBuildingServiceAPI) GetMigrationsRequest(arg0 *lexmodelbuildingservice.GetMigrationsInput) (*request.Request, *lexmodelbuildingservice.GetMigrationsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetMigrationsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelbuildingservice.GetMigrationsOutput)
+	return ret0, ret1
+}
+
+// GetMigrationsRequest indicates an expected call of GetMigrationsRequest.
+func (mr *MockLexModelBuildingServiceAPIMockRecorder) GetMigrationsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMigrationsRequest", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).GetMigrationsRequest), arg0)
+}
+
+// GetMigrationsWithContext mocks base method.
+func (m *MockLexModelBuildingServiceAPI) GetMigrationsWithContext(arg0 context.Context, arg1 *lexmodelbuildingservice.GetMigrationsInput, arg2 ...request.Option) (*lexmodelbuildingservice.GetMigrationsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetMigrationsWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelbuildingservice.GetMigrationsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetMigrationsWithContext indicates an expected call of GetMigrationsWithContext.
+func (mr *MockLexModelBuildingServiceAPIMockRecorder) GetMigrationsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetMigrationsWithContext", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).GetMigrationsWithContext), varargs...)
+}
+
 // GetSlotType mocks base method.
 func (m *MockLexModelBuildingServiceAPI) GetSlotType(arg0 *lexmodelbuildingservice.GetSlotTypeInput) (*lexmodelbuildingservice.GetSlotTypeOutput, error) {
 	m.ctrl.T.Helper()
@@ -2214,6 +2347,56 @@ func (mr *MockLexModelBuildingServiceAPIMockRecorder) StartImportWithContext(arg
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartImportWithContext", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).StartImportWithContext), varargs...)
+}
+
+// StartMigration mocks base method.
+func (m *MockLexModelBuildingServiceAPI) StartMigration(arg0 *lexmodelbuildingservice.StartMigrationInput) (*lexmodelbuildingservice.StartMigrationOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartMigration", arg0)
+	ret0, _ := ret[0].(*lexmodelbuildingservice.StartMigrationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartMigration indicates an expected call of StartMigration.
+func (mr *MockLexModelBuildingServiceAPIMockRecorder) StartMigration(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMigration", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).StartMigration), arg0)
+}
+
+// StartMigrationRequest mocks base method.
+func (m *MockLexModelBuildingServiceAPI) StartMigrationRequest(arg0 *lexmodelbuildingservice.StartMigrationInput) (*request.Request, *lexmodelbuildingservice.StartMigrationOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartMigrationRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lexmodelbuildingservice.StartMigrationOutput)
+	return ret0, ret1
+}
+
+// StartMigrationRequest indicates an expected call of StartMigrationRequest.
+func (mr *MockLexModelBuildingServiceAPIMockRecorder) StartMigrationRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMigrationRequest", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).StartMigrationRequest), arg0)
+}
+
+// StartMigrationWithContext mocks base method.
+func (m *MockLexModelBuildingServiceAPI) StartMigrationWithContext(arg0 context.Context, arg1 *lexmodelbuildingservice.StartMigrationInput, arg2 ...request.Option) (*lexmodelbuildingservice.StartMigrationOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "StartMigrationWithContext", varargs...)
+	ret0, _ := ret[0].(*lexmodelbuildingservice.StartMigrationOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartMigrationWithContext indicates an expected call of StartMigrationWithContext.
+func (mr *MockLexModelBuildingServiceAPIMockRecorder) StartMigrationWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartMigrationWithContext", reflect.TypeOf((*MockLexModelBuildingServiceAPI)(nil).StartMigrationWithContext), varargs...)
 }
 
 // TagResource mocks base method.

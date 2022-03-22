@@ -36,6 +36,56 @@ func (m *MockCloudFrontAPI) EXPECT() *MockCloudFrontAPIMockRecorder {
 	return m.recorder
 }
 
+// AssociateAlias mocks base method.
+func (m *MockCloudFrontAPI) AssociateAlias(arg0 *cloudfront.AssociateAliasInput) (*cloudfront.AssociateAliasOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AssociateAlias", arg0)
+	ret0, _ := ret[0].(*cloudfront.AssociateAliasOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AssociateAlias indicates an expected call of AssociateAlias.
+func (mr *MockCloudFrontAPIMockRecorder) AssociateAlias(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateAlias", reflect.TypeOf((*MockCloudFrontAPI)(nil).AssociateAlias), arg0)
+}
+
+// AssociateAliasRequest mocks base method.
+func (m *MockCloudFrontAPI) AssociateAliasRequest(arg0 *cloudfront.AssociateAliasInput) (*request.Request, *cloudfront.AssociateAliasOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AssociateAliasRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*cloudfront.AssociateAliasOutput)
+	return ret0, ret1
+}
+
+// AssociateAliasRequest indicates an expected call of AssociateAliasRequest.
+func (mr *MockCloudFrontAPIMockRecorder) AssociateAliasRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateAliasRequest", reflect.TypeOf((*MockCloudFrontAPI)(nil).AssociateAliasRequest), arg0)
+}
+
+// AssociateAliasWithContext mocks base method.
+func (m *MockCloudFrontAPI) AssociateAliasWithContext(arg0 context.Context, arg1 *cloudfront.AssociateAliasInput, arg2 ...request.Option) (*cloudfront.AssociateAliasOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "AssociateAliasWithContext", varargs...)
+	ret0, _ := ret[0].(*cloudfront.AssociateAliasOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AssociateAliasWithContext indicates an expected call of AssociateAliasWithContext.
+func (mr *MockCloudFrontAPIMockRecorder) AssociateAliasWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AssociateAliasWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).AssociateAliasWithContext), varargs...)
+}
+
 // CreateCachePolicy mocks base method.
 func (m *MockCloudFrontAPI) CreateCachePolicy(arg0 *cloudfront.CreateCachePolicyInput) (*cloudfront.CreateCachePolicyOutput, error) {
 	m.ctrl.T.Helper()
@@ -686,6 +736,56 @@ func (mr *MockCloudFrontAPIMockRecorder) CreateRealtimeLogConfigWithContext(arg0
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRealtimeLogConfigWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).CreateRealtimeLogConfigWithContext), varargs...)
 }
 
+// CreateResponseHeadersPolicy mocks base method.
+func (m *MockCloudFrontAPI) CreateResponseHeadersPolicy(arg0 *cloudfront.CreateResponseHeadersPolicyInput) (*cloudfront.CreateResponseHeadersPolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateResponseHeadersPolicy", arg0)
+	ret0, _ := ret[0].(*cloudfront.CreateResponseHeadersPolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateResponseHeadersPolicy indicates an expected call of CreateResponseHeadersPolicy.
+func (mr *MockCloudFrontAPIMockRecorder) CreateResponseHeadersPolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateResponseHeadersPolicy", reflect.TypeOf((*MockCloudFrontAPI)(nil).CreateResponseHeadersPolicy), arg0)
+}
+
+// CreateResponseHeadersPolicyRequest mocks base method.
+func (m *MockCloudFrontAPI) CreateResponseHeadersPolicyRequest(arg0 *cloudfront.CreateResponseHeadersPolicyInput) (*request.Request, *cloudfront.CreateResponseHeadersPolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateResponseHeadersPolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*cloudfront.CreateResponseHeadersPolicyOutput)
+	return ret0, ret1
+}
+
+// CreateResponseHeadersPolicyRequest indicates an expected call of CreateResponseHeadersPolicyRequest.
+func (mr *MockCloudFrontAPIMockRecorder) CreateResponseHeadersPolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateResponseHeadersPolicyRequest", reflect.TypeOf((*MockCloudFrontAPI)(nil).CreateResponseHeadersPolicyRequest), arg0)
+}
+
+// CreateResponseHeadersPolicyWithContext mocks base method.
+func (m *MockCloudFrontAPI) CreateResponseHeadersPolicyWithContext(arg0 context.Context, arg1 *cloudfront.CreateResponseHeadersPolicyInput, arg2 ...request.Option) (*cloudfront.CreateResponseHeadersPolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateResponseHeadersPolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*cloudfront.CreateResponseHeadersPolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateResponseHeadersPolicyWithContext indicates an expected call of CreateResponseHeadersPolicyWithContext.
+func (mr *MockCloudFrontAPIMockRecorder) CreateResponseHeadersPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateResponseHeadersPolicyWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).CreateResponseHeadersPolicyWithContext), varargs...)
+}
+
 // CreateStreamingDistribution mocks base method.
 func (m *MockCloudFrontAPI) CreateStreamingDistribution(arg0 *cloudfront.CreateStreamingDistributionInput) (*cloudfront.CreateStreamingDistributionOutput, error) {
 	m.ctrl.T.Helper()
@@ -1334,6 +1434,56 @@ func (mr *MockCloudFrontAPIMockRecorder) DeleteRealtimeLogConfigWithContext(arg0
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRealtimeLogConfigWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).DeleteRealtimeLogConfigWithContext), varargs...)
+}
+
+// DeleteResponseHeadersPolicy mocks base method.
+func (m *MockCloudFrontAPI) DeleteResponseHeadersPolicy(arg0 *cloudfront.DeleteResponseHeadersPolicyInput) (*cloudfront.DeleteResponseHeadersPolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteResponseHeadersPolicy", arg0)
+	ret0, _ := ret[0].(*cloudfront.DeleteResponseHeadersPolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteResponseHeadersPolicy indicates an expected call of DeleteResponseHeadersPolicy.
+func (mr *MockCloudFrontAPIMockRecorder) DeleteResponseHeadersPolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResponseHeadersPolicy", reflect.TypeOf((*MockCloudFrontAPI)(nil).DeleteResponseHeadersPolicy), arg0)
+}
+
+// DeleteResponseHeadersPolicyRequest mocks base method.
+func (m *MockCloudFrontAPI) DeleteResponseHeadersPolicyRequest(arg0 *cloudfront.DeleteResponseHeadersPolicyInput) (*request.Request, *cloudfront.DeleteResponseHeadersPolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteResponseHeadersPolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*cloudfront.DeleteResponseHeadersPolicyOutput)
+	return ret0, ret1
+}
+
+// DeleteResponseHeadersPolicyRequest indicates an expected call of DeleteResponseHeadersPolicyRequest.
+func (mr *MockCloudFrontAPIMockRecorder) DeleteResponseHeadersPolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResponseHeadersPolicyRequest", reflect.TypeOf((*MockCloudFrontAPI)(nil).DeleteResponseHeadersPolicyRequest), arg0)
+}
+
+// DeleteResponseHeadersPolicyWithContext mocks base method.
+func (m *MockCloudFrontAPI) DeleteResponseHeadersPolicyWithContext(arg0 context.Context, arg1 *cloudfront.DeleteResponseHeadersPolicyInput, arg2 ...request.Option) (*cloudfront.DeleteResponseHeadersPolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteResponseHeadersPolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*cloudfront.DeleteResponseHeadersPolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteResponseHeadersPolicyWithContext indicates an expected call of DeleteResponseHeadersPolicyWithContext.
+func (mr *MockCloudFrontAPIMockRecorder) DeleteResponseHeadersPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResponseHeadersPolicyWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).DeleteResponseHeadersPolicyWithContext), varargs...)
 }
 
 // DeleteStreamingDistribution mocks base method.
@@ -2436,6 +2586,106 @@ func (mr *MockCloudFrontAPIMockRecorder) GetRealtimeLogConfigWithContext(arg0, a
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRealtimeLogConfigWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).GetRealtimeLogConfigWithContext), varargs...)
 }
 
+// GetResponseHeadersPolicy mocks base method.
+func (m *MockCloudFrontAPI) GetResponseHeadersPolicy(arg0 *cloudfront.GetResponseHeadersPolicyInput) (*cloudfront.GetResponseHeadersPolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetResponseHeadersPolicy", arg0)
+	ret0, _ := ret[0].(*cloudfront.GetResponseHeadersPolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetResponseHeadersPolicy indicates an expected call of GetResponseHeadersPolicy.
+func (mr *MockCloudFrontAPIMockRecorder) GetResponseHeadersPolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResponseHeadersPolicy", reflect.TypeOf((*MockCloudFrontAPI)(nil).GetResponseHeadersPolicy), arg0)
+}
+
+// GetResponseHeadersPolicyConfig mocks base method.
+func (m *MockCloudFrontAPI) GetResponseHeadersPolicyConfig(arg0 *cloudfront.GetResponseHeadersPolicyConfigInput) (*cloudfront.GetResponseHeadersPolicyConfigOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetResponseHeadersPolicyConfig", arg0)
+	ret0, _ := ret[0].(*cloudfront.GetResponseHeadersPolicyConfigOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetResponseHeadersPolicyConfig indicates an expected call of GetResponseHeadersPolicyConfig.
+func (mr *MockCloudFrontAPIMockRecorder) GetResponseHeadersPolicyConfig(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResponseHeadersPolicyConfig", reflect.TypeOf((*MockCloudFrontAPI)(nil).GetResponseHeadersPolicyConfig), arg0)
+}
+
+// GetResponseHeadersPolicyConfigRequest mocks base method.
+func (m *MockCloudFrontAPI) GetResponseHeadersPolicyConfigRequest(arg0 *cloudfront.GetResponseHeadersPolicyConfigInput) (*request.Request, *cloudfront.GetResponseHeadersPolicyConfigOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetResponseHeadersPolicyConfigRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*cloudfront.GetResponseHeadersPolicyConfigOutput)
+	return ret0, ret1
+}
+
+// GetResponseHeadersPolicyConfigRequest indicates an expected call of GetResponseHeadersPolicyConfigRequest.
+func (mr *MockCloudFrontAPIMockRecorder) GetResponseHeadersPolicyConfigRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResponseHeadersPolicyConfigRequest", reflect.TypeOf((*MockCloudFrontAPI)(nil).GetResponseHeadersPolicyConfigRequest), arg0)
+}
+
+// GetResponseHeadersPolicyConfigWithContext mocks base method.
+func (m *MockCloudFrontAPI) GetResponseHeadersPolicyConfigWithContext(arg0 context.Context, arg1 *cloudfront.GetResponseHeadersPolicyConfigInput, arg2 ...request.Option) (*cloudfront.GetResponseHeadersPolicyConfigOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetResponseHeadersPolicyConfigWithContext", varargs...)
+	ret0, _ := ret[0].(*cloudfront.GetResponseHeadersPolicyConfigOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetResponseHeadersPolicyConfigWithContext indicates an expected call of GetResponseHeadersPolicyConfigWithContext.
+func (mr *MockCloudFrontAPIMockRecorder) GetResponseHeadersPolicyConfigWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResponseHeadersPolicyConfigWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).GetResponseHeadersPolicyConfigWithContext), varargs...)
+}
+
+// GetResponseHeadersPolicyRequest mocks base method.
+func (m *MockCloudFrontAPI) GetResponseHeadersPolicyRequest(arg0 *cloudfront.GetResponseHeadersPolicyInput) (*request.Request, *cloudfront.GetResponseHeadersPolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetResponseHeadersPolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*cloudfront.GetResponseHeadersPolicyOutput)
+	return ret0, ret1
+}
+
+// GetResponseHeadersPolicyRequest indicates an expected call of GetResponseHeadersPolicyRequest.
+func (mr *MockCloudFrontAPIMockRecorder) GetResponseHeadersPolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResponseHeadersPolicyRequest", reflect.TypeOf((*MockCloudFrontAPI)(nil).GetResponseHeadersPolicyRequest), arg0)
+}
+
+// GetResponseHeadersPolicyWithContext mocks base method.
+func (m *MockCloudFrontAPI) GetResponseHeadersPolicyWithContext(arg0 context.Context, arg1 *cloudfront.GetResponseHeadersPolicyInput, arg2 ...request.Option) (*cloudfront.GetResponseHeadersPolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetResponseHeadersPolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*cloudfront.GetResponseHeadersPolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetResponseHeadersPolicyWithContext indicates an expected call of GetResponseHeadersPolicyWithContext.
+func (mr *MockCloudFrontAPIMockRecorder) GetResponseHeadersPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetResponseHeadersPolicyWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).GetResponseHeadersPolicyWithContext), varargs...)
+}
+
 // GetStreamingDistribution mocks base method.
 func (m *MockCloudFrontAPI) GetStreamingDistribution(arg0 *cloudfront.GetStreamingDistributionInput) (*cloudfront.GetStreamingDistributionOutput, error) {
 	m.ctrl.T.Helper()
@@ -2669,6 +2919,56 @@ func (mr *MockCloudFrontAPIMockRecorder) ListCloudFrontOriginAccessIdentitiesWit
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListCloudFrontOriginAccessIdentitiesWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).ListCloudFrontOriginAccessIdentitiesWithContext), varargs...)
 }
 
+// ListConflictingAliases mocks base method.
+func (m *MockCloudFrontAPI) ListConflictingAliases(arg0 *cloudfront.ListConflictingAliasesInput) (*cloudfront.ListConflictingAliasesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListConflictingAliases", arg0)
+	ret0, _ := ret[0].(*cloudfront.ListConflictingAliasesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListConflictingAliases indicates an expected call of ListConflictingAliases.
+func (mr *MockCloudFrontAPIMockRecorder) ListConflictingAliases(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConflictingAliases", reflect.TypeOf((*MockCloudFrontAPI)(nil).ListConflictingAliases), arg0)
+}
+
+// ListConflictingAliasesRequest mocks base method.
+func (m *MockCloudFrontAPI) ListConflictingAliasesRequest(arg0 *cloudfront.ListConflictingAliasesInput) (*request.Request, *cloudfront.ListConflictingAliasesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListConflictingAliasesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*cloudfront.ListConflictingAliasesOutput)
+	return ret0, ret1
+}
+
+// ListConflictingAliasesRequest indicates an expected call of ListConflictingAliasesRequest.
+func (mr *MockCloudFrontAPIMockRecorder) ListConflictingAliasesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConflictingAliasesRequest", reflect.TypeOf((*MockCloudFrontAPI)(nil).ListConflictingAliasesRequest), arg0)
+}
+
+// ListConflictingAliasesWithContext mocks base method.
+func (m *MockCloudFrontAPI) ListConflictingAliasesWithContext(arg0 context.Context, arg1 *cloudfront.ListConflictingAliasesInput, arg2 ...request.Option) (*cloudfront.ListConflictingAliasesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListConflictingAliasesWithContext", varargs...)
+	ret0, _ := ret[0].(*cloudfront.ListConflictingAliasesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListConflictingAliasesWithContext indicates an expected call of ListConflictingAliasesWithContext.
+func (mr *MockCloudFrontAPIMockRecorder) ListConflictingAliasesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListConflictingAliasesWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).ListConflictingAliasesWithContext), varargs...)
+}
+
 // ListDistributions mocks base method.
 func (m *MockCloudFrontAPI) ListDistributions(arg0 *cloudfront.ListDistributionsInput) (*cloudfront.ListDistributionsOutput, error) {
 	m.ctrl.T.Helper()
@@ -2882,6 +3182,56 @@ func (mr *MockCloudFrontAPIMockRecorder) ListDistributionsByRealtimeLogConfigWit
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDistributionsByRealtimeLogConfigWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).ListDistributionsByRealtimeLogConfigWithContext), varargs...)
+}
+
+// ListDistributionsByResponseHeadersPolicyId mocks base method.
+func (m *MockCloudFrontAPI) ListDistributionsByResponseHeadersPolicyId(arg0 *cloudfront.ListDistributionsByResponseHeadersPolicyIdInput) (*cloudfront.ListDistributionsByResponseHeadersPolicyIdOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListDistributionsByResponseHeadersPolicyId", arg0)
+	ret0, _ := ret[0].(*cloudfront.ListDistributionsByResponseHeadersPolicyIdOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListDistributionsByResponseHeadersPolicyId indicates an expected call of ListDistributionsByResponseHeadersPolicyId.
+func (mr *MockCloudFrontAPIMockRecorder) ListDistributionsByResponseHeadersPolicyId(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDistributionsByResponseHeadersPolicyId", reflect.TypeOf((*MockCloudFrontAPI)(nil).ListDistributionsByResponseHeadersPolicyId), arg0)
+}
+
+// ListDistributionsByResponseHeadersPolicyIdRequest mocks base method.
+func (m *MockCloudFrontAPI) ListDistributionsByResponseHeadersPolicyIdRequest(arg0 *cloudfront.ListDistributionsByResponseHeadersPolicyIdInput) (*request.Request, *cloudfront.ListDistributionsByResponseHeadersPolicyIdOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListDistributionsByResponseHeadersPolicyIdRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*cloudfront.ListDistributionsByResponseHeadersPolicyIdOutput)
+	return ret0, ret1
+}
+
+// ListDistributionsByResponseHeadersPolicyIdRequest indicates an expected call of ListDistributionsByResponseHeadersPolicyIdRequest.
+func (mr *MockCloudFrontAPIMockRecorder) ListDistributionsByResponseHeadersPolicyIdRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDistributionsByResponseHeadersPolicyIdRequest", reflect.TypeOf((*MockCloudFrontAPI)(nil).ListDistributionsByResponseHeadersPolicyIdRequest), arg0)
+}
+
+// ListDistributionsByResponseHeadersPolicyIdWithContext mocks base method.
+func (m *MockCloudFrontAPI) ListDistributionsByResponseHeadersPolicyIdWithContext(arg0 context.Context, arg1 *cloudfront.ListDistributionsByResponseHeadersPolicyIdInput, arg2 ...request.Option) (*cloudfront.ListDistributionsByResponseHeadersPolicyIdOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListDistributionsByResponseHeadersPolicyIdWithContext", varargs...)
+	ret0, _ := ret[0].(*cloudfront.ListDistributionsByResponseHeadersPolicyIdOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListDistributionsByResponseHeadersPolicyIdWithContext indicates an expected call of ListDistributionsByResponseHeadersPolicyIdWithContext.
+func (mr *MockCloudFrontAPIMockRecorder) ListDistributionsByResponseHeadersPolicyIdWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDistributionsByResponseHeadersPolicyIdWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).ListDistributionsByResponseHeadersPolicyIdWithContext), varargs...)
 }
 
 // ListDistributionsByWebACLId mocks base method.
@@ -3433,6 +3783,56 @@ func (mr *MockCloudFrontAPIMockRecorder) ListRealtimeLogConfigsWithContext(arg0,
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRealtimeLogConfigsWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).ListRealtimeLogConfigsWithContext), varargs...)
+}
+
+// ListResponseHeadersPolicies mocks base method.
+func (m *MockCloudFrontAPI) ListResponseHeadersPolicies(arg0 *cloudfront.ListResponseHeadersPoliciesInput) (*cloudfront.ListResponseHeadersPoliciesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListResponseHeadersPolicies", arg0)
+	ret0, _ := ret[0].(*cloudfront.ListResponseHeadersPoliciesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListResponseHeadersPolicies indicates an expected call of ListResponseHeadersPolicies.
+func (mr *MockCloudFrontAPIMockRecorder) ListResponseHeadersPolicies(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResponseHeadersPolicies", reflect.TypeOf((*MockCloudFrontAPI)(nil).ListResponseHeadersPolicies), arg0)
+}
+
+// ListResponseHeadersPoliciesRequest mocks base method.
+func (m *MockCloudFrontAPI) ListResponseHeadersPoliciesRequest(arg0 *cloudfront.ListResponseHeadersPoliciesInput) (*request.Request, *cloudfront.ListResponseHeadersPoliciesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListResponseHeadersPoliciesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*cloudfront.ListResponseHeadersPoliciesOutput)
+	return ret0, ret1
+}
+
+// ListResponseHeadersPoliciesRequest indicates an expected call of ListResponseHeadersPoliciesRequest.
+func (mr *MockCloudFrontAPIMockRecorder) ListResponseHeadersPoliciesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResponseHeadersPoliciesRequest", reflect.TypeOf((*MockCloudFrontAPI)(nil).ListResponseHeadersPoliciesRequest), arg0)
+}
+
+// ListResponseHeadersPoliciesWithContext mocks base method.
+func (m *MockCloudFrontAPI) ListResponseHeadersPoliciesWithContext(arg0 context.Context, arg1 *cloudfront.ListResponseHeadersPoliciesInput, arg2 ...request.Option) (*cloudfront.ListResponseHeadersPoliciesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListResponseHeadersPoliciesWithContext", varargs...)
+	ret0, _ := ret[0].(*cloudfront.ListResponseHeadersPoliciesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListResponseHeadersPoliciesWithContext indicates an expected call of ListResponseHeadersPoliciesWithContext.
+func (mr *MockCloudFrontAPIMockRecorder) ListResponseHeadersPoliciesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListResponseHeadersPoliciesWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).ListResponseHeadersPoliciesWithContext), varargs...)
 }
 
 // ListStreamingDistributions mocks base method.
@@ -4266,6 +4666,56 @@ func (mr *MockCloudFrontAPIMockRecorder) UpdateRealtimeLogConfigWithContext(arg0
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRealtimeLogConfigWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).UpdateRealtimeLogConfigWithContext), varargs...)
+}
+
+// UpdateResponseHeadersPolicy mocks base method.
+func (m *MockCloudFrontAPI) UpdateResponseHeadersPolicy(arg0 *cloudfront.UpdateResponseHeadersPolicyInput) (*cloudfront.UpdateResponseHeadersPolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateResponseHeadersPolicy", arg0)
+	ret0, _ := ret[0].(*cloudfront.UpdateResponseHeadersPolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateResponseHeadersPolicy indicates an expected call of UpdateResponseHeadersPolicy.
+func (mr *MockCloudFrontAPIMockRecorder) UpdateResponseHeadersPolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateResponseHeadersPolicy", reflect.TypeOf((*MockCloudFrontAPI)(nil).UpdateResponseHeadersPolicy), arg0)
+}
+
+// UpdateResponseHeadersPolicyRequest mocks base method.
+func (m *MockCloudFrontAPI) UpdateResponseHeadersPolicyRequest(arg0 *cloudfront.UpdateResponseHeadersPolicyInput) (*request.Request, *cloudfront.UpdateResponseHeadersPolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateResponseHeadersPolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*cloudfront.UpdateResponseHeadersPolicyOutput)
+	return ret0, ret1
+}
+
+// UpdateResponseHeadersPolicyRequest indicates an expected call of UpdateResponseHeadersPolicyRequest.
+func (mr *MockCloudFrontAPIMockRecorder) UpdateResponseHeadersPolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateResponseHeadersPolicyRequest", reflect.TypeOf((*MockCloudFrontAPI)(nil).UpdateResponseHeadersPolicyRequest), arg0)
+}
+
+// UpdateResponseHeadersPolicyWithContext mocks base method.
+func (m *MockCloudFrontAPI) UpdateResponseHeadersPolicyWithContext(arg0 context.Context, arg1 *cloudfront.UpdateResponseHeadersPolicyInput, arg2 ...request.Option) (*cloudfront.UpdateResponseHeadersPolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateResponseHeadersPolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*cloudfront.UpdateResponseHeadersPolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateResponseHeadersPolicyWithContext indicates an expected call of UpdateResponseHeadersPolicyWithContext.
+func (mr *MockCloudFrontAPIMockRecorder) UpdateResponseHeadersPolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateResponseHeadersPolicyWithContext", reflect.TypeOf((*MockCloudFrontAPI)(nil).UpdateResponseHeadersPolicyWithContext), varargs...)
 }
 
 // UpdateStreamingDistribution mocks base method.

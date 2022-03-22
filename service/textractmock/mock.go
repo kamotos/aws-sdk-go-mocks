@@ -86,6 +86,106 @@ func (mr *MockTextractAPIMockRecorder) AnalyzeDocumentWithContext(arg0, arg1 int
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnalyzeDocumentWithContext", reflect.TypeOf((*MockTextractAPI)(nil).AnalyzeDocumentWithContext), varargs...)
 }
 
+// AnalyzeExpense mocks base method.
+func (m *MockTextractAPI) AnalyzeExpense(arg0 *textract.AnalyzeExpenseInput) (*textract.AnalyzeExpenseOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AnalyzeExpense", arg0)
+	ret0, _ := ret[0].(*textract.AnalyzeExpenseOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AnalyzeExpense indicates an expected call of AnalyzeExpense.
+func (mr *MockTextractAPIMockRecorder) AnalyzeExpense(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnalyzeExpense", reflect.TypeOf((*MockTextractAPI)(nil).AnalyzeExpense), arg0)
+}
+
+// AnalyzeExpenseRequest mocks base method.
+func (m *MockTextractAPI) AnalyzeExpenseRequest(arg0 *textract.AnalyzeExpenseInput) (*request.Request, *textract.AnalyzeExpenseOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AnalyzeExpenseRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*textract.AnalyzeExpenseOutput)
+	return ret0, ret1
+}
+
+// AnalyzeExpenseRequest indicates an expected call of AnalyzeExpenseRequest.
+func (mr *MockTextractAPIMockRecorder) AnalyzeExpenseRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnalyzeExpenseRequest", reflect.TypeOf((*MockTextractAPI)(nil).AnalyzeExpenseRequest), arg0)
+}
+
+// AnalyzeExpenseWithContext mocks base method.
+func (m *MockTextractAPI) AnalyzeExpenseWithContext(arg0 context.Context, arg1 *textract.AnalyzeExpenseInput, arg2 ...request.Option) (*textract.AnalyzeExpenseOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "AnalyzeExpenseWithContext", varargs...)
+	ret0, _ := ret[0].(*textract.AnalyzeExpenseOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AnalyzeExpenseWithContext indicates an expected call of AnalyzeExpenseWithContext.
+func (mr *MockTextractAPIMockRecorder) AnalyzeExpenseWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnalyzeExpenseWithContext", reflect.TypeOf((*MockTextractAPI)(nil).AnalyzeExpenseWithContext), varargs...)
+}
+
+// AnalyzeID mocks base method.
+func (m *MockTextractAPI) AnalyzeID(arg0 *textract.AnalyzeIDInput) (*textract.AnalyzeIDOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AnalyzeID", arg0)
+	ret0, _ := ret[0].(*textract.AnalyzeIDOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AnalyzeID indicates an expected call of AnalyzeID.
+func (mr *MockTextractAPIMockRecorder) AnalyzeID(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnalyzeID", reflect.TypeOf((*MockTextractAPI)(nil).AnalyzeID), arg0)
+}
+
+// AnalyzeIDRequest mocks base method.
+func (m *MockTextractAPI) AnalyzeIDRequest(arg0 *textract.AnalyzeIDInput) (*request.Request, *textract.AnalyzeIDOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AnalyzeIDRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*textract.AnalyzeIDOutput)
+	return ret0, ret1
+}
+
+// AnalyzeIDRequest indicates an expected call of AnalyzeIDRequest.
+func (mr *MockTextractAPIMockRecorder) AnalyzeIDRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnalyzeIDRequest", reflect.TypeOf((*MockTextractAPI)(nil).AnalyzeIDRequest), arg0)
+}
+
+// AnalyzeIDWithContext mocks base method.
+func (m *MockTextractAPI) AnalyzeIDWithContext(arg0 context.Context, arg1 *textract.AnalyzeIDInput, arg2 ...request.Option) (*textract.AnalyzeIDOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "AnalyzeIDWithContext", varargs...)
+	ret0, _ := ret[0].(*textract.AnalyzeIDOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AnalyzeIDWithContext indicates an expected call of AnalyzeIDWithContext.
+func (mr *MockTextractAPIMockRecorder) AnalyzeIDWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnalyzeIDWithContext", reflect.TypeOf((*MockTextractAPI)(nil).AnalyzeIDWithContext), varargs...)
+}
+
 // DetectDocumentText mocks base method.
 func (m *MockTextractAPI) DetectDocumentText(arg0 *textract.DetectDocumentTextInput) (*textract.DetectDocumentTextOutput, error) {
 	m.ctrl.T.Helper()
@@ -236,6 +336,56 @@ func (mr *MockTextractAPIMockRecorder) GetDocumentTextDetectionWithContext(arg0,
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetDocumentTextDetectionWithContext", reflect.TypeOf((*MockTextractAPI)(nil).GetDocumentTextDetectionWithContext), varargs...)
 }
 
+// GetExpenseAnalysis mocks base method.
+func (m *MockTextractAPI) GetExpenseAnalysis(arg0 *textract.GetExpenseAnalysisInput) (*textract.GetExpenseAnalysisOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetExpenseAnalysis", arg0)
+	ret0, _ := ret[0].(*textract.GetExpenseAnalysisOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetExpenseAnalysis indicates an expected call of GetExpenseAnalysis.
+func (mr *MockTextractAPIMockRecorder) GetExpenseAnalysis(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetExpenseAnalysis", reflect.TypeOf((*MockTextractAPI)(nil).GetExpenseAnalysis), arg0)
+}
+
+// GetExpenseAnalysisRequest mocks base method.
+func (m *MockTextractAPI) GetExpenseAnalysisRequest(arg0 *textract.GetExpenseAnalysisInput) (*request.Request, *textract.GetExpenseAnalysisOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetExpenseAnalysisRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*textract.GetExpenseAnalysisOutput)
+	return ret0, ret1
+}
+
+// GetExpenseAnalysisRequest indicates an expected call of GetExpenseAnalysisRequest.
+func (mr *MockTextractAPIMockRecorder) GetExpenseAnalysisRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetExpenseAnalysisRequest", reflect.TypeOf((*MockTextractAPI)(nil).GetExpenseAnalysisRequest), arg0)
+}
+
+// GetExpenseAnalysisWithContext mocks base method.
+func (m *MockTextractAPI) GetExpenseAnalysisWithContext(arg0 context.Context, arg1 *textract.GetExpenseAnalysisInput, arg2 ...request.Option) (*textract.GetExpenseAnalysisOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetExpenseAnalysisWithContext", varargs...)
+	ret0, _ := ret[0].(*textract.GetExpenseAnalysisOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetExpenseAnalysisWithContext indicates an expected call of GetExpenseAnalysisWithContext.
+func (mr *MockTextractAPIMockRecorder) GetExpenseAnalysisWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetExpenseAnalysisWithContext", reflect.TypeOf((*MockTextractAPI)(nil).GetExpenseAnalysisWithContext), varargs...)
+}
+
 // StartDocumentAnalysis mocks base method.
 func (m *MockTextractAPI) StartDocumentAnalysis(arg0 *textract.StartDocumentAnalysisInput) (*textract.StartDocumentAnalysisOutput, error) {
 	m.ctrl.T.Helper()
@@ -334,4 +484,54 @@ func (mr *MockTextractAPIMockRecorder) StartDocumentTextDetectionWithContext(arg
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartDocumentTextDetectionWithContext", reflect.TypeOf((*MockTextractAPI)(nil).StartDocumentTextDetectionWithContext), varargs...)
+}
+
+// StartExpenseAnalysis mocks base method.
+func (m *MockTextractAPI) StartExpenseAnalysis(arg0 *textract.StartExpenseAnalysisInput) (*textract.StartExpenseAnalysisOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartExpenseAnalysis", arg0)
+	ret0, _ := ret[0].(*textract.StartExpenseAnalysisOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartExpenseAnalysis indicates an expected call of StartExpenseAnalysis.
+func (mr *MockTextractAPIMockRecorder) StartExpenseAnalysis(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartExpenseAnalysis", reflect.TypeOf((*MockTextractAPI)(nil).StartExpenseAnalysis), arg0)
+}
+
+// StartExpenseAnalysisRequest mocks base method.
+func (m *MockTextractAPI) StartExpenseAnalysisRequest(arg0 *textract.StartExpenseAnalysisInput) (*request.Request, *textract.StartExpenseAnalysisOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartExpenseAnalysisRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*textract.StartExpenseAnalysisOutput)
+	return ret0, ret1
+}
+
+// StartExpenseAnalysisRequest indicates an expected call of StartExpenseAnalysisRequest.
+func (mr *MockTextractAPIMockRecorder) StartExpenseAnalysisRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartExpenseAnalysisRequest", reflect.TypeOf((*MockTextractAPI)(nil).StartExpenseAnalysisRequest), arg0)
+}
+
+// StartExpenseAnalysisWithContext mocks base method.
+func (m *MockTextractAPI) StartExpenseAnalysisWithContext(arg0 context.Context, arg1 *textract.StartExpenseAnalysisInput, arg2 ...request.Option) (*textract.StartExpenseAnalysisOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "StartExpenseAnalysisWithContext", varargs...)
+	ret0, _ := ret[0].(*textract.StartExpenseAnalysisOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartExpenseAnalysisWithContext indicates an expected call of StartExpenseAnalysisWithContext.
+func (mr *MockTextractAPIMockRecorder) StartExpenseAnalysisWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartExpenseAnalysisWithContext", reflect.TypeOf((*MockTextractAPI)(nil).StartExpenseAnalysisWithContext), varargs...)
 }

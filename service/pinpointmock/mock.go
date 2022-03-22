@@ -286,6 +286,56 @@ func (mr *MockPinpointAPIMockRecorder) CreateImportJobWithContext(arg0, arg1 int
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateImportJobWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).CreateImportJobWithContext), varargs...)
 }
 
+// CreateInAppTemplate mocks base method.
+func (m *MockPinpointAPI) CreateInAppTemplate(arg0 *pinpoint.CreateInAppTemplateInput) (*pinpoint.CreateInAppTemplateOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateInAppTemplate", arg0)
+	ret0, _ := ret[0].(*pinpoint.CreateInAppTemplateOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateInAppTemplate indicates an expected call of CreateInAppTemplate.
+func (mr *MockPinpointAPIMockRecorder) CreateInAppTemplate(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInAppTemplate", reflect.TypeOf((*MockPinpointAPI)(nil).CreateInAppTemplate), arg0)
+}
+
+// CreateInAppTemplateRequest mocks base method.
+func (m *MockPinpointAPI) CreateInAppTemplateRequest(arg0 *pinpoint.CreateInAppTemplateInput) (*request.Request, *pinpoint.CreateInAppTemplateOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateInAppTemplateRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*pinpoint.CreateInAppTemplateOutput)
+	return ret0, ret1
+}
+
+// CreateInAppTemplateRequest indicates an expected call of CreateInAppTemplateRequest.
+func (mr *MockPinpointAPIMockRecorder) CreateInAppTemplateRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInAppTemplateRequest", reflect.TypeOf((*MockPinpointAPI)(nil).CreateInAppTemplateRequest), arg0)
+}
+
+// CreateInAppTemplateWithContext mocks base method.
+func (m *MockPinpointAPI) CreateInAppTemplateWithContext(arg0 context.Context, arg1 *pinpoint.CreateInAppTemplateInput, arg2 ...request.Option) (*pinpoint.CreateInAppTemplateOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateInAppTemplateWithContext", varargs...)
+	ret0, _ := ret[0].(*pinpoint.CreateInAppTemplateOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateInAppTemplateWithContext indicates an expected call of CreateInAppTemplateWithContext.
+func (mr *MockPinpointAPIMockRecorder) CreateInAppTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateInAppTemplateWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).CreateInAppTemplateWithContext), varargs...)
+}
+
 // CreateJourney mocks base method.
 func (m *MockPinpointAPI) CreateJourney(arg0 *pinpoint.CreateJourneyInput) (*pinpoint.CreateJourneyOutput, error) {
 	m.ctrl.T.Helper()
@@ -1234,6 +1284,56 @@ func (mr *MockPinpointAPIMockRecorder) DeleteGcmChannelWithContext(arg0, arg1 in
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteGcmChannelWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).DeleteGcmChannelWithContext), varargs...)
+}
+
+// DeleteInAppTemplate mocks base method.
+func (m *MockPinpointAPI) DeleteInAppTemplate(arg0 *pinpoint.DeleteInAppTemplateInput) (*pinpoint.DeleteInAppTemplateOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteInAppTemplate", arg0)
+	ret0, _ := ret[0].(*pinpoint.DeleteInAppTemplateOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteInAppTemplate indicates an expected call of DeleteInAppTemplate.
+func (mr *MockPinpointAPIMockRecorder) DeleteInAppTemplate(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInAppTemplate", reflect.TypeOf((*MockPinpointAPI)(nil).DeleteInAppTemplate), arg0)
+}
+
+// DeleteInAppTemplateRequest mocks base method.
+func (m *MockPinpointAPI) DeleteInAppTemplateRequest(arg0 *pinpoint.DeleteInAppTemplateInput) (*request.Request, *pinpoint.DeleteInAppTemplateOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteInAppTemplateRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*pinpoint.DeleteInAppTemplateOutput)
+	return ret0, ret1
+}
+
+// DeleteInAppTemplateRequest indicates an expected call of DeleteInAppTemplateRequest.
+func (mr *MockPinpointAPIMockRecorder) DeleteInAppTemplateRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInAppTemplateRequest", reflect.TypeOf((*MockPinpointAPI)(nil).DeleteInAppTemplateRequest), arg0)
+}
+
+// DeleteInAppTemplateWithContext mocks base method.
+func (m *MockPinpointAPI) DeleteInAppTemplateWithContext(arg0 context.Context, arg1 *pinpoint.DeleteInAppTemplateInput, arg2 ...request.Option) (*pinpoint.DeleteInAppTemplateOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteInAppTemplateWithContext", varargs...)
+	ret0, _ := ret[0].(*pinpoint.DeleteInAppTemplateOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteInAppTemplateWithContext indicates an expected call of DeleteInAppTemplateWithContext.
+func (mr *MockPinpointAPIMockRecorder) DeleteInAppTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteInAppTemplateWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).DeleteInAppTemplateWithContext), varargs...)
 }
 
 // DeleteJourney mocks base method.
@@ -2986,6 +3086,106 @@ func (mr *MockPinpointAPIMockRecorder) GetImportJobsWithContext(arg0, arg1 inter
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetImportJobsWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).GetImportJobsWithContext), varargs...)
 }
 
+// GetInAppMessages mocks base method.
+func (m *MockPinpointAPI) GetInAppMessages(arg0 *pinpoint.GetInAppMessagesInput) (*pinpoint.GetInAppMessagesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetInAppMessages", arg0)
+	ret0, _ := ret[0].(*pinpoint.GetInAppMessagesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetInAppMessages indicates an expected call of GetInAppMessages.
+func (mr *MockPinpointAPIMockRecorder) GetInAppMessages(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInAppMessages", reflect.TypeOf((*MockPinpointAPI)(nil).GetInAppMessages), arg0)
+}
+
+// GetInAppMessagesRequest mocks base method.
+func (m *MockPinpointAPI) GetInAppMessagesRequest(arg0 *pinpoint.GetInAppMessagesInput) (*request.Request, *pinpoint.GetInAppMessagesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetInAppMessagesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*pinpoint.GetInAppMessagesOutput)
+	return ret0, ret1
+}
+
+// GetInAppMessagesRequest indicates an expected call of GetInAppMessagesRequest.
+func (mr *MockPinpointAPIMockRecorder) GetInAppMessagesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInAppMessagesRequest", reflect.TypeOf((*MockPinpointAPI)(nil).GetInAppMessagesRequest), arg0)
+}
+
+// GetInAppMessagesWithContext mocks base method.
+func (m *MockPinpointAPI) GetInAppMessagesWithContext(arg0 context.Context, arg1 *pinpoint.GetInAppMessagesInput, arg2 ...request.Option) (*pinpoint.GetInAppMessagesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetInAppMessagesWithContext", varargs...)
+	ret0, _ := ret[0].(*pinpoint.GetInAppMessagesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetInAppMessagesWithContext indicates an expected call of GetInAppMessagesWithContext.
+func (mr *MockPinpointAPIMockRecorder) GetInAppMessagesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInAppMessagesWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).GetInAppMessagesWithContext), varargs...)
+}
+
+// GetInAppTemplate mocks base method.
+func (m *MockPinpointAPI) GetInAppTemplate(arg0 *pinpoint.GetInAppTemplateInput) (*pinpoint.GetInAppTemplateOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetInAppTemplate", arg0)
+	ret0, _ := ret[0].(*pinpoint.GetInAppTemplateOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetInAppTemplate indicates an expected call of GetInAppTemplate.
+func (mr *MockPinpointAPIMockRecorder) GetInAppTemplate(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInAppTemplate", reflect.TypeOf((*MockPinpointAPI)(nil).GetInAppTemplate), arg0)
+}
+
+// GetInAppTemplateRequest mocks base method.
+func (m *MockPinpointAPI) GetInAppTemplateRequest(arg0 *pinpoint.GetInAppTemplateInput) (*request.Request, *pinpoint.GetInAppTemplateOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetInAppTemplateRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*pinpoint.GetInAppTemplateOutput)
+	return ret0, ret1
+}
+
+// GetInAppTemplateRequest indicates an expected call of GetInAppTemplateRequest.
+func (mr *MockPinpointAPIMockRecorder) GetInAppTemplateRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInAppTemplateRequest", reflect.TypeOf((*MockPinpointAPI)(nil).GetInAppTemplateRequest), arg0)
+}
+
+// GetInAppTemplateWithContext mocks base method.
+func (m *MockPinpointAPI) GetInAppTemplateWithContext(arg0 context.Context, arg1 *pinpoint.GetInAppTemplateInput, arg2 ...request.Option) (*pinpoint.GetInAppTemplateOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetInAppTemplateWithContext", varargs...)
+	ret0, _ := ret[0].(*pinpoint.GetInAppTemplateOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetInAppTemplateWithContext indicates an expected call of GetInAppTemplateWithContext.
+func (mr *MockPinpointAPIMockRecorder) GetInAppTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInAppTemplateWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).GetInAppTemplateWithContext), varargs...)
+}
+
 // GetJourney mocks base method.
 func (m *MockPinpointAPI) GetJourney(arg0 *pinpoint.GetJourneyInput) (*pinpoint.GetJourneyOutput, error) {
 	m.ctrl.T.Helper()
@@ -4336,6 +4536,56 @@ func (mr *MockPinpointAPIMockRecorder) SendMessagesWithContext(arg0, arg1 interf
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendMessagesWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).SendMessagesWithContext), varargs...)
 }
 
+// SendOTPMessage mocks base method.
+func (m *MockPinpointAPI) SendOTPMessage(arg0 *pinpoint.SendOTPMessageInput) (*pinpoint.SendOTPMessageOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SendOTPMessage", arg0)
+	ret0, _ := ret[0].(*pinpoint.SendOTPMessageOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SendOTPMessage indicates an expected call of SendOTPMessage.
+func (mr *MockPinpointAPIMockRecorder) SendOTPMessage(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendOTPMessage", reflect.TypeOf((*MockPinpointAPI)(nil).SendOTPMessage), arg0)
+}
+
+// SendOTPMessageRequest mocks base method.
+func (m *MockPinpointAPI) SendOTPMessageRequest(arg0 *pinpoint.SendOTPMessageInput) (*request.Request, *pinpoint.SendOTPMessageOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SendOTPMessageRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*pinpoint.SendOTPMessageOutput)
+	return ret0, ret1
+}
+
+// SendOTPMessageRequest indicates an expected call of SendOTPMessageRequest.
+func (mr *MockPinpointAPIMockRecorder) SendOTPMessageRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendOTPMessageRequest", reflect.TypeOf((*MockPinpointAPI)(nil).SendOTPMessageRequest), arg0)
+}
+
+// SendOTPMessageWithContext mocks base method.
+func (m *MockPinpointAPI) SendOTPMessageWithContext(arg0 context.Context, arg1 *pinpoint.SendOTPMessageInput, arg2 ...request.Option) (*pinpoint.SendOTPMessageOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "SendOTPMessageWithContext", varargs...)
+	ret0, _ := ret[0].(*pinpoint.SendOTPMessageOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SendOTPMessageWithContext indicates an expected call of SendOTPMessageWithContext.
+func (mr *MockPinpointAPIMockRecorder) SendOTPMessageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendOTPMessageWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).SendOTPMessageWithContext), varargs...)
+}
+
 // SendUsersMessages mocks base method.
 func (m *MockPinpointAPI) SendUsersMessages(arg0 *pinpoint.SendUsersMessagesInput) (*pinpoint.SendUsersMessagesOutput, error) {
 	m.ctrl.T.Helper()
@@ -5136,6 +5386,56 @@ func (mr *MockPinpointAPIMockRecorder) UpdateGcmChannelWithContext(arg0, arg1 in
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateGcmChannelWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).UpdateGcmChannelWithContext), varargs...)
 }
 
+// UpdateInAppTemplate mocks base method.
+func (m *MockPinpointAPI) UpdateInAppTemplate(arg0 *pinpoint.UpdateInAppTemplateInput) (*pinpoint.UpdateInAppTemplateOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateInAppTemplate", arg0)
+	ret0, _ := ret[0].(*pinpoint.UpdateInAppTemplateOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateInAppTemplate indicates an expected call of UpdateInAppTemplate.
+func (mr *MockPinpointAPIMockRecorder) UpdateInAppTemplate(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInAppTemplate", reflect.TypeOf((*MockPinpointAPI)(nil).UpdateInAppTemplate), arg0)
+}
+
+// UpdateInAppTemplateRequest mocks base method.
+func (m *MockPinpointAPI) UpdateInAppTemplateRequest(arg0 *pinpoint.UpdateInAppTemplateInput) (*request.Request, *pinpoint.UpdateInAppTemplateOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateInAppTemplateRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*pinpoint.UpdateInAppTemplateOutput)
+	return ret0, ret1
+}
+
+// UpdateInAppTemplateRequest indicates an expected call of UpdateInAppTemplateRequest.
+func (mr *MockPinpointAPIMockRecorder) UpdateInAppTemplateRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInAppTemplateRequest", reflect.TypeOf((*MockPinpointAPI)(nil).UpdateInAppTemplateRequest), arg0)
+}
+
+// UpdateInAppTemplateWithContext mocks base method.
+func (m *MockPinpointAPI) UpdateInAppTemplateWithContext(arg0 context.Context, arg1 *pinpoint.UpdateInAppTemplateInput, arg2 ...request.Option) (*pinpoint.UpdateInAppTemplateOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateInAppTemplateWithContext", varargs...)
+	ret0, _ := ret[0].(*pinpoint.UpdateInAppTemplateOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateInAppTemplateWithContext indicates an expected call of UpdateInAppTemplateWithContext.
+func (mr *MockPinpointAPIMockRecorder) UpdateInAppTemplateWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInAppTemplateWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).UpdateInAppTemplateWithContext), varargs...)
+}
+
 // UpdateJourney mocks base method.
 func (m *MockPinpointAPI) UpdateJourney(arg0 *pinpoint.UpdateJourneyInput) (*pinpoint.UpdateJourneyOutput, error) {
 	m.ctrl.T.Helper()
@@ -5634,4 +5934,54 @@ func (mr *MockPinpointAPIMockRecorder) UpdateVoiceTemplateWithContext(arg0, arg1
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateVoiceTemplateWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).UpdateVoiceTemplateWithContext), varargs...)
+}
+
+// VerifyOTPMessage mocks base method.
+func (m *MockPinpointAPI) VerifyOTPMessage(arg0 *pinpoint.VerifyOTPMessageInput) (*pinpoint.VerifyOTPMessageOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "VerifyOTPMessage", arg0)
+	ret0, _ := ret[0].(*pinpoint.VerifyOTPMessageOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// VerifyOTPMessage indicates an expected call of VerifyOTPMessage.
+func (mr *MockPinpointAPIMockRecorder) VerifyOTPMessage(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "VerifyOTPMessage", reflect.TypeOf((*MockPinpointAPI)(nil).VerifyOTPMessage), arg0)
+}
+
+// VerifyOTPMessageRequest mocks base method.
+func (m *MockPinpointAPI) VerifyOTPMessageRequest(arg0 *pinpoint.VerifyOTPMessageInput) (*request.Request, *pinpoint.VerifyOTPMessageOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "VerifyOTPMessageRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*pinpoint.VerifyOTPMessageOutput)
+	return ret0, ret1
+}
+
+// VerifyOTPMessageRequest indicates an expected call of VerifyOTPMessageRequest.
+func (mr *MockPinpointAPIMockRecorder) VerifyOTPMessageRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "VerifyOTPMessageRequest", reflect.TypeOf((*MockPinpointAPI)(nil).VerifyOTPMessageRequest), arg0)
+}
+
+// VerifyOTPMessageWithContext mocks base method.
+func (m *MockPinpointAPI) VerifyOTPMessageWithContext(arg0 context.Context, arg1 *pinpoint.VerifyOTPMessageInput, arg2 ...request.Option) (*pinpoint.VerifyOTPMessageOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "VerifyOTPMessageWithContext", varargs...)
+	ret0, _ := ret[0].(*pinpoint.VerifyOTPMessageOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// VerifyOTPMessageWithContext indicates an expected call of VerifyOTPMessageWithContext.
+func (mr *MockPinpointAPIMockRecorder) VerifyOTPMessageWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "VerifyOTPMessageWithContext", reflect.TypeOf((*MockPinpointAPI)(nil).VerifyOTPMessageWithContext), varargs...)
 }

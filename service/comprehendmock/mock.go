@@ -686,6 +686,56 @@ func (mr *MockComprehendAPIMockRecorder) DeleteEntityRecognizerWithContext(arg0,
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEntityRecognizerWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).DeleteEntityRecognizerWithContext), varargs...)
 }
 
+// DeleteResourcePolicy mocks base method.
+func (m *MockComprehendAPI) DeleteResourcePolicy(arg0 *comprehend.DeleteResourcePolicyInput) (*comprehend.DeleteResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteResourcePolicy", arg0)
+	ret0, _ := ret[0].(*comprehend.DeleteResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteResourcePolicy indicates an expected call of DeleteResourcePolicy.
+func (mr *MockComprehendAPIMockRecorder) DeleteResourcePolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicy", reflect.TypeOf((*MockComprehendAPI)(nil).DeleteResourcePolicy), arg0)
+}
+
+// DeleteResourcePolicyRequest mocks base method.
+func (m *MockComprehendAPI) DeleteResourcePolicyRequest(arg0 *comprehend.DeleteResourcePolicyInput) (*request.Request, *comprehend.DeleteResourcePolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteResourcePolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*comprehend.DeleteResourcePolicyOutput)
+	return ret0, ret1
+}
+
+// DeleteResourcePolicyRequest indicates an expected call of DeleteResourcePolicyRequest.
+func (mr *MockComprehendAPIMockRecorder) DeleteResourcePolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyRequest", reflect.TypeOf((*MockComprehendAPI)(nil).DeleteResourcePolicyRequest), arg0)
+}
+
+// DeleteResourcePolicyWithContext mocks base method.
+func (m *MockComprehendAPI) DeleteResourcePolicyWithContext(arg0 context.Context, arg1 *comprehend.DeleteResourcePolicyInput, arg2 ...request.Option) (*comprehend.DeleteResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteResourcePolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*comprehend.DeleteResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteResourcePolicyWithContext indicates an expected call of DeleteResourcePolicyWithContext.
+func (mr *MockComprehendAPIMockRecorder) DeleteResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteResourcePolicyWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).DeleteResourcePolicyWithContext), varargs...)
+}
+
 // DescribeDocumentClassificationJob mocks base method.
 func (m *MockComprehendAPI) DescribeDocumentClassificationJob(arg0 *comprehend.DescribeDocumentClassificationJobInput) (*comprehend.DescribeDocumentClassificationJobOutput, error) {
 	m.ctrl.T.Helper()
@@ -1136,6 +1186,56 @@ func (mr *MockComprehendAPIMockRecorder) DescribePiiEntitiesDetectionJobWithCont
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribePiiEntitiesDetectionJobWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).DescribePiiEntitiesDetectionJobWithContext), varargs...)
 }
 
+// DescribeResourcePolicy mocks base method.
+func (m *MockComprehendAPI) DescribeResourcePolicy(arg0 *comprehend.DescribeResourcePolicyInput) (*comprehend.DescribeResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeResourcePolicy", arg0)
+	ret0, _ := ret[0].(*comprehend.DescribeResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeResourcePolicy indicates an expected call of DescribeResourcePolicy.
+func (mr *MockComprehendAPIMockRecorder) DescribeResourcePolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeResourcePolicy", reflect.TypeOf((*MockComprehendAPI)(nil).DescribeResourcePolicy), arg0)
+}
+
+// DescribeResourcePolicyRequest mocks base method.
+func (m *MockComprehendAPI) DescribeResourcePolicyRequest(arg0 *comprehend.DescribeResourcePolicyInput) (*request.Request, *comprehend.DescribeResourcePolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeResourcePolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*comprehend.DescribeResourcePolicyOutput)
+	return ret0, ret1
+}
+
+// DescribeResourcePolicyRequest indicates an expected call of DescribeResourcePolicyRequest.
+func (mr *MockComprehendAPIMockRecorder) DescribeResourcePolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeResourcePolicyRequest", reflect.TypeOf((*MockComprehendAPI)(nil).DescribeResourcePolicyRequest), arg0)
+}
+
+// DescribeResourcePolicyWithContext mocks base method.
+func (m *MockComprehendAPI) DescribeResourcePolicyWithContext(arg0 context.Context, arg1 *comprehend.DescribeResourcePolicyInput, arg2 ...request.Option) (*comprehend.DescribeResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeResourcePolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*comprehend.DescribeResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeResourcePolicyWithContext indicates an expected call of DescribeResourcePolicyWithContext.
+func (mr *MockComprehendAPIMockRecorder) DescribeResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeResourcePolicyWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).DescribeResourcePolicyWithContext), varargs...)
+}
+
 // DescribeSentimentDetectionJob mocks base method.
 func (m *MockComprehendAPI) DescribeSentimentDetectionJob(arg0 *comprehend.DescribeSentimentDetectionJobInput) (*comprehend.DescribeSentimentDetectionJobOutput, error) {
 	m.ctrl.T.Helper()
@@ -1184,6 +1284,56 @@ func (mr *MockComprehendAPIMockRecorder) DescribeSentimentDetectionJobWithContex
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeSentimentDetectionJobWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).DescribeSentimentDetectionJobWithContext), varargs...)
+}
+
+// DescribeTargetedSentimentDetectionJob mocks base method.
+func (m *MockComprehendAPI) DescribeTargetedSentimentDetectionJob(arg0 *comprehend.DescribeTargetedSentimentDetectionJobInput) (*comprehend.DescribeTargetedSentimentDetectionJobOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeTargetedSentimentDetectionJob", arg0)
+	ret0, _ := ret[0].(*comprehend.DescribeTargetedSentimentDetectionJobOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeTargetedSentimentDetectionJob indicates an expected call of DescribeTargetedSentimentDetectionJob.
+func (mr *MockComprehendAPIMockRecorder) DescribeTargetedSentimentDetectionJob(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTargetedSentimentDetectionJob", reflect.TypeOf((*MockComprehendAPI)(nil).DescribeTargetedSentimentDetectionJob), arg0)
+}
+
+// DescribeTargetedSentimentDetectionJobRequest mocks base method.
+func (m *MockComprehendAPI) DescribeTargetedSentimentDetectionJobRequest(arg0 *comprehend.DescribeTargetedSentimentDetectionJobInput) (*request.Request, *comprehend.DescribeTargetedSentimentDetectionJobOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeTargetedSentimentDetectionJobRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*comprehend.DescribeTargetedSentimentDetectionJobOutput)
+	return ret0, ret1
+}
+
+// DescribeTargetedSentimentDetectionJobRequest indicates an expected call of DescribeTargetedSentimentDetectionJobRequest.
+func (mr *MockComprehendAPIMockRecorder) DescribeTargetedSentimentDetectionJobRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTargetedSentimentDetectionJobRequest", reflect.TypeOf((*MockComprehendAPI)(nil).DescribeTargetedSentimentDetectionJobRequest), arg0)
+}
+
+// DescribeTargetedSentimentDetectionJobWithContext mocks base method.
+func (m *MockComprehendAPI) DescribeTargetedSentimentDetectionJobWithContext(arg0 context.Context, arg1 *comprehend.DescribeTargetedSentimentDetectionJobInput, arg2 ...request.Option) (*comprehend.DescribeTargetedSentimentDetectionJobOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeTargetedSentimentDetectionJobWithContext", varargs...)
+	ret0, _ := ret[0].(*comprehend.DescribeTargetedSentimentDetectionJobOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeTargetedSentimentDetectionJobWithContext indicates an expected call of DescribeTargetedSentimentDetectionJobWithContext.
+func (mr *MockComprehendAPIMockRecorder) DescribeTargetedSentimentDetectionJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTargetedSentimentDetectionJobWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).DescribeTargetedSentimentDetectionJobWithContext), varargs...)
 }
 
 // DescribeTopicsDetectionJob mocks base method.
@@ -1536,6 +1686,56 @@ func (mr *MockComprehendAPIMockRecorder) DetectSyntaxWithContext(arg0, arg1 inte
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DetectSyntaxWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).DetectSyntaxWithContext), varargs...)
 }
 
+// ImportModel mocks base method.
+func (m *MockComprehendAPI) ImportModel(arg0 *comprehend.ImportModelInput) (*comprehend.ImportModelOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ImportModel", arg0)
+	ret0, _ := ret[0].(*comprehend.ImportModelOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ImportModel indicates an expected call of ImportModel.
+func (mr *MockComprehendAPIMockRecorder) ImportModel(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportModel", reflect.TypeOf((*MockComprehendAPI)(nil).ImportModel), arg0)
+}
+
+// ImportModelRequest mocks base method.
+func (m *MockComprehendAPI) ImportModelRequest(arg0 *comprehend.ImportModelInput) (*request.Request, *comprehend.ImportModelOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ImportModelRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*comprehend.ImportModelOutput)
+	return ret0, ret1
+}
+
+// ImportModelRequest indicates an expected call of ImportModelRequest.
+func (mr *MockComprehendAPIMockRecorder) ImportModelRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportModelRequest", reflect.TypeOf((*MockComprehendAPI)(nil).ImportModelRequest), arg0)
+}
+
+// ImportModelWithContext mocks base method.
+func (m *MockComprehendAPI) ImportModelWithContext(arg0 context.Context, arg1 *comprehend.ImportModelInput, arg2 ...request.Option) (*comprehend.ImportModelOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ImportModelWithContext", varargs...)
+	ret0, _ := ret[0].(*comprehend.ImportModelOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ImportModelWithContext indicates an expected call of ImportModelWithContext.
+func (mr *MockComprehendAPIMockRecorder) ImportModelWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ImportModelWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).ImportModelWithContext), varargs...)
+}
+
 // ListDocumentClassificationJobs mocks base method.
 func (m *MockComprehendAPI) ListDocumentClassificationJobs(arg0 *comprehend.ListDocumentClassificationJobsInput) (*comprehend.ListDocumentClassificationJobsOutput, error) {
 	m.ctrl.T.Helper()
@@ -1617,6 +1817,89 @@ func (mr *MockComprehendAPIMockRecorder) ListDocumentClassificationJobsWithConte
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDocumentClassificationJobsWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).ListDocumentClassificationJobsWithContext), varargs...)
+}
+
+// ListDocumentClassifierSummaries mocks base method.
+func (m *MockComprehendAPI) ListDocumentClassifierSummaries(arg0 *comprehend.ListDocumentClassifierSummariesInput) (*comprehend.ListDocumentClassifierSummariesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListDocumentClassifierSummaries", arg0)
+	ret0, _ := ret[0].(*comprehend.ListDocumentClassifierSummariesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListDocumentClassifierSummaries indicates an expected call of ListDocumentClassifierSummaries.
+func (mr *MockComprehendAPIMockRecorder) ListDocumentClassifierSummaries(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDocumentClassifierSummaries", reflect.TypeOf((*MockComprehendAPI)(nil).ListDocumentClassifierSummaries), arg0)
+}
+
+// ListDocumentClassifierSummariesPages mocks base method.
+func (m *MockComprehendAPI) ListDocumentClassifierSummariesPages(arg0 *comprehend.ListDocumentClassifierSummariesInput, arg1 func(*comprehend.ListDocumentClassifierSummariesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListDocumentClassifierSummariesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListDocumentClassifierSummariesPages indicates an expected call of ListDocumentClassifierSummariesPages.
+func (mr *MockComprehendAPIMockRecorder) ListDocumentClassifierSummariesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDocumentClassifierSummariesPages", reflect.TypeOf((*MockComprehendAPI)(nil).ListDocumentClassifierSummariesPages), arg0, arg1)
+}
+
+// ListDocumentClassifierSummariesPagesWithContext mocks base method.
+func (m *MockComprehendAPI) ListDocumentClassifierSummariesPagesWithContext(arg0 context.Context, arg1 *comprehend.ListDocumentClassifierSummariesInput, arg2 func(*comprehend.ListDocumentClassifierSummariesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListDocumentClassifierSummariesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListDocumentClassifierSummariesPagesWithContext indicates an expected call of ListDocumentClassifierSummariesPagesWithContext.
+func (mr *MockComprehendAPIMockRecorder) ListDocumentClassifierSummariesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDocumentClassifierSummariesPagesWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).ListDocumentClassifierSummariesPagesWithContext), varargs...)
+}
+
+// ListDocumentClassifierSummariesRequest mocks base method.
+func (m *MockComprehendAPI) ListDocumentClassifierSummariesRequest(arg0 *comprehend.ListDocumentClassifierSummariesInput) (*request.Request, *comprehend.ListDocumentClassifierSummariesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListDocumentClassifierSummariesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*comprehend.ListDocumentClassifierSummariesOutput)
+	return ret0, ret1
+}
+
+// ListDocumentClassifierSummariesRequest indicates an expected call of ListDocumentClassifierSummariesRequest.
+func (mr *MockComprehendAPIMockRecorder) ListDocumentClassifierSummariesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDocumentClassifierSummariesRequest", reflect.TypeOf((*MockComprehendAPI)(nil).ListDocumentClassifierSummariesRequest), arg0)
+}
+
+// ListDocumentClassifierSummariesWithContext mocks base method.
+func (m *MockComprehendAPI) ListDocumentClassifierSummariesWithContext(arg0 context.Context, arg1 *comprehend.ListDocumentClassifierSummariesInput, arg2 ...request.Option) (*comprehend.ListDocumentClassifierSummariesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListDocumentClassifierSummariesWithContext", varargs...)
+	ret0, _ := ret[0].(*comprehend.ListDocumentClassifierSummariesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListDocumentClassifierSummariesWithContext indicates an expected call of ListDocumentClassifierSummariesWithContext.
+func (mr *MockComprehendAPIMockRecorder) ListDocumentClassifierSummariesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListDocumentClassifierSummariesWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).ListDocumentClassifierSummariesWithContext), varargs...)
 }
 
 // ListDocumentClassifiers mocks base method.
@@ -1916,6 +2199,89 @@ func (mr *MockComprehendAPIMockRecorder) ListEntitiesDetectionJobsWithContext(ar
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEntitiesDetectionJobsWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).ListEntitiesDetectionJobsWithContext), varargs...)
+}
+
+// ListEntityRecognizerSummaries mocks base method.
+func (m *MockComprehendAPI) ListEntityRecognizerSummaries(arg0 *comprehend.ListEntityRecognizerSummariesInput) (*comprehend.ListEntityRecognizerSummariesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListEntityRecognizerSummaries", arg0)
+	ret0, _ := ret[0].(*comprehend.ListEntityRecognizerSummariesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListEntityRecognizerSummaries indicates an expected call of ListEntityRecognizerSummaries.
+func (mr *MockComprehendAPIMockRecorder) ListEntityRecognizerSummaries(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEntityRecognizerSummaries", reflect.TypeOf((*MockComprehendAPI)(nil).ListEntityRecognizerSummaries), arg0)
+}
+
+// ListEntityRecognizerSummariesPages mocks base method.
+func (m *MockComprehendAPI) ListEntityRecognizerSummariesPages(arg0 *comprehend.ListEntityRecognizerSummariesInput, arg1 func(*comprehend.ListEntityRecognizerSummariesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListEntityRecognizerSummariesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListEntityRecognizerSummariesPages indicates an expected call of ListEntityRecognizerSummariesPages.
+func (mr *MockComprehendAPIMockRecorder) ListEntityRecognizerSummariesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEntityRecognizerSummariesPages", reflect.TypeOf((*MockComprehendAPI)(nil).ListEntityRecognizerSummariesPages), arg0, arg1)
+}
+
+// ListEntityRecognizerSummariesPagesWithContext mocks base method.
+func (m *MockComprehendAPI) ListEntityRecognizerSummariesPagesWithContext(arg0 context.Context, arg1 *comprehend.ListEntityRecognizerSummariesInput, arg2 func(*comprehend.ListEntityRecognizerSummariesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListEntityRecognizerSummariesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListEntityRecognizerSummariesPagesWithContext indicates an expected call of ListEntityRecognizerSummariesPagesWithContext.
+func (mr *MockComprehendAPIMockRecorder) ListEntityRecognizerSummariesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEntityRecognizerSummariesPagesWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).ListEntityRecognizerSummariesPagesWithContext), varargs...)
+}
+
+// ListEntityRecognizerSummariesRequest mocks base method.
+func (m *MockComprehendAPI) ListEntityRecognizerSummariesRequest(arg0 *comprehend.ListEntityRecognizerSummariesInput) (*request.Request, *comprehend.ListEntityRecognizerSummariesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListEntityRecognizerSummariesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*comprehend.ListEntityRecognizerSummariesOutput)
+	return ret0, ret1
+}
+
+// ListEntityRecognizerSummariesRequest indicates an expected call of ListEntityRecognizerSummariesRequest.
+func (mr *MockComprehendAPIMockRecorder) ListEntityRecognizerSummariesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEntityRecognizerSummariesRequest", reflect.TypeOf((*MockComprehendAPI)(nil).ListEntityRecognizerSummariesRequest), arg0)
+}
+
+// ListEntityRecognizerSummariesWithContext mocks base method.
+func (m *MockComprehendAPI) ListEntityRecognizerSummariesWithContext(arg0 context.Context, arg1 *comprehend.ListEntityRecognizerSummariesInput, arg2 ...request.Option) (*comprehend.ListEntityRecognizerSummariesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListEntityRecognizerSummariesWithContext", varargs...)
+	ret0, _ := ret[0].(*comprehend.ListEntityRecognizerSummariesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListEntityRecognizerSummariesWithContext indicates an expected call of ListEntityRecognizerSummariesWithContext.
+func (mr *MockComprehendAPIMockRecorder) ListEntityRecognizerSummariesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListEntityRecognizerSummariesWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).ListEntityRecognizerSummariesWithContext), varargs...)
 }
 
 // ListEntityRecognizers mocks base method.
@@ -2350,6 +2716,89 @@ func (mr *MockComprehendAPIMockRecorder) ListTagsForResourceWithContext(arg0, ar
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).ListTagsForResourceWithContext), varargs...)
 }
 
+// ListTargetedSentimentDetectionJobs mocks base method.
+func (m *MockComprehendAPI) ListTargetedSentimentDetectionJobs(arg0 *comprehend.ListTargetedSentimentDetectionJobsInput) (*comprehend.ListTargetedSentimentDetectionJobsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTargetedSentimentDetectionJobs", arg0)
+	ret0, _ := ret[0].(*comprehend.ListTargetedSentimentDetectionJobsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListTargetedSentimentDetectionJobs indicates an expected call of ListTargetedSentimentDetectionJobs.
+func (mr *MockComprehendAPIMockRecorder) ListTargetedSentimentDetectionJobs(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetedSentimentDetectionJobs", reflect.TypeOf((*MockComprehendAPI)(nil).ListTargetedSentimentDetectionJobs), arg0)
+}
+
+// ListTargetedSentimentDetectionJobsPages mocks base method.
+func (m *MockComprehendAPI) ListTargetedSentimentDetectionJobsPages(arg0 *comprehend.ListTargetedSentimentDetectionJobsInput, arg1 func(*comprehend.ListTargetedSentimentDetectionJobsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTargetedSentimentDetectionJobsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListTargetedSentimentDetectionJobsPages indicates an expected call of ListTargetedSentimentDetectionJobsPages.
+func (mr *MockComprehendAPIMockRecorder) ListTargetedSentimentDetectionJobsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetedSentimentDetectionJobsPages", reflect.TypeOf((*MockComprehendAPI)(nil).ListTargetedSentimentDetectionJobsPages), arg0, arg1)
+}
+
+// ListTargetedSentimentDetectionJobsPagesWithContext mocks base method.
+func (m *MockComprehendAPI) ListTargetedSentimentDetectionJobsPagesWithContext(arg0 context.Context, arg1 *comprehend.ListTargetedSentimentDetectionJobsInput, arg2 func(*comprehend.ListTargetedSentimentDetectionJobsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListTargetedSentimentDetectionJobsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListTargetedSentimentDetectionJobsPagesWithContext indicates an expected call of ListTargetedSentimentDetectionJobsPagesWithContext.
+func (mr *MockComprehendAPIMockRecorder) ListTargetedSentimentDetectionJobsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetedSentimentDetectionJobsPagesWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).ListTargetedSentimentDetectionJobsPagesWithContext), varargs...)
+}
+
+// ListTargetedSentimentDetectionJobsRequest mocks base method.
+func (m *MockComprehendAPI) ListTargetedSentimentDetectionJobsRequest(arg0 *comprehend.ListTargetedSentimentDetectionJobsInput) (*request.Request, *comprehend.ListTargetedSentimentDetectionJobsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTargetedSentimentDetectionJobsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*comprehend.ListTargetedSentimentDetectionJobsOutput)
+	return ret0, ret1
+}
+
+// ListTargetedSentimentDetectionJobsRequest indicates an expected call of ListTargetedSentimentDetectionJobsRequest.
+func (mr *MockComprehendAPIMockRecorder) ListTargetedSentimentDetectionJobsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetedSentimentDetectionJobsRequest", reflect.TypeOf((*MockComprehendAPI)(nil).ListTargetedSentimentDetectionJobsRequest), arg0)
+}
+
+// ListTargetedSentimentDetectionJobsWithContext mocks base method.
+func (m *MockComprehendAPI) ListTargetedSentimentDetectionJobsWithContext(arg0 context.Context, arg1 *comprehend.ListTargetedSentimentDetectionJobsInput, arg2 ...request.Option) (*comprehend.ListTargetedSentimentDetectionJobsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListTargetedSentimentDetectionJobsWithContext", varargs...)
+	ret0, _ := ret[0].(*comprehend.ListTargetedSentimentDetectionJobsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListTargetedSentimentDetectionJobsWithContext indicates an expected call of ListTargetedSentimentDetectionJobsWithContext.
+func (mr *MockComprehendAPIMockRecorder) ListTargetedSentimentDetectionJobsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetedSentimentDetectionJobsWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).ListTargetedSentimentDetectionJobsWithContext), varargs...)
+}
+
 // ListTopicsDetectionJobs mocks base method.
 func (m *MockComprehendAPI) ListTopicsDetectionJobs(arg0 *comprehend.ListTopicsDetectionJobsInput) (*comprehend.ListTopicsDetectionJobsOutput, error) {
 	m.ctrl.T.Helper()
@@ -2431,6 +2880,56 @@ func (mr *MockComprehendAPIMockRecorder) ListTopicsDetectionJobsWithContext(arg0
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTopicsDetectionJobsWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).ListTopicsDetectionJobsWithContext), varargs...)
+}
+
+// PutResourcePolicy mocks base method.
+func (m *MockComprehendAPI) PutResourcePolicy(arg0 *comprehend.PutResourcePolicyInput) (*comprehend.PutResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "PutResourcePolicy", arg0)
+	ret0, _ := ret[0].(*comprehend.PutResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// PutResourcePolicy indicates an expected call of PutResourcePolicy.
+func (mr *MockComprehendAPIMockRecorder) PutResourcePolicy(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutResourcePolicy", reflect.TypeOf((*MockComprehendAPI)(nil).PutResourcePolicy), arg0)
+}
+
+// PutResourcePolicyRequest mocks base method.
+func (m *MockComprehendAPI) PutResourcePolicyRequest(arg0 *comprehend.PutResourcePolicyInput) (*request.Request, *comprehend.PutResourcePolicyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "PutResourcePolicyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*comprehend.PutResourcePolicyOutput)
+	return ret0, ret1
+}
+
+// PutResourcePolicyRequest indicates an expected call of PutResourcePolicyRequest.
+func (mr *MockComprehendAPIMockRecorder) PutResourcePolicyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutResourcePolicyRequest", reflect.TypeOf((*MockComprehendAPI)(nil).PutResourcePolicyRequest), arg0)
+}
+
+// PutResourcePolicyWithContext mocks base method.
+func (m *MockComprehendAPI) PutResourcePolicyWithContext(arg0 context.Context, arg1 *comprehend.PutResourcePolicyInput, arg2 ...request.Option) (*comprehend.PutResourcePolicyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "PutResourcePolicyWithContext", varargs...)
+	ret0, _ := ret[0].(*comprehend.PutResourcePolicyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// PutResourcePolicyWithContext indicates an expected call of PutResourcePolicyWithContext.
+func (mr *MockComprehendAPIMockRecorder) PutResourcePolicyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PutResourcePolicyWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).PutResourcePolicyWithContext), varargs...)
 }
 
 // StartDocumentClassificationJob mocks base method.
@@ -2783,6 +3282,56 @@ func (mr *MockComprehendAPIMockRecorder) StartSentimentDetectionJobWithContext(a
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartSentimentDetectionJobWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).StartSentimentDetectionJobWithContext), varargs...)
 }
 
+// StartTargetedSentimentDetectionJob mocks base method.
+func (m *MockComprehendAPI) StartTargetedSentimentDetectionJob(arg0 *comprehend.StartTargetedSentimentDetectionJobInput) (*comprehend.StartTargetedSentimentDetectionJobOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartTargetedSentimentDetectionJob", arg0)
+	ret0, _ := ret[0].(*comprehend.StartTargetedSentimentDetectionJobOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartTargetedSentimentDetectionJob indicates an expected call of StartTargetedSentimentDetectionJob.
+func (mr *MockComprehendAPIMockRecorder) StartTargetedSentimentDetectionJob(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartTargetedSentimentDetectionJob", reflect.TypeOf((*MockComprehendAPI)(nil).StartTargetedSentimentDetectionJob), arg0)
+}
+
+// StartTargetedSentimentDetectionJobRequest mocks base method.
+func (m *MockComprehendAPI) StartTargetedSentimentDetectionJobRequest(arg0 *comprehend.StartTargetedSentimentDetectionJobInput) (*request.Request, *comprehend.StartTargetedSentimentDetectionJobOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartTargetedSentimentDetectionJobRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*comprehend.StartTargetedSentimentDetectionJobOutput)
+	return ret0, ret1
+}
+
+// StartTargetedSentimentDetectionJobRequest indicates an expected call of StartTargetedSentimentDetectionJobRequest.
+func (mr *MockComprehendAPIMockRecorder) StartTargetedSentimentDetectionJobRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartTargetedSentimentDetectionJobRequest", reflect.TypeOf((*MockComprehendAPI)(nil).StartTargetedSentimentDetectionJobRequest), arg0)
+}
+
+// StartTargetedSentimentDetectionJobWithContext mocks base method.
+func (m *MockComprehendAPI) StartTargetedSentimentDetectionJobWithContext(arg0 context.Context, arg1 *comprehend.StartTargetedSentimentDetectionJobInput, arg2 ...request.Option) (*comprehend.StartTargetedSentimentDetectionJobOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "StartTargetedSentimentDetectionJobWithContext", varargs...)
+	ret0, _ := ret[0].(*comprehend.StartTargetedSentimentDetectionJobOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartTargetedSentimentDetectionJobWithContext indicates an expected call of StartTargetedSentimentDetectionJobWithContext.
+func (mr *MockComprehendAPIMockRecorder) StartTargetedSentimentDetectionJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartTargetedSentimentDetectionJobWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).StartTargetedSentimentDetectionJobWithContext), varargs...)
+}
+
 // StartTopicsDetectionJob mocks base method.
 func (m *MockComprehendAPI) StartTopicsDetectionJob(arg0 *comprehend.StartTopicsDetectionJobInput) (*comprehend.StartTopicsDetectionJobOutput, error) {
 	m.ctrl.T.Helper()
@@ -3131,6 +3680,56 @@ func (mr *MockComprehendAPIMockRecorder) StopSentimentDetectionJobWithContext(ar
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopSentimentDetectionJobWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).StopSentimentDetectionJobWithContext), varargs...)
+}
+
+// StopTargetedSentimentDetectionJob mocks base method.
+func (m *MockComprehendAPI) StopTargetedSentimentDetectionJob(arg0 *comprehend.StopTargetedSentimentDetectionJobInput) (*comprehend.StopTargetedSentimentDetectionJobOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StopTargetedSentimentDetectionJob", arg0)
+	ret0, _ := ret[0].(*comprehend.StopTargetedSentimentDetectionJobOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StopTargetedSentimentDetectionJob indicates an expected call of StopTargetedSentimentDetectionJob.
+func (mr *MockComprehendAPIMockRecorder) StopTargetedSentimentDetectionJob(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopTargetedSentimentDetectionJob", reflect.TypeOf((*MockComprehendAPI)(nil).StopTargetedSentimentDetectionJob), arg0)
+}
+
+// StopTargetedSentimentDetectionJobRequest mocks base method.
+func (m *MockComprehendAPI) StopTargetedSentimentDetectionJobRequest(arg0 *comprehend.StopTargetedSentimentDetectionJobInput) (*request.Request, *comprehend.StopTargetedSentimentDetectionJobOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StopTargetedSentimentDetectionJobRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*comprehend.StopTargetedSentimentDetectionJobOutput)
+	return ret0, ret1
+}
+
+// StopTargetedSentimentDetectionJobRequest indicates an expected call of StopTargetedSentimentDetectionJobRequest.
+func (mr *MockComprehendAPIMockRecorder) StopTargetedSentimentDetectionJobRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopTargetedSentimentDetectionJobRequest", reflect.TypeOf((*MockComprehendAPI)(nil).StopTargetedSentimentDetectionJobRequest), arg0)
+}
+
+// StopTargetedSentimentDetectionJobWithContext mocks base method.
+func (m *MockComprehendAPI) StopTargetedSentimentDetectionJobWithContext(arg0 context.Context, arg1 *comprehend.StopTargetedSentimentDetectionJobInput, arg2 ...request.Option) (*comprehend.StopTargetedSentimentDetectionJobOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "StopTargetedSentimentDetectionJobWithContext", varargs...)
+	ret0, _ := ret[0].(*comprehend.StopTargetedSentimentDetectionJobOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StopTargetedSentimentDetectionJobWithContext indicates an expected call of StopTargetedSentimentDetectionJobWithContext.
+func (mr *MockComprehendAPIMockRecorder) StopTargetedSentimentDetectionJobWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopTargetedSentimentDetectionJobWithContext", reflect.TypeOf((*MockComprehendAPI)(nil).StopTargetedSentimentDetectionJobWithContext), varargs...)
 }
 
 // StopTrainingDocumentClassifier mocks base method.

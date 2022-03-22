@@ -719,6 +719,56 @@ func (mr *MockElasticsearchServiceAPIMockRecorder) DescribeDomainAutoTunesWithCo
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDomainAutoTunesWithContext", reflect.TypeOf((*MockElasticsearchServiceAPI)(nil).DescribeDomainAutoTunesWithContext), varargs...)
 }
 
+// DescribeDomainChangeProgress mocks base method.
+func (m *MockElasticsearchServiceAPI) DescribeDomainChangeProgress(arg0 *elasticsearchservice.DescribeDomainChangeProgressInput) (*elasticsearchservice.DescribeDomainChangeProgressOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeDomainChangeProgress", arg0)
+	ret0, _ := ret[0].(*elasticsearchservice.DescribeDomainChangeProgressOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeDomainChangeProgress indicates an expected call of DescribeDomainChangeProgress.
+func (mr *MockElasticsearchServiceAPIMockRecorder) DescribeDomainChangeProgress(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDomainChangeProgress", reflect.TypeOf((*MockElasticsearchServiceAPI)(nil).DescribeDomainChangeProgress), arg0)
+}
+
+// DescribeDomainChangeProgressRequest mocks base method.
+func (m *MockElasticsearchServiceAPI) DescribeDomainChangeProgressRequest(arg0 *elasticsearchservice.DescribeDomainChangeProgressInput) (*request.Request, *elasticsearchservice.DescribeDomainChangeProgressOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeDomainChangeProgressRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*elasticsearchservice.DescribeDomainChangeProgressOutput)
+	return ret0, ret1
+}
+
+// DescribeDomainChangeProgressRequest indicates an expected call of DescribeDomainChangeProgressRequest.
+func (mr *MockElasticsearchServiceAPIMockRecorder) DescribeDomainChangeProgressRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDomainChangeProgressRequest", reflect.TypeOf((*MockElasticsearchServiceAPI)(nil).DescribeDomainChangeProgressRequest), arg0)
+}
+
+// DescribeDomainChangeProgressWithContext mocks base method.
+func (m *MockElasticsearchServiceAPI) DescribeDomainChangeProgressWithContext(arg0 context.Context, arg1 *elasticsearchservice.DescribeDomainChangeProgressInput, arg2 ...request.Option) (*elasticsearchservice.DescribeDomainChangeProgressOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeDomainChangeProgressWithContext", varargs...)
+	ret0, _ := ret[0].(*elasticsearchservice.DescribeDomainChangeProgressOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeDomainChangeProgressWithContext indicates an expected call of DescribeDomainChangeProgressWithContext.
+func (mr *MockElasticsearchServiceAPIMockRecorder) DescribeDomainChangeProgressWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeDomainChangeProgressWithContext", reflect.TypeOf((*MockElasticsearchServiceAPI)(nil).DescribeDomainChangeProgressWithContext), varargs...)
+}
+
 // DescribeElasticsearchDomain mocks base method.
 func (m *MockElasticsearchServiceAPI) DescribeElasticsearchDomain(arg0 *elasticsearchservice.DescribeElasticsearchDomainInput) (*elasticsearchservice.DescribeElasticsearchDomainOutput, error) {
 	m.ctrl.T.Helper()

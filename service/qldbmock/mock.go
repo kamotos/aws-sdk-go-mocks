@@ -1083,6 +1083,56 @@ func (mr *MockQLDBAPIMockRecorder) UpdateLedger(arg0 interface{}) *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLedger", reflect.TypeOf((*MockQLDBAPI)(nil).UpdateLedger), arg0)
 }
 
+// UpdateLedgerPermissionsMode mocks base method.
+func (m *MockQLDBAPI) UpdateLedgerPermissionsMode(arg0 *qldb.UpdateLedgerPermissionsModeInput) (*qldb.UpdateLedgerPermissionsModeOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateLedgerPermissionsMode", arg0)
+	ret0, _ := ret[0].(*qldb.UpdateLedgerPermissionsModeOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateLedgerPermissionsMode indicates an expected call of UpdateLedgerPermissionsMode.
+func (mr *MockQLDBAPIMockRecorder) UpdateLedgerPermissionsMode(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLedgerPermissionsMode", reflect.TypeOf((*MockQLDBAPI)(nil).UpdateLedgerPermissionsMode), arg0)
+}
+
+// UpdateLedgerPermissionsModeRequest mocks base method.
+func (m *MockQLDBAPI) UpdateLedgerPermissionsModeRequest(arg0 *qldb.UpdateLedgerPermissionsModeInput) (*request.Request, *qldb.UpdateLedgerPermissionsModeOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateLedgerPermissionsModeRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*qldb.UpdateLedgerPermissionsModeOutput)
+	return ret0, ret1
+}
+
+// UpdateLedgerPermissionsModeRequest indicates an expected call of UpdateLedgerPermissionsModeRequest.
+func (mr *MockQLDBAPIMockRecorder) UpdateLedgerPermissionsModeRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLedgerPermissionsModeRequest", reflect.TypeOf((*MockQLDBAPI)(nil).UpdateLedgerPermissionsModeRequest), arg0)
+}
+
+// UpdateLedgerPermissionsModeWithContext mocks base method.
+func (m *MockQLDBAPI) UpdateLedgerPermissionsModeWithContext(arg0 context.Context, arg1 *qldb.UpdateLedgerPermissionsModeInput, arg2 ...request.Option) (*qldb.UpdateLedgerPermissionsModeOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateLedgerPermissionsModeWithContext", varargs...)
+	ret0, _ := ret[0].(*qldb.UpdateLedgerPermissionsModeOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateLedgerPermissionsModeWithContext indicates an expected call of UpdateLedgerPermissionsModeWithContext.
+func (mr *MockQLDBAPIMockRecorder) UpdateLedgerPermissionsModeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLedgerPermissionsModeWithContext", reflect.TypeOf((*MockQLDBAPI)(nil).UpdateLedgerPermissionsModeWithContext), varargs...)
+}
+
 // UpdateLedgerRequest mocks base method.
 func (m *MockQLDBAPI) UpdateLedgerRequest(arg0 *qldb.UpdateLedgerInput) (*request.Request, *qldb.UpdateLedgerOutput) {
 	m.ctrl.T.Helper()

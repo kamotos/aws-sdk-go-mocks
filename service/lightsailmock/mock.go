@@ -436,6 +436,106 @@ func (mr *MockLightsailAPIMockRecorder) CopySnapshotWithContext(arg0, arg1 inter
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CopySnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CopySnapshotWithContext), varargs...)
 }
 
+// CreateBucket mocks base method.
+func (m *MockLightsailAPI) CreateBucket(arg0 *lightsail.CreateBucketInput) (*lightsail.CreateBucketOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateBucket", arg0)
+	ret0, _ := ret[0].(*lightsail.CreateBucketOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateBucket indicates an expected call of CreateBucket.
+func (mr *MockLightsailAPIMockRecorder) CreateBucket(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBucket", reflect.TypeOf((*MockLightsailAPI)(nil).CreateBucket), arg0)
+}
+
+// CreateBucketAccessKey mocks base method.
+func (m *MockLightsailAPI) CreateBucketAccessKey(arg0 *lightsail.CreateBucketAccessKeyInput) (*lightsail.CreateBucketAccessKeyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateBucketAccessKey", arg0)
+	ret0, _ := ret[0].(*lightsail.CreateBucketAccessKeyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateBucketAccessKey indicates an expected call of CreateBucketAccessKey.
+func (mr *MockLightsailAPIMockRecorder) CreateBucketAccessKey(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBucketAccessKey", reflect.TypeOf((*MockLightsailAPI)(nil).CreateBucketAccessKey), arg0)
+}
+
+// CreateBucketAccessKeyRequest mocks base method.
+func (m *MockLightsailAPI) CreateBucketAccessKeyRequest(arg0 *lightsail.CreateBucketAccessKeyInput) (*request.Request, *lightsail.CreateBucketAccessKeyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateBucketAccessKeyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lightsail.CreateBucketAccessKeyOutput)
+	return ret0, ret1
+}
+
+// CreateBucketAccessKeyRequest indicates an expected call of CreateBucketAccessKeyRequest.
+func (mr *MockLightsailAPIMockRecorder) CreateBucketAccessKeyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBucketAccessKeyRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateBucketAccessKeyRequest), arg0)
+}
+
+// CreateBucketAccessKeyWithContext mocks base method.
+func (m *MockLightsailAPI) CreateBucketAccessKeyWithContext(arg0 context.Context, arg1 *lightsail.CreateBucketAccessKeyInput, arg2 ...request.Option) (*lightsail.CreateBucketAccessKeyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateBucketAccessKeyWithContext", varargs...)
+	ret0, _ := ret[0].(*lightsail.CreateBucketAccessKeyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateBucketAccessKeyWithContext indicates an expected call of CreateBucketAccessKeyWithContext.
+func (mr *MockLightsailAPIMockRecorder) CreateBucketAccessKeyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBucketAccessKeyWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateBucketAccessKeyWithContext), varargs...)
+}
+
+// CreateBucketRequest mocks base method.
+func (m *MockLightsailAPI) CreateBucketRequest(arg0 *lightsail.CreateBucketInput) (*request.Request, *lightsail.CreateBucketOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateBucketRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lightsail.CreateBucketOutput)
+	return ret0, ret1
+}
+
+// CreateBucketRequest indicates an expected call of CreateBucketRequest.
+func (mr *MockLightsailAPIMockRecorder) CreateBucketRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBucketRequest", reflect.TypeOf((*MockLightsailAPI)(nil).CreateBucketRequest), arg0)
+}
+
+// CreateBucketWithContext mocks base method.
+func (m *MockLightsailAPI) CreateBucketWithContext(arg0 context.Context, arg1 *lightsail.CreateBucketInput, arg2 ...request.Option) (*lightsail.CreateBucketOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateBucketWithContext", varargs...)
+	ret0, _ := ret[0].(*lightsail.CreateBucketOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateBucketWithContext indicates an expected call of CreateBucketWithContext.
+func (mr *MockLightsailAPIMockRecorder) CreateBucketWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBucketWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).CreateBucketWithContext), varargs...)
+}
+
 // CreateCertificate mocks base method.
 func (m *MockLightsailAPI) CreateCertificate(arg0 *lightsail.CreateCertificateInput) (*lightsail.CreateCertificateOutput, error) {
 	m.ctrl.T.Helper()
@@ -1584,6 +1684,106 @@ func (mr *MockLightsailAPIMockRecorder) DeleteAutoSnapshotWithContext(arg0, arg1
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAutoSnapshotWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteAutoSnapshotWithContext), varargs...)
+}
+
+// DeleteBucket mocks base method.
+func (m *MockLightsailAPI) DeleteBucket(arg0 *lightsail.DeleteBucketInput) (*lightsail.DeleteBucketOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteBucket", arg0)
+	ret0, _ := ret[0].(*lightsail.DeleteBucketOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteBucket indicates an expected call of DeleteBucket.
+func (mr *MockLightsailAPIMockRecorder) DeleteBucket(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBucket", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteBucket), arg0)
+}
+
+// DeleteBucketAccessKey mocks base method.
+func (m *MockLightsailAPI) DeleteBucketAccessKey(arg0 *lightsail.DeleteBucketAccessKeyInput) (*lightsail.DeleteBucketAccessKeyOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteBucketAccessKey", arg0)
+	ret0, _ := ret[0].(*lightsail.DeleteBucketAccessKeyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteBucketAccessKey indicates an expected call of DeleteBucketAccessKey.
+func (mr *MockLightsailAPIMockRecorder) DeleteBucketAccessKey(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBucketAccessKey", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteBucketAccessKey), arg0)
+}
+
+// DeleteBucketAccessKeyRequest mocks base method.
+func (m *MockLightsailAPI) DeleteBucketAccessKeyRequest(arg0 *lightsail.DeleteBucketAccessKeyInput) (*request.Request, *lightsail.DeleteBucketAccessKeyOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteBucketAccessKeyRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lightsail.DeleteBucketAccessKeyOutput)
+	return ret0, ret1
+}
+
+// DeleteBucketAccessKeyRequest indicates an expected call of DeleteBucketAccessKeyRequest.
+func (mr *MockLightsailAPIMockRecorder) DeleteBucketAccessKeyRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBucketAccessKeyRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteBucketAccessKeyRequest), arg0)
+}
+
+// DeleteBucketAccessKeyWithContext mocks base method.
+func (m *MockLightsailAPI) DeleteBucketAccessKeyWithContext(arg0 context.Context, arg1 *lightsail.DeleteBucketAccessKeyInput, arg2 ...request.Option) (*lightsail.DeleteBucketAccessKeyOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteBucketAccessKeyWithContext", varargs...)
+	ret0, _ := ret[0].(*lightsail.DeleteBucketAccessKeyOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteBucketAccessKeyWithContext indicates an expected call of DeleteBucketAccessKeyWithContext.
+func (mr *MockLightsailAPIMockRecorder) DeleteBucketAccessKeyWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBucketAccessKeyWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteBucketAccessKeyWithContext), varargs...)
+}
+
+// DeleteBucketRequest mocks base method.
+func (m *MockLightsailAPI) DeleteBucketRequest(arg0 *lightsail.DeleteBucketInput) (*request.Request, *lightsail.DeleteBucketOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteBucketRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lightsail.DeleteBucketOutput)
+	return ret0, ret1
+}
+
+// DeleteBucketRequest indicates an expected call of DeleteBucketRequest.
+func (mr *MockLightsailAPIMockRecorder) DeleteBucketRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBucketRequest", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteBucketRequest), arg0)
+}
+
+// DeleteBucketWithContext mocks base method.
+func (m *MockLightsailAPI) DeleteBucketWithContext(arg0 context.Context, arg1 *lightsail.DeleteBucketInput, arg2 ...request.Option) (*lightsail.DeleteBucketOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteBucketWithContext", varargs...)
+	ret0, _ := ret[0].(*lightsail.DeleteBucketOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteBucketWithContext indicates an expected call of DeleteBucketWithContext.
+func (mr *MockLightsailAPIMockRecorder) DeleteBucketWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBucketWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).DeleteBucketWithContext), varargs...)
 }
 
 // DeleteCertificate mocks base method.
@@ -3034,6 +3234,206 @@ func (mr *MockLightsailAPIMockRecorder) GetBlueprintsWithContext(arg0, arg1 inte
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlueprintsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetBlueprintsWithContext), varargs...)
+}
+
+// GetBucketAccessKeys mocks base method.
+func (m *MockLightsailAPI) GetBucketAccessKeys(arg0 *lightsail.GetBucketAccessKeysInput) (*lightsail.GetBucketAccessKeysOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetBucketAccessKeys", arg0)
+	ret0, _ := ret[0].(*lightsail.GetBucketAccessKeysOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetBucketAccessKeys indicates an expected call of GetBucketAccessKeys.
+func (mr *MockLightsailAPIMockRecorder) GetBucketAccessKeys(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketAccessKeys", reflect.TypeOf((*MockLightsailAPI)(nil).GetBucketAccessKeys), arg0)
+}
+
+// GetBucketAccessKeysRequest mocks base method.
+func (m *MockLightsailAPI) GetBucketAccessKeysRequest(arg0 *lightsail.GetBucketAccessKeysInput) (*request.Request, *lightsail.GetBucketAccessKeysOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetBucketAccessKeysRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lightsail.GetBucketAccessKeysOutput)
+	return ret0, ret1
+}
+
+// GetBucketAccessKeysRequest indicates an expected call of GetBucketAccessKeysRequest.
+func (mr *MockLightsailAPIMockRecorder) GetBucketAccessKeysRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketAccessKeysRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetBucketAccessKeysRequest), arg0)
+}
+
+// GetBucketAccessKeysWithContext mocks base method.
+func (m *MockLightsailAPI) GetBucketAccessKeysWithContext(arg0 context.Context, arg1 *lightsail.GetBucketAccessKeysInput, arg2 ...request.Option) (*lightsail.GetBucketAccessKeysOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetBucketAccessKeysWithContext", varargs...)
+	ret0, _ := ret[0].(*lightsail.GetBucketAccessKeysOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetBucketAccessKeysWithContext indicates an expected call of GetBucketAccessKeysWithContext.
+func (mr *MockLightsailAPIMockRecorder) GetBucketAccessKeysWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketAccessKeysWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetBucketAccessKeysWithContext), varargs...)
+}
+
+// GetBucketBundles mocks base method.
+func (m *MockLightsailAPI) GetBucketBundles(arg0 *lightsail.GetBucketBundlesInput) (*lightsail.GetBucketBundlesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetBucketBundles", arg0)
+	ret0, _ := ret[0].(*lightsail.GetBucketBundlesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetBucketBundles indicates an expected call of GetBucketBundles.
+func (mr *MockLightsailAPIMockRecorder) GetBucketBundles(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketBundles", reflect.TypeOf((*MockLightsailAPI)(nil).GetBucketBundles), arg0)
+}
+
+// GetBucketBundlesRequest mocks base method.
+func (m *MockLightsailAPI) GetBucketBundlesRequest(arg0 *lightsail.GetBucketBundlesInput) (*request.Request, *lightsail.GetBucketBundlesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetBucketBundlesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lightsail.GetBucketBundlesOutput)
+	return ret0, ret1
+}
+
+// GetBucketBundlesRequest indicates an expected call of GetBucketBundlesRequest.
+func (mr *MockLightsailAPIMockRecorder) GetBucketBundlesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketBundlesRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetBucketBundlesRequest), arg0)
+}
+
+// GetBucketBundlesWithContext mocks base method.
+func (m *MockLightsailAPI) GetBucketBundlesWithContext(arg0 context.Context, arg1 *lightsail.GetBucketBundlesInput, arg2 ...request.Option) (*lightsail.GetBucketBundlesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetBucketBundlesWithContext", varargs...)
+	ret0, _ := ret[0].(*lightsail.GetBucketBundlesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetBucketBundlesWithContext indicates an expected call of GetBucketBundlesWithContext.
+func (mr *MockLightsailAPIMockRecorder) GetBucketBundlesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketBundlesWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetBucketBundlesWithContext), varargs...)
+}
+
+// GetBucketMetricData mocks base method.
+func (m *MockLightsailAPI) GetBucketMetricData(arg0 *lightsail.GetBucketMetricDataInput) (*lightsail.GetBucketMetricDataOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetBucketMetricData", arg0)
+	ret0, _ := ret[0].(*lightsail.GetBucketMetricDataOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetBucketMetricData indicates an expected call of GetBucketMetricData.
+func (mr *MockLightsailAPIMockRecorder) GetBucketMetricData(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketMetricData", reflect.TypeOf((*MockLightsailAPI)(nil).GetBucketMetricData), arg0)
+}
+
+// GetBucketMetricDataRequest mocks base method.
+func (m *MockLightsailAPI) GetBucketMetricDataRequest(arg0 *lightsail.GetBucketMetricDataInput) (*request.Request, *lightsail.GetBucketMetricDataOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetBucketMetricDataRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lightsail.GetBucketMetricDataOutput)
+	return ret0, ret1
+}
+
+// GetBucketMetricDataRequest indicates an expected call of GetBucketMetricDataRequest.
+func (mr *MockLightsailAPIMockRecorder) GetBucketMetricDataRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketMetricDataRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetBucketMetricDataRequest), arg0)
+}
+
+// GetBucketMetricDataWithContext mocks base method.
+func (m *MockLightsailAPI) GetBucketMetricDataWithContext(arg0 context.Context, arg1 *lightsail.GetBucketMetricDataInput, arg2 ...request.Option) (*lightsail.GetBucketMetricDataOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetBucketMetricDataWithContext", varargs...)
+	ret0, _ := ret[0].(*lightsail.GetBucketMetricDataOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetBucketMetricDataWithContext indicates an expected call of GetBucketMetricDataWithContext.
+func (mr *MockLightsailAPIMockRecorder) GetBucketMetricDataWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketMetricDataWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetBucketMetricDataWithContext), varargs...)
+}
+
+// GetBuckets mocks base method.
+func (m *MockLightsailAPI) GetBuckets(arg0 *lightsail.GetBucketsInput) (*lightsail.GetBucketsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetBuckets", arg0)
+	ret0, _ := ret[0].(*lightsail.GetBucketsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetBuckets indicates an expected call of GetBuckets.
+func (mr *MockLightsailAPIMockRecorder) GetBuckets(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBuckets", reflect.TypeOf((*MockLightsailAPI)(nil).GetBuckets), arg0)
+}
+
+// GetBucketsRequest mocks base method.
+func (m *MockLightsailAPI) GetBucketsRequest(arg0 *lightsail.GetBucketsInput) (*request.Request, *lightsail.GetBucketsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetBucketsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lightsail.GetBucketsOutput)
+	return ret0, ret1
+}
+
+// GetBucketsRequest indicates an expected call of GetBucketsRequest.
+func (mr *MockLightsailAPIMockRecorder) GetBucketsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketsRequest", reflect.TypeOf((*MockLightsailAPI)(nil).GetBucketsRequest), arg0)
+}
+
+// GetBucketsWithContext mocks base method.
+func (m *MockLightsailAPI) GetBucketsWithContext(arg0 context.Context, arg1 *lightsail.GetBucketsInput, arg2 ...request.Option) (*lightsail.GetBucketsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetBucketsWithContext", varargs...)
+	ret0, _ := ret[0].(*lightsail.GetBucketsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetBucketsWithContext indicates an expected call of GetBucketsWithContext.
+func (mr *MockLightsailAPIMockRecorder) GetBucketsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBucketsWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).GetBucketsWithContext), varargs...)
 }
 
 // GetBundles mocks base method.
@@ -6386,6 +6786,56 @@ func (mr *MockLightsailAPIMockRecorder) SetIpAddressTypeWithContext(arg0, arg1 i
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetIpAddressTypeWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).SetIpAddressTypeWithContext), varargs...)
 }
 
+// SetResourceAccessForBucket mocks base method.
+func (m *MockLightsailAPI) SetResourceAccessForBucket(arg0 *lightsail.SetResourceAccessForBucketInput) (*lightsail.SetResourceAccessForBucketOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SetResourceAccessForBucket", arg0)
+	ret0, _ := ret[0].(*lightsail.SetResourceAccessForBucketOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SetResourceAccessForBucket indicates an expected call of SetResourceAccessForBucket.
+func (mr *MockLightsailAPIMockRecorder) SetResourceAccessForBucket(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetResourceAccessForBucket", reflect.TypeOf((*MockLightsailAPI)(nil).SetResourceAccessForBucket), arg0)
+}
+
+// SetResourceAccessForBucketRequest mocks base method.
+func (m *MockLightsailAPI) SetResourceAccessForBucketRequest(arg0 *lightsail.SetResourceAccessForBucketInput) (*request.Request, *lightsail.SetResourceAccessForBucketOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SetResourceAccessForBucketRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lightsail.SetResourceAccessForBucketOutput)
+	return ret0, ret1
+}
+
+// SetResourceAccessForBucketRequest indicates an expected call of SetResourceAccessForBucketRequest.
+func (mr *MockLightsailAPIMockRecorder) SetResourceAccessForBucketRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetResourceAccessForBucketRequest", reflect.TypeOf((*MockLightsailAPI)(nil).SetResourceAccessForBucketRequest), arg0)
+}
+
+// SetResourceAccessForBucketWithContext mocks base method.
+func (m *MockLightsailAPI) SetResourceAccessForBucketWithContext(arg0 context.Context, arg1 *lightsail.SetResourceAccessForBucketInput, arg2 ...request.Option) (*lightsail.SetResourceAccessForBucketOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "SetResourceAccessForBucketWithContext", varargs...)
+	ret0, _ := ret[0].(*lightsail.SetResourceAccessForBucketOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// SetResourceAccessForBucketWithContext indicates an expected call of SetResourceAccessForBucketWithContext.
+func (mr *MockLightsailAPIMockRecorder) SetResourceAccessForBucketWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetResourceAccessForBucketWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).SetResourceAccessForBucketWithContext), varargs...)
+}
+
 // StartInstance mocks base method.
 func (m *MockLightsailAPI) StartInstance(arg0 *lightsail.StartInstanceInput) (*lightsail.StartInstanceOutput, error) {
 	m.ctrl.T.Helper()
@@ -6784,6 +7234,106 @@ func (mr *MockLightsailAPIMockRecorder) UntagResourceWithContext(arg0, arg1 inte
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).UntagResourceWithContext), varargs...)
+}
+
+// UpdateBucket mocks base method.
+func (m *MockLightsailAPI) UpdateBucket(arg0 *lightsail.UpdateBucketInput) (*lightsail.UpdateBucketOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateBucket", arg0)
+	ret0, _ := ret[0].(*lightsail.UpdateBucketOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateBucket indicates an expected call of UpdateBucket.
+func (mr *MockLightsailAPIMockRecorder) UpdateBucket(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBucket", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateBucket), arg0)
+}
+
+// UpdateBucketBundle mocks base method.
+func (m *MockLightsailAPI) UpdateBucketBundle(arg0 *lightsail.UpdateBucketBundleInput) (*lightsail.UpdateBucketBundleOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateBucketBundle", arg0)
+	ret0, _ := ret[0].(*lightsail.UpdateBucketBundleOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateBucketBundle indicates an expected call of UpdateBucketBundle.
+func (mr *MockLightsailAPIMockRecorder) UpdateBucketBundle(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBucketBundle", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateBucketBundle), arg0)
+}
+
+// UpdateBucketBundleRequest mocks base method.
+func (m *MockLightsailAPI) UpdateBucketBundleRequest(arg0 *lightsail.UpdateBucketBundleInput) (*request.Request, *lightsail.UpdateBucketBundleOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateBucketBundleRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lightsail.UpdateBucketBundleOutput)
+	return ret0, ret1
+}
+
+// UpdateBucketBundleRequest indicates an expected call of UpdateBucketBundleRequest.
+func (mr *MockLightsailAPIMockRecorder) UpdateBucketBundleRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBucketBundleRequest", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateBucketBundleRequest), arg0)
+}
+
+// UpdateBucketBundleWithContext mocks base method.
+func (m *MockLightsailAPI) UpdateBucketBundleWithContext(arg0 context.Context, arg1 *lightsail.UpdateBucketBundleInput, arg2 ...request.Option) (*lightsail.UpdateBucketBundleOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateBucketBundleWithContext", varargs...)
+	ret0, _ := ret[0].(*lightsail.UpdateBucketBundleOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateBucketBundleWithContext indicates an expected call of UpdateBucketBundleWithContext.
+func (mr *MockLightsailAPIMockRecorder) UpdateBucketBundleWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBucketBundleWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateBucketBundleWithContext), varargs...)
+}
+
+// UpdateBucketRequest mocks base method.
+func (m *MockLightsailAPI) UpdateBucketRequest(arg0 *lightsail.UpdateBucketInput) (*request.Request, *lightsail.UpdateBucketOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateBucketRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*lightsail.UpdateBucketOutput)
+	return ret0, ret1
+}
+
+// UpdateBucketRequest indicates an expected call of UpdateBucketRequest.
+func (mr *MockLightsailAPIMockRecorder) UpdateBucketRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBucketRequest", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateBucketRequest), arg0)
+}
+
+// UpdateBucketWithContext mocks base method.
+func (m *MockLightsailAPI) UpdateBucketWithContext(arg0 context.Context, arg1 *lightsail.UpdateBucketInput, arg2 ...request.Option) (*lightsail.UpdateBucketOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateBucketWithContext", varargs...)
+	ret0, _ := ret[0].(*lightsail.UpdateBucketOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateBucketWithContext indicates an expected call of UpdateBucketWithContext.
+func (mr *MockLightsailAPIMockRecorder) UpdateBucketWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateBucketWithContext", reflect.TypeOf((*MockLightsailAPI)(nil).UpdateBucketWithContext), varargs...)
 }
 
 // UpdateContainerService mocks base method.

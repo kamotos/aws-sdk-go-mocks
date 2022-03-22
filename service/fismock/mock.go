@@ -286,6 +286,56 @@ func (mr *MockFISAPIMockRecorder) GetExperimentWithContext(arg0, arg1 interface{
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetExperimentWithContext", reflect.TypeOf((*MockFISAPI)(nil).GetExperimentWithContext), varargs...)
 }
 
+// GetTargetResourceType mocks base method.
+func (m *MockFISAPI) GetTargetResourceType(arg0 *fis.GetTargetResourceTypeInput) (*fis.GetTargetResourceTypeOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetTargetResourceType", arg0)
+	ret0, _ := ret[0].(*fis.GetTargetResourceTypeOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetTargetResourceType indicates an expected call of GetTargetResourceType.
+func (mr *MockFISAPIMockRecorder) GetTargetResourceType(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTargetResourceType", reflect.TypeOf((*MockFISAPI)(nil).GetTargetResourceType), arg0)
+}
+
+// GetTargetResourceTypeRequest mocks base method.
+func (m *MockFISAPI) GetTargetResourceTypeRequest(arg0 *fis.GetTargetResourceTypeInput) (*request.Request, *fis.GetTargetResourceTypeOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetTargetResourceTypeRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*fis.GetTargetResourceTypeOutput)
+	return ret0, ret1
+}
+
+// GetTargetResourceTypeRequest indicates an expected call of GetTargetResourceTypeRequest.
+func (mr *MockFISAPIMockRecorder) GetTargetResourceTypeRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTargetResourceTypeRequest", reflect.TypeOf((*MockFISAPI)(nil).GetTargetResourceTypeRequest), arg0)
+}
+
+// GetTargetResourceTypeWithContext mocks base method.
+func (m *MockFISAPI) GetTargetResourceTypeWithContext(arg0 context.Context, arg1 *fis.GetTargetResourceTypeInput, arg2 ...request.Option) (*fis.GetTargetResourceTypeOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetTargetResourceTypeWithContext", varargs...)
+	ret0, _ := ret[0].(*fis.GetTargetResourceTypeOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetTargetResourceTypeWithContext indicates an expected call of GetTargetResourceTypeWithContext.
+func (mr *MockFISAPIMockRecorder) GetTargetResourceTypeWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTargetResourceTypeWithContext", reflect.TypeOf((*MockFISAPI)(nil).GetTargetResourceTypeWithContext), varargs...)
+}
+
 // ListActions mocks base method.
 func (m *MockFISAPI) ListActions(arg0 *fis.ListActionsInput) (*fis.ListActionsOutput, error) {
 	m.ctrl.T.Helper()
@@ -583,6 +633,89 @@ func (mr *MockFISAPIMockRecorder) ListTagsForResourceWithContext(arg0, arg1 inte
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTagsForResourceWithContext", reflect.TypeOf((*MockFISAPI)(nil).ListTagsForResourceWithContext), varargs...)
+}
+
+// ListTargetResourceTypes mocks base method.
+func (m *MockFISAPI) ListTargetResourceTypes(arg0 *fis.ListTargetResourceTypesInput) (*fis.ListTargetResourceTypesOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTargetResourceTypes", arg0)
+	ret0, _ := ret[0].(*fis.ListTargetResourceTypesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListTargetResourceTypes indicates an expected call of ListTargetResourceTypes.
+func (mr *MockFISAPIMockRecorder) ListTargetResourceTypes(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetResourceTypes", reflect.TypeOf((*MockFISAPI)(nil).ListTargetResourceTypes), arg0)
+}
+
+// ListTargetResourceTypesPages mocks base method.
+func (m *MockFISAPI) ListTargetResourceTypesPages(arg0 *fis.ListTargetResourceTypesInput, arg1 func(*fis.ListTargetResourceTypesOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTargetResourceTypesPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListTargetResourceTypesPages indicates an expected call of ListTargetResourceTypesPages.
+func (mr *MockFISAPIMockRecorder) ListTargetResourceTypesPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetResourceTypesPages", reflect.TypeOf((*MockFISAPI)(nil).ListTargetResourceTypesPages), arg0, arg1)
+}
+
+// ListTargetResourceTypesPagesWithContext mocks base method.
+func (m *MockFISAPI) ListTargetResourceTypesPagesWithContext(arg0 context.Context, arg1 *fis.ListTargetResourceTypesInput, arg2 func(*fis.ListTargetResourceTypesOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListTargetResourceTypesPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListTargetResourceTypesPagesWithContext indicates an expected call of ListTargetResourceTypesPagesWithContext.
+func (mr *MockFISAPIMockRecorder) ListTargetResourceTypesPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetResourceTypesPagesWithContext", reflect.TypeOf((*MockFISAPI)(nil).ListTargetResourceTypesPagesWithContext), varargs...)
+}
+
+// ListTargetResourceTypesRequest mocks base method.
+func (m *MockFISAPI) ListTargetResourceTypesRequest(arg0 *fis.ListTargetResourceTypesInput) (*request.Request, *fis.ListTargetResourceTypesOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListTargetResourceTypesRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*fis.ListTargetResourceTypesOutput)
+	return ret0, ret1
+}
+
+// ListTargetResourceTypesRequest indicates an expected call of ListTargetResourceTypesRequest.
+func (mr *MockFISAPIMockRecorder) ListTargetResourceTypesRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetResourceTypesRequest", reflect.TypeOf((*MockFISAPI)(nil).ListTargetResourceTypesRequest), arg0)
+}
+
+// ListTargetResourceTypesWithContext mocks base method.
+func (m *MockFISAPI) ListTargetResourceTypesWithContext(arg0 context.Context, arg1 *fis.ListTargetResourceTypesInput, arg2 ...request.Option) (*fis.ListTargetResourceTypesOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListTargetResourceTypesWithContext", varargs...)
+	ret0, _ := ret[0].(*fis.ListTargetResourceTypesOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListTargetResourceTypesWithContext indicates an expected call of ListTargetResourceTypesWithContext.
+func (mr *MockFISAPIMockRecorder) ListTargetResourceTypesWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListTargetResourceTypesWithContext", reflect.TypeOf((*MockFISAPI)(nil).ListTargetResourceTypesWithContext), varargs...)
 }
 
 // StartExperiment mocks base method.

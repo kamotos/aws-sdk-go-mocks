@@ -1251,6 +1251,56 @@ func (mr *MockServiceDiscoveryAPIMockRecorder) UntagResourceWithContext(arg0, ar
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UntagResourceWithContext", reflect.TypeOf((*MockServiceDiscoveryAPI)(nil).UntagResourceWithContext), varargs...)
 }
 
+// UpdateHttpNamespace mocks base method.
+func (m *MockServiceDiscoveryAPI) UpdateHttpNamespace(arg0 *servicediscovery.UpdateHttpNamespaceInput) (*servicediscovery.UpdateHttpNamespaceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateHttpNamespace", arg0)
+	ret0, _ := ret[0].(*servicediscovery.UpdateHttpNamespaceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateHttpNamespace indicates an expected call of UpdateHttpNamespace.
+func (mr *MockServiceDiscoveryAPIMockRecorder) UpdateHttpNamespace(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateHttpNamespace", reflect.TypeOf((*MockServiceDiscoveryAPI)(nil).UpdateHttpNamespace), arg0)
+}
+
+// UpdateHttpNamespaceRequest mocks base method.
+func (m *MockServiceDiscoveryAPI) UpdateHttpNamespaceRequest(arg0 *servicediscovery.UpdateHttpNamespaceInput) (*request.Request, *servicediscovery.UpdateHttpNamespaceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateHttpNamespaceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*servicediscovery.UpdateHttpNamespaceOutput)
+	return ret0, ret1
+}
+
+// UpdateHttpNamespaceRequest indicates an expected call of UpdateHttpNamespaceRequest.
+func (mr *MockServiceDiscoveryAPIMockRecorder) UpdateHttpNamespaceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateHttpNamespaceRequest", reflect.TypeOf((*MockServiceDiscoveryAPI)(nil).UpdateHttpNamespaceRequest), arg0)
+}
+
+// UpdateHttpNamespaceWithContext mocks base method.
+func (m *MockServiceDiscoveryAPI) UpdateHttpNamespaceWithContext(arg0 context.Context, arg1 *servicediscovery.UpdateHttpNamespaceInput, arg2 ...request.Option) (*servicediscovery.UpdateHttpNamespaceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateHttpNamespaceWithContext", varargs...)
+	ret0, _ := ret[0].(*servicediscovery.UpdateHttpNamespaceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateHttpNamespaceWithContext indicates an expected call of UpdateHttpNamespaceWithContext.
+func (mr *MockServiceDiscoveryAPIMockRecorder) UpdateHttpNamespaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateHttpNamespaceWithContext", reflect.TypeOf((*MockServiceDiscoveryAPI)(nil).UpdateHttpNamespaceWithContext), varargs...)
+}
+
 // UpdateInstanceCustomHealthStatus mocks base method.
 func (m *MockServiceDiscoveryAPI) UpdateInstanceCustomHealthStatus(arg0 *servicediscovery.UpdateInstanceCustomHealthStatusInput) (*servicediscovery.UpdateInstanceCustomHealthStatusOutput, error) {
 	m.ctrl.T.Helper()
@@ -1299,6 +1349,106 @@ func (mr *MockServiceDiscoveryAPIMockRecorder) UpdateInstanceCustomHealthStatusW
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateInstanceCustomHealthStatusWithContext", reflect.TypeOf((*MockServiceDiscoveryAPI)(nil).UpdateInstanceCustomHealthStatusWithContext), varargs...)
+}
+
+// UpdatePrivateDnsNamespace mocks base method.
+func (m *MockServiceDiscoveryAPI) UpdatePrivateDnsNamespace(arg0 *servicediscovery.UpdatePrivateDnsNamespaceInput) (*servicediscovery.UpdatePrivateDnsNamespaceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdatePrivateDnsNamespace", arg0)
+	ret0, _ := ret[0].(*servicediscovery.UpdatePrivateDnsNamespaceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdatePrivateDnsNamespace indicates an expected call of UpdatePrivateDnsNamespace.
+func (mr *MockServiceDiscoveryAPIMockRecorder) UpdatePrivateDnsNamespace(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePrivateDnsNamespace", reflect.TypeOf((*MockServiceDiscoveryAPI)(nil).UpdatePrivateDnsNamespace), arg0)
+}
+
+// UpdatePrivateDnsNamespaceRequest mocks base method.
+func (m *MockServiceDiscoveryAPI) UpdatePrivateDnsNamespaceRequest(arg0 *servicediscovery.UpdatePrivateDnsNamespaceInput) (*request.Request, *servicediscovery.UpdatePrivateDnsNamespaceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdatePrivateDnsNamespaceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*servicediscovery.UpdatePrivateDnsNamespaceOutput)
+	return ret0, ret1
+}
+
+// UpdatePrivateDnsNamespaceRequest indicates an expected call of UpdatePrivateDnsNamespaceRequest.
+func (mr *MockServiceDiscoveryAPIMockRecorder) UpdatePrivateDnsNamespaceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePrivateDnsNamespaceRequest", reflect.TypeOf((*MockServiceDiscoveryAPI)(nil).UpdatePrivateDnsNamespaceRequest), arg0)
+}
+
+// UpdatePrivateDnsNamespaceWithContext mocks base method.
+func (m *MockServiceDiscoveryAPI) UpdatePrivateDnsNamespaceWithContext(arg0 context.Context, arg1 *servicediscovery.UpdatePrivateDnsNamespaceInput, arg2 ...request.Option) (*servicediscovery.UpdatePrivateDnsNamespaceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdatePrivateDnsNamespaceWithContext", varargs...)
+	ret0, _ := ret[0].(*servicediscovery.UpdatePrivateDnsNamespaceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdatePrivateDnsNamespaceWithContext indicates an expected call of UpdatePrivateDnsNamespaceWithContext.
+func (mr *MockServiceDiscoveryAPIMockRecorder) UpdatePrivateDnsNamespaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePrivateDnsNamespaceWithContext", reflect.TypeOf((*MockServiceDiscoveryAPI)(nil).UpdatePrivateDnsNamespaceWithContext), varargs...)
+}
+
+// UpdatePublicDnsNamespace mocks base method.
+func (m *MockServiceDiscoveryAPI) UpdatePublicDnsNamespace(arg0 *servicediscovery.UpdatePublicDnsNamespaceInput) (*servicediscovery.UpdatePublicDnsNamespaceOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdatePublicDnsNamespace", arg0)
+	ret0, _ := ret[0].(*servicediscovery.UpdatePublicDnsNamespaceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdatePublicDnsNamespace indicates an expected call of UpdatePublicDnsNamespace.
+func (mr *MockServiceDiscoveryAPIMockRecorder) UpdatePublicDnsNamespace(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePublicDnsNamespace", reflect.TypeOf((*MockServiceDiscoveryAPI)(nil).UpdatePublicDnsNamespace), arg0)
+}
+
+// UpdatePublicDnsNamespaceRequest mocks base method.
+func (m *MockServiceDiscoveryAPI) UpdatePublicDnsNamespaceRequest(arg0 *servicediscovery.UpdatePublicDnsNamespaceInput) (*request.Request, *servicediscovery.UpdatePublicDnsNamespaceOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdatePublicDnsNamespaceRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*servicediscovery.UpdatePublicDnsNamespaceOutput)
+	return ret0, ret1
+}
+
+// UpdatePublicDnsNamespaceRequest indicates an expected call of UpdatePublicDnsNamespaceRequest.
+func (mr *MockServiceDiscoveryAPIMockRecorder) UpdatePublicDnsNamespaceRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePublicDnsNamespaceRequest", reflect.TypeOf((*MockServiceDiscoveryAPI)(nil).UpdatePublicDnsNamespaceRequest), arg0)
+}
+
+// UpdatePublicDnsNamespaceWithContext mocks base method.
+func (m *MockServiceDiscoveryAPI) UpdatePublicDnsNamespaceWithContext(arg0 context.Context, arg1 *servicediscovery.UpdatePublicDnsNamespaceInput, arg2 ...request.Option) (*servicediscovery.UpdatePublicDnsNamespaceOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdatePublicDnsNamespaceWithContext", varargs...)
+	ret0, _ := ret[0].(*servicediscovery.UpdatePublicDnsNamespaceOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdatePublicDnsNamespaceWithContext indicates an expected call of UpdatePublicDnsNamespaceWithContext.
+func (mr *MockServiceDiscoveryAPIMockRecorder) UpdatePublicDnsNamespaceWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdatePublicDnsNamespaceWithContext", reflect.TypeOf((*MockServiceDiscoveryAPI)(nil).UpdatePublicDnsNamespaceWithContext), varargs...)
 }
 
 // UpdateService mocks base method.

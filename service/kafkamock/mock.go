@@ -166,6 +166,56 @@ func (mr *MockKafkaAPIMockRecorder) CreateClusterRequest(arg0 interface{}) *gomo
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateClusterRequest", reflect.TypeOf((*MockKafkaAPI)(nil).CreateClusterRequest), arg0)
 }
 
+// CreateClusterV2 mocks base method.
+func (m *MockKafkaAPI) CreateClusterV2(arg0 *kafka.CreateClusterV2Input) (*kafka.CreateClusterV2Output, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateClusterV2", arg0)
+	ret0, _ := ret[0].(*kafka.CreateClusterV2Output)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateClusterV2 indicates an expected call of CreateClusterV2.
+func (mr *MockKafkaAPIMockRecorder) CreateClusterV2(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateClusterV2", reflect.TypeOf((*MockKafkaAPI)(nil).CreateClusterV2), arg0)
+}
+
+// CreateClusterV2Request mocks base method.
+func (m *MockKafkaAPI) CreateClusterV2Request(arg0 *kafka.CreateClusterV2Input) (*request.Request, *kafka.CreateClusterV2Output) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CreateClusterV2Request", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*kafka.CreateClusterV2Output)
+	return ret0, ret1
+}
+
+// CreateClusterV2Request indicates an expected call of CreateClusterV2Request.
+func (mr *MockKafkaAPIMockRecorder) CreateClusterV2Request(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateClusterV2Request", reflect.TypeOf((*MockKafkaAPI)(nil).CreateClusterV2Request), arg0)
+}
+
+// CreateClusterV2WithContext mocks base method.
+func (m *MockKafkaAPI) CreateClusterV2WithContext(arg0 context.Context, arg1 *kafka.CreateClusterV2Input, arg2 ...request.Option) (*kafka.CreateClusterV2Output, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "CreateClusterV2WithContext", varargs...)
+	ret0, _ := ret[0].(*kafka.CreateClusterV2Output)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// CreateClusterV2WithContext indicates an expected call of CreateClusterV2WithContext.
+func (mr *MockKafkaAPIMockRecorder) CreateClusterV2WithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateClusterV2WithContext", reflect.TypeOf((*MockKafkaAPI)(nil).CreateClusterV2WithContext), varargs...)
+}
+
 // CreateClusterWithContext mocks base method.
 func (m *MockKafkaAPI) CreateClusterWithContext(arg0 context.Context, arg1 *kafka.CreateClusterInput, arg2 ...request.Option) (*kafka.CreateClusterOutput, error) {
 	m.ctrl.T.Helper()
@@ -414,6 +464,56 @@ func (m *MockKafkaAPI) DescribeClusterRequest(arg0 *kafka.DescribeClusterInput) 
 func (mr *MockKafkaAPIMockRecorder) DescribeClusterRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeClusterRequest", reflect.TypeOf((*MockKafkaAPI)(nil).DescribeClusterRequest), arg0)
+}
+
+// DescribeClusterV2 mocks base method.
+func (m *MockKafkaAPI) DescribeClusterV2(arg0 *kafka.DescribeClusterV2Input) (*kafka.DescribeClusterV2Output, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeClusterV2", arg0)
+	ret0, _ := ret[0].(*kafka.DescribeClusterV2Output)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeClusterV2 indicates an expected call of DescribeClusterV2.
+func (mr *MockKafkaAPIMockRecorder) DescribeClusterV2(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeClusterV2", reflect.TypeOf((*MockKafkaAPI)(nil).DescribeClusterV2), arg0)
+}
+
+// DescribeClusterV2Request mocks base method.
+func (m *MockKafkaAPI) DescribeClusterV2Request(arg0 *kafka.DescribeClusterV2Input) (*request.Request, *kafka.DescribeClusterV2Output) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DescribeClusterV2Request", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*kafka.DescribeClusterV2Output)
+	return ret0, ret1
+}
+
+// DescribeClusterV2Request indicates an expected call of DescribeClusterV2Request.
+func (mr *MockKafkaAPIMockRecorder) DescribeClusterV2Request(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeClusterV2Request", reflect.TypeOf((*MockKafkaAPI)(nil).DescribeClusterV2Request), arg0)
+}
+
+// DescribeClusterV2WithContext mocks base method.
+func (m *MockKafkaAPI) DescribeClusterV2WithContext(arg0 context.Context, arg1 *kafka.DescribeClusterV2Input, arg2 ...request.Option) (*kafka.DescribeClusterV2Output, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DescribeClusterV2WithContext", varargs...)
+	ret0, _ := ret[0].(*kafka.DescribeClusterV2Output)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DescribeClusterV2WithContext indicates an expected call of DescribeClusterV2WithContext.
+func (mr *MockKafkaAPIMockRecorder) DescribeClusterV2WithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeClusterV2WithContext", reflect.TypeOf((*MockKafkaAPI)(nil).DescribeClusterV2WithContext), varargs...)
 }
 
 // DescribeClusterWithContext mocks base method.
@@ -780,6 +880,89 @@ func (m *MockKafkaAPI) ListClustersRequest(arg0 *kafka.ListClustersInput) (*requ
 func (mr *MockKafkaAPIMockRecorder) ListClustersRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClustersRequest", reflect.TypeOf((*MockKafkaAPI)(nil).ListClustersRequest), arg0)
+}
+
+// ListClustersV2 mocks base method.
+func (m *MockKafkaAPI) ListClustersV2(arg0 *kafka.ListClustersV2Input) (*kafka.ListClustersV2Output, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListClustersV2", arg0)
+	ret0, _ := ret[0].(*kafka.ListClustersV2Output)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListClustersV2 indicates an expected call of ListClustersV2.
+func (mr *MockKafkaAPIMockRecorder) ListClustersV2(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClustersV2", reflect.TypeOf((*MockKafkaAPI)(nil).ListClustersV2), arg0)
+}
+
+// ListClustersV2Pages mocks base method.
+func (m *MockKafkaAPI) ListClustersV2Pages(arg0 *kafka.ListClustersV2Input, arg1 func(*kafka.ListClustersV2Output, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListClustersV2Pages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListClustersV2Pages indicates an expected call of ListClustersV2Pages.
+func (mr *MockKafkaAPIMockRecorder) ListClustersV2Pages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClustersV2Pages", reflect.TypeOf((*MockKafkaAPI)(nil).ListClustersV2Pages), arg0, arg1)
+}
+
+// ListClustersV2PagesWithContext mocks base method.
+func (m *MockKafkaAPI) ListClustersV2PagesWithContext(arg0 context.Context, arg1 *kafka.ListClustersV2Input, arg2 func(*kafka.ListClustersV2Output, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListClustersV2PagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListClustersV2PagesWithContext indicates an expected call of ListClustersV2PagesWithContext.
+func (mr *MockKafkaAPIMockRecorder) ListClustersV2PagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClustersV2PagesWithContext", reflect.TypeOf((*MockKafkaAPI)(nil).ListClustersV2PagesWithContext), varargs...)
+}
+
+// ListClustersV2Request mocks base method.
+func (m *MockKafkaAPI) ListClustersV2Request(arg0 *kafka.ListClustersV2Input) (*request.Request, *kafka.ListClustersV2Output) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListClustersV2Request", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*kafka.ListClustersV2Output)
+	return ret0, ret1
+}
+
+// ListClustersV2Request indicates an expected call of ListClustersV2Request.
+func (mr *MockKafkaAPIMockRecorder) ListClustersV2Request(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClustersV2Request", reflect.TypeOf((*MockKafkaAPI)(nil).ListClustersV2Request), arg0)
+}
+
+// ListClustersV2WithContext mocks base method.
+func (m *MockKafkaAPI) ListClustersV2WithContext(arg0 context.Context, arg1 *kafka.ListClustersV2Input, arg2 ...request.Option) (*kafka.ListClustersV2Output, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListClustersV2WithContext", varargs...)
+	ret0, _ := ret[0].(*kafka.ListClustersV2Output)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListClustersV2WithContext indicates an expected call of ListClustersV2WithContext.
+func (mr *MockKafkaAPIMockRecorder) ListClustersV2WithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClustersV2WithContext", reflect.TypeOf((*MockKafkaAPI)(nil).ListClustersV2WithContext), varargs...)
 }
 
 // ListClustersWithContext mocks base method.
@@ -1717,6 +1900,56 @@ func (mr *MockKafkaAPIMockRecorder) UpdateConfigurationWithContext(arg0, arg1 in
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConfigurationWithContext", reflect.TypeOf((*MockKafkaAPI)(nil).UpdateConfigurationWithContext), varargs...)
 }
 
+// UpdateConnectivity mocks base method.
+func (m *MockKafkaAPI) UpdateConnectivity(arg0 *kafka.UpdateConnectivityInput) (*kafka.UpdateConnectivityOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateConnectivity", arg0)
+	ret0, _ := ret[0].(*kafka.UpdateConnectivityOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateConnectivity indicates an expected call of UpdateConnectivity.
+func (mr *MockKafkaAPIMockRecorder) UpdateConnectivity(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConnectivity", reflect.TypeOf((*MockKafkaAPI)(nil).UpdateConnectivity), arg0)
+}
+
+// UpdateConnectivityRequest mocks base method.
+func (m *MockKafkaAPI) UpdateConnectivityRequest(arg0 *kafka.UpdateConnectivityInput) (*request.Request, *kafka.UpdateConnectivityOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateConnectivityRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*kafka.UpdateConnectivityOutput)
+	return ret0, ret1
+}
+
+// UpdateConnectivityRequest indicates an expected call of UpdateConnectivityRequest.
+func (mr *MockKafkaAPIMockRecorder) UpdateConnectivityRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConnectivityRequest", reflect.TypeOf((*MockKafkaAPI)(nil).UpdateConnectivityRequest), arg0)
+}
+
+// UpdateConnectivityWithContext mocks base method.
+func (m *MockKafkaAPI) UpdateConnectivityWithContext(arg0 context.Context, arg1 *kafka.UpdateConnectivityInput, arg2 ...request.Option) (*kafka.UpdateConnectivityOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateConnectivityWithContext", varargs...)
+	ret0, _ := ret[0].(*kafka.UpdateConnectivityOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateConnectivityWithContext indicates an expected call of UpdateConnectivityWithContext.
+func (mr *MockKafkaAPIMockRecorder) UpdateConnectivityWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateConnectivityWithContext", reflect.TypeOf((*MockKafkaAPI)(nil).UpdateConnectivityWithContext), varargs...)
+}
+
 // UpdateMonitoring mocks base method.
 func (m *MockKafkaAPI) UpdateMonitoring(arg0 *kafka.UpdateMonitoringInput) (*kafka.UpdateMonitoringOutput, error) {
 	m.ctrl.T.Helper()
@@ -1765,4 +1998,54 @@ func (mr *MockKafkaAPIMockRecorder) UpdateMonitoringWithContext(arg0, arg1 inter
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateMonitoringWithContext", reflect.TypeOf((*MockKafkaAPI)(nil).UpdateMonitoringWithContext), varargs...)
+}
+
+// UpdateSecurity mocks base method.
+func (m *MockKafkaAPI) UpdateSecurity(arg0 *kafka.UpdateSecurityInput) (*kafka.UpdateSecurityOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateSecurity", arg0)
+	ret0, _ := ret[0].(*kafka.UpdateSecurityOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateSecurity indicates an expected call of UpdateSecurity.
+func (mr *MockKafkaAPIMockRecorder) UpdateSecurity(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSecurity", reflect.TypeOf((*MockKafkaAPI)(nil).UpdateSecurity), arg0)
+}
+
+// UpdateSecurityRequest mocks base method.
+func (m *MockKafkaAPI) UpdateSecurityRequest(arg0 *kafka.UpdateSecurityInput) (*request.Request, *kafka.UpdateSecurityOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateSecurityRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*kafka.UpdateSecurityOutput)
+	return ret0, ret1
+}
+
+// UpdateSecurityRequest indicates an expected call of UpdateSecurityRequest.
+func (mr *MockKafkaAPIMockRecorder) UpdateSecurityRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSecurityRequest", reflect.TypeOf((*MockKafkaAPI)(nil).UpdateSecurityRequest), arg0)
+}
+
+// UpdateSecurityWithContext mocks base method.
+func (m *MockKafkaAPI) UpdateSecurityWithContext(arg0 context.Context, arg1 *kafka.UpdateSecurityInput, arg2 ...request.Option) (*kafka.UpdateSecurityOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateSecurityWithContext", varargs...)
+	ret0, _ := ret[0].(*kafka.UpdateSecurityOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateSecurityWithContext indicates an expected call of UpdateSecurityWithContext.
+func (mr *MockKafkaAPIMockRecorder) UpdateSecurityWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateSecurityWithContext", reflect.TypeOf((*MockKafkaAPI)(nil).UpdateSecurityWithContext), varargs...)
 }

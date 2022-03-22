@@ -36,6 +36,56 @@ func (m *MockMediaConnectAPI) EXPECT() *MockMediaConnectAPIMockRecorder {
 	return m.recorder
 }
 
+// AddFlowMediaStreams mocks base method.
+func (m *MockMediaConnectAPI) AddFlowMediaStreams(arg0 *mediaconnect.AddFlowMediaStreamsInput) (*mediaconnect.AddFlowMediaStreamsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AddFlowMediaStreams", arg0)
+	ret0, _ := ret[0].(*mediaconnect.AddFlowMediaStreamsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AddFlowMediaStreams indicates an expected call of AddFlowMediaStreams.
+func (mr *MockMediaConnectAPIMockRecorder) AddFlowMediaStreams(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddFlowMediaStreams", reflect.TypeOf((*MockMediaConnectAPI)(nil).AddFlowMediaStreams), arg0)
+}
+
+// AddFlowMediaStreamsRequest mocks base method.
+func (m *MockMediaConnectAPI) AddFlowMediaStreamsRequest(arg0 *mediaconnect.AddFlowMediaStreamsInput) (*request.Request, *mediaconnect.AddFlowMediaStreamsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AddFlowMediaStreamsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*mediaconnect.AddFlowMediaStreamsOutput)
+	return ret0, ret1
+}
+
+// AddFlowMediaStreamsRequest indicates an expected call of AddFlowMediaStreamsRequest.
+func (mr *MockMediaConnectAPIMockRecorder) AddFlowMediaStreamsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddFlowMediaStreamsRequest", reflect.TypeOf((*MockMediaConnectAPI)(nil).AddFlowMediaStreamsRequest), arg0)
+}
+
+// AddFlowMediaStreamsWithContext mocks base method.
+func (m *MockMediaConnectAPI) AddFlowMediaStreamsWithContext(arg0 context.Context, arg1 *mediaconnect.AddFlowMediaStreamsInput, arg2 ...request.Option) (*mediaconnect.AddFlowMediaStreamsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "AddFlowMediaStreamsWithContext", varargs...)
+	ret0, _ := ret[0].(*mediaconnect.AddFlowMediaStreamsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AddFlowMediaStreamsWithContext indicates an expected call of AddFlowMediaStreamsWithContext.
+func (mr *MockMediaConnectAPIMockRecorder) AddFlowMediaStreamsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddFlowMediaStreamsWithContext", reflect.TypeOf((*MockMediaConnectAPI)(nil).AddFlowMediaStreamsWithContext), varargs...)
+}
+
 // AddFlowOutputs mocks base method.
 func (m *MockMediaConnectAPI) AddFlowOutputs(arg0 *mediaconnect.AddFlowOutputsInput) (*mediaconnect.AddFlowOutputsOutput, error) {
 	m.ctrl.T.Helper()
@@ -918,6 +968,56 @@ func (mr *MockMediaConnectAPIMockRecorder) PurchaseOfferingWithContext(arg0, arg
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PurchaseOfferingWithContext", reflect.TypeOf((*MockMediaConnectAPI)(nil).PurchaseOfferingWithContext), varargs...)
 }
 
+// RemoveFlowMediaStream mocks base method.
+func (m *MockMediaConnectAPI) RemoveFlowMediaStream(arg0 *mediaconnect.RemoveFlowMediaStreamInput) (*mediaconnect.RemoveFlowMediaStreamOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "RemoveFlowMediaStream", arg0)
+	ret0, _ := ret[0].(*mediaconnect.RemoveFlowMediaStreamOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// RemoveFlowMediaStream indicates an expected call of RemoveFlowMediaStream.
+func (mr *MockMediaConnectAPIMockRecorder) RemoveFlowMediaStream(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RemoveFlowMediaStream", reflect.TypeOf((*MockMediaConnectAPI)(nil).RemoveFlowMediaStream), arg0)
+}
+
+// RemoveFlowMediaStreamRequest mocks base method.
+func (m *MockMediaConnectAPI) RemoveFlowMediaStreamRequest(arg0 *mediaconnect.RemoveFlowMediaStreamInput) (*request.Request, *mediaconnect.RemoveFlowMediaStreamOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "RemoveFlowMediaStreamRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*mediaconnect.RemoveFlowMediaStreamOutput)
+	return ret0, ret1
+}
+
+// RemoveFlowMediaStreamRequest indicates an expected call of RemoveFlowMediaStreamRequest.
+func (mr *MockMediaConnectAPIMockRecorder) RemoveFlowMediaStreamRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RemoveFlowMediaStreamRequest", reflect.TypeOf((*MockMediaConnectAPI)(nil).RemoveFlowMediaStreamRequest), arg0)
+}
+
+// RemoveFlowMediaStreamWithContext mocks base method.
+func (m *MockMediaConnectAPI) RemoveFlowMediaStreamWithContext(arg0 context.Context, arg1 *mediaconnect.RemoveFlowMediaStreamInput, arg2 ...request.Option) (*mediaconnect.RemoveFlowMediaStreamOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "RemoveFlowMediaStreamWithContext", varargs...)
+	ret0, _ := ret[0].(*mediaconnect.RemoveFlowMediaStreamOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// RemoveFlowMediaStreamWithContext indicates an expected call of RemoveFlowMediaStreamWithContext.
+func (mr *MockMediaConnectAPIMockRecorder) RemoveFlowMediaStreamWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RemoveFlowMediaStreamWithContext", reflect.TypeOf((*MockMediaConnectAPI)(nil).RemoveFlowMediaStreamWithContext), varargs...)
+}
+
 // RemoveFlowOutput mocks base method.
 func (m *MockMediaConnectAPI) RemoveFlowOutput(arg0 *mediaconnect.RemoveFlowOutputInput) (*mediaconnect.RemoveFlowOutputOutput, error) {
 	m.ctrl.T.Helper()
@@ -1381,6 +1481,56 @@ func (mr *MockMediaConnectAPIMockRecorder) UpdateFlowEntitlementWithContext(arg0
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFlowEntitlementWithContext", reflect.TypeOf((*MockMediaConnectAPI)(nil).UpdateFlowEntitlementWithContext), varargs...)
+}
+
+// UpdateFlowMediaStream mocks base method.
+func (m *MockMediaConnectAPI) UpdateFlowMediaStream(arg0 *mediaconnect.UpdateFlowMediaStreamInput) (*mediaconnect.UpdateFlowMediaStreamOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateFlowMediaStream", arg0)
+	ret0, _ := ret[0].(*mediaconnect.UpdateFlowMediaStreamOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateFlowMediaStream indicates an expected call of UpdateFlowMediaStream.
+func (mr *MockMediaConnectAPIMockRecorder) UpdateFlowMediaStream(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFlowMediaStream", reflect.TypeOf((*MockMediaConnectAPI)(nil).UpdateFlowMediaStream), arg0)
+}
+
+// UpdateFlowMediaStreamRequest mocks base method.
+func (m *MockMediaConnectAPI) UpdateFlowMediaStreamRequest(arg0 *mediaconnect.UpdateFlowMediaStreamInput) (*request.Request, *mediaconnect.UpdateFlowMediaStreamOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateFlowMediaStreamRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*mediaconnect.UpdateFlowMediaStreamOutput)
+	return ret0, ret1
+}
+
+// UpdateFlowMediaStreamRequest indicates an expected call of UpdateFlowMediaStreamRequest.
+func (mr *MockMediaConnectAPIMockRecorder) UpdateFlowMediaStreamRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFlowMediaStreamRequest", reflect.TypeOf((*MockMediaConnectAPI)(nil).UpdateFlowMediaStreamRequest), arg0)
+}
+
+// UpdateFlowMediaStreamWithContext mocks base method.
+func (m *MockMediaConnectAPI) UpdateFlowMediaStreamWithContext(arg0 context.Context, arg1 *mediaconnect.UpdateFlowMediaStreamInput, arg2 ...request.Option) (*mediaconnect.UpdateFlowMediaStreamOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateFlowMediaStreamWithContext", varargs...)
+	ret0, _ := ret[0].(*mediaconnect.UpdateFlowMediaStreamOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateFlowMediaStreamWithContext indicates an expected call of UpdateFlowMediaStreamWithContext.
+func (mr *MockMediaConnectAPIMockRecorder) UpdateFlowMediaStreamWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateFlowMediaStreamWithContext", reflect.TypeOf((*MockMediaConnectAPI)(nil).UpdateFlowMediaStreamWithContext), varargs...)
 }
 
 // UpdateFlowOutput mocks base method.

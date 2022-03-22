@@ -581,6 +581,56 @@ func (mr *MockAuditManagerAPIMockRecorder) DeleteAssessmentFrameworkRequest(arg0
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAssessmentFrameworkRequest", reflect.TypeOf((*MockAuditManagerAPI)(nil).DeleteAssessmentFrameworkRequest), arg0)
 }
 
+// DeleteAssessmentFrameworkShare mocks base method.
+func (m *MockAuditManagerAPI) DeleteAssessmentFrameworkShare(arg0 *auditmanager.DeleteAssessmentFrameworkShareInput) (*auditmanager.DeleteAssessmentFrameworkShareOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteAssessmentFrameworkShare", arg0)
+	ret0, _ := ret[0].(*auditmanager.DeleteAssessmentFrameworkShareOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteAssessmentFrameworkShare indicates an expected call of DeleteAssessmentFrameworkShare.
+func (mr *MockAuditManagerAPIMockRecorder) DeleteAssessmentFrameworkShare(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAssessmentFrameworkShare", reflect.TypeOf((*MockAuditManagerAPI)(nil).DeleteAssessmentFrameworkShare), arg0)
+}
+
+// DeleteAssessmentFrameworkShareRequest mocks base method.
+func (m *MockAuditManagerAPI) DeleteAssessmentFrameworkShareRequest(arg0 *auditmanager.DeleteAssessmentFrameworkShareInput) (*request.Request, *auditmanager.DeleteAssessmentFrameworkShareOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteAssessmentFrameworkShareRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*auditmanager.DeleteAssessmentFrameworkShareOutput)
+	return ret0, ret1
+}
+
+// DeleteAssessmentFrameworkShareRequest indicates an expected call of DeleteAssessmentFrameworkShareRequest.
+func (mr *MockAuditManagerAPIMockRecorder) DeleteAssessmentFrameworkShareRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAssessmentFrameworkShareRequest", reflect.TypeOf((*MockAuditManagerAPI)(nil).DeleteAssessmentFrameworkShareRequest), arg0)
+}
+
+// DeleteAssessmentFrameworkShareWithContext mocks base method.
+func (m *MockAuditManagerAPI) DeleteAssessmentFrameworkShareWithContext(arg0 context.Context, arg1 *auditmanager.DeleteAssessmentFrameworkShareInput, arg2 ...request.Option) (*auditmanager.DeleteAssessmentFrameworkShareOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "DeleteAssessmentFrameworkShareWithContext", varargs...)
+	ret0, _ := ret[0].(*auditmanager.DeleteAssessmentFrameworkShareOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// DeleteAssessmentFrameworkShareWithContext indicates an expected call of DeleteAssessmentFrameworkShareWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) DeleteAssessmentFrameworkShareWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAssessmentFrameworkShareWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).DeleteAssessmentFrameworkShareWithContext), varargs...)
+}
+
 // DeleteAssessmentFrameworkWithContext mocks base method.
 func (m *MockAuditManagerAPI) DeleteAssessmentFrameworkWithContext(arg0 context.Context, arg1 *auditmanager.DeleteAssessmentFrameworkInput, arg2 ...request.Option) (*auditmanager.DeleteAssessmentFrameworkOutput, error) {
 	m.ctrl.T.Helper()
@@ -1651,6 +1701,106 @@ func (mr *MockAuditManagerAPIMockRecorder) GetEvidenceWithContext(arg0, arg1 int
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEvidenceWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).GetEvidenceWithContext), varargs...)
 }
 
+// GetInsights mocks base method.
+func (m *MockAuditManagerAPI) GetInsights(arg0 *auditmanager.GetInsightsInput) (*auditmanager.GetInsightsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetInsights", arg0)
+	ret0, _ := ret[0].(*auditmanager.GetInsightsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetInsights indicates an expected call of GetInsights.
+func (mr *MockAuditManagerAPIMockRecorder) GetInsights(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsights", reflect.TypeOf((*MockAuditManagerAPI)(nil).GetInsights), arg0)
+}
+
+// GetInsightsByAssessment mocks base method.
+func (m *MockAuditManagerAPI) GetInsightsByAssessment(arg0 *auditmanager.GetInsightsByAssessmentInput) (*auditmanager.GetInsightsByAssessmentOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetInsightsByAssessment", arg0)
+	ret0, _ := ret[0].(*auditmanager.GetInsightsByAssessmentOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetInsightsByAssessment indicates an expected call of GetInsightsByAssessment.
+func (mr *MockAuditManagerAPIMockRecorder) GetInsightsByAssessment(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightsByAssessment", reflect.TypeOf((*MockAuditManagerAPI)(nil).GetInsightsByAssessment), arg0)
+}
+
+// GetInsightsByAssessmentRequest mocks base method.
+func (m *MockAuditManagerAPI) GetInsightsByAssessmentRequest(arg0 *auditmanager.GetInsightsByAssessmentInput) (*request.Request, *auditmanager.GetInsightsByAssessmentOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetInsightsByAssessmentRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*auditmanager.GetInsightsByAssessmentOutput)
+	return ret0, ret1
+}
+
+// GetInsightsByAssessmentRequest indicates an expected call of GetInsightsByAssessmentRequest.
+func (mr *MockAuditManagerAPIMockRecorder) GetInsightsByAssessmentRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightsByAssessmentRequest", reflect.TypeOf((*MockAuditManagerAPI)(nil).GetInsightsByAssessmentRequest), arg0)
+}
+
+// GetInsightsByAssessmentWithContext mocks base method.
+func (m *MockAuditManagerAPI) GetInsightsByAssessmentWithContext(arg0 context.Context, arg1 *auditmanager.GetInsightsByAssessmentInput, arg2 ...request.Option) (*auditmanager.GetInsightsByAssessmentOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetInsightsByAssessmentWithContext", varargs...)
+	ret0, _ := ret[0].(*auditmanager.GetInsightsByAssessmentOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetInsightsByAssessmentWithContext indicates an expected call of GetInsightsByAssessmentWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) GetInsightsByAssessmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightsByAssessmentWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).GetInsightsByAssessmentWithContext), varargs...)
+}
+
+// GetInsightsRequest mocks base method.
+func (m *MockAuditManagerAPI) GetInsightsRequest(arg0 *auditmanager.GetInsightsInput) (*request.Request, *auditmanager.GetInsightsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetInsightsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*auditmanager.GetInsightsOutput)
+	return ret0, ret1
+}
+
+// GetInsightsRequest indicates an expected call of GetInsightsRequest.
+func (mr *MockAuditManagerAPIMockRecorder) GetInsightsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightsRequest", reflect.TypeOf((*MockAuditManagerAPI)(nil).GetInsightsRequest), arg0)
+}
+
+// GetInsightsWithContext mocks base method.
+func (m *MockAuditManagerAPI) GetInsightsWithContext(arg0 context.Context, arg1 *auditmanager.GetInsightsInput, arg2 ...request.Option) (*auditmanager.GetInsightsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetInsightsWithContext", varargs...)
+	ret0, _ := ret[0].(*auditmanager.GetInsightsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetInsightsWithContext indicates an expected call of GetInsightsWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) GetInsightsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetInsightsWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).GetInsightsWithContext), varargs...)
+}
+
 // GetOrganizationAdminAccount mocks base method.
 func (m *MockAuditManagerAPI) GetOrganizationAdminAccount(arg0 *auditmanager.GetOrganizationAdminAccountInput) (*auditmanager.GetOrganizationAdminAccountOutput, error) {
 	m.ctrl.T.Helper()
@@ -1799,6 +1949,172 @@ func (mr *MockAuditManagerAPIMockRecorder) GetSettingsWithContext(arg0, arg1 int
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSettingsWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).GetSettingsWithContext), varargs...)
+}
+
+// ListAssessmentControlInsightsByControlDomain mocks base method.
+func (m *MockAuditManagerAPI) ListAssessmentControlInsightsByControlDomain(arg0 *auditmanager.ListAssessmentControlInsightsByControlDomainInput) (*auditmanager.ListAssessmentControlInsightsByControlDomainOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAssessmentControlInsightsByControlDomain", arg0)
+	ret0, _ := ret[0].(*auditmanager.ListAssessmentControlInsightsByControlDomainOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListAssessmentControlInsightsByControlDomain indicates an expected call of ListAssessmentControlInsightsByControlDomain.
+func (mr *MockAuditManagerAPIMockRecorder) ListAssessmentControlInsightsByControlDomain(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssessmentControlInsightsByControlDomain", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListAssessmentControlInsightsByControlDomain), arg0)
+}
+
+// ListAssessmentControlInsightsByControlDomainPages mocks base method.
+func (m *MockAuditManagerAPI) ListAssessmentControlInsightsByControlDomainPages(arg0 *auditmanager.ListAssessmentControlInsightsByControlDomainInput, arg1 func(*auditmanager.ListAssessmentControlInsightsByControlDomainOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAssessmentControlInsightsByControlDomainPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAssessmentControlInsightsByControlDomainPages indicates an expected call of ListAssessmentControlInsightsByControlDomainPages.
+func (mr *MockAuditManagerAPIMockRecorder) ListAssessmentControlInsightsByControlDomainPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssessmentControlInsightsByControlDomainPages", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListAssessmentControlInsightsByControlDomainPages), arg0, arg1)
+}
+
+// ListAssessmentControlInsightsByControlDomainPagesWithContext mocks base method.
+func (m *MockAuditManagerAPI) ListAssessmentControlInsightsByControlDomainPagesWithContext(arg0 context.Context, arg1 *auditmanager.ListAssessmentControlInsightsByControlDomainInput, arg2 func(*auditmanager.ListAssessmentControlInsightsByControlDomainOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListAssessmentControlInsightsByControlDomainPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAssessmentControlInsightsByControlDomainPagesWithContext indicates an expected call of ListAssessmentControlInsightsByControlDomainPagesWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) ListAssessmentControlInsightsByControlDomainPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssessmentControlInsightsByControlDomainPagesWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListAssessmentControlInsightsByControlDomainPagesWithContext), varargs...)
+}
+
+// ListAssessmentControlInsightsByControlDomainRequest mocks base method.
+func (m *MockAuditManagerAPI) ListAssessmentControlInsightsByControlDomainRequest(arg0 *auditmanager.ListAssessmentControlInsightsByControlDomainInput) (*request.Request, *auditmanager.ListAssessmentControlInsightsByControlDomainOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAssessmentControlInsightsByControlDomainRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*auditmanager.ListAssessmentControlInsightsByControlDomainOutput)
+	return ret0, ret1
+}
+
+// ListAssessmentControlInsightsByControlDomainRequest indicates an expected call of ListAssessmentControlInsightsByControlDomainRequest.
+func (mr *MockAuditManagerAPIMockRecorder) ListAssessmentControlInsightsByControlDomainRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssessmentControlInsightsByControlDomainRequest", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListAssessmentControlInsightsByControlDomainRequest), arg0)
+}
+
+// ListAssessmentControlInsightsByControlDomainWithContext mocks base method.
+func (m *MockAuditManagerAPI) ListAssessmentControlInsightsByControlDomainWithContext(arg0 context.Context, arg1 *auditmanager.ListAssessmentControlInsightsByControlDomainInput, arg2 ...request.Option) (*auditmanager.ListAssessmentControlInsightsByControlDomainOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListAssessmentControlInsightsByControlDomainWithContext", varargs...)
+	ret0, _ := ret[0].(*auditmanager.ListAssessmentControlInsightsByControlDomainOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListAssessmentControlInsightsByControlDomainWithContext indicates an expected call of ListAssessmentControlInsightsByControlDomainWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) ListAssessmentControlInsightsByControlDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssessmentControlInsightsByControlDomainWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListAssessmentControlInsightsByControlDomainWithContext), varargs...)
+}
+
+// ListAssessmentFrameworkShareRequests mocks base method.
+func (m *MockAuditManagerAPI) ListAssessmentFrameworkShareRequests(arg0 *auditmanager.ListAssessmentFrameworkShareRequestsInput) (*auditmanager.ListAssessmentFrameworkShareRequestsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAssessmentFrameworkShareRequests", arg0)
+	ret0, _ := ret[0].(*auditmanager.ListAssessmentFrameworkShareRequestsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListAssessmentFrameworkShareRequests indicates an expected call of ListAssessmentFrameworkShareRequests.
+func (mr *MockAuditManagerAPIMockRecorder) ListAssessmentFrameworkShareRequests(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssessmentFrameworkShareRequests", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListAssessmentFrameworkShareRequests), arg0)
+}
+
+// ListAssessmentFrameworkShareRequestsPages mocks base method.
+func (m *MockAuditManagerAPI) ListAssessmentFrameworkShareRequestsPages(arg0 *auditmanager.ListAssessmentFrameworkShareRequestsInput, arg1 func(*auditmanager.ListAssessmentFrameworkShareRequestsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAssessmentFrameworkShareRequestsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAssessmentFrameworkShareRequestsPages indicates an expected call of ListAssessmentFrameworkShareRequestsPages.
+func (mr *MockAuditManagerAPIMockRecorder) ListAssessmentFrameworkShareRequestsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssessmentFrameworkShareRequestsPages", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListAssessmentFrameworkShareRequestsPages), arg0, arg1)
+}
+
+// ListAssessmentFrameworkShareRequestsPagesWithContext mocks base method.
+func (m *MockAuditManagerAPI) ListAssessmentFrameworkShareRequestsPagesWithContext(arg0 context.Context, arg1 *auditmanager.ListAssessmentFrameworkShareRequestsInput, arg2 func(*auditmanager.ListAssessmentFrameworkShareRequestsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListAssessmentFrameworkShareRequestsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListAssessmentFrameworkShareRequestsPagesWithContext indicates an expected call of ListAssessmentFrameworkShareRequestsPagesWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) ListAssessmentFrameworkShareRequestsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssessmentFrameworkShareRequestsPagesWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListAssessmentFrameworkShareRequestsPagesWithContext), varargs...)
+}
+
+// ListAssessmentFrameworkShareRequestsRequest mocks base method.
+func (m *MockAuditManagerAPI) ListAssessmentFrameworkShareRequestsRequest(arg0 *auditmanager.ListAssessmentFrameworkShareRequestsInput) (*request.Request, *auditmanager.ListAssessmentFrameworkShareRequestsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListAssessmentFrameworkShareRequestsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*auditmanager.ListAssessmentFrameworkShareRequestsOutput)
+	return ret0, ret1
+}
+
+// ListAssessmentFrameworkShareRequestsRequest indicates an expected call of ListAssessmentFrameworkShareRequestsRequest.
+func (mr *MockAuditManagerAPIMockRecorder) ListAssessmentFrameworkShareRequestsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssessmentFrameworkShareRequestsRequest", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListAssessmentFrameworkShareRequestsRequest), arg0)
+}
+
+// ListAssessmentFrameworkShareRequestsWithContext mocks base method.
+func (m *MockAuditManagerAPI) ListAssessmentFrameworkShareRequestsWithContext(arg0 context.Context, arg1 *auditmanager.ListAssessmentFrameworkShareRequestsInput, arg2 ...request.Option) (*auditmanager.ListAssessmentFrameworkShareRequestsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListAssessmentFrameworkShareRequestsWithContext", varargs...)
+	ret0, _ := ret[0].(*auditmanager.ListAssessmentFrameworkShareRequestsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListAssessmentFrameworkShareRequestsWithContext indicates an expected call of ListAssessmentFrameworkShareRequestsWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) ListAssessmentFrameworkShareRequestsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssessmentFrameworkShareRequestsWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListAssessmentFrameworkShareRequestsWithContext), varargs...)
 }
 
 // ListAssessmentFrameworks mocks base method.
@@ -2048,6 +2364,255 @@ func (mr *MockAuditManagerAPIMockRecorder) ListAssessmentsWithContext(arg0, arg1
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListAssessmentsWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListAssessmentsWithContext), varargs...)
+}
+
+// ListControlDomainInsights mocks base method.
+func (m *MockAuditManagerAPI) ListControlDomainInsights(arg0 *auditmanager.ListControlDomainInsightsInput) (*auditmanager.ListControlDomainInsightsOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListControlDomainInsights", arg0)
+	ret0, _ := ret[0].(*auditmanager.ListControlDomainInsightsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListControlDomainInsights indicates an expected call of ListControlDomainInsights.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlDomainInsights(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlDomainInsights", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlDomainInsights), arg0)
+}
+
+// ListControlDomainInsightsByAssessment mocks base method.
+func (m *MockAuditManagerAPI) ListControlDomainInsightsByAssessment(arg0 *auditmanager.ListControlDomainInsightsByAssessmentInput) (*auditmanager.ListControlDomainInsightsByAssessmentOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListControlDomainInsightsByAssessment", arg0)
+	ret0, _ := ret[0].(*auditmanager.ListControlDomainInsightsByAssessmentOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListControlDomainInsightsByAssessment indicates an expected call of ListControlDomainInsightsByAssessment.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlDomainInsightsByAssessment(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlDomainInsightsByAssessment", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlDomainInsightsByAssessment), arg0)
+}
+
+// ListControlDomainInsightsByAssessmentPages mocks base method.
+func (m *MockAuditManagerAPI) ListControlDomainInsightsByAssessmentPages(arg0 *auditmanager.ListControlDomainInsightsByAssessmentInput, arg1 func(*auditmanager.ListControlDomainInsightsByAssessmentOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListControlDomainInsightsByAssessmentPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListControlDomainInsightsByAssessmentPages indicates an expected call of ListControlDomainInsightsByAssessmentPages.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlDomainInsightsByAssessmentPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlDomainInsightsByAssessmentPages", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlDomainInsightsByAssessmentPages), arg0, arg1)
+}
+
+// ListControlDomainInsightsByAssessmentPagesWithContext mocks base method.
+func (m *MockAuditManagerAPI) ListControlDomainInsightsByAssessmentPagesWithContext(arg0 context.Context, arg1 *auditmanager.ListControlDomainInsightsByAssessmentInput, arg2 func(*auditmanager.ListControlDomainInsightsByAssessmentOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListControlDomainInsightsByAssessmentPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListControlDomainInsightsByAssessmentPagesWithContext indicates an expected call of ListControlDomainInsightsByAssessmentPagesWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlDomainInsightsByAssessmentPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlDomainInsightsByAssessmentPagesWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlDomainInsightsByAssessmentPagesWithContext), varargs...)
+}
+
+// ListControlDomainInsightsByAssessmentRequest mocks base method.
+func (m *MockAuditManagerAPI) ListControlDomainInsightsByAssessmentRequest(arg0 *auditmanager.ListControlDomainInsightsByAssessmentInput) (*request.Request, *auditmanager.ListControlDomainInsightsByAssessmentOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListControlDomainInsightsByAssessmentRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*auditmanager.ListControlDomainInsightsByAssessmentOutput)
+	return ret0, ret1
+}
+
+// ListControlDomainInsightsByAssessmentRequest indicates an expected call of ListControlDomainInsightsByAssessmentRequest.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlDomainInsightsByAssessmentRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlDomainInsightsByAssessmentRequest", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlDomainInsightsByAssessmentRequest), arg0)
+}
+
+// ListControlDomainInsightsByAssessmentWithContext mocks base method.
+func (m *MockAuditManagerAPI) ListControlDomainInsightsByAssessmentWithContext(arg0 context.Context, arg1 *auditmanager.ListControlDomainInsightsByAssessmentInput, arg2 ...request.Option) (*auditmanager.ListControlDomainInsightsByAssessmentOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListControlDomainInsightsByAssessmentWithContext", varargs...)
+	ret0, _ := ret[0].(*auditmanager.ListControlDomainInsightsByAssessmentOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListControlDomainInsightsByAssessmentWithContext indicates an expected call of ListControlDomainInsightsByAssessmentWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlDomainInsightsByAssessmentWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlDomainInsightsByAssessmentWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlDomainInsightsByAssessmentWithContext), varargs...)
+}
+
+// ListControlDomainInsightsPages mocks base method.
+func (m *MockAuditManagerAPI) ListControlDomainInsightsPages(arg0 *auditmanager.ListControlDomainInsightsInput, arg1 func(*auditmanager.ListControlDomainInsightsOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListControlDomainInsightsPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListControlDomainInsightsPages indicates an expected call of ListControlDomainInsightsPages.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlDomainInsightsPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlDomainInsightsPages", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlDomainInsightsPages), arg0, arg1)
+}
+
+// ListControlDomainInsightsPagesWithContext mocks base method.
+func (m *MockAuditManagerAPI) ListControlDomainInsightsPagesWithContext(arg0 context.Context, arg1 *auditmanager.ListControlDomainInsightsInput, arg2 func(*auditmanager.ListControlDomainInsightsOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListControlDomainInsightsPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListControlDomainInsightsPagesWithContext indicates an expected call of ListControlDomainInsightsPagesWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlDomainInsightsPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlDomainInsightsPagesWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlDomainInsightsPagesWithContext), varargs...)
+}
+
+// ListControlDomainInsightsRequest mocks base method.
+func (m *MockAuditManagerAPI) ListControlDomainInsightsRequest(arg0 *auditmanager.ListControlDomainInsightsInput) (*request.Request, *auditmanager.ListControlDomainInsightsOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListControlDomainInsightsRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*auditmanager.ListControlDomainInsightsOutput)
+	return ret0, ret1
+}
+
+// ListControlDomainInsightsRequest indicates an expected call of ListControlDomainInsightsRequest.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlDomainInsightsRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlDomainInsightsRequest", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlDomainInsightsRequest), arg0)
+}
+
+// ListControlDomainInsightsWithContext mocks base method.
+func (m *MockAuditManagerAPI) ListControlDomainInsightsWithContext(arg0 context.Context, arg1 *auditmanager.ListControlDomainInsightsInput, arg2 ...request.Option) (*auditmanager.ListControlDomainInsightsOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListControlDomainInsightsWithContext", varargs...)
+	ret0, _ := ret[0].(*auditmanager.ListControlDomainInsightsOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListControlDomainInsightsWithContext indicates an expected call of ListControlDomainInsightsWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlDomainInsightsWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlDomainInsightsWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlDomainInsightsWithContext), varargs...)
+}
+
+// ListControlInsightsByControlDomain mocks base method.
+func (m *MockAuditManagerAPI) ListControlInsightsByControlDomain(arg0 *auditmanager.ListControlInsightsByControlDomainInput) (*auditmanager.ListControlInsightsByControlDomainOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListControlInsightsByControlDomain", arg0)
+	ret0, _ := ret[0].(*auditmanager.ListControlInsightsByControlDomainOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListControlInsightsByControlDomain indicates an expected call of ListControlInsightsByControlDomain.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlInsightsByControlDomain(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlInsightsByControlDomain", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlInsightsByControlDomain), arg0)
+}
+
+// ListControlInsightsByControlDomainPages mocks base method.
+func (m *MockAuditManagerAPI) ListControlInsightsByControlDomainPages(arg0 *auditmanager.ListControlInsightsByControlDomainInput, arg1 func(*auditmanager.ListControlInsightsByControlDomainOutput, bool) bool) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListControlInsightsByControlDomainPages", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListControlInsightsByControlDomainPages indicates an expected call of ListControlInsightsByControlDomainPages.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlInsightsByControlDomainPages(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlInsightsByControlDomainPages", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlInsightsByControlDomainPages), arg0, arg1)
+}
+
+// ListControlInsightsByControlDomainPagesWithContext mocks base method.
+func (m *MockAuditManagerAPI) ListControlInsightsByControlDomainPagesWithContext(arg0 context.Context, arg1 *auditmanager.ListControlInsightsByControlDomainInput, arg2 func(*auditmanager.ListControlInsightsByControlDomainOutput, bool) bool, arg3 ...request.Option) error {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1, arg2}
+	for _, a := range arg3 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListControlInsightsByControlDomainPagesWithContext", varargs...)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// ListControlInsightsByControlDomainPagesWithContext indicates an expected call of ListControlInsightsByControlDomainPagesWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlInsightsByControlDomainPagesWithContext(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlInsightsByControlDomainPagesWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlInsightsByControlDomainPagesWithContext), varargs...)
+}
+
+// ListControlInsightsByControlDomainRequest mocks base method.
+func (m *MockAuditManagerAPI) ListControlInsightsByControlDomainRequest(arg0 *auditmanager.ListControlInsightsByControlDomainInput) (*request.Request, *auditmanager.ListControlInsightsByControlDomainOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "ListControlInsightsByControlDomainRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*auditmanager.ListControlInsightsByControlDomainOutput)
+	return ret0, ret1
+}
+
+// ListControlInsightsByControlDomainRequest indicates an expected call of ListControlInsightsByControlDomainRequest.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlInsightsByControlDomainRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlInsightsByControlDomainRequest", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlInsightsByControlDomainRequest), arg0)
+}
+
+// ListControlInsightsByControlDomainWithContext mocks base method.
+func (m *MockAuditManagerAPI) ListControlInsightsByControlDomainWithContext(arg0 context.Context, arg1 *auditmanager.ListControlInsightsByControlDomainInput, arg2 ...request.Option) (*auditmanager.ListControlInsightsByControlDomainOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "ListControlInsightsByControlDomainWithContext", varargs...)
+	ret0, _ := ret[0].(*auditmanager.ListControlInsightsByControlDomainOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// ListControlInsightsByControlDomainWithContext indicates an expected call of ListControlInsightsByControlDomainWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) ListControlInsightsByControlDomainWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListControlInsightsByControlDomainWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).ListControlInsightsByControlDomainWithContext), varargs...)
 }
 
 // ListControls mocks base method.
@@ -2449,6 +3014,56 @@ func (mr *MockAuditManagerAPIMockRecorder) RegisterOrganizationAdminAccountWithC
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RegisterOrganizationAdminAccountWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).RegisterOrganizationAdminAccountWithContext), varargs...)
 }
 
+// StartAssessmentFrameworkShare mocks base method.
+func (m *MockAuditManagerAPI) StartAssessmentFrameworkShare(arg0 *auditmanager.StartAssessmentFrameworkShareInput) (*auditmanager.StartAssessmentFrameworkShareOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartAssessmentFrameworkShare", arg0)
+	ret0, _ := ret[0].(*auditmanager.StartAssessmentFrameworkShareOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartAssessmentFrameworkShare indicates an expected call of StartAssessmentFrameworkShare.
+func (mr *MockAuditManagerAPIMockRecorder) StartAssessmentFrameworkShare(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartAssessmentFrameworkShare", reflect.TypeOf((*MockAuditManagerAPI)(nil).StartAssessmentFrameworkShare), arg0)
+}
+
+// StartAssessmentFrameworkShareRequest mocks base method.
+func (m *MockAuditManagerAPI) StartAssessmentFrameworkShareRequest(arg0 *auditmanager.StartAssessmentFrameworkShareInput) (*request.Request, *auditmanager.StartAssessmentFrameworkShareOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "StartAssessmentFrameworkShareRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*auditmanager.StartAssessmentFrameworkShareOutput)
+	return ret0, ret1
+}
+
+// StartAssessmentFrameworkShareRequest indicates an expected call of StartAssessmentFrameworkShareRequest.
+func (mr *MockAuditManagerAPIMockRecorder) StartAssessmentFrameworkShareRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartAssessmentFrameworkShareRequest", reflect.TypeOf((*MockAuditManagerAPI)(nil).StartAssessmentFrameworkShareRequest), arg0)
+}
+
+// StartAssessmentFrameworkShareWithContext mocks base method.
+func (m *MockAuditManagerAPI) StartAssessmentFrameworkShareWithContext(arg0 context.Context, arg1 *auditmanager.StartAssessmentFrameworkShareInput, arg2 ...request.Option) (*auditmanager.StartAssessmentFrameworkShareOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "StartAssessmentFrameworkShareWithContext", varargs...)
+	ret0, _ := ret[0].(*auditmanager.StartAssessmentFrameworkShareOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// StartAssessmentFrameworkShareWithContext indicates an expected call of StartAssessmentFrameworkShareWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) StartAssessmentFrameworkShareWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartAssessmentFrameworkShareWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).StartAssessmentFrameworkShareWithContext), varargs...)
+}
+
 // TagResource mocks base method.
 func (m *MockAuditManagerAPI) TagResource(arg0 *auditmanager.TagResourceInput) (*auditmanager.TagResourceOutput, error) {
 	m.ctrl.T.Helper()
@@ -2692,6 +3307,56 @@ func (m *MockAuditManagerAPI) UpdateAssessmentFrameworkRequest(arg0 *auditmanage
 func (mr *MockAuditManagerAPIMockRecorder) UpdateAssessmentFrameworkRequest(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAssessmentFrameworkRequest", reflect.TypeOf((*MockAuditManagerAPI)(nil).UpdateAssessmentFrameworkRequest), arg0)
+}
+
+// UpdateAssessmentFrameworkShare mocks base method.
+func (m *MockAuditManagerAPI) UpdateAssessmentFrameworkShare(arg0 *auditmanager.UpdateAssessmentFrameworkShareInput) (*auditmanager.UpdateAssessmentFrameworkShareOutput, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateAssessmentFrameworkShare", arg0)
+	ret0, _ := ret[0].(*auditmanager.UpdateAssessmentFrameworkShareOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateAssessmentFrameworkShare indicates an expected call of UpdateAssessmentFrameworkShare.
+func (mr *MockAuditManagerAPIMockRecorder) UpdateAssessmentFrameworkShare(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAssessmentFrameworkShare", reflect.TypeOf((*MockAuditManagerAPI)(nil).UpdateAssessmentFrameworkShare), arg0)
+}
+
+// UpdateAssessmentFrameworkShareRequest mocks base method.
+func (m *MockAuditManagerAPI) UpdateAssessmentFrameworkShareRequest(arg0 *auditmanager.UpdateAssessmentFrameworkShareInput) (*request.Request, *auditmanager.UpdateAssessmentFrameworkShareOutput) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "UpdateAssessmentFrameworkShareRequest", arg0)
+	ret0, _ := ret[0].(*request.Request)
+	ret1, _ := ret[1].(*auditmanager.UpdateAssessmentFrameworkShareOutput)
+	return ret0, ret1
+}
+
+// UpdateAssessmentFrameworkShareRequest indicates an expected call of UpdateAssessmentFrameworkShareRequest.
+func (mr *MockAuditManagerAPIMockRecorder) UpdateAssessmentFrameworkShareRequest(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAssessmentFrameworkShareRequest", reflect.TypeOf((*MockAuditManagerAPI)(nil).UpdateAssessmentFrameworkShareRequest), arg0)
+}
+
+// UpdateAssessmentFrameworkShareWithContext mocks base method.
+func (m *MockAuditManagerAPI) UpdateAssessmentFrameworkShareWithContext(arg0 context.Context, arg1 *auditmanager.UpdateAssessmentFrameworkShareInput, arg2 ...request.Option) (*auditmanager.UpdateAssessmentFrameworkShareOutput, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{arg0, arg1}
+	for _, a := range arg2 {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "UpdateAssessmentFrameworkShareWithContext", varargs...)
+	ret0, _ := ret[0].(*auditmanager.UpdateAssessmentFrameworkShareOutput)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// UpdateAssessmentFrameworkShareWithContext indicates an expected call of UpdateAssessmentFrameworkShareWithContext.
+func (mr *MockAuditManagerAPIMockRecorder) UpdateAssessmentFrameworkShareWithContext(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateAssessmentFrameworkShareWithContext", reflect.TypeOf((*MockAuditManagerAPI)(nil).UpdateAssessmentFrameworkShareWithContext), varargs...)
 }
 
 // UpdateAssessmentFrameworkWithContext mocks base method.
